@@ -12,6 +12,15 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ fluid: string }> }) {
+  const { fluid } = await params;
+  const formattedFluid = fluid.replace(/([A-Z])/g, ' $1').trim();
+  return {
+    title: `${formattedFluid} Properties & Charts - MEPKit`,
+    description: `Engineering data, charts, and tables for ${formattedFluid} properties including density and dynamic viscosity across temperatures.`,
+  };
+}
+
 export default async function FluidPropertyPage({ params }: { params: Promise<{ fluid: string }> }) {
   const { fluid } = await params;
   
@@ -29,8 +38,23 @@ export default async function FluidPropertyPage({ params }: { params: Promise<{ 
   
   const fluidName = fluid.replace(/([A-Z])/g, ' $1').trim(); // Basic formatting
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": `${fluidName} Engineering Properties`,
+    "description": `Data table and charts containing density and viscosity for ${fluidName}.`,
+    "provider": {
+      "@type": "Organization",
+      "name": "MEPKit"
+    }
+  };
+
   return (
     <div className="container py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="text-4xl font-bold mb-4">{fluidName} Properties</h1>
       <p className="text-lg text-muted-foreground mb-8">
         Reference table and property charts for {fluidName} across various temperatures.

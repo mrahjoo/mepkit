@@ -11,6 +11,15 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ material: string }> }) {
+  const { material } = await params;
+  const formattedMaterial = material.replace(/_/g, ' ');
+  return {
+    title: `${formattedMaterial} Pipe Dimensions & Properties - MEPKit`,
+    description: `Engineering data table for ${formattedMaterial} pipes including inner diameter, outer diameter, wall thickness, and weight per foot.`,
+  };
+}
+
 export default async function PipeMaterialPage({ params }: { params: Promise<{ material: string }> }) {
   const { material } = await params;
   const fileName = `PipeTables_${material}.json`;
@@ -21,12 +30,28 @@ export default async function PipeMaterialPage({ params }: { params: Promise<{ m
   }
 
   const data: PipeData[] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  const formattedMaterial = material.replace(/_/g, ' ');
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": `${formattedMaterial} Pipe Dimensions`,
+    "description": `Data table containing specifications for ${formattedMaterial} pipe schedules.`,
+    "provider": {
+      "@type": "Organization",
+      "name": "MEPKit"
+    }
+  };
 
   return (
     <div className="container py-10">
-      <h1 className="text-4xl font-bold mb-4">{material.replace(/_/g, ' ')} Pipe Data</h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="text-4xl font-bold mb-4">{formattedMaterial} Pipe Data</h1>
       <p className="text-lg text-muted-foreground mb-8">
-        Reference table for {material.replace(/_/g, ' ')} pipe dimensions and properties.
+        Reference table for {formattedMaterial} pipe dimensions and properties.
       </p>
       
       <PipeTable 
