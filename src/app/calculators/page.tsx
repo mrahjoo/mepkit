@@ -13,6 +13,16 @@ export default function CalculatorsCategoryPage() {
       href: '/calculators/pipe-pressure-drop', 
       desc: 'Calculate friction loss in a pipe system using the Darcy-Weisbach equation.' 
     },
+    { 
+      title: 'Specific Acoustic Impedance', 
+      href: '/calculators/acoustic-impedance', 
+      desc: 'Measure the ability of a medium to transmit sound waves (Rayls).' 
+    },
+    { 
+      title: 'Speed of Sound in Air', 
+      href: '/calculators/speed-of-sound', 
+      desc: 'Calculate the velocity of sound in air based on ambient temperature.' 
+    },
   ];
 
   return (
