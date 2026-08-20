@@ -28,6 +28,11 @@ export default function CalculatorsCategoryPage() {
       href: '/calculators/decibel', 
       desc: 'Calculate logarithmic ratios for signal power, intensity, and amplitude.' 
     },
+    { 
+      title: 'Decibel A, B, C Weighting', 
+      href: '/calculators/decibel-weighting', 
+      desc: 'Apply frequency filters to sound pressure measurements and compute logarithmic sums.' 
+    },
   ];
 
   return (
