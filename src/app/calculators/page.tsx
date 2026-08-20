@@ -23,6 +23,11 @@ export default function CalculatorsCategoryPage() {
       href: '/calculators/speed-of-sound', 
       desc: 'Calculate the velocity of sound in air based on ambient temperature.' 
     },
+    { 
+      title: 'Decibel Calculator (dB)', 
+      href: '/calculators/decibel', 
+      desc: 'Calculate logarithmic ratios for signal power, intensity, and amplitude.' 
+    },
   ];
 
   return (
