@@ -1,0 +1,101 @@
+[
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.162,
+    "outer_diameter": 4.215,
+    "weight": 1.343
+  },
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.241,
+    "outer_diameter": 6.275,
+    "weight": 2.974
+  },
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.323,
+    "outer_diameter": 8.4,
+    "weight": 5.336
+  },
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.404,
+    "outer_diameter": 10.5,
+    "weight": 8.342
+  },
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 0.481,
+    "outer_diameter": 12.5,
+    "weight": 11.824
+  },
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 380,
+    "size_metric": "380 mm",
+    "size_imperial": "15\"",
+    "wall_thickness": 0.588,
+    "outer_diameter": 15.3,
+    "weight": 17.692
+  },
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 450,
+    "size_metric": "450 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 0.719,
+    "outer_diameter": 18.701,
+    "weight": 26.443
+  },
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "21\"",
+    "wall_thickness": 0.848,
+    "outer_diameter": 22.047,
+    "weight": 36.766
+  },
+  {
+    "material": "PVC (Sewer pipe)",
+    "schedule": "SDR 26",
+    "roughness": 0.000197,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 0.956,
+    "outer_diameter": 24.803,
+    "weight": 46.626
+  }
+]

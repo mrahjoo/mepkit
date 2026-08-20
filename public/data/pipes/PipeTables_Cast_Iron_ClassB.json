@@ -1,0 +1,211 @@
+[
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.42,
+    "outer_diameter": 3.96,
+    "weight": 14.481
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.45,
+    "outer_diameter": 5,
+    "weight": 19.943
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.48,
+    "outer_diameter": 7.1,
+    "weight": 30.95
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.51,
+    "outer_diameter": 9.05,
+    "weight": 42.422
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.57,
+    "outer_diameter": 11.1,
+    "weight": 58.461
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 0.62,
+    "outer_diameter": 13.2,
+    "weight": 75.968
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 0.66,
+    "outer_diameter": 15.3,
+    "weight": 94.112
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 0.7,
+    "outer_diameter": 17.4,
+    "weight": 113.861
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 450,
+    "size_metric": "450 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 0.75,
+    "outer_diameter": 19.5,
+    "weight": 136.969
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "20\"",
+    "wall_thickness": 0.8,
+    "outer_diameter": 21.6,
+    "weight": 162.074
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 0.89,
+    "outer_diameter": 25.8,
+    "weight": 215.935
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 750,
+    "size_metric": "750 mm",
+    "size_imperial": "30\"",
+    "wall_thickness": 1.03,
+    "outer_diameter": 32,
+    "weight": 310.698
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 900,
+    "size_metric": "900 mm",
+    "size_imperial": "36\"",
+    "wall_thickness": 1.15,
+    "outer_diameter": 38.3,
+    "weight": 416.118
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 1050,
+    "size_metric": "1050 mm",
+    "size_imperial": "42\"",
+    "wall_thickness": 1.28,
+    "outer_diameter": 44.5,
+    "weight": 538.833
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 1200,
+    "size_metric": "1200 mm",
+    "size_imperial": "48\"",
+    "wall_thickness": 1.42,
+    "outer_diameter": 50.8,
+    "weight": 682.966
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 1400,
+    "size_metric": "1400 mm",
+    "size_imperial": "54\"",
+    "wall_thickness": 1.55,
+    "outer_diameter": 57.1,
+    "weight": 838.64
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 1500,
+    "size_metric": "1500 mm",
+    "size_imperial": "60\"",
+    "wall_thickness": 1.67,
+    "outer_diameter": 63.4,
+    "weight": 1004.09
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 1800,
+    "size_metric": "1800 mm",
+    "size_imperial": "72\"",
+    "wall_thickness": 1.95,
+    "outer_diameter": 76,
+    "weight": 1406.434
+  },
+  {
+    "material": "Cast Iron",
+    "schedule": "Class B",
+    "roughness": 0.015748,
+    "size_id": 2100,
+    "size_metric": "2100 mm",
+    "size_imperial": "84\"",
+    "wall_thickness": 2.22,
+    "outer_diameter": 88.54,
+    "weight": 1866.484
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 8,
+    "size_metric": "8 mm",
+    "size_imperial": "1/4\"",
+    "wall_thickness": 0.084,
+    "outer_diameter": 0.54,
+    "weight": 0.572
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 10,
+    "size_metric": "10 mm",
+    "size_imperial": "3/8\"",
+    "wall_thickness": 0.084,
+    "outer_diameter": 0.675,
+    "weight": 0.635
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 15,
+    "size_metric": "15 mm",
+    "size_imperial": "1/2\"",
+    "wall_thickness": 0.096,
+    "outer_diameter": 0.84,
+    "weight": 0.652
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 20,
+    "size_metric": "20 mm",
+    "size_imperial": "3/4\"",
+    "wall_thickness": 0.096,
+    "outer_diameter": 1.05,
+    "weight": 0.992
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 25,
+    "size_metric": "25 mm",
+    "size_imperial": "1\"",
+    "wall_thickness": 0.115,
+    "outer_diameter": 1.315,
+    "weight": 1.539
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 32,
+    "size_metric": "32 mm",
+    "size_imperial": "1-1/4\"",
+    "wall_thickness": 0.115,
+    "outer_diameter": 1.66,
+    "weight": 1.967
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 40,
+    "size_metric": "40 mm",
+    "size_imperial": "1-1/2\"",
+    "wall_thickness": 0.115,
+    "outer_diameter": 1.9,
+    "weight": 2.244
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 50,
+    "size_metric": "50 mm",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.131,
+    "outer_diameter": 2.375,
+    "weight": 3.213
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 65,
+    "size_metric": "65 mm",
+    "size_imperial": "2-1/2\"",
+    "wall_thickness": 0.131,
+    "outer_diameter": 2.875,
+    "weight": 4.087
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.143,
+    "outer_diameter": 3.5,
+    "weight": 5.222
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.159,
+    "outer_diameter": 4.5,
+    "weight": 7.507
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 125,
+    "size_metric": "125 mm",
+    "size_imperial": "5\"",
+    "wall_thickness": 0.17,
+    "outer_diameter": 5.5,
+    "weight": 9.907
+  },
+  {
+    "material": "Steel (SANS 62) Galvanised",
+    "schedule": "Medium",
+    "roughness": 0.005906,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.17,
+    "outer_diameter": 6.5,
+    "weight": 11.845
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 15,
+    "size_metric": "15 mm",
+    "size_imperial": "1/2\"",
+    "wall_thickness": 0.147,
+    "outer_diameter": 0.84,
+    "weight": 0.224
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 20,
+    "size_metric": "20 mm",
+    "size_imperial": "3/4\"",
+    "wall_thickness": 0.154,
+    "outer_diameter": 1.05,
+    "weight": 0.304
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 25,
+    "size_metric": "25 mm",
+    "size_imperial": "1\"",
+    "wall_thickness": 0.179,
+    "outer_diameter": 1.315,
+    "weight": 0.449
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 32,
+    "size_metric": "32 mm",
+    "size_imperial": "1-1/4\"",
+    "wall_thickness": 0.191,
+    "outer_diameter": 1.66,
+    "weight": 0.619
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 40,
+    "size_metric": "40 mm",
+    "size_imperial": "1-1/2\"",
+    "wall_thickness": 0.2,
+    "outer_diameter": 1.9,
+    "weight": 0.749
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 50,
+    "size_metric": "50 mm",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.218,
+    "outer_diameter": 2.375,
+    "weight": 1.037
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 65,
+    "size_metric": "65 mm",
+    "size_imperial": "2-1/2\"",
+    "wall_thickness": 0.276,
+    "outer_diameter": 2.875,
+    "weight": 1.582
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.3,
+    "outer_diameter": 3.5,
+    "weight": 2.116
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.337,
+    "outer_diameter": 4.5,
+    "weight": 3.093
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.432,
+    "outer_diameter": 6.625,
+    "weight": 5.899
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.5,
+    "outer_diameter": 8.625,
+    "weight": 8.957
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.593,
+    "outer_diameter": 10.75,
+    "weight": 13.28
+  },
+  {
+    "material": "PVC (ANSI) Chlorinated",
+    "schedule": "Sch. 80",
+    "roughness": 0.000197,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 0.687,
+    "outer_diameter": 12.75,
+    "weight": 18.293
+  }
+]

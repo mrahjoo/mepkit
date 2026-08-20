@@ -1,0 +1,1222 @@
+[
+  {
+    "name": "Air",
+    "formula": "N/A",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.292,
+    "viscosity_cp": 0.017,
+    "vapor_pressure_kpa": 1.402736,
+    "flag": 1
+  },
+  {
+    "name": "Air",
+    "formula": "N/A",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.225,
+    "viscosity_cp": 0.018,
+    "vapor_pressure_kpa": 1.402163,
+    "flag": 1
+  },
+  {
+    "name": "Air",
+    "formula": "N/A",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.222,
+    "viscosity_cp": 0.018,
+    "vapor_pressure_kpa": 1.402141,
+    "flag": 1
+  },
+  {
+    "name": "Air",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.204,
+    "viscosity_cp": 0.018,
+    "vapor_pressure_kpa": 1.401968,
+    "flag": 1
+  },
+  {
+    "name": "Ammonia",
+    "formula": "N H3",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 0.76,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.327243,
+    "flag": 1
+  },
+  {
+    "name": "Ammonia",
+    "formula": "N H3",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 0.72,
+    "viscosity_cp": 0.01,
+    "vapor_pressure_kpa": 1.320311,
+    "flag": 1
+  },
+  {
+    "name": "Ammonia",
+    "formula": "N H3",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 0.719,
+    "viscosity_cp": 0.01,
+    "vapor_pressure_kpa": 1.320066,
+    "flag": 1
+  },
+  {
+    "name": "Ammonia",
+    "formula": "N H3",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 0.708,
+    "viscosity_cp": 0.01,
+    "vapor_pressure_kpa": 1.318101,
+    "flag": 1
+  },
+  {
+    "name": "Argon",
+    "formula": "Ar",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.782,
+    "viscosity_cp": 0.021,
+    "vapor_pressure_kpa": 1.670229,
+    "flag": 1
+  },
+  {
+    "name": "Argon",
+    "formula": "Ar",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.69,
+    "viscosity_cp": 0.022,
+    "vapor_pressure_kpa": 1.669817,
+    "flag": 1
+  },
+  {
+    "name": "Argon",
+    "formula": "Ar",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.686,
+    "viscosity_cp": 0.022,
+    "vapor_pressure_kpa": 1.669803,
+    "flag": 1
+  },
+  {
+    "name": "Argon",
+    "formula": "Ar",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.661,
+    "viscosity_cp": 0.022,
+    "vapor_pressure_kpa": 1.66969,
+    "flag": 1
+  },
+  {
+    "name": "Butane",
+    "formula": "C4 H10",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 2.593,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.118825,
+    "flag": 1
+  },
+  {
+    "name": "Butane",
+    "formula": "C4 H10",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 2.458,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.110243,
+    "flag": 1
+  },
+  {
+    "name": "Butane",
+    "formula": "C4 H10",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 2.453,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.109952,
+    "flag": 1
+  },
+  {
+    "name": "Butane",
+    "formula": "C4 H10",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 2.416,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.107632,
+    "flag": 1
+  },
+  {
+    "name": "Butene",
+    "formula": "C4 H8",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 2.503,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.138955,
+    "flag": 1
+  },
+  {
+    "name": "Butene",
+    "formula": "C4 H8",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 2.373,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.128478,
+    "flag": 1
+  },
+  {
+    "name": "Butene",
+    "formula": "C4 H8",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 2.368,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.12813,
+    "flag": 1
+  },
+  {
+    "name": "Butene",
+    "formula": "C4 H8",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 2.332,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.125339,
+    "flag": 1
+  },
+  {
+    "name": "Carbon Dioxide",
+    "formula": "C O2",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.964,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.308272,
+    "flag": 1
+  },
+  {
+    "name": "Carbon Dioxide",
+    "formula": "C O2",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.861,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.29953,
+    "flag": 1
+  },
+  {
+    "name": "Carbon Dioxide",
+    "formula": "C O2",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.858,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.299221,
+    "flag": 1
+  },
+  {
+    "name": "Carbon Dioxide",
+    "formula": "C O2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.83,
+    "viscosity_cp": 0.015,
+    "vapor_pressure_kpa": 1.296745,
+    "flag": 1
+  },
+  {
+    "name": "Carbon Monoxide",
+    "formula": "C O",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.25,
+    "viscosity_cp": 0.017,
+    "vapor_pressure_kpa": 1.402054,
+    "flag": 1
+  },
+  {
+    "name": "Carbon Monoxide",
+    "formula": "C O",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.185,
+    "viscosity_cp": 0.017,
+    "vapor_pressure_kpa": 1.401593,
+    "flag": 1
+  },
+  {
+    "name": "Carbon Monoxide",
+    "formula": "C O",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.182,
+    "viscosity_cp": 0.017,
+    "vapor_pressure_kpa": 1.401576,
+    "flag": 1
+  },
+  {
+    "name": "Carbon Monoxide",
+    "formula": "C O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.164,
+    "viscosity_cp": 0.017,
+    "vapor_pressure_kpa": 1.401438,
+    "flag": 1
+  },
+  {
+    "name": "Dimethylether",
+    "formula": "C2 H6 O",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 2.055,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.174609,
+    "flag": 1
+  },
+  {
+    "name": "Dimethylether",
+    "formula": "C2 H6 O",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.948,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.164071,
+    "flag": 1
+  },
+  {
+    "name": "Dimethylether",
+    "formula": "C2 H6 O",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.945,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.163716,
+    "flag": 1
+  },
+  {
+    "name": "Dimethylether",
+    "formula": "C2 H6 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.915,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.160882,
+    "flag": 1
+  },
+  {
+    "name": "Ethane",
+    "formula": "C2 H6",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.342,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.209294,
+    "flag": 1
+  },
+  {
+    "name": "Ethane",
+    "formula": "C2 H6",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.272,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.199877,
+    "flag": 1
+  },
+  {
+    "name": "Ethane",
+    "formula": "C2 H6",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.269,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.199539,
+    "flag": 1
+  },
+  {
+    "name": "Ethane",
+    "formula": "C2 H6",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.25,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.196835,
+    "flag": 1
+  },
+  {
+    "name": "Ethylene",
+    "formula": "C2 H4",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.252,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.265089,
+    "flag": 1
+  },
+  {
+    "name": "Ethylene",
+    "formula": "C2 H4",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.186,
+    "viscosity_cp": 0.01,
+    "vapor_pressure_kpa": 1.253535,
+    "flag": 1
+  },
+  {
+    "name": "Ethylene",
+    "formula": "C2 H4",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.184,
+    "viscosity_cp": 0.01,
+    "vapor_pressure_kpa": 1.253117,
+    "flag": 1
+  },
+  {
+    "name": "Ethylene",
+    "formula": "C2 H4",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.166,
+    "viscosity_cp": 0.01,
+    "vapor_pressure_kpa": 1.249776,
+    "flag": 1
+  },
+  {
+    "name": "Helium",
+    "formula": "He",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 0.179,
+    "viscosity_cp": 0.019,
+    "vapor_pressure_kpa": 1.666534,
+    "flag": 1
+  },
+  {
+    "name": "Helium",
+    "formula": "He",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 0.169,
+    "viscosity_cp": 0.019,
+    "vapor_pressure_kpa": 1.66654,
+    "flag": 1
+  },
+  {
+    "name": "Helium",
+    "formula": "He",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 0.169,
+    "viscosity_cp": 0.019,
+    "vapor_pressure_kpa": 1.66654,
+    "flag": 1
+  },
+  {
+    "name": "Helium",
+    "formula": "He",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 0.166,
+    "viscosity_cp": 0.02,
+    "vapor_pressure_kpa": 1.666542,
+    "flag": 1
+  },
+  {
+    "name": "Hydrogen",
+    "formula": "H2",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 0.09,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.409812,
+    "flag": 1
+  },
+  {
+    "name": "Hydrogen",
+    "formula": "H2",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 0.085,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.406963,
+    "flag": 1
+  },
+  {
+    "name": "Hydrogen",
+    "formula": "H2",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 0.085,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.406868,
+    "flag": 1
+  },
+  {
+    "name": "Hydrogen",
+    "formula": "H2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 0.084,
+    "viscosity_cp": 0.009,
+    "vapor_pressure_kpa": 1.406111,
+    "flag": 1
+  },
+  {
+    "name": "Hydrogen Sulfide",
+    "formula": "H2 S",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.521,
+    "viscosity_cp": 0.011,
+    "vapor_pressure_kpa": 1.337042,
+    "flag": 1
+  },
+  {
+    "name": "Hydrogen Sulfide",
+    "formula": "H2 S",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.441,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.333339,
+    "flag": 1
+  },
+  {
+    "name": "Hydrogen Sulfide",
+    "formula": "H2 S",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.439,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.333206,
+    "flag": 1
+  },
+  {
+    "name": "Hydrogen Sulfide",
+    "formula": "H2 S",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.417,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.332138,
+    "flag": 1
+  },
+  {
+    "name": "Isobutane",
+    "formula": "C4 H10",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 2.593,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.118474,
+    "flag": 1
+  },
+  {
+    "name": "Isobutane",
+    "formula": "C4 H10",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 2.458,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.110111,
+    "flag": 1
+  },
+  {
+    "name": "Isobutane",
+    "formula": "C4 H10",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 2.453,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.109826,
+    "flag": 1
+  },
+  {
+    "name": "Isobutane",
+    "formula": "C4 H10",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 2.453,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.109826,
+    "flag": 1
+  },
+  {
+    "name": "Isobutane",
+    "formula": "C4 H10",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 2.416,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.107549,
+    "flag": 1
+  },
+  {
+    "name": "Krypton",
+    "formula": "Kr",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 3.739,
+    "viscosity_cp": 0.023,
+    "vapor_pressure_kpa": 1.67341,
+    "flag": 1
+  },
+  {
+    "name": "Krypton",
+    "formula": "Kr",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 3.544,
+    "viscosity_cp": 0.024,
+    "vapor_pressure_kpa": 1.672656,
+    "flag": 1
+  },
+  {
+    "name": "Krypton",
+    "formula": "Kr",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 3.537,
+    "viscosity_cp": 0.024,
+    "vapor_pressure_kpa": 1.672631,
+    "flag": 1
+  },
+  {
+    "name": "Krypton",
+    "formula": "Kr",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 3.484,
+    "viscosity_cp": 0.025,
+    "vapor_pressure_kpa": 1.672424,
+    "flag": 1
+  },
+  {
+    "name": "Methane",
+    "formula": "C H4",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 0.716,
+    "viscosity_cp": 0.01,
+    "vapor_pressure_kpa": 1.316442,
+    "flag": 1
+  },
+  {
+    "name": "Methane",
+    "formula": "C H4",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 0.678,
+    "viscosity_cp": 0.011,
+    "vapor_pressure_kpa": 1.310405,
+    "flag": 1
+  },
+  {
+    "name": "Methane",
+    "formula": "C H4",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 0.677,
+    "viscosity_cp": 0.011,
+    "vapor_pressure_kpa": 1.310173,
+    "flag": 1
+  },
+  {
+    "name": "Methane",
+    "formula": "C H4",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 0.667,
+    "viscosity_cp": 0.011,
+    "vapor_pressure_kpa": 1.308321,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.55)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 0.674,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.55)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 0.673,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.55)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 0.663,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.60)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 0.736,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.60)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 0.734,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.60)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 0.723,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.65)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 0.797,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.65)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 0.795,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Natural Gas (SG = 0.65)",
+    "formula": "C H4 (mainly)",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 0.783,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.31,
+    "flag": 1
+  },
+  {
+    "name": "Neon",
+    "formula": "Ne",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 0.9,
+    "viscosity_cp": 0.029,
+    "vapor_pressure_kpa": 1.666937,
+    "flag": 1
+  },
+  {
+    "name": "Neon",
+    "formula": "Ne",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 0.853,
+    "viscosity_cp": 0.03,
+    "vapor_pressure_kpa": 1.666888,
+    "flag": 1
+  },
+  {
+    "name": "Neon",
+    "formula": "Ne",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 0.852,
+    "viscosity_cp": 0.03,
+    "vapor_pressure_kpa": 1.666886,
+    "flag": 1
+  },
+  {
+    "name": "Neon",
+    "formula": "Ne",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 0.839,
+    "viscosity_cp": 0.031,
+    "vapor_pressure_kpa": 1.666873,
+    "flag": 1
+  },
+  {
+    "name": "Nitrogen",
+    "formula": "N2",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.25,
+    "viscosity_cp": 0.017,
+    "vapor_pressure_kpa": 1.401858,
+    "flag": 1
+  },
+  {
+    "name": "Nitrogen",
+    "formula": "N2",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.185,
+    "viscosity_cp": 0.017,
+    "vapor_pressure_kpa": 1.401511,
+    "flag": 1
+  },
+  {
+    "name": "Nitrogen",
+    "formula": "N2",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.182,
+    "viscosity_cp": 0.017,
+    "vapor_pressure_kpa": 1.401498,
+    "flag": 1
+  },
+  {
+    "name": "Nitrogen",
+    "formula": "N2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.165,
+    "viscosity_cp": 0.018,
+    "vapor_pressure_kpa": 1.401397,
+    "flag": 1
+  },
+  {
+    "name": "Nitrous Oxide",
+    "formula": "N2 0",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.964,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.293309,
+    "flag": 1
+  },
+  {
+    "name": "Nitrous Oxide",
+    "formula": "N2 0",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.861,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.285334,
+    "flag": 1
+  },
+  {
+    "name": "Nitrous Oxide",
+    "formula": "N2 0",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.858,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.285053,
+    "flag": 1
+  },
+  {
+    "name": "Nitrous Oxide",
+    "formula": "N2 0",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.83,
+    "viscosity_cp": 0.015,
+    "vapor_pressure_kpa": 1.282806,
+    "flag": 1
+  },
+  {
+    "name": "Oxygen",
+    "formula": "O2",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.428,
+    "viscosity_cp": 0.019,
+    "vapor_pressure_kpa": 1.399086,
+    "flag": 1
+  },
+  {
+    "name": "Oxygen",
+    "formula": "O2",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.353,
+    "viscosity_cp": 0.02,
+    "vapor_pressure_kpa": 1.397673,
+    "flag": 1
+  },
+  {
+    "name": "Oxygen",
+    "formula": "O2",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.351,
+    "viscosity_cp": 0.02,
+    "vapor_pressure_kpa": 1.397618,
+    "flag": 1
+  },
+  {
+    "name": "Oxygen",
+    "formula": "O2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.33,
+    "viscosity_cp": 0.02,
+    "vapor_pressure_kpa": 1.397178,
+    "flag": 1
+  },
+  {
+    "name": "Propane",
+    "formula": "C3 H8",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.967,
+    "viscosity_cp": 0.007,
+    "vapor_pressure_kpa": 1.150364,
+    "flag": 1
+  },
+  {
+    "name": "Propane",
+    "formula": "C3 H8",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.865,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.141691,
+    "flag": 1
+  },
+  {
+    "name": "Propane",
+    "formula": "C3 H8",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.861,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.141388,
+    "flag": 1
+  },
+  {
+    "name": "Propane",
+    "formula": "C3 H8",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.833,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.138963,
+    "flag": 1
+  },
+  {
+    "name": "Propylene",
+    "formula": "C3 H6",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1.877,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.17167,
+    "flag": 1
+  },
+  {
+    "name": "Propylene",
+    "formula": "C3 H6",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 1.78,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.162605,
+    "flag": 1
+  },
+  {
+    "name": "Propylene",
+    "formula": "C3 H6",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 1.776,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.162287,
+    "flag": 1
+  },
+  {
+    "name": "Propylene",
+    "formula": "C3 H6",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1.749,
+    "viscosity_cp": 0.008,
+    "vapor_pressure_kpa": 1.159746,
+    "flag": 1
+  },
+  {
+    "name": "R125",
+    "formula": "C2 HF5",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 5.355,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.112704,
+    "flag": 1
+  },
+  {
+    "name": "R125",
+    "formula": "C2 HF5",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 5.076,
+    "viscosity_cp": 0.013,
+    "vapor_pressure_kpa": 1.106977,
+    "flag": 1
+  },
+  {
+    "name": "R125",
+    "formula": "C2 HF5",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 5.066,
+    "viscosity_cp": 0.013,
+    "vapor_pressure_kpa": 1.106781,
+    "flag": 1
+  },
+  {
+    "name": "R125",
+    "formula": "C2 HF5",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 4.989,
+    "viscosity_cp": 0.013,
+    "vapor_pressure_kpa": 1.105214,
+    "flag": 1
+  },
+  {
+    "name": "R134a",
+    "formula": "CF3 CH2 F",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 4.552,
+    "viscosity_cp": 0.011,
+    "vapor_pressure_kpa": 1.132336,
+    "flag": 1
+  },
+  {
+    "name": "R134a",
+    "formula": "CF3 CH2 F",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 4.315,
+    "viscosity_cp": 0.011,
+    "vapor_pressure_kpa": 1.124209,
+    "flag": 1
+  },
+  {
+    "name": "R134a",
+    "formula": "CF3 CH2 F",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 4.307,
+    "viscosity_cp": 0.011,
+    "vapor_pressure_kpa": 1.123936,
+    "flag": 1
+  },
+  {
+    "name": "R134a",
+    "formula": "CF3 CH2 F",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 4.242,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.121756,
+    "flag": 1
+  },
+  {
+    "name": "R23",
+    "formula": "CH F3",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 3.124,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.215995,
+    "flag": 1
+  },
+  {
+    "name": "R23",
+    "formula": "CH F3",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 2.961,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.206786,
+    "flag": 1
+  },
+  {
+    "name": "R23",
+    "formula": "CH F3",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 2.955,
+    "viscosity_cp": 0.014,
+    "vapor_pressure_kpa": 1.206461,
+    "flag": 1
+  },
+  {
+    "name": "R23",
+    "formula": "CH F3",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 2.911,
+    "viscosity_cp": 0.015,
+    "vapor_pressure_kpa": 1.203864,
+    "flag": 1
+  },
+  {
+    "name": "R32",
+    "formula": "CH2 F2",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 2.321,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.271119,
+    "flag": 1
+  },
+  {
+    "name": "R32",
+    "formula": "CH2 F2",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 2.2,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.259501,
+    "flag": 1
+  },
+  {
+    "name": "R32",
+    "formula": "CH2 F2",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 2.196,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.259089,
+    "flag": 1
+  },
+  {
+    "name": "R32",
+    "formula": "CH2 F2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 2.163,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.255797,
+    "flag": 1
+  },
+  {
+    "name": "Sulphur Dioxide",
+    "formula": "S O2",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 2.858,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.296583,
+    "flag": 1
+  },
+  {
+    "name": "Sulphur Dioxide",
+    "formula": "S O2",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 2.709,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.286408,
+    "flag": 1
+  },
+  {
+    "name": "Sulphur Dioxide",
+    "formula": "S O2",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 2.704,
+    "viscosity_cp": 0.012,
+    "vapor_pressure_kpa": 1.286066,
+    "flag": 1
+  },
+  {
+    "name": "Sulphur Dioxide",
+    "formula": "S O2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 2.663,
+    "viscosity_cp": 0.013,
+    "vapor_pressure_kpa": 1.283327,
+    "flag": 1
+  },
+  {
+    "name": "Xenon",
+    "formula": "Xe",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 5.858,
+    "viscosity_cp": 0.021,
+    "vapor_pressure_kpa": 1.679686,
+    "flag": 1
+  },
+  {
+    "name": "Xenon",
+    "formula": "Xe",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 5.553,
+    "viscosity_cp": 0.022,
+    "vapor_pressure_kpa": 1.678207,
+    "flag": 1
+  },
+  {
+    "name": "Xenon",
+    "formula": "Xe",
+    "temperature_k": 288.706,
+    "pressure_kpa": 0,
+    "density": 5.542,
+    "viscosity_cp": 0.022,
+    "vapor_pressure_kpa": 1.678157,
+    "flag": 1
+  },
+  {
+    "name": "Xenon",
+    "formula": "Xe",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 5.458,
+    "viscosity_cp": 0.023,
+    "vapor_pressure_kpa": 1.677753,
+    "flag": 1
+  }
+]

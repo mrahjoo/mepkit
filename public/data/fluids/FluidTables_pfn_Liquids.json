@@ -1,0 +1,1102 @@
+[
+  {
+    "name": "Acetic acid",
+    "formula": "C2 H4 O2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1049,
+    "viscosity_cp": 1.127,
+    "vapor_pressure_kpa": 1.584,
+    "flag": 0
+  },
+  {
+    "name": "Acetone",
+    "formula": "C3 H6 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 780,
+    "viscosity_cp": 0.325,
+    "vapor_pressure_kpa": 24.22,
+    "flag": 0
+  },
+  {
+    "name": "tert Amyl Alcohol",
+    "formula": "C5 H12 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 810.173,
+    "viscosity_cp": 4.805,
+    "vapor_pressure_kpa": 1.7,
+    "flag": 0
+  },
+  {
+    "name": "Aniline",
+    "formula": "C6 H7 N",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1022,
+    "viscosity_cp": 4.565,
+    "vapor_pressure_kpa": 0.4,
+    "flag": 0
+  },
+  {
+    "name": "Benzene",
+    "formula": "C6 H6",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 879,
+    "viscosity_cp": 0.654,
+    "vapor_pressure_kpa": 10.1,
+    "flag": 0
+  },
+  {
+    "name": "Benzyl alcohol",
+    "formula": "C7 H8 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1043.956,
+    "viscosity_cp": 6.529,
+    "vapor_pressure_kpa": 0.008,
+    "flag": 0
+  },
+  {
+    "name": "Bromine",
+    "formula": "Br",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 3100,
+    "viscosity_cp": 0.997,
+    "vapor_pressure_kpa": 23.33,
+    "flag": 0
+  },
+  {
+    "name": "Butanoic acid",
+    "formula": "C4 H8 O2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 957.878,
+    "viscosity_cp": 1.554,
+    "vapor_pressure_kpa": 0.67,
+    "flag": 0
+  },
+  {
+    "name": "Butyl acetate",
+    "formula": "C6 H12 O2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 881.366,
+    "viscosity_cp": 0.737,
+    "vapor_pressure_kpa": 1.84,
+    "flag": 0
+  },
+  {
+    "name": "Butyl alcohol (1-butanol)",
+    "formula": "C4 H10 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 811.036,
+    "viscosity_cp": 2.971,
+    "vapor_pressure_kpa": 0.62,
+    "flag": 0
+  },
+  {
+    "name": "Butylbenzene",
+    "formula": "C10 H14",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 859.973,
+    "viscosity_cp": 1.025,
+    "vapor_pressure_kpa": 1.37,
+    "flag": 0
+  },
+  {
+    "name": "sec-Butyl alcohol (2-butanol)",
+    "formula": "C4 H10 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 800.261,
+    "viscosity_cp": 3.869,
+    "vapor_pressure_kpa": 1.606,
+    "flag": 0
+  },
+  {
+    "name": "Carbon disulphide",
+    "formula": "C S2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1293,
+    "viscosity_cp": 0.366,
+    "vapor_pressure_kpa": 14,
+    "flag": 0
+  },
+  {
+    "name": "Carbon tetrachloride",
+    "formula": "C Cl4",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1632,
+    "viscosity_cp": 0.979,
+    "vapor_pressure_kpa": 12,
+    "flag": 0
+  },
+  {
+    "name": "Castor oil",
+    "formula": "N/A",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 970,
+    "viscosity_cp": 873,
+    "vapor_pressure_kpa": 0,
+    "flag": 0
+  },
+  {
+    "name": "Chloroform",
+    "formula": "C H Cl3",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1490,
+    "viscosity_cp": 0.567,
+    "vapor_pressure_kpa": 21.198,
+    "flag": 0
+  },
+  {
+    "name": "Coconut oil",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 911,
+    "viscosity_cp": 80,
+    "vapor_pressure_kpa": 0,
+    "flag": 0
+  },
+  {
+    "name": "Corn oil",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 922,
+    "viscosity_cp": 71.4,
+    "vapor_pressure_kpa": 0.0001,
+    "flag": 0
+  },
+  {
+    "name": "Cottonseed oil",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 930,
+    "viscosity_cp": 60,
+    "vapor_pressure_kpa": 0.689,
+    "flag": 0
+  },
+  {
+    "name": "Cyclohexane",
+    "formula": "C6 H12",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 778.63,
+    "viscosity_cp": 0.962,
+    "vapor_pressure_kpa": 10.526,
+    "flag": 0
+  },
+  {
+    "name": "Decane",
+    "formula": "C10 H22",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 730.41,
+    "viscosity_cp": 0.913,
+    "vapor_pressure_kpa": 0.17,
+    "flag": 0
+  },
+  {
+    "name": "Dodecane",
+    "formula": "C12 H26",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 749.44,
+    "viscosity_cp": 1.489,
+    "vapor_pressure_kpa": 0.04,
+    "flag": 0
+  },
+  {
+    "name": "Ether  diethyl",
+    "formula": "C4 H10 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 714,
+    "viscosity_cp": 0.242,
+    "vapor_pressure_kpa": 55.075,
+    "flag": 0
+  },
+  {
+    "name": "Ethyl alcohol (Ethanol)",
+    "formula": "C2 H6 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 789,
+    "viscosity_cp": 1.19,
+    "vapor_pressure_kpa": 7.9,
+    "flag": 0
+  },
+  {
+    "name": "Gasoline (typical)",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 719,
+    "viscosity_cp": 0.292,
+    "vapor_pressure_kpa": 55.1,
+    "flag": 0
+  },
+  {
+    "name": "Glycerol",
+    "formula": "C3 H8 O2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1262,
+    "viscosity_cp": 1495,
+    "vapor_pressure_kpa": 0,
+    "flag": 0
+  },
+  {
+    "name": "Heptane",
+    "formula": "C7 H16",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 683.82,
+    "viscosity_cp": 0.411,
+    "vapor_pressure_kpa": 5.553,
+    "flag": 0
+  },
+  {
+    "name": "Hexane",
+    "formula": "C6 H14",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 659.36,
+    "viscosity_cp": 0.312,
+    "vapor_pressure_kpa": 23.998,
+    "flag": 0
+  },
+  {
+    "name": "Isohexane",
+    "formula": "C6 H14",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 653.18,
+    "viscosity_cp": 0.286,
+    "vapor_pressure_kpa": 41.35,
+    "flag": 0
+  },
+  {
+    "name": "Isopentane",
+    "formula": "C5 H12",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 620.06,
+    "viscosity_cp": 0.228,
+    "vapor_pressure_kpa": 79.327,
+    "flag": 0
+  },
+  {
+    "name": "Linseed oil",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 925,
+    "viscosity_cp": 43.5,
+    "vapor_pressure_kpa": 0,
+    "flag": 0
+  },
+  {
+    "name": "Mercury",
+    "formula": "Hg",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 13546,
+    "viscosity_cp": 1.559,
+    "vapor_pressure_kpa": 0.000011,
+    "flag": 0
+  },
+  {
+    "name": "Methyl alcohol (Methanol)",
+    "formula": "C H4 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 791,
+    "viscosity_cp": 0.594,
+    "vapor_pressure_kpa": 12.93,
+    "flag": 0
+  },
+  {
+    "name": "Nitrobenzene",
+    "formula": "C6 H5 N O2",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1175,
+    "viscosity_cp": 2.052,
+    "vapor_pressure_kpa": 0.02,
+    "flag": 0
+  },
+  {
+    "name": "Nonane",
+    "formula": "C9 H20",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 718.03,
+    "viscosity_cp": 0.698,
+    "vapor_pressure_kpa": 0.444,
+    "flag": 0
+  },
+  {
+    "name": "Octane",
+    "formula": "C8 H18",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 702.29,
+    "viscosity_cp": 0.542,
+    "vapor_pressure_kpa": 1.333,
+    "flag": 0
+  },
+  {
+    "name": "Olive oil",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 920,
+    "viscosity_cp": 83.676,
+    "vapor_pressure_kpa": 0,
+    "flag": 0
+  },
+  {
+    "name": "Pentane",
+    "formula": "C5 H12",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 625.75,
+    "viscosity_cp": 0.228,
+    "vapor_pressure_kpa": 56.795,
+    "flag": 0
+  },
+  {
+    "name": "Phenol",
+    "formula": "C6 H6 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1073,
+    "viscosity_cp": 12.74,
+    "vapor_pressure_kpa": 0.029,
+    "flag": 0
+  },
+  {
+    "name": "SAE 10W engine oil",
+    "formula": "N/A",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 877,
+    "viscosity_cp": 34.2,
+    "vapor_pressure_kpa": 0.1,
+    "flag": 0
+  },
+  {
+    "name": "SAE 10W-30 engine oil",
+    "formula": "N/A",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 869,
+    "viscosity_cp": 67.8,
+    "vapor_pressure_kpa": 0.1,
+    "flag": 0
+  },
+  {
+    "name": "SAE 15W-30 engine oil",
+    "formula": "N/A",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 873,
+    "viscosity_cp": 96,
+    "vapor_pressure_kpa": 0.1,
+    "flag": 0
+  },
+  {
+    "name": "SAE 30 engine oil",
+    "formula": "N/A",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 888,
+    "viscosity_cp": 90.6,
+    "vapor_pressure_kpa": 0.1,
+    "flag": 0
+  },
+  {
+    "name": "SAE 40 engine oil",
+    "formula": "N/A",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 890,
+    "viscosity_cp": 121.9,
+    "vapor_pressure_kpa": 0.1,
+    "flag": 0
+  },
+  {
+    "name": "SAE 50 engine oil",
+    "formula": "N/A",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 894,
+    "viscosity_cp": 181.5,
+    "vapor_pressure_kpa": 0.1,
+    "flag": 0
+  },
+  {
+    "name": "SAE 5W-40 synthetic oil",
+    "formula": "N/A",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 868,
+    "viscosity_cp": 83.8,
+    "vapor_pressure_kpa": 0.1,
+    "flag": 0
+  },
+  {
+    "name": "SAE 15W-40 multigrade oil",
+    "formula": "N/A",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 881,
+    "viscosity_cp": 110.1,
+    "vapor_pressure_kpa": 0.1,
+    "flag": 0
+  },
+  {
+    "name": "Sunflower oil",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 920,
+    "viscosity_cp": 64.073,
+    "vapor_pressure_kpa": 0,
+    "flag": 0
+  },
+  {
+    "name": "Tetrabromoethane",
+    "formula": "C2H2 Br4",
+    "temperature_k": 290,
+    "pressure_kpa": 0,
+    "density": 2964,
+    "viscosity_cp": 12.328,
+    "vapor_pressure_kpa": 0.01,
+    "flag": 0
+  },
+  {
+    "name": "Toluene (Methylbenzene)",
+    "formula": "C7 H8",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 867,
+    "viscosity_cp": 0.585,
+    "vapor_pressure_kpa": 2.914,
+    "flag": 0
+  },
+  {
+    "name": "Turpentine",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 870,
+    "viscosity_cp": 1.49,
+    "vapor_pressure_kpa": 0.25,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 273.15,
+    "pressure_kpa": 0,
+    "density": 1000,
+    "viscosity_cp": 1.792,
+    "vapor_pressure_kpa": 0.611,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 278.15,
+    "pressure_kpa": 0,
+    "density": 1000,
+    "viscosity_cp": 1.518,
+    "vapor_pressure_kpa": 0.873,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 283.15,
+    "pressure_kpa": 0,
+    "density": 1000,
+    "viscosity_cp": 1.306,
+    "vapor_pressure_kpa": 1.228,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 288.15,
+    "pressure_kpa": 0,
+    "density": 999,
+    "viscosity_cp": 1.138,
+    "vapor_pressure_kpa": 1.706,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 998,
+    "viscosity_cp": 1.002,
+    "vapor_pressure_kpa": 2.339,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 298.15,
+    "pressure_kpa": 0,
+    "density": 997,
+    "viscosity_cp": 0.89,
+    "vapor_pressure_kpa": 3.17,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 303.15,
+    "pressure_kpa": 0,
+    "density": 996,
+    "viscosity_cp": 0.797,
+    "vapor_pressure_kpa": 4.247,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 308.15,
+    "pressure_kpa": 0,
+    "density": 994,
+    "viscosity_cp": 0.719,
+    "vapor_pressure_kpa": 5.629,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 313.15,
+    "pressure_kpa": 0,
+    "density": 992,
+    "viscosity_cp": 0.653,
+    "vapor_pressure_kpa": 7.384,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 318.15,
+    "pressure_kpa": 0,
+    "density": 990,
+    "viscosity_cp": 0.596,
+    "vapor_pressure_kpa": 9.594,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 323.15,
+    "pressure_kpa": 0,
+    "density": 988,
+    "viscosity_cp": 0.547,
+    "vapor_pressure_kpa": 12.351,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 328.15,
+    "pressure_kpa": 0,
+    "density": 986,
+    "viscosity_cp": 0.504,
+    "vapor_pressure_kpa": 15.761,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 333.15,
+    "pressure_kpa": 0,
+    "density": 984,
+    "viscosity_cp": 0.466,
+    "vapor_pressure_kpa": 19.946,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 338.15,
+    "pressure_kpa": 0,
+    "density": 981,
+    "viscosity_cp": 0.433,
+    "vapor_pressure_kpa": 25.041,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 343.15,
+    "pressure_kpa": 0,
+    "density": 978,
+    "viscosity_cp": 0.404,
+    "vapor_pressure_kpa": 31.201,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 348.15,
+    "pressure_kpa": 0,
+    "density": 975,
+    "viscosity_cp": 0.378,
+    "vapor_pressure_kpa": 38.595,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 353.15,
+    "pressure_kpa": 0,
+    "density": 971,
+    "viscosity_cp": 0.354,
+    "vapor_pressure_kpa": 47.415,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 358.15,
+    "pressure_kpa": 0,
+    "density": 968,
+    "viscosity_cp": 0.333,
+    "vapor_pressure_kpa": 57.867,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 363.15,
+    "pressure_kpa": 0,
+    "density": 965,
+    "viscosity_cp": 0.314,
+    "vapor_pressure_kpa": 70.182,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 368.15,
+    "pressure_kpa": 0,
+    "density": 962,
+    "viscosity_cp": 0.297,
+    "vapor_pressure_kpa": 84.609,
+    "flag": 0
+  },
+  {
+    "name": "Water",
+    "formula": "H2 O",
+    "temperature_k": 373.15,
+    "pressure_kpa": 0,
+    "density": 958,
+    "viscosity_cp": 0.282,
+    "vapor_pressure_kpa": 101.325,
+    "flag": 0
+  },
+  {
+    "name": "Water sea",
+    "formula": "N/A",
+    "temperature_k": 283.15,
+    "pressure_kpa": 0,
+    "density": 1030,
+    "viscosity_cp": 1.346,
+    "vapor_pressure_kpa": 1.3,
+    "flag": 0
+  },
+  {
+    "name": "Water sea",
+    "formula": "N/A",
+    "temperature_k": 293.15,
+    "pressure_kpa": 0,
+    "density": 1028,
+    "viscosity_cp": 1.07,
+    "vapor_pressure_kpa": 2.34,
+    "flag": 0
+  },
+  {
+    "name": "{Ammonia}",
+    "formula": "N H3",
+    "temperature_k": 273.15,
+    "pressure_kpa": 5,
+    "density": 638.69,
+    "viscosity_cp": 0.17,
+    "vapor_pressure_kpa": 425,
+    "flag": 0
+  },
+  {
+    "name": "{Ammonia}",
+    "formula": "N H3",
+    "temperature_k": 273.15,
+    "pressure_kpa": 10,
+    "density": 639.04,
+    "viscosity_cp": 0.171,
+    "vapor_pressure_kpa": 425,
+    "flag": 0
+  },
+  {
+    "name": "{Ammonia}",
+    "formula": "N H3",
+    "temperature_k": 283.15,
+    "pressure_kpa": 10,
+    "density": 625.02,
+    "viscosity_cp": 0.153,
+    "vapor_pressure_kpa": 600,
+    "flag": 0
+  },
+  {
+    "name": "{Ammonia}",
+    "formula": "N H3",
+    "temperature_k": 293.15,
+    "pressure_kpa": 10,
+    "density": 610.42,
+    "viscosity_cp": 0.139,
+    "vapor_pressure_kpa": 840,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 273.15,
+    "pressure_kpa": 5,
+    "density": 601.38,
+    "viscosity_cp": 0.204,
+    "vapor_pressure_kpa": 105,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 283.15,
+    "pressure_kpa": 5,
+    "density": 590.49,
+    "viscosity_cp": 0.184,
+    "vapor_pressure_kpa": 150,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 293.15,
+    "pressure_kpa": 5,
+    "density": 579.23,
+    "viscosity_cp": 0.167,
+    "vapor_pressure_kpa": 200,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 303.15,
+    "pressure_kpa": 5,
+    "density": 567.56,
+    "viscosity_cp": 0.152,
+    "vapor_pressure_kpa": 265,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 313.15,
+    "pressure_kpa": 5,
+    "density": 555.39,
+    "viscosity_cp": 0.138,
+    "vapor_pressure_kpa": 370,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 323.15,
+    "pressure_kpa": 5,
+    "density": 542.6,
+    "viscosity_cp": 0.126,
+    "vapor_pressure_kpa": 480,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 273.15,
+    "pressure_kpa": 10,
+    "density": 602.03,
+    "viscosity_cp": 0.205,
+    "vapor_pressure_kpa": 105,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 283.15,
+    "pressure_kpa": 10,
+    "density": 591.21,
+    "viscosity_cp": 0.185,
+    "vapor_pressure_kpa": 150,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 293.15,
+    "pressure_kpa": 10,
+    "density": 580.04,
+    "viscosity_cp": 0.168,
+    "vapor_pressure_kpa": 200,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 303.15,
+    "pressure_kpa": 10,
+    "density": 568.48,
+    "viscosity_cp": 0.153,
+    "vapor_pressure_kpa": 265,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 313.15,
+    "pressure_kpa": 10,
+    "density": 556.43,
+    "viscosity_cp": 0.139,
+    "vapor_pressure_kpa": 370,
+    "flag": 0
+  },
+  {
+    "name": "{Butane}",
+    "formula": "C4 H10",
+    "temperature_k": 323.15,
+    "pressure_kpa": 10,
+    "density": 543.79,
+    "viscosity_cp": 0.127,
+    "vapor_pressure_kpa": 480,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 273.15,
+    "pressure_kpa": 5,
+    "density": 581.26,
+    "viscosity_cp": 0.2,
+    "vapor_pressure_kpa": 105,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 283.15,
+    "pressure_kpa": 5,
+    "density": 569.59,
+    "viscosity_cp": 0.179,
+    "vapor_pressure_kpa": 150,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 293.15,
+    "pressure_kpa": 5,
+    "density": 557.45,
+    "viscosity_cp": 0.16,
+    "vapor_pressure_kpa": 200,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 303.15,
+    "pressure_kpa": 5,
+    "density": 544.76,
+    "viscosity_cp": 0.144,
+    "vapor_pressure_kpa": 265,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 313.15,
+    "pressure_kpa": 5,
+    "density": 531.37,
+    "viscosity_cp": 0.13,
+    "vapor_pressure_kpa": 370,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 273.15,
+    "pressure_kpa": 10,
+    "density": 582.03,
+    "viscosity_cp": 0.201,
+    "vapor_pressure_kpa": 105,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 283.15,
+    "pressure_kpa": 10,
+    "density": 570.45,
+    "viscosity_cp": 0.18,
+    "vapor_pressure_kpa": 150,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 293.15,
+    "pressure_kpa": 10,
+    "density": 558.44,
+    "viscosity_cp": 0.162,
+    "vapor_pressure_kpa": 200,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 303.15,
+    "pressure_kpa": 10,
+    "density": 545.89,
+    "viscosity_cp": 0.145,
+    "vapor_pressure_kpa": 265,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 313.15,
+    "pressure_kpa": 10,
+    "density": 532.69,
+    "viscosity_cp": 0.131,
+    "vapor_pressure_kpa": 370,
+    "flag": 0
+  },
+  {
+    "name": "{Isobutane}",
+    "formula": "C4 H10",
+    "temperature_k": 323.15,
+    "pressure_kpa": 10,
+    "density": 518.67,
+    "viscosity_cp": 0.118,
+    "vapor_pressure_kpa": 480,
+    "flag": 0
+  },
+  {
+    "name": "{Propane}",
+    "formula": "C3 H8",
+    "temperature_k": 273.15,
+    "pressure_kpa": 5,
+    "density": 528.85,
+    "viscosity_cp": 0.126,
+    "vapor_pressure_kpa": 460,
+    "flag": 0
+  },
+  {
+    "name": "{Propane}",
+    "formula": "C3 H8",
+    "temperature_k": 273.15,
+    "pressure_kpa": 10,
+    "density": 529.85,
+    "viscosity_cp": 0.127,
+    "vapor_pressure_kpa": 460,
+    "flag": 0
+  },
+  {
+    "name": "{Propane}",
+    "formula": "C3 H8",
+    "temperature_k": 283.15,
+    "pressure_kpa": 10,
+    "density": 515.82,
+    "viscosity_cp": 0.114,
+    "vapor_pressure_kpa": 670,
+    "flag": 0
+  },
+  {
+    "name": "{Propane}",
+    "formula": "C3 H8",
+    "temperature_k": 293.15,
+    "pressure_kpa": 10,
+    "density": 500.81,
+    "viscosity_cp": 0.103,
+    "vapor_pressure_kpa": 880,
+    "flag": 0
+  },
+  {
+    "name": "{Propane}",
+    "formula": "C3 H8",
+    "temperature_k": 303.15,
+    "pressure_kpa": 10,
+    "density": 484.47,
+    "viscosity_cp": 0.092,
+    "vapor_pressure_kpa": 1180,
+    "flag": 0
+  },
+  {
+    "name": "{Propylene}",
+    "formula": "C3 H6",
+    "temperature_k": 273.15,
+    "pressure_kpa": 5,
+    "density": 546.17,
+    "viscosity_cp": 0.121,
+    "vapor_pressure_kpa": 640,
+    "flag": 0
+  },
+  {
+    "name": "{Propylene}",
+    "formula": "C3 H6",
+    "temperature_k": 273.15,
+    "pressure_kpa": 10,
+    "density": 547.25,
+    "viscosity_cp": 0.122,
+    "vapor_pressure_kpa": 640,
+    "flag": 0
+  },
+  {
+    "name": "{Propylene}",
+    "formula": "C3 H6",
+    "temperature_k": 283.15,
+    "pressure_kpa": 10,
+    "density": 531.76,
+    "viscosity_cp": 0.111,
+    "vapor_pressure_kpa": 880,
+    "flag": 0
+  },
+  {
+    "name": "{Propylene}",
+    "formula": "C3 H6",
+    "temperature_k": 293.15,
+    "pressure_kpa": 10,
+    "density": 515.05,
+    "viscosity_cp": 0.101,
+    "vapor_pressure_kpa": 1200,
+    "flag": 0
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 10,
+    "size_metric": "12 mm",
+    "size_imperial": "3/8\"",
+    "wall_thickness": 0.025,
+    "outer_diameter": 0.5,
+    "weight": 0.145
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 15,
+    "size_metric": "15 mm",
+    "size_imperial": "1/2\"",
+    "wall_thickness": 0.028,
+    "outer_diameter": 0.625,
+    "weight": 0.204
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 20,
+    "size_metric": "20 mm",
+    "size_imperial": "3/4\"",
+    "wall_thickness": 0.032,
+    "outer_diameter": 0.875,
+    "weight": 0.33
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 25,
+    "size_metric": "25 mm",
+    "size_imperial": "1\"",
+    "wall_thickness": 0.035,
+    "outer_diameter": 1.125,
+    "weight": 0.467
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 32,
+    "size_metric": "32 mm",
+    "size_imperial": "1-1/4\"",
+    "wall_thickness": 0.042,
+    "outer_diameter": 1.375,
+    "weight": 0.685
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 40,
+    "size_metric": "40 mm",
+    "size_imperial": "1-1/2\"",
+    "wall_thickness": 0.049,
+    "outer_diameter": 1.625,
+    "weight": 0.945
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 50,
+    "size_metric": "50 mm",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.058,
+    "outer_diameter": 2.125,
+    "weight": 1.466
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 65,
+    "size_metric": "65 mm",
+    "size_imperial": "2-1/2\"",
+    "wall_thickness": 0.065,
+    "outer_diameter": 2.625,
+    "weight": 2.035
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.072,
+    "outer_diameter": 3.125,
+    "weight": 2.689
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 90,
+    "size_metric": "90 mm",
+    "size_imperial": "3-1/2\"",
+    "wall_thickness": 0.083,
+    "outer_diameter": 3.625,
+    "weight": 3.596
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.095,
+    "outer_diameter": 4.125,
+    "weight": 4.683
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 125,
+    "size_metric": "125 mm",
+    "size_imperial": "5\"",
+    "wall_thickness": 0.109,
+    "outer_diameter": 5.125,
+    "weight": 6.687
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.122,
+    "outer_diameter": 6.125,
+    "weight": 8.958
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.17,
+    "outer_diameter": 8.125,
+    "weight": 16.541
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.212,
+    "outer_diameter": 10.125,
+    "weight": 25.588
+  },
+  {
+    "material": "Copper",
+    "schedule": "Type M",
+    "roughness": 0.000059,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 0.254,
+    "outer_diameter": 12.125,
+    "weight": 36.713
+  }
+]

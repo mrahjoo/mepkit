@@ -1,0 +1,90 @@
+[
+  {
+    "material": "Brass",
+    "schedule": "18G",
+    "roughness": 0.000059,
+    "size_id": 10,
+    "size_metric": "9.525 mm OD",
+    "size_imperial": "3/8\" OD",
+    "wall_thickness": 0.048,
+    "outer_diameter": 0.375,
+    "weight": 0.183
+  },
+  {
+    "material": "Brass",
+    "schedule": "18G",
+    "roughness": 0.000059,
+    "size_id": 15,
+    "size_metric": "12.700 mm OD",
+    "size_imperial": "1/2\" OD",
+    "wall_thickness": 0.048,
+    "outer_diameter": 0.5,
+    "weight": 0.254
+  },
+  {
+    "material": "Brass",
+    "schedule": "18G",
+    "roughness": 0.000059,
+    "size_id": 20,
+    "size_metric": "19.050 mm OD",
+    "size_imperial": "3/4\" OD",
+    "wall_thickness": 0.048,
+    "outer_diameter": 0.75,
+    "weight": 0.394
+  },
+  {
+    "material": "Brass",
+    "schedule": "18G",
+    "roughness": 0.000059,
+    "size_id": 22,
+    "size_metric": "22.225 mm OD",
+    "size_imperial": "7/8\" OD",
+    "wall_thickness": 0.048,
+    "outer_diameter": 0.875,
+    "weight": 0.464
+  },
+  {
+    "material": "Brass",
+    "schedule": "18G",
+    "roughness": 0.000059,
+    "size_id": 25,
+    "size_metric": "25.400 mm OD",
+    "size_imperial": "1\" OD",
+    "wall_thickness": 0.048,
+    "outer_diameter": 1,
+    "weight": 0.534
+  },
+  {
+    "material": "Brass",
+    "schedule": "18G",
+    "roughness": 0.000059,
+    "size_id": 32,
+    "size_metric": "31.750 mm OD",
+    "size_imperial": "1-1/4\" OD",
+    "wall_thickness": 0.048,
+    "outer_diameter": 1.25,
+    "weight": 0.674
+  },
+  {
+    "material": "Brass",
+    "schedule": "18G",
+    "roughness": 0.000059,
+    "size_id": 40,
+    "size_metric": "38.100 mm OD",
+    "size_imperial": "1-1/2\" OD",
+    "wall_thickness": 0.048,
+    "outer_diameter": 1.5,
+    "weight": 0.814
+  },
+  {
+    "material": "Brass",
+    "schedule": "18G",
+    "roughness": 0.000059,
+    "size_id": 50,
+    "size_metric": "50.800 mm OD",
+    "size_imperial": "2\" OD",
+    "wall_thickness": 0.048,
+    "outer_diameter": 2,
+    "weight": 1.095
+  }
+]

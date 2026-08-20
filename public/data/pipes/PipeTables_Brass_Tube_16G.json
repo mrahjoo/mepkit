@@ -1,0 +1,79 @@
+[
+  {
+    "material": "Brass",
+    "schedule": "16G",
+    "roughness": 0.000059,
+    "size_id": 20,
+    "size_metric": "19.05 mm OD",
+    "size_imperial": "3/4\" OD",
+    "wall_thickness": 0.064,
+    "outer_diameter": 0.75,
+    "weight": 0.513
+  },
+  {
+    "material": "Brass",
+    "schedule": "16G",
+    "roughness": 0.000059,
+    "size_id": 25,
+    "size_metric": "25.40 mm OD",
+    "size_imperial": "1\" OD",
+    "wall_thickness": 0.064,
+    "outer_diameter": 1,
+    "weight": 0.7
+  },
+  {
+    "material": "Brass",
+    "schedule": "16G",
+    "roughness": 0.000059,
+    "size_id": 50,
+    "size_metric": "50.80 mm OD",
+    "size_imperial": "2\" OD",
+    "wall_thickness": 0.064,
+    "outer_diameter": 2,
+    "weight": 1.448
+  },
+  {
+    "material": "Brass",
+    "schedule": "16G",
+    "roughness": 0.000059,
+    "size_id": 65,
+    "size_metric": "63.50 mm OD",
+    "size_imperial": "2-1/2\" OD",
+    "wall_thickness": 0.064,
+    "outer_diameter": 2.5,
+    "weight": 1.822
+  },
+  {
+    "material": "Brass",
+    "schedule": "16G",
+    "roughness": 0.000059,
+    "size_id": 80,
+    "size_metric": "76.20 mm OD",
+    "size_imperial": "3\" OD",
+    "wall_thickness": 0.064,
+    "outer_diameter": 3,
+    "weight": 2.196
+  },
+  {
+    "material": "Brass",
+    "schedule": "16G",
+    "roughness": 0.000059,
+    "size_id": 90,
+    "size_metric": "88.90 mm OD",
+    "size_imperial": "3-1/2\" OD",
+    "wall_thickness": 0.064,
+    "outer_diameter": 3.5,
+    "weight": 2.57
+  },
+  {
+    "material": "Brass",
+    "schedule": "16G",
+    "roughness": 0.000059,
+    "size_id": 100,
+    "size_metric": "101.60 mm OD",
+    "size_imperial": "4\" OD",
+    "wall_thickness": 0.064,
+    "outer_diameter": 4,
+    "weight": 2.944
+  }
+]

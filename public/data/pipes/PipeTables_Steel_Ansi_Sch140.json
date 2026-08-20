@@ -1,0 +1,101 @@
+[
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.812,
+    "outer_diameter": 8.625,
+    "weight": 67.757
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 1,
+    "outer_diameter": 10.75,
+    "weight": 104.132
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 1.125,
+    "outer_diameter": 12.75,
+    "weight": 139.676
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 1.25,
+    "outer_diameter": 14,
+    "weight": 170.215
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 1.438,
+    "outer_diameter": 16,
+    "weight": 223.644
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 450,
+    "size_metric": "450 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 1.563,
+    "outer_diameter": 18,
+    "weight": 274.384
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "20\"",
+    "wall_thickness": 1.75,
+    "outer_diameter": 20,
+    "weight": 341.098
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 550,
+    "size_metric": "550 mm",
+    "size_imperial": "22\"",
+    "wall_thickness": 1.875,
+    "outer_diameter": 22,
+    "weight": 403
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 140",
+    "roughness": 0.001811,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 2.063,
+    "outer_diameter": 24,
+    "weight": 483.342
+  }
+]

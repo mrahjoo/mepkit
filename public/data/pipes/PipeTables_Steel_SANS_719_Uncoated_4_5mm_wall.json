@@ -1,0 +1,57 @@
+[
+  {
+    "material": "Steel (SANS 719) Uncoated",
+    "schedule": "4.5mm Wall",
+    "roughness": 0.001811,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.177,
+    "outer_diameter": 8.625,
+    "weight": 16.732
+  },
+  {
+    "material": "Steel (SANS 719) Uncoated",
+    "schedule": "4.5mm Wall",
+    "roughness": 0.001811,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.177,
+    "outer_diameter": 10.75,
+    "weight": 20.965
+  },
+  {
+    "material": "Steel (SANS 719) Uncoated",
+    "schedule": "4.5mm Wall",
+    "roughness": 0.001811,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 0.177,
+    "outer_diameter": 12.75,
+    "weight": 24.93
+  },
+  {
+    "material": "Steel (SANS 719) Uncoated",
+    "schedule": "4.5mm Wall",
+    "roughness": 0.001811,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 0.177,
+    "outer_diameter": 14,
+    "weight": 27.349
+  },
+  {
+    "material": "Steel (SANS 719) Uncoated",
+    "schedule": "4.5mm Wall",
+    "roughness": 0.001811,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 0.177,
+    "outer_diameter": 16,
+    "weight": 31.314
+  }
+]

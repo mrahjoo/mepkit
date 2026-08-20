@@ -1,0 +1,57 @@
+[
+  {
+    "material": "PVC (Iron pipe size)",
+    "schedule": "SDR 13.5 (315 psi)",
+    "roughness": 0.000197,
+    "size_id": 15,
+    "size_metric": "15 mm",
+    "size_imperial": "1/2\"",
+    "wall_thickness": 0.062,
+    "outer_diameter": 0.84,
+    "weight": 0.099
+  },
+  {
+    "material": "PVC (Iron pipe size)",
+    "schedule": "SDR 13.5 (315 psi)",
+    "roughness": 0.000197,
+    "size_id": 50,
+    "size_metric": "50 mm",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.176,
+    "outer_diameter": 2.375,
+    "weight": 0.792
+  },
+  {
+    "material": "PVC (Iron pipe size)",
+    "schedule": "SDR 13.5 (315 psi)",
+    "roughness": 0.000197,
+    "size_id": 65,
+    "size_metric": "65 mm",
+    "size_imperial": "2-1/2\"",
+    "wall_thickness": 0.213,
+    "outer_diameter": 2.875,
+    "weight": 1.155
+  },
+  {
+    "material": "PVC (Iron pipe size)",
+    "schedule": "SDR 13.5 (315 psi)",
+    "roughness": 0.000197,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.259,
+    "outer_diameter": 3.5,
+    "weight": 1.702
+  },
+  {
+    "material": "PVC (Iron pipe size)",
+    "schedule": "SDR 13.5 (315 psi)",
+    "roughness": 0.000197,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.333,
+    "outer_diameter": 4.5,
+    "weight": 2.814
+  }
+]

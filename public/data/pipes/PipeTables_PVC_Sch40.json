@@ -1,0 +1,211 @@
+[
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 10,
+    "size_metric": "10 mm",
+    "size_imperial": "3/8\"",
+    "wall_thickness": 0.091,
+    "outer_diameter": 0.675,
+    "weight": 0.109
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 15,
+    "size_metric": "15 mm",
+    "size_imperial": "1/2\"",
+    "wall_thickness": 0.109,
+    "outer_diameter": 0.84,
+    "weight": 0.163
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 20,
+    "size_metric": "20 mm",
+    "size_imperial": "3/4\"",
+    "wall_thickness": 0.113,
+    "outer_diameter": 1.05,
+    "weight": 0.217
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 25,
+    "size_metric": "25 mm",
+    "size_imperial": "1\"",
+    "wall_thickness": 0.133,
+    "outer_diameter": 1.315,
+    "weight": 0.322
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 32,
+    "size_metric": "32 mm",
+    "size_imperial": "1-1/4\"",
+    "wall_thickness": 0.14,
+    "outer_diameter": 1.66,
+    "weight": 0.435
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 40,
+    "size_metric": "40 mm",
+    "size_imperial": "1-1/2\"",
+    "wall_thickness": 0.145,
+    "outer_diameter": 1.9,
+    "weight": 0.52
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 50,
+    "size_metric": "50 mm",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.154,
+    "outer_diameter": 2.375,
+    "weight": 0.7
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 65,
+    "size_metric": "65 mm",
+    "size_imperial": "2-1/2\"",
+    "wall_thickness": 0.203,
+    "outer_diameter": 2.875,
+    "weight": 1.109
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.216,
+    "outer_diameter": 3.5,
+    "weight": 1.451
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.237,
+    "outer_diameter": 4.5,
+    "weight": 2.066
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.28,
+    "outer_diameter": 6.625,
+    "weight": 3.634
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.322,
+    "outer_diameter": 8.625,
+    "weight": 5.468
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.365,
+    "outer_diameter": 10.75,
+    "weight": 7.752
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 0.406,
+    "outer_diameter": 12.75,
+    "weight": 10.25
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 0.437,
+    "outer_diameter": 14,
+    "weight": 12.122
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 0.5,
+    "outer_diameter": 16,
+    "weight": 15.85
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 450,
+    "size_metric": "450 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 0.562,
+    "outer_diameter": 18,
+    "weight": 20.043
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "20\"",
+    "wall_thickness": 0.593,
+    "outer_diameter": 20,
+    "weight": 23.537
+  },
+  {
+    "material": "PVC (ANSI)",
+    "schedule": "Sch. 40",
+    "roughness": 0.000197,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 0.687,
+    "outer_diameter": 24,
+    "weight": 32.756
+  }
+]

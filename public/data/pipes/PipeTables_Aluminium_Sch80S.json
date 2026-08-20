@@ -1,0 +1,189 @@
+[
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 8,
+    "size_metric": "8 mm",
+    "size_imperial": "1/4\"",
+    "wall_thickness": 0.119,
+    "outer_diameter": 0.54,
+    "weight": 0.186
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 10,
+    "size_metric": "10 mm",
+    "size_imperial": "3/8\"",
+    "wall_thickness": 0.126,
+    "outer_diameter": 0.675,
+    "weight": 0.257
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 15,
+    "size_metric": "15 mm",
+    "size_imperial": "1/2\"",
+    "wall_thickness": 0.147,
+    "outer_diameter": 0.84,
+    "weight": 0.378
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 20,
+    "size_metric": "20 mm",
+    "size_imperial": "3/4\"",
+    "wall_thickness": 0.154,
+    "outer_diameter": 1.05,
+    "weight": 0.512
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 25,
+    "size_metric": "25 mm",
+    "size_imperial": "1\"",
+    "wall_thickness": 0.179,
+    "outer_diameter": 1.315,
+    "weight": 0.755
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 32,
+    "size_metric": "32 mm",
+    "size_imperial": "1-1/4\"",
+    "wall_thickness": 0.191,
+    "outer_diameter": 1.66,
+    "weight": 1.041
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 40,
+    "size_metric": "40 mm",
+    "size_imperial": "1-1/2\"",
+    "wall_thickness": 0.2,
+    "outer_diameter": 1.9,
+    "weight": 1.262
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 50,
+    "size_metric": "50 mm",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.218,
+    "outer_diameter": 2.375,
+    "weight": 1.746
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 65,
+    "size_metric": "65 mm",
+    "size_imperial": "2-1/2\"",
+    "wall_thickness": 0.276,
+    "outer_diameter": 2.875,
+    "weight": 2.662
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.3,
+    "outer_diameter": 3.5,
+    "weight": 3.563
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 90,
+    "size_metric": "90 mm",
+    "size_imperial": "3-1/2\"",
+    "wall_thickness": 0.318,
+    "outer_diameter": 4,
+    "weight": 4.347
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.337,
+    "outer_diameter": 4.5,
+    "weight": 5.207
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 125,
+    "size_metric": "125 mm",
+    "size_imperial": "5\"",
+    "wall_thickness": 0.375,
+    "outer_diameter": 5.563,
+    "weight": 7.216
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.432,
+    "outer_diameter": 6.625,
+    "weight": 9.926
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.5,
+    "outer_diameter": 8.625,
+    "weight": 15.076
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.5,
+    "outer_diameter": 10.75,
+    "weight": 19.019
+  },
+  {
+    "material": "Aluminium",
+    "schedule": "Sch.  80S",
+    "roughness": 0.000059,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 0.5,
+    "outer_diameter": 12.75,
+    "weight": 22.73
+  }
+]

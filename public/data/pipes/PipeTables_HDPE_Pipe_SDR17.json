@@ -1,0 +1,222 @@
+[
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 50,
+    "size_metric": "50 mm",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.148,
+    "outer_diameter": 2.375,
+    "weight": 0.43
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.218,
+    "outer_diameter": 3.5,
+    "weight": 0.93
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.281,
+    "outer_diameter": 4.5,
+    "weight": 1.54
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 125,
+    "size_metric": "125 mm",
+    "size_imperial": "5\"",
+    "wall_thickness": 0.347,
+    "outer_diameter": 5.5625,
+    "weight": 2.37
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.413,
+    "outer_diameter": 6.625,
+    "weight": 3.34
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.537,
+    "outer_diameter": 8.625,
+    "weight": 5.65
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.67,
+    "outer_diameter": 10.75,
+    "weight": 8.78
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 0.795,
+    "outer_diameter": 12.75,
+    "weight": 12.36
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 0.873,
+    "outer_diameter": 14,
+    "weight": 14.91
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 0.997,
+    "outer_diameter": 16,
+    "weight": 19.46
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 450,
+    "size_metric": "450 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 1.123,
+    "outer_diameter": 18,
+    "weight": 24.64
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "20\"",
+    "wall_thickness": 1.247,
+    "outer_diameter": 20,
+    "weight": 30.41
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 550,
+    "size_metric": "550 mm",
+    "size_imperial": "22\"",
+    "wall_thickness": 1.372,
+    "outer_diameter": 22,
+    "weight": 36.8
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 1.497,
+    "outer_diameter": 24,
+    "weight": 43.81
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 650,
+    "size_metric": "650 mm",
+    "size_imperial": "26\"",
+    "wall_thickness": 1.621,
+    "outer_diameter": 26,
+    "weight": 51.39
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 700,
+    "size_metric": "700 mm",
+    "size_imperial": "28\"",
+    "wall_thickness": 1.746,
+    "outer_diameter": 28,
+    "weight": 59.62
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 750,
+    "size_metric": "750 mm",
+    "size_imperial": "30\"",
+    "wall_thickness": 1.871,
+    "outer_diameter": 30,
+    "weight": 68.45
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 800,
+    "size_metric": "800 mm",
+    "size_imperial": "32\"",
+    "wall_thickness": 1.995,
+    "outer_diameter": 32,
+    "weight": 77.86
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 900,
+    "size_metric": "900 mm",
+    "size_imperial": "36\"",
+    "wall_thickness": 2.245,
+    "outer_diameter": 36,
+    "weight": 98.57
+  },
+  {
+    "material": "HDPE",
+    "schedule": "SDR 17",
+    "roughness": 0.00006,
+    "size_id": 1050,
+    "size_metric": "1050 mm",
+    "size_imperial": "42\"",
+    "wall_thickness": 2.618,
+    "outer_diameter": 42,
+    "weight": 134.15
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 0.471,
+    "outer_diameter": 15.3,
+    "weight": 15.14
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 0.535,
+    "outer_diameter": 17.4,
+    "weight": 19.63
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 450,
+    "size_metric": "450 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 0.6,
+    "outer_diameter": 19.5,
+    "weight": 24.75
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "20\"",
+    "wall_thickness": 0.665,
+    "outer_diameter": 21.6,
+    "weight": 30.54
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 0.794,
+    "outer_diameter": 25.8,
+    "weight": 44.11
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 750,
+    "size_metric": "750 mm",
+    "size_imperial": "30\"",
+    "wall_thickness": 0.985,
+    "outer_diameter": 32,
+    "weight": 68.45
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 900,
+    "size_metric": "900 mm",
+    "size_imperial": "36\"",
+    "wall_thickness": 1.178,
+    "outer_diameter": 38.3,
+    "weight": 99.22
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 1050,
+    "size_metric": "1050 mm",
+    "size_imperial": "42\"",
+    "wall_thickness": 1.369,
+    "outer_diameter": 44.5,
+    "weight": 135.49
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 32.5 (125 psi)",
+    "roughness": 0.000197,
+    "size_id": 1200,
+    "size_metric": "1200 mm",
+    "size_imperial": "48\"",
+    "wall_thickness": 1.563,
+    "outer_diameter": 50.8,
+    "weight": 178.49
+  }
+]

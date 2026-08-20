@@ -1,0 +1,145 @@
+[
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 6,
+    "size_metric": "6 mm OD",
+    "size_imperial": "1/4\"",
+    "wall_thickness": 0.032,
+    "outer_diameter": 0.236220472,
+    "weight": 0.08
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 8,
+    "size_metric": "8 mm OD",
+    "size_imperial": "5/16\"",
+    "wall_thickness": 0.032,
+    "outer_diameter": 0.31496063,
+    "weight": 0.11
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 10,
+    "size_metric": "10 mm OD",
+    "size_imperial": "3/8\"",
+    "wall_thickness": 0.032,
+    "outer_diameter": 0.393700784,
+    "weight": 0.141
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 12,
+    "size_metric": "12 mm OD",
+    "size_imperial": "1/2\"",
+    "wall_thickness": 0.032,
+    "outer_diameter": 0.472440945,
+    "weight": 0.17
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 15,
+    "size_metric": "15 mm OD",
+    "size_imperial": "5/8\"",
+    "wall_thickness": 0.039,
+    "outer_diameter": 0.590551181,
+    "weight": 0.265
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 22,
+    "size_metric": "22 mm OD",
+    "size_imperial": "7/8\"",
+    "wall_thickness": 0.047,
+    "outer_diameter": 0.866141732,
+    "weight": 0.473
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 25,
+    "size_metric": "28 mm OD",
+    "size_imperial": "1\"",
+    "wall_thickness": 0.047,
+    "outer_diameter": 1.102362205,
+    "weight": 0.61
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 32,
+    "size_metric": "35 mm OD",
+    "size_imperial": "1-1/4\"",
+    "wall_thickness": 0.059,
+    "outer_diameter": 1.377952756,
+    "weight": 0.953
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 40,
+    "size_metric": "42 mm OD",
+    "size_imperial": "1-1/2\"",
+    "wall_thickness": 0.059,
+    "outer_diameter": 1.653543307,
+    "weight": 1.152
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 50,
+    "size_metric": "54 mm OD",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.079,
+    "outer_diameter": 2.125984252,
+    "weight": 1.972
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 65,
+    "size_metric": "67 mm OD",
+    "size_imperial": "2-1/2\"",
+    "wall_thickness": 0.079,
+    "outer_diameter": 2.637795276,
+    "weight": 2.461
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 80,
+    "size_metric": "76.2 mm OD",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.079,
+    "outer_diameter": 3,
+    "weight": 2.81
+  },
+  {
+    "material": "Copper",
+    "schedule": "Table Y",
+    "roughness": 0.000059,
+    "size_id": 100,
+    "size_metric": "108.1 mm OD",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.079,
+    "outer_diameter": 4.255905512,
+    "weight": 4.018
+  }
+]

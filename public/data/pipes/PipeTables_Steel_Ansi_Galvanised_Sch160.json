@@ -1,0 +1,222 @@
+[
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 15,
+    "size_metric": "15 mm",
+    "size_imperial": "1/2\"",
+    "wall_thickness": 0.193,
+    "outer_diameter": 0.84,
+    "weight": 1.335
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 20,
+    "size_metric": "20 mm",
+    "size_imperial": "3/4\"",
+    "wall_thickness": 0.224,
+    "outer_diameter": 1.05,
+    "weight": 1.978
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 25,
+    "size_metric": "25 mm",
+    "size_imperial": "1\"",
+    "wall_thickness": 0.255,
+    "outer_diameter": 1.315,
+    "weight": 2.89
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 32,
+    "size_metric": "32 mm",
+    "size_imperial": "1-1/4\"",
+    "wall_thickness": 0.255,
+    "outer_diameter": 1.66,
+    "weight": 3.831
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 40,
+    "size_metric": "40 mm",
+    "size_imperial": "1-1/2\"",
+    "wall_thickness": 0.286,
+    "outer_diameter": 1.9,
+    "weight": 4.935
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 50,
+    "size_metric": "50 mm",
+    "size_imperial": "2\"",
+    "wall_thickness": 0.349,
+    "outer_diameter": 2.375,
+    "weight": 7.56
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 65,
+    "size_metric": "65 mm",
+    "size_imperial": "2-1/2\"",
+    "wall_thickness": 0.38,
+    "outer_diameter": 2.875,
+    "weight": 10.137
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 80,
+    "size_metric": "80 mm",
+    "size_imperial": "3\"",
+    "wall_thickness": 0.443,
+    "outer_diameter": 3.5,
+    "weight": 14.479
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.536,
+    "outer_diameter": 4.5,
+    "weight": 22.716
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 125,
+    "size_metric": "125 mm",
+    "size_imperial": "5\"",
+    "wall_thickness": 0.63,
+    "outer_diameter": 5.563,
+    "weight": 33.227
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.724,
+    "outer_diameter": 6.625,
+    "weight": 45.678
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.911,
+    "outer_diameter": 8.625,
+    "weight": 75.135
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 1.13,
+    "outer_diameter": 10.75,
+    "weight": 116.224
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 1.317,
+    "outer_diameter": 12.75,
+    "weight": 160.986
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 1.411,
+    "outer_diameter": 14,
+    "weight": 189.915
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 1.598,
+    "outer_diameter": 16,
+    "weight": 246.02
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 450,
+    "size_metric": "250 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 1.786,
+    "outer_diameter": 18,
+    "weight": 309.366
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "20\"",
+    "wall_thickness": 1.974,
+    "outer_diameter": 20,
+    "weight": 380.133
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 550,
+    "size_metric": "550 mm",
+    "size_imperial": "22\"",
+    "wall_thickness": 2.13,
+    "outer_diameter": 22,
+    "weight": 452.121
+  },
+  {
+    "material": "Steel (ANSI) Galvanised",
+    "schedule": "Sch. 160",
+    "roughness": 0.005906,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 2.348,
+    "outer_diameter": 24,
+    "weight": 543.055
+  }
+]

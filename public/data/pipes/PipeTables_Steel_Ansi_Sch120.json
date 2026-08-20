@@ -1,0 +1,134 @@
+[
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 100,
+    "size_metric": "100 mm",
+    "size_imperial": "4\"",
+    "wall_thickness": 0.438,
+    "outer_diameter": 4.5,
+    "weight": 19.002
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 125,
+    "size_metric": "125 mm",
+    "size_imperial": "5\"",
+    "wall_thickness": 0.5,
+    "outer_diameter": 5.563,
+    "weight": 27.037
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 150,
+    "size_metric": "150 mm",
+    "size_imperial": "6\"",
+    "wall_thickness": 0.562,
+    "outer_diameter": 6.625,
+    "weight": 36.398
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 200,
+    "size_metric": "200 mm",
+    "size_imperial": "8\"",
+    "wall_thickness": 0.719,
+    "outer_diameter": 8.625,
+    "weight": 60.71
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 250,
+    "size_metric": "250 mm",
+    "size_imperial": "10\"",
+    "wall_thickness": 0.844,
+    "outer_diameter": 10.75,
+    "weight": 89.293
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 300,
+    "size_metric": "300 mm",
+    "size_imperial": "12\"",
+    "wall_thickness": 1,
+    "outer_diameter": 12.75,
+    "weight": 125.492
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 1.094,
+    "outer_diameter": 14,
+    "weight": 150.795
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 1.219,
+    "outer_diameter": 16,
+    "weight": 192.436
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 450,
+    "size_metric": "450 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 1.375,
+    "outer_diameter": 18,
+    "weight": 244.142
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "20\"",
+    "wall_thickness": 1.5,
+    "outer_diameter": 20,
+    "weight": 296.374
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 550,
+    "size_metric": "550 mm",
+    "size_imperial": "22\"",
+    "wall_thickness": 1.625,
+    "outer_diameter": 22,
+    "weight": 296.374
+  },
+  {
+    "material": "Steel (ANSI)",
+    "schedule": "Sch. 120",
+    "roughness": 0.001811,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 1.812,
+    "outer_diameter": 24,
+    "weight": 429.392
+  }
+]

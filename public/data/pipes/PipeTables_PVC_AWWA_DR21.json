@@ -1,0 +1,79 @@
+[
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 21 (200 psi)",
+    "roughness": 0.000197,
+    "size_id": 350,
+    "size_metric": "350 mm",
+    "size_imperial": "14\"",
+    "wall_thickness": 0.729,
+    "outer_diameter": 15.3,
+    "weight": 23.07
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 21 (200 psi)",
+    "roughness": 0.000197,
+    "size_id": 400,
+    "size_metric": "400 mm",
+    "size_imperial": "16\"",
+    "wall_thickness": 0.829,
+    "outer_diameter": 17.4,
+    "weight": 30.04
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 21 (200 psi)",
+    "roughness": 0.000197,
+    "size_id": 450,
+    "size_metric": "450 mm",
+    "size_imperial": "18\"",
+    "wall_thickness": 0.929,
+    "outer_diameter": 19.5,
+    "weight": 37.27
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 21 (200 psi)",
+    "roughness": 0.000197,
+    "size_id": 500,
+    "size_metric": "500 mm",
+    "size_imperial": "20\"",
+    "wall_thickness": 1.029,
+    "outer_diameter": 21.6,
+    "weight": 46.71
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 21 (200 psi)",
+    "roughness": 0.000197,
+    "size_id": 600,
+    "size_metric": "600 mm",
+    "size_imperial": "24\"",
+    "wall_thickness": 1.229,
+    "outer_diameter": 25.8,
+    "weight": 67.53
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 21 (200 psi)",
+    "roughness": 0.000197,
+    "size_id": 750,
+    "size_metric": "750 mm",
+    "size_imperial": "30\"",
+    "wall_thickness": 1.524,
+    "outer_diameter": 32,
+    "weight": 103.71
+  },
+  {
+    "material": "PVC (AWWA)",
+    "schedule": "DR 21 (200 psi)",
+    "roughness": 0.000197,
+    "size_id": 900,
+    "size_metric": "900 mm",
+    "size_imperial": "36\"",
+    "wall_thickness": 1.824,
+    "outer_diameter": 38.3,
+    "weight": 152.16
+  }
+]
