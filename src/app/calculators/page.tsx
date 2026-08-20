@@ -33,6 +33,11 @@ export default function CalculatorsCategoryPage() {
       href: '/calculators/decibel-weighting', 
       desc: 'Apply frequency filters to sound pressure measurements and compute logarithmic sums.' 
     },
+    { 
+      title: 'EU Environmental Noise (Lden)', 
+      href: '/calculators/environmental-noise', 
+      desc: 'Calculate cumulative noise exposure (Lden) based on Day, Evening, and Night metrics.' 
+    },
   ];
 
   return (
