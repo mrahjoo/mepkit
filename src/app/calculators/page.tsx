@@ -38,6 +38,11 @@ export default function CalculatorsCategoryPage() {
       href: '/calculators/environmental-noise', 
       desc: 'Calculate cumulative noise exposure (Lden) based on Day, Evening, and Night metrics.' 
     },
+    { 
+      title: 'Fan Noise Power Generation', 
+      href: '/calculators/fan-noise', 
+      desc: 'Estimate fan sound power levels based on motor power, static pressure, and volume.' 
+    },
   ];
 
   return (
