@@ -8,8 +8,8 @@ export const metadata = {
 
 export default function TablesCategoryPage() {
   const categories = [
-    { title: 'Pipe Specifications', href: '/tables/pipes/Aluminium_Sch40', desc: 'Inner dimensions, weights, and thickness for all pipe schedules.' },
-    { title: 'Fluid Properties', href: '/tables/fluids/Water', desc: 'Density, viscosity, and vapor pressure across temperatures.' },
+    { title: 'Pipe Specifications', href: '/tables/pipes', desc: 'Inner dimensions, weights, and thickness for all pipe schedules.' },
+    { title: 'Fluid Properties', href: '/tables/fluids', desc: 'Density, viscosity, and vapor pressure across temperatures.' },
     { title: 'Fittings & Valves', href: '/tables/fittings', desc: 'Friction loss coefficients (K-Factors) for various fittings.' },
     { title: 'Component Library', href: '/components', desc: 'Extensive raw data for flanges, valves, olets, blanks, loops, etc.' },
   ];
