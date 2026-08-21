@@ -5,6 +5,7 @@ import { GlobalBreadcrumbs } from "@/components/navigation/Breadcrumbs";
 import Link from "next/link";
 import { Hexagon } from "lucide-react";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
       </body>
+      <GoogleAnalytics gaId="G-9RJG0NGKJ1" />
     </html>
   );
 }
