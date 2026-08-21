@@ -12,8 +12,27 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "MEPKit | Mechanical, Electrical, and Plumbing Engineering Toolbox",
-  description: "The ultimate reference and toolkit for MEP professionals.",
+  metadataBase: new URL("https://mepkit.com"),
+  title: {
+    template: "%s | MEPKit",
+    default: "MEPKit | Mechanical, Electrical, and Plumbing Engineering Toolbox",
+  },
+  description: "The ultimate reference and toolkit for MEP professionals. Explore calculators, data tables, and interactive tools for fluid dynamics and pipe flow.",
+  keywords: ["MEP", "engineering", "piping", "fluid dynamics", "calculators", "BOM", "CAD", "fittings", "valves", "pressure drop"],
+  authors: [{ name: "MEPKit Team" }],
+  openGraph: {
+    title: "MEPKit | Engineering Toolbox",
+    description: "The ultimate reference and toolkit for MEP professionals.",
+    url: "https://mepkit.com",
+    siteName: "MEPKit",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MEPKit | Engineering Toolbox",
+    description: "The ultimate reference and toolkit for MEP professionals.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
