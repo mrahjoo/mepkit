@@ -1,0 +1,20 @@
+14,2,3,4,5,6,7,8,9,10,11,12,13,14
+NB inch,NB mm,A - F to F,B - Height,C Base to drain,D Base to CL,E Base to Cover,F Bask Removal,Net Basket Removal,Basket Area,vent,drain,kg,Basket removal
+0+1/8,6,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+0+1/4,8,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+0+3/8,10,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+0+1/2,15,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+0+3/4,20,224,333,25,180,213,200,233,241,0+1/4,0+3/4,7.5,Basket removal
+1,25,232,345,28,190,225,200,235,241,0+1/4,0+3/4,14.5,Basket removal
+1+1/4,32,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+1+1/2,40,245,420,35,254,297,275,318,375,0+1/4,0+3/4,21.5,Basket removal
+2,50,321,490,38,314,362,340,388,488,0+1/4,0+3/4,29.5,Basket removal
+2+1/2,65,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+3,80,375,570,40,342,411,375,444,652,0+3/8,0+3/4,49,Basket removal
+3+1/2,90,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+4,100,455,715,47,426,508,450,532,1088,0+3/8,1,92,Basket removal
+5,125,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+6,150,620,1010,95,619,749,630,760,2151,0+1/2,1+1/2,225,Basket removal
+8,200,740,1320,109.5,787,952,800,965,3973,0+1/2,1+1/2,405,Basket removal
+10,250,890,1495,120,908,1103,940,1135,5304,0+1/2,1+1/2,655,Basket removal
+12,300,1050,1570,175,1152,1367,1180,1395,8295,0+1/2,2,700,Basket removal

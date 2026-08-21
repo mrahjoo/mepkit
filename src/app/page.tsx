@@ -24,6 +24,13 @@ export default function Home() {
       color: "border-green-500/20 hover:border-green-500",
     },
     {
+      title: "Interactive Tools",
+      href: "/tools",
+      icon: <Calculator className="w-8 h-8 mb-4 text-orange-500" />,
+      desc: "Advanced engineering tools to build Bill of Materials and simulate pipe networks.",
+      color: "border-orange-500/20 hover:border-orange-500",
+    },
+    {
       title: "Charts & Graphs",
       href: "/charts",
       icon: <LineChart className="w-8 h-8 mb-4 text-purple-500" />,

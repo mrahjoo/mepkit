@@ -1,0 +1,8 @@
+
+<text x="110" y="53" alignment-baseline="middle"text-anchor="left" tspan font-weight=" bold"fill="rgb(0,0,0)" Class= "Title">Header1</tspan></text>
+<text x="110" y="113" alignment-baseline="middle"text-anchor="left" tspan font-weight=" bold"fill="rgb(0,0,0)" Class= "heavy">Header2</tspan></text>
+<text x="110" y="173" alignment-baseline="middle"text-anchor="left" tspan font-weight=" bold"fill="rgb(0,0,0)" Class= "heavy">Header3</tspan></text>	
+<text x="110" y="960" alignment-baseline="middle"text-anchor="left" tspan font-weight=" bold"fill="rgb(0,0,0)" Class= "heavy">Header4</tspan></text>
+<text x="110" y="1020" alignment-baseline="middle"text-anchor="left" tspan font-weight=" bold"fill="rgb(0,0,0)" Class= "heavy">Header5</tspan></text>
+<text x="110" y="1080" alignment-baseline="middle"text-anchor="left" tspan font-weight=" bold"fill="rgb(0,0,0)" Class= "heavy">Header6</tspan></text>	
+<text x="1570" y="1080" alignment-baseline="middle"  text-anchor="end"  font-weight="bold" fill="rgb(0,0,0)" Class= "heavy" >Header7</text> 

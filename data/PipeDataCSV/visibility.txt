@@ -1,0 +1,50 @@
+Public Sub Fxly1_Visibility_ON()
+lnFxly1_1.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_2.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_3.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_4.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_5.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_6.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_7.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_8.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_9.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_10.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_11.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_12.Visibility = Windows.UI.Xaml.Visibility.Visible
+lnFxly1_13.Visibility = Windows.UI.Xaml.Visibility.Visible
+End Sub
+
+
+
+
+
+
+
+
+
+
+Public Sub Fxly1_Visibility_OFF()
+lnFxly1_1.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_2.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_3.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_4.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_5.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_6.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_7.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_8.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_9.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_10.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_11.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_12.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+lnFxly1_13.Visibility = Windows.UI.Xaml.Visibility.Collapsed
+End Sub
+
+
+
+
+
+
+
+
+
+

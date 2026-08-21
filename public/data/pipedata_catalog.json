@@ -1,0 +1,4777 @@
+[
+  {
+    "id": "45elbow10",
+    "category": "elbow",
+    "filename": "45elbow10.json"
+  },
+  {
+    "id": "45elbow100",
+    "category": "elbow",
+    "filename": "45elbow100.json"
+  },
+  {
+    "id": "45elbow10s",
+    "category": "elbow",
+    "filename": "45elbow10s.json"
+  },
+  {
+    "id": "45elbow120",
+    "category": "elbow",
+    "filename": "45elbow120.json"
+  },
+  {
+    "id": "45elbow140",
+    "category": "elbow",
+    "filename": "45elbow140.json"
+  },
+  {
+    "id": "45elbow160",
+    "category": "elbow",
+    "filename": "45elbow160.json"
+  },
+  {
+    "id": "45elbow20",
+    "category": "elbow",
+    "filename": "45elbow20.json"
+  },
+  {
+    "id": "45elbow30",
+    "category": "elbow",
+    "filename": "45elbow30.json"
+  },
+  {
+    "id": "45elbow40",
+    "category": "elbow",
+    "filename": "45elbow40.json"
+  },
+  {
+    "id": "45elbow40s",
+    "category": "elbow",
+    "filename": "45elbow40s.json"
+  },
+  {
+    "id": "45elbow5",
+    "category": "elbow",
+    "filename": "45elbow5.json"
+  },
+  {
+    "id": "45elbow5s",
+    "category": "elbow",
+    "filename": "45elbow5s.json"
+  },
+  {
+    "id": "45elbow60",
+    "category": "elbow",
+    "filename": "45elbow60.json"
+  },
+  {
+    "id": "45elbow80",
+    "category": "elbow",
+    "filename": "45elbow80.json"
+  },
+  {
+    "id": "45elbow80s",
+    "category": "elbow",
+    "filename": "45elbow80s.json"
+  },
+  {
+    "id": "45elbowstd",
+    "category": "elbow",
+    "filename": "45elbowstd.json"
+  },
+  {
+    "id": "45elbowxs",
+    "category": "elbow",
+    "filename": "45elbowxs.json"
+  },
+  {
+    "id": "45elbowxxs",
+    "category": "elbow",
+    "filename": "45elbowxxs.json"
+  },
+  {
+    "id": "45elbow_imperial_10",
+    "category": "elbow",
+    "filename": "45elbow_imperial_10.json"
+  },
+  {
+    "id": "45elbow_imperial_100",
+    "category": "elbow",
+    "filename": "45elbow_imperial_100.json"
+  },
+  {
+    "id": "45elbow_imperial_10s",
+    "category": "elbow",
+    "filename": "45elbow_imperial_10s.json"
+  },
+  {
+    "id": "45elbow_imperial_120",
+    "category": "elbow",
+    "filename": "45elbow_imperial_120.json"
+  },
+  {
+    "id": "45elbow_imperial_140",
+    "category": "elbow",
+    "filename": "45elbow_imperial_140.json"
+  },
+  {
+    "id": "45elbow_imperial_160",
+    "category": "elbow",
+    "filename": "45elbow_imperial_160.json"
+  },
+  {
+    "id": "45elbow_imperial_20",
+    "category": "elbow",
+    "filename": "45elbow_imperial_20.json"
+  },
+  {
+    "id": "45elbow_imperial_30",
+    "category": "elbow",
+    "filename": "45elbow_imperial_30.json"
+  },
+  {
+    "id": "45elbow_imperial_40",
+    "category": "elbow",
+    "filename": "45elbow_imperial_40.json"
+  },
+  {
+    "id": "45elbow_imperial_40s",
+    "category": "elbow",
+    "filename": "45elbow_imperial_40s.json"
+  },
+  {
+    "id": "45elbow_imperial_5",
+    "category": "elbow",
+    "filename": "45elbow_imperial_5.json"
+  },
+  {
+    "id": "45elbow_imperial_5s",
+    "category": "elbow",
+    "filename": "45elbow_imperial_5s.json"
+  },
+  {
+    "id": "45elbow_imperial_60",
+    "category": "elbow",
+    "filename": "45elbow_imperial_60.json"
+  },
+  {
+    "id": "45elbow_imperial_80",
+    "category": "elbow",
+    "filename": "45elbow_imperial_80.json"
+  },
+  {
+    "id": "45elbow_imperial_80s",
+    "category": "elbow",
+    "filename": "45elbow_imperial_80s.json"
+  },
+  {
+    "id": "45elbow_imperial_std",
+    "category": "elbow",
+    "filename": "45elbow_imperial_std.json"
+  },
+  {
+    "id": "45elbow_imperial_xs",
+    "category": "elbow",
+    "filename": "45elbow_imperial_xs.json"
+  },
+  {
+    "id": "45elbow_imperial_xxs",
+    "category": "elbow",
+    "filename": "45elbow_imperial_xxs.json"
+  },
+  {
+    "id": "45elbow_imperial_xxs_",
+    "category": "elbow",
+    "filename": "45elbow_imperial_xxs_.json"
+  },
+  {
+    "id": "90elbow10",
+    "category": "elbow",
+    "filename": "90elbow10.json"
+  },
+  {
+    "id": "90elbow100",
+    "category": "elbow",
+    "filename": "90elbow100.json"
+  },
+  {
+    "id": "90elbow10s",
+    "category": "elbow",
+    "filename": "90elbow10s.json"
+  },
+  {
+    "id": "90elbow120",
+    "category": "elbow",
+    "filename": "90elbow120.json"
+  },
+  {
+    "id": "90elbow140",
+    "category": "elbow",
+    "filename": "90elbow140.json"
+  },
+  {
+    "id": "90elbow160",
+    "category": "elbow",
+    "filename": "90elbow160.json"
+  },
+  {
+    "id": "90elbow20",
+    "category": "elbow",
+    "filename": "90elbow20.json"
+  },
+  {
+    "id": "90elbow30",
+    "category": "elbow",
+    "filename": "90elbow30.json"
+  },
+  {
+    "id": "90elbow40",
+    "category": "elbow",
+    "filename": "90elbow40.json"
+  },
+  {
+    "id": "90elbow40s",
+    "category": "elbow",
+    "filename": "90elbow40s.json"
+  },
+  {
+    "id": "90elbow5",
+    "category": "elbow",
+    "filename": "90elbow5.json"
+  },
+  {
+    "id": "90elbow5s",
+    "category": "elbow",
+    "filename": "90elbow5s.json"
+  },
+  {
+    "id": "90elbow60",
+    "category": "elbow",
+    "filename": "90elbow60.json"
+  },
+  {
+    "id": "90elbow80",
+    "category": "elbow",
+    "filename": "90elbow80.json"
+  },
+  {
+    "id": "90elbow80s",
+    "category": "elbow",
+    "filename": "90elbow80s.json"
+  },
+  {
+    "id": "90elbowstd",
+    "category": "elbow",
+    "filename": "90elbowstd.json"
+  },
+  {
+    "id": "90elbowxs",
+    "category": "elbow",
+    "filename": "90elbowxs.json"
+  },
+  {
+    "id": "90elbowxxs",
+    "category": "elbow",
+    "filename": "90elbowxxs.json"
+  },
+  {
+    "id": "90elbow_imperial_10",
+    "category": "elbow",
+    "filename": "90elbow_imperial_10.json"
+  },
+  {
+    "id": "90elbow_imperial_100",
+    "category": "elbow",
+    "filename": "90elbow_imperial_100.json"
+  },
+  {
+    "id": "90elbow_imperial_10s",
+    "category": "elbow",
+    "filename": "90elbow_imperial_10s.json"
+  },
+  {
+    "id": "90elbow_imperial_120",
+    "category": "elbow",
+    "filename": "90elbow_imperial_120.json"
+  },
+  {
+    "id": "90elbow_imperial_140",
+    "category": "elbow",
+    "filename": "90elbow_imperial_140.json"
+  },
+  {
+    "id": "90elbow_imperial_160",
+    "category": "elbow",
+    "filename": "90elbow_imperial_160.json"
+  },
+  {
+    "id": "90elbow_imperial_20",
+    "category": "elbow",
+    "filename": "90elbow_imperial_20.json"
+  },
+  {
+    "id": "90elbow_imperial_30",
+    "category": "elbow",
+    "filename": "90elbow_imperial_30.json"
+  },
+  {
+    "id": "90elbow_imperial_40",
+    "category": "elbow",
+    "filename": "90elbow_imperial_40.json"
+  },
+  {
+    "id": "90elbow_imperial_40s",
+    "category": "elbow",
+    "filename": "90elbow_imperial_40s.json"
+  },
+  {
+    "id": "90elbow_imperial_5",
+    "category": "elbow",
+    "filename": "90elbow_imperial_5.json"
+  },
+  {
+    "id": "90elbow_imperial_5s",
+    "category": "elbow",
+    "filename": "90elbow_imperial_5s.json"
+  },
+  {
+    "id": "90elbow_imperial_60",
+    "category": "elbow",
+    "filename": "90elbow_imperial_60.json"
+  },
+  {
+    "id": "90elbow_imperial_80",
+    "category": "elbow",
+    "filename": "90elbow_imperial_80.json"
+  },
+  {
+    "id": "90elbow_imperial_80s",
+    "category": "elbow",
+    "filename": "90elbow_imperial_80s.json"
+  },
+  {
+    "id": "90elbow_imperial_std",
+    "category": "elbow",
+    "filename": "90elbow_imperial_std.json"
+  },
+  {
+    "id": "90elbow_imperial_xs",
+    "category": "elbow",
+    "filename": "90elbow_imperial_xs.json"
+  },
+  {
+    "id": "90elbow_imperial_xxs",
+    "category": "elbow",
+    "filename": "90elbow_imperial_xxs.json"
+  },
+  {
+    "id": "90shortradiuselbow10",
+    "category": "elbow",
+    "filename": "90shortradiuselbow10.json"
+  },
+  {
+    "id": "90shortradiuselbow100",
+    "category": "elbow",
+    "filename": "90shortradiuselbow100.json"
+  },
+  {
+    "id": "90shortradiuselbow10s",
+    "category": "elbow",
+    "filename": "90shortradiuselbow10s.json"
+  },
+  {
+    "id": "90shortradiuselbow120",
+    "category": "elbow",
+    "filename": "90shortradiuselbow120.json"
+  },
+  {
+    "id": "90shortradiuselbow140",
+    "category": "elbow",
+    "filename": "90shortradiuselbow140.json"
+  },
+  {
+    "id": "90shortradiuselbow160",
+    "category": "elbow",
+    "filename": "90shortradiuselbow160.json"
+  },
+  {
+    "id": "90shortradiuselbow20",
+    "category": "elbow",
+    "filename": "90shortradiuselbow20.json"
+  },
+  {
+    "id": "90shortradiuselbow30",
+    "category": "elbow",
+    "filename": "90shortradiuselbow30.json"
+  },
+  {
+    "id": "90shortradiuselbow40",
+    "category": "elbow",
+    "filename": "90shortradiuselbow40.json"
+  },
+  {
+    "id": "90shortradiuselbow40s",
+    "category": "elbow",
+    "filename": "90shortradiuselbow40s.json"
+  },
+  {
+    "id": "90shortradiuselbow5",
+    "category": "elbow",
+    "filename": "90shortradiuselbow5.json"
+  },
+  {
+    "id": "90shortradiuselbow5s",
+    "category": "elbow",
+    "filename": "90shortradiuselbow5s.json"
+  },
+  {
+    "id": "90shortradiuselbow60",
+    "category": "elbow",
+    "filename": "90shortradiuselbow60.json"
+  },
+  {
+    "id": "90shortradiuselbow80",
+    "category": "elbow",
+    "filename": "90shortradiuselbow80.json"
+  },
+  {
+    "id": "90shortradiuselbow80s",
+    "category": "elbow",
+    "filename": "90shortradiuselbow80s.json"
+  },
+  {
+    "id": "90shortradiuselbowstd",
+    "category": "elbow",
+    "filename": "90shortradiuselbowstd.json"
+  },
+  {
+    "id": "90shortradiuselbowxs",
+    "category": "elbow",
+    "filename": "90shortradiuselbowxs.json"
+  },
+  {
+    "id": "90shortradiuselbowxxs",
+    "category": "elbow",
+    "filename": "90shortradiuselbowxxs.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_10",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_10.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_100",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_100.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_10s",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_10s.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_120",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_120.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_140",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_140.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_160",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_160.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_20",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_20.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_30",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_30.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_40",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_40.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_40s",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_40s.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_5",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_5.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_5s",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_5s.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_60",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_60.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_80",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_80.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_80s",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_80s.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_std",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_std.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_xs",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_xs.json"
+  },
+  {
+    "id": "90shortradiuselbow_imperial_xxs",
+    "category": "elbow",
+    "filename": "90shortradiuselbow_imperial_xxs.json"
+  },
+  {
+    "id": "blnu1a_1_150_inches",
+    "category": "blank",
+    "filename": "blnu1a_1_150_inches.json"
+  },
+  {
+    "id": "blnu1a_1_150_millimetres",
+    "category": "blank",
+    "filename": "blnu1a_1_150_millimetres.json"
+  },
+  {
+    "id": "blnu1a_2_300_inches",
+    "category": "blank",
+    "filename": "blnu1a_2_300_inches.json"
+  },
+  {
+    "id": "blnu1a_2_300_millimetres",
+    "category": "blank",
+    "filename": "blnu1a_2_300_millimetres.json"
+  },
+  {
+    "id": "blnu1a_3_300_millimetres",
+    "category": "blank",
+    "filename": "blnu1a_3_300_millimetres.json"
+  },
+  {
+    "id": "blnu1a_3_400_inches",
+    "category": "blank",
+    "filename": "blnu1a_3_400_inches.json"
+  },
+  {
+    "id": "blnu1a_3_400_inches_",
+    "category": "blank",
+    "filename": "blnu1a_3_400_inches_.json"
+  },
+  {
+    "id": "blnu1a_3_400_millimetres",
+    "category": "blank",
+    "filename": "blnu1a_3_400_millimetres.json"
+  },
+  {
+    "id": "blnu1a_3_400_millimetres_",
+    "category": "blank",
+    "filename": "blnu1a_3_400_millimetres_.json"
+  },
+  {
+    "id": "blnu1a_4_600_inches",
+    "category": "blank",
+    "filename": "blnu1a_4_600_inches.json"
+  },
+  {
+    "id": "blnu1a_4_600_millimetres",
+    "category": "blank",
+    "filename": "blnu1a_4_600_millimetres.json"
+  },
+  {
+    "id": "blnu1a_5_900_inches",
+    "category": "blank",
+    "filename": "blnu1a_5_900_inches.json"
+  },
+  {
+    "id": "blnu1a_5_900_millimetres",
+    "category": "blank",
+    "filename": "blnu1a_5_900_millimetres.json"
+  },
+  {
+    "id": "blnu1a_6_1500_inches",
+    "category": "blank",
+    "filename": "blnu1a_6_1500_inches.json"
+  },
+  {
+    "id": "blnu1a_6_1500_millimetres",
+    "category": "blank",
+    "filename": "blnu1a_6_1500_millimetres.json"
+  },
+  {
+    "id": "blnu1a_7_2500_inches",
+    "category": "blank",
+    "filename": "blnu1a_7_2500_inches.json"
+  },
+  {
+    "id": "blnu1a_7_2500_millimetres",
+    "category": "blank",
+    "filename": "blnu1a_7_2500_millimetres.json"
+  },
+  {
+    "id": "blnu1_1_150_inches",
+    "category": "blank",
+    "filename": "blnu1_1_150_inches.json"
+  },
+  {
+    "id": "blnu1_1_150_millimetres",
+    "category": "blank",
+    "filename": "blnu1_1_150_millimetres.json"
+  },
+  {
+    "id": "blnu1_2_300_inches",
+    "category": "blank",
+    "filename": "blnu1_2_300_inches.json"
+  },
+  {
+    "id": "blnu1_2_300_millimetres",
+    "category": "blank",
+    "filename": "blnu1_2_300_millimetres.json"
+  },
+  {
+    "id": "blnu1_3_400_inches",
+    "category": "blank",
+    "filename": "blnu1_3_400_inches.json"
+  },
+  {
+    "id": "blnu1_3_400_millimetres",
+    "category": "blank",
+    "filename": "blnu1_3_400_millimetres.json"
+  },
+  {
+    "id": "blnu1_4_600_inches",
+    "category": "blank",
+    "filename": "blnu1_4_600_inches.json"
+  },
+  {
+    "id": "blnu1_4_600_millimetres",
+    "category": "blank",
+    "filename": "blnu1_4_600_millimetres.json"
+  },
+  {
+    "id": "blnu1_5_900_inches",
+    "category": "blank",
+    "filename": "blnu1_5_900_inches.json"
+  },
+  {
+    "id": "blnu1_5_900_millimetres",
+    "category": "blank",
+    "filename": "blnu1_5_900_millimetres.json"
+  },
+  {
+    "id": "blnu1_6_1500_inches",
+    "category": "blank",
+    "filename": "blnu1_6_1500_inches.json"
+  },
+  {
+    "id": "blnu1_6_1500_millimetres",
+    "category": "blank",
+    "filename": "blnu1_6_1500_millimetres.json"
+  },
+  {
+    "id": "blnu1_7_2500_inches",
+    "category": "blank",
+    "filename": "blnu1_7_2500_inches.json"
+  },
+  {
+    "id": "blnu1_7_2500_millimetres",
+    "category": "blank",
+    "filename": "blnu1_7_2500_millimetres.json"
+  },
+  {
+    "id": "blnu2a_3_400_inches",
+    "category": "blank",
+    "filename": "blnu2a_3_400_inches.json"
+  },
+  {
+    "id": "blnu2a_3_400_millimetres",
+    "category": "blank",
+    "filename": "blnu2a_3_400_millimetres.json"
+  },
+  {
+    "id": "blnu2_3_400_inches",
+    "category": "blank",
+    "filename": "blnu2_3_400_inches.json"
+  },
+  {
+    "id": "blnu2_3_400_millimetres",
+    "category": "blank",
+    "filename": "blnu2_3_400_millimetres.json"
+  },
+  {
+    "id": "blnu3a_3_400_inches",
+    "category": "blank",
+    "filename": "blnu3a_3_400_inches.json"
+  },
+  {
+    "id": "blnu3a_3_400_millimetres",
+    "category": "blank",
+    "filename": "blnu3a_3_400_millimetres.json"
+  },
+  {
+    "id": "blnu3_1_150_inches",
+    "category": "blank",
+    "filename": "blnu3_1_150_inches.json"
+  },
+  {
+    "id": "blnu3_1_150_millimetres",
+    "category": "blank",
+    "filename": "blnu3_1_150_millimetres.json"
+  },
+  {
+    "id": "blnu3_2_300_inches",
+    "category": "blank",
+    "filename": "blnu3_2_300_inches.json"
+  },
+  {
+    "id": "blnu3_2_300_millimetres",
+    "category": "blank",
+    "filename": "blnu3_2_300_millimetres.json"
+  },
+  {
+    "id": "blnu3_3_400_inches",
+    "category": "blank",
+    "filename": "blnu3_3_400_inches.json"
+  },
+  {
+    "id": "blnu3_3_400_millimetres",
+    "category": "blank",
+    "filename": "blnu3_3_400_millimetres.json"
+  },
+  {
+    "id": "blnu3_4_600_inches",
+    "category": "blank",
+    "filename": "blnu3_4_600_inches.json"
+  },
+  {
+    "id": "blnu3_4_600_millimetres",
+    "category": "blank",
+    "filename": "blnu3_4_600_millimetres.json"
+  },
+  {
+    "id": "blnu3_5_900_inches",
+    "category": "blank",
+    "filename": "blnu3_5_900_inches.json"
+  },
+  {
+    "id": "blnu3_5_900_millimetres",
+    "category": "blank",
+    "filename": "blnu3_5_900_millimetres.json"
+  },
+  {
+    "id": "blnu3_6_1500_inches",
+    "category": "blank",
+    "filename": "blnu3_6_1500_inches.json"
+  },
+  {
+    "id": "blnu3_6_1500_millimetres",
+    "category": "blank",
+    "filename": "blnu3_6_1500_millimetres.json"
+  },
+  {
+    "id": "blnu3_7_2500_inches",
+    "category": "blank",
+    "filename": "blnu3_7_2500_inches.json"
+  },
+  {
+    "id": "blnu3_7_2500_millimetres",
+    "category": "blank",
+    "filename": "blnu3_7_2500_millimetres.json"
+  },
+  {
+    "id": "blnu4a_3_400_inches",
+    "category": "blank",
+    "filename": "blnu4a_3_400_inches.json"
+  },
+  {
+    "id": "blnu4a_3_400_millimetres",
+    "category": "blank",
+    "filename": "blnu4a_3_400_millimetres.json"
+  },
+  {
+    "id": "blnu4_3_400_inches",
+    "category": "blank",
+    "filename": "blnu4_3_400_inches.json"
+  },
+  {
+    "id": "blnu4_3_400_millimetres",
+    "category": "blank",
+    "filename": "blnu4_3_400_millimetres.json"
+  },
+  {
+    "id": "cap10",
+    "category": "cap",
+    "filename": "cap10.json"
+  },
+  {
+    "id": "cap100",
+    "category": "cap",
+    "filename": "cap100.json"
+  },
+  {
+    "id": "cap10s",
+    "category": "cap",
+    "filename": "cap10s.json"
+  },
+  {
+    "id": "cap120",
+    "category": "cap",
+    "filename": "cap120.json"
+  },
+  {
+    "id": "cap140",
+    "category": "cap",
+    "filename": "cap140.json"
+  },
+  {
+    "id": "cap160",
+    "category": "cap",
+    "filename": "cap160.json"
+  },
+  {
+    "id": "cap20",
+    "category": "cap",
+    "filename": "cap20.json"
+  },
+  {
+    "id": "cap30",
+    "category": "cap",
+    "filename": "cap30.json"
+  },
+  {
+    "id": "cap40",
+    "category": "cap",
+    "filename": "cap40.json"
+  },
+  {
+    "id": "cap40s",
+    "category": "cap",
+    "filename": "cap40s.json"
+  },
+  {
+    "id": "cap5",
+    "category": "cap",
+    "filename": "cap5.json"
+  },
+  {
+    "id": "cap5s",
+    "category": "cap",
+    "filename": "cap5s.json"
+  },
+  {
+    "id": "cap60",
+    "category": "cap",
+    "filename": "cap60.json"
+  },
+  {
+    "id": "cap80",
+    "category": "cap",
+    "filename": "cap80.json"
+  },
+  {
+    "id": "cap80s",
+    "category": "cap",
+    "filename": "cap80s.json"
+  },
+  {
+    "id": "capstd",
+    "category": "cap",
+    "filename": "capstd.json"
+  },
+  {
+    "id": "capxs",
+    "category": "cap",
+    "filename": "capxs.json"
+  },
+  {
+    "id": "capxxs",
+    "category": "cap",
+    "filename": "capxxs.json"
+  },
+  {
+    "id": "cap_imperial_10",
+    "category": "cap",
+    "filename": "cap_imperial_10.json"
+  },
+  {
+    "id": "cap_imperial_100",
+    "category": "cap",
+    "filename": "cap_imperial_100.json"
+  },
+  {
+    "id": "cap_imperial_10s",
+    "category": "cap",
+    "filename": "cap_imperial_10s.json"
+  },
+  {
+    "id": "cap_imperial_120",
+    "category": "cap",
+    "filename": "cap_imperial_120.json"
+  },
+  {
+    "id": "cap_imperial_140",
+    "category": "cap",
+    "filename": "cap_imperial_140.json"
+  },
+  {
+    "id": "cap_imperial_160",
+    "category": "cap",
+    "filename": "cap_imperial_160.json"
+  },
+  {
+    "id": "cap_imperial_20",
+    "category": "cap",
+    "filename": "cap_imperial_20.json"
+  },
+  {
+    "id": "cap_imperial_30",
+    "category": "cap",
+    "filename": "cap_imperial_30.json"
+  },
+  {
+    "id": "cap_imperial_40",
+    "category": "cap",
+    "filename": "cap_imperial_40.json"
+  },
+  {
+    "id": "cap_imperial_40s",
+    "category": "cap",
+    "filename": "cap_imperial_40s.json"
+  },
+  {
+    "id": "cap_imperial_5",
+    "category": "cap",
+    "filename": "cap_imperial_5.json"
+  },
+  {
+    "id": "cap_imperial_5s",
+    "category": "cap",
+    "filename": "cap_imperial_5s.json"
+  },
+  {
+    "id": "cap_imperial_60",
+    "category": "cap",
+    "filename": "cap_imperial_60.json"
+  },
+  {
+    "id": "cap_imperial_80",
+    "category": "cap",
+    "filename": "cap_imperial_80.json"
+  },
+  {
+    "id": "cap_imperial_80s",
+    "category": "cap",
+    "filename": "cap_imperial_80s.json"
+  },
+  {
+    "id": "cap_imperial_std",
+    "category": "cap",
+    "filename": "cap_imperial_std.json"
+  },
+  {
+    "id": "cap_imperial_xs",
+    "category": "cap",
+    "filename": "cap_imperial_xs.json"
+  },
+  {
+    "id": "cap_imperial_xxs",
+    "category": "cap",
+    "filename": "cap_imperial_xxs.json"
+  },
+  {
+    "id": "elboflange150",
+    "category": "flange",
+    "filename": "elboflange150.json"
+  },
+  {
+    "id": "elboflange1500",
+    "category": "flange",
+    "filename": "elboflange1500.json"
+  },
+  {
+    "id": "elboflange2500",
+    "category": "flange",
+    "filename": "elboflange2500.json"
+  },
+  {
+    "id": "elboflange300",
+    "category": "flange",
+    "filename": "elboflange300.json"
+  },
+  {
+    "id": "elboflange600",
+    "category": "flange",
+    "filename": "elboflange600.json"
+  },
+  {
+    "id": "elboflange900",
+    "category": "flange",
+    "filename": "elboflange900.json"
+  },
+  {
+    "id": "empty - copy - copy",
+    "category": "other",
+    "filename": "empty - copy - copy.json"
+  },
+  {
+    "id": "empty",
+    "category": "other",
+    "filename": "empty.json"
+  },
+  {
+    "id": "emptyapps",
+    "category": "other",
+    "filename": "emptyapps.json"
+  },
+  {
+    "id": "eol3000",
+    "category": "other",
+    "filename": "eol3000.json"
+  },
+  {
+    "id": "eol6000",
+    "category": "other",
+    "filename": "eol6000.json"
+  },
+  {
+    "id": "fl6b1",
+    "category": "flange",
+    "filename": "fl6b1.json"
+  },
+  {
+    "id": "fl6b1_imperial",
+    "category": "flange",
+    "filename": "fl6b1_imperial.json"
+  },
+  {
+    "id": "fl6b2",
+    "category": "flange",
+    "filename": "fl6b2.json"
+  },
+  {
+    "id": "fl6b2_imperial",
+    "category": "flange",
+    "filename": "fl6b2_imperial.json"
+  },
+  {
+    "id": "fl6b3",
+    "category": "flange",
+    "filename": "fl6b3.json"
+  },
+  {
+    "id": "fl6b3_imperial",
+    "category": "flange",
+    "filename": "fl6b3_imperial.json"
+  },
+  {
+    "id": "fla150",
+    "category": "flange",
+    "filename": "fla150.json"
+  },
+  {
+    "id": "fla300",
+    "category": "flange",
+    "filename": "fla300.json"
+  },
+  {
+    "id": "fla400",
+    "category": "flange",
+    "filename": "fla400.json"
+  },
+  {
+    "id": "fla600",
+    "category": "flange",
+    "filename": "fla600.json"
+  },
+  {
+    "id": "fla900",
+    "category": "flange",
+    "filename": "fla900.json"
+  },
+  {
+    "id": "flaa",
+    "category": "flange",
+    "filename": "flaa.json"
+  },
+  {
+    "id": "flad",
+    "category": "flange",
+    "filename": "flad.json"
+  },
+  {
+    "id": "flae",
+    "category": "flange",
+    "filename": "flae.json"
+  },
+  {
+    "id": "flaf",
+    "category": "flange",
+    "filename": "flaf.json"
+  },
+  {
+    "id": "flah",
+    "category": "flange",
+    "filename": "flah.json"
+  },
+  {
+    "id": "flaj",
+    "category": "flange",
+    "filename": "flaj.json"
+  },
+  {
+    "id": "flak",
+    "category": "flange",
+    "filename": "flak.json"
+  },
+  {
+    "id": "flar",
+    "category": "flange",
+    "filename": "flar.json"
+  },
+  {
+    "id": "flas",
+    "category": "flange",
+    "filename": "flas.json"
+  },
+  {
+    "id": "flat",
+    "category": "flange",
+    "filename": "flat.json"
+  },
+  {
+    "id": "fla_imperial_150",
+    "category": "flange",
+    "filename": "fla_imperial_150.json"
+  },
+  {
+    "id": "fla_imperial_300",
+    "category": "flange",
+    "filename": "fla_imperial_300.json"
+  },
+  {
+    "id": "fla_imperial_400",
+    "category": "flange",
+    "filename": "fla_imperial_400.json"
+  },
+  {
+    "id": "fla_imperial_600",
+    "category": "flange",
+    "filename": "fla_imperial_600.json"
+  },
+  {
+    "id": "fla_imperial_900",
+    "category": "flange",
+    "filename": "fla_imperial_900.json"
+  },
+  {
+    "id": "flbxbt4",
+    "category": "flange",
+    "filename": "flbxbt4.json"
+  },
+  {
+    "id": "flbxbt4_imperial",
+    "category": "flange",
+    "filename": "flbxbt4_imperial.json"
+  },
+  {
+    "id": "flbxbt5",
+    "category": "flange",
+    "filename": "flbxbt5.json"
+  },
+  {
+    "id": "flbxbt5_imperial",
+    "category": "flange",
+    "filename": "flbxbt5_imperial.json"
+  },
+  {
+    "id": "flbxbt6",
+    "category": "flange",
+    "filename": "flbxbt6.json"
+  },
+  {
+    "id": "flbxbt6_imperial",
+    "category": "flange",
+    "filename": "flbxbt6_imperial.json"
+  },
+  {
+    "id": "flbxwn4",
+    "category": "flange",
+    "filename": "flbxwn4.json"
+  },
+  {
+    "id": "flbxwn4_imperial",
+    "category": "flange",
+    "filename": "flbxwn4_imperial.json"
+  },
+  {
+    "id": "flbxwn5",
+    "category": "flange",
+    "filename": "flbxwn5.json"
+  },
+  {
+    "id": "flbxwn5_imperial",
+    "category": "flange",
+    "filename": "flbxwn5_imperial.json"
+  },
+  {
+    "id": "flbxwn6",
+    "category": "flange",
+    "filename": "flbxwn6.json"
+  },
+  {
+    "id": "flbxwn6_imperial",
+    "category": "flange",
+    "filename": "flbxwn6_imperial.json"
+  },
+  {
+    "id": "flcflg150",
+    "category": "flange",
+    "filename": "flcflg150.json"
+  },
+  {
+    "id": "flcflg1500",
+    "category": "flange",
+    "filename": "flcflg1500.json"
+  },
+  {
+    "id": "flcflg2500",
+    "category": "flange",
+    "filename": "flcflg2500.json"
+  },
+  {
+    "id": "flcflg300",
+    "category": "flange",
+    "filename": "flcflg300.json"
+  },
+  {
+    "id": "flcflg400",
+    "category": "flange",
+    "filename": "flcflg400.json"
+  },
+  {
+    "id": "flcflg600",
+    "category": "flange",
+    "filename": "flcflg600.json"
+  },
+  {
+    "id": "flcflg900",
+    "category": "flange",
+    "filename": "flcflg900.json"
+  },
+  {
+    "id": "fldi_10",
+    "category": "flange",
+    "filename": "fldi_10.json"
+  },
+  {
+    "id": "fldi_100",
+    "category": "flange",
+    "filename": "fldi_100.json"
+  },
+  {
+    "id": "fldi_16",
+    "category": "flange",
+    "filename": "fldi_16.json"
+  },
+  {
+    "id": "fldi_160",
+    "category": "flange",
+    "filename": "fldi_160.json"
+  },
+  {
+    "id": "fldi_2.5",
+    "category": "flange",
+    "filename": "fldi_2.5.json"
+  },
+  {
+    "id": "fldi_25",
+    "category": "flange",
+    "filename": "fldi_25.json"
+  },
+  {
+    "id": "fldi_250",
+    "category": "flange",
+    "filename": "fldi_250.json"
+  },
+  {
+    "id": "fldi_320",
+    "category": "flange",
+    "filename": "fldi_320.json"
+  },
+  {
+    "id": "fldi_40",
+    "category": "flange",
+    "filename": "fldi_40.json"
+  },
+  {
+    "id": "fldi_400",
+    "category": "flange",
+    "filename": "fldi_400.json"
+  },
+  {
+    "id": "fldi_6",
+    "category": "flange",
+    "filename": "fldi_6.json"
+  },
+  {
+    "id": "fldi_63",
+    "category": "flange",
+    "filename": "fldi_63.json"
+  },
+  {
+    "id": "flg150",
+    "category": "flange",
+    "filename": "flg150.json"
+  },
+  {
+    "id": "flg1500",
+    "category": "flange",
+    "filename": "flg1500.json"
+  },
+  {
+    "id": "flg2500",
+    "category": "flange",
+    "filename": "flg2500.json"
+  },
+  {
+    "id": "flg300",
+    "category": "flange",
+    "filename": "flg300.json"
+  },
+  {
+    "id": "flg400",
+    "category": "flange",
+    "filename": "flg400.json"
+  },
+  {
+    "id": "flg600",
+    "category": "flange",
+    "filename": "flg600.json"
+  },
+  {
+    "id": "flg900",
+    "category": "flange",
+    "filename": "flg900.json"
+  },
+  {
+    "id": "flgap150",
+    "category": "flange",
+    "filename": "flgap150.json"
+  },
+  {
+    "id": "flgap300",
+    "category": "flange",
+    "filename": "flgap300.json"
+  },
+  {
+    "id": "flgap400",
+    "category": "flange",
+    "filename": "flgap400.json"
+  },
+  {
+    "id": "flgap600",
+    "category": "flange",
+    "filename": "flgap600.json"
+  },
+  {
+    "id": "flgap900",
+    "category": "flange",
+    "filename": "flgap900.json"
+  },
+  {
+    "id": "flgap_imperial_150",
+    "category": "flange",
+    "filename": "flgap_imperial_150.json"
+  },
+  {
+    "id": "flgap_imperial_300",
+    "category": "flange",
+    "filename": "flgap_imperial_300.json"
+  },
+  {
+    "id": "flgap_imperial_400",
+    "category": "flange",
+    "filename": "flgap_imperial_400.json"
+  },
+  {
+    "id": "flgap_imperial_600",
+    "category": "flange",
+    "filename": "flgap_imperial_600.json"
+  },
+  {
+    "id": "flgap_imperial_900",
+    "category": "flange",
+    "filename": "flgap_imperial_900.json"
+  },
+  {
+    "id": "flg_imperial_150",
+    "category": "flange",
+    "filename": "flg_imperial_150.json"
+  },
+  {
+    "id": "flg_imperial_1500",
+    "category": "flange",
+    "filename": "flg_imperial_1500.json"
+  },
+  {
+    "id": "flg_imperial_2500",
+    "category": "flange",
+    "filename": "flg_imperial_2500.json"
+  },
+  {
+    "id": "flg_imperial_300",
+    "category": "flange",
+    "filename": "flg_imperial_300.json"
+  },
+  {
+    "id": "flg_imperial_400",
+    "category": "flange",
+    "filename": "flg_imperial_400.json"
+  },
+  {
+    "id": "flg_imperial_600",
+    "category": "flange",
+    "filename": "flg_imperial_600.json"
+  },
+  {
+    "id": "flg_imperial_900",
+    "category": "flange",
+    "filename": "flg_imperial_900.json"
+  },
+  {
+    "id": "flhb1",
+    "category": "flange",
+    "filename": "flhb1.json"
+  },
+  {
+    "id": "flhb1120",
+    "category": "flange",
+    "filename": "flhb1120.json"
+  },
+  {
+    "id": "flhb1160",
+    "category": "flange",
+    "filename": "flhb1160.json"
+  },
+  {
+    "id": "flhb140",
+    "category": "flange",
+    "filename": "flhb140.json"
+  },
+  {
+    "id": "flhb160",
+    "category": "flange",
+    "filename": "flhb160.json"
+  },
+  {
+    "id": "flhb180",
+    "category": "flange",
+    "filename": "flhb180.json"
+  },
+  {
+    "id": "flhb1std",
+    "category": "flange",
+    "filename": "flhb1std.json"
+  },
+  {
+    "id": "flhb1xxs",
+    "category": "flange",
+    "filename": "flhb1xxs.json"
+  },
+  {
+    "id": "fswa1_metric",
+    "category": "other",
+    "filename": "fswa1_metric.json"
+  },
+  {
+    "id": "fswa1_uscust",
+    "category": "other",
+    "filename": "fswa1_uscust.json"
+  },
+  {
+    "id": "fswa2_metric",
+    "category": "other",
+    "filename": "fswa2_metric.json"
+  },
+  {
+    "id": "fswa2_uscust",
+    "category": "other",
+    "filename": "fswa2_uscust.json"
+  },
+  {
+    "id": "fswapipetable",
+    "category": "pipe",
+    "filename": "fswapipetable.json"
+  },
+  {
+    "id": "ftbw1",
+    "category": "fitting",
+    "filename": "ftbw1.json"
+  },
+  {
+    "id": "ftbw11",
+    "category": "fitting",
+    "filename": "ftbw11.json"
+  },
+  {
+    "id": "ftbw2",
+    "category": "fitting",
+    "filename": "ftbw2.json"
+  },
+  {
+    "id": "ftbw2a",
+    "category": "fitting",
+    "filename": "ftbw2a.json"
+  },
+  {
+    "id": "ftbw3",
+    "category": "fitting",
+    "filename": "ftbw3.json"
+  },
+  {
+    "id": "ftbw3a",
+    "category": "fitting",
+    "filename": "ftbw3a.json"
+  },
+  {
+    "id": "ftbw6",
+    "category": "fitting",
+    "filename": "ftbw6.json"
+  },
+  {
+    "id": "ftbw7",
+    "category": "fitting",
+    "filename": "ftbw7.json"
+  },
+  {
+    "id": "ftbw8",
+    "category": "fitting",
+    "filename": "ftbw8.json"
+  },
+  {
+    "id": "ftbw9",
+    "category": "fitting",
+    "filename": "ftbw9.json"
+  },
+  {
+    "id": "ftsc10_threaded_hex_head_plug_2000_inches",
+    "category": "fitting",
+    "filename": "ftsc10_threaded_hex_head_plug_2000_inches.json"
+  },
+  {
+    "id": "ftsc10_threaded_hex_head_plug_2000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc10_threaded_hex_head_plug_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc10_threaded_hex_head_plug_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc10_threaded_hex_head_plug_3000_inches.json"
+  },
+  {
+    "id": "ftsc10_threaded_hex_head_plug_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc10_threaded_hex_head_plug_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc10_threaded_hex_head_plug_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc10_threaded_hex_head_plug_6000_inches.json"
+  },
+  {
+    "id": "ftsc10_threaded_hex_head_plug_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc10_threaded_hex_head_plug_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc10_threaded_hex_head_plug_9000_inches",
+    "category": "fitting",
+    "filename": "ftsc10_threaded_hex_head_plug_9000_inches.json"
+  },
+  {
+    "id": "ftsc10_threaded_hex_head_plug_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc10_threaded_hex_head_plug_9000_millimetres.json"
+  },
+  {
+    "id": "ftsc11_threaded_round_head_plug_2000_inches",
+    "category": "fitting",
+    "filename": "ftsc11_threaded_round_head_plug_2000_inches.json"
+  },
+  {
+    "id": "ftsc11_threaded_round_head_plug_2000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc11_threaded_round_head_plug_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc11_threaded_round_head_plug_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc11_threaded_round_head_plug_3000_inches.json"
+  },
+  {
+    "id": "ftsc11_threaded_round_head_plug_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc11_threaded_round_head_plug_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc11_threaded_round_head_plug_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc11_threaded_round_head_plug_6000_inches.json"
+  },
+  {
+    "id": "ftsc11_threaded_round_head_plug_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc11_threaded_round_head_plug_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc11_threaded_round_head_plug_9000_inches",
+    "category": "fitting",
+    "filename": "ftsc11_threaded_round_head_plug_9000_inches.json"
+  },
+  {
+    "id": "ftsc11_threaded_round_head_plug_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc11_threaded_round_head_plug_9000_millimetres.json"
+  },
+  {
+    "id": "ftsc12_threaded_hex_head_bushing_2000_inches",
+    "category": "fitting",
+    "filename": "ftsc12_threaded_hex_head_bushing_2000_inches.json"
+  },
+  {
+    "id": "ftsc12_threaded_hex_head_bushing_2000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc12_threaded_hex_head_bushing_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc12_threaded_hex_head_bushing_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc12_threaded_hex_head_bushing_3000_inches.json"
+  },
+  {
+    "id": "ftsc12_threaded_hex_head_bushing_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc12_threaded_hex_head_bushing_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc12_threaded_hex_head_bushing_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc12_threaded_hex_head_bushing_6000_inches.json"
+  },
+  {
+    "id": "ftsc12_threaded_hex_head_bushing_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc12_threaded_hex_head_bushing_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc12_threaded_hex_head_bushing_9000_inches",
+    "category": "fitting",
+    "filename": "ftsc12_threaded_hex_head_bushing_9000_inches.json"
+  },
+  {
+    "id": "ftsc12_threaded_hex_head_bushing_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc12_threaded_hex_head_bushing_9000_millimetres.json"
+  },
+  {
+    "id": "ftsc13_threaded_flush_bushing_2000_inches",
+    "category": "fitting",
+    "filename": "ftsc13_threaded_flush_bushing_2000_inches.json"
+  },
+  {
+    "id": "ftsc13_threaded_flush_bushing_2000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc13_threaded_flush_bushing_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc13_threaded_flush_bushing_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc13_threaded_flush_bushing_3000_inches.json"
+  },
+  {
+    "id": "ftsc13_threaded_flush_bushing_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc13_threaded_flush_bushing_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc13_threaded_flush_bushing_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc13_threaded_flush_bushing_6000_inches.json"
+  },
+  {
+    "id": "ftsc13_threaded_flush_bushing_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc13_threaded_flush_bushing_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc13_threaded_flush_bushing_9000_inches",
+    "category": "fitting",
+    "filename": "ftsc13_threaded_flush_bushing_9000_inches.json"
+  },
+  {
+    "id": "ftsc13_threaded_flush_bushing_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc13_threaded_flush_bushing_9000_millimetres.json"
+  },
+  {
+    "id": "ftsc1430_inches",
+    "category": "fitting",
+    "filename": "ftsc1430_inches.json"
+  },
+  {
+    "id": "ftsc1430_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1430_millimetres.json"
+  },
+  {
+    "id": "ftsc1530_inches",
+    "category": "fitting",
+    "filename": "ftsc1530_inches.json"
+  },
+  {
+    "id": "ftsc1530_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1530_millimetres.json"
+  },
+  {
+    "id": "ftsc1560_inches",
+    "category": "fitting",
+    "filename": "ftsc1560_inches.json"
+  },
+  {
+    "id": "ftsc1560_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1560_millimetres.json"
+  },
+  {
+    "id": "ftsc1630_inches",
+    "category": "fitting",
+    "filename": "ftsc1630_inches.json"
+  },
+  {
+    "id": "ftsc1630_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1630_millimetres.json"
+  },
+  {
+    "id": "ftsc1660_inches",
+    "category": "fitting",
+    "filename": "ftsc1660_inches.json"
+  },
+  {
+    "id": "ftsc1660_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1660_millimetres.json"
+  },
+  {
+    "id": "ftsc1730_inches",
+    "category": "fitting",
+    "filename": "ftsc1730_inches.json"
+  },
+  {
+    "id": "ftsc1730_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1730_millimetres.json"
+  },
+  {
+    "id": "ftsc1760_inches",
+    "category": "fitting",
+    "filename": "ftsc1760_inches.json"
+  },
+  {
+    "id": "ftsc1760_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1760_millimetres.json"
+  },
+  {
+    "id": "ftsc1830_inches",
+    "category": "fitting",
+    "filename": "ftsc1830_inches.json"
+  },
+  {
+    "id": "ftsc1830_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1830_millimetres.json"
+  },
+  {
+    "id": "ftsc1860_inches",
+    "category": "fitting",
+    "filename": "ftsc1860_inches.json"
+  },
+  {
+    "id": "ftsc1860_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1860_millimetres.json"
+  },
+  {
+    "id": "ftsc1930_inches",
+    "category": "fitting",
+    "filename": "ftsc1930_inches.json"
+  },
+  {
+    "id": "ftsc1930_millimetres",
+    "category": "fitting",
+    "filename": "ftsc1930_millimetres.json"
+  },
+  {
+    "id": "ftsc1_threaded_90deg_elbow_2000_inches",
+    "category": "elbow",
+    "filename": "ftsc1_threaded_90deg_elbow_2000_inches.json"
+  },
+  {
+    "id": "ftsc1_threaded_90deg_elbow_2000_millimetres",
+    "category": "elbow",
+    "filename": "ftsc1_threaded_90deg_elbow_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc1_threaded_90deg_elbow_3000_inches",
+    "category": "elbow",
+    "filename": "ftsc1_threaded_90deg_elbow_3000_inches.json"
+  },
+  {
+    "id": "ftsc1_threaded_90deg_elbow_3000_millimetres",
+    "category": "elbow",
+    "filename": "ftsc1_threaded_90deg_elbow_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc1_threaded_90deg_elbow_6000_inches",
+    "category": "elbow",
+    "filename": "ftsc1_threaded_90deg_elbow_6000_inches.json"
+  },
+  {
+    "id": "ftsc1_threaded_90deg_elbow_6000_millimetres",
+    "category": "elbow",
+    "filename": "ftsc1_threaded_90deg_elbow_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc2030_inches",
+    "category": "fitting",
+    "filename": "ftsc2030_inches.json"
+  },
+  {
+    "id": "ftsc2330_inches",
+    "category": "fitting",
+    "filename": "ftsc2330_inches.json"
+  },
+  {
+    "id": "ftsc2330_millimetres",
+    "category": "fitting",
+    "filename": "ftsc2330_millimetres.json"
+  },
+  {
+    "id": "ftsc2360_inches",
+    "category": "fitting",
+    "filename": "ftsc2360_inches.json"
+  },
+  {
+    "id": "ftsc2360_millimetres",
+    "category": "fitting",
+    "filename": "ftsc2360_millimetres.json"
+  },
+  {
+    "id": "ftsc2430_inches",
+    "category": "fitting",
+    "filename": "ftsc2430_inches.json"
+  },
+  {
+    "id": "ftsc2430_millimetres",
+    "category": "fitting",
+    "filename": "ftsc2430_millimetres.json"
+  },
+  {
+    "id": "ftsc2460_inches",
+    "category": "fitting",
+    "filename": "ftsc2460_inches.json"
+  },
+  {
+    "id": "ftsc2460_millimetres",
+    "category": "fitting",
+    "filename": "ftsc2460_millimetres.json"
+  },
+  {
+    "id": "ftsc25",
+    "category": "fitting",
+    "filename": "ftsc25.json"
+  },
+  {
+    "id": "ftsc2530_inches_x",
+    "category": "fitting",
+    "filename": "ftsc2530_inches_x.json"
+  },
+  {
+    "id": "ftsc2530_millimetres_x",
+    "category": "fitting",
+    "filename": "ftsc2530_millimetres_x.json"
+  },
+  {
+    "id": "ftsc2560_inches_x",
+    "category": "fitting",
+    "filename": "ftsc2560_inches_x.json"
+  },
+  {
+    "id": "ftsc2560_millimetres_x",
+    "category": "fitting",
+    "filename": "ftsc2560_millimetres_x.json"
+  },
+  {
+    "id": "ftsc25_inches",
+    "category": "fitting",
+    "filename": "ftsc25_inches.json"
+  },
+  {
+    "id": "ftsc25_millimetres",
+    "category": "fitting",
+    "filename": "ftsc25_millimetres.json"
+  },
+  {
+    "id": "ftsc2_threaded_tee_2000_inches",
+    "category": "fitting",
+    "filename": "ftsc2_threaded_tee_2000_inches.json"
+  },
+  {
+    "id": "ftsc2_threaded_tee_2000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc2_threaded_tee_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc2_threaded_tee_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc2_threaded_tee_3000_inches.json"
+  },
+  {
+    "id": "ftsc2_threaded_tee_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc2_threaded_tee_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc2_threaded_tee_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc2_threaded_tee_6000_inches.json"
+  },
+  {
+    "id": "ftsc2_threaded_tee_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc2_threaded_tee_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc3_threaded_cross_2000_inches",
+    "category": "fitting",
+    "filename": "ftsc3_threaded_cross_2000_inches.json"
+  },
+  {
+    "id": "ftsc3_threaded_cross_2000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc3_threaded_cross_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc3_threaded_cross_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc3_threaded_cross_3000_inches.json"
+  },
+  {
+    "id": "ftsc3_threaded_cross_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc3_threaded_cross_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc3_threaded_cross_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc3_threaded_cross_6000_inches.json"
+  },
+  {
+    "id": "ftsc3_threaded_cross_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc3_threaded_cross_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc4_threaded_45deg_elbow_2000_inches",
+    "category": "elbow",
+    "filename": "ftsc4_threaded_45deg_elbow_2000_inches.json"
+  },
+  {
+    "id": "ftsc4_threaded_45deg_elbow_2000_millimetres",
+    "category": "elbow",
+    "filename": "ftsc4_threaded_45deg_elbow_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc4_threaded_45deg_elbow_3000_inches",
+    "category": "elbow",
+    "filename": "ftsc4_threaded_45deg_elbow_3000_inches.json"
+  },
+  {
+    "id": "ftsc4_threaded_45deg_elbow_3000_millimetres",
+    "category": "elbow",
+    "filename": "ftsc4_threaded_45deg_elbow_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc4_threaded_45deg_elbow_6000_inches",
+    "category": "elbow",
+    "filename": "ftsc4_threaded_45deg_elbow_6000_inches.json"
+  },
+  {
+    "id": "ftsc4_threaded_45deg_elbow_6000_millimetres",
+    "category": "elbow",
+    "filename": "ftsc4_threaded_45deg_elbow_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc5_threaded_90deg_street_elbow_3000_inches",
+    "category": "elbow",
+    "filename": "ftsc5_threaded_90deg_street_elbow_3000_inches.json"
+  },
+  {
+    "id": "ftsc5_threaded_90deg_street_elbow_3000_millimetres",
+    "category": "elbow",
+    "filename": "ftsc5_threaded_90deg_street_elbow_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc5_threaded_90deg_street_elbow_6000_inches",
+    "category": "elbow",
+    "filename": "ftsc5_threaded_90deg_street_elbow_6000_inches.json"
+  },
+  {
+    "id": "ftsc5_threaded_90deg_street_elbow_6000_millimetres",
+    "category": "elbow",
+    "filename": "ftsc5_threaded_90deg_street_elbow_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc6_threaded_coupling_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc6_threaded_coupling_3000_inches.json"
+  },
+  {
+    "id": "ftsc6_threaded_coupling_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc6_threaded_coupling_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc6_threaded_coupling_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc6_threaded_coupling_6000_inches.json"
+  },
+  {
+    "id": "ftsc6_threaded_coupling_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc6_threaded_coupling_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc7_threaded_half_coupling_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc7_threaded_half_coupling_3000_inches.json"
+  },
+  {
+    "id": "ftsc7_threaded_half_coupling_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc7_threaded_half_coupling_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc7_threaded_half_coupling_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc7_threaded_half_coupling_6000_inches.json"
+  },
+  {
+    "id": "ftsc7_threaded_half_coupling_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc7_threaded_half_coupling_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc8_threaded_cap_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc8_threaded_cap_3000_inches.json"
+  },
+  {
+    "id": "ftsc8_threaded_cap_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc8_threaded_cap_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc8_threaded_cap_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc8_threaded_cap_6000_inches.json"
+  },
+  {
+    "id": "ftsc8_threaded_cap_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc8_threaded_cap_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc9_threaded_square_head_plug_2000_inches",
+    "category": "fitting",
+    "filename": "ftsc9_threaded_square_head_plug_2000_inches.json"
+  },
+  {
+    "id": "ftsc9_threaded_square_head_plug_2000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc9_threaded_square_head_plug_2000_millimetres.json"
+  },
+  {
+    "id": "ftsc9_threaded_square_head_plug_3000_inches",
+    "category": "fitting",
+    "filename": "ftsc9_threaded_square_head_plug_3000_inches.json"
+  },
+  {
+    "id": "ftsc9_threaded_square_head_plug_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc9_threaded_square_head_plug_3000_millimetres.json"
+  },
+  {
+    "id": "ftsc9_threaded_square_head_plug_6000_inches",
+    "category": "fitting",
+    "filename": "ftsc9_threaded_square_head_plug_6000_inches.json"
+  },
+  {
+    "id": "ftsc9_threaded_square_head_plug_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc9_threaded_square_head_plug_6000_millimetres.json"
+  },
+  {
+    "id": "ftsc9_threaded_square_head_plug_9000_inches",
+    "category": "fitting",
+    "filename": "ftsc9_threaded_square_head_plug_9000_inches.json"
+  },
+  {
+    "id": "ftsc9_threaded_square_head_plug_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsc9_threaded_square_head_plug_9000_millimetres.json"
+  },
+  {
+    "id": "ftsw1030",
+    "category": "fitting",
+    "filename": "ftsw1030.json"
+  },
+  {
+    "id": "ftsw1060",
+    "category": "fitting",
+    "filename": "ftsw1060.json"
+  },
+  {
+    "id": "ftsw1130",
+    "category": "fitting",
+    "filename": "ftsw1130.json"
+  },
+  {
+    "id": "ftsw1160",
+    "category": "fitting",
+    "filename": "ftsw1160.json"
+  },
+  {
+    "id": "ftsw120",
+    "category": "fitting",
+    "filename": "ftsw120.json"
+  },
+  {
+    "id": "ftsw1230",
+    "category": "fitting",
+    "filename": "ftsw1230.json"
+  },
+  {
+    "id": "ftsw1260",
+    "category": "fitting",
+    "filename": "ftsw1260.json"
+  },
+  {
+    "id": "ftsw130",
+    "category": "fitting",
+    "filename": "ftsw130.json"
+  },
+  {
+    "id": "ftsw1330",
+    "category": "fitting",
+    "filename": "ftsw1330.json"
+  },
+  {
+    "id": "ftsw1360",
+    "category": "fitting",
+    "filename": "ftsw1360.json"
+  },
+  {
+    "id": "ftsw1430 - copy",
+    "category": "fitting",
+    "filename": "ftsw1430 - copy.json"
+  },
+  {
+    "id": "ftsw1430",
+    "category": "fitting",
+    "filename": "ftsw1430.json"
+  },
+  {
+    "id": "ftsw1460",
+    "category": "fitting",
+    "filename": "ftsw1460.json"
+  },
+  {
+    "id": "ftsw160",
+    "category": "fitting",
+    "filename": "ftsw160.json"
+  },
+  {
+    "id": "ftsw1_socketwelded_90_deg_elbow_3000_inches",
+    "category": "elbow",
+    "filename": "ftsw1_socketwelded_90_deg_elbow_3000_inches.json"
+  },
+  {
+    "id": "ftsw1_socketwelded_90_deg_elbow_3000_millimetres",
+    "category": "elbow",
+    "filename": "ftsw1_socketwelded_90_deg_elbow_3000_millimetres.json"
+  },
+  {
+    "id": "ftsw1_socketwelded_90_deg_elbow_6000_inches",
+    "category": "elbow",
+    "filename": "ftsw1_socketwelded_90_deg_elbow_6000_inches.json"
+  },
+  {
+    "id": "ftsw1_socketwelded_90_deg_elbow_6000_millimetres",
+    "category": "elbow",
+    "filename": "ftsw1_socketwelded_90_deg_elbow_6000_millimetres.json"
+  },
+  {
+    "id": "ftsw1_socketwelded_90_deg_elbow_9000_inches",
+    "category": "elbow",
+    "filename": "ftsw1_socketwelded_90_deg_elbow_9000_inches.json"
+  },
+  {
+    "id": "ftsw1_socketwelded_90_deg_elbow_9000_millimetres",
+    "category": "elbow",
+    "filename": "ftsw1_socketwelded_90_deg_elbow_9000_millimetres.json"
+  },
+  {
+    "id": "ftsw2_socketwelded_45_deg_elbow_3000_inches",
+    "category": "elbow",
+    "filename": "ftsw2_socketwelded_45_deg_elbow_3000_inches.json"
+  },
+  {
+    "id": "ftsw2_socketwelded_45_deg_elbow_3000_millimetres",
+    "category": "elbow",
+    "filename": "ftsw2_socketwelded_45_deg_elbow_3000_millimetres.json"
+  },
+  {
+    "id": "ftsw2_socketwelded_45_deg_elbow_6000_inches",
+    "category": "elbow",
+    "filename": "ftsw2_socketwelded_45_deg_elbow_6000_inches.json"
+  },
+  {
+    "id": "ftsw2_socketwelded_45_deg_elbow_6000_millimetres",
+    "category": "elbow",
+    "filename": "ftsw2_socketwelded_45_deg_elbow_6000_millimetres.json"
+  },
+  {
+    "id": "ftsw2_socketwelded_45_deg_elbow_9000_inches",
+    "category": "elbow",
+    "filename": "ftsw2_socketwelded_45_deg_elbow_9000_inches.json"
+  },
+  {
+    "id": "ftsw2_socketwelded_45_deg_elbow_9000_millimetres",
+    "category": "elbow",
+    "filename": "ftsw2_socketwelded_45_deg_elbow_9000_millimetres.json"
+  },
+  {
+    "id": "ftsw3_socketwelded_tee_3000_inches",
+    "category": "fitting",
+    "filename": "ftsw3_socketwelded_tee_3000_inches.json"
+  },
+  {
+    "id": "ftsw3_socketwelded_tee_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw3_socketwelded_tee_3000_millimetres.json"
+  },
+  {
+    "id": "ftsw3_socketwelded_tee_6000_inches",
+    "category": "fitting",
+    "filename": "ftsw3_socketwelded_tee_6000_inches.json"
+  },
+  {
+    "id": "ftsw3_socketwelded_tee_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw3_socketwelded_tee_6000_millimetres.json"
+  },
+  {
+    "id": "ftsw3_socketwelded_tee_9000_inches",
+    "category": "fitting",
+    "filename": "ftsw3_socketwelded_tee_9000_inches.json"
+  },
+  {
+    "id": "ftsw3_socketwelded_tee_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw3_socketwelded_tee_9000_millimetres.json"
+  },
+  {
+    "id": "ftsw4_socketwelded_cross_3000_inches",
+    "category": "fitting",
+    "filename": "ftsw4_socketwelded_cross_3000_inches.json"
+  },
+  {
+    "id": "ftsw4_socketwelded_cross_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw4_socketwelded_cross_3000_millimetres.json"
+  },
+  {
+    "id": "ftsw4_socketwelded_cross_6000_inches",
+    "category": "fitting",
+    "filename": "ftsw4_socketwelded_cross_6000_inches.json"
+  },
+  {
+    "id": "ftsw4_socketwelded_cross_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw4_socketwelded_cross_6000_millimetres.json"
+  },
+  {
+    "id": "ftsw4_socketwelded_cross_9000_inches",
+    "category": "fitting",
+    "filename": "ftsw4_socketwelded_cross_9000_inches.json"
+  },
+  {
+    "id": "ftsw4_socketwelded_cross_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw4_socketwelded_cross_9000_millimetres.json"
+  },
+  {
+    "id": "ftsw5_socketwelded_coupling_3000_inches",
+    "category": "fitting",
+    "filename": "ftsw5_socketwelded_coupling_3000_inches.json"
+  },
+  {
+    "id": "ftsw5_socketwelded_coupling_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw5_socketwelded_coupling_3000_millimetres.json"
+  },
+  {
+    "id": "ftsw5_socketwelded_coupling_6000_inches",
+    "category": "fitting",
+    "filename": "ftsw5_socketwelded_coupling_6000_inches.json"
+  },
+  {
+    "id": "ftsw5_socketwelded_coupling_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw5_socketwelded_coupling_6000_millimetres.json"
+  },
+  {
+    "id": "ftsw5_socketwelded_coupling_9000_inches",
+    "category": "fitting",
+    "filename": "ftsw5_socketwelded_coupling_9000_inches.json"
+  },
+  {
+    "id": "ftsw5_socketwelded_coupling_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw5_socketwelded_coupling_9000_millimetres.json"
+  },
+  {
+    "id": "ftsw6_socketwelded_half_coupling_3000_inches",
+    "category": "fitting",
+    "filename": "ftsw6_socketwelded_half_coupling_3000_inches.json"
+  },
+  {
+    "id": "ftsw6_socketwelded_half_coupling_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw6_socketwelded_half_coupling_3000_millimetres.json"
+  },
+  {
+    "id": "ftsw6_socketwelded_half_coupling_6000_inches",
+    "category": "fitting",
+    "filename": "ftsw6_socketwelded_half_coupling_6000_inches.json"
+  },
+  {
+    "id": "ftsw6_socketwelded_half_coupling_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw6_socketwelded_half_coupling_6000_millimetres.json"
+  },
+  {
+    "id": "ftsw6_socketwelded_half_coupling_9000_inches",
+    "category": "fitting",
+    "filename": "ftsw6_socketwelded_half_coupling_9000_inches.json"
+  },
+  {
+    "id": "ftsw6_socketwelded_half_coupling_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw6_socketwelded_half_coupling_9000_millimetres.json"
+  },
+  {
+    "id": "ftsw7_socketwelded_cap_3000_inches",
+    "category": "fitting",
+    "filename": "ftsw7_socketwelded_cap_3000_inches.json"
+  },
+  {
+    "id": "ftsw7_socketwelded_cap_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw7_socketwelded_cap_3000_millimetres.json"
+  },
+  {
+    "id": "ftsw7_socketwelded_cap_6000_inches",
+    "category": "fitting",
+    "filename": "ftsw7_socketwelded_cap_6000_inches.json"
+  },
+  {
+    "id": "ftsw7_socketwelded_cap_6000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw7_socketwelded_cap_6000_millimetres.json"
+  },
+  {
+    "id": "ftsw7_socketwelded_cap_9000_inches",
+    "category": "fitting",
+    "filename": "ftsw7_socketwelded_cap_9000_inches.json"
+  },
+  {
+    "id": "ftsw7_socketwelded_cap_9000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw7_socketwelded_cap_9000_millimetres.json"
+  },
+  {
+    "id": "ftsw830",
+    "category": "fitting",
+    "filename": "ftsw830.json"
+  },
+  {
+    "id": "ftsw860",
+    "category": "fitting",
+    "filename": "ftsw860.json"
+  },
+  {
+    "id": "ftsw8_sw_red_cplg_3000_millimetres",
+    "category": "fitting",
+    "filename": "ftsw8_sw_red_cplg_3000_millimetres.json"
+  },
+  {
+    "id": "ftsw930",
+    "category": "fitting",
+    "filename": "ftsw930.json"
+  },
+  {
+    "id": "ftsw960",
+    "category": "fitting",
+    "filename": "ftsw960.json"
+  },
+  {
+    "id": "gflt1",
+    "category": "other",
+    "filename": "gflt1.json"
+  },
+  {
+    "id": "gflt1_imperial",
+    "category": "other",
+    "filename": "gflt1_imperial.json"
+  },
+  {
+    "id": "gflt2",
+    "category": "other",
+    "filename": "gflt2.json"
+  },
+  {
+    "id": "gflt2_imperial",
+    "category": "other",
+    "filename": "gflt2_imperial.json"
+  },
+  {
+    "id": "gflt3",
+    "category": "other",
+    "filename": "gflt3.json"
+  },
+  {
+    "id": "gflt3_imperial",
+    "category": "other",
+    "filename": "gflt3_imperial.json"
+  },
+  {
+    "id": "grtj1",
+    "category": "gasket",
+    "filename": "grtj1.json"
+  },
+  {
+    "id": "grtj1_imperial",
+    "category": "gasket",
+    "filename": "grtj1_imperial.json"
+  },
+  {
+    "id": "grtj2",
+    "category": "gasket",
+    "filename": "grtj2.json"
+  },
+  {
+    "id": "grtj2_imperial",
+    "category": "gasket",
+    "filename": "grtj2_imperial.json"
+  },
+  {
+    "id": "grtj3",
+    "category": "gasket",
+    "filename": "grtj3.json"
+  },
+  {
+    "id": "grtj3_imperial",
+    "category": "gasket",
+    "filename": "grtj3_imperial.json"
+  },
+  {
+    "id": "gspr1",
+    "category": "other",
+    "filename": "gspr1.json"
+  },
+  {
+    "id": "gspr1_imperial",
+    "category": "other",
+    "filename": "gspr1_imperial.json"
+  },
+  {
+    "id": "gspr2",
+    "category": "other",
+    "filename": "gspr2.json"
+  },
+  {
+    "id": "gspr2_imperial",
+    "category": "other",
+    "filename": "gspr2_imperial.json"
+  },
+  {
+    "id": "gspr3",
+    "category": "other",
+    "filename": "gspr3.json"
+  },
+  {
+    "id": "gspr3_imperial",
+    "category": "other",
+    "filename": "gspr3_imperial.json"
+  },
+  {
+    "id": "latroflange150",
+    "category": "flange",
+    "filename": "latroflange150.json"
+  },
+  {
+    "id": "latroflange1500",
+    "category": "flange",
+    "filename": "latroflange1500.json"
+  },
+  {
+    "id": "latroflange2500",
+    "category": "flange",
+    "filename": "latroflange2500.json"
+  },
+  {
+    "id": "latroflange300",
+    "category": "flange",
+    "filename": "latroflange300.json"
+  },
+  {
+    "id": "latroflange600",
+    "category": "flange",
+    "filename": "latroflange600.json"
+  },
+  {
+    "id": "latroflange900",
+    "category": "flange",
+    "filename": "latroflange900.json"
+  },
+  {
+    "id": "lol3000",
+    "category": "other",
+    "filename": "lol3000.json"
+  },
+  {
+    "id": "lol6000",
+    "category": "other",
+    "filename": "lol6000.json"
+  },
+  {
+    "id": "nipoflange150",
+    "category": "flange",
+    "filename": "nipoflange150.json"
+  },
+  {
+    "id": "nipoflange1500",
+    "category": "flange",
+    "filename": "nipoflange1500.json"
+  },
+  {
+    "id": "nipoflange2500",
+    "category": "flange",
+    "filename": "nipoflange2500.json"
+  },
+  {
+    "id": "nipoflange300",
+    "category": "flange",
+    "filename": "nipoflange300.json"
+  },
+  {
+    "id": "nipoflange600",
+    "category": "flange",
+    "filename": "nipoflange600.json"
+  },
+  {
+    "id": "nipoflange900",
+    "category": "flange",
+    "filename": "nipoflange900.json"
+  },
+  {
+    "id": "nuts1",
+    "category": "nut",
+    "filename": "nuts1.json"
+  },
+  {
+    "id": "nuts2",
+    "category": "nut",
+    "filename": "nuts2.json"
+  },
+  {
+    "id": "orif1500",
+    "category": "orifice",
+    "filename": "orif1500.json"
+  },
+  {
+    "id": "orif2500",
+    "category": "orifice",
+    "filename": "orif2500.json"
+  },
+  {
+    "id": "orif300",
+    "category": "orifice",
+    "filename": "orif300.json"
+  },
+  {
+    "id": "orif600",
+    "category": "orifice",
+    "filename": "orif600.json"
+  },
+  {
+    "id": "orif900",
+    "category": "orifice",
+    "filename": "orif900.json"
+  },
+  {
+    "id": "orif_imperial_1500",
+    "category": "orifice",
+    "filename": "orif_imperial_1500.json"
+  },
+  {
+    "id": "orif_imperial_2500",
+    "category": "orifice",
+    "filename": "orif_imperial_2500.json"
+  },
+  {
+    "id": "orif_imperial_300",
+    "category": "orifice",
+    "filename": "orif_imperial_300.json"
+  },
+  {
+    "id": "orif_imperial_600",
+    "category": "orifice",
+    "filename": "orif_imperial_600.json"
+  },
+  {
+    "id": "orif_imperial_900",
+    "category": "orifice",
+    "filename": "orif_imperial_900.json"
+  },
+  {
+    "id": "pipe10",
+    "category": "pipe",
+    "filename": "pipe10.json"
+  },
+  {
+    "id": "pipe100",
+    "category": "pipe",
+    "filename": "pipe100.json"
+  },
+  {
+    "id": "pipe10s",
+    "category": "pipe",
+    "filename": "pipe10s.json"
+  },
+  {
+    "id": "pipe120",
+    "category": "pipe",
+    "filename": "pipe120.json"
+  },
+  {
+    "id": "pipe140",
+    "category": "pipe",
+    "filename": "pipe140.json"
+  },
+  {
+    "id": "pipe160",
+    "category": "pipe",
+    "filename": "pipe160.json"
+  },
+  {
+    "id": "pipe20",
+    "category": "pipe",
+    "filename": "pipe20.json"
+  },
+  {
+    "id": "pipe30",
+    "category": "pipe",
+    "filename": "pipe30.json"
+  },
+  {
+    "id": "pipe40",
+    "category": "pipe",
+    "filename": "pipe40.json"
+  },
+  {
+    "id": "pipe40s",
+    "category": "pipe",
+    "filename": "pipe40s.json"
+  },
+  {
+    "id": "pipe5",
+    "category": "pipe",
+    "filename": "pipe5.json"
+  },
+  {
+    "id": "pipe5s",
+    "category": "pipe",
+    "filename": "pipe5s.json"
+  },
+  {
+    "id": "pipe60",
+    "category": "pipe",
+    "filename": "pipe60.json"
+  },
+  {
+    "id": "pipe80",
+    "category": "pipe",
+    "filename": "pipe80.json"
+  },
+  {
+    "id": "pipe80s",
+    "category": "pipe",
+    "filename": "pipe80s.json"
+  },
+  {
+    "id": "pipestd",
+    "category": "pipe",
+    "filename": "pipestd.json"
+  },
+  {
+    "id": "pipexs",
+    "category": "pipe",
+    "filename": "pipexs.json"
+  },
+  {
+    "id": "pipexxs",
+    "category": "pipe",
+    "filename": "pipexxs.json"
+  },
+  {
+    "id": "pipe_imperial_10",
+    "category": "pipe",
+    "filename": "pipe_imperial_10.json"
+  },
+  {
+    "id": "pipe_imperial_100",
+    "category": "pipe",
+    "filename": "pipe_imperial_100.json"
+  },
+  {
+    "id": "pipe_imperial_10s",
+    "category": "pipe",
+    "filename": "pipe_imperial_10s.json"
+  },
+  {
+    "id": "pipe_imperial_120",
+    "category": "pipe",
+    "filename": "pipe_imperial_120.json"
+  },
+  {
+    "id": "pipe_imperial_140",
+    "category": "pipe",
+    "filename": "pipe_imperial_140.json"
+  },
+  {
+    "id": "pipe_imperial_160",
+    "category": "pipe",
+    "filename": "pipe_imperial_160.json"
+  },
+  {
+    "id": "pipe_imperial_20",
+    "category": "pipe",
+    "filename": "pipe_imperial_20.json"
+  },
+  {
+    "id": "pipe_imperial_30",
+    "category": "pipe",
+    "filename": "pipe_imperial_30.json"
+  },
+  {
+    "id": "pipe_imperial_40",
+    "category": "pipe",
+    "filename": "pipe_imperial_40.json"
+  },
+  {
+    "id": "pipe_imperial_40s",
+    "category": "pipe",
+    "filename": "pipe_imperial_40s.json"
+  },
+  {
+    "id": "pipe_imperial_5",
+    "category": "pipe",
+    "filename": "pipe_imperial_5.json"
+  },
+  {
+    "id": "pipe_imperial_5s",
+    "category": "pipe",
+    "filename": "pipe_imperial_5s.json"
+  },
+  {
+    "id": "pipe_imperial_60",
+    "category": "pipe",
+    "filename": "pipe_imperial_60.json"
+  },
+  {
+    "id": "pipe_imperial_80",
+    "category": "pipe",
+    "filename": "pipe_imperial_80.json"
+  },
+  {
+    "id": "pipe_imperial_80s",
+    "category": "pipe",
+    "filename": "pipe_imperial_80s.json"
+  },
+  {
+    "id": "pipe_imperial_std",
+    "category": "pipe",
+    "filename": "pipe_imperial_std.json"
+  },
+  {
+    "id": "pipe_imperial_xs",
+    "category": "pipe",
+    "filename": "pipe_imperial_xs.json"
+  },
+  {
+    "id": "pipe_imperial_xxs",
+    "category": "pipe",
+    "filename": "pipe_imperial_xxs.json"
+  },
+  {
+    "id": "piwt1_carbonsteel_imperial",
+    "category": "tee",
+    "filename": "piwt1_carbonsteel_imperial.json"
+  },
+  {
+    "id": "piwt1_carbonsteel_metric",
+    "category": "tee",
+    "filename": "piwt1_carbonsteel_metric.json"
+  },
+  {
+    "id": "psv",
+    "category": "other",
+    "filename": "psv.json"
+  },
+  {
+    "id": "reducers10",
+    "category": "other",
+    "filename": "reducers10.json"
+  },
+  {
+    "id": "reducers100",
+    "category": "other",
+    "filename": "reducers100.json"
+  },
+  {
+    "id": "reducers10s",
+    "category": "other",
+    "filename": "reducers10s.json"
+  },
+  {
+    "id": "reducers120",
+    "category": "other",
+    "filename": "reducers120.json"
+  },
+  {
+    "id": "reducers140",
+    "category": "other",
+    "filename": "reducers140.json"
+  },
+  {
+    "id": "reducers160",
+    "category": "other",
+    "filename": "reducers160.json"
+  },
+  {
+    "id": "reducers20",
+    "category": "other",
+    "filename": "reducers20.json"
+  },
+  {
+    "id": "reducers30",
+    "category": "other",
+    "filename": "reducers30.json"
+  },
+  {
+    "id": "reducers40",
+    "category": "other",
+    "filename": "reducers40.json"
+  },
+  {
+    "id": "reducers40s",
+    "category": "other",
+    "filename": "reducers40s.json"
+  },
+  {
+    "id": "reducers5",
+    "category": "other",
+    "filename": "reducers5.json"
+  },
+  {
+    "id": "reducers5s",
+    "category": "other",
+    "filename": "reducers5s.json"
+  },
+  {
+    "id": "reducers60",
+    "category": "other",
+    "filename": "reducers60.json"
+  },
+  {
+    "id": "reducers80",
+    "category": "other",
+    "filename": "reducers80.json"
+  },
+  {
+    "id": "reducers80s",
+    "category": "other",
+    "filename": "reducers80s.json"
+  },
+  {
+    "id": "reducersstd",
+    "category": "other",
+    "filename": "reducersstd.json"
+  },
+  {
+    "id": "reducersxs",
+    "category": "other",
+    "filename": "reducersxs.json"
+  },
+  {
+    "id": "reducersxxs",
+    "category": "other",
+    "filename": "reducersxxs.json"
+  },
+  {
+    "id": "reducers_imperial_10",
+    "category": "other",
+    "filename": "reducers_imperial_10.json"
+  },
+  {
+    "id": "reducers_imperial_100",
+    "category": "other",
+    "filename": "reducers_imperial_100.json"
+  },
+  {
+    "id": "reducers_imperial_10s",
+    "category": "other",
+    "filename": "reducers_imperial_10s.json"
+  },
+  {
+    "id": "reducers_imperial_120",
+    "category": "other",
+    "filename": "reducers_imperial_120.json"
+  },
+  {
+    "id": "reducers_imperial_140",
+    "category": "other",
+    "filename": "reducers_imperial_140.json"
+  },
+  {
+    "id": "reducers_imperial_160",
+    "category": "other",
+    "filename": "reducers_imperial_160.json"
+  },
+  {
+    "id": "reducers_imperial_20",
+    "category": "other",
+    "filename": "reducers_imperial_20.json"
+  },
+  {
+    "id": "reducers_imperial_30",
+    "category": "other",
+    "filename": "reducers_imperial_30.json"
+  },
+  {
+    "id": "reducers_imperial_40",
+    "category": "other",
+    "filename": "reducers_imperial_40.json"
+  },
+  {
+    "id": "reducers_imperial_40s",
+    "category": "other",
+    "filename": "reducers_imperial_40s.json"
+  },
+  {
+    "id": "reducers_imperial_5",
+    "category": "other",
+    "filename": "reducers_imperial_5.json"
+  },
+  {
+    "id": "reducers_imperial_5s",
+    "category": "other",
+    "filename": "reducers_imperial_5s.json"
+  },
+  {
+    "id": "reducers_imperial_60",
+    "category": "other",
+    "filename": "reducers_imperial_60.json"
+  },
+  {
+    "id": "reducers_imperial_80",
+    "category": "other",
+    "filename": "reducers_imperial_80.json"
+  },
+  {
+    "id": "reducers_imperial_80s",
+    "category": "other",
+    "filename": "reducers_imperial_80s.json"
+  },
+  {
+    "id": "reducers_imperial_std",
+    "category": "other",
+    "filename": "reducers_imperial_std.json"
+  },
+  {
+    "id": "reducers_imperial_xs",
+    "category": "other",
+    "filename": "reducers_imperial_xs.json"
+  },
+  {
+    "id": "reducers_imperial_xxs",
+    "category": "other",
+    "filename": "reducers_imperial_xxs.json"
+  },
+  {
+    "id": "reducingtee10",
+    "category": "tee",
+    "filename": "reducingtee10.json"
+  },
+  {
+    "id": "reducingtee100",
+    "category": "tee",
+    "filename": "reducingtee100.json"
+  },
+  {
+    "id": "reducingtee10s",
+    "category": "tee",
+    "filename": "reducingtee10s.json"
+  },
+  {
+    "id": "reducingtee120",
+    "category": "tee",
+    "filename": "reducingtee120.json"
+  },
+  {
+    "id": "reducingtee140",
+    "category": "tee",
+    "filename": "reducingtee140.json"
+  },
+  {
+    "id": "reducingtee160",
+    "category": "tee",
+    "filename": "reducingtee160.json"
+  },
+  {
+    "id": "reducingtee20",
+    "category": "tee",
+    "filename": "reducingtee20.json"
+  },
+  {
+    "id": "reducingtee30",
+    "category": "tee",
+    "filename": "reducingtee30.json"
+  },
+  {
+    "id": "reducingtee40",
+    "category": "tee",
+    "filename": "reducingtee40.json"
+  },
+  {
+    "id": "reducingtee40s",
+    "category": "tee",
+    "filename": "reducingtee40s.json"
+  },
+  {
+    "id": "reducingtee5",
+    "category": "tee",
+    "filename": "reducingtee5.json"
+  },
+  {
+    "id": "reducingtee5s",
+    "category": "tee",
+    "filename": "reducingtee5s.json"
+  },
+  {
+    "id": "reducingtee60",
+    "category": "tee",
+    "filename": "reducingtee60.json"
+  },
+  {
+    "id": "reducingtee80",
+    "category": "tee",
+    "filename": "reducingtee80.json"
+  },
+  {
+    "id": "reducingtee80s",
+    "category": "tee",
+    "filename": "reducingtee80s.json"
+  },
+  {
+    "id": "reducingteestd",
+    "category": "tee",
+    "filename": "reducingteestd.json"
+  },
+  {
+    "id": "reducingteexs",
+    "category": "tee",
+    "filename": "reducingteexs.json"
+  },
+  {
+    "id": "reducingteexxs (2)",
+    "category": "tee",
+    "filename": "reducingteexxs (2).json"
+  },
+  {
+    "id": "reducingteexxs",
+    "category": "tee",
+    "filename": "reducingteexxs.json"
+  },
+  {
+    "id": "reducingteexxs_",
+    "category": "tee",
+    "filename": "reducingteexxs_.json"
+  },
+  {
+    "id": "reducingtee_imperial_10",
+    "category": "tee",
+    "filename": "reducingtee_imperial_10.json"
+  },
+  {
+    "id": "reducingtee_imperial_100",
+    "category": "tee",
+    "filename": "reducingtee_imperial_100.json"
+  },
+  {
+    "id": "reducingtee_imperial_10s",
+    "category": "tee",
+    "filename": "reducingtee_imperial_10s.json"
+  },
+  {
+    "id": "reducingtee_imperial_120",
+    "category": "tee",
+    "filename": "reducingtee_imperial_120.json"
+  },
+  {
+    "id": "reducingtee_imperial_140",
+    "category": "tee",
+    "filename": "reducingtee_imperial_140.json"
+  },
+  {
+    "id": "reducingtee_imperial_160",
+    "category": "tee",
+    "filename": "reducingtee_imperial_160.json"
+  },
+  {
+    "id": "reducingtee_imperial_20",
+    "category": "tee",
+    "filename": "reducingtee_imperial_20.json"
+  },
+  {
+    "id": "reducingtee_imperial_30",
+    "category": "tee",
+    "filename": "reducingtee_imperial_30.json"
+  },
+  {
+    "id": "reducingtee_imperial_40",
+    "category": "tee",
+    "filename": "reducingtee_imperial_40.json"
+  },
+  {
+    "id": "reducingtee_imperial_40s",
+    "category": "tee",
+    "filename": "reducingtee_imperial_40s.json"
+  },
+  {
+    "id": "reducingtee_imperial_5",
+    "category": "tee",
+    "filename": "reducingtee_imperial_5.json"
+  },
+  {
+    "id": "reducingtee_imperial_5s",
+    "category": "tee",
+    "filename": "reducingtee_imperial_5s.json"
+  },
+  {
+    "id": "reducingtee_imperial_60",
+    "category": "tee",
+    "filename": "reducingtee_imperial_60.json"
+  },
+  {
+    "id": "reducingtee_imperial_80",
+    "category": "tee",
+    "filename": "reducingtee_imperial_80.json"
+  },
+  {
+    "id": "reducingtee_imperial_80s",
+    "category": "tee",
+    "filename": "reducingtee_imperial_80s.json"
+  },
+  {
+    "id": "reducingtee_imperial_std",
+    "category": "tee",
+    "filename": "reducingtee_imperial_std.json"
+  },
+  {
+    "id": "reducingtee_imperial_xs",
+    "category": "tee",
+    "filename": "reducingtee_imperial_xs.json"
+  },
+  {
+    "id": "reducingtee_imperial_xxs",
+    "category": "tee",
+    "filename": "reducingtee_imperial_xxs.json"
+  },
+  {
+    "id": "return10",
+    "category": "other",
+    "filename": "return10.json"
+  },
+  {
+    "id": "return100",
+    "category": "other",
+    "filename": "return100.json"
+  },
+  {
+    "id": "return10s",
+    "category": "other",
+    "filename": "return10s.json"
+  },
+  {
+    "id": "return120",
+    "category": "other",
+    "filename": "return120.json"
+  },
+  {
+    "id": "return140",
+    "category": "other",
+    "filename": "return140.json"
+  },
+  {
+    "id": "return160",
+    "category": "other",
+    "filename": "return160.json"
+  },
+  {
+    "id": "return20",
+    "category": "other",
+    "filename": "return20.json"
+  },
+  {
+    "id": "return30",
+    "category": "other",
+    "filename": "return30.json"
+  },
+  {
+    "id": "return40",
+    "category": "other",
+    "filename": "return40.json"
+  },
+  {
+    "id": "return40s",
+    "category": "other",
+    "filename": "return40s.json"
+  },
+  {
+    "id": "return5",
+    "category": "other",
+    "filename": "return5.json"
+  },
+  {
+    "id": "return5s",
+    "category": "other",
+    "filename": "return5s.json"
+  },
+  {
+    "id": "return60",
+    "category": "other",
+    "filename": "return60.json"
+  },
+  {
+    "id": "return80",
+    "category": "other",
+    "filename": "return80.json"
+  },
+  {
+    "id": "return80s",
+    "category": "other",
+    "filename": "return80s.json"
+  },
+  {
+    "id": "returnstd",
+    "category": "other",
+    "filename": "returnstd.json"
+  },
+  {
+    "id": "returnxs",
+    "category": "other",
+    "filename": "returnxs.json"
+  },
+  {
+    "id": "returnxxs",
+    "category": "other",
+    "filename": "returnxxs.json"
+  },
+  {
+    "id": "return_imperial_10",
+    "category": "other",
+    "filename": "return_imperial_10.json"
+  },
+  {
+    "id": "return_imperial_100",
+    "category": "other",
+    "filename": "return_imperial_100.json"
+  },
+  {
+    "id": "return_imperial_10s",
+    "category": "other",
+    "filename": "return_imperial_10s.json"
+  },
+  {
+    "id": "return_imperial_120",
+    "category": "other",
+    "filename": "return_imperial_120.json"
+  },
+  {
+    "id": "return_imperial_140",
+    "category": "other",
+    "filename": "return_imperial_140.json"
+  },
+  {
+    "id": "return_imperial_160",
+    "category": "other",
+    "filename": "return_imperial_160.json"
+  },
+  {
+    "id": "return_imperial_20",
+    "category": "other",
+    "filename": "return_imperial_20.json"
+  },
+  {
+    "id": "return_imperial_30",
+    "category": "other",
+    "filename": "return_imperial_30.json"
+  },
+  {
+    "id": "return_imperial_40",
+    "category": "other",
+    "filename": "return_imperial_40.json"
+  },
+  {
+    "id": "return_imperial_40s",
+    "category": "other",
+    "filename": "return_imperial_40s.json"
+  },
+  {
+    "id": "return_imperial_5",
+    "category": "other",
+    "filename": "return_imperial_5.json"
+  },
+  {
+    "id": "return_imperial_5s",
+    "category": "other",
+    "filename": "return_imperial_5s.json"
+  },
+  {
+    "id": "return_imperial_60",
+    "category": "other",
+    "filename": "return_imperial_60.json"
+  },
+  {
+    "id": "return_imperial_80",
+    "category": "other",
+    "filename": "return_imperial_80.json"
+  },
+  {
+    "id": "return_imperial_80s",
+    "category": "other",
+    "filename": "return_imperial_80s.json"
+  },
+  {
+    "id": "return_imperial_std",
+    "category": "other",
+    "filename": "return_imperial_std.json"
+  },
+  {
+    "id": "return_imperial_xs",
+    "category": "other",
+    "filename": "return_imperial_xs.json"
+  },
+  {
+    "id": "return_imperial_xxs",
+    "category": "other",
+    "filename": "return_imperial_xxs.json"
+  },
+  {
+    "id": "shortradiusreturn10",
+    "category": "other",
+    "filename": "shortradiusreturn10.json"
+  },
+  {
+    "id": "shortradiusreturn100",
+    "category": "other",
+    "filename": "shortradiusreturn100.json"
+  },
+  {
+    "id": "shortradiusreturn10s",
+    "category": "other",
+    "filename": "shortradiusreturn10s.json"
+  },
+  {
+    "id": "shortradiusreturn120",
+    "category": "other",
+    "filename": "shortradiusreturn120.json"
+  },
+  {
+    "id": "shortradiusreturn140",
+    "category": "other",
+    "filename": "shortradiusreturn140.json"
+  },
+  {
+    "id": "shortradiusreturn160",
+    "category": "other",
+    "filename": "shortradiusreturn160.json"
+  },
+  {
+    "id": "shortradiusreturn20",
+    "category": "other",
+    "filename": "shortradiusreturn20.json"
+  },
+  {
+    "id": "shortradiusreturn30",
+    "category": "other",
+    "filename": "shortradiusreturn30.json"
+  },
+  {
+    "id": "shortradiusreturn40",
+    "category": "other",
+    "filename": "shortradiusreturn40.json"
+  },
+  {
+    "id": "shortradiusreturn40s",
+    "category": "other",
+    "filename": "shortradiusreturn40s.json"
+  },
+  {
+    "id": "shortradiusreturn5",
+    "category": "other",
+    "filename": "shortradiusreturn5.json"
+  },
+  {
+    "id": "shortradiusreturn5s",
+    "category": "other",
+    "filename": "shortradiusreturn5s.json"
+  },
+  {
+    "id": "shortradiusreturn60",
+    "category": "other",
+    "filename": "shortradiusreturn60.json"
+  },
+  {
+    "id": "shortradiusreturn80",
+    "category": "other",
+    "filename": "shortradiusreturn80.json"
+  },
+  {
+    "id": "shortradiusreturn80s",
+    "category": "other",
+    "filename": "shortradiusreturn80s.json"
+  },
+  {
+    "id": "shortradiusreturnstd",
+    "category": "other",
+    "filename": "shortradiusreturnstd.json"
+  },
+  {
+    "id": "shortradiusreturnxs",
+    "category": "other",
+    "filename": "shortradiusreturnxs.json"
+  },
+  {
+    "id": "shortradiusreturnxxs",
+    "category": "other",
+    "filename": "shortradiusreturnxxs.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_10",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_10.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_100",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_100.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_10s",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_10s.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_120",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_120.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_140",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_140.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_160",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_160.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_20",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_20.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_30",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_30.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_40",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_40.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_40s",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_40s.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_5",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_5.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_5s",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_5s.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_60",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_60.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_80",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_80.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_80s",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_80s.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_std",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_std.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_xs",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_xs.json"
+  },
+  {
+    "id": "shortradiusreturn_imperial_xxs",
+    "category": "other",
+    "filename": "shortradiusreturn_imperial_xxs.json"
+  },
+  {
+    "id": "sol3000",
+    "category": "other",
+    "filename": "sol3000.json"
+  },
+  {
+    "id": "sol6000",
+    "category": "other",
+    "filename": "sol6000.json"
+  },
+  {
+    "id": "srra1_150",
+    "category": "other",
+    "filename": "srra1_150.json"
+  },
+  {
+    "id": "srra1_300",
+    "category": "other",
+    "filename": "srra1_300.json"
+  },
+  {
+    "id": "srra1_400",
+    "category": "other",
+    "filename": "srra1_400.json"
+  },
+  {
+    "id": "srra1_600",
+    "category": "other",
+    "filename": "srra1_600.json"
+  },
+  {
+    "id": "srra1_imperial_150",
+    "category": "other",
+    "filename": "srra1_imperial_150.json"
+  },
+  {
+    "id": "srra1_imperial_300",
+    "category": "other",
+    "filename": "srra1_imperial_300.json"
+  },
+  {
+    "id": "srra1_imperial_400",
+    "category": "other",
+    "filename": "srra1_imperial_400.json"
+  },
+  {
+    "id": "srra1_imperial_600",
+    "category": "other",
+    "filename": "srra1_imperial_600.json"
+  },
+  {
+    "id": "srra2_150",
+    "category": "other",
+    "filename": "srra2_150.json"
+  },
+  {
+    "id": "srra2_300",
+    "category": "other",
+    "filename": "srra2_300.json"
+  },
+  {
+    "id": "srra2_imperial_150",
+    "category": "other",
+    "filename": "srra2_imperial_150.json"
+  },
+  {
+    "id": "srra2_imperial_300",
+    "category": "other",
+    "filename": "srra2_imperial_300.json"
+  },
+  {
+    "id": "srra3_150",
+    "category": "other",
+    "filename": "srra3_150.json"
+  },
+  {
+    "id": "srra3_imperial_150",
+    "category": "other",
+    "filename": "srra3_imperial_150.json"
+  },
+  {
+    "id": "srra4_150",
+    "category": "other",
+    "filename": "srra4_150.json"
+  },
+  {
+    "id": "srra4_imperial_150",
+    "category": "other",
+    "filename": "srra4_imperial_150.json"
+  },
+  {
+    "id": "srrb1_150",
+    "category": "other",
+    "filename": "srrb1_150.json"
+  },
+  {
+    "id": "srrb1_300",
+    "category": "other",
+    "filename": "srrb1_300.json"
+  },
+  {
+    "id": "srrb1_imperial_150",
+    "category": "other",
+    "filename": "srrb1_imperial_150.json"
+  },
+  {
+    "id": "srrb1_imperial_300",
+    "category": "other",
+    "filename": "srrb1_imperial_300.json"
+  },
+  {
+    "id": "srrb2_150",
+    "category": "other",
+    "filename": "srrb2_150.json"
+  },
+  {
+    "id": "srrb2_imperial_150",
+    "category": "other",
+    "filename": "srrb2_imperial_150.json"
+  },
+  {
+    "id": "srrb3_150",
+    "category": "other",
+    "filename": "srrb3_150.json"
+  },
+  {
+    "id": "srrb3_300",
+    "category": "other",
+    "filename": "srrb3_300.json"
+  },
+  {
+    "id": "srrb3_imperial_150",
+    "category": "other",
+    "filename": "srrb3_imperial_150.json"
+  },
+  {
+    "id": "srrb3_imperial_300",
+    "category": "other",
+    "filename": "srrb3_imperial_300.json"
+  },
+  {
+    "id": "srrc1_150",
+    "category": "other",
+    "filename": "srrc1_150.json"
+  },
+  {
+    "id": "srrc1_300",
+    "category": "other",
+    "filename": "srrc1_300.json"
+  },
+  {
+    "id": "srrc1_imperial_150",
+    "category": "other",
+    "filename": "srrc1_imperial_150.json"
+  },
+  {
+    "id": "srrc1_imperial_300",
+    "category": "other",
+    "filename": "srrc1_imperial_300.json"
+  },
+  {
+    "id": "srrd1_150",
+    "category": "other",
+    "filename": "srrd1_150.json"
+  },
+  {
+    "id": "srrd1_300",
+    "category": "other",
+    "filename": "srrd1_300.json"
+  },
+  {
+    "id": "srrd1_imperial_150",
+    "category": "other",
+    "filename": "srrd1_imperial_150.json"
+  },
+  {
+    "id": "srrd1_imperial_300",
+    "category": "other",
+    "filename": "srrd1_imperial_300.json"
+  },
+  {
+    "id": "srre1_150",
+    "category": "other",
+    "filename": "srre1_150.json"
+  },
+  {
+    "id": "srre1_300",
+    "category": "other",
+    "filename": "srre1_300.json"
+  },
+  {
+    "id": "srre1_imperial_150",
+    "category": "other",
+    "filename": "srre1_imperial_150.json"
+  },
+  {
+    "id": "srre1_imperial_300",
+    "category": "other",
+    "filename": "srre1_imperial_300.json"
+  },
+  {
+    "id": "straighttee10",
+    "category": "tee",
+    "filename": "straighttee10.json"
+  },
+  {
+    "id": "straighttee100",
+    "category": "tee",
+    "filename": "straighttee100.json"
+  },
+  {
+    "id": "straighttee10s",
+    "category": "tee",
+    "filename": "straighttee10s.json"
+  },
+  {
+    "id": "straighttee120",
+    "category": "tee",
+    "filename": "straighttee120.json"
+  },
+  {
+    "id": "straighttee140",
+    "category": "tee",
+    "filename": "straighttee140.json"
+  },
+  {
+    "id": "straighttee160",
+    "category": "tee",
+    "filename": "straighttee160.json"
+  },
+  {
+    "id": "straighttee20",
+    "category": "tee",
+    "filename": "straighttee20.json"
+  },
+  {
+    "id": "straighttee30",
+    "category": "tee",
+    "filename": "straighttee30.json"
+  },
+  {
+    "id": "straighttee40",
+    "category": "tee",
+    "filename": "straighttee40.json"
+  },
+  {
+    "id": "straighttee40s",
+    "category": "tee",
+    "filename": "straighttee40s.json"
+  },
+  {
+    "id": "straighttee5",
+    "category": "tee",
+    "filename": "straighttee5.json"
+  },
+  {
+    "id": "straighttee5s",
+    "category": "tee",
+    "filename": "straighttee5s.json"
+  },
+  {
+    "id": "straighttee60",
+    "category": "tee",
+    "filename": "straighttee60.json"
+  },
+  {
+    "id": "straighttee80",
+    "category": "tee",
+    "filename": "straighttee80.json"
+  },
+  {
+    "id": "straighttee80s",
+    "category": "tee",
+    "filename": "straighttee80s.json"
+  },
+  {
+    "id": "straightteestd",
+    "category": "tee",
+    "filename": "straightteestd.json"
+  },
+  {
+    "id": "straightteexs",
+    "category": "tee",
+    "filename": "straightteexs.json"
+  },
+  {
+    "id": "straightteexxs",
+    "category": "tee",
+    "filename": "straightteexxs.json"
+  },
+  {
+    "id": "straighttee_imperial_10",
+    "category": "tee",
+    "filename": "straighttee_imperial_10.json"
+  },
+  {
+    "id": "straighttee_imperial_100",
+    "category": "tee",
+    "filename": "straighttee_imperial_100.json"
+  },
+  {
+    "id": "straighttee_imperial_10s",
+    "category": "tee",
+    "filename": "straighttee_imperial_10s.json"
+  },
+  {
+    "id": "straighttee_imperial_120",
+    "category": "tee",
+    "filename": "straighttee_imperial_120.json"
+  },
+  {
+    "id": "straighttee_imperial_140",
+    "category": "tee",
+    "filename": "straighttee_imperial_140.json"
+  },
+  {
+    "id": "straighttee_imperial_160",
+    "category": "tee",
+    "filename": "straighttee_imperial_160.json"
+  },
+  {
+    "id": "straighttee_imperial_20",
+    "category": "tee",
+    "filename": "straighttee_imperial_20.json"
+  },
+  {
+    "id": "straighttee_imperial_30",
+    "category": "tee",
+    "filename": "straighttee_imperial_30.json"
+  },
+  {
+    "id": "straighttee_imperial_40",
+    "category": "tee",
+    "filename": "straighttee_imperial_40.json"
+  },
+  {
+    "id": "straighttee_imperial_40s",
+    "category": "tee",
+    "filename": "straighttee_imperial_40s.json"
+  },
+  {
+    "id": "straighttee_imperial_5",
+    "category": "tee",
+    "filename": "straighttee_imperial_5.json"
+  },
+  {
+    "id": "straighttee_imperial_5s",
+    "category": "tee",
+    "filename": "straighttee_imperial_5s.json"
+  },
+  {
+    "id": "straighttee_imperial_60",
+    "category": "tee",
+    "filename": "straighttee_imperial_60.json"
+  },
+  {
+    "id": "straighttee_imperial_80",
+    "category": "tee",
+    "filename": "straighttee_imperial_80.json"
+  },
+  {
+    "id": "straighttee_imperial_80s",
+    "category": "tee",
+    "filename": "straighttee_imperial_80s.json"
+  },
+  {
+    "id": "straighttee_imperial_std",
+    "category": "tee",
+    "filename": "straighttee_imperial_std.json"
+  },
+  {
+    "id": "straighttee_imperial_xs",
+    "category": "tee",
+    "filename": "straighttee_imperial_xs.json"
+  },
+  {
+    "id": "straighttee_imperial_xxs",
+    "category": "tee",
+    "filename": "straighttee_imperial_xxs.json"
+  },
+  {
+    "id": "stubend10s",
+    "category": "other",
+    "filename": "stubend10s.json"
+  },
+  {
+    "id": "stubend40s",
+    "category": "other",
+    "filename": "stubend40s.json"
+  },
+  {
+    "id": "stubend5",
+    "category": "other",
+    "filename": "stubend5.json"
+  },
+  {
+    "id": "stubend5s",
+    "category": "other",
+    "filename": "stubend5s.json"
+  },
+  {
+    "id": "stubend_imperial_10s",
+    "category": "other",
+    "filename": "stubend_imperial_10s.json"
+  },
+  {
+    "id": "stubend_imperial_40s",
+    "category": "other",
+    "filename": "stubend_imperial_40s.json"
+  },
+  {
+    "id": "stubend_imperial_5",
+    "category": "other",
+    "filename": "stubend_imperial_5.json"
+  },
+  {
+    "id": "stubend_imperial_5s",
+    "category": "other",
+    "filename": "stubend_imperial_5s.json"
+  },
+  {
+    "id": "tol3000",
+    "category": "other",
+    "filename": "tol3000.json"
+  },
+  {
+    "id": "tol6000",
+    "category": "other",
+    "filename": "tol6000.json"
+  },
+  {
+    "id": "vlfl9",
+    "category": "other",
+    "filename": "vlfl9.json"
+  },
+  {
+    "id": "vlsc1_1500",
+    "category": "other",
+    "filename": "vlsc1_1500.json"
+  },
+  {
+    "id": "vlsc1_800",
+    "category": "other",
+    "filename": "vlsc1_800.json"
+  },
+  {
+    "id": "vlsc1_imperial_1500",
+    "category": "other",
+    "filename": "vlsc1_imperial_1500.json"
+  },
+  {
+    "id": "vlsc1_imperial_800",
+    "category": "other",
+    "filename": "vlsc1_imperial_800.json"
+  },
+  {
+    "id": "vlsc2_1500",
+    "category": "other",
+    "filename": "vlsc2_1500.json"
+  },
+  {
+    "id": "vlsc2_800",
+    "category": "other",
+    "filename": "vlsc2_800.json"
+  },
+  {
+    "id": "vlsc2_imperial_1500",
+    "category": "other",
+    "filename": "vlsc2_imperial_1500.json"
+  },
+  {
+    "id": "vlsc2_imperial_800",
+    "category": "other",
+    "filename": "vlsc2_imperial_800.json"
+  },
+  {
+    "id": "vlsc3_1500",
+    "category": "other",
+    "filename": "vlsc3_1500.json"
+  },
+  {
+    "id": "vlsc3_800",
+    "category": "other",
+    "filename": "vlsc3_800.json"
+  },
+  {
+    "id": "vlsc3_imperial_1500",
+    "category": "other",
+    "filename": "vlsc3_imperial_1500.json"
+  },
+  {
+    "id": "vlsc3_imperial_800",
+    "category": "other",
+    "filename": "vlsc3_imperial_800.json"
+  },
+  {
+    "id": "vlsc4_1500",
+    "category": "other",
+    "filename": "vlsc4_1500.json"
+  },
+  {
+    "id": "vlsc4_800",
+    "category": "other",
+    "filename": "vlsc4_800.json"
+  },
+  {
+    "id": "vlsc4_imperial_1500",
+    "category": "other",
+    "filename": "vlsc4_imperial_1500.json"
+  },
+  {
+    "id": "vlsc4_imperial_800",
+    "category": "other",
+    "filename": "vlsc4_imperial_800.json"
+  },
+  {
+    "id": "vlsc5_1500",
+    "category": "other",
+    "filename": "vlsc5_1500.json"
+  },
+  {
+    "id": "vlsc5_800",
+    "category": "other",
+    "filename": "vlsc5_800.json"
+  },
+  {
+    "id": "vlsc5_imperial_1500",
+    "category": "other",
+    "filename": "vlsc5_imperial_1500.json"
+  },
+  {
+    "id": "vlsc5_imperial_800",
+    "category": "other",
+    "filename": "vlsc5_imperial_800.json"
+  },
+  {
+    "id": "vlsw5_1500",
+    "category": "other",
+    "filename": "vlsw5_1500.json"
+  },
+  {
+    "id": "vlsw5_800",
+    "category": "other",
+    "filename": "vlsw5_800.json"
+  },
+  {
+    "id": "vlsw5_imperial_1500",
+    "category": "other",
+    "filename": "vlsw5_imperial_1500.json"
+  },
+  {
+    "id": "vlsw5_imperial_800",
+    "category": "other",
+    "filename": "vlsw5_imperial_800.json"
+  },
+  {
+    "id": "vlv1150",
+    "category": "valve",
+    "filename": "vlv1150.json"
+  },
+  {
+    "id": "vlv11500",
+    "category": "valve",
+    "filename": "vlv11500.json"
+  },
+  {
+    "id": "vlv12500",
+    "category": "valve",
+    "filename": "vlv12500.json"
+  },
+  {
+    "id": "vlv1300",
+    "category": "valve",
+    "filename": "vlv1300.json"
+  },
+  {
+    "id": "vlv1400",
+    "category": "valve",
+    "filename": "vlv1400.json"
+  },
+  {
+    "id": "vlv1400_",
+    "category": "valve",
+    "filename": "vlv1400_.json"
+  },
+  {
+    "id": "vlv1600",
+    "category": "valve",
+    "filename": "vlv1600.json"
+  },
+  {
+    "id": "vlv1900",
+    "category": "valve",
+    "filename": "vlv1900.json"
+  },
+  {
+    "id": "vlv1_imperial_150",
+    "category": "valve",
+    "filename": "vlv1_imperial_150.json"
+  },
+  {
+    "id": "vlv1_imperial_1500",
+    "category": "valve",
+    "filename": "vlv1_imperial_1500.json"
+  },
+  {
+    "id": "vlv1_imperial_2500",
+    "category": "valve",
+    "filename": "vlv1_imperial_2500.json"
+  },
+  {
+    "id": "vlv1_imperial_300",
+    "category": "valve",
+    "filename": "vlv1_imperial_300.json"
+  },
+  {
+    "id": "vlv1_imperial_400",
+    "category": "valve",
+    "filename": "vlv1_imperial_400.json"
+  },
+  {
+    "id": "vlv1_imperial_600",
+    "category": "valve",
+    "filename": "vlv1_imperial_600.json"
+  },
+  {
+    "id": "vlv1_imperial_900",
+    "category": "valve",
+    "filename": "vlv1_imperial_900.json"
+  },
+  {
+    "id": "vlv2150",
+    "category": "valve",
+    "filename": "vlv2150.json"
+  },
+  {
+    "id": "vlv21500",
+    "category": "valve",
+    "filename": "vlv21500.json"
+  },
+  {
+    "id": "vlv22500",
+    "category": "valve",
+    "filename": "vlv22500.json"
+  },
+  {
+    "id": "vlv2300",
+    "category": "valve",
+    "filename": "vlv2300.json"
+  },
+  {
+    "id": "vlv2400",
+    "category": "valve",
+    "filename": "vlv2400.json"
+  },
+  {
+    "id": "vlv2600",
+    "category": "valve",
+    "filename": "vlv2600.json"
+  },
+  {
+    "id": "vlv2900",
+    "category": "valve",
+    "filename": "vlv2900.json"
+  },
+  {
+    "id": "vlv2_imperial_150",
+    "category": "valve",
+    "filename": "vlv2_imperial_150.json"
+  },
+  {
+    "id": "vlv2_imperial_1500",
+    "category": "valve",
+    "filename": "vlv2_imperial_1500.json"
+  },
+  {
+    "id": "vlv2_imperial_2500",
+    "category": "valve",
+    "filename": "vlv2_imperial_2500.json"
+  },
+  {
+    "id": "vlv2_imperial_300",
+    "category": "valve",
+    "filename": "vlv2_imperial_300.json"
+  },
+  {
+    "id": "vlv2_imperial_400",
+    "category": "valve",
+    "filename": "vlv2_imperial_400.json"
+  },
+  {
+    "id": "vlv2_imperial_600",
+    "category": "valve",
+    "filename": "vlv2_imperial_600.json"
+  },
+  {
+    "id": "vlv2_imperial_900",
+    "category": "valve",
+    "filename": "vlv2_imperial_900.json"
+  },
+  {
+    "id": "vlv3150",
+    "category": "valve",
+    "filename": "vlv3150.json"
+  },
+  {
+    "id": "vlv31500",
+    "category": "valve",
+    "filename": "vlv31500.json"
+  },
+  {
+    "id": "vlv32500",
+    "category": "valve",
+    "filename": "vlv32500.json"
+  },
+  {
+    "id": "vlv3300",
+    "category": "valve",
+    "filename": "vlv3300.json"
+  },
+  {
+    "id": "vlv3400",
+    "category": "valve",
+    "filename": "vlv3400.json"
+  },
+  {
+    "id": "vlv3600",
+    "category": "valve",
+    "filename": "vlv3600.json"
+  },
+  {
+    "id": "vlv3900",
+    "category": "valve",
+    "filename": "vlv3900.json"
+  },
+  {
+    "id": "vlv3_imperial_150",
+    "category": "valve",
+    "filename": "vlv3_imperial_150.json"
+  },
+  {
+    "id": "vlv3_imperial_1500",
+    "category": "valve",
+    "filename": "vlv3_imperial_1500.json"
+  },
+  {
+    "id": "vlv3_imperial_2500",
+    "category": "valve",
+    "filename": "vlv3_imperial_2500.json"
+  },
+  {
+    "id": "vlv3_imperial_300",
+    "category": "valve",
+    "filename": "vlv3_imperial_300.json"
+  },
+  {
+    "id": "vlv3_imperial_400",
+    "category": "valve",
+    "filename": "vlv3_imperial_400.json"
+  },
+  {
+    "id": "vlv3_imperial_600",
+    "category": "valve",
+    "filename": "vlv3_imperial_600.json"
+  },
+  {
+    "id": "vlv3_imperial_900",
+    "category": "valve",
+    "filename": "vlv3_imperial_900.json"
+  },
+  {
+    "id": "vlv4150",
+    "category": "valve",
+    "filename": "vlv4150.json"
+  },
+  {
+    "id": "vlv41500",
+    "category": "valve",
+    "filename": "vlv41500.json"
+  },
+  {
+    "id": "vlv42500",
+    "category": "valve",
+    "filename": "vlv42500.json"
+  },
+  {
+    "id": "vlv4300",
+    "category": "valve",
+    "filename": "vlv4300.json"
+  },
+  {
+    "id": "vlv4400",
+    "category": "valve",
+    "filename": "vlv4400.json"
+  },
+  {
+    "id": "vlv4600",
+    "category": "valve",
+    "filename": "vlv4600.json"
+  },
+  {
+    "id": "vlv4900",
+    "category": "valve",
+    "filename": "vlv4900.json"
+  },
+  {
+    "id": "vlv4_imperial_150",
+    "category": "valve",
+    "filename": "vlv4_imperial_150.json"
+  },
+  {
+    "id": "vlv4_imperial_1500",
+    "category": "valve",
+    "filename": "vlv4_imperial_1500.json"
+  },
+  {
+    "id": "vlv4_imperial_2500",
+    "category": "valve",
+    "filename": "vlv4_imperial_2500.json"
+  },
+  {
+    "id": "vlv4_imperial_300",
+    "category": "valve",
+    "filename": "vlv4_imperial_300.json"
+  },
+  {
+    "id": "vlv4_imperial_400",
+    "category": "valve",
+    "filename": "vlv4_imperial_400.json"
+  },
+  {
+    "id": "vlv4_imperial_600",
+    "category": "valve",
+    "filename": "vlv4_imperial_600.json"
+  },
+  {
+    "id": "vlv4_imperial_900",
+    "category": "valve",
+    "filename": "vlv4_imperial_900.json"
+  },
+  {
+    "id": "vlv5150",
+    "category": "valve",
+    "filename": "vlv5150.json"
+  },
+  {
+    "id": "vlv51500",
+    "category": "valve",
+    "filename": "vlv51500.json"
+  },
+  {
+    "id": "vlv52500",
+    "category": "valve",
+    "filename": "vlv52500.json"
+  },
+  {
+    "id": "vlv5300",
+    "category": "valve",
+    "filename": "vlv5300.json"
+  },
+  {
+    "id": "vlv5400",
+    "category": "valve",
+    "filename": "vlv5400.json"
+  },
+  {
+    "id": "vlv5600",
+    "category": "valve",
+    "filename": "vlv5600.json"
+  },
+  {
+    "id": "vlv5900",
+    "category": "valve",
+    "filename": "vlv5900.json"
+  },
+  {
+    "id": "vlv5_imperial_150",
+    "category": "valve",
+    "filename": "vlv5_imperial_150.json"
+  },
+  {
+    "id": "vlv5_imperial_1500",
+    "category": "valve",
+    "filename": "vlv5_imperial_1500.json"
+  },
+  {
+    "id": "vlv5_imperial_2500",
+    "category": "valve",
+    "filename": "vlv5_imperial_2500.json"
+  },
+  {
+    "id": "vlv5_imperial_300",
+    "category": "valve",
+    "filename": "vlv5_imperial_300.json"
+  },
+  {
+    "id": "vlv5_imperial_400",
+    "category": "valve",
+    "filename": "vlv5_imperial_400.json"
+  },
+  {
+    "id": "vlv5_imperial_600",
+    "category": "valve",
+    "filename": "vlv5_imperial_600.json"
+  },
+  {
+    "id": "vlv5_imperial_900",
+    "category": "valve",
+    "filename": "vlv5_imperial_900.json"
+  },
+  {
+    "id": "vlv6150",
+    "category": "valve",
+    "filename": "vlv6150.json"
+  },
+  {
+    "id": "vlv61500",
+    "category": "valve",
+    "filename": "vlv61500.json"
+  },
+  {
+    "id": "vlv62500",
+    "category": "valve",
+    "filename": "vlv62500.json"
+  },
+  {
+    "id": "vlv6300",
+    "category": "valve",
+    "filename": "vlv6300.json"
+  },
+  {
+    "id": "vlv6400",
+    "category": "valve",
+    "filename": "vlv6400.json"
+  },
+  {
+    "id": "vlv6600",
+    "category": "valve",
+    "filename": "vlv6600.json"
+  },
+  {
+    "id": "vlv6900",
+    "category": "valve",
+    "filename": "vlv6900.json"
+  },
+  {
+    "id": "vlv6_imperial_150",
+    "category": "valve",
+    "filename": "vlv6_imperial_150.json"
+  },
+  {
+    "id": "vlv6_imperial_1500",
+    "category": "valve",
+    "filename": "vlv6_imperial_1500.json"
+  },
+  {
+    "id": "vlv6_imperial_2500",
+    "category": "valve",
+    "filename": "vlv6_imperial_2500.json"
+  },
+  {
+    "id": "vlv6_imperial_300",
+    "category": "valve",
+    "filename": "vlv6_imperial_300.json"
+  },
+  {
+    "id": "vlv6_imperial_400",
+    "category": "valve",
+    "filename": "vlv6_imperial_400.json"
+  },
+  {
+    "id": "vlv6_imperial_600",
+    "category": "valve",
+    "filename": "vlv6_imperial_600.json"
+  },
+  {
+    "id": "vlv6_imperial_900",
+    "category": "valve",
+    "filename": "vlv6_imperial_900.json"
+  },
+  {
+    "id": "vlv7150",
+    "category": "valve",
+    "filename": "vlv7150.json"
+  },
+  {
+    "id": "vlv71500",
+    "category": "valve",
+    "filename": "vlv71500.json"
+  },
+  {
+    "id": "vlv72500",
+    "category": "valve",
+    "filename": "vlv72500.json"
+  },
+  {
+    "id": "vlv7300",
+    "category": "valve",
+    "filename": "vlv7300.json"
+  },
+  {
+    "id": "vlv7400",
+    "category": "valve",
+    "filename": "vlv7400.json"
+  },
+  {
+    "id": "vlv7600",
+    "category": "valve",
+    "filename": "vlv7600.json"
+  },
+  {
+    "id": "vlv7900",
+    "category": "valve",
+    "filename": "vlv7900.json"
+  },
+  {
+    "id": "vlv7_imperial_150",
+    "category": "valve",
+    "filename": "vlv7_imperial_150.json"
+  },
+  {
+    "id": "vlv7_imperial_1500",
+    "category": "valve",
+    "filename": "vlv7_imperial_1500.json"
+  },
+  {
+    "id": "vlv7_imperial_2500",
+    "category": "valve",
+    "filename": "vlv7_imperial_2500.json"
+  },
+  {
+    "id": "vlv7_imperial_300",
+    "category": "valve",
+    "filename": "vlv7_imperial_300.json"
+  },
+  {
+    "id": "vlv7_imperial_400",
+    "category": "valve",
+    "filename": "vlv7_imperial_400.json"
+  },
+  {
+    "id": "vlv7_imperial_600",
+    "category": "valve",
+    "filename": "vlv7_imperial_600.json"
+  },
+  {
+    "id": "vlv7_imperial_900",
+    "category": "valve",
+    "filename": "vlv7_imperial_900.json"
+  },
+  {
+    "id": "vlv8150",
+    "category": "valve",
+    "filename": "vlv8150.json"
+  },
+  {
+    "id": "vlv81500",
+    "category": "valve",
+    "filename": "vlv81500.json"
+  },
+  {
+    "id": "vlv82500",
+    "category": "valve",
+    "filename": "vlv82500.json"
+  },
+  {
+    "id": "vlv8300",
+    "category": "valve",
+    "filename": "vlv8300.json"
+  },
+  {
+    "id": "vlv8400",
+    "category": "valve",
+    "filename": "vlv8400.json"
+  },
+  {
+    "id": "vlv8600",
+    "category": "valve",
+    "filename": "vlv8600.json"
+  },
+  {
+    "id": "vlv8900",
+    "category": "valve",
+    "filename": "vlv8900.json"
+  },
+  {
+    "id": "vlv8_imperial_150",
+    "category": "valve",
+    "filename": "vlv8_imperial_150.json"
+  },
+  {
+    "id": "vlv8_imperial_1500",
+    "category": "valve",
+    "filename": "vlv8_imperial_1500.json"
+  },
+  {
+    "id": "vlv8_imperial_2500",
+    "category": "valve",
+    "filename": "vlv8_imperial_2500.json"
+  },
+  {
+    "id": "vlv8_imperial_300",
+    "category": "valve",
+    "filename": "vlv8_imperial_300.json"
+  },
+  {
+    "id": "vlv8_imperial_400",
+    "category": "valve",
+    "filename": "vlv8_imperial_400.json"
+  },
+  {
+    "id": "vlv8_imperial_600",
+    "category": "valve",
+    "filename": "vlv8_imperial_600.json"
+  },
+  {
+    "id": "vlv8_imperial_900",
+    "category": "valve",
+    "filename": "vlv8_imperial_900.json"
+  },
+  {
+    "id": "weldoflange150",
+    "category": "flange",
+    "filename": "weldoflange150.json"
+  },
+  {
+    "id": "weldoflange1500",
+    "category": "flange",
+    "filename": "weldoflange1500.json"
+  },
+  {
+    "id": "weldoflange2500",
+    "category": "flange",
+    "filename": "weldoflange2500.json"
+  },
+  {
+    "id": "weldoflange300",
+    "category": "flange",
+    "filename": "weldoflange300.json"
+  },
+  {
+    "id": "weldoflange600",
+    "category": "flange",
+    "filename": "weldoflange600.json"
+  },
+  {
+    "id": "weldoflange900",
+    "category": "flange",
+    "filename": "weldoflange900.json"
+  },
+  {
+    "id": "wol160",
+    "category": "other",
+    "filename": "wol160.json"
+  },
+  {
+    "id": "wolstd",
+    "category": "other",
+    "filename": "wolstd.json"
+  },
+  {
+    "id": "wolxs",
+    "category": "other",
+    "filename": "wolxs.json"
+  },
+  {
+    "id": "wolxxs",
+    "category": "other",
+    "filename": "wolxxs.json"
+  }
+]

@@ -1,0 +1,7 @@
+SAFE SPAN CALCULATION PARAMETERS
+
+1. Limited by a max. deflection of 10mm and a max. stress of 68 MPa.
+2. Wind speed = 50 meters/second.
+3. Spans are for temperatures up to 300° C.
+4. Youngs modulus = 203400 MPa, Insulation density = 150 Kg/m3.
+5. Empty = line is carrying gas, air etc. Full = line is carrying water

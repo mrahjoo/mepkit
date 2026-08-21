@@ -14,6 +14,16 @@ export default function CalculatorsCategoryPage() {
       desc: 'Calculate friction loss in a pipe system using the Darcy-Weisbach equation.' 
     },
     { 
+      title: 'Fluid Properties Explorer', 
+      href: '/calculators/fluid-properties', 
+      desc: 'Interpolate density, viscosity, and vapor pressure for various fluids.' 
+    },
+    { 
+      title: 'Advanced Pressure Drop', 
+      href: '/calculators/pressure-drop', 
+      desc: 'Compute friction loss by combining pipe materials, fluid properties, and exact dimensions.' 
+    },
+    { 
       title: 'Specific Acoustic Impedance', 
       href: '/calculators/acoustic-impedance', 
       desc: 'Measure the ability of a medium to transmit sound waves (Rayls).' 

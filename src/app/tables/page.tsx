@@ -11,7 +11,7 @@ export default function TablesCategoryPage() {
     { title: 'Pipe Specifications', href: '/tables/pipes/Aluminium_Sch40', desc: 'Inner dimensions, weights, and thickness for all pipe schedules.' },
     { title: 'Fluid Properties', href: '/tables/fluids/Water', desc: 'Density, viscosity, and vapor pressure across temperatures.' },
     { title: 'Fittings & Valves', href: '/tables/fittings', desc: 'Friction loss coefficients (K-Factors) for various fittings.' },
-    { title: 'Pipe Components Data', href: '/tables/pipedata', desc: 'Extensive raw data for flanges, valves, olets, blanks, loops, etc.' },
+    { title: 'Component Library', href: '/components', desc: 'Extensive raw data for flanges, valves, olets, blanks, loops, etc.' },
   ];
 
   return (
