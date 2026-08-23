@@ -1,0 +1,108 @@
+{
+  "id": "dowtherm_a",
+  "title": "Dowtherm A",
+  "description": "Physical properties of Dowtherm A heat transfer fluid. DOWTHERM™ A is a eutectic mixture of biphenyl and diphenyl oxide, suitable for non-pressurized liquid phase systems with a maximum temperature of 550 °F (288 °C).",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Dowtherm A Properties\n\nDOWTHERM™ A is a eutectic mixture of:\n- **Biphenyl** (C₁₂H₁₀)\n- **Diphenyl oxide** (C₁₂H₁₀O)\n\n### Operating Range\n- **Liquid phase:** 15 °C to 400 °C (60 °F to 750 °F)\n- **Vapor phase:** 257 °C to 400 °C (495 °F to 750 °F)\n\n### Key Physical Properties\n- **Freeze point:** 12 °C (56.6 °F)\n- **Boiling point (atmospheric):** 257 °C (494.8 °F)\n- **Flash point (SETA):** 113 °C (236 °F)\n- **Fire point (C.O.C):** 118 °C (245 °F)\n- **Autoignition temperature:** 599 °C (1110 °F)\n- **Density (at 25 °C/75 °F):** 1056 kg/m³ (66 lb/ft³)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_c",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        },
+        {
+          "id": "density_offset",
+          "label": "Density Adjustment Factor",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_f",
+          "label": "Temperature",
+          "unit": "°F",
+          "formula": "inputs.temperature_c * 9/5 + 32",
+          "format": "decimal"
+        },
+        {
+          "id": "density",
+          "label": "Estimated Density",
+          "unit": "kg/m³",
+          "formula": "1056 - (inputs.temperature_c - 25) * 0.72 + inputs.density_offset",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lbft3",
+          "label": "Estimated Density",
+          "unit": "lb/ft³",
+          "formula": "(1056 - (inputs.temperature_c - 25) * 0.72 + inputs.density_offset) / 16.018",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Typical Density (kg/m³)",
+        "Typical Density (lb/ft³)",
+        "Application"
+      ],
+      "rows": [
+        [
+          15,
+          59,
+          1070,
+          66.8,
+          "Minimum liquid phase"
+        ],
+        [
+          25,
+          77,
+          1056,
+          66,
+          "Reference temperature"
+        ],
+        [
+          100,
+          212,
+          1010,
+          63.1,
+          "Moderate temperature"
+        ],
+        [
+          200,
+          392,
+          945,
+          59.1,
+          "Higher temperature"
+        ],
+        [
+          257,
+          495,
+          900,
+          56.3,
+          "Boiling point"
+        ],
+        [
+          400,
+          752,
+          800,
+          50.1,
+          "Maximum operating"
+        ]
+      ]
+    }
+  ]
+}

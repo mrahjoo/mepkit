@@ -1,0 +1,202 @@
+{
+  "id": "electrical_series_circuits",
+  "title": "Electrical Series Circuits",
+  "description": "Calculate total resistance, current, and power in a series circuit with multiple resistors connected to a voltage source.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Series Circuit Rules\n\n1. The total current in the circuit is equal to the current in any other part of the circuit.\n2. The total voltage in a series circuit is equal to the sum of the voltages across all parts in the circuit.\n3. The total resistance in a series circuit is equal to the resistances of all parts in the circuit.\n\n### Key Equations\n\n- **Total Voltage**: U = U1 + U2 + ... + Un\n- **Ohm's Law**: Un = In × Rn\n- **Equal Currents**: I1 = I2 = ... = In\n- **Total Resistance**: R = R1 + R2 + ... + Rn\n- **Power**: P = R × I²"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Applied Voltage (U)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 12
+        },
+        {
+          "id": "r1",
+          "label": "Resistance 1 (R1)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 1.25
+        },
+        {
+          "id": "r2",
+          "label": "Resistance 2 (R2)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "r3",
+          "label": "Resistance 3 (R3)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 1.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_resistance",
+          "label": "Total Resistance (R)",
+          "formula": "inputs.r1 + inputs.r2 + inputs.r3",
+          "unit": "Ω",
+          "format": "decimal"
+        },
+        {
+          "id": "current",
+          "label": "Circuit Current (I)",
+          "formula": "inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)",
+          "unit": "A",
+          "format": "decimal"
+        },
+        {
+          "id": "power",
+          "label": "Power Dissipated (P)",
+          "formula": "(inputs.r1 + inputs.r2 + inputs.r3) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "voltage_r1",
+          "label": "Voltage across R1 (U1)",
+          "formula": "inputs.r1 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+          "unit": "V",
+          "format": "decimal"
+        },
+        {
+          "id": "voltage_r2",
+          "label": "Voltage across R2 (U2)",
+          "formula": "inputs.r2 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+          "unit": "V",
+          "format": "decimal"
+        },
+        {
+          "id": "voltage_r3",
+          "label": "Voltage across R3 (U3)",
+          "formula": "inputs.r3 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+          "unit": "V",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Resistance (Ω)",
+        "Current (A)",
+        "Voltage (V)",
+        "Power (W)"
+      ],
+      "rows": [
+        [
+          "R1",
+          "=inputs.r1",
+          "=inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)",
+          "=inputs.r1 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+          "=inputs.r1 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))"
+        ],
+        [
+          "R2",
+          "=inputs.r2",
+          "=inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)",
+          "=inputs.r2 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+          "=inputs.r2 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))"
+        ],
+        [
+          "R3",
+          "=inputs.r3",
+          "=inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)",
+          "=inputs.r3 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+          "=inputs.r3 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))"
+        ],
+        [
+          "Total",
+          "=inputs.r1 + inputs.r2 + inputs.r3",
+          "=inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)",
+          "=inputs.voltage",
+          "=(inputs.r1 + inputs.r2 + inputs.r3) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Series Circuit Analysis",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Resistance",
+            "Voltage",
+            "Power"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "R1",
+            "R2",
+            "R3"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Resistance (Ω)"
+          },
+          {
+            "type": "value",
+            "name": "Voltage (V)"
+          },
+          {
+            "type": "value",
+            "name": "Power (W)"
+          }
+        ],
+        "series": [
+          {
+            "name": "Resistance",
+            "data": [
+              "=inputs.r1",
+              "=inputs.r2",
+              "=inputs.r3"
+            ],
+            "type": "bar",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Voltage",
+            "data": [
+              "=inputs.r1 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+              "=inputs.r2 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+              "=inputs.r3 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))"
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          },
+          {
+            "name": "Power",
+            "data": [
+              "=inputs.r1 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+              "=inputs.r2 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))",
+              "=inputs.r3 * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3)) * (inputs.voltage / (inputs.r1 + inputs.r2 + inputs.r3))"
+            ],
+            "type": "line",
+            "yAxisIndex": 2
+          }
+        ]
+      }
+    }
+  ]
+}

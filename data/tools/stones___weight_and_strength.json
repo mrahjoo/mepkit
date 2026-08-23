@@ -1,0 +1,133 @@
+{
+  "id": "stones___weight_and_strength",
+  "title": "Stones - Weight and Strength",
+  "description": "Weight and strength of sandstone, granite, limestone, marble and slate. Compare crushing weight, shearing strength, and strength across different stone types.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "chart",
+      "content": "Stone Strength Comparison",
+      "options": {
+        "title": {
+          "text": "Stones - Weight and Strength Comparison"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Crushing Weight (lbf/in²)",
+            "Shearing Strength (lbf/in²)",
+            "Strength (lbf)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Sandstone",
+            "Granite",
+            "Limestone",
+            "Marble",
+            "Slate"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Crushing Weight & Shearing Strength (lbf/in²)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Strength (lbf)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Crushing Weight (lbf/in²)",
+            "data": [
+              150,
+              170,
+              170,
+              170,
+              175
+            ],
+            "type": "bar",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Shearing Strength (lbf/in²)",
+            "data": [
+              8000,
+              15000,
+              6000,
+              10000,
+              15000
+            ],
+            "type": "line",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Strength (lbf)",
+            "data": [
+              1500,
+              2000,
+              1000,
+              1400,
+              null
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "content": "Stone Properties Table",
+      "headers": [
+        "Stone",
+        "Crushing Weight (lbf/in²)",
+        "Shearing Strength (lbf/in²)",
+        "Strength (lbf)"
+      ],
+      "rows": [
+        [
+          "Sandstone",
+          150,
+          8000,
+          1500
+        ],
+        [
+          "Granite",
+          170,
+          15000,
+          2000
+        ],
+        [
+          "Limestone",
+          170,
+          6000,
+          1000
+        ],
+        [
+          "Marble",
+          170,
+          10000,
+          1400
+        ],
+        [
+          "Slate",
+          175,
+          15000,
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Unit Conversions\n\n- **1 psi (lb/in²) = 6,894.8 Pa (N/m²)**\n- **1 lbf (Pound force) = 4.45 N = 0.454 kp**"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "id": "ventilation_systems___acoustic_calculation_procedu",
+  "title": "Ventilation Systems - Acoustic Calculation Procedure",
+  "description": "An acoustic noise calculation of a ventilation system following a systematic procedure to estimate sound sources, attenuation, and determine required silencer specifications.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sound and Noise Sources\n\nEstimate all sound power sources.\n\n### 1. Sound Power Level from the Fan (LN)\nEnter the manufacturer's sound power data or calculate the fan sound power.\n\n### 2. Add Safety Factors\nAdd safety factors - 3 dB is recommended.\n\n## Attenuation\n\nEstimate the attenuation in the system.\n\n### 10. Room and Terminal Effect\nThe sound pressure levels are converted to sound power level at the terminals. The acoustic characteristics of the room as well as the number and location of the terminals must be considered.\n\n- Determine the acoustic characteristics of the room\n- Determine whether the receiver are in the direct or reverberant field\n- Find the room's absorption characteristics\n- Determine how many terminals the listener is influenced by\n\n### 11. Allowance for End Reflection\nAttenuation due to end reflection based on duct dimensions.\n\n### 12. Duct Work Attenuation\nCalculate the attenuation in unlined and lined ducts (in dB/m).\n\n### 13. Elbow Attenuation\nCalculate the attenuation in the elbows.\n\n### 14. Power-level Split, Branch to Terminals\nDetermine the allowance for split - branch to terminals.\n\n### 15. Power-level Split, Main Duct to Branch Duct\nDetermine the allowance for split - main duct to branch.\n\n### 16. Other Attenuation\nAdd attenuation from other components."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fan_sound_power",
+          "label": "Fan Sound Power Level (LN)",
+          "type": "number",
+          "defaultValue": 80,
+          "unit": "dB"
+        },
+        {
+          "id": "safety_factor",
+          "label": "Safety Factor",
+          "type": "number",
+          "defaultValue": 3,
+          "unit": "dB"
+        },
+        {
+          "id": "room_attenuation",
+          "label": "Room and Terminal Effect Attenuation",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "dB"
+        },
+        {
+          "id": "end_reflection_attenuation",
+          "label": "End Reflection Attenuation",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "dB"
+        },
+        {
+          "id": "duct_attenuation",
+          "label": "Duct Work Attenuation",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "dB"
+        },
+        {
+          "id": "elbow_attenuation",
+          "label": "Elbow Attenuation",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "dB"
+        },
+        {
+          "id": "branch_split_attenuation",
+          "label": "Power-level Split (Branch to Terminals)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "dB"
+        },
+        {
+          "id": "main_duct_split_attenuation",
+          "label": "Power-level Split (Main to Branch)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "dB"
+        },
+        {
+          "id": "other_attenuation",
+          "label": "Other Attenuation",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "dB"
+        },
+        {
+          "id": "nr_criterion",
+          "label": "Noise Rating (NR) Criterion",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "NR"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "fan_power_with_safety",
+          "label": "Fan Sound Power (with Safety Factor)",
+          "formula": "inputs.fan_sound_power + inputs.safety_factor",
+          "unit": "dB"
+        },
+        {
+          "id": "total_attenuation",
+          "label": "Total System Attenuation",
+          "formula": "inputs.room_attenuation + inputs.end_reflection_attenuation + inputs.duct_attenuation + inputs.elbow_attenuation + inputs.branch_split_attenuation + inputs.main_duct_split_attenuation + inputs.other_attenuation",
+          "unit": "dB"
+        },
+        {
+          "id": "resulting_sound_power",
+          "label": "Resulting Sound Power Fan",
+          "formula": "(inputs.fan_sound_power + inputs.safety_factor) - (inputs.room_attenuation + inputs.end_reflection_attenuation + inputs.duct_attenuation + inputs.elbow_attenuation + inputs.branch_split_attenuation + inputs.main_duct_split_attenuation + inputs.other_attenuation)",
+          "unit": "dB"
+        },
+        {
+          "id": "silencer_requirement",
+          "label": "Required Silencer Attenuation",
+          "formula": "Math.max(0, inputs.resulting_sound_power - inputs.nr_criterion)",
+          "unit": "dB"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Calculation Step",
+        "Component",
+        "Attenuation (dB)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "1",
+          "Fan Sound Power Level (LN)",
+          "Input",
+          "Manufacturer's data"
+        ],
+        [
+          "2",
+          "Safety Factor",
+          "+3",
+          "Recommended value"
+        ],
+        [
+          "10",
+          "Room and Terminal Effect",
+          "Variable",
+          "Depends on room absorption and terminal count"
+        ],
+        [
+          "11",
+          "End Reflection Allowance",
+          "Variable",
+          "Based on duct dimensions"
+        ],
+        [
+          "12",
+          "Duct Work Attenuation",
+          "Variable",
+          "dB/m for lined/unlined ducts"
+        ],
+        [
+          "13",
+          "Elbow Attenuation",
+          "Variable",
+          "Based on duct elbow configuration"
+        ],
+        [
+          "14",
+          "Power-level Split (Branch)",
+          "Variable",
+          "Branch to terminals"
+        ],
+        [
+          "15",
+          "Power-level Split (Main)",
+          "Variable",
+          "Main duct to branch duct"
+        ],
+        [
+          "16",
+          "Other Attenuation",
+          "Variable",
+          "From other components"
+        ],
+        [
+          "20",
+          "Resulting Sound Power",
+          "Calculated",
+          "Fan power minus total attenuation"
+        ],
+        [
+          "21",
+          "Sound Pressure Level Criterion",
+          "NR-value",
+          "Based on location and regulations"
+        ],
+        [
+          "22",
+          "Silencer Requirements",
+          "Calculated",
+          "Attenuation needed to meet criterion"
+        ]
+      ]
+    }
+  ]
+}

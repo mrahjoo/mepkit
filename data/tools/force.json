@@ -1,0 +1,140 @@
+{
+  "id": "force",
+  "title": "Force Calculator",
+  "description": "Calculate force based on mass and acceleration using Newton's second law (F = ma). The tool supports calculations for basic force, gravitational force, and net force scenarios.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Force Calculator - Newton's Second Law",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "kg"
+        },
+        {
+          "id": "acceleration",
+          "label": "Acceleration",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m/s²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force",
+          "label": "Force",
+          "formula": "inputs.mass * inputs.acceleration",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Gravitational Force (Weight) Calculator",
+      "inputs": [
+        {
+          "id": "mass_gravity",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 0.05,
+          "unit": "kg"
+        },
+        {
+          "id": "gravity_acceleration",
+          "label": "Gravitational Acceleration",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight",
+          "label": "Weight (Gravitational Force)",
+          "formula": "inputs.mass_gravity * inputs.gravity_acceleration",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Net Force and Acceleration Calculator",
+      "inputs": [
+        {
+          "id": "cable_force",
+          "label": "Applied Force (Cable Force)",
+          "type": "number",
+          "defaultValue": 700,
+          "unit": "N"
+        },
+        {
+          "id": "weight_force",
+          "label": "Weight Force",
+          "type": "number",
+          "defaultValue": 588.6,
+          "unit": "N"
+        },
+        {
+          "id": "body_mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 60,
+          "unit": "kg"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "net_force",
+          "label": "Net Force",
+          "formula": "inputs.cable_force - inputs.weight_force",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "resulting_acceleration",
+          "label": "Resulting Acceleration",
+          "formula": "(inputs.cable_force - inputs.weight_force) / inputs.body_mass",
+          "unit": "m/s²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Force Unit Conversions",
+      "headers": [
+        "Unit",
+        "Value",
+        "Equivalent"
+      ],
+      "rows": [
+        [
+          "Newton (N)",
+          "1",
+          "1 kg⋅m/s²"
+        ],
+        [
+          "Dyne",
+          "100000",
+          "1 N"
+        ],
+        [
+          "Pound-force (lbf)",
+          "1",
+          "4.45 N"
+        ],
+        [
+          "SI Base",
+          "1 N",
+          "Force that accelerates 1 kg at 1 m/s²"
+        ]
+      ]
+    }
+  ]
+}

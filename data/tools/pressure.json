@@ -1,0 +1,180 @@
+{
+  "id": "pressure",
+  "title": "Pressure",
+  "description": "Calculate pressure from force and area, or convert between different pressure units. Pressure is defined as the normal force per unit area exerted on a surface in a fluid or gas.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pressure_calculator",
+      "content": "## Pressure Calculator\n\nCalculate pressure from force and area using the equation: p = F / A",
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 1000
+        },
+        {
+          "id": "area",
+          "label": "Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_pa",
+          "label": "Pressure",
+          "unit": "Pa",
+          "format": "decimal",
+          "formula": "inputs.force / inputs.area"
+        },
+        {
+          "id": "pressure_bar",
+          "label": "Pressure",
+          "unit": "bar",
+          "format": "decimal",
+          "formula": "(inputs.force / inputs.area) / 100000"
+        },
+        {
+          "id": "pressure_psi",
+          "label": "Pressure",
+          "unit": "psi",
+          "format": "decimal",
+          "formula": "(inputs.force / inputs.area) / 6894.76"
+        },
+        {
+          "id": "pressure_kpa",
+          "label": "Pressure",
+          "unit": "kPa",
+          "format": "decimal",
+          "formula": "(inputs.force / inputs.area) / 1000"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "pressure_units_table",
+      "content": "## Pressure Units Conversion Reference",
+      "headers": [
+        "Unit",
+        "Conversion Factor (to Pa)",
+        "Alternative Names"
+      ],
+      "rows": [
+        [
+          "Pascal (Pa)",
+          "1",
+          "N/m²"
+        ],
+        [
+          "kiloPascal (kPa)",
+          "1000",
+          "-"
+        ],
+        [
+          "hectoPascal (hPa)",
+          "100",
+          "millibar"
+        ],
+        [
+          "bar",
+          "100000",
+          "-"
+        ],
+        [
+          "millibar (mbar)",
+          "100",
+          "-"
+        ],
+        [
+          "psi (lbf/in²)",
+          "6894.76",
+          "-"
+        ],
+        [
+          "atmosphere (atm)",
+          "101325",
+          "-"
+        ],
+        [
+          "mm Hg (Torr)",
+          "133.322",
+          "-"
+        ],
+        [
+          "inch Hg (inHg)",
+          "3386.39",
+          "-"
+        ],
+        [
+          "meter H₂O (mH₂O)",
+          "9806.65",
+          "-"
+        ],
+        [
+          "mm H₂O (mmH₂O)",
+          "9.80665",
+          "-"
+        ],
+        [
+          "foot H₂O (ftH₂O)",
+          "2989.07",
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "gauge_pressure_calculator",
+      "content": "## Gauge Pressure Calculator\n\nGauge pressure is the pressure difference between a system and atmospheric pressure: pg = ps - patm",
+      "inputs": [
+        {
+          "id": "system_pressure",
+          "label": "System Pressure",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 150000
+        },
+        {
+          "id": "atmospheric_pressure",
+          "label": "Atmospheric Pressure",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        }
+      ],
+      "outputs": [
+        {
+          "id": "gauge_pressure",
+          "label": "Gauge Pressure",
+          "unit": "Pa",
+          "format": "decimal",
+          "formula": "inputs.system_pressure - inputs.atmospheric_pressure"
+        },
+        {
+          "id": "gauge_pressure_bar",
+          "label": "Gauge Pressure",
+          "unit": "bar",
+          "format": "decimal",
+          "formula": "(inputs.system_pressure - inputs.atmospheric_pressure) / 100000"
+        },
+        {
+          "id": "gauge_pressure_psi",
+          "label": "Gauge Pressure",
+          "unit": "psi",
+          "format": "decimal",
+          "formula": "(inputs.system_pressure - inputs.atmospheric_pressure) / 6894.76"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "pressure_info",
+      "content": "## Pressure Definitions\n\n### Absolute Pressure\n**Absolute pressure** (pabs) is measured relative to absolute zero pressure (the pressure at absolute vacuum). All calculations involving gas laws require pressure to be in absolute units.\n\n### Gauge Pressure\n**Gauge pressure** (pg) is the pressure difference between a system and the surrounding atmosphere, often measured with a gauge: pg = ps - patm\n\n### Standard Atmospheric Pressure\nThe **Standard Atmospheric Pressure** at sea-level (273 K / 0°C) is:\n- **1.01325 bar**\n- **101,325 Pa (absolute)**\n- **14.696 psi**\n- **760 mmHg**\n- **10.33 mH₂O**\n- **29.92 inHg**\n\n### Standard Pressure Conversion\n- 1 bar = 100,000 Pa = 0.9869 atm = 14.5 psi\n- 1 atmosphere = 101,325 Pa = 760 torr = 14.696 psi = 1.013 bar\n- 1 millibar = 100 Pa = 0.001 bar = 0.750 torr\n"
+    }
+  ]
+}

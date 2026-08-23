@@ -1,0 +1,171 @@
+{
+  "id": "support_reactions___equilibrium",
+  "title": "Support Reactions - Equilibrium",
+  "description": "Equilibrium of a body requires both a balance of forces to prevent the body from translating or having accelerated motion along a straight or curved path - and a balance of moments to prevent the body from rotating. This tool calculates support reaction forces for beams and structural frames under static equilibrium conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Support Reactions - Equilibrium\n\nEquilibrium of a body requires both a balance of forces to prevent the body from translating or having accelerated motion along a straight or curved path - and a balance of moments to prevent the body from rotating.\n\n### Equilibrium Equations\n\n**Static equilibrium in a three dimensional system:**\n\n- ΣF = ΣFx = ΣFy = ΣFz = 0 (Force equilibrium)\n- ΣM = ΣMx = ΣMy = ΣMz = 0 (Moment equilibrium)\n\n**For two dimensional co-planar systems:**\n\n- ΣF = ΣFx = ΣFy = 0\n- ΣM = ΣMz = 0\n\nWhere:\n- F = force (N, lb)\n- M = moment (Nm, ft·lb)\n- x, y, z = orthogonal axes"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Beam with Eccentric Load - Example"
+      ],
+      "inputs": [
+        {
+          "id": "beam_length",
+          "label": "Beam Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 6
+        },
+        {
+          "id": "applied_force",
+          "label": "Applied Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 9000
+        },
+        {
+          "id": "distance_a",
+          "label": "Distance from Support 1 to Load",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance_b",
+          "label": "Distance from Load to Support 2",
+          "formula": "inputs.beam_length - inputs.distance_a",
+          "unit": "m"
+        },
+        {
+          "id": "reaction_support2",
+          "label": "Reaction Force at Support 2 (R2y)",
+          "formula": "(inputs.applied_force * inputs.distance_a) / inputs.beam_length",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "reaction_support1",
+          "label": "Reaction Force at Support 1 (R1y)",
+          "formula": "inputs.applied_force - (inputs.applied_force * inputs.distance_a) / inputs.beam_length",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Structural Frame - Example"
+      ],
+      "inputs": [
+        {
+          "id": "frame_weight",
+          "label": "Hanging Weight (F)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 1000
+        },
+        {
+          "id": "frame_length",
+          "label": "Total Frame Length",
+          "type": "number",
+          "unit": "cm",
+          "defaultValue": 230
+        },
+        {
+          "id": "distance_to_weight_a",
+          "label": "Distance from Point A to Weight",
+          "type": "number",
+          "unit": "cm",
+          "defaultValue": 100
+        },
+        {
+          "id": "distance_to_weight_b",
+          "label": "Distance from Point B to Weight",
+          "type": "number",
+          "unit": "cm",
+          "defaultValue": 130
+        },
+        {
+          "id": "frame_height",
+          "label": "Frame Height",
+          "type": "number",
+          "unit": "cm",
+          "defaultValue": 80.7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reaction_by",
+          "label": "Vertical Reaction at B (RBy)",
+          "formula": "(inputs.frame_weight * inputs.distance_to_weight_a) / inputs.frame_length",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "reaction_ay",
+          "label": "Vertical Reaction at A (RAy)",
+          "formula": "(inputs.frame_weight * inputs.distance_to_weight_b) / inputs.frame_length",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "reaction_bx",
+          "label": "Horizontal Reaction at B (RBx)",
+          "formula": "((inputs.frame_weight * inputs.distance_to_weight_a) / inputs.frame_length) * inputs.distance_to_weight_b / inputs.frame_height",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "reaction_ax",
+          "label": "Horizontal Reaction at A (RAx)",
+          "formula": "((inputs.frame_weight * inputs.distance_to_weight_a) / inputs.frame_length) * inputs.distance_to_weight_b / inputs.frame_height",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Load Case",
+        "Horizontal Force (N)",
+        "Vertical Force (N)",
+        "Moment (Nm)"
+      ],
+      "rows": [
+        [
+          "Beam with Eccentric Load - Support 1",
+          "0",
+          "3000",
+          "0"
+        ],
+        [
+          "Beam with Eccentric Load - Support 2",
+          "0",
+          "6000",
+          "0"
+        ],
+        [
+          "Structural Frame - Support A",
+          "700",
+          "565",
+          "0"
+        ],
+        [
+          "Structural Frame - Support B",
+          "700",
+          "435",
+          "0"
+        ]
+      ]
+    }
+  ]
+}

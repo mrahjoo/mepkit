@@ -1,0 +1,283 @@
+{
+  "id": "materials___light_reflecting_factors",
+  "title": "Materials - Light Reflecting Factors",
+  "description": "A comprehensive reference tool for light reflecting factors (albedo) of various materials. Use this to look up the reflection factor percentage for different materials ranging from black bodies (0%) to highly reflective surfaces (100%).",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Reflection Factor (%)"
+      ],
+      "rows": [
+        [
+          "Aluminum coatings, matte",
+          "55 - 56"
+        ],
+        [
+          "Aluminum, anodized, matte",
+          "80 - 85"
+        ],
+        [
+          "Aluminum, matte",
+          "55 - 75"
+        ],
+        [
+          "Aluminum, polished",
+          "65 - 75"
+        ],
+        [
+          "Aluminum, pure, highly polished",
+          "80 - 87"
+        ],
+        [
+          "Body where no light is reflected (Black body)",
+          "0"
+        ],
+        [
+          "Body where all light is reflected",
+          "100"
+        ],
+        [
+          "Brick, red",
+          "10 - 15"
+        ],
+        [
+          "Chrome, polished",
+          "60 - 70"
+        ],
+        [
+          "Concrete, rough",
+          "20 - 30"
+        ],
+        [
+          "Copper, highly polished",
+          "70 - 75"
+        ],
+        [
+          "Crops",
+          "15 - 24"
+        ],
+        [
+          "Forrest",
+          "7 - 14"
+        ],
+        [
+          "Granite",
+          "20 - 25"
+        ],
+        [
+          "Ice",
+          "32 - 38"
+        ],
+        [
+          "Lacquer, pure white",
+          "80 - 85"
+        ],
+        [
+          "Limestone",
+          "35 - 55"
+        ],
+        [
+          "Marble, polished",
+          "30 - 70"
+        ],
+        [
+          "Nickel, highly polished",
+          "50 - 60"
+        ],
+        [
+          "Oak, light polished",
+          "25 - 35"
+        ],
+        [
+          "Paint, brown",
+          "20 - 30"
+        ],
+        [
+          "Paint, dark blue",
+          "15 - 20"
+        ],
+        [
+          "Paint, dark green",
+          "15 - 20"
+        ],
+        [
+          "Paint, dark red",
+          "15 - 20"
+        ],
+        [
+          "Paint, light green",
+          "45 - 55"
+        ],
+        [
+          "Paint, light yellow",
+          "60 - 70"
+        ],
+        [
+          "Paint, medium grey",
+          "25 - 35"
+        ],
+        [
+          "Paint, white",
+          "75 - 85"
+        ],
+        [
+          "Paper, white",
+          "70 - 80"
+        ],
+        [
+          "Plaster, dark",
+          "15 - 25"
+        ],
+        [
+          "Plaster, light",
+          "40 - 45"
+        ],
+        [
+          "Plywood, rough",
+          "25 - 40"
+        ],
+        [
+          "Sand - dry",
+          "38 - 42"
+        ],
+        [
+          "Sand - wet",
+          "22 - 28"
+        ],
+        [
+          "Sandstone",
+          "20 - 40"
+        ],
+        [
+          "Snow - fresh",
+          "85"
+        ],
+        [
+          "Snow - old",
+          "45"
+        ],
+        [
+          "Silver, highly polished",
+          "90 - 92"
+        ],
+        [
+          "Silvered mirror, behind glass",
+          "80 - 88"
+        ],
+        [
+          "Soil - dry",
+          "22 - 34"
+        ],
+        [
+          "Soil - dark wet",
+          "7 - 14"
+        ],
+        [
+          "Stainless steel",
+          "50"
+        ],
+        [
+          "Vitreous Enamel, white",
+          "65 - 75"
+        ],
+        [
+          "Water",
+          "7 - 9"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "material_reflectance",
+          "label": "Material Reflectance Factor",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "%"
+        },
+        {
+          "id": "incident_radiation",
+          "label": "Incident Solar Radiation",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "W/m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reflected_radiation",
+          "label": "Reflected Solar Radiation",
+          "formula": "inputs.incident_radiation * inputs.material_reflectance / 100",
+          "unit": "W/m²",
+          "format": "decimal"
+        },
+        {
+          "id": "absorbed_radiation",
+          "label": "Absorbed Solar Radiation",
+          "formula": "inputs.incident_radiation * (100 - inputs.material_reflectance) / 100",
+          "unit": "W/m²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Material Reflectance Comparison",
+          "subtext": "Light Reflecting Factors by Material Category"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Metals",
+            "Paint",
+            "Coatings",
+            "Natural Materials",
+            "Extreme Cases"
+          ],
+          "axisLabel": {
+            "interval": 0,
+            "rotate": 45
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Reflection Factor (%)"
+        },
+        "series": [
+          {
+            "name": "Average Reflection Factor",
+            "type": "bar",
+            "data": [
+              65,
+              47,
+              83,
+              28,
+              50
+            ],
+            "itemStyle": {
+              "color": "rgba(54, 162, 235, 0.8)"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

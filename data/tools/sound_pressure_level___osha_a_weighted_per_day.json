@@ -1,0 +1,53 @@
+{
+  "id": "sound_pressure_level___osha_a_weighted_per_day",
+  "title": "Sound Pressure Level - OSHA A-Weighted per Day",
+  "description": "OSHA maximum A-weighted sound pressure levels allowed per day. Maximum A-weighted sound pressure levels allowed by the U.S. Occupational Safety and Health Administration (OSHA) for periods in a working day.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Duration per Day (hr)",
+        "Maximum Allowed Sound Pressure Level (dBA)"
+      ],
+      "rows": [
+        [
+          8,
+          90
+        ],
+        [
+          6,
+          92
+        ],
+        [
+          4,
+          95
+        ],
+        [
+          3,
+          97
+        ],
+        [
+          2,
+          100
+        ],
+        [
+          1.5,
+          102
+        ],
+        [
+          1,
+          105
+        ],
+        [
+          0.5,
+          110
+        ],
+        [
+          "less than 0.25",
+          115
+        ]
+      ]
+    }
+  ]
+}

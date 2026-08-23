@@ -1,0 +1,150 @@
+{
+  "id": "numbers___standard_form__scientific_and_engineerin",
+  "title": "Numbers - Standard Form, Scientific and Engineering Notation",
+  "description": "Calculator and reference tool for converting between standard form, scientific notation, and engineering notation. Perform calculations and conversions including multiplication, division, addition, and subtraction of numbers in scientific and engineering notation.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Scientific and Engineering Notation Converter\n\n### Standard Form or Scientific Notation\nA number written with one digit to the left of the decimal point and multiplied by 10 raised to some power.\n\nExamples:\n- 43712 = 4.3712×10⁴\n- 0.036 = 3.6×10⁻²\n\n### Engineering Notation\nSimilar to scientific notation except the power of ten is always a multiple of 3.\n\nExamples:\n- 43712 = 43.712×10³ = 0.043712×10⁶\n- 0.036 = 36×10⁻³ = 36000×10⁻⁶"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Conversion Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "number",
+          "label": "Number",
+          "type": "number",
+          "defaultValue": 43712
+        },
+        {
+          "id": "operation",
+          "label": "Operation",
+          "type": "select",
+          "options": [
+            {
+              "label": "Convert to Scientific Notation",
+              "value": "scientific"
+            },
+            {
+              "label": "Convert to Engineering Notation",
+              "value": "engineering"
+            },
+            {
+              "label": "Standard Form (Decimal)",
+              "value": "standard"
+            }
+          ],
+          "defaultValue": "scientific"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Result",
+          "formula": "inputs.number",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Multiplication of Scientific Notation Numbers"
+      ],
+      "inputs": [
+        {
+          "id": "mult_mantissa1",
+          "label": "First Number (Mantissa)",
+          "type": "number",
+          "defaultValue": 4.3
+        },
+        {
+          "id": "mult_exponent1",
+          "label": "First Number (Exponent)",
+          "type": "number",
+          "defaultValue": 4
+        },
+        {
+          "id": "mult_mantissa2",
+          "label": "Second Number (Mantissa)",
+          "type": "number",
+          "defaultValue": 2.4
+        },
+        {
+          "id": "mult_exponent2",
+          "label": "Second Number (Exponent)",
+          "type": "number",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mult_mantissa_result",
+          "label": "Result Mantissa",
+          "formula": "inputs.mult_mantissa1 * inputs.mult_mantissa2",
+          "format": "decimal"
+        },
+        {
+          "id": "mult_exponent_result",
+          "label": "Result Exponent",
+          "formula": "inputs.mult_exponent1 + inputs.mult_exponent2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Division of Scientific Notation Numbers"
+      ],
+      "inputs": [
+        {
+          "id": "div_mantissa1",
+          "label": "Numerator (Mantissa)",
+          "type": "number",
+          "defaultValue": 4.3
+        },
+        {
+          "id": "div_exponent1",
+          "label": "Numerator (Exponent)",
+          "type": "number",
+          "defaultValue": 4
+        },
+        {
+          "id": "div_mantissa2",
+          "label": "Denominator (Mantissa)",
+          "type": "number",
+          "defaultValue": 2.4
+        },
+        {
+          "id": "div_exponent2",
+          "label": "Denominator (Exponent)",
+          "type": "number",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "div_mantissa_result",
+          "label": "Result Mantissa",
+          "formula": "inputs.div_mantissa1 / inputs.div_mantissa2",
+          "format": "decimal"
+        },
+        {
+          "id": "div_exponent_result",
+          "label": "Result Exponent",
+          "formula": "inputs.div_exponent1 - inputs.div_exponent2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Key Formulas\n\n**Multiplication:** N₁ × 10ˣ × N₂ × 10ʸ = (N₁ × N₂) × 10^(x+y)\n\n**Division:** N₁ × 10ˣ ÷ N₂ × 10ʸ = (N₁ ÷ N₂) × 10^(x-y)\n\n**For Addition/Subtraction:** Convert to the same exponent first, then add/subtract the mantissas."
+    }
+  ]
+}

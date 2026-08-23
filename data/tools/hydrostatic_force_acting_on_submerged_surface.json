@@ -1,0 +1,173 @@
+{
+  "id": "hydrostatic_force_acting_on_submerged_surface",
+  "title": "Hydrostatic Force acting on Submerged Surface",
+  "description": "Calculate the thrust force acting on a surface submerged in a liquid using hydrostatic pressure formulas. Supports calculations for vertical surfaces, bottom surfaces, and other submerged configurations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "hydrostatic_calculator",
+      "content": "Calculate hydrostatic force on submerged surfaces",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Liquid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "gravity",
+          "label": "Gravity Acceleration (g)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "surfaceType",
+          "label": "Surface Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Vertical Surface (average depth)",
+              "value": "vertical"
+            },
+            {
+              "label": "Horizontal Bottom Surface",
+              "value": "horizontal"
+            },
+            {
+              "label": "General Surface (average depth)",
+              "value": "general"
+            }
+          ],
+          "defaultValue": "vertical"
+        },
+        {
+          "id": "topDepth",
+          "label": "Depth at Top (ht)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "bottomDepth",
+          "label": "Depth at Bottom (hb)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "width",
+          "label": "Width (w)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "length",
+          "label": "Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "area",
+          "label": "Surface Area (A)",
+          "formula": "inputs.width * inputs.length",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "averageDepth",
+          "label": "Average Depth (ha)",
+          "formula": "(inputs.topDepth + inputs.bottomDepth) / 2",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "averagePressure",
+          "label": "Average Pressure (pa)",
+          "formula": "inputs.density * inputs.gravity * ((inputs.topDepth + inputs.bottomDepth) / 2)",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "hydrostaticForce",
+          "label": "Hydrostatic Force (F)",
+          "formula": "inputs.density * inputs.gravity * ((inputs.topDepth + inputs.bottomDepth) / 2) * inputs.width * inputs.length",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "hydrostaticForceKN",
+          "label": "Hydrostatic Force (F)",
+          "formula": "(inputs.density * inputs.gravity * ((inputs.topDepth + inputs.bottomDepth) / 2) * inputs.width * inputs.length) / 1000",
+          "unit": "kN",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "example_calculations",
+      "content": "Example Calculations",
+      "headers": [
+        "Scenario",
+        "Density (kg/m³)",
+        "Gravity (m/s²)",
+        "Top Depth (m)",
+        "Bottom Depth (m)",
+        "Width (m)",
+        "Length (m)",
+        "Area (m²)",
+        "Average Depth (m)",
+        "Force (N)",
+        "Force (kN)"
+      ],
+      "rows": [
+        [
+          "Vertical side - Container",
+          1000,
+          9.81,
+          0,
+          2,
+          1,
+          2,
+          2,
+          1,
+          19620,
+          19.6
+        ],
+        [
+          "Horizontal bottom - Container",
+          1000,
+          9.81,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          19620,
+          19.6
+        ],
+        [
+          "Vertical side - Deep water",
+          1000,
+          9.81,
+          5,
+          10,
+          2,
+          3,
+          6,
+          7.5,
+          1102650,
+          1102.65
+        ]
+      ]
+    }
+  ]
+}

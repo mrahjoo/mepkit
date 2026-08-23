@@ -1,0 +1,130 @@
+{
+  "id": "trigonometric_functions",
+  "title": "Trigonometric Functions",
+  "description": "Calculator for natural trigonometric functions including sine, cosine, tangent, and their inverse functions. Supports angle calculations in degrees and radians.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Trigonometric Functions Calculator",
+      "inputs": [
+        {
+          "id": "angle_degrees",
+          "label": "Angle (degrees)",
+          "type": "number",
+          "defaultValue": 45,
+          "unit": "°"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sine",
+          "label": "sin(θ)",
+          "formula": "Math.sin(inputs.angle_degrees * Math.PI / 180)",
+          "format": "decimal"
+        },
+        {
+          "id": "cosine",
+          "label": "cos(θ)",
+          "formula": "Math.cos(inputs.angle_degrees * Math.PI / 180)",
+          "format": "decimal"
+        },
+        {
+          "id": "tangent",
+          "label": "tan(θ)",
+          "formula": "Math.tan(inputs.angle_degrees * Math.PI / 180)",
+          "format": "decimal"
+        },
+        {
+          "id": "cotangent",
+          "label": "cot(θ)",
+          "formula": "1 / Math.tan(inputs.angle_degrees * Math.PI / 180)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Inverse Trigonometric Functions",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Value",
+          "type": "number",
+          "defaultValue": 0.707,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "arcsin",
+          "label": "arcsin(a)",
+          "formula": "Math.asin(inputs.value) * 180 / Math.PI",
+          "format": "decimal",
+          "unit": "°"
+        },
+        {
+          "id": "arccos",
+          "label": "arccos(a)",
+          "formula": "Math.acos(inputs.value) * 180 / Math.PI",
+          "format": "decimal",
+          "unit": "°"
+        },
+        {
+          "id": "arctan",
+          "label": "arctan(a)",
+          "formula": "Math.atan(inputs.value) * 180 / Math.PI",
+          "format": "decimal",
+          "unit": "°"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Angle",
+        "sin(θ)",
+        "cos(θ)",
+        "tan(θ)",
+        "cot(θ)"
+      ],
+      "rows": [
+        [
+          "0°",
+          "0",
+          "1",
+          "0",
+          "∞"
+        ],
+        [
+          "30°",
+          "0.5",
+          "0.866",
+          "0.577",
+          "1.732"
+        ],
+        [
+          "45°",
+          "0.707",
+          "0.707",
+          "1",
+          "1"
+        ],
+        [
+          "60°",
+          "0.866",
+          "0.5",
+          "1.732",
+          "0.577"
+        ],
+        [
+          "90°",
+          "1",
+          "0",
+          "∞",
+          "0"
+        ]
+      ]
+    }
+  ]
+}

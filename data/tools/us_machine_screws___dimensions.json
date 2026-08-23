@@ -1,0 +1,115 @@
+{
+  "id": "us_machine_screws___dimensions",
+  "title": "US Machine Screws - Dimensions",
+  "description": "Machine screw diameters and thread specifications. Look up thread diameter, nearest fractional size, and TPI (threads per inch) for US machine screws from size 0 to 3/8\".",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Size No.",
+        "Thread Diameter (in)",
+        "Nearest Fractional (in)",
+        "Fine TPI",
+        "Coarse TPI"
+      ],
+      "rows": [
+        [
+          "0",
+          "0.0600",
+          "1/16",
+          "80",
+          "—"
+        ],
+        [
+          "1",
+          "0.0730",
+          "5/64",
+          "72",
+          "64"
+        ],
+        [
+          "2",
+          "0.0860",
+          "3/32",
+          "64",
+          "56"
+        ],
+        [
+          "3",
+          "0.0990",
+          "7/64",
+          "56",
+          "48"
+        ],
+        [
+          "4",
+          "0.1120",
+          "7/64",
+          "48",
+          "40"
+        ],
+        [
+          "5",
+          "0.1250",
+          "1/8",
+          "44",
+          "40"
+        ],
+        [
+          "6",
+          "0.1380",
+          "9/64",
+          "40",
+          "32"
+        ],
+        [
+          "8",
+          "0.1640",
+          "5/32",
+          "36",
+          "32"
+        ],
+        [
+          "10",
+          "0.1900",
+          "3/16",
+          "32",
+          "24"
+        ],
+        [
+          "12",
+          "0.2160",
+          "7/32",
+          "28",
+          "24"
+        ],
+        [
+          "1/4",
+          "0.2500",
+          "1/4",
+          "28",
+          "20"
+        ],
+        [
+          "5/16",
+          "0.3125",
+          "5/16",
+          "24",
+          "18"
+        ],
+        [
+          "3/8",
+          "0.3750",
+          "3/8",
+          "24",
+          "16"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Reference Information\n- **TPI** = Threads per inch\n- **Fine threads** are according to UNF (Unified National Fine Thread) standard\n- **Coarse threads** are according to UNC (Unified National Coarse Thread) standard"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "miter_saw_angle_protractor___quick___accurate_angl",
+  "title": "Miter Saw Angle Protractor – Quick & Accurate Angle Measurements",
+  "description": "Use a miter saw angle protractor for precise angle calculations in woodworking and construction. Measure and cut perfect angles effortlessly by inputting three measured lengths (a, b, c) to calculate miter saw angles and skirting saw angles.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "miter_calculator",
+      "content": "Enter the three measured lengths to calculate miter saw angles",
+      "inputs": [
+        {
+          "id": "length_a",
+          "label": "Length a (mm, in)",
+          "type": "number",
+          "defaultValue": 33.5,
+          "unit": "mm"
+        },
+        {
+          "id": "length_b",
+          "label": "Length b (mm, in)",
+          "type": "number",
+          "defaultValue": 40,
+          "unit": "mm"
+        },
+        {
+          "id": "length_c",
+          "label": "Length c (mm, in)",
+          "type": "number",
+          "defaultValue": 39.1,
+          "unit": "mm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "angle_a",
+          "label": "Angle A",
+          "formula": "Math.asin(inputs.length_a / inputs.length_c) * (180 / Math.PI)",
+          "unit": "deg",
+          "format": "decimal"
+        },
+        {
+          "id": "angle_b",
+          "label": "Angle B",
+          "formula": "Math.asin(inputs.length_b / inputs.length_c) * (180 / Math.PI)",
+          "unit": "deg",
+          "format": "decimal"
+        },
+        {
+          "id": "angle_c",
+          "label": "Angle C",
+          "formula": "180 - (Math.asin(inputs.length_a / inputs.length_c) * (180 / Math.PI)) - (Math.asin(inputs.length_b / inputs.length_c) * (180 / Math.PI))",
+          "unit": "deg",
+          "format": "decimal"
+        },
+        {
+          "id": "miter_saw_angle",
+          "label": "Miter Saw Angle",
+          "formula": "(Math.asin(inputs.length_a / inputs.length_c) * (180 / Math.PI)) - (Math.asin(inputs.length_b / inputs.length_c) * (180 / Math.PI))",
+          "unit": "deg",
+          "format": "decimal"
+        },
+        {
+          "id": "skirting_saw_angle",
+          "label": "Skirting (Decorative Moulding) Saw Angle",
+          "formula": "90 - ((Math.asin(inputs.length_a / inputs.length_c) * (180 / Math.PI)) - (Math.asin(inputs.length_b / inputs.length_c) * (180 / Math.PI))) / 2",
+          "unit": "deg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "calculation_results",
+      "headers": [
+        "Measurement",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Length a",
+          "33.5",
+          "mm"
+        ],
+        [
+          "Length b",
+          "40",
+          "mm"
+        ],
+        [
+          "Length c",
+          "39.1",
+          "mm"
+        ],
+        [
+          "Angle A",
+          "56.8°",
+          "deg"
+        ],
+        [
+          "Angle B",
+          "90°",
+          "deg"
+        ],
+        [
+          "Angle C",
+          "33.2°",
+          "deg"
+        ],
+        [
+          "Miter Saw Angle",
+          "26.4°",
+          "deg"
+        ],
+        [
+          "Skirting Saw Angle",
+          "76.8°",
+          "deg"
+        ]
+      ]
+    }
+  ]
+}

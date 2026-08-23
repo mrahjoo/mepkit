@@ -1,0 +1,137 @@
+{
+  "id": "dry_air_and_water_vapor___density_and_specific_vol",
+  "title": "Dry Air and Water Vapor - Density and Specific Volume vs. Temperature (Imperial)",
+  "description": "Density and specific volume of dry air and water vapor at temperatures ranging 225 to 900 °F (107 to 482 °C) at atmospheric pressure (29.96 inches Mercury, 14.696 psia, 101.33 kPa).",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Temperature (°C)",
+        "Dry Air - Specific Volume (ft³/lb)",
+        "Dry Air - Density (lb/ft³)",
+        "Water Vapor - Specific Volume (ft³/lb)",
+        "Water Vapor - Density (lb/ft³)"
+      ],
+      "rows": [
+        [
+          225,
+          107,
+          17.2,
+          0.0581,
+          27.7,
+          0.0361
+        ],
+        [
+          250,
+          121,
+          17.8,
+          0.0562,
+          28.7,
+          0.0349
+        ],
+        [
+          275,
+          135,
+          18.5,
+          0.0541,
+          29.7,
+          0.0337
+        ],
+        [
+          300,
+          149,
+          19.1,
+          0.0524,
+          30.8,
+          0.0325
+        ],
+        [
+          325,
+          163,
+          19.7,
+          0.0508,
+          31.8,
+          0.0314
+        ],
+        [
+          350,
+          177,
+          20.3,
+          0.0493,
+          32.7,
+          0.0306
+        ],
+        [
+          375,
+          191,
+          21,
+          0.0476,
+          33.8,
+          0.0296
+        ],
+        [
+          400,
+          204,
+          21.6,
+          0.0463,
+          34.8,
+          0.0287
+        ],
+        [
+          450,
+          232,
+          22.8,
+          0.0439,
+          36.8,
+          0.0272
+        ],
+        [
+          500,
+          260,
+          24.1,
+          0.0415,
+          38.8,
+          0.0258
+        ],
+        [
+          600,
+          316,
+          26.6,
+          0.0376,
+          42.9,
+          0.0233
+        ],
+        [
+          700,
+          371,
+          29.1,
+          0.0344,
+          46.9,
+          0.0213
+        ],
+        [
+          800,
+          427,
+          31.6,
+          0.0316,
+          51,
+          0.0196
+        ],
+        [
+          900,
+          482,
+          34.1,
+          0.0293,
+          55,
+          0.0182
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- **Temperature**: T (°F) = (T (°C)) × (9/5) + 32\n- **Specific Volume**: 1 ft³/lbm = 1728 in³/lbm = 7.48 U.S. gal/lbm = 62.43 liter/kg = 0.062 m³/kg\n- **Density**: 1 lb/ft³ = 16.018 kg/m³ = 0.016 g/cm³\n\n## Operating Conditions\n\n- **Pressure**: 29.96 inches Mercury (760 mm Mercury, 14.696 psia, 1.0333 kg/cm², 101.33 kPa)"
+    }
+  ]
+}

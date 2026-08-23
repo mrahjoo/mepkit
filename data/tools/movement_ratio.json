@@ -1,0 +1,95 @@
+{
+  "id": "movement_ratio",
+  "title": "Movement Ratio",
+  "description": "Calculate the movement ratio (velocity ratio) of machines and machine efficiency. The movement ratio is defined as the ratio of the distance moved by the effort to the distance moved by the load. Machine efficiency is the ratio of the force ratio to the movement ratio.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Movement Ratio\n\nThe **movement ratio** (or **velocity ratio**) of a machine is defined as the ratio of the distance moved by the effort to the distance moved by the load.\n\n**Formula:**\n- Mr = se / sl\n\nWhere:\n- Mr = movement ratio\n- se = distance moved by the effort (m, ft)\n- sl = distance moved by the load (m, ft)\n\n## Machine Efficiency\n\nThe efficiency of a simple machine is defined as the ratio of the force ratio to the movement ratio.\n\n**Formula:**\n- μ = Fr / Mr\n\nWhere:\n- μ = machine efficiency\n- Fr = force ratio"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "effort_distance",
+          "label": "Distance Moved by Effort (se)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m"
+        },
+        {
+          "id": "load_distance",
+          "label": "Distance Moved by Load (sl)",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "m"
+        },
+        {
+          "id": "force_ratio",
+          "label": "Force Ratio (Fr)",
+          "type": "number",
+          "defaultValue": 3,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "movement_ratio_value",
+          "label": "Movement Ratio (Mr)",
+          "formula": "inputs.effort_distance / inputs.load_distance",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "machine_efficiency",
+          "label": "Machine Efficiency (μ)",
+          "formula": "inputs.force_ratio / (inputs.effort_distance / inputs.load_distance)",
+          "format": "decimal",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Description",
+        "Symbol",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Distance Moved by Effort",
+          "se",
+          "User Input",
+          "m"
+        ],
+        [
+          "Distance Moved by Load",
+          "sl",
+          "User Input",
+          "m"
+        ],
+        [
+          "Force Ratio",
+          "Fr",
+          "User Input",
+          ""
+        ],
+        [
+          "Movement Ratio",
+          "Mr",
+          "Calculated",
+          ""
+        ],
+        [
+          "Machine Efficiency",
+          "μ",
+          "Calculated",
+          ""
+        ]
+      ]
+    }
+  ]
+}

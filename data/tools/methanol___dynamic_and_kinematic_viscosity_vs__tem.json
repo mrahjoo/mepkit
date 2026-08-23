@@ -1,0 +1,152 @@
+{
+  "id": "methanol___dynamic_and_kinematic_viscosity_vs__tem",
+  "title": "Methanol - Dynamic and Kinematic Viscosity vs. Temperature and Pressure",
+  "description": "Calculator and reference table for dynamic and kinematic viscosity of liquid methanol at varying temperatures and pressures. Dynamic viscosity is given in Pa·s, cP, and lbf·s/ft², while kinematic viscosity is given in cSt, m²/s, and ft²/s.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "State",
+        "Temperature (K)",
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Dynamic Viscosity (μPa·s)",
+        "Dynamic Viscosity (cP)",
+        "Dynamic Viscosity (mPa·s)",
+        "Dynamic Viscosity (×10⁻⁶ lbf·s/ft²)",
+        "Dynamic Viscosity (×10⁻⁶ lbm·s/ft·s)",
+        "Dynamic Viscosity (lbm/ft·h)",
+        "Kinematic Viscosity (cSt)",
+        "Kinematic Viscosity (×10⁻⁶ m²/s)",
+        "Kinematic Viscosity (×10⁻⁶ ft²/s)"
+      ],
+      "rows": [
+        [
+          "Liquid",
+          248.2,
+          -25,
+          -13,
+          1258,
+          1.258,
+          1.258,
+          0.02627,
+          0.8453,
+          0.003043,
+          1.508,
+          1.508,
+          16.23
+        ],
+        [
+          "Liquid",
+          273.2,
+          0,
+          32,
+          795,
+          0.795,
+          0.795,
+          0.0166,
+          0.5342,
+          0.001923,
+          0.9815,
+          0.9815,
+          10.56
+        ],
+        [
+          "Liquid",
+          293.2,
+          20,
+          68,
+          594,
+          0.594,
+          0.594,
+          0.01241,
+          0.3991,
+          0.001437,
+          0.75,
+          0.75,
+          8.073
+        ],
+        [
+          "Liquid",
+          298.2,
+          25,
+          77,
+          543.5,
+          0.5435,
+          0.5435,
+          0.01135,
+          0.3652,
+          0.001315,
+          0.6906,
+          0.6906,
+          7.434
+        ],
+        [
+          "Liquid",
+          303.2,
+          30,
+          86,
+          507,
+          0.507,
+          0.507,
+          0.01059,
+          0.3407,
+          0.001226,
+          0.6488,
+          0.6488,
+          6.983
+        ],
+        [
+          "Liquid",
+          323.2,
+          50,
+          122,
+          392,
+          0.392,
+          0.392,
+          0.00819,
+          0.2634,
+          0.000948,
+          0.5142,
+          0.5142,
+          5.535
+        ],
+        [
+          "Liquid*",
+          348.2,
+          75,
+          167,
+          294,
+          0.294,
+          0.294,
+          0.00614,
+          0.1976,
+          0.000711,
+          0.4,
+          0.4,
+          4.306
+        ],
+        [
+          "Liquid*",
+          373.2,
+          100,
+          212,
+          227,
+          0.227,
+          0.227,
+          0.00474,
+          0.1525,
+          0.000549,
+          0.3206,
+          0.3206,
+          3.451
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n* The atmospheric boiling point of methanol is 64.15 °C (147.47 °F). Methanol must be pressurized to be present as liquid above that temperature.\n\n## Viscosity - Definition\n\nViscosity is a measure of a fluid's resistance to gradual deformation by shear stress or tensile stress.\n\n**Dynamic (Absolute) Viscosity** is used to calculate Reynolds Number to determine if fluid flow is laminar, transient, or turbulent.\n\n**Kinematic Viscosity** is the ratio of dynamic viscosity to fluid density.\n\n## Unit Conversions\n\n### Dynamic Viscosity\n- 1 cP = 0.001 Pa·s = 2.4191 lb/(ft·h)\n- 1 Pa·s = 1000 cP = 2419.08 lb/(ft·h)\n- 1 lb/(ft·s) = 1488.16 cP\n\n### Kinematic Viscosity\n- 1 cSt = 1×10⁻⁶ m²/s = 1.07639×10⁻⁵ ft²/s\n- 1 m²/s = 1×10⁶ cSt = 10.7639 ft²/s\n- 1 ft²/s = 92903.04 cSt"
+    }
+  ]
+}

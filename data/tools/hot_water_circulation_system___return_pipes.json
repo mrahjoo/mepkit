@@ -1,0 +1,107 @@
+{
+  "id": "hot_water_circulation_system___return_pipes",
+  "title": "Hot Water Circulation System - Return Pipes",
+  "description": "Calculate the required pump capacity for hot water circulation systems to maintain acceptable temperature drops in return pipes, especially for systems where the distance from the hot water heater to fixtures exceeds 25-30 meters.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "circulation_calculator",
+      "content": "Hot Water Circulation Pump Capacity Calculator",
+      "inputs": [
+        {
+          "id": "pipe_length",
+          "label": "Pipeline Length (including circulation line)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        },
+        {
+          "id": "heat_loss_per_meter",
+          "label": "Specific Heat Loss from Pipeline",
+          "type": "number",
+          "unit": "W/m",
+          "defaultValue": 30
+        },
+        {
+          "id": "temperature_drop",
+          "label": "Acceptable Temperature Drop",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 10
+        },
+        {
+          "id": "water_density",
+          "label": "Water Density (at 50°C default)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 988
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat of Water (at 50°C default)",
+          "type": "number",
+          "unit": "J/kg°C",
+          "defaultValue": 4182
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_heat_loss",
+          "label": "Total Heat Loss",
+          "formula": "inputs.pipe_length * inputs.heat_loss_per_meter",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "pump_capacity_m3_s",
+          "label": "Required Pump Capacity",
+          "formula": "inputs.total_heat_loss / (inputs.water_density * inputs.specific_heat * inputs.temperature_drop)",
+          "unit": "m³/s",
+          "format": "scientific"
+        },
+        {
+          "id": "pump_capacity_liters_s",
+          "label": "Required Pump Capacity",
+          "formula": "(inputs.total_heat_loss / (inputs.water_density * inputs.specific_heat * inputs.temperature_drop)) * 1000",
+          "unit": "liters/s",
+          "format": "decimal"
+        },
+        {
+          "id": "pump_capacity_gpm",
+          "label": "Required Pump Capacity",
+          "formula": "((inputs.total_heat_loss / (inputs.water_density * inputs.specific_heat * inputs.temperature_drop)) * 1000) / 0.0630",
+          "unit": "U.S. gpm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "reference_table",
+      "content": "Reference Heat Loss Values for Insulated Pipes",
+      "headers": [
+        "Pipe Condition",
+        "Heat Loss Range (W/m)",
+        "Application Notes"
+      ],
+      "rows": [
+        [
+          "Typical Insulated Pipes",
+          "30 - 60",
+          "Standard residential and commercial applications"
+        ],
+        [
+          "Example Calculation",
+          "30",
+          "Used in the provided example for 100m pipeline"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "notes",
+      "content": "## Key Formula\n\n**Q = q / (ρ × cp × dt)**\n\nWhere:\n- **Q** = pump capacity (m³/s)\n- **q** = heat loss from pipeline (W)\n- **ρ** = density of water (kg/m³) - typically 988 kg/m³ at 50°C\n- **cp** = specific heat of water (J/kg°C) - typically 4182 J/kg°C at 50°C\n- **dt** = acceptable temperature drop (°C) - typically 10°C\n\n## Design Considerations\n\n- Return circulation pipes are recommended when distance from heater to fixtures exceeds 25-30 meters\n- Acceptable temperature drop is typically limited to 10°C\n- Typical heat loss from insulated pipes ranges from 30-60 W/m\n- The pump may run continuously or intermittently depending on system design\n\n## Unit Conversions\n\n- 1 U.S. gpm = 0.0630 liter/sec\n- 1 feet = 0.305 m"
+    }
+  ]
+}

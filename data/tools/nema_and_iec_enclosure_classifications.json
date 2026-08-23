@@ -1,0 +1,129 @@
+{
+  "id": "nema_and_iec_enclosure_classifications",
+  "title": "NEMA and IEC Enclosure Classifications",
+  "description": "Comprehensive reference tool for NEMA and IEC enclosure classifications, including environmental protection ratings, ingress protection (IP) ratings, and application guidelines for indoor and outdoor environments.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "NEMA Type",
+        "Description",
+        "Environment",
+        "IP Rating",
+        "Dust Protection",
+        "Water Protection"
+      ],
+      "rows": [
+        [
+          "1",
+          "General Purpose",
+          "Indoor",
+          "IP10",
+          "Protected against solid objects up to 50mm (accidental touch)",
+          "None"
+        ],
+        [
+          "2",
+          "Drip-Proof",
+          "Indoor",
+          "IP11",
+          "Protected against solid objects up to 50mm (accidental touch)",
+          "Vertically falling drops (e.g., condensation)"
+        ],
+        [
+          "3",
+          "Dust-tight, Rain-tight, Sleet-tight",
+          "Outdoor",
+          "IP54",
+          "Protected against dust limited ingress (no harmful deposit)",
+          "Water sprayed from all directions, limited ingress"
+        ],
+        [
+          "3R",
+          "Rain-tight, Sleet Resistant",
+          "Outdoor",
+          "IP14",
+          "Protected against solid objects up to 50mm (accidental touch)",
+          "Water sprayed from all directions, limited ingress"
+        ],
+        [
+          "3S",
+          "Dust-tight, Rain-tight, Sleet-tight",
+          "Outdoor",
+          "IP54",
+          "Protected against dust limited ingress (no harmful deposit)",
+          "Water sprayed from all directions, limited ingress"
+        ],
+        [
+          "4",
+          "Water-tight, Dust-tight, Sleet Resistant",
+          "Indoor & Outdoor",
+          "IP56",
+          "Protected against dust limited ingress (no harmful deposit)",
+          "Water sprayed from all directions, limited ingress"
+        ],
+        [
+          "4X",
+          "Water-tight, Dust-tight, Corrosion-Resistant",
+          "Indoor & Outdoor",
+          "IP56",
+          "Protected against dust limited ingress (no harmful deposit)",
+          "Water sprayed from all directions, limited ingress"
+        ],
+        [
+          "5",
+          "Dust-tight, Drip-Proof",
+          "Indoor",
+          "IP52",
+          "Protected against dust limited ingress (no harmful deposit)",
+          "Direct sprays of water up to 15° from vertical"
+        ],
+        [
+          "6",
+          "Occasionally Submersible, Watertight, Sleet Resistant",
+          "Indoor & Outdoor",
+          "IP67",
+          "Totally protected against dust",
+          "Immersion between 15cm and 1m"
+        ],
+        [
+          "6P",
+          "Water-tight, Sleet Resistant, Prolonged Submersion",
+          "Indoor & Outdoor",
+          "IP67",
+          "Totally protected against dust",
+          "Immersion between 15cm and 1m"
+        ],
+        [
+          "12",
+          "Dust-tight and Drip-tight",
+          "Indoor",
+          "IP52",
+          "Protected against dust limited ingress (no harmful deposit)",
+          "Direct sprays of water up to 15° from vertical"
+        ],
+        [
+          "12K",
+          "Dust-tight and Drip-tight, with Knockouts",
+          "Indoor",
+          "IP52",
+          "Protected against dust limited ingress (no harmful deposit)",
+          "Direct sprays of water up to 15° from vertical"
+        ],
+        [
+          "13",
+          "Oil-tight and Dust-tight",
+          "Indoor",
+          "IP54",
+          "Protected against dust limited ingress (no harmful deposit)",
+          "Water sprayed from all directions, limited ingress"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## IP Rating Explained\n\n**IP (Ingress Protection) Rating Format: IPXY**\n\n- **X (First Digit - Dust Protection)**: 0-6\n  - 0: No protection\n  - 1: Protected against solid objects >50mm\n  - 2: Protected against solid objects >12.5mm\n  - 3: Protected against solid objects >2.5mm\n  - 4: Protected against solid objects >1mm\n  - 5: Limited dust ingress (no harmful deposit)\n  - 6: Totally protected against dust\n\n- **Y (Second Digit - Water Protection)**: 0-8\n  - 0: No protection\n  - 1: Dripping water (vertical)\n  - 2: Dripping water (up to 15°)\n  - 3: Spraying water (up to 60°)\n  - 4: Splashing water from all directions\n  - 5: Water jets from all directions\n  - 6: Powerful water jets\n  - 7: Immersion up to 1m for up to 30 minutes\n  - 8: Prolonged immersion under pressure\n\n## NEMA vs IEC Standards\n\n- **NEMA (National Electrical Manufacturers Association)**: Primarily used in North America\n- **IEC (International Electrotechnical Commission)**: International standard (IP ratings)\n\nNEMA types provide practical descriptions, while IEC IP ratings provide more specific technical classifications."
+    }
+  ]
+}

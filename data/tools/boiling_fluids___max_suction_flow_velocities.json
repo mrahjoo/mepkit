@@ -1,0 +1,71 @@
+{
+  "id": "boiling_fluids___max_suction_flow_velocities",
+  "title": "Boiling Fluids - Max Suction Flow Velocities",
+  "description": "Recommended max suction flow velocity when pumping boiling fluids. Capacity problems, cavitation and higher power consumption in pumps are often the result of suction side conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe bore (inches)",
+        "Pipe bore (mm)",
+        "Max Velocity (m/s)",
+        "Max Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          1,
+          25,
+          0.3,
+          1
+        ],
+        [
+          2,
+          50,
+          0.3,
+          1
+        ],
+        [
+          3,
+          75,
+          0.3,
+          1
+        ],
+        [
+          4,
+          100,
+          0.3,
+          1
+        ],
+        [
+          6,
+          150,
+          0.35,
+          1.1
+        ],
+        [
+          8,
+          200,
+          0.38,
+          1.2
+        ],
+        [
+          10,
+          250,
+          0.45,
+          1.5
+        ],
+        [
+          12,
+          300,
+          0.45,
+          1.5
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Considerations\n\nBoiling liquids - due to cavitation - may be extremely difficult to pump. If the pressure at any point within a pump falls below the vapor pressure of the liquid being pumped, vaporization or cavitation will occur.\n\nFor example, water at 100°F (38°C) boils or vaporizes if exposed to a vacuum of 28 in Hg. The problem with cavitation increases with higher temperatures.\n\n### Related Topics\n\n- **Condensate Pumping** - the challenge with pumping condensate with high temperature and the cavitation of pump wheels\n- **Steam Systems and Feeding Pumps Suction Lift** - information about steam feed pumps\n- **Cavitation and NPSH** - an introduction to cavitation and Net Positive Suction Head NPSH"
+    }
+  ]
+}

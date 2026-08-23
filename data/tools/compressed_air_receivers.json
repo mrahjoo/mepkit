@@ -1,0 +1,145 @@
+{
+  "id": "compressed_air_receivers",
+  "title": "Compressed Air Receivers",
+  "description": "Calculator and reference tool for sizing compressed air receivers. Calculates receiver tank volume based on air consumption, pressure differential, and time requirements. Includes a reference table of standard receiver capacities.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Air Receiver Sizing Calculator\n\nCalculate the required volume of a compressed air receiver tank based on:\n- Free air needed (C) in SCFM\n- Maximum tank pressure (p1) in psia\n- Minimum tank pressure (p2) in psia\n- Time for pressure drop (t) in seconds\n\nUses the formula: **V = t × C × pa / (p1 - p2)**\n\nWhere pa = atmospheric pressure (14.7 psia)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "air_consumption",
+          "label": "Free Air Needed (SCFM)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "cfm"
+        },
+        {
+          "id": "max_pressure",
+          "label": "Maximum Tank Pressure",
+          "type": "number",
+          "defaultValue": 110,
+          "unit": "psig"
+        },
+        {
+          "id": "min_pressure",
+          "label": "Minimum Tank Pressure",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "psig"
+        },
+        {
+          "id": "time_seconds",
+          "label": "Time for Pressure Drop",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "seconds"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tank_volume",
+          "label": "Required Tank Volume",
+          "formula": "inputs.time_seconds * (1/60) * inputs.air_consumption * 14.7 / (inputs.max_pressure - inputs.min_pressure)",
+          "unit": "cubic feet",
+          "format": "decimal"
+        },
+        {
+          "id": "tank_volume_gallons",
+          "label": "Required Tank Volume",
+          "formula": "inputs.time_seconds * (1/60) * inputs.air_consumption * 14.7 / (inputs.max_pressure - inputs.min_pressure) * 7.48",
+          "unit": "gallons",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_band",
+          "label": "Pressure Band (Storage)",
+          "formula": "inputs.max_pressure - inputs.min_pressure",
+          "unit": "psig",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Standard Sizing Rules\n\n- **1 gallon per ACFM** - Quick rule for general applications\n- **4 gallons per compressor HP** - Alternative sizing based on motor horsepower\n\n## Air Receiver Standard Capacities Reference"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Tank Size (inches)",
+        "Tank Size (gallons)",
+        "50 psig (cu ft)",
+        "100 psig (cu ft)",
+        "150 psig (cu ft)",
+        "200 psig (cu ft)"
+      ],
+      "rows": [
+        [
+          "12 × 24",
+          "10",
+          "1.3",
+          "11",
+          "15",
+          "19"
+        ],
+        [
+          "14 × 36",
+          "20",
+          "2.7",
+          "21",
+          "30",
+          "39"
+        ],
+        [
+          "16 × 36",
+          "30",
+          "4.0",
+          "31",
+          "45",
+          "59"
+        ],
+        [
+          "20 × 48",
+          "60",
+          "8.0",
+          "62",
+          "90",
+          "117"
+        ],
+        [
+          "20 × 63",
+          "80",
+          "11",
+          "83",
+          "120",
+          "156"
+        ],
+        [
+          "24 × 68",
+          "120",
+          "16",
+          "125",
+          "180",
+          "234"
+        ],
+        [
+          "30 × 84",
+          "240",
+          "32",
+          "250",
+          "360",
+          "467"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Considerations\n\n**Pressure Band:** The difference between maximum and minimum tank pressure is critical. A larger pressure band allows:\n- Better buffering of consumption variations\n- More air storage capacity\n- Reduced compressor cycling\n\n**Typical Pressure Bands:** 10 psig is common; 15-20 psig provides better buffer capacity.\n\n**Unit Conversions:**\n- 1 ft³ = 0.02832 m³\n- 1 gallon (U.S.) = 3.785 liters\n- 1 psig = 0.069 bar"
+    }
+  ]
+}

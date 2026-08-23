@@ -1,0 +1,683 @@
+{
+  "id": "liquids___specific_gravities",
+  "title": "Liquids - Specific Gravities",
+  "description": "Specific gravities for common fluids like acetone, alcohol, turpentine, oil and more. Specific Gravity (SG) is the ratio of the density of a substance to the density of water at a specified temperature (based on water at 60°F with SG = 1).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Liquid",
+        "Temperature (°C)",
+        "Specific Gravity (SG)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde CH3CHO",
+          16.1,
+          0.79
+        ],
+        [
+          "Acetaldehyde CH3CHO",
+          20,
+          0.76
+        ],
+        [
+          "Acetic acid 5% - vinegar",
+          15,
+          1.006
+        ],
+        [
+          "Acetic acid - 10%",
+          15,
+          1.014
+        ],
+        [
+          "Acetic acid - 50%",
+          15,
+          1.061
+        ],
+        [
+          "Acetic acid - 80%",
+          15,
+          1.075
+        ],
+        [
+          "Acetic acid - concentrated",
+          15,
+          1.055
+        ],
+        [
+          "Acetic acid anhydride (CH3COO)2O",
+          15,
+          1.087
+        ],
+        [
+          "Acetone CH3COCH3",
+          20,
+          0.792
+        ],
+        [
+          "Alcohol - allyl",
+          20,
+          0.855
+        ],
+        [
+          "Alcohol - butyl-n",
+          20,
+          0.81
+        ],
+        [
+          "Alcohol - butyl-n",
+          70,
+          0.78
+        ],
+        [
+          "Alcohol - ethyl (grain) C2H5OH",
+          20,
+          0.789
+        ],
+        [
+          "Alcohol - ethyl (grain) C2H5OH",
+          40,
+          0.772
+        ],
+        [
+          "Alcohol - methyl (wood) CH3OH",
+          20,
+          0.79
+        ],
+        [
+          "Alcohol - propyl",
+          20,
+          0.804
+        ],
+        [
+          "Alcohol - propyl",
+          0,
+          0.817
+        ],
+        [
+          "Aluminum sulfate 36% solution",
+          15.6,
+          1.055
+        ],
+        [
+          "Ammonia",
+          -17.8,
+          0.662
+        ],
+        [
+          "Aniline",
+          20,
+          1.022
+        ],
+        [
+          "Aniline",
+          0,
+          1.035
+        ],
+        [
+          "Automotive crankcase oils SAE-5W/10W/20W/30W/40W/50W",
+          15.6,
+          "0.88 - 0.94"
+        ],
+        [
+          "Automotive gear oils SAE-75W/80W/85W/90W/140W/150W",
+          15.6,
+          "0.88 - 0.94"
+        ],
+        [
+          "Beer",
+          15.6,
+          1.01
+        ],
+        [
+          "Benzene (benzol) C6H6",
+          0,
+          0.899
+        ],
+        [
+          "Benzene (benzol) C6H6",
+          15.6,
+          0.885
+        ],
+        [
+          "Benzine",
+          "",
+          0.69
+        ],
+        [
+          "Bone oil",
+          15.6,
+          0.918
+        ],
+        [
+          "Boric acid H3BO3",
+          8,
+          1.014
+        ],
+        [
+          "Boric acid H3BO3",
+          15,
+          1.025
+        ],
+        [
+          "Bromine",
+          0,
+          2.9
+        ],
+        [
+          "Butane-n",
+          15.6,
+          0.584
+        ],
+        [
+          "Butyric acid",
+          20,
+          0.959
+        ],
+        [
+          "Calcium chloride 5%",
+          18.3,
+          1.04
+        ],
+        [
+          "Calcium chloride 25%",
+          15.6,
+          1.23
+        ],
+        [
+          "Carbolic acid (phenol)",
+          18.3,
+          1.08
+        ],
+        [
+          "Carbon tetrachloride CCl4",
+          20,
+          1.594
+        ],
+        [
+          "Carbon disulfide CS2",
+          "0/20",
+          "1.293/1.263"
+        ],
+        [
+          "Castor Oil",
+          20,
+          0.96
+        ],
+        [
+          "Castor Oil",
+          40,
+          0.95
+        ],
+        [
+          "China wood oil",
+          15.6,
+          0.943
+        ],
+        [
+          "Chloroform",
+          20,
+          1.489
+        ],
+        [
+          "Chloroform",
+          60,
+          1.413
+        ],
+        [
+          "Coconut oil",
+          15.6,
+          0.925
+        ],
+        [
+          "Cod liver oil",
+          15,
+          "0.920 - 0.925"
+        ],
+        [
+          "Corn oil",
+          15.6,
+          0.924
+        ],
+        [
+          "Cotton seed oil",
+          15.6,
+          "0.88 - 0.93"
+        ],
+        [
+          "Creosote",
+          15.6,
+          "1.04 - 1.10"
+        ],
+        [
+          "Crude oil 48° API",
+          15.6,
+          0.79
+        ],
+        [
+          "Crude oil 48° API",
+          54.4,
+          0.76
+        ],
+        [
+          "Crude oil 40° API",
+          15.6,
+          0.825
+        ],
+        [
+          "Crude oil 40° API",
+          54.4,
+          0.805
+        ],
+        [
+          "Crude oil 35.6° API",
+          15.6,
+          0.847
+        ],
+        [
+          "Crude oil 35.6° API",
+          54.4,
+          0.824
+        ],
+        [
+          "Crude oil 32.6° API",
+          15.6,
+          0.862
+        ],
+        [
+          "Crude oil 32.6° API",
+          54.4,
+          0.84
+        ],
+        [
+          "Crude oil Salt creek",
+          "15.6/54.4",
+          "0.843/0.82"
+        ],
+        [
+          "Decane-n",
+          20,
+          0.73
+        ],
+        [
+          "Diethylene glycol",
+          15.6,
+          1.12
+        ],
+        [
+          "Diethyl ether",
+          20,
+          0.714
+        ],
+        [
+          "Diphenylamine",
+          "",
+          1.16
+        ],
+        [
+          "Diesel Fuel Oil 2D/3D/4D/5D",
+          15.6,
+          "0.81 - 0.96"
+        ],
+        [
+          "Dowtherm",
+          25,
+          1.056
+        ],
+        [
+          "Ether, sulfuric",
+          "",
+          0.72
+        ],
+        [
+          "Ethyl acetate CH3COOC2H3",
+          "15/20",
+          "0.907/0.90"
+        ],
+        [
+          "Ethyl bromide C2H3Br",
+          15,
+          1.45
+        ],
+        [
+          "Ethylene bromide",
+          20,
+          2.18
+        ],
+        [
+          "Ethylene chloride",
+          20,
+          1.246
+        ],
+        [
+          "Ethylene glycol",
+          15.6,
+          1.125
+        ],
+        [
+          "Fluoric acid",
+          "",
+          1.5
+        ],
+        [
+          "Formic acid - 10%",
+          20,
+          1.025
+        ],
+        [
+          "Formic acid - 50%",
+          20,
+          1.121
+        ],
+        [
+          "Formic acid - 80%",
+          20,
+          1.186
+        ],
+        [
+          "Formic acid - concentrated",
+          20,
+          1.221
+        ],
+        [
+          "Trichlorofluoromethane - 11",
+          21.1,
+          1.49
+        ],
+        [
+          "Dichlorodifluoromethane - 12",
+          21.1,
+          1.33
+        ],
+        [
+          "Dichlorofluoromethane - 21",
+          21.1,
+          1.37
+        ],
+        [
+          "Furfurol",
+          20,
+          1.159
+        ],
+        [
+          "Fuel oils 1/2/3/5A/5B/6",
+          15.6,
+          "0.82-0.95"
+        ],
+        [
+          "Gas oils",
+          15.6,
+          0.89
+        ],
+        [
+          "Gasoline a",
+          15.6,
+          0.74
+        ],
+        [
+          "Gasoline b",
+          15.6,
+          0.72
+        ],
+        [
+          "Gasoline c",
+          15.6,
+          0.68
+        ],
+        [
+          "Glycerine (glycol 100%)",
+          25,
+          1.261
+        ],
+        [
+          "Glycerine (glycol 95%, water 5%)",
+          25,
+          1.249
+        ],
+        [
+          "Glycerine (glycol 50%, water 50%)",
+          25,
+          1.13
+        ],
+        [
+          "Glycol",
+          25,
+          1.261
+        ],
+        [
+          "Glucose",
+          15.6,
+          "1.35 - 1.44"
+        ],
+        [
+          "Heptane-n",
+          15.6,
+          0.688
+        ],
+        [
+          "Hexane-n",
+          15.6,
+          0.664
+        ],
+        [
+          "Ink printers",
+          15.6,
+          "1.0 - 1.4"
+        ],
+        [
+          "Kerosene",
+          15.6,
+          "0.78 - 0.82"
+        ],
+        [
+          "Jet fuel",
+          15.6,
+          0.82
+        ],
+        [
+          "Lard",
+          15.6,
+          0.96
+        ],
+        [
+          "Lard oil",
+          15.6,
+          "0.91 - 0.93"
+        ],
+        [
+          "Linseed oil",
+          15.6,
+          "0.92 - 0.94"
+        ],
+        [
+          "Mercury",
+          15.6,
+          13.6
+        ],
+        [
+          "Methyl acetate",
+          20,
+          0.93
+        ],
+        [
+          "Methyl iodide",
+          20,
+          2.28
+        ],
+        [
+          "Mineral oil",
+          "",
+          0.92
+        ],
+        [
+          "Milk",
+          15.6,
+          "1.02 - 1.05"
+        ],
+        [
+          "Molasses A first",
+          15.6,
+          "1.40 - 1.46"
+        ],
+        [
+          "Molasses B second",
+          15.6,
+          "1.43 - 1.48"
+        ],
+        [
+          "Molasses C blackstrap",
+          15.6,
+          "1.46 - 1.49"
+        ],
+        [
+          "Muriatic acid",
+          "",
+          1.2
+        ],
+        [
+          "Naphtha",
+          "",
+          0.76
+        ],
+        [
+          "Naphthalene",
+          20,
+          1.145
+        ],
+        [
+          "Neatsfoot oil",
+          15.6,
+          0.917
+        ],
+        [
+          "Nitric acid",
+          "",
+          1.5
+        ],
+        [
+          "Nitrobentzene",
+          20,
+          1.203
+        ],
+        [
+          "Nitrobentzene",
+          15,
+          1.205
+        ],
+        [
+          "Nonane-n",
+          "15.6/20",
+          "0.722/0.718"
+        ],
+        [
+          "Octane-n",
+          15.6,
+          0.707
+        ],
+        [
+          "Olive oil",
+          15.6,
+          "0.91 - 0.92"
+        ],
+        [
+          "Palm oil",
+          15.6,
+          0.924
+        ],
+        [
+          "Peanut oil",
+          15.6,
+          0.92
+        ],
+        [
+          "Pentane-n",
+          0,
+          0.65
+        ],
+        [
+          "Pentane-n",
+          15.6,
+          0.631
+        ],
+        [
+          "Petroleum oil",
+          "",
+          0.82
+        ],
+        [
+          "Phosphoric acid",
+          "",
+          1.78
+        ],
+        [
+          "Potassium hydrate",
+          "",
+          1.24
+        ],
+        [
+          "Rape oil",
+          "",
+          0.92
+        ],
+        [
+          "Sodium chloride",
+          "",
+          1.19
+        ],
+        [
+          "Sodium hydrate",
+          "",
+          1.27
+        ],
+        [
+          "Sulphuric acid",
+          "",
+          1.84
+        ],
+        [
+          "Tar",
+          "",
+          1
+        ],
+        [
+          "Tuluol",
+          "",
+          0.87
+        ],
+        [
+          "Turpentine oil",
+          "",
+          0.87
+        ],
+        [
+          "Vinegar",
+          "",
+          1.08
+        ],
+        [
+          "Water. fresh",
+          "",
+          1
+        ],
+        [
+          "Water. sea 36 °F",
+          "",
+          1.02
+        ],
+        [
+          "Whale oil",
+          "",
+          0.92
+        ],
+        [
+          "Xylene",
+          "",
+          0.87
+        ]
+      ]
+    }
+  ]
+}

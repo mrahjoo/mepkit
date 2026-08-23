@@ -1,0 +1,54 @@
+{
+  "id": "energy_transfer_equation",
+  "title": "Energy Transfer Equation",
+  "description": "Calculator for fluid energy transfer using the equation Q = m × cp × ΔT, where Q is the quantity of energy transferred, m is the mass of substance, cp is the specific heat, and ΔT is the temperature difference.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 2
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat (cp)",
+          "type": "number",
+          "unit": "kJ/kg°C",
+          "defaultValue": 4.2
+        },
+        {
+          "id": "temp_difference",
+          "label": "Temperature Difference (ΔT)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 40
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy_transferred_kj",
+          "label": "Energy Transferred (Q)",
+          "formula": "inputs.mass * inputs.specific_heat * inputs.temp_difference",
+          "unit": "kJ",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_transferred_kwh",
+          "label": "Energy Transferred (Q)",
+          "formula": "(inputs.mass * inputs.specific_heat * inputs.temp_difference) / 3600",
+          "unit": "kWh",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\n**Q = m × cp × ΔT**\n\nWhere:\n- **Q** = Quantity of energy transferred (kJ, Btu)\n- **m** = Mass of substance (kg, lb)\n- **cp** = Specific heat of the substance (kJ/kg°C, kJ/kg°K, Btu/lb°F)\n- **ΔT** = Temperature difference (°C, K, °F)\n\n## Example\n\n2 kg of water is heated from 20°C to 60°C. The specific heat of water is 4.2 kJ/kg°C.\n\n**Calculation:**\n- Q = (2 kg) × (4.2 kJ/kg°C) × ((60°C) - (20°C))\n- Q = (2) × (4.2) × (40)\n- Q = 336 kJ\n- Q = 336 kWs × (1/3600 h/s) = 0.093 kWh"
+    }
+  ]
+}

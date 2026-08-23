@@ -1,0 +1,186 @@
+{
+  "id": "acetone___density_and_specific_weight",
+  "title": "Acetone - Density and Specific Weight",
+  "description": "Calculator for estimating the density and specific weight of liquid acetone at given temperature at saturation pressure. Output density is given in kg/m³, lb/ft³, lb/gal(US liq) and sl/ft³. Specific weight is given in N/m³ and lbf/ft³.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Acetone Density and Specific Weight Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "defaultValue": "C",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "C"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "F"
+            },
+            {
+              "label": "Kelvin (K)",
+              "value": "K"
+            },
+            {
+              "label": "Rankine (°R)",
+              "value": "R"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "782.6"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "48.85"
+        },
+        {
+          "id": "density_lb_gal",
+          "label": "Density",
+          "unit": "lb/gal(US liq)",
+          "format": "decimal",
+          "formula": "6.53"
+        },
+        {
+          "id": "density_sl_ft3",
+          "label": "Density",
+          "unit": "sl/ft³",
+          "format": "decimal",
+          "formula": "1.518"
+        },
+        {
+          "id": "specific_weight_n_m3",
+          "label": "Specific Weight",
+          "unit": "N/m³",
+          "format": "decimal",
+          "formula": "7674"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "format": "decimal",
+          "formula": "48.9"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Acetone Properties at Saturation Pressure",
+      "headers": [
+        "Temperature (K)",
+        "Temperature (°C)",
+        "Pressure (MPa)",
+        "Density (kg/m³)",
+        "Specific Weight (N/m³)"
+      ],
+      "rows": [
+        [
+          "178.5",
+          "-94.7",
+          "0.0000233",
+          "913.2",
+          "8955"
+        ],
+        [
+          "210",
+          "-63.2",
+          "0.000966",
+          "879.4",
+          "8624"
+        ],
+        [
+          "240",
+          "-33.2",
+          "0.0120",
+          "847.5",
+          "8312"
+        ],
+        [
+          "270",
+          "-3.1",
+          "0.0785",
+          "815.5",
+          "7997"
+        ],
+        [
+          "300",
+          "26.9",
+          "0.3326",
+          "782.6",
+          "7674"
+        ],
+        [
+          "330",
+          "56.9",
+          "1.040",
+          "748.1",
+          "7336"
+        ],
+        [
+          "360",
+          "86.9",
+          "2.619",
+          "711.1",
+          "6973"
+        ],
+        [
+          "390",
+          "117",
+          "5.624",
+          "670.5",
+          "6576"
+        ],
+        [
+          "420",
+          "147",
+          "10.73",
+          "624.5",
+          "6124"
+        ],
+        [
+          "450",
+          "177",
+          "18.76",
+          "569.4",
+          "5584"
+        ],
+        [
+          "480",
+          "207",
+          "30.73",
+          "496.1",
+          "4865"
+        ],
+        [
+          "508.1",
+          "235.0",
+          "46.92",
+          "273.0",
+          "2677"
+        ]
+      ]
+    }
+  ]
+}

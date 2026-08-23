@@ -1,0 +1,73 @@
+{
+  "id": "fiberglass_insulation",
+  "title": "Fiberglass Insulation",
+  "description": "Thermal conductivity of fiberglass insulation - temperature and k-values.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Temperature (°C)",
+        "Thermal Conductivity k-value (Btu/hr·ft·°F)",
+        "Thermal Conductivity k-value (W/m·K)"
+      ],
+      "rows": [
+        [
+          -100,
+          -73.3,
+          0.135,
+          0.234
+        ],
+        [
+          -50,
+          -45.6,
+          0.138,
+          0.239
+        ],
+        [
+          0,
+          -17.8,
+          0.142,
+          0.246
+        ],
+        [
+          50,
+          10,
+          0.147,
+          0.254
+        ],
+        [
+          100,
+          37.8,
+          0.153,
+          0.265
+        ],
+        [
+          150,
+          65.6,
+          0.16,
+          0.277
+        ],
+        [
+          200,
+          93.3,
+          0.168,
+          0.291
+        ],
+        [
+          250,
+          121.1,
+          0.177,
+          0.306
+        ],
+        [
+          300,
+          148.9,
+          0.188,
+          0.325
+        ]
+      ]
+    }
+  ]
+}

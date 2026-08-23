@@ -1,0 +1,54 @@
+{
+  "id": "din___deutsches_institut_f_r_normung",
+  "title": "DIN - Deutsches Institut für Normung",
+  "description": "The German Institute for Standardization (DIN) is a non-governmental organization recognized by the German government as the national standards body. DIN promotes rationalization, quality assurance, safety, and environmental protection through over 12,000 standards covering topics including physical quantities, fasteners, water analysis, building engineering, materials testing, and process engineering.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Designation",
+        "Type",
+        "Description"
+      ],
+      "rows": [
+        [
+          "DIN #",
+          "German Standard",
+          "Used for German standards with primarily domestic significance or designed as a first step toward international status"
+        ],
+        [
+          "E DIN #",
+          "Draft Standard",
+          "A draft standard published for public comment before final publication"
+        ],
+        [
+          "DIN V #",
+          "Preliminary Standard",
+          "A preliminary standard designation"
+        ],
+        [
+          "DIN EN #",
+          "European Standard",
+          "German edition of European standards"
+        ],
+        [
+          "DIN ETS #",
+          "European Telecommunications Standard",
+          "Standards prepared by European Telecommunications Standards Institute"
+        ],
+        [
+          "DIN ISO #",
+          "ISO Standard",
+          "German edition of ISO standards"
+        ],
+        [
+          "DIN EN ISO #",
+          "Adopted European & ISO Standard",
+          "Standard adopted as both European and ISO standard"
+        ]
+      ],
+      "content": "## DIN Standards Designation Overview\n\nDIN standards follow a systematic designation scheme that indicates their origin and status:\n\n- **DIN #**: German standards with primarily domestic significance\n- **E DIN #**: Draft standards (published for public comment)\n- **DIN V #**: Preliminary standards\n- **DIN EN #**: German edition of European standards\n- **DIN ETS #**: European Telecommunications Standards\n- **DIN ISO #**: German edition of ISO standards\n- **DIN EN ISO #**: Adopted as both European and ISO standards\n\n### Example DIN Standards:\n\n- DIN 75078-1: Motor vehicle for the transport of persons with reduced mobility\n- DIN V 4108-4: Thermal insulation and energy economy in buildings\n- DIN EN 126: Multifunctional controls for gas burning appliances\n- DIN EN ISO 10042: Welding - Arc-welded joints in aluminum and its weldable alloys"
+    }
+  ]
+}

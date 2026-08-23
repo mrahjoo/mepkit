@@ -1,0 +1,42 @@
+{
+  "id": "electrical_motors___insulation_classes",
+  "title": "Electrical Motors - Insulation Classes",
+  "description": "Electrical motors NEMA temperature and insulation classes. Electrical insulation systems are rated by standard NEMA (National Electrical Manufacturers Association) classifications according to maximum allowable operating temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Insulation Class",
+        "Temperature Limit (°C)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "A",
+          105,
+          "Hygroscopic insulation - avoided for open and outdoor locations - shortened lifetime if condensation in the insulation occurs"
+        ],
+        [
+          "B",
+          130,
+          "Hygroscopic insulation - avoided for open and outdoor locations - shortened lifetime if condensation in the insulation occurs"
+        ],
+        [
+          "F",
+          155,
+          "Non-hygroscopic insulation - preferred for open and outdoor locations, higher ambient temperatures"
+        ],
+        [
+          "H",
+          180,
+          "Non-hygroscopic insulation - preferred for open and outdoor locations, higher ambient temperatures"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n**Hygroscopic Insulation (Classes A, B):** Avoided for open and outdoor locations due to shortened lifetime if condensation in the insulation occurs.\n\n**Non-hygroscopic Insulation (Classes F, H):** Preferred for open and outdoor locations and higher ambient temperatures."
+    }
+  ]
+}

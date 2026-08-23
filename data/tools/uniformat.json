@@ -1,0 +1,146 @@
+{
+  "id": "uniformat",
+  "title": "Uniformat",
+  "description": "The ASTM E1557 UNIFORMAT II Standard provides a common structure for describing major building systems linking building conceptual design, cost estimating, facilities management, and life-cycle cost engineering. The UNIFORMAT organizes information by functional elements (systems and assemblies) with the primary purposes of identifying functional elements in BIM models, and organizing preliminary project descriptions and early cost estimates.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Uniformat Levels and Titles\n\n### A Substructure\n- **A10** - Foundations\n- **A20** - Basement Constructions\n\n### B Shell\n- **B10** - Superstructure\n- **B20** - Exterior Enclosure\n- **B30** - Roofing\n\n### C Interiors\n- **C10** - Interior Construction\n- **C20** - Stairs\n- **C30** - Roofing\n\n### D Services\n- **D10** - Conveying Systems\n- **D20** - Plumbing\n- **D30** - Heating, Ventilating, and Air Conditioning (HVAC)\n- **D40** - Fire Protecting Systems\n- **D50** - Electrical Systems\n\n### E Equipment and Furnishings\n- **E10** - Equipment\n- **E20** - Furnishings\n\n### F Special Construction and Demolition\n- **F10** - Special Construction\n- **F20** - Selective Demolition\n\n### G Building Sitework\n- **G10** - Site Preparation\n- **G20** - Site Improvements\n- **G30** - Site Civil/Mechanical Utilities\n- **G40** - Site Electrical Utilities\n- **G90** - Other Site Construction\n\n### Z General\n- **Z10** - General Requirements\n- **Z20** - Bidding Requirements, Contract Forms\n- **Z90** - Project Cost Estimate"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "unitCost",
+          "label": "Unit Cost",
+          "type": "number",
+          "unit": "$",
+          "defaultValue": 100
+        },
+        {
+          "id": "quantity",
+          "label": "Quantity",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "uniformatLevel",
+          "label": "Uniformat Level",
+          "type": "select",
+          "options": [
+            {
+              "value": "A10",
+              "label": "A10 - Foundations"
+            },
+            {
+              "value": "A20",
+              "label": "A20 - Basement Constructions"
+            },
+            {
+              "value": "B10",
+              "label": "B10 - Superstructure"
+            },
+            {
+              "value": "B20",
+              "label": "B20 - Exterior Enclosure"
+            },
+            {
+              "value": "B30",
+              "label": "B30 - Roofing"
+            },
+            {
+              "value": "C10",
+              "label": "C10 - Interior Construction"
+            },
+            {
+              "value": "C20",
+              "label": "C20 - Stairs"
+            },
+            {
+              "value": "C30",
+              "label": "C30 - Roofing"
+            },
+            {
+              "value": "D10",
+              "label": "D10 - Conveying Systems"
+            },
+            {
+              "value": "D20",
+              "label": "D20 - Plumbing"
+            },
+            {
+              "value": "D30",
+              "label": "D30 - HVAC"
+            },
+            {
+              "value": "D40",
+              "label": "D40 - Fire Protecting Systems"
+            },
+            {
+              "value": "D50",
+              "label": "D50 - Electrical Systems"
+            },
+            {
+              "value": "E10",
+              "label": "E10 - Equipment"
+            },
+            {
+              "value": "E20",
+              "label": "E20 - Furnishings"
+            },
+            {
+              "value": "F10",
+              "label": "F10 - Special Construction"
+            },
+            {
+              "value": "F20",
+              "label": "F20 - Selective Demolition"
+            },
+            {
+              "value": "G10",
+              "label": "G10 - Site Preparation"
+            },
+            {
+              "value": "G20",
+              "label": "G20 - Site Improvements"
+            },
+            {
+              "value": "G30",
+              "label": "G30 - Site Civil/Mechanical Utilities"
+            },
+            {
+              "value": "G40",
+              "label": "G40 - Site Electrical Utilities"
+            },
+            {
+              "value": "G90",
+              "label": "G90 - Other Site Construction"
+            },
+            {
+              "value": "Z10",
+              "label": "Z10 - General Requirements"
+            },
+            {
+              "value": "Z20",
+              "label": "Z20 - Bidding Requirements"
+            },
+            {
+              "value": "Z90",
+              "label": "Z90 - Project Cost Estimate"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "totalCost",
+          "label": "Total Cost",
+          "formula": "inputs.unitCost * inputs.quantity",
+          "unit": "$",
+          "format": "currency"
+        }
+      ]
+    }
+  ]
+}

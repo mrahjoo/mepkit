@@ -1,0 +1,65 @@
+{
+  "id": "distance_between_3d_points",
+  "title": "Distance between 3D Points",
+  "description": "Calculate the distance between two points in a three-dimensional (3D) coordinate system using the Euclidean distance formula.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate the distance between two 3D points using the formula: d = √((x2-x1)² + (y2-y1)² + (z2-z1)²)",
+      "inputs": [
+        {
+          "id": "x1",
+          "label": "X1 Coordinate (Point 1)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        },
+        {
+          "id": "y1",
+          "label": "Y1 Coordinate (Point 1)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        },
+        {
+          "id": "z1",
+          "label": "Z1 Coordinate (Point 1)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m"
+        },
+        {
+          "id": "x2",
+          "label": "X2 Coordinate (Point 2)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m"
+        },
+        {
+          "id": "y2",
+          "label": "Y2 Coordinate (Point 2)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        },
+        {
+          "id": "z2",
+          "label": "Z2 Coordinate (Point 2)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance",
+          "label": "Distance",
+          "formula": "sqrt((inputs.x2 - inputs.x1)^2 + (inputs.y2 - inputs.y1)^2 + (inputs.z2 - inputs.z1)^2)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

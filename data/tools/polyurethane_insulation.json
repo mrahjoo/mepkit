@@ -1,0 +1,60 @@
+{
+  "id": "polyurethane_insulation",
+  "title": "Polyurethane Insulation",
+  "description": "Thermal conductivity (k-values) calculator for polyurethane insulation versus temperature. Polyurethane is an organic polymer used in flexible foams, coatings, adhesives, sealants, and insulation applications for buildings and technical systems.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Polyurethane Thermal Conductivity Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "value": "metric",
+              "label": "Metric (W/(m·K))"
+            },
+            {
+              "value": "imperial",
+              "label": "Imperial (Btu·in/(h·ft²·°F))"
+            }
+          ],
+          "defaultValue": "metric"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_fahrenheit",
+          "label": "Temperature (Fahrenheit)",
+          "formula": "inputs.temperature_celsius * 9/5 + 32",
+          "unit": "°F",
+          "format": "decimal"
+        },
+        {
+          "id": "conversion_factor",
+          "label": "Conversion Factor",
+          "formula": "6.935",
+          "unit": "Btu·in/(h·ft²·°F) per W/(m·K)",
+          "format": "decimal"
+        }
+      ],
+      "content": "Enter the temperature and select the desired unit system to calculate thermal conductivity conversions for polyurethane insulation. Use the conversion factor to switch between metric and imperial units."
+    },
+    {
+      "type": "markdown",
+      "content": "## Temperature Conversion Formula\n\n- **Celsius to Fahrenheit**: T (°F) = 9/5 × T (°C) + 32\n- **Fahrenheit to Celsius**: T (°C) = 5/9 × (T (°F) - 32)\n\n## Thermal Conductivity Conversion\n\n- **1 W/(m·K) = 6.935 Btu·in/(h·ft²·°F)**\n\n## Applications\n\nPolyurethane insulation is commonly used in:\n- Building insulation systems\n- Heat exchangers\n- Cooling pipes\n- Flexible foams and mattresses\n- Chemical-resistant coatings\n- Adhesives and sealants"
+    }
+  ]
+}

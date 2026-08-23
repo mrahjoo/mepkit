@@ -1,0 +1,70 @@
+{
+  "id": "electrical_vehicle_charging___power_vs__voltage_an",
+  "title": "Electrical Vehicle Charging - Power vs. Voltage and Amps",
+  "description": "EV Charging - AC vs. DC, single phase vs. three phase and power vs. voltage and amps.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 230
+        },
+        {
+          "id": "current",
+          "label": "Current",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 16
+        },
+        {
+          "id": "phase_type",
+          "label": "Phase Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "single",
+              "label": "Single Phase AC"
+            },
+            {
+              "value": "three",
+              "label": "Three Phase AC"
+            },
+            {
+              "value": "dc",
+              "label": "DC"
+            }
+          ],
+          "defaultValue": "single"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_single",
+          "label": "Power (Single Phase)",
+          "formula": "inputs.voltage * inputs.current",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "power_three",
+          "label": "Power (Three Phase)",
+          "formula": "inputs.voltage * inputs.current * 1.732",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "power_kw",
+          "label": "Power",
+          "formula": "(inputs.voltage * inputs.current) / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "oil_viscosity_converter",
+  "title": "Oil Viscosity Converter",
+  "description": "Convert between commonly used oil viscosity units including Poise, centiPoise, Reyn, Stoke, and centiStoke. Specify your oil's specific gravity for accurate conversions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Viscosity Value",
+          "type": "number",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "from_unit",
+          "label": "Convert From",
+          "type": "select",
+          "options": [
+            {
+              "value": "poise",
+              "label": "Poise (P)"
+            },
+            {
+              "value": "centipoise",
+              "label": "centiPoise (cP)"
+            },
+            {
+              "value": "reyn",
+              "label": "Reyn"
+            },
+            {
+              "value": "stoke",
+              "label": "Stoke (cm²/sec)"
+            },
+            {
+              "value": "centistoke",
+              "label": "centiStoke (cSt)"
+            }
+          ],
+          "defaultValue": "stoke"
+        },
+        {
+          "id": "to_unit",
+          "label": "Convert To",
+          "type": "select",
+          "options": [
+            {
+              "value": "poise",
+              "label": "Poise (P)"
+            },
+            {
+              "value": "centipoise",
+              "label": "centiPoise (cP)"
+            },
+            {
+              "value": "reyn",
+              "label": "Reyn"
+            },
+            {
+              "value": "stoke",
+              "label": "Stoke (cm²/sec)"
+            },
+            {
+              "value": "centistoke",
+              "label": "centiStoke (cSt)"
+            }
+          ],
+          "defaultValue": "centistoke"
+        },
+        {
+          "id": "sg",
+          "label": "Specific Gravity (SG)",
+          "type": "number",
+          "defaultValue": 0.88,
+          "unit": "dimensionless"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Viscosity",
+          "formula": "inputs.value * (inputs.from_unit === 'stoke' && inputs.to_unit === 'centistoke' ? 100 : inputs.from_unit === 'centistoke' && inputs.to_unit === 'stoke' ? 0.01 : inputs.from_unit === 'poise' && inputs.to_unit === 'centipoise' ? 100 : inputs.from_unit === 'centipoise' && inputs.to_unit === 'poise' ? 0.01 : inputs.from_unit === 'poise' && inputs.to_unit === 'reyn' ? 1.45e-5 : inputs.from_unit === 'reyn' && inputs.to_unit === 'poise' ? 6.9e4 : inputs.from_unit === 'centipoise' && inputs.to_unit === 'reyn' ? 1.45e-7 : inputs.from_unit === 'reyn' && inputs.to_unit === 'centipoise' ? 6.9e6 : inputs.from_unit === 'poise' && inputs.to_unit === 'stoke' ? 1 / inputs.sg : inputs.from_unit === 'stoke' && inputs.to_unit === 'poise' ? inputs.sg : inputs.from_unit === 'poise' && inputs.to_unit === 'centistoke' ? 100 / inputs.sg : inputs.from_unit === 'centistoke' && inputs.to_unit === 'poise' ? 0.01 * inputs.sg : inputs.from_unit === 'centipoise' && inputs.to_unit === 'stoke' ? 0.01 / inputs.sg : inputs.from_unit === 'stoke' && inputs.to_unit === 'centipoise' ? 100 * inputs.sg : inputs.from_unit === 'centipoise' && inputs.to_unit === 'centistoke' ? 1 : inputs.from_unit === 'centistoke' && inputs.to_unit === 'centipoise' ? 1 : inputs.from_unit === 'reyn' && inputs.to_unit === 'stoke' ? 6.9e4 / inputs.sg : inputs.from_unit === 'stoke' && inputs.to_unit === 'reyn' ? 1.45e-5 * inputs.sg : inputs.from_unit === 'reyn' && inputs.to_unit === 'centistoke' ? 6.9e6 / inputs.sg : inputs.from_unit === 'centistoke' && inputs.to_unit === 'reyn' ? 1.45e-7 * inputs.sg : 1)",
+          "unit": "variable"
+        }
+      ]
+    }
+  ]
+}

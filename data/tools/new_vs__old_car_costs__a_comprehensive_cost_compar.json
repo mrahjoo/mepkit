@@ -1,0 +1,152 @@
+{
+  "id": "new_vs__old_car_costs__a_comprehensive_cost_compar",
+  "title": "New vs. Old Car Costs: A Comprehensive Cost Comparison",
+  "description": "Compare the total cost of owning a new car versus an old car, including purchase price, maintenance, fuel efficiency, insurance, and depreciation. Use our detailed breakdown to make an informed financial decision before buying the next vehicle.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Cost Category",
+        "New Car - Year 1",
+        "New Car - Year 2",
+        "New Car - Year 3",
+        "Old Car - Year 1",
+        "Old Car - Year 2",
+        "Old Car - Year 3"
+      ],
+      "rows": [
+        [
+          "Purchase Price",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Depreciation",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Financing Costs / Lost Interest",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Insurance",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Road Taxes",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Fuel Costs",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Service Costs",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Regular Maintenance",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Unexpected Repairs",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Other Costs",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Total Annual Cost",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Cumulative Cost",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Residual Value",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Net Cost of Ownership",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## How to Use This Calculator\n\nModify the following values for your specific vehicles:\n\n- **Purchase Price**: Add estimated sales value for the old car and buying cost for the new one. If leasing, set to zero and add leasing costs in appropriate years\n- **Depreciation**: Varies by car make, model and age. Typical values range 10-20% per year\n- **Financing Costs**: When savings are used, interest lost should be handled as a cost\n- **Insurance Costs**: Annual insurance premiums\n- **Road Taxes**: Annual road/registration taxes\n- **Expected Mileage & Fuel Costs**: Based on consumption and fuel prices\n- **Service Costs**: Scheduled maintenance and servicing\n- **Regular Maintenance**: Tires, brake pads, etc.\n- **Unexpected Repairs**: Budget for unforeseen repair costs\n- **Other Costs**: Supplementary equipment typically needed for a new car\n\n## Key Decision Points\n\nUse this calculator to:\n- Decide when to replace an old car\n- Decide between different cars\n- Decide between buying or leasing a car\n- Compare similar investments like machinery"
+    }
+  ]
+}

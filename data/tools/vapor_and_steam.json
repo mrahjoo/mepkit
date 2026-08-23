@@ -1,0 +1,52 @@
+{
+  "id": "vapor_and_steam",
+  "title": "Vapor and Steam",
+  "description": "An introduction to vapor and steam - understanding the properties, states, and characteristics of vapor and steam including saturated vapor, superheated vapor, and steam pressure classifications.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Vapor and Steam\n\nVapor is a gas - there is no significant physical or chemical difference between a vapor and a gas.\n\n## Definition\nA vapor is a substance in gaseous state - at a condition where it is ordinarily a liquid or a solid.\n\nThe most common example of a vapor is steam - water vaporized during boiling or evaporation.\n\n## Key Concepts\n\n### Evaporation\nEvaporation from a fluid takes place when liquid molecules at the liquid surface have enough momentum to overcome the intermolecular cohesive forces and escape to the atmosphere.\n\n- Increased heat → increased molecular momentum and evaporation\n- Increased pressure above a liquid → reduces evaporation\n- Reduced pressure above a liquid → increases evaporation\n\n### Common Terms\n\n**Boiling**: Formation of vapor bubbles within a fluid, initiated when absolute pressure reaches vapor pressure.\n\n**Saturated Vapor**: Vapor at the temperature of the boiling point corresponding to its pressure.\n\n**Wet Saturated Vapor**: Carries liquid globules in suspension; does not follow the general gas law.\n\n**Dry Saturated Vapor**: Free from liquid particles; all particles are vaporized.\n\n**Super-heated Vapor**: Temperature is higher than the boiling point temperature corresponding to the pressure; highly superheated vapors approximate the general gas law.\n\n**High Pressure Steam**: Steam where pressure greatly exceeds atmospheric pressure.\n\n**Low Pressure Steam**: Steam where pressure is less than, equal to, or not greatly above atmospheric pressure."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Vapor/Steam Type",
+        "Description",
+        "Key Characteristics"
+      ],
+      "rows": [
+        [
+          "Saturated Vapor",
+          "Vapor at boiling point temperature",
+          "In equilibrium with liquid phase"
+        ],
+        [
+          "Wet Saturated Vapor",
+          "Contains liquid globules",
+          "Does not follow general gas law"
+        ],
+        [
+          "Dry Saturated Vapor",
+          "Free from liquid particles",
+          "All particles vaporized"
+        ],
+        [
+          "Superheated Vapor",
+          "Temperature above boiling point",
+          "Approximately follows gas law when highly superheated"
+        ],
+        [
+          "High Pressure Steam",
+          "High pressure relative to atmosphere",
+          "Pressure greatly exceeds atmospheric pressure"
+        ],
+        [
+          "Low Pressure Steam",
+          "Low pressure relative to atmosphere",
+          "Pressure ≤ atmospheric pressure"
+        ]
+      ]
+    }
+  ]
+}

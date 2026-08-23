@@ -1,0 +1,82 @@
+{
+  "id": "hooke_s_law",
+  "title": "Hooke's Law",
+  "description": "Hooke's law - force, elongation and spring constant. Calculate the force required to extend or compress a spring, or determine the spring constant needed for a given force and displacement.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Force (F)",
+          "",
+          "N"
+        ],
+        [
+          "Spring Constant (k)",
+          "",
+          "N/m"
+        ],
+        [
+          "Extension/Compression (s)",
+          "",
+          "m"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Force (F)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 4905
+        },
+        {
+          "id": "spring_constant",
+          "label": "Spring Constant (k)",
+          "type": "number",
+          "unit": "N/m",
+          "defaultValue": 49050
+        },
+        {
+          "id": "displacement",
+          "label": "Extension/Compression (s)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hookes_law_force",
+          "label": "Force (Hooke's Law)",
+          "formula": "inputs.force",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "calculated_spring_constant",
+          "label": "Spring Constant Calculated",
+          "formula": "inputs.force / inputs.displacement",
+          "unit": "N/m",
+          "format": "decimal"
+        },
+        {
+          "id": "calculated_displacement",
+          "label": "Displacement Calculated",
+          "formula": "inputs.force / inputs.spring_constant",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

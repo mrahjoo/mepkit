@@ -1,0 +1,84 @@
+{
+  "id": "dynamic_pressure",
+  "title": "Dynamic Pressure Calculator",
+  "description": "Calculate dynamic pressure of a flowing fluid using the formula pd = 1/2 ρ v². Supports both SI and Imperial units for fluid density and velocity calculations.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate dynamic pressure using pd = 1/2 ρ v²",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dynamic_pressure",
+          "label": "Dynamic Pressure (pd)",
+          "formula": "0.5 * inputs.density * inputs.velocity * inputs.velocity",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "dynamic_pressure_kpa",
+          "label": "Dynamic Pressure (pd)",
+          "formula": "(0.5 * inputs.density * inputs.velocity * inputs.velocity) / 1000",
+          "unit": "kPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Common fluid densities at atmospheric pressure",
+      "headers": [
+        "Fluid",
+        "Temperature",
+        "Density (SI)",
+        "Density (Imperial)"
+      ],
+      "rows": [
+        [
+          "Water",
+          "0°C / 32°F",
+          "1000 kg/m³",
+          "1.940 slugs/ft³"
+        ],
+        [
+          "Water",
+          "20°C / 68°F",
+          "998 kg/m³",
+          "1.937 slugs/ft³"
+        ],
+        [
+          "Air",
+          "20°C / 68°F",
+          "1.2 kg/m³",
+          "2.373×10⁻³ slugs/ft³"
+        ],
+        [
+          "Air",
+          "0°C / 32°F",
+          "1.29 kg/m³",
+          "2.504×10⁻³ slugs/ft³"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\n**pd = 1/2 ρ v²**\n\nWhere:\n- **pd** = dynamic pressure (Pa, N/m²)\n- **ρ** = density of fluid (kg/m³)\n- **v** = velocity (m/s)\n\n## Pressure Unit Conversions\n\n- 1 Pa (N/m²) = 0.02089 lbf/ft² (psf)\n- 1 Pa = 1.4504×10⁻⁴ psi\n- 1 Pa = 1×10⁻⁵ bar\n- 1 Pa = 0.1024 mm water\n\n## Example\n\nFor water at 20°C with density 1000 kg/m³ and velocity 5 m/s:\n\npd = 1/2 × 1000 × 5² = 12,500 Pa = 12.5 kPa"
+    }
+  ]
+}

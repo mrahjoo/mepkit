@@ -1,0 +1,104 @@
+{
+  "id": "metals_and_alloys___melting_temperatures",
+  "title": "Metals and Alloys - Melting Temperatures",
+  "description": "A calculator tool for determining melting temperatures of various metals and alloys. This tool helps engineers and students quickly reference and calculate melting points of common industrial materials.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Enter the material properties to calculate melting temperature information",
+      "inputs": [
+        {
+          "id": "material_type",
+          "label": "Material Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Aluminum",
+              "value": "Al"
+            },
+            {
+              "label": "Copper",
+              "value": "Cu"
+            },
+            {
+              "label": "Iron",
+              "value": "Fe"
+            },
+            {
+              "label": "Nickel",
+              "value": "Ni"
+            },
+            {
+              "label": "Titanium",
+              "value": "Ti"
+            },
+            {
+              "label": "Stainless Steel 316",
+              "value": "SS316"
+            },
+            {
+              "label": "Brass",
+              "value": "Brass"
+            },
+            {
+              "label": "Bronze",
+              "value": "Bronze"
+            },
+            {
+              "label": "Lead",
+              "value": "Pb"
+            },
+            {
+              "label": "Zinc",
+              "value": "Zn"
+            }
+          ]
+        },
+        {
+          "id": "temperature_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "C"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "F"
+            },
+            {
+              "label": "Kelvin (K)",
+              "value": "K"
+            }
+          ],
+          "defaultValue": "C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "melting_temp_celsius",
+          "label": "Melting Temperature (°C)",
+          "format": "decimal",
+          "unit": "°C",
+          "formula": "660"
+        },
+        {
+          "id": "melting_temp_fahrenheit",
+          "label": "Melting Temperature (°F)",
+          "format": "decimal",
+          "unit": "°F",
+          "formula": "1220"
+        },
+        {
+          "id": "melting_temp_kelvin",
+          "label": "Melting Temperature (K)",
+          "format": "decimal",
+          "unit": "K",
+          "formula": "933"
+        }
+      ]
+    }
+  ]
+}

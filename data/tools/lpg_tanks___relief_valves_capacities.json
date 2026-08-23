@@ -1,0 +1,83 @@
+{
+  "id": "lpg_tanks___relief_valves_capacities",
+  "title": "LPG Tanks - Relief Valves Capacities",
+  "description": "Required capacities of relief valves on LPG vaporizers and tanks.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## LPG Tanks - Relief Valves Capacities\n\nRequired capacities of relief valves on LPG vaporizers and tanks based on surface area and flow rate requirements.\n\n### Imperial Units (ft² and cfm)\n\n![lpg tank vaporizer relief valve capacity diagram](static/docs/documents/1201/lpg-tank-relief-valve-capacity.png \"lpg tank vaporizer relief valve capacity diagram\")\n\n### Metric Units (m² and l/s)\n\n![lpg tank vaporizer relief valve capacity diagram](static/docs/documents/1201/lpg-tank-relief-valve-capacity-m2.png \"lpg tank vaporizer relief valve capacity diagram\")"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Surface Area (ft²)",
+        "Relief Valve Capacity (cfm air)",
+        "Surface Area (m²)",
+        "Relief Valve Capacity (l/s air)"
+      ],
+      "rows": [
+        [
+          "10",
+          "500",
+          "0.93",
+          "236"
+        ],
+        [
+          "20",
+          "1000",
+          "1.86",
+          "472"
+        ],
+        [
+          "30",
+          "1500",
+          "2.79",
+          "708"
+        ],
+        [
+          "40",
+          "2000",
+          "3.72",
+          "944"
+        ],
+        [
+          "50",
+          "2500",
+          "4.65",
+          "1180"
+        ],
+        [
+          "100",
+          "5000",
+          "9.29",
+          "2360"
+        ],
+        [
+          "150",
+          "7500",
+          "13.94",
+          "3540"
+        ],
+        [
+          "200",
+          "10000",
+          "18.58",
+          "4720"
+        ],
+        [
+          "250",
+          "12500",
+          "23.23",
+          "5900"
+        ],
+        [
+          "300",
+          "15000",
+          "27.87",
+          "7080"
+        ]
+      ]
+    }
+  ]
+}

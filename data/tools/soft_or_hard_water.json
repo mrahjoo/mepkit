@@ -1,0 +1,136 @@
+{
+  "id": "soft_or_hard_water",
+  "title": "Soft or Hard Water",
+  "description": "Calculate water hardness based on dissolved minerals. Water hardness is a function of the amount of dissolved calcium, magnesium, iron, aluminum, and manganese salts.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Water Hardness Calculator\n\n**Hard water** contains dissolved minerals, primarily calcium and magnesium salts, iron and aluminum. Total hardness can be calculated based on the concentrations of these minerals.\n\n## Classification\n\n| Classification | mg/L (ppm) | gpg |\n|---|---|---|\n| Soft | 0 - 60 | 0 - 3.5 |\n| Moderate | 61 - 120 | 3.5 - 7 |\n| Hard | 121 - 180 | 7 - 10.5 |\n| Very Hard | > 180 | > 10.5 |\n\n*1 ppm = 0.058 grains/US gallon*"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "calcium_ppm",
+          "label": "Calcium",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 50
+        },
+        {
+          "id": "magnesium_ppm",
+          "label": "Magnesium",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 10
+        },
+        {
+          "id": "iron_ppm",
+          "label": "Iron",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 0
+        },
+        {
+          "id": "manganese_ppm",
+          "label": "Manganese",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_hardness_ppm",
+          "label": "Total Hardness",
+          "unit": "ppm CaCO₃",
+          "formula": "(inputs.calcium_ppm * 2.497) + (inputs.magnesium_ppm * 4.115) + (inputs.iron_ppm * 1.792) + (inputs.manganese_ppm * 1.822)",
+          "format": "decimal"
+        },
+        {
+          "id": "total_hardness_gpg",
+          "label": "Total Hardness",
+          "unit": "gpg",
+          "formula": "((inputs.calcium_ppm * 2.497) + (inputs.magnesium_ppm * 4.115) + (inputs.iron_ppm * 1.792) + (inputs.manganese_ppm * 1.822)) * 0.058",
+          "format": "decimal"
+        },
+        {
+          "id": "hardness_classification",
+          "label": "Water Classification",
+          "formula": "IF(((inputs.calcium_ppm * 2.497) + (inputs.magnesium_ppm * 4.115) + (inputs.iron_ppm * 1.792) + (inputs.manganese_ppm * 1.822)) <= 60, 'Soft', IF(((inputs.calcium_ppm * 2.497) + (inputs.magnesium_ppm * 4.115) + (inputs.iron_ppm * 1.792) + (inputs.manganese_ppm * 1.822)) <= 120, 'Moderate', IF(((inputs.calcium_ppm * 2.497) + (inputs.magnesium_ppm * 4.115) + (inputs.iron_ppm * 1.792) + (inputs.manganese_ppm * 1.822)) <= 180, 'Hard', 'Very Hard')))"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "type": "gauge",
+        "title": "Water Hardness Level",
+        "data": [
+          {
+            "name": "Hardness",
+            "value": 0
+          }
+        ],
+        "min": 0,
+        "max": 300,
+        "splitNumber": 4,
+        "axisLine": {
+          "lineStyle": {
+            "width": 30,
+            "color": [
+              [
+                0.25,
+                "#67b26f"
+              ],
+              [
+                0.5,
+                "#FFD700"
+              ],
+              [
+                0.75,
+                "#FF8C00"
+              ],
+              [
+                1,
+                "#FF4500"
+              ]
+            ]
+          }
+        },
+        "pointer": {
+          "itemStyle": {
+            "color": "auto"
+          }
+        },
+        "axisTick": {
+          "distance": -30,
+          "length": 8,
+          "lineStyle": {
+            "color": "#fff",
+            "width": 2
+          }
+        },
+        "splitLine": {
+          "distance": -30,
+          "length": 30,
+          "lineStyle": {
+            "color": "#fff",
+            "width": 4
+          }
+        },
+        "axisLabel": {
+          "color": "auto",
+          "distance": 50,
+          "fontSize": 16
+        },
+        "detail": {
+          "valueAnimation": true,
+          "formatter": "{value} ppm",
+          "color": "auto"
+        }
+      }
+    }
+  ]
+}

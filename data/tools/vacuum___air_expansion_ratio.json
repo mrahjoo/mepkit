@@ -1,0 +1,99 @@
+{
+  "id": "vacuum___air_expansion_ratio",
+  "title": "Vacuum - Air Expansion Ratio",
+  "description": "Convert vacuum air volume to standard air volume. Calculate the expanded air ratio (EAR) to convert SCFM (standard cubic feet per minute) to ACFM (actual cubic feet per minute) using absolute vacuum pressure and temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "air_expansion_calculator",
+      "content": "Calculate Expanded Air Ratio (EAR)",
+      "inputs": [
+        {
+          "id": "pressure_vacuum",
+          "label": "Absolute Vacuum Pressure",
+          "type": "number",
+          "unit": "inches Hg",
+          "defaultValue": 14.96
+        },
+        {
+          "id": "temperature_f",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 60
+        },
+        {
+          "id": "scfm_volume",
+          "label": "Standard Air Volume Flow (SCFM)",
+          "type": "number",
+          "unit": "SCFM",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ear_ratio",
+          "label": "Expanded Air Ratio (EAR)",
+          "formula": "(30 / inputs.pressure_vacuum) * ((inputs.temperature_f + 460) / 520)",
+          "unit": "ratio"
+        },
+        {
+          "id": "acfm_volume",
+          "label": "Actual Air Volume Flow (ACFM)",
+          "formula": "inputs.scfm_volume * ((30 / inputs.pressure_vacuum) * ((inputs.temperature_f + 460) / 520))",
+          "unit": "ACFM"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "expansion_ratio_table",
+      "content": "Expanded Air Ratio Reference Table",
+      "headers": [
+        "Absolute Pressure (inches Hg)",
+        "Vacuum (%)",
+        "EAR at 60°F",
+        "EAR at 70°F",
+        "EAR at 80°F"
+      ],
+      "rows": [
+        [
+          29.92,
+          0,
+          1,
+          1.02,
+          1.03
+        ],
+        [
+          22.44,
+          25,
+          1.33,
+          1.36,
+          1.38
+        ],
+        [
+          14.96,
+          50,
+          2,
+          2.04,
+          2.07
+        ],
+        [
+          7.48,
+          75,
+          4,
+          4.08,
+          4.15
+        ],
+        [
+          0,
+          100,
+          "∞",
+          "∞",
+          "∞"
+        ]
+      ]
+    }
+  ]
+}

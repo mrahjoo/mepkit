@@ -1,0 +1,67 @@
+{
+  "id": "ratios_and_proportions",
+  "title": "Ratios and Proportions",
+  "description": "The relative values between quantities - ratios and proportions. Calculate ratios, inverse ratios, and verify proportions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Ratio Calculator\n\nA ratio is the quotient obtained by dividing the first quantity by the second. The ratio between two quantities expresses how many times one quantity is contained in another.\n\n### Ratio Formula\n**Ratio = a / b** or expressed as **a : b**\n\n### Inverse Ratio Formula\n**Inverse Ratio = b / a** or expressed as **b : a**\n\n### Proportion\nProportion is the equality of two ratios: **a : b = c : d**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "quantity_a",
+          "label": "First Quantity (a)",
+          "type": "number",
+          "defaultValue": 3
+        },
+        {
+          "id": "quantity_b",
+          "label": "Second Quantity (b)",
+          "type": "number",
+          "defaultValue": 6
+        },
+        {
+          "id": "quantity_c",
+          "label": "Third Quantity (c)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "quantity_d",
+          "label": "Fourth Quantity (d)",
+          "type": "number",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ratio_ab",
+          "label": "Ratio (a:b)",
+          "formula": "inputs.quantity_a / inputs.quantity_b",
+          "format": "decimal"
+        },
+        {
+          "id": "inverse_ratio_ba",
+          "label": "Inverse Ratio (b:a)",
+          "formula": "inputs.quantity_b / inputs.quantity_a",
+          "format": "decimal"
+        },
+        {
+          "id": "ratio_cd",
+          "label": "Ratio (c:d)",
+          "formula": "inputs.quantity_c / inputs.quantity_d",
+          "format": "decimal"
+        },
+        {
+          "id": "proportion_check",
+          "label": "Proportion Check (a:b = c:d)",
+          "formula": "(inputs.quantity_a / inputs.quantity_b) - (inputs.quantity_c / inputs.quantity_d)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "id": "safety_valves_in_gas_and_vapor_systems",
+  "title": "Safety Valves in Gas and Vapor Systems",
+  "description": "Calculate the minimum discharge area of relief safety valves in gas or vapor systems using either flow rate in lb/hr or SCFM, accounting for temperature, pressure, gas properties, and system coefficients.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Safety Valves in Gas and Vapor Systems\n\nCalculate the minimum discharge area of a relief safety valve in a gas or vapor system.\n\n### Calculation Methods:\n\n**Method 1 - Flow in lb/hr:**\n- Formula: A = m T^(1/2) / (C kd kbp P M^(1/2))\n\n**Method 2 - Flow in SCFM:**\n- Formula: A = qs (SG T)^(1/2) / (1.175 C kd kbp P)\n\n### Common Coefficients (C) by Gas:\nAir: 356, Nitrogen: 356, Oxygen: 356, Natural Gas: 344, Propane: 330, Ammonia: 347, Hydrogen: 357, Methane: 348, Carbon Dioxide: 346"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Flow (lb/hr) Method",
+        "Flow (SCFM) Method"
+      ],
+      "inputs": [
+        {
+          "id": "method",
+          "label": "Calculation Method",
+          "type": "select",
+          "options": [
+            {
+              "label": "Flow in lb/hr",
+              "value": "lbhr"
+            },
+            {
+              "label": "Flow in SCFM",
+              "value": "scfm"
+            }
+          ],
+          "defaultValue": "lbhr"
+        },
+        {
+          "id": "m",
+          "label": "Relieving Capacity (lb/hr)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "lb/hr"
+        },
+        {
+          "id": "qs",
+          "label": "Relieving Capacity (SCFM)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "SCFM"
+        },
+        {
+          "id": "T_temp",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "°F"
+        },
+        {
+          "id": "C",
+          "label": "Coefficient (C)",
+          "type": "number",
+          "defaultValue": 356,
+          "unit": ""
+        },
+        {
+          "id": "kd",
+          "label": "Discharge Coefficient (kd)",
+          "type": "number",
+          "defaultValue": 0.975,
+          "unit": ""
+        },
+        {
+          "id": "kbp",
+          "label": "Back Pressure Coefficient (kbp)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        },
+        {
+          "id": "set_pressure",
+          "label": "Set Pressure (psig)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "psig"
+        },
+        {
+          "id": "over_pressure",
+          "label": "Over Pressure (psig)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "psig"
+        },
+        {
+          "id": "M",
+          "label": "Molecular Weight (lb/lbmol)",
+          "type": "number",
+          "defaultValue": 28.97,
+          "unit": "lb/lbmol"
+        },
+        {
+          "id": "SG",
+          "label": "Specific Gravity (relative to air)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "T_absolute",
+          "label": "Absolute Temperature",
+          "formula": "inputs.T_temp + 460",
+          "unit": "°R"
+        },
+        {
+          "id": "P_relief",
+          "label": "Relieving Pressure",
+          "formula": "inputs.set_pressure + inputs.over_pressure + 14.7",
+          "unit": "psia"
+        },
+        {
+          "id": "A_lbhr",
+          "label": "Minimum Discharge Area (lb/hr method)",
+          "formula": "inputs.m * Math.sqrt(inputs.T_absolute) / (inputs.C * inputs.kd * inputs.kbp * (inputs.set_pressure + inputs.over_pressure + 14.7) * Math.sqrt(inputs.M))",
+          "unit": "in²",
+          "format": "decimal"
+        },
+        {
+          "id": "A_scfm",
+          "label": "Minimum Discharge Area (SCFM method)",
+          "formula": "inputs.qs * Math.sqrt(inputs.SG * (inputs.T_temp + 460)) / (1.175 * inputs.C * inputs.kd * inputs.kbp * (inputs.set_pressure + inputs.over_pressure + 14.7))",
+          "unit": "in²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Molecular Weight",
+        "Coefficient (C)",
+        "Specific Gravity*"
+      ],
+      "rows": [
+        [
+          "Acetylene",
+          26.04,
+          342,
+          0.9
+        ],
+        [
+          "Air",
+          28.97,
+          356,
+          1
+        ],
+        [
+          "Ammonia",
+          17.03,
+          347,
+          0.59
+        ],
+        [
+          "Argon",
+          39.94,
+          377,
+          1.38
+        ],
+        [
+          "Benzene",
+          78.11,
+          329,
+          2.7
+        ],
+        [
+          "N-Butane",
+          58.12,
+          335,
+          2.01
+        ],
+        [
+          "Iso-Butane",
+          58.12,
+          336,
+          2.01
+        ],
+        [
+          "Carbon Dioxide",
+          44.01,
+          346,
+          1.52
+        ],
+        [
+          "Carbon Disulphide",
+          76.13,
+          338,
+          2.63
+        ],
+        [
+          "Carbon Monoxide",
+          28.01,
+          356,
+          0.97
+        ],
+        [
+          "Chlorine",
+          70.9,
+          352,
+          2.45
+        ],
+        [
+          "Cyclohexane",
+          84.16,
+          325,
+          2.91
+        ],
+        [
+          "Ethane",
+          30.07,
+          336,
+          1.04
+        ],
+        [
+          "Ethyl Alcohol",
+          46.07,
+          330,
+          1.59
+        ],
+        [
+          "Ethyl Chloride",
+          64.52,
+          336,
+          2.23
+        ],
+        [
+          "Ethylene",
+          28.03,
+          341,
+          0.97
+        ],
+        [
+          "Helium",
+          4.02,
+          377,
+          0.14
+        ],
+        [
+          "N-Heptane",
+          100.2,
+          321,
+          3.46
+        ],
+        [
+          "Hexane",
+          86.17,
+          322,
+          2.98
+        ],
+        [
+          "Hydrochloric Acid",
+          36.47,
+          357,
+          1.26
+        ],
+        [
+          "Hydrogen",
+          2.02,
+          357,
+          0.07
+        ],
+        [
+          "Hydrogen Chloride",
+          36.47,
+          357,
+          1.26
+        ],
+        [
+          "Hydrogen Sulphide",
+          34.08,
+          349,
+          1.18
+        ],
+        [
+          "Methane",
+          16.04,
+          348,
+          0.55
+        ],
+        [
+          "Methyl Alcohol",
+          32.04,
+          337,
+          1.11
+        ],
+        [
+          "Methyl Butane",
+          72.15,
+          325,
+          2.49
+        ],
+        [
+          "Methyl Chloride",
+          50.49,
+          337,
+          1.74
+        ],
+        [
+          "Natural Gas",
+          19,
+          344,
+          0.66
+        ],
+        [
+          "Nitric Oxide",
+          30,
+          356,
+          1.04
+        ],
+        [
+          "Nitrogen",
+          28.02,
+          356,
+          0.97
+        ],
+        [
+          "Nitrous Oxide",
+          44.02,
+          348,
+          1.52
+        ],
+        [
+          "N-Octane",
+          114.22,
+          321,
+          3.95
+        ],
+        [
+          "Oxygen",
+          32,
+          356,
+          1.11
+        ],
+        [
+          "N-Pentane",
+          72.15,
+          325,
+          2.49
+        ],
+        [
+          "Iso-Pentane",
+          72.15,
+          325,
+          2.49
+        ],
+        [
+          "Propane",
+          44.09,
+          330,
+          1.52
+        ],
+        [
+          "R-11",
+          137.37,
+          331,
+          4.75
+        ],
+        [
+          "R-12",
+          120.92,
+          331,
+          4.18
+        ],
+        [
+          "R-22",
+          86.48,
+          335,
+          2.99
+        ],
+        [
+          "R-114",
+          170.93,
+          326,
+          5.91
+        ],
+        [
+          "R-123",
+          152.93,
+          327,
+          5.28
+        ],
+        [
+          "Sulfur Dioxide",
+          64.04,
+          344,
+          2.21
+        ],
+        [
+          "Toluene",
+          92.13,
+          326,
+          3.18
+        ]
+      ]
+    }
+  ]
+}

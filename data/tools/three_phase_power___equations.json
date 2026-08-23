@@ -1,0 +1,99 @@
+{
+  "id": "three_phase_power___equations",
+  "title": "Three-Phase Power - Equations",
+  "description": "Calculate three-phase power parameters including real power, apparent power, and brake horsepower using line-to-line or line-to-neutral voltages.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Three-Phase Power Calculator\n\nThis calculator computes real power, apparent power, and brake horsepower for three-phase AC systems. Three sinusoidal voltages are generated out of phase with each other.\n\n### Power Types:\n- **Real Power (W)**: Actual power consumed by resistive loads\n- **Apparent Power (VA)**: Total power in the circuit\n- **Brake Horsepower (hp)**: Actual power delivered to/by a shaft"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "voltage_mode",
+          "label": "Voltage Mode",
+          "type": "select",
+          "options": [
+            {
+              "label": "Line to Line (Ull)",
+              "value": "line_to_line"
+            },
+            {
+              "label": "Line to Neutral (Uln)",
+              "value": "line_to_neutral"
+            }
+          ],
+          "defaultValue": "line_to_line"
+        },
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 400
+        },
+        {
+          "id": "current",
+          "label": "Current",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 20
+        },
+        {
+          "id": "power_factor",
+          "label": "Power Factor (PF)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        },
+        {
+          "id": "efficiency",
+          "label": "Device Efficiency (μ)",
+          "type": "number",
+          "defaultValue": 0.9,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "real_power",
+          "label": "Real Power",
+          "formula": "inputs.voltage_mode === 'line_to_line' ? 1.732 * inputs.voltage * inputs.current * inputs.power_factor : 3 * inputs.voltage * inputs.current * inputs.power_factor",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "real_power_kw",
+          "label": "Real Power",
+          "formula": "(inputs.voltage_mode === 'line_to_line' ? 1.732 * inputs.voltage * inputs.current * inputs.power_factor : 3 * inputs.voltage * inputs.current * inputs.power_factor) / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "apparent_power",
+          "label": "Apparent Power",
+          "formula": "inputs.voltage_mode === 'line_to_line' ? 1.732 * inputs.voltage * inputs.current : 3 * inputs.voltage * inputs.current",
+          "unit": "VA",
+          "format": "decimal"
+        },
+        {
+          "id": "brake_horsepower",
+          "label": "Brake Horsepower",
+          "formula": "(1.732 * inputs.voltage * inputs.current * inputs.power_factor * inputs.efficiency) / 746",
+          "unit": "hp",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Equations\n\n**Real Power (Line to Line):**\n- W = √3 × Ull × I × PF\n\n**Real Power (Line to Neutral):**\n- W = 3 × Uln × I × PF\n\n**Apparent Power:**\n- W = √3 × U × I (line to line)\n- W = 3 × U × I (line to neutral)\n\n**Brake Horsepower:**\n- BHP = (√3 × U × I × PF × μ) / 746\n\nwhere:\n- U = Voltage (V)\n- I = Current (A)\n- PF = Power Factor (0.7 - 0.95)\n- μ = Device Efficiency\n- √3 ≈ 1.732"
+    },
+    {
+      "type": "markdown",
+      "content": "### Typical Power Factors\n\n| Device | Power Factor |\n|--------|---------------|\n| Lamp, fluorescent uncompensated | 0.5 |\n| Lamp, fluorescent compensated | 0.93 |\n| Lamp, incandescent | 1.0 |\n| Motor, induction 100% load | 0.85 |\n| Motor, induction 50% load | 0.73 |\n| Motor, induction 0% load | 0.17 |\n| Motor, synchronous | 0.9 |\n| Oven, resistive heating element | 1.0 |\n| Oven, induction compensated | 0.85 |\n| Pure resistive load | 1.0 |"
+    }
+  ]
+}

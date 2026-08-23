@@ -1,0 +1,149 @@
+{
+  "id": "gallons_vs__pounds_of_water_converter",
+  "title": "Gallons vs. Pounds of Water Converter",
+  "description": "Convert between gallons and pounds of water, and vice versa.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Water Conversion Calculator",
+      "inputs": [
+        {
+          "id": "gallons",
+          "label": "Gallons",
+          "type": "number",
+          "unit": "gal",
+          "defaultValue": 1
+        },
+        {
+          "id": "pounds",
+          "label": "Pounds",
+          "type": "number",
+          "unit": "lbs",
+          "defaultValue": 8.34
+        }
+      ],
+      "outputs": [
+        {
+          "id": "gallons_to_pounds",
+          "label": "Gallons to Pounds",
+          "formula": "inputs.gallons * 8.34",
+          "unit": "lbs",
+          "format": "decimal"
+        },
+        {
+          "id": "pounds_to_gallons",
+          "label": "Pounds to Gallons",
+          "formula": "inputs.pounds / 8.34",
+          "unit": "gal",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Conversion Reference Table",
+      "headers": [
+        "Gallons",
+        "Pounds"
+      ],
+      "rows": [
+        [
+          1,
+          8.34
+        ],
+        [
+          5,
+          41.7
+        ],
+        [
+          10,
+          83.4
+        ],
+        [
+          25,
+          208.5
+        ],
+        [
+          50,
+          417
+        ],
+        [
+          100,
+          834
+        ],
+        [
+          500,
+          4170
+        ],
+        [
+          1000,
+          8340
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Gallons vs. Pounds Conversion Chart",
+      "options": {
+        "title": {
+          "text": "Water: Gallons to Pounds Conversion"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Gallons",
+          "axisLabel": {
+            "formatter": "{value} gal"
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Pounds",
+          "axisLabel": {
+            "formatter": "{value} lbs"
+          }
+        },
+        "series": [
+          {
+            "type": "line",
+            "name": "Conversion (8.34 lbs/gal)",
+            "data": [
+              [
+                0,
+                0
+              ],
+              [
+                100,
+                834
+              ],
+              [
+                200,
+                1668
+              ],
+              [
+                300,
+                2502
+              ],
+              [
+                400,
+                3336
+              ],
+              [
+                500,
+                4170
+              ]
+            ],
+            "smooth": true,
+            "symbolSize": 6
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "containLabel": true
+        }
+      }
+    }
+  ]
+}

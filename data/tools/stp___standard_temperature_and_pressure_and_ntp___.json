@@ -1,0 +1,102 @@
+{
+  "id": "stp___standard_temperature_and_pressure_and_ntp___",
+  "title": "STP - Standard Temperature and Pressure and NTP - Normal Temperature and Pressure",
+  "description": "A comprehensive reference tool for standard temperature and pressure conditions including STP (IUPAC and Imperial definitions), NTP, SATP, ISA, and ICAO Standard Atmosphere. Essential for comparing chemical and physical processes across different testing standards.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Standard",
+        "Temperature (°C)",
+        "Temperature (K)",
+        "Pressure (Pa)",
+        "Pressure (kPa)",
+        "Pressure (bar)",
+        "Pressure (psia)",
+        "Molar Volume (L/mol)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "STP (IUPAC Current)",
+          "0",
+          "273.15",
+          "100000",
+          "100",
+          "1",
+          "14.504",
+          "23.6442",
+          "Current IUPAC definition"
+        ],
+        [
+          "STP (Imperial/USA)",
+          "15.6",
+          "288.75",
+          "101325",
+          "101.325",
+          "1.01325",
+          "14.696",
+          "24.0",
+          "Common in Imperial systems"
+        ],
+        [
+          "STP (IUPAC Discontinued)",
+          "0",
+          "273.15",
+          "101325",
+          "101.325",
+          "1.01325",
+          "14.696",
+          "22.4136",
+          "Older IUPAC definition, still used for Nm³"
+        ],
+        [
+          "NTP",
+          "20",
+          "293.15",
+          "101325",
+          "101.325",
+          "1.01325",
+          "14.7",
+          "24.0548",
+          "Standard for fan testing"
+        ],
+        [
+          "SATP (IUPAC)",
+          "25",
+          "298.15",
+          "100000",
+          "100",
+          "1",
+          "14.504",
+          "24.4651",
+          "Standard Ambient Temperature & Pressure"
+        ],
+        [
+          "ISA",
+          "15",
+          "288.15",
+          "101325",
+          "101.325",
+          "1.01325",
+          "14.7",
+          "23.8",
+          "Aircraft performance reference"
+        ],
+        [
+          "ICAO Standard Atmosphere",
+          "15",
+          "288.15",
+          "101325",
+          "101.325",
+          "1.01325",
+          "14.7",
+          "23.8",
+          "International Civil Aviation Organization standard"
+        ]
+      ],
+      "content": "## Standard Temperature and Pressure Reference Conditions\n\nThis table provides a comprehensive comparison of various standard temperature and pressure definitions used in chemistry, physics, engineering, and aviation. Each standard serves different purposes and industries.\n\n### Key Observations:\n- **STP definitions vary**: The IUPAC current definition uses 0°C and 1 bar (100 kPa), different from the older 1 atm definition\n- **NTP** is primarily used for fan and compressor testing at 20°C\n- **SATP** is the modern ambient reference at 25°C and 100 kPa\n- **ISA and ICAO** are identical and used for aircraft performance calculations\n\n### Pressure Unit Conversions:\n- 1 Pa = 10⁻⁵ bar = 1.02×10⁻⁴ m H₂O = 1.45×10⁻⁴ psi\n- 1 bar = 10⁵ Pa = 100 kPa\n- 1 atm = 1.01325 bar = 101.325 kPa = 14.696 psia"
+    }
+  ]
+}

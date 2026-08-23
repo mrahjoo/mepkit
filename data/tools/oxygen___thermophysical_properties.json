@@ -1,0 +1,108 @@
+{
+  "id": "oxygen___thermophysical_properties",
+  "title": "Oxygen - Thermophysical Properties",
+  "description": "Thermophysical properties of Oxygen (O2) at 25°C (77°F, 298 K) and atmospheric pressure, including molecular weight, density, viscosity, specific heat, thermal conductivity, and phase transition properties.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Units"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "31.9988",
+          "g/mol"
+        ],
+        [
+          "Specific Gravity (air = 1)",
+          "1.105",
+          "dimensionless"
+        ],
+        [
+          "Specific Volume",
+          "12.24 / 0.764",
+          "ft³/lb / m³/kg"
+        ],
+        [
+          "Density of liquid at atmospheric pressure",
+          "71.27 / 1142",
+          "lb/ft³ / kg/m³"
+        ],
+        [
+          "Absolute Viscosity",
+          "13.4×10⁻⁶ / 0.020",
+          "lbm/ft·s / cP"
+        ],
+        [
+          "Sound velocity in gas",
+          "329",
+          "m/s"
+        ],
+        [
+          "Specific Heat (cp)",
+          "0.220 / 920",
+          "Btu/lb·°F / J/kg·K"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          "1.40",
+          "dimensionless"
+        ],
+        [
+          "Gas constant (R)",
+          "48.3 / 260",
+          "ft·lb/lb·°R / J/kg·°C"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.015 / 0.026",
+          "Btu/hr·ft·°F / W/m·°C"
+        ],
+        [
+          "Boiling Point (at 14.7 psia)",
+          "-297.3 / -182.97",
+          "°F / °C"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "91.7 / 213000",
+          "Btu/lb / J/kg"
+        ],
+        [
+          "Freezing/Melting Point (at 1 atm)",
+          "-361.1 / -218.4",
+          "°F / °C"
+        ],
+        [
+          "Latent Heat of Fusion",
+          "5.9 / 13700",
+          "Btu/lb / J/kg"
+        ],
+        [
+          "Critical Temperature",
+          "-181.5 / -118.6",
+          "°F / °C"
+        ],
+        [
+          "Critical Pressure",
+          "726 / 5.01",
+          "psia / MN/m²"
+        ],
+        [
+          "Critical Volume",
+          "0.040 / 0.0025",
+          "ft³/lb / m³/kg"
+        ],
+        [
+          "Flammable",
+          "No",
+          "dimensionless"
+        ]
+      ]
+    }
+  ]
+}

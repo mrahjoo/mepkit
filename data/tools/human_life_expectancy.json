@@ -1,0 +1,177 @@
+{
+  "id": "human_life_expectancy",
+  "title": "Human Life Expectancy",
+  "description": "Age and life expectancy for men and women based on U.S. Social Security Administration Period Life Table 1997",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Enter your current age to calculate remaining life expectancy",
+      "inputs": [
+        {
+          "id": "current_age",
+          "label": "Current Age",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "years"
+        },
+        {
+          "id": "gender",
+          "label": "Gender",
+          "type": "select",
+          "defaultValue": "male",
+          "options": [
+            {
+              "label": "Male",
+              "value": "male"
+            },
+            {
+              "label": "Female",
+              "value": "female"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "life_expectancy",
+          "label": "Additional Years Expected",
+          "formula": "inputs.current_age",
+          "unit": "years",
+          "format": "decimal"
+        },
+        {
+          "id": "expected_lifespan",
+          "label": "Expected Total Lifespan",
+          "formula": "inputs.current_age + inputs.life_expectancy",
+          "unit": "years",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Age",
+        "Male Life Expectancy",
+        "Female Life Expectancy"
+      ],
+      "rows": [
+        [
+          0,
+          74.1,
+          79.3
+        ],
+        [
+          10,
+          64.5,
+          69.6
+        ],
+        [
+          20,
+          54.8,
+          59.9
+        ],
+        [
+          30,
+          45.2,
+          50.2
+        ],
+        [
+          40,
+          35.6,
+          40.5
+        ],
+        [
+          50,
+          26.5,
+          31.1
+        ],
+        [
+          60,
+          18.1,
+          22.3
+        ],
+        [
+          70,
+          11,
+          14.4
+        ],
+        [
+          80,
+          6.1,
+          8.6
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Life Expectancy by Age and Gender"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Male",
+            "Female"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Life Expectancy (years)"
+        },
+        "series": [
+          {
+            "name": "Male",
+            "data": [
+              74.1,
+              64.5,
+              54.8,
+              45.2,
+              35.6,
+              26.5,
+              18.1,
+              11,
+              6.1
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Female",
+            "data": [
+              79.3,
+              69.6,
+              59.9,
+              50.2,
+              40.5,
+              31.1,
+              22.3,
+              14.4,
+              8.6
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

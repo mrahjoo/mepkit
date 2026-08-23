@@ -1,0 +1,115 @@
+{
+  "id": "human_effects_when_exposed_to_low_frequency_noise_",
+  "title": "Human Effects when Exposed to Low-Frequency Noise or Vibration",
+  "description": "Physiological effects from low-frequency noise or vibrations. Assess comfort levels based on vibration acceleration measurements.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Human Effects when Exposed to Low-Frequency Noise or Vibration\n\nPhysiological effects from low-frequency noise and vibrations.\n\n## Comfort Assessments of Vibration Environments\n\nThis tool helps assess human perception and comfort levels when exposed to low-frequency noise or vibration based on acceleration measurements.\n\n**Note:** 1 m/s² = 3.28 ft/s²"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "vibration_level",
+          "label": "Vibration Level - Acceleration",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "perception_level",
+          "label": "Human Perception Level",
+          "formula": "inputs.vibration_level < 0.315 ? 'Not uncomfortable' : inputs.vibration_level <= 0.63 ? 'A little uncomfortable' : inputs.vibration_level <= 1 ? 'Fairly uncomfortable' : inputs.vibration_level <= 1.6 ? 'Uncomfortable' : inputs.vibration_level <= 2.5 ? 'Very uncomfortable' : 'Extremely uncomfortable'",
+          "unit": "perception"
+        },
+        {
+          "id": "acceleration_ft_s2",
+          "label": "Vibration Level - Acceleration",
+          "formula": "inputs.vibration_level * 3.28",
+          "unit": "ft/s²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Vibration Level - Acceleration (m/s²)",
+        "Human Perception"
+      ],
+      "rows": [
+        [
+          "< 0.315",
+          "Not uncomfortable"
+        ],
+        [
+          "0.315 - 0.63",
+          "A little uncomfortable"
+        ],
+        [
+          "0.5 - 1",
+          "Fairly uncomfortable"
+        ],
+        [
+          "0.8 - 1.6",
+          "Uncomfortable"
+        ],
+        [
+          "1.25 - 2.5",
+          "Very uncomfortable"
+        ],
+        [
+          "> 2",
+          "Extremely uncomfortable"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Human Perception Scale for Vibration Levels"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "< 0.315",
+            "0.315-0.63",
+            "0.5-1",
+            "0.8-1.6",
+            "1.25-2.5",
+            "> 2"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Acceleration (m/s²)"
+        },
+        "series": [
+          {
+            "name": "Vibration Level Range",
+            "data": [
+              0.315,
+              0.63,
+              1,
+              1.6,
+              2.5,
+              2
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "insulated_copper_tubes___heat_loss",
+  "title": "Insulated Copper Tubes - Heat Loss",
+  "description": "Heat loss to surrounding air from insulated copper tubes. The heat loss is based on temperature difference 55°C (99°F) with insulation thickness 25 mm (1 inch) and conductivity coefficient k = 0.043 W/m°C (0.3 Btu in/ft²hr°F).",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Bore (mm)",
+        "Nominal Bore (inches)",
+        "Heat Loss (W/m)",
+        "Heat Loss (Btu/hr ft)"
+      ],
+      "rows": [
+        [
+          22,
+          "3/4",
+          8,
+          8
+        ],
+        [
+          28,
+          "1",
+          10,
+          10
+        ],
+        [
+          42,
+          "1 1/2",
+          11.5,
+          12
+        ],
+        [
+          54,
+          "2",
+          14.5,
+          15
+        ],
+        [
+          67,
+          "2 1/2",
+          16,
+          17
+        ],
+        [
+          76,
+          "3",
+          19,
+          20
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n- 1 W = 3.4 Btu/hr\n- 1 ft (foot) = 0.3048 m\n\n## Parameters\n- **Temperature Difference**: 55°C (99°F)\n- **Insulation Thickness**: 25 mm (1 inch)\n- **Conductivity Coefficient (k)**: 0.043 W/m°C (0.3 Btu in/ft²hr°F)"
+    }
+  ]
+}

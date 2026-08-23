@@ -1,0 +1,65 @@
+{
+  "id": "fluid_flow___entrance_length_and_developed_flow",
+  "title": "Fluid Flow - Entrance Length and Developed Flow",
+  "description": "Calculate the entrance length and entrance length number for laminar and turbulent flow in tubes and ducts. The entrance length is the distance required for a fluid flow velocity profile to become fully developed after passing through components like bends, valves, or pumps.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Entrance Length Calculator\n\nThe entrance length is the length in a tube or duct after an obstruction until the flow velocity profile is fully developed. Use this calculator to determine the entrance length number for laminar and turbulent flow conditions."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number (Re)",
+          "type": "number",
+          "defaultValue": 5000,
+          "unit": "-"
+        },
+        {
+          "id": "tube_diameter",
+          "label": "Tube/Duct Diameter (d)",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "entrance_length_laminar",
+          "label": "Entrance Length Number - Laminar Flow (El_laminar)",
+          "formula": "0.06 * inputs.reynolds_number",
+          "unit": "-",
+          "format": "decimal"
+        },
+        {
+          "id": "entrance_length_developed_laminar",
+          "label": "Developed Flow Length - Laminar (le)",
+          "formula": "(0.06 * inputs.reynolds_number) * inputs.tube_diameter",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "entrance_length_turbulent",
+          "label": "Entrance Length Number - Turbulent Flow (El_turbulent)",
+          "formula": "4.4 * Math.pow(inputs.reynolds_number, 1/6)",
+          "unit": "-",
+          "format": "decimal"
+        },
+        {
+          "id": "entrance_length_developed_turbulent",
+          "label": "Developed Flow Length - Turbulent (le)",
+          "formula": "(4.4 * Math.pow(inputs.reynolds_number, 1/6)) * inputs.tube_diameter",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Formulas\n\n**Entrance Length Number (Dimensionless):**\n- El = le / d\n\n**Laminar Flow:**\n- El_laminar = 0.06 × Re\n\n**Turbulent Flow:**\n- El_turbulent = 4.4 × Re^(1/6)\n\n**Developed Flow Length:**\n- le = El × d\n\n**Where:**\n- El = Entrance Length number\n- le = Length to fully developed velocity profile (m, ft)\n- d = Tube or duct diameter (m, ft)\n- Re = Reynolds Number"
+    }
+  ]
+}

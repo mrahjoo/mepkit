@@ -1,0 +1,84 @@
+{
+  "id": "interest_formulas",
+  "title": "Interest Formulas",
+  "description": "Calculate Future Value and Present Value using single cash accumulation formulas with compound interest and discounting processes.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Interest Formulas\n\n### Single Cash Accumulation - Future Value\n\nThe accumulated value of a present sum invested at a given interest rate after some time:\n\n**F = P (1 + i)^n**\n\nWhere:\n- **F** = Future Value (accumulated value)\n- **P** = Principal (present sum invested)\n- **i** = Interest rate per period\n- **n** = Number of interest periods\n\n### Discounting Process - Present Value\n\nThe present value of a future cash flow using the discounting process:\n\n**P = F / (1 + i)^n**\n\nWhere:\n- **P** = Present Value\n- **F** = Future cash flow\n- **i** = Discount rate\n- **n** = Number of periods"
+    },
+    {
+      "type": "calculator",
+      "content": "### Future Value Calculator",
+      "inputs": [
+        {
+          "id": "principal",
+          "label": "Principal (Present Value)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "currency"
+        },
+        {
+          "id": "interest_rate",
+          "label": "Interest Rate per Period",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "periods_fv",
+          "label": "Number of Periods",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "periods"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "future_value",
+          "label": "Future Value (F)",
+          "formula": "inputs.principal * Math.pow(1 + inputs.interest_rate, inputs.periods_fv)",
+          "format": "currency",
+          "unit": "currency"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Present Value Calculator",
+      "inputs": [
+        {
+          "id": "future_cash_flow",
+          "label": "Future Cash Flow",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "currency"
+        },
+        {
+          "id": "discount_rate",
+          "label": "Discount Rate per Period",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "periods_pv",
+          "label": "Number of Periods",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "periods"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "present_value",
+          "label": "Present Value (P)",
+          "formula": "inputs.future_cash_flow / Math.pow(1 + inputs.discount_rate, inputs.periods_pv)",
+          "format": "currency",
+          "unit": "currency"
+        }
+      ]
+    }
+  ]
+}

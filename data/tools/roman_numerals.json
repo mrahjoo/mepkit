@@ -1,0 +1,152 @@
+{
+  "id": "roman_numerals",
+  "title": "Roman Numerals",
+  "description": "Roman numerals are combinations of seven letters (I, V, X, L, C, D, M) that represent numeric values. This tool helps you understand and convert between Arabic numbers and Roman numerals, including the rules for addition and subtraction.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Arabic Number",
+        "Roman Numeral",
+        "Calculation"
+      ],
+      "rows": [
+        [
+          1,
+          "I",
+          "1"
+        ],
+        [
+          2,
+          "II",
+          "1 + 1"
+        ],
+        [
+          3,
+          "III",
+          "1 + 1 + 1"
+        ],
+        [
+          4,
+          "IV",
+          "-1 + 5"
+        ],
+        [
+          5,
+          "V",
+          "5"
+        ],
+        [
+          6,
+          "VI",
+          "5 + 1"
+        ],
+        [
+          7,
+          "VII",
+          "5 + 1 + 1"
+        ],
+        [
+          8,
+          "VIII",
+          "5 + 1 + 1 + 1"
+        ],
+        [
+          9,
+          "IX",
+          "-1 + 10"
+        ],
+        [
+          10,
+          "X",
+          "10"
+        ],
+        [
+          11,
+          "XI",
+          "10 + 1"
+        ],
+        [
+          12,
+          "XII",
+          "10 + 1 + 1"
+        ],
+        [
+          15,
+          "XV",
+          "10 + 5"
+        ],
+        [
+          20,
+          "XX",
+          "10 + 10"
+        ],
+        [
+          30,
+          "XXX",
+          "10 + 10 + 10"
+        ],
+        [
+          40,
+          "XL",
+          "-10 + 50"
+        ],
+        [
+          50,
+          "L",
+          "50"
+        ],
+        [
+          90,
+          "XC",
+          "-10 + 100"
+        ],
+        [
+          100,
+          "C",
+          "100"
+        ],
+        [
+          400,
+          "CD",
+          "-100 + 500"
+        ],
+        [
+          500,
+          "D",
+          "500"
+        ],
+        [
+          900,
+          "CM",
+          "-100 + 1000"
+        ],
+        [
+          1000,
+          "M",
+          "1000"
+        ],
+        [
+          1977,
+          "MCMLXXVII",
+          "1000 + (-100 + 1000) + 50 + 10 + 10 + 5 + 1 + 1"
+        ],
+        [
+          1982,
+          "MCMLXXXII",
+          "1000 + (-100 + 1000) + 50 + 10 + 10 + 10 + 1 + 1"
+        ],
+        [
+          5000,
+          "V̄",
+          "5 × 1000"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Roman Numeral Rules\n\n### The Seven Roman Numeral Letters\n- **I** = 1\n- **V** = 5\n- **X** = 10\n- **L** = 50\n- **C** = 100\n- **D** = 500\n- **M** = 1000\n\n### Rules for Combining\n1. **Smaller numbers before larger numbers are subtracted** (e.g., IV = 4, IX = 9)\n2. **Smaller numbers after larger numbers are added** (e.g., VI = 6, XI = 11)\n3. **Roman numerals have no zero**\n4. **Large numbers** are indicated with a horizontal line above them, multiplying the value by 1000"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "heat_transfer_coefficients_in_heat_exchanger_surfa",
+  "title": "Heat Transfer Coefficients in Heat Exchanger Surface Combinations",
+  "description": "Average overall heat transmission coefficients for fluid and surface combinations like Water to Air, Water to Water, Air to Air, Steam to Water and more. These coefficients are used to calculate total heat transfer through a wall or heat exchanger construction.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid 1",
+        "Surface Material",
+        "Fluid 2",
+        "U-Value (Btu/ft² hr °F)",
+        "U-Value (W/m² K)"
+      ],
+      "rows": [
+        [
+          "Water",
+          "Cast Iron",
+          "Air or Gas",
+          1.4,
+          7.9
+        ],
+        [
+          "Water",
+          "Mild Steel",
+          "Air or Gas",
+          2,
+          11.3
+        ],
+        [
+          "Water",
+          "Copper",
+          "Air or Gas",
+          2.3,
+          13.1
+        ],
+        [
+          "Water",
+          "Cast Iron",
+          "Water",
+          "40-50",
+          "230-280"
+        ],
+        [
+          "Water",
+          "Mild Steel",
+          "Water",
+          "60-70",
+          "340-400"
+        ],
+        [
+          "Water",
+          "Copper",
+          "Water",
+          "60-80",
+          "340-455"
+        ],
+        [
+          "Air",
+          "Cast Iron",
+          "Air",
+          1,
+          5.7
+        ],
+        [
+          "Air",
+          "Mild Steel",
+          "Air",
+          1.4,
+          7.9
+        ],
+        [
+          "Steam",
+          "Cast Iron",
+          "Air",
+          2,
+          11.3
+        ],
+        [
+          "Steam",
+          "Mild Steel",
+          "Air",
+          2.5,
+          14.2
+        ],
+        [
+          "Steam",
+          "Copper",
+          "Air",
+          3,
+          17
+        ],
+        [
+          "Steam",
+          "Cast Iron",
+          "Water",
+          160,
+          910
+        ],
+        [
+          "Steam",
+          "Mild Steel",
+          "Water",
+          185,
+          1050
+        ],
+        [
+          "Steam",
+          "Copper",
+          "Water",
+          205,
+          1160
+        ],
+        [
+          "Steam",
+          "Stainless Steel",
+          "Water",
+          120,
+          680
+        ]
+      ],
+      "content": "Heat Transfer Coefficients in Heat Exchangers - Reference Table"
+    }
+  ]
+}

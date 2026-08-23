@@ -1,0 +1,107 @@
+{
+  "id": "supercooled_water___vapor_pressure_vs__temperature",
+  "title": "Supercooled Water - Vapor Pressure vs. Temperature",
+  "description": "Undercooled water and vapor pressure. Water can be supercooled without becoming a solid at standard pressure down to almost 224.8 K (−48.3 °C, −55 °F) if it is pure and free of nucleation sites. This tool displays the relationship between temperature and vapor pressure for supercooled water.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Vapor Pressure (kPa)"
+      ],
+      "rows": [
+        [
+          0,
+          0.6112
+        ],
+        [
+          -5,
+          0.4218
+        ],
+        [
+          -10,
+          0.2865
+        ],
+        [
+          -15,
+          0.1913
+        ],
+        [
+          -20,
+          0.1255
+        ],
+        [
+          -25,
+          0.08078
+        ],
+        [
+          -30,
+          0.05094
+        ],
+        [
+          -35,
+          0.03141
+        ],
+        [
+          -40,
+          0.01891
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°C)",
+          "data": [
+            0,
+            -5,
+            -10,
+            -15,
+            -20,
+            -25,
+            -30,
+            -35,
+            -40
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Vapor Pressure (kPa)"
+        },
+        "series": [
+          {
+            "data": [
+              0.6112,
+              0.4218,
+              0.2865,
+              0.1913,
+              0.1255,
+              0.08078,
+              0.05094,
+              0.03141,
+              0.01891
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Vapor Pressure"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Vapor Pressure"
+          ]
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## Unit Conversion\n\n* _1 Pa = 1.45×10⁻⁴ psi (lbf/in²)_\n\n## Physical Properties\n\nWater freezes at **273.15 K (0 °C, 32 °F)** but can remain liquid (supercooled) at standard pressure down to approximately **224.8 K (−48.3 °C, −55 °F)** when pure and free of nucleation sites."
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "id": "crude_oil_properties___standard_test_methods__astm",
+  "title": "Crude Oil Properties - Standard Test Methods (ASTM and others)",
+  "description": "Comprehensive reference tool for standard test methods and typical ranges for crude oil quality parameters including acidity, sulfur content, viscosity, metals, and other critical properties used in petroleum refining and quality assessment.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Test Method",
+        "Standard",
+        "What",
+        "Typical Range",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Acidity (TAN)",
+          "Potentiometric Titration",
+          "ASTM D664",
+          "Sum of all acid compounds; measure of corrosion potential",
+          "0.01 - 3.0",
+          "mg KOH/g"
+        ],
+        [
+          "Asphaltenes (C7)",
+          "Heptane Insoluble Separation",
+          "ASTM D6560",
+          "High molecular mass organic molecules in crude; precipitation issues",
+          "0 - 10",
+          "wt%"
+        ],
+        [
+          "Carbon Content",
+          "Instrumental Determination",
+          "ASTM D5291",
+          "Total carbon in petroleum samples",
+          "84 - 87",
+          "wt%"
+        ],
+        [
+          "Hydrogen Content",
+          "Instrumental Determination",
+          "ASTM D5291",
+          "Total hydrogen in petroleum samples",
+          "12 - 15",
+          "wt%"
+        ],
+        [
+          "Nitrogen Content (Total)",
+          "Instrumental Determination",
+          "ASTM D5291",
+          "Total nitrogen in petroleum samples",
+          "100 - 4000",
+          "mg/kg"
+        ],
+        [
+          "Nitrogen (Basic)",
+          "Potentiometric Titration",
+          "UOP269",
+          "Basic organic nitrogen; catalyst poison indicator",
+          "0 - 1000",
+          "mg/kg"
+        ],
+        [
+          "Carbon Residue",
+          "Pyrolysis Method",
+          "ASTM D4530",
+          "Coke forming tendency after evaporation and pyrolysis",
+          "0 - 12",
+          "wt%"
+        ],
+        [
+          "Conductivity",
+          "Electrometric Method",
+          "ASTM D3230",
+          "Measure of salt/chloride content via conductivity",
+          "1 - 100",
+          "mg/kg NaCl"
+        ],
+        [
+          "Density @ 15°C",
+          "Digital Density Meter",
+          "ASTM D4052",
+          "Mass per unit volume; fundamental physical property",
+          "700 - 1000",
+          "kg/m³"
+        ],
+        [
+          "API Gravity",
+          "Digital Density Meter",
+          "ASTM D4052",
+          "Gravity scale for crude oils derived from density",
+          "10 - 70",
+          "°API"
+        ],
+        [
+          "Distillation (Atmospheric)",
+          "Fractionating Column",
+          "ASTM D2892",
+          "Volatility and boiling range characteristics to 400°C AET",
+          "Variable",
+          "vol%"
+        ],
+        [
+          "Distillation (Vacuum)",
+          "Vacuum Potstill Method",
+          "ASTM D5236",
+          "Volatility and boiling range for heavy fractions",
+          "Variable",
+          "vol%"
+        ],
+        [
+          "Light Hydrocarbons",
+          "Gas Chromatography",
+          "ASTM D8003",
+          "Speciation of C1-C6 hydrocarbons without depressurizing",
+          "0.02 - 12.5",
+          "wt%"
+        ],
+        [
+          "Hydrogen Sulfide (H2S)",
+          "Rapid Liquid Phase Extraction",
+          "ASTM D7621",
+          "Dissolved H2S in liquid phase; safety and corrosion concern",
+          "0 - 5",
+          "ppm"
+        ],
+        [
+          "Phosphorus Content",
+          "ICP Optical Emission Spectometry",
+          "CAPP",
+          "Organo-phosphorus in volatile distillates; catalyst poison",
+          "0 - 3",
+          "ppm"
+        ],
+        [
+          "Pour Point",
+          "Temperature Cooling Method",
+          "ASTM D5853",
+          "Lowest temperature for oil handleability and flow",
+          "-80 - 30",
+          "°C"
+        ],
+        [
+          "Salt (Chloride)",
+          "Electrometric Method",
+          "ASTM D3230",
+          "Chloride concentration; desalting requirement indicator",
+          "1 - 100",
+          "mg/kg"
+        ],
+        [
+          "Sediment (Total)",
+          "Membrane Filtration",
+          "ASTM D4807",
+          "Suspended solids and particulates in crude oil",
+          "0 - 0.15",
+          "wt%"
+        ],
+        [
+          "Sulfur (Mercaptans)",
+          "Potentiometric Titration",
+          "ASTM D3227",
+          "Mercaptan sulfur content; odor and corrosion issues",
+          "0 - 15",
+          "mg/kg"
+        ],
+        [
+          "Sulfur (Total)",
+          "X-ray Fluorescence Spectrometry",
+          "ASTM D4294",
+          "Total sulfur content; quality and processing indicator",
+          "0.002 - 4",
+          "wt%"
+        ],
+        [
+          "Trace Metals (Ni)",
+          "ICP Atomic Emission Spectrometry",
+          "ASTM D5708",
+          "Nickel content; catalyst poison and refining indicator",
+          "0 - 50",
+          "ppm"
+        ],
+        [
+          "Trace Metals (V)",
+          "ICP Atomic Emission Spectrometry",
+          "ASTM D5708",
+          "Vanadium content; catalyst poison and refractory damage",
+          "0 - 150",
+          "ppm"
+        ],
+        [
+          "Trace Metals (Fe)",
+          "ICP Atomic Emission Spectrometry",
+          "ASTM D5708",
+          "Iron content from corrosion; catalyst poison",
+          "0 - 50",
+          "ppm"
+        ],
+        [
+          "Trace Metals (Ca)",
+          "ICP Atomic Emission Spectrometry",
+          "ASTM D5708",
+          "Calcium content; salt-related issues",
+          "0 - 150",
+          "ppm"
+        ],
+        [
+          "UOP K Factor",
+          "Calculation Method",
+          "UOP375",
+          "Characterization factor; paraffinic/aromatic nature classification",
+          "11.0 - 12.5",
+          "dimensionless"
+        ],
+        [
+          "Vapor Pressure (Reid)",
+          "Vapor Pressure Apparatus",
+          "ASTM D323",
+          "Vapor pressure at 37.8°C; handling and safety indicator",
+          "0.5 - 12",
+          "psi"
+        ],
+        [
+          "Vapor Pressure (Expansion)",
+          "Expansion Method",
+          "ASTM D6377",
+          "VPCR at various conditions; volatility measure",
+          "25 - 180",
+          "kPa @ 37.8°C"
+        ],
+        [
+          "Viscosity @ 20°C",
+          "Glass Capillary Viscometer",
+          "ASTM D445",
+          "Kinematic viscosity; product performance indicator",
+          "0.5 - 1000",
+          "cSt"
+        ],
+        [
+          "Viscosity @ 40°C",
+          "Glass Capillary Viscometer",
+          "ASTM D445",
+          "Kinematic viscosity; standard reference temperature",
+          "0.5 - 130",
+          "cSt"
+        ],
+        [
+          "Viscosity @ 50°C",
+          "Glass Capillary Viscometer",
+          "ASTM D445",
+          "Kinematic viscosity; extended temperature range",
+          "0.5 - 70",
+          "cSt"
+        ],
+        [
+          "Water Content",
+          "Karl Fischer Titration",
+          "ASTM D4377",
+          "Entrained water in crude oil; refining and custody transfer",
+          "0.1 - 1.5",
+          "wt%"
+        ],
+        [
+          "Wax Content",
+          "Solvent Dewaxing",
+          "UOP46",
+          "Paraffin wax content; precipitation and flow issues",
+          "0 - 15",
+          "wt%"
+        ]
+      ]
+    }
+  ]
+}

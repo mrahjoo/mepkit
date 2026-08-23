@@ -1,0 +1,48 @@
+{
+  "id": "area_moment_of_inertia___typical_cross_sections_ii",
+  "title": "Area Moment of Inertia - Typical Cross Sections II",
+  "description": "Area Moment of Inertia, Moment of Inertia for an Area or Second Moment of Area for typical cross section profiles including angles with equal/unequal legs, triangles, and rectangular triangles.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Cross Section",
+        "Formula",
+        "Parameters",
+        "Ix",
+        "Iy"
+      ],
+      "rows": [
+        [
+          "Angle with Equal Legs",
+          "Ix = 1/3 (2c⁴ - 2(c - t)⁴ + t(h - 2c + 1/2t)³)",
+          "c = yt·cos(45°), yt = (h² + ht + t²) / (2(2h - t)·cos(45°))",
+          "b h³ / 36",
+          "h b³ / 36"
+        ],
+        [
+          "Angle with Unequal Legs",
+          "Ix = 1/3 (t(h - yd)³ + b·yd³ - b1(yd - t)³); Iy = 1/3 (t(b - xd)³ + h·xd³ - h1(xd - t)³)",
+          "xd = (b² + h1·t) / (2(b + h1)); yd = (h² + b1·t) / (2(h + b1))",
+          "Varies",
+          "Varies"
+        ],
+        [
+          "Triangle",
+          "Ix = b·h³ / 36; Iy = h·b(b² - ba·bc) / 36",
+          "b = base, h = height, ba = a dimension, bc = c dimension",
+          "b h³ / 36",
+          "h b(b² - ba·bc) / 36"
+        ],
+        [
+          "Rectangular Triangle",
+          "Ix = b·h³ / 36; Iy = h·b³ / 36",
+          "b = base, h = height",
+          "b h³ / 36",
+          "h b³ / 36"
+        ]
+      ]
+    }
+  ]
+}

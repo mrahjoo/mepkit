@@ -1,0 +1,226 @@
+{
+  "id": "earth_pressure_acting_on_basement_walls",
+  "title": "Earth Pressure Acting on Basement Walls",
+  "description": "Calculate the resultant force, position, and maximum bending moment due to earth pressure acting on basement walls with 1st floor above or at ground level.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Earth Pressure Acting on Basement Walls\n\nCalculate the forces and moments acting on basement walls due to lateral earth pressure. This tool supports two configurations:\n- **1st Floor above Ground Level**: Includes support from basement floor/slab and 1st floor joists\n- **1st Floor at Ground Level**: Simpler case with ground level support\n\n## Key Parameters\n- **hs**: Height of backfill soil (m)\n- **γ**: Specific weight of backfill soil (kN/m³)\n- **K**: Coefficient of earth pressure at rest\n- **ht**: Height from basement floor to 1st floor level (m) - only for 1st floor above ground\n\n## Typical Values\n\n### Poisson's Ratio (μ)\n- Clay: 0.41\n- Sand: 0.29\n- Sandy Clay: 0.37\n- Sandy Loam: 0.31\n\n### Soil Densities (kg/m³)\n- Clay, dry: 1600\n- Sand, dry: 1555"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "configuration",
+          "label": "Configuration",
+          "type": "select",
+          "options": [
+            {
+              "value": "1",
+              "label": "1st Floor Above Ground Level"
+            },
+            {
+              "value": "2",
+              "label": "1st Floor at Ground Level"
+            }
+          ],
+          "defaultValue": "1"
+        },
+        {
+          "id": "hs",
+          "label": "Height of Backfill Soil (hs)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2.5
+        },
+        {
+          "id": "poisson_ratio",
+          "label": "Poisson's Ratio (μ)",
+          "type": "number",
+          "defaultValue": 0.29
+        },
+        {
+          "id": "soil_density",
+          "label": "Soil Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1555
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (ag)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "ht",
+          "label": "Height to 1st Floor (ht)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "K",
+          "label": "Coefficient of Earth Pressure (K)",
+          "formula": "inputs.poisson_ratio / (1 - inputs.poisson_ratio)",
+          "format": "decimal"
+        },
+        {
+          "id": "gamma",
+          "label": "Specific Weight of Soil (γ)",
+          "formula": "(inputs.soil_density * inputs.gravity) / 1000",
+          "unit": "kN/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "Fa",
+          "label": "Resultant Force (Fa)",
+          "formula": "0.5 * (inputs.poisson_ratio / (1 - inputs.poisson_ratio)) * ((inputs.soil_density * inputs.gravity) / 1000) * inputs.hs * inputs.hs",
+          "unit": "kN/m",
+          "format": "decimal"
+        },
+        {
+          "id": "da",
+          "label": "Acting Position Distance (da)",
+          "formula": "inputs.hs / 3",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "Mmax",
+          "label": "Maximum Bending Moment (Mmax)",
+          "formula": "inputs.configuration === 1 ? ((0.5 * (inputs.poisson_ratio / (1 - inputs.poisson_ratio)) * ((inputs.soil_density * inputs.gravity) / 1000) * inputs.hs * inputs.hs * inputs.hs / 3 / inputs.ht) * (inputs.hs + (2 * inputs.hs / 3) * Math.pow(inputs.hs / (3 * inputs.ht), 0.5))) : (0.128 * 0.5 * (inputs.poisson_ratio / (1 - inputs.poisson_ratio)) * ((inputs.soil_density * inputs.gravity) / 1000) * inputs.hs * inputs.hs * inputs.hs)",
+          "unit": "kNm/m",
+          "format": "decimal"
+        },
+        {
+          "id": "dm",
+          "label": "Position of Maximum Moment (dm)",
+          "formula": "inputs.configuration === 1 ? (inputs.hs * Math.pow(inputs.hs / (3 * inputs.ht), 0.5)) : (0.42 * inputs.hs)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Height of Backfill Soil",
+          "hs",
+          "=inputs.hs",
+          "m"
+        ],
+        [
+          "Poisson's Ratio",
+          "μ",
+          "=inputs.poisson_ratio",
+          "-"
+        ],
+        [
+          "Soil Density",
+          "ρ",
+          "=inputs.soil_density",
+          "kg/m³"
+        ],
+        [
+          "Acceleration of Gravity",
+          "ag",
+          "=inputs.gravity",
+          "m/s²"
+        ],
+        [
+          "Coefficient of Earth Pressure",
+          "K",
+          "=K",
+          "-"
+        ],
+        [
+          "Specific Weight of Soil",
+          "γ",
+          "=gamma",
+          "kN/m³"
+        ],
+        [
+          "Resultant Force",
+          "Fa",
+          "=Fa",
+          "kN/m"
+        ],
+        [
+          "Acting Position Distance",
+          "da",
+          "=da",
+          "m"
+        ],
+        [
+          "Maximum Bending Moment",
+          "Mmax",
+          "=Mmax",
+          "kNm/m"
+        ],
+        [
+          "Position of Maximum Moment",
+          "dm",
+          "=dm",
+          "m"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Basement Wall Earth Pressure Analysis",
+      "options": {
+        "title": {
+          "text": "Earth Pressure Distribution on Basement Wall",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Pressure (kPa)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Depth (m)",
+          "inverse": true
+        },
+        "series": [
+          {
+            "name": "Earth Pressure",
+            "type": "line",
+            "data": [
+              [
+                0,
+                0
+              ],
+              [
+                "=Fa*2/inputs.hs",
+                "=inputs.hs"
+              ]
+            ],
+            "smooth": true,
+            "itemStyle": {
+              "color": "#1890FF"
+            },
+            "areaStyle": {
+              "color": "rgba(24, 144, 255, 0.3)"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

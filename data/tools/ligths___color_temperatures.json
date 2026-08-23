@@ -1,0 +1,120 @@
+{
+  "id": "ligths___color_temperatures",
+  "title": "Ligths - Color Temperatures",
+  "description": "Light sources and their color irradiation in degrees Kelvin. The Correlated Color Temperature (CCT) is the absolute temperature of a black radiating reference light source which emits the same color irradiation as a given light source measured in degrees Kelvin (K).",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Color Temperature Classifications\n\n* **Cold colors** (bluish white): > 5300 K\n* **Neutral colors**: 3300 - 5300 K\n* **Warm colors** (yellowish white through red): < 3300 K"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cct_value",
+          "label": "Color Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 6500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "color_classification",
+          "label": "Color Classification",
+          "formula": "inputs.cct_value > 5300 ? 'Cold (Bluish White)' : inputs.cct_value >= 3300 ? 'Neutral' : 'Warm (Yellowish-Red)'"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Light Source",
+        "Correlated Color Temperature (K)"
+      ],
+      "rows": [
+        [
+          "Clear blue sky",
+          "12000 - 24000"
+        ],
+        [
+          "LCD or CRT screen",
+          "6500 - 9500"
+        ],
+        [
+          "Uniform daylight - overcast sky",
+          "7000"
+        ],
+        [
+          "Average natural daylight",
+          "6500"
+        ],
+        [
+          "Xenon short-arc (continuous compact 250 W)",
+          "6200"
+        ],
+        [
+          "Electronic flash",
+          "5500 - 6000"
+        ],
+        [
+          "High intensity carbon arc",
+          "5000"
+        ],
+        [
+          "Moonlight",
+          "4100 - 4150"
+        ],
+        [
+          "HP mercury cool white lamp",
+          "4000"
+        ],
+        [
+          "Fluorescent warm white lamp",
+          "3000"
+        ],
+        [
+          "Warm white LED lamp",
+          "3000"
+        ],
+        [
+          "Halogen filament lamp",
+          "3000"
+        ],
+        [
+          "Soft white LED lamp",
+          "2700"
+        ],
+        [
+          "GLS tungsten filament",
+          "2700"
+        ],
+        [
+          "Soft white incandescent lamp",
+          "2550"
+        ],
+        [
+          "Standard incandescent lamp",
+          "2400"
+        ],
+        [
+          "HP sodium lamp, Paraffin flame (flat wick)",
+          "2050"
+        ],
+        [
+          "Candle flame",
+          "2000"
+        ],
+        [
+          "Sunset, sunrise",
+          "1850"
+        ],
+        [
+          "Match flame",
+          "1700"
+        ]
+      ]
+    }
+  ]
+}

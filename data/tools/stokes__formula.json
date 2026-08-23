@@ -1,0 +1,82 @@
+{
+  "id": "stokes__formula",
+  "title": "Stokes' Formula",
+  "description": "Viscosity force acting on a smooth sphere.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Stokes' Formula\n\nThe force of viscosity acting on a smooth sphere in stream line motion can be expressed with Stokes' formula:\n\n**F = 6 π η r v** (1)\n\nWhere:\n- **F** = force (N)\n- **η** = viscosity of fluid (Pa·s)\n- **r** = radius of sphere (m)\n- **v** = relative velocity between fluid and sphere (m/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "viscosity",
+          "label": "Viscosity (η)",
+          "type": "number",
+          "unit": "Pa·s",
+          "defaultValue": 0.001
+        },
+        {
+          "id": "radius",
+          "label": "Radius of sphere (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.001
+        },
+        {
+          "id": "velocity",
+          "label": "Relative velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force",
+          "label": "Viscosity Force (F)",
+          "formula": "6 * 3.14159265 * inputs.viscosity * inputs.radius * inputs.velocity",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Viscosity of fluid",
+          "η",
+          "inputs.viscosity",
+          "Pa·s"
+        ],
+        [
+          "Radius of sphere",
+          "r",
+          "inputs.radius",
+          "m"
+        ],
+        [
+          "Relative velocity",
+          "v",
+          "inputs.velocity",
+          "m/s"
+        ],
+        [
+          "Viscosity Force",
+          "F",
+          "6 * 3.14159265 * inputs.viscosity * inputs.radius * inputs.velocity",
+          "N"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "cast_iron_soil_pipes___dimensions",
+  "title": "Cast Iron Soil Pipes - Dimensions",
+  "description": "Dimensions of cast iron soil pipes for both Service and Extra Heavy grades",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Cast Iron Soil Pipes - Dimensions\n\nDimensions of cast iron soil pipes for Service and Extra Heavy grades.\n\n![cast iron soil pipe](static/docs/documents/1751/cast_iron_soil.png \"cast iron soil pipe\")"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Size (in)",
+        "Inside Diameter of Hub (in)",
+        "Outside Diameter of Barrel (in)",
+        "Inside Diameter barrel (in)"
+      ],
+      "rows": [
+        [
+          2,
+          2.94,
+          2.3,
+          1.96
+        ],
+        [
+          3,
+          3.94,
+          3.3,
+          2.96
+        ],
+        [
+          4,
+          4.94,
+          4.3,
+          3.94
+        ],
+        [
+          5,
+          5.94,
+          5.3,
+          4.94
+        ],
+        [
+          6,
+          6.94,
+          6.3,
+          5.94
+        ],
+        [
+          8,
+          9.25,
+          8.38,
+          7.94
+        ],
+        [
+          10,
+          11.38,
+          10.5,
+          9.94
+        ],
+        [
+          12,
+          13.5,
+          12.5,
+          11.94
+        ]
+      ],
+      "content": "Service Cast Iron Soil Pipes - Dimensions"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Size (in)",
+        "Inside Diameter of Hub (in)",
+        "Outside Diameter of Barrel (in)",
+        "Inside Diameter barrel (in)"
+      ],
+      "rows": [
+        [
+          2,
+          3.06,
+          2.38,
+          2
+        ],
+        [
+          3,
+          4.19,
+          3.5,
+          3
+        ],
+        [
+          4,
+          5.19,
+          4.5,
+          4
+        ],
+        [
+          5,
+          6.19,
+          5.5,
+          5
+        ],
+        [
+          6,
+          7.19,
+          6.5,
+          6
+        ],
+        [
+          8,
+          9.5,
+          8.62,
+          8
+        ],
+        [
+          10,
+          11.62,
+          10.75,
+          10
+        ],
+        [
+          12,
+          13.75,
+          12.75,
+          12
+        ]
+      ],
+      "content": "Extra Heavy Cast Iron Soil Pipes - Dimensions"
+    }
+  ]
+}

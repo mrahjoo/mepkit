@@ -1,0 +1,137 @@
+{
+  "id": "steam_pipes___sizing",
+  "title": "Steam Pipes - Sizing",
+  "description": "Calculate pressure drop and sizing for steam distribution pipes. Determines available pressure for distribution, major friction losses, minor losses in fittings, and equivalent pipe lengths.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Steam Pipe Sizing Calculator\n\nThe pressure available for distribution of steam is the pressure difference between the initial pressure at the boiler and the required final pressure at the steam consumer.\n\n**Available Pressure Drop:** p = pj - pk\n\n**Total Pressure Drop:** pt = pmajor + pminor"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Available Pressure Drop"
+      ],
+      "inputs": [
+        {
+          "id": "initial_pressure",
+          "label": "Initial Boiler Pressure",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 100
+        },
+        {
+          "id": "final_pressure",
+          "label": "Final Required Pressure",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 80
+        }
+      ],
+      "outputs": [
+        {
+          "id": "available_pressure_drop",
+          "label": "Available Pressure Drop",
+          "formula": "inputs.initial_pressure - inputs.final_pressure",
+          "unit": "psi",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Major Friction Loss"
+      ],
+      "inputs": [
+        {
+          "id": "steam_flow_rate",
+          "label": "Steam Flow Rate",
+          "type": "number",
+          "unit": "lb/h",
+          "defaultValue": 1000
+        },
+        {
+          "id": "pipe_inside_diameter",
+          "label": "Pipe Inside Diameter",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 2
+        },
+        {
+          "id": "steam_density",
+          "label": "Steam Density",
+          "type": "number",
+          "unit": "lb/ft³",
+          "defaultValue": 3.5
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_drop_per_100ft",
+          "label": "Pressure Drop per 100 ft",
+          "formula": "0.01306 * inputs.steam_flow_rate * inputs.steam_flow_rate * (1 + 3.6/inputs.pipe_inside_diameter) / (3600 * inputs.steam_density * inputs.pipe_inside_diameter * inputs.pipe_inside_diameter * inputs.pipe_inside_diameter * inputs.pipe_inside_diameter * inputs.pipe_inside_diameter)",
+          "unit": "psig/100ft",
+          "format": "decimal"
+        },
+        {
+          "id": "major_pressure_loss",
+          "label": "Major Pressure Loss (Total Length)",
+          "formula": "(0.01306 * inputs.steam_flow_rate * inputs.steam_flow_rate * (1 + 3.6/inputs.pipe_inside_diameter) / (3600 * inputs.steam_density * inputs.pipe_inside_diameter * inputs.pipe_inside_diameter * inputs.pipe_inside_diameter * inputs.pipe_inside_diameter * inputs.pipe_inside_diameter)) * inputs.pipe_length / 100",
+          "unit": "psig",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Velocity Check"
+      ],
+      "inputs": [
+        {
+          "id": "flow_rate_velocity",
+          "label": "Steam Flow Rate",
+          "type": "number",
+          "unit": "lb/h",
+          "defaultValue": 1000
+        },
+        {
+          "id": "diameter_velocity",
+          "label": "Pipe Inside Diameter",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 2
+        },
+        {
+          "id": "density_velocity",
+          "label": "Steam Density",
+          "type": "number",
+          "unit": "lb/ft³",
+          "defaultValue": 3.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_velocity",
+          "label": "Flow Velocity",
+          "formula": "inputs.flow_rate_velocity / (3600 * inputs.density_velocity * 3.14159 * (inputs.diameter_velocity/24) * (inputs.diameter_velocity/24))",
+          "unit": "ft/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Typical Steam Velocities\n\n- **Exhaust steam:** 20 to 30 m/s (70 - 100 ft/s)\n- **Saturated steam:** 30 to 40 m/s (100 - 130 ft/s)\n- **Superheated steam:** 40 to 60 m/s (130 - 200 ft/s)\n\n## Rule of Thumb\n\nTotal pressure drop is approximately 5-10% of initial pressure per 100 m of pipe."
+    }
+  ]
+}

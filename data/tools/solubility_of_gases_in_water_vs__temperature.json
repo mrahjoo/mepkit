@@ -1,0 +1,244 @@
+{
+  "id": "solubility_of_gases_in_water_vs__temperature",
+  "title": "Solubility of Gases in Water vs. Temperature",
+  "description": "Solubility of pure gases (Ammonia, Argon, Carbon Dioxide, Carbon Monoxide, Chlorine, Ethane, Ethylene, Helium, Hydrogen, Hydrogen Sulfide, Methane, Nitrogen, Oxygen and Sulfur Dioxide) in water at one atmosphere (101.325 kPa) and different temperatures.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "gas_solubility_calc",
+      "content": "Gas Solubility Calculator",
+      "inputs": [
+        {
+          "id": "gas_type",
+          "label": "Select Gas",
+          "type": "select",
+          "options": [
+            {
+              "value": "NH3",
+              "label": "Ammonia (NH3)"
+            },
+            {
+              "value": "Ar",
+              "label": "Argon (Ar)"
+            },
+            {
+              "value": "CO",
+              "label": "Carbon Monoxide (CO)"
+            },
+            {
+              "value": "CO2",
+              "label": "Carbon Dioxide (CO2)"
+            },
+            {
+              "value": "Cl2",
+              "label": "Chlorine Gas (Cl2)"
+            },
+            {
+              "value": "C2H6",
+              "label": "Ethane (C2H6)"
+            },
+            {
+              "value": "C2H4",
+              "label": "Ethylene (C2H4)"
+            },
+            {
+              "value": "H2",
+              "label": "Hydrogen Gas (H2)"
+            },
+            {
+              "value": "H2S",
+              "label": "Hydrogen Sulfide (H2S)"
+            },
+            {
+              "value": "He",
+              "label": "Helium (He)"
+            },
+            {
+              "value": "CH4",
+              "label": "Methane (CH4)"
+            },
+            {
+              "value": "N2",
+              "label": "Nitrogen (N2)"
+            },
+            {
+              "value": "O2",
+              "label": "Oxygen (O2)"
+            },
+            {
+              "value": "SO2",
+              "label": "Sulfur Dioxide (SO2)"
+            }
+          ],
+          "defaultValue": "CO2"
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "kPa",
+          "defaultValue": 101.325
+        }
+      ],
+      "outputs": [
+        {
+          "id": "solubility",
+          "label": "Gas Solubility",
+          "unit": "ml/l at STP",
+          "format": "decimal",
+          "formula": "inputs.temperature * 0.5"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "solubility_reference_table",
+      "content": "Solubility Reference Data",
+      "headers": [
+        "Gas",
+        "Chemical Formula",
+        "0°C",
+        "10°C",
+        "20°C",
+        "30°C",
+        "40°C"
+      ],
+      "rows": [
+        [
+          "Ammonia",
+          "NH3",
+          "900",
+          "680",
+          "520",
+          "400",
+          "310"
+        ],
+        [
+          "Argon",
+          "Ar",
+          "55",
+          "42",
+          "34",
+          "28",
+          "24"
+        ],
+        [
+          "Carbon Monoxide",
+          "CO",
+          "35",
+          "28",
+          "23",
+          "19",
+          "17"
+        ],
+        [
+          "Carbon Dioxide",
+          "CO2",
+          "1700",
+          "1120",
+          "880",
+          "665",
+          "530"
+        ],
+        [
+          "Chlorine Gas",
+          "Cl2",
+          "3200",
+          "2080",
+          "1480",
+          "1100",
+          "840"
+        ],
+        [
+          "Ethane",
+          "C2H6",
+          "210",
+          "148",
+          "112",
+          "87",
+          "69"
+        ],
+        [
+          "Ethylene",
+          "C2H4",
+          "375",
+          "258",
+          "188",
+          "140",
+          "107"
+        ],
+        [
+          "Hydrogen Gas",
+          "H2",
+          "21",
+          "19",
+          "18",
+          "17",
+          "16"
+        ],
+        [
+          "Hydrogen Sulfide",
+          "H2S",
+          "2600",
+          "1850",
+          "1400",
+          "1050",
+          "820"
+        ],
+        [
+          "Helium",
+          "He",
+          "9",
+          "8",
+          "8",
+          "7",
+          "7"
+        ],
+        [
+          "Methane",
+          "CH4",
+          "55",
+          "42",
+          "33",
+          "26",
+          "21"
+        ],
+        [
+          "Nitrogen",
+          "N2",
+          "29",
+          "24",
+          "19",
+          "16",
+          "14"
+        ],
+        [
+          "Oxygen",
+          "O2",
+          "69",
+          "54",
+          "43",
+          "35",
+          "29"
+        ],
+        [
+          "Sulfur Dioxide",
+          "SO2",
+          "22400",
+          "13000",
+          "9400",
+          "6700",
+          "5100"
+        ]
+      ]
+    }
+  ]
+}

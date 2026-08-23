@@ -1,0 +1,103 @@
+{
+  "id": "hvac_terms",
+  "title": "HVAC Terms",
+  "description": "Common HVAC industry terms like absolute humidity, pressure, temperature and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# HVAC Terms Reference Guide\n\nThis comprehensive reference provides definitions of common HVAC industry terms and concepts.\n\n## Temperature & Pressure Terms\n\n- **ABSOLUTE HUMIDITY** - The weight of water vapor in a given amount of air.\n- **ABSOLUTE PRESSURE** - Pressure measured with the base of zero.\n- **ABSOLUTE TEMPERATURE** - A temperature scale expressed in degrees °F or °C using absolute zero as a base. Referred to as the Rankin or Kelvin scale.\n- **ABSOLUTE ZERO** - The temperature at which molecular activity theoretically ceases. -456.69 °F or -273.16 °C.\n- **ATMOSPHERIC PRESSURE** - The weight of a 1 unit column of the earth's atmosphere.\n- **GAUGE PRESSURE** - Pressure measured with atmospheric pressure as a base.\n\n## Temperature Scales\n\n- **CENTIGRADE** - A temperature scale with the freezing point of water 0 °C and the boiling point 100 °C at sea level.\n- **FAHRENHEIT** - A temperature scale with the freezing point of water 32 °F and the boiling point 212 °F at sea level.\n- **DRY BULB TEMPERATURE** - Temperature read with an ordinary thermometer.\n- **WET BULB TEMPERATURE** - Temperature read with a thermometer whose bulb is encased in a wetted wick.\n\n## Heat & Energy Terms\n\n- **BRITISH THERMAL UNIT (BTU)** - The amount of heat necessary to change the temperature of 1 pound of pure water 1 degree Fahrenheit (°F).\n- **MBH** - One MBH is equivalent to 1,000 BTU's per hour.\n- **TON OF REFRIGERATION** - The amount of heat of fusion absorbed by melting 1 short ton of pure ice at 0 °C (32 °F) in 24 hours.\n- **ENTHALPY** - Total amount of heat in one pound (kg) of a substance calculated from accepted temperature base, expressed in BTU's per pound mass (J/kg).\n- **SENSIBLE HEAT** - Heat that can be measured or felt. Sensible heat always causes a temperature rise.\n- **LATENT HEAT** - Heat that produces a change of state without a change in temperature.\n- **SPECIFIC HEAT** - The amount of heat necessary to change the temperature of one pound of a substance 10 °F.\n\n## Refrigeration & System Components\n\n- **REFRIGERANT** - A substance which produces a refrigerating effect while expanding or vaporizing.\n- **COMPRESSOR** - A mechanical device used to compress gases. Main types: screw, scroll, reciprocating, centrifugal and rotary.\n- **CONDENSER** - A device that removes heat from a substance.\n- **EVAPORATOR** - A device in which a liquid refrigerant is vaporized. Some super-heating usually takes place.\n- **CAPILLARY TUBE** - A refrigerant control consisting of a small diameter tube which controls flow by restriction.\n- **CHECK VALVE** - A valve designed to permit flow in one direction only.\n- **FILTER-DRIER** - A device that removes moisture, acid and foreign matter from the refrigerant.\n- **OIL SEPARATOR** - A device for separating out oil entrained in the discharge gas from the compressor and returning it to the crankcase.\n\n## Pressure & Measurement Terms\n\n- **DISCHARGE PRESSURE** - The pressure read at the compressor outlet. Also called head pressure or high side pressure.\n- **COMPRESSION RATIO** - The ratio determined by dividing the discharge pressure, in PSI (Pa), by the suction pressure in PSI (Pa).\n- **PRESSURE DROP** - The decrease in pressure due to friction of a fluid or vapor as it passes through a tube or duct.\n- **STATIC PRESSURE** - The normal force per unit area at a small hole in the wall of a duct.\n- **VELOCITY PRESSURE** - In a moving fluid, the pressure capable of causing an equivalent velocity.\n- **MANOMETER** - A tube filled with a liquid used to measure pressures.\n- **MICRON** - A unit used to measure high vacuums. One micron equals 1/25,400 of one inch mercury.\n\n## Air & Humidity Terms\n\n- **AIR CONDITIONING** - The process of controlling the temperature, humidity, cleanliness and distribution of the air.\n- **RELATIVE HUMIDITY** - The percentage of water vapor present in a given quantity air compared to the amount it can hold at its temperature.\n- **CUBIC FEET PER MINUTE (CFM)** - A common means of assigning quantitative values to volumes of air in transit.\n- **FEET PER MINUTE (FPM)** - A term assigned to a velocity of a moving air stream.\n- **DRY AIR** - Air which contains no moisture vapor.\n- **AMBIENT** - Refers to the temperature surrounding a body or unit under test.\n\n## Additional Key Terms\n\n- **HEAT TRANSFER** - The three methods of heat transfer are conduction, convection and radiation.\n- **CONDUCTION** - The transfer of heat from molecule to molecule within a substance.\n- **CONVECTION** - The transfer of heat by a moving fluid.\n- **RADIATION** - The transfer of heat without an intervening medium.\n- **DENSITY** - Mass or weight per unit of volume.\n- **VACUUM** - Any pressure below atmospheric pressure.\n- **REVERSING VALVE** - A device in a heat pump that is electrically controlled to reverse the flow of refrigerant as the system is switched from cooling to heating.\n- **THERMOSTAT** - A bimetal actuated switch to close and open a circuit to indicate or terminate operation of a heating or air conditioning system."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fahrenheit",
+          "label": "Temperature (°F)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "celsius",
+          "label": "Temperature (°C)",
+          "formula": "(inputs.fahrenheit - 32) * 5/9",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "rankine",
+          "label": "Absolute Temperature (°R)",
+          "formula": "inputs.fahrenheit + 459.67",
+          "unit": "°R",
+          "format": "decimal"
+        },
+        {
+          "id": "kelvin",
+          "label": "Absolute Temperature (K)",
+          "formula": "(inputs.fahrenheit - 32) * 5/9 + 273.15",
+          "unit": "K",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "btu_per_hour",
+          "label": "Heat (BTU/hour)",
+          "type": "number",
+          "defaultValue": 12000,
+          "unit": "BTU/hour"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mbh",
+          "label": "Heat (MBH)",
+          "formula": "inputs.btu_per_hour / 1000",
+          "unit": "MBH",
+          "format": "decimal"
+        },
+        {
+          "id": "tons_of_refrigeration",
+          "label": "Tons of Refrigeration",
+          "formula": "inputs.btu_per_hour / 12000",
+          "unit": "Ton",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "discharge_pressure",
+          "label": "Discharge Pressure (PSI)",
+          "type": "number",
+          "defaultValue": 250,
+          "unit": "PSI"
+        },
+        {
+          "id": "suction_pressure",
+          "label": "Suction Pressure (PSI)",
+          "type": "number",
+          "defaultValue": 75,
+          "unit": "PSI"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "compression_ratio",
+          "label": "Compression Ratio",
+          "formula": "inputs.discharge_pressure / inputs.suction_pressure",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

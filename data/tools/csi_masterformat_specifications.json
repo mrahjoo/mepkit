@@ -1,0 +1,253 @@
+{
+  "id": "csi_masterformat_specifications",
+  "title": "CSI MasterFormat Specifications",
+  "description": "Construction Specifications Institute's 2004 Master-Format Edition. The most widely used standard for organizing specifications for building projects in the U.S. and Canada. MasterFormat organizes information by work results (materials and methods) with primary purposes of organizing specifications and detailed cost information.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Division Code",
+        "Division Name",
+        "Category"
+      ],
+      "rows": [
+        [
+          "00",
+          "Procurement and Contracting Requirements",
+          "Procurement and Contracting Requirements Group"
+        ],
+        [
+          "01",
+          "General Requirements",
+          "General Requirements Subgroup"
+        ],
+        [
+          "02",
+          "Existing Conditions",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "03",
+          "Concrete",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "04",
+          "Masonry",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "05",
+          "Metals",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "06",
+          "Wood, Plastics, and Composites",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "07",
+          "Thermal and Moisture Protection",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "08",
+          "Openings",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "09",
+          "Finishes",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "10",
+          "Specialties",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "11",
+          "Equipment",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "12",
+          "Furnishings",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "13",
+          "Special Construction",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "14",
+          "Conveying Equipment",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "15",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "16",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Facility Construction Subgroup"
+        ],
+        [
+          "20",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Facility Services Subgroup"
+        ],
+        [
+          "21",
+          "Fire Suppression",
+          "Facility Services Subgroup"
+        ],
+        [
+          "22",
+          "Plumbing",
+          "Facility Services Subgroup"
+        ],
+        [
+          "23",
+          "Heating Ventilating and Air Conditioning",
+          "Facility Services Subgroup"
+        ],
+        [
+          "24",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Facility Services Subgroup"
+        ],
+        [
+          "25",
+          "Integrated Automation",
+          "Facility Services Subgroup"
+        ],
+        [
+          "26",
+          "Electrical",
+          "Facility Services Subgroup"
+        ],
+        [
+          "27",
+          "Communications",
+          "Facility Services Subgroup"
+        ],
+        [
+          "28",
+          "Electronic Safety and Security",
+          "Facility Services Subgroup"
+        ],
+        [
+          "29",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Facility Services Subgroup"
+        ],
+        [
+          "30",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "31",
+          "Earthwork",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "32",
+          "Exterior Improvements",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "33",
+          "Utilities",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "34",
+          "Transportation",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "35",
+          "Waterways and Marine Construction",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "36",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "37",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "38",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "39",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Site and Infrastructure Subgroup"
+        ],
+        [
+          "40",
+          "Process Integration",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "41",
+          "Material Processing and Handling Equipment",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "42",
+          "Process Heating, Cooling, and Drying Equipment",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "43",
+          "Process Gas and Liquid Handling, Purification and Storage Equipment",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "44",
+          "Pollution Control Equipment",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "45",
+          "Industry-Specific Manufacturing Equipment",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "46",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "47",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "48",
+          "Electrical Power Generation",
+          "Process Equipment Subgroup"
+        ],
+        [
+          "49",
+          "RESERVED FOR FUTURE EXPANSION",
+          "Process Equipment Subgroup"
+        ]
+      ]
+    }
+  ]
+}

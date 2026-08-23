@@ -1,0 +1,68 @@
+{
+  "id": "kinetic_energy",
+  "title": "Kinetic Energy",
+  "description": "Calculate translational and rotational kinetic energy. Translational kinetic energy is the energy of motion from one location to another, calculated as Et = 1/2 m v². Rotational kinetic energy is the energy due to rotational motion, calculated as Er = 1/2 I ω².",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Kinetic Energy Calculator\n\nCalculate translational and rotational kinetic energy using the formulas:\n\n**Translational Kinetic Energy:** Et = 1/2 m v²\n- m = mass (kg)\n- v = velocity (m/s)\n\n**Rotational Kinetic Energy:** Er = 1/2 I ω²\n- I = moment of inertia (kg m²)\n- ω = angular velocity (rad/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1000
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 19.44
+        },
+        {
+          "id": "moment_of_inertia",
+          "label": "Moment of Inertia",
+          "type": "number",
+          "unit": "kg m²",
+          "defaultValue": 0.15
+        },
+        {
+          "id": "angular_velocity",
+          "label": "Angular Velocity",
+          "type": "number",
+          "unit": "rad/s",
+          "defaultValue": 104
+        }
+      ],
+      "outputs": [
+        {
+          "id": "translational_ke",
+          "label": "Translational Kinetic Energy",
+          "formula": "0.5 * inputs.mass * inputs.velocity * inputs.velocity",
+          "unit": "Joule",
+          "format": "decimal"
+        },
+        {
+          "id": "rotational_ke",
+          "label": "Rotational Kinetic Energy",
+          "formula": "0.5 * inputs.moment_of_inertia * inputs.angular_velocity * inputs.angular_velocity",
+          "unit": "Joule",
+          "format": "decimal"
+        },
+        {
+          "id": "total_ke",
+          "label": "Total Kinetic Energy",
+          "formula": "(0.5 * inputs.mass * inputs.velocity * inputs.velocity) + (0.5 * inputs.moment_of_inertia * inputs.angular_velocity * inputs.angular_velocity)",
+          "unit": "Joule",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "solids___volume_temperature_expansion_coefficients",
+  "title": "Solids - Volume Temperature Expansion Coefficients",
+  "description": "Cubical expansion coefficients for solids. Reference table for volume temperature expansion coefficients of various solid materials.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Solid",
+        "Expansion Coefficient (10⁻⁶ 1/K)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          69
+        ],
+        [
+          "Antimony",
+          31.7
+        ],
+        [
+          "Beryl",
+          1.1
+        ],
+        [
+          "Bismuth",
+          39.5
+        ],
+        [
+          "Brass",
+          57
+        ],
+        [
+          "Carbon steel",
+          32.4
+        ],
+        [
+          "Concrete",
+          36
+        ],
+        [
+          "Copper",
+          49.9
+        ],
+        [
+          "Diamond",
+          3.5
+        ],
+        [
+          "Douglas-fir",
+          75
+        ],
+        [
+          "Emerald",
+          1.7
+        ],
+        [
+          "Galena",
+          55.8
+        ],
+        [
+          "Glass",
+          27.6
+        ],
+        [
+          "Glass, borosilicate",
+          9.9
+        ],
+        [
+          "Gold",
+          44.1
+        ],
+        [
+          "Ice",
+          112.5
+        ],
+        [
+          "Iron",
+          35.5
+        ],
+        [
+          "Lead",
+          84
+        ],
+        [
+          "Magnesium",
+          78
+        ],
+        [
+          "Molybdenum",
+          14.4
+        ],
+        [
+          "Nickel",
+          39
+        ],
+        [
+          "Paraffin",
+          590
+        ],
+        [
+          "Platinum",
+          26.5
+        ],
+        [
+          "Polypropylene, PP",
+          450
+        ],
+        [
+          "Porcelain",
+          8.1
+        ],
+        [
+          "PVC",
+          156
+        ],
+        [
+          "Quartz",
+          38.4
+        ],
+        [
+          "Rock salt",
+          121.2
+        ],
+        [
+          "Rubber",
+          487
+        ],
+        [
+          "Silicon",
+          9
+        ],
+        [
+          "Silicon Carbide",
+          8.3
+        ],
+        [
+          "Silver",
+          58.3
+        ],
+        [
+          "Sodium",
+          213
+        ],
+        [
+          "Stainless Steel",
+          "30 - 52"
+        ],
+        [
+          "Stearic acid",
+          810
+        ],
+        [
+          "Steel",
+          "33 - 39"
+        ],
+        [
+          "Sulfur",
+          223
+        ],
+        [
+          "Tin",
+          69
+        ],
+        [
+          "Titanium",
+          26
+        ],
+        [
+          "Tungsten",
+          13.5
+        ],
+        [
+          "Zinc",
+          89.3
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## References\n\n* [Volumetric - or Cubic Thermal Expansion](volumetric-temperature-expansion-d_315.html)"
+    }
+  ]
+}

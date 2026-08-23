@@ -1,0 +1,97 @@
+{
+  "id": "equations_in_fluid_mechanics",
+  "title": "Equations in Fluid Mechanics",
+  "description": "Equations used in fluid mechanics - like Bernoulli, conservation of energy, conservation of mass, pressure, Navier-Stokes, ideal gas law, Euler equations, Laplace equations, Darcy-Weisbach Equation and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Equation Name",
+        "Category",
+        "Description",
+        "Key Principle"
+      ],
+      "rows": [
+        [
+          "Bernoulli Equation",
+          "Conservation Laws",
+          "A statement of the conservation of energy in a form useful for solving problems involving fluids.",
+          "For a non-viscous, incompressible fluid in steady flow, the sum of pressure, potential and kinetic energies per unit volume is constant at any point."
+        ],
+        [
+          "Conservation of Energy",
+          "Conservation Laws",
+          "Energy is conserved in an isolated physical system.",
+          "Particular measurable properties of an isolated physical system does not change as the system evolves."
+        ],
+        [
+          "Conservation of Mass",
+          "Conservation Laws",
+          "Mass can neither be created nor destroyed.",
+          "The law of conservation of mass states that mass can neither be created or destroyed."
+        ],
+        [
+          "Continuity Equation",
+          "Conservation Laws",
+          "A statement that mass is conserved.",
+          "The Continuity Equation expresses conservation of mass in fluid flow."
+        ],
+        [
+          "Darcy-Weisbach Equation",
+          "Pressure Loss",
+          "Pressure loss and head loss due to friction in ducts and tubes.",
+          "Major loss - head loss or pressure loss - due to friction in pipes and ducts."
+        ],
+        [
+          "Euler Equations",
+          "Compressible Flow",
+          "Govern the motion of a compressible, inviscid fluid.",
+          "Corresponds to the Navier-Stokes equations with zero viscosity. Represents conservation of mass, momentum, and energy."
+        ],
+        [
+          "Laplace's Equation",
+          "Potential Flow",
+          "Describes the behavior of gravitational, electric, and fluid potentials.",
+          "Used for modeling potential flow in fluid mechanics."
+        ],
+        [
+          "Ideal Gas Law",
+          "Thermodynamics",
+          "For a perfect or ideal gas the change in density is directly related to the change in temperature and pressure.",
+          "PV = nRT or ρ = P/(RT)"
+        ],
+        [
+          "Gas Mixture Properties",
+          "Thermodynamics",
+          "Special considerations for gas mixtures when using the ideal gas law.",
+          "Individual gas constants and mixture properties must be carefully calculated."
+        ],
+        [
+          "Individual and Universal Gas Constant",
+          "Thermodynamics",
+          "The Individual and Universal Gas Constant is common in fluid mechanics and thermodynamics.",
+          "R_universal = 8.314 J/(mol·K), R_individual varies by gas."
+        ],
+        [
+          "Navier-Stokes Equations",
+          "Viscous Flow",
+          "Govern the motion of a non-turbulent, Newtonian fluid.",
+          "Can be used to model turbulent flow where fluid parameters are interpreted as time-averaged values."
+        ],
+        [
+          "Mechanical Energy Equation",
+          "Energy",
+          "Energy per unit mass, per unit volume, and per unit weight involving heads.",
+          "Relates pressure head, velocity head, and elevation head."
+        ],
+        [
+          "Static Pressure and Pressure Head",
+          "Pressure",
+          "Pressure and pressure head in a static fluid.",
+          "Fundamental relationships for pressure analysis in fluids."
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "belts___pulley_diameters_vs__speed",
+  "title": "Belts - Pulley Diameters vs. Speed",
+  "description": "Calculate pulley speeds and diameters for single and multiple belt transmission systems using pulley diameter and speed relationships.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pulley",
+        "Diameter (mm)",
+        "Speed (rpm)"
+      ],
+      "rows": [
+        [
+          "1",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "",
+          ""
+        ],
+        [
+          "4",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Single Belt Transmission Calculator\n\nFor a system with two pulleys (1 and 2):\n\n**Formula:** d₁ × n₁ = d₂ × n₂"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Single Belt Transmission"
+      ],
+      "inputs": [
+        {
+          "id": "d1_single",
+          "label": "Driving Pulley Diameter (mm)",
+          "type": "number",
+          "defaultValue": 100
+        },
+        {
+          "id": "n1_single",
+          "label": "Driving Pulley Speed (rpm)",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "d2_single",
+          "label": "Driven Pulley Diameter (mm)",
+          "type": "number",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "n2_single",
+          "label": "Driven Pulley Speed (rpm)",
+          "formula": "(inputs.d1_single * inputs.n1_single) / inputs.d2_single",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Multiple Belt Transmission Calculator\n\nFor a system with four pulleys (1, 2, 3, 4):\n\n**Formula:** n₄ = n₁ × (d₁ × d₃) / (d₂ × d₄)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Multiple Belt Transmission"
+      ],
+      "inputs": [
+        {
+          "id": "n1_multi",
+          "label": "Pulley 1 Speed (rpm)",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "d1_multi",
+          "label": "Pulley 1 Diameter (mm)",
+          "type": "number",
+          "defaultValue": 100
+        },
+        {
+          "id": "d2_multi",
+          "label": "Pulley 2 Diameter (mm)",
+          "type": "number",
+          "defaultValue": 50
+        },
+        {
+          "id": "d3_multi",
+          "label": "Pulley 3 Diameter (mm)",
+          "type": "number",
+          "defaultValue": 110
+        },
+        {
+          "id": "d4_multi",
+          "label": "Pulley 4 Diameter (mm)",
+          "type": "number",
+          "defaultValue": 60
+        }
+      ],
+      "outputs": [
+        {
+          "id": "n2_multi",
+          "label": "Pulley 2 Speed (rpm)",
+          "formula": "inputs.n1_multi",
+          "format": "decimal"
+        },
+        {
+          "id": "n3_multi",
+          "label": "Pulley 3 Speed (rpm)",
+          "formula": "inputs.n1_multi",
+          "format": "decimal"
+        },
+        {
+          "id": "n4_multi",
+          "label": "Pulley 4 Speed (rpm)",
+          "formula": "inputs.n1_multi * (inputs.d1_multi * inputs.d3_multi) / (inputs.d2_multi * inputs.d4_multi)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

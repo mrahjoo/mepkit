@@ -1,0 +1,350 @@
+{
+  "id": "steam_consumption_for_some_typical_steam_heated_co",
+  "title": "Steam Consumption for Typical Steam Heated Consumers",
+  "description": "Steam consumption rates for typical steam heated consumers in industries like bakeries, breweries, paper factories etc. This table can be used for estimating the steam consumption in the preliminary design of steam applications. Remember always check the manufacturing specifications before final design.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Industry",
+        "Application",
+        "Operating Pressure (psig)",
+        "Consumption Production (lb/h)",
+        "Consumption Maximum (lb/h)",
+        "Consumption Production (kg/h)",
+        "Consumption Maximum (kg/h)"
+      ],
+      "rows": [
+        [
+          "Bakeries",
+          "Dough room trough, 8 ft long",
+          10,
+          1,
+          5,
+          0.45,
+          2.27
+        ],
+        [
+          "Bakeries",
+          "Proof Boxes, 500 cu ft capacity",
+          10,
+          1,
+          10,
+          0.45,
+          4.54
+        ],
+        [
+          "Bakeries",
+          "White bread, 120 sq ft surface",
+          10,
+          1,
+          30,
+          0.45,
+          13.61
+        ],
+        [
+          "Bakeries",
+          "Rye bread, 10 sq ft surface",
+          10,
+          1,
+          60,
+          0.45,
+          27.22
+        ],
+        [
+          "Breweries",
+          "Bottle washing, normal size 100 bottles/min",
+          5,
+          0.3,
+          300,
+          0.14,
+          136.08
+        ],
+        [
+          "Candy and Chocolate",
+          "Candy cooking, 30 gal cooker, 1 hour",
+          70,
+          5,
+          45,
+          2.27,
+          20.41
+        ],
+        [
+          "Candy and Chocolate",
+          "Chocolate melting, jacketed, 24 inch diameter",
+          70,
+          5,
+          30,
+          2.27,
+          13.61
+        ],
+        [
+          "Creameries and Dairies",
+          "Milk quarts per 100 cases per hr",
+          5,
+          0.3,
+          60,
+          0.14,
+          27.22
+        ],
+        [
+          "Creameries and Dairies",
+          "Creamery cans 3 per min",
+          50,
+          3,
+          300,
+          1.36,
+          136.08
+        ],
+        [
+          "Creameries and Dairies",
+          "Pasteurizer per 100 gal heated 20 min",
+          50,
+          3,
+          250,
+          1.36,
+          113.4
+        ],
+        [
+          "Hospitals",
+          "Stills per 100 gal distilled water",
+          50,
+          3,
+          100,
+          1.36,
+          45.36
+        ],
+        [
+          "Hospitals",
+          "Sterilizers bed pan",
+          50,
+          3,
+          5,
+          1.36,
+          2.27
+        ],
+        [
+          "Hospitals",
+          "Sterilizers instruments per 100 cu inch",
+          50,
+          3,
+          5,
+          1.36,
+          2.27
+        ],
+        [
+          "Hospitals",
+          "Sterilizers water per 10 gal",
+          50,
+          3,
+          5,
+          1.36,
+          2.27
+        ],
+        [
+          "Hospitals",
+          "Disinfecting ovens 100 cu ft, per 10 cu ft",
+          50,
+          3,
+          25,
+          1.36,
+          11.34
+        ],
+        [
+          "Laundry",
+          "Vacuum stills per 10 gal",
+          100,
+          7,
+          15,
+          3.18,
+          6.8
+        ],
+        [
+          "Laundry",
+          "Spotting board",
+          100,
+          7,
+          30,
+          3.18,
+          13.61
+        ],
+        [
+          "Laundry",
+          "Jacket, dress finisher",
+          100,
+          7,
+          50,
+          3.18,
+          22.68
+        ],
+        [
+          "Laundry",
+          "Steam Irons",
+          100,
+          7,
+          5,
+          3.18,
+          2.27
+        ],
+        [
+          "Laundry",
+          "Flat iron worker, 48'' * 120''",
+          100,
+          7,
+          300,
+          3.18,
+          136.08
+        ],
+        [
+          "Plastic Molding",
+          "12 to 15 sq ft platen surface",
+          125,
+          9,
+          30,
+          4.08,
+          13.61
+        ],
+        [
+          "Paper Production",
+          "Corrugators per 1000 sq ft",
+          175,
+          12,
+          30,
+          5.44,
+          13.61
+        ],
+        [
+          "Paper Production",
+          "Wood pulp paper per 10 lb paper",
+          50,
+          3,
+          400,
+          1.36,
+          181.44
+        ],
+        [
+          "Restaurants",
+          "Dishwasher",
+          20,
+          1,
+          70,
+          0.45,
+          31.75
+        ],
+        [
+          "Restaurants",
+          "Standard steam tables per ft length",
+          20,
+          1,
+          40,
+          0.45,
+          18.14
+        ],
+        [
+          "Restaurants",
+          "Bain Marie per ft length 30 '' wide",
+          20,
+          1,
+          15,
+          0.45,
+          6.8
+        ],
+        [
+          "Restaurants",
+          "Oyster steamers",
+          20,
+          1,
+          15,
+          0.45,
+          6.8
+        ],
+        [
+          "Restaurants",
+          "Clam and lobster steamer",
+          20,
+          1,
+          30,
+          0.45,
+          13.61
+        ],
+        [
+          "Restaurants",
+          "Steam jacket kettle 10 gal",
+          20,
+          1,
+          15,
+          0.45,
+          6.8
+        ],
+        [
+          "Restaurants",
+          "Steam jacket kettle 60 gal",
+          20,
+          1,
+          60,
+          0.45,
+          27.22
+        ],
+        [
+          "Restaurants",
+          "Plate and dish warmers per 100 sq ft",
+          20,
+          1,
+          60,
+          0.45,
+          27.22
+        ],
+        [
+          "Restaurants",
+          "Warming ovens per 20 cu ft",
+          20,
+          1,
+          30,
+          0.45,
+          13.61
+        ],
+        [
+          "Restaurants",
+          "Vegetable steamer",
+          20,
+          1,
+          30,
+          0.45,
+          13.61
+        ],
+        [
+          "Restaurants",
+          "Potato Steamer",
+          20,
+          1,
+          30,
+          0.45,
+          13.61
+        ],
+        [
+          "Tire Shops",
+          "Truck molds",
+          100,
+          7,
+          90,
+          3.18,
+          40.82
+        ],
+        [
+          "Tire Shops",
+          "Passenger molds",
+          100,
+          7,
+          30,
+          3.18,
+          13.61
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n* This table can be used for estimating the steam consumption in the preliminary design of steam applications\n* Always check the manufacturing specifications before final design\n* Consumption rates are provided in both imperial (lb/h) and metric (kg/h) units\n* Operating pressure is given in psig (pounds per square inch gauge)\n* Production consumption represents typical operating conditions\n* Maximum consumption represents peak or design conditions"
+    }
+  ]
+}

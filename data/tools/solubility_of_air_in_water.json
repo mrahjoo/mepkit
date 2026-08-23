@@ -1,0 +1,335 @@
+{
+  "id": "solubility_of_air_in_water",
+  "title": "Solubility of Air in Water",
+  "description": "Calculate the solubility of air dissolved in water based on temperature and pressure using Henry's Law. The amount of air that can be dissolved in water increases with pressure and decreases with temperature.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "air_solubility_calculator",
+      "content": "Henry's Law Calculator - Air Solubility in Water",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Absolute Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "atm"
+        },
+        {
+          "id": "water_volume",
+          "label": "Water Volume",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "litre"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dissolved_air_mass",
+          "label": "Dissolved Air Mass",
+          "formula": "inputs.pressure * inputs.water_volume * 0.0227",
+          "unit": "g",
+          "format": "decimal"
+        },
+        {
+          "id": "dissolved_air_per_kg",
+          "label": "Dissolved Air per Water Mass",
+          "formula": "inputs.pressure * 0.023",
+          "unit": "g/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "oxygen_dissolved",
+          "label": "Oxygen Dissolved (at 25°C)",
+          "formula": "inputs.pressure * 0.0089 * inputs.water_volume",
+          "unit": "g",
+          "format": "decimal"
+        },
+        {
+          "id": "nitrogen_dissolved",
+          "label": "Nitrogen Dissolved (at 25°C)",
+          "formula": "inputs.pressure * 0.0138 * inputs.water_volume",
+          "unit": "g",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "solubility_table",
+      "content": "Air Solubility in Water - Reference Table",
+      "headers": [
+        "Temperature (°F)",
+        "0 psig",
+        "20 psig",
+        "40 psig",
+        "60 psig",
+        "80 psig",
+        "100 psig"
+      ],
+      "rows": [
+        [
+          40,
+          0.0258,
+          0.0613,
+          0.0967,
+          0.1321,
+          0.1676,
+          0.203
+        ],
+        [
+          50,
+          0.0223,
+          0.0529,
+          0.0836,
+          0.1143,
+          0.1449,
+          0.1756
+        ],
+        [
+          60,
+          0.0197,
+          0.0469,
+          0.0742,
+          0.1014,
+          0.1296,
+          0.1559
+        ],
+        [
+          70,
+          0.0177,
+          0.0423,
+          0.0669,
+          0.0916,
+          0.1162,
+          0.1408
+        ],
+        [
+          80,
+          0.0161,
+          0.0387,
+          0.0614,
+          0.084,
+          0.1067,
+          0.1293
+        ],
+        [
+          90,
+          0.0147,
+          0.0358,
+          0.0569,
+          0.078,
+          0.099,
+          0.1201
+        ],
+        [
+          100,
+          0.0136,
+          0.0334,
+          0.0532,
+          0.073,
+          0.0928,
+          0.1126
+        ],
+        [
+          110,
+          0.0126,
+          0.0314,
+          0.0501,
+          0.0689,
+          0.0877,
+          0.1065
+        ],
+        [
+          120,
+          0.0117,
+          0.0296,
+          0.0475,
+          0.0654,
+          0.0833,
+          0.1012
+        ],
+        [
+          130,
+          0.0107,
+          0.028,
+          0.0452,
+          0.0624,
+          0.0796,
+          0.0968
+        ],
+        [
+          140,
+          0.0098,
+          0.0265,
+          0.0432,
+          0.0598,
+          0.0765,
+          0.0931
+        ],
+        [
+          150,
+          0.0089,
+          0.0251,
+          0.0413,
+          0.0574,
+          0.0736,
+          0.0898
+        ],
+        [
+          160,
+          0.0079,
+          0.0237,
+          0.0395,
+          0.0553,
+          0.0711,
+          0.0869
+        ],
+        [
+          170,
+          0.0068,
+          0.0223,
+          0.0378,
+          0.0534,
+          0.0689,
+          0.0844
+        ],
+        [
+          180,
+          0.0055,
+          0.0208,
+          0.0361,
+          0.0514,
+          0.0667,
+          0.082
+        ],
+        [
+          190,
+          0.0041,
+          0.0192,
+          0.0344,
+          0.0496,
+          0.0647,
+          0.0799
+        ],
+        [
+          200,
+          0.0024,
+          0.0175,
+          0.0326,
+          0.0477,
+          0.0628,
+          0.0779
+        ],
+        [
+          210,
+          0.0004,
+          0.0155,
+          0.0306,
+          0.0457,
+          0.0607,
+          0.0758
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "solubility_chart",
+      "content": "Air Solubility vs Pressure and Temperature",
+      "options": {
+        "title": {
+          "text": "Air Solubility in Water"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Gauge Pressure (psig)",
+          "data": [
+            0,
+            20,
+            40,
+            60,
+            80,
+            100
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Solubility (v_air/v_water)"
+        },
+        "series": [
+          {
+            "name": "40°F",
+            "type": "line",
+            "data": [
+              0.0258,
+              0.0613,
+              0.0967,
+              0.1321,
+              0.1676,
+              0.203
+            ]
+          },
+          {
+            "name": "70°F",
+            "type": "line",
+            "data": [
+              0.0177,
+              0.0423,
+              0.0669,
+              0.0916,
+              0.1162,
+              0.1408
+            ]
+          },
+          {
+            "name": "100°F",
+            "type": "line",
+            "data": [
+              0.0136,
+              0.0334,
+              0.0532,
+              0.073,
+              0.0928,
+              0.1126
+            ]
+          },
+          {
+            "name": "150°F",
+            "type": "line",
+            "data": [
+              0.0089,
+              0.0251,
+              0.0413,
+              0.0574,
+              0.0736,
+              0.0898
+            ]
+          },
+          {
+            "name": "210°F",
+            "type": "line",
+            "data": [
+              0.0004,
+              0.0155,
+              0.0306,
+              0.0457,
+              0.0607,
+              0.0758
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "elastomers_properties",
+  "title": "Elastomers Properties",
+  "description": "Typical operating temperature-ranges and characteristics for various elastomers according to DIN ISO 1629 standards",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "ID (DIN ISO 1629)",
+        "Name",
+        "Characterized by",
+        "Typical Applications",
+        "Operating Temp Range (°C)"
+      ],
+      "rows": [
+        [
+          "ACM",
+          "Polyacrylic rubber",
+          "Good hot-air resistance, good ozone and weather resistance, good resistance to lubricating oils with additives, low elasticity, medium strength",
+          "Oil seals, higher temperature seals",
+          "-20 - 150"
+        ],
+        [
+          "AEM",
+          "Ethylene acrylate rubber",
+          "Good mechanical properties, temperature resistant, good compression ratio",
+          "Oil seals, higher temperature seals",
+          "-40 - 160"
+        ],
+        [
+          "CR",
+          "Chloroprene rubber",
+          "Good weather, ozone, aging and chemical resistance, high flame retardance, good mechanical properties, abrasion resistance, flexible in low temperatures",
+          "Refrigerant sealings, outdoor seals, adhesives or glues",
+          "-35 - 90"
+        ],
+        [
+          "ECO",
+          "Epichlorohydrin rubber",
+          "Resistant to engine oil and fuels, very low gas permeability, weather and ozone resistant, low compression ratio",
+          "Engine bearings, vibration dampers, fuel lines",
+          "-40 - 120"
+        ],
+        [
+          "EPDM",
+          "Ethylene propylene diene rubber",
+          "High elasticity, weather resistant, good heat, ozone and aging resistance, good low-temperature performance",
+          "Parts in contact with brake fluids, cooling water, refrigerants",
+          "-40 - 150"
+        ],
+        [
+          "FKM",
+          "Fluorine rubber",
+          "Good resistance to oils, fuels and aggressive media, very good aging, ozone and weather resistance, low gas permeability",
+          "Fuel applications",
+          "-20 - 200"
+        ],
+        [
+          "FVMQ",
+          "Fluorosilicone rubber",
+          "Very good chemical resistance to hydrocarbons, mineral oils and fuel",
+          "General applications",
+          "-55 - 175"
+        ],
+        [
+          "HNBR",
+          "Hydrogenated nitrile butadiene rubber",
+          "Properties comparable to NBR with higher operating temperatures",
+          "Parts in contact with mineral oil, diesel and cooling water",
+          "-30 - 140"
+        ],
+        [
+          "IIR",
+          "Isobutene-isoprene rubber",
+          "Very low permeability to air, water vapor and gases, good weather, ozone, organic and inorganic chemicals and aging resistance",
+          "Tires",
+          "-40 - 110"
+        ],
+        [
+          "NBR",
+          "Nitrile butadiene rubber",
+          "Oil resistant (depends on acrylonitrile content), good mechanical properties, good abrasion resistance",
+          "Mineral oil and grease seals",
+          "-30 - 100"
+        ],
+        [
+          "PUR",
+          "Polyurethanes",
+          "Very good low temperature flexibility, good recovery performance, low gas permeability, good mineral oil resistance, high strength",
+          "Adhesives or glues, seat cushions, exterior elements in cars, soundproofing, suspension insulators",
+          "-50 - 110"
+        ],
+        [
+          "SBR",
+          "Styrene butadiene rubber",
+          "Very good mechanical properties, abrasion resistance",
+          "Tires, v-belts",
+          "-40 - 110"
+        ],
+        [
+          "VMQ",
+          "Silicone rubber",
+          "High thermal resistance, very flexible at low temperatures, resistant to oils and water vapor, good weather resistance, good dielectric properties, hydrophobic",
+          "Seals in electric applications, radiators",
+          "-50 - 200"
+        ]
+      ]
+    }
+  ]
+}

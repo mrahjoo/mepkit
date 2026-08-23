@@ -1,0 +1,68 @@
+{
+  "id": "water_consumption_and_activities",
+  "title": "Water Consumption and Activities",
+  "description": "Typical human activities and average water consumption. The values indicate water consumption versus human activities in both gallons and liters.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Activity",
+        "Water Consumption (gallons)",
+        "Water Consumption (liters)"
+      ],
+      "rows": [
+        [
+          "Brushing teeth, tap running",
+          "2 - 3",
+          "7.5 - 11.5"
+        ],
+        [
+          "Bath",
+          "30 - 40",
+          "115 - 150"
+        ],
+        [
+          "Dish-washing by hand, tap running",
+          "10 - 20",
+          "38 - 75"
+        ],
+        [
+          "Dishwasher",
+          "7 - 10",
+          "26 - 38"
+        ],
+        [
+          "Food preparation",
+          "-",
+          "11 - 19"
+        ],
+        [
+          "Hands washing, tap running",
+          "1 - 2",
+          "3.5 - 7.5"
+        ],
+        [
+          "Laundry machine, clothes washer",
+          "25 - 40",
+          "150"
+        ],
+        [
+          "Shaving, tap running",
+          "2 - 5",
+          "7.5 - 19"
+        ],
+        [
+          "Shower (per minute)",
+          "2 - 4",
+          "7.5 - 15"
+        ],
+        [
+          "Toilet (per flush)",
+          "1.5 - 4",
+          "5.5 - 15"
+        ]
+      ]
+    }
+  ]
+}

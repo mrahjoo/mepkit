@@ -1,0 +1,122 @@
+{
+  "id": "calcium_chloride_water_solutions",
+  "title": "Calcium Chloride Water Solutions",
+  "description": "Freezing point, density, specific heat and dynamic viscosity of Calcium Chloride Water coolants",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Calcium Chloride Water Solutions\n\nCalculate and explore freezing point, density, specific heat, and dynamic viscosity of calcium chloride water solutions based on concentration."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "concentration",
+          "label": "Calcium Chloride Concentration",
+          "type": "select",
+          "options": [
+            {
+              "value": 10,
+              "label": "10% by mass"
+            },
+            {
+              "value": 20,
+              "label": "20% by mass"
+            },
+            {
+              "value": 30,
+              "label": "30% by mass"
+            },
+            {
+              "value": 40,
+              "label": "40% by mass"
+            }
+          ],
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity (at 60°F, 15.6°C)",
+          "formula": "inputs.concentration == 10 ? 1.090 : inputs.concentration == 20 ? 1.189 : inputs.concentration == 30 ? 1.298 : 1.416",
+          "unit": ""
+        },
+        {
+          "id": "freezing_point_f",
+          "label": "Freezing Point",
+          "formula": "inputs.concentration == 10 ? 20 : inputs.concentration == 20 ? -4 : inputs.concentration == 30 ? -52 : 61",
+          "unit": "°F"
+        },
+        {
+          "id": "freezing_point_c",
+          "label": "Freezing Point",
+          "formula": "inputs.concentration == 10 ? -6.7 : inputs.concentration == 20 ? -20 : inputs.concentration == 30 ? -47 : 16",
+          "unit": "°C"
+        },
+        {
+          "id": "boiling_point_f",
+          "label": "Boiling Point",
+          "formula": "inputs.concentration == 10 ? 215 : inputs.concentration == 20 ? 220 : inputs.concentration == 30 ? 231 : 247",
+          "unit": "°F"
+        },
+        {
+          "id": "boiling_point_c",
+          "label": "Boiling Point",
+          "formula": "inputs.concentration == 10 ? 102 : inputs.concentration == 20 ? 104 : inputs.concentration == 30 ? 111 : 119",
+          "unit": "°C"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Concentration (% by mass)",
+        "Specific Gravity (60°F)",
+        "Freezing Point (°F)",
+        "Freezing Point (°C)",
+        "Boiling Point (°F)",
+        "Boiling Point (°C)"
+      ],
+      "rows": [
+        [
+          10,
+          1.09,
+          20,
+          -6.7,
+          215,
+          102
+        ],
+        [
+          20,
+          1.189,
+          -4,
+          -20,
+          220,
+          104
+        ],
+        [
+          30,
+          1.298,
+          -52,
+          -47,
+          231,
+          111
+        ],
+        [
+          40,
+          1.416,
+          61,
+          16,
+          247,
+          119
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Important Notes\n\n- **Eutectic Point**: The eutectic point occurs at approximately 29.92% calcium chloride concentration, which represents the lowest freezing point for calcium chloride water solutions.\n- **Specific Gravity**: Measured at 60°F (15.6°C)\n- **Applications**: Calcium chloride water solutions are commonly used as coolants and de-icing agents\n- **Density**: Increases with calcium chloride concentration\n- **Viscosity**: Dynamic viscosity varies with both concentration and temperature"
+    }
+  ]
+}

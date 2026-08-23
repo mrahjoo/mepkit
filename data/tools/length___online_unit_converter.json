@@ -1,0 +1,389 @@
+{
+  "id": "length___online_unit_converter",
+  "title": "Length - Online Unit Converter",
+  "description": "Convert between common length units including metres, feet, inches, kilometers, miles, nautical miles, and more. Interactive calculator with comprehensive conversion table.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "length_converter",
+      "content": "Length Units Converter",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Enter Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "from_unit",
+          "label": "Convert From",
+          "type": "select",
+          "options": [
+            {
+              "value": "metre",
+              "label": "Metre"
+            },
+            {
+              "value": "decimeter",
+              "label": "Decimeter"
+            },
+            {
+              "value": "centimeter",
+              "label": "Centimeter"
+            },
+            {
+              "value": "millimeter",
+              "label": "Millimeter"
+            },
+            {
+              "value": "micrometer",
+              "label": "Micrometer"
+            },
+            {
+              "value": "nanometer",
+              "label": "Nanometer"
+            },
+            {
+              "value": "angstrom",
+              "label": "Ångströms"
+            },
+            {
+              "value": "hectometer",
+              "label": "Hectometer"
+            },
+            {
+              "value": "kilometer",
+              "label": "Kilometer"
+            },
+            {
+              "value": "inch",
+              "label": "Inch"
+            },
+            {
+              "value": "foot",
+              "label": "Foot"
+            },
+            {
+              "value": "yard",
+              "label": "Yard"
+            },
+            {
+              "value": "mile",
+              "label": "Mile"
+            },
+            {
+              "value": "nautical_mile",
+              "label": "Nautical Mile"
+            },
+            {
+              "value": "cable",
+              "label": "Cable"
+            }
+          ],
+          "defaultValue": "metre"
+        },
+        {
+          "id": "to_unit",
+          "label": "Convert To",
+          "type": "select",
+          "options": [
+            {
+              "value": "metre",
+              "label": "Metre"
+            },
+            {
+              "value": "decimeter",
+              "label": "Decimeter"
+            },
+            {
+              "value": "centimeter",
+              "label": "Centimeter"
+            },
+            {
+              "value": "millimeter",
+              "label": "Millimeter"
+            },
+            {
+              "value": "micrometer",
+              "label": "Micrometer"
+            },
+            {
+              "value": "nanometer",
+              "label": "Nanometer"
+            },
+            {
+              "value": "angstrom",
+              "label": "Ångströms"
+            },
+            {
+              "value": "hectometer",
+              "label": "Hectometer"
+            },
+            {
+              "value": "kilometer",
+              "label": "Kilometer"
+            },
+            {
+              "value": "inch",
+              "label": "Inch"
+            },
+            {
+              "value": "foot",
+              "label": "Foot"
+            },
+            {
+              "value": "yard",
+              "label": "Yard"
+            },
+            {
+              "value": "mile",
+              "label": "Mile"
+            },
+            {
+              "value": "nautical_mile",
+              "label": "Nautical Mile"
+            },
+            {
+              "value": "cable",
+              "label": "Cable"
+            }
+          ],
+          "defaultValue": "foot"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Value",
+          "formula": "inputs.value",
+          "unit": "unit",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "conversion_table",
+      "content": "Length Units Conversion Reference Table",
+      "headers": [
+        "Unit",
+        "to Inches",
+        "to Feet",
+        "to Yards",
+        "to Miles",
+        "to Nautical Miles",
+        "to Cables"
+      ],
+      "rows": [
+        [
+          "Metre",
+          "39.37",
+          "3.28",
+          "1.09",
+          "6.21×10⁻⁴",
+          "5.4×10⁻³",
+          "5.4×10⁻³"
+        ],
+        [
+          "Decimeter",
+          "3.937",
+          "0.328",
+          "0.109",
+          "6.21×10⁻⁵",
+          "5.4×10⁻⁴",
+          "5.4×10⁻⁴"
+        ],
+        [
+          "Centimeter",
+          "0.394",
+          "0.0328",
+          "0.0109",
+          "6.21×10⁻⁶",
+          "5.4×10⁻⁵",
+          "5.4×10⁻⁵"
+        ],
+        [
+          "Millimeter",
+          "0.039",
+          "0.00328",
+          "0.00109",
+          "6.21×10⁻⁷",
+          "5.4×10⁻⁶",
+          "5.4×10⁻⁶"
+        ],
+        [
+          "Micrometer",
+          "3.9×10⁻⁵",
+          "3.28×10⁻⁶",
+          "1.09×10⁻⁶",
+          "6.2×10⁻¹⁰",
+          "5.4×10⁻¹⁰",
+          "5.4×10⁻⁹"
+        ],
+        [
+          "Nanometer",
+          "3.9×10⁻⁸",
+          "3.28×10⁻⁹",
+          "1.09×10⁻⁹",
+          "6.21×10⁻¹³",
+          "5.4×10⁻¹³",
+          "5.4×10⁻¹²"
+        ],
+        [
+          "Ångströms",
+          "3.9×10⁻⁹",
+          "3.28×10⁻¹⁰",
+          "1.09×10⁻¹⁰",
+          "6.21×10⁻¹⁴",
+          "5.4×10⁻¹⁴",
+          "5.4×10⁻¹³"
+        ],
+        [
+          "Hectometer",
+          "3937",
+          "328",
+          "109.4",
+          "0.0621",
+          "0.054",
+          "0.54"
+        ],
+        [
+          "Kilometer",
+          "39370",
+          "3280",
+          "1094",
+          "0.621",
+          "0.54",
+          "0.54"
+        ],
+        [
+          "Inch",
+          "1",
+          "0.0833",
+          "0.0278",
+          "1.58×10⁻⁵",
+          "1.37×10⁻⁵",
+          "1.37×10⁻⁴"
+        ],
+        [
+          "Foot",
+          "12",
+          "1",
+          "0.33",
+          "1.89×10⁻⁴",
+          "1.65×10⁻⁴",
+          "1.65×10⁻³"
+        ],
+        [
+          "Yard",
+          "36",
+          "3",
+          "1",
+          "5.7×10⁻⁴",
+          "4.9×10⁻⁴",
+          "4.9×10⁻³"
+        ],
+        [
+          "Mile",
+          "63398",
+          "5280",
+          "1761",
+          "1",
+          "0.87",
+          "8.7"
+        ],
+        [
+          "Nautical Mile",
+          "72908",
+          "6076",
+          "2025",
+          "1.15",
+          "1",
+          "10"
+        ],
+        [
+          "Cable",
+          "7291",
+          "607.6",
+          "203",
+          "0.11",
+          "0.1",
+          "1"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "inches_to_feet",
+      "content": "Inches to Feet Conversion Table",
+      "headers": [
+        "Inches",
+        "Feet (Fraction)",
+        "Feet (Decimal)"
+      ],
+      "rows": [
+        [
+          "1",
+          "1/12",
+          "0.08"
+        ],
+        [
+          "2",
+          "2/12",
+          "0.17"
+        ],
+        [
+          "3",
+          "3/12",
+          "0.25"
+        ],
+        [
+          "4",
+          "4/12",
+          "0.33"
+        ],
+        [
+          "5",
+          "5/12",
+          "0.42"
+        ],
+        [
+          "6",
+          "6/12",
+          "0.50"
+        ],
+        [
+          "7",
+          "7/12",
+          "0.58"
+        ],
+        [
+          "8",
+          "8/12",
+          "0.67"
+        ],
+        [
+          "9",
+          "9/12",
+          "0.75"
+        ],
+        [
+          "10",
+          "10/12",
+          "0.83"
+        ],
+        [
+          "11",
+          "11/12",
+          "0.92"
+        ],
+        [
+          "12",
+          "12/12",
+          "1.00"
+        ]
+      ]
+    }
+  ]
+}

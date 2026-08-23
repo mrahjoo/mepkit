@@ -1,0 +1,104 @@
+{
+  "id": "lpg___liquefied_petroleum_gas",
+  "title": "LPG - Liquefied Petroleum Gas",
+  "description": "LPG (Liquefied Petroleum Gas) is a hydrocarbon mixture consisting of propane, propylene, isobutane, n-butane, and butylene. It is gaseous under normal atmospheric conditions but liquefied by cooling and/or compression. Commonly used as an industrial fuel for domestic, commercial, and chemical applications.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# LPG - Liquefied Petroleum Gas\n\nLPG (Liquefied Petroleum Gas) is a hydrocarbon mixture in either liquid or gaseous state where the main components consist of:\n\n- **Propane** - C₃H₈\n- **Propylene (Propene)** - C₃H₆\n- **Isobutane** - C₄H₁₀\n- **n-Butane** - C₄H₁₀\n- **Butylene (Butene)** - C₄H₈\n\nLiquefied Petroleum Gas (LPG) is gaseous under normal atmospheric conditions, but liquefied by cooling and/or compression.\n\n## Common Uses\n\nLPG is commonly used as an industrial fuel for:\n- Domestic purposes\n- Commercial applications\n- Town gas\n- Autogas\n- Feedstock in chemical plant processes"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Chemical Formula",
+        "Type",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Propane",
+          "C₃H₈",
+          "Alkane",
+          "Primary LPG component"
+        ],
+        [
+          "Propylene",
+          "C₃H₆",
+          "Alkene",
+          "Also called propene"
+        ],
+        [
+          "Isobutane",
+          "C₄H₁₀",
+          "Alkane",
+          "Branched butane isomer"
+        ],
+        [
+          "n-Butane",
+          "C₄H₁₀",
+          "Alkane",
+          "Straight-chain butane"
+        ],
+        [
+          "Butylene",
+          "C₄H₈",
+          "Alkene",
+          "Also called butene"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "LPG Composition by Component Type"
+        },
+        "tooltip": {
+          "trigger": "item"
+        },
+        "legend": {
+          "orient": "vertical",
+          "left": "left"
+        },
+        "series": [
+          {
+            "name": "Component Distribution",
+            "type": "pie",
+            "radius": "50%",
+            "data": [
+              {
+                "value": 40,
+                "name": "Propane"
+              },
+              {
+                "value": 20,
+                "name": "Propylene"
+              },
+              {
+                "value": 15,
+                "name": "Isobutane"
+              },
+              {
+                "value": 18,
+                "name": "n-Butane"
+              },
+              {
+                "value": 7,
+                "name": "Butylene"
+              }
+            ],
+            "emphasis": {
+              "itemStyle": {
+                "shadowBlur": 10,
+                "shadowOffsetX": 0,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

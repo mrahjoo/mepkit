@@ -1,0 +1,103 @@
+{
+  "id": "lpg___gas_properties",
+  "title": "LPG - Gas Properties",
+  "description": "Liquefied Petroleum - LP - gas properties. LPG, GPL, LP or autogas is a flammable mixture of hydrocarbon gases.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Butane",
+        "Propane"
+      ],
+      "rows": [
+        [
+          "Btu per cu. ft. (60 oF)",
+          3280,
+          2516
+        ],
+        [
+          "Btu per lb.",
+          21221,
+          21591
+        ],
+        [
+          "Btu per gal.",
+          102032,
+          91547
+        ],
+        [
+          "Cu. ft. per lb.",
+          6.506,
+          8.58
+        ],
+        [
+          "Cu. ft. per gal.",
+          31.26,
+          36.69
+        ],
+        [
+          "Lb. per gal.",
+          4.81,
+          4.24
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "LPG Gas Properties Comparison",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Butane",
+            "Propane"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Btu/cu.ft.",
+            "Btu/lb.",
+            "Btu/gal.",
+            "Cu.ft/lb.",
+            "Cu.ft/gal.",
+            "Lb/gal."
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Butane",
+            "data": [
+              3280,
+              21221,
+              102032,
+              6.506,
+              31.26,
+              4.81
+            ],
+            "type": "bar"
+          },
+          {
+            "name": "Propane",
+            "data": [
+              2516,
+              21591,
+              91547,
+              8.58,
+              36.69,
+              4.24
+            ],
+            "type": "bar"
+          }
+        ]
+      }
+    }
+  ]
+}

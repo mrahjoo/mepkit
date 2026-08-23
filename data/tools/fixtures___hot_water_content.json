@@ -1,0 +1,43 @@
+{
+  "id": "fixtures___hot_water_content",
+  "title": "Fixtures - Hot Water Content",
+  "description": "Content of hot water in some common used fixtures - basins, sinks and baths. The table below provides an indication of normal hot water content in fixtures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fixtures",
+        "Contents (liter)",
+        "Contents (gal)"
+      ],
+      "rows": [
+        [
+          "Basin, normal",
+          5,
+          1
+        ],
+        [
+          "Basin, full",
+          9,
+          2
+        ],
+        [
+          "Sink, normal",
+          22,
+          5
+        ],
+        [
+          "Sink, full",
+          45,
+          10
+        ],
+        [
+          "Bath",
+          "135 - 180",
+          "30 - 40"
+        ]
+      ]
+    }
+  ]
+}

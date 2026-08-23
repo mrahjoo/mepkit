@@ -1,0 +1,6 @@
+{
+  "id": "ethylene___density_and_specific_weight_vs__tempera",
+  "title": "Ethylene - Density and Specific Weight vs. Temperature and Pressure",
+  "description": "Calculate and display density and specific weight of ethylene at varying temperatures and pressures in SI and Imperial units. This tool provides comprehensive tables and conversions for ethylene properties across different states (liquid, gas, supercritical phase).",
+  "type": "datatable"
+}

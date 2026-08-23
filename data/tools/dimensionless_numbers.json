@@ -1,0 +1,227 @@
+{
+  "id": "dimensionless_numbers",
+  "title": "Dimensionless Numbers",
+  "description": "Physical and chemical dimensionless quantities - Reynolds number, Euler, Nusselt, and Prandtl number - and many more. Calculator for dimensionless numbers used in chemistry, fluid flow and physics engineering.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Dimensionless Numbers Calculator\n\nCalculate various dimensionless quantities used in chemistry, fluid flow and physics engineering such as Reynolds number, Euler, Nusselt, and Prandtl number.\n\n## Select a Dimensionless Number\n\nChoose from the available dimensionless numbers below and enter the required parameters."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "number_type",
+          "label": "Dimensionless Number",
+          "type": "select",
+          "options": [
+            {
+              "value": "Re",
+              "label": "Reynolds number (Re) - Fluid flow patterns"
+            },
+            {
+              "value": "Eu",
+              "label": "Euler number (Eu) - Energy losses in fluid flows"
+            },
+            {
+              "value": "Fr",
+              "label": "Froude number (Fr) - Resistance of submerged objects"
+            },
+            {
+              "value": "Gr",
+              "label": "Grashof number (Gr) - Natural heat convection"
+            },
+            {
+              "value": "Ha",
+              "label": "Hartmann number (Ha) - Electromagnetic vs viscous force"
+            },
+            {
+              "value": "Kn",
+              "label": "Knudsen number (Kn) - Statistical vs continuum mechanics"
+            },
+            {
+              "value": "Le",
+              "label": "Lewis number (Le) - Simultaneous heat and mass transfer"
+            },
+            {
+              "value": "Ma",
+              "label": "Mach number (Ma) - Incompressible flow approximation"
+            },
+            {
+              "value": "Nu",
+              "label": "Nusselt number (Nu) - Convective vs conductive heat transfer"
+            },
+            {
+              "value": "Pe",
+              "label": "Peclet number (Pe) - Advective vs diffusive heat transport"
+            },
+            {
+              "value": "Pr",
+              "label": "Prandtl number (Pr) - Thermal conductivity of gases"
+            },
+            {
+              "value": "Ra",
+              "label": "Rayleigh number (Ra) - Conduction vs convection heat transfer"
+            },
+            {
+              "value": "Sc",
+              "label": "Schmidt number (Sc) - Momentum and mass diffusion"
+            },
+            {
+              "value": "St",
+              "label": "Stanton number (St) - Heat transfer in forced convection"
+            },
+            {
+              "value": "Sr",
+              "label": "Strouhal number (Sr) - Oscillating flow mechanisms"
+            },
+            {
+              "value": "We",
+              "label": "Weber number (We) - Fluid flows with interface"
+            }
+          ]
+        },
+        {
+          "id": "nu",
+          "label": "Speed ν",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "eta",
+          "label": "Viscosity η",
+          "type": "number",
+          "unit": "kg/(m·s)",
+          "defaultValue": 0.001
+        },
+        {
+          "id": "rho",
+          "label": "Density ρ",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "l",
+          "label": "Length l",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "p",
+          "label": "Pressure difference Δp",
+          "type": "number",
+          "unit": "kg/(m·s²)",
+          "defaultValue": 1000
+        },
+        {
+          "id": "g",
+          "label": "Acceleration of free fall g",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "alpha",
+          "label": "Cubic expansion coefficient α",
+          "type": "number",
+          "unit": "1/K",
+          "defaultValue": 0.0001
+        },
+        {
+          "id": "delta_T",
+          "label": "Temperature difference ΔT",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 1
+        },
+        {
+          "id": "a",
+          "label": "Thermal diffusivity a",
+          "type": "number",
+          "unit": "m²/s",
+          "defaultValue": 0.00001
+        },
+        {
+          "id": "D",
+          "label": "Diffusion coefficient D",
+          "type": "number",
+          "unit": "m²/s",
+          "defaultValue": 0.00001
+        },
+        {
+          "id": "c",
+          "label": "Speed of sound c",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 343
+        },
+        {
+          "id": "h",
+          "label": "Heat transfer coefficient h",
+          "type": "number",
+          "unit": "kg/(s³·K)",
+          "defaultValue": 100
+        },
+        {
+          "id": "k",
+          "label": "Thermal conductivity k",
+          "type": "number",
+          "unit": "kg·m/(s³·K)",
+          "defaultValue": 0.6
+        },
+        {
+          "id": "cp",
+          "label": "Specific heat capacity cp",
+          "type": "number",
+          "unit": "J/(kg·K)",
+          "defaultValue": 4186
+        },
+        {
+          "id": "f",
+          "label": "Frequency f",
+          "type": "number",
+          "unit": "1/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "gamma",
+          "label": "Surface tension γ",
+          "type": "number",
+          "unit": "kg/s²",
+          "defaultValue": 0.072
+        },
+        {
+          "id": "lambda",
+          "label": "Mean free path λ",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.00001
+        },
+        {
+          "id": "kd",
+          "label": "Mass transfer coefficient kd",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0.001
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Dimensionless Number",
+          "formula": "IF(inputs.number_type === 'Re', inputs.rho * inputs.nu * inputs.l / inputs.eta, IF(inputs.number_type === 'Eu', inputs.p / (inputs.rho * inputs.nu^2), IF(inputs.number_type === 'Fr', inputs.nu / SQRT(inputs.l * inputs.g), IF(inputs.number_type === 'Gr', inputs.l^3 * inputs.g * inputs.alpha * inputs.delta_T * inputs.rho^2 / inputs.eta^2, IF(inputs.number_type === 'Ha', inputs.B * inputs.l * SQRT(inputs.kappa / inputs.eta), IF(inputs.number_type === 'Kn', inputs.lambda / inputs.l, IF(inputs.number_type === 'Le', inputs.a / inputs.D, IF(inputs.number_type === 'Ma', inputs.nu / inputs.c, IF(inputs.number_type === 'Nu', inputs.h * inputs.l / inputs.k, IF(inputs.number_type === 'Pe', inputs.nu * inputs.l / inputs.a, IF(inputs.number_type === 'Pr', inputs.eta / (inputs.rho * inputs.a), IF(inputs.number_type === 'Ra', inputs.l^3 * inputs.g * inputs.alpha * inputs.delta_T * inputs.rho / (inputs.eta * inputs.a), IF(inputs.number_type === 'Sc', inputs.eta / (inputs.rho * inputs.D), IF(inputs.number_type === 'St', inputs.h / (inputs.rho * inputs.nu * inputs.cp), IF(inputs.number_type === 'Sr', inputs.l * inputs.f / inputs.nu, IF(inputs.number_type === 'We', inputs.rho * inputs.nu^2 * inputs.l / inputs.gamma, 0))))))))))))))))))",
+          "unit": "-",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Symbol Definitions\n\n| Symbol | Parameter | SI Unit |\n|--------|-----------|----------|\n| ν | Speed | m/s |\n| η | Viscosity | kg/(m·s) |\n| ρ | Density | kg/m³ |\n| l | Length | m |\n| a | Thermal diffusivity | m²/s |\n| Δp | Pressure difference | kg/(m·s²) |\n| g | Acceleration of free fall | m/s² |\n| α | Cubic expansion coefficient | 1/K |\n| ΔT | Temperature difference | K |\n| λ | Mean free path | m |\n| D | Diffusion coefficient | m²/s |\n| c | Speed of sound | m/s |\n| h | Heat transfer coefficient | kg/(s³·K) |\n| k | Thermal conductivity | kg·m/(s³·K) |\n| cp | Specific heat capacity | kg·m²/(s²·K) |\n| f | Frequency | 1/s |\n| γ | Surface tension | kg/s² |\n| kd | Mass transfer coefficient | m/s |"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "pvc_pipes_schedule_40___friction_loss_vs__water_fl",
+  "title": "PVC Pipes Schedule 40 - Friction Loss vs. Water Flow",
+  "description": "Friction loss (psi/100 ft) and velocity for water flow in plastic PVC pipe schedule 40, calculated using the Hazen-Williams Equation with coefficient c = 140.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 1
+        },
+        {
+          "id": "flow_rate",
+          "label": "Water Flow Rate",
+          "type": "number",
+          "unit": "gal/min",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "friction_loss",
+          "label": "Friction Loss",
+          "unit": "psi/100 ft",
+          "format": "decimal",
+          "formula": "((inputs.flow_rate / (0.2083 * inputs.pipe_diameter * inputs.pipe_diameter)) ^ 1.852) / (61.9 * (inputs.pipe_diameter ^ 4.8704))"
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity",
+          "unit": "ft/s",
+          "format": "decimal",
+          "formula": "inputs.flow_rate * 0.0002228 / (0.7854 * inputs.pipe_diameter * inputs.pipe_diameter / 144)"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Information\n\n**Hazen-Williams Equation**: The calculation is based on the Hazen-Williams Equation with a Hazen-Williams coefficient c = 140.\n\n**Recommended Velocity**: Velocities between 7 to 10 feet per second are common. In general, velocities above 5 feet per second should be avoided.\n\n**Conversion Factors**:\n- 1 gal (US)/min = 6.30888×10⁻⁵ m³/s = 0.0227 m³/h = 0.06309 dm³(litre)/s = 2.228×10⁻³ ft³/s\n- 1 ft/s = 0.3048 m/s\n- 1 psi (lb/in²) = 6,894.8 Pa (N/m²) = 6.895×10⁻² bar = 703.1 mm H₂O at 61°F"
+    }
+  ]
+}

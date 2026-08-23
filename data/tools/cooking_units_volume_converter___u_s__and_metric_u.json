@@ -1,0 +1,423 @@
+{
+  "id": "cooking_units_volume_converter___u_s__and_metric_u",
+  "title": "Cooking Units Volume Converter - U.S. and Metric Units",
+  "description": "Convert between cooking liquid and dry measuring US and metric volume units. Easily convert between teaspoons, tablespoons, cups, ounces, milliliters, liters and other common cooking measurements.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "volume_amount",
+          "label": "Volume Amount",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        },
+        {
+          "id": "source_unit",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "US Teaspoon",
+              "value": "us_teaspoon"
+            },
+            {
+              "label": "US Tablespoon",
+              "value": "us_tablespoon"
+            },
+            {
+              "label": "US Fluid Ounce",
+              "value": "us_fl_oz"
+            },
+            {
+              "label": "US Gill",
+              "value": "us_gill"
+            },
+            {
+              "label": "US Cup",
+              "value": "us_cup"
+            },
+            {
+              "label": "US Pint",
+              "value": "us_pint"
+            },
+            {
+              "label": "US Quart",
+              "value": "us_quart"
+            },
+            {
+              "label": "US Gallon",
+              "value": "us_gallon"
+            },
+            {
+              "label": "Cubic Inch",
+              "value": "cubic_inch"
+            },
+            {
+              "label": "UK Teaspoon",
+              "value": "uk_teaspoon"
+            },
+            {
+              "label": "UK Dessert Spoon",
+              "value": "uk_dessert_spoon"
+            },
+            {
+              "label": "UK Tablespoon",
+              "value": "uk_tablespoon"
+            },
+            {
+              "label": "UK Fluid Ounce",
+              "value": "uk_fl_oz"
+            },
+            {
+              "label": "UK Gill",
+              "value": "uk_gill"
+            },
+            {
+              "label": "UK Breakfast Cup",
+              "value": "uk_breakfast_cup"
+            },
+            {
+              "label": "UK Pint",
+              "value": "uk_pint"
+            },
+            {
+              "label": "UK Quart",
+              "value": "uk_quart"
+            },
+            {
+              "label": "UK Gallon",
+              "value": "uk_gallon"
+            },
+            {
+              "label": "Milliliter",
+              "value": "milliliter"
+            },
+            {
+              "label": "Centiliter",
+              "value": "centiliter"
+            },
+            {
+              "label": "Deciliter",
+              "value": "deciliter"
+            },
+            {
+              "label": "Liter",
+              "value": "liter"
+            },
+            {
+              "label": "Dekaliter",
+              "value": "dekaliter"
+            },
+            {
+              "label": "Metric Teaspoon",
+              "value": "metric_teaspoon"
+            },
+            {
+              "label": "Metric Dessert Spoon",
+              "value": "metric_dessert_spoon"
+            },
+            {
+              "label": "Metric Tablespoon",
+              "value": "metric_tablespoon"
+            },
+            {
+              "label": "Metric Cup",
+              "value": "metric_cup"
+            },
+            {
+              "label": "Australian Tablespoon",
+              "value": "au_tablespoon"
+            }
+          ],
+          "defaultValue": "us_cup"
+        },
+        {
+          "id": "target_unit",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "US Teaspoon",
+              "value": "us_teaspoon"
+            },
+            {
+              "label": "US Tablespoon",
+              "value": "us_tablespoon"
+            },
+            {
+              "label": "US Fluid Ounce",
+              "value": "us_fl_oz"
+            },
+            {
+              "label": "US Gill",
+              "value": "us_gill"
+            },
+            {
+              "label": "US Cup",
+              "value": "us_cup"
+            },
+            {
+              "label": "US Pint",
+              "value": "us_pint"
+            },
+            {
+              "label": "US Quart",
+              "value": "us_quart"
+            },
+            {
+              "label": "US Gallon",
+              "value": "us_gallon"
+            },
+            {
+              "label": "Cubic Inch",
+              "value": "cubic_inch"
+            },
+            {
+              "label": "UK Teaspoon",
+              "value": "uk_teaspoon"
+            },
+            {
+              "label": "UK Dessert Spoon",
+              "value": "uk_dessert_spoon"
+            },
+            {
+              "label": "UK Tablespoon",
+              "value": "uk_tablespoon"
+            },
+            {
+              "label": "UK Fluid Ounce",
+              "value": "uk_fl_oz"
+            },
+            {
+              "label": "UK Gill",
+              "value": "uk_gill"
+            },
+            {
+              "label": "UK Breakfast Cup",
+              "value": "uk_breakfast_cup"
+            },
+            {
+              "label": "UK Pint",
+              "value": "uk_pint"
+            },
+            {
+              "label": "UK Quart",
+              "value": "uk_quart"
+            },
+            {
+              "label": "UK Gallon",
+              "value": "uk_gallon"
+            },
+            {
+              "label": "Milliliter",
+              "value": "milliliter"
+            },
+            {
+              "label": "Centiliter",
+              "value": "centiliter"
+            },
+            {
+              "label": "Deciliter",
+              "value": "deciliter"
+            },
+            {
+              "label": "Liter",
+              "value": "liter"
+            },
+            {
+              "label": "Dekaliter",
+              "value": "dekaliter"
+            },
+            {
+              "label": "Metric Teaspoon",
+              "value": "metric_teaspoon"
+            },
+            {
+              "label": "Metric Dessert Spoon",
+              "value": "metric_dessert_spoon"
+            },
+            {
+              "label": "Metric Tablespoon",
+              "value": "metric_tablespoon"
+            },
+            {
+              "label": "Metric Cup",
+              "value": "metric_cup"
+            },
+            {
+              "label": "Australian Tablespoon",
+              "value": "au_tablespoon"
+            }
+          ],
+          "defaultValue": "milliliter"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result_value",
+          "label": "Converted Volume",
+          "formula": "inputs.volume_amount * 236.6",
+          "unit": "ml",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Volume",
+        "U.S. Units",
+        "Metric Units"
+      ],
+      "rows": [
+        [
+          "1 teaspoon (US)",
+          "1/6 ounce",
+          "4.929 milliliters"
+        ],
+        [
+          "1 tablespoon (US)",
+          "0.5 ounce",
+          "14.79 milliliters"
+        ],
+        [
+          "1 fluid ounce (US)",
+          "1 ounce",
+          "29.57 milliliters"
+        ],
+        [
+          "1 gill (US)",
+          "4 ounces",
+          "118 milliliters"
+        ],
+        [
+          "1 cup (US)",
+          "8 ounces",
+          "236.6 milliliters"
+        ],
+        [
+          "1 pint (US)",
+          "16 ounces",
+          "473.2 milliliters"
+        ],
+        [
+          "1 quart (US)",
+          "32 ounces",
+          "946.3 milliliters"
+        ],
+        [
+          "1 gallon (US)",
+          "128 ounces",
+          "3.785 liters"
+        ],
+        [
+          "1 cubic inch",
+          "0.5541 ounces",
+          "16.387 milliliters"
+        ],
+        [
+          "1 teaspoon (UK)",
+          "",
+          "3.55 milliliters"
+        ],
+        [
+          "1 dessert spoon (UK)",
+          "",
+          "12.32 milliliters"
+        ],
+        [
+          "1 tablespoon (UK)",
+          "",
+          "17.75 milliliters"
+        ],
+        [
+          "1 fluid ounce (UK)",
+          "0.96076 ounces",
+          "28.4 milliliters"
+        ],
+        [
+          "1 gill (UK)",
+          "1.2 gills",
+          "142 milliliters"
+        ],
+        [
+          "1 breakfast cup (UK)",
+          "1.2 cups",
+          "284 milliliters"
+        ],
+        [
+          "1 pint (UK)",
+          "1.2 pints",
+          "568 milliliters"
+        ],
+        [
+          "1 quart (UK)",
+          "1.2 quarts",
+          "1.136 liters"
+        ],
+        [
+          "1 gallon (UK)",
+          "1.2 gallons",
+          "4.546 liters"
+        ],
+        [
+          "1 milliliter",
+          "0.203 teaspoon",
+          "1 milliliter"
+        ],
+        [
+          "1 centiliter",
+          "2.03 teaspoons",
+          "10 milliliters"
+        ],
+        [
+          "1 deciliter",
+          "0.423 cup",
+          "100 milliliters"
+        ],
+        [
+          "1 liter",
+          "1.057 quarts",
+          "1000 milliliters"
+        ],
+        [
+          "1 dekaliter",
+          "2.642 gallons",
+          "10000 milliliters"
+        ],
+        [
+          "1 teaspoon (metric)",
+          "",
+          "5 milliliters"
+        ],
+        [
+          "1 dessert spoon (metric)",
+          "",
+          "10 milliliters"
+        ],
+        [
+          "1 tablespoon (metric)",
+          "",
+          "15 milliliters"
+        ],
+        [
+          "1 cup (metric)",
+          "",
+          "250 milliliters"
+        ],
+        [
+          "1 tablespoon (Australia)",
+          "",
+          "20 milliliters"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Notes\n\n- **1 milliliter = 1/1000 liter**\n- UK measurements marked with an asterisk (1) are outdated - metric units are used today\n- This converter includes US standard, UK, and metric cooking measurements\n- Use metric units for the most accurate and standardized recipes"
+    }
+  ]
+}

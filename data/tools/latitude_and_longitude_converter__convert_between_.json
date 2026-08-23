@@ -1,0 +1,101 @@
+{
+  "id": "latitude_and_longitude_converter__convert_between_",
+  "title": "Latitude and Longitude Converter",
+  "description": "Convert between Degrees, Minutes, Seconds (DMS) and Decimal Degrees formats for geographic coordinates. Simplify GPS data, mapping tools, and scientific research coordinate translations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Latitude and Longitude Converter\n\nConvert between different formats of geographic coordinates:\n- **Decimal Degrees (DD)**: Single decimal number (e.g., 63.506144)\n- **Degrees, Minutes, Seconds (DMS)**: Format like 63° 30' 22.1178\" N\n\n## Conversion Rules:\n- **Latitude**: Range from -90° to 90°. Positive = North, Negative = South\n- **Longitude**: Range from -180° to 180°. Positive = East of Greenwich, Negative = West\n\n## Example Conversions:\n- DMS to DD: 63° 30' 22.1178\" N, 9° 12' 3.276\" E → 63.506144, 9.20091\n- DD to DMS: 63.506144, 9.20091 → 63° 30' 22.1178\" N, 9° 12' 3.276\" E"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "latitude_dd",
+          "label": "Latitude (Decimal Degrees)",
+          "type": "number",
+          "defaultValue": 63.506144
+        },
+        {
+          "id": "longitude_dd",
+          "label": "Longitude (Decimal Degrees)",
+          "type": "number",
+          "defaultValue": 9.20091
+        }
+      ],
+      "outputs": [
+        {
+          "id": "latitude_degrees",
+          "label": "Latitude Degrees",
+          "formula": "Math.floor(Math.abs(inputs.latitude_dd))"
+        },
+        {
+          "id": "latitude_minutes",
+          "label": "Latitude Minutes",
+          "formula": "Math.floor((Math.abs(inputs.latitude_dd) - Math.floor(Math.abs(inputs.latitude_dd))) * 60)"
+        },
+        {
+          "id": "latitude_seconds",
+          "label": "Latitude Seconds",
+          "formula": "((Math.abs(inputs.latitude_dd) - Math.floor(Math.abs(inputs.latitude_dd))) * 60 - Math.floor((Math.abs(inputs.latitude_dd) - Math.floor(Math.abs(inputs.latitude_dd))) * 60)) * 60"
+        },
+        {
+          "id": "latitude_hemisphere",
+          "label": "Latitude Hemisphere",
+          "formula": "inputs.latitude_dd >= 0 ? 'N' : 'S'"
+        },
+        {
+          "id": "longitude_degrees",
+          "label": "Longitude Degrees",
+          "formula": "Math.floor(Math.abs(inputs.longitude_dd))"
+        },
+        {
+          "id": "longitude_minutes",
+          "label": "Longitude Minutes",
+          "formula": "Math.floor((Math.abs(inputs.longitude_dd) - Math.floor(Math.abs(inputs.longitude_dd))) * 60)"
+        },
+        {
+          "id": "longitude_seconds",
+          "label": "Longitude Seconds",
+          "formula": "((Math.abs(inputs.longitude_dd) - Math.floor(Math.abs(inputs.longitude_dd))) * 60 - Math.floor((Math.abs(inputs.longitude_dd) - Math.floor(Math.abs(inputs.longitude_dd))) * 60)) * 60"
+        },
+        {
+          "id": "longitude_hemisphere",
+          "label": "Longitude Hemisphere",
+          "formula": "inputs.longitude_dd >= 0 ? 'E' : 'W'"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Coordinate Type",
+        "Format",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Latitude (Decimal Degrees)",
+          "DD",
+          "63.506144"
+        ],
+        [
+          "Latitude (DMS)",
+          "DMS",
+          "63° 30' 22.12\" N"
+        ],
+        [
+          "Longitude (Decimal Degrees)",
+          "DD",
+          "9.20091"
+        ],
+        [
+          "Longitude (DMS)",
+          "DMS",
+          "9° 12' 3.28\" E"
+        ]
+      ]
+    }
+  ]
+}

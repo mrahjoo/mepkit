@@ -1,0 +1,85 @@
+{
+  "id": "units_of_heat___btu__calorie_and_joule",
+  "title": "Units of Heat - BTU, Calorie and Joule",
+  "description": "Convert between common heat units: BTU (British Thermal Unit), Calorie, and Joule. Understand the definitions and relationships between these fundamental heat measurement units in imperial and SI systems.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "id": "info_section",
+      "content": "# Units of Heat - BTU, Calorie and Joule\n\nThe most common units for heat are:\n\n- **BTU (Btu)** - British Thermal Unit - the amount of heat required to raise the temperature of one pound of water through 1 °F\n- **Calorie** - the amount of heat required to raise the temperature of one gram of water 1 °C\n- **Joule** - the SI unit of energy, equal to the work done when a force of one newton acts through a distance of one meter\n\n## Conversion Factors\n\n- 1 Btu = 1055.06 J = 252 cal = 0.293 watt-hours\n- 1 kcal = 4186.8 J = 3.9683 Btu = 1000 cal\n- 1 J = 0.7376 ft·lbf = 9.478×10⁻⁴ Btu = 2.389×10⁻⁴ kcal"
+    },
+    {
+      "type": "calculator",
+      "id": "heat_converter",
+      "content": "Convert between BTU, Calorie, and Joule",
+      "inputs": [
+        {
+          "id": "value_input",
+          "label": "Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "unit_from",
+          "label": "From Unit",
+          "type": "select",
+          "defaultValue": "btu",
+          "options": [
+            {
+              "label": "BTU (British Thermal Unit)",
+              "value": "btu"
+            },
+            {
+              "label": "Calorie (cal)",
+              "value": "cal"
+            },
+            {
+              "label": "Kilocalorie (kcal)",
+              "value": "kcal"
+            },
+            {
+              "label": "Joule (J)",
+              "value": "joule"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result_btu",
+          "label": "BTU",
+          "formula": "inputs.unit_from === 'btu' ? inputs.value_input : inputs.unit_from === 'cal' ? inputs.value_input / 252 : inputs.unit_from === 'kcal' ? inputs.value_input / 3.9683 : inputs.value_input / 1055.06",
+          "unit": "Btu",
+          "format": "decimal"
+        },
+        {
+          "id": "result_cal",
+          "label": "Calorie",
+          "formula": "inputs.unit_from === 'btu' ? inputs.value_input * 252 : inputs.unit_from === 'cal' ? inputs.value_input : inputs.unit_from === 'kcal' ? inputs.value_input * 1000 : inputs.value_input / 4.184",
+          "unit": "cal",
+          "format": "decimal"
+        },
+        {
+          "id": "result_kcal",
+          "label": "Kilocalorie",
+          "formula": "inputs.unit_from === 'btu' ? inputs.value_input * 3.9683 : inputs.unit_from === 'cal' ? inputs.value_input / 1000 : inputs.unit_from === 'kcal' ? inputs.value_input : inputs.value_input / 4186.8",
+          "unit": "kcal",
+          "format": "decimal"
+        },
+        {
+          "id": "result_joule",
+          "label": "Joule",
+          "formula": "inputs.unit_from === 'btu' ? inputs.value_input * 1055.06 : inputs.unit_from === 'cal' ? inputs.value_input * 4.184 : inputs.unit_from === 'kcal' ? inputs.value_input * 4186.8 : inputs.value_input",
+          "unit": "J",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "details_section",
+      "content": "## Key Definitions\n\n### BTU - British Thermal Unit\nThe unit of heat in the imperial system. One BTU is the amount of heat required to raise the temperature of one pound of water through 1 °F (58.5 °F to 59.5 °F) at sea level.\n\n**Conversions:**\n- 1 Btu = 1055.06 J\n- 1 Btu = 0.252 kcal\n- 1 Btu = 252 cal\n- 1 Btu = 778.16 ft·lbf\n\n### Calorie\nCommonly defined as the amount of heat required to raise the temperature of one gram of water by 1 °C. The kilogram calorie (kcal) is used for food energy content.\n\n**Conversions:**\n- 1 kcal = 4186.8 J\n- 1 kcal = 3.9683 Btu\n- 1 kcal = 1000 cal\n\n### Joule\nThe SI unit of heat and energy. One Joule is the work done when a force of one newton acts through a distance of one meter. 4.184 joules of heat energy is required to raise the temperature of 1 gram of water by 1 °C.\n\n**Conversions:**\n- 1 J = 0.7376 ft·lbf\n- 1 J = 9.478×10⁻⁴ Btu\n- 1 J = 2.389×10⁻⁴ kcal"
+    }
+  ]
+}

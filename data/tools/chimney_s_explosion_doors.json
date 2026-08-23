@@ -1,0 +1,37 @@
+{
+  "id": "chimney_s_explosion_doors",
+  "title": "Chimney's Explosion Doors",
+  "description": "Recommended size of explosion doors or draught stabilizers in oil fired installations. The table below can be used to estimate release openings in chimneys.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Cross Sectional Area of Chimney (m²)",
+        "Approximately Release Opening of Stabilizer (mm)"
+      ],
+      "rows": [
+        [
+          "0.025 - 0.050",
+          "150 x 230"
+        ],
+        [
+          "0.050 - 0.125",
+          "200 x 330"
+        ],
+        [
+          "0.125 - 0.200",
+          "330 x 450"
+        ],
+        [
+          "0.200 - 0.400",
+          "400 x 600"
+        ],
+        [
+          "0.400 - 1.000",
+          "600 x 800"
+        ]
+      ]
+    }
+  ]
+}

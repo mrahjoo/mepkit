@@ -1,0 +1,194 @@
+{
+  "id": "flow_section_channels___geometric_relationships",
+  "title": "Flow Section Channels - Geometric Relationships",
+  "description": "Calculate area, wetted perimeter and hydraulic radius for geometric flow sections including rectangular, trapezoidal, triangular, and circular channels.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Rectangular Channel",
+      "inputs": [
+        {
+          "id": "rect_b",
+          "label": "Width (b)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "rect_h",
+          "label": "Height of flow (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "rect_area",
+          "label": "Flow Area (A)",
+          "formula": "inputs.rect_b * inputs.rect_h",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "rect_perimeter",
+          "label": "Wetted Perimeter (P)",
+          "formula": "inputs.rect_b + 2 * inputs.rect_h",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "rect_radius",
+          "label": "Hydraulic Radius (Rh)",
+          "formula": "(inputs.rect_b * inputs.rect_h) / (inputs.rect_b + 2 * inputs.rect_h)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Trapezoidal Channel",
+      "inputs": [
+        {
+          "id": "trap_b",
+          "label": "Bottom width (b)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "trap_T",
+          "label": "Top width (T)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 4
+        },
+        {
+          "id": "trap_h",
+          "label": "Height of flow (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "trap_area",
+          "label": "Flow Area (A)",
+          "formula": "inputs.trap_h * (inputs.trap_b + inputs.trap_T) / 2",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "trap_perimeter",
+          "label": "Wetted Perimeter (P)",
+          "formula": "inputs.trap_b + 2 * Math.sqrt(Math.pow((inputs.trap_T - inputs.trap_b) / 2, 2) + Math.pow(inputs.trap_h, 2))",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "trap_radius",
+          "label": "Hydraulic Radius (Rh)",
+          "formula": "(inputs.trap_h * (inputs.trap_b + inputs.trap_T) / 2) / (inputs.trap_b + 2 * Math.sqrt(Math.pow((inputs.trap_T - inputs.trap_b) / 2, 2) + Math.pow(inputs.trap_h, 2)))",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Triangular Channel",
+      "inputs": [
+        {
+          "id": "tri_z",
+          "label": "Side slope (z)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 1
+        },
+        {
+          "id": "tri_h",
+          "label": "Height of flow (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tri_area",
+          "label": "Flow Area (A)",
+          "formula": "inputs.tri_z * Math.pow(inputs.tri_h, 2)",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "tri_perimeter",
+          "label": "Wetted Perimeter (P)",
+          "formula": "2 * inputs.tri_h * Math.sqrt(1 + Math.pow(inputs.tri_z, 2))",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "tri_radius",
+          "label": "Hydraulic Radius (Rh)",
+          "formula": "(inputs.tri_z * inputs.tri_h) / (2 * Math.sqrt(1 + Math.pow(inputs.tri_z, 2)))",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Circular Channel",
+      "inputs": [
+        {
+          "id": "circ_D",
+          "label": "Diameter (D)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "circ_h",
+          "label": "Height of flow (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "circ_alpha",
+          "label": "Angle (α)",
+          "formula": "Math.acos(1 - inputs.circ_h / (inputs.circ_D / 2))",
+          "unit": "rad",
+          "format": "decimal"
+        },
+        {
+          "id": "circ_area",
+          "label": "Flow Area (A)",
+          "formula": "(Math.pow(inputs.circ_D, 2) / 4) * (Math.acos(1 - inputs.circ_h / (inputs.circ_D / 2)) - Math.sin(2 * Math.acos(1 - inputs.circ_h / (inputs.circ_D / 2))) / 2)",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "circ_perimeter",
+          "label": "Wetted Perimeter (P)",
+          "formula": "Math.acos(1 - inputs.circ_h / (inputs.circ_D / 2)) * inputs.circ_D",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "circ_radius",
+          "label": "Hydraulic Radius (Rh)",
+          "formula": "(inputs.circ_D / 4) * (1 - Math.sin(2 * Math.acos(1 - inputs.circ_h / (inputs.circ_D / 2))) / (2 * Math.acos(1 - inputs.circ_h / (inputs.circ_D / 2))))",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

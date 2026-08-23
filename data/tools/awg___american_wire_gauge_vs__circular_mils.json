@@ -1,0 +1,258 @@
+{
+  "id": "awg___american_wire_gauge_vs__circular_mils",
+  "title": "AWG - American Wire Gauge vs. Circular Mils",
+  "description": "Calculate wire diameter and cross-sectional area from American Wire Gauge (AWG) number. Convert between AWG, diameter (inches and mm), and area (circular mils and mm²).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "gauge",
+          "label": "AWG Gauge Number",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": "AWG"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "diameter_inches",
+          "label": "Diameter",
+          "formula": "0.00592 * Math.pow(36 - inputs.gauge, 1/39)",
+          "unit": "inches",
+          "format": "decimal"
+        },
+        {
+          "id": "diameter_mm",
+          "label": "Diameter",
+          "formula": "0.12792 * Math.pow(36 - inputs.gauge, 1/39)",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "area_circular_mils",
+          "label": "Area",
+          "formula": "Math.pow(0.00592 * Math.pow(36 - inputs.gauge, 1/39) * 1000, 2)",
+          "unit": "circular mils",
+          "format": "decimal"
+        },
+        {
+          "id": "area_mm2",
+          "label": "Area",
+          "formula": "Math.PI * Math.pow(0.12792 * Math.pow(36 - inputs.gauge, 1/39) / 2, 2)",
+          "unit": "mm²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "AWG",
+        "Diameter (mils)",
+        "Diameter (mm)",
+        "Area (circular mils)",
+        "Area (mm²)"
+      ],
+      "rows": [
+        [
+          "0000 (4/0)",
+          460,
+          11.7,
+          211592,
+          107
+        ],
+        [
+          "000 (3/0)",
+          410,
+          10.4,
+          167800,
+          85
+        ],
+        [
+          "00 (2/0)",
+          365,
+          9.27,
+          133072,
+          67.4
+        ],
+        [
+          "0 (1/0)",
+          325,
+          8.25,
+          105531,
+          53.5
+        ],
+        [
+          "1",
+          289,
+          7.35,
+          83690,
+          42.4
+        ],
+        [
+          "2",
+          258,
+          6.54,
+          66369,
+          33.6
+        ],
+        [
+          "3",
+          229,
+          5.83,
+          52633,
+          26.7
+        ],
+        [
+          "4",
+          204,
+          5.19,
+          41740,
+          21.2
+        ],
+        [
+          "5",
+          182,
+          4.62,
+          33101,
+          16.8
+        ],
+        [
+          "6",
+          162,
+          4.12,
+          26251,
+          13.3
+        ],
+        [
+          "7",
+          144,
+          3.67,
+          20818,
+          10.5
+        ],
+        [
+          "8",
+          128,
+          3.26,
+          16509,
+          8.37
+        ],
+        [
+          "9",
+          114,
+          2.91,
+          13092,
+          6.63
+        ],
+        [
+          "10",
+          102,
+          2.59,
+          10383,
+          5.26
+        ],
+        [
+          "11",
+          90.7,
+          2.31,
+          8234,
+          4.17
+        ],
+        [
+          "12",
+          80.8,
+          2.05,
+          6530,
+          3.31
+        ],
+        [
+          "13",
+          72,
+          1.83,
+          5178,
+          2.62
+        ],
+        [
+          "14",
+          64.1,
+          1.63,
+          4107,
+          2.08
+        ],
+        [
+          "15",
+          57.1,
+          1.45,
+          3257,
+          1.65
+        ],
+        [
+          "16",
+          50.8,
+          1.29,
+          2583,
+          1.31
+        ],
+        [
+          "17",
+          45.3,
+          1.15,
+          2048,
+          1.04
+        ],
+        [
+          "18",
+          40.3,
+          1.02,
+          1624,
+          0.823
+        ],
+        [
+          "20",
+          32,
+          0.812,
+          1022,
+          0.518
+        ],
+        [
+          "21",
+          28.5,
+          0.723,
+          810,
+          0.41
+        ],
+        [
+          "22",
+          25.3,
+          0.644,
+          642,
+          0.326
+        ],
+        [
+          "23",
+          22.6,
+          0.573,
+          510,
+          0.258
+        ],
+        [
+          "24",
+          20.1,
+          0.511,
+          404,
+          0.205
+        ],
+        [
+          "25",
+          17.9,
+          0.455,
+          320,
+          0.162
+        ]
+      ]
+    }
+  ]
+}

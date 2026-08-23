@@ -1,0 +1,136 @@
+{
+  "id": "sound___abatement_vs__the_distance_from_source",
+  "title": "Sound - Abatement vs. the Distance from Source",
+  "description": "Calculate sound pressure level reduction with distance from a noise source using the spherical and half-spherical distance formulas. The sound pressure decreases with distance, where doubling the distance reduces the sound pressure level by approximately 6 decibels.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "sound_pressure_calculator",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "content": "### Sound Pressure Level Calculator\n\nCalculate the sound pressure level at a given distance from a noise source using the formula:\n\n_Lp = 20 log((D ρ c N / (4 π r²))^(1/2) / pref)_",
+      "inputs": [
+        {
+          "id": "directivity_coefficient",
+          "label": "Directivity Coefficient (D)",
+          "type": "select",
+          "defaultValue": 2,
+          "options": [
+            {
+              "label": "Spherical (1)",
+              "value": 1
+            },
+            {
+              "label": "Half Spherical (2)",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "air_density",
+          "label": "Density of Air (ρ)",
+          "type": "number",
+          "defaultValue": 1.2,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "speed_of_sound",
+          "label": "Speed of Sound (c)",
+          "type": "number",
+          "defaultValue": 331.2,
+          "unit": "m/s"
+        },
+        {
+          "id": "sound_power",
+          "label": "Sound Power (N)",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "W"
+        },
+        {
+          "id": "distance_from_source",
+          "label": "Distance from Source (r)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sound_pressure",
+          "label": "Sound Pressure (p)",
+          "formula": "Math.sqrt((inputs.directivity_coefficient * inputs.air_density * inputs.speed_of_sound * inputs.sound_power) / (4 * Math.PI * Math.pow(inputs.distance_from_source, 2)))",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "sound_pressure_level",
+          "label": "Sound Pressure Level (Lp)",
+          "formula": "20 * Math.log10(Math.sqrt((inputs.directivity_coefficient * inputs.air_density * inputs.speed_of_sound * inputs.sound_power) / (4 * Math.PI * Math.pow(inputs.distance_from_source, 2))) / 0.00002)",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "distance_attenuation_table",
+      "headers": [
+        "Distance (m)",
+        "Sound Pressure Level (dB)",
+        "Attenuation from 1m (dB)"
+      ],
+      "rows": [
+        [
+          1,
+          "91.00",
+          "0.00"
+        ],
+        [
+          2,
+          "84.96",
+          "6.04"
+        ],
+        [
+          3,
+          "80.47",
+          "10.53"
+        ],
+        [
+          4,
+          "77.96",
+          "13.04"
+        ],
+        [
+          5,
+          "76.00",
+          "15.00"
+        ],
+        [
+          10,
+          "71.00",
+          "20.00"
+        ],
+        [
+          20,
+          "64.96",
+          "26.04"
+        ],
+        [
+          50,
+          "56.00",
+          "35.00"
+        ],
+        [
+          100,
+          "50.00",
+          "41.00"
+        ]
+      ]
+    }
+  ]
+}

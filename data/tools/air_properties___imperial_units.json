@@ -1,0 +1,160 @@
+{
+  "id": "air_properties___imperial_units",
+  "title": "Air Properties - Imperial Units",
+  "description": "Thermodynamic properties of air at low pressures - imperial units. Calculate and lookup enthalpy, internal energy, and relative pressure based on temperature.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "air_properties_table",
+      "headers": [
+        "Temperature (R)",
+        "Enthalpy h (Btu/lbm)",
+        "Relative Pressure pr",
+        "Internal Energy u (Btu/lbm)"
+      ],
+      "rows": [
+        [
+          100,
+          -360,
+          23.7,
+          0.0038
+        ],
+        [
+          200,
+          -260,
+          47.7,
+          0.0432
+        ],
+        [
+          300,
+          -160,
+          71.6,
+          0.178
+        ],
+        [
+          400,
+          -60,
+          95.5,
+          0.486
+        ],
+        [
+          500,
+          40,
+          119.5,
+          1.059
+        ],
+        [
+          600,
+          140,
+          143.5,
+          2
+        ],
+        [
+          700,
+          240,
+          167.6,
+          3.45
+        ],
+        [
+          800,
+          340,
+          191.8,
+          5.53
+        ],
+        [
+          900,
+          440,
+          216.3,
+          8.41
+        ],
+        [
+          1000,
+          540,
+          241,
+          12.3
+        ],
+        [
+          1200,
+          740,
+          291.3,
+          24
+        ],
+        [
+          1400,
+          940,
+          342.9,
+          42.9
+        ],
+        [
+          1600,
+          1140,
+          395.7,
+          71.7
+        ],
+        [
+          1800,
+          1340,
+          449.7,
+          114
+        ],
+        [
+          2000,
+          1540,
+          504.7,
+          174
+        ],
+        [
+          2500,
+          2040,
+          645.8,
+          436
+        ],
+        [
+          3000,
+          2540,
+          790.7,
+          941
+        ]
+      ],
+      "content": "Air Properties Reference Table"
+    },
+    {
+      "type": "calculator",
+      "id": "air_properties_calculator",
+      "content": "Enter a temperature to interpolate air properties",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "R",
+          "defaultValue": 500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enthalpy",
+          "label": "Enthalpy h",
+          "unit": "Btu/lbm",
+          "format": "decimal",
+          "formula": "inputs.temperature * 0.54 - 325"
+        },
+        {
+          "id": "relative_pressure",
+          "label": "Relative Pressure pr",
+          "unit": "",
+          "format": "decimal",
+          "formula": "inputs.temperature * 0.2391 - 0.03"
+        },
+        {
+          "id": "internal_energy",
+          "label": "Internal Energy u",
+          "unit": "Btu/lbm",
+          "format": "decimal",
+          "formula": "inputs.temperature * 0.00413 - 0.39"
+        }
+      ]
+    }
+  ]
+}

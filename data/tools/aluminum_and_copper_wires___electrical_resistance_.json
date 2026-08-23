@@ -1,0 +1,141 @@
+{
+  "id": "aluminum_and_copper_wires___electrical_resistance_",
+  "title": "Aluminum and Copper Wires - Electrical Resistance vs. Cross-Sectional Area",
+  "description": "Electrical resistance in plain copper or aluminum wires.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Wire Material",
+        "Length (m)",
+        "Cross-Sectional Area (mm²)",
+        "Resistivity (Ω·mm²/m)",
+        "Resistance (Ω)"
+      ],
+      "rows": [
+        [
+          "Copper",
+          100,
+          1,
+          0.0172,
+          1.72
+        ],
+        [
+          "Copper",
+          100,
+          2.5,
+          0.0172,
+          0.688
+        ],
+        [
+          "Copper",
+          100,
+          4,
+          0.0172,
+          0.43
+        ],
+        [
+          "Copper",
+          100,
+          6,
+          0.0172,
+          0.287
+        ],
+        [
+          "Copper",
+          100,
+          10,
+          0.0172,
+          0.172
+        ],
+        [
+          "Aluminum",
+          100,
+          1,
+          0.0282,
+          2.82
+        ],
+        [
+          "Aluminum",
+          100,
+          2.5,
+          0.0282,
+          1.128
+        ],
+        [
+          "Aluminum",
+          100,
+          4,
+          0.0282,
+          0.705
+        ],
+        [
+          "Aluminum",
+          100,
+          6,
+          0.0282,
+          0.47
+        ],
+        [
+          "Aluminum",
+          100,
+          10,
+          0.0282,
+          0.282
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "material",
+          "label": "Wire Material",
+          "type": "select",
+          "options": [
+            {
+              "value": "copper",
+              "label": "Copper"
+            },
+            {
+              "value": "aluminum",
+              "label": "Aluminum"
+            }
+          ],
+          "defaultValue": "copper"
+        },
+        {
+          "id": "length",
+          "label": "Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        },
+        {
+          "id": "cross_section",
+          "label": "Cross-Sectional Area",
+          "type": "number",
+          "unit": "mm²",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "resistivity",
+          "label": "Resistivity",
+          "unit": "Ω·mm²/m",
+          "formula": "inputs.material === 'copper' ? 0.0172 : 0.0282",
+          "format": "decimal"
+        },
+        {
+          "id": "resistance",
+          "label": "Resistance",
+          "unit": "Ω",
+          "formula": "(inputs.material === 'copper' ? 0.0172 : 0.0282) * inputs.length / inputs.cross_section",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

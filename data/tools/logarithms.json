@@ -1,0 +1,140 @@
+{
+  "id": "logarithms",
+  "title": "Logarithms",
+  "description": "The rules of logarithms - log10 and loge for numbers ranging 1 to 1000. Calculate logarithms to different bases (base 10, base e, base 2) and explore logarithmic conversions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Number (x)",
+        "log₁₀(x)",
+        "logₑ(x) [ln(x)]",
+        "log₂(x)"
+      ],
+      "rows": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0.301,
+          0.6931,
+          1
+        ],
+        [
+          5,
+          0.699,
+          1.6094,
+          2.3219
+        ],
+        [
+          10,
+          1,
+          2.3026,
+          3.3219
+        ],
+        [
+          50,
+          1.699,
+          3.912,
+          5.6439
+        ],
+        [
+          100,
+          2,
+          4.6052,
+          6.6438
+        ],
+        [
+          500,
+          2.699,
+          6.2146,
+          8.9658
+        ],
+        [
+          1000,
+          3,
+          6.9078,
+          9.9657
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "number",
+          "label": "Number (x)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": ""
+        },
+        {
+          "id": "base",
+          "label": "Logarithm Base",
+          "type": "select",
+          "options": [
+            {
+              "label": "Base 10 (log₁₀)",
+              "value": "10"
+            },
+            {
+              "label": "Base e (ln)",
+              "value": "e"
+            },
+            {
+              "label": "Base 2 (log₂)",
+              "value": "2"
+            }
+          ],
+          "defaultValue": "10"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "log10_result",
+          "label": "log₁₀(x)",
+          "formula": "Math.log10(inputs.number)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "ln_result",
+          "label": "logₑ(x) [ln(x)]",
+          "formula": "Math.log(inputs.number)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "log2_result",
+          "label": "log₂(x)",
+          "formula": "Math.log2(inputs.number)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "conversion_to_log10",
+          "label": "Convert ln(x) to log₁₀(x)",
+          "formula": "Math.log(inputs.number) * 0.434294",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "conversion_to_ln",
+          "label": "Convert log₁₀(x) to ln(x)",
+          "formula": "Math.log10(inputs.number) * 2.302585",
+          "format": "decimal",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Logarithmic Rules\n\n1. **Product Rule**: log_a(xy) = log_a(x) + log_a(y)\n2. **Quotient Rule**: log_a(x/y) = log_a(x) - log_a(y)\n3. **Power Rule**: log_a(x^p) = p·log_a(x)\n4. **Reciprocal Rule**: log_a(1/x) = -log_a(x)\n5. **Base Rule**: log_a(a) = 1\n6. **Unity Rule**: log_a(1) = 0\n\n## Conversion Formulas\n\n- **log₁₀(x) = 0.434294 × ln(x)**\n- **ln(x) = 2.302585 × log₁₀(x)**\n- **log₂(x) = 1.442695 × ln(x) = 3.321928 × log₁₀(x)**"
+    }
+  ]
+}

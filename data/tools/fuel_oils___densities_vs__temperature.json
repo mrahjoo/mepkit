@@ -1,0 +1,72 @@
+{
+  "id": "fuel_oils___densities_vs__temperature",
+  "title": "Fuel Oils - Densities vs. Temperature",
+  "description": "Calculator for fuel oil density and volume corrections based on temperature using ASTM D 1250-04 and IP 200/04 standards. Estimate fuel oil densities at different temperatures and calculate volume correction factors.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Fuel Oils - Densities vs. Temperature\n\nThis calculator estimates fuel oil densities at different temperatures and calculates volume correction factors based on ASTM D 1250-04 and IP 200/04 standards.\n\n### How to use:\n1. Enter the known density and its reference temperature\n2. Enter the target temperature for calculation\n3. The calculator will estimate the density at the target temperature and provide volume correction factors\n\n**Volume Correction Rule**: Volume increases with increasing temperature."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "reference_density",
+          "label": "Reference Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 900
+        },
+        {
+          "id": "reference_temperature",
+          "label": "Reference Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 15
+        },
+        {
+          "id": "target_temperature",
+          "label": "Target Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        },
+        {
+          "id": "volume_reference",
+          "label": "Volume at Reference Temperature",
+          "type": "number",
+          "unit": "liters",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_at_target",
+          "label": "Estimated Density at Target Temperature",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "inputs.reference_density * (1 - 0.0008 * (inputs.target_temperature - inputs.reference_temperature))"
+        },
+        {
+          "id": "volume_correction_factor",
+          "label": "Volume Correction Factor",
+          "unit": "ratio",
+          "format": "decimal",
+          "formula": "inputs.reference_density / (inputs.reference_density * (1 - 0.0008 * (inputs.target_temperature - inputs.reference_temperature)))"
+        },
+        {
+          "id": "volume_at_target",
+          "label": "Volume at Target Temperature",
+          "unit": "liters",
+          "format": "decimal",
+          "formula": "inputs.volume_reference * inputs.reference_density / (inputs.reference_density * (1 - 0.0008 * (inputs.target_temperature - inputs.reference_temperature)))"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Example 1\n**Given**: 100 liters of fuel oil with density 800 kg/m³ at 20°C. Find volume at 15°C.\n\n**Result**: Enter reference density: 800 kg/m³, reference temp: 20°C, target temp: 15°C, volume: 100 liters.\n\n### Example 2\n**Given**: 1000 m³ of fuel oil with density 960 kg/m³ at 15°C. Find volume at 100°C.\n\n**Result**: Enter reference density: 960 kg/m³, reference temp: 15°C, target temp: 100°C, volume: 1000 liters.\n\n### Key Principle\nVolume correction factors follow the rule: **Volume increases with increasing temperature**. Always verify results against this principle."
+    }
+  ]
+}

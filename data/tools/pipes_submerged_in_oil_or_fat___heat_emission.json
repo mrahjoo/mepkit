@@ -1,0 +1,156 @@
+{
+  "id": "pipes_submerged_in_oil_or_fat___heat_emission",
+  "title": "Pipes Submerged in Oil or Fat - Heat Emission",
+  "description": "Heat emission from steam or water heating pipes submerged in oil or fat - forced and natural circulation. Calculates heat emission based on pipe parameters, fluid type, and temperature differential.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Heat Emission Calculator",
+      "inputs": [
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        },
+        {
+          "id": "pipe_outer_diameter",
+          "label": "Pipe Outer Diameter",
+          "type": "number",
+          "defaultValue": 60.3,
+          "unit": "mm"
+        },
+        {
+          "id": "heat_emission_coeff",
+          "label": "Heat Emission Coefficient",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "W/m²°C"
+        },
+        {
+          "id": "fluid_type",
+          "label": "Fluid Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Light Oils - Natural Convection",
+              "value": "light_oils_natural"
+            },
+            {
+              "label": "Heavy Oils - Natural Convection",
+              "value": "heavy_oils_natural"
+            },
+            {
+              "label": "Fats - Natural Convection",
+              "value": "fats_natural"
+            },
+            {
+              "label": "Light Oils - Forced Convection",
+              "value": "light_oils_forced"
+            },
+            {
+              "label": "Heavy Oils - Forced Convection",
+              "value": "heavy_oils_forced"
+            },
+            {
+              "label": "Fats - Forced Convection",
+              "value": "fats_forced"
+            }
+          ],
+          "defaultValue": "light_oils_natural"
+        },
+        {
+          "id": "coil_temp",
+          "label": "Coil Temperature",
+          "type": "number",
+          "defaultValue": 120,
+          "unit": "°C"
+        },
+        {
+          "id": "tank_temp",
+          "label": "Tank Temperature",
+          "type": "number",
+          "defaultValue": 40,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "surface_area_per_m",
+          "label": "Surface Area per m of Pipe",
+          "formula": "inputs.pipe_outer_diameter / 1000 * 3.14159 * 1",
+          "unit": "m²/m"
+        },
+        {
+          "id": "total_surface_area",
+          "label": "Total Surface Area",
+          "formula": "inputs.pipe_length * (inputs.pipe_outer_diameter / 1000 * 3.14159)",
+          "unit": "m²"
+        },
+        {
+          "id": "temp_differential",
+          "label": "Temperature Differential",
+          "formula": "inputs.coil_temp - inputs.tank_temp",
+          "unit": "°C"
+        },
+        {
+          "id": "heat_emission",
+          "label": "Heat Emission",
+          "formula": "inputs.pipe_length * (inputs.pipe_outer_diameter / 1000 * 3.14159) * inputs.heat_emission_coeff * (inputs.coil_temp - inputs.tank_temp)",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Heat Emission Reference Table",
+      "headers": [
+        "Application",
+        "Fluid Type",
+        "Heat Emission (W/m²°C)",
+        "Heat Emission (Btu/ft²hr°F)"
+      ],
+      "rows": [
+        [
+          "Steam Coil - Medium Pressure - Natural Convection",
+          "Light Oils",
+          "30",
+          "170"
+        ],
+        [
+          "Steam Coil - Medium Pressure - Natural Convection",
+          "Heavy Oils",
+          "15 - 20",
+          "85 - 115"
+        ],
+        [
+          "Steam Coil - Medium Pressure - Natural Convection",
+          "Fats",
+          "5 - 10",
+          "30 - 60"
+        ],
+        [
+          "Steam Coil - Medium Pressure - Forced Convection",
+          "Light Oils",
+          "100",
+          "570"
+        ],
+        [
+          "Steam Coil - Medium Pressure - Forced Convection",
+          "Heavy Oils",
+          "60",
+          "340"
+        ],
+        [
+          "Steam Coil - Medium Pressure - Forced Convection",
+          "Fats",
+          "30",
+          "170"
+        ]
+      ]
+    }
+  ]
+}

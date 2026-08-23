@@ -1,0 +1,41 @@
+{
+  "id": "horizontal_drainage_pipe___required_slopes",
+  "title": "Horizontal Drainage Pipe - Required Slopes",
+  "description": "Minimum pitch of horizontal drainage pipes. Drainage piping and recommended minimum slope or pitch.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Diameter (in)",
+        "Pitch (in/ft)",
+        "Pitch (m/m)",
+        "Gradient"
+      ],
+      "rows": [
+        [
+          "under 3",
+          "1/4",
+          "0.02",
+          "1:50"
+        ],
+        [
+          "3 - 6",
+          "1/8",
+          "0.01",
+          "1:100"
+        ],
+        [
+          "8 or larger",
+          "1/16",
+          "0.005",
+          "1:200"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Conversion Factor\n\n1 in/ft = 0.083 m/m"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "riser_diagrams",
+  "title": "Riser Diagrams",
+  "description": "Plumbing sanitary and water riser diagram - example. Vertically supply lines are known as risers.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Riser Type",
+        "Description",
+        "Purpose",
+        "Reference"
+      ],
+      "rows": [
+        [
+          "Water Supply Riser",
+          "Vertical supply line for water distribution",
+          "Distributes water throughout the building",
+          "http://ufdc.ufl.edu/AA00011923/00010"
+        ],
+        [
+          "Sanitary Riser",
+          "Vertical drainage line for wastewater",
+          "Removes wastewater from fixtures",
+          "http://ufdc.ufl.edu/AA00011923/00010"
+        ],
+        [
+          "Vent Riser",
+          "Vertical vent line for drainage system",
+          "Provides ventilation and pressure relief",
+          "http://ufdc.ufl.edu/AA00011923/00010"
+        ]
+      ]
+    }
+  ]
+}

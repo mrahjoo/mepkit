@@ -1,0 +1,94 @@
+{
+  "id": "thermal_expansion___superficial_i_e__area",
+  "title": "Thermal Expansion - Superficial (Area)",
+  "description": "Superficial (area) temperature expansion calculator. Calculate the change in area of a material when temperature changes using the coefficient of superficial expansion.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate thermal expansion based on initial area, superficial expansion coefficient, and temperature change.",
+      "inputs": [
+        {
+          "id": "initial_area",
+          "label": "Initial Area (A₀)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 1
+        },
+        {
+          "id": "superficial_coefficient",
+          "label": "Superficial Expansion Coefficient (γ)",
+          "type": "number",
+          "unit": "m²/m²K",
+          "defaultValue": 0.000046
+        },
+        {
+          "id": "initial_temperature",
+          "label": "Initial Temperature (t₀)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "final_temperature",
+          "label": "Final Temperature (t₁)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "area_change",
+          "label": "Change in Area (dA)",
+          "formula": "inputs.initial_area * inputs.superficial_coefficient * (inputs.final_temperature - inputs.initial_temperature)",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "final_area",
+          "label": "Final Area",
+          "formula": "inputs.initial_area + (inputs.initial_area * inputs.superficial_coefficient * (inputs.final_temperature - inputs.initial_temperature))",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "temperature_change",
+          "label": "Temperature Change (ΔT)",
+          "formula": "inputs.final_temperature - inputs.initial_temperature",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Linear Coefficient (α)",
+        "Superficial Coefficient (γ ≈ 2α)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          "0.000023 m/m°C",
+          "0.000046 m²/m²K"
+        ],
+        [
+          "Steel",
+          "0.000016 m/m°C",
+          "0.000032 m²/m²K"
+        ],
+        [
+          "Copper",
+          "0.000017 m/m°C",
+          "0.000034 m²/m²K"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\n**dA = A₀ × γ × (t₁ - t₀)**\n\nWhere:\n- **dA** = change in area (m²)\n- **A₀** = initial area (m²)\n- **γ** = superficial expansion coefficient (m²/m²K)\n- **t₀** = initial temperature (°C)\n- **t₁** = final temperature (°C)\n\n### Approximation\nThe superficial temperature coefficient can be approximated as:\n**γ ≈ 2α**\n\nWhere **α** is the linear temperature expansion coefficient (m/m K or m/m°C)"
+    }
+  ]
+}

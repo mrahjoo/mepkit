@@ -1,0 +1,102 @@
+{
+  "id": "iron_binary_eutectic_alloys___melting_points",
+  "title": "Iron Binary Eutectic Alloys - Melting Points",
+  "description": "Fe - Iron - binary eutectic alloys and melting points. An eutectic mixture is the mixture where the melting point is as low as possible. This tool provides composition and melting points for binary iron alloys.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Iron Binary Eutectic Alloys - Melting Points\n\nThe melting point of an alloy of two (binary) or more metals depends on the relative proportions of the ingredients.\n\n*An eutectic mixture* is the mixture where the melting point is as low as possible.\n\nBinary eutectic Iron (Fe) alloys with composition and melting points are indicated in the table below."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloy Component",
+        "Weight of Alloy Component (%)",
+        "Melting Point (K)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Gd - Gadolinium",
+          86,
+          1123,
+          1562
+        ],
+        [
+          "Mo - Molybdenum",
+          31,
+          1725,
+          2646
+        ],
+        [
+          "Nb - Niobium (Columbium)",
+          18.5,
+          1643,
+          2498
+        ],
+        [
+          "Sb - Antimony (Stibium)",
+          94.1,
+          1021,
+          1378
+        ],
+        [
+          "Si - Silicon",
+          21,
+          1475,
+          2196
+        ],
+        [
+          "Sn - Tin (Stannum)",
+          49,
+          1400,
+          2061
+        ],
+        [
+          "Y - Yttrium",
+          75,
+          1173,
+          1652
+        ],
+        [
+          "Zr - Zirconium",
+          17,
+          1600,
+          2421
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "melting_point_fahrenheit",
+          "label": "Melting Point (°F)",
+          "type": "number",
+          "defaultValue": 1562
+        }
+      ],
+      "outputs": [
+        {
+          "id": "melting_point_celsius",
+          "label": "Melting Point (°C)",
+          "formula": "(inputs.melting_point_fahrenheit - 32) * 5 / 9",
+          "format": "decimal",
+          "unit": "°C"
+        },
+        {
+          "id": "melting_point_kelvin",
+          "label": "Melting Point (K)",
+          "formula": "(inputs.melting_point_fahrenheit - 32) * 5 / 9 + 273.15",
+          "format": "decimal",
+          "unit": "K"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Temperature Conversion Formula\n\n**T (°C) = 5/9 (T (°F) - 32)**\n\n**T (K) = T (°C) + 273.15**"
+    }
+  ]
+}

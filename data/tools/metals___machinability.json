@@ -1,0 +1,378 @@
+{
+  "id": "metals___machinability",
+  "title": "Metals - Machinability",
+  "description": "The machinability of some common metals. Machinability can be expressed as a percentage or normalized value relative to AISI No. 1112 carbon steel (100% reference).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Category",
+        "Machinability (%)"
+      ],
+      "rows": [
+        [
+          "1015",
+          "Carbon Steels",
+          72
+        ],
+        [
+          "1018",
+          "Carbon Steels",
+          78
+        ],
+        [
+          "1020",
+          "Carbon Steels",
+          72
+        ],
+        [
+          "1022",
+          "Carbon Steels",
+          78
+        ],
+        [
+          "1030",
+          "Carbon Steels",
+          70
+        ],
+        [
+          "1040",
+          "Carbon Steels",
+          64
+        ],
+        [
+          "1042",
+          "Carbon Steels",
+          64
+        ],
+        [
+          "1050",
+          "Carbon Steels",
+          54
+        ],
+        [
+          "1095",
+          "Carbon Steels",
+          42
+        ],
+        [
+          "1117",
+          "Carbon Steels",
+          91
+        ],
+        [
+          "1137",
+          "Carbon Steels",
+          72
+        ],
+        [
+          "1141",
+          "Carbon Steels",
+          70
+        ],
+        [
+          "1141 annealed",
+          "Carbon Steels",
+          81
+        ],
+        [
+          "1144",
+          "Carbon Steels",
+          76
+        ],
+        [
+          "1144 annealed",
+          "Carbon Steels",
+          85
+        ],
+        [
+          "1144 stress-proof",
+          "Carbon Steels",
+          83
+        ],
+        [
+          "1212",
+          "Carbon Steels",
+          100
+        ],
+        [
+          "1213",
+          "Carbon Steels",
+          136
+        ],
+        [
+          "12L14",
+          "Carbon Steels",
+          170
+        ],
+        [
+          "1215",
+          "Carbon Steels",
+          136
+        ],
+        [
+          "2355 annealed",
+          "Alloy Steels",
+          70
+        ],
+        [
+          "4130 annealed",
+          "Alloy Steels",
+          72
+        ],
+        [
+          "4140 annealed",
+          "Alloy Steels",
+          66
+        ],
+        [
+          "4142 annealed",
+          "Alloy Steels",
+          66
+        ],
+        [
+          "41L42 annealed",
+          "Alloy Steels",
+          77
+        ],
+        [
+          "4150 annealed",
+          "Alloy Steels",
+          60
+        ],
+        [
+          "4340 annealed",
+          "Alloy Steels",
+          57
+        ],
+        [
+          "4620",
+          "Alloy Steels",
+          66
+        ],
+        [
+          "4820 annealed",
+          "Alloy Steels",
+          49
+        ],
+        [
+          "52100 annealed",
+          "Alloy Steels",
+          40
+        ],
+        [
+          "6150 annealed",
+          "Alloy Steels",
+          60
+        ],
+        [
+          "8620",
+          "Alloy Steels",
+          66
+        ],
+        [
+          "86L20",
+          "Alloy Steels",
+          77
+        ],
+        [
+          "9310 annealed",
+          "Alloy Steels",
+          51
+        ],
+        [
+          "302 annealed",
+          "Stainless Steels and Super Alloys",
+          45
+        ],
+        [
+          "303 annealed",
+          "Stainless Steels and Super Alloys",
+          78
+        ],
+        [
+          "304 annealed",
+          "Stainless Steels and Super Alloys",
+          45
+        ],
+        [
+          "316 annealed",
+          "Stainless Steels and Super Alloys",
+          45
+        ],
+        [
+          "321 annealed",
+          "Stainless Steels and Super Alloys",
+          36
+        ],
+        [
+          "347 annealed",
+          "Stainless Steels and Super Alloys",
+          36
+        ],
+        [
+          "410 annealed",
+          "Stainless Steels and Super Alloys",
+          54
+        ],
+        [
+          "416 annealed",
+          "Stainless Steels and Super Alloys",
+          110
+        ],
+        [
+          "420 annealed",
+          "Stainless Steels and Super Alloys",
+          45
+        ],
+        [
+          "430 annealed",
+          "Stainless Steels and Super Alloys",
+          54
+        ],
+        [
+          "431 annealed",
+          "Stainless Steels and Super Alloys",
+          45
+        ],
+        [
+          "440A",
+          "Stainless Steels and Super Alloys",
+          45
+        ],
+        [
+          "15-5PH condition A",
+          "Stainless Steels and Super Alloys",
+          48
+        ],
+        [
+          "17-4PH condition A",
+          "Stainless Steels and Super Alloys",
+          48
+        ],
+        [
+          "A286 aged",
+          "Stainless Steels and Super Alloys",
+          33
+        ],
+        [
+          "Hastelloy X",
+          "Stainless Steels and Super Alloys",
+          19
+        ],
+        [
+          "A-2",
+          "Tool Steels",
+          42
+        ],
+        [
+          "A-6",
+          "Tool Steels",
+          33
+        ],
+        [
+          "D-2",
+          "Tool Steels",
+          27
+        ],
+        [
+          "D-3",
+          "Tool Steels",
+          27
+        ],
+        [
+          "M-2",
+          "Tool Steels",
+          39
+        ],
+        [
+          "O-1",
+          "Tool Steels",
+          42
+        ],
+        [
+          "O-2",
+          "Tool Steels",
+          42
+        ],
+        [
+          "ASTM class 20 annealed",
+          "Gray Cast Iron",
+          73
+        ],
+        [
+          "ASTM class 25",
+          "Gray Cast Iron",
+          55
+        ],
+        [
+          "ASTM class 30",
+          "Gray Cast Iron",
+          48
+        ],
+        [
+          "ASTM class 35",
+          "Gray Cast Iron",
+          48
+        ],
+        [
+          "ASTM class 40",
+          "Gray Cast Iron",
+          48
+        ],
+        [
+          "ASTM class 45",
+          "Gray Cast Iron",
+          36
+        ],
+        [
+          "ASTM class 50",
+          "Gray Cast Iron",
+          36
+        ],
+        [
+          "60-40-18 annealed",
+          "Nodular Ductile Iron",
+          61
+        ],
+        [
+          "65-45-12 annealed",
+          "Nodular Ductile Iron",
+          61
+        ],
+        [
+          "80-55-06",
+          "Nodular Ductile Iron",
+          39
+        ],
+        [
+          "aluminum, cold drawn",
+          "Aluminum / Magnesium Alloys",
+          360
+        ],
+        [
+          "aluminum, cast",
+          "Aluminum / Magnesium Alloys",
+          450
+        ],
+        [
+          "aluminum, die cast",
+          "Aluminum / Magnesium Alloys",
+          76
+        ],
+        [
+          "magnesium, cold drawn",
+          "Aluminum / Magnesium Alloys",
+          480
+        ],
+        [
+          "magnesium, cast",
+          "Aluminum / Magnesium Alloys",
+          480
+        ]
+      ]
+    }
+  ]
+}

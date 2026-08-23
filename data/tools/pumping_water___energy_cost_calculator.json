@@ -1,0 +1,116 @@
+{
+  "id": "pumping_water___energy_cost_calculator",
+  "title": "Pumping Water - Energy Cost Calculator",
+  "description": "Calculate the energy cost per hour for pumping water using imperial or metric units. The tool supports both unit systems with efficient calculation of pumping costs based on flow rate, head, electricity rates, and pump/motor efficiency.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pumping Water - Energy Cost Calculator\n\nCalculate the energy cost per hour for pumping water using the formulas:\n\n**Imperial Units:**\nC = 0.746 Q h c / (3960 μp μm)\n\n**Metric Units:**\nC = q ρ g h c / (3.6×10⁶ μp μm)\n\nWhere:\n- C = cost per hour (USD/hour, EUR/hour, ...)\n- Q = volume flow (US gpm)\n- q = volume flow (m³/h)\n- h = differential head (ft or m)\n- c = cost rate per kWh (USD/kWh, EUR/kWh, ...)\n- μp = pump efficiency (0 - 1)\n- μm = motor efficiency (0 - 1)\n- ρ = density of water (1000 kg/m³)\n- g = acceleration of gravity (9.81 m/s²)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Imperial Units"
+      ],
+      "inputs": [
+        {
+          "id": "flow_rate_gpm",
+          "label": "Volume Flow Rate",
+          "type": "number",
+          "unit": "US gpm",
+          "defaultValue": 10
+        },
+        {
+          "id": "head_ft",
+          "label": "Differential Head",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        },
+        {
+          "id": "cost_rate_imperial",
+          "label": "Cost Rate",
+          "type": "number",
+          "unit": "USD/kWh",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "pump_efficiency_imperial",
+          "label": "Pump Efficiency",
+          "type": "number",
+          "unit": "0-1",
+          "defaultValue": 0.9
+        },
+        {
+          "id": "motor_efficiency_imperial",
+          "label": "Motor Efficiency",
+          "type": "number",
+          "unit": "0-1",
+          "defaultValue": 0.9
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cost_per_hour_imperial",
+          "label": "Energy Cost per Hour",
+          "formula": "(0.746 * inputs.flow_rate_gpm * inputs.head_ft * inputs.cost_rate_imperial) / (3960 * inputs.pump_efficiency_imperial * inputs.motor_efficiency_imperial)",
+          "unit": "USD/hour",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Metric Units"
+      ],
+      "inputs": [
+        {
+          "id": "flow_rate_m3h",
+          "label": "Volume Flow Rate",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 2.27
+        },
+        {
+          "id": "head_m",
+          "label": "Differential Head",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3.05
+        },
+        {
+          "id": "cost_rate_metric",
+          "label": "Cost Rate",
+          "type": "number",
+          "unit": "USD/kWh",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "pump_efficiency_metric",
+          "label": "Pump Efficiency",
+          "type": "number",
+          "unit": "0-1",
+          "defaultValue": 0.9
+        },
+        {
+          "id": "motor_efficiency_metric",
+          "label": "Motor Efficiency",
+          "type": "number",
+          "unit": "0-1",
+          "defaultValue": 0.9
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cost_per_hour_metric",
+          "label": "Energy Cost per Hour",
+          "formula": "(inputs.flow_rate_m3h * 1000 * 9.81 * inputs.head_m * inputs.cost_rate_metric) / (3600000 * inputs.pump_efficiency_metric * inputs.motor_efficiency_metric)",
+          "unit": "USD/hour",
+          "format": "currency"
+        }
+      ]
+    }
+  ]
+}

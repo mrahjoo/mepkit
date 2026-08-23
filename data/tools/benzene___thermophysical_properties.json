@@ -1,0 +1,262 @@
+{
+  "id": "benzene___thermophysical_properties",
+  "title": "Benzene - Thermophysical Properties",
+  "description": "Interactive tool for calculating and visualizing thermophysical properties of Benzene (C6H6). This tool provides comprehensive data on thermal, physical, and chemical properties of benzene including density, viscosity, heat capacity, and critical parameters. Values are given for liquid benzene at 25°C (77°F, 298 K) and 1 bar unless otherwise specified.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Benzene - Thermophysical Properties\n\n**Benzene, C6H6**, is a clear colorless to light-yellow liquid, flammable with a petroleum-like, aromatic odor.\n\nBenzene is less dense than water and is slightly soluble in water. Hence it floats on water. Benzene vapor is heavier than air.\n\nIn industry benzene is used as a solvent, as a chemical intermediate, and is used in the synthesis of numerous chemicals.\n\nValues are given for liquid at 25°C (77°F, 298 K) and 1 bar, if not other phase, temperature or pressure given."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value (SI)",
+        "Unit (SI)",
+        "Value (Alternative)",
+        "Unit (Alternative)"
+      ],
+      "rows": [
+        [
+          "Autoignition temperature",
+          "771",
+          "K",
+          "498",
+          "°C"
+        ],
+        [
+          "Boiling Point",
+          "353.2",
+          "K",
+          "80.08",
+          "°C"
+        ],
+        [
+          "Critical density",
+          "312",
+          "kg/m³",
+          "4.00",
+          "mol/dm³"
+        ],
+        [
+          "Critical pressure",
+          "4.89",
+          "MPa",
+          "48.9",
+          "bar"
+        ],
+        [
+          "Critical temperature",
+          "562.0",
+          "K",
+          "288.9",
+          "°C"
+        ],
+        [
+          "Critical volume",
+          "0.00320",
+          "m³/kg",
+          "250",
+          "cm³/mol"
+        ],
+        [
+          "Density",
+          "873.7",
+          "kg/m³",
+          "11185",
+          "mol/m³"
+        ],
+        [
+          "Flash point",
+          "262",
+          "K",
+          "-11",
+          "°C"
+        ],
+        [
+          "Gas constant, individual (R)",
+          "106.4",
+          "J/kg·K",
+          "636.5",
+          "ft·lbf/slug·°R"
+        ],
+        [
+          "Heat of combustion (liquid)",
+          "-41832",
+          "kJ/kg",
+          "-3267.6",
+          "kJ/mol"
+        ],
+        [
+          "Heat of evaporation",
+          "433",
+          "kJ/kg",
+          "33.8",
+          "kJ/mol"
+        ],
+        [
+          "Heat of formation (gas)",
+          "1061",
+          "kJ/kg",
+          "82.9",
+          "kJ/mol"
+        ],
+        [
+          "Heat of formation (liquid)",
+          "627",
+          "kJ/kg",
+          "49",
+          "kJ/mol"
+        ],
+        [
+          "Melting point",
+          "278.708",
+          "K",
+          "5.6",
+          "°C"
+        ],
+        [
+          "Molecular Weight",
+          "78.112",
+          "g/mol",
+          "0.17221",
+          "lb/mol"
+        ],
+        [
+          "Specific heat capacity, Cp (gas)",
+          "1.05",
+          "kJ/kg·K",
+          "82.4",
+          "J/mol·K"
+        ],
+        [
+          "Specific heat capacity, Cp (liquid)",
+          "1.70",
+          "kJ/kg·K",
+          "133",
+          "J/mol·K"
+        ],
+        [
+          "Specific Gravity (liquid)",
+          "0.88",
+          "—",
+          "0.88",
+          "relative to water"
+        ],
+        [
+          "Surface tension",
+          "0.02822",
+          "N/m",
+          "28.2",
+          "dynes/cm"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.143",
+          "W/m·°C",
+          "0.0826",
+          "Btu/hr·ft·°F"
+        ],
+        [
+          "Triple point temperature",
+          "278.7",
+          "K",
+          "5.6",
+          "°C"
+        ],
+        [
+          "Vapor pressure",
+          "0.0128",
+          "MPa",
+          "12.8",
+          "kPa"
+        ],
+        [
+          "Viscosity, dynamic",
+          "0.6040",
+          "cP",
+          "0.000604",
+          "Pa·s"
+        ],
+        [
+          "Viscosity, kinematic",
+          "0.691",
+          "cSt",
+          "6.91 × 10⁻⁸",
+          "m²/s"
+        ],
+        [
+          "Solubility in water (at 25°C)",
+          "1.79",
+          "mg/mL",
+          "1790",
+          "mg/L"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Benzene Key Thermophysical Properties Comparison",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "legend": {
+          "data": [
+            "Value (SI Units)"
+          ],
+          "top": "bottom"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Density\n(kg/m³)",
+            "Critical Temp\n(K)",
+            "Boiling Point\n(K)",
+            "Thermal Cond.\n(W/m·°C)",
+            "Surface Tension\n(N/m)",
+            "Vapor Pressure\n(kPa)"
+          ],
+          "axisLabel": {
+            "interval": 0,
+            "rotate": 45
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Property Value"
+        },
+        "series": [
+          {
+            "name": "Value (SI Units)",
+            "type": "bar",
+            "data": [
+              873.7,
+              562,
+              353.2,
+              0.143,
+              0.02822,
+              12.8
+            ],
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          }
+        ],
+        "grid": {
+          "left": "3%",
+          "right": "3%",
+          "bottom": "15%",
+          "containLabel": true
+        }
+      }
+    }
+  ]
+}

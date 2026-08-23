@@ -1,0 +1,137 @@
+{
+  "id": "he_m_steel_beams",
+  "title": "HE-M Steel Beams",
+  "description": "Calculator for HE-M steel beam properties and calculations",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# HE-M Steel Beams\n\nCalculator for HE-M steel beam properties. HE-M beams are European wide-flange beams with moderate depth, commonly used in structural engineering applications.\n\n**Note:** Personal data is processed in accordance with GDPR regulations. Please refer to our [privacy policy](https://www.engineeringtoolbox.com/privacy-policy-d_2228.html) for more information."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "beam_size",
+          "label": "Beam Size (HE-M)",
+          "type": "select",
+          "options": [
+            {
+              "value": "100",
+              "label": "HE 100 M"
+            },
+            {
+              "value": "120",
+              "label": "HE 120 M"
+            },
+            {
+              "value": "140",
+              "label": "HE 140 M"
+            },
+            {
+              "value": "160",
+              "label": "HE 160 M"
+            },
+            {
+              "value": "180",
+              "label": "HE 180 M"
+            },
+            {
+              "value": "200",
+              "label": "HE 200 M"
+            },
+            {
+              "value": "220",
+              "label": "HE 220 M"
+            },
+            {
+              "value": "240",
+              "label": "HE 240 M"
+            },
+            {
+              "value": "260",
+              "label": "HE 260 M"
+            },
+            {
+              "value": "280",
+              "label": "HE 280 M"
+            },
+            {
+              "value": "300",
+              "label": "HE 300 M"
+            },
+            {
+              "value": "320",
+              "label": "HE 320 M"
+            },
+            {
+              "value": "340",
+              "label": "HE 340 M"
+            },
+            {
+              "value": "360",
+              "label": "HE 360 M"
+            },
+            {
+              "value": "400",
+              "label": "HE 400 M"
+            },
+            {
+              "value": "450",
+              "label": "HE 450 M"
+            },
+            {
+              "value": "500",
+              "label": "HE 500 M"
+            },
+            {
+              "value": "550",
+              "label": "HE 550 M"
+            },
+            {
+              "value": "600",
+              "label": "HE 600 M"
+            }
+          ],
+          "defaultValue": "200"
+        },
+        {
+          "id": "length",
+          "label": "Beam Length",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 5000
+        },
+        {
+          "id": "applied_load",
+          "label": "Applied Load",
+          "type": "number",
+          "unit": "kN",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "beam_height",
+          "label": "Beam Height",
+          "unit": "mm",
+          "formula": "inputs.beam_size"
+        },
+        {
+          "id": "deflection",
+          "label": "Approximate Deflection",
+          "unit": "mm",
+          "formula": "(inputs.applied_load * inputs.length^3) / (384 * 210000 * inputs.beam_size^4 / 12)",
+          "format": "decimal"
+        },
+        {
+          "id": "max_stress",
+          "label": "Maximum Bending Stress",
+          "unit": "MPa",
+          "formula": "(inputs.applied_load * inputs.length / 4) / (inputs.beam_size^3 / 6)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

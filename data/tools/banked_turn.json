@@ -1,0 +1,157 @@
+{
+  "id": "banked_turn",
+  "title": "Banked Turn",
+  "description": "Calculate the banked angle for a vehicle moving in a circular path to compensate for centrifugal forces. This tool computes the required banking angle in both radians and degrees given the vehicle's velocity, curve radius, and gravitational acceleration.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "banked_turn_calculator",
+      "content": "Banked Turn Calculator",
+      "inputs": [
+        {
+          "id": "velocity_kmh",
+          "label": "Velocity",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "km/h"
+        },
+        {
+          "id": "radius_m",
+          "label": "Curve Radius",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "m"
+        },
+        {
+          "id": "gravity_ms2",
+          "label": "Gravity Acceleration",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity_ms",
+          "label": "Velocity",
+          "unit": "m/s",
+          "formula": "inputs.velocity_kmh * 1000 / 3600",
+          "format": "decimal"
+        },
+        {
+          "id": "centripetal_acceleration",
+          "label": "Centripetal Acceleration",
+          "unit": "m/s²",
+          "formula": "(inputs.velocity_kmh * 1000 / 3600) ** 2 / inputs.radius_m",
+          "format": "decimal"
+        },
+        {
+          "id": "banked_angle_rad",
+          "label": "Banked Angle",
+          "unit": "rad",
+          "formula": "Math.atan((inputs.velocity_kmh * 1000 / 3600) ** 2 / (inputs.radius_m * inputs.gravity_ms2))",
+          "format": "decimal"
+        },
+        {
+          "id": "banked_angle_deg",
+          "label": "Banked Angle",
+          "unit": "°",
+          "formula": "Math.atan((inputs.velocity_kmh * 1000 / 3600) ** 2 / (inputs.radius_m * inputs.gravity_ms2)) * 360 / (2 * Math.PI)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "banked_turn_table",
+      "content": "Banked Turn Reference Table",
+      "headers": [
+        "Velocity (km/h)",
+        "Radius (m)",
+        "Banked Angle (°)",
+        "Centripetal Acceleration (m/s²)"
+      ],
+      "rows": [
+        [
+          50,
+          500,
+          "2.61",
+          "0.38"
+        ],
+        [
+          60,
+          500,
+          "3.77",
+          "0.56"
+        ],
+        [
+          70,
+          500,
+          "5.14",
+          "0.76"
+        ],
+        [
+          80,
+          500,
+          "6.66",
+          "0.99"
+        ],
+        [
+          50,
+          750,
+          "1.74",
+          "0.26"
+        ],
+        [
+          70,
+          750,
+          "3.40",
+          "0.51"
+        ],
+        [
+          90,
+          750,
+          "5.62",
+          "0.84"
+        ],
+        [
+          50,
+          1000,
+          "1.31",
+          "0.19"
+        ],
+        [
+          70,
+          1000,
+          "2.20",
+          "0.38"
+        ],
+        [
+          90,
+          1000,
+          "4.18",
+          "0.63"
+        ],
+        [
+          50,
+          1500,
+          "0.87",
+          "0.13"
+        ],
+        [
+          70,
+          1500,
+          "1.47",
+          "0.25"
+        ],
+        [
+          100,
+          1500,
+          "3.78",
+          "0.52"
+        ]
+      ]
+    }
+  ]
+}

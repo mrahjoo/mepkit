@@ -1,0 +1,272 @@
+{
+  "id": "electrical_formulas",
+  "title": "Electrical Formulas",
+  "description": "Common electrical formulas including Ohm's Law, Electric Power, Electric Energy, and Electrical Motor calculations",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Formula",
+        "Description",
+        "Variables"
+      ],
+      "rows": [
+        [
+          "U = R × I",
+          "Electrical Potential (Ohm's Law)",
+          "U: Voltage (V), R: Resistance (Ω), I: Current (A)"
+        ],
+        [
+          "U = P / I",
+          "Electrical Potential from Power",
+          "U: Voltage (V), P: Power (W), I: Current (A)"
+        ],
+        [
+          "U = √(P × R)",
+          "Electrical Potential from Power and Resistance",
+          "U: Voltage (V), P: Power (W), R: Resistance (Ω)"
+        ],
+        [
+          "I = U / R",
+          "Electric Current (Ohm's Law)",
+          "I: Current (A), U: Voltage (V), R: Resistance (Ω)"
+        ],
+        [
+          "I = P / U",
+          "Electric Current from Power",
+          "I: Current (A), P: Power (W), U: Voltage (V)"
+        ],
+        [
+          "I = √(P / R)",
+          "Electric Current from Power and Resistance",
+          "I: Current (A), P: Power (W), R: Resistance (Ω)"
+        ],
+        [
+          "R = U / I",
+          "Electric Resistance (Ohm's Law)",
+          "R: Resistance (Ω), U: Voltage (V), I: Current (A)"
+        ],
+        [
+          "R = U² / P",
+          "Electric Resistance from Voltage and Power",
+          "R: Resistance (Ω), U: Voltage (V), P: Power (W)"
+        ],
+        [
+          "R = P / I²",
+          "Electric Resistance from Power and Current",
+          "R: Resistance (Ω), P: Power (W), I: Current (A)"
+        ],
+        [
+          "P = U × I",
+          "Electric Power",
+          "P: Power (W), U: Voltage (V), I: Current (A)"
+        ],
+        [
+          "P = R × I²",
+          "Electric Power from Resistance and Current",
+          "P: Power (W), R: Resistance (Ω), I: Current (A)"
+        ],
+        [
+          "P = U² / R",
+          "Electric Power from Voltage and Resistance",
+          "P: Power (W), U: Voltage (V), R: Resistance (Ω)"
+        ],
+        [
+          "W = P × t",
+          "Electric Energy",
+          "W: Energy (Ws, J), P: Power (W), t: Time (s)"
+        ],
+        [
+          "P = W / t",
+          "Power from Energy and Time",
+          "P: Power (W), W: Energy (Ws, J), t: Time (s)"
+        ],
+        [
+          "μ = 746 × Php / Pinput_w",
+          "Electrical Motor Efficiency",
+          "μ: Efficiency, Php: Output horsepower (hp), Pinput_w: Input power (W)"
+        ],
+        [
+          "μ = 746 × Php / (1.732 × V × I × PF)",
+          "Electrical Motor Efficiency (3-phase)",
+          "μ: Efficiency, Php: Output (hp), V: Voltage (V), I: Current (A), PF: Power Factor"
+        ],
+        [
+          "P3-phase = (U × I × PF × 1.732) / 1,000",
+          "Electrical Motor Power (3-phase)",
+          "P3-phase: Power (kW), U: Voltage (V), I: Current (A), PF: Power Factor"
+        ],
+        [
+          "I3-phase = 746 × Php / (1.732 × V × μ × PF)",
+          "Electrical Motor Current (3-phase)",
+          "I3-phase: Current (amps), Php: Output (hp), V: Voltage (V), μ: Efficiency, PF: Power Factor"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Ohm's Law Calculator\nCalculate electrical parameters using Ohm's Law. Provide any two values and the calculator will compute the others.",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage (V)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 12
+        },
+        {
+          "id": "current",
+          "label": "Current (A)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 0.67
+        },
+        {
+          "id": "resistance",
+          "label": "Resistance (Ω)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 18
+        },
+        {
+          "id": "power",
+          "label": "Power (W)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 8.04
+        }
+      ],
+      "outputs": [
+        {
+          "id": "calculated_voltage",
+          "label": "Voltage",
+          "formula": "inputs.resistance * inputs.current",
+          "unit": "V",
+          "format": "decimal"
+        },
+        {
+          "id": "calculated_current",
+          "label": "Current",
+          "formula": "inputs.voltage / inputs.resistance",
+          "unit": "A",
+          "format": "decimal"
+        },
+        {
+          "id": "calculated_resistance",
+          "label": "Resistance",
+          "formula": "inputs.voltage / inputs.current",
+          "unit": "Ω",
+          "format": "decimal"
+        },
+        {
+          "id": "calculated_power",
+          "label": "Power",
+          "formula": "inputs.voltage * inputs.current",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Electric Energy Calculator\nCalculate energy dissipation and consumption over time.",
+      "inputs": [
+        {
+          "id": "power_energy",
+          "label": "Power (W)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 2.9
+        },
+        {
+          "id": "time_seconds",
+          "label": "Time (s)",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 60
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy_joules",
+          "label": "Energy",
+          "formula": "inputs.power_energy * inputs.time_seconds",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_kwh",
+          "label": "Energy",
+          "formula": "(inputs.power_energy * inputs.time_seconds) / 3600000",
+          "unit": "kWh",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Electrical Motor (3-Phase) Calculator\nCalculate 3-phase motor power and efficiency.",
+      "inputs": [
+        {
+          "id": "motor_voltage",
+          "label": "Voltage (V)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 480
+        },
+        {
+          "id": "motor_current",
+          "label": "Current (A)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 6
+        },
+        {
+          "id": "power_factor",
+          "label": "Power Factor",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.85
+        },
+        {
+          "id": "output_hp",
+          "label": "Output (hp)",
+          "type": "number",
+          "unit": "hp",
+          "defaultValue": 1
+        },
+        {
+          "id": "input_power_motor",
+          "label": "Input Power (W)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "motor_power_kw",
+          "label": "3-Phase Power",
+          "formula": "(inputs.motor_voltage * inputs.motor_current * inputs.power_factor * 1.732) / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "motor_efficiency",
+          "label": "Motor Efficiency",
+          "formula": "(746 * inputs.output_hp) / inputs.input_power_motor",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "motor_current_calc",
+          "label": "Motor Current (3-phase)",
+          "formula": "(746 * inputs.output_hp) / (1.732 * inputs.motor_voltage * inputs.power_factor)",
+          "unit": "A",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

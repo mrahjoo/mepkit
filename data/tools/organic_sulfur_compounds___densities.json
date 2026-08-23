@@ -1,0 +1,83 @@
+{
+  "id": "organic_sulfur_compounds___densities",
+  "title": "Organic Sulfur Compounds - Densities",
+  "description": "Tables and figures showing the liquid density at 20°C for different groups of organic sulfur compounds including thiols, dialkyl sulfides, methylalkyl sulfides, ethyl alkyl sulfides, isopropyl alkyl sulfides, diisoalkyl sulfides, dialkyl disulfides, and alkylthiophenes, compared to alkanes, alcohols, acids and amines as function of carbon number.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Compound Type",
+        "Molecular Formula Pattern",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Thiol",
+          "R-SH",
+          "Organosulfur compound with carbon-bonded sulfhydryl group. R represents alkyl group. 1-thiol has -SH at end of chain, 2-thiol at second carbon, 3-thiol at third carbon."
+        ],
+        [
+          "Dialkyl Sulfide",
+          "R'-S-R''",
+          "Sulfide where R' and R'' are linear alkyl groups of the same length."
+        ],
+        [
+          "Methyl Alkyl Sulfide",
+          "CH3-S-R''",
+          "Sulfide where R' is methyl and R'' is any alkyl group."
+        ],
+        [
+          "Ethyl Alkyl Sulfide",
+          "C2H5-S-R''",
+          "Sulfide where R' is ethyl and R'' is any alkyl group."
+        ],
+        [
+          "Isopropyl Alkyl Sulfide",
+          "i-C3H7-S-R''",
+          "Sulfide where R' is isopropyl and R'' is any alkyl group."
+        ],
+        [
+          "Diisoalkyl Sulfide",
+          "i-R'-S-i-R''",
+          "Sulfide where R' and R'' are isoalkyl groups of the same length."
+        ],
+        [
+          "Dialkyl Disulfide",
+          "R'-S-S-R''",
+          "Organic compound with disulfide linkage where R' and R'' are alkyl groups."
+        ],
+        [
+          "Thiophene",
+          "C4H4S",
+          "Heterocyclic compound with stable flat five-membered ring."
+        ],
+        [
+          "Alkylthiophene",
+          "CnH(2n+1)C4H3S",
+          "Monosubstituted thiophene with one alkyl group attached to the ring."
+        ],
+        [
+          "Alkane",
+          "CnH2n+2",
+          "Acyclic saturated hydrocarbon. Also called paraffin."
+        ],
+        [
+          "Alcohol",
+          "R-OH",
+          "Organic compound with hydroxyl functional group bound to saturated carbon."
+        ],
+        [
+          "Carboxylic Acid",
+          "R-COOH",
+          "Organic compound containing carboxyl group."
+        ],
+        [
+          "Amine",
+          "R-NH2, R',R''-NH, or R',R'',R'''-N",
+          "Compound with basic nitrogen atom. Primary (1-amine), secondary, or tertiary forms."
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "elementary_curves",
+  "title": "Elementary Curves",
+  "description": "Ellipse, circle, hyperbola, parabola, parallel, intersecting and coincident lines. Explore the simplest curves (straight lines) and second degree conics curves.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Elementary Curves\n\nThe simplest of all curves are the straight lines. The next in complexity are the second degree or conics curves.\n\n## Non-degenerate Conics\n\n### Ellipse\nx² / a² + y² / b² = 1\n\nwhere a, b = intrinsic parameters\n\n### Circle\nx² + y² = a²\n\nwhere a = radius\n\n### Hyperbola\nx² / a² - y² / b² = 1\n\nwhere a, b = intrinsic parameters\n\n### Parabola\ny² - 2ly = 0\n\nwhere l = intrinsic parameter\n\n## Degenerate Conics\n\n### Parallel Lines\nx² - a² = 0\n\nwhere a = half the distance between the parallel lines\n\n### Intersecting Lines\nx² / a² - y² / b² = 0\n\nwhere tan⁻¹(b/a) = half the angle between the intersecting lines\n\n### Coincident Lines\nx² = 0"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "curve_type",
+          "label": "Curve Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Ellipse",
+              "value": "ellipse"
+            },
+            {
+              "label": "Circle",
+              "value": "circle"
+            },
+            {
+              "label": "Hyperbola",
+              "value": "hyperbola"
+            },
+            {
+              "label": "Parabola",
+              "value": "parabola"
+            },
+            {
+              "label": "Parallel Lines",
+              "value": "parallel"
+            },
+            {
+              "label": "Intersecting Lines",
+              "value": "intersecting"
+            },
+            {
+              "label": "Coincident Lines",
+              "value": "coincident"
+            }
+          ]
+        },
+        {
+          "id": "param_a",
+          "label": "Parameter a",
+          "type": "number",
+          "defaultValue": 5
+        },
+        {
+          "id": "param_b",
+          "label": "Parameter b",
+          "type": "number",
+          "defaultValue": 3
+        },
+        {
+          "id": "param_l",
+          "label": "Parameter l",
+          "type": "number",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ellipse_equation",
+          "label": "Ellipse Equation",
+          "formula": "inputs.curve_type === 'ellipse' ? 'x²/' + inputs.param_a + '² + y²/' + inputs.param_b + '² = 1' : 'N/A'"
+        },
+        {
+          "id": "circle_equation",
+          "label": "Circle Equation",
+          "formula": "inputs.curve_type === 'circle' ? 'x² + y² = ' + (inputs.param_a * inputs.param_a) : 'N/A'"
+        },
+        {
+          "id": "hyperbola_equation",
+          "label": "Hyperbola Equation",
+          "formula": "inputs.curve_type === 'hyperbola' ? 'x²/' + inputs.param_a + '² - y²/' + inputs.param_b + '² = 1' : 'N/A'"
+        },
+        {
+          "id": "parabola_equation",
+          "label": "Parabola Equation",
+          "formula": "inputs.curve_type === 'parabola' ? 'y² - 2·' + inputs.param_l + '·x = 0' : 'N/A'"
+        },
+        {
+          "id": "parallel_equation",
+          "label": "Parallel Lines Equation",
+          "formula": "inputs.curve_type === 'parallel' ? 'x² - ' + (inputs.param_a * inputs.param_a) + ' = 0' : 'N/A'"
+        },
+        {
+          "id": "intersecting_angle",
+          "label": "Half Angle Between Lines",
+          "formula": "inputs.curve_type === 'intersecting' ? Math.atan(inputs.param_b / inputs.param_a) * 180 / Math.PI : 0",
+          "unit": "degrees"
+        },
+        {
+          "id": "coincident_equation",
+          "label": "Coincident Lines Equation",
+          "formula": "inputs.curve_type === 'coincident' ? 'x² = 0' : 'N/A'"
+        }
+      ]
+    }
+  ]
+}

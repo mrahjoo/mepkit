@@ -1,0 +1,89 @@
+{
+  "id": "water_steam_mollier_diagram",
+  "title": "Water-Steam Mollier Diagram",
+  "description": "Enthalpy-entropy diagram for water and steam. Used to determine enthalpy versus entropy of water and steam, and useful for analyzing the performance of adiabatic steady-flow processes such as flow in nozzles, diffusers, turbines and compressors.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "State",
+        "Pressure (bar)",
+        "Dryness Fraction (x)",
+        "Enthalpy (kJ/kg)",
+        "Entropy (kJ/kg·K)",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Saturated Liquid",
+          "1",
+          "0",
+          "417.3",
+          "1.303",
+          "Liquid water at saturation"
+        ],
+        [
+          "Wet Vapor",
+          "1",
+          "0.5",
+          "1312",
+          "3.598",
+          "Two-phase mixture at 50% quality"
+        ],
+        [
+          "Saturated Vapor",
+          "1",
+          "1",
+          "2676",
+          "7.361",
+          "Pure steam at saturation"
+        ],
+        [
+          "Saturated Vapor",
+          "5",
+          "1",
+          "2794",
+          "6.818",
+          "Saturated steam at 5 bar"
+        ],
+        [
+          "Saturated Vapor",
+          "10",
+          "1",
+          "2770",
+          "6.586",
+          "Saturated steam at 10 bar"
+        ],
+        [
+          "Superheated Steam",
+          "5",
+          "—",
+          "2960",
+          "7.229",
+          "Superheated steam at 5 bar, 400°C"
+        ],
+        [
+          "Superheated Steam",
+          "10",
+          "—",
+          "3040",
+          "7.167",
+          "Superheated steam at 10 bar, 500°C"
+        ],
+        [
+          "Wet Vapor",
+          "10",
+          "0.9",
+          "2493",
+          "6.586",
+          "90% quality steam at 10 bar"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About the Mollier Diagram\n\nThe Mollier diagram is an enthalpy-entropy diagram for water and steam. It is particularly useful for analyzing:\n\n- **Nozzles and Diffusers**: Examining flow processes with minimal pressure change\n- **Turbines**: Evaluating adiabatic expansion processes\n- **Compressors**: Analyzing adiabatic compression processes\n\n### Dryness Fraction (Quality)\n\nThe dryness fraction, denoted by *x*, represents the quantity of saturated vapor in unit mass of wet vapor:\n- **x = 0**: Saturated liquid (100% liquid)\n- **0 < x < 1**: Wet vapor (two-phase mixture)\n- **x = 1**: Saturated vapor (100% vapor)\n\n### Key Example\n\nFor saturated steam at 10 bar pressure:\n- **Enthalpy**: approximately 2770 kJ/kg\n- **Entropy**: approximately 6.586 kJ/kg·K\n- **Dryness Fraction**: x = 1 (saturated vapor)\n\n### Unit Conversions\n\n**Pressure:**\n- 1 bar = 10⁵ Pa = 0.1 N/mm² = 14.50 psi = 0.9869 atm\n\n**Energy:**\n- 1 kJ/kg = 0.4299 Btu/lbm = 0.23884 kcal/kg"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "cooling_mode___heat_flux",
+  "title": "Cooling Mode - Heat Flux",
+  "description": "Heat fluxes for various cooling or heat transfer modes. Reference values based on 85°C surface temperature and 20°C ambient temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Cooling Mode",
+        "Heat Flux (kW/m²)"
+      ],
+      "rows": [
+        [
+          "Free Convection Air",
+          0.5
+        ],
+        [
+          "Forced Convection Air",
+          5
+        ],
+        [
+          "Free Convection Immersion",
+          10
+        ],
+        [
+          "Forced Convection Immersion",
+          500
+        ],
+        [
+          "Forced Convection Boiling",
+          1000
+        ],
+        [
+          "Impingement Air",
+          10
+        ],
+        [
+          "Jet Immersion, single phase",
+          400
+        ],
+        [
+          "Jet Immersion, boiling",
+          900
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n* **Conversion Factor**: 1 Btu/ft²h = 3.1525 W/m²\n* **Reference Conditions**: Based on 85°C surface temperature and 20°C ambient temperature"
+    }
+  ]
+}

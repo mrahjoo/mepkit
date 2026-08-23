@@ -1,0 +1,65 @@
+{
+  "id": "asme___american_society_of_mechanical_engineers",
+  "title": "ASME - American Society of Mechanical Engineers",
+  "description": "A professional organization focused on mechanical engineering technical, educational and research issues. ASME conducts technical publishing, conferences, professional development courses, and sets internationally recognized industrial and manufacturing codes and standards.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# ASME - American Society of Mechanical Engineers\n\n[ASME](http://www.asme.org/) is a 120,000-member professional organization focused on technical, educational and research issues of the engineering and technology community. ASME conducts one of the world's largest technical publishing operations, holds numerous technical conferences worldwide, and offers hundreds of professional development courses each year.\n\n## Organization\nThe work of the Society is performed by its member-elected Board of Governors and through its five Councils, 44 Boards and hundreds of Committees in 13 regions throughout the world.\n\n## 37 Technical Divisions and Subdivisions\nAdvancing the science and practice of mechanical engineering through specialized disciplines including:\n- Advanced Energy Systems\n- Aerospace\n- Applied Mechanics\n- Bioengineering\n- Computers & Information in Engineering\n- Design Engineering\n- Dynamic Systems & Control\n- Electronic & Photonic Packaging\n- Environmental Engineering\n- Fluids Engineering\n- Fluid Power Systems & Technology\n- Fuels & Combustion Technologies\n- Heat Transfer\n- Internal Combustion Engine\n- International Gas Turbine Institute\n- Manufacturing Engineering\n- Materials\n- And 20+ more divisions\n\n## Popular ASME Publications and Standards\nASME committees develop and publish internationally recognized codes and standards including:"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Standard Code",
+        "Year",
+        "Title",
+        "Primary Application"
+      ],
+      "rows": [
+        [
+          "ASME 2004 Boiler & Pressure Vessel Code",
+          "2004",
+          "Boiler & Pressure Vessel Code",
+          "Design, fabrication and inspection of boilers and pressure vessels"
+        ],
+        [
+          "ASME A17-CD",
+          "2004",
+          "Elevators and Escalators",
+          "Safety codes and inspection guides for elevators, escalators and moving walks"
+        ],
+        [
+          "ASME B31.1 - 2001",
+          "2001",
+          "Power Piping",
+          "Design and inspection of power and auxiliary service piping systems"
+        ],
+        [
+          "ASME B31.3 - 2002",
+          "2002",
+          "Process Piping",
+          "Piping in petroleum refineries, chemical, pharmaceutical and processing plants"
+        ],
+        [
+          "ASME B31.4 - 1998",
+          "1998",
+          "Pipeline Transportation Systems for Liquid Hydrocarbons",
+          "Design and testing of pipelines transporting crude oil and liquid products"
+        ],
+        [
+          "ASME V14.5M - 1994",
+          "1994",
+          "Dimensioning and Tolerance",
+          "Uniform practices for dimensioning and tolerances on engineering drawings"
+        ],
+        [
+          "ASME B16.5 - 1996",
+          "1996",
+          "Pipe Flanges and Flange Fittings",
+          "Pressure-temperature ratings, materials and dimensions for pipe flanges"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "combustion_processes_and_combustion_efficiency",
+  "title": "Combustion Processes and Combustion Efficiency",
+  "description": "Calculate furnace performance indices including thermal efficiency, annual fuel utilization efficiency (AFUE), and steady-state efficiency (SSE) based on energy inputs and outputs.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Combustion Processes and Combustion Efficiency\n\nCombustion is an exothermic reaction between a fuel and an oxidant.\n\n### Common Combustion Reactions\n\n- Carbon: C + O₂ → CO₂\n- Methane: CH₄ + 2O₂ → CO₂ + 2H₂O\n- Hydrogen: H₂ + ½O₂ → H₂O\n\n### Typical Combustion Process Efficiency\n\n- Home fireplace: 10 - 40%\n- Space heater: 50 - 80%\n- Residential gas furnace: 70 - 80%\n- Oil burner heating system: 70 - 85%\n- Gas powered boiler: 75 - 85%\n- High efficiency gas or oil condensing furnace: 85 - 95%"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Thermal Efficiency",
+        "Annual Fuel Utilization Efficiency (AFUE)",
+        "Steady-State Efficiency (SSE)"
+      ],
+      "inputs": [
+        {
+          "id": "energy_output",
+          "label": "Energy Output (Eo)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 10000
+        },
+        {
+          "id": "fuel_energy_input",
+          "label": "Fuel Energy Input (Ei)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 12500
+        },
+        {
+          "id": "annual_energy_output",
+          "label": "Annual Energy Output (Eao)",
+          "type": "number",
+          "unit": "Wh",
+          "defaultValue": 50000000
+        },
+        {
+          "id": "annual_fuel_energy_input",
+          "label": "Annual Fuel Energy Input (Eai)",
+          "type": "number",
+          "unit": "Wh",
+          "defaultValue": 62500000
+        },
+        {
+          "id": "energy_loss",
+          "label": "Energy Loss (El)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 2500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_efficiency",
+          "label": "Thermal Efficiency (μt)",
+          "formula": "100 * inputs.energy_output / inputs.fuel_energy_input",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "afue",
+          "label": "Annual Fuel Utilization Efficiency (AFUE)",
+          "formula": "100 * inputs.annual_energy_output / inputs.annual_fuel_energy_input",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "steady_state_efficiency",
+          "label": "Steady-State Efficiency (SSE)",
+          "formula": "100 * (inputs.fuel_energy_input - inputs.energy_loss) / inputs.fuel_energy_input",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

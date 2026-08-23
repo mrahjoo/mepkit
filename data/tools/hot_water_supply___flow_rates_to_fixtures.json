@@ -1,0 +1,110 @@
+{
+  "id": "hot_water_supply___flow_rates_to_fixtures",
+  "title": "Hot Water Supply - Flow Rates to Fixtures",
+  "description": "Hot water consumption of some common equipment as basins, sinks, baths and showers.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fixture Type",
+        "Flow Rate (L/min)",
+        "Typical Usage Duration (min)",
+        "Hot Water per Use (L)"
+      ],
+      "rows": [
+        [
+          "Basin/Wash Sink",
+          6,
+          2,
+          12
+        ],
+        [
+          "Kitchen Sink",
+          8,
+          5,
+          40
+        ],
+        [
+          "Bath",
+          12,
+          20,
+          240
+        ],
+        [
+          "Shower",
+          9,
+          8,
+          72
+        ],
+        [
+          "Bidet",
+          6,
+          3,
+          18
+        ],
+        [
+          "Dishwasher",
+          10,
+          45,
+          450
+        ],
+        [
+          "Washing Machine",
+          15,
+          60,
+          900
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Hot Water Flow Rates by Fixture Type",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Basin/Wash Sink",
+            "Kitchen Sink",
+            "Bath",
+            "Shower",
+            "Bidet",
+            "Dishwasher",
+            "Washing Machine"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Flow Rate (L/min)"
+        },
+        "series": [
+          {
+            "name": "Flow Rate (L/min)",
+            "type": "bar",
+            "data": [
+              6,
+              8,
+              12,
+              9,
+              6,
+              10,
+              15
+            ],
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

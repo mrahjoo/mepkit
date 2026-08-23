@@ -1,0 +1,88 @@
+{
+  "id": "methane___density_and_specific_weight_vs__temperat",
+  "title": "Methane - Density and Specific Weight vs. Temperature and Pressure",
+  "description": "Calculator to estimate the density and specific weight of gaseous methane at given temperature and pressure. Outputs include density in multiple units (kg/m³, lb/ft³, lb/gal(US liq), sl/ft³) and specific weight in N/m³ and lbf/ft³.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 300,
+          "unit": "K"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "select",
+          "options": [
+            {
+              "label": "0.1 MPa (1 bara / 14.5 psia)",
+              "value": 0.1
+            },
+            {
+              "label": "1 MPa (10 bara / 145 psia)",
+              "value": 1
+            },
+            {
+              "label": "5 MPa (50 bara / 725 psia)",
+              "value": 5
+            },
+            {
+              "label": "10 MPa (100 bara / 1450 psia)",
+              "value": 10
+            }
+          ],
+          "defaultValue": 0.1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "inputs.pressure > 0 ? (inputs.temperature * inputs.pressure / (8.314 * inputs.temperature)) * 16 / 1000 : 0",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "formula": "inputs.density_kg_m3 * 0.06243",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lb_gal",
+          "label": "Density",
+          "unit": "lb/gal(US liq)",
+          "formula": "inputs.density_kg_m3 * 0.008345",
+          "format": "decimal"
+        },
+        {
+          "id": "density_sl_ft3",
+          "label": "Density",
+          "unit": "sl/ft³",
+          "formula": "inputs.density_kg_m3 / 515.3788",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_weight_N_m3",
+          "label": "Specific Weight",
+          "unit": "N/m³",
+          "formula": "inputs.density_kg_m3 * 9.80665",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "formula": "inputs.density_lb_ft3 * 32.17405",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

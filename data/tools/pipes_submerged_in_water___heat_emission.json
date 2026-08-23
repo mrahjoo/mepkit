@@ -1,0 +1,96 @@
+{
+  "id": "pipes_submerged_in_water___heat_emission",
+  "title": "Pipes Submerged in Water - Heat Emission",
+  "description": "Heat emission from steam or water heating pipes submerged in water - assisted (forced) or natural circulation.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature Difference (°C)",
+        "Heat Transfer Rate (W/(m²·°C))"
+      ],
+      "rows": [
+        [
+          "28",
+          "570"
+        ],
+        [
+          "56",
+          "1000"
+        ],
+        [
+          "111",
+          "1300"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Application Type",
+        "Heat Transfer Rate (W/(m²·°C))"
+      ],
+      "rows": [
+        [
+          "Tank coils with low pressure steam, natural circulation",
+          "570"
+        ],
+        [
+          "Tank coils with high pressure steam, natural circulation",
+          "1100"
+        ],
+        [
+          "Tank coils with low pressure steam, forced circulation",
+          "1100"
+        ],
+        [
+          "Tank coils with high pressure steam, forced circulation",
+          "1700"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "surface_area",
+          "label": "Surface Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "heat_transfer_rate",
+          "label": "Heat Transfer Rate",
+          "type": "number",
+          "unit": "W/(m²·°C)",
+          "defaultValue": 570
+        },
+        {
+          "id": "temperature_difference",
+          "label": "Temperature Difference",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_emission",
+          "label": "Heat Emission",
+          "unit": "W",
+          "formula": "inputs.surface_area * inputs.heat_transfer_rate * inputs.temperature_difference",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_emission_kw",
+          "label": "Heat Emission",
+          "unit": "kW",
+          "formula": "(inputs.surface_area * inputs.heat_transfer_rate * inputs.temperature_difference) / 1000",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

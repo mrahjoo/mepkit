@@ -1,0 +1,53 @@
+{
+  "id": "trusses",
+  "title": "Trusses",
+  "description": "Tool for calculating and analyzing truss properties and performance",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Trusses\n\nWe care about your privacy!\n\nWhen visiting our site, pre-selected companies may access and use certain information on your device and about this web page to serve relevant ads or personalised content. Please note that ads help keep our service free.\n\n## Learn more why you are seeing this\n\nTo offer you free, high-quality content and deliver the best possible user experience on our website, we and our technology partners require your consent to store and access personal data on your device.\n\nYou can change or withdraw your consent anytime via our [privacy policy page](https://www.engineeringtoolbox.com/privacy-policy-d_2228.html)."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Truss Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "height",
+          "label": "Truss Height",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "load",
+          "label": "Applied Load",
+          "type": "number",
+          "unit": "kN",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "span_ratio",
+          "label": "Span to Height Ratio",
+          "formula": "inputs.length / inputs.height",
+          "format": "decimal"
+        },
+        {
+          "id": "load_intensity",
+          "label": "Load Intensity",
+          "formula": "inputs.load / inputs.length",
+          "unit": "kN/m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

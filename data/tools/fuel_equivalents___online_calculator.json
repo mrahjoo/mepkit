@@ -1,0 +1,148 @@
+{
+  "id": "fuel_equivalents___online_calculator",
+  "title": "Fuel Equivalents - Online Calculator",
+  "description": "Online fuels energy equivalents calculator for oil, gas and more. Convert between common fuel energy equivalents including Btu, natural gas, and other fuel types.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel Type",
+        "Unit",
+        "Equivalent to 1 Unit",
+        "Reference"
+      ],
+      "rows": [
+        [
+          "Oil",
+          "Barrel",
+          "5.8 Million Btu",
+          "Standard reference fuel"
+        ],
+        [
+          "Natural Gas",
+          "1000 ft³",
+          "1000 Btu",
+          "Gross heating value"
+        ],
+        [
+          "Natural Gas",
+          "Nm³",
+          "9400 kcal",
+          "Gross heating value"
+        ],
+        [
+          "Natural Gas",
+          "Nm³",
+          "39.4 MJ",
+          "Gross heating value"
+        ],
+        [
+          "Coal",
+          "Short Ton",
+          "21.3 Million Btu",
+          "Standard reference fuel"
+        ],
+        [
+          "Electricity",
+          "kWh",
+          "3.412 Btu",
+          "Standard conversion"
+        ],
+        [
+          "Wood",
+          "Cord",
+          "20-25 Million Btu",
+          "Varies with moisture content"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "source_value",
+          "label": "Source Value",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "Btu"
+        },
+        {
+          "id": "source_fuel",
+          "label": "From Fuel Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Btu",
+              "value": "btu"
+            },
+            {
+              "label": "Oil Barrel",
+              "value": "barrel"
+            },
+            {
+              "label": "Natural Gas nm³",
+              "value": "gas_nm3"
+            },
+            {
+              "label": "Natural Gas 1000 ft³",
+              "value": "gas_1000ft3"
+            },
+            {
+              "label": "Coal (Short Ton)",
+              "value": "coal"
+            },
+            {
+              "label": "Electricity (kWh)",
+              "value": "electricity"
+            }
+          ]
+        },
+        {
+          "id": "target_fuel",
+          "label": "To Fuel Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Btu",
+              "value": "btu"
+            },
+            {
+              "label": "Oil Barrel",
+              "value": "barrel"
+            },
+            {
+              "label": "Natural Gas nm³",
+              "value": "gas_nm3"
+            },
+            {
+              "label": "Natural Gas 1000 ft³",
+              "value": "gas_1000ft3"
+            },
+            {
+              "label": "Coal (Short Ton)",
+              "value": "coal"
+            },
+            {
+              "label": "Electricity (kWh)",
+              "value": "electricity"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Equivalent Value",
+          "formula": "inputs.source_value",
+          "unit": "varies",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### How to Use\n\n1. **Select Source Fuel Type**: Choose the fuel type and unit you want to convert from\n2. **Enter Value**: Input the quantity to convert\n3. **Select Target Fuel Type**: Choose the fuel type you want to convert to\n4. **View Result**: The equivalent value will be calculated automatically\n\n### Reference Standards\n\n* **Natural gas equivalents** assume *1000 Btu/ft³* gross - or *9400 kcal/Nm³* or *39.4 MJ/Nm³*\n* **Standard reference fuels** are statistical units with defined gross heat content\n* All conversions based on gross heating values\n\n### Example\n\nThe equivalent of *100 Btu* energy approximates to *0.0025 nm³* of natural gas."
+    }
+  ]
+}

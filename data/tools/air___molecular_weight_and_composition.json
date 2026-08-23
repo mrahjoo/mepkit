@@ -1,0 +1,113 @@
+{
+  "id": "air___molecular_weight_and_composition",
+  "title": "Air - Molecular Weight and Composition",
+  "description": "Calculate and explore the molecular weight and composition of dry air, including major and minor gas components. Understand how the average molar mass of air is determined from its constituent gases.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Formula",
+        "Volume Ratio (mol/molair)",
+        "Molar Mass (g/mol)",
+        "Molar Mass in Air (g/molair)",
+        "Weight % (wt%)"
+      ],
+      "rows": [
+        [
+          "Nitrogen",
+          "N2",
+          "0.78084",
+          "28.013",
+          "21.873983",
+          "75.52"
+        ],
+        [
+          "Oxygen",
+          "O2",
+          "0.20946",
+          "31.999",
+          "6.702469",
+          "23.14"
+        ],
+        [
+          "Argon",
+          "Ar",
+          "0.00934",
+          "39.948",
+          "0.373114",
+          "1.29"
+        ],
+        [
+          "Carbon dioxide",
+          "CO2",
+          "0.00033",
+          "44.010",
+          "0.014677",
+          "0.051"
+        ],
+        [
+          "Neon",
+          "Ne",
+          "0.00001818",
+          "20.180",
+          "0.000367",
+          "0.0013"
+        ],
+        [
+          "Helium",
+          "He",
+          "0.00000524",
+          "4.003",
+          "0.000021",
+          "0.00007"
+        ],
+        [
+          "Methane",
+          "CH4",
+          "0.00000179",
+          "16.042",
+          "0.000029",
+          "0.00010"
+        ],
+        [
+          "Krypton",
+          "Kr",
+          "0.0000010",
+          "83.798",
+          "0.000084",
+          "0.00029"
+        ],
+        [
+          "Hydrogen",
+          "H2",
+          "0.0000005",
+          "2.016",
+          "0.000001",
+          "0.000003"
+        ],
+        [
+          "Xenon",
+          "Xe",
+          "0.00000009",
+          "131.293",
+          "0.000012",
+          "0.00004"
+        ],
+        [
+          "Average molar mass of air",
+          "",
+          "",
+          "",
+          "28.9647",
+          "100.00"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Calculation Method\n\nThe average molar mass of air is calculated using the formula:\n\n**Mmixture = x₁M₁ + ... + xₙMₙ**\n\nWhere:\n- **xᵢ** = mole fractions of each gas\n- **Mᵢ** = the molar mass of each gas\n\n## Key Components\n\n**Dry air is composed primarily of:**\n- **78.084 vol%** Nitrogen (N₂) with molar mass ~28 g/mol\n- **20.946 vol%** Oxygen (O₂) with molar mass ~32 g/mol\n- **0.934 vol%** Argon (Ar) with molar mass ~40 g/mol\n- **Trace amounts** of CO₂, Ne, He, CH₄, Kr, H₂, and Xe\n\n**Average Molar Mass of Dry Air: 28.9647 g/mol**\n\n## Air Density\n\nThe density of dry air can be calculated using the Ideal Gas Law:\n\n**ρ = P / (R·T)**\n\nWhere:\n- P = pressure (Pa)\n- R_air = 287.05 J/kg·K (individual gas constant)\n- T = absolute temperature (K)\n\n**Example:** At atmospheric pressure (101.325 kPa) and 0°C (273.15 K):\nρ = 1.292 kg/m³\n\n## Water Vapor Note\n\n⚠️ **Important:** Water vapor (H₂O) is lighter than both O₂ and N₂, so **dry air is denser than humid air**. Water vapor dilutes the other gases and reduces the total density of the mixture."
+    }
+  ]
+}

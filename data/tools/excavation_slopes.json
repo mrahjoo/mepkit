@@ -1,0 +1,59 @@
+{
+  "id": "excavation_slopes",
+  "title": "Excavation Slopes",
+  "description": "Calculate excavation slope requirements based on soil type and excavation depth",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Excavation Slopes Calculator\n\nCalculating excavation slope based on soil type and excavation depth.\n\n### Excavation Slopes vs. Type of Soils\n\n| Type of Soil | Slope (x : y) |\n|---|---|\n| Solid rock, shale or cemented sand and gravels | 0 : 1 |\n| Compact angular gravels | 1/2 : 1 |\n| Recommended slope for average soils | 1 : 1 |\n| Compact sharp sand | 1 1/2 : 1 |\n| Well-rounded loose sand | 2 : 1 |"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "excavation_depth",
+          "label": "Excavation Depth",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        },
+        {
+          "id": "soil_type",
+          "label": "Soil Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Solid rock, shale or cemented sand and gravels",
+              "value": 0
+            },
+            {
+              "label": "Compact angular gravels",
+              "value": 0.5
+            },
+            {
+              "label": "Recommended slope for average soils",
+              "value": 1
+            },
+            {
+              "label": "Compact sharp sand",
+              "value": 1.5
+            },
+            {
+              "label": "Well-rounded loose sand",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "slope_distance",
+          "label": "Required Slope Distance",
+          "formula": "inputs.excavation_depth * inputs.soil_type",
+          "unit": "ft"
+        }
+      ]
+    }
+  ]
+}

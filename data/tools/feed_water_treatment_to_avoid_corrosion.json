@@ -1,0 +1,52 @@
+{
+  "id": "feed_water_treatment_to_avoid_corrosion",
+  "title": "Feed Water Treatment to Avoid Corrosion",
+  "description": "Guidance on feed water treatment methods to prevent corrosion in steam systems, including scavenger chemicals (Sodium Sulfite, Hydrazine, Sodium Erythorbate) and deaeration towers. Covers pressure ratings, application methods, and considerations for different system types.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Chemical",
+        "Pressure Rating",
+        "Advantages",
+        "Disadvantages",
+        "Application"
+      ],
+      "rows": [
+        [
+          "Sodium Sulfite",
+          "Below 1000 psi",
+          "Common, cost-effective, effective oxygen scavenger",
+          "May increase dissolved solids and conductivity; breaks down above 1000 psi forming corrosive H2S/SO2",
+          "Low to medium pressure systems"
+        ],
+        [
+          "Hydrazine",
+          "Above 1000 psi",
+          "Efficient oxygen elimination, forms only water and nitrogen",
+          "Toxic; cannot be used in food processing systems",
+          "High pressure systems"
+        ],
+        [
+          "Sodium Erythorbate",
+          "All pressures",
+          "Non-toxic, can be used in food processing, replaces Sodium Sulfite and Hydrazine",
+          "Newer alternative with fewer restrictions",
+          "All system types including food processing"
+        ],
+        [
+          "Deaeration Tower",
+          "All pressures",
+          "Physical removal of oxygen through heating, always recommended, no chemical addition required",
+          "Requires elevated tank design, depends on temperature effectiveness",
+          "All steam systems - primary method"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Treatment Methods\n\n### Scavenger Chemicals\n- **Sodium Sulfite**: White crystalline powder, effective below 1000 psi. Decomposes at high pressure causing corrosive byproducts.\n- **Hydrazine**: Eliminates residual oxygen by forming water and gaseous nitrogen. Not suitable for food processing due to toxicity.\n- **Sodium Erythorbate**: Non-toxic alternative oxygen scavenger suitable for all pressure ranges and food processing applications.\n\n### Best Practices\n- Add chemicals to storage tank before feed tank for maximum reaction time\n- Do NOT add directly to make-up water feed line (insufficient reaction time)\n- Always use deaeration tower on top of feed tank to vent dissolved gases\n- Modern supercritical power plants use oxidizing treatment with oxygen feeders (>50 ppb) instead of dearation\n\n### Special Considerations\n- **Supercritical/Power Plants**: Condensate polishing critical for contaminant control. Positive potential (dissolved oxygen >50 ppb) reduces oxide formation and corrosion significantly.\n- **Food Processing**: Must use non-toxic alternatives like Sodium Erythorbate; Hydrazine is prohibited.\n- **Deaerator Operation**: Modern supercritical units operate with closed deaerator vents or with oxygen feeders at deaerator outlets."
+    }
+  ]
+}

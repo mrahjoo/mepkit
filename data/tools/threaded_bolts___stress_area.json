@@ -1,0 +1,72 @@
+{
+  "id": "threaded_bolts___stress_area",
+  "title": "Threaded Bolts - Stress Area",
+  "description": "Calculate the tensile stress area in bolts according to UN/UNR or ISO 898-1 standards. The stressed area represents the weakest point in a bolt at the thread root.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## UN and UNR Bolts Tensile Stress Area\n\nCalculate stressed area using:\n\n**A = (π / 4) × (dn - 0.9743 / n)²**\n\nWhere:\n- A = stressed area (in²)\n- dn = nominal bolt diameter (in)\n- n = threads per inch (TPI)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "un_nominal_diameter",
+          "label": "Nominal Bolt Diameter (UN/UNR)",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "in"
+        },
+        {
+          "id": "threads_per_inch",
+          "label": "Threads Per Inch (TPI)",
+          "type": "number",
+          "defaultValue": 13,
+          "unit": "threads/in"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "un_stress_area",
+          "label": "Stress Area (UN/UNR)",
+          "formula": "(3.14159265359 / 4) * Math.pow((inputs.un_nominal_diameter - 0.9743 / inputs.threads_per_inch), 2)",
+          "unit": "in²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## ISO 898 Bolts Tensile Stress Area\n\nCalculate stressed area using:\n\n**As,nom = (π / 4) × ((d2 + d3) / 2)²**\n\nWhere:\n- As,nom = nominal stress area (mm²)\n- d2 = pitch diameter (mm)\n- d3 = minor diameter (mm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "iso_pitch_diameter",
+          "label": "Pitch Diameter (d2)",
+          "type": "number",
+          "defaultValue": 8.376,
+          "unit": "mm"
+        },
+        {
+          "id": "iso_minor_diameter",
+          "label": "Minor Diameter (d3)",
+          "type": "number",
+          "defaultValue": 7.188,
+          "unit": "mm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "iso_stress_area",
+          "label": "Stress Area (ISO 898-1)",
+          "formula": "(3.14159265359 / 4) * Math.pow(((inputs.iso_pitch_diameter + inputs.iso_minor_diameter) / 2), 2)",
+          "unit": "mm²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

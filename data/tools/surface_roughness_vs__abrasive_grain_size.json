@@ -1,0 +1,49 @@
+{
+  "id": "surface_roughness_vs__abrasive_grain_size",
+  "title": "Surface Roughness vs. Abrasive Grain Size",
+  "description": "U.S. mesh size vs. surface roughness. Reference table showing the relationship between abrasive grain size and workpiece surface roughness.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Surface Roughness Ra (μm)",
+        "Abrasive Grain Size (U.S. mesh size)"
+      ],
+      "rows": [
+        [
+          "0.7 - 1.1",
+          46
+        ],
+        [
+          "0.35 - 0.7",
+          60
+        ],
+        [
+          "0.2 - 0.4",
+          80
+        ],
+        [
+          "0.17 - 0.25",
+          100
+        ],
+        [
+          "0.14 - 0.2",
+          120
+        ],
+        [
+          "0.12 - 0.17",
+          150
+        ],
+        [
+          "0.1 - 0.14",
+          180
+        ],
+        [
+          "0.08 - 0.12",
+          220
+        ]
+      ]
+    }
+  ]
+}

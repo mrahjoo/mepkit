@@ -1,0 +1,12 @@
+{
+  "id": "compressed_air___glossary_of_terms",
+  "title": "Compressed Air - Glossary of Terms",
+  "description": "A glossary of terms commonly used for compressed air.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Compressed Air - Glossary of Terms\n\nA glossary of terms commonly used for compressed air.\n\n## Reference\n\n* [Impact Resource Management - Glossary](http://www.impactrm.com/glossary)\n\nThis tool provides definitions and explanations of terminology used in compressed air systems and pneumatic applications."
+    }
+  ]
+}

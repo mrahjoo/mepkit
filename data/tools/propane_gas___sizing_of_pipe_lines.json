@@ -1,0 +1,48 @@
+{
+  "id": "propane_gas___sizing_of_pipe_lines",
+  "title": "Propane Gas - Sizing of Pipe Lines",
+  "description": "Tool for calculating and sizing propane gas pipe lines",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Pipe Diameter",
+          "",
+          "mm"
+        ],
+        [
+          "Flow Rate",
+          "",
+          "kg/h"
+        ],
+        [
+          "Pressure Drop",
+          "",
+          "kPa"
+        ],
+        [
+          "Pipe Length",
+          "",
+          "m"
+        ],
+        [
+          "Temperature",
+          "",
+          "°C"
+        ],
+        [
+          "Velocity",
+          "",
+          "m/s"
+        ]
+      ]
+    }
+  ]
+}

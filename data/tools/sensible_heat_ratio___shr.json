@@ -1,0 +1,193 @@
+{
+  "id": "sensible_heat_ratio___shr",
+  "title": "Sensible Heat Ratio - SHR",
+  "description": "Calculate the Sensible Heat Ratio (SHR), which describes the ratio of sensible heat load to total heat load in HVAC systems. SHR is essential for understanding air conditioning performance and design specifications for various building types.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sensible Heat Ratio Calculator\n\nThe Sensible Heat Ratio (SHR) is calculated using:\n\n**SHR = cp × (to - ti) / (ho - hi)**\n\nWhere:\n- **cp** = Specific heat of air (kJ/kg·°C)\n- **to** = Outlet air temperature (°C)\n- **ti** = Inlet air temperature (°C)\n- **ho** = Outlet moist air enthalpy (kJ/kg)\n- **hi** = Inlet moist air enthalpy (kJ/kg)\n\nSHR ranges from 0 to 1, where higher values indicate more sensible cooling/heating relative to latent load."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cp",
+          "label": "Specific Heat of Air (cp)",
+          "type": "number",
+          "defaultValue": 1.005,
+          "unit": "kJ/kg·°C"
+        },
+        {
+          "id": "to",
+          "label": "Outlet Air Temperature (to)",
+          "type": "number",
+          "defaultValue": 26,
+          "unit": "°C"
+        },
+        {
+          "id": "ti",
+          "label": "Inlet Air Temperature (ti)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "ho",
+          "label": "Outlet Moist Air Enthalpy (ho)",
+          "type": "number",
+          "defaultValue": 47,
+          "unit": "kJ/kg"
+        },
+        {
+          "id": "hi",
+          "label": "Inlet Moist Air Enthalpy (hi)",
+          "type": "number",
+          "defaultValue": 37,
+          "unit": "kJ/kg"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "shr_ratio",
+          "label": "Sensible Heat Ratio (SHR)",
+          "formula": "inputs.cp * (inputs.to - inputs.ti) / (inputs.ho - inputs.hi)",
+          "format": "decimal",
+          "unit": "ratio"
+        },
+        {
+          "id": "shr_percent",
+          "label": "Sensible Heat Ratio (%)",
+          "formula": "inputs.cp * (inputs.to - inputs.ti) / (inputs.ho - inputs.hi) * 100",
+          "format": "decimal",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Building Type",
+        "SHR Range (Min)",
+        "SHR Range (Max)"
+      ],
+      "rows": [
+        [
+          "Auditoriums, Theaters",
+          "0.65",
+          "0.75"
+        ],
+        [
+          "Apartments",
+          "0.80",
+          "0.95"
+        ],
+        [
+          "Banks, Court Houses, Municipal Buildings",
+          "0.75",
+          "0.90"
+        ],
+        [
+          "Churches",
+          "0.65",
+          "0.75"
+        ],
+        [
+          "Dining Halls",
+          "0.65",
+          "0.80"
+        ],
+        [
+          "Computer Rooms",
+          "0.80",
+          "0.95"
+        ],
+        [
+          "Cocktail Lounges, Bars, Taverns, Clubhouses, Nightclubs",
+          "0.65",
+          "0.80"
+        ],
+        [
+          "Jails",
+          "0.80",
+          "0.95"
+        ],
+        [
+          "Hospital Patient Rooms, Nursing Home, Patient Rooms",
+          "0.75",
+          "0.85"
+        ],
+        [
+          "Kitchens",
+          "0.60",
+          "0.70"
+        ],
+        [
+          "Libraries, Museums",
+          "0.80",
+          "0.90"
+        ],
+        [
+          "Malls, Shopping Centers",
+          "0.65",
+          "0.85"
+        ],
+        [
+          "Medical/Dental Centers, Clinics and Offices",
+          "0.75",
+          "0.85"
+        ],
+        [
+          "Motel and Hotel Public Areas",
+          "0.75",
+          "0.90"
+        ],
+        [
+          "Motel and Hotel Guest Rooms",
+          "0.80",
+          "0.95"
+        ],
+        [
+          "Police Stations, Fire Stations, Post Offices",
+          "0.75",
+          "0.90"
+        ],
+        [
+          "Precision Manufacturing",
+          "0.80",
+          "0.95"
+        ],
+        [
+          "Restaurants",
+          "0.65",
+          "0.80"
+        ],
+        [
+          "Residences",
+          "0.80",
+          "0.95"
+        ],
+        [
+          "Retail, Department Stores",
+          "0.65",
+          "0.90"
+        ],
+        [
+          "Other Shops",
+          "0.65",
+          "0.90"
+        ],
+        [
+          "School Classrooms",
+          "0.65",
+          "0.80"
+        ],
+        [
+          "Supermarkets",
+          "0.65",
+          "0.85"
+        ]
+      ]
+    }
+  ]
+}

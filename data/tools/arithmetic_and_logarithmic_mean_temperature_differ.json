@@ -1,0 +1,91 @@
+{
+  "id": "arithmetic_and_logarithmic_mean_temperature_differ",
+  "title": "Arithmetic and Logarithmic Mean Temperature Difference",
+  "description": "Calculator for Arithmetic Mean Temperature Difference (AMTD) and Logarithmic Mean Temperature Difference (LMTD) in heat exchangers. Based on Newton's Law of Cooling, this tool computes mean temperature differences for parallel flow and counter-current flow configurations.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Arithmetic and Logarithmic Mean Temperature Difference\n\nCalculate the Arithmetic Mean Temperature Difference (AMTD) and Logarithmic Mean Temperature Difference (LMTD) for heat exchangers.\n\n### AMTD Formula\nAMTD = (tpi + tpo) / 2 - (tsi + tso) / 2\n\n### LMTD Formula\nLMTD = (dti - dto) / ln(dti / dto)\n\nWhere:\n- **dti** = inlet temperature difference\n- **dto** = outlet temperature difference"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "tpi",
+          "label": "Primary Inlet Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 80
+        },
+        {
+          "id": "tpo",
+          "label": "Primary Outlet Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 60
+        },
+        {
+          "id": "tsi",
+          "label": "Secondary Inlet Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 0
+        },
+        {
+          "id": "tso",
+          "label": "Secondary Outlet Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "flow_type",
+          "label": "Flow Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Parallel Flow",
+              "value": "parallel"
+            },
+            {
+              "label": "Counter Flow",
+              "value": "counter"
+            }
+          ],
+          "defaultValue": "parallel"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "amtd",
+          "label": "Arithmetic Mean Temperature Difference (AMTD)",
+          "formula": "(inputs.tpi + inputs.tpo) / 2 - (inputs.tsi + inputs.tso) / 2",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "dti",
+          "label": "Inlet Temperature Difference (dti)",
+          "formula": "inputs.flow_type === 'parallel' ? inputs.tpi - inputs.tsi : inputs.tpi - inputs.tso",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "dto",
+          "label": "Outlet Temperature Difference (dto)",
+          "formula": "inputs.flow_type === 'parallel' ? inputs.tpo - inputs.tso : inputs.tpo - inputs.tsi",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "lmtd",
+          "label": "Logarithmic Mean Temperature Difference (LMTD)",
+          "formula": "(inputs.dti - inputs.dto) / Math.log(inputs.dti / inputs.dto)",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

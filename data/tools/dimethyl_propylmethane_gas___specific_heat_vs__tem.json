@@ -1,0 +1,77 @@
+{
+  "id": "dimethyl_propylmethane_gas___specific_heat_vs__tem",
+  "title": "Dimethyl Propylmethane Gas - Specific Heat vs. Temperature",
+  "description": "Specific heat of Dimethyl Propylmethane Gas - C6H18 - at temperatures ranging 250 - 800 K. Reference: 1 kJ/kgK = 0.2389 kcal/(kg oC) = 0.2389 Btu/lbmoF",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature - T - (K)",
+        "Specific Heat - cp - (kJ/kgK)"
+      ],
+      "rows": [
+        [
+          250,
+          1.308
+        ],
+        [
+          275,
+          1.484
+        ],
+        [
+          300,
+          1.656
+        ],
+        [
+          325,
+          1.825
+        ],
+        [
+          350,
+          1.979
+        ],
+        [
+          375,
+          2.109
+        ],
+        [
+          400,
+          2.218
+        ],
+        [
+          450,
+          2.403
+        ],
+        [
+          500,
+          2.608
+        ],
+        [
+          550,
+          2.774
+        ],
+        [
+          600,
+          2.924
+        ],
+        [
+          650,
+          3.121
+        ],
+        [
+          700,
+          3.232
+        ],
+        [
+          750,
+          3.349
+        ],
+        [
+          800,
+          3.465
+        ]
+      ]
+    }
+  ]
+}

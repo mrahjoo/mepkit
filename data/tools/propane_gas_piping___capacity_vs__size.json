@@ -1,0 +1,90 @@
+{
+  "id": "propane_gas_piping___capacity_vs__size",
+  "title": "Propane Gas Piping - Capacity vs. Size",
+  "description": "Calculate propane gas piping capacity based on pipe size, length, pressure, and temperature parameters.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Size (inches)",
+        "Capacity (BTU/h)",
+        "Flow Rate (CFM)",
+        "Pressure Drop (%)",
+        "Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          "1/4",
+          38000,
+          15,
+          2.5,
+          4.2
+        ],
+        [
+          "3/8",
+          60000,
+          24,
+          2,
+          3.8
+        ],
+        [
+          "1/2",
+          120000,
+          48,
+          1.5,
+          3.5
+        ],
+        [
+          "5/8",
+          180000,
+          72,
+          1.2,
+          3.2
+        ],
+        [
+          "3/4",
+          240000,
+          96,
+          1,
+          3
+        ],
+        [
+          "1",
+          410000,
+          164,
+          0.8,
+          2.8
+        ],
+        [
+          "1-1/4",
+          650000,
+          260,
+          0.6,
+          2.5
+        ],
+        [
+          "1-1/2",
+          1000000,
+          400,
+          0.5,
+          2.3
+        ],
+        [
+          "2",
+          1600000,
+          640,
+          0.4,
+          2.1
+        ],
+        [
+          "2-1/2",
+          2400000,
+          960,
+          0.3,
+          1.9
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "pressure_energy",
+  "title": "Pressure Energy",
+  "description": "Calculate the potential of pressure energy in an incompressible fluid. The pressure energy is expressed as ΔE = Δp / ρ, where ΔE is potential energy (J/kg), Δp is pressure difference (Pa), and ρ is density of fluid (kg/m³).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate pressure energy in incompressible fluids",
+      "inputs": [
+        {
+          "id": "pressure_diff",
+          "label": "Pressure Difference (Δp)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 1000000
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_energy",
+          "label": "Pressure Energy (ΔE)",
+          "formula": "inputs.pressure_diff / inputs.fluid_density",
+          "unit": "J/kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pressure Difference (Pa)",
+        "Fluid Density (kg/m³)",
+        "Pressure Energy (J/kg)"
+      ],
+      "rows": [
+        [
+          100000,
+          1000,
+          100
+        ],
+        [
+          500000,
+          1000,
+          500
+        ],
+        [
+          1000000,
+          1000,
+          1000
+        ],
+        [
+          2000000,
+          1000,
+          2000
+        ],
+        [
+          1000000,
+          800,
+          1250
+        ],
+        [
+          1000000,
+          1200,
+          833.33
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\n**ΔE = Δp / ρ**\n\nWhere:\n- **ΔE** = potential energy (J/kg, Btu/lb)\n- **Δp** = pressure difference (Pa, lb/ft²)\n- **ρ** = density of fluid (kg/m³, lb/ft³)\n\n## Example\n\nFor a water tank with:\n- Pressure: 10 bar (10⁶ Pa)\n- Water density: 1000 kg/m³\n\nThe pressure energy is:\n**ΔE = (10⁶ Pa) / (1000 kg/m³) = 1000 J/kg**"
+    }
+  ]
+}

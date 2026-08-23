@@ -1,0 +1,179 @@
+{
+  "id": "bytes__kilobytes_and_megabytes",
+  "title": "Bytes, Kilobytes and Megabytes",
+  "description": "Computer bytes conversion tool for understanding different units of digital storage including decimal and binary systems",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Bytes, Kilobytes and Megabytes\n\nComputer bytes and their conversions.\n\n## Key Facts\n- 1 byte = 8 bits\n- 8 bits computers move 1 byte\n- 16 bits computers move 2 bytes\n- 32 bits computers move 4 bytes\n- 64 bits computers move 8 bytes"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "bytes_input",
+          "label": "Bytes",
+          "type": "number",
+          "defaultValue": 1024
+        }
+      ],
+      "outputs": [
+        {
+          "id": "kilobytes_decimal",
+          "label": "Kilobytes (Decimal)",
+          "formula": "inputs.bytes_input / 1000",
+          "unit": "kB",
+          "format": "decimal"
+        },
+        {
+          "id": "kilobytes_binary",
+          "label": "Kilobytes (Binary)",
+          "formula": "inputs.bytes_input / 1024",
+          "unit": "KiB",
+          "format": "decimal"
+        },
+        {
+          "id": "megabytes_decimal",
+          "label": "Megabytes (Decimal)",
+          "formula": "inputs.bytes_input / 1000000",
+          "unit": "MB",
+          "format": "decimal"
+        },
+        {
+          "id": "megabytes_binary",
+          "label": "Megabytes (Binary)",
+          "formula": "inputs.bytes_input / 1048576",
+          "unit": "MiB",
+          "format": "decimal"
+        },
+        {
+          "id": "gigabytes_decimal",
+          "label": "Gigabytes (Decimal)",
+          "formula": "inputs.bytes_input / 1000000000",
+          "unit": "GB",
+          "format": "decimal"
+        },
+        {
+          "id": "gigabytes_binary",
+          "label": "Gigabytes (Binary)",
+          "formula": "inputs.bytes_input / 1073741824",
+          "unit": "GiB",
+          "format": "decimal"
+        },
+        {
+          "id": "terabytes_decimal",
+          "label": "Terabytes (Decimal)",
+          "formula": "inputs.bytes_input / 1000000000000",
+          "unit": "TB",
+          "format": "decimal"
+        },
+        {
+          "id": "terabytes_binary",
+          "label": "Terabytes (Binary)",
+          "formula": "inputs.bytes_input / 1099511627776",
+          "unit": "TiB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Unit",
+        "Decimal (Base 10)",
+        "Binary (Base 2)",
+        "Bytes",
+        "Abbreviation"
+      ],
+      "rows": [
+        [
+          "Kilobyte",
+          "10^3",
+          "2^10",
+          "1 024",
+          "kB / KiB"
+        ],
+        [
+          "Megabyte",
+          "10^6",
+          "2^20",
+          "1 048 576",
+          "MB / MiB"
+        ],
+        [
+          "Gigabyte",
+          "10^9",
+          "2^30",
+          "1 073 741 824",
+          "GB / GiB"
+        ],
+        [
+          "Terabyte",
+          "10^12",
+          "2^40",
+          "1 099 511 627 776",
+          "TB / TiB"
+        ],
+        [
+          "Petabyte",
+          "10^15",
+          "2^50",
+          "1 125 899 906 842 620",
+          "PB / PiB"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Kilobyte",
+            "Megabyte",
+            "Gigabyte",
+            "Terabyte",
+            "Petabyte"
+          ]
+        },
+        "yAxis": {
+          "type": "log"
+        },
+        "series": [
+          {
+            "name": "Decimal (Base 10)",
+            "data": [
+              1000,
+              1000000,
+              1000000000,
+              1000000000000,
+              1000000000000000
+            ],
+            "type": "bar"
+          },
+          {
+            "name": "Binary (Base 2)",
+            "data": [
+              1024,
+              1048576,
+              1073741824,
+              1099511627776,
+              1125899906842620
+            ],
+            "type": "bar"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Decimal (Base 10)",
+            "Binary (Base 2)"
+          ]
+        }
+      }
+    }
+  ]
+}

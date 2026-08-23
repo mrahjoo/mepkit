@@ -1,0 +1,105 @@
+{
+  "id": "centrifugal_pumps",
+  "title": "Centrifugal Pumps",
+  "description": "A calculator tool for analyzing centrifugal pump performance, including head calculations, pressure conversions, and pump efficiency analysis. This tool helps engineers and technicians understand pump behavior based on kinetic energy transfer, head measurements, and system resistance.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Centrifugal Pumps Calculator\n\nThis tool calculates key performance parameters for centrifugal pumps including total head developed and pump efficiency. Centrifugal pumps convert input power to kinetic energy by accelerating liquid in a revolving impeller.\n\n### Key Concepts:\n- **Head**: Measurement of kinetic energy in terms of liquid column height (m or ft)\n- **Efficiency**: Ratio of useful work output to power input\n- **Constant Head Machines**: Centrifugal pumps maintain constant head regardless of fluid density"
+    },
+    {
+      "type": "calculator",
+      "content": "### Total Head Calculation",
+      "inputs": [
+        {
+          "id": "p_outlet",
+          "label": "Pressure at Outlet (p2)",
+          "type": "number",
+          "unit": "N/m²",
+          "defaultValue": 150000
+        },
+        {
+          "id": "p_inlet",
+          "label": "Pressure at Inlet (p1)",
+          "type": "number",
+          "unit": "N/m²",
+          "defaultValue": 100000
+        },
+        {
+          "id": "density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (g)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "velocity_outlet",
+          "label": "Velocity at Outlet (v2)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 2.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_head",
+          "label": "Pressure Head Component",
+          "formula": "(inputs.p_outlet - inputs.p_inlet) / (inputs.density * inputs.gravity)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity_head",
+          "label": "Velocity Head Component",
+          "formula": "(inputs.velocity_outlet * inputs.velocity_outlet) / (2 * inputs.gravity)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "total_head",
+          "label": "Total Head Developed (h)",
+          "formula": "((inputs.p_outlet - inputs.p_inlet) / (inputs.density * inputs.gravity)) + ((inputs.velocity_outlet * inputs.velocity_outlet) / (2 * inputs.gravity))",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Pump Efficiency Calculation",
+      "inputs": [
+        {
+          "id": "power_output",
+          "label": "Power Output (Pout)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 5000
+        },
+        {
+          "id": "power_input",
+          "label": "Power Input (Pin)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 6250
+        }
+      ],
+      "outputs": [
+        {
+          "id": "efficiency",
+          "label": "Pump Efficiency (η)",
+          "formula": "(inputs.power_output / inputs.power_input) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

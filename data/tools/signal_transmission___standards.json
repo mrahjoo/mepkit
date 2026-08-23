@@ -1,0 +1,33 @@
+{
+  "id": "signal_transmission___standards",
+  "title": "Signal Transmission - Standards",
+  "description": "Standard signals used for transmission from sensor to controller in industrial processes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Signal Type",
+        "Standard Range"
+      ],
+      "rows": [
+        [
+          "Pneumatic pressure",
+          "3 - 15 psig, 20 - 100 kPa"
+        ],
+        [
+          "Voltage",
+          "0 - 10 V (or 0 - 5 V)"
+        ],
+        [
+          "Electric current (direct current)",
+          "4 - 20 mA"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Notes\nMore and more sensor to/from controller transmission are now done with \"smart\" equipment and wire/wireless data communication."
+    }
+  ]
+}

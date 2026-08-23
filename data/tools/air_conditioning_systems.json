@@ -1,0 +1,58 @@
+{
+  "id": "air_conditioning_systems",
+  "title": "Air Conditioning Systems",
+  "description": "Design of Air Conditioning systems - heating, cooling and dehumidification of indoor air for thermal comfort.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Description",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Cooling Load",
+          "Total heat removal required from the space",
+          "kW"
+        ],
+        [
+          "Heating Load",
+          "Total heat addition required to the space",
+          "kW"
+        ],
+        [
+          "Dehumidification Rate",
+          "Moisture removal capacity",
+          "kg/h"
+        ],
+        [
+          "Indoor Temperature",
+          "Target indoor air temperature",
+          "°C"
+        ],
+        [
+          "Outdoor Temperature",
+          "Ambient air temperature",
+          "°C"
+        ],
+        [
+          "Relative Humidity",
+          "Indoor air moisture content",
+          "%"
+        ],
+        [
+          "Air Change Rate",
+          "Number of air changes per hour",
+          "ACH"
+        ],
+        [
+          "Supply Air Temperature",
+          "Temperature of conditioned air supplied to space",
+          "°C"
+        ]
+      ]
+    }
+  ]
+}

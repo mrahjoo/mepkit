@@ -1,0 +1,151 @@
+{
+  "id": "conservation_of_mass",
+  "title": "Conservation of Mass",
+  "description": "Calculate the change in mass storage in a system based on the Law of Mass Conservation. The mass flow in and out of a control volume must balance according to: dM = ρi vi Ai dt - ρo vo Ao dt",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Inflow",
+        "Outflow"
+      ],
+      "rows": [
+        [
+          "Density (kg/m³)",
+          "1000",
+          "1000"
+        ],
+        [
+          "Velocity (m/s)",
+          "2",
+          "2.5"
+        ],
+        [
+          "Diameter (mm)",
+          "50",
+          "30"
+        ],
+        [
+          "Area (m²)",
+          "0.001963",
+          "0.000707"
+        ],
+        [
+          "Time (s)",
+          "1200",
+          "1200"
+        ],
+        [
+          "Mass Flow (kg)",
+          "4712.4",
+          "2120.4"
+        ],
+        [
+          "Change in Mass (kg)",
+          "",
+          "2592"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "rho_i",
+          "label": "Inflow Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "v_i",
+          "label": "Inflow Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 2
+        },
+        {
+          "id": "d_i",
+          "label": "Inflow Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "rho_o",
+          "label": "Outflow Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "v_o",
+          "label": "Outflow Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 2.5
+        },
+        {
+          "id": "d_o",
+          "label": "Outflow Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 30
+        },
+        {
+          "id": "time_min",
+          "label": "Time Duration",
+          "type": "number",
+          "unit": "minutes",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "a_i",
+          "label": "Inflow Area",
+          "formula": "3.14159 * (inputs.d_i / 1000 / 2) ** 2",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "a_o",
+          "label": "Outflow Area",
+          "formula": "3.14159 * (inputs.d_o / 1000 / 2) ** 2",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "time_s",
+          "label": "Time Duration",
+          "formula": "inputs.time_min * 60",
+          "unit": "s",
+          "format": "decimal"
+        },
+        {
+          "id": "mass_flow_i",
+          "label": "Inflow Mass Flow",
+          "formula": "inputs.rho_i * inputs.v_i * 3.14159 * (inputs.d_i / 1000 / 2) ** 2 * inputs.time_min * 60",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "mass_flow_o",
+          "label": "Outflow Mass Flow",
+          "formula": "inputs.rho_o * inputs.v_o * 3.14159 * (inputs.d_o / 1000 / 2) ** 2 * inputs.time_min * 60",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "dm",
+          "label": "Change in Mass Storage (dM)",
+          "formula": "inputs.rho_i * inputs.v_i * 3.14159 * (inputs.d_i / 1000 / 2) ** 2 * inputs.time_min * 60 - inputs.rho_o * inputs.v_o * 3.14159 * (inputs.d_o / 1000 / 2) ** 2 * inputs.time_min * 60",
+          "unit": "kg",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

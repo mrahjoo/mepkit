@@ -1,0 +1,187 @@
+{
+  "id": "humid_air___heating",
+  "title": "Humid Air - Heating",
+  "description": "Calculate sensible heating of air without adding moisture, including enthalpy changes, temperature rise, and heat flow through heating coils using psychrometric principles.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "enthalpy_calculator",
+      "content": "### Enthalpy Change Calculation",
+      "inputs": [
+        {
+          "id": "temp_a",
+          "label": "Initial Temperature (tA)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 25
+        },
+        {
+          "id": "temp_b",
+          "label": "Final Temperature (tB)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 35
+        },
+        {
+          "id": "humidity_ratio",
+          "label": "Humidity Ratio (x)",
+          "type": "number",
+          "unit": "kg/kg",
+          "defaultValue": 0.0115
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enthalpy_air",
+          "label": "Enthalpy from Air",
+          "formula": "1.01 * (inputs.temp_b - inputs.temp_a)",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "enthalpy_vapor",
+          "label": "Enthalpy from Water Vapor",
+          "formula": "inputs.humidity_ratio * 1.84 * (inputs.temp_b - inputs.temp_a)",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "enthalpy_total",
+          "label": "Total Enthalpy Difference",
+          "formula": "(1.01 * (inputs.temp_b - inputs.temp_a)) + (inputs.humidity_ratio * 1.84 * (inputs.temp_b - inputs.temp_a))",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "heat_flow_calculator",
+      "content": "### Heat Flow Rate Calculation",
+      "inputs": [
+        {
+          "id": "air_flow_rate",
+          "label": "Air Flow Rate (L)",
+          "type": "number",
+          "unit": "m³/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "air_density",
+          "label": "Air Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.205
+        },
+        {
+          "id": "temp_rise_a",
+          "label": "Initial Temperature (tA)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 15
+        },
+        {
+          "id": "temp_rise_b",
+          "label": "Final Temperature (tB)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 30
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sensible_heat_flow",
+          "label": "Sensible Heat Flow Rate",
+          "formula": "inputs.air_flow_rate * inputs.air_density * 1.01 * (inputs.temp_rise_b - inputs.temp_rise_a)",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "coil_effectiveness_calculator",
+      "content": "### Heating Coil Effectiveness",
+      "inputs": [
+        {
+          "id": "outlet_temp",
+          "label": "Outlet Air Temperature (tB)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 30
+        },
+        {
+          "id": "inlet_temp",
+          "label": "Inlet Air Temperature (tA)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 15
+        },
+        {
+          "id": "coil_surface_temp",
+          "label": "Heating Coil Surface Temperature (tHC)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 80
+        }
+      ],
+      "outputs": [
+        {
+          "id": "coil_effectiveness",
+          "label": "Heating Coil Effectiveness (μ)",
+          "formula": "(inputs.outlet_temp - inputs.inlet_temp) / (inputs.coil_surface_temp - inputs.inlet_temp)",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "reference_table",
+      "content": "### Air Density Reference",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)"
+      ],
+      "rows": [
+        [
+          0,
+          1.293
+        ],
+        [
+          10,
+          1.247
+        ],
+        [
+          20,
+          1.205
+        ],
+        [
+          30,
+          1.165
+        ],
+        [
+          40,
+          1.127
+        ],
+        [
+          50,
+          1.093
+        ],
+        [
+          60,
+          1.06
+        ],
+        [
+          70,
+          1.029
+        ],
+        [
+          80,
+          1
+        ]
+      ]
+    }
+  ]
+}

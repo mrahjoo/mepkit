@@ -1,0 +1,90 @@
+{
+  "id": "hydraulic_cylinder_area_vs__diameter",
+  "title": "Hydraulic Cylinder Area vs. Diameter",
+  "description": "Calculate the acting area of a hydraulic cylinder based on its diameter. Typical hydraulic cylinders and acting area vs. cylinder diameter.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Hydraulic Cylinder Area vs. Diameter\n\nTypical hydraulic cylinders and acting area vs. cylinder diameter.\n\n![hydraulic cylinder](static/docs/documents/1466/hydraulic_cylinder.png \"hydraulic cylinder\")\n\nThe acting area of a hydraulic cylinder is calculated using the formula: **A = π × (d/2)²**, where d is the cylinder diameter.\n\n_1 in (inch) = 25.4 mm_"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "diameter",
+          "label": "Cylinder Diameter",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "area",
+          "label": "Cylinder Area",
+          "formula": "3.14159 * (inputs.diameter / 2) ** 2",
+          "unit": "in²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Cylinder Diameter (in)",
+        "Cylinder Area (in²)"
+      ],
+      "rows": [
+        [
+          1,
+          0.785
+        ],
+        [
+          1.5,
+          1.77
+        ],
+        [
+          2,
+          3.14
+        ],
+        [
+          2.5,
+          4.91
+        ],
+        [
+          3,
+          7.07
+        ],
+        [
+          3.5,
+          9.62
+        ],
+        [
+          4,
+          12.6
+        ],
+        [
+          4.5,
+          15.9
+        ],
+        [
+          5,
+          19.6
+        ],
+        [
+          5.5,
+          23.8
+        ],
+        [
+          6,
+          28.3
+        ],
+        [
+          6.5,
+          33.2
+        ]
+      ]
+    }
+  ]
+}

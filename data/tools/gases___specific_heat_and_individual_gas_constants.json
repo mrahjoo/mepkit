@@ -1,0 +1,395 @@
+{
+  "id": "gases___specific_heat_and_individual_gas_constants",
+  "title": "Gases - Specific Heat and Individual Gas Constants",
+  "description": "Calculate specific heat at constant volume (cv), specific heat at constant pressure (cp), specific heat ratio (κ), and individual gas constants (R) for common ideal gases. Reference values at 68°F (20°C) and 14.7 psia (1 atm).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "gas_properties_calculator",
+      "content": "## Gas Properties Calculator\n\nCalculate relationships between specific heat properties of ideal gases.",
+      "inputs": [
+        {
+          "id": "gas_selection",
+          "label": "Select Gas",
+          "type": "select",
+          "options": [
+            {
+              "label": "Air",
+              "value": "air"
+            },
+            {
+              "label": "Nitrogen (N2)",
+              "value": "nitrogen"
+            },
+            {
+              "label": "Oxygen (O2)",
+              "value": "oxygen"
+            },
+            {
+              "label": "Argon (Ar)",
+              "value": "argon"
+            },
+            {
+              "label": "Helium (He)",
+              "value": "helium"
+            },
+            {
+              "label": "Hydrogen (H2)",
+              "value": "hydrogen"
+            },
+            {
+              "label": "Methane (CH4)",
+              "value": "methane"
+            },
+            {
+              "label": "Carbon Dioxide (CO2)",
+              "value": "carbon_dioxide"
+            },
+            {
+              "label": "Carbon Monoxide (CO)",
+              "value": "carbon_monoxide"
+            },
+            {
+              "label": "Acetylene (C2H2)",
+              "value": "acetylene"
+            },
+            {
+              "label": "Ethane (C2H6)",
+              "value": "ethane"
+            },
+            {
+              "label": "Ethylene (C2H4)",
+              "value": "ethylene"
+            },
+            {
+              "label": "Propane (C3H8)",
+              "value": "propane"
+            },
+            {
+              "label": "Propene (C3H6)",
+              "value": "propene"
+            },
+            {
+              "label": "Butane (C4H10)",
+              "value": "butane"
+            },
+            {
+              "label": "Ammonia (NH3)",
+              "value": "ammonia"
+            },
+            {
+              "label": "Water Vapor/Steam",
+              "value": "steam"
+            },
+            {
+              "label": "Sulfur Dioxide (SO2)",
+              "value": "sulfur_dioxide"
+            },
+            {
+              "label": "Nitrous Oxide (N2O)",
+              "value": "nitrous_oxide"
+            },
+            {
+              "label": "Hydrogen Sulfide (H2S)",
+              "value": "hydrogen_sulfide"
+            },
+            {
+              "label": "Hydrogen Chloride (HCl)",
+              "value": "hydrogen_chloride"
+            },
+            {
+              "label": "Chlorine (Cl2)",
+              "value": "chlorine"
+            },
+            {
+              "label": "Bromine (Br2)",
+              "value": "bromine"
+            },
+            {
+              "label": "Neon (Ne)",
+              "value": "neon"
+            },
+            {
+              "label": "Krypton (Kr)",
+              "value": "krypton"
+            },
+            {
+              "label": "Xenon (Xe)",
+              "value": "xenon"
+            }
+          ]
+        },
+        {
+          "id": "cp_input",
+          "label": "Specific Heat at Constant Pressure (cp)",
+          "type": "number",
+          "unit": "kJ/kgK",
+          "defaultValue": 1.007
+        },
+        {
+          "id": "cv_input",
+          "label": "Specific Heat at Constant Volume (cv)",
+          "type": "number",
+          "unit": "kJ/kgK",
+          "defaultValue": 0.718
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_heat_ratio",
+          "label": "Specific Heat Ratio (κ = cp/cv)",
+          "formula": "inputs.cp_input / inputs.cv_input",
+          "format": "decimal"
+        },
+        {
+          "id": "cp_minus_cv",
+          "label": "cp - cv (R gas constant)",
+          "formula": "inputs.cp_input - inputs.cv_input",
+          "unit": "kJ/kgK",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "gas_properties_table",
+      "headers": [
+        "Gas or Vapor",
+        "Formula",
+        "cp (kJ/kgK)",
+        "cv (kJ/kgK)",
+        "κ (cp/cv)",
+        "R (kJ/kgK)",
+        "R (ft·lbf/(lbm·R))"
+      ],
+      "rows": [
+        [
+          "Acetone",
+          "(CH3)2CO",
+          1.47,
+          1.32,
+          1.11,
+          0.15,
+          "—"
+        ],
+        [
+          "Acetylene",
+          "C2H2",
+          1.69,
+          1.37,
+          1.232,
+          0.32,
+          59.34
+        ],
+        [
+          "Air",
+          "—",
+          1.007,
+          0.718,
+          1.4,
+          0.289,
+          53.34
+        ],
+        [
+          "Alcohol (ethanol)",
+          "C2H5OH",
+          1.88,
+          1.67,
+          1.13,
+          0.21,
+          "—"
+        ],
+        [
+          "Alcohol (methanol)",
+          "CH3OH",
+          1.93,
+          1.53,
+          1.26,
+          0.4,
+          "—"
+        ],
+        [
+          "Ammonia",
+          "NH3",
+          2.16,
+          1.66,
+          1.31,
+          0.5,
+          96.5
+        ],
+        [
+          "Argon",
+          "Ar",
+          0.52,
+          0.312,
+          1.667,
+          0.208,
+          "—"
+        ],
+        [
+          "Benzene",
+          "C6H6",
+          1.09,
+          0.99,
+          1.1,
+          0.1,
+          "—"
+        ],
+        [
+          "Butane",
+          "C4H10",
+          1.67,
+          1.53,
+          1.09,
+          0.14,
+          26.5
+        ],
+        [
+          "Carbon dioxide",
+          "CO2",
+          0.8459,
+          0.655,
+          1.29,
+          0.191,
+          38.86
+        ],
+        [
+          "Carbon monoxide",
+          "CO",
+          1.02,
+          0.72,
+          1.4,
+          0.3,
+          55.14
+        ],
+        [
+          "Chlorine",
+          "Cl2",
+          0.48,
+          0.36,
+          1.33,
+          0.12,
+          "—"
+        ],
+        [
+          "Ethane",
+          "C2H6",
+          1.75,
+          1.48,
+          1.18,
+          0.27,
+          51.5
+        ],
+        [
+          "Ether (diethyl)",
+          "(C2H5)2O",
+          2.01,
+          1.95,
+          1.03,
+          0.06,
+          "—"
+        ],
+        [
+          "Ethylene",
+          "C2H4",
+          1.53,
+          1.23,
+          1.24,
+          0.3,
+          55.08
+        ],
+        [
+          "Helium",
+          "He",
+          5.251,
+          3.12,
+          1.68,
+          2.08,
+          386.3
+        ],
+        [
+          "Hydrogen",
+          "H2",
+          14.32,
+          10.16,
+          1.41,
+          4.16,
+          765.9
+        ],
+        [
+          "Methane",
+          "CH4",
+          2.22,
+          1.7,
+          1.3,
+          0.52,
+          96.4
+        ],
+        [
+          "Nitrogen",
+          "N2",
+          1.041,
+          0.743,
+          1.4,
+          0.298,
+          54.99
+        ],
+        [
+          "Nitrous oxide",
+          "N2O",
+          0.88,
+          0.69,
+          1.28,
+          0.19,
+          35.1
+        ],
+        [
+          "Oxygen",
+          "O2",
+          0.9189,
+          0.659,
+          1.39,
+          0.26,
+          48.24
+        ],
+        [
+          "Propane",
+          "C3H8",
+          1.67,
+          1.48,
+          1.13,
+          0.19,
+          35
+        ],
+        [
+          "Propene",
+          "C3H6",
+          1.5,
+          1.31,
+          1.15,
+          0.19,
+          36.8
+        ],
+        [
+          "Steam (H2O)",
+          "H2O",
+          1.97,
+          1.5,
+          1.31,
+          0.47,
+          "—"
+        ],
+        [
+          "Sulfur dioxide",
+          "SO2",
+          0.64,
+          0.51,
+          1.25,
+          0.13,
+          24.1
+        ]
+      ]
+    }
+  ]
+}

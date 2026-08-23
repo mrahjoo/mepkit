@@ -1,0 +1,38 @@
+{
+  "id": "oil_pipes___recommended_flow_velocities",
+  "title": "Oil Pipes - Recommended Flow Velocities",
+  "description": "Oil pipes flow velocities should be kept within certain limits. The table below shows recommended flow velocities for different oil applications. Values depend on the viscosity of the oil - heavier oils with higher viscosities require lower velocities but can be compensated with heating and heat tracing.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Oil Application",
+        "Oil Flow Velocity (m/s)",
+        "Oil Flow Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          "Suction lines for pumps",
+          "< 0.5",
+          "< 1.6"
+        ],
+        [
+          "Suction lines for pumps at low pressures",
+          "0.1 - 0.2",
+          "0.3 - 0.65"
+        ],
+        [
+          "Discharge lines for booster pumps",
+          "1.0 - 2.0",
+          "3.3 - 6.5"
+        ],
+        [
+          "Discharge lines for burner pumps",
+          "< 1.0",
+          "< 3.3"
+        ]
+      ]
+    }
+  ]
+}

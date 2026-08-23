@@ -1,0 +1,137 @@
+{
+  "id": "moist_air___psychrometric_terms",
+  "title": "Moist Air - Psychrometric Terms",
+  "description": "Psychrometry is the science of studying thermodynamic properties of moist air and the use of these to analyze humid air conditions and processes. This tool helps you understand and visualize the key psychrometric properties including dry-bulb temperature, wet-bulb temperature, relative humidity, humidity ratio, specific volume, dew point temperature, and enthalpy.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "psychrometric_calculator",
+      "content": "Psychrometric Properties Calculator",
+      "inputs": [
+        {
+          "id": "dry_bulb_temp",
+          "label": "Dry-Bulb Temperature (°C)",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "relative_humidity",
+          "label": "Relative Humidity (%)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "%"
+        },
+        {
+          "id": "atmospheric_pressure",
+          "label": "Atmospheric Pressure (kPa)",
+          "type": "number",
+          "defaultValue": 101.325,
+          "unit": "kPa"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "wet_bulb_temp",
+          "label": "Wet-Bulb Temperature",
+          "formula": "inputs.dry_bulb_temp - ((inputs.dry_bulb_temp - 20) * (100 - inputs.relative_humidity) / 100) * 0.05",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "dew_point_temp",
+          "label": "Dew Point Temperature",
+          "formula": "inputs.dry_bulb_temp - ((100 - inputs.relative_humidity) / 5)",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "saturation_pressure",
+          "label": "Saturation Pressure",
+          "formula": "6.112 * Math.exp((17.67 * inputs.dry_bulb_temp) / (inputs.dry_bulb_temp + 243.5))",
+          "unit": "hPa",
+          "format": "decimal"
+        },
+        {
+          "id": "vapor_pressure",
+          "label": "Vapor Pressure",
+          "formula": "(inputs.relative_humidity / 100) * (6.112 * Math.exp((17.67 * inputs.dry_bulb_temp) / (inputs.dry_bulb_temp + 243.5)))",
+          "unit": "hPa",
+          "format": "decimal"
+        },
+        {
+          "id": "humidity_ratio",
+          "label": "Humidity Ratio",
+          "formula": "0.622 * (inputs.relative_humidity / 100 * (6.112 * Math.exp((17.67 * inputs.dry_bulb_temp) / (inputs.dry_bulb_temp + 243.5)))) / (inputs.atmospheric_pressure * 10 - inputs.relative_humidity / 100 * (6.112 * Math.exp((17.67 * inputs.dry_bulb_temp) / (inputs.dry_bulb_temp + 243.5))))",
+          "unit": "kgH₂O/kgair",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_volume",
+          "label": "Specific Volume of Humid Air",
+          "formula": "(0.287 * (inputs.dry_bulb_temp + 273.15) * (1 + 1.6078 * (0.622 * (inputs.relative_humidity / 100 * (6.112 * Math.exp((17.67 * inputs.dry_bulb_temp) / (inputs.dry_bulb_temp + 243.5)))) / (inputs.atmospheric_pressure * 10 - inputs.relative_humidity / 100 * (6.112 * Math.exp((17.67 * inputs.dry_bulb_temp) / (inputs.dry_bulb_temp + 243.5))))))) / (inputs.atmospheric_pressure * 10)",
+          "unit": "m³/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "enthalpy",
+          "label": "Enthalpy",
+          "formula": "1.006 * inputs.dry_bulb_temp + (0.622 * (inputs.relative_humidity / 100 * (6.112 * Math.exp((17.67 * inputs.dry_bulb_temp) / (inputs.dry_bulb_temp + 243.5)))) / (inputs.atmospheric_pressure * 10 - inputs.relative_humidity / 100 * (6.112 * Math.exp((17.67 * inputs.dry_bulb_temp) / (inputs.dry_bulb_temp + 243.5))))) * (2501 + 1.86 * inputs.dry_bulb_temp)",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "psychrometric_chart",
+      "content": "Psychrometric Chart Visualization",
+      "options": {
+        "xAxis": {
+          "type": "value",
+          "name": "Dry-Bulb Temperature (°C)",
+          "min": -10,
+          "max": 50
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Humidity Ratio (kgH₂O/kgair)",
+          "min": 0,
+          "max": 0.03
+        },
+        "series": [
+          {
+            "name": "State Point",
+            "type": "scatter",
+            "data": [
+              [
+                25,
+                0.01
+              ]
+            ]
+          },
+          {
+            "name": "Constant RH Lines",
+            "type": "line",
+            "data": [
+              [
+                10,
+                0.005
+              ],
+              [
+                30,
+                0.015
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "psychrometric_reference",
+      "content": "## Psychrometric Properties Reference\n\n### Dry-Bulb Temperature (Tdb)\nThe air property most commonly used; measured with a normal thermometer. It determines the sensible heat content in air.\n\n### Wet-Bulb Temperature (Twb)\nAssociated with the moisture content of air. Always lower than dry-bulb temperature except at 100% RH where they are identical.\n\n### Relative Humidity (RH)\nThe ratio of actual water vapor content to maximum possible vapor content at the given temperature and pressure, expressed as a percentage.\n\n### Dew Point Temperature (Tdp)\nThe temperature at which water vapor starts to condense; the temperature at which air becomes completely saturated.\n\n### Specific Volume (v)\nThe space occupied by a unit weight of dry air, expressed in m³/kg or ft³/lb.\n\n### Humidity Ratio (x)\nThe amount of water vapor by weight in dry air, expressed in kgH₂O/kgair or lbH₂O/lbair.\n\n### Enthalpy (h)\nThe measure of total thermal energy in air, expressed per unit weight of air (kJ/kg or Btu/lbair)."
+    }
+  ]
+}

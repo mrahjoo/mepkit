@@ -1,0 +1,179 @@
+{
+  "id": "rechargeable_batteries___properties_and__life_calc",
+  "title": "Rechargeable Batteries - Properties and Life Calculator",
+  "description": "Properties of rechargeable batteries and accumulators. Calculate battery life based on capacity, device consumption, and usable energy.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Rechargeable Batteries - Properties and Life Calculator\n\nProperties of rechargeable batteries are compared below. Use the calculator below to determine battery life based on capacity and consumption."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Battery Type",
+        "Electrolyte",
+        "Operating Temp (°C)",
+        "Cell Voltage (V)",
+        "Energy Density (Wh/kg)",
+        "Efficiency (%)",
+        "Power Density (W/kg)",
+        "Life Cycles"
+      ],
+      "rows": [
+        [
+          "Lead-Acid",
+          "H2SO4",
+          "-20 to 60",
+          "2.1-2.2",
+          "171",
+          "30-40",
+          "70-90",
+          "200-2000"
+        ],
+        [
+          "Nickel-Iron",
+          "KOH",
+          "20 to 30",
+          "1.2",
+          "267",
+          "60",
+          "65",
+          "2000"
+        ],
+        [
+          "Zinc-Iron",
+          "KOH",
+          "50 to 60",
+          "1.65",
+          "1084",
+          "90",
+          "45",
+          "600"
+        ],
+        [
+          "Sodium-Sulfur",
+          "β-Al2O3",
+          "300 to 400",
+          "1.76-2.08",
+          "664",
+          "120",
+          "70",
+          "2000"
+        ],
+        [
+          "Lithium-Iron Sulfide",
+          "LiCl-KCl",
+          "400 to 450",
+          "1.6",
+          "869",
+          "150",
+          "75",
+          "1000"
+        ],
+        [
+          "Nickel-Cadmium",
+          "KOH",
+          "-40 to 60",
+          "1.2",
+          "140",
+          "40-60",
+          "70-90",
+          "500-2000"
+        ],
+        [
+          "Nickel-Metal Hydride",
+          "KOH",
+          "10 to 50",
+          "1.2",
+          "220",
+          "60-80",
+          "50",
+          "<3000"
+        ],
+        [
+          "Lithium Ion",
+          "LiPF6",
+          "-20 to 60",
+          "3.6",
+          "360",
+          "100-200",
+          "70",
+          "500-2000"
+        ],
+        [
+          "Lithium-Sulphide",
+          "AIN",
+          "430 to 500",
+          "-",
+          "-",
+          "130",
+          "75",
+          "200"
+        ],
+        [
+          "Zinc-Chlorine",
+          "ZnCl2",
+          "-",
+          "-",
+          "120",
+          "-",
+          "65",
+          "100"
+        ],
+        [
+          "Lithium Ion Polymer",
+          "Li-β-Alu",
+          "-20 to 60",
+          "3.7",
+          "-",
+          "130-200",
+          "70",
+          ">1200"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "battery_capacity",
+          "label": "Battery Capacity",
+          "type": "number",
+          "defaultValue": 3000,
+          "unit": "mAh"
+        },
+        {
+          "id": "device_consumption",
+          "label": "Device Consumption",
+          "type": "number",
+          "defaultValue": 500,
+          "unit": "mA"
+        },
+        {
+          "id": "usable_energy",
+          "label": "Usable Energy",
+          "type": "number",
+          "defaultValue": 80,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "battery_life_hours",
+          "label": "Battery Life",
+          "formula": "(inputs.battery_capacity * inputs.usable_energy / 100) / inputs.device_consumption",
+          "unit": "hours",
+          "format": "decimal"
+        },
+        {
+          "id": "battery_life_minutes",
+          "label": "Battery Life",
+          "formula": "((inputs.battery_capacity * inputs.usable_energy / 100) / inputs.device_consumption) * 60",
+          "unit": "minutes",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

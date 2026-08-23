@@ -1,0 +1,89 @@
+{
+  "id": "bsi___british_standards_institute",
+  "title": "BSi - British Standards Institute",
+  "description": "British Standards Institute - the National Standards Body of the UK, responsible for facilitating, drafting, publishing and marketing British Standards and other guidelines. Access UK standardization through European (CEN, CENELEC, ETSI) and international bodies (ISO, IEC).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Standard Code",
+        "Year",
+        "Title",
+        "Category"
+      ],
+      "rows": [
+        [
+          "BS 8888",
+          "2002",
+          "Technical product documentation (TPD). Specification for defining, specifying and graphically representing products",
+          "Engineering"
+        ],
+        [
+          "BS PD 5500",
+          "2003",
+          "Specification for unfired fusion welded pressure vessels",
+          "Engineering"
+        ],
+        [
+          "BS EN 10255",
+          "2004",
+          "Non-alloy steel tubes suitable for welding or threading",
+          "Materials and Chemicals"
+        ],
+        [
+          "BS EN ISO 9001",
+          "2000",
+          "Quality management systems. Requirements",
+          "Management Systems"
+        ],
+        [
+          "BS EN ISO 9004",
+          "2000",
+          "Quality management systems. Guidelines for performance improvements",
+          "Management Systems"
+        ],
+        [
+          "BS 5839-1",
+          "2002",
+          "Fire detection and alarm systems for buildings. Code of practice for system design, installation, commissioning and maintenance",
+          "Building and Civil Engineering"
+        ],
+        [
+          "BS EN ISO 10012",
+          "2003",
+          "Measurement management systems. Requirements for measurement processes and measuring equipment",
+          "Management Systems"
+        ],
+        [
+          "BS EN ISO 19011",
+          "2002",
+          "Guidelines for quality and/or environmental management systems auditing",
+          "Management Systems"
+        ],
+        [
+          "BS EN ISO 14001",
+          "1996",
+          "Environmental management systems. Specification with guidance for use",
+          "Management Systems"
+        ],
+        [
+          "BS 5266-1",
+          "1999",
+          "Emergency lighting. Code of practice for the emergency lighting of premises other than cinemas and certain other specified premises used for entertainment",
+          "Building and Civil Engineering"
+        ],
+        [
+          "BS 7671",
+          "2001",
+          "Requirements for electrical installations. IEE Wiring Regulations. Sixteenth edition",
+          "Electro technical"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Standards Development Categories\n\nBSi standards are organized into the following programmes:\n\n- **Building and Civil Engineering**\n- **Materials and Chemicals**\n- **Engineering**\n- **Electro technical**\n- **Consumer Products and Services**\n- **Healthcare**\n- **Management Systems**\n- **DISC (Information Technology)**\n\n## Standards Numbering\n\nBritish Standards are titled: **BS XXX:Year Title**\n\nWhere XXX is the number of the standard.\n\nRepresentations are sought from consumer organizations, professional institutions, certification bodies, educational establishments, research organizations, UK notified bodies, enforcement bodies, and government departments.\n\nOver 15,000 British Standard publications have been published covering all major industries and sectors."
+    }
+  ]
+}

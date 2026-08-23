@@ -1,0 +1,59 @@
+{
+  "id": "stone_masonry___strength",
+  "title": "Stone Masonry - Strength",
+  "description": "Typical strength of stone masonry constructions including crushing, tension, and shear strength values for various stone materials.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Crushing (N/mm²)",
+        "Tension (N/mm²)",
+        "Shear (N/mm²)"
+      ],
+      "rows": [
+        [
+          "Basalt",
+          8.5,
+          8.6,
+          4.3
+        ],
+        [
+          "Granite",
+          96.6,
+          3.2,
+          5.4
+        ],
+        [
+          "Limestone",
+          53.7,
+          2.7,
+          4.3
+        ],
+        [
+          "Marble",
+          64.4,
+          3.2,
+          5.4
+        ],
+        [
+          "Sandstone",
+          53.7,
+          1.1,
+          3.2
+        ],
+        [
+          "Slate",
+          85.8,
+          1.1,
+          3.2
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "**Conversion:** 1 N/mm² = 145 psi"
+    }
+  ]
+}

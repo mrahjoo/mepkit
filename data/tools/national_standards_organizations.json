@@ -1,0 +1,62 @@
+{
+  "id": "national_standards_organizations",
+  "title": "National Standards Organizations",
+  "description": "Comprehensive resource for information about national standards organizations and engineering standards. The Engineering ToolBox provides technical data, calculations, and information resources for engineers and designers across various disciplines.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# National Standards Organizations\n\n## Our Mission\n\nThe Engineering ToolBox provides a wide range of free tools, calculators, and information resources aimed at engineers and designers. It offers detailed technical data and calculations for various fields such as:\n\n- Fluid mechanics\n- Material properties\n- HVAC systems\n- Electrical engineering\n- Acoustics\n- Hydraulics\n\nThe site includes resources for common engineering tasks, such as calculating physical properties (e.g., density, viscosity, thermal conductivity), converting units, and designing systems like heating and water distribution.\n\n## About the ToolBox\n\nWe appreciate any comments and tips on how to make The Engineering ToolBox a better information source. The content is copyrighted but can be used with NO WARRANTY or LIABILITY. Important information should always be double checked with alternative sources.\n\n## Privacy Policy\n\nWe don't collect information from our users. We use third-party monetization technology for our site. You can review their privacy and cookie policy on their website."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Organization",
+        "Focus Area",
+        "Website"
+      ],
+      "rows": [
+        [
+          "ISO",
+          "International Standards Organization",
+          "https://www.iso.org"
+        ],
+        [
+          "ASTM International",
+          "Materials, Products, Systems and Services",
+          "https://www.astm.org"
+        ],
+        [
+          "IEEE",
+          "Electrical and Electronics Standards",
+          "https://www.ieee.org"
+        ],
+        [
+          "ANSI",
+          "American National Standards Institute",
+          "https://www.ansi.org"
+        ],
+        [
+          "DIN",
+          "German Institute for Standardization",
+          "https://www.din.de"
+        ],
+        [
+          "BSI",
+          "British Standards Institution",
+          "https://www.bsigroup.com"
+        ],
+        [
+          "JIS",
+          "Japanese Industrial Standards",
+          "https://www.jisc.go.jp"
+        ],
+        [
+          "NFPA",
+          "Fire and Safety Codes",
+          "https://www.nfpa.org"
+        ]
+      ]
+    }
+  ]
+}

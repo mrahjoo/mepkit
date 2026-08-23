@@ -1,0 +1,73 @@
+{
+  "id": "value_engineering",
+  "title": "Value Engineering",
+  "description": "Improved value by enhanced function.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Value Engineering\n\nThe definition of value\n\n**V = F / C**\n\nwhere\n- **V** = value\n- **F** = function\n- **C** = cost\n\nis the key to Value Engineering. Improving the function, reducing the cost, or both - will increase the value."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "function",
+          "label": "Function (F)",
+          "type": "number",
+          "defaultValue": 100
+        },
+        {
+          "id": "cost",
+          "label": "Cost (C)",
+          "type": "number",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "value",
+          "label": "Value (V)",
+          "formula": "inputs.function / inputs.cost",
+          "format": "decimal",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Scenario",
+        "Function (F)",
+        "Cost (C)",
+        "Value (V)"
+      ],
+      "rows": [
+        [
+          "Current State",
+          100,
+          50,
+          "=100/50"
+        ],
+        [
+          "Enhanced Function",
+          150,
+          50,
+          "=150/50"
+        ],
+        [
+          "Reduced Cost",
+          100,
+          35,
+          "=100/35"
+        ],
+        [
+          "Both Improved",
+          150,
+          35,
+          "=150/35"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "aqueous_salt_solutions___acid_and_base_properties",
+  "title": "Aqueous Salt Solutions - Acid and Base Properties",
+  "description": "Salts contain ions that may affect the pH in aqueous solutions in both acidic and basic directions. This tool helps predict whether an aqueous solution of a salt will be basic, acidic, or neutral by comparing the Ka value for the acidic ion with the Kb value for the basic ion.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Salt",
+        "Examples",
+        "pH of Solution",
+        "Comment"
+      ],
+      "rows": [
+        [
+          "Strong base + Strong acid",
+          "BaCl2, KCl, CaNO3, Na2SO4",
+          "7",
+          "Neutral - Neither acts as an acid or a base"
+        ],
+        [
+          "Strong base + Weak acid",
+          "NaF, KCHOO, NaHCO3",
+          "> 7",
+          "Basic - Anion acts as a base, Cation has no effect on pH"
+        ],
+        [
+          "Conjugate acid of weak base + Strong acid",
+          "NH4Br, NH4NO3",
+          "< 7",
+          "Acidic - Cation acts as an acid, Anion has no effect on pH"
+        ],
+        [
+          "Conjugate acid of weak base + Conjugate base of weak acid",
+          "NH4CN, NH4CH3COO",
+          "Depends on Ka vs Kb",
+          "Acidic if Ka > Kb, Basic if Kb > Ka, Neutral if Ka = Kb"
+        ],
+        [
+          "Highly charged metal ion + Strong acid",
+          "Al(NO3)3, CrCl3",
+          "< 7",
+          "Acidic - Hydrated cations acts as an acid, Anion has no effect on pH"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Ka vs Kb",
+        "pH",
+        "Basic or Acidic"
+      ],
+      "rows": [
+        [
+          "Ka > Kb",
+          "< 7",
+          "Acidic"
+        ],
+        [
+          "Ka < Kb",
+          "> 7",
+          "Basic"
+        ],
+        [
+          "Ka = Kb",
+          "7",
+          "Neutral"
+        ]
+      ]
+    }
+  ]
+}

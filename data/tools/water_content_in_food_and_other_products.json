@@ -1,0 +1,342 @@
+{
+  "id": "water_content_in_food_and_other_products",
+  "title": "Water Content in Food and Other Products",
+  "description": "Water content before and after drying in food and other products including cork, grain, soap, peat, wood and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Water Content Reference Data\n\nThis tool provides water content information for various food and other products before and after drying. Select a product below or use the calculator to compute water content changes.\n\n### Common Products:\n- **Fruits**: Apple (84%), Apricot (86%), Banana (74%), Blueberries (85%), Cherries (81%), Grapes (81%), Peach (88%), Pear (84%), Plum (85%), Strawberries (92%)\n- **Vegetables**: Broccoli (91%), Cabbage (92-93%), Carrot (87%), Celery (95%), Cucumber (96%), Lettuce (96%), Spinach (92%), Tomato (93-94%)\n- **Materials**: Coal (40-60%), Cork (40-45%), Grain (17-23%), Peat (85-90%), Wood (10-50%), Soap (27-35%)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Product",
+        "Water Content Before Drying %",
+        "Water Content After Drying %"
+      ],
+      "rows": [
+        [
+          "Apple",
+          84,
+          ""
+        ],
+        [
+          "Apricot",
+          86,
+          ""
+        ],
+        [
+          "Banana",
+          74,
+          ""
+        ],
+        [
+          "Blueberries",
+          85,
+          ""
+        ],
+        [
+          "Broccoli",
+          91,
+          ""
+        ],
+        [
+          "Cabbage (green)",
+          93,
+          ""
+        ],
+        [
+          "Cabbage (red)",
+          92,
+          ""
+        ],
+        [
+          "Cantaloupe",
+          90,
+          ""
+        ],
+        [
+          "Carrots",
+          87,
+          ""
+        ],
+        [
+          "Cauliflower",
+          92,
+          ""
+        ],
+        [
+          "Celery",
+          95,
+          ""
+        ],
+        [
+          "Cherries",
+          81,
+          ""
+        ],
+        [
+          "Coal, bituminous",
+          "40-60",
+          "8-12"
+        ],
+        [
+          "Cork",
+          "40-45",
+          "10-15"
+        ],
+        [
+          "Cranberries",
+          87,
+          ""
+        ],
+        [
+          "Cucumber",
+          96,
+          ""
+        ],
+        [
+          "Earth",
+          "45-50",
+          ""
+        ],
+        [
+          "Earth, sandy",
+          "20-25",
+          ""
+        ],
+        [
+          "Eggplant",
+          92,
+          ""
+        ],
+        [
+          "Glue",
+          "80-90",
+          ""
+        ],
+        [
+          "Glue, air dried",
+          15,
+          ""
+        ],
+        [
+          "Grain",
+          "17-23",
+          "10-12"
+        ],
+        [
+          "Grapefruit",
+          91,
+          ""
+        ],
+        [
+          "Grapes",
+          81,
+          ""
+        ],
+        [
+          "Hides",
+          45,
+          ""
+        ],
+        [
+          "Lettuce (iceberg)",
+          96,
+          ""
+        ],
+        [
+          "Macaroni",
+          "30-35",
+          "11-13"
+        ],
+        [
+          "Orange",
+          87,
+          ""
+        ],
+        [
+          "Pasta",
+          "30-35",
+          "11-13"
+        ],
+        [
+          "Peach",
+          88,
+          ""
+        ],
+        [
+          "Pear",
+          84,
+          ""
+        ],
+        [
+          "Peas (green)",
+          79,
+          ""
+        ],
+        [
+          "Peat",
+          "85-90",
+          "30-35"
+        ],
+        [
+          "Peppers (sweet)",
+          92,
+          ""
+        ],
+        [
+          "Pineapple",
+          87,
+          ""
+        ],
+        [
+          "Plum",
+          85,
+          ""
+        ],
+        [
+          "Potato (white)",
+          79,
+          ""
+        ],
+        [
+          "Radish",
+          95,
+          ""
+        ],
+        [
+          "Raspberries",
+          87,
+          ""
+        ],
+        [
+          "Rubber goods",
+          "30-50",
+          ""
+        ],
+        [
+          "Soap",
+          "27-35",
+          "25-26"
+        ],
+        [
+          "Spinach",
+          92,
+          ""
+        ],
+        [
+          "Starch",
+          "38-45",
+          "12-14"
+        ],
+        [
+          "Starch, air dried",
+          "16-20",
+          "12-14"
+        ],
+        [
+          "Strawberries",
+          92,
+          ""
+        ],
+        [
+          "Tomato (green)",
+          93,
+          ""
+        ],
+        [
+          "Tomato (red)",
+          94,
+          ""
+        ],
+        [
+          "Watermelon",
+          92,
+          ""
+        ],
+        [
+          "Wood, air dried hard",
+          "17-20",
+          "10-15"
+        ],
+        [
+          "Wood, air dried soft",
+          "10-15",
+          "10-15"
+        ],
+        [
+          "Wood, green hard",
+          50,
+          "10-15"
+        ],
+        [
+          "Wood, green soft",
+          "30-50",
+          "10-15"
+        ],
+        [
+          "Yarn, washing",
+          "40-50",
+          ""
+        ],
+        [
+          "Zucchini",
+          95,
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Water Content Calculator",
+      "inputs": [
+        {
+          "id": "initial_water_content",
+          "label": "Initial Water Content",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 85
+        },
+        {
+          "id": "final_water_content",
+          "label": "Final Water Content",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 15
+        },
+        {
+          "id": "initial_mass",
+          "label": "Initial Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_removed",
+          "label": "Water Removed",
+          "formula": "inputs.initial_mass * (inputs.initial_water_content - inputs.final_water_content) / 100",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "final_mass",
+          "label": "Final Mass After Drying",
+          "formula": "inputs.initial_mass - (inputs.initial_mass * (inputs.initial_water_content - inputs.final_water_content) / 100)",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "mass_reduction_percent",
+          "label": "Mass Reduction Percentage",
+          "formula": "((inputs.initial_mass * (inputs.initial_water_content - inputs.final_water_content) / 100) / inputs.initial_mass) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

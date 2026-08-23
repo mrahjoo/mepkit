@@ -1,0 +1,82 @@
+{
+  "id": "liquids___densities_vs__pressure_and_temperature_c",
+  "title": "Liquids - Densities vs. Pressure and Temperature Change",
+  "description": "Calculate the density of a liquid when changing both temperature and pressure. This tool uses the combined effects of thermal expansion and pressure compression on liquid density.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Liquid Density Calculator\n\nThe density of a liquid changes with both temperature and pressure. This calculator computes the final density using the formula:\n\n**ρ₁ = ρ₀ / ((1 + β(t₁ - t₀)) × (1 - (p₁ - p₀)/E))**\n\nWhere:\n- ρ₁ = final density\n- ρ₀ = initial density\n- β = volumetric temperature expansion coefficient\n- t₁ - t₀ = temperature change\n- p₁ - p₀ = pressure change\n- E = bulk modulus (liquid elasticity)\n\n### Common Volumetric Expansion Coefficients (β):\n- Water: 0.0002 (m³/m³ °C)\n- Ethyl alcohol: 0.0011 (m³/m³ °C)\n\n### Common Bulk Moduli (E):\n- Water: 2.15×10⁹ (N/m²)\n- Ethyl alcohol: 1.06×10⁹ (N/m²)\n- Oil: 1.5×10⁹ (N/m²)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "rho0",
+          "label": "Initial Density (ρ₀)",
+          "type": "number",
+          "defaultValue": 999.8,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "beta",
+          "label": "Volumetric Temperature Expansion Coefficient (β)",
+          "type": "number",
+          "defaultValue": 0.000088,
+          "unit": "m³/m³ °C"
+        },
+        {
+          "id": "temp_change",
+          "label": "Temperature Change (t₁ - t₀)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure_initial",
+          "label": "Initial Pressure (p₀)",
+          "type": "number",
+          "defaultValue": 100000,
+          "unit": "Pa"
+        },
+        {
+          "id": "pressure_final",
+          "label": "Final Pressure (p₁)",
+          "type": "number",
+          "defaultValue": 10100000,
+          "unit": "Pa"
+        },
+        {
+          "id": "bulk_modulus",
+          "label": "Bulk Modulus (E)",
+          "type": "number",
+          "defaultValue": 2150000000,
+          "unit": "N/m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "rho1",
+          "label": "Final Density (ρ₁)",
+          "formula": "inputs.rho0 / ((1 + inputs.beta * inputs.temp_change) * (1 - (inputs.pressure_final - inputs.pressure_initial) / inputs.bulk_modulus))",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "density_change",
+          "label": "Density Change",
+          "formula": "inputs.rho0 / ((1 + inputs.beta * inputs.temp_change) * (1 - (inputs.pressure_final - inputs.pressure_initial) / inputs.bulk_modulus)) - inputs.rho0",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "density_change_percent",
+          "label": "Density Change (%)",
+          "formula": "((inputs.rho0 / ((1 + inputs.beta * inputs.temp_change) * (1 - (inputs.pressure_final - inputs.pressure_initial) / inputs.bulk_modulus)) - inputs.rho0) / inputs.rho0) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

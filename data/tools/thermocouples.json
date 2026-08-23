@@ -1,0 +1,129 @@
+{
+  "id": "thermocouples",
+  "title": "Thermocouples",
+  "description": "Calculator for thermocouple temperature conversions and analysis. Convert between Celsius, Fahrenheit, Kelvin, and Rankine scales.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Thermocouple Temperature Conversion\n\nThis tool converts between different temperature scales commonly used in thermocouple applications.\n\n### Temperature Conversion Formulas:\n- **Fahrenheit to Celsius**: oC = (oF - 32) × 0.555\n- **Celsius to Fahrenheit**: oF = (1.8 × oC) + 32\n- **Celsius to Kelvin**: Kelvin = oC + 273.2\n- **Fahrenheit to Rankine**: oRankin = oF + 459.67\n\n### Common Thermocouple Types:\n| Type | Metals | Max Temp (°C) | Sensitivity (mV/°C) |\n|------|--------|--------------|---------------------|\n| T | Copper-Constantan | 400 | 0.045 |\n| J | Iron-Constantan | 850 | 0.068 |\n| E | Chromel-Constantan | 700 | 0.050 |\n| K | Chromel-Alumel | 1100 | 0.041 |\n| N | Nicrosil-Nisil | 1250 | 0.039 |"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "celsius",
+          "label": "Temperature (Celsius)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "fahrenheit",
+          "label": "Temperature (Fahrenheit)",
+          "unit": "°F",
+          "formula": "(inputs.celsius * 1.8) + 32",
+          "format": "decimal"
+        },
+        {
+          "id": "kelvin",
+          "label": "Temperature (Kelvin)",
+          "unit": "K",
+          "formula": "inputs.celsius + 273.2",
+          "format": "decimal"
+        },
+        {
+          "id": "rankine",
+          "label": "Temperature (Rankine)",
+          "unit": "°R",
+          "formula": "((inputs.celsius * 1.8) + 32) + 459.67",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fahrenheit_input",
+          "label": "Temperature (Fahrenheit)",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 32
+        }
+      ],
+      "outputs": [
+        {
+          "id": "celsius_from_f",
+          "label": "Temperature (Celsius)",
+          "unit": "°C",
+          "formula": "(inputs.fahrenheit_input - 32) * 0.555",
+          "format": "decimal"
+        },
+        {
+          "id": "kelvin_from_f",
+          "label": "Temperature (Kelvin)",
+          "unit": "K",
+          "formula": "((inputs.fahrenheit_input - 32) * 0.555) + 273.2",
+          "format": "decimal"
+        },
+        {
+          "id": "rankine_from_f",
+          "label": "Temperature (Rankine)",
+          "unit": "°R",
+          "formula": "inputs.fahrenheit_input + 459.67",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Thermocouple Type",
+        "Metal Combination",
+        "Max Continuous (°C)",
+        "Max Spot (°C)",
+        "Sensitivity (mV/°C)"
+      ],
+      "rows": [
+        [
+          "T",
+          "Copper-Constantan",
+          "400",
+          "500",
+          "0.045"
+        ],
+        [
+          "J",
+          "Iron-Constantan",
+          "850",
+          "1100",
+          "0.068"
+        ],
+        [
+          "E",
+          "Chromel-Constantan",
+          "700",
+          "1000",
+          "0.050"
+        ],
+        [
+          "K",
+          "Chromel-Alumel",
+          "1100",
+          "1300",
+          "0.041"
+        ],
+        [
+          "N",
+          "Nicrosil-Nisil",
+          "1250",
+          "—",
+          "0.039"
+        ]
+      ]
+    }
+  ]
+}

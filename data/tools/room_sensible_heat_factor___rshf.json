@@ -1,0 +1,76 @@
+{
+  "id": "room_sensible_heat_factor___rshf",
+  "title": "Room Sensible Heat Factor - RSHF",
+  "description": "Room Sensible Heat Factor - RSHF - is defined as the sensible heat load divided by the total heat load in a room. It expresses the ratio between sensible heat load and total heat load in a room.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Room Sensible Heat Factor - RSHF\n\nRSHF is defined as:\n\n**RSHF = Qsr / Qtr**\n\nWhere:\n- **RSHF** = Room sensible heat factor\n- **Qsr** = Sensible heat load in room (kW, Btu/hr)\n- **Qtr** = Total heat load in room (kW, Btu/hr)\n\n### Alternative Formula:\n\n**RSHF = cp (tr - ti) / (hr - hi)**\n\nWhere:\n- **cp** = Specific heat of air (kJ/kg·°C)\n- **tr** = Room temperature (°C)\n- **ti** = Inlet temperature (°C)\n- **hr** = Room enthalpy (kJ/kg)\n- **hi** = Inlet enthalpy (kJ/kg)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sensible_heat_load",
+          "label": "Sensible Heat Load (Qsr)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 4
+        },
+        {
+          "id": "latent_heat_load",
+          "label": "Latent Heat Load (Ql)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 1.4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_heat_load",
+          "label": "Total Heat Load (Qtr)",
+          "formula": "inputs.sensible_heat_load + inputs.latent_heat_load",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "rshf",
+          "label": "Room Sensible Heat Factor (RSHF)",
+          "formula": "inputs.sensible_heat_load / (inputs.sensible_heat_load + inputs.latent_heat_load)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Sensible Heat Load (Qsr)",
+          "4",
+          "kW"
+        ],
+        [
+          "Latent Heat Load (Ql)",
+          "1.4",
+          "kW"
+        ],
+        [
+          "Total Heat Load (Qtr)",
+          "5.4",
+          "kW"
+        ],
+        [
+          "Room Sensible Heat Factor (RSHF)",
+          "0.75",
+          "-"
+        ]
+      ]
+    }
+  ]
+}

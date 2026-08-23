@@ -1,0 +1,73 @@
+{
+  "id": "ducts_or_pipes_through_steel_joists___maximum_size",
+  "title": "Ducts or Pipes through Steel Joists - Maximum Sizes",
+  "description": "Maximum sizes of ducts or pipes through K series joists. K series are common open web joists, standard sized for typical applications. K types span from 8' to 60' across with depths of 8\" to 30\".",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Joists Depth (in)",
+        "Round Duct Size (in)",
+        "Square Duct Size (in)",
+        "Rectangular Duct Size (in)"
+      ],
+      "rows": [
+        [
+          8,
+          5,
+          "4 x 4",
+          "3 x 8"
+        ],
+        [
+          10,
+          6,
+          "5 x 5",
+          "3 x 8"
+        ],
+        [
+          12,
+          7,
+          "6 x 6",
+          "4 x 9"
+        ],
+        [
+          14,
+          8,
+          "6 x 6",
+          "4 x 9"
+        ],
+        [
+          16,
+          9,
+          "7 x 7",
+          "6 x 10"
+        ],
+        [
+          18,
+          11,
+          "8 x 8",
+          "7 x 11"
+        ],
+        [
+          20,
+          11,
+          "9 x 9",
+          "7 x 12"
+        ],
+        [
+          22,
+          12,
+          "9 x 9",
+          "8 x 12"
+        ],
+        [
+          24,
+          13,
+          "10 x 10",
+          "8 x 13"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "id": "ethanol___thermophysical_properties",
+  "title": "Ethanol - Thermophysical Properties",
+  "description": "Calculate and reference thermophysical properties of Ethanol (C2H5OH) including density, viscosity, heat capacity, thermal conductivity, and other physical and chemical properties at standard conditions (25°C, 1 bara).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "property_selector",
+          "label": "Select Property",
+          "type": "select",
+          "options": [
+            {
+              "label": "Molecular Weight",
+              "value": "molecular_weight"
+            },
+            {
+              "label": "Density (liquid)",
+              "value": "density_liquid"
+            },
+            {
+              "label": "Density (gas) at 0.08 bar",
+              "value": "density_gas"
+            },
+            {
+              "label": "Boiling Point",
+              "value": "boiling_point"
+            },
+            {
+              "label": "Melting Point",
+              "value": "melting_point"
+            },
+            {
+              "label": "Flash Point",
+              "value": "flash_point"
+            },
+            {
+              "label": "Autoignition Temperature",
+              "value": "autoignition_temp"
+            },
+            {
+              "label": "Critical Temperature",
+              "value": "critical_temp"
+            },
+            {
+              "label": "Critical Pressure",
+              "value": "critical_pressure"
+            },
+            {
+              "label": "Critical Density",
+              "value": "critical_density"
+            },
+            {
+              "label": "Critical Volume",
+              "value": "critical_volume"
+            },
+            {
+              "label": "Specific Heat Capacity, Cp (liquid)",
+              "value": "cp_liquid"
+            },
+            {
+              "label": "Specific Heat Capacity, Cp (gas)",
+              "value": "cp_gas"
+            },
+            {
+              "label": "Specific Heat Capacity, Cv (liquid)",
+              "value": "cv_liquid"
+            },
+            {
+              "label": "Specific Heat Capacity, Cv (gas)",
+              "value": "cv_gas"
+            },
+            {
+              "label": "Thermal Conductivity",
+              "value": "thermal_conductivity"
+            },
+            {
+              "label": "Viscosity, dynamic (absolute)",
+              "value": "viscosity_dynamic"
+            },
+            {
+              "label": "Viscosity, kinematic",
+              "value": "viscosity_kinematic"
+            },
+            {
+              "label": "Surface Tension",
+              "value": "surface_tension"
+            },
+            {
+              "label": "Vapor Pressure (saturation)",
+              "value": "vapor_pressure"
+            },
+            {
+              "label": "Heat of Combustion (gas)",
+              "value": "heat_combustion"
+            },
+            {
+              "label": "Heat of Formation (gas)",
+              "value": "heat_formation"
+            },
+            {
+              "label": "Heat of Evaporation",
+              "value": "heat_evaporation"
+            },
+            {
+              "label": "Heat of Fusion",
+              "value": "heat_fusion"
+            },
+            {
+              "label": "Gas Constant (individual) - R",
+              "value": "gas_constant"
+            },
+            {
+              "label": "Specific Gravity (liquid)",
+              "value": "specific_gravity_liquid"
+            },
+            {
+              "label": "Specific Gravity (gas)",
+              "value": "specific_gravity_gas"
+            },
+            {
+              "label": "Specific Heat Ratio (liquid) - Cp/Cv",
+              "value": "heat_ratio_liquid"
+            },
+            {
+              "label": "Specific Heat Ratio (gas) - Cp/Cv",
+              "value": "heat_ratio_gas"
+            },
+            {
+              "label": "Sound Velocity in Liquid",
+              "value": "sound_velocity_liquid"
+            },
+            {
+              "label": "Sound Velocity in Gas",
+              "value": "sound_velocity_gas"
+            },
+            {
+              "label": "Standard Molar Entropy, S° (liquid)",
+              "value": "entropy_liquid"
+            },
+            {
+              "label": "Standard Molar Entropy, S° (gas)",
+              "value": "entropy_gas"
+            },
+            {
+              "label": "Gibbs Free Energy of Formation (gas)",
+              "value": "gibbs_energy"
+            },
+            {
+              "label": "Triple Point Temperature",
+              "value": "triple_point_temp"
+            },
+            {
+              "label": "Triple Point Pressure",
+              "value": "triple_point_pressure"
+            },
+            {
+              "label": "Ionization Potential",
+              "value": "ionization_potential"
+            },
+            {
+              "label": "Acidity (pKa1)",
+              "value": "acidity"
+            },
+            {
+              "label": "Solubility in Water",
+              "value": "solubility_water"
+            },
+            {
+              "label": "log KOW (Octanol/Water Partition Coefficient)",
+              "value": "log_kow"
+            }
+          ],
+          "defaultValue": "molecular_weight"
+        },
+        {
+          "id": "unit_selector",
+          "label": "Select Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "SI Units",
+              "value": "si"
+            },
+            {
+              "label": "Imperial Units",
+              "value": "imperial"
+            },
+            {
+              "label": "Mixed Units",
+              "value": "mixed"
+            }
+          ],
+          "defaultValue": "si"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "property_name",
+          "label": "Property",
+          "formula": "Property selected"
+        },
+        {
+          "id": "property_value",
+          "label": "Value",
+          "formula": "Value based on property_selector"
+        },
+        {
+          "id": "property_unit",
+          "label": "Unit",
+          "formula": "Unit based on unit_selector"
+        },
+        {
+          "id": "property_description",
+          "label": "Description",
+          "formula": "Standard conditions: 25°C, 1 bara (unless otherwise specified)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value (SI)",
+        "Unit (SI)"
+      ],
+      "rows": [
+        [
+          "Acidity (pKa1)",
+          "15.9",
+          ""
+        ],
+        [
+          "Autoignition temperature",
+          "636",
+          "K"
+        ],
+        [
+          "Boiling Point",
+          "351.39",
+          "K"
+        ],
+        [
+          "Critical density",
+          "5.91",
+          "mol/dm³"
+        ],
+        [
+          "Critical Pressure",
+          "6.25",
+          "MPa"
+        ],
+        [
+          "Critical temperature",
+          "513.9",
+          "K"
+        ],
+        [
+          "Critical Volume",
+          "169",
+          "cm³/mol"
+        ],
+        [
+          "Density (gas) at 0.08 bar",
+          "3.15",
+          "mol/m³"
+        ],
+        [
+          "Density (liquid)",
+          "17046",
+          "mol/m³"
+        ],
+        [
+          "Flammable (gas and liquid)",
+          "yes",
+          ""
+        ],
+        [
+          "Flash point",
+          "286",
+          "K"
+        ],
+        [
+          "Gas constant (individual) - R",
+          "180.5",
+          "J/kg K"
+        ],
+        [
+          "Gibbs free energy of formation (gas)",
+          "-168",
+          "kJ/mol"
+        ],
+        [
+          "Specific heat capacity, Cp (isobaric) (gas)",
+          "74",
+          "J/mol K"
+        ],
+        [
+          "Specific heat capacity, Cp (liquid)",
+          "118",
+          "J/mol K"
+        ],
+        [
+          "Specific heat capacity, Cv (isochoric) (gas)",
+          "65",
+          "J/mol K"
+        ],
+        [
+          "Specific heat capacity, Cv (liquid)",
+          "100",
+          "J/mol K"
+        ],
+        [
+          "Heat (enthalpy) of combustion (gas)",
+          "1336.8",
+          "kJ/mol"
+        ],
+        [
+          "Heat (enthalpy) of formation (gas)",
+          "-234",
+          "kJ/mol"
+        ],
+        [
+          "Heat (enthalpy) of fusion at -173°F/-114°C",
+          "4.9",
+          "kJ/mol"
+        ],
+        [
+          "Heat (enthalpy) of evaporation",
+          "42.32",
+          "kJ/mol"
+        ],
+        [
+          "Ionization potential",
+          "10.47",
+          "eV"
+        ],
+        [
+          "log KOW (Octanol/Water Partition Coefficient)",
+          "-0.31",
+          ""
+        ],
+        [
+          "Melting point",
+          "159.01",
+          "K"
+        ],
+        [
+          "Molecular Weight",
+          "46.069",
+          "g/mol"
+        ],
+        [
+          "Solubility in water",
+          "1000",
+          "mg/ml"
+        ],
+        [
+          "Sound velocity in liquid",
+          "1139",
+          "m/s"
+        ],
+        [
+          "Sound velocity in gas, at 0.08 bara",
+          "246",
+          "m/s"
+        ],
+        [
+          "Specific Gravity (gas) (relative to air)",
+          "1.59",
+          ""
+        ],
+        [
+          "Specific Gravity (liquid) (relative to water)",
+          "0.79",
+          ""
+        ],
+        [
+          "Specific Heat Ratio (gas) - Cp/Cv",
+          "1.13",
+          ""
+        ],
+        [
+          "Specific Heat Ratio (liquid) - Cp/Cv",
+          "1.18",
+          ""
+        ],
+        [
+          "Specific Volume (gas), at 0.08 bar",
+          "0.318",
+          "m³/mol"
+        ],
+        [
+          "Specific Volume (liquid)",
+          "0.0000587",
+          "m³/mol"
+        ],
+        [
+          "Standard molar entropy, S° (gas)",
+          "283",
+          "J/mol K"
+        ],
+        [
+          "Standard molar entropy, S° (liquid)",
+          "160",
+          "J/mol K"
+        ],
+        [
+          "Surface tension",
+          "21.97",
+          "dynes/cm"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.167",
+          "W/m K"
+        ],
+        [
+          "Triple point pressure",
+          "4.3×10⁻¹⁰",
+          "MPa"
+        ],
+        [
+          "Triple point temperature",
+          "150.00",
+          "K"
+        ],
+        [
+          "Vapor (saturation) pressure",
+          "0.008",
+          "MPa"
+        ],
+        [
+          "Viscosity, dynamic (absolute)",
+          "1.074",
+          "cP"
+        ],
+        [
+          "Viscosity, kinematic",
+          "1.36",
+          "cSt"
+        ]
+      ]
+    }
+  ]
+}

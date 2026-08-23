@@ -1,0 +1,179 @@
+{
+  "id": "hydraulic_force_and_pascal_s_law",
+  "title": "Hydraulic Force and Pascal's Law",
+  "description": "Pascal's Law calculator for hydraulic systems. Calculate forces in hydraulic cylinders and jacks based on pressure and area relationships.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pascal_law_calculator",
+      "content": "Basic Hydraulic Force Calculation (Pascal's Law)",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "pressure",
+          "label": "Pressure (p)",
+          "type": "number",
+          "defaultValue": 2000,
+          "unit": "Pa"
+        },
+        {
+          "id": "area",
+          "label": "Area (A)",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force",
+          "label": "Force (F)",
+          "formula": "inputs.pressure * inputs.area",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "hydraulic_jack_calculator",
+      "content": "Hydraulic Jack Force Calculation",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "effort_force",
+          "label": "Effort Force on Small Cylinder (Fs)",
+          "type": "number",
+          "defaultValue": 981,
+          "unit": "N"
+        },
+        {
+          "id": "area_small",
+          "label": "Small Cylinder Area (As)",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "m²"
+        },
+        {
+          "id": "area_large",
+          "label": "Large Cylinder Area (Al)",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "load_force",
+          "label": "Load Force on Large Cylinder (Fl)",
+          "formula": "inputs.effort_force * inputs.area_large / inputs.area_small",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "area_ratio",
+          "label": "Area Ratio (As/Al)",
+          "formula": "inputs.area_small / inputs.area_large",
+          "unit": "ratio",
+          "format": "decimal"
+        },
+        {
+          "id": "mechanical_advantage",
+          "label": "Mechanical Advantage (Al/As)",
+          "formula": "inputs.area_large / inputs.area_small",
+          "unit": "ratio",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "car_lift_calculator",
+      "content": "Hydraulic Jack Lifting a Car Example",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "car_mass",
+          "label": "Car Mass (half weight)",
+          "type": "number",
+          "defaultValue": 2000,
+          "unit": "kg"
+        },
+        {
+          "id": "gravity",
+          "label": "Gravity Acceleration (a)",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        },
+        {
+          "id": "area_ratio_car",
+          "label": "Area Ratio (As/Al)",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "ratio"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "load_force_car",
+          "label": "Load Force on Large Cylinder (Fl)",
+          "formula": "inputs.car_mass * inputs.gravity / 2",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "effort_force_car",
+          "label": "Effort Force on Small Cylinder (Fs)",
+          "formula": "(inputs.car_mass * inputs.gravity / 2) * inputs.area_ratio_car",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "pascal_law_reference",
+      "content": "Pascal's Law Principles",
+      "headers": [
+        "Principle",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Pressure Uniformity",
+          "If the weight of a fluid is neglected, the pressure throughout an enclosed volume will be the same"
+        ],
+        [
+          "Pressure Direction",
+          "The static pressure in a fluid acts equally in all directions"
+        ],
+        [
+          "Pressure Perpendicularity",
+          "The static pressure acts at right angles to any surface in contact with the fluid"
+        ],
+        [
+          "Force Equation",
+          "F = p × A (Force = Pressure × Area)"
+        ],
+        [
+          "Jack Principle",
+          "Fs / As = Fl / Al (Pressure is equal in both cylinders)"
+        ]
+      ]
+    }
+  ]
+}

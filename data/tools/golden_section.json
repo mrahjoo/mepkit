@@ -1,0 +1,46 @@
+{
+  "id": "golden_section",
+  "title": "Golden Section",
+  "description": "Golden Section also called the Golden Mean. The Golden Section is an irrational proportion defined as a line cut in such a way that the ratio between the smaller section to the greater equals the ratio of the greater section to the whole line. The ratio of the two lengths in the Golden Section is called phi (Φ = 1.618).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Golden Section\n\nThe _Golden Section_ (or _Golden Mean_) is an irrational proportion defined as a line cut in such a way that:\n\n- The _ratio between the smaller section to the greater_ equals the _ratio of the greater section to the whole line_\n\n**Formula:** AB / BC = BC / AC\n\n**Golden Ratio (Φ) ≈ 1.618033988749895**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "whole_line",
+          "label": "Whole Line (AC)",
+          "type": "number",
+          "unit": "units",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "greater_section",
+          "label": "Greater Section (BC)",
+          "formula": "inputs.whole_line / 1.618033988749895",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "smaller_section",
+          "label": "Smaller Section (AB)",
+          "formula": "inputs.whole_line - (inputs.whole_line / 1.618033988749895)",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "golden_ratio",
+          "label": "Golden Ratio (Φ)",
+          "formula": "1.618033988749895",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

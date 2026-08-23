@@ -1,0 +1,146 @@
+{
+  "id": "solving_first_degree_equations_with_two_unknowns",
+  "title": "Solving First Degree Equations with Two Unknowns",
+  "description": "Online calculator and solving procedure for two equations with two unknowns. Solve systems of first degree equations in the form: a1*x + b1*y = c1 and a2*x + b2*y = c2",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Solving First Degree Equations with Two Unknowns\n\nFirst degree equations with two unknowns can be expressed as:\n\n**Equation 1:** a₁x + b₁y = c₁  \n**Equation 2:** a₂x + b₂y = c₂\n\n## Solution Method\n\nThis calculator solves the system using the elimination/substitution method:\n\n1. Rearrange equation 1 to express y in terms of x\n2. Substitute into equation 2 to solve for x\n3. Back-substitute to find y\n\n## Example\n\nFor the equations:\n- 3x + 5y = 7\n- 4x - 3y = 19\n\nThe solution is: **x = 4, y = -1**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "a1",
+          "label": "a₁ (Coefficient of x in Equation 1)",
+          "type": "number",
+          "defaultValue": 3
+        },
+        {
+          "id": "b1",
+          "label": "b₁ (Coefficient of y in Equation 1)",
+          "type": "number",
+          "defaultValue": 5
+        },
+        {
+          "id": "c1",
+          "label": "c₁ (Constant in Equation 1)",
+          "type": "number",
+          "defaultValue": 7
+        },
+        {
+          "id": "a2",
+          "label": "a₂ (Coefficient of x in Equation 2)",
+          "type": "number",
+          "defaultValue": 4
+        },
+        {
+          "id": "b2",
+          "label": "b₂ (Coefficient of y in Equation 2)",
+          "type": "number",
+          "defaultValue": -3
+        },
+        {
+          "id": "c2",
+          "label": "c₂ (Constant in Equation 2)",
+          "type": "number",
+          "defaultValue": 19
+        }
+      ],
+      "outputs": [
+        {
+          "id": "x",
+          "label": "x (Solution)",
+          "formula": "(inputs.c1 * inputs.b2 - inputs.c2 * inputs.b1) / (inputs.a1 * inputs.b2 - inputs.a2 * inputs.b1)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "y",
+          "label": "y (Solution)",
+          "formula": "(inputs.a1 * inputs.c2 - inputs.a2 * inputs.c1) / (inputs.a1 * inputs.b2 - inputs.a2 * inputs.b1)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "determinant",
+          "label": "Determinant",
+          "formula": "inputs.a1 * inputs.b2 - inputs.a2 * inputs.b1",
+          "format": "decimal",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Linear Equations Visualization"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Equation 1: a₁x + b₁y = c₁",
+            "Equation 2: a₂x + b₂y = c₂"
+          ]
+        },
+        "grid": {
+          "left": "10%",
+          "right": "10%",
+          "bottom": "10%",
+          "top": "15%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "x"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "y"
+        },
+        "series": [
+          {
+            "name": "Equation 1: a₁x + b₁y = c₁",
+            "type": "line",
+            "data": [
+              [
+                -5,
+                5.4
+              ],
+              [
+                10,
+                -5.4
+              ]
+            ],
+            "smooth": true,
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          },
+          {
+            "name": "Equation 2: a₂x + b₂y = c₂",
+            "type": "line",
+            "data": [
+              [
+                -5,
+                -1.667
+              ],
+              [
+                10,
+                7.667
+              ]
+            ],
+            "smooth": true,
+            "itemStyle": {
+              "color": "#ee6666"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

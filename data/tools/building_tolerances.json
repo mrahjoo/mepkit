@@ -1,0 +1,235 @@
+{
+  "id": "building_tolerances",
+  "title": "Building Tolerances",
+  "description": "Typical tolerances for floors, walls, columns and more in building construction.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Building Tolerances\n\nTypical tolerances for floors, walls, columns and more.\n\n![waterpass building tolerances](static/docs/documents/1790/waterpass.png \"waterpass building tolerances\")\n\nTypical building tolerances are indicated below. All measurements are in millimeters (mm) and represent acceptable deviation from specified dimensions."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Category",
+        "Material/Type",
+        "Tolerance (mm)"
+      ],
+      "rows": [
+        [
+          "Floors, Flatness (3m)",
+          "Concrete, in situ",
+          5
+        ],
+        [
+          "Floors, Flatness (3m)",
+          "Floor screed",
+          5
+        ],
+        [
+          "Wall Vertical",
+          "Brickwork",
+          10
+        ],
+        [
+          "Wall Vertical",
+          "Blockwork",
+          10
+        ],
+        [
+          "Wall Vertical",
+          "Concrete, in situ",
+          17
+        ],
+        [
+          "Wall Vertical",
+          "Concrete, precast",
+          11
+        ],
+        [
+          "Column Vertical",
+          "Steel",
+          6
+        ],
+        [
+          "Column Vertical",
+          "Timber",
+          10
+        ],
+        [
+          "Column Vertical",
+          "Concrete, in situ",
+          12
+        ],
+        [
+          "Column Vertical",
+          "Concrete, precast",
+          10
+        ],
+        [
+          "Space between Walls",
+          "Brickwork",
+          20
+        ],
+        [
+          "Space between Walls",
+          "Blockwork",
+          21
+        ],
+        [
+          "Space between Walls",
+          "Timber",
+          30
+        ],
+        [
+          "Space between Walls",
+          "Concrete, in situ",
+          24
+        ],
+        [
+          "Space between Walls",
+          "Concrete, precast",
+          18
+        ],
+        [
+          "Space between Columns",
+          "Steel",
+          12
+        ],
+        [
+          "Space between Columns",
+          "Timber",
+          12
+        ],
+        [
+          "Space between Columns",
+          "Concrete, in situ",
+          18
+        ],
+        [
+          "Space between Columns",
+          "Concrete, precast",
+          13
+        ],
+        [
+          "Beams, Vertical Position",
+          "Steel",
+          20
+        ],
+        [
+          "Beams, Vertical Position",
+          "Timber",
+          20
+        ],
+        [
+          "Beams, Vertical Position",
+          "Concrete, in situ",
+          22
+        ],
+        [
+          "Beams, Vertical Position",
+          "Concrete, precast",
+          23
+        ],
+        [
+          "Floors, Vertical Position",
+          "Concrete, in situ",
+          15
+        ],
+        [
+          "Floors, Vertical Position",
+          "Concrete, precast",
+          15
+        ],
+        [
+          "Plan Position",
+          "Brickwork",
+          10
+        ],
+        [
+          "Plan Position",
+          "Steel",
+          10
+        ],
+        [
+          "Plan Position",
+          "Timber",
+          10
+        ],
+        [
+          "Plan Position",
+          "Concrete, in situ",
+          12
+        ],
+        [
+          "Plan Position",
+          "Concrete, precast",
+          10
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Building Tolerances by Category"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Tolerance (mm)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Floors, Flatness",
+            "Wall Vertical",
+            "Column Vertical",
+            "Space between Walls",
+            "Space between Columns",
+            "Beams, Vertical",
+            "Floors, Vertical",
+            "Plan Position"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Tolerance (mm)"
+        },
+        "series": [
+          {
+            "name": "Min Tolerance",
+            "type": "bar",
+            "data": [
+              5,
+              10,
+              6,
+              18,
+              12,
+              20,
+              15,
+              10
+            ]
+          },
+          {
+            "name": "Max Tolerance",
+            "type": "bar",
+            "data": [
+              5,
+              17,
+              12,
+              30,
+              18,
+              23,
+              15,
+              12
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

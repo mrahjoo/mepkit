@@ -1,0 +1,90 @@
+{
+  "id": "steel_wool___grades",
+  "title": "Steel Wool - Grades",
+  "description": "Steel wool grades vs. fiber thickness. Steel wool consists of long and relatively strong shavings with sharp edges made by shaving thin layers of steel from wires.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Steel Wool Grades and Fiber Thickness",
+      "headers": [
+        "Grade Name",
+        "Grade Code",
+        "Fiber Thickness (inches)",
+        "Fiber Thickness (mm)"
+      ],
+      "rows": [
+        [
+          "Super Fine",
+          "0000",
+          0.001,
+          0.025
+        ],
+        [
+          "Extra Fine",
+          "000",
+          0.0015,
+          0.035
+        ],
+        [
+          "Very Fine",
+          "00",
+          0.0018,
+          0.04
+        ],
+        [
+          "Fine",
+          "0",
+          0.002,
+          0.05
+        ],
+        [
+          "Medium",
+          "1",
+          0.0025,
+          0.06
+        ],
+        [
+          "Medium Coarse",
+          "2",
+          0.003,
+          0.075
+        ],
+        [
+          "Coarse",
+          "3",
+          0.0035,
+          0.09
+        ],
+        [
+          "Extra Coarse",
+          "4",
+          0.004,
+          0.1
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Steel Wool Fiber Thickness Converter",
+      "inputs": [
+        {
+          "id": "thickness_inches",
+          "label": "Fiber Thickness (inches)",
+          "type": "number",
+          "defaultValue": 0.001,
+          "unit": "inches"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thickness_mm",
+          "label": "Fiber Thickness (mm)",
+          "formula": "inputs.thickness_inches * 25.4",
+          "unit": "mm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

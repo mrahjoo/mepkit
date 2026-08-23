@@ -1,0 +1,155 @@
+{
+  "id": "natural_gas___pipe_sizing_calculator",
+  "title": "Natural Gas - Pipe Sizing Calculator",
+  "description": "Calculate the capacity of low pressure natural gas pipelines using the Spitzglass formula. Determine flow rates based on pipe diameter, pressure drop, length, and gas specific gravity.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Natural Gas Pipe Sizing Calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Inside Diameter",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 0.622
+        },
+        {
+          "id": "pressure_drop",
+          "label": "Pressure Drop",
+          "type": "number",
+          "unit": "in WC",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 100
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity of Natural Gas",
+          "type": "number",
+          "unit": "dimensionless",
+          "defaultValue": 0.6
+        }
+      ],
+      "outputs": [
+        {
+          "id": "k_factor",
+          "label": "K Factor",
+          "formula": "Math.sqrt((Math.pow(inputs.pipe_diameter, 5)) / (1 + 3.6 / inputs.pipe_diameter + 0.03 * inputs.pipe_diameter))",
+          "unit": "dimensionless",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_rate",
+          "label": "Gas Flow Rate",
+          "formula": "3550 * Math.sqrt((Math.pow(inputs.pipe_diameter, 5)) / (1 + 3.6 / inputs.pipe_diameter + 0.03 * inputs.pipe_diameter)) * Math.sqrt(inputs.pressure_drop / (inputs.pipe_length * inputs.specific_gravity))",
+          "unit": "cfh",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_rate_mbh",
+          "label": "Heat Output",
+          "formula": "3550 * Math.sqrt((Math.pow(inputs.pipe_diameter, 5)) / (1 + 3.6 / inputs.pipe_diameter + 0.03 * inputs.pipe_diameter)) * Math.sqrt(inputs.pressure_drop / (inputs.pipe_length * inputs.specific_gravity))",
+          "unit": "MBH",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Diameter (in)",
+        "Pressure Drop (in WC)",
+        "Pipe Length (ft)",
+        "Specific Gravity",
+        "Flow Rate (cfh)",
+        "Heat Output (MBH)"
+      ],
+      "rows": [
+        [
+          0.5,
+          0.25,
+          50,
+          0.6,
+          "=3550*SQRT((0.5^5)/(1+3.6/0.5+0.03*0.5))*SQRT(0.25/(50*0.60))",
+          "=3550*SQRT((0.5^5)/(1+3.6/0.5+0.03*0.5))*SQRT(0.25/(50*0.60))"
+        ],
+        [
+          0.5,
+          0.5,
+          100,
+          0.6,
+          "=3550*SQRT((0.622^5)/(1+3.6/0.622+0.03*0.622))*SQRT(0.5/(100*0.60))",
+          "=3550*SQRT((0.622^5)/(1+3.6/0.622+0.03*0.622))*SQRT(0.5/(100*0.60))"
+        ],
+        [
+          0.75,
+          0.5,
+          100,
+          0.6,
+          "=3550*SQRT((0.75^5)/(1+3.6/0.75+0.03*0.75))*SQRT(0.5/(100*0.60))",
+          "=3550*SQRT((0.75^5)/(1+3.6/0.75+0.03*0.75))*SQRT(0.5/(100*0.60))"
+        ],
+        [
+          1,
+          0.5,
+          100,
+          0.6,
+          "=3550*SQRT((1.0^5)/(1+3.6/1.0+0.03*1.0))*SQRT(0.5/(100*0.60))",
+          "=3550*SQRT((1.0^5)/(1+3.6/1.0+0.03*1.0))*SQRT(0.5/(100*0.60))"
+        ],
+        [
+          1.25,
+          0.5,
+          100,
+          0.6,
+          "=3550*SQRT((1.25^5)/(1+3.6/1.25+0.03*1.25))*SQRT(0.5/(100*0.60))",
+          "=3550*SQRT((1.25^5)/(1+3.6/1.25+0.03*1.25))*SQRT(0.5/(100*0.60))"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Flow Rate vs Pipe Diameter",
+      "options": {
+        "title": {
+          "text": "Natural Gas Flow Rate vs Pipe Diameter"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Pipe Diameter (in)",
+          "data": [
+            0.5,
+            0.75,
+            1,
+            1.25,
+            1.5
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Flow Rate (cfh)"
+        },
+        "series": [
+          {
+            "name": "Flow Rate",
+            "type": "line",
+            "data": [
+              26.8,
+              61.5,
+              122.4,
+              215.3,
+              343.2
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

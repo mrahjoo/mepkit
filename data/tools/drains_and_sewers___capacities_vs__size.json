@@ -1,0 +1,107 @@
+{
+  "id": "drains_and_sewers___capacities_vs__size",
+  "title": "Drains and Sewers - Capacities vs. Size",
+  "description": "Drainage Fixture Units (DFU) connected to building drains and sewers. Charts are based on clean pipes with friction coefficients that may vary with pipe material. DFU values are defined by the Uniform Plumbing Code (UPC) and are used to determine required drainage capacities from fixtures and service systems.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Drains and Sewers - Capacities vs. Size\n\nDrainage Fixture Units (DFU) connected to building drains and sewers.\n\n**Note!** - Charts are based on clean pipes. Friction coefficients may vary with pipe material.\n\nThe _Drainage Fixture Unit Values (DFU)_ are defined by the [Uniform Plumbing Code](plumbing-codes-d_1100.html \"UPC - Uniform Plumbing Code \") (UPC) and can be used to determine required drainage capacities from fixtures and service systems."
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Pipe Diameter (inches)",
+        "1/4\" Slope (DFU)",
+        "1/2\" Slope (DFU)",
+        "3/4\" Slope (DFU)",
+        "1\" Slope (DFU)"
+      ],
+      "rows": [
+        [
+          1.25,
+          6,
+          9,
+          11,
+          13
+        ],
+        [
+          1.5,
+          8,
+          13,
+          15,
+          18
+        ],
+        [
+          2,
+          20,
+          28,
+          35,
+          41
+        ],
+        [
+          2.5,
+          35,
+          50,
+          60,
+          70
+        ],
+        [
+          3,
+          60,
+          85,
+          105,
+          124
+        ],
+        [
+          4,
+          160,
+          225,
+          280,
+          330
+        ],
+        [
+          5,
+          360,
+          500,
+          620,
+          730
+        ],
+        [
+          6,
+          620,
+          860,
+          1060,
+          1250
+        ],
+        [
+          8,
+          1400,
+          1920,
+          2360,
+          2780
+        ]
+      ],
+      "options": {
+        "type": "bar",
+        "title": "Drainage Capacity by Pipe Diameter and Slope",
+        "xAxis": {
+          "type": "category",
+          "name": "Pipe Diameter (inches)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Drainage Fixture Units (DFU)"
+        },
+        "legend": {
+          "orient": "vertical",
+          "right": 10,
+          "top": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "pentane___density_and_specific_weight_vs__temperat",
+  "title": "Pentane - Density and Specific Weight vs. Temperature",
+  "description": "Calculator for estimating the density and specific weight of liquid pentane at given temperature. Outputs density in kg/m³, lb/ft³, lb/gal(US liq), and sl/ft³. Specific weight in N/m³ and lbf/ft³.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pentane Density and Specific Weight Calculator\n\nThis calculator estimates the density and specific weight of liquid pentane at a given temperature.\n\n## Input Variables\nEnter the temperature value and select its unit below.\n\n## Output\nThe calculator returns:\n- **Density** in: kg/m³, lb/ft³, lb/gal(US liq), sl/ft³\n- **Specific weight** in: N/m³, lbf/ft³"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_value",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "temperature_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "celsius"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "fahrenheit"
+            },
+            {
+              "label": "Kelvin (K)",
+              "value": "kelvin"
+            },
+            {
+              "label": "Rankine (°R)",
+              "value": "rankine"
+            }
+          ],
+          "defaultValue": "celsius"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "inputs.temperature_unit === 'celsius' ? (626.2 - 0.682 * inputs.temperature_value) : inputs.temperature_unit === 'fahrenheit' ? (626.2 - 0.682 * (inputs.temperature_value - 32) / 1.8) : inputs.temperature_unit === 'kelvin' ? (626.2 - 0.682 * (inputs.temperature_value - 273.15)) : (626.2 - 0.682 * (inputs.temperature_value - 491.67) / 1.8)"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "(inputs.temperature_unit === 'celsius' ? (626.2 - 0.682 * inputs.temperature_value) : inputs.temperature_unit === 'fahrenheit' ? (626.2 - 0.682 * (inputs.temperature_value - 32) / 1.8) : inputs.temperature_unit === 'kelvin' ? (626.2 - 0.682 * (inputs.temperature_value - 273.15)) : (626.2 - 0.682 * (inputs.temperature_value - 491.67) / 1.8)) * 0.06243"
+        },
+        {
+          "id": "density_lb_gal_us",
+          "label": "Density",
+          "unit": "lb/gal(US liq)",
+          "format": "decimal",
+          "formula": "(inputs.temperature_unit === 'celsius' ? (626.2 - 0.682 * inputs.temperature_value) : inputs.temperature_unit === 'fahrenheit' ? (626.2 - 0.682 * (inputs.temperature_value - 32) / 1.8) : inputs.temperature_unit === 'kelvin' ? (626.2 - 0.682 * (inputs.temperature_value - 273.15)) : (626.2 - 0.682 * (inputs.temperature_value - 491.67) / 1.8)) * 0.008345"
+        },
+        {
+          "id": "density_sl_ft3",
+          "label": "Density",
+          "unit": "sl/ft³",
+          "format": "decimal",
+          "formula": "(inputs.temperature_unit === 'celsius' ? (626.2 - 0.682 * inputs.temperature_value) : inputs.temperature_unit === 'fahrenheit' ? (626.2 - 0.682 * (inputs.temperature_value - 32) / 1.8) : inputs.temperature_unit === 'kelvin' ? (626.2 - 0.682 * (inputs.temperature_value - 273.15)) : (626.2 - 0.682 * (inputs.temperature_value - 491.67) / 1.8)) / 515.3788"
+        },
+        {
+          "id": "specific_weight_n_m3",
+          "label": "Specific Weight",
+          "unit": "N/m³",
+          "format": "decimal",
+          "formula": "(inputs.temperature_unit === 'celsius' ? (626.2 - 0.682 * inputs.temperature_value) : inputs.temperature_unit === 'fahrenheit' ? (626.2 - 0.682 * (inputs.temperature_value - 32) / 1.8) : inputs.temperature_unit === 'kelvin' ? (626.2 - 0.682 * (inputs.temperature_value - 273.15)) : (626.2 - 0.682 * (inputs.temperature_value - 491.67) / 1.8)) * 9.80665"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "format": "decimal",
+          "formula": "(inputs.temperature_unit === 'celsius' ? (626.2 - 0.682 * inputs.temperature_value) : inputs.temperature_unit === 'fahrenheit' ? (626.2 - 0.682 * (inputs.temperature_value - 32) / 1.8) : inputs.temperature_unit === 'kelvin' ? (626.2 - 0.682 * (inputs.temperature_value - 273.15)) : (626.2 - 0.682 * (inputs.temperature_value - 491.67) / 1.8)) * 0.06243 * 0.3048"
+        }
+      ]
+    }
+  ]
+}

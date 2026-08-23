@@ -1,0 +1,124 @@
+{
+  "id": "control_valves___sizing_and_selection",
+  "title": "Control Valves - Sizing and Selection",
+  "description": "A comprehensive tool for engineers and designers to size and select control valves. This tool provides detailed technical data and calculations for control valve sizing, helping with fluid mechanics calculations and system design for HVAC systems, water distribution, and hydraulic applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Valve Size (inches)",
+        "Flow Rate (GPM)",
+        "Pressure Drop (psi)",
+        "Valve Coefficient (Cv)",
+        "Application Type"
+      ],
+      "rows": [
+        [
+          0.5,
+          10,
+          5,
+          2,
+          "Small HVAC Systems"
+        ],
+        [
+          0.75,
+          25,
+          8,
+          5.5,
+          "Medium HVAC Systems"
+        ],
+        [
+          1,
+          50,
+          12,
+          13,
+          "Large HVAC Systems"
+        ],
+        [
+          1.5,
+          100,
+          15,
+          35,
+          "Industrial Water Distribution"
+        ],
+        [
+          2,
+          150,
+          20,
+          65,
+          "High-Flow Applications"
+        ],
+        [
+          2.5,
+          225,
+          25,
+          100,
+          "Large Industrial Systems"
+        ],
+        [
+          3,
+          300,
+          30,
+          150,
+          "Major Flow Control"
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "flow_rate",
+          "label": "Required Flow Rate (GPM)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "GPM"
+        },
+        {
+          "id": "pressure_drop",
+          "label": "Maximum Pressure Drop (psi)",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": "psi"
+        },
+        {
+          "id": "application_type",
+          "label": "Application Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "hvac",
+              "label": "HVAC Systems"
+            },
+            {
+              "value": "water_distribution",
+              "label": "Water Distribution"
+            },
+            {
+              "value": "steam",
+              "label": "Steam Systems"
+            },
+            {
+              "value": "industrial",
+              "label": "Industrial"
+            }
+          ],
+          "defaultValue": "hvac"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "recommended_cv",
+          "label": "Recommended Valve Coefficient (Cv)",
+          "formula": "inputs.flow_rate / sqrt(inputs.pressure_drop)",
+          "unit": "Cv",
+          "format": "decimal"
+        },
+        {
+          "id": "valve_size",
+          "label": "Recommended Valve Size",
+          "formula": "inputs.flow_rate > 225 ? '3.0 inches' : inputs.flow_rate > 150 ? '2.5 inches' : inputs.flow_rate > 100 ? '2.0 inches' : inputs.flow_rate > 50 ? '1.5 inches' : inputs.flow_rate > 25 ? '1.0 inches' : inputs.flow_rate > 10 ? '0.75 inches' : '0.5 inches'",
+          "unit": "inches"
+        }
+      ]
+    }
+  ]
+}

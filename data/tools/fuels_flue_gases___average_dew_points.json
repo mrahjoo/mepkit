@@ -1,0 +1,71 @@
+{
+  "id": "fuels_flue_gases___average_dew_points",
+  "title": "Fuels Flue Gases - Average Dew Points",
+  "description": "Flue gas dew point temperatures for some fuels.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "chart",
+      "headers": [
+        "Fuel Type",
+        "Dew Point (°C)"
+      ],
+      "rows": [
+        [
+          "Natural Gas",
+          "55"
+        ],
+        [
+          "Coal",
+          "130"
+        ],
+        [
+          "Oil Fuel",
+          "48"
+        ],
+        [
+          "Biomass",
+          "65"
+        ],
+        [
+          "LPG",
+          "52"
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Natural Gas",
+            "Coal",
+            "Oil Fuel",
+            "Biomass",
+            "LPG"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Dew Point (°C)"
+        },
+        "series": [
+          {
+            "data": [
+              55,
+              130,
+              48,
+              65,
+              52
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

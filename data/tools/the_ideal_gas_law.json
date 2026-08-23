@@ -1,0 +1,117 @@
+{
+  "id": "the_ideal_gas_law",
+  "title": "The Ideal Gas Law",
+  "description": "Calculate pressure, volume, temperature, and density relationships using the Ideal Gas Law. This calculator helps solve problems involving ideal gases using the fundamental equations: pV = nRuT, pV = mRT, and p = ρRT.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# The Ideal Gas Law Calculator\n\n## Equations\n\n**Primary Ideal Gas Law:**\n- **pV = nRu T** (using moles)\n- **pV = mRT** (using mass)\n- **p = ρRT** (using density)\n\n**Where:**\n- p = absolute pressure\n- V = volume\n- n = number of moles\n- Ru = universal gas constant = 8.3145 J/(mol·K)\n- m = mass\n- R = individual gas constant (depends on gas)\n- T = absolute temperature\n- ρ = density = m/V\n\n**For a given quantity of gas:**\n- **p₁V₁/T₁ = p₂V₂/T₂**\n\n**Density calculation:**\n- **ρ = p/(RT)**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 101325,
+          "unit": "Pa"
+        },
+        {
+          "id": "volume",
+          "label": "Volume",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m³"
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 273.15,
+          "unit": "K"
+        },
+        {
+          "id": "moles",
+          "label": "Number of Moles",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "mol"
+        },
+        {
+          "id": "gas_constant",
+          "label": "Universal Gas Constant (Ru)",
+          "type": "number",
+          "defaultValue": 8.3145,
+          "unit": "J/(mol·K)"
+        },
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "kg"
+        },
+        {
+          "id": "specific_gas_constant",
+          "label": "Specific Gas Constant (R)",
+          "type": "number",
+          "defaultValue": 287,
+          "unit": "J/(kg·K)"
+        },
+        {
+          "id": "density",
+          "label": "Density",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pv_nRu_T",
+          "label": "pV from nRuT",
+          "formula": "inputs.pressure * inputs.volume",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "nRu_T",
+          "label": "nRuT Result",
+          "formula": "inputs.moles * inputs.gas_constant * inputs.temperature",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "pv_mRT",
+          "label": "pV from mRT",
+          "formula": "inputs.pressure * inputs.volume",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "mRT",
+          "label": "mRT Result",
+          "formula": "inputs.mass * inputs.specific_gas_constant * inputs.temperature",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "calc_density",
+          "label": "Calculated Density (ρ = p/RT)",
+          "formula": "inputs.pressure / (inputs.specific_gas_constant * inputs.temperature)",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "calc_pressure_from_density",
+          "label": "Calculated Pressure (p = ρRT)",
+          "formula": "inputs.density * inputs.specific_gas_constant * inputs.temperature",
+          "unit": "Pa",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

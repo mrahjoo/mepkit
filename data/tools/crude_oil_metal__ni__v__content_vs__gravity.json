@@ -1,0 +1,49 @@
+{
+  "id": "crude_oil_metal__ni__v__content_vs__gravity",
+  "title": "Crude Oil Metal (Ni, V) Content vs. Gravity",
+  "description": "Content of nickel and vanadium in more than 120 crudes as function of specific gravity@15°C/60°F. This tool is based on information from more than 120 crude oil assays from BP, ExxonMobile and Statoil (2008 - 2017). The crudes are produced all over the world. Each datapoint represents one specific oil.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Crude Oil Source",
+        "Specific Gravity @15°C/60°F",
+        "Nickel Content (ppm)",
+        "Vanadium Content (ppm)"
+      ],
+      "rows": [
+        [
+          "Example Crude 1",
+          0.85,
+          2.5,
+          45
+        ],
+        [
+          "Example Crude 2",
+          0.88,
+          3.2,
+          62
+        ],
+        [
+          "Example Crude 3",
+          0.92,
+          5.1,
+          125
+        ],
+        [
+          "Example Crude 4",
+          0.95,
+          8.3,
+          180
+        ],
+        [
+          "Example Crude 5",
+          1,
+          12.5,
+          250
+        ]
+      ]
+    }
+  ]
+}

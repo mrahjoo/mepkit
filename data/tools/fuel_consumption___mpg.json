@@ -1,0 +1,71 @@
+{
+  "id": "fuel_consumption___mpg",
+  "title": "Fuel Consumption - mpg",
+  "description": "Calculate fuel consumption in miles per gallon - mpg - calculator and consumption charts.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Miles Driven",
+        "Gallons Used",
+        "Fuel Consumption (MPG)"
+      ],
+      "rows": [
+        [
+          100,
+          5,
+          20
+        ],
+        [
+          150,
+          6.5,
+          23.08
+        ],
+        [
+          200,
+          8,
+          25
+        ],
+        [
+          250,
+          10,
+          25
+        ],
+        [
+          300,
+          12,
+          25
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "miles_driven",
+          "label": "Miles Driven",
+          "type": "number",
+          "unit": "miles",
+          "defaultValue": 100
+        },
+        {
+          "id": "gallons_used",
+          "label": "Gallons Used",
+          "type": "number",
+          "unit": "gallons",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mpg",
+          "label": "Fuel Consumption (MPG)",
+          "unit": "miles per gallon",
+          "formula": "inputs.miles_driven / inputs.gallons_used",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

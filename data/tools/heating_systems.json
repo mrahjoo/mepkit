@@ -1,0 +1,43 @@
+{
+  "id": "heating_systems",
+  "title": "Heating Systems",
+  "description": "Design of heating systems - capacities and design of boilers, pipelines, heat exchangers, expansion systems and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Description",
+        "Design Parameters"
+      ],
+      "rows": [
+        [
+          "Boilers",
+          "Heat generation units",
+          "Capacity, efficiency, fuel type"
+        ],
+        [
+          "Pipelines",
+          "Heat distribution",
+          "Diameter, material, insulation"
+        ],
+        [
+          "Heat Exchangers",
+          "Heat transfer devices",
+          "Surface area, effectiveness, flow rates"
+        ],
+        [
+          "Expansion Systems",
+          "Volume compensation",
+          "Tank volume, pressure relief"
+        ],
+        [
+          "Controls",
+          "System regulation",
+          "Thermostats, pumps, valves"
+        ]
+      ]
+    }
+  ]
+}

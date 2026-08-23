@@ -1,0 +1,313 @@
+{
+  "id": "bronze_flanges___asme_ansi_150_lb",
+  "title": "Bronze Flanges - ASME/ANSI 150 lb",
+  "description": "Flange diameters, thickness, bolt circles, numbers and diameters of bolts for ASME/ANSI B16.15 - Cast Bronze Threaded Fittings - 150 lb Bronze flanges with plain faces.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "bronze_flange_table",
+      "content": "ANSI 150 lb Bronze Flange Specifications",
+      "headers": [
+        "Pipe Size (inches)",
+        "Flange Diameter (inches)",
+        "Flange Thickness (inches)",
+        "Bolt Circle Diameter (inches)",
+        "Number of Bolts",
+        "Bolt Diameter (inches)"
+      ],
+      "rows": [
+        [
+          "1/2",
+          3.5,
+          0.3125,
+          2.375,
+          4,
+          0.5
+        ],
+        [
+          "3/4",
+          3.875,
+          0.34375,
+          2.75,
+          4,
+          0.5
+        ],
+        [
+          "1",
+          4.25,
+          0.375,
+          3.125,
+          4,
+          0.5
+        ],
+        [
+          "1 1/4",
+          4.625,
+          0.40625,
+          3.5,
+          4,
+          0.5
+        ],
+        [
+          "1 1/2",
+          5,
+          0.4375,
+          3.875,
+          4,
+          0.5
+        ],
+        [
+          "2",
+          6,
+          0.5,
+          4.75,
+          4,
+          0.75
+        ],
+        [
+          "2 1/2",
+          7,
+          0.5625,
+          5.5,
+          4,
+          0.75
+        ],
+        [
+          "3",
+          7.5,
+          0.625,
+          6,
+          4,
+          0.75
+        ],
+        [
+          "3 1/2",
+          8.5,
+          0.6875,
+          7,
+          8,
+          0.75
+        ],
+        [
+          "4",
+          9,
+          0.6875,
+          7.5,
+          8,
+          0.75
+        ],
+        [
+          "5",
+          10,
+          0.75,
+          8.5,
+          8,
+          0.75
+        ],
+        [
+          "6",
+          11,
+          0.8125,
+          9.5,
+          8,
+          0.75
+        ],
+        [
+          "8",
+          13.5,
+          0.9375,
+          11.75,
+          8,
+          0.75
+        ],
+        [
+          "10",
+          16,
+          1,
+          14.25,
+          12,
+          0.875
+        ],
+        [
+          "12",
+          19,
+          1.0625,
+          17,
+          12,
+          0.875
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "flange_calculator",
+      "content": "Bronze Flange Specifications Calculator",
+      "inputs": [
+        {
+          "id": "pipe_size",
+          "label": "Pipe Size",
+          "type": "select",
+          "options": [
+            {
+              "value": 0.5,
+              "label": "1/2 inch"
+            },
+            {
+              "value": 0.75,
+              "label": "3/4 inch"
+            },
+            {
+              "value": 1,
+              "label": "1 inch"
+            },
+            {
+              "value": 1.25,
+              "label": "1 1/4 inch"
+            },
+            {
+              "value": 1.5,
+              "label": "1 1/2 inch"
+            },
+            {
+              "value": 2,
+              "label": "2 inch"
+            },
+            {
+              "value": 2.5,
+              "label": "2 1/2 inch"
+            },
+            {
+              "value": 3,
+              "label": "3 inch"
+            },
+            {
+              "value": 3.5,
+              "label": "3 1/2 inch"
+            },
+            {
+              "value": 4,
+              "label": "4 inch"
+            },
+            {
+              "value": 5,
+              "label": "5 inch"
+            },
+            {
+              "value": 6,
+              "label": "6 inch"
+            },
+            {
+              "value": 8,
+              "label": "8 inch"
+            },
+            {
+              "value": 10,
+              "label": "10 inch"
+            },
+            {
+              "value": 12,
+              "label": "12 inch"
+            }
+          ],
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flange_diameter",
+          "label": "Flange Diameter",
+          "unit": "inches",
+          "formula": "inputs.pipe_size === 0.5 ? 3.5 : inputs.pipe_size === 0.75 ? 3.875 : inputs.pipe_size === 1 ? 4.25 : inputs.pipe_size === 1.25 ? 4.625 : inputs.pipe_size === 1.5 ? 5 : inputs.pipe_size === 2 ? 6 : inputs.pipe_size === 2.5 ? 7 : inputs.pipe_size === 3 ? 7.5 : inputs.pipe_size === 3.5 ? 8.5 : inputs.pipe_size === 4 ? 9 : inputs.pipe_size === 5 ? 10 : inputs.pipe_size === 6 ? 11 : inputs.pipe_size === 8 ? 13.5 : inputs.pipe_size === 10 ? 16 : inputs.pipe_size === 12 ? 19 : 0"
+        },
+        {
+          "id": "flange_thickness",
+          "label": "Flange Thickness",
+          "unit": "inches",
+          "formula": "inputs.pipe_size === 0.5 ? 0.3125 : inputs.pipe_size === 0.75 ? 0.34375 : inputs.pipe_size === 1 ? 0.375 : inputs.pipe_size === 1.25 ? 0.40625 : inputs.pipe_size === 1.5 ? 0.4375 : inputs.pipe_size === 2 ? 0.5 : inputs.pipe_size === 2.5 ? 0.5625 : inputs.pipe_size === 3 ? 0.625 : inputs.pipe_size === 3.5 ? 0.6875 : inputs.pipe_size === 4 ? 0.6875 : inputs.pipe_size === 5 ? 0.75 : inputs.pipe_size === 6 ? 0.8125 : inputs.pipe_size === 8 ? 0.9375 : inputs.pipe_size === 10 ? 1 : inputs.pipe_size === 12 ? 1.0625 : 0"
+        },
+        {
+          "id": "bolt_circle_diameter",
+          "label": "Bolt Circle Diameter",
+          "unit": "inches",
+          "formula": "inputs.pipe_size === 0.5 ? 2.375 : inputs.pipe_size === 0.75 ? 2.75 : inputs.pipe_size === 1 ? 3.125 : inputs.pipe_size === 1.25 ? 3.5 : inputs.pipe_size === 1.5 ? 3.875 : inputs.pipe_size === 2 ? 4.75 : inputs.pipe_size === 2.5 ? 5.5 : inputs.pipe_size === 3 ? 6 : inputs.pipe_size === 3.5 ? 7 : inputs.pipe_size === 4 ? 7.5 : inputs.pipe_size === 5 ? 8.5 : inputs.pipe_size === 6 ? 9.5 : inputs.pipe_size === 8 ? 11.75 : inputs.pipe_size === 10 ? 14.25 : inputs.pipe_size === 12 ? 17 : 0"
+        },
+        {
+          "id": "number_of_bolts",
+          "label": "Number of Bolts",
+          "unit": "count",
+          "formula": "inputs.pipe_size === 0.5 || inputs.pipe_size === 0.75 || inputs.pipe_size === 1 || inputs.pipe_size === 1.25 || inputs.pipe_size === 1.5 || inputs.pipe_size === 2 || inputs.pipe_size === 2.5 || inputs.pipe_size === 3 ? 4 : inputs.pipe_size === 3.5 || inputs.pipe_size === 4 || inputs.pipe_size === 5 || inputs.pipe_size === 6 || inputs.pipe_size === 8 ? 8 : inputs.pipe_size === 10 || inputs.pipe_size === 12 ? 12 : 0"
+        },
+        {
+          "id": "bolt_diameter",
+          "label": "Bolt Diameter",
+          "unit": "inches",
+          "formula": "inputs.pipe_size <= 1.5 || (inputs.pipe_size >= 2 && inputs.pipe_size <= 8) ? (inputs.pipe_size <= 1.5 ? 0.5 : 0.75) : inputs.pipe_size === 10 || inputs.pipe_size === 12 ? 0.875 : 0"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "flange_comparison_chart",
+      "content": "Flange Diameter vs Pipe Size",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "1/2",
+            "3/4",
+            "1",
+            "1 1/4",
+            "1 1/2",
+            "2",
+            "2 1/2",
+            "3",
+            "3 1/2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "12"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Diameter (inches)"
+        },
+        "series": [
+          {
+            "name": "Flange Diameter",
+            "data": [
+              3.5,
+              3.875,
+              4.25,
+              4.625,
+              5,
+              6,
+              7,
+              7.5,
+              8.5,
+              9,
+              10,
+              11,
+              13.5,
+              16,
+              19
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Flange Diameter"
+          ]
+        }
+      }
+    }
+  ]
+}

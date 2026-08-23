@@ -1,0 +1,53 @@
+{
+  "id": "electrical_motors___speed_at_operating_vs__synchro",
+  "title": "Electrical Motors - Speed at Operating vs. Synchronous Load",
+  "description": "Speed of an operating electrical motor with load is lower than the synchronous speed (no load) of the motor. This tool provides synchronous and approximate speed (rpm) at rated load for small and medium motors operating at 60 Hz and 50 Hz.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Electrical Motors - Speed at Operating vs. Synchronous Load",
+      "headers": [
+        "No. Poles",
+        "Speed with Rated Load (60 Hz)",
+        "Speed with Rated Load (50 Hz)",
+        "Synchronous Speed (60 Hz)",
+        "Synchronous Speed (50 Hz)"
+      ],
+      "rows": [
+        [
+          "2",
+          "3450",
+          "2850",
+          "3600",
+          "3000"
+        ],
+        [
+          "4",
+          "1725",
+          "1425",
+          "1800",
+          "1500"
+        ],
+        [
+          "6",
+          "1140",
+          "950",
+          "1200",
+          "1000"
+        ],
+        [
+          "8",
+          "850",
+          "700",
+          "900",
+          "750"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Information\n\n**Synchronous Speed Formula:**\n- Synchronous Speed (rpm) = (120 × Frequency (Hz)) / Number of Poles\n\n**Speed Slip:**\n- Slip = (Synchronous Speed - Operating Speed) / Synchronous Speed × 100%\n\nThe operating speed is always lower than the synchronous speed due to mechanical load and slip in the motor."
+    }
+  ]
+}

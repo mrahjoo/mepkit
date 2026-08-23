@@ -1,0 +1,171 @@
+{
+  "id": "light_beam_path_for_a_prism",
+  "title": "Light Beam Path for a Prism",
+  "description": "The light beam dispersion rainbow color effect of a prism. When white light shines on a prism surface it is broken down to different color components based on wavelength and refractive index variations.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Light Beam Path for a Prism\n\nThe [refractive index](refractive-index-d_1264.html \"Light refractive index\") for light at the interface between two media varies with the wavelength of the light. \n\n- **Blue light**: wavelength λ between 420 and 490 nm\n- **Red light**: wavelength between 650 to 750 nm\n\nWhen white light shines on a prism surface it is broken down to different color components."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "wavelength",
+          "label": "Wavelength (nm)",
+          "type": "number",
+          "defaultValue": 550,
+          "unit": "nm"
+        },
+        {
+          "id": "incident_angle",
+          "label": "Incident Angle (degrees)",
+          "type": "number",
+          "defaultValue": 45,
+          "unit": "degrees"
+        },
+        {
+          "id": "prism_angle",
+          "label": "Prism Apex Angle (degrees)",
+          "type": "number",
+          "defaultValue": 60,
+          "unit": "degrees"
+        },
+        {
+          "id": "refractive_index",
+          "label": "Refractive Index",
+          "type": "number",
+          "defaultValue": 1.52,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "refraction_angle",
+          "label": "Refraction Angle",
+          "formula": "Math.asin(Math.sin(inputs.incident_angle * Math.PI / 180) / inputs.refractive_index) * 180 / Math.PI",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "deviation_angle",
+          "label": "Deviation Angle",
+          "formula": "inputs.incident_angle + Math.asin(inputs.refractive_index * Math.sin((inputs.prism_angle * Math.PI / 180) - Math.asin(Math.sin(inputs.incident_angle * Math.PI / 180) / inputs.refractive_index))) * 180 / Math.PI - inputs.prism_angle",
+          "unit": "degrees",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Color",
+        "Wavelength (nm)",
+        "Refractive Index"
+      ],
+      "rows": [
+        [
+          "Red",
+          700,
+          1.51
+        ],
+        [
+          "Orange",
+          620,
+          1.517
+        ],
+        [
+          "Yellow",
+          580,
+          1.522
+        ],
+        [
+          "Green",
+          540,
+          1.526
+        ],
+        [
+          "Blue",
+          460,
+          1.531
+        ],
+        [
+          "Violet",
+          380,
+          1.538
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Red",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Violet"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Wavelength (nm)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Refractive Index",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Wavelength (nm)",
+            "data": [
+              700,
+              620,
+              580,
+              540,
+              460,
+              380
+            ],
+            "type": "line",
+            "yAxisIndex": 0,
+            "smooth": true,
+            "lineStyle": {
+              "color": "#FF0000"
+            }
+          },
+          {
+            "name": "Refractive Index",
+            "data": [
+              1.51,
+              1.517,
+              1.522,
+              1.526,
+              1.531,
+              1.538
+            ],
+            "type": "line",
+            "yAxisIndex": 1,
+            "smooth": true,
+            "lineStyle": {
+              "color": "#4169E1"
+            }
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Wavelength (nm)",
+            "Refractive Index"
+          ]
+        }
+      }
+    }
+  ]
+}

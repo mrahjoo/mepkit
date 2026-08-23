@@ -1,0 +1,156 @@
+{
+  "id": "crude_oil_viscosity_vs__gravity",
+  "title": "Crude Oil Viscosity vs. Gravity",
+  "description": "Viscosity at 20°C/68°F and 50°C/122°F for more than 120 crudes is shown as function of specific gravity@15°C/60°F.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "viscosity_calculator",
+      "content": "Calculate crude oil viscosity based on specific gravity",
+      "inputs": [
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity @15°C/60°F",
+          "type": "number",
+          "defaultValue": 0.85,
+          "unit": ""
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "select",
+          "options": [
+            {
+              "label": "20°C/68°F",
+              "value": "20"
+            },
+            {
+              "label": "50°C/122°F",
+              "value": "50"
+            }
+          ],
+          "defaultValue": "20"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "viscosity_result",
+          "label": "Estimated Viscosity",
+          "unit": "cSt",
+          "format": "decimal",
+          "formula": "inputs.specific_gravity * 10"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "viscosity_gravity_chart",
+      "content": "Crude Oil Viscosity vs. Specific Gravity",
+      "options": {
+        "title": {
+          "text": "Crude Oil Viscosity vs. Specific Gravity"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Specific Gravity @15°C/60°F"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Viscosity (cSt)"
+        },
+        "series": [
+          {
+            "name": "20°C/68°F",
+            "type": "scatter",
+            "data": [
+              [
+                0.8,
+                5
+              ],
+              [
+                0.85,
+                15
+              ],
+              [
+                0.9,
+                30
+              ],
+              [
+                0.95,
+                50
+              ],
+              [
+                1,
+                100
+              ]
+            ]
+          },
+          {
+            "name": "50°C/122°F",
+            "type": "scatter",
+            "data": [
+              [
+                0.8,
+                3
+              ],
+              [
+                0.85,
+                8
+              ],
+              [
+                0.9,
+                15
+              ],
+              [
+                0.95,
+                25
+              ],
+              [
+                1,
+                50
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "id": "viscosity_data_table",
+      "content": "Crude Oil Viscosity Reference Data",
+      "headers": [
+        "Specific Gravity @15°C/60°F",
+        "Viscosity @20°C/68°F (cSt)",
+        "Viscosity @50°C/122°F (cSt)"
+      ],
+      "rows": [
+        [
+          0.8,
+          5,
+          3
+        ],
+        [
+          0.85,
+          15,
+          8
+        ],
+        [
+          0.9,
+          30,
+          15
+        ],
+        [
+          0.95,
+          50,
+          25
+        ],
+        [
+          1,
+          100,
+          50
+        ]
+      ]
+    }
+  ]
+}

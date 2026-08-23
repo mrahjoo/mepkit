@@ -1,0 +1,62 @@
+{
+  "id": "pasteurization___temperatures_and_time",
+  "title": "Pasteurization - Temperatures and Time",
+  "description": "Pasteurization methods, time and temperatures. Pasteurization is a heat-treatment process that destroys pathogenic microorganisms in foods and beverages.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pasteurization Methods\n\nPasteurization is a heat-treatment process that destroys pathogenic microorganisms in foods and beverages.\n\n**Note:** If the fat content of the milk product is ten percent (10%) or more, or if it contains added sweeteners, or if it is concentrated (condensed), the specified temperature shall be increased by 3ºC (5ºF)."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature",
+        "Time",
+        "Pasteurization Type"
+      ],
+      "rows": [
+        [
+          "63ºC (145ºF)",
+          "30 minutes",
+          "Vat Pasteurization"
+        ],
+        [
+          "72ºC (161ºF)",
+          "15 seconds",
+          "High Temperature Short Time Pasteurization (HTST)"
+        ],
+        [
+          "89ºC (191ºF)",
+          "1.0 second",
+          "Higher-Heat Shorter Time (HHST)"
+        ],
+        [
+          "90ºC (194ºF)",
+          "0.5 seconds",
+          "Higher-Heat Shorter Time (HHST)"
+        ],
+        [
+          "94ºC (201ºF)",
+          "0.1 seconds",
+          "Higher-Heat Shorter Time (HHST)"
+        ],
+        [
+          "96ºC (204ºF)",
+          "0.05 seconds",
+          "Higher-Heat Shorter Time (HHST)"
+        ],
+        [
+          "100ºC (212ºF)",
+          "0.01 seconds",
+          "Higher-Heat Shorter Time (HHST)"
+        ],
+        [
+          "138ºC (280ºF)",
+          "2.0 seconds",
+          "Ultra Pasteurization (UP)"
+        ]
+      ]
+    }
+  ]
+}

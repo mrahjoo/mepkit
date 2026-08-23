@@ -1,0 +1,176 @@
+{
+  "id": "mollier_chart_for_water___imperial_units",
+  "title": "Mollier Chart for Water - Imperial Units",
+  "description": "Interactive Mollier chart for water using imperial units. This tool provides thermodynamic properties and state data for water in imperial measurement units (BTU, °F, psia, etc.). Useful for HVAC systems, steam calculations, and thermodynamic analysis.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Pressure (psia)",
+        "Enthalpy (BTU/lbm)",
+        "Entropy (BTU/lbm·°R)",
+        "Specific Volume (ft³/lbm)",
+        "Quality (x)"
+      ],
+      "rows": [
+        [
+          32,
+          0.089,
+          0,
+          0,
+          0.01602,
+          0
+        ],
+        [
+          50,
+          0.178,
+          18.07,
+          0.0361,
+          0.01613,
+          0
+        ],
+        [
+          100,
+          0.949,
+          68,
+          0.1295,
+          0.01613,
+          0
+        ],
+        [
+          150,
+          3.718,
+          117.89,
+          0.216,
+          0.0162,
+          0
+        ],
+        [
+          200,
+          11.526,
+          167.99,
+          0.2939,
+          0.01633,
+          0
+        ],
+        [
+          212,
+          14.696,
+          180.07,
+          0.3121,
+          0.01645,
+          0
+        ],
+        [
+          250,
+          29.825,
+          217.71,
+          0.3674,
+          0.01668,
+          0
+        ],
+        [
+          300,
+          67.013,
+          298.4,
+          0.4743,
+          0.01745,
+          0
+        ],
+        [
+          350,
+          134.63,
+          379.04,
+          0.5686,
+          0.01837,
+          0
+        ],
+        [
+          400,
+          247.257,
+          449.2,
+          0.649,
+          0.01975,
+          0
+        ],
+        [
+          450,
+          422.64,
+          507.07,
+          0.7126,
+          0.02164,
+          0
+        ],
+        [
+          500,
+          680.866,
+          449.51,
+          0.7086,
+          0.02744,
+          0
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "temp_min",
+          "label": "Temperature Range Min (°F)",
+          "type": "number",
+          "defaultValue": 32,
+          "unit": "°F"
+        },
+        {
+          "id": "temp_max",
+          "label": "Temperature Range Max (°F)",
+          "type": "number",
+          "defaultValue": 500,
+          "unit": "°F"
+        },
+        {
+          "id": "pressure_range",
+          "label": "Pressure Range",
+          "type": "select",
+          "options": [
+            {
+              "label": "Low (0-50 psia)",
+              "value": "low"
+            },
+            {
+              "label": "Medium (50-250 psia)",
+              "value": "medium"
+            },
+            {
+              "label": "High (250-1000 psia)",
+              "value": "high"
+            }
+          ],
+          "defaultValue": "medium"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enthalpy_avg",
+          "label": "Average Enthalpy",
+          "formula": "inputs.enthalpy_value",
+          "unit": "BTU/lbm",
+          "format": "decimal"
+        },
+        {
+          "id": "entropy_avg",
+          "label": "Average Entropy",
+          "formula": "inputs.entropy_value",
+          "unit": "BTU/lbm·°R",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_avg",
+          "label": "Average Pressure",
+          "formula": "inputs.pressure_value",
+          "unit": "psia",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

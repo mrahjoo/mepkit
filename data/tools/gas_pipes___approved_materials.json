@@ -1,0 +1,12 @@
+{
+  "id": "gas_pipes___approved_materials",
+  "title": "Gas Pipes - Approved Materials",
+  "description": "Materials approved for gas pipes. Review of approved materials including steel, copper, brass, ductile iron, aluminum, PVC, and PE pipes with their specific applications and restrictions.",
+  "type": "markdown",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Gas Pipes - Approved Materials\n\nMaterials approved for gas pipes. There are several types of materials approved for gas work. The codes for the local jurisdiction should always be checked but in general the following may be used:\n\n## Approved Materials\n\n- **Steel pipes** - Most common for inside buildings; can be used above ground if corrosion is not a concern\n- **Copper pipes** - Type L or K approved for gas; very common for inside buildings\n- **Yellow brass pipes** - May be approved for inside installations\n- **Ductile iron** - May be approved in some jurisdictions for underground work\n- **Aluminum pipes** - Should NOT be used in the ground; not approved in all jurisdictions\n- **PVC pipes** - Polyvinyl Chloride; may be used in pipelines buried outside a building\n- **PE pipes** - Polyethylene; may be used in pipelines buried outside a building\n\n## Material-Specific Guidelines\n\n### Steel Pipes\nSteel pipes can be used above ground as long as corrosion due to the environment and the conveying gas is of no problem. Steel pipes and copper pipes are the most common materials used inside buildings.\n\n### Copper Pipes\nCopper pipes used in gas systems should be of type L or K and approved for gas.\n\n### Yellow Brass Pipes\nYellow brass pipes may be approved for inside installations.\n\n### Aluminum Pipes\nAluminum pipes should not be used in the ground. Aluminum is not approved in all jurisdictions.\n\n### Ductile Iron\nDuctile iron pipes may be approved in some jurisdiction for underground work.\n\n### PVC Pipes\nPVC - Polyvinyl Chloride - pipes may be used in pipelines buried outside a building.\n\n### PE Pipes\nPE - Polyethylene - pipes may be used in pipelines buried outside a building.\n\n## Flexible Connectors\n\nFlexible connectors are used to connect appliances to gas sources. Flexible connectors must be approved.\n\n---\n\n**Important:** Always check the codes for your local jurisdiction as approval varies by location."
+    }
+  ]
+}

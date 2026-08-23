@@ -1,0 +1,97 @@
+{
+  "id": "iron___density__specific_heats_and_thermal_conduct",
+  "title": "Iron - Density, Specific Heats and Thermal Conductivities vs. Temperatures",
+  "description": "Specific heat, density and thermal conductivity of iron related to temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "T (K)",
+        "ρ (kg/m³)",
+        "c (kJ/kg K)",
+        "k (W/m K)"
+      ],
+      "rows": [
+        [
+          100,
+          7900,
+          0.216,
+          134
+        ],
+        [
+          150,
+          7890,
+          0.324,
+          104
+        ],
+        [
+          200,
+          7880,
+          0.384,
+          94
+        ],
+        [
+          250,
+          7870,
+          0.422,
+          87
+        ],
+        [
+          300,
+          7860,
+          0.45,
+          80
+        ],
+        [
+          400,
+          7830,
+          0.491,
+          70
+        ],
+        [
+          600,
+          7760,
+          0.555,
+          55
+        ],
+        [
+          800,
+          7690,
+          0.692,
+          43
+        ],
+        [
+          1000,
+          7650,
+          1.034,
+          32
+        ],
+        [
+          1200,
+          7620,
+          null,
+          28
+        ],
+        [
+          1400,
+          7520,
+          null,
+          31
+        ],
+        [
+          1600,
+          7420,
+          null,
+          null
+        ],
+        [
+          1800,
+          7420,
+          null,
+          null
+        ]
+      ]
+    }
+  ]
+}

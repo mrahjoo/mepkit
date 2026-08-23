@@ -1,0 +1,106 @@
+{
+  "id": "fluid_flow___equation_of_continuity",
+  "title": "Fluid Flow - Equation of Continuity",
+  "description": "Calculator for the Equation of Continuity based on conservation of mass in steady flow processes. Calculates output velocity for fluids with uniform density through pipes and ducts using the formula: vout = vin × Ain / Aout",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "continuity_calculator",
+      "content": "Equation of Continuity Calculator",
+      "inputs": [
+        {
+          "id": "vin",
+          "label": "Input Velocity (vin)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0.35
+        },
+        {
+          "id": "ain",
+          "label": "Input Area (Ain)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 0.00785
+        },
+        {
+          "id": "aout",
+          "label": "Output Area (Aout)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 0.00503
+        }
+      ],
+      "outputs": [
+        {
+          "id": "vout",
+          "label": "Output Velocity (vout)",
+          "unit": "m/s",
+          "formula": "inputs.vin * inputs.ain / inputs.aout",
+          "format": "decimal"
+        },
+        {
+          "id": "qin",
+          "label": "Input Flow Rate (q)",
+          "unit": "m³/s",
+          "formula": "inputs.vin * inputs.ain",
+          "format": "decimal"
+        },
+        {
+          "id": "qout",
+          "label": "Output Flow Rate (q)",
+          "unit": "m³/s",
+          "formula": "inputs.vout * inputs.aout",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "continuity_examples",
+      "content": "Example Calculations",
+      "headers": [
+        "Scenario",
+        "Input Velocity (m/s)",
+        "Input Area (m²)",
+        "Output Area (m²)",
+        "Output Velocity (m/s)"
+      ],
+      "rows": [
+        [
+          "100mm to 80mm pipe",
+          "0.35",
+          "0.00785",
+          "0.00503",
+          "0.55"
+        ],
+        [
+          "Pipe expansion",
+          "2.0",
+          "0.005",
+          "0.010",
+          "1.0"
+        ],
+        [
+          "Pipe reduction",
+          "1.0",
+          "0.010",
+          "0.005",
+          "2.0"
+        ],
+        [
+          "Large diameter change",
+          "0.5",
+          "0.020",
+          "0.005",
+          "2.0"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "continuity_explanation",
+      "content": "## Equation of Continuity\n\nThe Equation of Continuity states that for a steady flow process with uniform density:\n\n**vin × Ain = vout × Aout**\n\nOr rearranged:\n\n**vout = vin × Ain / Aout**\n\nWhere:\n- **vin** = input velocity (m/s)\n- **Ain** = input area (m²)\n- **vout** = output velocity (m/s)\n- **Aout** = output area (m²)\n\nThis principle applies to incompressible fluids like water, oil, and other liquids flowing through pipes, tubes, and ducts. When a fluid flows from a larger diameter pipe to a smaller one, the velocity increases to maintain constant flow rate."
+    }
+  ]
+}

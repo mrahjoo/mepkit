@@ -1,0 +1,61 @@
+{
+  "id": "gasoline___density__specific_heat__viscosity_and_t",
+  "title": "Gasoline - Density, Specific Heat, Viscosity and Thermal Conductivity vs. Temperature",
+  "description": "Density, specific heat, dynamic and kinematic viscosity and thermal conductivity of gasoline vs. temperature",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Density ρ (kg/m³)",
+        "Specific Heat cp (kJ/KgK)",
+        "Dynamic Viscosity μ (10⁻⁴ Ns/m²)",
+        "Kinematic Viscosity ν (10⁻⁷ m²/s)",
+        "Thermal Conductivity k (10⁻³ W/m·K)"
+      ],
+      "rows": [
+        [
+          20,
+          751,
+          2.06,
+          5.29,
+          7.04,
+          0.1164
+        ],
+        [
+          50,
+          721,
+          2.2,
+          3.7,
+          5.13,
+          0.1105
+        ],
+        [
+          100,
+          681,
+          2.46,
+          2.25,
+          3.3,
+          0.1005
+        ],
+        [
+          150,
+          628,
+          2.74,
+          1.56,
+          2.48,
+          0.0919
+        ],
+        [
+          200,
+          570,
+          3.04,
+          1.11,
+          1.95,
+          0.08
+        ]
+      ]
+    }
+  ]
+}

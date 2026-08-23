@@ -1,0 +1,197 @@
+{
+  "id": "mild_steel___round_bars_weight",
+  "title": "Mild Steel - Round Bars Weight",
+  "description": "Weight of round bars. Calculate the weight of mild steel round bars using the formula W = 0.0062 d²",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate the weight of mild steel round bars based on diameter",
+      "inputs": [
+        {
+          "id": "diameter",
+          "label": "Bar Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight",
+          "label": "Weight",
+          "unit": "kg/m",
+          "formula": "inputs.diameter * inputs.diameter * 0.0062",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Standard mild steel round bar sizes and their weights",
+      "headers": [
+        "Bar Diameter (mm)",
+        "Weight (kg/m)"
+      ],
+      "rows": [
+        [
+          6,
+          0.22
+        ],
+        [
+          8,
+          0.39
+        ],
+        [
+          10,
+          0.62
+        ],
+        [
+          12,
+          0.89
+        ],
+        [
+          16,
+          1.58
+        ],
+        [
+          20,
+          2.47
+        ],
+        [
+          25,
+          3.85
+        ],
+        [
+          32,
+          6.31
+        ],
+        [
+          40,
+          9.86
+        ],
+        [
+          45,
+          12.5
+        ],
+        [
+          50,
+          15.4
+        ],
+        [
+          60,
+          22.2
+        ],
+        [
+          65,
+          26
+        ],
+        [
+          75,
+          34.7
+        ],
+        [
+          90,
+          49.9
+        ],
+        [
+          100,
+          61.6
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Weight vs Diameter of Mild Steel Round Bars",
+      "options": {
+        "title": {
+          "text": "Mild Steel Round Bars - Weight vs Diameter"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "name": "Diameter (mm)",
+          "type": "value"
+        },
+        "yAxis": {
+          "name": "Weight (kg/m)",
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Weight",
+            "type": "scatter",
+            "data": [
+              [
+                6,
+                0.22
+              ],
+              [
+                8,
+                0.39
+              ],
+              [
+                10,
+                0.62
+              ],
+              [
+                12,
+                0.89
+              ],
+              [
+                16,
+                1.58
+              ],
+              [
+                20,
+                2.47
+              ],
+              [
+                25,
+                3.85
+              ],
+              [
+                32,
+                6.31
+              ],
+              [
+                40,
+                9.86
+              ],
+              [
+                45,
+                12.5
+              ],
+              [
+                50,
+                15.4
+              ],
+              [
+                60,
+                22.2
+              ],
+              [
+                65,
+                26
+              ],
+              [
+                75,
+                34.7
+              ],
+              [
+                90,
+                49.9
+              ],
+              [
+                100,
+                61.6
+              ]
+            ],
+            "symbolSize": 6
+          }
+        ]
+      }
+    }
+  ]
+}

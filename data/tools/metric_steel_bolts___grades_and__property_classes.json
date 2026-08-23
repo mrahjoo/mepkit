@@ -1,0 +1,101 @@
+{
+  "id": "metric_steel_bolts___grades_and__property_classes",
+  "title": "Metric Steel Bolts - Grades and Property Classes",
+  "description": "Calculator for metric steel bolts grades and property classes. A tool to help engineers and technicians understand and work with metric steel bolt specifications and their corresponding property classes.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Metric Steel Bolts - Grades and Property Classes\n\nThis calculator helps you work with metric steel bolt specifications, grades, and property classes. Select your bolt parameters to view the relevant properties and grades."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "bolt_diameter",
+          "label": "Bolt Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 12
+        },
+        {
+          "id": "bolt_grade",
+          "label": "Bolt Grade",
+          "type": "select",
+          "options": [
+            {
+              "value": "4.6",
+              "label": "4.6"
+            },
+            {
+              "value": "4.8",
+              "label": "4.8"
+            },
+            {
+              "value": "5.6",
+              "label": "5.6"
+            },
+            {
+              "value": "5.8",
+              "label": "5.8"
+            },
+            {
+              "value": "6.8",
+              "label": "6.8"
+            },
+            {
+              "value": "8.8",
+              "label": "8.8"
+            },
+            {
+              "value": "10.9",
+              "label": "10.9"
+            },
+            {
+              "value": "12.9",
+              "label": "12.9"
+            }
+          ],
+          "defaultValue": "8.8"
+        },
+        {
+          "id": "quantity",
+          "label": "Quantity",
+          "type": "number",
+          "unit": "pcs",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tensile_strength",
+          "label": "Tensile Strength",
+          "unit": "MPa",
+          "format": "decimal",
+          "formula": "inputs.bolt_grade * 100"
+        },
+        {
+          "id": "yield_strength",
+          "label": "Yield Strength",
+          "unit": "MPa",
+          "format": "decimal",
+          "formula": "inputs.bolt_grade * 10 * 0.9"
+        },
+        {
+          "id": "cross_section_area",
+          "label": "Nominal Cross Section Area",
+          "unit": "mm²",
+          "format": "decimal",
+          "formula": "3.14159 * (inputs.bolt_diameter / 2) ^ 2 * 0.75"
+        },
+        {
+          "id": "tensile_load_capacity",
+          "label": "Tensile Load Capacity",
+          "unit": "kN",
+          "format": "decimal",
+          "formula": "(3.14159 * (inputs.bolt_diameter / 2) ^ 2 * 0.75) * (inputs.bolt_grade * 100) * inputs.quantity / 1000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "satellites_in_orbit",
+  "title": "Satellites in Orbit",
+  "description": "Calculate orbital velocity, escape velocity, orbital period, and orbit height for satellites. Uses physics equations to determine key orbital parameters based on planet radius, orbital radius, and orbital period.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Satellites in Orbit\n\nOrbital velocity of a satellite is at maximum at sea level and decreases with height.\n\n**Orbital velocity:**\n\nv_s = √(g r_p² / r_s)\n\nwhere:\n- v_s = orbital velocity (m/s)\n- g = acceleration due to gravity (m/s²)\n- r_p = radius of planet (m)\n- r_s = radius of satellite orbit (m)\n\n**Escape velocity:**\n\nv_s_escape = √(2 g r_p)\n\n**Orbit periodic time:**\n\nt_s = 2π √(r_s³ / (g r_p²))\n\n**Height of orbit:**\n\nh_s = r_p (∛(g t_s² / (4π² r_p)) - 1)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "g",
+          "label": "Acceleration due to gravity",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        },
+        {
+          "id": "rp",
+          "label": "Planet radius",
+          "type": "number",
+          "defaultValue": 6371000,
+          "unit": "m"
+        },
+        {
+          "id": "rs",
+          "label": "Satellite orbit radius",
+          "type": "number",
+          "defaultValue": 6631000,
+          "unit": "m"
+        },
+        {
+          "id": "ts",
+          "label": "Orbital period",
+          "type": "number",
+          "defaultValue": 86400,
+          "unit": "s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "vs",
+          "label": "Orbital velocity",
+          "formula": "Math.sqrt((inputs.g * inputs.rp * inputs.rp) / inputs.rs)",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "vs_max",
+          "label": "Maximum velocity (at sea level)",
+          "formula": "Math.sqrt(inputs.g * inputs.rp)",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "vs_escape",
+          "label": "Escape velocity",
+          "formula": "Math.sqrt(2 * inputs.g * inputs.rp)",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "orbit_period",
+          "label": "Orbital period",
+          "formula": "2 * Math.PI * Math.sqrt((inputs.rs * inputs.rs * inputs.rs) / (inputs.g * inputs.rp * inputs.rp))",
+          "unit": "s",
+          "format": "decimal"
+        },
+        {
+          "id": "hs",
+          "label": "Height of orbit",
+          "formula": "inputs.rp * (Math.pow((inputs.g * inputs.ts * inputs.ts) / (4 * Math.PI * Math.PI * inputs.rp), 1/3) - 1)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

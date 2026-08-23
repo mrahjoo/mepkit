@@ -1,0 +1,896 @@
+{
+  "id": "combustion_heat",
+  "title": "Combustion Heat Calculator",
+  "description": "Calculate the standard heat of combustion for various organic and inorganic compounds at standard conditions (25°C and 1 bar). The tool includes a comprehensive database of combustion heat values in multiple units (kJ/mol, kJ/kg, BTU/lb, kcal/kg) and supports unit conversion.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "combustion_table",
+      "headers": [
+        "Compound Name",
+        "Chemical Formula",
+        "State",
+        "ΔHc° (kJ/mol)",
+        "ΔHc° (kJ/kg)",
+        "ΔHc° (BTU/lb)",
+        "ΔHc° (kcal/kg)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          "C2H4O",
+          "liq",
+          1167,
+          26487,
+          11387,
+          6326
+        ],
+        [
+          "Acetamide",
+          "C2H5NO",
+          "cry",
+          1185,
+          20058,
+          8623,
+          4791
+        ],
+        [
+          "Acetic acid",
+          "C2H4O2",
+          "liq",
+          874,
+          14552,
+          6256,
+          3476
+        ],
+        [
+          "Acetone",
+          "C3H6O",
+          "liq",
+          1790,
+          30814,
+          13248,
+          7360
+        ],
+        [
+          "Acetonitrile",
+          "C2H3N",
+          "liq",
+          1256,
+          30589,
+          13151,
+          7306
+        ],
+        [
+          "Acetylene (ethyne)",
+          "C2H2",
+          "gas",
+          1300,
+          49923,
+          21463,
+          11924
+        ],
+        [
+          "l-Alanine",
+          "C3H7NO2",
+          "cry",
+          1577,
+          17697,
+          7608,
+          4227
+        ],
+        [
+          "Ammonia",
+          "NH3",
+          "gas",
+          383,
+          22477,
+          9663,
+          5369
+        ],
+        [
+          "Aniline",
+          "C6H7N",
+          "liq",
+          3393,
+          36429,
+          15662,
+          8701
+        ],
+        [
+          "Anthracene",
+          "C14H10",
+          "cry",
+          7068,
+          39654,
+          17048,
+          9471
+        ],
+        [
+          "Benzene",
+          "C6H6",
+          "liq",
+          3268,
+          41833,
+          17985,
+          9992
+        ],
+        [
+          "Benzoic acid",
+          "C7H6O2",
+          "cry",
+          3228.2,
+          26432,
+          11364,
+          6313
+        ],
+        [
+          "1,3-Butadiene",
+          "C4H6",
+          "gas",
+          2542,
+          46987,
+          20201,
+          11223
+        ],
+        [
+          "Butane",
+          "C4H10",
+          "gas",
+          2878,
+          49501,
+          21282,
+          11823
+        ],
+        [
+          "1-Butanol",
+          "C4H10O",
+          "liq",
+          2676,
+          36092,
+          15517,
+          8621
+        ],
+        [
+          "2-Butanone",
+          "C4H8O",
+          "liq",
+          2444,
+          33888,
+          14569,
+          8094
+        ],
+        [
+          "1-Butene",
+          "C4H8",
+          "gas",
+          2718,
+          48432,
+          20822,
+          11568
+        ],
+        [
+          "cis-2-Butene",
+          "C4H8",
+          "gas",
+          2710,
+          48289,
+          20761,
+          11534
+        ],
+        [
+          "trans-2-Butene",
+          "C4H8",
+          "gas",
+          2706,
+          48218,
+          20730,
+          11517
+        ],
+        [
+          "Butanoic acid",
+          "C4H8O2",
+          "liq",
+          2183.6,
+          38909,
+          16728,
+          9293
+        ],
+        [
+          "Butylbenzene",
+          "C10H14",
+          "liq",
+          5872.7,
+          43754,
+          18810,
+          24994
+        ],
+        [
+          "Carbon (graphite)",
+          "C",
+          "cry",
+          394,
+          32806,
+          14104,
+          7836
+        ],
+        [
+          "Carbon monoxide",
+          "CO",
+          "gas",
+          283,
+          10104,
+          4344,
+          2413
+        ],
+        [
+          "Cyclobutane",
+          "C4H8",
+          "gas",
+          2745.1,
+          48914,
+          21029,
+          11683
+        ],
+        [
+          "Cyclobutene",
+          "C4H6",
+          "gas",
+          2588,
+          47837,
+          20566,
+          11426
+        ],
+        [
+          "Cyclohexane",
+          "C6H12",
+          "liq",
+          3920,
+          46567,
+          20020,
+          11122
+        ],
+        [
+          "Cyclopentane",
+          "C5H10",
+          "liq",
+          3291.6,
+          46922,
+          20173,
+          11207
+        ],
+        [
+          "Cyclopropane",
+          "C3H6",
+          "gas",
+          2091,
+          49679,
+          21358,
+          11866
+        ],
+        [
+          "Decane",
+          "C10H22",
+          "liq",
+          6778,
+          47625,
+          20475,
+          11375
+        ],
+        [
+          "Diethyl ether (ethoxyethane)",
+          "C4H10O",
+          "liq",
+          2724,
+          36741,
+          15796,
+          8775
+        ],
+        [
+          "Dimethyl ether (methoxymethane)",
+          "C2H6O",
+          "gas",
+          1460,
+          31684,
+          13622,
+          7568
+        ],
+        [
+          "Ethane",
+          "C2H6",
+          "gas",
+          1561,
+          51895,
+          22311,
+          12395
+        ],
+        [
+          "1,2-Ethanediol",
+          "C2H6O2",
+          "liq",
+          1185,
+          19088,
+          8206,
+          4559
+        ],
+        [
+          "Ethanol",
+          "C2H6O",
+          "liq",
+          1367,
+          29666,
+          12754,
+          7086
+        ],
+        [
+          "Ethyl acetate",
+          "C4H8O2",
+          "liq",
+          2238,
+          25397,
+          10919,
+          6066
+        ],
+        [
+          "Ethylene (ethene)",
+          "C2H4",
+          "gas",
+          1411,
+          50285,
+          21619,
+          12010
+        ],
+        [
+          "Formaldehyde",
+          "CH2O",
+          "gas",
+          571,
+          19014,
+          8175,
+          4541
+        ],
+        [
+          "Formic acid",
+          "CH2O2",
+          "liq",
+          254,
+          5518,
+          2372,
+          1318
+        ],
+        [
+          "Glycerol",
+          "C3H8O3",
+          "liq",
+          1654,
+          17957,
+          7720,
+          4289
+        ],
+        [
+          "Heptane",
+          "C7H16",
+          "liq",
+          4817,
+          48059,
+          20662,
+          11479
+        ],
+        [
+          "Heptanoic acid",
+          "C7H14O2",
+          "liq",
+          4145.2,
+          31835,
+          13687,
+          7604
+        ],
+        [
+          "Hexane",
+          "C6H14",
+          "liq",
+          4163,
+          48307,
+          20767,
+          11538
+        ],
+        [
+          "Hexadecanoic acid",
+          "C16H32O2",
+          "liq",
+          10031.3,
+          39112,
+          16815,
+          9342
+        ],
+        [
+          "Hexanoic acid",
+          "C6H12O2",
+          "liq",
+          3492.2,
+          30059,
+          12923,
+          7179
+        ],
+        [
+          "Hydrazine",
+          "N2H4",
+          "liq",
+          622,
+          19401,
+          8341,
+          4634
+        ],
+        [
+          "Hydrogen",
+          "H2",
+          "gas",
+          286,
+          141584,
+          60870,
+          33817
+        ],
+        [
+          "Hydrogen cyanide",
+          "CHN",
+          "gas",
+          672,
+          24861,
+          10688,
+          5938
+        ],
+        [
+          "Ketene",
+          "C2H2O",
+          "gas",
+          1025,
+          24382,
+          10482,
+          5824
+        ],
+        [
+          "Methane",
+          "CH4",
+          "gas",
+          891,
+          55514,
+          23867,
+          13259
+        ],
+        [
+          "Methanol",
+          "CH4O",
+          "liq",
+          726,
+          22652,
+          9739,
+          5410
+        ],
+        [
+          "Methyl acetate",
+          "C3H6O2",
+          "liq",
+          1592,
+          21487,
+          9238,
+          5132
+        ],
+        [
+          "Methylamine",
+          "CH5N",
+          "gas",
+          1086,
+          34953,
+          15027,
+          8348
+        ],
+        [
+          "Methylcyclohexane",
+          "C7H14",
+          "liq",
+          4565.3,
+          46485,
+          19985,
+          11103
+        ],
+        [
+          "Methylcyclopentane",
+          "C6H12",
+          "liq",
+          3938.1,
+          46782,
+          20113,
+          11174
+        ],
+        [
+          "Methyl formate",
+          "C2H4O2",
+          "liq",
+          973,
+          16200,
+          6965,
+          3869
+        ],
+        [
+          "Methyl tert-butyl ether",
+          "C5H12O",
+          "liq",
+          3369,
+          38209,
+          16427,
+          9126
+        ],
+        [
+          "Naphthalene",
+          "C10H8",
+          "cry",
+          5157,
+          40232,
+          17294,
+          9609
+        ],
+        [
+          "Nitric oxide",
+          "NO",
+          "gas",
+          91,
+          3032,
+          1304,
+          724
+        ],
+        [
+          "Nitrobenzene",
+          "C6H5NO2",
+          "liq",
+          3088,
+          25081,
+          10783,
+          5990
+        ],
+        [
+          "Nitromethane",
+          "CH3NO2",
+          "liq",
+          710,
+          11630,
+          5000,
+          2778
+        ],
+        [
+          "Nitrous oxide",
+          "N2O",
+          "gas",
+          82,
+          1863,
+          801,
+          445
+        ],
+        [
+          "Nonane",
+          "C9H20",
+          "liq",
+          6125,
+          47743,
+          20526,
+          11403
+        ],
+        [
+          "Octane",
+          "C8H18",
+          "liq",
+          5470,
+          47873,
+          20582,
+          11434
+        ],
+        [
+          "1-Octanol",
+          "C8H18O",
+          "liq",
+          5294,
+          40642,
+          17473,
+          9707
+        ],
+        [
+          "Pentane",
+          "C5H12",
+          "liq",
+          3509,
+          48621,
+          20903,
+          11613
+        ],
+        [
+          "Pentanoic acid",
+          "C5H10O2",
+          "liq",
+          2837.3,
+          27776,
+          11942,
+          6634
+        ],
+        [
+          "1-Pentanol",
+          "C5H12O",
+          "liq",
+          3331,
+          37779,
+          16242,
+          9023
+        ],
+        [
+          "Phenanthrene",
+          "C14H10",
+          "cry",
+          7055,
+          39581,
+          17017,
+          9454
+        ],
+        [
+          "Phenol",
+          "C6H6O",
+          "cry",
+          3054,
+          32448,
+          13950,
+          7750
+        ],
+        [
+          "Propanal",
+          "C3H6O",
+          "liq",
+          1522,
+          26201,
+          11264,
+          6258
+        ],
+        [
+          "Propane",
+          "C3H8",
+          "gas",
+          2220,
+          50329,
+          21638,
+          12021
+        ],
+        [
+          "Propanenitrile",
+          "C3H5N",
+          "liq",
+          1911,
+          34689,
+          14914,
+          8285
+        ],
+        [
+          "Propanoic acid",
+          "C3H6O2",
+          "liq",
+          1527.3,
+          20614,
+          8862,
+          4924
+        ],
+        [
+          "1-Propanol",
+          "C3H8O",
+          "liq",
+          2021,
+          33622,
+          14455,
+          8030
+        ],
+        [
+          "2-Propanol",
+          "C3H8O",
+          "liq",
+          2006,
+          33372,
+          14347,
+          7971
+        ],
+        [
+          "Propene",
+          "C3H6",
+          "gas",
+          2058,
+          48895,
+          21021,
+          11678
+        ],
+        [
+          "Propyne",
+          "C3H4",
+          "gas",
+          185,
+          4617,
+          1985,
+          1103
+        ],
+        [
+          "Pyridine",
+          "C5H5N",
+          "liq",
+          2782,
+          35166,
+          15119,
+          8399
+        ],
+        [
+          "Toluene (methylbenzene)",
+          "C7H8",
+          "liq",
+          3910,
+          42431,
+          18242,
+          10134
+        ],
+        [
+          "Trimethylamine",
+          "C3H9N",
+          "gas",
+          2443,
+          41316,
+          17763,
+          9868
+        ],
+        [
+          "2,4,6-Trinitrotoluene",
+          "C7H5N3O6",
+          "cry",
+          3406,
+          14994,
+          6446,
+          3581
+        ],
+        [
+          "Undecane",
+          "C11H24",
+          "liq",
+          7431.4,
+          47530,
+          20434,
+          11352
+        ],
+        [
+          "Urea",
+          "CH4N2O",
+          "cry",
+          632.7,
+          10533,
+          4528,
+          2516
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "unit_converter",
+      "content": "## Unit Conversion Calculator\n\nConvert combustion heat values between different units using the following conversion factors:\n- 1 kJ/kg = 0.4299 BTU/lbm = 0.23884 kcal/kg\n- 1 BTU/lbm = 2.326 kJ/kg = 0.55 kcal/kg\n- 1 kcal/kg = 4.1868 kJ/kg = 1.8 BTU/lbm",
+      "inputs": [
+        {
+          "id": "heat_value",
+          "label": "Heat Value",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "source_unit",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "kJ_kg",
+              "label": "kJ/kg"
+            },
+            {
+              "value": "BTU_lb",
+              "label": "BTU/lbm"
+            },
+            {
+              "value": "kcal_kg",
+              "label": "kcal/kg"
+            },
+            {
+              "value": "kJ_mol",
+              "label": "kJ/mol"
+            }
+          ],
+          "defaultValue": "kJ_kg"
+        },
+        {
+          "id": "target_unit",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "kJ_kg",
+              "label": "kJ/kg"
+            },
+            {
+              "value": "BTU_lb",
+              "label": "BTU/lbm"
+            },
+            {
+              "value": "kcal_kg",
+              "label": "kcal/kg"
+            },
+            {
+              "value": "kJ_mol",
+              "label": "kJ/mol"
+            }
+          ],
+          "defaultValue": "BTU_lb"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "converted_value",
+          "label": "Converted Value",
+          "formula": "inputs.heat_value",
+          "unit": "converted",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "combustion_comparison",
+      "content": "Combustion Heat Comparison of Common Fuels",
+      "options": {
+        "title": {
+          "text": "Combustion Heat of Common Substances (kJ/kg)"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Hydrogen",
+            "Acetylene",
+            "Methane",
+            "Propane",
+            "Ethane",
+            "Butane",
+            "Benzene",
+            "Octane",
+            "Ethanol",
+            "Methanol"
+          ],
+          "axisLabel": {
+            "rotate": 45
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Heat of Combustion (kJ/kg)"
+        },
+        "series": [
+          {
+            "name": "ΔHc° (kJ/kg)",
+            "type": "bar",
+            "data": [
+              141584,
+              49923,
+              55514,
+              50329,
+              51895,
+              49501,
+              41833,
+              47873,
+              29666,
+              22652
+            ],
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

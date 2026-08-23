@@ -1,0 +1,43 @@
+{
+  "id": "accounting_rate_of_return",
+  "title": "Accounting Rate of Return",
+  "description": "Calculate the Accounting Rate of Return (R.O.R), which measures net income vs net investment. This metric shows the return generated from an investment during a period, divided by the book value of the investment at the start of the period.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "net_income",
+          "label": "Net Income in Period",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "currency"
+        },
+        {
+          "id": "book_value",
+          "label": "Book Value of Net Investment at Start of Period",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "currency"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ror_decimal",
+          "label": "Accounting Rate of Return (Decimal)",
+          "formula": "inputs.net_income / inputs.book_value",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "ror_percentage",
+          "label": "Accounting Rate of Return (%)",
+          "formula": "(inputs.net_income / inputs.book_value) * 100",
+          "format": "decimal",
+          "unit": "%"
+        }
+      ]
+    }
+  ]
+}

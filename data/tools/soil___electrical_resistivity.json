@@ -1,0 +1,97 @@
+{
+  "id": "soil___electrical_resistivity",
+  "title": "Soil - Electrical Resistivity",
+  "description": "Types of soil and resistivity. The resistivity values of soil may be useful when designing earth-electrode systems.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Soil Type",
+        "Mean Value of Resistivity (Ω·m)"
+      ],
+      "rows": [
+        [
+          "Clay, compacted",
+          "100 - 200"
+        ],
+        [
+          "Clay, soft",
+          "50"
+        ],
+        [
+          "Clayely sand",
+          "50 - 500"
+        ],
+        [
+          "Humus, leaf mold",
+          "10 - 150"
+        ],
+        [
+          "Granite",
+          "1500 - 10000"
+        ],
+        [
+          "Granite, modified",
+          "100 - 600"
+        ],
+        [
+          "Jurassic marl",
+          "30 - 40"
+        ],
+        [
+          "Limestone, fissured",
+          "500 - 1000"
+        ],
+        [
+          "Marl",
+          "100 - 200"
+        ],
+        [
+          "Mica schist",
+          "800"
+        ],
+        [
+          "Peat, turf",
+          "5 - 100"
+        ],
+        [
+          "Sandstone",
+          "1500 - 10000"
+        ],
+        [
+          "Sandstone, modified",
+          "100 - 600"
+        ],
+        [
+          "Shist, shale",
+          "50 - 300"
+        ],
+        [
+          "Siliceous sand",
+          "200 - 300"
+        ],
+        [
+          "Soil, chalky",
+          "100 - 300"
+        ],
+        [
+          "Soil, swampy",
+          "1 - 30"
+        ],
+        [
+          "Stony sub-soil, grass-covered",
+          "300 - 500"
+        ],
+        [
+          "Stony ground",
+          "1500 - 3000"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nElectrical resistivity is a fundamental property of soil that measures its resistance to electrical current flow. This parameter is crucial in:\n\n- **Earth-electrode system design**: Determines grounding effectiveness\n- **Lightning protection**: Impacts earthing system specifications\n- **Electrical safety**: Influences touch voltage and step voltage calculations\n- **Cathodic protection**: Critical for design of cathodic protection systems\n\n## Factors Affecting Soil Resistivity\n\n- **Soil composition**: Different soil types have inherently different resistivity values\n- **Moisture content**: Higher moisture significantly reduces resistivity\n- **Temperature**: Affects ionic mobility and water conductivity\n- **Mineral content**: Presence of salts and minerals influences conductivity\n- **Compaction**: Dense soils typically have lower resistivity than loose soils\n\n## Typical Applications\n\nUse these resistivity values when:\n- Designing grounding systems for electrical installations\n- Calculating electrode resistance\n- Planning lightning protection systems\n- Evaluating site suitability for electrical infrastructure"
+    }
+  ]
+}

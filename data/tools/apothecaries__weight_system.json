@@ -1,0 +1,71 @@
+{
+  "id": "apothecaries__weight_system",
+  "title": "Apothecaries' Weight System",
+  "description": "Apothecaries' fluid and weight system with ounces, drachms, grains, scruples and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Unit",
+        "Equivalent",
+        "In Grains",
+        "In Minims (Fluid)"
+      ],
+      "rows": [
+        [
+          "Pound (Weight)",
+          "12 ounces",
+          "5760",
+          "-"
+        ],
+        [
+          "Ounce (Weight)",
+          "8 drachms",
+          "480",
+          "-"
+        ],
+        [
+          "Drachm (Weight)",
+          "3 scruples",
+          "60",
+          "-"
+        ],
+        [
+          "Scruple (Weight)",
+          "1 scruple",
+          "20",
+          "-"
+        ],
+        [
+          "Grain",
+          "1 grain",
+          "1",
+          "-"
+        ],
+        [
+          "Fluid Ounce (U.S.)",
+          "8 drachms",
+          "-",
+          "480"
+        ],
+        [
+          "Fluid Drachm",
+          "1 drachm",
+          "-",
+          "60"
+        ],
+        [
+          "Minim (Fluid)",
+          "1 minim",
+          "-",
+          "1"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n### Apothecaries' Weight\n- 1 pound = 12 ounces = 5760 grains\n- 1 ounce = 8 drachms = 480 grains\n- 1 drachm = 3 scruples = 60 grains\n- 1 scruple = 20 grains\n\n### Apothecaries' Fluid Measure\n- 1 U.S. fluid ounce = 8 drachms = 1.805 cubic inch = 1/128 U.S. gallon\n- 1 fluid drachm = 60 minims\n- 1 British fluid ounce = 1.732 cubic inch"
+    }
+  ]
+}

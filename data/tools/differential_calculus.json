@@ -1,0 +1,97 @@
+{
+  "id": "differential_calculus",
+  "title": "Differential Calculus",
+  "description": "Derivatives and differentiation expressions. A subfield of calculus that studies the rates at which quantities change.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Differential Calculus\n\nDifferential calculus is a subfield of calculus that studies the rates at which quantities change.\n\n## Common Derivatives\n\nThis table provides derivatives for common mathematical expressions and functions."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Expression",
+        "Derivative"
+      ],
+      "rows": [
+        [
+          "y = xⁿ",
+          "dy/dx = n xⁿ⁻¹"
+        ],
+        [
+          "y = a xⁿ",
+          "dy/dx = a n xⁿ⁻¹"
+        ],
+        [
+          "f(x) = a xⁿ",
+          "f'(x) = a n xⁿ⁻¹"
+        ],
+        [
+          "y = eˣ",
+          "dy/dx = eˣ"
+        ],
+        [
+          "y = eᵃˣ",
+          "dy/dx = a eᵃˣ"
+        ],
+        [
+          "y = aˣ",
+          "dy/dx = aˣ ln(a)"
+        ],
+        [
+          "y = ln(x)",
+          "dy/dx = 1 / x"
+        ],
+        [
+          "y = sin(θ)",
+          "dy/dθ = cos(θ)"
+        ],
+        [
+          "y = cos(θ)",
+          "dy/dθ = -sin(θ)"
+        ],
+        [
+          "y = tan(θ)",
+          "dy/dθ = sec²(θ)"
+        ],
+        [
+          "y = cot(θ)",
+          "dy/dθ = -cosec²(θ)"
+        ],
+        [
+          "y = sec(θ)",
+          "dy/dθ = tan(θ) sec(θ) = sin(θ) / cos²(θ)"
+        ],
+        [
+          "y = cosec(θ)",
+          "dy/dθ = -cot(θ) cosec(θ) = -cos(θ) / sin²(θ)"
+        ],
+        [
+          "y = sin⁻¹(x / a)",
+          "dy/dx = 1 / √(a² - x²)"
+        ],
+        [
+          "y = cos⁻¹(x / a)",
+          "dy/dx = -1 / √(a² - x²)"
+        ],
+        [
+          "y = tan⁻¹(x / a)",
+          "dy/dx = a / (a² + x²)"
+        ],
+        [
+          "y = cot⁻¹(x / a)",
+          "dy/dx = -a / (a² + x²)"
+        ],
+        [
+          "y = sec⁻¹(x / a)",
+          "dy/dx = a / (x √(x² - a²))"
+        ],
+        [
+          "y = cosec⁻¹(x / a)",
+          "dy/dx = -a / (x √(x² - a²))"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "electromotive_force___e_m_f",
+  "title": "Electromotive Force - e.m.f",
+  "description": "Change in electrical potential between two points. Calculate voltage, power, and current relationships in electrical circuits.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Electromotive Force - e.m.f\n\nA change in electrical potential between two points in an electric circuit is called a \"potential difference\". The \"electromotive force (e.m.f)\" provided by a source of energy - such as a generator or battery - is measured in volts.\n\nOne volt is one joule per coulomb and is defined as the difference in potential between two points in a conductor which, when carrying a current of one ampere, dissipates a power of one watt:\n\n**volts = watts / amperes = (joules/sec) / amperes = joules / ampere seconds = joules / coulombs**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "power",
+          "label": "Power",
+          "type": "number",
+          "unit": "watts",
+          "defaultValue": 100
+        },
+        {
+          "id": "current",
+          "label": "Current",
+          "type": "number",
+          "unit": "amperes",
+          "defaultValue": 1
+        },
+        {
+          "id": "energy",
+          "label": "Energy",
+          "type": "number",
+          "unit": "joules",
+          "defaultValue": 100
+        },
+        {
+          "id": "charge",
+          "label": "Charge",
+          "type": "number",
+          "unit": "coulombs",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "voltage_from_power_current",
+          "label": "Voltage (from Power/Current)",
+          "formula": "inputs.power / inputs.current",
+          "unit": "volts",
+          "format": "decimal"
+        },
+        {
+          "id": "voltage_from_energy_charge",
+          "label": "Voltage (from Energy/Charge)",
+          "formula": "inputs.energy / inputs.charge",
+          "unit": "volts",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

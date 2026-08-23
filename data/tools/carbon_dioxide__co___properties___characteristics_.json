@@ -1,0 +1,356 @@
+{
+  "id": "carbon_dioxide__co___properties___characteristics_",
+  "title": "Carbon Dioxide (CO₂) Properties & Characteristics",
+  "description": "Calculator for carbon dioxide thermophysical properties including density, thermal data, critical parameters, and phase characteristics. Values provided for gas phase at 25°C (77°F, 298 K) and 1 atm unless otherwise specified.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## CO₂ Properties Calculator\n\nCarbon dioxide (CO₂) is a colorless, odorless gas that is relatively nontoxic and noncombustible. This calculator provides key thermophysical properties of CO₂ for various conditions.\n\n### Key Information:\n- **Standard Conditions**: 25°C (77°F, 298 K) and 1 atm\n- **Molar Mass**: 44.0095 g/mol\n- **Specific Gravity**: 1.53 (relative to air)\n- **Critical Temperature**: 304.13 K (30.98°C / 87.76°F)\n- **Critical Pressure**: 7.38 MPa (73.8 bar / 72.8 atm)\n\nSelect a property and enter conditions to calculate values."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "property",
+          "label": "Select CO₂ Property",
+          "type": "select",
+          "options": [
+            {
+              "label": "Density (gas at 25°C, 1 atm)",
+              "value": "density_gas"
+            },
+            {
+              "label": "Density (gas at 0°C, 1 atm)",
+              "value": "density_gas_0c"
+            },
+            {
+              "label": "Density (liquid at -37°C, sat pressure)",
+              "value": "density_liquid"
+            },
+            {
+              "label": "Density (solid at -78.5°C, 1 atm)",
+              "value": "density_solid"
+            },
+            {
+              "label": "Specific Heat Capacity (Cp)",
+              "value": "heat_capacity_cp"
+            },
+            {
+              "label": "Specific Heat Capacity (Cv)",
+              "value": "heat_capacity_cv"
+            },
+            {
+              "label": "Thermal Conductivity",
+              "value": "thermal_conductivity"
+            },
+            {
+              "label": "Dynamic Viscosity",
+              "value": "viscosity_dynamic"
+            },
+            {
+              "label": "Kinematic Viscosity",
+              "value": "viscosity_kinematic"
+            },
+            {
+              "label": "Critical Density",
+              "value": "critical_density"
+            },
+            {
+              "label": "Critical Pressure",
+              "value": "critical_pressure"
+            },
+            {
+              "label": "Critical Temperature",
+              "value": "critical_temperature"
+            },
+            {
+              "label": "Heat of Vaporization (Triple Point)",
+              "value": "heat_vaporization_tp"
+            },
+            {
+              "label": "Heat of Sublimation",
+              "value": "heat_sublimation"
+            },
+            {
+              "label": "Enthalpy of Formation",
+              "value": "enthalpy_formation"
+            },
+            {
+              "label": "Gibbs Free Energy of Formation",
+              "value": "gibbs_free_energy"
+            }
+          ]
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "SI Units",
+              "value": "si"
+            },
+            {
+              "label": "Imperial Units",
+              "value": "imperial"
+            },
+            {
+              "label": "CGS Units",
+              "value": "cgs"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_output",
+          "label": "Density",
+          "formula": "inputs.property == 'density_gas' && inputs.unit_system == 'si' ? 1.795 : inputs.property == 'density_gas' && inputs.unit_system == 'imperial' ? 0.1121 : inputs.property == 'density_gas_0c' && inputs.unit_system == 'si' ? 1.977 : inputs.property == 'density_gas_0c' && inputs.unit_system == 'imperial' ? 0.1234 : inputs.property == 'density_liquid' && inputs.unit_system == 'si' ? 1101 : inputs.property == 'density_liquid' && inputs.unit_system == 'imperial' ? 68.73 : inputs.property == 'density_solid' && inputs.unit_system == 'si' ? 1562 : inputs.property == 'density_solid' && inputs.unit_system == 'imperial' ? 97.51 : 'N/A'",
+          "unit": "kg/m³ or lb/ft³",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_capacity_output",
+          "label": "Specific Heat Capacity",
+          "formula": "inputs.property == 'heat_capacity_cp' && inputs.unit_system == 'si' ? 0.849 : inputs.property == 'heat_capacity_cp' && inputs.unit_system == 'imperial' ? 0.203 : inputs.property == 'heat_capacity_cv' && inputs.unit_system == 'si' ? 0.658 : inputs.property == 'heat_capacity_cv' && inputs.unit_system == 'imperial' ? 0.157 : 'N/A'",
+          "unit": "kJ/kg K or Btu/lb°F",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_cond_output",
+          "label": "Thermal Conductivity",
+          "formula": "inputs.property == 'thermal_conductivity' && inputs.unit_system == 'si' ? 0.01663 : inputs.property == 'thermal_conductivity' && inputs.unit_system == 'imperial' ? 0.009609 : 'N/A'",
+          "unit": "W/m°C or Btu/hr ft °F",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_output",
+          "label": "Viscosity",
+          "formula": "inputs.property == 'viscosity_dynamic' && inputs.unit_system == 'si' ? 1.495 : inputs.property == 'viscosity_dynamic' && inputs.unit_system == 'imperial' ? 31.22 : inputs.property == 'viscosity_kinematic' && inputs.unit_system == 'si' ? 0.834 : inputs.property == 'viscosity_kinematic' && inputs.unit_system == 'imperial' ? 8.977 : 'N/A'",
+          "unit": "cP / cSt or lbf s/ft²",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_output",
+          "label": "Critical Parameter Value",
+          "formula": "inputs.property == 'critical_density' && inputs.unit_system == 'si' ? 467.6 : inputs.property == 'critical_density' && inputs.unit_system == 'imperial' ? 29.19 : inputs.property == 'critical_pressure' && inputs.unit_system == 'si' ? 7.38 : inputs.property == 'critical_pressure' && inputs.unit_system == 'imperial' ? 1070 : inputs.property == 'critical_temperature' && inputs.unit_system == 'si' ? 304.13 : inputs.property == 'critical_temperature' && inputs.unit_system == 'imperial' ? 87.76 : 'N/A'",
+          "unit": "Varies by property",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_output",
+          "label": "Energy Value",
+          "formula": "inputs.property == 'heat_vaporization_tp' && inputs.unit_system == 'si' ? 353.4 : inputs.property == 'heat_vaporization_tp' && inputs.unit_system == 'imperial' ? 151.93 : inputs.property == 'heat_sublimation' && inputs.unit_system == 'si' ? 591 : inputs.property == 'heat_sublimation' && inputs.unit_system == 'imperial' ? 254 : inputs.property == 'enthalpy_formation' && inputs.unit_system == 'si' ? -8941 : inputs.property == 'enthalpy_formation' && inputs.unit_system == 'imperial' ? -3844 : inputs.property == 'gibbs_free_energy' && inputs.unit_system == 'si' ? -8953 : inputs.property == 'gibbs_free_energy' && inputs.unit_system == 'imperial' ? -3849 : 'N/A'",
+          "unit": "kJ/kg or Btu/lb",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value (SI)",
+        "Unit (SI)",
+        "Value (Imperial)",
+        "Unit (Imperial)"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "44.0095",
+          "g/mol",
+          "0.09702",
+          "lb/mol"
+        ],
+        [
+          "Density (gas, 25°C, 1 atm)",
+          "1.795",
+          "kg/m³",
+          "0.1121",
+          "lb/ft³"
+        ],
+        [
+          "Density (gas, 0°C, 1 atm)",
+          "1.977",
+          "kg/m³",
+          "0.1234",
+          "lb/ft³"
+        ],
+        [
+          "Density (liquid, -37°C)",
+          "1101",
+          "kg/m³",
+          "68.73",
+          "lb/ft³"
+        ],
+        [
+          "Density (solid, -78.5°C)",
+          "1562",
+          "kg/m³",
+          "97.51",
+          "lb/ft³"
+        ],
+        [
+          "Specific Gravity (vs air)",
+          "1.53",
+          "",
+          "1.53",
+          ""
+        ],
+        [
+          "Critical Density",
+          "467.6",
+          "kg/m³",
+          "29.19",
+          "lb/ft³"
+        ],
+        [
+          "Critical Pressure",
+          "7.38",
+          "MPa",
+          "1070",
+          "psi"
+        ],
+        [
+          "Critical Temperature",
+          "304.13",
+          "K",
+          "87.76",
+          "°F"
+        ],
+        [
+          "Boiling/Sublimation Point",
+          "-78.464",
+          "°C",
+          "-109.24",
+          "°F"
+        ],
+        [
+          "Triple Point Temperature",
+          "216.58",
+          "K",
+          "-69.81",
+          "°F"
+        ],
+        [
+          "Triple Point Pressure",
+          "0.5180",
+          "MPa",
+          "75.12",
+          "psi"
+        ],
+        [
+          "Specific Heat Capacity (Cp)",
+          "0.849",
+          "kJ/kg K",
+          "0.203",
+          "Btu/lb°F"
+        ],
+        [
+          "Specific Heat Capacity (Cv)",
+          "0.658",
+          "kJ/kg K",
+          "0.157",
+          "Btu/lb°F"
+        ],
+        [
+          "Specific Heat Ratio (Cp/Cv)",
+          "1.29",
+          "",
+          "1.29",
+          ""
+        ],
+        [
+          "Thermal Conductivity",
+          "0.01663",
+          "W/m°C",
+          "0.009609",
+          "Btu/hr ft °F"
+        ],
+        [
+          "Dynamic Viscosity",
+          "1.495",
+          "cP",
+          "31.22",
+          "lbf s/ft² ×10⁻⁶"
+        ],
+        [
+          "Kinematic Viscosity",
+          "0.834",
+          "cSt",
+          "8.977",
+          "ft²/s ×10⁻⁶"
+        ],
+        [
+          "Sound Velocity",
+          "269",
+          "m/s",
+          "883",
+          "ft/s"
+        ],
+        [
+          "Heat of Vaporization (Triple Point)",
+          "353.4",
+          "kJ/kg",
+          "151.93",
+          "Btu/lb"
+        ],
+        [
+          "Heat of Sublimation",
+          "591",
+          "kJ/kg",
+          "254",
+          "Btu/lb"
+        ],
+        [
+          "Enthalpy of Formation",
+          "-8941",
+          "kJ/kg",
+          "-3844",
+          "Btu/lb"
+        ],
+        [
+          "Gibbs Free Energy of Formation",
+          "-8953",
+          "kJ/kg",
+          "-3849",
+          "Btu/lb"
+        ],
+        [
+          "Standard Molar Entropy",
+          "4.86",
+          "kJ/kg K",
+          "1.16",
+          "Btu/lb °F"
+        ],
+        [
+          "Solubility in Water (20°C)",
+          "1.48",
+          "g/l",
+          "0.148",
+          "g/100g"
+        ],
+        [
+          "pH of Saturated Solution",
+          "3.7",
+          "",
+          "3.7",
+          ""
+        ],
+        [
+          "Surface Tension (melting point)",
+          "16.2",
+          "dynes/cm",
+          "16.2",
+          "dynes/cm"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Important Notes\n\n- **Standard Conditions**: Most values are given for gas phase at 25°C (77°F, 298 K) and 1 atm pressure\n- **Dry Ice**: Solid CO₂ is commonly known as dry ice\n- **Phase Behavior**: CO₂ exhibits unique phase behavior with a triple point at 216.58 K (-56.57°C)\n- **Toxicity**: CO₂ is relatively nontoxic but can cause asphyxiation by displacement of air\n- **Carbonic Acid**: When dissolved in water, CO₂ forms mild carbonic acid (pKa1 = 6.35, pKa2 = 10.33)\n- **Flammability**: CO₂ is non-flammable\n\n### Related Properties\nFor temperature and pressure-dependent values, please refer to:\n- Density variations with temperature and pressure\n- Dynamic and kinematic viscosity variations\n- Specific heat variations\n- Thermal conductivity variations\n- Prandtl number calculations"
+    }
+  ]
+}

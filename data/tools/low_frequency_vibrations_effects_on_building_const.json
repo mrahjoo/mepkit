@@ -1,0 +1,55 @@
+{
+  "id": "low_frequency_vibrations_effects_on_building_const",
+  "title": "Low-Frequency Vibrations Effects on Building Constructions",
+  "description": "Effects of low-frequency vibrations on building constructions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Frequency Range (Hz)",
+        "Vibration Type",
+        "Effects on Building",
+        "Typical Sources",
+        "Risk Level"
+      ],
+      "rows": [
+        [
+          "0.5 - 2",
+          "Very Low Frequency",
+          "Minimal structural damage, comfort disturbance",
+          "Distant earthquakes, ocean waves",
+          "Low"
+        ],
+        [
+          "2 - 5",
+          "Low Frequency",
+          "Resonance potential, minor structural vibrations",
+          "Heavy traffic, construction equipment",
+          "Medium"
+        ],
+        [
+          "5 - 10",
+          "Low-Mid Frequency",
+          "Noticeable vibrations, potential fatigue cracking",
+          "Industrial machinery, rail traffic",
+          "Medium-High"
+        ],
+        [
+          "10 - 20",
+          "Mid Frequency",
+          "Visible building sway, comfort issues",
+          "HVAC systems, generators",
+          "High"
+        ],
+        [
+          "20 - 100",
+          "Higher Frequency",
+          "Localized damage, window rattling",
+          "Impact loads, mechanical equipment",
+          "High"
+        ]
+      ]
+    }
+  ]
+}

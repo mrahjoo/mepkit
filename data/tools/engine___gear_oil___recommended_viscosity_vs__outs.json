@@ -1,0 +1,282 @@
+{
+  "id": "engine___gear_oil___recommended_viscosity_vs__outs",
+  "title": "Engine & Gear Oil - Recommended Viscosity vs. Outside Temperature",
+  "description": "Oil viscosity vs. temperature. Indicates appropriate engine oil and gear oil viscosity based on ambient (startup) temperatures. Lower temperatures and increased viscosity restrict lubrication, while higher temperatures reduce viscosity which may limit lubrication film thickness.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Engine & Gear Oil - Recommended Viscosity vs. Outside Temperature\n\nAll lubricants have practical limits when it comes to operating temperatures.\n\n* **Lower temperatures and increased viscosity** may restrict lubrication - causing metal to metal contact and damage to machines\n* **Higher temperatures and reduced viscosity** may limit lubrication film thickness - causing metal to metal contact and damage to machines\n\nFor most machines like car engines, the critical point of operation is at startup before reaching operating temperatures. In cold weather, lubricants with adequate viscosities at startup temperature are required."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ambient_temp_f",
+          "label": "Ambient Temperature (°F)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "°F"
+        },
+        {
+          "id": "ambient_temp_c",
+          "label": "Ambient Temperature (°C)",
+          "type": "number",
+          "defaultValue": -17.8,
+          "unit": "°C"
+        },
+        {
+          "id": "oil_type",
+          "label": "Oil Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Engine Oil - 20W-20",
+              "value": "20W-20"
+            },
+            {
+              "label": "Engine Oil - 20W-40",
+              "value": "20W-40"
+            },
+            {
+              "label": "Engine Oil - 20W-50",
+              "value": "20W-50"
+            },
+            {
+              "label": "Engine Oil - 10W-30",
+              "value": "10W-30"
+            },
+            {
+              "label": "Engine Oil - 10W-40",
+              "value": "10W-40"
+            },
+            {
+              "label": "Engine Oil - 10W",
+              "value": "10W"
+            },
+            {
+              "label": "Engine Oil - 5W-30",
+              "value": "5W-30"
+            },
+            {
+              "label": "Engine Oil - 5W-20",
+              "value": "5W-20"
+            },
+            {
+              "label": "Gear Oil - 75W",
+              "value": "75W"
+            },
+            {
+              "label": "Gear Oil - 80W",
+              "value": "80W"
+            },
+            {
+              "label": "Gear Oil - 80W-90",
+              "value": "80W-90"
+            },
+            {
+              "label": "Gear Oil - 85W",
+              "value": "85W"
+            },
+            {
+              "label": "Gear Oil - 90",
+              "value": "90"
+            },
+            {
+              "label": "Gear Oil - 140",
+              "value": "140"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "selected_viscosity",
+          "label": "Selected Oil Viscosity",
+          "formula": "inputs.oil_type"
+        },
+        {
+          "id": "temp_celsius",
+          "label": "Temperature (Celsius)",
+          "formula": "(inputs.ambient_temp_f - 32) * 5 / 9",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Engine Oil SAE Viscosity",
+        "-20°F (-29°C)",
+        "0°F (-17.8°C)",
+        "20°F (-6.7°C)",
+        "40°F (4.4°C)",
+        "60°F (15.6°C)",
+        "80°F (26.7°C)",
+        "100°F (37.8°C)"
+      ],
+      "rows": [
+        [
+          "20W-20",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "",
+          "",
+          ""
+        ],
+        [
+          "20W-40",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "",
+          ""
+        ],
+        [
+          "20W-50",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          ""
+        ],
+        [
+          "10W-30",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓"
+        ],
+        [
+          "10W-40",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓"
+        ],
+        [
+          "10W",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          ""
+        ],
+        [
+          "5W-30",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓"
+        ],
+        [
+          "5W-20",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Gear Oil SAE Viscosity",
+        "-20°F (-29°C)",
+        "0°F (-17.8°C)",
+        "20°F (-6.7°C)",
+        "40°F (4.4°C)",
+        "60°F (15.6°C)",
+        "80°F (26.7°C)",
+        "100°F (37.8°C)"
+      ],
+      "rows": [
+        [
+          "75W",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "",
+          "",
+          ""
+        ],
+        [
+          "80W",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "",
+          ""
+        ],
+        [
+          "80W-90",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          ""
+        ],
+        [
+          "85W",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          ""
+        ],
+        [
+          "90",
+          "",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓"
+        ],
+        [
+          "140",
+          "",
+          "",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Important Notes\n\n* Machine operating temperatures and lubricant temperatures do not change significantly with different ambient temperatures\n* In most cases, operating temperatures of engines are above the temperatures indicated in the tables above\n* The tables above indicate average data. For specific information, check manufacturer data\n* The critical point of operation is typically at startup before reaching operating temperatures"
+    }
+  ]
+}

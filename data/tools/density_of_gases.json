@@ -1,0 +1,500 @@
+{
+  "id": "density_of_gases",
+  "title": "Density of Gases",
+  "description": "Densities and molecular weights of common gases like acetylene, air, methane, nitrogen, oxygen and others.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Formula",
+        "Molecular Weight",
+        "Density (kg/m³) - NTP",
+        "Density (kg/m³) - STP",
+        "Density (lb/ft³) - NTP",
+        "Density (lb/ft³) - STP"
+      ],
+      "rows": [
+        [
+          "Acetylene (ethyne)",
+          "C2H2",
+          "26",
+          "1.0921",
+          "1.1702",
+          "0.0682",
+          "0.0729"
+        ],
+        [
+          "Air",
+          "",
+          "29",
+          "1.205",
+          "1.293",
+          "0.0752",
+          "0.0806"
+        ],
+        [
+          "Ammonia",
+          "NH3",
+          "17.031",
+          "0.717",
+          "0.769",
+          "0.0448",
+          "0.0480"
+        ],
+        [
+          "Argon",
+          "Ar",
+          "39.948",
+          "1.661",
+          "1.7837",
+          "0.1037",
+          "0.1114"
+        ],
+        [
+          "Benzene",
+          "C6H6",
+          "78.11",
+          "3.486",
+          "",
+          "0.2064",
+          ""
+        ],
+        [
+          "Blast furnace gas",
+          "",
+          "",
+          "1.250",
+          "",
+          "0.0780",
+          ""
+        ],
+        [
+          "Butane",
+          "C4H10",
+          "58.1",
+          "2.489",
+          "2.52",
+          "0.1554",
+          "0.1562"
+        ],
+        [
+          "Butylene (Butene)",
+          "C4H8",
+          "56.11",
+          "2.504",
+          "",
+          "0.1482",
+          ""
+        ],
+        [
+          "Carbon dioxide",
+          "CO2",
+          "44.01",
+          "1.842",
+          "1.977",
+          "0.1150",
+          "0.1234"
+        ],
+        [
+          "Carbon monoxide",
+          "CO",
+          "28.01",
+          "1.165",
+          "1.250",
+          "0.0727",
+          "0.0780"
+        ],
+        [
+          "Carbureted Water Gas",
+          "",
+          "",
+          "",
+          "",
+          "0.048",
+          ""
+        ],
+        [
+          "Chlorine",
+          "Cl2",
+          "70.906",
+          "2.994",
+          "",
+          "0.1869",
+          ""
+        ],
+        [
+          "Coal gas",
+          "",
+          "",
+          "0.582",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Coke Oven Gas",
+          "",
+          "",
+          "",
+          "",
+          "0.0342",
+          ""
+        ],
+        [
+          "Combustion products",
+          "",
+          "",
+          "1.112",
+          "",
+          "0.0692",
+          ""
+        ],
+        [
+          "Cyanogen (dicyan)",
+          "",
+          "",
+          "2.332",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Dichlorodifluoromethane (Freon F 12)",
+          "CCl2F2",
+          "",
+          "5.512",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Digester Gas (Sewage or Biogas)",
+          "",
+          "",
+          "",
+          "",
+          "0.062",
+          ""
+        ],
+        [
+          "Ethane",
+          "C2H6",
+          "30.07",
+          "1.264",
+          "",
+          "0.0789",
+          ""
+        ],
+        [
+          "Ethylene",
+          "C2H4",
+          "28.03",
+          "1.260",
+          "",
+          "0.0786",
+          ""
+        ],
+        [
+          "Helium",
+          "He",
+          "4.02",
+          "0.1664",
+          "0.1785",
+          "0.0104",
+          "0.0111"
+        ],
+        [
+          "Hydrogen",
+          "H2",
+          "2.016",
+          "",
+          "0.0899",
+          "",
+          "0.0056"
+        ],
+        [
+          "Hydrochloric Acid",
+          "",
+          "36.47",
+          "1.632",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydrogen Chloride",
+          "HCl",
+          "36.5",
+          "1.528",
+          "",
+          "0.0954",
+          ""
+        ],
+        [
+          "Hydrogen Sulfide",
+          "H2S",
+          "34.076",
+          "1.434",
+          "",
+          "0.0895",
+          ""
+        ],
+        [
+          "Krypton",
+          "",
+          "",
+          "3.742",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Methane",
+          "CH4",
+          "16.043",
+          "0.668",
+          "0.717",
+          "0.0417",
+          "0.0447"
+        ],
+        [
+          "Natural gas",
+          "",
+          "19.5",
+          "0.7-0.92",
+          "",
+          "0.044-0.056",
+          ""
+        ],
+        [
+          "Neon",
+          "Ne",
+          "20.179",
+          "0.8999",
+          "",
+          "0.0562",
+          ""
+        ],
+        [
+          "Nitric oxide",
+          "NO",
+          "30.0",
+          "1.249",
+          "",
+          "0.0780",
+          ""
+        ],
+        [
+          "Nitrogen",
+          "N2",
+          "28.02",
+          "1.165",
+          "1.2506",
+          "0.0727",
+          "0.0781"
+        ],
+        [
+          "Nitrous Oxide",
+          "N2O",
+          "44.013",
+          "",
+          "",
+          "",
+          "0.114"
+        ],
+        [
+          "Oxygen",
+          "O2",
+          "32",
+          "1.331",
+          "1.4290",
+          "0.0831",
+          "0.0892"
+        ],
+        [
+          "Ozone",
+          "O3",
+          "48.0",
+          "2.142",
+          "",
+          "0.125",
+          ""
+        ],
+        [
+          "Propane",
+          "C3H8",
+          "44.09",
+          "1.882",
+          "",
+          "0.1175",
+          ""
+        ],
+        [
+          "Propene (propylene)",
+          "C3H6",
+          "42.1",
+          "1.748",
+          "",
+          "0.1091",
+          ""
+        ],
+        [
+          "Sasol",
+          "",
+          "",
+          "",
+          "",
+          "0.032",
+          ""
+        ],
+        [
+          "Sulfur",
+          "S",
+          "32.06",
+          "",
+          "",
+          "0.135",
+          ""
+        ],
+        [
+          "Sulfur Dioxide",
+          "SO2",
+          "64.06",
+          "2.279",
+          "2.926",
+          "0.1703",
+          "0.1828"
+        ],
+        [
+          "Toluene",
+          "C7H8",
+          "92.141",
+          "4.111",
+          "",
+          "0.2435",
+          ""
+        ],
+        [
+          "Water Vapor, steam",
+          "H2O",
+          "18.016",
+          "0.804",
+          "",
+          "0.048",
+          ""
+        ],
+        [
+          "Water gas (bituminous)",
+          "",
+          "",
+          "",
+          "",
+          "0.054",
+          ""
+        ],
+        [
+          "Xenon",
+          "",
+          "",
+          "5.862",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "density_kgm3",
+          "label": "Density",
+          "type": "number",
+          "defaultValue": 1.2,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "conversion_type",
+          "label": "Conversion",
+          "type": "select",
+          "options": [
+            {
+              "label": "kg/m³ to lb/ft³",
+              "value": "to_lb_ft3"
+            },
+            {
+              "label": "lb/ft³ to kg/m³",
+              "value": "to_kg_m3"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "inputs.conversion_type === 'to_lb_ft3' ? inputs.density_kgm3 * 0.0624 : inputs.density_kgm3 / 16.018"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Density Comparison of Common Gases"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Hydrogen",
+            "Helium",
+            "Methane",
+            "Ammonia",
+            "Ethane",
+            "Air",
+            "Nitrogen",
+            "Carbon Monoxide",
+            "Oxygen",
+            "Carbon Dioxide",
+            "Argon",
+            "Chlorine"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Density (kg/m³)"
+        },
+        "series": [
+          {
+            "name": "Density at NTP",
+            "type": "bar",
+            "data": [
+              0.0899,
+              0.1664,
+              0.668,
+              0.717,
+              1.264,
+              1.205,
+              1.165,
+              1.165,
+              1.331,
+              1.842,
+              1.661,
+              2.994
+            ],
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

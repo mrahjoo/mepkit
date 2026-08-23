@@ -1,0 +1,82 @@
+{
+  "id": "boiler_blowdown_rate",
+  "title": "Boiler Blowdown Rate",
+  "description": "Calculate boiler blowdown rate based on steam consumption, feed water TDS concentration, and maximum allowable TDS in boiler water.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Boiler Blowdown Rate Calculator\n\nA blowdown of the boiler is a routine operation necessary due to the increased concentration of Total Dissolved Solids (TDS) in the boiler water when producing steam.\n\nThe blowdown rate can be calculated using the formula:\n\n**qBD = qS × fc / (bc - fc)**\n\nWhere:\n- **qBD** = blowdown rate (kg/h)\n- **qS** = steam consumption (kg/h)\n- **fc** = Total Dissolved Solids (TDS) in the feed water (ppm)\n- **bc** = maximum allowable Total Dissolved Solids (TDS) in the boiler water (ppm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "qS",
+          "label": "Steam Consumption",
+          "type": "number",
+          "unit": "kg/h",
+          "defaultValue": 1000
+        },
+        {
+          "id": "fc",
+          "label": "TDS in Feed Water",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 100
+        },
+        {
+          "id": "bc",
+          "label": "Maximum Allowable TDS in Boiler Water",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 3000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "qBD",
+          "label": "Blowdown Rate",
+          "formula": "inputs.qS * inputs.fc / (inputs.bc - inputs.fc)",
+          "unit": "kg/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Steam Consumption (qS)",
+          "Input",
+          "kg/h",
+          "Amount of steam consumed in the process"
+        ],
+        [
+          "Feed Water TDS (fc)",
+          "Input",
+          "ppm",
+          "Total Dissolved Solids concentration in feed water"
+        ],
+        [
+          "Max Boiler Water TDS (bc)",
+          "Input",
+          "ppm",
+          "Maximum allowable TDS concentration in boiler water"
+        ],
+        [
+          "Blowdown Rate (qBD)",
+          "Output",
+          "kg/h",
+          "Required blowdown rate to maintain TDS levels"
+        ]
+      ]
+    }
+  ]
+}

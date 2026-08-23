@@ -1,0 +1,62 @@
+{
+  "id": "vacuum_pipes___flow_velocities",
+  "title": "Vacuum Pipes - Flow Velocities",
+  "description": "Air velocity diagrams for vacuum pipe lines.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "volumetric_flow",
+          "label": "Volumetric Flow Rate",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 100
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "density",
+          "label": "Air Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_velocity",
+          "label": "Flow Velocity",
+          "formula": "inputs.volumetric_flow / ((3.14159 * (inputs.pipe_diameter / 1000 / 2) ^ 2) * 3.6)",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "pipe_area",
+          "label": "Pipe Cross-sectional Area",
+          "formula": "3.14159 * (inputs.pipe_diameter / 1000 / 2) ^ 2",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "mass_flow",
+          "label": "Mass Flow Rate",
+          "formula": "(inputs.volumetric_flow / 3600) * inputs.density",
+          "unit": "kg/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

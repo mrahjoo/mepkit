@@ -1,0 +1,137 @@
+{
+  "id": "builder_s_to_surveyor_s_measurements",
+  "title": "Builder's to Surveyor's Measurements",
+  "description": "Convert builder's measurements to surveyor's measurements. This calculator helps convert between various historical and modern units of measurement used in surveys and construction.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Common Measurement Conversions\n\n### Length Conversions\n- 1 meter = 39.37 in = 3.2808 ft\n- 1 rod = 1 pole = 1 perch = 16½ ft = 5.029 m\n- 1 engineer's chain = 100 ft = 30.48 m\n- 1 Gunter's chain = 66 ft = 20.11 m = 100 Gunter's links\n- 1 statute mi = 5280 ft = 1609.35 m\n- 1 nautical mi (U.S.) = 6080.27 ft = 1853.248 m\n- 1 fathom = 6 ft = 1.829 m\n- 1 cubit = 18 in = 0.457 m\n- 1 vara = 33 in\n\n### Area Conversions\n- 1 acre = 43560 ft² = 160 rods² = 10 sq (Gunter's) chains = 4046.87 m² = 0.4047 ha\n- 1 rood = 3/4 acre = 1011.5 m² = 40 rods²\n- 1 ha = 10000 m² = 107639.10 ft² = 2.471 acres\n- 1 arpent ≈ 0.85 acre\n- 1 square arpent ≈ 3439.1 m²\n- 1 mi² = 640 acres = 258.94 ha"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "length_feet",
+          "label": "Length (Feet)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "ft"
+        },
+        {
+          "id": "length_unit",
+          "label": "Convert to",
+          "type": "select",
+          "defaultValue": "meters",
+          "options": [
+            {
+              "value": "meters",
+              "label": "Meters (m)"
+            },
+            {
+              "value": "rods",
+              "label": "Rods"
+            },
+            {
+              "value": "gunters_chain",
+              "label": "Gunter's Chain"
+            },
+            {
+              "value": "engineers_chain",
+              "label": "Engineer's Chain"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "length_meters",
+          "label": "Meters",
+          "formula": "inputs.length_feet * 0.3048",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "length_rods",
+          "label": "Rods",
+          "formula": "inputs.length_feet / 16.5",
+          "unit": "rods",
+          "format": "decimal"
+        },
+        {
+          "id": "length_gunters_chain",
+          "label": "Gunter's Chains",
+          "formula": "inputs.length_feet / 66",
+          "unit": "chains",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "area_sqft",
+          "label": "Area (Square Feet)",
+          "type": "number",
+          "defaultValue": 43560,
+          "unit": "ft²"
+        },
+        {
+          "id": "area_unit",
+          "label": "Convert to",
+          "type": "select",
+          "defaultValue": "acres",
+          "options": [
+            {
+              "value": "acres",
+              "label": "Acres"
+            },
+            {
+              "value": "sq_meters",
+              "label": "Square Meters (m²)"
+            },
+            {
+              "value": "hectares",
+              "label": "Hectares (ha)"
+            },
+            {
+              "value": "rods_sq",
+              "label": "Square Rods"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "area_acres",
+          "label": "Acres",
+          "formula": "inputs.area_sqft / 43560",
+          "unit": "acres",
+          "format": "decimal"
+        },
+        {
+          "id": "area_sq_meters",
+          "label": "Square Meters",
+          "formula": "inputs.area_sqft * 0.092903",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "area_hectares",
+          "label": "Hectares",
+          "formula": "inputs.area_sqft * 0.0000092903",
+          "unit": "ha",
+          "format": "decimal"
+        },
+        {
+          "id": "area_sq_rods",
+          "label": "Square Rods",
+          "formula": "inputs.area_sqft / 272.25",
+          "unit": "rods²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

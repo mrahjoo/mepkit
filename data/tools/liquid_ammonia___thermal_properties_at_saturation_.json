@@ -1,0 +1,98 @@
+{
+  "id": "liquid_ammonia___thermal_properties_at_saturation_",
+  "title": "Liquid Ammonia - Thermal Properties at Saturation Pressure",
+  "description": "Density, specific heat, thermal conductivity, viscosity and Prandtl's number of liquid ammonia at saturation pressure. Provides thermal properties in both SI and Imperial units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Specific Heat (kJ/kgK)",
+        "Thermal Conductivity (W/(m K))",
+        "Dynamic Viscosity (10⁻⁶ Pa·s)",
+        "Prandtl's Number"
+      ],
+      "rows": [
+        [
+          -50,
+          698,
+          4.45,
+          0.547,
+          317,
+          1.98
+        ],
+        [
+          0,
+          636,
+          4.61,
+          0.54,
+          169,
+          1.4
+        ],
+        [
+          20,
+          609,
+          4.74,
+          0.521,
+          138,
+          1.29
+        ],
+        [
+          50,
+          561,
+          5.08,
+          0.477,
+          103,
+          1.26
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Density (lb/ft³)",
+        "Specific Heat (Btu/lb·°F)",
+        "Thermal Conductivity (Btu/(hr·ft·°F))",
+        "Dynamic Viscosity (10⁻⁶ lb/(ft·s))",
+        "Prandtl's Number"
+      ],
+      "rows": [
+        [
+          -58,
+          43.4,
+          1.06,
+          0.32,
+          213,
+          1.98
+        ],
+        [
+          32,
+          39.7,
+          1.1,
+          0.31,
+          113,
+          1.4
+        ],
+        [
+          68,
+          38,
+          1.13,
+          0.3,
+          93,
+          1.29
+        ],
+        [
+          122,
+          35,
+          1.21,
+          0.28,
+          69,
+          1.26
+        ]
+      ]
+    }
+  ]
+}

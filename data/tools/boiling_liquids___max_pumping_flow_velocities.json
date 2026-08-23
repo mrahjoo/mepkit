@@ -1,0 +1,109 @@
+{
+  "id": "boiling_liquids___max_pumping_flow_velocities",
+  "title": "Boiling Liquids - Max Pumping Flow Velocities",
+  "description": "Recommended max flow velocity on the delivery (pressure) side when pumping boiling liquids.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Dimensions (inches)",
+        "Pipe Dimensions (mm)",
+        "Max Velocity (m/s)",
+        "Max Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          1,
+          25,
+          1,
+          3.5
+        ],
+        [
+          2,
+          50,
+          1.1,
+          3.6
+        ],
+        [
+          3,
+          75,
+          1.15,
+          3.8
+        ],
+        [
+          4,
+          100,
+          1.25,
+          4
+        ],
+        [
+          6,
+          150,
+          1.5,
+          4.7
+        ],
+        [
+          8,
+          200,
+          1.75,
+          5.5
+        ],
+        [
+          10,
+          250,
+          2,
+          6.5
+        ],
+        [
+          12,
+          300,
+          2,
+          6.5
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter_inches",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 4
+        },
+        {
+          "id": "unit_preference",
+          "label": "Velocity Unit Preference",
+          "type": "select",
+          "defaultValue": "metric",
+          "options": [
+            {
+              "label": "Metric (m/s)",
+              "value": "metric"
+            },
+            {
+              "label": "Imperial (ft/s)",
+              "value": "imperial"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "max_velocity",
+          "label": "Recommended Max Flow Velocity",
+          "unit": "m/s",
+          "formula": "inputs.pipe_diameter_inches < 1.5 ? 1 : inputs.pipe_diameter_inches < 2.5 ? 1.1 : inputs.pipe_diameter_inches < 3.5 ? 1.15 : inputs.pipe_diameter_inches < 5 ? 1.25 : inputs.pipe_diameter_inches < 7 ? 1.5 : inputs.pipe_diameter_inches < 9 ? 1.75 : 2"
+        },
+        {
+          "id": "max_velocity_imperial",
+          "label": "Recommended Max Flow Velocity (Imperial)",
+          "unit": "ft/s",
+          "formula": "inputs.pipe_diameter_inches < 1.5 ? 3.5 : inputs.pipe_diameter_inches < 2.5 ? 3.6 : inputs.pipe_diameter_inches < 3.5 ? 3.8 : inputs.pipe_diameter_inches < 5 ? 4 : inputs.pipe_diameter_inches < 7 ? 4.7 : inputs.pipe_diameter_inches < 9 ? 5.5 : 6.5"
+        }
+      ]
+    }
+  ]
+}

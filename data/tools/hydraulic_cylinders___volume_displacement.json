@@ -1,0 +1,40 @@
+{
+  "id": "hydraulic_cylinders___volume_displacement",
+  "title": "Hydraulic Cylinders - Volume Displacement",
+  "description": "Calculate the volumetric displacement of hydraulic cylinders using cylinder area and stroke length.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hydraulic Cylinders - Volume Displacement\n\nThe volume displacement of a hydraulic cylinder is calculated using:\n\n**q = A × s / 231**\n\nWhere:\n- **q** = volume displacement (gal)\n- **A** = cylinder area (in²)\n- **s** = cylinder stroke (in)\n\n### Conversion Factors\n- 1 gal (US) = 3.785 dm³ (liter) = 3.785×10⁻³ m³\n- 1 in² = 6.452 cm²"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cylinder_area",
+          "label": "Cylinder Area",
+          "type": "number",
+          "unit": "in²",
+          "defaultValue": 12.57
+        },
+        {
+          "id": "cylinder_stroke",
+          "label": "Cylinder Stroke",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 30
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_displacement",
+          "label": "Volume Displacement",
+          "unit": "gal",
+          "format": "decimal",
+          "formula": "(inputs.cylinder_area * inputs.cylinder_stroke) / 231"
+        }
+      ]
+    }
+  ]
+}

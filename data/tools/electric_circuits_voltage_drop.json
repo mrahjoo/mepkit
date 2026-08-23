@@ -1,0 +1,260 @@
+{
+  "id": "electric_circuits_voltage_drop",
+  "title": "Electric Circuits Voltage Drop",
+  "description": "Calculate voltage drop in electric circuits using Ohm's law and other methods. Voltage drop is calculated using resistance and current, or by using specific resistivity with wire properties, or by using conductor factors.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Voltage Drop Calculator\n\nVoltage drop in an electric circuit can be calculated using Ohm's law:\n\n**U = R × I**\n\nwhere:\n- U = voltage drop (volts, V)\n- R = electrical resistance (ohms, Ω)\n- I = current (amps, A)\n\nAlternatively, using wire properties:\n\n**U = K × P × L × I / A**\n\nwhere:\n- K = specific resistivity (Ω - circular mils/foot)\n- P = phase constant (2 for single phase, 1.732 for three phase)\n- L = wire length (ft)\n- A = wire area (circular mils)\n\nOr using conductor factor:\n\n**U = f × I × L**\n\nwhere:\n- f = factor from lookup table\n- I = current (amps)\n- L = conductor length (ft)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Method 1: Using Ohm's Law (U = R × I)"
+      ],
+      "inputs": [
+        {
+          "id": "resistance",
+          "label": "Resistance (R)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 0.204
+        },
+        {
+          "id": "current_ohm",
+          "label": "Current (I)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "voltage_drop_ohm",
+          "label": "Voltage Drop (U)",
+          "formula": "inputs.resistance * inputs.current_ohm",
+          "unit": "V",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Method 2: Using Specific Resistivity (U = K × P × L × I / A)"
+      ],
+      "inputs": [
+        {
+          "id": "specific_resistivity",
+          "label": "Specific Resistivity (K)",
+          "type": "number",
+          "unit": "Ω - circular mils/ft",
+          "defaultValue": 11
+        },
+        {
+          "id": "phase_constant",
+          "label": "Phase Constant (P)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Single Phase",
+              "value": 2
+            },
+            {
+              "label": "Three Phase",
+              "value": 1.732
+            }
+          ],
+          "defaultValue": 2
+        },
+        {
+          "id": "wire_length",
+          "label": "Wire Length (L)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 200
+        },
+        {
+          "id": "current_resistivity",
+          "label": "Current (I)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 10
+        },
+        {
+          "id": "wire_area",
+          "label": "Wire Area (A)",
+          "type": "number",
+          "unit": "circular mils",
+          "defaultValue": 10400
+        }
+      ],
+      "outputs": [
+        {
+          "id": "voltage_drop_resistivity",
+          "label": "Voltage Drop (U)",
+          "formula": "(inputs.specific_resistivity * inputs.phase_constant * inputs.wire_length * inputs.current_resistivity) / inputs.wire_area",
+          "unit": "V",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Method 3: Using Conductor Factor (U = f × I × L)"
+      ],
+      "inputs": [
+        {
+          "id": "conductor_factor",
+          "label": "Conductor Factor (f)",
+          "type": "number",
+          "defaultValue": 0.196
+        },
+        {
+          "id": "current_factor",
+          "label": "Current (I)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 10
+        },
+        {
+          "id": "conductor_length",
+          "label": "Conductor Length (L)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "voltage_drop_factor",
+          "label": "Voltage Drop (U)",
+          "formula": "inputs.conductor_factor * inputs.current_factor * inputs.conductor_length",
+          "unit": "V",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "AWG",
+        "Metric (mm²)",
+        "Single-Phase Factor",
+        "Three-Phase Factor"
+      ],
+      "rows": [
+        [
+          14,
+          2.08,
+          0.476,
+          0.42
+        ],
+        [
+          12,
+          3.31,
+          0.313,
+          0.26
+        ],
+        [
+          10,
+          5.26,
+          0.196,
+          0.17
+        ],
+        [
+          8,
+          8.37,
+          0.125,
+          0.11
+        ],
+        [
+          6,
+          13.3,
+          0.0833,
+          0.071
+        ],
+        [
+          4,
+          21.2,
+          0.0538,
+          0.046
+        ],
+        [
+          3,
+          "-",
+          0.0431,
+          0.038
+        ],
+        [
+          2,
+          33.6,
+          0.0323,
+          0.028
+        ],
+        [
+          1,
+          42.4,
+          0.0323,
+          0.028
+        ],
+        [
+          "1/0",
+          53.5,
+          0.0269,
+          0.023
+        ],
+        [
+          "2/0",
+          67.4,
+          0.0222,
+          0.02
+        ],
+        [
+          "3/0",
+          85,
+          0.019,
+          0.016
+        ],
+        [
+          "4/0",
+          107.2,
+          0.0161,
+          0.014
+        ],
+        [
+          250,
+          "-",
+          0.0147,
+          0.013
+        ],
+        [
+          300,
+          "-",
+          0.0131,
+          0.011
+        ],
+        [
+          350,
+          "-",
+          0.0121,
+          0.011
+        ],
+        [
+          400,
+          "-",
+          0.0115,
+          0.009
+        ],
+        [
+          500,
+          "-",
+          0.0101,
+          0.009
+        ]
+      ]
+    }
+  ]
+}

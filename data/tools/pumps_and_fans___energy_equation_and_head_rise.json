@@ -1,0 +1,146 @@
+{
+  "id": "pumps_and_fans___energy_equation_and_head_rise",
+  "title": "Pumps and Fans - Energy Equation and Head Rise",
+  "description": "Calculate the actual head rise of a pump or fan using the Energy Equation. Compute pressure head difference, specific work, and head rise for both inline pumps and fans.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "head_rise_calculator",
+      "content": "Calculate actual head rise and specific work for pumps and fans",
+      "inputs": [
+        {
+          "id": "p1",
+          "label": "Inlet Pressure (p₁)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 100000
+        },
+        {
+          "id": "p2",
+          "label": "Outlet Pressure (p₂)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 1000000
+        },
+        {
+          "id": "density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (g)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "h1",
+          "label": "Inlet Elevation (h₁)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "h2",
+          "label": "Outlet Elevation (h₂)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "v1",
+          "label": "Inlet Velocity (v₁)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        },
+        {
+          "id": "v2",
+          "label": "Outlet Velocity (v₂)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_head",
+          "label": "Pressure Head Rise",
+          "unit": "m fluid column",
+          "formula": "(inputs.p2 - inputs.p1) / (inputs.density * inputs.gravity)",
+          "format": "decimal"
+        },
+        {
+          "id": "elevation_head",
+          "label": "Elevation Head Rise",
+          "unit": "m",
+          "formula": "inputs.h2 - inputs.h1",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity_head",
+          "label": "Velocity Head Rise",
+          "unit": "m",
+          "formula": "(inputs.v2 * inputs.v2 - inputs.v1 * inputs.v1) / (2 * inputs.gravity)",
+          "format": "decimal"
+        },
+        {
+          "id": "actual_head_rise",
+          "label": "Actual Head Rise (hₐ)",
+          "unit": "m fluid column",
+          "formula": "((inputs.p2 - inputs.p1) / (inputs.density * inputs.gravity)) + (inputs.h2 - inputs.h1) + ((inputs.v2 * inputs.v2 - inputs.v1 * inputs.v1) / (2 * inputs.gravity))",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_work",
+          "label": "Specific Work (w)",
+          "unit": "J/kg",
+          "formula": "(((inputs.p2 - inputs.p1) / (inputs.density * inputs.gravity)) + (inputs.h2 - inputs.h1) + ((inputs.v2 * inputs.v2 - inputs.v1 * inputs.v1) / (2 * inputs.gravity))) * inputs.gravity",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "examples_table",
+      "headers": [
+        "Fluid",
+        "Inlet Pressure",
+        "Outlet Pressure",
+        "Fluid Density",
+        "Pressure Head",
+        "Head Unit"
+      ],
+      "rows": [
+        [
+          "Water",
+          "1 bar (1×10⁵ Pa)",
+          "10 bar (10×10⁵ Pa)",
+          "1000 kg/m³",
+          "91.7",
+          "m Water Column"
+        ],
+        [
+          "Hot Air",
+          "400 Pa",
+          "400 Pa (gauge)",
+          "1.06 kg/m³",
+          "38.5",
+          "m Air Column"
+        ],
+        [
+          "Hot Air (ref. to water)",
+          "400 Pa",
+          "400 Pa (gauge)",
+          "1000 kg/m³ (water)",
+          "0.041",
+          "m Water Column (41 mm)"
+        ]
+      ]
+    }
+  ]
+}

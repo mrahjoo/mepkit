@@ -1,0 +1,12 @@
+{
+  "id": "bid_work_flow_template",
+  "title": "Bid Work Flow Template",
+  "description": "A bid work flow template - Online with Google Docs. Log into your Google Account to make and edit your own copy of the template.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Bid Work Flow Template\n\nA bid work flow template for managing bidding processes online using Google Docs.\n\n## Overview\n\nThis template provides a structured workflow for bid management and processing.\n\n## Resources\n\n- **[Bid Work Flow Template](https://docs.google.com/drawings/edit?id=1_IxdXg3VxXh6ouu8Dx0MaXVph1aH8DCkbxJNcnKyQGw&hl=en&authkey=CKGy0soH)** - Google Docs Format\n\n### Instructions\n\nLog into your Google Account to make and edit your own copy of the template.\n\n## Features\n\n- Structured workflow for bid management\n- Collaborative editing through Google Docs\n- Easy customization for your specific needs\n- Online access from anywhere\n\n**Note:** Click the link above to access and use the Bid Work Flow Template in Google Docs."
+    }
+  ]
+}

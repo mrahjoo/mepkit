@@ -1,0 +1,50 @@
+{
+  "id": "sound___ldn___day_and_night_level",
+  "title": "Sound - Ldn - Day and Night Level",
+  "description": "Calculate the EPA Day-Night Sound Level (Ldn) based on daytime and nighttime equivalent sound levels. The Ldn is an A-weighted equivalent sound level for a 24-hour period with an additional 10 dB imposed on nighttime hours (10 pm to 7 am).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ld",
+          "label": "Ld - Daytime Equivalent Sound Level",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 70
+        },
+        {
+          "id": "daytime_hours",
+          "label": "Daytime Hours",
+          "type": "number",
+          "unit": "h",
+          "defaultValue": 15
+        },
+        {
+          "id": "ln",
+          "label": "Ln - Nighttime Equivalent Sound Level",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 50
+        },
+        {
+          "id": "nighttime_hours",
+          "label": "Nighttime Hours",
+          "type": "number",
+          "unit": "h",
+          "defaultValue": 9
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ldn",
+          "label": "Ldn - Day-Night Sound Level",
+          "unit": "dBA",
+          "formula": "10 * LOG10(1/24 * (inputs.daytime_hours * POW(10, inputs.ld/10) + inputs.nighttime_hours * POW(10, (inputs.ln + 10)/10)))",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

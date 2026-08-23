@@ -1,0 +1,47 @@
+{
+  "id": "slurry_transports___minimum_flow_velocities",
+  "title": "Slurry Transports - Minimum Flow Velocities",
+  "description": "A tool for determining minimum flow velocities in slurry transport systems to prevent settling of solid particles. The required velocity depends on the type and size of solids in the slurry mixture.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Solids",
+        "Size of Solids (Mesh No)",
+        "Minimum Flow Velocity (m/s)",
+        "Minimum Flow Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          "Fine",
+          "over 200",
+          "1 – 1.5",
+          "3 – 5"
+        ],
+        [
+          "Sand",
+          "200 – 20",
+          "1.5 – 2",
+          "5 – 7"
+        ],
+        [
+          "Coarse",
+          "20 – 4",
+          "2 – 3.25",
+          "7 – 11"
+        ],
+        [
+          "Sludge",
+          "",
+          "0.6 - 3",
+          "2 - 9"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Considerations\n\n- **Self-Cleaning Systems**: Pipeline transport systems may be nearly self-cleaning when solids settle, decreasing pipe area and increasing fluid speed until equilibrium is reached.\n\n- **Sludge Content**: Sludges with solid content less than 2 percent have hydraulic characteristics similar to water. For solids contents greater than 2 percent, friction losses are 1.5 - 4 times the friction losses for water.\n\n- **Pipeline Design**: The speed should be increased in lifting lines by decreasing the piping diameter. At the end of a pipeline, the speed should be slowed down by increasing the pipeline diameter.\n\n## Self-Cleaning Slope Formula\n\nThe required slope for self-cleaning of sludge pipelines can be estimated as:\n\n**Smin = τmin / (ρ × Rh)**\n\nWhere:\n- **Smin** = minimum slope for self-cleaning (m/m)\n- **τmin** = required shear stress for self-cleaning (kg/m²)\n  - 0.25 kg/m² for sludge waste water\n  - 0.15 kg/m² for rain water\n- **ρ** = density of fluid (kg/m³)\n- **Rh** = hydraulic diameter at maximum flow (m)"
+    }
+  ]
+}

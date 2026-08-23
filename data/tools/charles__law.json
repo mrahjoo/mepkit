@@ -1,0 +1,73 @@
+{
+  "id": "charles__law",
+  "title": "Charles' Law",
+  "description": "Calculate the volume of an ideal gas vs. temperature using Charles' Law. In a perfect gas where mass and pressure are constant, volume varies directly with absolute temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "State",
+        "Volume (L)",
+        "Temperature (K)"
+      ],
+      "rows": [
+        [
+          "Initial (State 1)",
+          2,
+          273
+        ],
+        [
+          "Final (State 2)",
+          2.73,
+          373
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Charles' Law Formula\n\n**V₁ / T₁ = V₂ / T₂**\n\nWhere:\n- V = volume (m³, ft³, L, etc.)\n- T = absolute temperature (K, °R)\n\n## Example Calculation\nA gas occupies a volume of 2 liters at 0°C (273 K). The volume at 100°C (373 K):\n\nV₂ = (T₂ × V₁) / T₁ = (373 K × 2 L) / (273 K) = 2.73 L"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "V1",
+          "label": "Initial Volume (V₁)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "L"
+        },
+        {
+          "id": "T1",
+          "label": "Initial Temperature (T₁)",
+          "type": "number",
+          "defaultValue": 273,
+          "unit": "K"
+        },
+        {
+          "id": "T2",
+          "label": "Final Temperature (T₂)",
+          "type": "number",
+          "defaultValue": 373,
+          "unit": "K"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "V2",
+          "label": "Final Volume (V₂)",
+          "formula": "(inputs.T2 * inputs.V1) / inputs.T1",
+          "unit": "L",
+          "format": "decimal"
+        },
+        {
+          "id": "ratio",
+          "label": "Volume Ratio (V₂/V₁)",
+          "formula": "inputs.T2 / inputs.T1",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

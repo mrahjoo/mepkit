@@ -1,0 +1,206 @@
+{
+  "id": "building_elements___heat_loss_vs__thermal_resistiv",
+  "title": "Building Elements - Heat Loss vs. Thermal Resistivity",
+  "description": "Calculate thermal resistance in building elements like walls, floors and roofs above and below the ground for heat loss calculations.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Thermal Resistance in Building Elements\n\nThermal resistance values are used to calculate heat loss from buildings. Select a building element type to view and calculate its thermal resistance."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "element_type",
+          "label": "Building Element Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "outside_wall",
+              "label": "Outside/Inside Walls - Against Surrounding Environment"
+            },
+            {
+              "value": "other_parts",
+              "label": "Building Parts - Others"
+            },
+            {
+              "value": "floor_near_wall",
+              "label": "Floors 0.5m Above/Below Ground - Near Wall (No Cold Bridge)"
+            },
+            {
+              "value": "floor_near_wall_protected",
+              "label": "Floors 0.5m Above/Below Ground - With Cold Bridge Protection"
+            },
+            {
+              "value": "floor_center",
+              "label": "Center-field Floors (>1m from Wall)"
+            },
+            {
+              "value": "basement_floor",
+              "label": "Basement Floors (0.5m Below Ground)"
+            },
+            {
+              "value": "basement_wall",
+              "label": "Basement Walls - Fully Against Earth"
+            },
+            {
+              "value": "basement_wall_mixed",
+              "label": "Basement Walls - Partly Against Earth/Air"
+            }
+          ]
+        },
+        {
+          "id": "basement_depth",
+          "label": "Basement Depth Below Ground (m)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ri",
+          "label": "Internal Resistance (Ri)",
+          "formula": "inputs.element_type === 'outside_wall' || inputs.element_type === 'other_parts' ? 0.13 : 0",
+          "unit": "m²K/W"
+        },
+        {
+          "id": "ro",
+          "label": "External Resistance (Ro)",
+          "formula": "inputs.element_type === 'outside_wall' ? 0.04 : inputs.element_type === 'other_parts' ? 0.13 : 0",
+          "unit": "m²K/W"
+        },
+        {
+          "id": "re",
+          "label": "Ground/Earth Resistance (Re)",
+          "formula": "inputs.element_type === 'floor_near_wall' ? 0.2 : inputs.element_type === 'floor_near_wall_protected' ? 1.0 : inputs.element_type === 'floor_center' ? 1.5 : inputs.element_type === 'basement_floor' ? 2.0 : inputs.element_type === 'basement_wall' ? 0.2 + 0.3 * inputs.basement_depth : inputs.element_type === 'basement_wall_mixed' ? 2.0 : 0",
+          "unit": "m²K/W"
+        },
+        {
+          "id": "total_resistance",
+          "label": "Total Thermal Resistance (Rtotal)",
+          "formula": "inputs.element_type === 'outside_wall' ? 0.13 + 0.04 : inputs.element_type === 'other_parts' ? 0.13 + 0.13 : inputs.element_type === 'floor_near_wall' ? 0.2 : inputs.element_type === 'floor_near_wall_protected' ? 1.0 : inputs.element_type === 'floor_center' ? 1.5 : inputs.element_type === 'basement_floor' ? 2.0 : inputs.element_type === 'basement_wall' ? 0.2 + 0.3 * inputs.basement_depth : inputs.element_type === 'basement_wall_mixed' ? 2.0 : 0",
+          "unit": "m²K/W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Building Element Type",
+        "Ri (m²K/W)",
+        "Ro (m²K/W)",
+        "Re (m²K/W)",
+        "Total (m²K/W)"
+      ],
+      "rows": [
+        [
+          "Outside/Inside Walls - Against Environment",
+          0.13,
+          0.04,
+          "-",
+          0.17
+        ],
+        [
+          "Building Parts - Others",
+          0.13,
+          0.13,
+          "-",
+          0.26
+        ],
+        [
+          "Floors Near Wall (No Protection)",
+          "-",
+          "-",
+          0.2,
+          0.2
+        ],
+        [
+          "Floors Near Wall (With Protection)",
+          "-",
+          "-",
+          1,
+          1
+        ],
+        [
+          "Center-field Floors (>1m from Wall)",
+          "-",
+          "-",
+          1.5,
+          1.5
+        ],
+        [
+          "Basement Floors (0.5m Below)",
+          "-",
+          "-",
+          2,
+          2
+        ],
+        [
+          "Basement Walls (Fully Against Earth)",
+          "-",
+          "-",
+          "0.2 + 0.3h",
+          "0.2 + 0.3h"
+        ],
+        [
+          "Basement Walls (Mixed)",
+          "-",
+          "-",
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Thermal Resistance Comparison",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Outside Walls",
+            "Other Parts",
+            "Floor Near Wall",
+            "Floor Protected",
+            "Center Floor",
+            "Basement Floor",
+            "Basement Wall",
+            "Basement Mixed"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Resistance (m²K/W)"
+        },
+        "series": [
+          {
+            "name": "Total Thermal Resistance",
+            "data": [
+              0.17,
+              0.26,
+              0.2,
+              1,
+              1.5,
+              2,
+              2.5,
+              2
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470C6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "sound___ls___exposure_level",
+  "title": "Sound - Ls - Exposure Level",
+  "description": "The EPA Sound Exposure Level - Ls - describes the noise from a variable source. It measures the sound change from moment to moment by accumulating intensity and exposure duration to measure the total sound energy.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Sound Exposure Level - Ls\n\nThe Sound Exposure Level - _Ls_ - is one of the Environmental Protection Agency (EPA) sound descriptors used to describe noise from variable sources such as airplanes, trains, trucks, etc.\n\n## Overview\n\nThe EPA has adopted a system of four sound descriptors:\n- A-weighted sound level\n- Sound Exposure Level - Ls\n- Equivalent Sound Level - Leq\n- Day-Night Sound Level - Ldn\n\n## Measurement\n\nThe Sound Exposure Level - Ls measures the sound change from moment to moment with variable sound by:\n- Measuring the maximum sound level\n- Recording the length of time with sound level greater than certain sound pressure levels\n- Accumulating intensity and exposure duration to calculate total sound energy\n\nThis metric is particularly useful for assessing noise from moving sources and determining the impact of noise on health and welfare."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Sound Source",
+        "Typical Ls Value (dB)",
+        "Exposure Duration (seconds)",
+        "Peak Sound Level (dB)"
+      ],
+      "rows": [
+        [
+          "Jet Aircraft Flyover",
+          "140",
+          "10",
+          "150"
+        ],
+        [
+          "Helicopter",
+          "130",
+          "15",
+          "145"
+        ],
+        [
+          "Train Passby",
+          "120",
+          "8",
+          "135"
+        ],
+        [
+          "Truck Passby",
+          "110",
+          "5",
+          "125"
+        ],
+        [
+          "Car Passby",
+          "100",
+          "3",
+          "115"
+        ]
+      ]
+    }
+  ]
+}

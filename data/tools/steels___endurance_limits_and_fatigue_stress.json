@@ -1,0 +1,81 @@
+{
+  "id": "steels___endurance_limits_and_fatigue_stress",
+  "title": "Steels - Endurance Limits and Fatigue Stress",
+  "description": "Endurance limits and fatigue stress for steels. Reference data for various steel types including carbon, manganese, chrome molybdenum, spring steel, and stainless steels.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Steel Type",
+        "BS Standard",
+        "Treatment",
+        "Tensile Strength σu (MPa)",
+        "Endurance Limit σe (MPa)",
+        "σe / σu Ratio"
+      ],
+      "rows": [
+        [
+          "0.4% Carbon",
+          "BS970 080M40",
+          "Normalized",
+          540,
+          270,
+          0.5
+        ],
+        [
+          "0.4% Carbon",
+          "BS970 080M40",
+          "Hardened and tempered",
+          700,
+          340,
+          0.49
+        ],
+        [
+          "Carbon, manganese",
+          "BS970 150M19",
+          "Normalized",
+          540,
+          250,
+          0.46
+        ],
+        [
+          "Carbon, manganese",
+          "BS970 150M19",
+          "Hardened and tempered",
+          700,
+          325,
+          0.53
+        ],
+        [
+          "3% Chrome molybdenum",
+          "BS970 709M40",
+          "Hardened and tempered",
+          1000,
+          480,
+          0.48
+        ],
+        [
+          "Spring steel",
+          "BS970 735A50",
+          "Hardened and tempered",
+          1500,
+          650,
+          0.43
+        ],
+        [
+          "18.8 Stainless",
+          "N/A",
+          "Cold rolled",
+          1200,
+          490,
+          0.41
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Definitions\n\n**Fatigue** - When a material is subjected to repeated cycles of stress or strain and its structure breaks down, ultimately leading to fracture. Fractures due to fatigue occur at stress levels less than the material's Yield Stress.\n\n**Endurance Limit (Fatigue Limit)** - The amplitude or range of cyclic stress that can be applied to a material without causing fatigue failure. Most steels have an endurance limit approximately half the Tensile Strength.\n\n**Tensile Strength (Ultimate Tensile Strength)** - The limit stress at which the material actually breaks, with sudden release of the stored elastic energy.\n\n**Yield Strength** - The amount of stress that a material can undergo before moving from elastic deformation into plastic deformation.\n\n**Creep** - Time-dependent deformation due to heavy loads over extended periods. Both stress and temperature influence the creep rate.\n\n## Unit Conversion\n\n1 MPa = 10⁶ Pa = 1 N/mm² = 145.0 psi (lbf/in²)"
+    }
+  ]
+}

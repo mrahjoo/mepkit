@@ -1,0 +1,185 @@
+{
+  "id": "lights_vs__power_installation",
+  "title": "Lights vs. Power Installation",
+  "description": "Lights vs. power installations in common types of buildings and rooms. The table below can be used as a guide to installed light power in some common types of buildings and rooms.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Building/Room",
+        "Light Power (watts/Sq.Ft.)"
+      ],
+      "rows": [
+        [
+          "Apartments",
+          "1.0 - 4.0"
+        ],
+        [
+          "Banks",
+          "2.0 - 5.0"
+        ],
+        [
+          "Bars",
+          "1.5 - 2.0"
+        ],
+        [
+          "Cafeterias",
+          "1.5 - 2.5"
+        ],
+        [
+          "Churches",
+          "1.0 - 3.0"
+        ],
+        [
+          "Clubhouses",
+          "1.5 - 2.0"
+        ],
+        [
+          "Cocktail Lounges",
+          "1.5 - 2.0"
+        ],
+        [
+          "Computer Rooms",
+          "1.5 - 5.0"
+        ],
+        [
+          "Court Houses",
+          "2.0 - 5.0"
+        ],
+        [
+          "Dental Centers",
+          "1.5 - 2.5"
+        ],
+        [
+          "Department Stores",
+          "1.0 - 3.0"
+        ],
+        [
+          "Dining Halls",
+          "1.5 - 2.5"
+        ],
+        [
+          "Drug Store",
+          "1.0 - 3.0"
+        ],
+        [
+          "Fire Stations",
+          "2.0 - 3.0"
+        ],
+        [
+          "Hospitals, General Areas",
+          "1.5 - 2.5"
+        ],
+        [
+          "Hotels Public Spaces",
+          "1.5 - 3.0"
+        ],
+        [
+          "Kindergarten",
+          "1.0 - 3.0"
+        ],
+        [
+          "Kitchens",
+          "1.5 - 3.0"
+        ],
+        [
+          "Jail",
+          "1.0 - 2.5"
+        ],
+        [
+          "Libraries",
+          "1.0 - 3.0"
+        ],
+        [
+          "Luncheonettes",
+          "1.5 - 2.5"
+        ],
+        [
+          "Lunch Rooms",
+          "1.5 - 2.5"
+        ],
+        [
+          "Malls",
+          "1.0 - 3.0"
+        ],
+        [
+          "Medical Centers",
+          "1.5 - 2.5"
+        ],
+        [
+          "Motels Public Areas",
+          "1.5 - 3.0"
+        ],
+        [
+          "Motels Guest Rooms",
+          "1.0 - 3.0"
+        ],
+        [
+          "Municipal Buildings",
+          "2.0 - 5.0"
+        ],
+        [
+          "Museums",
+          "1.0 - 3.0"
+        ],
+        [
+          "Nightclubs",
+          "1.5 - 2.0"
+        ],
+        [
+          "Nursing Home Patient Rooms",
+          "2.0 - 3.0"
+        ],
+        [
+          "Police Stations",
+          "2.0 - 3.0"
+        ],
+        [
+          "Post Offices",
+          "2.0 - 3.0"
+        ],
+        [
+          "Precision Manufacturing",
+          "2.0 - 3.0"
+        ],
+        [
+          "Residential",
+          "1.0 - 4.0"
+        ],
+        [
+          "Retail Stores",
+          "2.0 - 6.0"
+        ],
+        [
+          "Restaurants",
+          "1.5 - 3.0"
+        ],
+        [
+          "School Classrooms",
+          "2.0 - 6.0"
+        ],
+        [
+          "Shops",
+          "1.0 - 3.0"
+        ],
+        [
+          "Supermarkets",
+          "1.0 - 3.0"
+        ],
+        [
+          "Taverns",
+          "1.5 - 2.0"
+        ],
+        [
+          "Town Halls",
+          "2.0 - 5.0"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- 1 ft² = 0.0929 m² = 144 in² = 0.1111 yd²\n- 1 watts/ft² = 10.8 watts/m²"
+    }
+  ]
+}

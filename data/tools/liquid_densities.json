@@ -1,0 +1,1243 @@
+{
+  "id": "liquid_densities",
+  "title": "Liquid Densities",
+  "description": "Densities of common liquids like acetone, beer, oil, water and more. Look up density values for various liquids at specific temperatures.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Liquid",
+        "Temperature (°C)",
+        "Density (kg/m³)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          18,
+          783
+        ],
+        [
+          "Acetic Acid",
+          25,
+          1049
+        ],
+        [
+          "Acetone",
+          25,
+          784.6
+        ],
+        [
+          "Acetonitrile",
+          20,
+          783
+        ],
+        [
+          "Acrolein",
+          20,
+          840
+        ],
+        [
+          "Acrolonitrile",
+          25,
+          801
+        ],
+        [
+          "Alcohol, ethyl (ethanol)",
+          25,
+          785.1
+        ],
+        [
+          "Alcohol, methyl (methanol)",
+          25,
+          786.5
+        ],
+        [
+          "Alcohol, propyl",
+          25,
+          800
+        ],
+        [
+          "Almond kernel oil",
+          25,
+          910
+        ],
+        [
+          "Allylamine",
+          20,
+          758
+        ],
+        [
+          "Ammonia (aqua)",
+          25,
+          823.5
+        ],
+        [
+          "Aniline",
+          25,
+          1019
+        ],
+        [
+          "Anisole",
+          20,
+          994
+        ],
+        [
+          "Apricot kernel oil",
+          25,
+          910
+        ],
+        [
+          "Argan seed oil",
+          20,
+          912
+        ],
+        [
+          "Avocado pulp oil",
+          25,
+          912
+        ],
+        [
+          "Babassu palm oil",
+          25,
+          914
+        ],
+        [
+          "Beef tallow",
+          25,
+          902
+        ],
+        [
+          "Beer",
+          10,
+          1010
+        ],
+        [
+          "Benzaldehyde",
+          25,
+          1040
+        ],
+        [
+          "Benzene",
+          25,
+          873.8
+        ],
+        [
+          "Benzil",
+          15,
+          1230
+        ],
+        [
+          "Blackcurrant oil",
+          20,
+          923
+        ],
+        [
+          "Borneo tallow",
+          100,
+          855
+        ],
+        [
+          "Brine",
+          15,
+          1230
+        ],
+        [
+          "Bromine",
+          25,
+          3120
+        ],
+        [
+          "Butanal",
+          20,
+          802
+        ],
+        [
+          "Butterfat",
+          15,
+          934
+        ],
+        [
+          "Butyric Acid",
+          20,
+          959
+        ],
+        [
+          "Butane",
+          25,
+          599
+        ],
+        [
+          "2,3-Butandione",
+          18,
+          981
+        ],
+        [
+          "2-Butanone",
+          25,
+          800
+        ],
+        [
+          "n-Butyl Acetate",
+          20,
+          880
+        ],
+        [
+          "n-Butyl Alcohol (Butanol)",
+          20,
+          810
+        ],
+        [
+          "n-Butylchloride",
+          20,
+          886
+        ],
+        [
+          "Cameline oil",
+          15,
+          924
+        ],
+        [
+          "Canola rapeseed oil",
+          20,
+          915
+        ],
+        [
+          "Caproic acid",
+          25,
+          921
+        ],
+        [
+          "Carbolic acid (phenol)",
+          15,
+          956
+        ],
+        [
+          "Carbon disulfide",
+          25,
+          1261
+        ],
+        [
+          "Carbon tetrachloride",
+          25,
+          1584
+        ],
+        [
+          "Carene",
+          25,
+          857
+        ],
+        [
+          "Cashew nut oil",
+          15,
+          914
+        ],
+        [
+          "Castor oil",
+          25,
+          952
+        ],
+        [
+          "Cherry kernel oil",
+          25,
+          918
+        ],
+        [
+          "Chicken fat",
+          15,
+          918
+        ],
+        [
+          "Chinese vegetable tallow",
+          25,
+          887
+        ],
+        [
+          "Chloride",
+          25,
+          1560
+        ],
+        [
+          "Chlorobenzene",
+          20,
+          1106
+        ],
+        [
+          "Chloroform",
+          20,
+          1489
+        ],
+        [
+          "Citric acid (50% solution)",
+          15,
+          1220
+        ],
+        [
+          "Cocoa butter",
+          25,
+          974
+        ],
+        [
+          "Coconut oil",
+          40,
+          930
+        ],
+        [
+          "Cod liver oil",
+          15,
+          924
+        ],
+        [
+          "Cohune nut oil",
+          25,
+          914
+        ],
+        [
+          "Corn oil",
+          20,
+          919
+        ],
+        [
+          "Coriander seed oil",
+          25,
+          908
+        ],
+        [
+          "Cotton seed oil",
+          20,
+          920
+        ],
+        [
+          "Crambe oil",
+          25,
+          906
+        ],
+        [
+          "Cresol",
+          25,
+          1024
+        ],
+        [
+          "Creosote",
+          15,
+          1067
+        ],
+        [
+          "Crude oil (48° API)",
+          15.6,
+          790
+        ],
+        [
+          "Crude oil (40° API)",
+          15.6,
+          825
+        ],
+        [
+          "Crude oil (35.6° API)",
+          15.6,
+          847
+        ],
+        [
+          "Crude oil (32.6° API)",
+          15.6,
+          862
+        ],
+        [
+          "Crude oil, California",
+          15.6,
+          915
+        ],
+        [
+          "Crude oil, Mexican",
+          15.6,
+          973
+        ],
+        [
+          "Crude oil, Texas",
+          15.6,
+          873
+        ],
+        [
+          "Cumene",
+          25,
+          860
+        ],
+        [
+          "Cyclohexane",
+          20,
+          779
+        ],
+        [
+          "Cyclopentane",
+          20,
+          745
+        ],
+        [
+          "Decane",
+          25,
+          726.3
+        ],
+        [
+          "Diethanolamine",
+          20,
+          1097
+        ],
+        [
+          "Diethyl ether",
+          20,
+          714
+        ],
+        [
+          "o-Dichlorobenzene",
+          20,
+          1306
+        ],
+        [
+          "Dichloromethane",
+          20,
+          1326
+        ],
+        [
+          "Diethylene glycol",
+          15,
+          1120
+        ],
+        [
+          "Diethylene glycol diethyl ether",
+          20,
+          906
+        ],
+        [
+          "Diisopropyl ether",
+          25,
+          719
+        ],
+        [
+          "Dimethyl acetamide",
+          20,
+          942
+        ],
+        [
+          "N,N-Dimethylformamide",
+          20,
+          949
+        ],
+        [
+          "Dimethyl sulfate",
+          20,
+          1332
+        ],
+        [
+          "Dimethyl sulfide",
+          20,
+          848
+        ],
+        [
+          "Dimethyl sulfoxide",
+          20,
+          1100
+        ],
+        [
+          "Dodecane",
+          25,
+          754.6
+        ],
+        [
+          "Ethane",
+          -89,
+          570
+        ],
+        [
+          "Ethanol",
+          20,
+          790
+        ],
+        [
+          "Ethanol (95%)",
+          20,
+          810
+        ],
+        [
+          "Ether",
+          25,
+          713.5
+        ],
+        [
+          "Ethylamine",
+          16,
+          681
+        ],
+        [
+          "Ethyl Acetate",
+          20,
+          901
+        ],
+        [
+          "Ethyl Alcohol (Ethanol)",
+          20,
+          789
+        ],
+        [
+          "Ethyl chloride",
+          20,
+          900
+        ],
+        [
+          "Ethyl Ether",
+          20,
+          713
+        ],
+        [
+          "Ethylene Dichloride",
+          20,
+          1253
+        ],
+        [
+          "Ethylene glycol",
+          25,
+          1097
+        ],
+        [
+          "Euphorbia lagascae seed oil",
+          25,
+          952
+        ],
+        [
+          "Trichlorofluoromethane (R-11)",
+          25,
+          1476
+        ],
+        [
+          "Dichlorodifluoromethane (R-12)",
+          25,
+          1311
+        ],
+        [
+          "Chlorodifluoromethane (R-22)",
+          25,
+          1194
+        ],
+        [
+          "Formaldehyde",
+          45,
+          812
+        ],
+        [
+          "Formic acid (10%)",
+          20,
+          1025
+        ],
+        [
+          "Formic acid (80%)",
+          20,
+          1221
+        ],
+        [
+          "Fuel oil",
+          15.6,
+          890
+        ],
+        [
+          "Furan",
+          25,
+          1416
+        ],
+        [
+          "Furfural",
+          25,
+          1155
+        ],
+        [
+          "Gasoline, natural",
+          15.6,
+          711
+        ],
+        [
+          "Gasoline, Vehicle",
+          15.6,
+          737
+        ],
+        [
+          "Gas oils",
+          15.6,
+          890
+        ],
+        [
+          "Glycerine (95%)",
+          25,
+          1249
+        ],
+        [
+          "Glycerol",
+          25,
+          1261
+        ],
+        [
+          "Grape seed oil",
+          20,
+          923
+        ],
+        [
+          "Hazelnut oil",
+          25,
+          909
+        ],
+        [
+          "Heating oil",
+          20,
+          920
+        ],
+        [
+          "Hempseed oil",
+          25,
+          921
+        ],
+        [
+          "Heptane",
+          25,
+          679.5
+        ],
+        [
+          "Herring oil",
+          20,
+          914
+        ],
+        [
+          "Hexane",
+          25,
+          654.8
+        ],
+        [
+          "Hexanol",
+          25,
+          811
+        ],
+        [
+          "Hexene",
+          25,
+          671
+        ],
+        [
+          "Hexylamine",
+          20,
+          766
+        ],
+        [
+          "Hydrazine",
+          25,
+          795
+        ],
+        [
+          "Illipe mowrah butter",
+          100,
+          862
+        ],
+        [
+          "Ionene",
+          25,
+          932
+        ],
+        [
+          "Isobutyl Alcohol",
+          20,
+          802
+        ],
+        [
+          "Iso-Octane",
+          20,
+          692
+        ],
+        [
+          "Isopropyl Alcohol",
+          20,
+          785
+        ],
+        [
+          "Isopropylbenzene hydroperoxide",
+          20,
+          1030
+        ],
+        [
+          "Isopropyl Myristate",
+          20,
+          853
+        ],
+        [
+          "Kapok seed oil",
+          15,
+          926
+        ],
+        [
+          "Kerosene (paraffin)",
+          15.6,
+          820.1
+        ],
+        [
+          "Linolenic Acid",
+          25,
+          897
+        ],
+        [
+          "Linseed oil",
+          25,
+          924
+        ],
+        [
+          "Lubricating oil",
+          20,
+          910
+        ],
+        [
+          "Machine oil",
+          20,
+          910
+        ],
+        [
+          "Mango seed oil",
+          15,
+          912
+        ],
+        [
+          "Menhaden oil",
+          15,
+          920
+        ],
+        [
+          "Mercury",
+          20,
+          13590
+        ],
+        [
+          "Methane",
+          -164,
+          465
+        ],
+        [
+          "Methanol",
+          20,
+          791
+        ],
+        [
+          "Methylamine",
+          25,
+          656
+        ],
+        [
+          "Methyl chloride",
+          20,
+          990
+        ],
+        [
+          "Methyl Isoamyl Ketone",
+          20,
+          888
+        ],
+        [
+          "Methyl Isobutyl Ketone",
+          20,
+          801
+        ],
+        [
+          "Methyl n-Propyl Ketone",
+          20,
+          808
+        ],
+        [
+          "Methyl t-Butyl Ether",
+          20,
+          741
+        ],
+        [
+          "N-Methylpyrrolidone",
+          20,
+          1030
+        ],
+        [
+          "Methyl Ethyl Ketone",
+          20,
+          805
+        ],
+        [
+          "Milk",
+          15,
+          1035
+        ],
+        [
+          "Moringa peregrina seed oil",
+          24,
+          903
+        ],
+        [
+          "Mustard seed oil",
+          20,
+          913
+        ],
+        [
+          "Mutton tallow",
+          15,
+          946
+        ],
+        [
+          "Naphtha",
+          15,
+          665
+        ],
+        [
+          "Naphtha, wood",
+          25,
+          960
+        ],
+        [
+          "Naphthalene",
+          25,
+          820
+        ],
+        [
+          "Neem oil",
+          30,
+          912
+        ],
+        [
+          "Niger seed oil",
+          15,
+          924
+        ],
+        [
+          "Nitric acid",
+          0,
+          1560
+        ],
+        [
+          "Oat bran oil",
+          25,
+          904
+        ],
+        [
+          "Oat oil",
+          25,
+          917
+        ],
+        [
+          "Ocimene",
+          25,
+          798
+        ],
+        [
+          "Octane",
+          15,
+          698.6
+        ],
+        [
+          "Oil of resin",
+          20,
+          940
+        ],
+        [
+          "Oil of turpentine",
+          20,
+          870
+        ],
+        [
+          "Oil, lubricating",
+          20,
+          900
+        ],
+        [
+          "Oiticica oil",
+          20,
+          972
+        ],
+        [
+          "Olive oil",
+          20,
+          911
+        ],
+        [
+          "Oxygen (liquid)",
+          -183,
+          1140
+        ],
+        [
+          "Palm kernel oil",
+          15,
+          922
+        ],
+        [
+          "Palm oil",
+          15,
+          914
+        ],
+        [
+          "Palm olein",
+          40,
+          910
+        ],
+        [
+          "Palm stearin",
+          60,
+          884
+        ],
+        [
+          "Paraldehyde",
+          20,
+          994
+        ],
+        [
+          "Paraffin oil",
+          20,
+          800
+        ],
+        [
+          "Palmitic Acid",
+          25,
+          851
+        ],
+        [
+          "Peanut oil",
+          20,
+          914
+        ],
+        [
+          "Pentane",
+          20,
+          626
+        ],
+        [
+          "Perchlorethylene",
+          20,
+          1620
+        ],
+        [
+          "Perilla oil",
+          25,
+          924
+        ],
+        [
+          "Petroleum ether",
+          20,
+          640
+        ],
+        [
+          "Phenol (carbolic acid)",
+          25,
+          1072
+        ],
+        [
+          "Phosgene",
+          0,
+          1378
+        ],
+        [
+          "Phytadiene",
+          25,
+          823
+        ],
+        [
+          "Phulwara butter",
+          100,
+          862
+        ],
+        [
+          "Pinene",
+          25,
+          857
+        ],
+        [
+          "Pine nut oil",
+          15,
+          919
+        ],
+        [
+          "Poppy seed oil",
+          25,
+          916
+        ],
+        [
+          "Pork lard",
+          20,
+          898
+        ],
+        [
+          "Propanal",
+          25,
+          866
+        ],
+        [
+          "Propane",
+          -40,
+          493.5
+        ],
+        [
+          "Propane (R-290)",
+          25,
+          494
+        ],
+        [
+          "Propanol",
+          25,
+          804
+        ],
+        [
+          "Propylamine",
+          20,
+          717
+        ],
+        [
+          "Propylene carbonate",
+          20,
+          1201
+        ],
+        [
+          "Propylene",
+          25,
+          514.4
+        ],
+        [
+          "Propylene glycol",
+          25,
+          1036
+        ],
+        [
+          "Pyridine",
+          25,
+          979
+        ],
+        [
+          "Pyrrole",
+          25,
+          966
+        ],
+        [
+          "Rapeseed oil",
+          20,
+          920
+        ],
+        [
+          "Resorcinol",
+          25,
+          1269
+        ],
+        [
+          "Rice bran oil",
+          25,
+          916
+        ],
+        [
+          "Rosin oil",
+          15,
+          980
+        ],
+        [
+          "Salmon oil",
+          15,
+          924
+        ],
+        [
+          "Sardine oil",
+          25,
+          915
+        ],
+        [
+          "Sea water",
+          25,
+          1025
+        ],
+        [
+          "Seaflower seed oil",
+          15,
+          924
+        ],
+        [
+          "Shark liver oil",
+          25,
+          917
+        ],
+        [
+          "Sheanut butter",
+          100,
+          863
+        ],
+        [
+          "Silane",
+          25,
+          718
+        ],
+        [
+          "Silicone oil",
+          25,
+          972.5
+        ],
+        [
+          "Sodium Hydroxide (caustic soda)",
+          15,
+          1250
+        ],
+        [
+          "Sorbaldehyde",
+          25,
+          895
+        ],
+        [
+          "Soybean oil",
+          20,
+          920
+        ],
+        [
+          "Stearic Acid",
+          25,
+          891
+        ],
+        [
+          "Stillinga seed kernel oil",
+          25,
+          937
+        ],
+        [
+          "Sulfur dichloride",
+          20,
+          1620
+        ],
+        [
+          "Sulfuric Acid (95%)",
+          20,
+          1839
+        ],
+        [
+          "Sulfurous acid",
+          -20,
+          1490
+        ],
+        [
+          "Sulfuryl chloride",
+          20,
+          1680
+        ],
+        [
+          "Sugar solution (68 brix)",
+          15,
+          1338
+        ],
+        [
+          "Sunflower seed oil",
+          20,
+          919
+        ],
+        [
+          "Styrene",
+          25,
+          903
+        ],
+        [
+          "Tall oil",
+          25,
+          969
+        ],
+        [
+          "Tar",
+          20,
+          1200
+        ],
+        [
+          "Terpinene",
+          25,
+          847
+        ],
+        [
+          "Tetrahydrofuran",
+          20,
+          888
+        ],
+        [
+          "Toluene",
+          20,
+          867
+        ],
+        [
+          "Transformer oil",
+          20,
+          880
+        ],
+        [
+          "Trichlorethylene",
+          20,
+          1470
+        ],
+        [
+          "Triethylamine",
+          20,
+          728
+        ],
+        [
+          "Trifluoroacetic Acid",
+          20,
+          1489
+        ],
+        [
+          "Tung oil",
+          25,
+          912
+        ],
+        [
+          "Turpentine oil",
+          25,
+          860
+        ],
+        [
+          "Ucuhuba butter oil",
+          100,
+          870
+        ],
+        [
+          "Vernonia seed oil",
+          30,
+          901
+        ],
+        [
+          "Walnut oil",
+          25,
+          921
+        ],
+        [
+          "Water, heavy",
+          11.6,
+          1105
+        ],
+        [
+          "Water, pure",
+          4,
+          1000
+        ],
+        [
+          "Water, sea",
+          25,
+          1022
+        ],
+        [
+          "Whale oil",
+          15,
+          925
+        ],
+        [
+          "Wheatgerm oil",
+          25,
+          926
+        ],
+        [
+          "o-Xylene",
+          20,
+          880
+        ],
+        [
+          "m-Xylene",
+          20,
+          864
+        ],
+        [
+          "p-Xylene",
+          20,
+          861
+        ]
+      ]
+    }
+  ]
+}

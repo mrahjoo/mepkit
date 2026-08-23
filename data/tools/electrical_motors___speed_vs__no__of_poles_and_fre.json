@@ -1,0 +1,48 @@
+{
+  "id": "electrical_motors___speed_vs__no__of_poles_and_fre",
+  "title": "Electrical Motors - Speed vs. No. of Poles and Frequency",
+  "description": "The speed of electrical motors with 2, 4, 6 or 8 poles at 50 Hz and 60 Hz. The speed at which an electric induction motor operates depends on the input power frequency and the number of electrical magnetic poles.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Poles",
+        "Frequency 50 Hz - Synchronous (rpm)",
+        "Frequency 50 Hz - Full Load (rpm)",
+        "Frequency 60 Hz - Synchronous (rpm)",
+        "Frequency 60 Hz - Full Load (rpm)"
+      ],
+      "rows": [
+        [
+          2,
+          3000,
+          2850,
+          3600,
+          3450
+        ],
+        [
+          4,
+          1500,
+          1425,
+          1800,
+          1725
+        ],
+        [
+          6,
+          1000,
+          950,
+          1200,
+          1150
+        ],
+        [
+          8,
+          750,
+          700,
+          900,
+          850
+        ]
+      ]
+    }
+  ]
+}

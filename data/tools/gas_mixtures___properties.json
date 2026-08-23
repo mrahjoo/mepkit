@@ -1,0 +1,141 @@
+{
+  "id": "gas_mixtures___properties",
+  "title": "Gas Mixtures - Properties",
+  "description": "Calculate properties of gas mixtures including mass, individual gas constant, and density using the ideal gas law adapted for gas mixtures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Gas Mixtures - Properties\n\nMixture of gases are common in many applications such as air (nitrogen, oxygen, and water vapor) and combustion gases (nitrogen, water vapor, and carbon dioxide).\n\n### The Ideal Gas Law for a Gas Mixture\n\n**p V = mm Rm T**\n\nWhere:\n- p = absolute pressure in the mixture (N/m², lb/ft²)\n- V = volume of the mixture (m³, ft³)\n- mm = mass of the mixture (kg, lb)\n- Rm = individual gas constant for the mixture (J/kg K, ft lb/slugs oR)\n- T = absolute temperature in the mixture (K, °R)\n\n### Key Formulas\n\n**Mass of Gas Mixture:**\nmm = m₁ + m₂ + ... + mₙ\n\n**Individual Gas Constant of Gas Mixture:**\nRm = (R₁m₁ + R₂m₂ + ... + Rₙmₙ) / (m₁ + m₂ + ... + mₙ)\n\n**Density of Gas Mixture:**\nρm = (ρ₁v₁ + ρ₂v₂ + ... + ρₙvₙ) / (v₁ + v₂ + ... + vₙ)\n\nWhere:\n- ρm = density of the gas mixture (kg/m³, lb/ft³)\n- ρ₁...ρₙ = density of each component (kg/m³, lb/ft³)\n- v₁ + v₂ + ... + vₙ = volume share of each component (m³, ft³)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Mass (kg)",
+        "Gas Constant R (J/kg K)",
+        "Density (kg/m³)",
+        "Volume (m³)"
+      ],
+      "rows": [
+        [
+          "N₂",
+          0.77,
+          296.8,
+          1.165,
+          0.66
+        ],
+        [
+          "O₂",
+          0.23,
+          259.8,
+          1.429,
+          0.34
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass_component_1",
+          "label": "Mass of Component 1",
+          "type": "number",
+          "defaultValue": 0.77,
+          "unit": "kg"
+        },
+        {
+          "id": "mass_component_2",
+          "label": "Mass of Component 2",
+          "type": "number",
+          "defaultValue": 0.23,
+          "unit": "kg"
+        },
+        {
+          "id": "gas_constant_1",
+          "label": "Gas Constant of Component 1",
+          "type": "number",
+          "defaultValue": 296.8,
+          "unit": "J/kg K"
+        },
+        {
+          "id": "gas_constant_2",
+          "label": "Gas Constant of Component 2",
+          "type": "number",
+          "defaultValue": 259.8,
+          "unit": "J/kg K"
+        },
+        {
+          "id": "density_1",
+          "label": "Density of Component 1",
+          "type": "number",
+          "defaultValue": 1.165,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "density_2",
+          "label": "Density of Component 2",
+          "type": "number",
+          "defaultValue": 1.429,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "volume_1",
+          "label": "Volume of Component 1",
+          "type": "number",
+          "defaultValue": 0.66,
+          "unit": "m³"
+        },
+        {
+          "id": "volume_2",
+          "label": "Volume of Component 2",
+          "type": "number",
+          "defaultValue": 0.34,
+          "unit": "m³"
+        },
+        {
+          "id": "pressure",
+          "label": "Absolute Pressure",
+          "type": "number",
+          "defaultValue": 101325,
+          "unit": "N/m²"
+        },
+        {
+          "id": "temperature",
+          "label": "Absolute Temperature",
+          "type": "number",
+          "defaultValue": 293.15,
+          "unit": "K"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_mass",
+          "label": "Total Mass of Mixture",
+          "formula": "inputs.mass_component_1 + inputs.mass_component_2",
+          "unit": "kg"
+        },
+        {
+          "id": "mixture_gas_constant",
+          "label": "Individual Gas Constant of Mixture",
+          "formula": "(inputs.gas_constant_1 * inputs.mass_component_1 + inputs.gas_constant_2 * inputs.mass_component_2) / (inputs.mass_component_1 + inputs.mass_component_2)",
+          "unit": "J/kg K",
+          "format": "decimal"
+        },
+        {
+          "id": "total_volume",
+          "label": "Total Volume of Mixture",
+          "formula": "inputs.volume_1 + inputs.volume_2",
+          "unit": "m³"
+        },
+        {
+          "id": "mixture_density",
+          "label": "Density of Gas Mixture",
+          "formula": "(inputs.density_1 * inputs.volume_1 + inputs.density_2 * inputs.volume_2) / (inputs.volume_1 + inputs.volume_2)",
+          "unit": "kg/m³",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

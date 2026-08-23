@@ -1,0 +1,151 @@
+{
+  "id": "cpvc___chemical_resistance",
+  "title": "CPVC - Chemical Resistance",
+  "description": "Chemical resistance of CPVC - Chlorinated Poly(Vinyl Chloride) - to common chemicals and products. This tool provides compatibility information for recommended, not recommended, and cautionary chemicals with CPVC pipes.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## CPVC Chemical Resistance Reference\n\nThis tool provides comprehensive chemical compatibility data for CPVC (Chlorinated Poly(Vinyl Chloride)) pipes and materials.\n\n### Overview\n\nCPVC is widely used in industrial applications for transporting various chemicals. This reference categorizes chemicals into three groups:\n\n1. **Recommended** - Chemicals safe for use with CPVC\n2. **Not Recommended** - Chemicals that may damage CPVC\n3. Used with Caution** - Chemicals requiring careful consideration based on stress levels\n\n### How to Use This Tool\n\nSelect a chemical category and review the detailed lists to determine CPVC compatibility for your application."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Chemical",
+        "Category",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde (up to 10%)",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Acetone (up to 5%)",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Acetone (>5%)",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Acetic Acid (pure)",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Ammonia",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Bleach",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Chlorine (aqueous)",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Hydrogen Peroxide (10%)",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Hydrochloric Acid",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Nitric Acid",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Phosphoric Acid",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Sodium Hydroxide",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Sulfuric Acid",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Water",
+          "Recommended",
+          "Safe for CPVC applications"
+        ],
+        [
+          "Carbon Tetrachloride",
+          "Not Recommended",
+          "May damage CPVC"
+        ],
+        [
+          "Chloroform",
+          "Not Recommended",
+          "May damage CPVC"
+        ],
+        [
+          "Dichloroethylene",
+          "Not Recommended",
+          "May damage CPVC"
+        ],
+        [
+          "Methylene Chloride",
+          "Not Recommended",
+          "May damage CPVC"
+        ],
+        [
+          "Trichloroethylene",
+          "Not Recommended",
+          "May damage CPVC"
+        ],
+        [
+          "Benzene",
+          "Used with Caution",
+          "Consider stress levels carefully"
+        ],
+        [
+          "Diesel Fuel",
+          "Used with Caution",
+          "Consider stress levels carefully"
+        ],
+        [
+          "Ethyl Benzene",
+          "Used with Caution",
+          "Consider stress levels carefully"
+        ],
+        [
+          "Naphthalene",
+          "Used with Caution",
+          "Consider stress levels carefully"
+        ],
+        [
+          "Toluene",
+          "Used with Caution",
+          "Consider stress levels carefully"
+        ],
+        [
+          "Xylene",
+          "Used with Caution",
+          "Consider stress levels carefully"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Detailed Chemical Categories\n\n### Recommended Chemicals (Safe for CPVC)\n\nThe following chemicals are approved for use with CPVC pipes:\n\n- **Acids**: Acetic, Formic, Hydrochloric, Nitric, Phosphoric, Sulfuric\n- **Bases**: Ammonia, Potassium Hydroxide, Sodium Hydroxide\n- **Oxidizers**: Bleach, Chlorine, Hydrogen Peroxide, Permanganate\n- **Salts**: Most common inorganic salts\n- **Organics**: Alcohols, Glycols, Esters (with concentration limits)\n- **Common Fluids**: Water, Gasoline, Kerosene, Mineral Oil\n\n### Chemicals NOT Recommended (Avoid with CPVC)\n\nThese chemicals can damage or degrade CPVC:\n\n- **Halogenated Hydrocarbons**: Carbon Tetrachloride, Chloroform, Dichloroethylene, Methylene Chloride, Trichloroethylene\n- **Chlorinated Aromatics**: Chlorobenzene, Chlorobenzene derivatives\n- **Other Halogenated Compounds**: Allyl Chloride, Ethylene Chloride, Methyl Chloride\n- **Petroleum Derivatives**: Motor Oil, Creosote, Asphalt\n- **Phthalates**: Dibutyl Phthalate, Dioctyl Phthalate, Dimethyl Phthalate\n\n### Chemicals Used with Caution\n\nThese chemicals require careful evaluation based on:\n- Concentration levels\n- Temperature\n- Pressure\n- Duration of exposure\n- Stress conditions\n\n**Common cautionary chemicals:**\n- Aromatic Hydrocarbons: Benzene, Toluene, Xylene\n- Aromatic Amines: Aniline, Aromatic compounds\n- Oils: Vegetable, Mineral, Lard, Linseed, Castor, Coconut\n- Specialized Fuels: Diesel, Naphtha\n- Halogenated Compounds: Some chlorinated and brominated substances\n\n## Application Recommendations\n\n1. **Always verify** chemical compatibility before installation\n2. **Consider concentration** - many chemicals are safe at low concentrations but problematic at high concentrations\n3. **Evaluate temperature** - chemical resistance may vary with temperature changes\n4. **Assess stress levels** - mechanical stress can accelerate chemical degradation\n5. **Consult manufacturer** - when in doubt, contact CPVC manufacturers for specific applications"
+    }
+  ]
+}

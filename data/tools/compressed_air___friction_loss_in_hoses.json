@@ -1,0 +1,169 @@
+{
+  "id": "compressed_air___friction_loss_in_hoses",
+  "title": "Compressed Air - Friction Loss in Hoses",
+  "description": "Calculate friction loss in compressed air hoses based on pipe diameter, flow rate, pressure, and hose length",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Friction Loss Calculator for Compressed Air Hoses",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Hose Diameter",
+          "type": "number",
+          "defaultValue": 0.75,
+          "unit": "inches"
+        },
+        {
+          "id": "pressure",
+          "label": "Operating Pressure (Gauge)",
+          "type": "select",
+          "options": [
+            {
+              "label": "50 psi",
+              "value": 50
+            },
+            {
+              "label": "70 psi",
+              "value": 70
+            },
+            {
+              "label": "90 psi",
+              "value": 90
+            },
+            {
+              "label": "110 psi",
+              "value": 110
+            }
+          ],
+          "defaultValue": 90
+        },
+        {
+          "id": "flow_rate",
+          "label": "Air Flow Rate",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "cfm"
+        },
+        {
+          "id": "hose_length",
+          "label": "Hose Length",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "feet"
+        },
+        {
+          "id": "reference_length",
+          "label": "Reference Length for Loss Rate",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "feet"
+        },
+        {
+          "id": "reference_loss",
+          "label": "Friction Loss at Reference Length",
+          "type": "number",
+          "defaultValue": 0.4,
+          "unit": "psi"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "friction_loss",
+          "label": "Friction Loss in Hose",
+          "formula": "(inputs.reference_loss / inputs.reference_length) * inputs.hose_length",
+          "unit": "psi",
+          "format": "decimal"
+        },
+        {
+          "id": "friction_loss_kpa",
+          "label": "Friction Loss in Hose",
+          "formula": "(inputs.reference_loss / inputs.reference_length) * inputs.hose_length * 6.9",
+          "unit": "kPa",
+          "format": "decimal"
+        },
+        {
+          "id": "friction_loss_bar",
+          "label": "Friction Loss in Hose",
+          "formula": "(inputs.reference_loss / inputs.reference_length) * inputs.hose_length * 0.069",
+          "unit": "bar",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Friction Loss vs Hose Length",
+      "options": {
+        "title": {
+          "text": "Friction Loss in Compressed Air Hose"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Hose Length (ft)",
+          "data": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            100,
+            150,
+            200
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Friction Loss (psi)"
+        },
+        "series": [
+          {
+            "name": "50 psi line",
+            "type": "line",
+            "data": [],
+            "smooth": true,
+            "itemStyle": {
+              "color": "#000000"
+            }
+          },
+          {
+            "name": "70 psi line",
+            "type": "line",
+            "data": [],
+            "smooth": true,
+            "itemStyle": {
+              "color": "#FF0000"
+            }
+          },
+          {
+            "name": "90 psi line",
+            "type": "line",
+            "data": [],
+            "smooth": true,
+            "itemStyle": {
+              "color": "#FFFF00"
+            }
+          },
+          {
+            "name": "110 psi line",
+            "type": "line",
+            "data": [],
+            "smooth": true,
+            "itemStyle": {
+              "color": "#0000FF"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- 1 psig = 6.9 kPa = 0.069 bar\n- 1 inch = 25.4 mm\n- 1 ft (foot) = 0.3048 m\n- 1 scfm = 0.472 nl/s\n\n## Formula\n\nFriction Loss = (Reference Loss / Reference Length) × Hose Length\n\n## Example\n\nFor a 3/4\" hose with 90 psi pressure and 30 cfm flow rate:\n- Reference friction loss: 0.4 psi per 50 ft\n- For a 10 ft hose: (0.4 psi / 50 ft) × 10 ft = 0.08 psi"
+    }
+  ]
+}

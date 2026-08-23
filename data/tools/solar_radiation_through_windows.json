@@ -1,0 +1,95 @@
+{
+  "id": "solar_radiation_through_windows",
+  "title": "Solar Radiation through Windows",
+  "description": "Heat from sun transmitted through windows. Calculate solar heat transmitted through vertical and horizontal single glass windows at different northern latitudes.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "chart",
+      "content": "Solar Radiation through Single Glass Windows",
+      "inputs": [
+        {
+          "id": "latitude",
+          "label": "Latitude (degrees North)",
+          "type": "select",
+          "options": [
+            {
+              "value": 60,
+              "label": "60° North"
+            },
+            {
+              "value": 64,
+              "label": "64° North"
+            },
+            {
+              "value": 68,
+              "label": "68° North"
+            }
+          ],
+          "defaultValue": 60
+        },
+        {
+          "id": "window_orientation",
+          "label": "Window Orientation",
+          "type": "select",
+          "options": [
+            {
+              "value": "vertical",
+              "label": "Vertical"
+            },
+            {
+              "value": "horizontal",
+              "label": "Horizontal"
+            }
+          ],
+          "defaultValue": "vertical"
+        }
+      ],
+      "options": {
+        "title": {
+          "text": "Solar Radiation Heat Transmission through Glass Windows",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "cross"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Time of Day",
+          "data": [
+            "06:00",
+            "08:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00",
+            "18:00"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Solar Radiation (W/m²)"
+        },
+        "series": [
+          {
+            "data": [
+              0,
+              150,
+              450,
+              650,
+              500,
+              200,
+              0
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Single Glass Window"
+          }
+        ]
+      }
+    }
+  ]
+}

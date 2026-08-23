@@ -1,0 +1,653 @@
+{
+  "id": "scientific_and_engineering_terms___ansi_abbreviati",
+  "title": "Scientific and Engineering Terms - ANSI Abbreviations",
+  "description": "Abbreviations for Use on Drawings and in Text - ANSI Y1.1-1972. A comprehensive reference table of scientific and engineering term abbreviations used in technical documentation and drawings.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Term",
+        "Abbreviation"
+      ],
+      "rows": [
+        [
+          "Absolute",
+          "abs"
+        ],
+        [
+          "Alternating current",
+          "ac"
+        ],
+        [
+          "Ampere-hour",
+          "amp hr"
+        ],
+        [
+          "Angstrom unit",
+          "A"
+        ],
+        [
+          "Antilogarithm",
+          "antilog"
+        ],
+        [
+          "Arithmetical average",
+          "aa"
+        ],
+        [
+          "Atmosphere",
+          "atm"
+        ],
+        [
+          "Atomic weight",
+          "at wt"
+        ],
+        [
+          "Avoirdupois",
+          "avdp"
+        ],
+        [
+          "Barometer",
+          "baro"
+        ],
+        [
+          "Board feet (feet board measure)",
+          "fbm"
+        ],
+        [
+          "Boiler pressure",
+          "bopress"
+        ],
+        [
+          "Boiling point",
+          "bp"
+        ],
+        [
+          "Brinell hardness number",
+          "Bhn"
+        ],
+        [
+          "British thermal unit",
+          "Btu or B"
+        ],
+        [
+          "Bushel",
+          "bu"
+        ],
+        [
+          "Calorie",
+          "cal"
+        ],
+        [
+          "Candle",
+          "cd"
+        ],
+        [
+          "Center to center",
+          "c to c"
+        ],
+        [
+          "Centimeter",
+          "cm"
+        ],
+        [
+          "Centimeter-gram-second (system)",
+          "cgs"
+        ],
+        [
+          "Chemical",
+          "chem"
+        ],
+        [
+          "Chemically pure",
+          "cp"
+        ],
+        [
+          "Circular",
+          "circ"
+        ],
+        [
+          "Circular mil",
+          "cmil"
+        ],
+        [
+          "Coefficient",
+          "coef"
+        ],
+        [
+          "Cologarithm",
+          "colog"
+        ],
+        [
+          "Concentrate",
+          "conc"
+        ],
+        [
+          "Conductivity",
+          "cndct"
+        ],
+        [
+          "Constant",
+          "const"
+        ],
+        [
+          "Cord",
+          "cd"
+        ],
+        [
+          "Cosecant",
+          "csc"
+        ],
+        [
+          "Cosine",
+          "cos"
+        ],
+        [
+          "Cost, insurance and freight",
+          "cif"
+        ],
+        [
+          "Cotangent",
+          "ctn"
+        ],
+        [
+          "Counter electromotive force",
+          "cemf"
+        ],
+        [
+          "Cubic",
+          "cu"
+        ],
+        [
+          "Cubic centimeter",
+          "cm3 or cc"
+        ],
+        [
+          "Cubic foot",
+          "ft3 or cu ft"
+        ],
+        [
+          "Cubic feet per second",
+          "ft3/s or cfs"
+        ],
+        [
+          "Cubic inch",
+          "in3 or cu in"
+        ],
+        [
+          "Cubic meter",
+          "m3 or cu m"
+        ],
+        [
+          "Cubic millimeter",
+          "mm3 or cumm"
+        ],
+        [
+          "Cubic yard",
+          "yd3 or cu yd"
+        ],
+        [
+          "Current density",
+          "cd"
+        ],
+        [
+          "Cylinder",
+          "cyl"
+        ],
+        [
+          "Decibel",
+          "dB"
+        ],
+        [
+          "Degree",
+          "de or o"
+        ],
+        [
+          "Degree Centigrade",
+          "oC"
+        ],
+        [
+          "Degree Fahrenheit",
+          "oF"
+        ],
+        [
+          "Degree Kelvin",
+          "K"
+        ],
+        [
+          "Diameter",
+          "dia"
+        ],
+        [
+          "Direct current",
+          "dc"
+        ],
+        [
+          "Dozen",
+          "doz"
+        ],
+        [
+          "Dram",
+          "dr"
+        ],
+        [
+          "Efficiency",
+          "eff"
+        ],
+        [
+          "Electric",
+          "elec"
+        ],
+        [
+          "Electromotive force",
+          "emf"
+        ],
+        [
+          "Elevation",
+          "el"
+        ],
+        [
+          "Engine",
+          "eng"
+        ],
+        [
+          "Engineer",
+          "engr"
+        ],
+        [
+          "Engineering",
+          "engrg"
+        ],
+        [
+          "Equation",
+          "eq"
+        ],
+        [
+          "External",
+          "ext"
+        ],
+        [
+          "Fluid",
+          "fl"
+        ],
+        [
+          "Foot",
+          "ft"
+        ],
+        [
+          "Foot-candle",
+          "fc"
+        ],
+        [
+          "Foot-Lambert",
+          "fL or fl"
+        ],
+        [
+          "Foot per minute",
+          "fpm"
+        ],
+        [
+          "Foot per second",
+          "fps"
+        ],
+        [
+          "Foot-pound (unit of work or mechanical energy)",
+          "ft lb"
+        ],
+        [
+          "Foot-pound-second (system)",
+          "fps"
+        ],
+        [
+          "Free on board",
+          "fob"
+        ],
+        [
+          "Freezing point",
+          "fp"
+        ],
+        [
+          "Frequency",
+          "freq"
+        ],
+        [
+          "Fusion point",
+          "fnpt"
+        ],
+        [
+          "Gallon",
+          "gal"
+        ],
+        [
+          "Gallon per minute",
+          "gpm"
+        ],
+        [
+          "Gallon per second",
+          "gps"
+        ],
+        [
+          "Grain",
+          "gr"
+        ],
+        [
+          "Gram",
+          "g"
+        ],
+        [
+          "Greatest common divisor",
+          "gcd"
+        ],
+        [
+          "High pressure",
+          "hp"
+        ],
+        [
+          "Horsepower",
+          "hp"
+        ],
+        [
+          "Horsepower-hour",
+          "hp hr"
+        ],
+        [
+          "Hour",
+          "h or hr"
+        ],
+        [
+          "Hyperbolic cosine",
+          "cosh"
+        ],
+        [
+          "Hyperbolic sine",
+          "sinh"
+        ],
+        [
+          "Hyperbolic tangent",
+          "tanh"
+        ],
+        [
+          "Inch",
+          "in"
+        ],
+        [
+          "Inch per second",
+          "in/s or ips"
+        ],
+        [
+          "Inch-pound",
+          "in lb"
+        ],
+        [
+          "Indicated horsepower-hour",
+          "iph"
+        ],
+        [
+          "Intermediate pressure",
+          "ip"
+        ],
+        [
+          "Internal",
+          "intl"
+        ],
+        [
+          "Kilovolt-ampere/hour",
+          "KVA-h or kVah"
+        ],
+        [
+          "Kilowatt-hour meter",
+          "kwhm"
+        ],
+        [
+          "Latitude",
+          "lat"
+        ],
+        [
+          "Least common multiple",
+          "lcm"
+        ],
+        [
+          "Liquid",
+          "liq"
+        ],
+        [
+          "Logarithm (common)",
+          "log"
+        ],
+        [
+          "Logarithm (natural)",
+          "ln"
+        ],
+        [
+          "Low pressure",
+          "lp"
+        ],
+        [
+          "Lumen per watt",
+          "lm/W or lpw"
+        ],
+        [
+          "Magnetomotive force",
+          "mmf"
+        ],
+        [
+          "Mathematics (ical)",
+          "math"
+        ],
+        [
+          "Maximum",
+          "max"
+        ],
+        [
+          "Mean effective pressure",
+          "mep"
+        ],
+        [
+          "Melting point",
+          "mp"
+        ],
+        [
+          "Meter",
+          "m"
+        ],
+        [
+          "Meter-kilogram-second",
+          "mks"
+        ],
+        [
+          "Microfarad",
+          "μF"
+        ],
+        [
+          "Mile",
+          "mi"
+        ],
+        [
+          "Mile per hour",
+          "mi/h or mph"
+        ],
+        [
+          "Milliampere",
+          "mA"
+        ],
+        [
+          "Minimum",
+          "min"
+        ],
+        [
+          "Molecular weight",
+          "mol wt"
+        ],
+        [
+          "Molecule",
+          "mo"
+        ],
+        [
+          "National Electric Code",
+          "NEC"
+        ],
+        [
+          "Ounce",
+          "oz"
+        ],
+        [
+          "Ounce-inch",
+          "oz in"
+        ],
+        [
+          "Pennyweight",
+          "dwt"
+        ],
+        [
+          "Pint",
+          "pt"
+        ],
+        [
+          "Potential difference",
+          "pd"
+        ],
+        [
+          "Pound",
+          "lb"
+        ],
+        [
+          "Pound-force foot (torque unit)",
+          "lbf ft or lb ft"
+        ],
+        [
+          "Pound-force inch (torque unit)",
+          "lbf in or lb in"
+        ],
+        [
+          "pound-force per square foot",
+          "lbf/ft2 or psf"
+        ],
+        [
+          "pound-force per square inch",
+          "lbf/in2 or psi"
+        ],
+        [
+          "pound per horsepower",
+          "lb/hp or php"
+        ],
+        [
+          "Powerfactor",
+          "pf"
+        ],
+        [
+          "Quart",
+          "qt"
+        ],
+        [
+          "Reactive volt-ampere meter",
+          "rva"
+        ],
+        [
+          "Revolution per minute",
+          "r/min or rpm"
+        ],
+        [
+          "Revolution per second",
+          "r/s or rps"
+        ],
+        [
+          "Root mean square",
+          "rms"
+        ],
+        [
+          "Round",
+          "rnd"
+        ],
+        [
+          "Secant",
+          "sec"
+        ],
+        [
+          "Second",
+          "s or sec"
+        ],
+        [
+          "Sine",
+          "sin"
+        ],
+        [
+          "Specific gravity",
+          "sp gr"
+        ],
+        [
+          "Specific heat",
+          "sp ht"
+        ],
+        [
+          "Square",
+          "sq"
+        ],
+        [
+          "Square centimeter",
+          "cm2 or sq cm"
+        ],
+        [
+          "Square foot",
+          "ft2 or sq ft"
+        ],
+        [
+          "Square inch",
+          "in2 or sq in"
+        ],
+        [
+          "Square kilometer",
+          "km2 or sq km"
+        ],
+        [
+          "Square root of mean square",
+          "rms"
+        ],
+        [
+          "Standard",
+          "std"
+        ],
+        [
+          "Tangent",
+          "tan"
+        ],
+        [
+          "Temperature",
+          "temp"
+        ],
+        [
+          "Tensile strength",
+          "ts"
+        ],
+        [
+          "Versed sine",
+          "vers"
+        ],
+        [
+          "Volt",
+          "V"
+        ],
+        [
+          "Watt",
+          "W"
+        ],
+        [
+          "Watthour",
+          "Wh"
+        ],
+        [
+          "Week",
+          "wk"
+        ],
+        [
+          "Weight",
+          "wt"
+        ],
+        [
+          "Yard",
+          "yd"
+        ]
+      ]
+    }
+  ]
+}

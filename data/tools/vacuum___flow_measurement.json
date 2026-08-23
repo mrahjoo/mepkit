@@ -1,0 +1,53 @@
+{
+  "id": "vacuum___flow_measurement",
+  "title": "Vacuum - Flow Measurement",
+  "description": "Measure air volume flow in vacuum. Convert between standard volume flow (scfm/nl/s) and actual volume flow (acfm/al/s) using pressure and temperature.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Vacuum - Flow Measurement Calculator\n\nConvert standard volume flow to actual volume flow in vacuum conditions.\n\nUse the formula:\n\n**qa = qs (29.92 / p) ((t + 460) / 520)**\n\nWhere:\n- **qa** = actual volume flow (acfm)\n- **qs** = standard volume flow (scfm)\n- **p** = actual pressure (in Hg absolute)\n- **t** = temperature (°F)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "qs",
+          "label": "Standard Volume Flow (qs)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "scfm"
+        },
+        {
+          "id": "p",
+          "label": "Absolute Pressure (p)",
+          "type": "number",
+          "defaultValue": 14.7,
+          "unit": "in Hg"
+        },
+        {
+          "id": "t",
+          "label": "Temperature (t)",
+          "type": "number",
+          "defaultValue": 68,
+          "unit": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "qa",
+          "label": "Actual Volume Flow (qa)",
+          "formula": "inputs.qs * (29.92 / inputs.p) * ((inputs.t + 460) / 520)",
+          "unit": "acfm",
+          "format": "decimal"
+        },
+        {
+          "id": "conversion_factor",
+          "label": "Conversion Factor",
+          "formula": "(29.92 / inputs.p) * ((inputs.t + 460) / 520)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

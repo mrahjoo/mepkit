@@ -1,0 +1,161 @@
+{
+  "id": "parts_per_million___ppm",
+  "title": "Parts per Million - ppm",
+  "description": "Parts per million (ppm) is a dimensionless measure of small concentration levels of pollutants in air, water, and body fluids. This calculator helps convert between ppm and other concentration units including percentages, weight percent, and mass per unit volume.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Convert between ppm and other concentration units",
+      "inputs": [
+        {
+          "id": "solute_mass_volume",
+          "label": "Solute (Component) Mass/Volume/Moles",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "unit"
+        },
+        {
+          "id": "solution_mass_volume",
+          "label": "Solution Mass/Volume/Moles",
+          "type": "number",
+          "defaultValue": 1000000,
+          "unit": "unit"
+        },
+        {
+          "id": "ppm_value",
+          "label": "PPM Value",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "ppm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "calculated_ppm",
+          "label": "Calculated PPM",
+          "formula": "(inputs.solute_mass_volume / inputs.solution_mass_volume) * 1000000",
+          "unit": "ppm",
+          "format": "decimal"
+        },
+        {
+          "id": "weight_percent",
+          "label": "Weight Percent",
+          "formula": "(inputs.solute_mass_volume / inputs.solution_mass_volume) * 100",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "ppb_value",
+          "label": "Parts per Billion",
+          "formula": "(inputs.solute_mass_volume / inputs.solution_mass_volume) * 1000000000",
+          "unit": "ppb",
+          "format": "decimal"
+        },
+        {
+          "id": "ppt_value",
+          "label": "Parts per Trillion",
+          "formula": "(inputs.solute_mass_volume / inputs.solution_mass_volume) * 1000000000000",
+          "unit": "ppt",
+          "format": "decimal"
+        },
+        {
+          "id": "mg_per_liter",
+          "label": "Milligrams per Liter",
+          "formula": "inputs.ppm_value * 1",
+          "unit": "mg/L",
+          "format": "decimal"
+        },
+        {
+          "id": "gram_per_litre",
+          "label": "Grams per Litre",
+          "formula": "inputs.ppm_value * 0.001",
+          "unit": "g/L",
+          "format": "decimal"
+        },
+        {
+          "id": "pounds_per_million_gallons",
+          "label": "Pounds per Million Gallons",
+          "formula": "inputs.ppm_value * 8.345",
+          "unit": "lb/million gal",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Concentration Unit",
+        "Value",
+        "Equivalent in ppm"
+      ],
+      "rows": [
+        [
+          "1 ppm",
+          "1",
+          "1"
+        ],
+        [
+          "10 ppm",
+          "10",
+          "10"
+        ],
+        [
+          "100 ppm",
+          "100",
+          "100"
+        ],
+        [
+          "1,000 ppm",
+          "1000",
+          "1000"
+        ],
+        [
+          "10,000 ppm",
+          "10000",
+          "10000"
+        ],
+        [
+          "0.0001%",
+          "0.0001",
+          "1"
+        ],
+        [
+          "0.001‰",
+          "0.001",
+          "1"
+        ],
+        [
+          "0.1%",
+          "0.1",
+          "1000"
+        ],
+        [
+          "1%",
+          "1",
+          "10000"
+        ],
+        [
+          "1 mg/kg",
+          "1",
+          "1"
+        ],
+        [
+          "1 mg/L (water)",
+          "1",
+          "1"
+        ],
+        [
+          "1 ppb",
+          "0.000001",
+          "0.001"
+        ],
+        [
+          "1 ppt",
+          "0.000000001",
+          "0.000001"
+        ]
+      ]
+    }
+  ]
+}

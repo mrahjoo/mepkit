@@ -1,0 +1,84 @@
+{
+  "id": "natural_gas_apartment_consumption_vs__no__of_apart",
+  "title": "Natural Gas Apartment Consumption vs. no. of Apartments",
+  "description": "Multiple apartments and natural gas demand. Analyze natural gas demand for multiple apartments in both CFH and m3/h units.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Natural Gas Demand Analysis\n\nThis tool helps you analyze natural gas demand for multiple apartments.\n\n### Gas Demand - cfh\n\n![natural gas demand diagram multiple dwellings - cfh](static/docs/documents/1199/gas-demand-apartments.png \"natural gas demand diagram multiple dwellings - cfh\")\n\n### Gas Demand - m3/h\n\n![natural gas demand diagram multiple dwellings - m3/h](static/docs/documents/1199/gas-demand-apartments-m3h.png \"natural gas demand diagram multiple dwellings - m3/h\")"
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Natural Gas Demand vs Number of Apartments"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Gas Demand (CFH)",
+            "Gas Demand (m3/h)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "CFH"
+          },
+          {
+            "type": "value",
+            "name": "m3/h"
+          }
+        ],
+        "series": [
+          {
+            "name": "Gas Demand (CFH)",
+            "type": "line",
+            "data": [
+              100,
+              180,
+              260,
+              330,
+              400,
+              460,
+              520,
+              575
+            ],
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Gas Demand (m3/h)",
+            "type": "line",
+            "data": [
+              2.8,
+              5.1,
+              7.4,
+              9.3,
+              11.3,
+              13,
+              14.7,
+              16.3
+            ],
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}

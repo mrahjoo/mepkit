@@ -1,0 +1,57 @@
+{
+  "id": "water_supply_systems___impurity_limits",
+  "title": "Water Supply Systems - Impurity Limits",
+  "description": "Typical limits for impurities in drinking water supply systems. This calculator displays the standard impurity limits measured in ppm (parts per million) for various contaminants including color, copper, fluoride, hardness, lead, magnesium, iron, solids, and turbidity.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Impurity",
+        "Limit (ppm)"
+      ],
+      "rows": [
+        [
+          "Color",
+          20
+        ],
+        [
+          "Copper",
+          3
+        ],
+        [
+          "Fluoride",
+          1
+        ],
+        [
+          "Hardness, Ca and Mg salts",
+          100
+        ],
+        [
+          "Lead",
+          0.1
+        ],
+        [
+          "Magnesium",
+          125
+        ],
+        [
+          "Iron plus manganese",
+          0.3
+        ],
+        [
+          "Solids",
+          500
+        ],
+        [
+          "Turbidity",
+          10
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Turbidity\n\nTurbidity is an optical characteristic and a measure of the relative clarity of a liquid. It is a measurement of the amount of light that is scattered by material in the water when a light is shined through it. High intensity of scattered light equals high turbidity."
+    }
+  ]
+}

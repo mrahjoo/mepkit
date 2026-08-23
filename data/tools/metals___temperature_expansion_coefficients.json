@@ -1,0 +1,628 @@
+{
+  "id": "metals___temperature_expansion_coefficients",
+  "title": "Metals - Temperature Expansion Coefficients",
+  "description": "A comprehensive reference table of linear thermal expansion coefficients for various metals and metal alloys across different temperature ranges.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Metal/Alloy",
+        "Temperature Range (°F)",
+        "Expansion Coefficient (×10⁻⁶/°F)"
+      ],
+      "rows": [
+        [
+          "Admiralty Brass",
+          "68 - 572",
+          11.2
+        ],
+        [
+          "Aluminum",
+          "68 - 212",
+          13.1
+        ],
+        [
+          "Aluminum Bronze",
+          "68 - 572",
+          9
+        ],
+        [
+          "Aluminum Alloy - 2011",
+          "",
+          12.8
+        ],
+        [
+          "Aluminum Alloy - 2017",
+          "",
+          13.1
+        ],
+        [
+          "Aluminum Alloy - 2024",
+          "",
+          12.9
+        ],
+        [
+          "Aluminum Alloy - 3003",
+          "",
+          12.9
+        ],
+        [
+          "Aluminum Alloy - 5052",
+          "",
+          13.2
+        ],
+        [
+          "Aluminum Alloy - 5086",
+          "",
+          13.2
+        ],
+        [
+          "Aluminum Alloy - 6061",
+          "",
+          13
+        ],
+        [
+          "Aluminum Alloy - 7075",
+          "",
+          13.1
+        ],
+        [
+          "Antimony",
+          "",
+          5
+        ],
+        [
+          "Beryllium",
+          "",
+          6.7
+        ],
+        [
+          "Beryllium Copper",
+          "68 - 212",
+          9.3
+        ],
+        [
+          "Bismuth",
+          "",
+          7.2
+        ],
+        [
+          "Cast Iron, grey",
+          "32 - 212",
+          5.8
+        ],
+        [
+          "Cast Steel, 3% C",
+          "",
+          7
+        ],
+        [
+          "Chromium",
+          "",
+          3.3
+        ],
+        [
+          "Cobalt",
+          "",
+          6.7
+        ],
+        [
+          "Copper",
+          "68 - 572",
+          9.8
+        ],
+        [
+          "Copper-Base Alloy - Manganese Bronze",
+          "",
+          11.8
+        ],
+        [
+          "Copper-Base Alloy - C1100 (Electrolytic tough pitch)",
+          "",
+          9.8
+        ],
+        [
+          "Copper-Base Alloy - C14500 (Free Machining Cu)",
+          "",
+          9.9
+        ],
+        [
+          "Copper-Base Alloy - C17200, C17300 (Beryllium Cu)",
+          "",
+          9.9
+        ],
+        [
+          "Copper-Base Alloy - C18200 (Chromium Cu)",
+          "",
+          9.8
+        ],
+        [
+          "Copper-Base Alloy - C18700 (Leaded Cu)",
+          "",
+          9.8
+        ],
+        [
+          "Copper-Base Alloy - C22000 (Commercial bronze, 90%)",
+          "",
+          10.2
+        ],
+        [
+          "Copper-Base Alloy - C23000 (Red brass, 85%)",
+          "",
+          10.4
+        ],
+        [
+          "Copper-Base Alloy - C26000 (Cartridge brass, 70%)",
+          "",
+          11.1
+        ],
+        [
+          "Copper-Base Alloy - C27000 (Yellow brass)",
+          "",
+          11.3
+        ],
+        [
+          "Copper-Base Alloy - C28000 (Muntz metal, 60%)",
+          "",
+          11.6
+        ],
+        [
+          "Copper-Base Alloy - C33000 (Low-leaded brass tube)",
+          "",
+          11.2
+        ],
+        [
+          "Copper-Base Alloy - C35300 (High-leaded brass)",
+          "",
+          11.3
+        ],
+        [
+          "Copper-Base Alloy - C35600 (Extra high-leaded brass)",
+          "",
+          11.4
+        ],
+        [
+          "Copper-Base Alloy - C36000 (Free machining brass)",
+          "",
+          11.4
+        ],
+        [
+          "Copper-Base Alloy - C36500 (Leaded Muntz metal)",
+          "",
+          11.6
+        ],
+        [
+          "Copper-Base Alloy - C46400 (Naval brass)",
+          "",
+          11.8
+        ],
+        [
+          "Copper-Base Alloy - C51000 (Phosphor bronze, 5% A)",
+          "",
+          9.9
+        ],
+        [
+          "Copper-Base Alloy - C54400 (Free cutting phos. bronze)",
+          "",
+          9.6
+        ],
+        [
+          "Copper-Base Alloy - C62300 (Aluminum bronze, 9%)",
+          "",
+          9
+        ],
+        [
+          "Copper-Base Alloy - C62400 (Aluminum bronze, 11%)",
+          "",
+          9.2
+        ],
+        [
+          "Copper-Base Alloy - C63000 (Ni-Al bronze)",
+          "",
+          9
+        ],
+        [
+          "Copper-Base Alloy - Nickel-Silver",
+          "",
+          9
+        ],
+        [
+          "Cupronickel",
+          "68 - 572",
+          9
+        ],
+        [
+          "Ductile Iron, A536 (120-90-02)",
+          "",
+          "5.9 - 6.2"
+        ],
+        [
+          "Gold",
+          "",
+          7.9
+        ],
+        [
+          "Hastelloy C",
+          "70 - 200",
+          5.3
+        ],
+        [
+          "Inconel",
+          "68 - 212",
+          6.4
+        ],
+        [
+          "Incoloy",
+          "32 - 212",
+          8
+        ],
+        [
+          "Invar",
+          "68 - 212",
+          0.67
+        ],
+        [
+          "Iridium",
+          "",
+          3.3
+        ],
+        [
+          "Iron, nodular pearlitic",
+          "68 - 212",
+          6.5
+        ],
+        [
+          "Iron, pure",
+          "68 - 212",
+          6.8
+        ],
+        [
+          "Kovar",
+          "77 - 392",
+          3.05
+        ],
+        [
+          "Kovar",
+          "77 - 572",
+          2.83
+        ],
+        [
+          "Kovar",
+          "77 - 752",
+          2.72
+        ],
+        [
+          "Kovar",
+          "77 - 932",
+          3.44
+        ],
+        [
+          "Magnesium",
+          "",
+          14
+        ],
+        [
+          "Malleable Iron, A220 (50005, 60004, 80002)",
+          "",
+          7.5
+        ],
+        [
+          "Manganese",
+          "",
+          12
+        ],
+        [
+          "Manganese Bronze",
+          "68 - 572",
+          11.8
+        ],
+        [
+          "Mild steel",
+          "",
+          5.9
+        ],
+        [
+          "Molybdenum",
+          "",
+          3
+        ],
+        [
+          "Monel",
+          "32 - 212",
+          7.8
+        ],
+        [
+          "Nickel-Base Alloy - Nickel 200, 201, 205",
+          "",
+          8.5
+        ],
+        [
+          "Nickel-Base Alloy - Hastelloy C-22",
+          "",
+          6.9
+        ],
+        [
+          "Nickel-Base Alloy - Hastelloy C-276",
+          "",
+          6.2
+        ],
+        [
+          "Nickel-Base Alloy - Inconel 718",
+          "",
+          7.2
+        ],
+        [
+          "Nickel-Base Alloy - Monel",
+          "",
+          8.7
+        ],
+        [
+          "Nickel-Base Alloy - Monel 400",
+          "",
+          7.7
+        ],
+        [
+          "Nickel-Base Alloy - K500",
+          "",
+          7.6
+        ],
+        [
+          "Nickel-Base Alloy - R405",
+          "",
+          7.6
+        ],
+        [
+          "Nickel Wrought",
+          "77 - 212",
+          7.4
+        ],
+        [
+          "Niobium (Columbium)",
+          "",
+          3.9
+        ],
+        [
+          "Red Brass",
+          "68 - 572",
+          10.4
+        ],
+        [
+          "Osmium",
+          "",
+          2.8
+        ],
+        [
+          "Platinum",
+          "",
+          5
+        ],
+        [
+          "Plutonium",
+          "",
+          19.84
+        ],
+        [
+          "Potassium",
+          "",
+          46
+        ],
+        [
+          "Rhodium",
+          "",
+          4.4
+        ],
+        [
+          "Selenium",
+          "",
+          21
+        ],
+        [
+          "Silicon",
+          "",
+          2.8
+        ],
+        [
+          "Silver",
+          "",
+          11
+        ],
+        [
+          "Sodium",
+          "",
+          39
+        ],
+        [
+          "Stainless Steel - S30100",
+          "",
+          9.4
+        ],
+        [
+          "Stainless Steel - S30200, S30300, S30323",
+          "",
+          9.6
+        ],
+        [
+          "Stainless Steel - S30215",
+          "",
+          9
+        ],
+        [
+          "Stainless Steel - S30400, S30500",
+          "",
+          9.6
+        ],
+        [
+          "Stainless Steel - S30430",
+          "",
+          9.6
+        ],
+        [
+          "Stainless Steel - S30800",
+          "",
+          9.6
+        ],
+        [
+          "Stainless Steel - S30900, S30908",
+          "",
+          8.3
+        ],
+        [
+          "Stainless Steel - S31000, S31008",
+          "",
+          8.8
+        ],
+        [
+          "Stainless Steel - S31600, S31700",
+          "",
+          8.8
+        ],
+        [
+          "Stainless Steel - S31703",
+          "",
+          9.2
+        ],
+        [
+          "Stainless Steel - S32100",
+          "",
+          9.2
+        ],
+        [
+          "Stainless Steel - S34700",
+          "",
+          9.2
+        ],
+        [
+          "Stainless Steel - S34800",
+          "",
+          9.3
+        ],
+        [
+          "Stainless Steel - S38400",
+          "",
+          9.6
+        ],
+        [
+          "Stainless Steel - S40300, S41000, S41600, 41623",
+          "",
+          5.5
+        ],
+        [
+          "Stainless Steel - S40500",
+          "",
+          6
+        ],
+        [
+          "Stainless Steel - S41400",
+          "",
+          5.8
+        ],
+        [
+          "Stainless Steel - S42000, S42020",
+          "",
+          5.7
+        ],
+        [
+          "Stainless Steel - S42200",
+          "",
+          6.2
+        ],
+        [
+          "Stainless Steel - S42900",
+          "",
+          5.7
+        ],
+        [
+          "Stainless Steel - S43000, S43020, S43023",
+          "",
+          5.8
+        ],
+        [
+          "Stainless Steel - S43600",
+          "",
+          5.2
+        ],
+        [
+          "Stainless Steel - S44002, S44004",
+          "",
+          5.7
+        ],
+        [
+          "Stainless Steel - S44003",
+          "",
+          5.6
+        ],
+        [
+          "Stainless Steel - S44600",
+          "",
+          5.8
+        ],
+        [
+          "Stainless Steel - S50100, S50200",
+          "",
+          6.2
+        ],
+        [
+          "Tantalum",
+          "",
+          3.6
+        ],
+        [
+          "Thorium",
+          "",
+          6.7
+        ],
+        [
+          "Tin",
+          "32 - 212",
+          12.8
+        ],
+        [
+          "Titanium",
+          "68 - 200",
+          4.8
+        ],
+        [
+          "Titanium Alloy - Ti-5Al-2.5Sn",
+          "",
+          5.3
+        ],
+        [
+          "Titanium Alloy - Ti-8Mn",
+          "",
+          6
+        ],
+        [
+          "Tungsten",
+          "",
+          2.5
+        ],
+        [
+          "Uranium",
+          "",
+          7.4
+        ],
+        [
+          "Vanadium",
+          "",
+          4.4
+        ],
+        [
+          "Wrought Carbon Steel",
+          "70 - 800",
+          7.8
+        ],
+        [
+          "Yellow Brass",
+          "68 - 572",
+          11.3
+        ],
+        [
+          "Zinc",
+          "",
+          19
+        ]
+      ]
+    }
+  ]
+}

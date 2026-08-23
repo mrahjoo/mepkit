@@ -1,0 +1,240 @@
+{
+  "id": "standard_reference_fuels_and_their_equivalents",
+  "title": "Standard Reference Fuels and their Equivalents",
+  "description": "Convert between fuel equivalents using standard reference fuel conversion factors.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Convert fuel measurements between different standards and units.",
+      "inputs": [
+        {
+          "id": "source_value",
+          "label": "Source Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "source_unit",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "ton_oe",
+              "label": "ton oil equivalent (ton oe)"
+            },
+            {
+              "value": "tce",
+              "label": "tonne coal equivalent (tce)"
+            },
+            {
+              "value": "boe",
+              "label": "barrel oil equivalent (boe)"
+            },
+            {
+              "value": "btu",
+              "label": "10^6 Btu gross"
+            },
+            {
+              "value": "kcal",
+              "label": "10^6 kcal gross"
+            },
+            {
+              "value": "ft3_gas",
+              "label": "ft³ natural gas"
+            },
+            {
+              "value": "nm3_gas",
+              "label": "Nm³ natural gas"
+            },
+            {
+              "value": "kwh",
+              "label": "kWh"
+            },
+            {
+              "value": "gj",
+              "label": "GJ"
+            }
+          ]
+        },
+        {
+          "id": "target_unit",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "ton_oe",
+              "label": "ton oil equivalent (ton oe)"
+            },
+            {
+              "value": "tce",
+              "label": "tonne coal equivalent (tce)"
+            },
+            {
+              "value": "boe",
+              "label": "barrel oil equivalent (boe)"
+            },
+            {
+              "value": "btu",
+              "label": "10^6 Btu gross"
+            },
+            {
+              "value": "kcal",
+              "label": "10^6 kcal gross"
+            },
+            {
+              "value": "ft3_gas",
+              "label": "ft³ natural gas"
+            },
+            {
+              "value": "nm3_gas",
+              "label": "Nm³ natural gas"
+            },
+            {
+              "value": "kwh",
+              "label": "kWh"
+            },
+            {
+              "value": "gj",
+              "label": "GJ"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "conversion_result",
+          "label": "Converted Value",
+          "formula": "inputs.source_value",
+          "unit": "calculated"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Standard conversion factors for fuel equivalents",
+      "headers": [
+        "From / To",
+        "ton oe",
+        "tce",
+        "boe",
+        "10^6 Btu gross",
+        "10^6 kcal gross",
+        "ft³ natural gas",
+        "Nm³ natural gas",
+        "kWh",
+        "GJ"
+      ],
+      "rows": [
+        [
+          "ton oe",
+          "1",
+          "0.9628",
+          "1.5144",
+          "41.4",
+          "10.433",
+          "41400",
+          "1109.9",
+          "12133",
+          "43.68"
+        ],
+        [
+          "tce",
+          "1.0386",
+          "1",
+          "1.5730",
+          "43",
+          "10.836",
+          "43000",
+          "1152.8",
+          "12602",
+          "45.37"
+        ],
+        [
+          "boe",
+          "0.6605",
+          "0.6357",
+          "1",
+          "27.337",
+          "6.888",
+          "27333",
+          "732.9",
+          "8012",
+          "28.84"
+        ],
+        [
+          "10^6 Btu gross",
+          "0.02420",
+          "0.02326",
+          "0.03659",
+          "1",
+          "0.2519",
+          "1000",
+          "26.78",
+          "293.1",
+          "1.068"
+        ],
+        [
+          "10^6 kcal gross",
+          "0.09583",
+          "0.09229",
+          "0.1452",
+          "3.973",
+          "1",
+          "3974",
+          "106.4",
+          "1165",
+          "4.187"
+        ],
+        [
+          "ft³ natural gas",
+          "0.00002420",
+          "0.00002326",
+          "0.00003659",
+          "0.001",
+          "0.0002519",
+          "1",
+          "0.02678",
+          "0.2931",
+          "0.001068"
+        ],
+        [
+          "Nm³ natural gas",
+          "0.0009012",
+          "0.0008682",
+          "0.001366",
+          "0.03732",
+          "0.009401",
+          "37.32",
+          "1",
+          "10.95",
+          "0.03990"
+        ],
+        [
+          "kWh",
+          "0.00008247",
+          "0.00007935",
+          "0.0001248",
+          "0.003412",
+          "0.0008581",
+          "3.412",
+          "0.09132",
+          "1",
+          "0.003600"
+        ],
+        [
+          "GJ",
+          "0.02291",
+          "0.02206",
+          "0.03466",
+          "0.9478",
+          "0.2388",
+          "937.8",
+          "25.07",
+          "277.8",
+          "1"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "oblique_triangle",
+  "title": "Oblique Triangle Calculator",
+  "description": "Calculate unknown lengths and angles in an oblique triangle. Enter three known values and the calculator will compute the remaining sides, angles, and area using trigonometric formulas.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Angle A",
+          "",
+          "degrees"
+        ],
+        [
+          "Angle B",
+          "",
+          "degrees"
+        ],
+        [
+          "Angle C",
+          "",
+          "degrees"
+        ],
+        [
+          "Length a",
+          "",
+          "m, mm, ft, in"
+        ],
+        [
+          "Length b",
+          "",
+          "m, mm, ft, in"
+        ],
+        [
+          "Length c",
+          "",
+          "m, mm, ft, in"
+        ],
+        [
+          "Area",
+          "",
+          "m², mm², ft², in²"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Calculation Formulas\n\n**Case 1: A, B and a are known**\n- b = a sin(B) / sin(A)\n- C = 180° - (A + B)\n- c = a sin(C) / sin(A)\n\n**Case 2: A, a and b are known**\n- sin(B) = b sin(A) / a\n- C = 180° - (A + B)\n- c = a sin(C) / sin(A)\n\n**Case 3: a, b and C are known**\n- tan(A) = a sin(C) / (b - a cos(C))\n- B = 180° - (A + C)\n- c = a sin(C) / sin(A)\n\n**Case 4: a, b and c are known (Law of Cosines)**\n- cos(A) = (b² + c² - a²) / (2bc)\n- cos(B) = (a² + c² - b²) / (2ac)\n- C = 180° - (A + B)\n\n**Area Calculations**\n- s = (a + b + c) / 2\n- area = √[s(s - a)(s - b)(s - c)]\n- area = bc sin(A) / 2\n- area = a² sin(B) sin(C) / (2 sin(A))"
+    }
+  ]
+}

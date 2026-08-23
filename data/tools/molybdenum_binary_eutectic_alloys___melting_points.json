@@ -1,0 +1,61 @@
+{
+  "id": "molybdenum_binary_eutectic_alloys___melting_points",
+  "title": "Molybdenum Binary Eutectic Alloys - Melting Points",
+  "description": "Reference data for melting points of molybdenum binary eutectic alloys used in materials science and metallurgical engineering.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloying Element",
+        "Composition (wt%)",
+        "Eutectic Temperature (°C)",
+        "Eutectic Temperature (K)"
+      ],
+      "rows": [
+        [
+          "Mo-Ni",
+          "31% Ni",
+          "1455",
+          "1728"
+        ],
+        [
+          "Mo-Fe",
+          "34% Fe",
+          "1480",
+          "1753"
+        ],
+        [
+          "Mo-Co",
+          "30% Co",
+          "1490",
+          "1763"
+        ],
+        [
+          "Mo-Cr",
+          "25% Cr",
+          "1560",
+          "1833"
+        ],
+        [
+          "Mo-W",
+          "26% W",
+          "2750",
+          "3023"
+        ],
+        [
+          "Mo-Re",
+          "28% Re",
+          "2615",
+          "2888"
+        ],
+        [
+          "Mo-Si",
+          "50.5% Si",
+          "2170",
+          "2443"
+        ]
+      ]
+    }
+  ]
+}

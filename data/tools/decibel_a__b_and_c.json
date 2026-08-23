@@ -1,0 +1,169 @@
+{
+  "id": "decibel_a__b_and_c",
+  "title": "Decibel A, B and C",
+  "description": "Calculator for Decibel A, B and C sound pressure level filters. The human ear is more sensitive to sound in the 1 to 4 kHz frequency range. This tool helps compensate for human hearing using A, B, and C weighted decibel filters commonly used in sound measurement.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Decibel A, B and C Sound Filters\n\nThe human ear is more sensitive to sound in the _1 to 4 kHz_ frequency range than to sound at very low or very high frequencies. Sound meters use filters to adapt measured sound response to human hearing:\n\n- **dB(A)**: Most widely used, corresponds to 40 dB equal-loudness curve\n- **dB(B)**: Between A and C, rarely used\n- **dB(C)**: Practically linear, suitable for high sound pressure levels\n\nThis calculator helps you work with these decibel-weighted measurements."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "measured_level",
+          "label": "Measured Sound Pressure Level",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 50
+        },
+        {
+          "id": "frequency",
+          "label": "Frequency",
+          "type": "select",
+          "options": [
+            {
+              "label": "31.25 Hz",
+              "value": 31.25
+            },
+            {
+              "label": "62.5 Hz",
+              "value": 62.5
+            },
+            {
+              "label": "125 Hz",
+              "value": 125
+            },
+            {
+              "label": "250 Hz",
+              "value": 250
+            },
+            {
+              "label": "500 Hz",
+              "value": 500
+            },
+            {
+              "label": "1000 Hz",
+              "value": 1000
+            },
+            {
+              "label": "2000 Hz",
+              "value": 2000
+            },
+            {
+              "label": "4000 Hz",
+              "value": 4000
+            },
+            {
+              "label": "8000 Hz",
+              "value": 8000
+            }
+          ],
+          "defaultValue": 1000
+        },
+        {
+          "id": "filter_type",
+          "label": "Decibel Filter Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "dB(A)",
+              "value": "A"
+            },
+            {
+              "label": "dB(B)",
+              "value": "B"
+            },
+            {
+              "label": "dB(C)",
+              "value": "C"
+            }
+          ],
+          "defaultValue": "A"
+        },
+        {
+          "id": "context_adjustment",
+          "label": "Context Adjustment",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weighted_level",
+          "label": "Weighted Sound Pressure Level",
+          "formula": "inputs.measured_level + inputs.context_adjustment",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Frequency (Hz)",
+        "dB(A) Filter (dB)",
+        "dB(B) Filter (dB)",
+        "dB(C) Filter (dB)"
+      ],
+      "rows": [
+        [
+          31.25,
+          -39.4,
+          -17,
+          -3
+        ],
+        [
+          62.5,
+          -26.2,
+          -9,
+          -0.8
+        ],
+        [
+          125,
+          -16.1,
+          -4,
+          -0.2
+        ],
+        [
+          250,
+          -8.6,
+          -1,
+          0
+        ],
+        [
+          500,
+          -3.2,
+          0,
+          0
+        ],
+        [
+          1000,
+          0,
+          0,
+          0
+        ],
+        [
+          2000,
+          1.2,
+          0,
+          -0.2
+        ],
+        [
+          4000,
+          1,
+          -1,
+          -0.8
+        ],
+        [
+          8000,
+          -1.1,
+          -3,
+          -3
+        ]
+      ]
+    }
+  ]
+}

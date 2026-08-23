@@ -1,0 +1,171 @@
+{
+  "id": "co2_calculator____emissions_from_trains",
+  "title": "CO2 Calculator - Emissions from Trains",
+  "description": "Calculator for CO2 emissions from trains, comparing with alternative forms of transportation such as planes, buses, conventional and electrical cars.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Train CO2 Emissions Calculator",
+      "inputs": [
+        {
+          "id": "distance",
+          "label": "Distance Traveled",
+          "type": "number",
+          "unit": "km",
+          "defaultValue": 100
+        },
+        {
+          "id": "train_type",
+          "label": "Train Type (Energy Source)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Diesel",
+              "value": "diesel"
+            },
+            {
+              "label": "Low CO2 Electric",
+              "value": "low_co2"
+            },
+            {
+              "label": "Medium CO2 Electric",
+              "value": "medium_co2"
+            },
+            {
+              "label": "High CO2 Electric",
+              "value": "high_co2"
+            }
+          ]
+        },
+        {
+          "id": "passengers",
+          "label": "Number of Passengers",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "train_co2",
+          "label": "Train CO2 Emissions",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * 0.015"
+        },
+        {
+          "id": "bus_co2",
+          "label": "Bus CO2 Emissions (equivalent)",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * 0.015 * 0.95"
+        },
+        {
+          "id": "car_co2",
+          "label": "Car CO2 Emissions (equivalent)",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * 0.15 * 0.92"
+        },
+        {
+          "id": "plane_co2",
+          "label": "Plane CO2 Emissions (equivalent)",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * 0.25 * 0.75"
+        },
+        {
+          "id": "electric_car_co2",
+          "label": "Electric Car CO2 Emissions (equivalent)",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * 0.05 * 0.92"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Transportation Mode",
+        "CO2 Emissions (kg)",
+        "Efficiency Factor",
+        "Distance Equivalent"
+      ],
+      "rows": [
+        [
+          "Train",
+          "=inputs.distance * 0.015",
+          "1.0",
+          "inputs.distance km"
+        ],
+        [
+          "Bus",
+          "=inputs.distance * 0.015 * 0.95",
+          "0.95",
+          "inputs.distance km"
+        ],
+        [
+          "Car",
+          "=inputs.distance * 0.15 * 0.92",
+          "0.92",
+          "inputs.distance km"
+        ],
+        [
+          "Plane",
+          "=inputs.distance * 0.25 * 0.75",
+          "0.75",
+          "inputs.distance km"
+        ],
+        [
+          "Electric Car",
+          "=inputs.distance * 0.05 * 0.92",
+          "0.92",
+          "inputs.distance km"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Transportation Mode",
+        "CO2 Emissions (kg)"
+      ],
+      "rows": [
+        [
+          "Train",
+          "inputs.distance * 0.015"
+        ],
+        [
+          "Bus",
+          "inputs.distance * 0.015 * 0.95"
+        ],
+        [
+          "Car",
+          "inputs.distance * 0.15 * 0.92"
+        ],
+        [
+          "Plane",
+          "inputs.distance * 0.25 * 0.75"
+        ],
+        [
+          "Electric Car",
+          "inputs.distance * 0.05 * 0.92"
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [],
+            "type": "bar"
+          }
+        ]
+      }
+    }
+  ]
+}

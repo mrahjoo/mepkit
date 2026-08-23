@@ -1,0 +1,53 @@
+{
+  "id": "discrete_data_sets_and_their_mean__median_and_mode",
+  "title": "Discrete Data Sets and their Mean, Median and Mode Values",
+  "description": "Calculate the mean, median, and mode values of a discrete data set. Enter comma-separated values to analyze statistical measures including arithmetic mean, median (middle value), and mode (most frequent value).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Instructions\n\nEnter your data set as **comma-separated values** (CSV) in the input field below.\n\n### Example\nFor the data set (3, 5, 2, 5, 12), enter: `3,5,2,5,12`\n\n### Definitions\n\n**Mean Value**: Arithmetic average calculated by summing all values and dividing by the count.\n\n**Median Value**: The middle value when data is sorted in ascending order. For even-sized sets, it's the average of the two middle values.\n\n**Mode Value**: The most frequently occurring value in the data set."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "dataSet",
+          "label": "Data Set (comma-separated values)",
+          "type": "string",
+          "defaultValue": "3,5,2,5,12"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mean",
+          "label": "Mean Value",
+          "formula": "inputs.dataSet.split(',').map(x => parseFloat(x.trim())).reduce((a, b) => a + b, 0) / inputs.dataSet.split(',').length",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "median",
+          "label": "Median Value",
+          "formula": "(() => { const sorted = inputs.dataSet.split(',').map(x => parseFloat(x.trim())).sort((a, b) => a - b); const mid = Math.floor(sorted.length / 2); return sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2; })()",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "mode",
+          "label": "Mode Value",
+          "formula": "(() => { const vals = inputs.dataSet.split(',').map(x => parseFloat(x.trim())); const freq = {}; vals.forEach(v => freq[v] = (freq[v] || 0) + 1); return Object.keys(freq).reduce((a, b) => freq[a] > freq[b] ? a : b); })()",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "count",
+          "label": "Number of Values",
+          "formula": "inputs.dataSet.split(',').length",
+          "format": "decimal",
+          "unit": ""
+        }
+      ]
+    }
+  ]
+}

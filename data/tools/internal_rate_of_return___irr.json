@@ -1,0 +1,93 @@
+{
+  "id": "internal_rate_of_return___irr",
+  "title": "Internal Rate of Return - IRR",
+  "description": "A primary measure of an investment's worth based on yield. The internal rate of return (IRR) is the break-even interest rate which equals the Net Present Worth (NPW) of a project's cash flows. IRR is calculated by finding the discount rate that makes the present value of all cash flows equal to zero.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Internal Rate of Return Calculator\n\nThe IRR can be expressed as:\n\n**P(irr) = F₀/(1+irr)⁰ + F₁/(1+irr)¹ + F₂/(1+irr)² + ... + Fₙ/(1+irr)ⁿ = 0**\n\nWhere:\n- **F₀..ₙ** = Cash flow in period 0 to n\n  - Positive values = cash flow in (money received)\n  - Negative values = cash flow out (money spent)\n- **irr** = Internal Rate of Return\n\nEnter your cash flows below. Use negative values for money spent and positive values for money received."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "year_0",
+          "label": "Year 0 Cash Flow (F₀)",
+          "type": "number",
+          "unit": "currency",
+          "defaultValue": -10000
+        },
+        {
+          "id": "year_1",
+          "label": "Year 1 Cash Flow (F₁)",
+          "type": "number",
+          "unit": "currency",
+          "defaultValue": 3000
+        },
+        {
+          "id": "year_2",
+          "label": "Year 2 Cash Flow (F₂)",
+          "type": "number",
+          "unit": "currency",
+          "defaultValue": 3000
+        },
+        {
+          "id": "year_3",
+          "label": "Year 3 Cash Flow (F₃)",
+          "type": "number",
+          "unit": "currency",
+          "defaultValue": 3000
+        },
+        {
+          "id": "year_4",
+          "label": "Year 4 Cash Flow (F₄)",
+          "type": "number",
+          "unit": "currency",
+          "defaultValue": 3000
+        },
+        {
+          "id": "year_5",
+          "label": "Year 5 Cash Flow (F₅)",
+          "type": "number",
+          "unit": "currency",
+          "defaultValue": 3000
+        },
+        {
+          "id": "marr",
+          "label": "Minimum Attractive Rate of Return (MARR)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "npv_at_marr",
+          "label": "Net Present Value at MARR",
+          "unit": "currency",
+          "format": "currency",
+          "formula": "inputs.year_0 + inputs.year_1/(1+inputs.marr/100)^1 + inputs.year_2/(1+inputs.marr/100)^2 + inputs.year_3/(1+inputs.marr/100)^3 + inputs.year_4/(1+inputs.marr/100)^4 + inputs.year_5/(1+inputs.marr/100)^5"
+        },
+        {
+          "id": "total_cash_flow",
+          "label": "Total Cash Flow",
+          "unit": "currency",
+          "format": "currency",
+          "formula": "inputs.year_0 + inputs.year_1 + inputs.year_2 + inputs.year_3 + inputs.year_4 + inputs.year_5"
+        },
+        {
+          "id": "irr_indicator",
+          "label": "IRR Assessment",
+          "unit": "",
+          "format": "decimal",
+          "formula": "IF(inputs.npv_at_marr >= 0, 1, 0)"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### How to Use:\n\n1. **Enter Cash Flows**: Input your project's cash flows for each year\n   - Initial investment (typically negative): Year 0\n   - Subsequent returns (positive or negative): Year 1-5\n\n2. **Set MARR**: Enter your Minimum Attractive Rate of Return (required rate)\n\n3. **Review Results**:\n   - **NPV at MARR**: If positive, the project's IRR exceeds MARR (acceptable)\n   - If negative, the project's IRR is below MARR (not acceptable)\n   - **Total Cash Flow**: Sum of all cash flows\n\n### Key Concepts:\n\n- **IRR**: The discount rate that makes NPV = 0\n- **MARR**: The minimum acceptable return for investment decisions\n- **Decision Rule**: If IRR ≥ MARR, the project is acceptable"
+    }
+  ]
+}

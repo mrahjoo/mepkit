@@ -1,0 +1,114 @@
+{
+  "id": "electrical_induction_motors___torque_vs__speed",
+  "title": "Electrical Induction Motors - Torque vs. Speed",
+  "description": "Calculate torque developed by asynchronous induction motors. Includes locked rotor torque, pull-up torque, break-down torque, and full-load torque calculations for electrical motors in both metric (kW) and imperial (hp) units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "torque_calculator",
+      "content": "Full-load Torque Calculator",
+      "inputs": [
+        {
+          "id": "power_input",
+          "label": "Power",
+          "type": "select",
+          "options": [
+            {
+              "label": "Kilowatts (kW)",
+              "value": "kw"
+            },
+            {
+              "label": "Horsepower (hp)",
+              "value": "hp"
+            }
+          ],
+          "defaultValue": "kw"
+        },
+        {
+          "id": "power_value",
+          "label": "Power Value",
+          "type": "number",
+          "defaultValue": 10
+        },
+        {
+          "id": "speed_rpm",
+          "label": "Rotational Speed",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 1725
+        }
+      ],
+      "outputs": [
+        {
+          "id": "full_load_torque_nm",
+          "label": "Full-load Torque (Metric)",
+          "unit": "Nm",
+          "format": "decimal",
+          "formula": "inputs.power_input === 'kw' ? (9550 * inputs.power_value) / inputs.speed_rpm : (9550 * inputs.power_value * 0.7457) / inputs.speed_rpm"
+        },
+        {
+          "id": "full_load_torque_lbft",
+          "label": "Full-load Torque (Imperial)",
+          "unit": "lb ft",
+          "format": "decimal",
+          "formula": "inputs.power_input === 'hp' ? (5252 * inputs.power_value) / inputs.speed_rpm : (5252 * inputs.power_value / 0.7457) / inputs.speed_rpm"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "motor_torque_table",
+      "content": "Motor Torque Characteristics",
+      "headers": [
+        "Torque Type",
+        "Description",
+        "Unit",
+        "Formula / Reference"
+      ],
+      "rows": [
+        [
+          "Locked Rotor Torque",
+          "Starting torque at zero speed",
+          "Nm / lb ft",
+          "Motor dependent"
+        ],
+        [
+          "Pull-up Torque",
+          "Minimum torque from start to full-load",
+          "Nm / lb ft",
+          "Motor dependent"
+        ],
+        [
+          "Break-down Torque",
+          "Maximum torque before speed increase",
+          "Nm / lb ft",
+          "Motor dependent"
+        ],
+        [
+          "Full-load Torque",
+          "Torque at rated power and speed",
+          "Nm",
+          "T = 9550 × PkW / nr"
+        ],
+        [
+          "Full-load Torque",
+          "Torque at rated power and speed",
+          "lb ft",
+          "T = 5252 × Php / nr"
+        ],
+        [
+          "Accelerating Torque",
+          "Available Motor Torque - Load Torque",
+          "Nm / lb ft",
+          "Motor dependent"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "motor_info",
+      "content": "### Key Concepts\n\n**Locked Rotor or Starting Torque**: The torque an electrical motor develops when starting at zero speed. High starting torque is important for hard-to-start applications like positive displacement pumps and cranes.\n\n**Pull-up Torque**: The minimum torque developed when the motor runs from zero to full-load speed, before reaching the break-down torque point. This may be critical for applications requiring power to overcome temporary barriers.\n\n**Break-down Torque**: The highest torque available before it decreases as the machine continues to accelerate to working conditions.\n\n**Full-load (Rated) Torque**: The torque required to produce the rated power at full-load speed.\n\n### Formulas\n\n**Metric Units**: T = 9550 × PkW / nr (Nm)\n\n**Imperial Units**: T = 5252 × Php / nr (lb ft)\n\nWhere:\n- T = rated torque\n- PkW = rated power (kW) or Php = rated horsepower\n- nr = rated rotational speed (rpm)"
+    }
+  ]
+}

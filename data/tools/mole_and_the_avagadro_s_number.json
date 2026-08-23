@@ -1,0 +1,76 @@
+{
+  "id": "mole_and_the_avagadro_s_number",
+  "title": "Mole and Avogadro's Number",
+  "description": "Calculate the number of molecules or moles using Avogadro's number. The mole is the SI base unit for amount of substance, with Avogadro's constant (NA) = 6.022141×10^23 molecules/mol.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Avogadro's Number (NA)",
+          "6.022141×10^23",
+          "molecules/mol"
+        ],
+        [
+          "Standard Molar Volume (STP)",
+          "22.414",
+          "liters/mol"
+        ],
+        [
+          "Temperature (STP)",
+          "0",
+          "°C"
+        ],
+        [
+          "Pressure (STP)",
+          "1",
+          "atm"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass of Substance",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "molecular_weight",
+          "label": "Molecular Weight",
+          "type": "number",
+          "unit": "kg/kmol",
+          "defaultValue": 46.07
+        }
+      ],
+      "outputs": [
+        {
+          "id": "number_of_moles",
+          "label": "Number of Moles",
+          "formula": "inputs.mass / inputs.molecular_weight * 1000",
+          "unit": "mol"
+        },
+        {
+          "id": "number_of_molecules",
+          "label": "Number of Molecules",
+          "formula": "(inputs.mass / inputs.molecular_weight) * 6.022141e23 * 1000",
+          "unit": "molecules",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Information\n\n**Avogadro's Constant (NA)**: 6.022141×10^23 molecules/mol\n\n**Standard Molar Volume**: 22.414 liters/mol at STP (1 atm, 0°C)\n\n### Formula for Number of Molecules:\nn = (mass / molecular_weight) × NA × 1000\n\nWhere:\n- mass is in kg\n- molecular_weight is in kg/kmol\n- NA is Avogadro's number"
+    }
+  ]
+}

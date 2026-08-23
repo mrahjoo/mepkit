@@ -1,0 +1,75 @@
+{
+  "id": "concrete___calculating_cubic_volume",
+  "title": "Concrete - Calculating Cubic Volume",
+  "description": "Calculating the concrete volume required for an operation. Concrete and mortar are normally delivered on a cubic volume basis.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate cubic volume using the formula V = l × w × h",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Length (l)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        },
+        {
+          "id": "width",
+          "label": "Width (w)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        },
+        {
+          "id": "height",
+          "label": "Height (h)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_ft3",
+          "label": "Volume (ft³)",
+          "formula": "inputs.length * inputs.width * inputs.height",
+          "unit": "ft³",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_yd3",
+          "label": "Volume (yd³)",
+          "formula": "inputs.length * inputs.width * inputs.height * 0.03704",
+          "unit": "yd³",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_m3",
+          "label": "Volume (m³)",
+          "formula": "inputs.length * inputs.width * inputs.height * 0.02832",
+          "unit": "m³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Unit",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          "1 ft³",
+          "0.02832 m³ = 28.32 dm³ = 0.03704 yd³"
+        ],
+        [
+          "1 yd³",
+          "0.7646 m³ = 764.6 dm³ = 27 ft³"
+        ]
+      ]
+    }
+  ]
+}

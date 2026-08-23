@@ -1,0 +1,123 @@
+{
+  "id": "power_gained_by_fluid_from_pump_or_fan",
+  "title": "Power Gained by Fluid from Pump or Fan",
+  "description": "Calculate the power gained by fluid from a pump or fan using mass flow rate and specific work, or alternatively using density, volume flow rate, gravitational acceleration, and head. Multiple formulas are provided for different input scenarios.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pump_power_calculator",
+      "content": "Select the calculation method for power gained by fluid",
+      "inputs": [
+        {
+          "id": "calculation_method",
+          "label": "Calculation Method",
+          "type": "select",
+          "options": [
+            {
+              "label": "Using Mass Flow Rate & Specific Work (P = m·w)",
+              "value": "method1"
+            },
+            {
+              "label": "Using Density, Volume Flow & Head (P = ρ·Q·g·h)",
+              "value": "method2"
+            },
+            {
+              "label": "Using Specific Weight & Head (P = γ·Q·h)",
+              "value": "method3"
+            },
+            {
+              "label": "Using Pressure Difference (P = Q·(p₂ - p₁))",
+              "value": "method4"
+            }
+          ],
+          "defaultValue": "method2"
+        },
+        {
+          "id": "mass_flow_rate",
+          "label": "Mass Flow Rate (m)",
+          "type": "number",
+          "unit": "kg/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "specific_work",
+          "label": "Specific Work (w)",
+          "type": "number",
+          "unit": "J/kg",
+          "defaultValue": 900
+        },
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "volume_flow_rate",
+          "label": "Volume Flow Rate (Q)",
+          "type": "number",
+          "unit": "m³/s",
+          "defaultValue": 0.001
+        },
+        {
+          "id": "gravitational_acceleration",
+          "label": "Gravitational Acceleration (g)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "head",
+          "label": "Head (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 91.7
+        },
+        {
+          "id": "specific_weight",
+          "label": "Specific Weight (γ)",
+          "type": "number",
+          "unit": "N/m³",
+          "defaultValue": 9810
+        },
+        {
+          "id": "pressure_1",
+          "label": "Inlet Pressure (p₁)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 100000
+        },
+        {
+          "id": "pressure_2",
+          "label": "Outlet Pressure (p₂)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 1000000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_gained",
+          "label": "Power Gained by Fluid",
+          "unit": "W",
+          "format": "decimal",
+          "formula": "inputs.calculation_method === 'method1' ? inputs.mass_flow_rate * inputs.specific_work : inputs.calculation_method === 'method2' ? inputs.density * inputs.volume_flow_rate * inputs.gravitational_acceleration * inputs.head : inputs.calculation_method === 'method3' ? inputs.specific_weight * inputs.volume_flow_rate * inputs.head : inputs.volume_flow_rate * (inputs.pressure_2 - inputs.pressure_1)"
+        },
+        {
+          "id": "power_gained_kw",
+          "label": "Power Gained by Fluid (kW)",
+          "unit": "kW",
+          "format": "decimal",
+          "formula": "(inputs.calculation_method === 'method1' ? inputs.mass_flow_rate * inputs.specific_work : inputs.calculation_method === 'method2' ? inputs.density * inputs.volume_flow_rate * inputs.gravitational_acceleration * inputs.head : inputs.calculation_method === 'method3' ? inputs.specific_weight * inputs.volume_flow_rate * inputs.head : inputs.volume_flow_rate * (inputs.pressure_2 - inputs.pressure_1)) / 1000"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "formulas_reference",
+      "content": "## Formulas Used\n\n**Method 1:** P = m·w\n- P = power (W)\n- m = mass flow rate (kg/s)\n- w = specific work (J/kg)\n\n**Method 2:** P = ρ·Q·g·h\n- ρ = density (kg/m³)\n- Q = volume flow rate (m³/s)\n- g = gravitational acceleration (9.81 m/s²)\n- h = head (m)\n\n**Method 3:** P = γ·Q·h\n- γ = specific weight (N/m³)\n- Q = volume flow rate (m³/s)\n- h = head (m)\n\n**Method 4:** P = Q·(p₂ - p₁)\n- Q = volume flow rate (m³/s)\n- p₂ = outlet pressure (Pa)\n- p₁ = inlet pressure (Pa)"
+    }
+  ]
+}

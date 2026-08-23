@@ -1,0 +1,79 @@
+{
+  "id": "equilibrant_force",
+  "title": "Equilibrant Force",
+  "description": "The force required to keep a system of forces in equilibrium.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Equilibrant Force\n\nThe force required to keep a system of forces in equilibrium is called the **equilibriant** of the system.\n\nWhen two or more forces are applied to a system, their resultant force can be calculated by vector addition. The equilibrant is the force that acts in the opposite direction of this resultant, keeping the system in perfect balance.\n\nIn the example:\n- Forces F1 and F2 can be added to produce the resultant force F(1,2)\n- The equilibrant E acts in the opposite direction of F(1,2) to maintain equilibrium"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "force_x",
+          "label": "Resultant Force (X-component)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 10
+        },
+        {
+          "id": "force_y",
+          "label": "Resultant Force (Y-component)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 8
+        }
+      ],
+      "outputs": [
+        {
+          "id": "equilibrant_magnitude",
+          "label": "Equilibrant Magnitude",
+          "formula": "sqrt(inputs.force_x * inputs.force_x + inputs.force_y * inputs.force_y)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "equilibrant_x",
+          "label": "Equilibrant (X-component)",
+          "formula": "-inputs.force_x",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "equilibrant_y",
+          "label": "Equilibrant (Y-component)",
+          "formula": "-inputs.force_y",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Force Component",
+        "Resultant Force",
+        "Equilibrant Force"
+      ],
+      "rows": [
+        [
+          "X-component",
+          "inputs.force_x",
+          "-inputs.force_x"
+        ],
+        [
+          "Y-component",
+          "inputs.force_y",
+          "-inputs.force_y"
+        ],
+        [
+          "Magnitude",
+          "sqrt(inputs.force_x * inputs.force_x + inputs.force_y * inputs.force_y)",
+          "sqrt(inputs.force_x * inputs.force_x + inputs.force_y * inputs.force_y)"
+        ]
+      ]
+    }
+  ]
+}

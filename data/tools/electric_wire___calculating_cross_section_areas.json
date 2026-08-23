@@ -1,0 +1,99 @@
+{
+  "id": "electric_wire___calculating_cross_section_areas",
+  "title": "Electric Wire - Calculating Cross-Section Areas",
+  "description": "Calculate single and bunched electric wire cross-section area and diameter.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Cross-Section Area of Single Wire\n\nThe cross-section area of a round single wire can be calculated as:\n\n**A = D² π / 4 = 0.7854 D²**\n\nwhere:\n- A = cross-section area (mm²)\n- D = diameter (mm)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Single Wire Cross-Section Area"
+      ],
+      "inputs": [
+        {
+          "id": "single_wire_diameter",
+          "label": "Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "single_wire_area",
+          "label": "Cross-Section Area",
+          "formula": "inputs.single_wire_diameter * inputs.single_wire_diameter * 3.14159265359 / 4",
+          "unit": "mm²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Cross-Section Area of Bunched Wire\n\nThe cross-section area of bunched wires can be calculated as:\n\n**A = n d² π / 4 = 0.7854 n d²**\n\nwhere:\n- n = number of wires\n- d = single wire diameter (mm)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Multiple Wires Cross-Section Area"
+      ],
+      "inputs": [
+        {
+          "id": "bunch_wire_diameter",
+          "label": "Diameter of each wire",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 1
+        },
+        {
+          "id": "number_of_wires",
+          "label": "Number of wires",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "bunched_wire_area",
+          "label": "Cross-Section Area",
+          "formula": "inputs.number_of_wires * inputs.bunch_wire_diameter * inputs.bunch_wire_diameter * 3.14159265359 / 4",
+          "unit": "mm²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Diameter of a Single Wire Cross-Section Area\n\nThe diameter of a single wire cross-section area can be calculated as:\n\n**D = (A × 4 / π)^(1/2) = (1.2732 A)^(1/2)**\n\nwhere:\n- A = cross-section area (mm²)\n- D = diameter (mm)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Diameter from Cross-Section Area"
+      ],
+      "inputs": [
+        {
+          "id": "cross_section_area",
+          "label": "Cross-Section Area",
+          "type": "number",
+          "unit": "mm²",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "calculated_diameter",
+          "label": "Diameter",
+          "formula": "Math.sqrt(inputs.cross_section_area * 4 / 3.14159265359)",
+          "unit": "mm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

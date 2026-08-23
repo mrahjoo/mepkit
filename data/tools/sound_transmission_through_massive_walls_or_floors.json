@@ -1,0 +1,215 @@
+{
+  "id": "sound_transmission_through_massive_walls_or_floors",
+  "title": "Sound Transmission through Massive Walls or Floors",
+  "description": "Calculate sound attenuation through massive walls or floors based on material mass and frequency. The attenuation depends primarily on the mass of the construction, with higher mass providing greater sound insulation.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "mass_calculator",
+      "content": "Calculate the mass per unit area of a construction element",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Material Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 2300
+        },
+        {
+          "id": "thickness",
+          "label": "Thickness",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mass_per_area",
+          "label": "Mass per Unit Area",
+          "formula": "inputs.density * inputs.thickness",
+          "unit": "kg/m²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "attenuation_calculator",
+      "content": "Calculate sound attenuation at specific frequencies",
+      "inputs": [
+        {
+          "id": "mean_attenuation",
+          "label": "Mean Sound Attenuation",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 52
+        },
+        {
+          "id": "frequency",
+          "label": "Frequency",
+          "type": "select",
+          "options": [
+            {
+              "value": -13,
+              "label": "63 Hz (-13 dB)"
+            },
+            {
+              "value": -9,
+              "label": "125 Hz (-9 dB)"
+            },
+            {
+              "value": -5,
+              "label": "250 Hz (-5 dB)"
+            },
+            {
+              "value": -1,
+              "label": "500 Hz (-1 dB)"
+            },
+            {
+              "value": 3,
+              "label": "1000 Hz (3 dB)"
+            },
+            {
+              "value": 7,
+              "label": "2000 Hz (7 dB)"
+            },
+            {
+              "value": 11,
+              "label": "4000 Hz (11 dB)"
+            },
+            {
+              "value": 15,
+              "label": "8000 Hz (15 dB)"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "frequency_attenuation",
+          "label": "Sound Attenuation at Frequency",
+          "formula": "inputs.mean_attenuation + inputs.frequency",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "building_elements_table",
+      "content": "Sound Transmission Loss through Different Building Elements",
+      "headers": [
+        "Building Element",
+        "STC Rating (dB)",
+        "Privacy Level"
+      ],
+      "rows": [
+        [
+          "230 mm brickwork, plastered both sides",
+          55,
+          "Shouting not audible"
+        ],
+        [
+          "Standard 38x89 mm wood studs with resilient channels and gypsum wallboard",
+          50,
+          "Shouting barely audible"
+        ],
+        [
+          "230 mm brickwork, plastered one side",
+          48,
+          "—"
+        ],
+        [
+          "115 mm brickwork, plastered both sides",
+          47,
+          "—"
+        ],
+        [
+          "100 mm timber studs, plasterboard both sides, quilt in cavity",
+          46,
+          "Loud speech barely audible"
+        ],
+        [
+          "6 mm double glazing, 100 mm air gap",
+          44,
+          "—"
+        ],
+        [
+          "75 mm clinker concrete block, plastered both sides",
+          44,
+          "—"
+        ],
+        [
+          "115 mm brickwork, plastered one side",
+          43,
+          "—"
+        ],
+        [
+          "Two layers of 20 mm gypsum wallboard on 38x89 mm studs",
+          40,
+          "Loud speech audible but not intelligible"
+        ],
+        [
+          "75 mm timber studs, plasterboard both sides",
+          36,
+          "Loud speech audible and fairly understandable"
+        ],
+        [
+          "6 mm single glazing",
+          29,
+          "Normal speech audible but not intelligible"
+        ],
+        [
+          "One layer plasterboard",
+          25,
+          "Normal speech easily understood"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "frequency_correction_table",
+      "content": "Attenuation Correction by Frequency",
+      "headers": [
+        "Frequency (Hz)",
+        "Attenuation Correction (dB)"
+      ],
+      "rows": [
+        [
+          63,
+          -13
+        ],
+        [
+          125,
+          -9
+        ],
+        [
+          250,
+          -5
+        ],
+        [
+          500,
+          -1
+        ],
+        [
+          1000,
+          3
+        ],
+        [
+          2000,
+          7
+        ],
+        [
+          4000,
+          11
+        ],
+        [
+          8000,
+          15
+        ]
+      ]
+    }
+  ]
+}

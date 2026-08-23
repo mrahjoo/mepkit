@@ -1,0 +1,513 @@
+{
+  "id": "relative_permittivity___the_dielectric_constant",
+  "title": "Relative Permittivity - the Dielectric Constant",
+  "description": "Common materials and their relative permittivity. The dielectric constant (relative permittivity) indicates how easily a material can become polarized by an electric field. Relative permittivity is calculated as εr = ε / ε₀, where ε is the permittivity of the substance and ε₀ is the permittivity of vacuum (8.854187817×10⁻¹² C²/(N m²)).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Relative Permittivity (εr)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde (41°F)",
+          21.8
+        ],
+        [
+          "Acetic Acid (68°F)",
+          6.2
+        ],
+        [
+          "Acetic Acid (36°F)",
+          4.1
+        ],
+        [
+          "Acetone (77°F)",
+          20.7
+        ],
+        [
+          "Acetone (127°F)",
+          17.7
+        ],
+        [
+          "Acetone (32°F)",
+          1.0159
+        ],
+        [
+          "Acetyl Acetone (68°F)",
+          23.1
+        ],
+        [
+          "Acetyl Bromide (68°F)",
+          16.5
+        ],
+        [
+          "Acetyl Chloride (68°F)",
+          15.8
+        ],
+        [
+          "Acetyle Acetone (68°F)",
+          25
+        ],
+        [
+          "Acetylene (32°F)",
+          1.0217
+        ],
+        [
+          "Air (Dry) (68°F)",
+          1.000536
+        ],
+        [
+          "Air, Liquid (-191 oC)",
+          1.4
+        ],
+        [
+          "Alcohol, Industrial",
+          "16-31"
+        ],
+        [
+          "Alumina",
+          "9.3-11.5"
+        ],
+        [
+          "Aluminum Bromide (212°F)",
+          3.4
+        ],
+        [
+          "Aluminum Fluoride",
+          2.2
+        ],
+        [
+          "Amber",
+          "2.8-2.9"
+        ],
+        [
+          "Ammonia (-74°F)",
+          25
+        ],
+        [
+          "Ammonia (-30°F)",
+          22
+        ],
+        [
+          "Ammonia (40°F)",
+          18.9
+        ],
+        [
+          "Ammonia (69°F)",
+          16.5
+        ],
+        [
+          "Aniline (32°F)",
+          7.8
+        ],
+        [
+          "Aniline (68°F)",
+          7.3
+        ],
+        [
+          "Aniline (212°F)",
+          5.5
+        ],
+        [
+          "Araldite",
+          3.6
+        ],
+        [
+          "Argon (68°F)",
+          1.000513
+        ],
+        [
+          "Bakelite",
+          "3.5-5.0"
+        ],
+        [
+          "Bakelite, mica filled",
+          4.7
+        ],
+        [
+          "Benzene (68°F)",
+          2.3
+        ],
+        [
+          "Body tissue",
+          8
+        ],
+        [
+          "Butane (30°F)",
+          1.4
+        ],
+        [
+          "Carbon dioxide (68°F)",
+          1.000921
+        ],
+        [
+          "Carbon disulfide",
+          2.6
+        ],
+        [
+          "Calcium",
+          3
+        ],
+        [
+          "Casting compound",
+          2.5
+        ],
+        [
+          "Caster oil",
+          4.7
+        ],
+        [
+          "Cellulose acetat",
+          "3.3 - 3.9"
+        ],
+        [
+          "Ceramic, MgNb2O6",
+          21
+        ],
+        [
+          "Ceramic, ZnNb2O6",
+          25
+        ],
+        [
+          "Ceramic, MgTa2O6",
+          28
+        ],
+        [
+          "Ceramic, ZnTa2O6",
+          38
+        ],
+        [
+          "Chlorine (32°F)",
+          2
+        ],
+        [
+          "Chloroform (68°F)",
+          4.8
+        ],
+        [
+          "Concrete",
+          4.5
+        ],
+        [
+          "Diamond",
+          "5.5 - 10"
+        ],
+        [
+          "Ebonite",
+          "2.5 - 2.9"
+        ],
+        [
+          "Epoxy Resin (Cast)",
+          3.6
+        ],
+        [
+          "Ethanol (25 oC, 77°F)",
+          24.3
+        ],
+        [
+          "Ethyl Acetate (77°F)",
+          6
+        ],
+        [
+          "Ethyl Alcohol (77°F)",
+          24.3
+        ],
+        [
+          "Ethylene glycol",
+          37
+        ],
+        [
+          "Formamide (20 oC)",
+          84
+        ],
+        [
+          "Formica",
+          "4.6 - 4.9"
+        ],
+        [
+          "Furfural",
+          42
+        ],
+        [
+          "R12 Dichlorodifluoromethane (70°F)",
+          2.4
+        ],
+        [
+          "Glass",
+          "3.7 - 10"
+        ],
+        [
+          "Glass, Pyrex",
+          4.8
+        ],
+        [
+          "Glycerin, Liquid",
+          "47-68"
+        ],
+        [
+          "Glycerol (77°F)",
+          42.5
+        ],
+        [
+          "Granite",
+          "7 - 9"
+        ],
+        [
+          "Graphite",
+          "10 - 15"
+        ],
+        [
+          "Guttapercha",
+          4
+        ],
+        [
+          "Hard paper, laminated",
+          4.5
+        ],
+        [
+          "Hydrazine (20 oC)",
+          52
+        ],
+        [
+          "Hydrocyanic acid (21 oC)",
+          2.3
+        ],
+        [
+          "Hydrofluoric acid (0 oC)",
+          83.6
+        ],
+        [
+          "Hydrogen peroxide (25 oC)",
+          60
+        ],
+        [
+          "Ice (-2 oC)",
+          3.2
+        ],
+        [
+          "Isoprene (77°F)",
+          2.1
+        ],
+        [
+          "Insulation of high voltage cables",
+          4.2
+        ],
+        [
+          "Insulation of telephone cables",
+          1.5
+        ],
+        [
+          "Marble",
+          8
+        ],
+        [
+          "Methanol (20 oC)",
+          33.6
+        ],
+        [
+          "Mica",
+          "2.5 - 7"
+        ],
+        [
+          "Mineral Oil (80°F)",
+          2.1
+        ],
+        [
+          "Mylar",
+          3.1
+        ],
+        [
+          "Neoprene",
+          6.7
+        ],
+        [
+          "Nitrogen (68°F)",
+          1.00058
+        ],
+        [
+          "Nylon",
+          "4.0 - 5.0"
+        ],
+        [
+          "Oil paper",
+          4
+        ],
+        [
+          "Olive oil",
+          3
+        ],
+        [
+          "Paper",
+          2.3
+        ],
+        [
+          "Paper, impregnated",
+          5
+        ],
+        [
+          "Paper, waxed",
+          2.5
+        ],
+        [
+          "Paraffin oil",
+          2.2
+        ],
+        [
+          "Paraffin Wax",
+          "2.1-2.5"
+        ],
+        [
+          "Petroleum",
+          2.2
+        ],
+        [
+          "Phenolic resin",
+          8
+        ],
+        [
+          "Plexiglass",
+          3.2
+        ],
+        [
+          "Polyester Resin",
+          "2.8 - 4.5"
+        ],
+        [
+          "Polyethylene, XLPE",
+          "2.2-2.4"
+        ],
+        [
+          "Polyamide",
+          2.8
+        ],
+        [
+          "Polymide",
+          3.4
+        ],
+        [
+          "Polypropylene",
+          2.2
+        ],
+        [
+          "Polystyrene",
+          3
+        ],
+        [
+          "Porcelain",
+          "5.0-7.0"
+        ],
+        [
+          "Pressed board",
+          4
+        ],
+        [
+          "Pyrex Glass",
+          "4.3 - 5.0"
+        ],
+        [
+          "Quartz",
+          4.5
+        ],
+        [
+          "Rubber",
+          3
+        ],
+        [
+          "Salt",
+          "3.0 - 15.0"
+        ],
+        [
+          "Sapphire",
+          "8.9 - 11.1"
+        ],
+        [
+          "Shellac",
+          3.5
+        ],
+        [
+          "Silica Sand",
+          "2.5-3.5"
+        ],
+        [
+          "Silicon",
+          "11.0 - 12.0"
+        ],
+        [
+          "Silicon dioxide",
+          3.9
+        ],
+        [
+          "Silicon oil",
+          "2.2 - 2.8"
+        ],
+        [
+          "Slate",
+          4
+        ],
+        [
+          "Sodium chloride",
+          5.6
+        ],
+        [
+          "Soft rubber",
+          2.5
+        ],
+        [
+          "Steatite",
+          6
+        ],
+        [
+          "Sulfur",
+          3.5
+        ],
+        [
+          "Sulfuric acid (20 oC)",
+          84
+        ],
+        [
+          "Polytetrafluoroethylene (PTFE)",
+          2
+        ],
+        [
+          "Teflon, PTFE",
+          2.1
+        ],
+        [
+          "Titanium dioxide",
+          "86 - 173"
+        ],
+        [
+          "Transformer oil, mineral",
+          2.2
+        ],
+        [
+          "Transformer oil, vegetable",
+          2.5
+        ],
+        [
+          "Turpentine",
+          2.2
+        ],
+        [
+          "Vacuum",
+          1
+        ],
+        [
+          "Vulcanized fibres",
+          2.5
+        ],
+        [
+          "Water",
+          "4 - 88"
+        ],
+        [
+          "Wood, Dry",
+          "2 - 6"
+        ]
+      ]
+    }
+  ]
+}

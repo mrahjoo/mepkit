@@ -1,0 +1,194 @@
+{
+  "id": "hazardous_areas___north_america_classification",
+  "title": "Hazardous Areas - North America Classification",
+  "description": "A comprehensive tool for understanding and classifying hazardous areas in North America using both the Class/Division/Group system and the Zone/Group system. Determine required protection techniques for electrical installations in locations with flammable gases, vapors, combustible dusts, or ignitable fibers.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hazardous Areas - North America Classification\n\nElectrical equipment installation in atmosphere with flammable gases or vapors, flammable liquids, combustible dusts, ignitable fibers or flyings represents a risk for fire and explosion.\n\nAreas with possible fire or explosion risks due to explosive atmospheres are classified using the **Class/Division** system (North America) or the **Zone** system (Europe and increasingly North America).\n\n### Classification Systems\n\n#### Class/Division/Group System\nBased on Article 500 of the National Electrical Code (NEC):\n- **Classes** - General nature of the hazardous material\n- **Divisions** - Probability of hazardous material being present\n- **Groups** - Type of the hazardous material\n\n#### Zone/Group System\nBased on Articles 505/506 of the National Electrical Code (NEC):\n- **Zones** - General nature and probability of hazardous material\n- **Groups** - Type of hazardous material and location"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "classification_system",
+          "label": "Classification System",
+          "type": "select",
+          "options": [
+            {
+              "label": "Class/Division/Group System",
+              "value": "class_division"
+            },
+            {
+              "label": "Zone/Group System",
+              "value": "zone"
+            }
+          ],
+          "defaultValue": "class_division"
+        },
+        {
+          "id": "class",
+          "label": "Class (Class/Division only)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Class I - Flammable gases or vapors",
+              "value": "I"
+            },
+            {
+              "label": "Class II - Combustible or conductive dusts",
+              "value": "II"
+            },
+            {
+              "label": "Class III - Ignitable fibers or flyings",
+              "value": "III"
+            }
+          ],
+          "defaultValue": "I"
+        },
+        {
+          "id": "division",
+          "label": "Division (Class/Division only)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Division 1 - High probability (continuous/intermittent)",
+              "value": "1"
+            },
+            {
+              "label": "Division 2 - Low probability (abnormal/short period)",
+              "value": "2"
+            }
+          ],
+          "defaultValue": "1"
+        },
+        {
+          "id": "class_group",
+          "label": "Group (Class I: A-D, Class II: E-G, Class III: none)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Group A - Acetylene",
+              "value": "A"
+            },
+            {
+              "label": "Group B - MESG ≤ 0.45mm or MIC ≤ 0.40 (e.g., Hydrogen)",
+              "value": "B"
+            },
+            {
+              "label": "Group C - MESG > 0.75mm or 0.40 < MIC < 0.80 (e.g., Ethylene)",
+              "value": "C"
+            },
+            {
+              "label": "Group D - MESG > 0.75mm or MIC > 0.80 (e.g., Propane, Gasoline)",
+              "value": "D"
+            },
+            {
+              "label": "Group E - Combustible metal dusts (Aluminum, Magnesium, etc.)",
+              "value": "E"
+            },
+            {
+              "label": "Group F - Carbonaceous dusts (Coal, Carbon black, etc.)",
+              "value": "F"
+            },
+            {
+              "label": "Group G - Other combustible dusts (Flour, Grain, Sugar, etc.)",
+              "value": "G"
+            }
+          ],
+          "defaultValue": "D"
+        },
+        {
+          "id": "zone",
+          "label": "Zone (Zone System only)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Zone 0 - Present continuously or long periods",
+              "value": "0"
+            },
+            {
+              "label": "Zone 1 - Likely to occur under normal conditions",
+              "value": "1"
+            },
+            {
+              "label": "Zone 2 - Not likely under normal conditions, short period",
+              "value": "2"
+            },
+            {
+              "label": "Zone 20 - Dusts present continuously or long periods",
+              "value": "20"
+            },
+            {
+              "label": "Zone 21 - Dusts likely under normal conditions",
+              "value": "21"
+            },
+            {
+              "label": "Zone 22 - Dusts not likely, short period only",
+              "value": "22"
+            }
+          ],
+          "defaultValue": "2"
+        },
+        {
+          "id": "zone_group",
+          "label": "Zone Group (Zone System only)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Group I - Mines with firedamp",
+              "value": "I"
+            },
+            {
+              "label": "Group IIA - Propane, Acetone, Benzene, etc.",
+              "value": "IIA"
+            },
+            {
+              "label": "Group IIB - Ethylene, Propylene oxide, etc.",
+              "value": "IIB"
+            },
+            {
+              "label": "Group IIC - Acetylene, Hydrogen, Carbon disulphide",
+              "value": "IIC"
+            },
+            {
+              "label": "Group IIIA - Combustible flyings",
+              "value": "IIIA"
+            },
+            {
+              "label": "Group IIIB - Non-conductive dust",
+              "value": "IIIB"
+            },
+            {
+              "label": "Group IIIC - Conductive dust",
+              "value": "IIIC"
+            }
+          ],
+          "defaultValue": "IIA"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "classification_result",
+          "label": "Hazardous Area Classification",
+          "formula": "IF(inputs.classification_system = 'class_division', 'Class ' & inputs.class & ', Division ' & inputs.division & ', Group ' & inputs.class_group, 'Zone ' & inputs.zone & ', Group ' & inputs.zone_group)"
+        },
+        {
+          "id": "hazard_description",
+          "label": "Hazard Description",
+          "formula": "IF(inputs.classification_system = 'class_division', IF(inputs.class = 'I', 'Flammable gases or vapors present in quantities sufficient to produce explosive or ignitable mixtures', IF(inputs.class = 'II', 'Combustible or conductive dusts present in quantities sufficient to produce explosive or ignitable mixtures', 'Ignitable fibers or flyings present in quantities sufficient to produce explosive or ignitable mixtures')), IF(OR(inputs.zone = '0', inputs.zone = '1', inputs.zone = '2'), 'Flammable gases, vapors or mists', 'Combustible dusts or ignitable fibers and flyings'))"
+        },
+        {
+          "id": "probability_description",
+          "label": "Probability of Hazardous Material",
+          "formula": "IF(inputs.classification_system = 'class_division', IF(inputs.division = '1', 'High probability - present continuously, intermittently, or periodically', 'Low probability - present only during abnormal conditions for short period'), IF(OR(inputs.zone = '0', inputs.zone = '20'), 'Present continuously or for long periods', IF(OR(inputs.zone = '1', inputs.zone = '21'), 'Likely to occur under normal operating conditions', 'Not likely under normal conditions and occurs only for short period')))"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Class/Division/Group System Details\n\n### Classes\n- **Class I**: Flammable gases or vapors\n- **Class II**: Combustible or conductive dusts\n- **Class III**: Ignitable fibers or flyings\n\n### Divisions\n- **Division 1**: High probability - continuous, intermittent, or periodic presence under normal operating conditions\n- **Division 2**: Low probability - abnormal conditions only, short duration\n\n### Groups (Class I: A-D for Gases)\n- **Group A**: Acetylene\n- **Group B**: MESG ≤ 0.45mm or MIC ≤ 0.40 (Hydrogen, Fuel gases with >30% hydrogen)\n- **Group C**: MESG > 0.75mm or 0.40 < MIC < 0.80 (Carbon monoxide, Ether, Hydrogen sulfide)\n- **Group D**: MESG > 0.75mm or MIC > 0.80 (Gasoline, Acetone, Ammonia, Benzene, Propane)\n\n### Groups (Class II & III: E-G for Dusts)\n- **Group E**: Combustible metal dusts (Aluminum, Magnesium, Titanium, Zinc)\n- **Group F**: Carbonaceous dusts (Coal, Carbon black, with >8% volatiles)\n- **Group G**: Other combustible dusts (Flour, Grain, Starch, Sugar, Wood, Plastics)\n\n## Zone/Group System Details\n\n### Zones - Gases, Vapors, Mists\n- **Zone 0**: Present continuously or for long periods\n- **Zone 1**: Likely to occur under normal operating conditions\n- **Zone 2**: Not likely under normal conditions, short period only\n\n### Zones - Dusts\n- **Zone 20**: Dusts present continuously or for long periods\n- **Zone 21**: Dusts likely to occur under normal operating conditions\n- **Zone 22**: Dusts not likely under normal conditions, short period only\n\n### Groups\n- **Group I**: Mining locations with firedamp\n- **Group II**: Explosive gas atmospheres (Zones 0, 1, 2)\n  - **IIA**: Propane, Acetone, Benzene, Butane, Methane, Petrol\n  - **IIB**: Ethylene, Propylene oxide, Ethylene oxide, Butadiene\n  - **IIC**: Acetylene, Hydrogen, Carbon disulphide\n- **Group III**: Explosive dust atmospheres (Zones 20, 21, 22)\n  - **IIIA**: Combustible flyings\n  - **IIIB**: Non-conductive dust\n  - **IIIC**: Conductive dust\n\n## Example\nA propane gas installation would typically be classified as:\n- **Class/Division**: Class I, Division 2, Group D\n- **Zone System**: Zone 2, Group IIA"
+    }
+  ]
+}

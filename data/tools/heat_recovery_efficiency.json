@@ -1,0 +1,149 @@
+{
+  "id": "heat_recovery_efficiency",
+  "title": "Heat Recovery Efficiency Calculator",
+  "description": "Calculate temperature, moisture, and enthalpy transfer efficiency for heat recovery units in ventilation and air conditioning systems. Supports both Imperial and Metric units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "efficiency_calculator",
+      "content": "Heat Recovery Efficiency Calculator",
+      "inputs": [
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "celsius"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "fahrenheit"
+            }
+          ],
+          "defaultValue": "celsius"
+        },
+        {
+          "id": "t1",
+          "label": "Temperature in outside make-up air before heat exchanger (t1)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "°C"
+        },
+        {
+          "id": "t2",
+          "label": "Temperature in outside make-up air after heat exchanger (t2)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "°C"
+        },
+        {
+          "id": "t3",
+          "label": "Temperature in outlet air before heat exchanger (t3)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "x1",
+          "label": "Moisture in outside make-up air before heat exchanger (x1)",
+          "type": "number",
+          "defaultValue": 0.002,
+          "unit": "kg/kg"
+        },
+        {
+          "id": "x2",
+          "label": "Moisture in outside make-up air after heat exchanger (x2)",
+          "type": "number",
+          "defaultValue": 0.004,
+          "unit": "kg/kg"
+        },
+        {
+          "id": "x3",
+          "label": "Moisture in outlet air before heat exchanger (x3)",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "kg/kg"
+        },
+        {
+          "id": "h1",
+          "label": "Enthalpy in outside make-up air before heat exchanger (h1)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "kJ/kg"
+        },
+        {
+          "id": "h2",
+          "label": "Enthalpy in outside make-up air after heat exchanger (h2)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "kJ/kg"
+        },
+        {
+          "id": "h3",
+          "label": "Enthalpy in outlet air before heat exchanger (h3)",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "kJ/kg"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temp_efficiency",
+          "label": "Temperature Transfer Efficiency (μt)",
+          "formula": "(inputs.t2 - inputs.t1) / (inputs.t3 - inputs.t1)",
+          "format": "decimal",
+          "unit": "%"
+        },
+        {
+          "id": "moisture_efficiency",
+          "label": "Moisture Transfer Efficiency (μm)",
+          "formula": "(inputs.x2 - inputs.x1) / (inputs.x3 - inputs.x1)",
+          "format": "decimal",
+          "unit": "%"
+        },
+        {
+          "id": "enthalpy_efficiency",
+          "label": "Enthalpy Transfer Efficiency (μe)",
+          "formula": "(inputs.h2 - inputs.h1) / (inputs.h3 - inputs.h1)",
+          "format": "decimal",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "efficiency_results",
+      "content": "Efficiency Results Summary",
+      "headers": [
+        "Efficiency Type",
+        "Formula",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Temperature Transfer Efficiency (μt)",
+          "μt = (t2 - t1) / (t3 - t1)",
+          "Calculated above"
+        ],
+        [
+          "Moisture Transfer Efficiency (μm)",
+          "μm = (x2 - x1) / (x3 - x1)",
+          "Calculated above"
+        ],
+        [
+          "Enthalpy Transfer Efficiency (μe)",
+          "μe = (h2 - h1) / (h3 - h1)",
+          "Calculated above"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "principles_info",
+      "content": "## Common Energy Recovery Principles\n\nHeat recovery units used in ventilation and air conditioning systems are based on these principles:\n\n- **Return Air Recovery Units**: Used air is mixed into the supply air, transferring both sensible and latent heat directly.\n- **Rotating Heat Exchangers**: Outlet air heats or cools an exchanger wheel that transfers energy to make-up air, including latent heat via moisture condensation.\n- **Air-Fluid-Air Exchangers**: Heat is transferred from outlet air to a circulating fluid, then to supply air.\n- **Cross Flow Heat Exchangers**: Heat is transferred directly through separating walls from outlet to make-up air.\n- **Heat Pumps**: Uses additional energy to move more outlet air energy to make-up air than other systems (consumes 1/3 to 1/5 of recovered energy).\n\n## Variable Definitions\n\n**Temperature Transfer Efficiency (μt)**\n- t1: Temperature in outside make-up air **before** the heat exchanger (°C, °F)\n- t2: Temperature in outside make-up air **after** the heat exchanger (°C, °F)\n- t3: Temperature in outlet air **before** the heat exchanger (°C, °F)\n\n**Moisture Transfer Efficiency (μm)**\n- x1: Moisture in outside make-up air **before** the heat exchanger (kg/kg, grains/lb)\n- x2: Moisture in outside make-up air **after** the heat exchanger (kg/kg, grains/lb)\n- x3: Moisture in outlet air **before** the heat exchanger (kg/kg, grains/lb)\n\n**Enthalpy Transfer Efficiency (μe)**\n- h1: Enthalpy in outside make-up air **before** the heat exchanger (kJ/kg, Btu/lb)\n- h2: Enthalpy in outside make-up air **after** the heat exchanger (kJ/kg, Btu/lb)\n- h3: Enthalpy in outlet air **before** the heat exchanger (kJ/kg, Btu/lb)"
+    }
+  ]
+}

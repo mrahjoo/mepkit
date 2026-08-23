@@ -1,0 +1,83 @@
+{
+  "id": "circles_within_a_rectangle___calculator",
+  "title": "Circles within a Rectangle - Calculator",
+  "description": "Estimates the maximum number of circles that may fit within a rectangle. Use this calculator to determine how many pipes, wires, or other circular objects fit within a conduit or similar rectangular space. Input rectangle dimensions (height and width) and circle diameter.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate the maximum number of circles that fit within a rectangle",
+      "inputs": [
+        {
+          "id": "rectangle_width",
+          "label": "Rectangle Width",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "units"
+        },
+        {
+          "id": "rectangle_height",
+          "label": "Rectangle Height",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "units"
+        },
+        {
+          "id": "circle_diameter",
+          "label": "Circle Diameter",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "units"
+        },
+        {
+          "id": "pattern_type",
+          "label": "Pattern Type",
+          "type": "select",
+          "defaultValue": "rectangular",
+          "options": [
+            {
+              "label": "Rectangular Pattern",
+              "value": "rectangular"
+            },
+            {
+              "label": "Triangular Pattern",
+              "value": "triangular"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "circles_horizontal",
+          "label": "Circles per Row (Horizontal)",
+          "formula": "Math.floor(inputs.rectangle_width / inputs.circle_diameter)",
+          "unit": "count"
+        },
+        {
+          "id": "circles_vertical",
+          "label": "Circles per Column (Vertical)",
+          "formula": "Math.floor(inputs.rectangle_height / inputs.circle_diameter)",
+          "unit": "count"
+        },
+        {
+          "id": "total_circles_rectangular",
+          "label": "Total Circles (Rectangular Pattern)",
+          "formula": "inputs.pattern_type === 'rectangular' ? Math.floor(inputs.rectangle_width / inputs.circle_diameter) * Math.floor(inputs.rectangle_height / inputs.circle_diameter) : 0",
+          "unit": "count"
+        },
+        {
+          "id": "total_circles_triangular",
+          "label": "Total Circles (Triangular Pattern)",
+          "formula": "inputs.pattern_type === 'triangular' ? Math.floor(inputs.rectangle_width / inputs.circle_diameter) * Math.floor((inputs.rectangle_height - inputs.circle_diameter / 2) / (inputs.circle_diameter * Math.sqrt(3) / 2)) + Math.floor((inputs.rectangle_width - inputs.circle_diameter / 2) / inputs.circle_diameter) : 0",
+          "unit": "count"
+        },
+        {
+          "id": "total_circles",
+          "label": "Total Circles (Maximum)",
+          "formula": "Math.max(Math.floor(inputs.rectangle_width / inputs.circle_diameter) * Math.floor(inputs.rectangle_height / inputs.circle_diameter), Math.floor(inputs.rectangle_width / inputs.circle_diameter) * Math.floor((inputs.rectangle_height - inputs.circle_diameter / 2) / (inputs.circle_diameter * Math.sqrt(3) / 2)) + Math.floor((inputs.rectangle_width - inputs.circle_diameter / 2) / inputs.circle_diameter))",
+          "unit": "count"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "septic_systems",
+  "title": "Septic Systems",
+  "description": "Septic systems handle waste from drain systems in buildings, processing waste through septic tanks and leaching areas. This tool helps determine septic tank capacity, grease interceptor requirements, and leach field sizing based on soil absorption rates.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Septic Tank Volume (gallons)",
+        "Maximum Capacity (m³)",
+        "Single Family Units (bedrooms)",
+        "Multiple Family Units (units)",
+        "DFU"
+      ],
+      "rows": [
+        [
+          750,
+          2.8,
+          "1 - 2",
+          "",
+          15
+        ],
+        [
+          1000,
+          3.8,
+          "3",
+          "",
+          20
+        ],
+        [
+          1200,
+          4.5,
+          "4",
+          "2",
+          25
+        ],
+        [
+          1500,
+          5.7,
+          "5 - 6",
+          "3",
+          33
+        ],
+        [
+          2000,
+          7.6,
+          "",
+          "4",
+          45
+        ],
+        [
+          2500,
+          9.5,
+          "",
+          "6",
+          60
+        ],
+        [
+          2750,
+          10.4,
+          "",
+          "7",
+          70
+        ],
+        [
+          3000,
+          11.3,
+          "",
+          "8",
+          80
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Soil",
+        "Absorption Capacity (gallons/ft²)",
+        "Absorption Capacity (liter/m²)"
+      ],
+      "rows": [
+        [
+          "Clay with small amount of sand or gravel",
+          "1 - 1.5",
+          "40 - 60"
+        ],
+        [
+          "Clay with small amount of sand or gravel",
+          "1.5 - 2",
+          "60 - 80"
+        ],
+        [
+          "Sandy loam/clay",
+          "2.5",
+          "100"
+        ],
+        [
+          "Fine sand",
+          "4",
+          "160"
+        ],
+        [
+          "Coarse sand or gravel",
+          "5",
+          "200"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Leach Field Area Calculator\n\nCalculate the required leach field area by dividing the 24-hour wastewater load by the soil absorption capacity.\n\n**Formula:** A = Wastewater Load / Absorption Capacity",
+      "inputs": [
+        {
+          "id": "wastewater_load",
+          "label": "24-Hour Wastewater Load",
+          "type": "number",
+          "unit": "gallons",
+          "defaultValue": 1200
+        },
+        {
+          "id": "absorption_capacity",
+          "label": "Soil Absorption Capacity",
+          "type": "number",
+          "unit": "gallons/ft²",
+          "defaultValue": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "leach_field_area",
+          "label": "Required Leach Field Area",
+          "formula": "inputs.wastewater_load / inputs.absorption_capacity",
+          "unit": "ft²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Leach Line Guidelines\n\n- **Maximum length of each line:** 100 ft (30 m)\n- **Minimum spacing between lines:** 10 ft (3 m)\n- **Minimum depth of leach line:** 12 in (0.3 m) or deeper if soil freezes\n- **Elevation rate:** Approximately 1%"
+    }
+  ]
+}

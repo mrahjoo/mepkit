@@ -1,0 +1,87 @@
+{
+  "id": "pressure_coefficient",
+  "title": "Pressure Coefficient",
+  "description": "The Pressure Coefficient is the ratio of pressure forces to inertial forces. It is an important parameter in most fluid flow applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pressure Coefficient Formula\n\nThe pressure coefficient is the ratio of _pressure forces_ to _inertial forces_ and can be expressed as:\n\n**Cp = dP / (ρ v² / 2)**\n\nOr alternatively:\n\n**Cp = dh (ρ v² / 2 g)**\n\n### Where:\n- **Cp** = pressure coefficient (dimensionless)\n- **dP** = pressure difference (Pa or N/m²)\n- **ρ** = fluid density (kg/m³)\n- **v** = flow velocity (m/s)\n- **dh** = head (m)\n- **g** = acceleration of gravity (9.81 m/s²)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pressure_diff",
+          "label": "Pressure Difference (dP)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 100
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "flow_velocity",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_coefficient",
+          "label": "Pressure Coefficient (Cp)",
+          "formula": "inputs.pressure_diff / (inputs.fluid_density * inputs.flow_velocity ** 2 / 2)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Pressure Difference",
+          "dP",
+          "",
+          "Pa"
+        ],
+        [
+          "Fluid Density",
+          "ρ",
+          "",
+          "kg/m³"
+        ],
+        [
+          "Flow Velocity",
+          "v",
+          "",
+          "m/s"
+        ],
+        [
+          "Acceleration of Gravity",
+          "g",
+          "9.81",
+          "m/s²"
+        ],
+        [
+          "Pressure Coefficient",
+          "Cp",
+          "",
+          "dimensionless"
+        ]
+      ]
+    }
+  ]
+}

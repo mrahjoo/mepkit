@@ -1,0 +1,392 @@
+{
+  "id": "petroleum_products___standard_test_methods__astm_a",
+  "title": "Petroleum Products - Standard Test Methods (ASTM and others)",
+  "description": "Comprehensive calculator for petroleum product specifications and standard test methods including ASTM test methods for gasoline, diesel, and jet kerosine. Covers key properties like acidity, aromatics, density, viscosity, flash point, sulfur content, and many other quality parameters with typical specification ranges.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Petroleum Products - Standard Test Methods Calculator\n\nThis tool provides a comprehensive reference for petroleum product specifications and test methods for:\n- **Gasoline** (automotive spark-ignition engine fuel)\n- **Diesel** (automotive compression-ignition fuel)\n- **Jet Kerosine** (aviation turbine fuel)\n\nUse the calculator below to check typical specification limits for various fuel properties."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fuel_type",
+          "label": "Fuel Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Gasoline",
+              "value": "gasoline"
+            },
+            {
+              "label": "Diesel",
+              "value": "diesel"
+            },
+            {
+              "label": "Jet Kerosine",
+              "value": "jet_kerosine"
+            }
+          ],
+          "defaultValue": "gasoline"
+        },
+        {
+          "id": "property",
+          "label": "Property to Check",
+          "type": "select",
+          "options": [
+            {
+              "label": "Acidity (TAN)",
+              "value": "acidity"
+            },
+            {
+              "label": "Aromatics Total",
+              "value": "aromatics_total"
+            },
+            {
+              "label": "Aromatics PAH",
+              "value": "aromatics_pah"
+            },
+            {
+              "label": "Ash",
+              "value": "ash"
+            },
+            {
+              "label": "Benzene",
+              "value": "benzene"
+            },
+            {
+              "label": "Carbon Residue",
+              "value": "carbon_residue"
+            },
+            {
+              "label": "Cetane Index",
+              "value": "cetane_index"
+            },
+            {
+              "label": "Cetane Number",
+              "value": "cetane_number"
+            },
+            {
+              "label": "Cloud Point",
+              "value": "cloud_point"
+            },
+            {
+              "label": "CFPP",
+              "value": "cfpp"
+            },
+            {
+              "label": "Density @ 15°C",
+              "value": "density"
+            },
+            {
+              "label": "Distillation 10%",
+              "value": "dist_10"
+            },
+            {
+              "label": "Distillation 50%",
+              "value": "dist_50"
+            },
+            {
+              "label": "Distillation 90%",
+              "value": "dist_90"
+            },
+            {
+              "label": "Distillation Final",
+              "value": "dist_final"
+            },
+            {
+              "label": "Flash Point",
+              "value": "flash_point"
+            },
+            {
+              "label": "Heat of Combustion",
+              "value": "heat_combustion"
+            },
+            {
+              "label": "Hydrogen Content",
+              "value": "hydrogen"
+            },
+            {
+              "label": "Octane Number (RON)",
+              "value": "ron"
+            },
+            {
+              "label": "Octane Number (MON)",
+              "value": "mon"
+            },
+            {
+              "label": "Olefins",
+              "value": "olefins"
+            },
+            {
+              "label": "Oxidation Stability",
+              "value": "oxidation"
+            },
+            {
+              "label": "Smoke Point",
+              "value": "smoke_point"
+            },
+            {
+              "label": "Sulfur Total",
+              "value": "sulfur_total"
+            },
+            {
+              "label": "Sulfur Mercaptans",
+              "value": "sulfur_mercaptan"
+            },
+            {
+              "label": "Vapor Pressure",
+              "value": "vapor_pressure"
+            },
+            {
+              "label": "Viscosity",
+              "value": "viscosity"
+            },
+            {
+              "label": "Water Content",
+              "value": "water"
+            }
+          ],
+          "defaultValue": "aromatics_total"
+        },
+        {
+          "id": "measured_value",
+          "label": "Measured Value",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "spec_min",
+          "label": "Typical Min Specification",
+          "formula": "inputs.fuel_type == 'gasoline' && inputs.property == 'aromatics_total' ? 0 : inputs.fuel_type == 'diesel' && inputs.property == 'aromatics_total' ? 0 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'aromatics_total' ? 0 : inputs.fuel_type == 'diesel' && inputs.property == 'cetane_number' ? 48 : inputs.fuel_type == 'diesel' && inputs.property == 'cetane_index' ? 48 : inputs.fuel_type == 'gasoline' && inputs.property == 'ron' ? 91 : inputs.fuel_type == 'gasoline' && inputs.property == 'mon' ? 82 : inputs.fuel_type == 'diesel' && inputs.property == 'density' ? 800 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'density' ? 775 : inputs.fuel_type == 'diesel' && inputs.property == 'viscosity' ? 2.0 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'viscosity' ? -1 : inputs.fuel_type == 'gasoline' && inputs.property == 'vapor_pressure' ? 45 : inputs.fuel_type == 'diesel' && inputs.property == 'flash_point' ? 55 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'flash_point' ? 28 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'smoke_point' ? 18 : 0",
+          "unit": "varies"
+        },
+        {
+          "id": "spec_max",
+          "label": "Typical Max Specification",
+          "formula": "inputs.fuel_type == 'gasoline' && inputs.property == 'aromatics_total' ? 35 : inputs.fuel_type == 'diesel' && inputs.property == 'aromatics_total' ? 25 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'aromatics_total' ? 50 : inputs.fuel_type == 'gasoline' && inputs.property == 'benzene' ? 5 : inputs.fuel_type == 'gasoline' && inputs.property == 'olefins' ? 18 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'olefins' ? 5 : inputs.fuel_type == 'diesel' && inputs.property == 'aromatics_pah' ? 8 : inputs.fuel_type == 'gasoline' && inputs.property == 'acidity' ? 0.08 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'acidity' ? 0.10 : inputs.fuel_type == 'diesel' && inputs.property == 'ash' ? 0.01 : inputs.fuel_type == 'diesel' && inputs.property == 'carbon_residue' ? 0.3 : inputs.fuel_type == 'gasoline' && inputs.property == 'density' ? 780 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'density' ? 840 : inputs.fuel_type == 'diesel' && inputs.property == 'density' ? 860 : inputs.fuel_type == 'gasoline' && inputs.property == 'vapor_pressure' ? 105 : inputs.fuel_type == 'gasoline' && inputs.property == 'sulfur_total' ? 1000 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'sulfur_total' ? 3000 : inputs.fuel_type == 'diesel' && inputs.property == 'sulfur_total' ? 2000 : inputs.fuel_type == 'diesel' && inputs.property == 'viscosity' ? 4.5 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'viscosity' ? 8.0 : inputs.fuel_type == 'diesel' && inputs.property == 'water' ? 500 : inputs.fuel_type == 'jet_kerosine' && inputs.property == 'smoke_point' ? 25 : 999999",
+          "unit": "varies"
+        },
+        {
+          "id": "compliance",
+          "label": "Specification Compliance",
+          "formula": "inputs.measured_value == 0 ? 'Enter measured value' : (inputs.spec_min != 0 && inputs.measured_value < inputs.spec_min) ? 'FAIL - Below minimum' : (inputs.spec_max != 999999 && inputs.measured_value > inputs.spec_max) ? 'FAIL - Above maximum' : 'PASS - Within range'",
+          "unit": "status"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Test Method",
+        "Unit",
+        "Gasoline Spec",
+        "Diesel Spec",
+        "Jet Kerosine Spec"
+      ],
+      "rows": [
+        [
+          "Acidity (TAN)",
+          "ASTM D664/D3242",
+          "mg KOH/g",
+          "0.08 max",
+          "0.08 max",
+          "0.015-0.10 max"
+        ],
+        [
+          "Aromatics Total",
+          "ASTM D1319/D5186",
+          "vol%/wt%",
+          "Max 35",
+          "Max 15-25",
+          "Max 25-50"
+        ],
+        [
+          "Aromatics PAH",
+          "ASTM D5186",
+          "wt%",
+          "N/A",
+          "Max 2-8",
+          "N/A"
+        ],
+        [
+          "Ash",
+          "ASTM D482",
+          "wt%",
+          "N/A",
+          "Max 0.01",
+          "N/A"
+        ],
+        [
+          "Benzene",
+          "ASTM D5580",
+          "vol%",
+          "Max 1-5",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "Carbon Residue",
+          "ASTM D4530",
+          "wt%",
+          "N/A",
+          "Max 0.2-0.3",
+          "N/A"
+        ],
+        [
+          "Cetane Index/Number",
+          "ASTM D4737/D613",
+          "CN",
+          "N/A",
+          "Min 48-55",
+          "N/A"
+        ],
+        [
+          "Density @ 15°C",
+          "ASTM D4052",
+          "kg/m³",
+          "715-780",
+          "800-860",
+          "775-840"
+        ],
+        [
+          "Distillation 10%",
+          "ASTM D86",
+          "°C",
+          "Max 45-65",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "Distillation 90%",
+          "ASTM D86",
+          "°C",
+          "Max 130-175",
+          "Max 320-340",
+          "N/A"
+        ],
+        [
+          "Distillation Final BP",
+          "ASTM D86",
+          "°C",
+          "Max 205",
+          "Max 350-365",
+          "Max 300"
+        ],
+        [
+          "Flash Point",
+          "ASTM D56/D93",
+          "°C",
+          "N/A",
+          "Min 55",
+          "Min 28"
+        ],
+        [
+          "Heat of Combustion",
+          "ASTM D3338",
+          "MJ/kg",
+          "N/A",
+          "N/A",
+          "Min 42.8"
+        ],
+        [
+          "Hydrogen Content",
+          "ASTM D3343",
+          "wt%",
+          "N/A",
+          "N/A",
+          "Min 13.4"
+        ],
+        [
+          "Octane Number RON",
+          "ASTM D2699",
+          "ON",
+          "Min 91-98",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "Octane Number MON",
+          "ASTM D2700",
+          "ON",
+          "Min 82-88",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "Olefins",
+          "ASTM D1319",
+          "vol%",
+          "Max 10-18",
+          "N/A",
+          "Max 5"
+        ],
+        [
+          "Oxidation Stability",
+          "ASTM D525/D2274",
+          "min/g/m³",
+          "Min 360-480",
+          "Max 25",
+          "N/A"
+        ],
+        [
+          "Smoke Point",
+          "ASTM D1322",
+          "mm",
+          "N/A",
+          "N/A",
+          "Min 18-25"
+        ],
+        [
+          "Sulfur Total",
+          "ASTM D4294",
+          "mg/kg",
+          "10-1000",
+          "10-2000",
+          "1000-3000"
+        ],
+        [
+          "Sulfur Mercaptans",
+          "ASTM D3227",
+          "wt%",
+          "N/A",
+          "N/A",
+          "Max 0.003"
+        ],
+        [
+          "Vapor Pressure",
+          "ASTM D5191",
+          "kPa",
+          "45-105",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "Viscosity",
+          "ASTM D445",
+          "cSt/mm²/s",
+          "N/A",
+          "2-4.5 @40°C",
+          "Max 8 @-20°C"
+        ],
+        [
+          "Water Content",
+          "ASTM D6304",
+          "mg/kg",
+          "N/A",
+          "Max 200-500",
+          "N/A"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Test Method References\n\n### ASTM Standards Referenced\n- **ASTM D56**: Flash Point by Tag Closed Cup Tester\n- **ASTM D86**: Distillation of Petroleum Products\n- **ASTM D130**: Corrosiveness to Copper from Petroleum Products\n- **ASTM D156**: Saybolt Color of Petroleum Products\n- **ASTM D445**: Kinematic Viscosity of Liquids\n- **ASTM D482**: Ash from Petroleum Products\n- **ASTM D525**: Oxidation Stability of Gasoline\n- **ASTM D613**: Cetane Number of Diesel Fuel Oil\n- **ASTM D664**: Acid Number by Potentiometric Titration\n- **ASTM D2500**: Cloud Point of Petroleum Products\n- **ASTM D2624**: Electrical Conductivity of Aviation and Distillate Fuels\n- **ASTM D2699**: Research Octane Number (RON)\n- **ASTM D2700**: Motor Octane Number (MON)\n- **ASTM D3227**: Mercaptan Sulfur Content\n- **ASTM D3338**: Heat of Combustion of Aviation Fuels\n- **ASTM D3343**: Hydrogen Content of Aviation Fuels\n- **ASTM D4052**: Density and Relative Density\n- **ASTM D4294**: Sulfur in Petroleum Products by XRF\n- **ASTM D4737**: Calculated Cetane Index\n- **ASTM D5191**: Vapor Pressure (Mini Method)\n- **ASTM D6304**: Water Content by Karl Fischer Titration\n- **ASTM D6371**: Cold Filter Plugging Point (CFPP)\n\n## Important Notes\n\n- **Specifications vary** by country, region, and product class\n- The values shown represent typical ranges from **strict** (emission-control advanced markets) to **relaxed** (basic performance markets)\n- Always consult the latest ASTM standards and local regulations for your specific application\n- Test methods and limits are updated regularly; refer to current standards documents\n- Some specifications depend on seasonal variations, specific applications, or regional mandates"
+    }
+  ]
+}

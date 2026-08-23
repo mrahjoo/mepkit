@@ -1,0 +1,77 @@
+{
+  "id": "luminous_efficacy",
+  "title": "Luminous Efficacy",
+  "description": "Calculate luminous efficacy and power requirements for various light sources. Luminous efficacy is the ratio of luminous flux (lumens) to power (watts), determining how efficiently a light source produces visible light.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Luminous Efficacy Calculator\n\n**Luminous Efficacy** (η) is the ratio of luminous flux to power:\n\n**η = Φ / P**\n\nWhere:\n- **η** = Luminous efficacy (lumens/W)\n- **Φ** = Luminous flux (lumens, lm)\n- **P** = Power (W)\n\nYou can also calculate required power: **P = Φ / η**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "luminous_flux",
+          "label": "Luminous Flux",
+          "type": "number",
+          "unit": "lumens",
+          "defaultValue": 500
+        },
+        {
+          "id": "efficacy",
+          "label": "Luminous Efficacy",
+          "type": "number",
+          "unit": "lumens/W",
+          "defaultValue": 70
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_required",
+          "label": "Required Power",
+          "formula": "inputs.luminous_flux / inputs.efficacy",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Light Type",
+        "Luminous Efficacy Range (lumens/W)"
+      ],
+      "rows": [
+        [
+          "Fluorescent lamp",
+          "45 - 75"
+        ],
+        [
+          "Halogen lamp",
+          "16 - 24"
+        ],
+        [
+          "High pressure sodium vapor lamp",
+          "85 - 150"
+        ],
+        [
+          "LED lamp",
+          "30 - 90"
+        ],
+        [
+          "Mercury vapor lamp",
+          "35 - 65"
+        ],
+        [
+          "Metal halide lamp",
+          "75 - 100"
+        ],
+        [
+          "Tungsten incandescent light bulb lamp",
+          "12 - 18"
+        ]
+      ]
+    }
+  ]
+}

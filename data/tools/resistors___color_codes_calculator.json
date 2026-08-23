@@ -1,0 +1,484 @@
+{
+  "id": "resistors___color_codes_calculator",
+  "title": "Resistors - Color Codes Calculator",
+  "description": "A calculator tool for determining resistor values from color codes. Supports both four-band and five-band fixed resistors with color code interpretation.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Resistors - Color Codes Calculator\n\n## Color Code Reference\n\n| Color  | Significant Figures | Multiplier | Tolerance   |\n|--------|-------------------|-----------|-------------|\n| Silver |                   | 10⁻²      | ±10%       |\n| Gold   |                   | 10⁻¹      | ±5%        |\n| Black  | 0                 | 1         |            |\n| Brown  | 1                 | 10        | ±1%        |\n| Red    | 2                 | 10²       | ±2%        |\n| Orange | 3                 | 10³       |            |\n| Yellow | 4                 | 10⁴       |            |\n| Green  | 5                 | 10⁵       | ±0.5%      |\n| Blue   | 6                 | 10⁶       | ±0.25%     |\n| Violet | 7                 | 10⁷       | ±0.1%      |\n| Grey   | 8                 | 10⁸       |            |\n| White  | 9                 | 10⁹       |            |\n| None   |                   |           | ±20%       |"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Four Band Resistor Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "band1_4",
+          "label": "Band 1 (First Digit)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Brown",
+              "value": 1
+            },
+            {
+              "label": "Red",
+              "value": 2
+            },
+            {
+              "label": "Orange",
+              "value": 3
+            },
+            {
+              "label": "Yellow",
+              "value": 4
+            },
+            {
+              "label": "Green",
+              "value": 5
+            },
+            {
+              "label": "Blue",
+              "value": 6
+            },
+            {
+              "label": "Violet",
+              "value": 7
+            },
+            {
+              "label": "Grey",
+              "value": 8
+            },
+            {
+              "label": "White",
+              "value": 9
+            }
+          ],
+          "defaultValue": 1
+        },
+        {
+          "id": "band2_4",
+          "label": "Band 2 (Second Digit)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Black",
+              "value": 0
+            },
+            {
+              "label": "Brown",
+              "value": 1
+            },
+            {
+              "label": "Red",
+              "value": 2
+            },
+            {
+              "label": "Orange",
+              "value": 3
+            },
+            {
+              "label": "Yellow",
+              "value": 4
+            },
+            {
+              "label": "Green",
+              "value": 5
+            },
+            {
+              "label": "Blue",
+              "value": 6
+            },
+            {
+              "label": "Violet",
+              "value": 7
+            },
+            {
+              "label": "Grey",
+              "value": 8
+            },
+            {
+              "label": "White",
+              "value": 9
+            }
+          ],
+          "defaultValue": 0
+        },
+        {
+          "id": "multiplier_4",
+          "label": "Multiplier Band",
+          "type": "select",
+          "options": [
+            {
+              "label": "Silver (10⁻²)",
+              "value": 0.01
+            },
+            {
+              "label": "Gold (10⁻¹)",
+              "value": 0.1
+            },
+            {
+              "label": "Black (1)",
+              "value": 1
+            },
+            {
+              "label": "Brown (10)",
+              "value": 10
+            },
+            {
+              "label": "Red (10²)",
+              "value": 100
+            },
+            {
+              "label": "Orange (10³)",
+              "value": 1000
+            },
+            {
+              "label": "Yellow (10⁴)",
+              "value": 10000
+            },
+            {
+              "label": "Green (10⁵)",
+              "value": 100000
+            },
+            {
+              "label": "Blue (10⁶)",
+              "value": 1000000
+            },
+            {
+              "label": "Violet (10⁷)",
+              "value": 10000000
+            },
+            {
+              "label": "Grey (10⁸)",
+              "value": 100000000
+            },
+            {
+              "label": "White (10⁹)",
+              "value": 1000000000
+            }
+          ],
+          "defaultValue": 10
+        },
+        {
+          "id": "tolerance_4",
+          "label": "Tolerance Band",
+          "type": "select",
+          "options": [
+            {
+              "label": "Silver (±10%)",
+              "value": 10
+            },
+            {
+              "label": "Gold (±5%)",
+              "value": 5
+            },
+            {
+              "label": "Brown (±1%)",
+              "value": 1
+            },
+            {
+              "label": "Red (±2%)",
+              "value": 2
+            },
+            {
+              "label": "Green (±0.5%)",
+              "value": 0.5
+            },
+            {
+              "label": "Blue (±0.25%)",
+              "value": 0.25
+            },
+            {
+              "label": "Violet (±0.1%)",
+              "value": 0.1
+            },
+            {
+              "label": "None (±20%)",
+              "value": 20
+            }
+          ],
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "resistance_4",
+          "label": "Resistance Value",
+          "formula": "(inputs.band1_4 * 10 + inputs.band2_4) * inputs.multiplier_4",
+          "unit": "Ω",
+          "format": "decimal"
+        },
+        {
+          "id": "tolerance_4_output",
+          "label": "Tolerance",
+          "formula": "inputs.tolerance_4",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Five Band Resistor Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "band1_5",
+          "label": "Band 1 (First Digit)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Brown",
+              "value": 1
+            },
+            {
+              "label": "Red",
+              "value": 2
+            },
+            {
+              "label": "Orange",
+              "value": 3
+            },
+            {
+              "label": "Yellow",
+              "value": 4
+            },
+            {
+              "label": "Green",
+              "value": 5
+            },
+            {
+              "label": "Blue",
+              "value": 6
+            },
+            {
+              "label": "Violet",
+              "value": 7
+            },
+            {
+              "label": "Grey",
+              "value": 8
+            },
+            {
+              "label": "White",
+              "value": 9
+            }
+          ],
+          "defaultValue": 1
+        },
+        {
+          "id": "band2_5",
+          "label": "Band 2 (Second Digit)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Black",
+              "value": 0
+            },
+            {
+              "label": "Brown",
+              "value": 1
+            },
+            {
+              "label": "Red",
+              "value": 2
+            },
+            {
+              "label": "Orange",
+              "value": 3
+            },
+            {
+              "label": "Yellow",
+              "value": 4
+            },
+            {
+              "label": "Green",
+              "value": 5
+            },
+            {
+              "label": "Blue",
+              "value": 6
+            },
+            {
+              "label": "Violet",
+              "value": 7
+            },
+            {
+              "label": "Grey",
+              "value": 8
+            },
+            {
+              "label": "White",
+              "value": 9
+            }
+          ],
+          "defaultValue": 0
+        },
+        {
+          "id": "band3_5",
+          "label": "Band 3 (Third Digit)",
+          "type": "select",
+          "options": [
+            {
+              "label": "Black",
+              "value": 0
+            },
+            {
+              "label": "Brown",
+              "value": 1
+            },
+            {
+              "label": "Red",
+              "value": 2
+            },
+            {
+              "label": "Orange",
+              "value": 3
+            },
+            {
+              "label": "Yellow",
+              "value": 4
+            },
+            {
+              "label": "Green",
+              "value": 5
+            },
+            {
+              "label": "Blue",
+              "value": 6
+            },
+            {
+              "label": "Violet",
+              "value": 7
+            },
+            {
+              "label": "Grey",
+              "value": 8
+            },
+            {
+              "label": "White",
+              "value": 9
+            }
+          ],
+          "defaultValue": 0
+        },
+        {
+          "id": "multiplier_5",
+          "label": "Multiplier Band",
+          "type": "select",
+          "options": [
+            {
+              "label": "Silver (10⁻²)",
+              "value": 0.01
+            },
+            {
+              "label": "Gold (10⁻¹)",
+              "value": 0.1
+            },
+            {
+              "label": "Black (1)",
+              "value": 1
+            },
+            {
+              "label": "Brown (10)",
+              "value": 10
+            },
+            {
+              "label": "Red (10²)",
+              "value": 100
+            },
+            {
+              "label": "Orange (10³)",
+              "value": 1000
+            },
+            {
+              "label": "Yellow (10⁴)",
+              "value": 10000
+            },
+            {
+              "label": "Green (10⁵)",
+              "value": 100000
+            },
+            {
+              "label": "Blue (10⁶)",
+              "value": 1000000
+            },
+            {
+              "label": "Violet (10⁷)",
+              "value": 10000000
+            },
+            {
+              "label": "Grey (10⁸)",
+              "value": 100000000
+            },
+            {
+              "label": "White (10⁹)",
+              "value": 1000000000
+            }
+          ],
+          "defaultValue": 10
+        },
+        {
+          "id": "tolerance_5",
+          "label": "Tolerance Band",
+          "type": "select",
+          "options": [
+            {
+              "label": "Silver (±10%)",
+              "value": 10
+            },
+            {
+              "label": "Gold (±5%)",
+              "value": 5
+            },
+            {
+              "label": "Brown (±1%)",
+              "value": 1
+            },
+            {
+              "label": "Red (±2%)",
+              "value": 2
+            },
+            {
+              "label": "Green (±0.5%)",
+              "value": 0.5
+            },
+            {
+              "label": "Blue (±0.25%)",
+              "value": 0.25
+            },
+            {
+              "label": "Violet (±0.1%)",
+              "value": 0.1
+            },
+            {
+              "label": "None (±20%)",
+              "value": 20
+            }
+          ],
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "resistance_5",
+          "label": "Resistance Value",
+          "formula": "(inputs.band1_5 * 100 + inputs.band2_5 * 10 + inputs.band3_5) * inputs.multiplier_5",
+          "unit": "Ω",
+          "format": "decimal"
+        },
+        {
+          "id": "tolerance_5_output",
+          "label": "Tolerance",
+          "formula": "inputs.tolerance_5",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

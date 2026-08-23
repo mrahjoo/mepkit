@@ -1,0 +1,52 @@
+{
+  "id": "fuel_oil_combustion_values",
+  "title": "Fuel Oil Combustion Values",
+  "description": "Combustion values in Btu/gal for fuel oils No.1 to No.6. The heat or combustion value of a fuel oil can be expressed as the quantity of heat (Btu per gallon) released during the combustion process where the oxygen from the air reacts with the hydrogen and carbon in the fuel.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Grade",
+        "Heating Value (Btu/US gal)",
+        "Comments"
+      ],
+      "rows": [
+        [
+          "Fuel Oil No. 1",
+          "132900 - 137000",
+          "Small Space Heaters"
+        ],
+        [
+          "Fuel Oil No. 2",
+          "137000 - 141800",
+          "Residential Heating"
+        ],
+        [
+          "Fuel Oil No. 4",
+          "143100 - 148100",
+          "Industrial Burners"
+        ],
+        [
+          "Fuel Oil No. 5 (Light)",
+          "146800 - 150000",
+          "Preheating in General Required"
+        ],
+        [
+          "Fuel Oil No. 5 (Heavy)",
+          "149400 - 152000",
+          "Heating Required"
+        ],
+        [
+          "Fuel Oil No. 6",
+          "151300 - 155900",
+          "Bunker C"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion\n\n1 Btu/US gal = 278.7 J/liter\n\n## Notes\n\nFuel oil No. 1 and No. 2 fuel are both used for residential heating purposes. The No. 2 is slightly more expensive but the fuel gives more heat per gallon used.\n\nThe No. 1 fuel oil is used in vaporizing pot-type burners. The No. 2 is used in atomizing gun-type and rotary fuel oil burners.\n\nGreat care must be taken with heavier grades of fuel used in oil burners to ensure that the oil is supplied with the proper atomizing temperature. If the temperature is too low the oil will not atomize and evaporate and the burner will not operate efficiently."
+    }
+  ]
+}

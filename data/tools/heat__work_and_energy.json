@@ -1,0 +1,188 @@
+{
+  "id": "heat__work_and_energy",
+  "title": "Heat, Work and Energy",
+  "description": "A comprehensive calculator for heat transfer, work calculations, and energy transformations. Includes tools for calculating heat required for temperature changes, work done by forces, gravitational work, work due to velocity changes, and kinetic energy.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Heat, Work and Energy Calculator\n\nThis tool provides calculations for:\n- Heat required to change temperature (Q = cp × m × ΔT)\n- Work done by force (W = F × l)\n- Work due to gravity (W = m × g × h)\n- Work due to velocity change (W = (v₂² - v₁²) × m / 2)\n- Kinetic energy (Ek = 1/2 × m × v²)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Heat Required for Temperature Change"
+      ],
+      "inputs": [
+        {
+          "id": "cp",
+          "label": "Specific Heat (cp)",
+          "type": "number",
+          "unit": "kJ/kg·K",
+          "defaultValue": 4.19
+        },
+        {
+          "id": "mass_heat",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "dT",
+          "label": "Temperature Difference (ΔT)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Q",
+          "label": "Heat Required",
+          "unit": "kJ",
+          "formula": "inputs.cp * inputs.mass_heat * inputs.dT",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Work Done by Force"
+      ],
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Applied Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 100
+        },
+        {
+          "id": "distance",
+          "label": "Distance Moved",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "W_force",
+          "label": "Work Done",
+          "unit": "J",
+          "formula": "inputs.force * inputs.distance",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Work Due to Gravitational Force"
+      ],
+      "inputs": [
+        {
+          "id": "mass_grav",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 100
+        },
+        {
+          "id": "g",
+          "label": "Acceleration due to Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "height",
+          "label": "Elevation (Height)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "W_gravity",
+          "label": "Work Done by Gravity",
+          "unit": "J",
+          "formula": "inputs.mass_grav * inputs.g * inputs.height",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Work Due to Change in Velocity"
+      ],
+      "inputs": [
+        {
+          "id": "mass_vel",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 100
+        },
+        {
+          "id": "v1",
+          "label": "Initial Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 10
+        },
+        {
+          "id": "v2",
+          "label": "Final Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "W_velocity",
+          "label": "Work Done by Velocity Change",
+          "unit": "J",
+          "formula": "(inputs.v2 * inputs.v2 - inputs.v1 * inputs.v1) * inputs.mass_vel / 2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Kinetic Energy"
+      ],
+      "inputs": [
+        {
+          "id": "mass_kinetic",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 100
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Ek",
+          "label": "Kinetic Energy",
+          "unit": "J",
+          "formula": "0.5 * inputs.mass_kinetic * inputs.velocity * inputs.velocity",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

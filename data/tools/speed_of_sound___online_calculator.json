@@ -1,0 +1,92 @@
+{
+  "id": "speed_of_sound___online_calculator",
+  "title": "Speed of Sound - Online Calculator",
+  "description": "A free online speed of sound calculator. Calculate the speed of sound in air using the formula c = (k R T)^1/2, where k is the ratio of specific heats, R is the individual gas constant, and T is the absolute temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Speed of Sound Calculator",
+      "inputs": [
+        {
+          "id": "k",
+          "label": "Ratio of Specific Heats (k)",
+          "type": "number",
+          "defaultValue": 1.4,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "R",
+          "label": "Individual Gas Constant (R)",
+          "type": "number",
+          "defaultValue": 286.9,
+          "unit": "J/kg K"
+        },
+        {
+          "id": "T",
+          "label": "Absolute Temperature (T)",
+          "type": "number",
+          "defaultValue": 273.15,
+          "unit": "K"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "speed_of_sound",
+          "label": "Speed of Sound (c)",
+          "formula": "(inputs.k * inputs.R * inputs.T) ^ 0.5",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Speed of Sound Reference Table",
+      "headers": [
+        "Temperature (K)",
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Speed of Sound (m/s)"
+      ],
+      "rows": [
+        [
+          273.15,
+          0,
+          32,
+          331.2
+        ],
+        [
+          293.15,
+          20,
+          68,
+          343.2
+        ],
+        [
+          313.15,
+          40,
+          104,
+          354.9
+        ],
+        [
+          333.15,
+          60,
+          140,
+          366.2
+        ],
+        [
+          353.15,
+          80,
+          176,
+          377.1
+        ],
+        [
+          373.15,
+          100,
+          212,
+          387.7
+        ]
+      ]
+    }
+  ]
+}

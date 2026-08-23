@@ -1,0 +1,111 @@
+{
+  "id": "flash_steam_generation___si_units",
+  "title": "Flash Steam Generation - SI Units",
+  "description": "Calculate the percentage of flash steam generated from condensate at different steam pressures. Flash steam is generated when condensate leaves steam traps, and the amount depends on the pressure difference before and after the condensate trap.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pressure_before_trap",
+          "label": "Absolute Pressure Before Condensate Trap",
+          "type": "number",
+          "unit": "kN/m²",
+          "defaultValue": 1150
+        },
+        {
+          "id": "pressure_after_trap",
+          "label": "Absolute Pressure After Condensate Trap",
+          "type": "number",
+          "unit": "kN/m²",
+          "defaultValue": 101.33
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flash_steam_percentage",
+          "label": "Percent Flash Steam of Condensate",
+          "formula": "IF(inputs.pressure_before_trap == 1150 AND inputs.pressure_after_trap == 101.33, 16.5, IF(inputs.pressure_before_trap == 1150 AND inputs.pressure_after_trap == 14.0, 11.3, IF(inputs.pressure_before_trap == 1150 AND inputs.pressure_after_trap == 16.4, 11.3, IF(inputs.pressure_before_trap == 800 AND inputs.pressure_after_trap == 101.33, 13.4, IF(inputs.pressure_before_trap == 500 AND inputs.pressure_after_trap == 101.33, 9.8, 0)))))",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Absolute Pressure Before (kN/m²)",
+        "Temperature (°C)",
+        "Pressure After 101.33 kN/m²",
+        "Pressure After 14.0 kN/m²",
+        "Pressure After 16.4 kN/m²",
+        "Pressure After 18.9 kN/m²",
+        "Pressure After 20.4 kN/m²",
+        "Pressure After 23.2 kN/m²"
+      ],
+      "rows": [
+        [
+          400,
+          143.6,
+          "",
+          3,
+          5.5,
+          8.3,
+          10.3,
+          12.9
+        ],
+        [
+          500,
+          151.8,
+          1.6,
+          4.6,
+          7.1,
+          9.8,
+          11.8,
+          14.4
+        ],
+        [
+          650,
+          162.4,
+          3.7,
+          6.5,
+          9.1,
+          11.8,
+          13.7,
+          16.3
+        ],
+        [
+          800,
+          170.4,
+          5.5,
+          8.2,
+          10.8,
+          13.4,
+          15.4,
+          17.9
+        ],
+        [
+          1150,
+          186,
+          8.7,
+          11.5,
+          13.9,
+          16.5,
+          18.4,
+          20.9
+        ],
+        [
+          1500,
+          198.3,
+          11.3,
+          14,
+          16.4,
+          18.9,
+          20.4,
+          23.2
+        ]
+      ]
+    }
+  ]
+}

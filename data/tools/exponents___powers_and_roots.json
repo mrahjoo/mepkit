@@ -1,0 +1,67 @@
+{
+  "id": "exponents___powers_and_roots",
+  "title": "Exponents - Powers and Roots",
+  "description": "The laws of fractional and integer exponents including formulas for integer and fractional exponent operations.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Integer Exponents\n\n**Law 1:** $a^n \\cdot a^m = a^{n+m}$\n\n**Law 2:** $\\frac{a^n}{a^m} = a^{n-m}$\n\n**Law 3:** $(a^n)^m = (a^m)^n = a^{nm}$\n\n**Law 4:** $(ab)^m = a^m b^m$\n\n**Law 5:** $\\left(\\frac{a}{b}\\right)^m = \\frac{a^m}{b^m}$\n\n**Law 6:** $p a^n \\pm q a^n = (p \\pm q) a^n$\n\n**Law 7:** $a^{-n} = \\frac{1}{a^n}$\n\n## Fractional Exponents\n\n**Law 8:** $a^{m/n} = (a^m)^{1/n} = (a^{1/n})^m$\n\n**Law 9:** $p a^{1/n} \\pm q a^{1/n} = (p \\pm q) a^{1/n}$\n\n**Law 10:** $(ab)^{1/n} = a^{1/n} b^{1/n}$\n\n**Law 11:** $\\frac{a^{1/n}}{b^{1/n}} = \\left(\\frac{a}{b}\\right)^{1/n}$\n\n**Law 12:** $(a^{mx})^{1/nx} = (a^m)^{1/n}$\n\n**Law 13:** $(-a)^{1/2} = i a^{1/2}$ (where $i$ is the imaginary number)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "base",
+          "label": "Base (a)",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "exponent",
+          "label": "Exponent (n)",
+          "type": "number",
+          "defaultValue": 3
+        },
+        {
+          "id": "exponent2",
+          "label": "Second Exponent (m)",
+          "type": "number",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power",
+          "label": "Power (a^n)",
+          "formula": "Math.pow(inputs.base, inputs.exponent)"
+        },
+        {
+          "id": "product_rule",
+          "label": "Product Rule (a^n × a^m = a^(n+m))",
+          "formula": "Math.pow(inputs.base, inputs.exponent + inputs.exponent2)"
+        },
+        {
+          "id": "quotient_rule",
+          "label": "Quotient Rule (a^n ÷ a^m = a^(n-m))",
+          "formula": "Math.pow(inputs.base, inputs.exponent - inputs.exponent2)"
+        },
+        {
+          "id": "power_rule",
+          "label": "Power Rule ((a^n)^m = a^(n×m))",
+          "formula": "Math.pow(inputs.base, inputs.exponent * inputs.exponent2)"
+        },
+        {
+          "id": "negative_exp",
+          "label": "Negative Exponent (a^(-n) = 1/a^n)",
+          "formula": "1 / Math.pow(inputs.base, inputs.exponent)"
+        },
+        {
+          "id": "root",
+          "label": "Root (a^(1/n))",
+          "formula": "Math.pow(inputs.base, 1 / inputs.exponent)"
+        }
+      ]
+    }
+  ]
+}

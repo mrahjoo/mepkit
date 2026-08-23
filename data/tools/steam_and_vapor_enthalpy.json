@@ -1,0 +1,107 @@
+{
+  "id": "steam_and_vapor_enthalpy",
+  "title": "Steam and Vapor Enthalpy Calculator",
+  "description": "Calculate enthalpy properties of steam and vapor including saturated water, saturated steam, superheated steam, and evaporation energy.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Steam and Vapor Enthalpy Calculator\n\nCalculate various enthalpy properties for steam and water vapor systems.\n\n## Key Concepts\n- **Sensible Heat**: Heat required to change temperature\n- **Latent Heat**: Heat required for state change (evaporation)\n- **Enthalpy (H)**: H = m × h (mass × specific enthalpy)\n- **Specific Enthalpy (h)**: h = u + pv (internal energy + pressure × volume)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass_water",
+          "label": "Mass of Water",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "kg"
+        },
+        {
+          "id": "saturation_temp",
+          "label": "Saturation Temperature",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "°C"
+        },
+        {
+          "id": "ref_temp",
+          "label": "Reference Temperature",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "°C"
+        },
+        {
+          "id": "specific_heat_water",
+          "label": "Specific Heat of Water (cw)",
+          "type": "number",
+          "defaultValue": 4.19,
+          "unit": "kJ/kg·°C"
+        },
+        {
+          "id": "hg_value",
+          "label": "Specific Enthalpy of Saturated Steam (hg)",
+          "type": "number",
+          "defaultValue": 2676,
+          "unit": "kJ/kg"
+        },
+        {
+          "id": "superheated_temp",
+          "label": "Superheated Steam Temperature",
+          "type": "number",
+          "defaultValue": 150,
+          "unit": "°C"
+        },
+        {
+          "id": "specific_heat_steam",
+          "label": "Specific Heat of Steam at Constant Pressure (cps)",
+          "type": "number",
+          "defaultValue": 1.86,
+          "unit": "kJ/kg·°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hf_enthalpy",
+          "label": "Specific Enthalpy of Saturated Water (hf)",
+          "formula": "inputs.specific_heat_water * (inputs.saturation_temp - inputs.ref_temp)",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "he_evaporation",
+          "label": "Specific Enthalpy of Evaporation (he)",
+          "formula": "inputs.hg_value - (inputs.specific_heat_water * (inputs.saturation_temp - inputs.ref_temp))",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "q_evaporation_energy",
+          "label": "Energy to Evaporate Water (Q)",
+          "formula": "(inputs.hg_value - (inputs.specific_heat_water * (inputs.saturation_temp - inputs.ref_temp))) * inputs.mass_water",
+          "unit": "kJ",
+          "format": "decimal"
+        },
+        {
+          "id": "hs_superheated",
+          "label": "Specific Enthalpy of Superheated Steam (hs)",
+          "formula": "inputs.hg_value + inputs.specific_heat_steam * (inputs.superheated_temp - inputs.saturation_temp)",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "total_enthalpy",
+          "label": "Total Enthalpy (H = m × h)",
+          "formula": "inputs.mass_water * inputs.hg_value",
+          "unit": "kJ",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formulas Used\n\n**Specific Enthalpy of Saturated Water (hf):**\n- hf = cw × (tf - t₀)\n\n**Specific Enthalpy of Evaporation (he):**\n- he = hg - hf\n\n**Energy to Evaporate Water (Q):**\n- Q = he × m\n\n**Specific Enthalpy of Superheated Steam (hs):**\n- hs = hg + cps × (ts - tf)\n\n**Total Enthalpy (H):**\n- H = m × h\n\nWhere:\n- hf = specific enthalpy of saturated water (kJ/kg)\n- hg = specific enthalpy of saturated steam (kJ/kg)\n- he = specific enthalpy of evaporation (kJ/kg)\n- hs = specific enthalpy of superheated steam (kJ/kg)\n- cw = specific heat of water = 4.19 kJ/kg·°C\n- cps = specific heat of steam at constant pressure = 1.86 kJ/kg·°C\n- m = mass (kg)\n- tf = saturation temperature (°C)\n- ts = superheated steam temperature (°C)\n- t₀ = reference temperature (°C)"
+    }
+  ]
+}

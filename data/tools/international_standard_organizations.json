@@ -1,0 +1,12 @@
+{
+  "id": "international_standard_organizations",
+  "title": "International Standard Organizations",
+  "description": "Some international standard organizations",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# International Standard Organizations\n\nStandards Organizations are constituted at different levels:\n\n*   **National standards organizations** (e.g. DIN - Deutsches Institut für Normung)\n*   **Transnational standards organizations** (e.g. the European Committee for Standardization)\n*   **International standards organizations** (e.g. the International Telecommunication Union)\n\n## Some International Standards Organizations:\n\n| Organization | Acronym | Description |\n|---|---|---|\n| [IEC](http://www.iec.ch/) | IEC | International Electrotechnical Commission |\n| [IEEE](http://www.ieee.org/) | IEEE | Institute of Electric and Electronic Engineers |\n| [IETF](http://www.ietf.org/) | IETF | Internet Engineering Task Force |\n| [ISO](http://www.iso.org/) | ISO | International Organization for Standardization |\n| [ITU](http://www.itu.int/) | ITU | The International Telecommunication Union |\n| [ITU-R](http://www.itu.int/) | ITU-R | ITU Radiocommunications Sector (CCIR) |\n| [ITU-T](http://www.itu.int/) | ITU-T | ITU Telecommunications Sector (CCITT) |\n| [IUPAC](http://www.iupac.org/) | IUPAC | International Union of Pure and Applied Chemistry |\n| [OASIS](http://www.oasis-open.org/) | OASIS | Organization for the Advancement of Structured Information Standards |\n| [SI](http://www.bipm.fr/en/si/) | SI | Systéme International d'Unit's (International System of Units) |\n| [W3C](http://www.w3.org/) | W3C | World Wide Web Consortium |\n| [Accellera](http://www.accellera.org/) | Accellera | Accellera Organization |"
+    }
+  ]
+}

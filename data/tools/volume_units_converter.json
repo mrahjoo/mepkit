@@ -1,0 +1,254 @@
+{
+  "id": "volume_units_converter",
+  "title": "Volume Units Converter",
+  "description": "Convert between common volume units like cubic metre, cubic feet, cubic inches, liters, gallons, and more.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "inputValue",
+          "label": "Input Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "fromUnit",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Cubic Meter",
+              "value": "cubic_meter"
+            },
+            {
+              "label": "Cubic Feet",
+              "value": "cubic_feet"
+            },
+            {
+              "label": "Cubic Inches",
+              "value": "cubic_inches"
+            },
+            {
+              "label": "Cubic Yards",
+              "value": "cubic_yards"
+            },
+            {
+              "label": "Liters",
+              "value": "liters"
+            },
+            {
+              "label": "Milliliters",
+              "value": "milliliters"
+            },
+            {
+              "label": "US Liquid Gallons",
+              "value": "us_liquid_gallons"
+            },
+            {
+              "label": "US Dry Gallons",
+              "value": "us_dry_gallons"
+            },
+            {
+              "label": "Imperial Gallons",
+              "value": "imp_gallons"
+            },
+            {
+              "label": "Barrels (Oil)",
+              "value": "barrels"
+            },
+            {
+              "label": "Cups",
+              "value": "cups"
+            },
+            {
+              "label": "Fluid Ounces (US)",
+              "value": "fl_oz_us"
+            },
+            {
+              "label": "Fluid Ounces (UK)",
+              "value": "fl_oz_uk"
+            },
+            {
+              "label": "Pints (UK)",
+              "value": "pints_uk"
+            }
+          ]
+        },
+        {
+          "id": "toUnit",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Cubic Meter",
+              "value": "cubic_meter"
+            },
+            {
+              "label": "Cubic Feet",
+              "value": "cubic_feet"
+            },
+            {
+              "label": "Cubic Inches",
+              "value": "cubic_inches"
+            },
+            {
+              "label": "Cubic Yards",
+              "value": "cubic_yards"
+            },
+            {
+              "label": "Liters",
+              "value": "liters"
+            },
+            {
+              "label": "Milliliters",
+              "value": "milliliters"
+            },
+            {
+              "label": "US Liquid Gallons",
+              "value": "us_liquid_gallons"
+            },
+            {
+              "label": "US Dry Gallons",
+              "value": "us_dry_gallons"
+            },
+            {
+              "label": "Imperial Gallons",
+              "value": "imp_gallons"
+            },
+            {
+              "label": "Barrels (Oil)",
+              "value": "barrels"
+            },
+            {
+              "label": "Cups",
+              "value": "cups"
+            },
+            {
+              "label": "Fluid Ounces (US)",
+              "value": "fl_oz_us"
+            },
+            {
+              "label": "Fluid Ounces (UK)",
+              "value": "fl_oz_uk"
+            },
+            {
+              "label": "Pints (UK)",
+              "value": "pints_uk"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "convertedValue",
+          "label": "Converted Value",
+          "formula": "inputs.inputValue * inputs.conversionFactor",
+          "unit": "Based on target unit",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Convert From",
+        "Convert To",
+        "Multiply By"
+      ],
+      "rows": [
+        [
+          "Cubic Meter",
+          "Cubic Feet",
+          "35.3"
+        ],
+        [
+          "Cubic Meter",
+          "Cubic Inches",
+          "6.1×10⁴"
+        ],
+        [
+          "Cubic Meter",
+          "Cubic Yards",
+          "1.308"
+        ],
+        [
+          "Cubic Meter",
+          "US Liquid Gallons",
+          "264.2"
+        ],
+        [
+          "Cubic Meter",
+          "US Dry Gallons",
+          "227"
+        ],
+        [
+          "Cubic Meter",
+          "Imperial Gallons",
+          "220"
+        ],
+        [
+          "Cubic Meter",
+          "Barrels (Oil)",
+          "6.29"
+        ],
+        [
+          "Cubic Meter",
+          "Liters",
+          "1000"
+        ],
+        [
+          "Cubic Feet",
+          "Cubic Meter",
+          "0.0283"
+        ],
+        [
+          "Cubic Feet",
+          "Cubic Inches",
+          "1728"
+        ],
+        [
+          "Cubic Feet",
+          "Cubic Yards",
+          "0.037"
+        ],
+        [
+          "Cubic Feet",
+          "US Liquid Gallons",
+          "7.48"
+        ],
+        [
+          "Cubic Feet",
+          "US Dry Gallons",
+          "6.43"
+        ],
+        [
+          "Liters",
+          "Milliliters",
+          "1000"
+        ],
+        [
+          "Liters",
+          "Cubic Meter",
+          "0.001"
+        ],
+        [
+          "Liters",
+          "US Liquid Gallons",
+          "0.264"
+        ],
+        [
+          "US Liquid Gallons",
+          "Liters",
+          "3.785"
+        ],
+        [
+          "US Liquid Gallons",
+          "Cubic Feet",
+          "0.134"
+        ]
+      ]
+    }
+  ]
+}

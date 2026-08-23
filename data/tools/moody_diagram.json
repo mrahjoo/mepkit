@@ -1,0 +1,54 @@
+{
+  "id": "moody_diagram",
+  "title": "Moody Diagram",
+  "description": "Calculate fluid flow friction coefficients from a Moody diagram. Determines the SI-based Moody friction factor (λ) used in the Darcy-Weisbach major loss equation based on Reynolds number and relative roughness.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Moody Diagram Calculator\n\nCalculate fluid flow friction coefficients using the SI-based Moody diagram approach.\n\n### Inputs\nProvide the following parameters to determine the friction factor:\n- **Absolute Roughness (k)**: Surface roughness in meters\n- **Hydraulic Diameter (d_h)**: Pipe or duct equivalent diameter in meters\n- **Reynolds Number (Re)**: Flow Reynolds number (dimensionless)\n\n### Output\n- **Relative Roughness (r)**: Calculated as k / d_h\n- **Friction Factor (λ)**: Estimated from the Moody diagram\n\n**Note**: For transient flow (2300 < Re < 4000), interpolate between laminar and turbulent values."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "k",
+          "label": "Absolute Roughness (k)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.0000015
+        },
+        {
+          "id": "dh",
+          "label": "Hydraulic Diameter (d_h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.01
+        },
+        {
+          "id": "re",
+          "label": "Reynolds Number (Re)",
+          "type": "number",
+          "unit": "-",
+          "defaultValue": 10000000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "relative_roughness",
+          "label": "Relative Roughness (r)",
+          "formula": "inputs.k / inputs.dh",
+          "unit": "-",
+          "format": "scientific"
+        },
+        {
+          "id": "friction_factor",
+          "label": "Friction Factor (λ)",
+          "formula": "(inputs.re < 2300) ? (64 / inputs.re) : ((inputs.re >= 2300 && inputs.re <= 4000) ? (64 / 2300 + (64 / 4000 - 64 / 2300) * ((inputs.re - 2300) / 1700)) : (0.316 / Math.pow(inputs.re, 0.25)))",
+          "unit": "-",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

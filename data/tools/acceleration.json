@@ -1,0 +1,47 @@
+{
+  "id": "acceleration",
+  "title": "Acceleration",
+  "description": "Calculate acceleration based on change in velocity and time. Acceleration is the ratio of change in velocity to time used, expressed as a = dv / dt = (v1 - v0) / (t1 - t0).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Acceleration Calculator\n\nAcceleration is the ratio of _change in velocity_ to _time used_ and can be expressed as:\n\n**a = dv / dt = (v1 - v0) / (t1 - t0)**\n\nWhere:\n- **a** = acceleration (m/s²)\n- **dv** = change in velocity (m/s)\n- **v1** = final velocity (m/s)\n- **v0** = initial velocity (m/s)\n- **dt** = time taken (s)\n\n### Example\nIf a motorcycle accelerates from 0 km/h to 100 km/h in 3 seconds:\n- a = ((100 - 0) × 1000/3600) / 3 = 9.26 m/s²"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "v1",
+          "label": "Final Velocity (v1)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 30
+        },
+        {
+          "id": "v0",
+          "label": "Initial Velocity (v0)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        },
+        {
+          "id": "dt",
+          "label": "Time Interval (dt)",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "acceleration",
+          "label": "Acceleration",
+          "formula": "(inputs.v1 - inputs.v0) / inputs.dt",
+          "unit": "m/s²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

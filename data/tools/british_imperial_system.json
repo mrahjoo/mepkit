@@ -1,0 +1,235 @@
+{
+  "id": "british_imperial_system",
+  "title": "British Imperial System",
+  "description": "A principal system of units used in Commonwealth countries and the US. The British Imperial System is a FMLT (force-mass-length-time) system with four primary quantities, unlike the SI system which uses only three (MLT).",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## British Imperial System Overview\n\nThe British Imperial System is based on **four primary quantities**:\n- **Force (F)**: pound-force\n- **Mass (M)**: ounce, pound, slug, ton\n- **Length (L)**: inch, foot, yard, rod, chain, furlong, mile\n- **Time (T)**: second, minute, hour, day\n\nThis differs from the SI system which uses only three primary quantities (mass, length, time).\n\n## Common Conversions"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "length_feet",
+          "label": "Length",
+          "type": "number",
+          "unit": "feet",
+          "defaultValue": 1
+        },
+        {
+          "id": "mass_pounds",
+          "label": "Mass",
+          "type": "number",
+          "unit": "pounds",
+          "defaultValue": 1
+        },
+        {
+          "id": "velocity_fps",
+          "label": "Velocity",
+          "type": "number",
+          "unit": "ft/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "force_lbf",
+          "label": "Force",
+          "type": "number",
+          "unit": "lbf",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "length_meters",
+          "label": "Length (Metric)",
+          "unit": "meters",
+          "formula": "inputs.length_feet * 0.3048",
+          "format": "decimal"
+        },
+        {
+          "id": "mass_kg",
+          "label": "Mass (Metric)",
+          "unit": "kilograms",
+          "formula": "inputs.mass_pounds * 0.453592",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity_mps",
+          "label": "Velocity (Metric)",
+          "unit": "m/s",
+          "formula": "inputs.velocity_fps * 0.3048",
+          "format": "decimal"
+        },
+        {
+          "id": "force_newtons",
+          "label": "Force (Metric)",
+          "unit": "newtons",
+          "formula": "inputs.force_lbf * 4.448222",
+          "format": "decimal"
+        },
+        {
+          "id": "momentum",
+          "label": "Momentum",
+          "unit": "lb·ft/s",
+          "formula": "inputs.mass_pounds * inputs.velocity_fps",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_psi",
+          "label": "Pressure",
+          "unit": "psi",
+          "formula": "inputs.force_lbf / 1",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Quantity",
+        "Dimensions",
+        "Common Imperial Units",
+        "SI Equivalent"
+      ],
+      "rows": [
+        [
+          "Force",
+          "F",
+          "pound-force (lbf)",
+          "newton (N)"
+        ],
+        [
+          "Mass",
+          "M",
+          "pound (lb), slug",
+          "kilogram (kg)"
+        ],
+        [
+          "Length",
+          "L",
+          "foot (ft), mile (mi)",
+          "meter (m)"
+        ],
+        [
+          "Time",
+          "T",
+          "second (s), hour (h)",
+          "second (s)"
+        ],
+        [
+          "Velocity",
+          "L/T",
+          "foot per second (ft/s), mph",
+          "meter per second (m/s)"
+        ],
+        [
+          "Acceleration",
+          "L/T²",
+          "foot per second squared",
+          "meter per second squared"
+        ],
+        [
+          "Area",
+          "L²",
+          "square foot (ft²), acre",
+          "square meter (m²)"
+        ],
+        [
+          "Volume",
+          "L³",
+          "cubic foot (ft³), gallon",
+          "cubic meter (m³)"
+        ],
+        [
+          "Density",
+          "M/L³",
+          "pounds per cubic foot",
+          "kilograms per cubic meter"
+        ],
+        [
+          "Pressure",
+          "F/L²",
+          "pound-force per square inch (psi)",
+          "pascal (Pa)"
+        ],
+        [
+          "Momentum",
+          "ML/T",
+          "pound foot per second",
+          "kilogram meter per second"
+        ],
+        [
+          "Impulse",
+          "FT",
+          "pound-force second",
+          "newton second"
+        ],
+        [
+          "Power",
+          "LF/T",
+          "horsepower (hp), ft·lbf/s",
+          "watt (W)"
+        ],
+        [
+          "Work",
+          "LF",
+          "foot pound-force (ft·lbf)",
+          "joule (J)"
+        ],
+        [
+          "Frequency",
+          "1/T",
+          "cycle per second",
+          "hertz (Hz)"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Imperial to Metric Conversion Factors"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Conversion Factor"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Length\n(ft→m)",
+            "Mass\n(lb→kg)",
+            "Velocity\n(ft/s→m/s)",
+            "Force\n(lbf→N)",
+            "Pressure\n(psi→Pa)"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Conversion Factor",
+            "data": [
+              0.3048,
+              0.453592,
+              0.3048,
+              4.448222,
+              6894.757
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

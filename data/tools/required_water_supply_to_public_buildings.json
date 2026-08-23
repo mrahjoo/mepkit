@@ -1,0 +1,62 @@
+{
+  "id": "required_water_supply_to_public_buildings",
+  "title": "Required Water Supply to Public Buildings",
+  "description": "Water consumption and supply to public buildings",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Building Type",
+        "Required Water Supply (gpm)",
+        "Required Water Supply (m³/h)"
+      ],
+      "rows": [
+        [
+          "Office Buildings",
+          3,
+          0.68
+        ],
+        [
+          "Hospitals",
+          5,
+          1.14
+        ],
+        [
+          "Schools",
+          2,
+          0.45
+        ],
+        [
+          "Shopping Centers",
+          4,
+          0.91
+        ],
+        [
+          "Restaurants",
+          6,
+          1.36
+        ],
+        [
+          "Residential",
+          1.5,
+          0.34
+        ],
+        [
+          "Hotels",
+          8,
+          1.82
+        ],
+        [
+          "Industrial Facilities",
+          10,
+          2.27
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factor\n\n1 gpm = 6.30888×10⁻⁵ m³/s = 0.227 m³/h"
+    }
+  ]
+}

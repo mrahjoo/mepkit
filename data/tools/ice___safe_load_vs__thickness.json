@@ -1,0 +1,125 @@
+{
+  "id": "ice___safe_load_vs__thickness",
+  "title": "Ice - Safe Load vs. Thickness",
+  "description": "Safe loads vs. thickness for clear and solid ice. This calculator helps determine the safe load capacity based on ice thickness, considering factors like ice age, distance to shore, and water conditions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Ice Safety Reference Guide\n\nSafe loads for clear solid ice are indicated in the table below. This is a general guide only - **KEEP OFF the ice if you are not absolutely sure of its safety.**\n\n### Factors Affecting Ice Strength\n- **Age**: Newer black ice is stronger than old milky ice\n- **Distance to shore**: Ice close to shore is weaker than ice farther out\n- **River outlets and inlets**: Ice near outlets and inlets is weaker\n- **Obstructions**: Rocks, trees, and plants weaken ice\n- **Water currents**: Flowing water weakens ice structure\n- **Snow cover**: Affects insulation and ice formation"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Ice Thickness (in)",
+        "Ice Thickness (cm)",
+        "Safe Load (tons)",
+        "Recommended Activity"
+      ],
+      "rows": [
+        [
+          "< 1 3/4",
+          "< 4.5",
+          "0",
+          "STAY OFF"
+        ],
+        [
+          "1 3/4",
+          "4.5",
+          "0.15",
+          "One person cross country skiing"
+        ],
+        [
+          "2",
+          "5",
+          "0.2",
+          "One person on foot or skates"
+        ],
+        [
+          "4",
+          "7.5",
+          "0.4",
+          "Snowmobile or smaller ATV, groups walking in single line"
+        ],
+        [
+          "7",
+          "17.5",
+          "0.8",
+          "Small car"
+        ],
+        [
+          "8",
+          "20",
+          "1.25",
+          "2.5 ton truck"
+        ],
+        [
+          "9",
+          "22.5",
+          "1.75",
+          "3.5 ton truck"
+        ],
+        [
+          "10",
+          "25",
+          "4",
+          "7-8 ton truck"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ice_thickness_inches",
+          "label": "Ice Thickness",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 4
+        },
+        {
+          "id": "safety_factor",
+          "label": "Safety Factor",
+          "type": "select",
+          "options": [
+            {
+              "value": 0.5,
+              "label": "Conservative (50%)"
+            },
+            {
+              "value": 0.7,
+              "label": "Moderate (70%)"
+            },
+            {
+              "value": 0.9,
+              "label": "High (90%)"
+            }
+          ],
+          "defaultValue": 0.7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ice_thickness_cm",
+          "label": "Ice Thickness",
+          "unit": "cm",
+          "formula": "inputs.ice_thickness_inches * 2.54"
+        },
+        {
+          "id": "safe_load_estimate",
+          "label": "Estimated Safe Load",
+          "unit": "tons",
+          "formula": "((inputs.ice_thickness_inches / 10) * 4) * inputs.safety_factor",
+          "format": "decimal"
+        },
+        {
+          "id": "load_pounds",
+          "label": "Estimated Safe Load",
+          "unit": "lbs",
+          "formula": "((inputs.ice_thickness_inches / 10) * 4) * inputs.safety_factor * 2000",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

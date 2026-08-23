@@ -1,0 +1,116 @@
+{
+  "id": "electrical_motors___heat_loss",
+  "title": "Electrical Motors - Heat Loss",
+  "description": "Calculate heat loss from an electrical motor to the surroundings based on motor size and efficiency",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Motor Heat Loss Reference Tables",
+      "headers": [
+        "Motor Size (kW)",
+        "Efficiency (%)",
+        "Heat Loss (watts/kW)"
+      ],
+      "rows": [
+        [
+          "0 - 2",
+          75,
+          250
+        ],
+        [
+          "3 - 15",
+          85,
+          150
+        ],
+        [
+          "15 - 150",
+          90,
+          100
+        ],
+        [
+          "150+",
+          92,
+          80
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Heat Loss Calculation",
+      "inputs": [
+        {
+          "id": "motor_power",
+          "label": "Motor Power",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 10
+        },
+        {
+          "id": "heat_loss_rate",
+          "label": "Heat Loss Rate",
+          "type": "number",
+          "unit": "watts/kW",
+          "defaultValue": 150
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_heat_loss",
+          "label": "Total Heat Loss",
+          "unit": "watts",
+          "format": "decimal",
+          "formula": "inputs.motor_power * inputs.heat_loss_rate"
+        },
+        {
+          "id": "total_heat_loss_kw",
+          "label": "Total Heat Loss",
+          "unit": "kW",
+          "format": "decimal",
+          "formula": "(inputs.motor_power * inputs.heat_loss_rate) / 1000"
+        },
+        {
+          "id": "mechanical_output",
+          "label": "Mechanical Output",
+          "unit": "kW",
+          "format": "decimal",
+          "formula": "inputs.motor_power - ((inputs.motor_power * inputs.heat_loss_rate) / 1000)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Heat Loss to Room Air by Motor Location",
+      "headers": [
+        "Nameplate Rating (hp)",
+        "Motor Efficiency (%)",
+        "Motor & Device in Room (Btu/hr)",
+        "Motor in Room / Device Outside (Btu/hr)",
+        "Motor Outside / Device in Room (Btu/hr)"
+      ],
+      "rows": [
+        [
+          "0 - 1.5",
+          80,
+          2542,
+          508,
+          2034
+        ],
+        [
+          "1.5 - 12.5",
+          85,
+          2542,
+          381,
+          2161
+        ],
+        [
+          "12.5+",
+          90,
+          2542,
+          254,
+          2289
+        ]
+      ]
+    }
+  ]
+}

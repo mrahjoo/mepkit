@@ -1,0 +1,525 @@
+{
+  "id": "fuels_and_chemicals___autoignition_temperatures",
+  "title": "Fuels and Chemicals - Autoignition Temperatures",
+  "description": "Autoignition points for fuels and chemicals like butane, coke, hydrogen, petroleum and more. The Autoignition Temperature is the minimum temperature required to ignite a gas or vapor in air without a spark or flame being present.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Product",
+        "Autoignition Temperature (°C)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          175
+        ],
+        [
+          "Acetic acid",
+          427
+        ],
+        [
+          "Acetone, propanone",
+          465
+        ],
+        [
+          "Acentonitrile",
+          220
+        ],
+        [
+          "Acetylene",
+          305
+        ],
+        [
+          "Acrolein",
+          220
+        ],
+        [
+          "Acronitrile",
+          481
+        ],
+        [
+          "Allylamine",
+          374
+        ],
+        [
+          "Aniline",
+          615
+        ],
+        [
+          "Anthracite - glow point",
+          600
+        ],
+        [
+          "Benzaldehyde",
+          192
+        ],
+        [
+          "Benzene",
+          498
+        ],
+        [
+          "Bituminous coal - glow point",
+          454
+        ],
+        [
+          "Butadiene",
+          420
+        ],
+        [
+          "Butanal",
+          218
+        ],
+        [
+          "Butane",
+          405
+        ],
+        [
+          "1-Butanol",
+          343
+        ],
+        [
+          "Butyl acetate",
+          421
+        ],
+        [
+          "Butyl alcohol",
+          345
+        ],
+        [
+          "Butyl methyl ketone",
+          423
+        ],
+        [
+          "Carbon",
+          700
+        ],
+        [
+          "Carbon disulfide, CS2",
+          90
+        ],
+        [
+          "Carbon monoxide",
+          609
+        ],
+        [
+          "Charcoal",
+          349
+        ],
+        [
+          "Coal-tar oil",
+          580
+        ],
+        [
+          "Coke",
+          700
+        ],
+        [
+          "Cyclohexane",
+          245
+        ],
+        [
+          "Cyclohexanol",
+          300
+        ],
+        [
+          "Cyclohexanone",
+          420
+        ],
+        [
+          "Cyclopropane",
+          498
+        ],
+        [
+          "Dichloromethane",
+          600
+        ],
+        [
+          "Diethylamine",
+          312
+        ],
+        [
+          "Diethyl ether",
+          180
+        ],
+        [
+          "Diethanolamine",
+          662
+        ],
+        [
+          "Diesel, Jet A-1",
+          210
+        ],
+        [
+          "Diisobutyl ketone",
+          396
+        ],
+        [
+          "Diisopropyl ether",
+          443
+        ],
+        [
+          "Dimethyl sulfate",
+          188
+        ],
+        [
+          "Dimethyl sulfide",
+          206
+        ],
+        [
+          "Dimethyl sulphoxide",
+          215
+        ],
+        [
+          "Dodecane, dihexyl",
+          203
+        ],
+        [
+          "Epichlorohydrin",
+          416
+        ],
+        [
+          "Ethane",
+          515
+        ],
+        [
+          "Ethylene, ethene",
+          450
+        ],
+        [
+          "Ethylamine",
+          385
+        ],
+        [
+          "Ethyl acetate",
+          410
+        ],
+        [
+          "Ethyl Alcohol (Ethanol)",
+          363
+        ],
+        [
+          "Ethylene oxide",
+          570
+        ],
+        [
+          "Formaldehyde",
+          424
+        ],
+        [
+          "Fuel Oil No.1",
+          210
+        ],
+        [
+          "Fuel Oil No.2",
+          256
+        ],
+        [
+          "Fuel Oil No.4",
+          262
+        ],
+        [
+          "Furfural",
+          316
+        ],
+        [
+          "Furfural alcohol",
+          491
+        ],
+        [
+          "Heavy hydrocarbons",
+          750
+        ],
+        [
+          "Heptane",
+          204
+        ],
+        [
+          "Hexane",
+          223
+        ],
+        [
+          "Hexadecane, cetane",
+          202
+        ],
+        [
+          "Hydrogen",
+          500
+        ],
+        [
+          "Gas oil",
+          336
+        ],
+        [
+          "Gasoline, Petrol",
+          "246 - 280"
+        ],
+        [
+          "Glycerol",
+          370
+        ],
+        [
+          "Gun Cotton",
+          221
+        ],
+        [
+          "Kerosene (paraffin)",
+          210
+        ],
+        [
+          "Isobutane",
+          462
+        ],
+        [
+          "Isobutene",
+          465
+        ],
+        [
+          "Isobutyl alcohol",
+          426
+        ],
+        [
+          "Isooctane",
+          447
+        ],
+        [
+          "Isopentane",
+          420
+        ],
+        [
+          "Isoprene",
+          395
+        ],
+        [
+          "Isopropyl alcohol",
+          399
+        ],
+        [
+          "Isophorone",
+          460
+        ],
+        [
+          "Isohexane",
+          264
+        ],
+        [
+          "Isononane",
+          227
+        ],
+        [
+          "Light gas",
+          600
+        ],
+        [
+          "Light hydrocarbons",
+          650
+        ],
+        [
+          "Lignite - glow point",
+          526
+        ],
+        [
+          "Magnesium",
+          473
+        ],
+        [
+          "Methane (Natural Gas)",
+          580
+        ],
+        [
+          "Methanol (Methyl Alcohol)",
+          464
+        ],
+        [
+          "Methylamine",
+          430
+        ],
+        [
+          "Methyl acetate",
+          455
+        ],
+        [
+          "Methyl ethyl ketone",
+          516
+        ],
+        [
+          "Naphtha",
+          230
+        ],
+        [
+          "Neoheaxane",
+          425
+        ],
+        [
+          "Neopentane",
+          450
+        ],
+        [
+          "Nitrobenzene",
+          480
+        ],
+        [
+          "Nitro-glycerine",
+          254
+        ],
+        [
+          "n-Butane",
+          405
+        ],
+        [
+          "n-Heptane",
+          215
+        ],
+        [
+          "n-Hexane",
+          225
+        ],
+        [
+          "n-Octane",
+          220
+        ],
+        [
+          "n-Pentane",
+          260
+        ],
+        [
+          "n-Pentene",
+          298
+        ],
+        [
+          "Oak Wood - dry",
+          482
+        ],
+        [
+          "Paper",
+          "218 - 246"
+        ],
+        [
+          "Paraldehyde",
+          238
+        ],
+        [
+          "Peat",
+          227
+        ],
+        [
+          "Petroleum",
+          400
+        ],
+        [
+          "Petroleum ether",
+          288
+        ],
+        [
+          "Pine Wood - dry",
+          427
+        ],
+        [
+          "Phosphorus, amorphous",
+          260
+        ],
+        [
+          "Phosphorus, transparent",
+          49
+        ],
+        [
+          "Phosphorus, white",
+          34
+        ],
+        [
+          "Production gas",
+          750
+        ],
+        [
+          "Propanal",
+          207
+        ],
+        [
+          "Propane",
+          455
+        ],
+        [
+          "Propyl acetate",
+          450
+        ],
+        [
+          "Propylamine",
+          318
+        ],
+        [
+          "Propylene (Propene)",
+          458
+        ],
+        [
+          "Pyridine",
+          482
+        ],
+        [
+          "p-Xylene",
+          530
+        ],
+        [
+          "Rifle (Gun) Powder",
+          288
+        ],
+        [
+          "Tetrahydrofuran",
+          321
+        ],
+        [
+          "Triethylamine",
+          249
+        ],
+        [
+          "Triethylborane",
+          -20
+        ],
+        [
+          "Toluene",
+          480
+        ],
+        [
+          "Semi anthracite coal",
+          400
+        ],
+        [
+          "Semi bituminous coal - glow point",
+          527
+        ],
+        [
+          "Silane",
+          "< 21"
+        ],
+        [
+          "Styrene",
+          490
+        ],
+        [
+          "Sulphur",
+          243
+        ],
+        [
+          "Trichloroethylene",
+          420
+        ],
+        [
+          "Wood",
+          300
+        ],
+        [
+          "o-Xylene",
+          463
+        ],
+        [
+          "m-Xylene",
+          527
+        ],
+        [
+          "p-Xylene",
+          528
+        ]
+      ]
+    }
+  ]
+}

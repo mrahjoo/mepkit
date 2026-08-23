@@ -1,0 +1,87 @@
+{
+  "id": "radiation_heat_transfer",
+  "title": "Radiation Heat Transfer",
+  "description": "Calculator for radiation heat transfer from a warm object to colder surroundings using the Stefan-Boltzmann Law. Calculates net radiation loss rate based on emissivity, temperatures, and surface area.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Radiation Heat Transfer Calculator\n\nThis calculator is based on the Stefan-Boltzmann Law and calculates the net radiation heat loss rate:\n\n**q = ε σ (Th⁴ - Tc⁴) Ah**\n\nWhere:\n- **ε** = emissivity coefficient (0 < ε ≤ 1)\n- **σ** = Stefan-Boltzmann constant = 5.6703×10⁻⁸ W/m²K⁴\n- **Th** = hot body absolute temperature (K)\n- **Tc** = cold surroundings absolute temperature (K)\n- **Ah** = surface area (m²)\n\n## Common Emissivity Values:\n- Black body: ε = 1.0\n- Oxidized iron (390°F): ε = 0.64\n- Polished copper (100°F): ε = 0.03"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "emissivity",
+          "label": "Emissivity Coefficient (ε)",
+          "type": "number",
+          "defaultValue": 0.95,
+          "unit": ""
+        },
+        {
+          "id": "temp_hot",
+          "label": "Hot Body Temperature (°C)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "°C"
+        },
+        {
+          "id": "temp_cold",
+          "label": "Surroundings Temperature (°C)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "area",
+          "label": "Surface Area (m²)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temp_hot_k",
+          "label": "Hot Body Temperature (K)",
+          "formula": "inputs.temp_hot + 273.15",
+          "unit": "K"
+        },
+        {
+          "id": "temp_cold_k",
+          "label": "Surroundings Temperature (K)",
+          "formula": "inputs.temp_cold + 273.15",
+          "unit": "K"
+        },
+        {
+          "id": "stefan_boltzmann",
+          "label": "Stefan-Boltzmann Constant",
+          "formula": "5.6703e-8",
+          "unit": "W/m²K⁴",
+          "format": "scientific"
+        },
+        {
+          "id": "heat_transfer",
+          "label": "Net Radiation Heat Transfer Rate (q)",
+          "formula": "inputs.emissivity * 5.6703e-8 * ((inputs.temp_hot + 273.15)^4 - (inputs.temp_cold + 273.15)^4) * inputs.area",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_transfer_kw",
+          "label": "Net Radiation Heat Transfer Rate (q)",
+          "formula": "inputs.emissivity * 5.6703e-8 * ((inputs.temp_hot + 273.15)^4 - (inputs.temp_cold + 273.15)^4) * inputs.area / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_flux",
+          "label": "Heat Flux (q/A)",
+          "formula": "inputs.emissivity * 5.6703e-8 * ((inputs.temp_hot + 273.15)^4 - (inputs.temp_cold + 273.15)^4)",
+          "unit": "W/m²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

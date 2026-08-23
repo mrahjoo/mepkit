@@ -1,0 +1,386 @@
+{
+  "id": "clo___clothing_and_thermal_insulation",
+  "title": "Clo - Clothing and Thermal Insulation",
+  "description": "Clo is used as a measure of clothes thermal insulation. 1 Clo = 0.155 m2K/W. Calculate total thermal insulation by summing individual garment Clo values.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "clo_table",
+      "headers": [
+        "Clothing Category",
+        "Description",
+        "Icl (Clo)",
+        "m2K/W"
+      ],
+      "rows": [
+        [
+          "Nude",
+          "Nude",
+          0,
+          0
+        ],
+        [
+          "Underwear - pants",
+          "Pantyhose",
+          0.02,
+          0.003
+        ],
+        [
+          "Underwear - pants",
+          "Panties",
+          0.03,
+          0.005
+        ],
+        [
+          "Underwear - pants",
+          "Briefs",
+          0.04,
+          0.006
+        ],
+        [
+          "Underwear - pants",
+          "Pants 1/2 long legs made of wool",
+          0.06,
+          0.009
+        ],
+        [
+          "Underwear - pants",
+          "Pants long legs",
+          0.1,
+          0.016
+        ],
+        [
+          "Underwear - shirts",
+          "Bra",
+          0.01,
+          0.002
+        ],
+        [
+          "Underwear - shirts",
+          "Shirt sleeveless",
+          0.06,
+          0.009
+        ],
+        [
+          "Underwear - shirts",
+          "T-shirt",
+          0.09,
+          0.014
+        ],
+        [
+          "Underwear - shirts",
+          "Shirt with long sleeves",
+          0.12,
+          0.019
+        ],
+        [
+          "Underwear - shirts",
+          "Half-slip in nylon",
+          0.14,
+          0.022
+        ],
+        [
+          "Shirts",
+          "Tube top",
+          0.06,
+          0.009
+        ],
+        [
+          "Shirts",
+          "Short sleeve",
+          0.09,
+          0.029
+        ],
+        [
+          "Shirts",
+          "Light blouse with long sleeves",
+          0.15,
+          0.023
+        ],
+        [
+          "Shirts",
+          "Light shirt with long sleeves",
+          0.2,
+          0.031
+        ],
+        [
+          "Shirts",
+          "Normal with long sleeves",
+          0.25,
+          0.039
+        ],
+        [
+          "Shirts",
+          "Flannel shirt with long sleeves",
+          0.3,
+          0.047
+        ],
+        [
+          "Shirts",
+          "Long sleeves with turtleneck blouse",
+          0.34,
+          0.053
+        ],
+        [
+          "Trousers",
+          "Shorts",
+          0.06,
+          0.009
+        ],
+        [
+          "Trousers",
+          "Walking shorts",
+          0.11,
+          0.017
+        ],
+        [
+          "Trousers",
+          "Light trousers",
+          0.2,
+          0.031
+        ],
+        [
+          "Trousers",
+          "Normal trousers",
+          0.25,
+          0.039
+        ],
+        [
+          "Trousers",
+          "Flannel trousers",
+          0.28,
+          0.043
+        ],
+        [
+          "Trousers",
+          "Overalls",
+          0.28,
+          0.043
+        ],
+        [
+          "Coveralls",
+          "Daily wear, belted",
+          0.49,
+          0.076
+        ],
+        [
+          "Coveralls",
+          "Work",
+          0.5,
+          0.078
+        ],
+        [
+          "Coveralls",
+          "Highly-insulating coveralls",
+          1.03,
+          0.16
+        ],
+        [
+          "Coveralls",
+          "Fiber-pelt",
+          1.13,
+          0.175
+        ],
+        [
+          "Sweaters",
+          "Sleeveless vest",
+          0.12,
+          0.019
+        ],
+        [
+          "Sweaters",
+          "Thin sweater",
+          0.2,
+          0.031
+        ],
+        [
+          "Sweaters",
+          "Long thin sleeves with turtleneck",
+          0.26,
+          0.04
+        ],
+        [
+          "Sweaters",
+          "Thick sweater",
+          0.35,
+          0.054
+        ],
+        [
+          "Sweaters",
+          "Long thick sleeves with turtleneck",
+          0.37,
+          0.057
+        ],
+        [
+          "Jacket",
+          "Vest",
+          0.13,
+          0.02
+        ],
+        [
+          "Jacket",
+          "Light summer jacket",
+          0.25,
+          0.039
+        ],
+        [
+          "Jacket",
+          "Smock",
+          0.3,
+          0.047
+        ],
+        [
+          "Jacket",
+          "Jacket",
+          0.35,
+          0.054
+        ],
+        [
+          "Coats and over-jackets",
+          "Overalls multi-component",
+          0.52,
+          0.081
+        ],
+        [
+          "Coats and over-jackets",
+          "Down jacket",
+          0.55,
+          0.085
+        ],
+        [
+          "Coats and over-jackets",
+          "Coat",
+          0.6,
+          0.093
+        ],
+        [
+          "Coats and over-jackets",
+          "Parka",
+          0.7,
+          0.109
+        ],
+        [
+          "Sundries",
+          "Socks",
+          0.02,
+          0.003
+        ],
+        [
+          "Sundries",
+          "Thin soled shoes",
+          0.02,
+          0.003
+        ],
+        [
+          "Sundries",
+          "Quilted fleece slippers",
+          0.03,
+          0.005
+        ],
+        [
+          "Sundries",
+          "Thick soled shoes",
+          0.04,
+          0.006
+        ],
+        [
+          "Sundries",
+          "Thick ankle socks",
+          0.05,
+          0.008
+        ],
+        [
+          "Sundries",
+          "Boots",
+          0.05,
+          0.008
+        ],
+        [
+          "Sundries",
+          "Thick long socks",
+          0.1,
+          0.016
+        ],
+        [
+          "Skirts, dresses",
+          "Light skirt 15 cm. above knee",
+          0.01,
+          0.016
+        ],
+        [
+          "Skirts, dresses",
+          "Light skirt 15 cm. below knee",
+          0.18,
+          0.028
+        ],
+        [
+          "Skirts, dresses",
+          "Heavy skirt knee-length",
+          0.25,
+          0.039
+        ],
+        [
+          "Skirts, dresses",
+          "Light dress sleeveless",
+          0.25,
+          0.039
+        ],
+        [
+          "Skirts, dresses",
+          "Winter dress long sleeves",
+          0.4,
+          0.062
+        ],
+        [
+          "Sleepwear",
+          "Under shorts",
+          0.1,
+          0.016
+        ],
+        [
+          "Sleepwear",
+          "Short gown thin strap",
+          0.15,
+          0.023
+        ],
+        [
+          "Sleepwear",
+          "Long gown long sleeve",
+          0.3,
+          0.047
+        ],
+        [
+          "Sleepwear",
+          "Hospital gown",
+          0.31,
+          0.048
+        ],
+        [
+          "Sleepwear",
+          "Long pajamas with long sleeve",
+          0.5,
+          0.078
+        ],
+        [
+          "Sleepwear",
+          "Body sleep with feet",
+          0.72,
+          0.112
+        ],
+        [
+          "Robes",
+          "Long sleeve, wrap, short",
+          0.41,
+          0.064
+        ],
+        [
+          "Robes",
+          "Long sleeve, wrap, long",
+          0.53,
+          0.082
+        ]
+      ]
+    }
+  ]
+}

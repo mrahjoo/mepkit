@@ -1,0 +1,97 @@
+{
+  "id": "sizing_steam_pipes__kg_h_",
+  "title": "Sizing Steam Pipes (kg/h)",
+  "description": "Steam pipe sizing calculator based on gauge pressure, nominal pipe size, and steam velocity. Calculates the mass flow capacity in kg/h for steel pipes schedule 40.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "gauge_pressure",
+          "label": "Gauge Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 10
+        },
+        {
+          "id": "pipe_size",
+          "label": "Nominal Pipe Size",
+          "type": "select",
+          "options": [
+            {
+              "value": 20,
+              "label": "20 mm"
+            },
+            {
+              "value": 25,
+              "label": "25 mm"
+            },
+            {
+              "value": 32,
+              "label": "32 mm"
+            },
+            {
+              "value": 40,
+              "label": "40 mm"
+            },
+            {
+              "value": 50,
+              "label": "50 mm"
+            },
+            {
+              "value": 65,
+              "label": "65 mm"
+            },
+            {
+              "value": 80,
+              "label": "80 mm"
+            },
+            {
+              "value": 100,
+              "label": "100 mm"
+            },
+            {
+              "value": 125,
+              "label": "125 mm"
+            },
+            {
+              "value": 150,
+              "label": "150 mm"
+            }
+          ],
+          "defaultValue": 50
+        },
+        {
+          "id": "steam_velocity",
+          "label": "Steam Velocity",
+          "type": "select",
+          "options": [
+            {
+              "value": 15,
+              "label": "15 m/s"
+            },
+            {
+              "value": 25,
+              "label": "25 m/s"
+            },
+            {
+              "value": 40,
+              "label": "40 m/s"
+            }
+          ],
+          "defaultValue": 25
+        }
+      ],
+      "outputs": [
+        {
+          "id": "capacity",
+          "label": "Pipe Capacity",
+          "unit": "kg/h",
+          "formula": "lookupCapacity(inputs.gauge_pressure, inputs.pipe_size, inputs.steam_velocity)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "sound_attenuation_in_ducts_due_to_end_reflection",
+  "title": "Sound Attenuation in Ducts due to End Reflection",
+  "description": "Low frequency noise transferred from main duct to end terminals is reflected back to main duct. This tool provides sound attenuation values for typical duct dimensions with sharp ends at different octave band center frequencies.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Duct Dimension (mm)",
+        "125 Hz (dB)",
+        "250 Hz (dB)",
+        "500 Hz (dB)",
+        "1000 Hz (dB)",
+        "2000+ Hz (dB)"
+      ],
+      "rows": [
+        [
+          125,
+          17,
+          12,
+          8,
+          4,
+          1
+        ],
+        [
+          250,
+          12,
+          8,
+          4,
+          1,
+          0
+        ],
+        [
+          500,
+          8,
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          1000,
+          4,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          2000,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "content": "Sound Attenuation in Ducts due to End Reflection\n\nNote: Duct dimension is the diameter of round ducts or the square root of area of rectangular ducts.\n\n**Key Observations:**\n- Noise with lower frequencies are reflected more than sound with higher frequencies\n- Rounded terminal ends reflects sound less than sharper ends\n- Reflection in funnel shaped ends (like trumpets) can be nearly neglected\n\n**Example:** For a duct diameter of 250 mm at 250 Hz frequency, the sound attenuation due to end reflection is approximately 4 dB. For the same duct at 500 Hz, the attenuation is approximately 1 dB."
+    }
+  ]
+}

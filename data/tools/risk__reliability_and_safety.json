@@ -1,0 +1,83 @@
+{
+  "id": "risk__reliability_and_safety",
+  "title": "Risk, Reliability and Safety",
+  "description": "Risk, reliability and safety in process control systems.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Risk, Reliability and Safety\n\nRisk, reliability and safety in process control systems.\n\nThis tool provides analysis and visualization of key metrics related to system reliability, failure rates, and safety performance."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Metric",
+        "Description",
+        "Value"
+      ],
+      "rows": [
+        [
+          "MTBF (Mean Time Between Failures)",
+          "Average time between system failures",
+          "Hours"
+        ],
+        [
+          "MTTR (Mean Time To Repair)",
+          "Average time to repair a failed system",
+          "Hours"
+        ],
+        [
+          "Availability",
+          "Percentage of time system is operational",
+          "%"
+        ],
+        [
+          "Reliability",
+          "Probability system functions without failure",
+          "%"
+        ],
+        [
+          "Safety Integrity Level (SIL)",
+          "Safety performance rating",
+          "Level 1-4"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "System Reliability Over Time"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Week 1",
+            "Week 2",
+            "Week 3",
+            "Week 4",
+            "Week 5"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Reliability (%)"
+        },
+        "series": [
+          {
+            "name": "System Reliability",
+            "data": [
+              98.5,
+              98.2,
+              97.9,
+              97.5,
+              97.1
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

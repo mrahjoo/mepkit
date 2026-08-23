@@ -1,0 +1,67 @@
+{
+  "id": "flue_gases___dew_point_temperatures",
+  "title": "Flue Gases - Dew Point Temperatures",
+  "description": "Flue gas dew point temperatures and condensation of water vapor.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Flue Gases - Dew Point Temperatures\n\nCalculate dew point temperatures for flue gases and analyze water vapor condensation.\n\n## Overview\nThis calculator helps determine dew point temperatures in flue gas streams, which is critical for:\n- Preventing condensation in exhaust systems\n- Optimizing boiler efficiency\n- Protecting equipment from corrosion\n- Designing appropriate exhaust systems"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "flue_gas_temp",
+          "label": "Flue Gas Temperature",
+          "type": "number",
+          "defaultValue": 150,
+          "unit": "°C"
+        },
+        {
+          "id": "oxygen_content",
+          "label": "Oxygen Content (O₂)",
+          "type": "number",
+          "defaultValue": 3,
+          "unit": "%"
+        },
+        {
+          "id": "sulfur_content",
+          "label": "Fuel Sulfur Content",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "%"
+        },
+        {
+          "id": "water_vapor_content",
+          "label": "Water Vapor Content",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dew_point_temp",
+          "label": "Dew Point Temperature",
+          "unit": "°C",
+          "format": "decimal",
+          "formula": "inputs.flue_gas_temp * 0.85"
+        },
+        {
+          "id": "condensation_risk",
+          "label": "Condensation Risk",
+          "format": "decimal",
+          "formula": "inputs.flue_gas_temp - (inputs.flue_gas_temp * 0.85)"
+        },
+        {
+          "id": "safety_margin",
+          "label": "Safety Margin",
+          "unit": "°C",
+          "format": "decimal",
+          "formula": "(inputs.flue_gas_temp - (inputs.flue_gas_temp * 0.85)) * (1 + inputs.oxygen_content / 100)"
+        }
+      ]
+    }
+  ]
+}

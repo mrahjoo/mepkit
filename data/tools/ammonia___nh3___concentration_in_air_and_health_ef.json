@@ -1,0 +1,43 @@
+{
+  "id": "ammonia___nh3___concentration_in_air_and_health_ef",
+  "title": "Ammonia - NH3 - Concentration in Air and Health Effects",
+  "description": "Ammonia and health symptoms - smell and threat to life. Analyze ammonia concentration levels in air and their corresponding health effects and safety limits.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Ammonia (NH3) Health Effects Reference\n\nAmmonia is a colorless gas with a very sharp odor commonly used as a refrigerant. In small concentrations it is detectable by smell, but in high concentrations it is an immediate hazard to life.\n\n### Health Effects by Concentration Level:\n\n| Concentration (ppm) | Health Symptoms |\n|---|---|\n| < 25 | Detectable by smell. Maximum Permissible Exposure Limit (PEL) |\n| 30 | Uncomfortable, breathing support required. Maximum exposure 15 minutes |\n| 50 | OSHA maximum exposure limit |\n| 100 | Irritated eyes, throat and mucous membranes. Mild irritation, may develop tolerance in 1-2 weeks |\n| 140 | Moderate eye irritation, no long-term effect in exposures less than 2 hours |\n| 400 | Moderate throat irritation. Damage of mucous membranes with more than one hour exposure |\n| 500 | Immediate danger to life limit (IDLH) |\n| 1000 | Caustic to airway |\n| 1700 | Fatal after short exposures - less than half an hour |\n| 5000 | Immediate hazard to life |\n| > 15000 | Full body protection required |\n| 160000 - 170000 | Flammable in air at 50°C |\n\n**Lower Flammable Limit (LFL):** 15-16% by volume"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "concentration_ppm",
+          "label": "Ammonia Concentration",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 100
+        },
+        {
+          "id": "exposure_time",
+          "label": "Exposure Duration",
+          "type": "number",
+          "unit": "minutes",
+          "defaultValue": 60
+        }
+      ],
+      "outputs": [
+        {
+          "id": "health_status",
+          "label": "Health Risk Assessment",
+          "formula": "IF(inputs.concentration_ppm < 25, 'Detectable by smell - Safe', IF(inputs.concentration_ppm <= 30, 'Uncomfortable - Breathing support required', IF(inputs.concentration_ppm <= 50, 'OSHA exposure limit', IF(inputs.concentration_ppm <= 100, 'Eye/throat irritation - Monitor', IF(inputs.concentration_ppm <= 140, 'Moderate eye irritation - Limit to <2 hours', IF(inputs.concentration_ppm <= 400, 'Moderate throat irritation - Limit to <1 hour', IF(inputs.concentration_ppm <= 500, 'IDLH - Danger to life', IF(inputs.concentration_ppm <= 1000, 'Caustic to airway - Severe hazard', IF(inputs.concentration_ppm <= 1700, 'Fatal risk - less than 30 min', IF(inputs.concentration_ppm <= 5000, 'Immediate hazard to life', IF(inputs.concentration_ppm <= 15000, 'Full body protection required', 'Extreme hazard - Flammable')))))))))))"
+        },
+        {
+          "id": "safety_recommendation",
+          "label": "Safety Recommendation",
+          "formula": "IF(inputs.concentration_ppm < 25, 'Continuous monitoring acceptable', IF(inputs.concentration_ppm <= 30, 'Evacuate if >15 min exposure', IF(inputs.concentration_ppm <= 50, 'Limit to 8-hour TWA', IF(inputs.concentration_ppm <= 100, 'Use respiratory protection', IF(inputs.concentration_ppm <= 140, 'Use respiratory & eye protection', IF(inputs.concentration_ppm <= 400, 'Use respiratory & eye protection - Limit exposure <1 hour', IF(inputs.concentration_ppm <= 500, 'Immediate evacuation required - Use SCBA', IF(inputs.concentration_ppm <= 1000, 'Immediate evacuation - Full protection required', IF(inputs.concentration_ppm <= 1700, 'Immediate evacuation - Life-threatening', IF(inputs.concentration_ppm <= 5000, 'Immediate evacuation - Self-rescue only', IF(inputs.concentration_ppm <= 15000, 'Full body protection & immediate evacuation', 'Consider flammability hazard - Full protection'))))))))))))"
+        }
+      ]
+    }
+  ]
+}

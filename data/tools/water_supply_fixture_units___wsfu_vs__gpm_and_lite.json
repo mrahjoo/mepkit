@@ -1,0 +1,122 @@
+{
+  "id": "water_supply_fixture_units___wsfu_vs__gpm_and_lite",
+  "title": "Water Supply Fixture Units - WSFU vs. GPM and Liters/sec",
+  "description": "Converting WSFU (Water Supply Fixture Units) to GPM and flow rate demand. Includes conversion tables for systems with and without flush valves.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Water Supply Fixture Units - WSFU vs. GPM and Liters/sec\n\nThe Water Supply Fixture Unit (**WSFU**) is defined by the American Uniform Plumbing Code (UPC) and is used to calculate the demand in water supply systems.\n\n**Key Conversion:** 1 WSFU = 1 GPM\n\nThis conversion is suitable for single or a few fixtures. When many fixtures are combined, the number must be compensated for intermittent use through probability curves or tables for sizing water supply lines.\n\n## Demand in Water Supply System without Flush Valves\n\nUse this table for systems without flush valves to estimate water demand based on WSFU load."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "WSFU",
+        "GPM",
+        "ft³/min",
+        "Liters/sec"
+      ],
+      "rows": [
+        [
+          1,
+          3,
+          0.41,
+          0.19
+        ],
+        [
+          2,
+          5,
+          0.68,
+          0.32
+        ],
+        [
+          4,
+          8,
+          1.07,
+          0.51
+        ],
+        [
+          8,
+          12.8,
+          1.71,
+          0.81
+        ],
+        [
+          15,
+          17.5,
+          2.3,
+          1.1
+        ],
+        [
+          30,
+          23.3,
+          3.1,
+          1.5
+        ],
+        [
+          50,
+          29.1,
+          3.9,
+          1.8
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Demand in Water Supply System with Flush Valves\n\nUse this table for systems with flush valves to estimate water demand based on WSFU load."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "WSFU",
+        "GPM",
+        "ft³/min",
+        "Liters/sec"
+      ],
+      "rows": [
+        [
+          5,
+          15,
+          2,
+          1
+        ],
+        [
+          7,
+          19.8,
+          2.7,
+          1.3
+        ],
+        [
+          10,
+          27,
+          3.6,
+          1.7
+        ],
+        [
+          15,
+          31,
+          4.1,
+          2
+        ],
+        [
+          20,
+          35,
+          4.7,
+          2.2
+        ],
+        [
+          30,
+          42,
+          4,
+          1.9
+        ],
+        [
+          50,
+          50,
+          6.7,
+          3.2
+        ]
+      ]
+    }
+  ]
+}

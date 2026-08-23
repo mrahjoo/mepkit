@@ -1,0 +1,133 @@
+{
+  "id": "u_s__bolts___head_and_wrench_sizes",
+  "title": "U.S. Bolts - Head and Wrench Sizes",
+  "description": "Reference guide for hex bolt, lag bolt, square bolt, and heavy hex bolt head and wrench sizes. Includes diameter to wrench size conversions with conversion factor of 1 in = 25.4 mm. Based on ANSI/ASME B18.2.1 standards.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Bolt Diameter (in)",
+        "Hex Bolt / Lag Bolt / Square Bolt (in)",
+        "Heavy Hex Bolt (in)"
+      ],
+      "rows": [
+        [
+          "#6",
+          "1/4",
+          ""
+        ],
+        [
+          "#8",
+          "1/4",
+          ""
+        ],
+        [
+          "#10",
+          "5/16",
+          ""
+        ],
+        [
+          "#12",
+          "5/16",
+          ""
+        ],
+        [
+          "1/4",
+          "7/16 or 3/8",
+          ""
+        ],
+        [
+          "5/16",
+          "1/2",
+          ""
+        ],
+        [
+          "3/8",
+          "9/16",
+          ""
+        ],
+        [
+          "7/16",
+          "5/8",
+          ""
+        ],
+        [
+          "1/2",
+          "3/4",
+          "7/8"
+        ],
+        [
+          "9/16",
+          "13/16",
+          ""
+        ],
+        [
+          "5/8",
+          "15/16",
+          "1 1/16"
+        ],
+        [
+          "3/4",
+          "1 1/8",
+          "1 1/4"
+        ],
+        [
+          "7/8",
+          "1 5/16",
+          "1 7/16"
+        ],
+        [
+          "1",
+          "1 1/2",
+          "1 5/8"
+        ],
+        [
+          "1 1/8",
+          "1 11/16",
+          "1 3/4"
+        ],
+        [
+          "1 1/4",
+          "1 7/8",
+          "2"
+        ],
+        [
+          "1 3/8",
+          "2 1/16",
+          ""
+        ],
+        [
+          "1 1/2",
+          "2 1/4",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "bolt_diameter_inches",
+          "label": "Bolt Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "bolt_diameter_mm",
+          "label": "Bolt Diameter",
+          "unit": "mm",
+          "formula": "inputs.bolt_diameter_inches * 25.4",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Information\n\n- **1 inch = 25.4 mm**\n- **Standard**: ANSI/ASME B18.2.1 Square, Hex, Heavy Hex, and Askew Head Bolts and Hex, Heavy Hex, Hex Flange, Lobed Head, and Lag Screws (Inch Series)\n- **Bolt Types**: Hex Bolt, Lag Bolt, Square Bolt, Heavy Hex Bolt"
+    }
+  ]
+}

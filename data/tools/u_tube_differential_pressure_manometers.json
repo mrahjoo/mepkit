@@ -1,0 +1,94 @@
+{
+  "id": "u_tube_differential_pressure_manometers",
+  "title": "U-Tube Differential Pressure Manometers",
+  "description": "Pressure measuring devices using liquid columns in vertical or inclined tubes. Calculate differential pressure using vertical or inclined U-tube manometers with adjustable specific weight, column height, and angle parameters.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "manometer_calculator",
+      "content": "U-tube Manometer Differential Pressure Calculator",
+      "inputs": [
+        {
+          "id": "specific_weight",
+          "label": "Specific Weight (γ)",
+          "type": "number",
+          "unit": "kN/m³",
+          "defaultValue": 9.8
+        },
+        {
+          "id": "column_height",
+          "label": "Column Height (h)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 10
+        },
+        {
+          "id": "angle",
+          "label": "Angle (θ)",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "vertical_pressure_diff",
+          "label": "Vertical Pressure Difference",
+          "formula": "inputs.specific_weight * 1000 * inputs.column_height * 0.001",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "inclined_pressure_diff",
+          "label": "Inclined Pressure Difference",
+          "formula": "inputs.specific_weight * 1000 * inputs.column_height * 0.001 * Math.sin(inputs.angle * Math.PI / 180)",
+          "unit": "Pa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "manometer_reference_table",
+      "content": "Common Reference Values for U-Tube Manometers",
+      "headers": [
+        "Fluid",
+        "Specific Weight (kN/m³)",
+        "Specific Weight (lb/ft³)",
+        "Common Applications"
+      ],
+      "rows": [
+        [
+          "Water",
+          9.8,
+          62.4,
+          "Most common, air flow measurement"
+        ],
+        [
+          "Mercury",
+          133.1,
+          849,
+          "High pressure differential measurement"
+        ],
+        [
+          "Oil",
+          8.5,
+          54,
+          "Low pressure sensitive applications"
+        ],
+        [
+          "Alcohol",
+          7.8,
+          49.7,
+          "Low temperature applications"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "manometer_info",
+      "content": "## Theory\n\n### Vertical U-Tube Manometer\nPressure difference is calculated as:\n\n**pd = γ × h = ρ × g × h**\n\nWhere:\n- pd = pressure difference (Pa)\n- γ = specific weight of liquid (kN/m³)\n- h = liquid column height (m)\n- ρ = liquid density (kg/m³)\n- g = acceleration of gravity (9.81 m/s²)\n\n### Inclined U-Tube Manometer\nFor improved accuracy at low pressures:\n\n**pd = γ × h × sin(θ)**\n\nWhere:\n- θ = angle of column relative to horizontal plane (degrees)\n- Inclining the tube increases measurement accuracy by increasing the effective column length\n\n### Example\nFor a water manometer with 10 mm column height at 45° inclination:\npd = (9.8 kN/m³) × (10 mm) × sin(45°) = 69.3 Pa"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "ammonia___prandtl_number_vs__temperature_and_press",
+  "title": "Ammonia - Prandtl Number vs. Temperature and Pressure",
+  "description": "Calculate and analyze the Prandtl Number for Ammonia at varying temperatures and pressures. The Prandtl number (Pr) is a dimensionless number approximating the ratio of momentum diffusivity (kinematic viscosity) to thermal diffusivity, expressed as Pr = μ Cp / k, where μ is absolute viscosity, Cp is specific heat, and k is thermal conductivity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (K)",
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Prandtl Number @ 1 bara",
+        "Prandtl Number @ 10 bara",
+        "Prandtl Number @ 50 bara",
+        "Prandtl Number @ 100 bara"
+      ],
+      "rows": [
+        [
+          200,
+          -73.2,
+          -8.6,
+          2.67,
+          2.67,
+          2.69,
+          2.72
+        ],
+        [
+          239.56,
+          -33.6,
+          13.3,
+          1.71,
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          239.56,
+          -33.6,
+          13.3,
+          0.881,
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          298.05,
+          24.9,
+          45.8,
+          "-",
+          1.3,
+          "-",
+          "-"
+        ],
+        [
+          298.05,
+          24.9,
+          45.8,
+          "-",
+          1.18,
+          "-",
+          "-"
+        ],
+        [
+          300,
+          26.9,
+          46.9,
+          0.876,
+          1.16,
+          1.29,
+          1.29
+        ],
+        [
+          362.03,
+          88.9,
+          81.4,
+          "-",
+          "-",
+          1.41,
+          "-"
+        ],
+        [
+          362.03,
+          88.9,
+          81.4,
+          "-",
+          "-",
+          1.84,
+          "-"
+        ],
+        [
+          398.32,
+          125,
+          102,
+          "-",
+          "-",
+          "-",
+          3.59
+        ],
+        [
+          398.32,
+          125,
+          102,
+          "-",
+          "-",
+          "-",
+          4.85
+        ],
+        [
+          400,
+          127,
+          102,
+          0.857,
+          0.894,
+          1.11,
+          3.24
+        ],
+        [
+          500,
+          227,
+          158,
+          0.835,
+          0.846,
+          0.903,
+          0.998
+        ],
+        [
+          600,
+          327,
+          214,
+          0.855,
+          0.86,
+          0.883,
+          0.913
+        ],
+        [
+          700,
+          427,
+          269,
+          0.952,
+          0.955,
+          0.965,
+          0.976
+        ]
+      ]
+    }
+  ]
+}

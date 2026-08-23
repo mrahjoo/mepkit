@@ -1,0 +1,85 @@
+{
+  "id": "threads",
+  "title": "Threads",
+  "description": "Thread data - metric, unified, ACME and others.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Threads\n\nThread data for metric, unified, ACME and other standard thread types.\n\nThis calculator provides thread specifications and calculations for various thread standards used in engineering and manufacturing."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "threadType",
+          "label": "Thread Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "metric",
+              "label": "Metric"
+            },
+            {
+              "value": "unified",
+              "label": "Unified (UNC/UNF)"
+            },
+            {
+              "value": "acme",
+              "label": "ACME"
+            },
+            {
+              "value": "bsp",
+              "label": "BSP (British Standard)"
+            }
+          ],
+          "defaultValue": "metric"
+        },
+        {
+          "id": "nominalDiameter",
+          "label": "Nominal Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 10
+        },
+        {
+          "id": "pitch",
+          "label": "Pitch",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 1.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "majorDiameter",
+          "label": "Major Diameter",
+          "unit": "mm",
+          "formula": "inputs.nominalDiameter",
+          "format": "decimal"
+        },
+        {
+          "id": "minorDiameter",
+          "label": "Minor Diameter",
+          "unit": "mm",
+          "formula": "inputs.nominalDiameter - (1.25 * inputs.pitch)",
+          "format": "decimal"
+        },
+        {
+          "id": "pitchDiameter",
+          "label": "Pitch Diameter",
+          "unit": "mm",
+          "formula": "inputs.nominalDiameter - (0.65 * inputs.pitch)",
+          "format": "decimal"
+        },
+        {
+          "id": "threadDepth",
+          "label": "Thread Depth",
+          "unit": "mm",
+          "formula": "inputs.pitch / 2",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

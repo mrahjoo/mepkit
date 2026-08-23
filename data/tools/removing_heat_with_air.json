@@ -1,0 +1,50 @@
+{
+  "id": "removing_heat_with_air",
+  "title": "Removing Heat with Air",
+  "description": "Calculating heat removed with air by measuring the wet bulb temperature.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass_flow_rate",
+          "label": "Mass Flow Rate",
+          "type": "number",
+          "unit": "kg/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "specific_heat_capacity",
+          "label": "Specific Heat Capacity",
+          "type": "number",
+          "unit": "kJ/kg·K",
+          "defaultValue": 1.005
+        },
+        {
+          "id": "dry_bulb_temp",
+          "label": "Dry Bulb Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 30
+        },
+        {
+          "id": "wet_bulb_temp",
+          "label": "Wet Bulb Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_removed",
+          "label": "Heat Removed",
+          "unit": "kW",
+          "formula": "inputs.mass_flow_rate * inputs.specific_heat_capacity * (inputs.dry_bulb_temp - inputs.wet_bulb_temp)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "id": "air___specific_heat_ratio",
+  "title": "Air - Specific Heat Ratio",
+  "description": "Specific Heat Ratio of air at temperatures ranging -40 - 1000 degC (-40 - 1500 degF) at standard atmospheric pressure - Imperial and SI Units. The specific heat ratio (k) is the ratio of specific heat at constant pressure (cp) to specific heat at constant volume (cv).",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Air - Specific Heat Ratio\n\nSpecific Heat Ratio of air at standard atmospheric pressure across a wide temperature range.\n\n**Definition:**\n- **k** = cp / cv (ratio of specific heat at constant pressure to specific heat at constant volume)\n- Valid temperature range: -40°C to 1000°C (-40°F to 1500°F)\n\nSelect the unit system below to view the corresponding data table and chart."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "unitSystem",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "Imperial Units (°F)",
+              "value": "imperial"
+            },
+            {
+              "label": "SI Units (°C)",
+              "value": "si"
+            }
+          ],
+          "defaultValue": "si"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Specific Heat Ratio k"
+      ],
+      "rows": [
+        [
+          -40,
+          1.401
+        ],
+        [
+          -20,
+          1.401
+        ],
+        [
+          0,
+          1.401
+        ],
+        [
+          5,
+          1.401
+        ],
+        [
+          10,
+          1.401
+        ],
+        [
+          15,
+          1.401
+        ],
+        [
+          20,
+          1.401
+        ],
+        [
+          25,
+          1.401
+        ],
+        [
+          30,
+          1.4
+        ],
+        [
+          40,
+          1.4
+        ],
+        [
+          50,
+          1.4
+        ],
+        [
+          60,
+          1.399
+        ],
+        [
+          70,
+          1.399
+        ],
+        [
+          80,
+          1.399
+        ],
+        [
+          90,
+          1.398
+        ],
+        [
+          100,
+          1.397
+        ],
+        [
+          200,
+          1.39
+        ],
+        [
+          300,
+          1.379
+        ],
+        [
+          400,
+          1.368
+        ],
+        [
+          500,
+          1.357
+        ],
+        [
+          1000,
+          1.321
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Air - Specific Heat Ratio vs Temperature (SI Units)",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "formatter": "{b}°C: {c}"
+        },
+        "grid": {
+          "left": "10%",
+          "right": "10%",
+          "bottom": "10%",
+          "top": "15%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°C)",
+          "data": [
+            -40,
+            -20,
+            0,
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100,
+            200,
+            300,
+            400,
+            500,
+            1000
+          ],
+          "nameLocation": "middle",
+          "nameGap": 30
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Specific Heat Ratio (k)",
+          "nameLocation": "middle",
+          "nameGap": 60,
+          "min": 1.31,
+          "max": 1.41
+        },
+        "series": [
+          {
+            "name": "Specific Heat Ratio k",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.4,
+              1.4,
+              1.4,
+              1.399,
+              1.399,
+              1.399,
+              1.398,
+              1.397,
+              1.39,
+              1.379,
+              1.368,
+              1.357,
+              1.321
+            ],
+            "lineStyle": {
+              "width": 2,
+              "color": "#2563eb"
+            },
+            "symbolSize": 4
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Specific Heat Ratio k"
+      ],
+      "rows": [
+        [
+          -40,
+          1.401
+        ],
+        [
+          -20,
+          1.401
+        ],
+        [
+          0,
+          1.401
+        ],
+        [
+          10,
+          1.401
+        ],
+        [
+          20,
+          1.401
+        ],
+        [
+          30,
+          1.401
+        ],
+        [
+          40,
+          1.401
+        ],
+        [
+          50,
+          1.401
+        ],
+        [
+          60,
+          1.401
+        ],
+        [
+          70,
+          1.401
+        ],
+        [
+          80,
+          1.4
+        ],
+        [
+          90,
+          1.4
+        ],
+        [
+          100,
+          1.4
+        ],
+        [
+          120,
+          1.4
+        ],
+        [
+          140,
+          1.399
+        ],
+        [
+          160,
+          1.399
+        ],
+        [
+          180,
+          1.399
+        ],
+        [
+          200,
+          1.398
+        ],
+        [
+          300,
+          1.394
+        ],
+        [
+          400,
+          1.389
+        ],
+        [
+          500,
+          1.383
+        ],
+        [
+          750,
+          1.367
+        ],
+        [
+          1000,
+          1.351
+        ],
+        [
+          1500,
+          1.329
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Air - Specific Heat Ratio vs Temperature (Imperial Units)",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "formatter": "{b}°F: {c}"
+        },
+        "grid": {
+          "left": "10%",
+          "right": "10%",
+          "bottom": "10%",
+          "top": "15%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°F)",
+          "data": [
+            -40,
+            -20,
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100,
+            120,
+            140,
+            160,
+            180,
+            200,
+            300,
+            400,
+            500,
+            750,
+            1000,
+            1500
+          ],
+          "nameLocation": "middle",
+          "nameGap": 30
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Specific Heat Ratio (k)",
+          "nameLocation": "middle",
+          "nameGap": 60,
+          "min": 1.32,
+          "max": 1.41
+        },
+        "series": [
+          {
+            "name": "Specific Heat Ratio k",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.401,
+              1.4,
+              1.4,
+              1.4,
+              1.4,
+              1.399,
+              1.399,
+              1.399,
+              1.398,
+              1.394,
+              1.389,
+              1.383,
+              1.367,
+              1.351,
+              1.329
+            ],
+            "lineStyle": {
+              "width": 2,
+              "color": "#dc2626"
+            },
+            "symbolSize": 4
+          }
+        ]
+      }
+    }
+  ]
+}

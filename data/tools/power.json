@@ -1,0 +1,239 @@
+{
+  "id": "power",
+  "title": "Power Calculator",
+  "description": "Calculate power based on work and time, or force and velocity. Power is the rate at which work is done or energy is converted.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Power Calculator\n\nPower is a measure of the rate at which work is done or energy is converted.\n\n**Formula 1:** P = W / dt (Power from Work and Time)\n**Formula 2:** P = F × v (Power from Force and Velocity)\n**Formula 3:** P = E / dt (Power from Energy and Time)\n\nwhere:\n- P = power (W)\n- W = work done (J)\n- E = energy converted (J)\n- dt = time (s)\n- F = force (N)\n- v = velocity (m/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "calculationType",
+          "label": "Calculation Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Power from Work and Time",
+              "value": "work"
+            },
+            {
+              "label": "Power from Force and Velocity",
+              "value": "force"
+            },
+            {
+              "label": "Power from Energy and Time",
+              "value": "energy"
+            },
+            {
+              "label": "Time from Work and Power",
+              "value": "time"
+            },
+            {
+              "label": "Work from Power and Time",
+              "value": "workFromPower"
+            }
+          ],
+          "defaultValue": "work"
+        },
+        {
+          "id": "work",
+          "label": "Work Done",
+          "type": "number",
+          "unit": "J",
+          "defaultValue": 98100
+        },
+        {
+          "id": "time",
+          "label": "Time",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 10
+        },
+        {
+          "id": "force",
+          "label": "Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 981
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 10
+        },
+        {
+          "id": "energy",
+          "label": "Energy Converted",
+          "type": "number",
+          "unit": "J",
+          "defaultValue": 3600000
+        },
+        {
+          "id": "power",
+          "label": "Power",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "powerOutput",
+          "label": "Power",
+          "unit": "W",
+          "format": "decimal",
+          "formula": "IF(inputs.calculationType = 'work', inputs.work / inputs.time, IF(inputs.calculationType = 'force', inputs.force * inputs.velocity, IF(inputs.calculationType = 'energy', inputs.energy / inputs.time, '')))"
+        },
+        {
+          "id": "powerKw",
+          "label": "Power",
+          "unit": "kW",
+          "format": "decimal",
+          "formula": "(IF(inputs.calculationType = 'work', inputs.work / inputs.time, IF(inputs.calculationType = 'force', inputs.force * inputs.velocity, IF(inputs.calculationType = 'energy', inputs.energy / inputs.time, '')))) / 1000"
+        },
+        {
+          "id": "powerHp",
+          "label": "Power",
+          "unit": "hp",
+          "format": "decimal",
+          "formula": "(IF(inputs.calculationType = 'work', inputs.work / inputs.time, IF(inputs.calculationType = 'force', inputs.force * inputs.velocity, IF(inputs.calculationType = 'energy', inputs.energy / inputs.time, '')))) / 745.7"
+        },
+        {
+          "id": "timeOutput",
+          "label": "Time Required",
+          "unit": "s",
+          "format": "decimal",
+          "formula": "IF(inputs.calculationType = 'time', inputs.work / inputs.power, '')"
+        },
+        {
+          "id": "workOutput",
+          "label": "Work Done",
+          "unit": "J",
+          "format": "decimal",
+          "formula": "IF(inputs.calculationType = 'workFromPower', inputs.power * inputs.time, '')"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Power Source",
+        "Power Output (kW)"
+      ],
+      "rows": [
+        [
+          "Human speech",
+          0.000001
+        ],
+        [
+          "Human daily average",
+          0.1
+        ],
+        [
+          "Human walking",
+          0.2
+        ],
+        [
+          "Human running",
+          1
+        ],
+        [
+          "Human sprinting",
+          1.7
+        ],
+        [
+          "Small scooter",
+          4
+        ],
+        [
+          "Family car",
+          40
+        ],
+        [
+          "Light aircraft",
+          150
+        ],
+        [
+          "Sports car",
+          240
+        ],
+        [
+          "Helicopter",
+          400
+        ],
+        [
+          "Formula 1 car",
+          600
+        ],
+        [
+          "Locomotive",
+          1500
+        ],
+        [
+          "Cargo vessel",
+          6000
+        ],
+        [
+          "Military aircraft",
+          30000
+        ],
+        [
+          "Warship",
+          60000
+        ],
+        [
+          "Airliner",
+          80000
+        ],
+        [
+          "Launch rocket",
+          400000
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "Comparative Power Outputs"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Power Source"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Power Output (kW)",
+          "scale": true
+        },
+        "series": [
+          {
+            "data": [
+              0.000001,
+              0.1,
+              0.2,
+              1,
+              1.7,
+              4,
+              40,
+              150,
+              240,
+              400,
+              600,
+              1500,
+              6000,
+              30000,
+              60000,
+              80000,
+              400000
+            ],
+            "type": "bar"
+          }
+        ]
+      }
+    }
+  ]
+}

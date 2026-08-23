@@ -1,0 +1,49 @@
+{
+  "id": "sound___room_absorption_characteristics",
+  "title": "Sound - Room Absorption Characteristics",
+  "description": "Mean absorption coefficients and reverberation times in typical rooms",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Room Characteristics",
+        "Reverberation Time - Ta (seconds)",
+        "Typical Room",
+        "Mean Sound Absorption Coefficient - αm"
+      ],
+      "rows": [
+        [
+          "Very Soft",
+          "0.2 < Ta < 0.25",
+          "Radio and TV studio",
+          0.4
+        ],
+        [
+          "Soft",
+          "0.4 < Ta < 0.5",
+          "Restaurant, Theater, Lecture hall",
+          0.25
+        ],
+        [
+          "Normal",
+          "0.9 < Ta < 1.1",
+          "Office, Library, Flat",
+          0.15
+        ],
+        [
+          "Hard",
+          "1.8 < Ta < 2.2",
+          "Hospital, Church",
+          0.1
+        ],
+        [
+          "Very Hard",
+          "2.5 < Ta < 4.5",
+          "Large church, Factory",
+          0.05
+        ]
+      ]
+    }
+  ]
+}

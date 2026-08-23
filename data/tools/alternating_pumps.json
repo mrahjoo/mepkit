@@ -1,0 +1,47 @@
+{
+  "id": "alternating_pumps",
+  "title": "Alternating Pumps",
+  "description": "Securing a system and achieve equal wear by alternating pumps in parallel. This tool helps manage pump alternation strategies to ensure equal wear distribution and system reliability.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alternation Method",
+        "Description",
+        "Advantages",
+        "Disadvantages"
+      ],
+      "rows": [
+        [
+          "Manual Alternation",
+          "Operator selects lead pump and sequence of lag pumps",
+          "Full control by operator",
+          "Requires constant manual intervention and monitoring"
+        ],
+        [
+          "Duty Alternation",
+          "Lead pump changes every time the pump or system is stopped",
+          "Automatic switching on system events",
+          "May not equalize wear if system stops frequently or infrequently"
+        ],
+        [
+          "Timed Alternation",
+          "Lead pump is switched by a timer or clock",
+          "Systematic and predictable switching",
+          "Does not adapt to actual operating conditions"
+        ],
+        [
+          "Equal Run Time",
+          "Lead pump is switched to achieve same operating time for each pump",
+          "Ensures equal wear distribution",
+          "All pumps may wear out simultaneously, reducing operation safety"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Considerations\n\n### When to Use Backup Pumps\n\nChoosing between one or more backup pumps depends on:\n\n- **System criticality** - How critical is the operation (e.g., hospital water supply vs. home cooling system)\n- **Costs** - Installation and maintenance costs of backup pumps\n- **Delivery and installation time** - How quickly a replacement pump can be obtained and installed\n\n### Benefits and Drawbacks of Automatic Pump Alternation\n\n**Advantages:**\n- Extends the time before repair and reinvestments\n- Distributes wear evenly across all pumps\n- Reduces premature failure of individual pumps\n\n**Disadvantages:**\n- All pumps may wear out at the same time\n- Reduces operational safety for the whole system when all pumps fail simultaneously\n- Requires sophisticated control systems"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "oil_filled_tanks___heat_loss",
+  "title": "Oil Filled Tanks - Heat Loss",
+  "description": "Heat loss from insulated and uninsulated, sheltered and exposed heated oil tanks. Calculate heat transfer rates and total heat loss using the formula Q = α A dt.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "sheltered_tanks",
+      "headers": [
+        "Tank Temperature (°C)",
+        "Tank Temperature (°F)",
+        "Uninsulated W/(m² °C)",
+        "Uninsulated Btu/(hr ft² °F)",
+        "Insulated W/(m² °C)",
+        "Insulated Btu/(hr ft² °F)"
+      ],
+      "rows": [
+        [
+          10,
+          50,
+          6.8,
+          1.2,
+          1.7,
+          0.3
+        ],
+        [
+          27,
+          80,
+          7.4,
+          1.3,
+          1.8,
+          0.33
+        ],
+        [
+          38,
+          100,
+          8,
+          1.4,
+          2,
+          0.35
+        ]
+      ],
+      "content": "## Sheltered Tank Heat Transfer Rates"
+    },
+    {
+      "type": "datatable",
+      "id": "exposed_tanks",
+      "headers": [
+        "Tank Temperature (°C)",
+        "Tank Temperature (°F)",
+        "Uninsulated W/(m² °C)",
+        "Uninsulated Btu/(hr ft² °F)",
+        "Insulated W/(m² °C)",
+        "Insulated Btu/(hr ft² °F)"
+      ],
+      "rows": [
+        [
+          10,
+          50,
+          8,
+          1.4,
+          2,
+          0.35
+        ],
+        [
+          27,
+          80,
+          8.5,
+          1.5,
+          2.1,
+          0.38
+        ],
+        [
+          38,
+          100,
+          9,
+          1.6,
+          2.3,
+          0.4
+        ]
+      ],
+      "content": "## Exposed Tank Heat Transfer Rates"
+    },
+    {
+      "type": "calculator",
+      "id": "heat_loss_calculator",
+      "content": "### Heat Loss Calculator\n\nUse the formula: **Q = α A Δt**\n\nWhere:\n- Q = heat loss (W)\n- α = heat transfer rate (W/(m² °C))\n- A = surface area (m²)\n- Δt = temperature difference (°C)",
+      "inputs": [
+        {
+          "id": "alpha",
+          "label": "Heat Transfer Rate (α)",
+          "type": "number",
+          "unit": "W/(m² °C)",
+          "defaultValue": 2.27
+        },
+        {
+          "id": "area",
+          "label": "Surface Area (A)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 1000
+        },
+        {
+          "id": "temp_diff",
+          "label": "Temperature Difference (Δt)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 38
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_loss_w",
+          "label": "Heat Loss",
+          "formula": "inputs.alpha * inputs.area * inputs.temp_diff",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_loss_kw",
+          "label": "Heat Loss",
+          "formula": "(inputs.alpha * inputs.area * inputs.temp_diff) / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

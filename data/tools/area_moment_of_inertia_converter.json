@@ -1,0 +1,141 @@
+{
+  "id": "area_moment_of_inertia_converter",
+  "title": "Area Moment of Inertia Converter",
+  "description": "Convert between different units of Area Moment of Inertia (Second Moment of Area) including m4, cm4, mm4, in4, and ft4. Used to predict deflection, bending and stress in beams.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "calculator_component",
+      "content": "Area Moment of Inertia Unit Converter",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Value",
+          "type": "number",
+          "defaultValue": 160.6
+        },
+        {
+          "id": "from_unit",
+          "label": "Convert from",
+          "type": "select",
+          "options": [
+            {
+              "label": "m4",
+              "value": "m4"
+            },
+            {
+              "label": "cm4",
+              "value": "cm4"
+            },
+            {
+              "label": "mm4",
+              "value": "mm4"
+            },
+            {
+              "label": "in4",
+              "value": "in4"
+            },
+            {
+              "label": "ft4",
+              "value": "ft4"
+            }
+          ],
+          "defaultValue": "cm4"
+        },
+        {
+          "id": "to_unit",
+          "label": "Convert to",
+          "type": "select",
+          "options": [
+            {
+              "label": "m4",
+              "value": "m4"
+            },
+            {
+              "label": "cm4",
+              "value": "cm4"
+            },
+            {
+              "label": "mm4",
+              "value": "mm4"
+            },
+            {
+              "label": "in4",
+              "value": "in4"
+            },
+            {
+              "label": "ft4",
+              "value": "ft4"
+            }
+          ],
+          "defaultValue": "in4"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Value",
+          "formula": "inputs.value * (inputs.from_unit === 'm4' && inputs.to_unit === 'cm4' ? 1e8 : inputs.from_unit === 'm4' && inputs.to_unit === 'mm4' ? 1e12 : inputs.from_unit === 'm4' && inputs.to_unit === 'in4' ? 2.4e6 : inputs.from_unit === 'm4' && inputs.to_unit === 'ft4' ? 116.3 : inputs.from_unit === 'cm4' && inputs.to_unit === 'm4' ? 1e-8 : inputs.from_unit === 'cm4' && inputs.to_unit === 'mm4' ? 1e4 : inputs.from_unit === 'cm4' && inputs.to_unit === 'in4' ? 2.4e-2 : inputs.from_unit === 'cm4' && inputs.to_unit === 'ft4' ? 1.2e-6 : inputs.from_unit === 'mm4' && inputs.to_unit === 'm4' ? 1e-12 : inputs.from_unit === 'mm4' && inputs.to_unit === 'cm4' ? 1e-4 : inputs.from_unit === 'mm4' && inputs.to_unit === 'in4' ? 2.4e-6 : inputs.from_unit === 'mm4' && inputs.to_unit === 'ft4' ? 1.2e-10 : inputs.from_unit === 'in4' && inputs.to_unit === 'm4' ? 4.16e-7 : inputs.from_unit === 'in4' && inputs.to_unit === 'cm4' ? 41.6 : inputs.from_unit === 'in4' && inputs.to_unit === 'mm4' ? 4.16e5 : inputs.from_unit === 'in4' && inputs.to_unit === 'ft4' ? 4.8225e-5 : inputs.from_unit === 'ft4' && inputs.to_unit === 'm4' ? 8.6e-3 : inputs.from_unit === 'ft4' && inputs.to_unit === 'cm4' ? 8.6e5 : inputs.from_unit === 'ft4' && inputs.to_unit === 'mm4' ? 8.6e9 : inputs.from_unit === 'ft4' && inputs.to_unit === 'in4' ? 207346 : 1)",
+          "unit": "converted",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "conversion_table",
+      "content": "Area Moment of Inertia Conversion Factors",
+      "headers": [
+        "Convert from / to",
+        "m4",
+        "cm4",
+        "mm4",
+        "in4",
+        "ft4"
+      ],
+      "rows": [
+        [
+          "m4",
+          "1",
+          "1×10⁸",
+          "1×10¹²",
+          "2.4×10⁶",
+          "116.3"
+        ],
+        [
+          "cm4",
+          "1×10⁻⁸",
+          "1",
+          "1×10⁴",
+          "2.4×10⁻²",
+          "1.2×10⁻⁶"
+        ],
+        [
+          "mm4",
+          "1×10⁻¹²",
+          "1×10⁻⁴",
+          "1",
+          "2.4×10⁻⁶",
+          "1.2×10⁻¹⁰"
+        ],
+        [
+          "in4",
+          "4.16×10⁻⁷",
+          "41.6",
+          "4.16×10⁵",
+          "1",
+          "4.8225×10⁻⁵"
+        ],
+        [
+          "ft4",
+          "8.6×10⁻³",
+          "8.6×10⁵",
+          "8.6×10⁹",
+          "207346",
+          "1"
+        ]
+      ]
+    }
+  ]
+}

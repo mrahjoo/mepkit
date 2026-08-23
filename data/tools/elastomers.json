@@ -1,0 +1,73 @@
+{
+  "id": "elastomers",
+  "title": "Elastomers",
+  "description": "Elastomers or rubbers are amorphic polymers with crosslinked linear chain molecules that ensures elasticity and the return of the material to its original shape when load is removed.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Elastomers Properties\n\nElastomers or rubbers are amorphic polymers with crosslinked linear chain molecules that ensures elasticity and the return of the material to its original shape when load is removed.\n\nTypical properties for some of the most commonly used elastomers:"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Elastomer Type",
+        "Chemical Name",
+        "Applications",
+        "Shore Hardness",
+        "Temperature Range (°C)"
+      ],
+      "rows": [
+        [
+          "Polyisoprene",
+          "NR (Natural Rubber)",
+          "Vehicle tyres, tubes, seals, antivibration mountings, hoses, belts",
+          "30 - 90",
+          "-55 to 85"
+        ],
+        [
+          "Styrene butadiene rubbers",
+          "SBR, GRS, BUNA S",
+          "Vehicle tyres, tubes, seals, antivibration mountings, hoses, belts",
+          "40 - 80",
+          "-50 to 82"
+        ],
+        [
+          "Polybutadiene",
+          "BR (Butadiene rubber)",
+          "Vehicle tyres, tubes, seals, antivibration mountings, hoses, belts",
+          "40 - 90",
+          "-100 to 90"
+        ],
+        [
+          "Isobutylene isoprene",
+          "GR 1 (Butyl rubber)",
+          "Puncture-proof tyres, tubes, vacuum seals",
+          "40 - 90",
+          "-45 to 150"
+        ],
+        [
+          "Butadiene acroylonitrile",
+          "BUNA (Nitrile rubber)",
+          "O-rings, seals, petrol hoses, fuel pumps",
+          "40 - 95",
+          "-55 to 82"
+        ],
+        [
+          "Polychlorprene",
+          "Neoprene (Chloroprene)",
+          "Diving suits",
+          "30 - 50",
+          "-40 to 115"
+        ],
+        [
+          "Polyurethane",
+          "Polyurethane rubber",
+          "Wear resistant applications",
+          "35 - 100",
+          "-50 to 115"
+        ]
+      ]
+    }
+  ]
+}

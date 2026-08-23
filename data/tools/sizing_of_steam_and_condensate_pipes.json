@@ -1,0 +1,107 @@
+{
+  "id": "sizing_of_steam_and_condensate_pipes",
+  "title": "Sizing of Steam and Condensate Pipes",
+  "description": "Dimensions of steam and condensate pipe lines. Calculate pressure losses, recommended velocities, capacities and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Steam Pipe Diameter",
+          "",
+          "mm"
+        ],
+        [
+          "Condensate Pipe Diameter",
+          "",
+          "mm"
+        ],
+        [
+          "Steam Velocity",
+          "",
+          "m/s"
+        ],
+        [
+          "Condensate Velocity",
+          "",
+          "m/s"
+        ],
+        [
+          "Pressure Loss - Steam",
+          "",
+          "bar/100m"
+        ],
+        [
+          "Pressure Loss - Condensate",
+          "",
+          "bar/100m"
+        ],
+        [
+          "Steam Capacity",
+          "",
+          "kg/h"
+        ],
+        [
+          "Condensate Capacity",
+          "",
+          "kg/h"
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "steam_flow_rate",
+          "label": "Steam Flow Rate",
+          "type": "number",
+          "unit": "kg/h",
+          "defaultValue": 1000
+        },
+        {
+          "id": "condensate_flow_rate",
+          "label": "Condensate Flow Rate",
+          "type": "number",
+          "unit": "kg/h",
+          "defaultValue": 800
+        },
+        {
+          "id": "steam_pressure",
+          "label": "Steam Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "steam_velocity",
+          "label": "Steam Velocity",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "condensate_velocity",
+          "label": "Condensate Velocity",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "steam_pressure_loss",
+          "label": "Pressure Loss - Steam",
+          "unit": "bar/100m",
+          "format": "decimal"
+        },
+        {
+          "id": "condensate_pressure_loss",
+          "label": "Pressure Loss - Condensate",
+          "unit": "bar/100m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

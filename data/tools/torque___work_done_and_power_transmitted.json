@@ -1,0 +1,111 @@
+{
+  "id": "torque___work_done_and_power_transmitted",
+  "title": "Torque - Work done and Power Transmitted",
+  "description": "Calculate work done and power transmitted by a constant torque. Includes calculations for angular motion, power transmission, and required torque to produce power.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Work Done\n\nWork done in angular motion is calculated as:\n\n**W = T × θ**\n\nWhere:\n- W = work done (Nm or J)\n- T = torque (Nm)\n- θ = angle (radians)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "torque_work",
+          "label": "Torque",
+          "type": "number",
+          "unit": "Nm",
+          "defaultValue": 10
+        },
+        {
+          "id": "angle",
+          "label": "Angle",
+          "type": "number",
+          "unit": "radians",
+          "defaultValue": 3.14
+        }
+      ],
+      "outputs": [
+        {
+          "id": "work_done",
+          "label": "Work Done",
+          "formula": "inputs.torque_work * inputs.angle",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Power Transmitted\n\nPower transmitted can be calculated from torque and rotational speed:\n\n**P = 0.105 × n_rpm × T**\n\nWhere:\n- P = power (Watts)\n- n_rpm = speed (rev/min, rpm)\n- T = torque (Nm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "torque_power",
+          "label": "Torque",
+          "type": "number",
+          "unit": "Nm",
+          "defaultValue": 15.9
+        },
+        {
+          "id": "speed_rpm",
+          "label": "Speed",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 3000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_transmitted",
+          "label": "Power Transmitted",
+          "formula": "0.105 * inputs.speed_rpm * inputs.torque_power",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "power_transmitted_kw",
+          "label": "Power Transmitted",
+          "formula": "(0.105 * inputs.speed_rpm * inputs.torque_power) / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Required Torque to Produce Power\n\nTo find the torque required to produce a given power:\n\n**T = P / (2π × n)**\n\nOr using rpm directly:\n\n**T = P / (0.105 × n_rpm)**\n\nWhere:\n- T = torque (Nm)\n- P = power (Watts)\n- n_rpm = speed (rev/min, rpm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "power_required",
+          "label": "Power",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 5000
+        },
+        {
+          "id": "speed_rpm_torque",
+          "label": "Speed",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 3000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "required_torque",
+          "label": "Required Torque",
+          "formula": "inputs.power_required / (0.105 * inputs.speed_rpm_torque)",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

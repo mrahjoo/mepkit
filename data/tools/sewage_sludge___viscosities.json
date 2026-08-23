@@ -1,0 +1,42 @@
+{
+  "id": "sewage_sludge___viscosities",
+  "title": "Sewage Sludge - Viscosities",
+  "description": "Viscosity of sewage sludge vs. content of solids.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Solids (%)",
+        "Viscosity (cP)"
+      ],
+      "rows": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          80
+        ],
+        [
+          4,
+          560
+        ],
+        [
+          6,
+          1760
+        ],
+        [
+          8,
+          4000
+        ],
+        [
+          10,
+          7500
+        ]
+      ],
+      "content": "Viscosity of sewage sludge vs. content of solids.\n\n**Unit Conversions:**\n- 1 cP = 0.01 poise\n- 1 cP = 0.01 gram per cm second\n- 1 cP = 0.001 Pascal second\n- 1 cP = 1 milliPascal second\n- 1 cP = 0.001 N s/m²"
+    }
+  ]
+}

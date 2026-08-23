@@ -1,0 +1,51 @@
+{
+  "id": "sound___attenuation_and_speed_vs__sound_frequency_",
+  "title": "Sound - Attenuation and Speed vs. Sound Frequency and Air Humidity",
+  "description": "The speed and attenuation of sound in moist air varies with sound frequency and air humidity.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate sound speed and attenuation in moist air based on frequency and humidity",
+      "inputs": [
+        {
+          "id": "frequency",
+          "label": "Sound Frequency",
+          "type": "number",
+          "unit": "Hz",
+          "defaultValue": 1000
+        },
+        {
+          "id": "humidity",
+          "label": "Air Humidity",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 50
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sound_speed",
+          "label": "Speed of Sound",
+          "unit": "m/s",
+          "formula": "331.3 + 0.606 * inputs.temperature",
+          "format": "decimal"
+        },
+        {
+          "id": "attenuation",
+          "label": "Sound Attenuation",
+          "unit": "dB/m",
+          "formula": "(1.84e-11 * inputs.frequency * inputs.frequency) / (inputs.humidity + 0.1)",
+          "format": "scientific"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "natural_gas___meter_capacities",
+  "title": "Natural Gas - Meter Capacities",
+  "description": "Calculator for determining natural gas meter capacities. This tool helps in calculating and understanding the capacity requirements for natural gas meters based on various input parameters.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Natural Gas - Meter Capacities\n\nThis calculator helps you determine natural gas meter capacities based on your specific requirements.\n\n**Note:** We care about your privacy. Please review our [privacy policy](https://www.engineeringtoolbox.com/privacy-policy-d_2228.html) for more information on how we handle your data."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "flow_rate",
+          "label": "Gas Flow Rate",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "m³/h"
+        },
+        {
+          "id": "pressure",
+          "label": "Operating Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bar"
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "meter_capacity",
+          "label": "Meter Capacity",
+          "formula": "inputs.flow_rate * inputs.pressure / (inputs.temperature + 273.15) * 101.325",
+          "unit": "m³/h",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

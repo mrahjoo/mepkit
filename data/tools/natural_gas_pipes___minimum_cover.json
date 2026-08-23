@@ -1,0 +1,63 @@
+{
+  "id": "natural_gas_pipes___minimum_cover",
+  "title": "Natural Gas Pipes - Minimum Cover",
+  "description": "Determine the minimum cover depth requirements for natural gas pipes based on installation location and conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Location/Condition",
+        "Minimum Cover (inches)",
+        "Minimum Cover (mm)"
+      ],
+      "rows": [
+        [
+          "Under streets and roads",
+          36,
+          914
+        ],
+        [
+          "Under sidewalks and alleys",
+          24,
+          610
+        ],
+        [
+          "Under driveways",
+          24,
+          610
+        ],
+        [
+          "Under cultivated areas and gardens",
+          18,
+          457
+        ],
+        [
+          "Under non-cultivated areas",
+          12,
+          305
+        ],
+        [
+          "Under water bodies (lakes, rivers)",
+          48,
+          1219
+        ],
+        [
+          "In congested areas",
+          48,
+          1219
+        ],
+        [
+          "In normal areas",
+          24,
+          610
+        ],
+        [
+          "In rural areas",
+          12,
+          305
+        ]
+      ]
+    }
+  ]
+}

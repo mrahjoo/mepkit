@@ -1,0 +1,58 @@
+{
+  "id": "concrete_footing",
+  "title": "Concrete Footing",
+  "description": "A tool for calculating and analyzing concrete footing specifications and requirements",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Footing Width",
+          "—",
+          "m"
+        ],
+        [
+          "Footing Length",
+          "—",
+          "m"
+        ],
+        [
+          "Footing Depth",
+          "—",
+          "m"
+        ],
+        [
+          "Concrete Strength (f'c)",
+          "—",
+          "MPa"
+        ],
+        [
+          "Soil Bearing Capacity",
+          "—",
+          "kPa"
+        ],
+        [
+          "Column Load",
+          "—",
+          "kN"
+        ],
+        [
+          "Footing Area",
+          "—",
+          "m²"
+        ],
+        [
+          "Bearing Pressure",
+          "—",
+          "kPa"
+        ]
+      ]
+    }
+  ]
+}

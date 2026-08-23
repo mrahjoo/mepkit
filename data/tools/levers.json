@@ -1,0 +1,111 @@
+{
+  "id": "levers",
+  "title": "Levers",
+  "description": "A lever is a mechanism that can be used to exert a large force over a small distance at one end of the lever by exerting a small force over a greater distance at the other end. This calculator computes lever effort force and related parameters.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "lever_calculator",
+      "content": "Lever Effort Force Calculator",
+      "inputs": [
+        {
+          "id": "load_force",
+          "label": "Load Force (N or lb)",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "load_distance",
+          "label": "Distance from Load to Fulcrum (m or ft)",
+          "type": "number",
+          "defaultValue": 0.2
+        },
+        {
+          "id": "effort_distance",
+          "label": "Distance from Effort to Fulcrum (m or ft)",
+          "type": "number",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "effort_force",
+          "label": "Effort Force Required",
+          "formula": "inputs.load_force * inputs.load_distance / inputs.effort_distance",
+          "unit": "N or lb",
+          "format": "decimal"
+        },
+        {
+          "id": "mechanical_advantage",
+          "label": "Mechanical Advantage",
+          "formula": "inputs.effort_distance / inputs.load_distance",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "lever_examples",
+      "content": "Lever Examples Reference",
+      "headers": [
+        "Lever Type",
+        "Load Force",
+        "Load Distance",
+        "Effort Distance",
+        "Effort Force",
+        "Mechanical Advantage"
+      ],
+      "rows": [
+        [
+          "First-Class",
+          "1 lb",
+          "1 ft",
+          "2 ft",
+          "0.5 lb",
+          "2.0"
+        ],
+        [
+          "Second-Class",
+          "1 lb",
+          "1 ft",
+          "2 ft",
+          "0.5 lb",
+          "2.0"
+        ],
+        [
+          "Third-Class",
+          "1 lb",
+          "2 ft",
+          "1 ft",
+          "2 lb",
+          "0.5"
+        ],
+        [
+          "Car Lift Example",
+          "9810 N",
+          "0.2 m",
+          "2 m",
+          "981 N",
+          "10.0"
+        ],
+        [
+          "SI Units Example",
+          "9.81 N",
+          "1 m",
+          "2 m",
+          "4.905 N",
+          "2.0"
+        ],
+        [
+          "Multiple Loads",
+          "14 lb",
+          "2 ft",
+          "2 ft",
+          "7 lb",
+          "1.0"
+        ]
+      ]
+    }
+  ]
+}

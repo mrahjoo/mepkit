@@ -1,0 +1,613 @@
+{
+  "id": "conveyors___maximum_inclination_vs__product",
+  "title": "Conveyors - Maximum Inclination vs. Product",
+  "description": "Maximum conveyor inclination slopes for typical products. Reference table showing the maximum slope in degrees for various materials on conveyor belts.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Maximum Slope (degrees)"
+      ],
+      "rows": [
+        [
+          "Acid phosphate",
+          13
+        ],
+        [
+          "Alum",
+          22
+        ],
+        [
+          "Alumina - sized or briquette",
+          10
+        ],
+        [
+          "Aluminum sulphate",
+          17
+        ],
+        [
+          "Anthracite coal",
+          16
+        ],
+        [
+          "Ammonium chloride",
+          10
+        ],
+        [
+          "Ammonium nitrate",
+          23
+        ],
+        [
+          "Asbestos ore rock",
+          18
+        ],
+        [
+          "Asbestos shred",
+          30
+        ],
+        [
+          "Ashes - wet",
+          18
+        ],
+        [
+          "Ashes - dry",
+          16
+        ],
+        [
+          "Asphalt",
+          30
+        ],
+        [
+          "Bagasse",
+          30
+        ],
+        [
+          "Bark, wood",
+          27
+        ],
+        [
+          "Barley",
+          12
+        ],
+        [
+          "Bauxite - ground dried",
+          23
+        ],
+        [
+          "Bauxite - mine run",
+          17
+        ],
+        [
+          "Beans",
+          7
+        ],
+        [
+          "Beets, whole",
+          20
+        ],
+        [
+          "Borax",
+          20
+        ],
+        [
+          "Bran",
+          12
+        ],
+        [
+          "Brewers grain, spent",
+          27
+        ],
+        [
+          "Brick",
+          27
+        ],
+        [
+          "Calcium carbide",
+          18
+        ],
+        [
+          "Carbon black, pelleted",
+          5
+        ],
+        [
+          "Carborundum 75 mm",
+          15
+        ],
+        [
+          "Cashew nuts",
+          22
+        ],
+        [
+          "Cement - Clinker",
+          20
+        ],
+        [
+          "Cement - loose",
+          22
+        ],
+        [
+          "Cement - Portland",
+          20
+        ],
+        [
+          "Chalk, lumpy",
+          15
+        ],
+        [
+          "Chalk < 100 mesh",
+          28
+        ],
+        [
+          "Charcoal",
+          22
+        ],
+        [
+          "Chrome ore",
+          17
+        ],
+        [
+          "Cinders",
+          23
+        ],
+        [
+          "Clay - dry lump loose",
+          21
+        ],
+        [
+          "Clay - ground",
+          22
+        ],
+        [
+          "Clay - gray granular",
+          20
+        ],
+        [
+          "Coal - bituminous slake",
+          20
+        ],
+        [
+          "Coal - run of mine",
+          18
+        ],
+        [
+          "Coke - screened",
+          18
+        ],
+        [
+          "Coke - breeze",
+          20
+        ],
+        [
+          "Coke - run of oven",
+          18
+        ],
+        [
+          "Concrete - 6 inch slump",
+          12
+        ],
+        [
+          "Concrete - 4 inch slump",
+          20
+        ],
+        [
+          "Concrete - 2 inch slope",
+          "24-26"
+        ],
+        [
+          "Coal - soft lumps > 4 inches",
+          15
+        ],
+        [
+          "Coal - soft lumps < 4 inches",
+          16
+        ],
+        [
+          "Coal - unsized",
+          18
+        ],
+        [
+          "Coal - soft fine",
+          "20-22"
+        ],
+        [
+          "Copper sulphate",
+          17
+        ],
+        [
+          "Corn, ear",
+          18
+        ],
+        [
+          "Corn, shelled",
+          10
+        ],
+        [
+          "Cornmeal",
+          22
+        ],
+        [
+          "Cottonseed cake",
+          20
+        ],
+        [
+          "Dolomite",
+          20
+        ],
+        [
+          "Earth - loose",
+          20
+        ],
+        [
+          "Earth - sluggish",
+          22
+        ],
+        [
+          "Earth - moist",
+          "18-20"
+        ],
+        [
+          "Fertilizer - artificial",
+          "12-15"
+        ],
+        [
+          "Fieldspar - crushed",
+          17
+        ],
+        [
+          "Flour",
+          "15-18"
+        ],
+        [
+          "Fluorspar",
+          20
+        ],
+        [
+          "Foundry sand",
+          20
+        ],
+        [
+          "Furnace slag - granulated",
+          13
+        ],
+        [
+          "Grain - except oats",
+          14
+        ],
+        [
+          "Grain, distillery spent dry",
+          15
+        ],
+        [
+          "Granite, 75 mm broken lumps",
+          18
+        ],
+        [
+          "Graphite, flakes",
+          15
+        ],
+        [
+          "Gravel - sized and washed",
+          12
+        ],
+        [
+          "Gravel - unsized",
+          "18-20"
+        ],
+        [
+          "Gypsum - broken",
+          18
+        ],
+        [
+          "Gypsum - ground",
+          27
+        ],
+        [
+          "Gypsum - powder",
+          23
+        ],
+        [
+          "Iron ore - limonite",
+          28
+        ],
+        [
+          "Iron ore - soft",
+          21
+        ],
+        [
+          "Kaolin - pulverized",
+          32
+        ],
+        [
+          "Lead ores",
+          15
+        ],
+        [
+          "Lead oxide",
+          20
+        ],
+        [
+          "Lignite, air dried",
+          18
+        ],
+        [
+          "Lime - burned pebble",
+          15
+        ],
+        [
+          "Lime - burned pulverized",
+          17
+        ],
+        [
+          "Lime - fine",
+          29
+        ],
+        [
+          "Limestone - pulverized",
+          34
+        ],
+        [
+          "Limestone - mixed sized",
+          21
+        ],
+        [
+          "Limestone - coarse sized",
+          12
+        ],
+        [
+          "Lineseed cake",
+          15
+        ],
+        [
+          "Lineseed meal",
+          20
+        ],
+        [
+          "Loam, moist",
+          "18-20"
+        ],
+        [
+          "Logs - no bark",
+          10
+        ],
+        [
+          "Magnesium chloride",
+          23
+        ],
+        [
+          "Magnesium sulphate",
+          15
+        ],
+        [
+          "Marble, crushed < 12 mm",
+          15
+        ],
+        [
+          "Mica - ground",
+          23
+        ],
+        [
+          "Molybdenite ore - powdered",
+          25
+        ],
+        [
+          "Manganese",
+          24
+        ],
+        [
+          "Nickel-cobalt",
+          20
+        ],
+        [
+          "Oats",
+          10
+        ],
+        [
+          "Ore - larger than 4 inches",
+          18
+        ],
+        [
+          "Ore - less than 4 inches",
+          20
+        ],
+        [
+          "Packages - wrapped in paper on smooth belts",
+          16
+        ],
+        [
+          "Packages - wrapped in paper on ribflex belts or similar",
+          "25-45"
+        ],
+        [
+          "Peanuts in shells or shelled",
+          8
+        ],
+        [
+          "Peas dried",
+          8
+        ],
+        [
+          "Peat",
+          16
+        ],
+        [
+          "Phosphate",
+          14
+        ],
+        [
+          "Phosphate - pulverized",
+          28
+        ],
+        [
+          "Potash ore",
+          15
+        ],
+        [
+          "Potatoes",
+          12
+        ],
+        [
+          "Quartz",
+          15
+        ],
+        [
+          "Rice",
+          8
+        ],
+        [
+          "Rock crushed",
+          18
+        ],
+        [
+          "Rubber pelleted",
+          22
+        ],
+        [
+          "Rye",
+          8
+        ],
+        [
+          "Salt, fine",
+          "15-18"
+        ],
+        [
+          "Salt, rock",
+          "18-20"
+        ],
+        [
+          "Sand - dry",
+          16
+        ],
+        [
+          "Sand - damp moist",
+          20
+        ],
+        [
+          "Sand - uniformly sized foundry high-quality silica sand or lake",
+          24
+        ],
+        [
+          "Sawdust",
+          22
+        ],
+        [
+          "Shale",
+          26
+        ],
+        [
+          "Sinter",
+          15
+        ],
+        [
+          "Slag, furnace",
+          "10-15"
+        ],
+        [
+          "Slate",
+          18
+        ],
+        [
+          "Soap chips",
+          18
+        ],
+        [
+          "Soda ash, briquettes",
+          7
+        ],
+        [
+          "Sodium nitrate",
+          11
+        ],
+        [
+          "Sodium phosphate",
+          16
+        ],
+        [
+          "Soybeans, cracked",
+          18
+        ],
+        [
+          "Soybeans, whole",
+          14
+        ],
+        [
+          "Starch",
+          12
+        ],
+        [
+          "Steel trimmings",
+          18
+        ],
+        [
+          "Stone - crushed",
+          18
+        ],
+        [
+          "Sugar, raw cane",
+          22
+        ],
+        [
+          "Sugar, refined",
+          20
+        ],
+        [
+          "Sulfur - powder",
+          21
+        ],
+        [
+          "Sulphate - powder",
+          21
+        ],
+        [
+          "Stones - larger than 4 inches",
+          15
+        ],
+        [
+          "Stones - less than 4 inches",
+          16
+        ],
+        [
+          "Talc, powder",
+          12
+        ],
+        [
+          "Titanium ore",
+          18
+        ],
+        [
+          "Traprock",
+          18
+        ],
+        [
+          "Vermiculite, expanded",
+          23
+        ],
+        [
+          "Vermiculite, ore",
+          20
+        ],
+        [
+          "Walnut shells, crushed",
+          20
+        ],
+        [
+          "Wheat",
+          12
+        ],
+        [
+          "Whole grain",
+          15
+        ],
+        [
+          "Woodchips",
+          27
+        ],
+        [
+          "Zinc ore",
+          "22-25"
+        ]
+      ]
+    }
+  ]
+}

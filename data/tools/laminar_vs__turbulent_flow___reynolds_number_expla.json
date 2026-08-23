@@ -1,0 +1,165 @@
+{
+  "id": "laminar_vs__turbulent_flow___reynolds_number_expla",
+  "title": "Laminar vs. Turbulent Flow - Reynolds Number Calculator",
+  "description": "Calculate Reynolds Number to determine if flow is laminar, transient, or turbulent. The Reynolds Number is a dimensionless quantity that represents the ratio of inertial forces to viscous forces.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "reynolds_calculator",
+      "content": "Reynolds Number Calculator - Method 1 (Density and Dynamic Viscosity Known)",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 910
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity (u)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 2.6
+        },
+        {
+          "id": "char_length",
+          "label": "Characteristic Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.025
+        },
+        {
+          "id": "dynamic_viscosity",
+          "label": "Dynamic Viscosity (μ)",
+          "type": "number",
+          "unit": "Ns/m²",
+          "defaultValue": 0.38
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number (Re)",
+          "formula": "(inputs.density * inputs.velocity * inputs.char_length) / inputs.dynamic_viscosity",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_type",
+          "label": "Flow Type",
+          "formula": "inputs.reynolds_number < 2300 ? 'Laminar' : inputs.reynolds_number <= 4000 ? 'Transient' : 'Turbulent'"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "reynolds_kinematic",
+      "content": "Reynolds Number Calculator - Method 2 (Kinematic Viscosity Known)",
+      "inputs": [
+        {
+          "id": "velocity_k",
+          "label": "Velocity (u)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 2.6
+        },
+        {
+          "id": "char_length_k",
+          "label": "Characteristic Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.025
+        },
+        {
+          "id": "kinematic_viscosity",
+          "label": "Kinematic Viscosity (ν)",
+          "type": "number",
+          "unit": "m²/s",
+          "defaultValue": 0.000418
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reynolds_number_k",
+          "label": "Reynolds Number (Re)",
+          "formula": "(inputs.velocity_k * inputs.char_length_k) / inputs.kinematic_viscosity",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_type_k",
+          "label": "Flow Type",
+          "formula": "inputs.reynolds_number_k < 2300 ? 'Laminar' : inputs.reynolds_number_k <= 4000 ? 'Transient' : 'Turbulent'"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "reynolds_imperial",
+      "content": "Reynolds Number Calculator - Imperial Units (Pipe/Duct)",
+      "inputs": [
+        {
+          "id": "velocity_ft",
+          "label": "Velocity (u)",
+          "type": "number",
+          "unit": "ft/s",
+          "defaultValue": 20
+        },
+        {
+          "id": "hydraulic_diameter_in",
+          "label": "Hydraulic Diameter (dh)",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "kinematic_viscosity_cst",
+          "label": "Kinematic Viscosity (ν)",
+          "type": "number",
+          "unit": "cSt",
+          "defaultValue": 1.004
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reynolds_number_imp",
+          "label": "Reynolds Number (Re)",
+          "formula": "7745.8 * inputs.velocity_ft * inputs.hydraulic_diameter_in / inputs.kinematic_viscosity_cst",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_type_imp",
+          "label": "Flow Type",
+          "formula": "inputs.reynolds_number_imp < 2300 ? 'Laminar' : inputs.reynolds_number_imp <= 4000 ? 'Transient' : 'Turbulent'"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "flow_regime_table",
+      "content": "Flow Regime Classification",
+      "headers": [
+        "Regime",
+        "Reynolds Number Range",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Laminar",
+          "Re < 2300",
+          "Smooth, orderly flow with parallel layers"
+        ],
+        [
+          "Transient",
+          "2300 < Re < 4000",
+          "Flow transitioning between laminar and turbulent"
+        ],
+        [
+          "Turbulent",
+          "Re > 4000",
+          "Chaotic flow with irregular mixing"
+        ]
+      ]
+    }
+  ]
+}

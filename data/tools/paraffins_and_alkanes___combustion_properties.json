@@ -1,0 +1,185 @@
+{
+  "id": "paraffins_and_alkanes___combustion_properties",
+  "title": "Paraffins and Alkanes - Combustion Properties",
+  "description": "Properties like heat values, air/fuel ratios, flame speed, flame temperatures, ignition temperatures, flash points and flammability limits for paraffins and alkanes.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Paraffin or Alkanes",
+        "Chemical Formula",
+        "Higher Heating Value (Btu/lbm)",
+        "Air/Fuel Ratio",
+        "Maximum Flame Speed (ft/s)",
+        "Adiabatic Flame Temperature (°F)",
+        "Ignition Temperature (°F)",
+        "Flash Point (°F)",
+        "LEL (%)",
+        "UEL (%)"
+      ],
+      "rows": [
+        [
+          "Ethane",
+          "C2H6",
+          22323,
+          15.899,
+          1.3,
+          3540,
+          "968 - 1166",
+          "*",
+          3,
+          12.5
+        ],
+        [
+          "n-Butane",
+          "C4H10",
+          21321,
+          14.984,
+          1.2,
+          3583,
+          761,
+          -76,
+          1.9,
+          8.4
+        ],
+        [
+          "iso-Butane",
+          "C4H10",
+          21271,
+          14.984,
+          1.2,
+          3583,
+          864,
+          -117,
+          1.8,
+          8.4
+        ],
+        [
+          "n-Heptane",
+          "C7H16",
+          20854,
+          14.141,
+          1.3,
+          3985,
+          433,
+          25,
+          1,
+          6
+        ],
+        [
+          "n-Hexane",
+          "C6H14",
+          20966,
+          15.238,
+          1.3,
+          4030,
+          478,
+          -7,
+          1.3,
+          7
+        ],
+        [
+          "Methane",
+          "CH4",
+          23875,
+          17.195,
+          1.1,
+          3484,
+          1301,
+          "*",
+          5,
+          15
+        ],
+        [
+          "Neopentane",
+          "C5H12",
+          20978,
+          15.323,
+          1.1,
+          4060,
+          842,
+          "*",
+          1.4,
+          7.2
+        ],
+        [
+          "Neohexane",
+          "C6H14",
+          20931,
+          15.238,
+          1.2,
+          4055,
+          797,
+          -54,
+          1.2,
+          7.6
+        ],
+        [
+          "n-Octane",
+          "C8H18",
+          20796,
+          15.093,
+          "",
+          "",
+          428,
+          56,
+          0.9,
+          3.2
+        ],
+        [
+          "iso-Octane",
+          "C8H18",
+          20770,
+          15.093,
+          1.1,
+          "",
+          837,
+          10,
+          0.8,
+          5.9
+        ],
+        [
+          "n-Pentane",
+          "C5H12",
+          21095,
+          15.323,
+          1.3,
+          4050,
+          588,
+          "< -40",
+          1.4,
+          7.8
+        ],
+        [
+          "iso-Pentane",
+          "C5H12",
+          21047,
+          15.323,
+          1.2,
+          4055,
+          788,
+          "< -60",
+          1.3,
+          9.2
+        ],
+        [
+          "Propane",
+          "C3H8",
+          21669,
+          15.246,
+          1.3,
+          3573,
+          871,
+          "*",
+          2.1,
+          10.1
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- **Flame Speed**: 1 ft/s = 0.3048 m/s\n- **Temperature**: T (°C) = 5/9 (T (°F) - 32)\n- **Heat Value**: 1 Btu/lbm = 2,326.1 J/kg = 0.55556 kcal/kg\n\n## Definitions\n\n- **LEL** - Lower Explosive or Flammable Limit\n- **UEL** - Upper Explosive or Flammable Limit\n- **(*) gas** - indicates gaseous state at standard conditions"
+    }
+  ]
+}

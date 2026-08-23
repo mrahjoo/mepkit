@@ -1,0 +1,48 @@
+{
+  "id": "iso_28741_metric_thread_dimensions_for_spark_plugs",
+  "title": "ISO 28741 Metric Thread Dimensions for Spark Plugs",
+  "description": "Reference table for metric thread dimensions for spark plugs according to ISO 28741 standard specifications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Thread Pitch (mm)",
+        "Major Diameter (mm)",
+        "Minor Diameter (mm)",
+        "Pitch Diameter (mm)",
+        "Thread Depth (mm)"
+      ],
+      "rows": [
+        [
+          "0.75",
+          "8.0",
+          "6.5",
+          "7.25",
+          "0.75"
+        ],
+        [
+          "1.0",
+          "10.0",
+          "8.5",
+          "9.25",
+          "1.0"
+        ],
+        [
+          "1.25",
+          "12.0",
+          "10.0",
+          "11.0",
+          "1.25"
+        ],
+        [
+          "1.5",
+          "14.0",
+          "11.5",
+          "12.75",
+          "1.5"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "fuel_oil_pumps___suction_capacities",
+  "title": "Fuel Oil Pumps - Suction Capacities",
+  "description": "Single stage and double stage fuel oil pumps and their suction capacities.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Fuel Oil Pump Types\n\nThe limitation of a fuel oil pump feeding a burner may often be the suction side. With higher suction lift the \"vacuum\" in the suction line will evaporate the light fractions of the fuel oil - and the pump starts to choke.\n\nThere are two main types of fuel feeding pumps:\n\n- **Single Stage Pumps**: Consist of one set of pumping gears with limited lift capacity, suited for low-level lifts up to 5-10 inches of vacuum\n- **Double Stage Pumps**: Consist of double set of pumping gears, suited for medium-level lifts up to 10-15 inches of vacuum\n\nHigher vacuum levels require use of separate lifting pumps and dedicated feeding reservoirs to the fuel pumps."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pump Type",
+        "Maximum Vacuum (inches)",
+        "Typical Application",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Single Stage",
+          "5-10",
+          "Low-level lifts",
+          "Limited lift capacity"
+        ],
+        [
+          "Double Stage",
+          "10-15",
+          "Medium-level lifts",
+          "Enhanced pumping gears"
+        ],
+        [
+          "Separate Lifting",
+          ">15",
+          "High-level lifts",
+          "Requires dedicated reservoir"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Vacuum Loss Estimation\n\nThe total \"vacuum\" in a fuel oil suction line can be estimated as follows:\n\n- **1 inch** of vacuum for each foot of vertical lift\n- **1 inch** of vacuum for each 90° elbow\n- **1 inch** for each 10 feet of 3/8 inch horizontal suction pipe\n- **1 inch** for each 20 feet of 1/2 inch horizontal suction pipe"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Vacuum Loss (inches per unit)"
+      ],
+      "rows": [
+        [
+          "Vertical lift",
+          "1 per foot"
+        ],
+        [
+          "90° elbow",
+          "1 per elbow"
+        ],
+        [
+          "3/8 inch horizontal pipe",
+          "1 per 10 feet"
+        ],
+        [
+          "1/2 inch horizontal pipe",
+          "1 per 20 feet"
+        ]
+      ]
+    }
+  ]
+}

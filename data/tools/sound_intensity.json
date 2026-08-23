@@ -1,0 +1,119 @@
+{
+  "id": "sound_intensity",
+  "title": "Sound Intensity",
+  "description": "Calculate sound intensity and sound intensity level. Includes calculations for sound intensity from power and area, intensity level in decibels, and the relationship between sound intensity and pressure.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Input",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "sound_power",
+          "label": "Sound Power",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 1
+        },
+        {
+          "id": "surface_area",
+          "label": "Surface Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 1
+        },
+        {
+          "id": "sound_pressure",
+          "label": "Sound Pressure",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 20
+        },
+        {
+          "id": "density",
+          "label": "Density (Air)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.2
+        },
+        {
+          "id": "sound_velocity",
+          "label": "Sound Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 343
+        }
+      ],
+      "outputs": [
+        {
+          "id": "intensity_pa",
+          "label": "Sound Intensity (Power/Area)",
+          "formula": "inputs.sound_power / inputs.surface_area",
+          "unit": "W/m²",
+          "format": "scientific"
+        },
+        {
+          "id": "intensity_pressure",
+          "label": "Sound Intensity (Pressure)",
+          "formula": "(inputs.sound_pressure * inputs.sound_pressure) / (inputs.density * inputs.sound_velocity)",
+          "unit": "W/m²",
+          "format": "scientific"
+        },
+        {
+          "id": "intensity_level",
+          "label": "Sound Intensity Level",
+          "formula": "10 * Math.log10((inputs.sound_power / inputs.surface_area) / 1e-12)",
+          "unit": "dB",
+          "format": "decimal"
+        },
+        {
+          "id": "intensity_level_pressure",
+          "label": "Sound Intensity Level (from Pressure)",
+          "formula": "10 * Math.log10(((inputs.sound_pressure * inputs.sound_pressure) / (inputs.density * inputs.sound_velocity)) / 1e-12)",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Sound Intensity Level (dB)",
+        "Loudness Perception"
+      ],
+      "rows": [
+        [
+          0,
+          "Very Faint"
+        ],
+        [
+          20,
+          "Very Faint"
+        ],
+        [
+          40,
+          "Faint"
+        ],
+        [
+          60,
+          "Moderate"
+        ],
+        [
+          80,
+          "Loud"
+        ],
+        [
+          100,
+          "Very Loud"
+        ],
+        [
+          225,
+          "Deafening"
+        ]
+      ]
+    }
+  ]
+}

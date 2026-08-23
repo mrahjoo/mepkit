@@ -1,0 +1,83 @@
+{
+  "id": "pumps___parallel_vs__serial_arrangement",
+  "title": "Pumps - Parallel vs. Serial Arrangement",
+  "description": "Compare pump performance when arranged in serial (head added) or parallel (flow rate added) configurations. Analyze how multiple identical pumps affect system operating points.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Configuration",
+        "Single Pump Head (m)",
+        "Single Pump Flow (m³/h)",
+        "Number of Pumps",
+        "Combined Head (m)",
+        "Combined Flow (m³/h)",
+        "Operating Point",
+        "Application"
+      ],
+      "rows": [
+        [
+          "Serial - Identical Pumps",
+          "10",
+          "100",
+          "2",
+          "20",
+          "100",
+          "Point 3 (System Curve)",
+          "Overcome larger system head loss"
+        ],
+        [
+          "Serial - Identical Pumps",
+          "15",
+          "150",
+          "2",
+          "30",
+          "150",
+          "Point 3 (System Curve)",
+          "Overcome larger system head loss"
+        ],
+        [
+          "Parallel - Identical Pumps",
+          "10",
+          "100",
+          "2",
+          "10",
+          "200",
+          "Point 3 (System Curve)",
+          "Overcome larger volume flows"
+        ],
+        [
+          "Parallel - Identical Pumps",
+          "15",
+          "150",
+          "2",
+          "15",
+          "300",
+          "Point 3 (System Curve)",
+          "Overcome larger volume flows"
+        ],
+        [
+          "Single Pump Operating",
+          "10",
+          "100",
+          "1",
+          "10",
+          "100",
+          "Point 1 (System Curve)",
+          "Baseline operation"
+        ],
+        [
+          "Single Pump Operating",
+          "15",
+          "150",
+          "1",
+          "15",
+          "150",
+          "Point 1 (System Curve)",
+          "Baseline operation"
+        ]
+      ]
+    }
+  ]
+}

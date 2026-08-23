@@ -1,0 +1,88 @@
+{
+  "id": "propagation_of_sound_outdoors___attenuation_vs__di",
+  "title": "Propagation of Sound Outdoors - Attenuation vs. Distance",
+  "description": "Calculate sound pressure level (Lp) for outdoor sound propagation considering attenuation due to distance, atmospheric conditions, and barriers. Supports single point sources (spherical and hemi-spherical radiation) and linear sources.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sound Propagation Calculator\n\nThis tool calculates the sound pressure level (Lp) for different radiation patterns and source types using the formula:\n\n**Lp = LN - 20 log(r) + K' + DI - Aa - Ab**\n\nwhere:\n- **Lp** = Sound pressure level (dB)\n- **LN** = Sound power level of source (dB)\n- **r** = Distance from source (m)\n- **K'** = Constant depending on radiation pattern\n- **DI** = Directivity index (dB)\n- **Aa** = Attenuation due to atmospheric conditions (dB)\n- **Ab** = Attenuation due to barriers (dB)\n\n### Key Notes:\n- For single point sources (spherical): K' = -11\n- For single point sources (hemi-spherical): K' = -8\n- For linear sources: Use Lp = LN - 10 log(4π r)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "source_type",
+          "label": "Source Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "point_spherical",
+              "label": "Point Source - Spherical (K' = -11)"
+            },
+            {
+              "value": "point_hemi",
+              "label": "Point Source - Hemi-Spherical (K' = -8)"
+            },
+            {
+              "value": "linear",
+              "label": "Linear Source"
+            }
+          ],
+          "defaultValue": "point_spherical"
+        },
+        {
+          "id": "LN",
+          "label": "Sound Power Level (LN)",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 80
+        },
+        {
+          "id": "distance",
+          "label": "Distance from Source (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "DI",
+          "label": "Directivity Index (DI)",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 0
+        },
+        {
+          "id": "Aa",
+          "label": "Atmospheric Attenuation (Aa)",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 0
+        },
+        {
+          "id": "Ab",
+          "label": "Barrier Attenuation (Ab)",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Lp",
+          "label": "Sound Pressure Level (Lp)",
+          "unit": "dB",
+          "format": "decimal",
+          "formula": "inputs.source_type === 'linear' ? inputs.LN - 10 * Math.log10(4 * Math.PI * inputs.distance) : inputs.LN - 20 * Math.log10(inputs.distance) + (inputs.source_type === 'point_spherical' ? -11 : -8) + inputs.DI - inputs.Aa - inputs.Ab"
+        },
+        {
+          "id": "attenuation_distance",
+          "label": "Distance Attenuation (20 log r or 10 log 4πr)",
+          "unit": "dB",
+          "format": "decimal",
+          "formula": "inputs.source_type === 'linear' ? 10 * Math.log10(4 * Math.PI * inputs.distance) : 20 * Math.log10(inputs.distance)"
+        }
+      ]
+    }
+  ]
+}

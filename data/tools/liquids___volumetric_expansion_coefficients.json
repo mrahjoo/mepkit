@@ -1,0 +1,148 @@
+{
+  "id": "liquids___volumetric_expansion_coefficients",
+  "title": "Liquids - Volumetric Expansion Coefficients",
+  "description": "Calculator for volumetric expansion coefficients of liquids. Calculate volume changes in liquids due to temperature variations using expansion coefficient formulas.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Volumetric Expansion Calculator",
+      "inputs": [
+        {
+          "id": "liquid_type",
+          "label": "Liquid Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Water",
+              "value": "water"
+            },
+            {
+              "label": "Ethanol",
+              "value": "ethanol"
+            },
+            {
+              "label": "Glycerin",
+              "value": "glycerin"
+            },
+            {
+              "label": "Benzene",
+              "value": "benzene"
+            },
+            {
+              "label": "Acetone",
+              "value": "acetone"
+            },
+            {
+              "label": "Mineral Oil",
+              "value": "mineral_oil"
+            },
+            {
+              "label": "Mercury",
+              "value": "mercury"
+            }
+          ],
+          "defaultValue": "water"
+        },
+        {
+          "id": "initial_volume",
+          "label": "Initial Volume",
+          "type": "number",
+          "unit": "cm³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "temperature_change",
+          "label": "Temperature Change",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 10
+        },
+        {
+          "id": "expansion_coefficient",
+          "label": "Volumetric Expansion Coefficient",
+          "type": "number",
+          "unit": "1/°C",
+          "defaultValue": 0.0002
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_change",
+          "label": "Volume Change",
+          "unit": "cm³",
+          "formula": "inputs.initial_volume * inputs.expansion_coefficient * inputs.temperature_change",
+          "format": "decimal"
+        },
+        {
+          "id": "final_volume",
+          "label": "Final Volume",
+          "unit": "cm³",
+          "formula": "inputs.initial_volume + inputs.initial_volume * inputs.expansion_coefficient * inputs.temperature_change",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_percent_change",
+          "label": "Volume Percent Change",
+          "unit": "%",
+          "formula": "(inputs.initial_volume * inputs.expansion_coefficient * inputs.temperature_change / inputs.initial_volume) * 100",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Common Liquids - Volumetric Expansion Coefficients",
+      "headers": [
+        "Liquid",
+        "Expansion Coefficient (1/°C)",
+        "Temperature Range (°C)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Water",
+          "0.0002",
+          "0-20",
+          "Anomalous behavior near 4°C"
+        ],
+        [
+          "Ethanol",
+          "0.001",
+          "0-50",
+          "Higher expansion than water"
+        ],
+        [
+          "Glycerin",
+          "0.0005",
+          "0-50",
+          "Used as reference liquid"
+        ],
+        [
+          "Benzene",
+          "0.0012",
+          "0-50",
+          "Flammable, handle with care"
+        ],
+        [
+          "Acetone",
+          "0.0015",
+          "0-40",
+          "Highly volatile"
+        ],
+        [
+          "Mineral Oil",
+          "0.0007",
+          "0-100",
+          "Temperature dependent"
+        ],
+        [
+          "Mercury",
+          "0.00018",
+          "0-100",
+          "Toxic, use in sealed systems"
+        ]
+      ]
+    }
+  ]
+}

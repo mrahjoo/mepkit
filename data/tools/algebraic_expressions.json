@@ -1,0 +1,199 @@
+{
+  "id": "algebraic_expressions",
+  "title": "Algebraic Expressions",
+  "description": "Algebraic expressions are the equations we get when operations such as addition, subtraction, multiplication, division, etc. are operated upon any variable. This tool provides a comprehensive reference of principal algebraic expression formulas.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Formula Number",
+        "Expression",
+        "Result/Simplification",
+        "Description"
+      ],
+      "rows": [
+        [
+          "(1)",
+          "a · a",
+          "a²",
+          "Multiplication of identical variables"
+        ],
+        [
+          "(2)",
+          "a · a · a",
+          "a³",
+          "Multiplication of three identical variables"
+        ],
+        [
+          "(3)",
+          "a · b",
+          "ab",
+          "Multiplication of different variables"
+        ],
+        [
+          "(4)",
+          "a² · b²",
+          "(ab)²",
+          "Product of squares"
+        ],
+        [
+          "(5)",
+          "a² · a³",
+          "a⁵",
+          "Product rule: a^m · a^n = a^(m+n)"
+        ],
+        [
+          "(6)",
+          "a⁴ / a³",
+          "a",
+          "Quotient rule: a^m / a^n = a^(m-n)"
+        ],
+        [
+          "(7)",
+          "a⁰",
+          "1",
+          "Any variable to the power of zero equals one"
+        ],
+        [
+          "(8)",
+          "(a + b)²",
+          "a² + 2ab + b²",
+          "Square of a sum"
+        ],
+        [
+          "(9)",
+          "(a - b)²",
+          "a² - 2ab + b²",
+          "Square of a difference"
+        ],
+        [
+          "(10)",
+          "(a + b)³",
+          "a³ + 3a²b + 3ab² + b³",
+          "Cube of a sum"
+        ],
+        [
+          "(11)",
+          "(a - b)³",
+          "a³ - 3a²b + 3ab² - b³",
+          "Cube of a difference"
+        ],
+        [
+          "(12)",
+          "a² - b²",
+          "(a - b)(a + b)",
+          "Difference of squares"
+        ],
+        [
+          "(13)",
+          "a³ - b³",
+          "(a - b)³ + 3ab(a - b)",
+          "Difference of cubes"
+        ],
+        [
+          "(14)",
+          "a³ + b³",
+          "(a + b)³ - 3ab(a + b)",
+          "Sum of cubes"
+        ],
+        [
+          "(15)",
+          "ab",
+          "((a + b)/2)² - ((a - b)/2)²",
+          "Product as difference of squares"
+        ],
+        [
+          "(16)",
+          "a³ / b³",
+          "(a / b)³",
+          "Quotient of cubes"
+        ],
+        [
+          "(17)",
+          "1 / a³",
+          "(1 / a)³ = a⁻³",
+          "Reciprocal of a cube"
+        ],
+        [
+          "(18)",
+          "(a²)³",
+          "a⁶",
+          "Power of a power: (a^m)^n = a^(mn)"
+        ],
+        [
+          "(19)",
+          "a³ + b³",
+          "(a + b)(a² - ab + b²)",
+          "Sum of cubes factorization"
+        ],
+        [
+          "(20)",
+          "a³ - b³",
+          "(a - b)(a² + ab + b²)",
+          "Difference of cubes factorization"
+        ],
+        [
+          "(21)",
+          "(a + b)³",
+          "a³ + 3a²b + 3ab² + b³",
+          "Cube of sum expansion"
+        ],
+        [
+          "(22)",
+          "(a - b)³",
+          "a³ - 3a²b + 3ab² - b³",
+          "Cube of difference expansion"
+        ],
+        [
+          "(23)",
+          "a^(1/2) · a^(1/2)",
+          "a",
+          "Square root multiplication"
+        ],
+        [
+          "(24)",
+          "a^(1/3) · a^(1/3) · a^(1/3)",
+          "a",
+          "Cube root multiplication"
+        ],
+        [
+          "(25)",
+          "(a^(1/3))³",
+          "a",
+          "Cube of cube root"
+        ],
+        [
+          "(26)",
+          "(a²)^(1/3)",
+          "a^(2/3)",
+          "Fractional exponent rule"
+        ],
+        [
+          "(27)",
+          "(a^(1/3))^(1/4)",
+          "a^(1/12)",
+          "Power of fractional exponent"
+        ],
+        [
+          "(28)",
+          "(ab)^(1/3)",
+          "a^(1/3) · b^(1/3)",
+          "Cube root of product"
+        ],
+        [
+          "(29)",
+          "(a / b)^(1/3)",
+          "a^(1/3) / b^(1/3)",
+          "Cube root of quotient"
+        ],
+        [
+          "(30)",
+          "(1 / a)^(1/3)",
+          "a^(-1/3)",
+          "Cube root of reciprocal"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "restricted_thermal_expansion___force_and_stress",
+  "title": "Restricted Thermal Expansion - Force and Stress",
+  "description": "Calculator for thermal stress and axial force in restricted objects due to temperature changes. Combines thermal expansion principles with material elasticity to compute resulting stresses and forces.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "thermal_expansion_calculator",
+      "content": "Calculate thermal stress and axial force for restricted thermal expansion",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Length of restricted object",
+          "type": "number",
+          "unit": "m (or inches)",
+          "defaultValue": 50
+        },
+        {
+          "id": "area",
+          "label": "Cross-sectional Area",
+          "type": "number",
+          "unit": "m² (or in²)",
+          "defaultValue": 0.0036
+        },
+        {
+          "id": "temp_change",
+          "label": "Temperature Difference",
+          "type": "number",
+          "unit": "°C (or °F)",
+          "defaultValue": 70
+        },
+        {
+          "id": "youngs_modulus",
+          "label": "Young's Modulus",
+          "type": "number",
+          "unit": "GPa (or 10⁹ psi)",
+          "defaultValue": 200
+        },
+        {
+          "id": "expansion_coeff",
+          "label": "Expansion Coefficient",
+          "type": "number",
+          "unit": "10⁻⁶ m/mK (or in/in°F)",
+          "defaultValue": 12
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_stress",
+          "label": "Thermal Stress (σdt)",
+          "formula": "inputs.youngs_modulus * inputs.expansion_coeff * inputs.temp_change",
+          "unit": "MPa (or psi)",
+          "format": "decimal"
+        },
+        {
+          "id": "elongation_unrestricted",
+          "label": "Elongation (Unrestricted)",
+          "formula": "inputs.expansion_coeff * inputs.length * inputs.temp_change",
+          "unit": "m (or inches)",
+          "format": "decimal"
+        },
+        {
+          "id": "strain",
+          "label": "Strain (ε)",
+          "formula": "inputs.expansion_coeff * inputs.temp_change",
+          "unit": "dimensionless",
+          "format": "scientific"
+        },
+        {
+          "id": "axial_force",
+          "label": "Axial Force (F)",
+          "formula": "inputs.youngs_modulus * inputs.expansion_coeff * inputs.temp_change * inputs.area",
+          "unit": "kN (or kips)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "material_reference_table",
+      "content": "Common Material Properties for Thermal Expansion Calculations",
+      "headers": [
+        "Material",
+        "Young's Modulus (GPa)",
+        "Expansion Coefficient (10⁻⁶ m/mK)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Steel",
+          "200",
+          "12",
+          "Standard structural steel"
+        ],
+        [
+          "Aluminum",
+          "70",
+          "23",
+          "Higher thermal expansion than steel"
+        ],
+        [
+          "Copper",
+          "110",
+          "17",
+          "Good thermal and electrical conductor"
+        ],
+        [
+          "Concrete",
+          "30",
+          "12",
+          "Typical reinforced concrete"
+        ],
+        [
+          "PVC Plastic",
+          "2.8",
+          "50.4",
+          "Much higher expansion coefficient"
+        ],
+        [
+          "Cast Iron",
+          "165",
+          "12",
+          "Similar to steel"
+        ],
+        [
+          "Brass",
+          "100",
+          "18.7",
+          "Copper-zinc alloy"
+        ]
+      ]
+    }
+  ]
+}

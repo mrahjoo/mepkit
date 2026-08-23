@@ -1,0 +1,120 @@
+{
+  "id": "sound_intensity__power_and_pressure_levels",
+  "title": "Sound Intensity, Power and Pressure Levels",
+  "description": "Calculate decibel levels for sound power, intensity, and pressure. Understand logarithmic ratios of physical values using reference standards for hearing threshold.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Measurement Type",
+        "Signal/Value",
+        "Reference Value",
+        "Formula",
+        "Level (dB)"
+      ],
+      "rows": [
+        [
+          "Sound Power Level",
+          "N (W)",
+          "10⁻¹² W",
+          "LN = 10 log(N / Nref)",
+          "=10*LOG10(inputs.sound_power/1e-12)"
+        ],
+        [
+          "Sound Intensity Level",
+          "I (W/m²)",
+          "10⁻¹² W/m²",
+          "LI = 10 log(I / Iref)",
+          "=10*LOG10(inputs.sound_intensity/1e-12)"
+        ],
+        [
+          "Sound Pressure Level",
+          "p (Pa)",
+          "2×10⁻⁵ Pa",
+          "Lp = 20 log(p / pref)",
+          "=20*LOG10(inputs.sound_pressure/2e-5)"
+        ],
+        [
+          "General Signal Level",
+          "S (Signal Unit)",
+          "Sref (Signal Unit)",
+          "L = 10 log(S / Sref)",
+          "=10*LOG10(inputs.signal/inputs.signal_ref)"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sound_power",
+          "label": "Sound Power",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 0.000001
+        },
+        {
+          "id": "sound_intensity",
+          "label": "Sound Intensity",
+          "type": "number",
+          "unit": "W/m²",
+          "defaultValue": 0.000001
+        },
+        {
+          "id": "sound_pressure",
+          "label": "Sound Pressure",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 0.02
+        },
+        {
+          "id": "signal",
+          "label": "Signal Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "signal_ref",
+          "label": "Reference Signal Value",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sound_power_level",
+          "label": "Sound Power Level",
+          "unit": "dB",
+          "formula": "=10*LOG10(inputs.sound_power/1e-12)",
+          "format": "decimal"
+        },
+        {
+          "id": "sound_intensity_level",
+          "label": "Sound Intensity Level",
+          "unit": "dB",
+          "formula": "=10*LOG10(inputs.sound_intensity/1e-12)",
+          "format": "decimal"
+        },
+        {
+          "id": "sound_pressure_level",
+          "label": "Sound Pressure Level",
+          "unit": "dB",
+          "formula": "=20*LOG10(inputs.sound_pressure/2e-5)",
+          "format": "decimal"
+        },
+        {
+          "id": "general_signal_level",
+          "label": "General Signal Level",
+          "unit": "dB",
+          "formula": "=10*LOG10(inputs.signal/inputs.signal_ref)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Standards\n\n**Sound Power Level (Lp):**\n- Reference: 10⁻¹² W (threshold of hearing)\n- Range: 0 dB (barely audible) to ~170 dB (jet aircraft)\n- Formula: Lp = 10 log(N / 10⁻¹²)\n\n**Sound Intensity Level (Li):**\n- Reference: 10⁻¹² W/m²\n- Formula: Li = 10 log(I / 10⁻¹²)\n\n**Sound Pressure Level (Lp):**\n- Reference: 2×10⁻⁵ Pa (threshold of hearing)\n- Formula: Lp = 20 log(p / 2×10⁻⁵)\n- Note: Doubling pressure increases level by 6 dB\n\n**General Decibel Formula:**\n- L = 10 log(S / Sref)"
+    }
+  ]
+}

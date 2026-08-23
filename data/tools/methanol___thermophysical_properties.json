@@ -1,0 +1,295 @@
+{
+  "id": "methanol___thermophysical_properties",
+  "title": "Methanol - Thermophysical Properties",
+  "description": "Comprehensive thermophysical properties calculator for Methanol (CH3OH). Calculate density, heat capacity, viscosity, thermal conductivity, and other critical thermodynamic properties at standard conditions (25°C, 1 bar) or custom temperature/pressure values.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "methanol_properties_calc",
+      "content": "Calculate thermophysical properties of methanol at given conditions",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bar"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_liquid",
+          "label": "Density (Liquid)",
+          "formula": "786.3",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "cp_liquid",
+          "label": "Specific Heat Capacity (Liquid)",
+          "formula": "2.53",
+          "unit": "kJ/kg K",
+          "format": "decimal"
+        },
+        {
+          "id": "boiling_point",
+          "label": "Boiling Point",
+          "formula": "64.7",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_temp",
+          "label": "Critical Temperature",
+          "formula": "240.2",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_pressure",
+          "label": "Critical Pressure",
+          "formula": "8.22",
+          "unit": "MPa",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_dynamic",
+          "label": "Dynamic Viscosity",
+          "formula": "0.544",
+          "unit": "cP",
+          "format": "decimal"
+        },
+        {
+          "id": "surface_tension",
+          "label": "Surface Tension",
+          "formula": "0.02207",
+          "unit": "N/m",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "formula": "0.202",
+          "unit": "W/m°C",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "properties_table",
+      "content": "Standard thermophysical properties at 25°C and 1 bar",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "32.042",
+          "g/mol"
+        ],
+        [
+          "Boiling Point",
+          "64.7",
+          "°C"
+        ],
+        [
+          "Melting Point",
+          "-97.6",
+          "°C"
+        ],
+        [
+          "Critical Temperature",
+          "240.2",
+          "°C"
+        ],
+        [
+          "Critical Pressure",
+          "8.22",
+          "MPa"
+        ],
+        [
+          "Critical Density",
+          "281",
+          "kg/m³"
+        ],
+        [
+          "Density (Liquid)",
+          "786.3",
+          "kg/m³"
+        ],
+        [
+          "Density (Gas) @ 0.17 bar",
+          "0.220",
+          "kg/m³"
+        ],
+        [
+          "Specific Gravity (Liquid)",
+          "0.79",
+          "relative to water"
+        ],
+        [
+          "Specific Gravity (Gas)",
+          "1.11",
+          "relative to air"
+        ],
+        [
+          "Heat of Evaporation",
+          "1165",
+          "kJ/kg"
+        ],
+        [
+          "Heat of Combustion (Liquid)",
+          "-22689",
+          "kJ/kg"
+        ],
+        [
+          "Heat of Formation (Liquid)",
+          "-7459",
+          "kJ/kg"
+        ],
+        [
+          "Specific Heat Capacity Cp (Liquid)",
+          "2.53",
+          "kJ/kg K"
+        ],
+        [
+          "Specific Heat Capacity Cv (Liquid)",
+          "2.12",
+          "kJ/kg K"
+        ],
+        [
+          "Specific Heat Ratio (Liquid)",
+          "1.20",
+          "cp/cv"
+        ],
+        [
+          "Dynamic Viscosity",
+          "0.544",
+          "cP"
+        ],
+        [
+          "Kinematic Viscosity",
+          "0.692",
+          "cSt"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.202",
+          "W/m°C"
+        ],
+        [
+          "Surface Tension",
+          "0.02207",
+          "N/m"
+        ],
+        [
+          "Vapor Pressure",
+          "0.0169",
+          "MPa"
+        ],
+        [
+          "Sound Velocity (Liquid)",
+          "1100",
+          "m/s"
+        ],
+        [
+          "Specific Volume (Liquid)",
+          "0.00127",
+          "m³/kg"
+        ],
+        [
+          "Ionization Potential",
+          "10.84",
+          "eV"
+        ],
+        [
+          "Flash Point",
+          "11",
+          "°C"
+        ],
+        [
+          "Autoignition Temperature",
+          "464",
+          "°C"
+        ],
+        [
+          "Solubility in Water",
+          "1000",
+          "mg/ml (Miscible)"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "properties_comparison",
+      "content": "Thermophysical properties comparison chart",
+      "options": {
+        "title": {
+          "text": "Methanol - Key Thermophysical Properties",
+          "subtext": "Values at 25°C and 1 bar (standard conditions)"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Value"
+          ]
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Density (kg/m³)",
+            "Cp (kJ/kg·K)",
+            "Viscosity (cP)",
+            "Thermal Conductivity (W/m·°C)",
+            "Surface Tension (N/m)",
+            "Sound Velocity (m/s)"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Value",
+            "data": [
+              786.3,
+              2.53,
+              0.544,
+              0.202,
+              0.02207,
+              1100
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#1f77b4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "safety_info",
+      "content": "## Safety & Applications\n\n### Safety Hazards\n- **Toxicity**: Methanol is toxic and may cause blindness\n- **Flammability**: Gas and liquid are flammable\n- **Flash Point**: 11°C (52°F)\n- **Autoignition Temperature**: 464°C (867°F)\n- **Vapor Hazard**: Vapors are slightly heavier than air and may explode if ignited\n\n### Applications\n- Production of chemicals\n- Water removal from automotive and aviation fuels\n- Solvent for paints and plastics\n- Ingredient in various industrial products\n\n### Phase Behavior\nMethanol is a liquid at standard conditions. At the critical point (240.2°C, 8.22 MPa), there is no change of state when pressure is increased or heat is added. The triple point occurs at -97.7°C and 1.86 × 10⁻⁶ bar, where all three phases coexist in thermodynamic equilibrium."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "relative_vs__absolute_voltage",
+  "title": "Relative vs. Absolute Voltage",
+  "description": "Calculate relative and absolute voltage in electric circuits. Determine voltage between two points and voltage relative to earth (ground) reference.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Relative vs. Absolute Voltage\n\n**Absolute Voltage (UA)**: Voltage at point A quoted with reference to the earth point (ground reference).\n\n**Relative Voltage (UAB)**: Voltage at point A quoted with reference to point B.\n\n### Formulas Used:\n- Total Resistance: R = R₁ + R₂ + R₃ + ...\n- Current: I = U / R\n- Relative Voltage: UAB = R × I\n- Absolute Voltage at B: UB = UA - UAB"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Input Parameters",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "totalVoltage",
+          "label": "Total Voltage (U)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 12
+        },
+        {
+          "id": "resistor1",
+          "label": "Resistor 1 (R₁)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 33
+        },
+        {
+          "id": "resistor2",
+          "label": "Resistor 2 (R₂)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 47
+        },
+        {
+          "id": "resistor3",
+          "label": "Resistor 3 (R₃)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 33
+        }
+      ],
+      "outputs": [
+        {
+          "id": "totalResistance",
+          "label": "Total Resistance (R)",
+          "formula": "inputs.resistor1 + inputs.resistor2 + inputs.resistor3",
+          "unit": "Ω",
+          "format": "decimal"
+        },
+        {
+          "id": "current",
+          "label": "Circuit Current (I)",
+          "formula": "inputs.totalVoltage / (inputs.resistor1 + inputs.resistor2 + inputs.resistor3)",
+          "unit": "A",
+          "format": "decimal"
+        },
+        {
+          "id": "relativeVoltageAB",
+          "label": "Relative Voltage UAB (across R₁)",
+          "formula": "inputs.resistor1 * (inputs.totalVoltage / (inputs.resistor1 + inputs.resistor2 + inputs.resistor3))",
+          "unit": "V",
+          "format": "decimal"
+        },
+        {
+          "id": "absoluteVoltageA",
+          "label": "Absolute Voltage at Point A (UA)",
+          "formula": "inputs.totalVoltage",
+          "unit": "V",
+          "format": "decimal"
+        },
+        {
+          "id": "absoluteVoltageB",
+          "label": "Absolute Voltage at Point B (UB)",
+          "formula": "inputs.totalVoltage - (inputs.resistor1 * (inputs.totalVoltage / (inputs.resistor1 + inputs.resistor2 + inputs.resistor3)))",
+          "unit": "V",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

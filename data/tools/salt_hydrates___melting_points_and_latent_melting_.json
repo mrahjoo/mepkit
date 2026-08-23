@@ -1,0 +1,92 @@
+{
+  "id": "salt_hydrates___melting_points_and_latent_melting_",
+  "title": "Salt Hydrates - Melting points and Latent Melting Energy",
+  "description": "Melting points and latent energy of salt hydrates. The latent heat of melting salt hydrates can be used for storing energy.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Salt Hydrates - Melting points and Latent Melting Energy\n\nThis tool provides data on melting points and latent melting heat of various salt hydrates, which can be used for thermal energy storage applications."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Salt Hydrate",
+        "Melting Point (°C)",
+        "Latent Melting Heat (MJ/m³)"
+      ],
+      "rows": [
+        [
+          "CaCl₂ (Calcium Chloride) 6H₂O",
+          29,
+          281
+        ],
+        [
+          "Na₂SO₄ (Sodium Sulfate) 10H₂O",
+          32,
+          342
+        ],
+        [
+          "Na₂CO₃ (Sodium Carbonate) 10H₂O",
+          33,
+          360
+        ],
+        [
+          "Na₂HPO₄ (Dibasic Sodium Orthophosphate) 12H₂O",
+          35,
+          205
+        ],
+        [
+          "Na₂HPO₄ (Dibasic Sodium Orthophosphate) 7H₂O",
+          48,
+          302
+        ],
+        [
+          "Na₂S₂O₃ (Sodium Thiosulphate) 5H₂O",
+          48,
+          346
+        ],
+        [
+          "Ba(OH)₂ (Barium Hydroxide) 8H₂O",
+          78,
+          655
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "melting_point",
+          "label": "Melting Point",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 29
+        },
+        {
+          "id": "latent_heat",
+          "label": "Latent Melting Heat",
+          "type": "number",
+          "unit": "MJ/m³",
+          "defaultValue": 281
+        },
+        {
+          "id": "volume",
+          "label": "Volume of Salt Hydrate",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_energy",
+          "label": "Total Energy Stored",
+          "formula": "inputs.latent_heat * inputs.volume",
+          "unit": "MJ",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

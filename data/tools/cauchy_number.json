@@ -1,0 +1,151 @@
+{
+  "id": "cauchy_number",
+  "title": "Cauchy Number",
+  "description": "Analyze fluid flow dynamics by calculating the Cauchy Number, a dimensionless value representing the ratio between inertial force and compressibility force in a flow.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Cauchy Number Calculator\n\nThe Cauchy Number is a dimensionless value useful for analyzing fluid flow dynamics problems where compressibility is a significant factor.\n\n### Formula\n\n**C = ρ v² / E**\n\nWhere:\n- **C** = Cauchy Number\n- **ρ** = Fluid density (kg/m³)\n- **v** = Flow velocity (m/s)\n- **E** = Bulk modulus of elasticity (N/m²)\n\n### Relationship to Mach Number\n\nThe Cauchy Number is the square of the Mach Number:\n\n**M² = C**\n\nWhere **M** = Mach Number"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "velocity",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 10
+        },
+        {
+          "id": "bulk_modulus",
+          "label": "Bulk Modulus of Elasticity (E)",
+          "type": "number",
+          "unit": "N/m²",
+          "defaultValue": 2200000000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cauchy_number_result",
+          "label": "Cauchy Number (C)",
+          "formula": "inputs.density * inputs.velocity * inputs.velocity / inputs.bulk_modulus",
+          "format": "scientific"
+        },
+        {
+          "id": "mach_number",
+          "label": "Mach Number (M)",
+          "formula": "Math.sqrt(inputs.density * inputs.velocity * inputs.velocity / inputs.bulk_modulus)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Density (kg/m³)",
+        "Velocity (m/s)",
+        "Bulk Modulus (N/m²)",
+        "Cauchy Number",
+        "Mach Number"
+      ],
+      "rows": [
+        [
+          1000,
+          5,
+          2200000000,
+          "1.14e-8",
+          "3.37e-4"
+        ],
+        [
+          1000,
+          10,
+          2200000000,
+          "4.55e-8",
+          "6.75e-4"
+        ],
+        [
+          1000,
+          20,
+          2200000000,
+          "1.82e-7",
+          "1.35e-3"
+        ],
+        [
+          1000,
+          50,
+          2200000000,
+          "1.14e-6",
+          "3.37e-3"
+        ],
+        [
+          1000,
+          100,
+          2200000000,
+          "4.55e-6",
+          "6.75e-3"
+        ],
+        [
+          1200,
+          10,
+          2200000000,
+          "5.45e-8",
+          "7.38e-4"
+        ],
+        [
+          800,
+          10,
+          2200000000,
+          "3.64e-8",
+          "6.03e-4"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Cauchy Number vs Flow Velocity"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            5,
+            10,
+            20,
+            50,
+            100
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Cauchy Number"
+        },
+        "series": [
+          {
+            "name": "ρ = 1000 kg/m³",
+            "type": "line",
+            "data": [
+              1.14e-8,
+              4.55e-8,
+              1.82e-7,
+              0.00000114,
+              0.00000455
+            ]
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

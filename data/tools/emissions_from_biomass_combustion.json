@@ -1,0 +1,110 @@
+{
+  "id": "emissions_from_biomass_combustion",
+  "title": "Emissions from Biomass Combustion",
+  "description": "Combustion of biomasses and their emission. Calculate typical uncontrolled emissions from combustion of biomass in boilers.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Emission Type",
+        "Typical Emission Range/Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Particulates",
+          "12.5 - 15",
+          "kg per ton biomass"
+        ],
+        [
+          "Organic compounds",
+          "1",
+          "kg per ton biomass"
+        ],
+        [
+          "Sulfur dioxide",
+          "< 1.5",
+          "kg per ton biomass"
+        ],
+        [
+          "Nitrogen oxides",
+          "5",
+          "kg per ton biomass"
+        ],
+        [
+          "Carbon monoxide",
+          "1",
+          "kg per ton biomass"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "**Notes:**\n- These values represent typical uncontrolled emissions from combustion of biomass in boilers\n- In addition there are ashes to dispose\n- Particulates are typically removed 99% in industrial boilers"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "biomass_amount",
+          "label": "Biomass Amount",
+          "type": "number",
+          "unit": "tons",
+          "defaultValue": 1
+        },
+        {
+          "id": "particulate_removal_efficiency",
+          "label": "Particulate Removal Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 99
+        }
+      ],
+      "outputs": [
+        {
+          "id": "particulates_uncontrolled",
+          "label": "Particulates (Uncontrolled)",
+          "formula": "inputs.biomass_amount * 13.75",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "organic_compounds",
+          "label": "Organic Compounds",
+          "formula": "inputs.biomass_amount * 1",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "sulfur_dioxide",
+          "label": "Sulfur Dioxide",
+          "formula": "inputs.biomass_amount * 1.5",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "nitrogen_oxides",
+          "label": "Nitrogen Oxides",
+          "formula": "inputs.biomass_amount * 5",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "carbon_monoxide",
+          "label": "Carbon Monoxide",
+          "formula": "inputs.biomass_amount * 1",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "particulates_controlled",
+          "label": "Particulates (After Control)",
+          "formula": "inputs.biomass_amount * 13.75 * (1 - inputs.particulate_removal_efficiency / 100)",
+          "unit": "kg",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

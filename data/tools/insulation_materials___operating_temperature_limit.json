@@ -1,0 +1,99 @@
+{
+  "id": "insulation_materials___operating_temperature_limit",
+  "title": "Insulation Materials - Operating Temperature Limits",
+  "description": "Temperature limits for commonly used insulation materials. Select a material to view its minimum and maximum operating temperature ranges in both Celsius and Fahrenheit.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "material",
+          "label": "Insulation Material",
+          "type": "select",
+          "options": [
+            {
+              "value": "calcium_silicate",
+              "label": "Calcium Silicate"
+            },
+            {
+              "value": "cellular_glass",
+              "label": "Cellular Glass"
+            },
+            {
+              "value": "elastomeric_foam",
+              "label": "Elastomeric Foam"
+            },
+            {
+              "value": "fiberglass",
+              "label": "Fiberglass"
+            },
+            {
+              "value": "mineral_wool_ceramic",
+              "label": "Mineral Wool - Ceramic Fiber"
+            },
+            {
+              "value": "mineral_wool_glass",
+              "label": "Mineral Wool - Glass"
+            },
+            {
+              "value": "mineral_wool_stone",
+              "label": "Mineral Wool - Stone"
+            },
+            {
+              "value": "phenolic_foam",
+              "label": "Phenolic Foam"
+            },
+            {
+              "value": "polyiso",
+              "label": "Polyisocyanurate (Polyiso)"
+            },
+            {
+              "value": "polystyrene",
+              "label": "Polystyrene"
+            },
+            {
+              "value": "polyurethane",
+              "label": "Polyurethane"
+            },
+            {
+              "value": "vermiculite",
+              "label": "Vermiculite"
+            }
+          ],
+          "defaultValue": "calcium_silicate"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "min_temp_c",
+          "label": "Minimum Temperature (°C)",
+          "formula": "inputs.material === 'calcium_silicate' ? -18 : inputs.material === 'cellular_glass' ? -260 : inputs.material === 'elastomeric_foam' ? -55 : inputs.material === 'fiberglass' ? -30 : inputs.material === 'mineral_wool_ceramic' ? null : inputs.material === 'mineral_wool_glass' ? 0 : inputs.material === 'mineral_wool_stone' ? 0 : inputs.material === 'phenolic_foam' ? null : inputs.material === 'polyiso' ? -180 : inputs.material === 'polystyrene' ? -50 : inputs.material === 'polyurethane' ? -210 : inputs.material === 'vermiculite' ? -272 : null",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "max_temp_c",
+          "label": "Maximum Temperature (°C)",
+          "formula": "inputs.material === 'calcium_silicate' ? 650 : inputs.material === 'cellular_glass' ? 480 : inputs.material === 'elastomeric_foam' ? 120 : inputs.material === 'fiberglass' ? 540 : inputs.material === 'mineral_wool_ceramic' ? 1200 : inputs.material === 'mineral_wool_glass' ? 250 : inputs.material === 'mineral_wool_stone' ? 760 : inputs.material === 'phenolic_foam' ? 150 : inputs.material === 'polyiso' ? 120 : inputs.material === 'polystyrene' ? 75 : inputs.material === 'polyurethane' ? 120 : inputs.material === 'vermiculite' ? 760 : null",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "min_temp_f",
+          "label": "Minimum Temperature (°F)",
+          "formula": "inputs.material === 'calcium_silicate' ? 0 : inputs.material === 'cellular_glass' ? -450 : inputs.material === 'elastomeric_foam' ? -70 : inputs.material === 'fiberglass' ? -20 : inputs.material === 'mineral_wool_ceramic' ? null : inputs.material === 'mineral_wool_glass' ? 32 : inputs.material === 'mineral_wool_stone' ? 32 : inputs.material === 'phenolic_foam' ? null : inputs.material === 'polyiso' ? -290 : inputs.material === 'polystyrene' ? -60 : inputs.material === 'polyurethane' ? -350 : inputs.material === 'vermiculite' ? -459 : null",
+          "unit": "°F",
+          "format": "decimal"
+        },
+        {
+          "id": "max_temp_f",
+          "label": "Maximum Temperature (°F)",
+          "formula": "inputs.material === 'calcium_silicate' ? 1200 : inputs.material === 'cellular_glass' ? 900 : inputs.material === 'elastomeric_foam' ? 250 : inputs.material === 'fiberglass' ? 1000 : inputs.material === 'mineral_wool_ceramic' ? 2200 : inputs.material === 'mineral_wool_glass' ? 480 : inputs.material === 'mineral_wool_stone' ? 1400 : inputs.material === 'phenolic_foam' ? 300 : inputs.material === 'polyiso' ? 250 : inputs.material === 'polystyrene' ? 165 : inputs.material === 'polyurethane' ? 250 : inputs.material === 'vermiculite' ? 1400 : null",
+          "unit": "°F",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

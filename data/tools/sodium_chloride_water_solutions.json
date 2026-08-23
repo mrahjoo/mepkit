@@ -1,0 +1,131 @@
+{
+  "id": "sodium_chloride_water_solutions",
+  "title": "Sodium Chloride Water Solutions",
+  "description": "Freezing point, density, specific heat and dynamic viscosity of Sodium Chloride and Water coolant.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "concentration",
+          "label": "NaCl Concentration",
+          "type": "number",
+          "unit": "wt%",
+          "defaultValue": 10
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "freezing_point",
+          "label": "Freezing Point",
+          "unit": "°C",
+          "formula": "inputs.concentration * -1.86",
+          "format": "decimal"
+        },
+        {
+          "id": "density",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "1000 + (inputs.concentration * 0.8)",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat",
+          "unit": "J/kg·K",
+          "formula": "4186 * (1 - inputs.concentration * 0.002)",
+          "format": "decimal"
+        },
+        {
+          "id": "dynamic_viscosity",
+          "label": "Dynamic Viscosity",
+          "unit": "mPa·s",
+          "formula": "1 + (inputs.concentration * 0.015)",
+          "format": "decimal"
+        }
+      ],
+      "content": "## Properties of Sodium Chloride Water Solutions\n\nCalculate thermodynamic and transport properties based on NaCl concentration and temperature."
+    },
+    {
+      "type": "chart",
+      "content": "## Property vs Concentration",
+      "options": {
+        "title": {
+          "text": "NaCl Solution Properties"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Freezing Point",
+            "Density",
+            "Specific Heat",
+            "Dynamic Viscosity"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0%",
+            "5%",
+            "10%",
+            "15%",
+            "20%",
+            "25%"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Freezing Point (°C)"
+          },
+          {
+            "type": "value",
+            "name": "Density (kg/m³)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Freezing Point",
+            "data": [
+              0,
+              -9.3,
+              -18.6,
+              -27.9,
+              -37.2,
+              -46.5
+            ],
+            "type": "line"
+          },
+          {
+            "name": "Density",
+            "data": [
+              1000,
+              1004,
+              1008,
+              1012,
+              1016,
+              1020
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}

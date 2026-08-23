@@ -1,0 +1,121 @@
+{
+  "id": "isentropic_flow",
+  "title": "Isentropic Flow Calculator",
+  "description": "Calculate relationships between temperature, density, and pressure for isentropic (adiabatic and frictionless) flow of an ideal gas using the fundamental equations of isentropic flow thermodynamics.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Isentropic Flow Relationships",
+      "inputs": [
+        {
+          "id": "T1",
+          "label": "Initial Temperature (T1)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        },
+        {
+          "id": "T2",
+          "label": "Final Temperature (T2)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 350
+        },
+        {
+          "id": "rho1",
+          "label": "Initial Density (ρ1)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.2
+        },
+        {
+          "id": "rho2",
+          "label": "Final Density (ρ2)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.5
+        },
+        {
+          "id": "p1",
+          "label": "Initial Pressure (p1)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        },
+        {
+          "id": "p2",
+          "label": "Final Pressure (p2)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 150000
+        },
+        {
+          "id": "kappa",
+          "label": "Specific Heat Ratio (κ)",
+          "type": "number",
+          "unit": "dimensionless",
+          "defaultValue": 1.4
+        },
+        {
+          "id": "v",
+          "label": "Specific Volume (v)",
+          "type": "number",
+          "unit": "m³/kg",
+          "defaultValue": 0.833
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temp_ratio",
+          "label": "Temperature Ratio (T2/T1)",
+          "formula": "inputs.T2 / inputs.T1",
+          "unit": "dimensionless",
+          "format": "decimal"
+        },
+        {
+          "id": "density_ratio",
+          "label": "Density Ratio (ρ2/ρ1)",
+          "formula": "inputs.rho2 / inputs.rho1",
+          "unit": "dimensionless",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_ratio",
+          "label": "Pressure Ratio (p2/p1)",
+          "formula": "inputs.p2 / inputs.p1",
+          "unit": "dimensionless",
+          "format": "decimal"
+        },
+        {
+          "id": "isentropic_relation",
+          "label": "Isentropic Temperature-Density Relation: (T2/T1)^(κ/(κ-1))",
+          "formula": "Math.pow(inputs.T2 / inputs.T1, inputs.kappa / (inputs.kappa - 1))",
+          "unit": "dimensionless",
+          "format": "decimal"
+        },
+        {
+          "id": "density_power_relation",
+          "label": "Isentropic Density-Pressure Relation: (ρ2/ρ1)^κ",
+          "formula": "Math.pow(inputs.rho2 / inputs.rho1, inputs.kappa)",
+          "unit": "dimensionless",
+          "format": "decimal"
+        },
+        {
+          "id": "p_v_constant",
+          "label": "p·v^κ (Should be constant for isentropic process)",
+          "formula": "inputs.p1 * Math.pow(inputs.v, inputs.kappa)",
+          "unit": "Pa·(m³/kg)^κ",
+          "format": "decimal"
+        },
+        {
+          "id": "p_rho_constant",
+          "label": "p·ρ^(-κ) (Should be constant for isentropic process)",
+          "formula": "inputs.p1 / Math.pow(inputs.rho1, inputs.kappa)",
+          "unit": "Pa·(kg/m³)^(-κ)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

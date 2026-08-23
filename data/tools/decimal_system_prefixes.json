@@ -1,0 +1,149 @@
+{
+  "id": "decimal_system_prefixes",
+  "title": "Decimal System Prefixes",
+  "description": "Prefix names used for multiples and submultiples units according to the SI system and DIN 1301.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Decimal System Prefixes\n\nPrefix names used for multiples and submultiples of units according to the SI system (DIN 1301 \"Units - Part 1: Unit names, unit symbols\")."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Prefix",
+        "Name of Factor",
+        "Decimal Equivalent",
+        "Exponential Expression"
+      ],
+      "rows": [
+        [
+          "y - yokto",
+          "septillionth",
+          "0.000 000 000 000 000 000 000 001",
+          "E-24"
+        ],
+        [
+          "z - zepto",
+          "sextillionth",
+          "0.000 000 000 000 000 000 001",
+          "E-21"
+        ],
+        [
+          "a - atto",
+          "trillionth",
+          "0.000 000 000 000 000 001",
+          "E-18"
+        ],
+        [
+          "f - femto",
+          "thousand billionth",
+          "0.000 000 000 000 001",
+          "E-15"
+        ],
+        [
+          "p - pico",
+          "billionth",
+          "0.000 000 000 001",
+          "E-12"
+        ],
+        [
+          "n - nano",
+          "thousand billionth",
+          "0.000 000 001",
+          "E-9"
+        ],
+        [
+          "μ - micro",
+          "millionth",
+          "0.000 001",
+          "E-6"
+        ],
+        [
+          "m - milli",
+          "thousandth",
+          "0.001",
+          "E-3"
+        ],
+        [
+          "c - centi",
+          "hundredth",
+          "0.01",
+          "E-2"
+        ],
+        [
+          "d - deci",
+          "tenth",
+          "0.1",
+          "E-1"
+        ],
+        [
+          "Uni",
+          "one",
+          "1",
+          "E0"
+        ],
+        [
+          "d - deka",
+          "ten",
+          "10",
+          "E1"
+        ],
+        [
+          "h - hecto",
+          "one hundred",
+          "100",
+          "E2"
+        ],
+        [
+          "k - kilo",
+          "one thousand",
+          "1 000",
+          "E3"
+        ],
+        [
+          "M - mega",
+          "one million",
+          "1 000 000",
+          "E6"
+        ],
+        [
+          "G - giga",
+          "one billion",
+          "1 000 000 000",
+          "E9"
+        ],
+        [
+          "T - tera",
+          "one trillion",
+          "1 000 000 000 000",
+          "E12"
+        ],
+        [
+          "P - peta",
+          "",
+          "1 000 000 000 000 000",
+          "E15"
+        ],
+        [
+          "E - exa",
+          "",
+          "1 000 000 000 000 000 000",
+          "E18"
+        ],
+        [
+          "Z - zetta",
+          "",
+          "1 000 000 000 000 000 000 000",
+          "E21"
+        ],
+        [
+          "Y - yotta",
+          "",
+          "1 000 000 000 000 000 000 000 000",
+          "E24"
+        ]
+      ]
+    }
+  ]
+}

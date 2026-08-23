@@ -1,0 +1,276 @@
+{
+  "id": "heating_values_of_fuel_gases",
+  "title": "Heating Values of Fuel Gases",
+  "description": "Combustion heat values for gases like acetylene, blast furnace gas, ethane, biogas and more - Gross and Net values.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel Gas",
+        "Gross Heating Value (Btu/ft³)",
+        "Net Heating Value (Btu/ft³)",
+        "Gross Heating Value (Btu/lb)",
+        "Net Heating Value (Btu/lb)"
+      ],
+      "rows": [
+        [
+          "Acetylene (ethyne) - C2H2",
+          1498,
+          1447,
+          21569,
+          20837
+        ],
+        [
+          "Ammonia (Liquefied, cooled compressed)",
+          "",
+          "",
+          "",
+          8017
+        ],
+        [
+          "Benzene",
+          3741,
+          3590,
+          18150,
+          17418
+        ],
+        [
+          "Blast Furnace gas",
+          92,
+          92,
+          1178,
+          1178
+        ],
+        [
+          "Blue water gas",
+          "",
+          "",
+          6550,
+          ""
+        ],
+        [
+          "Butane - C4H10",
+          3225,
+          2977,
+          21640,
+          19976
+        ],
+        [
+          "Butylene (Butene)",
+          3077,
+          2876,
+          20780,
+          19420
+        ],
+        [
+          "Carbon to CO2",
+          "",
+          "",
+          14150,
+          14150
+        ],
+        [
+          "Carbon to CO",
+          "",
+          "",
+          3960,
+          3960
+        ],
+        [
+          "Carbon monoxide - CO",
+          323,
+          323,
+          4368,
+          4368
+        ],
+        [
+          "Carburetted Water Gas",
+          550,
+          508,
+          11440,
+          10566
+        ],
+        [
+          "Coal gas",
+          149,
+          "",
+          16500,
+          ""
+        ],
+        [
+          "Coke Oven Gas",
+          574,
+          514,
+          17048,
+          15266
+        ],
+        [
+          "Digester Gas (Sewage or Biogas)",
+          690,
+          621,
+          11316,
+          10184
+        ],
+        [
+          "Ethane - C2H6",
+          1783,
+          1630,
+          22198,
+          20295
+        ],
+        [
+          "Ethyl alcohol saturated with water",
+          1548,
+          "",
+          12804,
+          ""
+        ],
+        [
+          "Ethylene",
+          1631,
+          1530,
+          21884,
+          20525
+        ],
+        [
+          "Hexane",
+          4667,
+          4315,
+          20526,
+          18976
+        ],
+        [
+          "Hydrogen (H2)",
+          325,
+          275,
+          61084,
+          51628
+        ],
+        [
+          "Hydrogen Sulphide",
+          672,
+          "",
+          7479,
+          ""
+        ],
+        [
+          "Landfill Gas",
+          476,
+          "",
+          "",
+          ""
+        ],
+        [
+          "Methane - CH4",
+          1011,
+          910,
+          23811,
+          21433
+        ],
+        [
+          "Methyl alcohol saturated with water",
+          818,
+          "",
+          9603,
+          ""
+        ],
+        [
+          "Naphthalene",
+          5859,
+          "",
+          17298,
+          ""
+        ],
+        [
+          "Natural Gas (typical)",
+          "950-1150",
+          "850-1050",
+          "19500-22500",
+          "17500-22000"
+        ],
+        [
+          "Octane saturated with water",
+          6239,
+          3170,
+          20542,
+          10444
+        ],
+        [
+          "Pentane",
+          3981,
+          3679,
+          20908,
+          19322
+        ],
+        [
+          "Producer gas",
+          "",
+          "",
+          2470,
+          ""
+        ],
+        [
+          "Propane - C3H8",
+          2572,
+          2371,
+          21564,
+          19834
+        ],
+        [
+          "Propene (Propylene) - C3H6",
+          2332,
+          2181,
+          20990,
+          19630
+        ],
+        [
+          "Propylene",
+          2336,
+          2185,
+          21042,
+          19683
+        ],
+        [
+          "Sasol",
+          500,
+          443,
+          14550,
+          13016
+        ],
+        [
+          "Sulphur",
+          "",
+          "",
+          3940,
+          ""
+        ],
+        [
+          "Toluene",
+          4408,
+          4206,
+          18291,
+          17301
+        ],
+        [
+          "Water Gas (bituminous)",
+          261,
+          239,
+          4881,
+          4469
+        ],
+        [
+          "Xylene",
+          5155,
+          "",
+          18410,
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- 1 Btu/ft³ = 8.9 kcal/m³ = 3.73×10⁴ J/m³\n- 1 Btu/lb = 2,326.1 J/kg = 0.55556 kcal/kg\n\n## Notes\n\nVolumetric Heating Values are based on standard temperatures and pressure of dry gas - 60°F and 14.73 psi."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "id": "geological_time",
+  "title": "Geological Time",
+  "description": "Geological periods and time scale covering the Cenozoic, Mesozoic, Paleozoic, and Pre-Cambrian eras.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Geological Time\n\nGeological periods and time scale with major events and evolutionary milestones.\n\n## Overview\n\nThis tool provides a comprehensive reference for geological time periods, from the present day (Holocene) back to Earth's formation (Hadean). Each period includes the time range in millions of years and significant evolutionary or geological events."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Era",
+        "Period/Epoch",
+        "Beginning - End (10⁶ years)",
+        "Significant Events"
+      ],
+      "rows": [
+        [
+          "Cenozoic",
+          "Holocene",
+          "0 - 0.0115",
+          "Present day"
+        ],
+        [
+          "Cenozoic",
+          "Pleistocene",
+          "0.0115 - 1.81",
+          "Homo erectus - evolution of anatomically modern humans"
+        ],
+        [
+          "Cenozoic",
+          "Pliocene",
+          "1.81 - 5.3",
+          "First recognizable hominins (australopithecines)"
+        ],
+        [
+          "Cenozoic",
+          "Miocene",
+          "5.3 - 23",
+          "Origin of grass"
+        ],
+        [
+          "Cenozoic",
+          "Oligocene",
+          "23 - 34",
+          "Rise of cats, dogs, pigs"
+        ],
+        [
+          "Cenozoic",
+          "Eocene",
+          "34 - 56",
+          "Hoofed animals"
+        ],
+        [
+          "Cenozoic",
+          "Paleocene",
+          "56 - 65",
+          "Primates"
+        ],
+        [
+          "Mesozoic",
+          "Cretaceous",
+          "65 - 145",
+          "Demise of dinosaurs"
+        ],
+        [
+          "Mesozoic",
+          "Jurassic",
+          "145 - 200",
+          "First birds"
+        ],
+        [
+          "Mesozoic",
+          "Triassic",
+          "200 - 251",
+          "Many major groups of dinosaurs emerged"
+        ],
+        [
+          "Paleozoic",
+          "Permian",
+          "251 - 299",
+          "Flowers, insect pollination"
+        ],
+        [
+          "Paleozoic",
+          "Carboniferous",
+          "299 - 359",
+          "First conifers"
+        ],
+        [
+          "Paleozoic",
+          "Devonian",
+          "359 - 416",
+          "First vertebrates ashore"
+        ],
+        [
+          "Paleozoic",
+          "Silurian",
+          "416 - 444",
+          "Spore-bearing plants"
+        ],
+        [
+          "Paleozoic",
+          "Ordovician",
+          "444 - 488",
+          "Vertebrates appear"
+        ],
+        [
+          "Paleozoic",
+          "Cambrian",
+          "488 - 542",
+          "Most animal life aquatic"
+        ],
+        [
+          "Pre-Cambrian",
+          "Proterozoic (Pre-Cambrian III)",
+          "542 - 2500",
+          "First advanced single-celled eukaryotes, multi-cellular life, first plants, jellyfish"
+        ],
+        [
+          "Pre-Cambrian",
+          "Archean (Pre-Cambrian II)",
+          "2500 - 3850",
+          "Photosynthetic bacteria"
+        ],
+        [
+          "Pre-Cambrian",
+          "Hadean (Pre-Cambrian I)",
+          "3850 - 4600",
+          "Earth formed 4600 million years ago"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "period_start",
+          "label": "Period Start (million years ago)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "Mya"
+        },
+        {
+          "id": "period_end",
+          "label": "Period End (million years ago)",
+          "type": "number",
+          "defaultValue": 65,
+          "unit": "Mya"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "duration",
+          "label": "Period Duration",
+          "formula": "inputs.period_end - inputs.period_start",
+          "unit": "million years",
+          "format": "decimal"
+        },
+        {
+          "id": "percent_earth_history",
+          "label": "Percentage of Earth History",
+          "formula": "((inputs.period_end - inputs.period_start) / 4600) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

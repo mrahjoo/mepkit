@@ -1,0 +1,53 @@
+{
+  "id": "storm_water_runoff_coefficients_vs__surface",
+  "title": "Storm-Water Runoff Coefficients vs. Surface",
+  "description": "Storm-water runoff coefficients for various surfaces. Reference table showing typical runoff coefficient ranges for different surface types used in stormwater management calculations.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Surface",
+        "Runoff Coefficient"
+      ],
+      "rows": [
+        [
+          "Gardens, lawns, parks",
+          "0.05 - 0.25"
+        ],
+        [
+          "Pavements, inferior block",
+          "0.40 - 0.50"
+        ],
+        [
+          "Pavements, stone or brick",
+          "0.75 - 0.80"
+        ],
+        [
+          "Pavements, asphalt",
+          "0.85 - 0.90"
+        ],
+        [
+          "Roads, gravel",
+          "0.15 - 0.30"
+        ],
+        [
+          "Roadways, macadamized",
+          "0.25 - 0.60"
+        ],
+        [
+          "Roofs",
+          "0.70 - 0.95"
+        ],
+        [
+          "Walks, gravel",
+          "0.15 - 0.30"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Usage\n\nStorm-water runoff coefficients are used to estimate the volume of runoff generated from a given rainfall event. The coefficient varies based on the surface type and its permeability.\n\n**Key Points:**\n- Lower coefficients (lawns, gardens) indicate high infiltration and less runoff\n- Higher coefficients (asphalt, roofs) indicate low infiltration and more runoff\n- Use these values in the rational method formula: Q = C × I × A\n  - Q = Peak runoff (m³/s or similar)\n  - C = Runoff coefficient\n  - I = Rainfall intensity\n  - A = Drainage area"
+    }
+  ]
+}

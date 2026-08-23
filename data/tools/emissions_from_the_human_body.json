@@ -1,0 +1,204 @@
+{
+  "id": "emissions_from_the_human_body",
+  "title": "Emissions from the Human Body",
+  "description": "Gaseous pollutants emissions from human bodies",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Gaseous Emissions from the Human Body\n\nTypical gaseous emissions rates from human bodies:\n\n- **Acetaldehyde**: 3.5×10⁻⁸ g/h\n- **Acetone**: 4.8×10⁻⁷ g/h\n- **Ammonia**: 1.6×10⁻⁵ g/h\n- **Carbon dioxide**: 3.2×10⁻² g/h\n- **Carbon monoxide**: 1×10⁻⁵ g/h\n- **Hydrogen sulfide**: 1.5×10⁻⁸ g/h\n- **Methane**: 1.7×10⁻⁶ g/h\n- **Methanol**: 6×10⁻⁹ g/h\n- **Toluene**: 2.3×10⁻⁸ g/h\n\n**Unit Conversion**: 1 g/h = 1×10⁻³ kg/h = 2.2×10⁻³ lb/h"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "duration_hours",
+          "label": "Duration",
+          "type": "number",
+          "defaultValue": 24,
+          "unit": "hours"
+        },
+        {
+          "id": "num_people",
+          "label": "Number of People",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "people"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "acetaldehyde_total",
+          "label": "Acetaldehyde",
+          "formula": "inputs.duration_hours * inputs.num_people * 3.5e-8",
+          "unit": "g",
+          "format": "scientific"
+        },
+        {
+          "id": "acetone_total",
+          "label": "Acetone",
+          "formula": "inputs.duration_hours * inputs.num_people * 4.8e-7",
+          "unit": "g",
+          "format": "scientific"
+        },
+        {
+          "id": "ammonia_total",
+          "label": "Ammonia",
+          "formula": "inputs.duration_hours * inputs.num_people * 1.6e-5",
+          "unit": "g",
+          "format": "scientific"
+        },
+        {
+          "id": "co2_total",
+          "label": "Carbon dioxide",
+          "formula": "inputs.duration_hours * inputs.num_people * 3.2e-2",
+          "unit": "g",
+          "format": "decimal"
+        },
+        {
+          "id": "co_total",
+          "label": "Carbon monoxide",
+          "formula": "inputs.duration_hours * inputs.num_people * 1e-5",
+          "unit": "g",
+          "format": "scientific"
+        },
+        {
+          "id": "h2s_total",
+          "label": "Hydrogen sulfide",
+          "formula": "inputs.duration_hours * inputs.num_people * 1.5e-8",
+          "unit": "g",
+          "format": "scientific"
+        },
+        {
+          "id": "methane_total",
+          "label": "Methane",
+          "formula": "inputs.duration_hours * inputs.num_people * 1.7e-6",
+          "unit": "g",
+          "format": "scientific"
+        },
+        {
+          "id": "methanol_total",
+          "label": "Methanol",
+          "formula": "inputs.duration_hours * inputs.num_people * 6e-9",
+          "unit": "g",
+          "format": "scientific"
+        },
+        {
+          "id": "toluene_total",
+          "label": "Toluene",
+          "formula": "inputs.duration_hours * inputs.num_people * 2.3e-8",
+          "unit": "g",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Compound",
+        "Emission Rate (g/h)",
+        "Emission Rate (kg/h)",
+        "Emission Rate (lb/h)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          "3.5×10⁻⁸",
+          "3.5×10⁻¹¹",
+          "7.7×10⁻¹¹"
+        ],
+        [
+          "Acetone",
+          "4.8×10⁻⁷",
+          "4.8×10⁻¹⁰",
+          "1.06×10⁻⁹"
+        ],
+        [
+          "Ammonia",
+          "1.6×10⁻⁵",
+          "1.6×10⁻⁸",
+          "3.52×10⁻⁸"
+        ],
+        [
+          "Carbon dioxide",
+          "3.2×10⁻²",
+          "3.2×10⁻⁵",
+          "7.04×10⁻⁵"
+        ],
+        [
+          "Carbon monoxide",
+          "1×10⁻⁵",
+          "1×10⁻⁸",
+          "2.2×10⁻⁸"
+        ],
+        [
+          "Hydrogen sulfide",
+          "1.5×10⁻⁸",
+          "1.5×10⁻¹¹",
+          "3.3×10⁻¹¹"
+        ],
+        [
+          "Methane",
+          "1.7×10⁻⁶",
+          "1.7×10⁻⁹",
+          "3.74×10⁻⁹"
+        ],
+        [
+          "Methanol",
+          "6×10⁻⁹",
+          "6×10⁻¹²",
+          "1.32×10⁻¹¹"
+        ],
+        [
+          "Toluene",
+          "2.3×10⁻⁸",
+          "2.3×10⁻¹¹",
+          "5.06×10⁻¹¹"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Acetaldehyde",
+            "Acetone",
+            "Ammonia",
+            "CO₂",
+            "CO",
+            "H₂S",
+            "Methane",
+            "Methanol",
+            "Toluene"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "scale": true
+        },
+        "series": [
+          {
+            "data": [
+              3.5e-8,
+              4.8e-7,
+              0.000016,
+              0.032,
+              0.00001,
+              1.5e-8,
+              0.0000017,
+              6e-9,
+              2.3e-8
+            ],
+            "type": "bar",
+            "name": "Emission Rate (g/h)"
+          }
+        ]
+      }
+    }
+  ]
+}

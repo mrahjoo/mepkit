@@ -1,0 +1,69 @@
+{
+  "id": "electrical_distribution_systems",
+  "title": "Electrical Distribution Systems",
+  "description": "Electrical distribution systems commonly used in Europe and USA",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "System Type",
+        "Configuration",
+        "Voltage",
+        "Region/Usage",
+        "Description"
+      ],
+      "rows": [
+        [
+          "TN",
+          "3-Phase, 4-Wire 400Y/230 V",
+          "230/400V",
+          "Europe and others",
+          "Standard European distribution system with neutral conductor"
+        ],
+        [
+          "IT",
+          "3-Phase, 3-Wire 230 V Wye (No neutral)",
+          "230V",
+          "Norway",
+          "Three-phase system without neutral conductor"
+        ],
+        [
+          "Three Phase Three Wire Delta",
+          "3-Phase, 3-Wire Delta",
+          "240/400/480/600V+",
+          "Industrial and utility",
+          "Used for three-phase motor loads in industry and utility power distribution"
+        ],
+        [
+          "277/480V Three Phase Four Wire Wye",
+          "3-Phase, 4-Wire Wye",
+          "277/480V",
+          "Larger U.S. facilities (347/600V in western Canada)",
+          "277V for lighting, 480V for larger loads like HVAC systems"
+        ],
+        [
+          "120/240V Three Phase Four Wire Delta",
+          "3-Phase, 4-Wire Delta",
+          "120/240V",
+          "Older U.S. manufacturing facilities",
+          "Designed for mostly three-phase motor loads with some single-phase lighting and plug loads"
+        ],
+        [
+          "120/240V Single Phase Three Wire",
+          "Single Phase, 3-Wire",
+          "120/240V",
+          "North America (residential)",
+          "Grounded neutral system, Edison system or split-phase, common residential service"
+        ],
+        [
+          "120/208V Three Phase Four Wire Wye",
+          "3-Phase, 4-Wire Wye",
+          "120/208V",
+          "North America (commercial)",
+          "Grounded neutral system, most common commercial building electric service in North America"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "id": "air___humidifying_by_adding_steam_or_water",
+  "title": "Air - Humidifying by Adding Steam or Water",
+  "description": "Calculate the mass of water or steam required to humidify air by adding water or steam. This tool covers humidification processes using both liquid water (adiabatic process) and saturated steam at atmospheric pressure.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "water_humidification_calculator",
+      "headers": [
+        "Humidifying Air by Adding Water"
+      ],
+      "inputs": [
+        {
+          "id": "air_flow_volume",
+          "label": "Air Flow Volume",
+          "type": "number",
+          "defaultValue": 3000,
+          "unit": "m³/h"
+        },
+        {
+          "id": "air_temperature",
+          "label": "Air Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "air_density",
+          "label": "Air Density",
+          "type": "number",
+          "defaultValue": 1.184,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "initial_humidity_ratio",
+          "label": "Initial Humidity Ratio (xA)",
+          "type": "number",
+          "defaultValue": 0.002,
+          "unit": "kg_h2o/kg_dry_air"
+        },
+        {
+          "id": "final_humidity_ratio",
+          "label": "Final Humidity Ratio (xC)",
+          "type": "number",
+          "defaultValue": 0.0062,
+          "unit": "kg_h2o/kg_dry_air"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_mass_per_second",
+          "label": "Mass of Water Added",
+          "formula": "(inputs.air_flow_volume / 3600) * inputs.air_density * (inputs.final_humidity_ratio - inputs.initial_humidity_ratio)",
+          "unit": "kg/s",
+          "format": "decimal"
+        },
+        {
+          "id": "water_mass_per_hour",
+          "label": "Mass of Water Added",
+          "formula": "((inputs.air_flow_volume / 3600) * inputs.air_density * (inputs.final_humidity_ratio - inputs.initial_humidity_ratio)) * 3600",
+          "unit": "kg/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "steam_humidification_calculator",
+      "headers": [
+        "Humidifying Air by Adding Steam"
+      ],
+      "inputs": [
+        {
+          "id": "steam_air_flow_volume",
+          "label": "Air Flow Volume",
+          "type": "number",
+          "defaultValue": 3000,
+          "unit": "m³/h"
+        },
+        {
+          "id": "steam_air_density",
+          "label": "Air Density",
+          "type": "number",
+          "defaultValue": 1.184,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "steam_initial_humidity_ratio",
+          "label": "Initial Humidity Ratio (xA)",
+          "type": "number",
+          "defaultValue": 0.002,
+          "unit": "kg_h2o/kg_dry_air"
+        },
+        {
+          "id": "steam_final_humidity_ratio",
+          "label": "Final Humidity Ratio (xB)",
+          "type": "number",
+          "defaultValue": 0.012,
+          "unit": "kg_h2o/kg_dry_air"
+        },
+        {
+          "id": "initial_enthalpy",
+          "label": "Initial Enthalpy (hA)",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "kJ/kg"
+        },
+        {
+          "id": "final_enthalpy",
+          "label": "Final Enthalpy (hB)",
+          "type": "number",
+          "defaultValue": 55,
+          "unit": "kJ/kg"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "steam_water_mass_per_second",
+          "label": "Mass of Steam Added",
+          "formula": "(inputs.steam_air_flow_volume / 3600) * inputs.steam_air_density * (inputs.steam_final_humidity_ratio - inputs.steam_initial_humidity_ratio)",
+          "unit": "kg/s",
+          "format": "decimal"
+        },
+        {
+          "id": "steam_water_mass_per_hour",
+          "label": "Mass of Steam Added",
+          "formula": "((inputs.steam_air_flow_volume / 3600) * inputs.steam_air_density * (inputs.steam_final_humidity_ratio - inputs.steam_initial_humidity_ratio)) * 3600",
+          "unit": "kg/h",
+          "format": "decimal"
+        },
+        {
+          "id": "enthalpy_difference",
+          "label": "Enthalpy Difference (ΔH)",
+          "formula": "inputs.final_enthalpy - inputs.initial_enthalpy",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "total_heat_added",
+          "label": "Total Heat Added by Steam",
+          "formula": "(inputs.steam_air_flow_volume / 3600) * inputs.steam_air_density * (inputs.final_enthalpy - inputs.initial_enthalpy)",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "humidification_comparison",
+      "headers": [
+        "Method",
+        "Initial Humidity Ratio (kg/kg)",
+        "Final Humidity Ratio (kg/kg)",
+        "Mass Added (kg/s)",
+        "Mass Added (kg/h)",
+        "Process Type"
+      ],
+      "rows": [
+        [
+          "Adding Water",
+          "0.002",
+          "0.0062",
+          "0.0041",
+          "14.9",
+          "Adiabatic (constant enthalpy)"
+        ],
+        [
+          "Adding Steam",
+          "0.002",
+          "0.012",
+          "0.01",
+          "35.5",
+          "Constant dh/dx line (~2502 kJ/kg)"
+        ]
+      ]
+    }
+  ]
+}

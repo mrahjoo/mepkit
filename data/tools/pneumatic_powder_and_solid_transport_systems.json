@@ -1,0 +1,116 @@
+{
+  "id": "pneumatic_powder_and_solid_transport_systems",
+  "title": "Pneumatic Powder and Solid Transport Systems",
+  "description": "Calculator for pneumatic transport systems used to move powder and other solid products through air suspension.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pneumatic Powder and Solid Transport Systems\n\nPneumatic transport systems are used to move powder and other solid products through air suspension. This calculator helps determine key parameters and constraints for pneumatic conveying systems.\n\n## System Specifications\n\n**Material Size Limit:** Up to 50 mm\n**Moisture Content:** Maximum 20%\n**Maximum System Length:** 300 m per unit\n**Working Pressure:** Maximum 40 kN/m²\n**Maximum Temperature Rise:** 5°C\n\n## Transport Modes\n\n- **Dilute Phase:** High air velocity (20-30 m/s)\n- **Strand Conveying:** Limited air velocity (15-20 m/s)\n- **Dense Phase:** Low air velocity (5-10 m/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "solid_mass_flow",
+          "label": "Solid Mass Flow Rate",
+          "type": "number",
+          "unit": "kg/h",
+          "defaultValue": 1000
+        },
+        {
+          "id": "air_velocity",
+          "label": "Air Velocity",
+          "type": "select",
+          "options": [
+            {
+              "label": "Dilute Phase (20-30 m/s)",
+              "value": 25
+            },
+            {
+              "label": "Strand Conveying (15-20 m/s)",
+              "value": 17.5
+            },
+            {
+              "label": "Dense Phase (5-10 m/s)",
+              "value": 7.5
+            }
+          ],
+          "defaultValue": 25
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 100
+        },
+        {
+          "id": "system_length",
+          "label": "System Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 150
+        },
+        {
+          "id": "pressure_limit",
+          "label": "Working Pressure Limit",
+          "type": "number",
+          "unit": "kN/m²",
+          "defaultValue": 40
+        },
+        {
+          "id": "moisture_content",
+          "label": "Material Moisture Content",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 10
+        },
+        {
+          "id": "solid_density",
+          "label": "Solid Material Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pipe_cross_section",
+          "label": "Pipe Cross-Sectional Area",
+          "formula": "(inputs.pipe_diameter / 1000)^2 * 3.14159 / 4",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "air_volume_flow",
+          "label": "Air Volume Flow Rate",
+          "formula": "inputs.air_velocity * (inputs.pipe_diameter / 1000)^2 * 3.14159 / 4 * 3600",
+          "unit": "m³/h",
+          "format": "decimal"
+        },
+        {
+          "id": "loading_ratio",
+          "label": "Material Loading Ratio",
+          "formula": "inputs.solid_mass_flow / (inputs.air_velocity * (inputs.pipe_diameter / 1000)^2 * 3.14159 / 4 * 1.2)",
+          "unit": "kg/kg air",
+          "format": "decimal"
+        },
+        {
+          "id": "length_validation",
+          "label": "System Length within Limit",
+          "formula": "if(inputs.system_length <= 300, 1, 0)",
+          "unit": "Valid (1=Yes, 0=No)",
+          "format": "decimal"
+        },
+        {
+          "id": "moisture_validation",
+          "label": "Moisture Content within Limit",
+          "formula": "if(inputs.moisture_content <= 20, 1, 0)",
+          "unit": "Valid (1=Yes, 0=No)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

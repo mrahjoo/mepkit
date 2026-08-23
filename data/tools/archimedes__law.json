@@ -1,0 +1,47 @@
+{
+  "id": "archimedes__law",
+  "title": "Archimedes' Law - Buoyant Force Calculator",
+  "description": "Calculate the buoyant force acting on a submerged or floating body using Archimedes' principle. The buoyant force equals the weight of the liquid displaced by the body.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Archimedes' Law\n\n**Archimedes' principle** states that the buoyant force acting on a submerged or floating body equals the gravitational force on the liquid displaced by the body.\n\n## Formula\n\n**FB = V × ρ × g**\n\nWhere:\n- **FB** = buoyant force (N)\n- **V** = volume of body below surface (m³)\n- **ρ** = density of fluid (kg/m³)\n- **g** = acceleration of gravity (9.81 m/s²)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "volume",
+          "label": "Volume of Body",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 1
+        },
+        {
+          "id": "density",
+          "label": "Density of Fluid",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        }
+      ],
+      "outputs": [
+        {
+          "id": "buoyant_force",
+          "label": "Buoyant Force",
+          "formula": "inputs.volume * inputs.density * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

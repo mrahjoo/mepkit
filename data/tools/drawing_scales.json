@@ -1,0 +1,105 @@
+{
+  "id": "drawing_scales",
+  "title": "Drawing Scales",
+  "description": "Tool for calculating actual dimensions from blueprint drawings using standard drawing scales (SI-units 1:20, 1:50, 1:100 or Imperial units 1/4\", 1/8\")",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Drawing Scales\n\nBlueprint drawings are typically drawn in standard scales:\n\n**SI-Units**\n- 1:20, 1:50, or 1:100\n\nTo scale a SI-drawing, multiply the measurement on the drawing with the denominator.\n\n**Imperial Units (US)**\n- 1/4\" or 1/8\"\n\nTo scale a blueprint in imperial units, multiply the measurement on the drawing (in inches) with the denominator.\n\n## Commonly Used Drawing Scales\n\n| Category | Scales |\n|----------|--------|\n| Details | 1:1, 1:5, 1:10, 1:20 |\n| Component Drawings, Assembly | 1:20, 1:10, 1:5 |\n| Floor Plans, GA | 1:40, 1:50 |\n| Location Plot Plans | 1:80, 1:100, 1:200 |\n| Location Plat Plans | 1:500 |\n| Block Plan, City Maps | 1:1000, 1:1250, 1:2500 |\n| Ordnance Survey Maps | 1:100000, 1:50000, 1:25000, 1:10000 |"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "SI-Units Scale Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "measured_length_si",
+          "label": "Measured Length on Drawing (cm)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "scale_denominator_si",
+          "label": "Scale Denominator (e.g., 50 for 1:50)",
+          "type": "number",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "actual_length_si",
+          "label": "Actual Physical Length",
+          "formula": "inputs.measured_length_si * inputs.scale_denominator_si",
+          "unit": "cm"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Imperial Units Scale Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "measured_length_imperial",
+          "label": "Measured Length on Drawing (inches, decimal)",
+          "type": "number",
+          "defaultValue": 1.375
+        },
+        {
+          "id": "scale_denominator_imperial",
+          "label": "Scale Denominator (e.g., 4 for 1/4\")",
+          "type": "number",
+          "defaultValue": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "actual_length_feet",
+          "label": "Actual Physical Length",
+          "formula": "inputs.measured_length_imperial * inputs.scale_denominator_imperial",
+          "unit": "feet"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Scale Type",
+        "Drawing Scales"
+      ],
+      "rows": [
+        [
+          "Details",
+          "1:1, 1:5, 1:10, 1:20"
+        ],
+        [
+          "Component Drawings, Assembly",
+          "1:20, 1:10, 1:5"
+        ],
+        [
+          "Floor Plans, General Arrangement (GA)",
+          "1:40, 1:50"
+        ],
+        [
+          "Location Plot Plans",
+          "1:80, 1:100, 1:200"
+        ],
+        [
+          "Location Plat Plans",
+          "1:500"
+        ],
+        [
+          "Block Plan, City Maps and larger",
+          "1:1000, 1:1250, 1:2500"
+        ],
+        [
+          "Ordnance Survey Maps",
+          "1:100000, 1:50000, 1:25000, 1:10000"
+        ]
+      ]
+    }
+  ]
+}

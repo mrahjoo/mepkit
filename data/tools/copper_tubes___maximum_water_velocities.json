@@ -1,0 +1,145 @@
+{
+  "id": "copper_tubes___maximum_water_velocities",
+  "title": "Copper Tubes - Maximum Water Velocities",
+  "description": "Water velocity in a copper tube should not exceed certain limits to avoid erosion. This tool helps determine safe water velocity limits based on water temperature and system type.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Water Velocity Limits by System Type\n\nThe water velocity in a copper tube should be kept within certain limits to avoid erosion, corrosion and excessive noise generation.\n\n### Velocity Limits:\n\n* **Cold water systems**: Maximum 8 feet per second (2.4 m/s)\n* **Hot water systems (below 140°F / 60°C)**: Maximum 5 feet per second (1.5 m/s)\n* **Hot water systems (above 140°F / 60°C)**: Maximum 2 feet per second (0.6 m/s)\n\n**Note**: Local velocities in small tubes, bends and similar obstructions may exceed these values."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "water_temperature",
+          "label": "Water Temperature",
+          "type": "number",
+          "defaultValue": 60,
+          "unit": "°C"
+        },
+        {
+          "id": "system_type",
+          "label": "System Type",
+          "type": "select",
+          "defaultValue": "cold",
+          "options": [
+            {
+              "label": "Cold Water",
+              "value": "cold"
+            },
+            {
+              "label": "Hot Water",
+              "value": "hot"
+            }
+          ]
+        },
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "L/min"
+        },
+        {
+          "id": "tube_diameter",
+          "label": "Copper Tube Diameter",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "inches"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "max_velocity_ms",
+          "label": "Maximum Allowed Velocity",
+          "formula": "inputs.system_type === 'cold' ? 2.4 : (inputs.water_temperature < 60 ? 1.5 : 0.6)",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "max_velocity_fts",
+          "label": "Maximum Allowed Velocity",
+          "formula": "inputs.system_type === 'cold' ? 8 : (inputs.water_temperature < 60 ? 5 : 2)",
+          "unit": "ft/s",
+          "format": "decimal"
+        },
+        {
+          "id": "actual_velocity_ms",
+          "label": "Actual Water Velocity",
+          "formula": "(inputs.flow_rate / 60000) / (3.14159 * Math.pow(inputs.tube_diameter * 0.0127 / 2, 2))",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity_status",
+          "label": "Velocity Status",
+          "formula": "(inputs.system_type === 'cold' ? 2.4 : (inputs.water_temperature < 60 ? 1.5 : 0.6)) >= ((inputs.flow_rate / 60000) / (3.14159 * Math.pow(inputs.tube_diameter * 0.0127 / 2, 2))) ? 'Safe' : 'Exceeds Limit'",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "System Type",
+        "Temperature Range",
+        "Max Velocity (m/s)",
+        "Max Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          "Cold Water",
+          "Any",
+          2.4,
+          8
+        ],
+        [
+          "Hot Water",
+          "Below 60°C (140°F)",
+          1.5,
+          5
+        ],
+        [
+          "Hot Water",
+          "Above 60°C (140°F)",
+          0.6,
+          2
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Cold Water",
+            "Hot Water (Below 60°C)",
+            "Hot Water (Above 60°C)"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Maximum Velocity (m/s)"
+        },
+        "series": [
+          {
+            "data": [
+              2.4,
+              1.5,
+              0.6
+            ],
+            "type": "bar",
+            "name": "Max Velocity (m/s)"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Max Velocity (m/s)"
+          ]
+        }
+      }
+    }
+  ]
+}

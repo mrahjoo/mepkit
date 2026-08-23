@@ -1,0 +1,108 @@
+{
+  "id": "impulse_and_impulse_force",
+  "title": "Impulse and Impulse Force",
+  "description": "Calculate impulse, force, momentum change, and resulting velocity based on Newton's Second Law of Motion. Impulse forces act for a very short time and the impulse equals the change of momentum.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Impulse and Impulse Force\n\nForces acting for a very short time are called impulse forces. According to Newton's Second Law of Motion:\n\n**F = dM / dt**\n\nWhere:\n- F = applied force (N)\n- dM = change of momentum (kg m/s)\n- dt = time taken (s)\n\nThe impulse I = F × dt = dM (change in momentum)\n\nMomentum M = m × v, where m is mass (kg) and v is velocity (m/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 1000
+        },
+        {
+          "id": "time",
+          "label": "Time",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 10
+        },
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "impulse",
+          "label": "Impulse",
+          "formula": "inputs.force * inputs.time",
+          "unit": "N s",
+          "format": "decimal"
+        },
+        {
+          "id": "momentum_change",
+          "label": "Change in Momentum",
+          "formula": "inputs.force * inputs.time",
+          "unit": "kg m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "resulting_velocity",
+          "label": "Resulting Velocity",
+          "formula": "(inputs.force * inputs.time) / inputs.mass",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Unit",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Applied Force",
+          "F",
+          "N",
+          "inputs.force"
+        ],
+        [
+          "Time Duration",
+          "dt",
+          "s",
+          "inputs.time"
+        ],
+        [
+          "Mass",
+          "m",
+          "kg",
+          "inputs.mass"
+        ],
+        [
+          "Impulse",
+          "I",
+          "N s",
+          "inputs.force * inputs.time"
+        ],
+        [
+          "Change in Momentum",
+          "dM",
+          "kg m/s",
+          "inputs.force * inputs.time"
+        ],
+        [
+          "Resulting Velocity",
+          "v",
+          "m/s",
+          "(inputs.force * inputs.time) / inputs.mass"
+        ]
+      ]
+    }
+  ]
+}

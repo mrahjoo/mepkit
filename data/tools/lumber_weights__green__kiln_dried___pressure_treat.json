@@ -1,0 +1,220 @@
+{
+  "id": "lumber_weights__green__kiln_dried___pressure_treat",
+  "title": "Lumber Weights: Green, Kiln-Dried & Pressure-Treated Wood",
+  "description": "Weights of green, kiln dried and pressure treated lumber boards. The density and weight of lumber varies with the water or moisture content in the wood.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Lumber Type",
+        "Nominal Dimension (in x in)",
+        "Weight per ft (lb)",
+        "8 ft (lb)",
+        "10 ft (lb)",
+        "12 ft (lb)",
+        "16 ft (lb)"
+      ],
+      "rows": [
+        [
+          "Green",
+          "2 x 4",
+          "1.7",
+          "13",
+          "17",
+          "20",
+          "27"
+        ],
+        [
+          "Green",
+          "4 x 4",
+          "3.6",
+          "29",
+          "36",
+          "43",
+          "58"
+        ],
+        [
+          "Green",
+          "4 x 6",
+          "5.4",
+          "43",
+          "54",
+          "65",
+          "86"
+        ],
+        [
+          "Green",
+          "4 x 8",
+          "7.2",
+          "58",
+          "72",
+          "86",
+          "115"
+        ],
+        [
+          "Green",
+          "4 x 10",
+          "9",
+          "72",
+          "90",
+          "108",
+          "144"
+        ],
+        [
+          "Green",
+          "4 x 12",
+          "10.8",
+          "86",
+          "108",
+          "130",
+          "173"
+        ],
+        [
+          "Green",
+          "6 x 6",
+          "8.1",
+          "65",
+          "81",
+          "97",
+          "130"
+        ],
+        [
+          "Kiln Dried",
+          "2 x 4",
+          "1.3",
+          "11",
+          "13",
+          "16",
+          "21"
+        ],
+        [
+          "Kiln Dried",
+          "2 x 6",
+          "2",
+          "16",
+          "20",
+          "24",
+          "32"
+        ],
+        [
+          "Kiln Dried",
+          "2 x 8",
+          "2.7",
+          "21",
+          "27",
+          "32",
+          "43"
+        ],
+        [
+          "Kiln Dried",
+          "2 x 10",
+          "3.3",
+          "27",
+          "33",
+          "40",
+          "53"
+        ],
+        [
+          "Kiln Dried",
+          "2 x 12",
+          "4",
+          "32",
+          "40",
+          "48",
+          "64"
+        ],
+        [
+          "Pressure Treated",
+          "2 x 4",
+          "2.1",
+          "17",
+          "21",
+          "26",
+          "34"
+        ],
+        [
+          "Pressure Treated",
+          "2 x 6",
+          "3.2",
+          "26",
+          "32",
+          "38",
+          "51"
+        ],
+        [
+          "Pressure Treated",
+          "2 x 8",
+          "4.4",
+          "35",
+          "44",
+          "53",
+          "70"
+        ],
+        [
+          "Pressure Treated",
+          "2 x 10",
+          "5.5",
+          "44",
+          "55",
+          "66",
+          "88"
+        ],
+        [
+          "Pressure Treated",
+          "2 x 12",
+          "6.6",
+          "53",
+          "66",
+          "79",
+          "106"
+        ],
+        [
+          "Pressure Treated",
+          "4 x 4",
+          "4.8",
+          "38",
+          "48",
+          "58",
+          "77"
+        ],
+        [
+          "Pressure Treated",
+          "4 x 6",
+          "7",
+          "56",
+          "70",
+          "84",
+          "112"
+        ],
+        [
+          "Pressure Treated",
+          "4 x 8",
+          "9.3",
+          "75",
+          "93",
+          "112",
+          "149"
+        ],
+        [
+          "Pressure Treated",
+          "4 x 10",
+          "11.7",
+          "93",
+          "117",
+          "140",
+          "187"
+        ],
+        [
+          "Pressure Treated",
+          "4 x 12",
+          "14",
+          "112",
+          "140",
+          "168",
+          "224"
+        ]
+      ]
+    }
+  ]
+}

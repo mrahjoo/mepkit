@@ -1,0 +1,71 @@
+{
+  "id": "hydrocarbons___melting_point_vs__molecular_weight",
+  "title": "Hydrocarbons - Melting Point vs. Molecular Weight",
+  "description": "Calculate melting points of pure hydrocarbons (n-alkanes, alkycyclopentanes, alkycyclohexanes, and alkybenzenes) based on molecular weight using Riazi and Sahhaf equations. Supports carbon ranges C5-C42 depending on hydrocarbon type with typical accuracy of 1-1.5%.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hydrocarbon Melting Point Calculator\n\nThis calculator uses the Riazi and Sahhaf equations to estimate melting points for different hydrocarbon groups:\n\n- **n-Alkanes (Paraffins)**: Carbon range C5-C40\n- **n-Alkycyclopentanes (Naphthenes)**: Carbon range C7-C41\n- **n-Alkycyclohexanes (Naphthenes)**: Carbon range C7-C20\n- **n-Alkybenzenes (Aromatics)**: Carbon range C9-C42\n\n**Equations:**\n- TM (n-alkanes) = 397 - exp(6.5096 - 0.14187·M^(2/3))\n- TMCP (cyclopentanes) = 370 - exp(6.52504 - 0.04945·M^(2/3))\n- TMCH (cyclohexanes) = 360 - exp(6.55942 - 0.04681·M^(2/3))\n- TMA (aromatics) = 356 - exp(6.62282 - 0.10019·M^(2/3))\n\nwhere M is molecular weight in g/mol and TM is melting point in Kelvin (K)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "hydrocarbon_type",
+          "label": "Hydrocarbon Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "n-Alkanes (Paraffins) C5-C40",
+              "value": "alkanes"
+            },
+            {
+              "label": "n-Alkycyclopentanes C7-C41",
+              "value": "cyclopentanes"
+            },
+            {
+              "label": "n-Alkycyclohexanes C7-C20",
+              "value": "cyclohexanes"
+            },
+            {
+              "label": "n-Alkybenzenes (Aromatics) C9-C42",
+              "value": "aromatics"
+            }
+          ],
+          "defaultValue": "alkanes"
+        },
+        {
+          "id": "molecular_weight",
+          "label": "Molecular Weight",
+          "type": "number",
+          "unit": "g/mol",
+          "defaultValue": 200
+        }
+      ],
+      "outputs": [
+        {
+          "id": "melting_point_k",
+          "label": "Melting Point",
+          "unit": "K",
+          "format": "decimal",
+          "formula": "IF(inputs.hydrocarbon_type='alkanes', 397 - EXP(6.5096 - 0.14187 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='cyclopentanes', 370 - EXP(6.52504 - 0.04945 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='cyclohexanes', 360 - EXP(6.55942 - 0.04681 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='aromatics', 356 - EXP(6.62282 - 0.10019 * POWER(inputs.molecular_weight, 2/3)), 0))))"
+        },
+        {
+          "id": "melting_point_celsius",
+          "label": "Melting Point",
+          "unit": "°C",
+          "format": "decimal",
+          "formula": "IF(inputs.hydrocarbon_type='alkanes', 397 - EXP(6.5096 - 0.14187 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='cyclopentanes', 370 - EXP(6.52504 - 0.04945 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='cyclohexanes', 360 - EXP(6.55942 - 0.04681 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='aromatics', 356 - EXP(6.62282 - 0.10019 * POWER(inputs.molecular_weight, 2/3)), 0)))) - 273.2"
+        },
+        {
+          "id": "melting_point_fahrenheit",
+          "label": "Melting Point",
+          "unit": "°F",
+          "format": "decimal",
+          "formula": "(IF(inputs.hydrocarbon_type='alkanes', 397 - EXP(6.5096 - 0.14187 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='cyclopentanes', 370 - EXP(6.52504 - 0.04945 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='cyclohexanes', 360 - EXP(6.55942 - 0.04681 * POWER(inputs.molecular_weight, 2/3)), IF(inputs.hydrocarbon_type='aromatics', 356 - EXP(6.62282 - 0.10019 * POWER(inputs.molecular_weight, 2/3)), 0)))) - 273.2) * 1.8 + 32"
+        }
+      ]
+    }
+  ]
+}

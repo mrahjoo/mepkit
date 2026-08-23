@@ -1,0 +1,86 @@
+{
+  "id": "legionella",
+  "title": "Legionella",
+  "description": "Legionella Pneumophila bacterium monitoring and risk assessment tool. Assess water system temperatures and determine the risk of Legionella development.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Legionella Risk Assessment\n\nThe Legionella Pneumophila bacterium thrives in water supply systems and air conditioning systems - and may cause Legionnaires disease.\n\n## Critical Temperature Ranges\n\n- **Danger Zone:** 69°F (20.5°C) to 122°F (50°C) - Bacteria thrives\n- **Survival Limit:** Up to 131°F (55°C) for 5-6 hours\n- **Destruction:** Above 158°F (70°C) - Instantaneous destruction\n- **Safe Operating:** At least 140°F (60°C) - General protection\n\n## High-Risk Systems\n\n- Cooling towers and evaporative condensers\n- Scrubber systems with low temperatures\n- Low temperature hot water supply systems\n\n## Prevention Measures\n\n- Keep basins and sumps free of mud and organic debris\n- Use chemical and organic inhibitors where recommended\n- Avoid water stagnation - circulate the water through the system\n- Avoid leaks from processes to the cooling water\n- Maintain proper operating temperatures\n\n**Warning:** Tap water at 140°F can cause full-thickness burn in 10 seconds. Always mix down to lower temperature before the tap."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "System Type",
+        "Current Temperature (°F)",
+        "Current Temperature (°C)",
+        "Risk Level",
+        "Recommended Action"
+      ],
+      "rows": [
+        [
+          "Cooling Tower",
+          "85",
+          "29.4",
+          "High Risk",
+          "Increase temperature or apply chemical treatment"
+        ],
+        [
+          "Hot Water Supply",
+          "130",
+          "54.4",
+          "Moderate Risk",
+          "Heat to at least 140°F (60°C)"
+        ],
+        [
+          "Evaporative Condenser",
+          "95",
+          "35",
+          "High Risk",
+          "Implement chemical inhibitors and circulation"
+        ],
+        [
+          "Heating System",
+          "155",
+          "68.3",
+          "Safe",
+          "Maintain current temperature and monitoring"
+        ],
+        [
+          "Process Water",
+          "110",
+          "43.3",
+          "High Risk",
+          "Prevent leaks and apply treatment protocol"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "waterTemp_F",
+          "label": "Water Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "waterTemp_C",
+          "label": "Temperature in Celsius",
+          "formula": "(inputs.waterTemp_F - 32) * 5/9",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "riskAssessment",
+          "label": "Risk Level",
+          "formula": "inputs.waterTemp_F < 69 ? 'Safe - Too Cold' : inputs.waterTemp_F <= 122 ? 'HIGH RISK - Danger Zone' : inputs.waterTemp_F < 131 ? 'Moderate Risk - Monitor' : inputs.waterTemp_F < 158 ? 'Safe - Monitor' : 'Safe - Bacteria Destroyed'",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

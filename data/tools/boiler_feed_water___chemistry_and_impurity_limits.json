@@ -1,0 +1,104 @@
+{
+  "id": "boiler_feed_water___chemistry_and_impurity_limits",
+  "title": "Boiler Feed Water - Chemistry and Impurity Limits",
+  "description": "ABMA recommended feed water chemistry limits for steam boilers. Contains maximum recommended limits for Total Dissolved Solids (TDS), total alkalinity, and suspended solids across different boiler operating pressures, as well as maximum allowable impurities in boiler water.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Boiler Operating Pressure (psig)",
+        "Boiler Operating Pressure (bar)",
+        "Total Dissolved Solids - TDS (ppm)",
+        "Total Alkalinity (ppm)",
+        "Total Suspended Solids (ppm)"
+      ],
+      "rows": [
+        [
+          "0 - 50",
+          "0 - 3.5",
+          2500,
+          500,
+          "—"
+        ],
+        [
+          "50 - 300",
+          "3.5 - 20",
+          3500,
+          700,
+          15
+        ],
+        [
+          "300 - 450",
+          "20 - 30",
+          3000,
+          600,
+          10
+        ],
+        [
+          "450 - 600",
+          "30 - 40",
+          2500,
+          500,
+          8
+        ],
+        [
+          "600 - 750",
+          "40 - 50",
+          1000,
+          200,
+          3
+        ],
+        [
+          "750 - 900",
+          "50 - 60",
+          750,
+          150,
+          2
+        ],
+        [
+          "900 - 1000",
+          "60 - 70",
+          625,
+          125,
+          1
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Chemical",
+        "Symbol",
+        "Maximum Concentration (ppm)"
+      ],
+      "rows": [
+        [
+          "Sodium sulphite",
+          "Na2SO3",
+          1
+        ],
+        [
+          "Sodium chloride",
+          "NaCl",
+          10
+        ],
+        [
+          "Sodium phosphate",
+          "Na3PO4",
+          25
+        ],
+        [
+          "Sodium sulphate",
+          "Na2SO4",
+          25
+        ],
+        [
+          "Silica oxide",
+          "SiO2",
+          0.2
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "hot_water_consumption_vs__occupants",
+  "title": "Hot Water Consumption vs. Occupants",
+  "description": "Consumption of hot water per person or occupant. Flow rate and temperature are the primary factors to be determined in the hydraulic and thermal design of water-heating and piping systems.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Building",
+        "Consumption per Occupant (liter/day)",
+        "Peak Demand per Occupant (liter/hr)",
+        "Storage per Occupant (liter)",
+        "Consumption per Occupant (gal/day)",
+        "Peak Demand per Occupant (gal/hr)",
+        "Storage per Occupant (gal)"
+      ],
+      "rows": [
+        [
+          "Factories (no process)",
+          "22 - 45",
+          "5 - 10",
+          "9",
+          "2",
+          "5",
+          "1"
+        ],
+        [
+          "Hospitals, general",
+          "160",
+          "35",
+          "30",
+          "7",
+          "27",
+          "6"
+        ],
+        [
+          "Hospitals, mental",
+          "110",
+          "25",
+          "22",
+          "5",
+          "27",
+          "6"
+        ],
+        [
+          "Hostels",
+          "90",
+          "20",
+          "45",
+          "10",
+          "30",
+          "7"
+        ],
+        [
+          "Hotels",
+          "90 - 160",
+          "20 - 35",
+          "45",
+          "10",
+          "30",
+          "7"
+        ],
+        [
+          "Houses and flats",
+          "90 - 160",
+          "20 - 35",
+          "45",
+          "10",
+          "30",
+          "7"
+        ],
+        [
+          "Offices",
+          "22",
+          "5",
+          "9",
+          "2",
+          "5",
+          "1"
+        ],
+        [
+          "Schools, boarding",
+          "115",
+          "25",
+          "20",
+          "4",
+          "25",
+          "5"
+        ],
+        [
+          "Schools, day",
+          "15",
+          "3",
+          "9",
+          "2",
+          "5",
+          "1"
+        ]
+      ]
+    }
+  ]
+}

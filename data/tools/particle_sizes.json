@@ -1,0 +1,224 @@
+{
+  "id": "particle_sizes",
+  "title": "Particle Sizes",
+  "description": "A comprehensive reference tool for understanding particle sizes across different materials and contaminants. Convert between microns, meters, inches, and other units. Includes typical particle sizes for common materials like dust, pollen, bacteria, sand, and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Particle Size Unit Conversions\n\n### Key Relationships\n- **One micron (μm)** is one-millionth of a meter\n- **1 micron = 10⁻⁶ m**\n- **1 micron = 1000 nanometers (nm)**\n- **1 inch = 25,400 microns**\n- **1 micron = 1/25,400 inch**\n\n### Eye Visibility\nThe human eye can generally see particles **larger than 40 microns**.\n\n### Airborne Particle Classification\n\n**Larger particles (>100 μm):** Fall quickly, terminal velocities > 0.5 m/s\n\n**Medium-size particles (1-100 μm):** Settle slowly, sedimentation velocities > 0.2 m/s\n\n**Small particles (<1 μm):** Fall very slowly, can remain suspended for days to years\n\n### Hazardous Dust Categories\n- **Inhalable Dust:** ≤100 microns (enters nose and mouth)\n- **Thoracic Dust/PM10:** ≤10 microns (reaches the lungs)\n- **Respirable Dust/PM2.5:** <5 microns (penetrates gas exchange region)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "microns",
+          "label": "Microns (μm)",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "meters",
+          "label": "Meters (m)",
+          "formula": "inputs.microns * 1e-6",
+          "format": "scientific"
+        },
+        {
+          "id": "nanometers",
+          "label": "Nanometers (nm)",
+          "formula": "inputs.microns * 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "inches",
+          "label": "Inches (in)",
+          "formula": "inputs.microns / 25400",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "meters_input",
+          "label": "Meters (m)",
+          "type": "number",
+          "defaultValue": 0.000001
+        }
+      ],
+      "outputs": [
+        {
+          "id": "microns_output",
+          "label": "Microns (μm)",
+          "formula": "inputs.meters_input * 1e6",
+          "format": "decimal"
+        },
+        {
+          "id": "nanometers_output",
+          "label": "Nanometers (nm)",
+          "formula": "inputs.meters_input * 1e9",
+          "format": "decimal"
+        },
+        {
+          "id": "inches_output",
+          "label": "Inches (in)",
+          "formula": "inputs.meters_input / 0.0254",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "inches_input",
+          "label": "Inches (in)",
+          "type": "number",
+          "defaultValue": 0.00004
+        }
+      ],
+      "outputs": [
+        {
+          "id": "microns_from_inches",
+          "label": "Microns (μm)",
+          "formula": "inputs.inches_input * 25400",
+          "format": "decimal"
+        },
+        {
+          "id": "meters_from_inches",
+          "label": "Meters (m)",
+          "formula": "inputs.inches_input * 0.0254",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Particle Type",
+        "Size Range (microns)",
+        "Category"
+      ],
+      "rows": [
+        [
+          "Oxygen",
+          "0.0005",
+          "Molecular"
+        ],
+        [
+          "Carbon Dioxide",
+          "0.00065",
+          "Molecular"
+        ],
+        [
+          "Pesticides & Herbicides",
+          "0.001",
+          "Chemical"
+        ],
+        [
+          "Sugars",
+          "0.0008 - 0.005",
+          "Organic"
+        ],
+        [
+          "Viruses",
+          "0.005 - 0.3",
+          "Biological"
+        ],
+        [
+          "Sea Salt",
+          "0.035 - 0.5",
+          "Marine"
+        ],
+        [
+          "Oil Smoke",
+          "0.03 - 1",
+          "Combustion"
+        ],
+        [
+          "Coal Flue Gas",
+          "0.08 - 0.2",
+          "Industrial"
+        ],
+        [
+          "Bromine",
+          "0.1 - 0.7",
+          "Chemical"
+        ],
+        [
+          "Lead Dust",
+          "0.1 - 0.7",
+          "Metal"
+        ],
+        [
+          "Paint Pigments",
+          "0.1 - 5",
+          "Industrial"
+        ],
+        [
+          "Radioactive Fallout",
+          "0.1 - 10",
+          "Hazardous"
+        ],
+        [
+          "Tobacco Smoke",
+          "0.01 - 4",
+          "Combustion"
+        ],
+        [
+          "Anthrax",
+          "1 - 5",
+          "Biological"
+        ],
+        [
+          "Red Blood Cells",
+          "5 - 10",
+          "Biological"
+        ],
+        [
+          "Bacteria",
+          "0.3 - 60",
+          "Biological"
+        ],
+        [
+          "Mold",
+          "3 - 12",
+          "Biological"
+        ],
+        [
+          "Pollen",
+          "10 - 1000",
+          "Biological"
+        ],
+        [
+          "Human Hair",
+          "40 - 300",
+          "Biological"
+        ],
+        [
+          "Dust Mites",
+          "100 - 300",
+          "Biological"
+        ],
+        [
+          "Beach Sand",
+          "100 - 10000",
+          "Mineral"
+        ],
+        [
+          "Gravel, very coarse",
+          "30000 - 65000",
+          "Mineral"
+        ],
+        [
+          "One inch",
+          "25400",
+          "Reference"
+        ]
+      ]
+    }
+  ]
+}

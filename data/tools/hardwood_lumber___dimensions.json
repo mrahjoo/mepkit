@@ -1,0 +1,118 @@
+{
+  "id": "hardwood_lumber___dimensions",
+  "title": "Hardwood Lumber - Dimensions",
+  "description": "Sizing of hardwood lumber. Dimensional lumber made from hardwood varies from the sizes used for softwood. Reference table for hardwood lumber dimensional sizes with rough sizes, nominal sizes, and actual dimensions in inches and millimeters.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Rough Size (Inches)",
+        "Nominal Size (Fraction In / Quarter)",
+        "Actual Dimension S1S (in)",
+        "Actual Dimension S1S (mm)",
+        "Actual Dimension S2S (in)",
+        "Actual Dimension S2S (mm)"
+      ],
+      "rows": [
+        [
+          "3/8",
+          "",
+          "",
+          "3/16",
+          "",
+          "4.8"
+        ],
+        [
+          "1/2",
+          "",
+          "3/8",
+          "9.5",
+          "5/16",
+          "7.9"
+        ],
+        [
+          "5/8",
+          "",
+          "1/2",
+          "13",
+          "7/16",
+          "11"
+        ],
+        [
+          "3/4",
+          "",
+          "5/8",
+          "16",
+          "9/16",
+          "14"
+        ],
+        [
+          "1",
+          "4/4",
+          "7/8",
+          "22",
+          "13/16",
+          "21"
+        ],
+        [
+          "1 1/4",
+          "5/4",
+          "1 1/8",
+          "29",
+          "1 1/16",
+          "27"
+        ],
+        [
+          "1 1/2",
+          "6/4",
+          "1 3/8",
+          "35",
+          "1 5/16",
+          "33"
+        ],
+        [
+          "1 3/4",
+          "",
+          "",
+          "",
+          "1 1/2",
+          "38"
+        ],
+        [
+          "2",
+          "8/4",
+          "1 13/16",
+          "46",
+          "1 3/4",
+          "44"
+        ],
+        [
+          "3",
+          "12/4",
+          "2 13/16",
+          "71",
+          "2 3/4",
+          "70"
+        ],
+        [
+          "3 1/2",
+          "",
+          "",
+          "",
+          "3 1/4",
+          "83"
+        ],
+        [
+          "4",
+          "16/4",
+          "3 13/16",
+          "97",
+          "3 3/4",
+          "95"
+        ]
+      ],
+      "content": "S1S - Surfaced one Side\nS2S - Surfaced two Sides\n\n1 inch = 25.4 mm"
+    }
+  ]
+}

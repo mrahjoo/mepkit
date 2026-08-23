@@ -1,0 +1,71 @@
+{
+  "id": "uscs___united_states_customary_system_units",
+  "title": "USCS - United States Customary System Units",
+  "description": "An overview of the United States Customary System Units - Imperial Units. Conversion tool between USCS and SI units with commonly used measurements.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# USCS - United States Customary System Units\n\nUSCS - United States Customary System Units are the measuring units used in the U.S. based on:\n\n- Mile\n- Foot\n- Inch\n- Gallon\n- Second\n- Pound\n\nUSCS units are also called the Imperial units. Imperial or USCS units are gradually being replaced by SI units.\n\n## Commonly used USCS and SI-units\n\nBelow is a table of common USCS units and their SI unit equivalents with conversion factors."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "USCS Unit",
+        "SI Unit",
+        "SI Symbol",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          "Square foot",
+          "Square meter",
+          "m²",
+          0.0929
+        ],
+        [
+          "Cubic foot",
+          "Cubic meter",
+          "m³",
+          0.2831
+        ],
+        [
+          "Pound per square inch",
+          "Kilopascal",
+          "kPa",
+          6.894
+        ],
+        [
+          "Pound force",
+          "Newton",
+          "N",
+          4.448
+        ],
+        [
+          "Foot pound torque",
+          "Newton meter",
+          "N·m",
+          1.356
+        ],
+        [
+          "Kip foot",
+          "Kilonewton meter",
+          "kN·m",
+          1.356
+        ],
+        [
+          "Gallon per minute",
+          "Liter per second",
+          "L/s",
+          0.06309
+        ],
+        [
+          "Kip per square inch",
+          "Megapascal",
+          "MPa",
+          6.89
+        ]
+      ]
+    }
+  ]
+}

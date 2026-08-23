@@ -1,0 +1,227 @@
+{
+  "id": "vertical_pipes___discharge_height_vs__volume_flow",
+  "title": "Vertical Pipes - Discharge Height vs. Volume Flow",
+  "description": "Calculate maximum vertical discharge height for water flow from vertical pipes and tubes. Includes both forward calculation (flow to height) and reverse calculation (height to flow) using the trajectory method.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate Discharge Height from Volume Flow",
+      "inputs": [
+        {
+          "id": "flow_gpm",
+          "label": "Volume Flow",
+          "type": "number",
+          "unit": "gpm",
+          "defaultValue": 529
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 4
+        },
+        {
+          "id": "coefficient_k",
+          "label": "Coefficient k",
+          "type": "number",
+          "defaultValue": 0.97
+        }
+      ],
+      "outputs": [
+        {
+          "id": "discharge_height",
+          "label": "Discharge Height",
+          "formula": "Math.pow(inputs.flow_gpm / (5.68 * inputs.coefficient_k * Math.pow(inputs.pipe_diameter, 2)), 2)",
+          "unit": "inches",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Measure Flow by Discharge Height (Reverse Calculation)",
+      "inputs": [
+        {
+          "id": "discharge_height_meas",
+          "label": "Measured Discharge Height",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 36
+        },
+        {
+          "id": "pipe_diameter_meas",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 4
+        },
+        {
+          "id": "coefficient_k_meas",
+          "label": "Coefficient k",
+          "type": "number",
+          "defaultValue": 0.97
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_flow_measured",
+          "label": "Volume Flow",
+          "formula": "5.68 * inputs.coefficient_k_meas * Math.pow(inputs.pipe_diameter_meas, 2) * Math.pow(inputs.discharge_height_meas, 0.5)",
+          "unit": "gpm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Discharge Height Reference Table",
+      "headers": [
+        "Pipe Diameter (in)",
+        "Flow 100 gpm",
+        "Flow 250 gpm",
+        "Flow 500 gpm",
+        "Flow 750 gpm",
+        "Flow 1000 gpm"
+      ],
+      "rows": [
+        [
+          2,
+          1.2,
+          7.5,
+          30,
+          67.5,
+          120
+        ],
+        [
+          3,
+          0.53,
+          3.31,
+          13.24,
+          29.79,
+          53
+        ],
+        [
+          4,
+          0.3,
+          1.87,
+          7.48,
+          16.83,
+          29.9
+        ],
+        [
+          6,
+          0.13,
+          0.83,
+          3.32,
+          7.47,
+          13.3
+        ],
+        [
+          8,
+          0.075,
+          0.47,
+          1.87,
+          4.2,
+          7.47
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Discharge Height vs Volume Flow",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Volume Flow (gpm)",
+          "data": [
+            100,
+            250,
+            500,
+            750,
+            1000
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Discharge Height (inches)"
+        },
+        "series": [
+          {
+            "name": "2 inch pipe",
+            "data": [
+              1.2,
+              7.5,
+              30,
+              67.5,
+              120
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "3 inch pipe",
+            "data": [
+              0.53,
+              3.31,
+              13.24,
+              29.79,
+              53
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "4 inch pipe",
+            "data": [
+              0.3,
+              1.87,
+              7.48,
+              16.83,
+              29.9
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "6 inch pipe",
+            "data": [
+              0.13,
+              0.83,
+              3.32,
+              7.47,
+              13.3
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "8 inch pipe",
+            "data": [
+              0.075,
+              0.47,
+              1.87,
+              4.2,
+              7.47
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "2 inch pipe",
+            "3 inch pipe",
+            "4 inch pipe",
+            "6 inch pipe",
+            "8 inch pipe"
+          ]
+        }
+      }
+    }
+  ]
+}

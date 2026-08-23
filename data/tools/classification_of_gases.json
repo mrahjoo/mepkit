@@ -1,0 +1,41 @@
+{
+  "id": "classification_of_gases",
+  "title": "Classification of Gases",
+  "description": "Oxidizers vs. inert vs. flammable gases. Compressed gases can be classified into three categories: oxidizers (contribute to combustion), inert gases (do not participate in combustion), and flammable gases (burn or explode when mixed with air/oxygen in the right concentration).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Gas Classification Overview\n\nCompressed gases can be classified into three main categories:\n\n### Oxidizers\nNot flammable by themselves, but will contribute to combustion as an oxidant. Do not mix with fats or oils.\n\n**Common oxidizers:** Air, Chlorine, Fluorine, Nitric Oxide, Nitrogen Dioxide, Oxygen\n\n### Inert Gases\nDo not take part in combustion processes and do not react with other materials. Useful for fire extinguishing systems where water damage must be avoided.\n\n**Common inert gases:** Argon, Carbon Dioxide, Helium, Neon, Nitrogen, Xenon\n\n### Flammable Gases\nBurn or explode when mixed with air or oxygen in the right concentration range. Mixture must be within the explosive concentration limits to ignite.\n\n**Common flammable gases:** Acetylene, Ammonia, Arsine, Butane, Carbon Monoxide, Cyclopropane, Ethane, Ethylene, Ethyl Chloride, Hydrogen, Isobutane, Methane, Methyl Chloride, Propane, Propylene, Silane"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas Category",
+        "Flammable",
+        "Supports Combustion",
+        "Safety Considerations"
+      ],
+      "rows": [
+        [
+          "Oxidizers",
+          "No",
+          "Yes (as oxidant)",
+          "Keep away from fats, oils, and flammable materials"
+        ],
+        [
+          "Inert Gases",
+          "No",
+          "No",
+          "Safe for use in sensitive environments; reduces oxygen levels"
+        ],
+        [
+          "Flammable Gases",
+          "Yes",
+          "No",
+          "Requires proper concentration limits; ignition risk if mixed with air/oxygen in right ratio"
+        ]
+      ]
+    }
+  ]
+}

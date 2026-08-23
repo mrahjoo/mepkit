@@ -1,0 +1,153 @@
+{
+  "id": "relative_humidity_in_production_and_process_enviro",
+  "title": "Relative Humidity in Production and Process Environments",
+  "description": "Recommended relative humidity in production and process environments - like libraries, breweries, storages and more. This tool provides guidance on optimal humidity levels to prevent product deterioration, damage, and ensure proper process conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Production or Process Environment",
+        "Recommended RH (%)",
+        "Key Considerations"
+      ],
+      "rows": [
+        [
+          "Sugar Storage",
+          "20 - 35%",
+          "Prevent moisture absorption"
+        ],
+        [
+          "Breweries",
+          "35 - 45%",
+          "Maintain proper fermentation conditions"
+        ],
+        [
+          "Coffee Powder",
+          "30 - 40%",
+          "Prevent caking and preserve aroma"
+        ],
+        [
+          "Milk Powder Storage",
+          "20 - 35%",
+          "Maintain shelf life and quality"
+        ],
+        [
+          "Seed Storage",
+          "35 - 45%",
+          "Preserve germination capacity"
+        ],
+        [
+          "Unpacked Medicine",
+          "20 - 35%",
+          "Prevent degradation"
+        ],
+        [
+          "Transformer Winding",
+          "15 - 30%",
+          "Electrical safety"
+        ],
+        [
+          "Semiconductors",
+          "30 - 50%",
+          "Prevent condensation and corrosion"
+        ],
+        [
+          "Books and Paper Archive",
+          "40 - 55%",
+          "Preserve document integrity"
+        ],
+        [
+          "Paper Storage",
+          "35 - 45%",
+          "Prevent brittleness and warping"
+        ],
+        [
+          "Preventing Rust and Corrosion",
+          "Below 55%",
+          "No rust generation below 40%"
+        ],
+        [
+          "Library",
+          "50 - 55%",
+          "Optimal archival conditions"
+        ],
+        [
+          "Spray Paint",
+          "30 - 50%",
+          "Proper application and drying"
+        ],
+        [
+          "Laboratory electronics",
+          "45 - 60%",
+          "Prevent static electricity"
+        ],
+        [
+          "Plastic Pallets",
+          "5 - 30%",
+          "Prevent warping"
+        ],
+        [
+          "Computer Peripherals",
+          "50 - 60%",
+          "Prevent static and condensation"
+        ],
+        [
+          "Rust Resistance",
+          "Below 40%",
+          "Corrosion prevention"
+        ],
+        [
+          "Medical Syrups",
+          "30 - 40%",
+          "Maintain pharmaceutical stability"
+        ],
+        [
+          "Capsule Storage",
+          "30 - 45%",
+          "Preserve capsule integrity"
+        ],
+        [
+          "Powder Storage",
+          "30 - 45%",
+          "Prevent caking and clumping"
+        ],
+        [
+          "Wood Drying",
+          "25 - 35%",
+          "Controlled drying process"
+        ],
+        [
+          "Explosives",
+          "35 - 50%",
+          "Safety: Low RH may generate static electricity"
+        ],
+        [
+          "Normal Storage",
+          "50 - 55%",
+          "General purpose storage"
+        ],
+        [
+          "Musical Instrument",
+          "45 - 55%",
+          "Preserve wood and acoustic properties"
+        ],
+        [
+          "Leather Product",
+          "40 - 55%",
+          "Prevent cracking and mold"
+        ],
+        [
+          "Cable Wrapping",
+          "15 - 25%",
+          "Maintain insulation properties"
+        ],
+        [
+          "Chemical Laboratory",
+          "30 - 45%",
+          "Ensure chemical stability"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "solubility",
+  "title": "Solubility Calculator",
+  "description": "Calculate the concentration of saturated solutions based on solubility data. This tool helps determine weight percentage (wt%) concentration of solutions given the solute mass, solvent mass, and solubility limits.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Solubility Calculator\n\n**Solubility** is the maximum amount of solute that can dissolve in a given amount of solvent at a specific temperature. This calculator determines the concentration (wt%) of solutions based on solubility data.\n\n### Key Concepts:\n- A **saturated solution** contains the maximum amount of solute possible in the solvent\n- Solubility varies with temperature (generally increases with temperature)\n- If you add more solute than the solubility allows, only the amount specified by solubility will dissolve\n\n### Formula:\n**Concentration (wt%) = (solute mass / total solution mass) × 100%**\n\nWhere total solution mass = solute mass + solvent mass"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "solute_mass",
+          "label": "Solute Mass Added",
+          "type": "number",
+          "unit": "g",
+          "defaultValue": 36
+        },
+        {
+          "id": "solvent_mass",
+          "label": "Solvent Mass",
+          "type": "number",
+          "unit": "g",
+          "defaultValue": 100
+        },
+        {
+          "id": "max_solubility",
+          "label": "Maximum Solubility",
+          "type": "number",
+          "unit": "g",
+          "defaultValue": 36
+        }
+      ],
+      "outputs": [
+        {
+          "id": "actual_dissolved",
+          "label": "Actual Solute Dissolved",
+          "formula": "Math.min(inputs.solute_mass, inputs.max_solubility)",
+          "unit": "g"
+        },
+        {
+          "id": "undissolved",
+          "label": "Undissolved Solute",
+          "formula": "Math.max(0, inputs.solute_mass - inputs.max_solubility)",
+          "unit": "g"
+        },
+        {
+          "id": "solution_mass",
+          "label": "Total Solution Mass",
+          "formula": "inputs.actual_dissolved + inputs.solvent_mass",
+          "unit": "g"
+        },
+        {
+          "id": "concentration_wt",
+          "label": "Concentration (wt%)",
+          "formula": "(inputs.actual_dissolved / (inputs.actual_dissolved + inputs.solvent_mass)) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Scenario",
+        "Solute Added (g)",
+        "Max Solubility (g)",
+        "Solvent (g)",
+        "Dissolved (g)",
+        "Undissolved (g)",
+        "Concentration (wt%)"
+      ],
+      "rows": [
+        [
+          "Example 1: Saturated NaCl",
+          "36",
+          "36",
+          "100",
+          "36",
+          "0",
+          "26.5"
+        ],
+        [
+          "Example 2: Unsaturated NaCl",
+          "34",
+          "36",
+          "100",
+          "34",
+          "0",
+          "25.4"
+        ],
+        [
+          "Example 3: Oversaturated NaCl",
+          "38",
+          "36",
+          "100",
+          "36",
+          "2",
+          "26.5"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Solubility Analysis",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Solubility Limit",
+            "Solute Added",
+            "Dissolved Amount"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Example 1\n(Saturated)",
+            "Example 2\n(Unsaturated)",
+            "Example 3\n(Oversaturated)"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Mass (g)"
+        },
+        "series": [
+          {
+            "name": "Solubility Limit",
+            "type": "line",
+            "data": [
+              36,
+              36,
+              36
+            ],
+            "itemStyle": {
+              "color": "#FF6B6B"
+            }
+          },
+          {
+            "name": "Solute Added",
+            "type": "bar",
+            "data": [
+              36,
+              34,
+              38
+            ],
+            "itemStyle": {
+              "color": "#4ECDC4"
+            }
+          },
+          {
+            "name": "Dissolved Amount",
+            "type": "bar",
+            "data": [
+              36,
+              34,
+              36
+            ],
+            "itemStyle": {
+              "color": "#95E1D3"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

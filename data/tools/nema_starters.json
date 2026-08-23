@@ -1,0 +1,154 @@
+{
+  "id": "nema_starters",
+  "title": "NEMA Starters",
+  "description": "NEMA sized contactors or starters - Select motor horsepower based on NEMA size and voltage. NEMA electrical motor starters are rated by size: 00, 0, 1, 2, 3, 4, 5, 6 and 7.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Polyphase Motors\n\nMaximum electrical motor horsepower for different NEMA starters for three phase motors:\n\n| NEMA Size | 200V | 230V | 460V | 575V |\n|-----------|------|------|------|------|\n| 00 | 1.5 | 1.5 | 2 | 2 |\n| 0 | 3 | 3 | 5 | 5 |\n| 1 | 7.5 | 7.5 | 10 | 15 |\n| 2 | 10 | 15 | 25 | 25 |\n| 3 | 25 | 30 | 50 | 50 |\n| 4 | 40 | 50 | 100 | 100 |\n| 5 | 75 | 100 | 200 | 200 |\n| 6 | 150 | 200 | 400 | 400 |\n| 7 | 300 | 300 | 600 | 600 |"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "nema_size",
+          "label": "NEMA Size",
+          "type": "select",
+          "options": [
+            {
+              "value": "00",
+              "label": "00"
+            },
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            }
+          ],
+          "defaultValue": "1"
+        },
+        {
+          "id": "voltage",
+          "label": "Voltage (Polyphase)",
+          "type": "select",
+          "options": [
+            {
+              "value": "200",
+              "label": "200V"
+            },
+            {
+              "value": "230",
+              "label": "230V"
+            },
+            {
+              "value": "460",
+              "label": "460V"
+            },
+            {
+              "value": "575",
+              "label": "575V"
+            }
+          ],
+          "defaultValue": "230"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "max_hp_polyphase",
+          "label": "Maximum Horsepower (Polyphase)",
+          "unit": "hp",
+          "formula": "inputs.nema_size === '00' && inputs.voltage === '200' ? 1.5 : inputs.nema_size === '00' && inputs.voltage === '230' ? 1.5 : inputs.nema_size === '00' && inputs.voltage === '460' ? 2 : inputs.nema_size === '00' && inputs.voltage === '575' ? 2 : inputs.nema_size === '0' && inputs.voltage === '200' ? 3 : inputs.nema_size === '0' && inputs.voltage === '230' ? 3 : inputs.nema_size === '0' && inputs.voltage === '460' ? 5 : inputs.nema_size === '0' && inputs.voltage === '575' ? 5 : inputs.nema_size === '1' && inputs.voltage === '200' ? 7.5 : inputs.nema_size === '1' && inputs.voltage === '230' ? 7.5 : inputs.nema_size === '1' && inputs.voltage === '460' ? 10 : inputs.nema_size === '1' && inputs.voltage === '575' ? 15 : inputs.nema_size === '2' && inputs.voltage === '200' ? 10 : inputs.nema_size === '2' && inputs.voltage === '230' ? 15 : inputs.nema_size === '2' && inputs.voltage === '460' ? 25 : inputs.nema_size === '2' && inputs.voltage === '575' ? 25 : inputs.nema_size === '3' && inputs.voltage === '200' ? 25 : inputs.nema_size === '3' && inputs.voltage === '230' ? 30 : inputs.nema_size === '3' && inputs.voltage === '460' ? 50 : inputs.nema_size === '3' && inputs.voltage === '575' ? 50 : inputs.nema_size === '4' && inputs.voltage === '200' ? 40 : inputs.nema_size === '4' && inputs.voltage === '230' ? 50 : inputs.nema_size === '4' && inputs.voltage === '460' ? 100 : inputs.nema_size === '4' && inputs.voltage === '575' ? 100 : inputs.nema_size === '5' && inputs.voltage === '200' ? 75 : inputs.nema_size === '5' && inputs.voltage === '230' ? 100 : inputs.nema_size === '5' && inputs.voltage === '460' ? 200 : inputs.nema_size === '5' && inputs.voltage === '575' ? 200 : inputs.nema_size === '6' && inputs.voltage === '200' ? 150 : inputs.nema_size === '6' && inputs.voltage === '230' ? 200 : inputs.nema_size === '6' && inputs.voltage === '460' ? 400 : inputs.nema_size === '6' && inputs.voltage === '575' ? 400 : inputs.nema_size === '7' && inputs.voltage === '200' ? 300 : inputs.nema_size === '7' && inputs.voltage === '230' ? 300 : inputs.nema_size === '7' && inputs.voltage === '460' ? 600 : 600"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Single Phase Motors\n\nMaximum horsepower with full voltage starting and two pole contactors:\n\n| NEMA Size | 115V | 230V |\n|-----------|------|------|\n| 00 | 1/3 | 1 |\n| 0 | 1 | 2 |\n| 1 | 2 | 3 |\n| 2 | 3 | 7.5 |\n| 3 | 7.5 | 15 |"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "nema_size_single",
+          "label": "NEMA Size",
+          "type": "select",
+          "options": [
+            {
+              "value": "00",
+              "label": "00"
+            },
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            }
+          ],
+          "defaultValue": "1"
+        },
+        {
+          "id": "voltage_single",
+          "label": "Voltage (Single Phase)",
+          "type": "select",
+          "options": [
+            {
+              "value": "115",
+              "label": "115V"
+            },
+            {
+              "value": "230",
+              "label": "230V"
+            }
+          ],
+          "defaultValue": "230"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "max_hp_single",
+          "label": "Maximum Horsepower (Single Phase)",
+          "unit": "hp",
+          "formula": "inputs.nema_size_single === '00' && inputs.voltage_single === '115' ? 0.333 : inputs.nema_size_single === '00' && inputs.voltage_single === '230' ? 1 : inputs.nema_size_single === '0' && inputs.voltage_single === '115' ? 1 : inputs.nema_size_single === '0' && inputs.voltage_single === '230' ? 2 : inputs.nema_size_single === '1' && inputs.voltage_single === '115' ? 2 : inputs.nema_size_single === '1' && inputs.voltage_single === '230' ? 3 : inputs.nema_size_single === '2' && inputs.voltage_single === '115' ? 3 : inputs.nema_size_single === '2' && inputs.voltage_single === '230' ? 7.5 : inputs.nema_size_single === '3' && inputs.voltage_single === '115' ? 7.5 : 15"
+        }
+      ]
+    }
+  ]
+}

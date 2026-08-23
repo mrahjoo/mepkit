@@ -1,0 +1,86 @@
+{
+  "id": "steam_pipes___max__flow_and_pressure_drop",
+  "title": "Steam Pipes - Max. Flow and Pressure Drop",
+  "description": "Calculate maximum flow rates and pressure drops in steam pipes based on pipe dimensions, steam properties, and operating conditions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Steam Pipe Flow and Pressure Drop Calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        },
+        {
+          "id": "steam_pressure",
+          "label": "Steam Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 10
+        },
+        {
+          "id": "steam_temperature",
+          "label": "Steam Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 200
+        },
+        {
+          "id": "mass_flow_rate",
+          "label": "Mass Flow Rate",
+          "type": "number",
+          "unit": "kg/h",
+          "defaultValue": 1000
+        },
+        {
+          "id": "pipe_roughness",
+          "label": "Pipe Roughness",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 0.045
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volumetric_flow",
+          "label": "Volumetric Flow Rate",
+          "formula": "inputs.mass_flow_rate / 3600",
+          "unit": "kg/s",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_drop",
+          "label": "Pressure Drop",
+          "formula": "(0.0826 * inputs.pipe_length * (inputs.mass_flow_rate / 3600)^2) / (inputs.pipe_diameter^5)",
+          "unit": "bar",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity",
+          "label": "Steam Velocity",
+          "formula": "(inputs.mass_flow_rate / 3600) / (3.14159 * (inputs.pipe_diameter/1000/2)^2)",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "max_velocity",
+          "label": "Max. Recommended Velocity",
+          "formula": "60",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

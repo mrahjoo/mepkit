@@ -1,0 +1,314 @@
+{
+  "id": "drag_coefficient",
+  "title": "Drag Coefficient Calculator",
+  "description": "Calculate drag force, work, and power required to overcome air resistance on a moving object. The drag force is determined by the drag coefficient, fluid density, velocity, and frontal area.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Drag Force Calculation\n\nCalculate the drag force and related energy metrics acting on an object moving through a fluid using the drag equation:\n\n**Fd = cd × ½ × ρ × v² × A**\n\nWhere:\n- **Fd** = drag force (N)\n- **cd** = drag coefficient (dimensionless)\n- **ρ** = fluid density (kg/m³)\n- **v** = flow velocity (m/s)\n- **A** = frontal area (m²)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cd",
+          "label": "Drag Coefficient (cd)",
+          "type": "number",
+          "defaultValue": 0.29,
+          "unit": ""
+        },
+        {
+          "id": "rho",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "defaultValue": 1.2,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "v",
+          "label": "Velocity (v)",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "m/s"
+        },
+        {
+          "id": "A",
+          "label": "Frontal Area (A)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m²"
+        },
+        {
+          "id": "distance",
+          "label": "Distance Traveled",
+          "type": "number",
+          "defaultValue": 90000,
+          "unit": "m"
+        },
+        {
+          "id": "time",
+          "label": "Time Duration",
+          "type": "number",
+          "defaultValue": 3600,
+          "unit": "s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Fd",
+          "label": "Drag Force",
+          "formula": "inputs.cd * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.A",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "Wd",
+          "label": "Work Done Against Drag",
+          "formula": "inputs.cd * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.A * inputs.distance",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "Pd",
+          "label": "Power Required",
+          "formula": "inputs.cd * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.v * inputs.A / inputs.time",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "Pd_kW",
+          "label": "Power Required",
+          "formula": "inputs.cd * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.v * inputs.A / inputs.time / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Object Type",
+        "Drag Coefficient (cd)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Laminar flat plate (Re=10⁶)",
+          0.001,
+          "Ideal streamlined surface"
+        ],
+        [
+          "Dolphin",
+          0.0036,
+          "Wetted area"
+        ],
+        [
+          "Turbulent flat plate (Re=10⁶)",
+          0.005,
+          ""
+        ],
+        [
+          "Subsonic Transport Aircraft",
+          0.012,
+          ""
+        ],
+        [
+          "Supersonic Fighter (M=2.5)",
+          0.016,
+          ""
+        ],
+        [
+          "Streamlined body",
+          0.04,
+          "π/4 d²"
+        ],
+        [
+          "Airplane wing (normal position)",
+          0.05,
+          ""
+        ],
+        [
+          "Streamlined half-body",
+          0.09,
+          ""
+        ],
+        [
+          "Long streamlined body",
+          0.1,
+          ""
+        ],
+        [
+          "Bicycle - Streamlined Velomobile",
+          0.12,
+          "5 ft² (0.47 m²)"
+        ],
+        [
+          "Airplane wing (stalled)",
+          0.15,
+          ""
+        ],
+        [
+          "Modern car (Tesla Model 3/Y)",
+          0.23,
+          ""
+        ],
+        [
+          "Toyota Prius / Tesla Model S",
+          0.24,
+          "Frontal area"
+        ],
+        [
+          "Sports car (sloping rear)",
+          0.25,
+          "0.2-0.3 range"
+        ],
+        [
+          "Common car (Opel Vectra Class C)",
+          0.29,
+          "Frontal area"
+        ],
+        [
+          "Hollow semi-sphere facing stream",
+          0.38,
+          ""
+        ],
+        [
+          "Bird",
+          0.4,
+          "Frontal area"
+        ],
+        [
+          "Solid Hemisphere",
+          0.42,
+          "π/4 d²"
+        ],
+        [
+          "Sphere",
+          0.5,
+          ""
+        ],
+        [
+          "Saloon car (stepped rear)",
+          0.45,
+          "0.4-0.5 range"
+        ],
+        [
+          "Bike - Drafting",
+          0.5,
+          "3.9 ft² (0.36 m²)"
+        ],
+        [
+          "Convertible (open top)",
+          0.65,
+          "0.6-0.7 range"
+        ],
+        [
+          "Bus",
+          0.7,
+          "0.6-0.8 range"
+        ],
+        [
+          "Old car (T-ford)",
+          0.8,
+          "0.7-0.9 range"
+        ],
+        [
+          "Cube",
+          0.8,
+          "s²"
+        ],
+        [
+          "Bike - Racing",
+          0.88,
+          "3.9 ft² (0.36 m²)"
+        ],
+        [
+          "Bicycle",
+          0.9,
+          ""
+        ],
+        [
+          "Tractor Trailed Truck",
+          0.96,
+          "Frontal area"
+        ],
+        [
+          "Truck",
+          0.9,
+          "0.8-1.0 range"
+        ],
+        [
+          "Person standing",
+          1.15,
+          "1.0-1.3 range"
+        ],
+        [
+          "Bike - Upright Commuter",
+          1.1,
+          "5.5 ft² (0.51 m²)"
+        ],
+        [
+          "Thin disk / Circular plate",
+          1.1,
+          "π/4 d²"
+        ],
+        [
+          "Solid hemisphere (normal to flat)",
+          1.17,
+          "π/4 d²"
+        ],
+        [
+          "Squared flat plate (90°)",
+          1.17,
+          ""
+        ],
+        [
+          "Wires and cables",
+          1.15,
+          "1.0-1.3 range"
+        ],
+        [
+          "Person (upright position)",
+          1.15,
+          "1.0-1.3 range"
+        ],
+        [
+          "Hollow semi-cylinder (opposite)",
+          1.2,
+          ""
+        ],
+        [
+          "Ski jumper",
+          1.25,
+          "1.2-1.3 range"
+        ],
+        [
+          "Hollow semi-sphere (open dish)",
+          1.38,
+          "1.33-1.42 range"
+        ],
+        [
+          "Passenger Train",
+          1.8,
+          "Frontal area"
+        ],
+        [
+          "Motorcycle and rider",
+          1.8,
+          "Frontal area"
+        ],
+        [
+          "Long flat plate (90°)",
+          1.98,
+          ""
+        ],
+        [
+          "Rectangular box",
+          2.1,
+          ""
+        ]
+      ]
+    }
+  ]
+}

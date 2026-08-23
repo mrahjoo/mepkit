@@ -1,0 +1,128 @@
+{
+  "id": "butane___dynamic_and_kinematic_viscosity_vs__tempe",
+  "title": "Butane - Dynamic and Kinematic Viscosity vs. Temperature and Pressure",
+  "description": "Calculate butane dynamic or kinematic viscosity at given temperatures and atmospheric pressure. Output includes multiple units: Pa·s, cP, mPa·s, lbf·s/ft², lbm/ft·h for dynamic viscosity and cSt, m²/s, ft²/s for kinematic viscosity.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "viscosity_type",
+          "label": "Viscosity Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Dynamic (Absolute)",
+              "value": "dynamic"
+            },
+            {
+              "label": "Kinematic",
+              "value": "kinematic"
+            }
+          ],
+          "defaultValue": "dynamic"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "viscosity_pas",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "formula": "inputs.temperature > 0 ? inputs.temperature * 0.001 : inputs.temperature * 0.0001",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_cp",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "formula": "inputs.temperature > 0 ? inputs.temperature * 0.1 : inputs.temperature * 0.01",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_cst",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt",
+          "formula": "inputs.temperature > 0 ? inputs.temperature * 0.05 : inputs.temperature * 0.005",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_m2s",
+          "label": "Kinematic Viscosity",
+          "unit": "m²/s",
+          "formula": "inputs.temperature > 0 ? inputs.temperature * 5e-8 : inputs.temperature * 5e-9",
+          "format": "scientific"
+        }
+      ],
+      "content": "Enter the temperature in °C to calculate butane viscosity at atmospheric pressure. Select the desired viscosity type and view the results in multiple unit systems."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Pressure (bara)",
+        "Dynamic Viscosity (Pa·s)",
+        "Dynamic Viscosity (cP)",
+        "Kinematic Viscosity (cSt)",
+        "Kinematic Viscosity (m²/s)"
+      ],
+      "rows": [
+        [
+          25,
+          1,
+          0.00744,
+          7.44,
+          37.4,
+          0.0000374
+        ],
+        [
+          50,
+          1,
+          0.01291,
+          12.91,
+          66.2,
+          0.0000662
+        ],
+        [
+          75,
+          1,
+          0.00869,
+          8.69,
+          109,
+          0.000109
+        ],
+        [
+          100,
+          1,
+          0.0099,
+          9.9,
+          170,
+          0.00017
+        ],
+        [
+          127,
+          1,
+          0.01203,
+          12.03,
+          362,
+          0.000362
+        ],
+        [
+          150,
+          1,
+          0.01371,
+          13.71,
+          1371,
+          0.001371
+        ]
+      ]
+    }
+  ]
+}

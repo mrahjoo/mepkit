@@ -1,0 +1,102 @@
+{
+  "id": "building_foundations___loads",
+  "title": "Building Foundations - Loads",
+  "description": "Typical loads on building foundations",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Typical Maximum Loads on Building Foundations\n\nTypical maximum loads on building foundations:\n\n*   Concrete frame, masonry clad : _20 - 25 kN/m2_  \n*   Steel frame, masonry clad : _15 - 20 kN/m2_ \n*   Precast concrete floor slabs, masonry walls : _15 - 20 kN/m2_\n*   Timber frame, masonry clad : _10 - 15 kN/m2_\n*   Steel frame, steel clad : _5 - 10 kN/m2_"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Building Type",
+        "Minimum Load (kN/m²)",
+        "Maximum Load (kN/m²)"
+      ],
+      "rows": [
+        [
+          "Concrete frame, masonry clad",
+          20,
+          25
+        ],
+        [
+          "Steel frame, masonry clad",
+          15,
+          20
+        ],
+        [
+          "Precast concrete floor slabs, masonry walls",
+          15,
+          20
+        ],
+        [
+          "Timber frame, masonry clad",
+          10,
+          15
+        ],
+        [
+          "Steel frame, steel clad",
+          5,
+          10
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Typical Maximum Loads on Building Foundations"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Minimum Load (kN/m²)",
+            "Maximum Load (kN/m²)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Concrete frame,\nmasonry clad",
+            "Steel frame,\nmasonry clad",
+            "Precast concrete\nfloor slabs",
+            "Timber frame,\nmasonry clad",
+            "Steel frame,\nsteel clad"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Load (kN/m²)"
+        },
+        "series": [
+          {
+            "name": "Minimum Load (kN/m²)",
+            "type": "bar",
+            "data": [
+              20,
+              15,
+              15,
+              10,
+              5
+            ]
+          },
+          {
+            "name": "Maximum Load (kN/m²)",
+            "type": "bar",
+            "data": [
+              25,
+              20,
+              20,
+              15,
+              10
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

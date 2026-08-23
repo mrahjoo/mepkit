@@ -1,0 +1,67 @@
+{
+  "id": "magnesium_binary_eutectic_alloys___melting_points",
+  "title": "Magnesium Binary Eutectic Alloys - Melting Points",
+  "description": "Mg - Magnesium - binary eutectic alloys and melting points. The melting point of an alloy of two or more metals depends on the relative proportions of the ingredients. An eutectic mixture is the mixture where the melting point is as low as possible.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloy Component",
+        "Weight of Alloy Component (%)",
+        "Melting Point (K)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Ni - Nickel",
+          23,
+          780,
+          945
+        ],
+        [
+          "Pr - Praseodymium",
+          23,
+          858,
+          1085
+        ],
+        [
+          "Pu - Plutonium",
+          63,
+          815,
+          1008
+        ],
+        [
+          "Sb - Antimony (Stibium)",
+          97,
+          855,
+          1080
+        ],
+        [
+          "Si - Silicon",
+          57,
+          1223,
+          1742
+        ],
+        [
+          "Sr - Strontium",
+          89,
+          699,
+          799
+        ],
+        [
+          "Th - Thorium",
+          42,
+          855,
+          1080
+        ],
+        [
+          "Zn - Zinc",
+          53,
+          615,
+          648
+        ]
+      ]
+    }
+  ]
+}

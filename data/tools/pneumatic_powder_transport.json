@@ -1,0 +1,85 @@
+{
+  "id": "pneumatic_powder_transport",
+  "title": "Pneumatic Powder Transport",
+  "description": "Calculator for pneumatic powder transport systems. This tool helps engineers and operators design and optimize pneumatic conveying systems for powder handling applications.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pneumatic Powder Transport Calculator\n\nThis calculator helps you determine key parameters for pneumatic powder transport systems.\n\n### Privacy Notice\nWe respect your privacy. Any data entered in this tool is processed securely and not stored for advertising purposes.",
+      "headers": [
+        "Pneumatic Powder Transport Calculator"
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "powder_density",
+          "label": "Powder Bulk Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1200
+        },
+        {
+          "id": "transport_distance",
+          "label": "Transport Distance",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        },
+        {
+          "id": "transport_rate",
+          "label": "Transport Rate",
+          "type": "number",
+          "unit": "kg/h",
+          "defaultValue": 5000
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "air_pressure",
+          "label": "Air Supply Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_flow",
+          "label": "Volume Flow Rate",
+          "unit": "m³/h",
+          "formula": "inputs.transport_rate / inputs.powder_density * 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "pipe_velocity",
+          "label": "Conveying Velocity",
+          "unit": "m/s",
+          "formula": "(inputs.transport_rate / inputs.powder_density * 1000 / 3600) / (3.14159 * (inputs.pipe_diameter/1000/2)^2)",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_drop",
+          "label": "Estimated Pressure Drop",
+          "unit": "bar",
+          "formula": "inputs.transport_distance * 0.01 + inputs.transport_rate * 0.00001",
+          "format": "decimal"
+        },
+        {
+          "id": "required_compressor",
+          "label": "Required Compressor Power",
+          "unit": "kW",
+          "formula": "inputs.air_pressure * (inputs.transport_rate / inputs.powder_density * 1000 / 3600) * 0.1 / 0.7",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

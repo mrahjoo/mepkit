@@ -1,0 +1,72 @@
+{
+  "id": "universal_gravitational_law",
+  "title": "Universal Gravitational Law",
+  "description": "Gravitational attraction between two objects vs. mass of the objects and the distance between them.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Universal Gravitational Law\n\nThe gravitational attraction between two objects depends upon the mass of the objects and the distance between them. This relationship is often called the \"Universal Law of Gravitation\" and can be expressed as:\n\n$$F = k_G \\frac{m_1 m_2}{r^2}$$\n\n**Where:**\n- **F** = gravitational force (N)\n- **k_G** = 6.668×10⁻¹¹ (Nm²/kg²) = Universal Gravitation Constant\n- **m₁, m₂** = mass of objects (kg)\n- **r** = distance between objects (m)\n\n### Example\nThe gravitational force acting on a 70 kg person on Earth's surface (6.37×10⁶ m from Earth's center):\n- F = (6.668×10⁻¹¹) × (5.98×10²⁴) × (70) / (6.37×10⁶)²\n- F = 688.1 N"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "m1",
+          "label": "Mass of Object 1 (m₁)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 70
+        },
+        {
+          "id": "m2",
+          "label": "Mass of Object 2 (m₂)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 5.98e+24
+        },
+        {
+          "id": "r",
+          "label": "Distance Between Objects (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 6370000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force",
+          "label": "Gravitational Force",
+          "unit": "N",
+          "formula": "(6.668e-11 * inputs.m1 * inputs.m2) / (inputs.r * inputs.r)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Distance (m)",
+        "Force (N)"
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Distance (m)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Gravitational Force (N)"
+        },
+        "series": [
+          {
+            "data": [],
+            "type": "line",
+            "smooth": true,
+            "name": "Gravitational Force"
+          }
+        ]
+      }
+    }
+  ]
+}

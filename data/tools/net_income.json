@@ -1,0 +1,55 @@
+{
+  "id": "net_income",
+  "title": "Net Income",
+  "description": "Operating profit after tax. Net income (or net profit) is calculated as the sum of project revenues minus the sum of project expenses.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Metric",
+        "Amount"
+      ],
+      "rows": [
+        [
+          "Project Revenues (R)",
+          ""
+        ],
+        [
+          "Project Expenses (E)",
+          ""
+        ],
+        [
+          "Net Income (NP)",
+          ""
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "revenues",
+          "label": "Project Revenues (R)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "expenses",
+          "label": "Project Expenses (E)",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "net_income_result",
+          "label": "Net Income (NP)",
+          "formula": "inputs.revenues - inputs.expenses",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\n**NP = Σ R - Σ E**\n\nWhere:\n- **NP** = Net Profit (or Net Income)\n- **R** = Project Revenues\n- **E** = Project Expenses\n\n## Expenses Include\n\nAll costs needed to generate revenue:\n- Labor\n- Material\n- Services\n- Inventory\n- Supplies\n- Depreciation\n- Employee salaries\n- Renting buildings\n- Insurance coverage\n- Income taxes"
+    }
+  ]
+}

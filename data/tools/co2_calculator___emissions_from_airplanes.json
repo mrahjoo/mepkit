@@ -1,0 +1,149 @@
+{
+  "id": "co2_calculator___emissions_from_airplanes",
+  "title": "CO2 Calculator - Emissions from Airplanes",
+  "description": "Calculator for CO2 emissions from planes, comparing with alternative forms of transportation (train, bus, conventional and electrical cars). Estimate CO2 emissions from your air travel and compare with alternative transportation methods.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "airplane_emissions_calc",
+      "content": "Calculate CO2 emissions from airplane travel",
+      "inputs": [
+        {
+          "id": "flight_distance",
+          "label": "Flight Distance",
+          "type": "number",
+          "unit": "km",
+          "defaultValue": 1000
+        },
+        {
+          "id": "seat_class",
+          "label": "Seat Class",
+          "type": "select",
+          "options": [
+            {
+              "label": "Economy",
+              "value": "economy"
+            },
+            {
+              "label": "Business",
+              "value": "business"
+            },
+            {
+              "label": "First",
+              "value": "first"
+            }
+          ],
+          "defaultValue": "economy"
+        },
+        {
+          "id": "number_of_passengers",
+          "label": "Number of Passengers",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "plane_emissions",
+          "label": "Plane CO2 Emissions",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.flight_distance * 0.12 * inputs.number_of_passengers"
+        },
+        {
+          "id": "car_emissions",
+          "label": "Car CO2 Emissions (equivalent)",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.flight_distance * 0.12 * inputs.number_of_passengers * 1.23"
+        },
+        {
+          "id": "bus_emissions",
+          "label": "Bus CO2 Emissions (equivalent)",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.flight_distance * 0.12 * inputs.number_of_passengers * 1.27"
+        },
+        {
+          "id": "train_emissions",
+          "label": "Train CO2 Emissions (equivalent)",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.flight_distance * 0.12 * inputs.number_of_passengers * 1.33"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "emissions_comparison_table",
+      "content": "Comparison of CO2 Emissions by Transportation Method",
+      "headers": [
+        "Transportation Method",
+        "Distance Efficiency",
+        "CO2 Emissions (kg)"
+      ],
+      "rows": [
+        [
+          "Plane",
+          "1.00",
+          "=outputs.plane_emissions"
+        ],
+        [
+          "Car",
+          "1.23",
+          "=outputs.car_emissions"
+        ],
+        [
+          "Bus",
+          "1.27",
+          "=outputs.bus_emissions"
+        ],
+        [
+          "Train",
+          "1.33",
+          "=outputs.train_emissions"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "emissions_chart",
+      "content": "CO2 Emissions Comparison Chart",
+      "options": {
+        "title": {
+          "text": "CO2 Emissions Comparison by Transportation Method",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Plane",
+            "Car",
+            "Bus",
+            "Train"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "CO2 Emissions (kg)"
+        },
+        "series": [
+          {
+            "name": "CO2 Emissions",
+            "type": "bar",
+            "data": [
+              "=outputs.plane_emissions",
+              "=outputs.car_emissions",
+              "=outputs.bus_emissions",
+              "=outputs.train_emissions"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

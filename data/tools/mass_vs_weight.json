@@ -1,0 +1,208 @@
+{
+  "id": "mass_vs_weight",
+  "title": "Mass vs Weight",
+  "description": "Calculate the relationship between mass and weight using Newton's Second Law. Convert between SI units (kg, N), British Gravitational units (slugs, lbf), and English Engineering units (lbm, lbf).",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "mass_weight_calculator",
+      "content": "## Mass and Weight Calculator\n\nUse Newton's Second Law (F = m × a) to calculate weight from mass:\n\n**Weight Formula:** Fg = m × ag\n\nWhere:\n- Fg = gravitational force (weight)\n- m = mass\n- ag = acceleration of gravity",
+      "inputs": [
+        {
+          "id": "mass_kg",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "kg"
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "select",
+          "defaultValue": "9.807",
+          "options": [
+            {
+              "label": "Earth (SI) - 9.807 m/s²",
+              "value": 9.807
+            },
+            {
+              "label": "Earth (Imperial) - 32.174 ft/s²",
+              "value": 32.174
+            },
+            {
+              "label": "Moon - 1.62 m/s²",
+              "value": 1.62
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight_N",
+          "label": "Weight (SI Units)",
+          "formula": "inputs.mass_kg * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "weight_kN",
+          "label": "Weight (SI - Kilonewtons)",
+          "formula": "(inputs.mass_kg * inputs.gravity) / 1000",
+          "unit": "kN",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "unit_systems_table",
+      "content": "## Unit Systems Comparison",
+      "headers": [
+        "System",
+        "Mass Unit",
+        "Force/Weight Unit",
+        "Gravity Constant",
+        "Base Formula"
+      ],
+      "rows": [
+        [
+          "SI (International System)",
+          "kg",
+          "N (Newton)",
+          "9.807 m/s²",
+          "Fg = m × ag"
+        ],
+        [
+          "BG (British Gravitational)",
+          "slug",
+          "lbf (pound-force)",
+          "32.174 ft/s²",
+          "Fg = m × ag"
+        ],
+        [
+          "EE (English Engineering)",
+          "lbm (pound-mass)",
+          "lbf (pound-force)",
+          "32.174 ft/s²",
+          "Fg = (m × ag) / gc"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "conversion_examples",
+      "content": "## Weight Conversion Examples",
+      "headers": [
+        "Mass (kg)",
+        "Weight (N)",
+        "Weight (kN)",
+        "Weight (lbf)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "1",
+          "9.807",
+          "0.0098",
+          "2.205",
+          "1 kg standard weight on Earth"
+        ],
+        [
+          "1644",
+          "16122.7",
+          "16.1",
+          "3627.8",
+          "Example: car mass"
+        ],
+        [
+          "100",
+          "980.7",
+          "0.981",
+          "220.5",
+          "Common example mass"
+        ],
+        [
+          "1",
+          "1.62",
+          "0.0016",
+          "0.364",
+          "Same 1 kg mass on Moon"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "mass_weight_chart",
+      "content": "## Mass vs Weight Relationship\n\nVisualization of weight calculation across different masses using Earth's gravity (9.807 m/s²)",
+      "options": {
+        "title": {
+          "text": "Mass vs Weight on Earth"
+        },
+        "xAxis": {
+          "name": "Mass (kg)",
+          "type": "value"
+        },
+        "yAxis": {
+          "name": "Weight (N)",
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Weight (N)",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                9.807
+              ],
+              [
+                5,
+                49.035
+              ],
+              [
+                10,
+                98.07
+              ],
+              [
+                50,
+                490.35
+              ],
+              [
+                100,
+                980.7
+              ],
+              [
+                500,
+                4903.5
+              ],
+              [
+                1000,
+                9807
+              ],
+              [
+                1644,
+                16122.7
+              ]
+            ]
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "left": "10%",
+          "right": "10%",
+          "bottom": "15%",
+          "top": "15%",
+          "containLabel": true
+        }
+      }
+    }
+  ]
+}

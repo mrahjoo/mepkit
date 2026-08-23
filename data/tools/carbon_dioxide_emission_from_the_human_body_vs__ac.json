@@ -1,0 +1,70 @@
+{
+  "id": "carbon_dioxide_emission_from_the_human_body_vs__ac",
+  "title": "Carbon Dioxide Emission from the Human Body vs. Activity",
+  "description": "Calculate carbon dioxide emission from persons based on their activity level. This tool helps determine CO2 concentrations in rooms with people and can be used to modulate ventilation system capacities.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Activity Levels Reference\n\n| Activity | Respiration (m³/h) | CO₂ Emission (m³/h) |\n|----------|-------------------|---------------------|\n| Sleep | 0.3 | 0.013 |\n| Resting/Low Activity | 0.5 | 0.02 |\n| Normal Work | 2-3 | 0.08-0.13 |\n| Hard Work | 7-8 | 0.33-0.38 |\n\n**Note:** 1 m³/h = 0.5886 ft³/min (cfm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "activity_type",
+          "label": "Activity Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Sleep",
+              "value": 1
+            },
+            {
+              "label": "Resting/Low Activity Work",
+              "value": 2
+            },
+            {
+              "label": "Normal Work",
+              "value": 3
+            },
+            {
+              "label": "Hard Work",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "num_persons",
+          "label": "Number of Persons",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "persons"
+        },
+        {
+          "id": "co2_emission_per_person",
+          "label": "CO₂ Emission per Person",
+          "type": "number",
+          "defaultValue": 0.02,
+          "unit": "m³/h"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_co2_emission",
+          "label": "Total CO₂ Emission",
+          "formula": "inputs.num_persons * inputs.co2_emission_per_person",
+          "unit": "m³/h",
+          "format": "decimal"
+        },
+        {
+          "id": "total_co2_emission_cfm",
+          "label": "Total CO₂ Emission (CFM)",
+          "formula": "inputs.num_persons * inputs.co2_emission_per_person * 0.5886",
+          "unit": "ft³/min",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

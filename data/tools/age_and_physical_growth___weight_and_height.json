@@ -1,0 +1,285 @@
+{
+  "id": "age_and_physical_growth___weight_and_height",
+  "title": "Age and Physical Growth - Weight and Height",
+  "description": "Age and typical physical growth of boys and girls - age 2 to 18 years.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "chart",
+      "content": "Physical Growth Chart",
+      "headers": [
+        "Age (years)",
+        "Boys Weight (kg)",
+        "Girls Weight (kg)",
+        "Boys Height (cm)",
+        "Girls Height (cm)"
+      ],
+      "rows": [
+        [
+          2,
+          14.5,
+          14,
+          89,
+          88
+        ],
+        [
+          3,
+          16.5,
+          16,
+          96,
+          95
+        ],
+        [
+          4,
+          18.5,
+          18,
+          103,
+          102
+        ],
+        [
+          5,
+          20.5,
+          20,
+          110,
+          109
+        ],
+        [
+          6,
+          22.5,
+          21.5,
+          116,
+          115
+        ],
+        [
+          7,
+          25,
+          24,
+          122,
+          121
+        ],
+        [
+          8,
+          27.5,
+          26.5,
+          128,
+          127
+        ],
+        [
+          9,
+          30,
+          29,
+          133,
+          132
+        ],
+        [
+          10,
+          33,
+          32,
+          139,
+          138
+        ],
+        [
+          11,
+          36.5,
+          35.5,
+          144,
+          144
+        ],
+        [
+          12,
+          40.5,
+          39.5,
+          150,
+          150
+        ],
+        [
+          13,
+          45,
+          43.5,
+          156,
+          156
+        ],
+        [
+          14,
+          50,
+          47.5,
+          162,
+          160
+        ],
+        [
+          15,
+          55,
+          50.5,
+          167,
+          162
+        ],
+        [
+          16,
+          60,
+          52.5,
+          171,
+          163
+        ],
+        [
+          17,
+          65,
+          53.5,
+          174,
+          164
+        ],
+        [
+          18,
+          68,
+          54,
+          176,
+          164
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Weight (kg)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Height (cm)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Boys Weight (kg)",
+            "data": [
+              14.5,
+              16.5,
+              18.5,
+              20.5,
+              22.5,
+              25,
+              27.5,
+              30,
+              33,
+              36.5,
+              40.5,
+              45,
+              50,
+              55,
+              60,
+              65,
+              68
+            ],
+            "type": "line",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Girls Weight (kg)",
+            "data": [
+              14,
+              16,
+              18,
+              20,
+              21.5,
+              24,
+              26.5,
+              29,
+              32,
+              35.5,
+              39.5,
+              43.5,
+              47.5,
+              50.5,
+              52.5,
+              53.5,
+              54
+            ],
+            "type": "line",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Boys Height (cm)",
+            "data": [
+              89,
+              96,
+              103,
+              110,
+              116,
+              122,
+              128,
+              133,
+              139,
+              144,
+              150,
+              156,
+              162,
+              167,
+              171,
+              174,
+              176
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          },
+          {
+            "name": "Girls Height (cm)",
+            "data": [
+              88,
+              95,
+              102,
+              109,
+              115,
+              121,
+              127,
+              132,
+              138,
+              144,
+              150,
+              156,
+              160,
+              162,
+              163,
+              164,
+              164
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ],
+        "legend": {
+          "data": [
+            "Boys Weight (kg)",
+            "Girls Weight (kg)",
+            "Boys Height (cm)",
+            "Girls Height (cm)"
+          ]
+        },
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "octane_liquid___thermal_properties",
+  "title": "Octane Liquid - Thermal Properties",
+  "description": "Density, specific heat, thermal conductivity and more. Thermal properties of Octane (C8H18) at various temperatures.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Octane Liquid - Thermal Properties\n\nOctane is a hydrocarbon and an alkane with the chemical formula C8H18, and the condensed structural formula CH3(CH2)6CH3.\n\n## Conversion Factors\n\n* 1 kg/m³ = 0.0624 lb/ft³\n* 1 kJ/kgK = 0.2389 Btu/lbmoF\n* 1 W/(m K) = 6.935 (Btu in)/(ft² h °F)\n* 1 Pa s (N s/m²) = 10 P (Poise) = 10³ cP = 0.1020 kp s/m² = 0.6721 lb/(ft s)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Specific Heat (kJ/kg K)",
+        "Thermal Conductivity (W/m K)",
+        "Dynamic Viscosity (×10⁻⁶ Pa·s)",
+        "Prandtl Number"
+      ],
+      "rows": [
+        [
+          -25,
+          738,
+          2.064,
+          0.144,
+          1020,
+          14.62
+        ],
+        [
+          0,
+          719,
+          2.131,
+          0.137,
+          714,
+          11.11
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Octane Thermal Properties vs Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Density (kg/m³)",
+            "Specific Heat (kJ/kg K)",
+            "Thermal Conductivity (W/m K)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            -25,
+            0
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Density (kg/m³)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Specific Heat (kJ/kg K)",
+            "position": "right"
+          },
+          {
+            "type": "value",
+            "name": "Thermal Conductivity (W/m K)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Density (kg/m³)",
+            "type": "line",
+            "data": [
+              738,
+              719
+            ],
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Specific Heat (kJ/kg K)",
+            "type": "line",
+            "data": [
+              2.064,
+              2.131
+            ],
+            "yAxisIndex": 1
+          },
+          {
+            "name": "Thermal Conductivity (W/m K)",
+            "type": "line",
+            "data": [
+              0.144,
+              0.137
+            ],
+            "yAxisIndex": 2
+          }
+        ]
+      }
+    }
+  ]
+}

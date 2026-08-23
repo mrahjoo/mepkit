@@ -1,0 +1,245 @@
+{
+  "id": "ventilation_systems___classification_of_noise_redu",
+  "title": "Ventilation Systems - Classification of Noise Reduction Silencers",
+  "description": "Tool for analyzing Dynamic Insertion Loss (DIL) of absorptive silencers in HVAC duct systems across various diameters, lengths, and frequencies.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "dil_table",
+      "headers": [
+        "Diameter (inches)",
+        "Length (inches)",
+        "Frequency (Hz)",
+        "125 Hz (dB)",
+        "250 Hz (dB)",
+        "500 Hz (dB)",
+        "1000 Hz (dB)",
+        "2000 Hz (dB)",
+        "4000 Hz (dB)",
+        "8000 Hz (dB)"
+      ],
+      "rows": [
+        [
+          4,
+          24,
+          "Multiple",
+          8,
+          14,
+          26,
+          34,
+          41,
+          45,
+          25
+        ],
+        [
+          5,
+          24,
+          "Multiple",
+          6,
+          12,
+          22,
+          28,
+          37,
+          38,
+          22
+        ],
+        [
+          6,
+          24,
+          "Multiple",
+          5,
+          10,
+          18,
+          23,
+          33,
+          30,
+          19
+        ],
+        [
+          8,
+          24,
+          "Multiple",
+          4,
+          9,
+          17,
+          22,
+          29,
+          25,
+          18
+        ],
+        [
+          10,
+          36,
+          "Multiple",
+          6,
+          11,
+          21,
+          27,
+          39,
+          25,
+          19
+        ],
+        [
+          12,
+          36,
+          "Multiple",
+          5,
+          9,
+          18,
+          23,
+          32,
+          20,
+          18
+        ],
+        [
+          16,
+          36,
+          "Multiple",
+          5,
+          8,
+          11,
+          23,
+          19,
+          17,
+          15
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "dil_chart",
+      "content": "DIL by Diameter and Frequency",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "4 in",
+            "5 in",
+            "6 in",
+            "8 in",
+            "10 in",
+            "12 in",
+            "16 in"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "125 Hz",
+            "250 Hz",
+            "500 Hz",
+            "1000 Hz",
+            "2000 Hz",
+            "4000 Hz",
+            "8000 Hz"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "DIL (dB)"
+        },
+        "series": [
+          {
+            "name": "4 in",
+            "type": "line",
+            "data": [
+              8,
+              14,
+              26,
+              34,
+              41,
+              45,
+              25
+            ]
+          },
+          {
+            "name": "5 in",
+            "type": "line",
+            "data": [
+              6,
+              12,
+              22,
+              28,
+              37,
+              38,
+              22
+            ]
+          },
+          {
+            "name": "6 in",
+            "type": "line",
+            "data": [
+              5,
+              10,
+              18,
+              23,
+              33,
+              30,
+              19
+            ]
+          },
+          {
+            "name": "8 in",
+            "type": "line",
+            "data": [
+              4,
+              9,
+              17,
+              22,
+              29,
+              25,
+              18
+            ]
+          },
+          {
+            "name": "10 in",
+            "type": "line",
+            "data": [
+              6,
+              11,
+              21,
+              27,
+              39,
+              25,
+              19
+            ]
+          },
+          {
+            "name": "12 in",
+            "type": "line",
+            "data": [
+              5,
+              9,
+              18,
+              23,
+              32,
+              20,
+              18
+            ]
+          },
+          {
+            "name": "16 in",
+            "type": "line",
+            "data": [
+              5,
+              8,
+              11,
+              23,
+              19,
+              17,
+              15
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "overview",
+      "content": "## Overview\n\nThe purpose of a duct silencer is to reduce the noise from the air-handling system caused by:\n- Fan operation\n- Passage of air through straight ducts\n- Impact of air flowing through components such as elbows, branches, mixing boxes, etc.\n\n### Key Silencer Classifications\n\n**Absorptive/Dissipative Silencers**: Use sound absorbing materials to attenuate sound waves. Widely used in HVAC duct systems with parallel baffle arrangements.\n\n**Reflective/Reactive Silencers**: Reflect sound waves back to the source using tuned cavities or membranes. Rarely used in HVAC systems.\n\n**Diffuser/Depressive Silencers**: Use perforated elements to slow flow velocity and prevent low frequency noise generation.\n\n**Active Silencers**: Use electro-acoustical means to cancel noise. Effective below 300 Hz for steady noise fields."
+    }
+  ]
+}

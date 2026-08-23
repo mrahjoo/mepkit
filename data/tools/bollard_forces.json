@@ -1,0 +1,175 @@
+{
+  "id": "bollard_forces",
+  "title": "Bollard Forces",
+  "description": "Calculate the effort force required to hold a load force in a rope wrapped around a bollard or pole. The effort force is dramatically reduced by wrapping the rope around the bollard due to friction.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "bollard_calculator",
+      "content": "Bollard Effort Force Calculator",
+      "inputs": [
+        {
+          "id": "load_force",
+          "label": "Load Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 500
+        },
+        {
+          "id": "friction_coefficient",
+          "label": "Friction Coefficient",
+          "type": "number",
+          "defaultValue": 0.4
+        },
+        {
+          "id": "angle_degrees",
+          "label": "Angle (degrees)",
+          "type": "number",
+          "unit": "°",
+          "defaultValue": 180
+        }
+      ],
+      "outputs": [
+        {
+          "id": "effort_force",
+          "label": "Effort Force",
+          "unit": "N",
+          "formula": "inputs.load_force * Math.exp(-(inputs.friction_coefficient * inputs.angle_degrees * Math.PI / 180))",
+          "format": "decimal"
+        },
+        {
+          "id": "force_ratio",
+          "label": "Effort/Load Ratio",
+          "formula": "Math.exp(-(inputs.friction_coefficient * inputs.angle_degrees * Math.PI / 180))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "bollard_chart",
+      "content": "Effort Force vs Rope Angle",
+      "headers": [
+        "Angle (degrees)",
+        "Friction 0.3",
+        "Friction 0.4",
+        "Friction 0.5"
+      ],
+      "rows": [
+        [
+          0,
+          100,
+          100,
+          100
+        ],
+        [
+          90,
+          73.85,
+          67.03,
+          60.65
+        ],
+        [
+          180,
+          54.54,
+          44.93,
+          36.79
+        ],
+        [
+          270,
+          40.25,
+          30.12,
+          22.31
+        ],
+        [
+          360,
+          29.69,
+          20.19,
+          13.53
+        ],
+        [
+          540,
+          16.23,
+          8.61,
+          3.73
+        ],
+        [
+          720,
+          8.9,
+          3.68,
+          1.37
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Angle (degrees)",
+          "data": [
+            "0°",
+            "90°",
+            "180°",
+            "270°",
+            "360°",
+            "540°",
+            "720°"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Effort/Load Ratio (%)"
+        },
+        "series": [
+          {
+            "name": "Friction 0.3",
+            "data": [
+              100,
+              73.85,
+              54.54,
+              40.25,
+              29.69,
+              16.23,
+              8.9
+            ],
+            "type": "line"
+          },
+          {
+            "name": "Friction 0.4",
+            "data": [
+              100,
+              67.03,
+              44.93,
+              30.12,
+              20.19,
+              8.61,
+              3.68
+            ],
+            "type": "line"
+          },
+          {
+            "name": "Friction 0.5",
+            "data": [
+              100,
+              60.65,
+              36.79,
+              22.31,
+              13.53,
+              3.73,
+              1.37
+            ],
+            "type": "line"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Friction 0.3",
+            "Friction 0.4",
+            "Friction 0.5"
+          ]
+        }
+      }
+    }
+  ]
+}

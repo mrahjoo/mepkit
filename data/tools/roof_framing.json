@@ -1,0 +1,61 @@
+{
+  "id": "roof_framing",
+  "title": "Roof Framing",
+  "description": "Calculate roof framing parameters including run, gable height, gable area, and roof slope based on span, vertical rise, and roof dimensions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Roof Framing Calculator\n\nCalculate roof framing parameters including run, gable height, gable area, and roof slope.\n\n![Roof framing diagram](static/docs/documents/1715/roof_framing.png)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "span",
+          "label": "Span",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 60
+        },
+        {
+          "id": "vertical_rise",
+          "label": "Vertical Rise",
+          "type": "number",
+          "unit": "in/ft",
+          "defaultValue": 6
+        }
+      ],
+      "outputs": [
+        {
+          "id": "run",
+          "label": "Run",
+          "unit": "ft",
+          "formula": "inputs.span / 2"
+        },
+        {
+          "id": "gable_height",
+          "label": "Gable Height",
+          "unit": "ft",
+          "formula": "(inputs.span / 2) * inputs.vertical_rise / 12"
+        },
+        {
+          "id": "gable_area",
+          "label": "Gable Area",
+          "unit": "sq.ft",
+          "formula": "((inputs.span / 2) * inputs.vertical_rise / 12) * (inputs.span / 2)"
+        },
+        {
+          "id": "roof_slope",
+          "label": "Roof Slope",
+          "unit": "ratio",
+          "formula": "inputs.vertical_rise / 12"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formulas\n\n**Run:** R = S / 2\n\n**Gable Height:** GH = R × VR\n\n**Gable Area:** GA = GH × R\n\n**Roof Slope:** RS = y / x\n\nwhere:\n- R = run (ft)\n- S = span (ft)\n- GH = gable height (ft)\n- VR = vertical rise (in/ft)\n- GA = gable area (sq.ft)\n- RS = roof slope"
+    }
+  ]
+}

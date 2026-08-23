@@ -1,0 +1,265 @@
+{
+  "id": "calcium_silicate_insulation",
+  "title": "Calcium Silicate Insulation",
+  "description": "Thermal conductivity calculator for calcium silicate insulation - analyze k-values across temperature ranges from 250°F (121°C) to 1000°F (540°C)",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Calcium Silicate Insulation\n\nCalcium silicate is a rigid, high-density material used as a safe alternative to asbestos for high-temperature insulation applications.\n\n### Key Features:\n- Light weight\n- Low thermal conductivity\n- High temperature and chemical resistance\n- Noncombustible\n- Good compressive strength\n\n### Application Range:\n250°F (121°C) to 1000°F (540°C)\n\n### Conversion Factors:\n- Temperature: T(°C) = 5/9 × (T(°F) - 32)\n- Thermal Conductivity: 1 W/(m·K) = 6.935 Btu·in/(h·ft²·°F)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_f",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 400,
+          "unit": "°F"
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "defaultValue": "metric",
+          "options": [
+            {
+              "label": "Metric (W/m·K)",
+              "value": "metric"
+            },
+            {
+              "label": "Imperial (Btu·in/h·ft²·°F)",
+              "value": "imperial"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_c",
+          "label": "Temperature (Celsius)",
+          "formula": "(inputs.temperature_f - 32) * 5 / 9",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "k_value_metric",
+          "label": "Thermal Conductivity (Metric)",
+          "formula": "0.05 + 0.00012 * inputs.temperature_f",
+          "unit": "W/(m·K)",
+          "format": "decimal"
+        },
+        {
+          "id": "k_value_imperial",
+          "label": "Thermal Conductivity (Imperial)",
+          "formula": "(0.05 + 0.00012 * inputs.temperature_f) * 6.935",
+          "unit": "Btu·in/(h·ft²·°F)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Temperature (°F)",
+        "Temperature (°C)",
+        "k-value (W/m·K)",
+        "k-value (Btu·in/h·ft²·°F)"
+      ],
+      "rows": [
+        [
+          250,
+          121,
+          0.08,
+          0.555
+        ],
+        [
+          300,
+          149,
+          0.086,
+          0.596
+        ],
+        [
+          350,
+          177,
+          0.092,
+          0.638
+        ],
+        [
+          400,
+          204,
+          0.098,
+          0.68
+        ],
+        [
+          450,
+          232,
+          0.104,
+          0.721
+        ],
+        [
+          500,
+          260,
+          0.11,
+          0.763
+        ],
+        [
+          550,
+          288,
+          0.116,
+          0.804
+        ],
+        [
+          600,
+          316,
+          0.122,
+          0.846
+        ],
+        [
+          650,
+          343,
+          0.128,
+          0.888
+        ],
+        [
+          700,
+          371,
+          0.134,
+          0.929
+        ],
+        [
+          750,
+          399,
+          0.14,
+          0.971
+        ],
+        [
+          800,
+          427,
+          0.146,
+          1.012
+        ],
+        [
+          850,
+          454,
+          0.152,
+          1.054
+        ],
+        [
+          900,
+          482,
+          0.158,
+          1.096
+        ],
+        [
+          950,
+          510,
+          0.164,
+          1.137
+        ],
+        [
+          1000,
+          538,
+          0.17,
+          1.179
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°F)",
+          "data": [
+            "250",
+            "300",
+            "350",
+            "400",
+            "450",
+            "500",
+            "550",
+            "600",
+            "650",
+            "700",
+            "750",
+            "800",
+            "850",
+            "900",
+            "950",
+            "1000"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "k-value (W/m·K)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "k-value (Btu·in/h·ft²·°F)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "k-value (W/m·K)",
+            "type": "line",
+            "data": [
+              0.08,
+              0.086,
+              0.092,
+              0.098,
+              0.104,
+              0.11,
+              0.116,
+              0.122,
+              0.128,
+              0.134,
+              0.14,
+              0.146,
+              0.152,
+              0.158,
+              0.164,
+              0.17
+            ],
+            "yAxisIndex": 0,
+            "smooth": true
+          },
+          {
+            "name": "k-value (Btu·in/h·ft²·°F)",
+            "type": "line",
+            "data": [
+              0.555,
+              0.596,
+              0.638,
+              0.68,
+              0.721,
+              0.763,
+              0.804,
+              0.846,
+              0.888,
+              0.929,
+              0.971,
+              1.012,
+              1.054,
+              1.096,
+              1.137,
+              1.179
+            ],
+            "yAxisIndex": 1,
+            "smooth": true
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "k-value (W/m·K)",
+            "k-value (Btu·in/h·ft²·°F)"
+          ]
+        }
+      }
+    }
+  ]
+}

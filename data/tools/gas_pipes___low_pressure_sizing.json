@@ -1,0 +1,313 @@
+{
+  "id": "gas_pipes___low_pressure_sizing",
+  "title": "Gas Pipes - Low Pressure Sizing",
+  "description": "Sizing gas pipes for apartment service lines. Based on schedule 40 steel pipe for low pressure services lines with pressure head 6 inH2O and gas with 0.6 specific gravity and pressure drop 0.3 inH2O.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "sizing_table",
+      "headers": [
+        "Length of Service Pipe (feet)",
+        "20 Apartments",
+        "40 Apartments",
+        "50 Apartments",
+        "60 Apartments",
+        "70 Apartments",
+        "80 Apartments",
+        "90 Apartments",
+        "100 Apartments",
+        "110 Apartments"
+      ],
+      "rows": [
+        [
+          4,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          8,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          12,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2.5
+        ],
+        [
+          14,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        [
+          16,
+          2,
+          2,
+          2,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        [
+          20,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        [
+          24,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          3
+        ],
+        [
+          30,
+          2.5,
+          null,
+          2.5,
+          2.5,
+          2.5,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          40,
+          2.5,
+          2.5,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        [
+          48,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "sizing_table_extended",
+      "headers": [
+        "Length of Service Pipe (feet)",
+        "120 Apartments",
+        "130 Apartments",
+        "140 Apartments",
+        "150 Apartments",
+        "160 Apartments",
+        "170 Apartments",
+        "180 Apartments",
+        "190 Apartments",
+        "200 Apartments"
+      ],
+      "rows": [
+        [
+          4,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          8,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        [
+          12,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        [
+          14,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        [
+          16,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        [
+          20,
+          2.5,
+          2.5,
+          2.5,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          24,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          30,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          40,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          48,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "notes",
+      "content": "**Conversion:** 1 ft (foot) = 0.3048 m\n\n**Table Basis:** Schedule 40 steel pipe for low pressure services lines with:\n- Pressure head: 6 inH2O\n- Gas specific gravity: 0.6\n- Pressure drop: 0.3 inH2O"
+    }
+  ]
+}

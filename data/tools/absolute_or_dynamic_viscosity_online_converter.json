@@ -1,0 +1,220 @@
+{
+  "id": "absolute_or_dynamic_viscosity_online_converter",
+  "title": "Absolute or Dynamic Viscosity Online Converter",
+  "description": "Convert between dynamic or absolute viscosity units - Poiseuille, Poise, centPoise, and more.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Conversion Type",
+        "Formula"
+      ],
+      "inputs": [
+        {
+          "id": "viscosity_value",
+          "label": "Viscosity Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "unit_from",
+          "label": "Convert From",
+          "type": "select",
+          "options": [
+            {
+              "label": "Poiseuille (Pa s)",
+              "value": "Pa_s"
+            },
+            {
+              "label": "Poise (dyne s/cm²)",
+              "value": "Poise"
+            },
+            {
+              "label": "centiPoise",
+              "value": "cP"
+            },
+            {
+              "label": "kg/m h",
+              "value": "kg_m_h"
+            },
+            {
+              "label": "kgf s/m²",
+              "value": "kgf_s_m2"
+            },
+            {
+              "label": "lbf s/inch² (Reyns)",
+              "value": "lbf_s_in2"
+            },
+            {
+              "label": "lbf s/ft²",
+              "value": "lbf_s_ft2"
+            },
+            {
+              "label": "lbf h/ft²",
+              "value": "lbf_h_ft2"
+            },
+            {
+              "label": "lb/ft s",
+              "value": "lb_ft_s"
+            },
+            {
+              "label": "lb/ft h",
+              "value": "lb_ft_h"
+            }
+          ],
+          "defaultValue": "Pa_s"
+        },
+        {
+          "id": "unit_to",
+          "label": "Convert To",
+          "type": "select",
+          "options": [
+            {
+              "label": "Poiseuille (Pa s)",
+              "value": "Pa_s"
+            },
+            {
+              "label": "Poise (dyne s/cm²)",
+              "value": "Poise"
+            },
+            {
+              "label": "centiPoise",
+              "value": "cP"
+            },
+            {
+              "label": "kg/m h",
+              "value": "kg_m_h"
+            },
+            {
+              "label": "kgf s/m²",
+              "value": "kgf_s_m2"
+            },
+            {
+              "label": "lbf s/inch² (Reyns)",
+              "value": "lbf_s_in2"
+            },
+            {
+              "label": "lbf s/ft²",
+              "value": "lbf_s_ft2"
+            },
+            {
+              "label": "lbf h/ft²",
+              "value": "lbf_h_ft2"
+            },
+            {
+              "label": "lb/ft s",
+              "value": "lb_ft_s"
+            },
+            {
+              "label": "lb/ft h",
+              "value": "lb_ft_h"
+            }
+          ],
+          "defaultValue": "cP"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "converted_value",
+          "label": "Converted Value",
+          "formula": "inputs.viscosity_value",
+          "unit": "See unit selection"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Convert From",
+        "Multiply by (to Pa s)",
+        "Multiply by (to Poise)",
+        "Multiply by (to cP)",
+        "Multiply by (to kg/m h)",
+        "Multiply by (to kgf s/m²)"
+      ],
+      "rows": [
+        [
+          "Poiseuille (Pa s)",
+          "1",
+          "10",
+          "1000",
+          "3.63×10³",
+          "0.102"
+        ],
+        [
+          "Poise (dyne s/cm²)",
+          "0.1",
+          "1",
+          "100",
+          "360",
+          "0.0102"
+        ],
+        [
+          "centiPoise",
+          "0.001",
+          "0.01",
+          "1",
+          "3.6",
+          "0.00012"
+        ],
+        [
+          "kg/m h",
+          "2.78×10⁻⁴",
+          "0.00278",
+          "0.278",
+          "1",
+          "2.83×10⁻⁵"
+        ],
+        [
+          "kgf s/m²",
+          "9.81",
+          "98.1",
+          "9.81×10³",
+          "3.53×10⁴",
+          "1"
+        ],
+        [
+          "lbf s/inch² (Reyns)",
+          "6.89×10³",
+          "6.89×10⁴",
+          "6.89×10⁶",
+          "2.48×10⁷",
+          "703"
+        ],
+        [
+          "lbf s/ft²",
+          "47.9",
+          "479",
+          "4.79×10⁴",
+          "1.72×10⁵",
+          "0.0488"
+        ],
+        [
+          "lbf h/ft²",
+          "1.72×10⁵",
+          "1.72×10⁶",
+          "1.72×10⁸",
+          "6.21×10⁸",
+          "1.76×10⁴"
+        ],
+        [
+          "lb/ft s",
+          "1.49",
+          "14.9",
+          "1.49×10³",
+          "5.36×10³",
+          "0.152"
+        ],
+        [
+          "lb/ft h",
+          "4.13×10⁻⁴",
+          "0.00413",
+          "0.413",
+          "1.49",
+          "4.22×10⁻⁵"
+        ]
+      ]
+    }
+  ]
+}

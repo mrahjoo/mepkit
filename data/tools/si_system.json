@@ -1,0 +1,403 @@
+{
+  "id": "si_system",
+  "title": "SI System",
+  "description": "The SI system (International System of Units) is the modern metric system of measurement and the dominant system of international commerce and trade. This tool provides comprehensive information about SI base units, derived units, prefixes, and non-SI units accepted for use with SI.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Quantity",
+        "Name of Unit",
+        "Symbol"
+      ],
+      "rows": [
+        [
+          "Length",
+          "metre",
+          "m"
+        ],
+        [
+          "Mass",
+          "kilogram",
+          "kg"
+        ],
+        [
+          "Time",
+          "second",
+          "s"
+        ],
+        [
+          "Electrical current",
+          "ampere",
+          "A"
+        ],
+        [
+          "Thermodynamic temperature",
+          "kelvin",
+          "K"
+        ],
+        [
+          "Luminous intensity",
+          "candela",
+          "cd"
+        ],
+        [
+          "Amount of substance",
+          "mole",
+          "mol"
+        ]
+      ],
+      "content": "### SI Base Units\n\nThe core of the SI system is a short list of base units defined in an absolute way without referring to any other units. The seven base units form the foundation of the International System of Units."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Quantity",
+        "Name of Unit",
+        "Symbol",
+        "Expression in SI Base Units",
+        "Other Units"
+      ],
+      "rows": [
+        [
+          "Plane angle",
+          "radian",
+          "rad",
+          "",
+          ""
+        ],
+        [
+          "Solid angle",
+          "steradian",
+          "sr",
+          "",
+          ""
+        ],
+        [
+          "Absorbed radiation",
+          "gray",
+          "Gy",
+          "m2s-2",
+          "J/kg"
+        ],
+        [
+          "Electrical capacitance",
+          "farad",
+          "F",
+          "m-2 kg-1 s4 A2",
+          "C/V"
+        ],
+        [
+          "Celsius temperature",
+          "degree Celsius",
+          "°C",
+          "K",
+          ""
+        ],
+        [
+          "Electrical charge",
+          "coulomb",
+          "C",
+          "A s",
+          ""
+        ],
+        [
+          "Electrical conductance",
+          "siemens",
+          "S",
+          "m-2 kg-1 s3 A2",
+          "A/V"
+        ],
+        [
+          "Electrical inductance",
+          "henry",
+          "H",
+          "m2 kg s-2 A-2",
+          ""
+        ],
+        [
+          "Electrical potential",
+          "volt",
+          "V",
+          "m2 kg s-3 A-1",
+          "W/A"
+        ],
+        [
+          "Electrical resistance",
+          "ohm",
+          "Ω",
+          "m2 kg s-3 A-2",
+          "V/A"
+        ],
+        [
+          "Force",
+          "newton",
+          "N",
+          "kg m s-2",
+          ""
+        ],
+        [
+          "Frequency",
+          "hertz",
+          "Hz",
+          "s-1",
+          ""
+        ],
+        [
+          "Illuminance",
+          "lux",
+          "lx",
+          "m-2 cd sr",
+          "lm/m2"
+        ],
+        [
+          "Luminous flux",
+          "lumen",
+          "lm",
+          "cd sr",
+          ""
+        ],
+        [
+          "Magnetic flux",
+          "weber",
+          "Wb",
+          "m2 kg s-2 A-1",
+          "V s"
+        ],
+        [
+          "Magnetic flux density",
+          "tesla",
+          "T",
+          "kg s-2 A-1",
+          "Wb/m2"
+        ],
+        [
+          "Power or radiant flux",
+          "watt",
+          "W",
+          "kg m2 s-3",
+          "J/s"
+        ],
+        [
+          "Pressure",
+          "pascal",
+          "Pa",
+          "kg/(m s2)",
+          "N/m2"
+        ],
+        [
+          "Radioactivity",
+          "becquerel",
+          "Bq",
+          "s-1",
+          ""
+        ],
+        [
+          "Work, energy, heat",
+          "joule",
+          "J",
+          "m2 kg s-2",
+          "N m"
+        ],
+        [
+          "Dose equivalent",
+          "sievert",
+          "Sv",
+          "",
+          "J/kg"
+        ],
+        [
+          "Catalytic activity",
+          "katal",
+          "kat",
+          "",
+          "mol/s"
+        ]
+      ],
+      "content": "### SI Derived Units with Special Names and Symbols\n\nDerived units are algebraic combinations of the seven base units with some combinations assigned special names and symbols acceptable in SI."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Power of 10",
+        "Prefix",
+        "Symbol"
+      ],
+      "rows": [
+        [
+          "1024",
+          "yotta",
+          "Y"
+        ],
+        [
+          "1021",
+          "zetta",
+          "Z"
+        ],
+        [
+          "1018",
+          "exa",
+          "E"
+        ],
+        [
+          "1015",
+          "peta",
+          "P"
+        ],
+        [
+          "1012",
+          "tera",
+          "T"
+        ],
+        [
+          "109",
+          "giga",
+          "G"
+        ],
+        [
+          "106",
+          "mega",
+          "M"
+        ],
+        [
+          "103",
+          "kilo",
+          "k"
+        ],
+        [
+          "102",
+          "hecto",
+          "h"
+        ],
+        [
+          "101",
+          "deca",
+          "da"
+        ],
+        [
+          "10-1",
+          "deci",
+          "d"
+        ],
+        [
+          "10-2",
+          "centi",
+          "c"
+        ],
+        [
+          "10-3",
+          "milli",
+          "m"
+        ],
+        [
+          "10-6",
+          "micro",
+          "μ"
+        ],
+        [
+          "10-9",
+          "nano",
+          "n"
+        ],
+        [
+          "10-12",
+          "pico",
+          "p"
+        ],
+        [
+          "10-15",
+          "femto",
+          "f"
+        ],
+        [
+          "10-18",
+          "atto",
+          "a"
+        ],
+        [
+          "10-21",
+          "zepto",
+          "z"
+        ],
+        [
+          "10-24",
+          "yocto",
+          "y"
+        ]
+      ],
+      "content": "### SI Prefix Symbols\n\nA strength of the SI system is the use of prefixes to indicate multiples or submultiples of units. These prefixes provide an order of magnitude."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Name",
+        "Symbol",
+        "Value in SI Units"
+      ],
+      "rows": [
+        [
+          "minute",
+          "min",
+          "1 min = 60 s"
+        ],
+        [
+          "hour",
+          "h",
+          "1 h = 3600 s"
+        ],
+        [
+          "day",
+          "d",
+          "1 d = 86400 s"
+        ],
+        [
+          "degree",
+          "°",
+          "1° = (π/180) rad"
+        ],
+        [
+          "liter",
+          "L",
+          "1 L = 10-3 m3"
+        ],
+        [
+          "metric ton",
+          "t",
+          "1 t = 103 kg"
+        ],
+        [
+          "nautical mile",
+          "nm",
+          "1 nautical mile = 1852 m"
+        ],
+        [
+          "knot",
+          "knot",
+          "1 knot = (1852/3600) m/s"
+        ],
+        [
+          "hectare",
+          "ha",
+          "1 ha = 104 m2"
+        ],
+        [
+          "bar",
+          "bar",
+          "1 bar = 105 Pa"
+        ],
+        [
+          "ångström",
+          "Å",
+          "1 Å = 10-10 m"
+        ],
+        [
+          "barn",
+          "b",
+          "1 b = 10-28 m2"
+        ]
+      ],
+      "content": "### Non-SI Units Accepted for Use with SI\n\nThese non-SI units are accepted for use with the International System of Units and are commonly used in various fields."
+    }
+  ]
+}

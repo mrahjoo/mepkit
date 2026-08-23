@@ -1,0 +1,85 @@
+{
+  "id": "oils___melting_points",
+  "title": "Oils - Melting Points",
+  "description": "Common oils from animals or plants and their melting points.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Oil",
+        "Melting Temperature (°C)"
+      ],
+      "rows": [
+        [
+          "Butter",
+          "32 - 35"
+        ],
+        [
+          "Castor Oil",
+          "-18"
+        ],
+        [
+          "Cocoa butter",
+          "34"
+        ],
+        [
+          "Coconut Oil",
+          "25"
+        ],
+        [
+          "Cotton Seed Oil",
+          "-1"
+        ],
+        [
+          "Lard",
+          "41"
+        ],
+        [
+          "Linseed Oil",
+          "-24"
+        ],
+        [
+          "Margarine",
+          "34 - 43"
+        ],
+        [
+          "Mutton Tallow",
+          "42"
+        ],
+        [
+          "Olive Oil",
+          "-6"
+        ],
+        [
+          "Palm Kernel Oil",
+          "24"
+        ],
+        [
+          "Palm Oil",
+          "35"
+        ],
+        [
+          "Peanut Oil",
+          "3"
+        ],
+        [
+          "Rapeseed Oil",
+          "-10"
+        ],
+        [
+          "Sunflower Oil",
+          "-17"
+        ],
+        [
+          "Soybean Oil",
+          "-16"
+        ],
+        [
+          "Tung Oil",
+          "-2.5"
+        ]
+      ]
+    }
+  ]
+}

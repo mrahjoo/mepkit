@@ -1,0 +1,100 @@
+{
+  "id": "medical_gas_piping",
+  "title": "Medical Gas Piping",
+  "description": "Piping systems for medical gases including compressed air, oxygen, nitrous oxide, carbon dioxide, nitrogen, and vacuum systems.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Medical Gas Piping Systems\n\nMedical gas systems include various compressed air types, oxygen, nitrous oxide, carbon dioxide, nitrogen, and vacuum systems for different medical applications.\n\n## Compressed Air Systems\n\n### Medical and Surgical\n- **Common delivery pressure:** ~50 psig (~3.5 bar)\n- Low pressure dedicated system for medical and surgical use only\n\n### High Pressure Instrument\n- **Common delivery pressure:** ~120 psig (~8 bar)\n- High pressure system for pneumatic equipment\n\n### Laboratory\n- **Common delivery pressure:** ~30 psig (~2 bar)\n\n### Dental\n- **Common delivery pressure:** ~90 psig (~6 bar)\n\n## Gas Systems\n\n### Oxygen\n- **Common delivery pressure:** ~50 psig (~3.5 bar)\n\n### Nitrous Oxide\n- **Common delivery pressure:** ~50 psig (~3.5 bar)\n\n### Carbon Dioxide\n- **Common delivery pressure:** ~50 psig (~3.5 bar)\n\n### Nitrogen\n- **Common delivery pressure:** ~160 psig (~11 bar)\n\n## Vacuum Systems\n\n### Surgical/Medical\n- **Common vacuum pressure:** ~50% (15 inHg gauge, 500 mbar abs)\n\n### Waste Anesthesia Gas Disposal (WAGD)\n- **Common vacuum pressure:** ~50% (15 inHg gauge, 500 mbar abs)\n\n### Laboratory\n- **Common vacuum pressure:** ~50% (15 inHg gauge, 500 mbar abs)\n\n### Dental\n- **Common vacuum pressure:** ~50% (15 inHg gauge, 500 mbar abs)\n\n---\n\n**Reference:** NFPA 99: Health Care Facilities"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Gas Type",
+        "Common Pressure (psig)",
+        "Common Pressure (bar)"
+      ],
+      "inputs": [
+        {
+          "id": "gas_type",
+          "label": "Gas Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Compressed Air - Medical/Surgical",
+              "value": "air_medical"
+            },
+            {
+              "label": "Compressed Air - High Pressure Instrument",
+              "value": "air_high_pressure"
+            },
+            {
+              "label": "Compressed Air - Laboratory",
+              "value": "air_lab"
+            },
+            {
+              "label": "Compressed Air - Dental",
+              "value": "air_dental"
+            },
+            {
+              "label": "Oxygen",
+              "value": "oxygen"
+            },
+            {
+              "label": "Nitrous Oxide",
+              "value": "nitrous_oxide"
+            },
+            {
+              "label": "Carbon Dioxide",
+              "value": "carbon_dioxide"
+            },
+            {
+              "label": "Nitrogen",
+              "value": "nitrogen"
+            },
+            {
+              "label": "Vacuum - Surgical/Medical",
+              "value": "vacuum_surgical"
+            },
+            {
+              "label": "Vacuum - WAGD",
+              "value": "vacuum_wagd"
+            },
+            {
+              "label": "Vacuum - Laboratory",
+              "value": "vacuum_lab"
+            },
+            {
+              "label": "Vacuum - Dental",
+              "value": "vacuum_dental"
+            }
+          ]
+        },
+        {
+          "id": "conversion_factor",
+          "label": "Conversion Factor (psig to bar)",
+          "type": "number",
+          "defaultValue": 0.0689476,
+          "unit": "bar/psig"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_psig",
+          "label": "Delivery Pressure (psig)",
+          "formula": "IF(inputs.gas_type='air_medical', 50, IF(inputs.gas_type='air_high_pressure', 120, IF(inputs.gas_type='air_lab', 30, IF(inputs.gas_type='air_dental', 90, IF(inputs.gas_type='oxygen', 50, IF(inputs.gas_type='nitrous_oxide', 50, IF(inputs.gas_type='carbon_dioxide', 50, IF(inputs.gas_type='nitrogen', 160, 0))))))))",
+          "unit": "psig",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_bar",
+          "label": "Delivery Pressure (bar)",
+          "formula": "inputs.pressure_psig * inputs.conversion_factor",
+          "unit": "bar",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

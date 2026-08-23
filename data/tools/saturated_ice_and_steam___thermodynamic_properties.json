@@ -1,0 +1,85 @@
+{
+  "id": "saturated_ice_and_steam___thermodynamic_properties",
+  "title": "Saturated Ice and Steam - Thermodynamic Properties",
+  "description": "Thermodynamic properties of saturated ice and steam - specific volume, enthalpy and entropy. Includes data for specific volume (v), specific internal energy (u), enthalpy (h), and entropy (s) of saturated ice and steam at various temperatures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Vapor Pressure (bar)",
+        "Specific Volume - Ice (m³/kg)",
+        "Specific Volume - Vapor (m³/kg)",
+        "Internal Energy - Ice (kJ/kg)",
+        "Internal Energy - Vapor (kJ/kg)",
+        "Enthalpy - Ice (kJ/kg)",
+        "Enthalpy - Vapor (kJ/kg)",
+        "Entropy - Ice (kJ/kg·K)",
+        "Entropy - Vapor (kJ/kg·K)"
+      ],
+      "rows": [
+        [
+          0.01,
+          0.006112,
+          1.091,
+          206.1,
+          -333.5,
+          2374.7,
+          -333.5,
+          2500.8,
+          -1.221,
+          9.155
+        ],
+        [
+          -10,
+          0.002598,
+          1.089,
+          467.5,
+          -354.2,
+          2360.8,
+          -354.2,
+          2482.2,
+          -1.298,
+          9.481
+        ],
+        [
+          -20,
+          0.001038,
+          1.087,
+          1125,
+          -374.1,
+          2346.8,
+          -374.1,
+          2463.6,
+          -1.375,
+          9.835
+        ],
+        [
+          -30,
+          0.0003809,
+          1.086,
+          2946,
+          -393.3,
+          2332.9,
+          -393.3,
+          2445.1,
+          -1.452,
+          10.221
+        ],
+        [
+          -40,
+          0.0001288,
+          1.084,
+          8354,
+          -411.8,
+          2319,
+          -411.8,
+          2426.6,
+          -1.53,
+          10.664
+        ]
+      ]
+    }
+  ]
+}

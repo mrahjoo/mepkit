@@ -1,0 +1,163 @@
+{
+  "id": "engine_oil___density_and_specific_heat_vs__tempera",
+  "title": "Engine Oil - Density and Specific Heat vs. Temperatures",
+  "description": "Specific heat and density of new engine oil related to temperature.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Engine Oil Properties Reference Table",
+      "headers": [
+        "Temperature - T - (K)",
+        "Density - ρ - (kg/m³)",
+        "Specific Heat - cp - (kJ/kg·K)"
+      ],
+      "rows": [
+        [
+          260,
+          908,
+          1.76
+        ],
+        [
+          280,
+          896,
+          1.83
+        ],
+        [
+          300,
+          884,
+          1.91
+        ],
+        [
+          320,
+          872,
+          1.99
+        ],
+        [
+          340,
+          860,
+          2.08
+        ],
+        [
+          360,
+          848,
+          2.16
+        ],
+        [
+          380,
+          836,
+          2.25
+        ],
+        [
+          400,
+          824,
+          2.34
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Engine Oil Properties Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density",
+          "label": "Density",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "908 - 0.8 * (inputs.temperature - 260)"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat",
+          "unit": "kJ/kg·K",
+          "format": "decimal",
+          "formula": "1.76 + 0.009 * (inputs.temperature - 260)"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Density and Specific Heat vs. Temperature",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            260,
+            280,
+            300,
+            320,
+            340,
+            360,
+            380,
+            400
+          ],
+          "name": "Temperature (K)"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Density (kg/m³)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Specific Heat (kJ/kg·K)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Density",
+            "type": "line",
+            "data": [
+              908,
+              896,
+              884,
+              872,
+              860,
+              848,
+              836,
+              824
+            ],
+            "yAxisIndex": 0,
+            "smooth": true
+          },
+          {
+            "name": "Specific Heat",
+            "type": "line",
+            "data": [
+              1.76,
+              1.83,
+              1.91,
+              1.99,
+              2.08,
+              2.16,
+              2.25,
+              2.34
+            ],
+            "yAxisIndex": 1,
+            "smooth": true
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Density",
+            "Specific Heat"
+          ]
+        }
+      }
+    }
+  ]
+}

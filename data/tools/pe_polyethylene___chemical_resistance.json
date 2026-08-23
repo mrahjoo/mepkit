@@ -1,0 +1,91 @@
+{
+  "id": "pe_polyethylene___chemical_resistance",
+  "title": "PE Polyethylene - Chemical Resistance",
+  "description": "Chemical resistance data table for polyethylene (PE) materials",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Chemical Name",
+        "Resistance Level",
+        "Temperature Range (°C)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Acetic Acid",
+          "Good",
+          "-20 to 60",
+          "Standard conditions"
+        ],
+        [
+          "Acetone",
+          "Fair",
+          "-20 to 40",
+          "Limited exposure recommended"
+        ],
+        [
+          "Benzene",
+          "Poor",
+          "-20 to 30",
+          "Not recommended for extended contact"
+        ],
+        [
+          "Ethanol",
+          "Good",
+          "-20 to 60",
+          "Standard conditions"
+        ],
+        [
+          "Gasoline",
+          "Fair",
+          "-20 to 50",
+          "Limited exposure recommended"
+        ],
+        [
+          "Hydrochloric Acid",
+          "Good",
+          "-20 to 50",
+          "Dilute solutions"
+        ],
+        [
+          "Methanol",
+          "Good",
+          "-20 to 60",
+          "Standard conditions"
+        ],
+        [
+          "Mineral Oil",
+          "Excellent",
+          "-30 to 70",
+          "Long-term use suitable"
+        ],
+        [
+          "Nitric Acid",
+          "Fair",
+          "-20 to 30",
+          "Concentrated acid not recommended"
+        ],
+        [
+          "Sulfuric Acid",
+          "Fair",
+          "-20 to 40",
+          "Dilute solutions only"
+        ],
+        [
+          "Toluene",
+          "Fair",
+          "-20 to 40",
+          "Limited exposure recommended"
+        ],
+        [
+          "Water",
+          "Excellent",
+          "-20 to 80",
+          "All conditions suitable"
+        ]
+      ]
+    }
+  ]
+}

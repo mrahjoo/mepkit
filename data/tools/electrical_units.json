@@ -1,0 +1,97 @@
+{
+  "id": "electrical_units",
+  "title": "Electrical Units",
+  "description": "Comprehensive reference guide for electrical units including Ampere, Coulomb, Farad, Ohm, Henry, Joule, Siemens, Watt, Weber, Tesla, and Volt with conversions and definitions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Unit",
+        "Symbol",
+        "Definition",
+        "Base SI Units",
+        "Common Submultiples"
+      ],
+      "rows": [
+        [
+          "Ampere",
+          "A",
+          "Electric current - 1 coulomb of charge per second",
+          "A",
+          "mA (10⁻³), μA (10⁻⁶), nA (10⁻⁹), pA (10⁻¹²)"
+        ],
+        [
+          "Coulomb",
+          "C",
+          "Quantity of electricity - charge conveyed in one second at 1V across 1Ω",
+          "A·s",
+          "1 C = 6.24×10¹⁸ electrons"
+        ],
+        [
+          "Farad",
+          "F",
+          "Capacitance - produces 1V potential difference for 1C charge",
+          "s⁴A²/(kg·m²)",
+          "μF (10⁻⁶), pF (10⁻¹²)"
+        ],
+        [
+          "Ohm",
+          "Ω",
+          "Electrical resistance - potential difference producing 1A current per 1V",
+          "kg·m²/(s³·A²)",
+          "kΩ, MΩ"
+        ],
+        [
+          "Henry",
+          "H",
+          "Inductance - stores energy in magnetic field",
+          "kg·m²/(s²·A²)",
+          "μH (10⁻⁶), mH (10⁻³), nH (10⁻⁹)"
+        ],
+        [
+          "Joule",
+          "J",
+          "Energy or work - 1 watt dissipated for 1 second",
+          "kg·m²/s²",
+          "1 Btu ≈ 1,055 J"
+        ],
+        [
+          "Siemens",
+          "S",
+          "Electrical conductance",
+          "A/V",
+          "mS, μS"
+        ],
+        [
+          "Watt",
+          "W",
+          "Power - rate of energy dissipation (joule/second)",
+          "kg·m²/s³",
+          "kW, MW, mW"
+        ],
+        [
+          "Weber",
+          "Wb",
+          "Magnetic flux - 1V EMF when reduced to zero in 1 second",
+          "kg·m²/(s²·A)",
+          "1 Wb = 10⁸ Maxwells"
+        ],
+        [
+          "Tesla",
+          "T",
+          "Magnetic flux density - 1 Weber per square meter",
+          "kg/(s²·A)",
+          "mT, μT"
+        ],
+        [
+          "Volt",
+          "V",
+          "Electric potential or electromotive force",
+          "kg·m²/(s³·A)",
+          "kV (10³), mV (10⁻³), μV (10⁻⁶)"
+        ]
+      ]
+    }
+  ]
+}

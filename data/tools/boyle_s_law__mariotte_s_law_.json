@@ -1,0 +1,68 @@
+{
+  "id": "boyle_s_law__mariotte_s_law_",
+  "title": "Boyle's Law (Mariotte's Law)",
+  "description": "Calculate the volume and pressure relationships of ideal gases at constant temperature using Boyle's Law (Mariotte's Law), where P₁V₁ = P₂V₂",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Boyle's Law (Mariotte's Law)\n\nBoyle's law states that for a perfect gas at constant mass and temperature, the volume varies inversely with absolute pressure:\n\n**P₁V₁ = P₂V₂**\n\nWhere:\n- **P** = absolute pressure (Pa, psi, MPa, etc.)\n- **V** = volume (m³, ft³, etc.)\n- **Subscript 1** = initial state\n- **Subscript 2** = final state"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "P1",
+          "label": "Initial Pressure (P₁)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "MPa"
+        },
+        {
+          "id": "V1",
+          "label": "Initial Volume (V₁)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m³"
+        },
+        {
+          "id": "P2",
+          "label": "Final Pressure (P₂)",
+          "type": "number",
+          "defaultValue": 4,
+          "unit": "MPa"
+        },
+        {
+          "id": "V2",
+          "label": "Final Volume (V₂)",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "constant",
+          "label": "PV Constant",
+          "formula": "inputs.P1 * inputs.V1",
+          "unit": "MPa·m³",
+          "format": "decimal"
+        },
+        {
+          "id": "calc_P2",
+          "label": "Calculated Final Pressure (P₂)",
+          "formula": "(inputs.P1 * inputs.V1) / inputs.V2",
+          "unit": "MPa",
+          "format": "decimal"
+        },
+        {
+          "id": "calc_V2",
+          "label": "Calculated Final Volume (V₂)",
+          "formula": "(inputs.P1 * inputs.V1) / inputs.P2",
+          "unit": "m³",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

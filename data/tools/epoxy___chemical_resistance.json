@@ -1,0 +1,367 @@
+{
+  "id": "epoxy___chemical_resistance",
+  "title": "Epoxy - Chemical Resistance",
+  "description": "Comprehensive chemical resistance guide for epoxy materials, providing resistance ratings for various chemicals at different temperature conditions",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Chemical",
+        "Resistance Rating",
+        "Temperature Condition"
+      ],
+      "rows": [
+        [
+          "Acetic Acid (20%)",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Acetone",
+          "Not Recommended",
+          "Standard"
+        ],
+        [
+          "Acetylene",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Alcohol - Ethyl",
+          "Excellent",
+          "< 120°F (50°C)"
+        ],
+        [
+          "Alcohol - Isopropyl",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Alcohol - Methyl",
+          "Good",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Aluminum Chloride",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Aluminum Fluoride",
+          "Good",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Aluminum Hydroxide",
+          "Good",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Aluminum Sulfate",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Ammonia - Liquid",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Ammonia 10%",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Barium Carbonate",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Barium Chloride",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Barium Hydroxide",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Benzol",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Bromine",
+          "Not Recommended",
+          "Standard"
+        ],
+        [
+          "Butane gas",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Calcium Carbonate",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Calcium Chloride",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Carbon Tetrachloride",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Citric Acid",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Copper Chloride",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Diesel Fuel",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Ferric Chloride",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Formaldehyde, 40%",
+          "Excellent",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Gasoline",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Glycerine",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Heptane",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Hydrochloric acid, 20%",
+          "Good",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Hydrofluoric Acid, 75%",
+          "Good",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Hydrogen Sulfide",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Jet Fuel",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Kerosene",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Lactic Acid",
+          "Good",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Lead acetate",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Magnesium Carbonate",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Magnesium Chloride",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Magnesium Hydroxide",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Mercury",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Methyl Ethyl Ketone",
+          "Fair",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Naphtha",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Naphthalene",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Nitric Acid",
+          "Not Recommended",
+          "Standard"
+        ],
+        [
+          "Oil - Castor",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Phosphoric Acid",
+          "Good",
+          "Standard"
+        ],
+        [
+          "Phenol",
+          "Good",
+          "Standard"
+        ],
+        [
+          "Potassium Carbonate",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Potassium Chloride",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Potassium Hydroxide",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Sodium Carbonate",
+          "Fair",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Sodium Chloride",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Sodium Hydroxide, 50%",
+          "Good",
+          "< 120°F (50°C)"
+        ],
+        [
+          "Sodium Hypochlorite, 100%",
+          "Not Recommended",
+          "Standard"
+        ],
+        [
+          "Sulfuric Acid, 75-100%",
+          "Fair",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Toluene",
+          "Good",
+          "< 71°F (22°C)"
+        ],
+        [
+          "Turpentine",
+          "Good",
+          "Standard"
+        ],
+        [
+          "Water - Distilled",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Water - Fresh",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Water - Sea, Salt",
+          "Excellent",
+          "Standard"
+        ],
+        [
+          "Xylene",
+          "Excellent",
+          "Standard"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Chemical Resistance Distribution",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "item"
+        },
+        "series": [
+          {
+            "name": "Resistance Ratings",
+            "type": "pie",
+            "radius": "50%",
+            "data": [
+              {
+                "value": 105,
+                "name": "Excellent"
+              },
+              {
+                "value": 18,
+                "name": "Good"
+              },
+              {
+                "value": 7,
+                "name": "Fair"
+              },
+              {
+                "value": 5,
+                "name": "Not Recommended"
+              }
+            ],
+            "emphasis": {
+              "itemStyle": {
+                "shadowBlur": 10,
+                "shadowOffsetX": 0,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

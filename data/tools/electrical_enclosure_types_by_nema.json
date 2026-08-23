@@ -1,0 +1,139 @@
+{
+  "id": "electrical_enclosure_types_by_nema",
+  "title": "Electrical Enclosure Types by NEMA",
+  "description": "Reference guide for NEMA electrical enclosure types used in hazardous and non-hazardous locations, including their classifications, protection features, and applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type",
+        "Name",
+        "Location",
+        "Key Features",
+        "Description"
+      ],
+      "rows": [
+        [
+          "1",
+          "General Purpose",
+          "Indoor",
+          "Incidental contact protection, falling dirt protection",
+          "Enclosures constructed for indoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and to provide a degree of protection against falling dirt."
+        ],
+        [
+          "2",
+          "Drip-Proof",
+          "Indoor",
+          "Incidental contact, falling dirt, dripping and light splashing",
+          "Enclosures constructed for indoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment, to provide a degree of protection against falling dirt, and to provide a degree of protection against dripping and light splashing of liquids."
+        ],
+        [
+          "3",
+          "Dust tight, Rain tight, Sleet tight",
+          "Outdoor",
+          "Falling dirt, rain, sleet, snow, windblown dust, ice resistance",
+          "Enclosures constructed for either indoor or outdoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and to provide a degree of protection against falling dirt, rain, sleet, snow, and windblown dust."
+        ],
+        [
+          "3R",
+          "Rain tight, Sleet Resistant",
+          "Outdoor",
+          "Falling dirt, rain, sleet, snow, ice resistance",
+          "Enclosures constructed for either indoor or outdoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and to provide a degree of protection against falling dirt, rain, sleet, and snow."
+        ],
+        [
+          "3S",
+          "Dust tight, Rain tight, Sleet tight (Operable)",
+          "Outdoor",
+          "Falling dirt, rain, sleet, snow, windblown dust, operable mechanisms in ice",
+          "Enclosures constructed for either indoor or outdoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and external mechanism(s) remain operable when ice laden."
+        ],
+        [
+          "4",
+          "Watertight, Dust tight, Sleet Resistant",
+          "Indoor & Outdoor",
+          "Falling dirt, rain, sleet, snow, windblown dust, splashing water, hose-directed water, ice resistance",
+          "Enclosures constructed for either indoor or outdoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and to provide a degree of protection against falling dirt, rain, sleet, snow, windblown dust, splashing water, and hose-directed water."
+        ],
+        [
+          "4X",
+          "Watertight, Dust tight, Corrosion-Resistant",
+          "Indoor & Outdoor",
+          "Falling dirt, rain, sleet, snow, windblown dust, splashing water, hose-directed water, corrosion resistance, ice resistance",
+          "Enclosures constructed for either indoor or outdoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and to provide a degree of protection against falling dirt, rain, sleet, snow, windblown dust, splashing water, hose-directed water, and corrosion."
+        ],
+        [
+          "5",
+          "Dust tight, Drip-Proof",
+          "Indoor",
+          "Falling dirt, airborne dust lint fibers, dripping and light splashing",
+          "Enclosures constructed for indoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and to provide a degree of protection against falling dirt and settling airborne dust, lint, fibers, and flyings."
+        ],
+        [
+          "6",
+          "Occasionally Submersible, Watertight, Sleet Resistant",
+          "Indoor & Outdoor",
+          "Falling dirt, hose-directed water, occasional temporary submersion, ice resistance",
+          "Enclosures constructed for either indoor or outdoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and against hose-directed water and the entry of water during occasional temporary submersion at a limited depth."
+        ],
+        [
+          "6P",
+          "Watertight, Sleet Resistant Prolonged Submersion",
+          "Indoor & Outdoor",
+          "Falling dirt, hose-directed water, prolonged submersion, ice resistance",
+          "Enclosures constructed for either indoor or outdoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and against hose-directed water and the entry of water during prolonged submersion at a limited depth."
+        ],
+        [
+          "12",
+          "Dust tight and Drip tight (No Knockouts)",
+          "Indoor",
+          "Falling dirt, circulating dust lint fibers, dripping and light splashing",
+          "Enclosures constructed without knockouts for indoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and against falling dirt, circulating dust, lint, fibers, and flyings."
+        ],
+        [
+          "12K",
+          "Dust tight and Drip tight (With Knockouts)",
+          "Indoor",
+          "Falling dirt, circulating dust lint fibers, dripping and light splashing, knockouts provided",
+          "Enclosures constructed with knockouts for indoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and against falling dirt, circulating dust, lint, fibers, and flyings."
+        ],
+        [
+          "13",
+          "Oil tight and Dust tight",
+          "Indoor",
+          "Falling dirt, circulating dust lint fibers, spraying splashing and seepage of water oil and coolants",
+          "Enclosures constructed for indoor use to provide a degree of protection to personnel against incidental contact with the enclosed equipment and against falling dirt, circulating dust, lint, fibers, and flyings."
+        ],
+        [
+          "7",
+          "Class I, Group A, B, C or D",
+          "Indoor",
+          "Hazardous location protection, Class I Division 1",
+          "Enclosures constructed for indoor use in hazardous locations classified as Class I, Division 1, Groups A, B, C, or D as defined in NFPA 70."
+        ],
+        [
+          "8",
+          "Class I, Group A, B, C or D",
+          "Indoor & Outdoor",
+          "Hazardous location protection, Class I Division 1",
+          "Enclosures constructed for either indoor or outdoor use in hazardous locations classified as Class I, Division 1, Groups A, B, C, and D as defined in NFPA 70."
+        ],
+        [
+          "9",
+          "Class II, Group E, F or G",
+          "Indoor",
+          "Hazardous location protection, Class II Division 1",
+          "Enclosures constructed for indoor use in hazardous locations classified as Class II, Division 1, Groups E, F, or G as defined in NFPA 70."
+        ],
+        [
+          "10",
+          "Mine Safety and Health Administration",
+          "Indoor & Outdoor",
+          "Mining application requirements, MSHA compliance",
+          "Enclosures constructed to meet the requirements of the Mine Safety and Health Administration, 30 CFR, Part 18."
+        ]
+      ]
+    }
+  ]
+}

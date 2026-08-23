@@ -1,0 +1,144 @@
+{
+  "id": "affinity_laws_for_pumps__principles__formulas___ca",
+  "title": "Affinity Laws for Pumps: Principles, Formulas & Calculator",
+  "description": "Calculate the influence of speed (rpm) and impeller diameter changes on pump volume capacity, head (pressure), and power consumption using affinity laws for centrifugal pumps.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Affinity Laws for Pumps Calculator\n\nThe Affinity Laws indicate the influence on pump performance (volume capacity, head/pressure, and power consumption) due to changes in wheel speed (rpm) or impeller diameter.\n\n### Two Main Scenarios:\n1. **Changing Wheel Velocity** (constant impeller diameter)\n2. **Changing Impeller Diameter** (constant wheel velocity)"
+    },
+    {
+      "type": "calculator",
+      "id": "velocity_change_calc",
+      "headers": [
+        "Changing Wheel Velocity (Constant Diameter)"
+      ],
+      "inputs": [
+        {
+          "id": "q1_velocity",
+          "label": "Initial Volume Capacity (q1)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "gpm"
+        },
+        {
+          "id": "dp1_velocity",
+          "label": "Initial Head/Pressure (dp1)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "ft"
+        },
+        {
+          "id": "P1_velocity",
+          "label": "Initial Power (P1)",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "bhp"
+        },
+        {
+          "id": "n1_velocity",
+          "label": "Initial Speed (n1)",
+          "type": "number",
+          "defaultValue": 1750,
+          "unit": "rpm"
+        },
+        {
+          "id": "n2_velocity",
+          "label": "Final Speed (n2)",
+          "type": "number",
+          "defaultValue": 3500,
+          "unit": "rpm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "q2_velocity",
+          "label": "Final Volume Capacity (q2)",
+          "formula": "inputs.q1_velocity * (inputs.n2_velocity / inputs.n1_velocity)",
+          "unit": "gpm"
+        },
+        {
+          "id": "dp2_velocity",
+          "label": "Final Head/Pressure (dp2)",
+          "formula": "inputs.dp1_velocity * Math.pow((inputs.n2_velocity / inputs.n1_velocity), 2)",
+          "unit": "ft"
+        },
+        {
+          "id": "P2_velocity",
+          "label": "Final Power (P2)",
+          "formula": "inputs.P1_velocity * Math.pow((inputs.n2_velocity / inputs.n1_velocity), 3)",
+          "unit": "bhp"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "diameter_change_calc",
+      "headers": [
+        "Changing Impeller Diameter (Constant Velocity)"
+      ],
+      "inputs": [
+        {
+          "id": "q1_diameter",
+          "label": "Initial Volume Capacity (q1)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "gpm"
+        },
+        {
+          "id": "dp1_diameter",
+          "label": "Initial Head/Pressure (dp1)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "ft"
+        },
+        {
+          "id": "P1_diameter",
+          "label": "Initial Power (P1)",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "bhp"
+        },
+        {
+          "id": "d1_diameter",
+          "label": "Initial Impeller Diameter (d1)",
+          "type": "number",
+          "defaultValue": 8,
+          "unit": "in"
+        },
+        {
+          "id": "d2_diameter",
+          "label": "Final Impeller Diameter (d2)",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "q2_diameter",
+          "label": "Final Volume Capacity (q2)",
+          "formula": "inputs.q1_diameter * (inputs.d2_diameter / inputs.d1_diameter)",
+          "unit": "gpm"
+        },
+        {
+          "id": "dp2_diameter",
+          "label": "Final Head/Pressure (dp2)",
+          "formula": "inputs.dp1_diameter * Math.pow((inputs.d2_diameter / inputs.d1_diameter), 2)",
+          "unit": "ft"
+        },
+        {
+          "id": "P2_diameter",
+          "label": "Final Power (P2)",
+          "formula": "inputs.P1_diameter * Math.pow((inputs.d2_diameter / inputs.d1_diameter), 3)",
+          "unit": "bhp"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Formulas\n\n### Changing Wheel Velocity (Constant Diameter):\n- **Volume Capacity:** q₁/q₂ = n₁/n₂\n- **Head/Pressure:** dp₁/dp₂ = (n₁/n₂)²\n- **Power:** P₁/P₂ = (n₁/n₂)³\n\n### Changing Impeller Diameter (Constant Velocity):\n- **Volume Capacity:** q₁/q₂ = d₁/d₂\n- **Head/Pressure:** dp₁/dp₂ = (d₁/d₂)²\n- **Power:** P₁/P₂ = (d₁/d₂)³\n\n### Important Note:\nIf pump speed increases by 10%:\n- Volume flow increases by 10%\n- Head increases by 21%\n- Power increases by 33%"
+    }
+  ]
+}

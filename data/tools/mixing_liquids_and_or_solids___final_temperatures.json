@@ -1,0 +1,131 @@
+{
+  "id": "mixing_liquids_and_or_solids___final_temperatures",
+  "title": "Mixing Liquids and/or Solids - Final Temperatures",
+  "description": "Calculate the final temperature when liquids and/or solids with different temperatures are mixed together using the heat balance equation.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "mixing_calculator",
+      "content": "Enter the mass, specific heat, and temperature for each substance to calculate the final mixed temperature.",
+      "inputs": [
+        {
+          "id": "m1",
+          "label": "Mass of Substance 1 (m1)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "cp1",
+          "label": "Specific Heat of Substance 1 (cp1)",
+          "type": "number",
+          "unit": "J/kg°C",
+          "defaultValue": 790
+        },
+        {
+          "id": "t1",
+          "label": "Temperature of Substance 1 (t1)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        },
+        {
+          "id": "m2",
+          "label": "Mass of Substance 2 (m2)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 10
+        },
+        {
+          "id": "cp2",
+          "label": "Specific Heat of Substance 2 (cp2)",
+          "type": "number",
+          "unit": "J/kg°C",
+          "defaultValue": 4186
+        },
+        {
+          "id": "t2",
+          "label": "Temperature of Substance 2 (t2)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tf",
+          "label": "Final Mixed Temperature (tf)",
+          "unit": "°C",
+          "formula": "(inputs.m1 * inputs.cp1 * inputs.t1 + inputs.m2 * inputs.cp2 * inputs.t2) / (inputs.m1 * inputs.cp1 + inputs.m2 * inputs.cp2)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "temperature_distribution",
+      "content": "Temperature distribution of the two substances before and after mixing",
+      "headers": [
+        "Substance",
+        "Initial Temperature (°C)",
+        "Mass (kg)",
+        "Specific Heat (J/kg°C)"
+      ],
+      "rows": [
+        [
+          "Substance 1",
+          "inputs.t1",
+          "inputs.m1",
+          "inputs.cp1"
+        ],
+        [
+          "Substance 2",
+          "inputs.t2",
+          "inputs.m2",
+          "inputs.cp2"
+        ],
+        [
+          "Final Mix",
+          "tf",
+          "inputs.m1 + inputs.m2",
+          "-"
+        ]
+      ],
+      "options": {
+        "title": "Mixing Process - Temperature Changes",
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Temperature (°C)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Substance 1",
+            "Substance 2",
+            "Final Mix"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Temperature (°C)"
+        },
+        "series": [
+          {
+            "name": "Temperature",
+            "type": "bar",
+            "data": [
+              100,
+              20,
+              21.5
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

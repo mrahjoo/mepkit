@@ -1,0 +1,262 @@
+{
+  "id": "human_body_composition",
+  "title": "Human Body Composition",
+  "description": "Composition of the human body. Shows the percentage share and mass in kg of various elements found in the human body based on total body mass.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Element",
+        "Share of Body Mass (%)",
+        "Mass (kg)"
+      ],
+      "inputs": [
+        {
+          "id": "body_mass",
+          "label": "Body Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 70
+        }
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          0.000087,
+          "=inputs.body_mass * 0.000087 / 100"
+        ],
+        [
+          "Antimony",
+          0.000011,
+          "=inputs.body_mass * 0.000011 / 100"
+        ],
+        [
+          "Arsenic",
+          0.000026,
+          "=inputs.body_mass * 0.000026 / 100"
+        ],
+        [
+          "Barium",
+          0.000031,
+          "=inputs.body_mass * 0.000031 / 100"
+        ],
+        [
+          "Beryllium",
+          5e-8,
+          "=inputs.body_mass * 0.00000005 / 100"
+        ],
+        [
+          "Boron",
+          0.000069,
+          "=inputs.body_mass * 0.000069 / 100"
+        ],
+        [
+          "Bromine",
+          0.00029,
+          "=inputs.body_mass * 0.00029 / 100"
+        ],
+        [
+          "Cadmium",
+          0.000072,
+          "=inputs.body_mass * 0.000072 / 100"
+        ],
+        [
+          "Calcium",
+          1.5,
+          "=inputs.body_mass * 1.5 / 100"
+        ],
+        [
+          "Carbon",
+          18,
+          "=inputs.body_mass * 18 / 100"
+        ],
+        [
+          "Cesium",
+          0.0000021,
+          "=inputs.body_mass * 0.0000021 / 100"
+        ],
+        [
+          "Chlorine",
+          0.15,
+          "=inputs.body_mass * 0.15 / 100"
+        ],
+        [
+          "Chromium",
+          0.0000024,
+          "=inputs.body_mass * 0.0000024 / 100"
+        ],
+        [
+          "Cobalt",
+          0.0000021,
+          "=inputs.body_mass * 0.0000021 / 100"
+        ],
+        [
+          "Copper",
+          0.0001,
+          "=inputs.body_mass * 0.00010 / 100"
+        ],
+        [
+          "Fluorine",
+          0.0037,
+          "=inputs.body_mass * 0.0037 / 100"
+        ],
+        [
+          "Gold",
+          0.000014,
+          "=inputs.body_mass * 0.000014 / 100"
+        ],
+        [
+          "Hydrogen",
+          10,
+          "=inputs.body_mass * 10 / 100"
+        ],
+        [
+          "Iodine",
+          0.000016,
+          "=inputs.body_mass * 0.000016 / 100"
+        ],
+        [
+          "Iron",
+          0.006,
+          "=inputs.body_mass * 0.006 / 100"
+        ],
+        [
+          "Lead",
+          0.00017,
+          "=inputs.body_mass * 0.00017 / 100"
+        ],
+        [
+          "Lithium",
+          0.0000031,
+          "=inputs.body_mass * 0.0000031 / 100"
+        ],
+        [
+          "Magnesium",
+          0.05,
+          "=inputs.body_mass * 0.05 / 100"
+        ],
+        [
+          "Manganese",
+          0.000017,
+          "=inputs.body_mass * 0.000017 / 100"
+        ],
+        [
+          "Mercury",
+          0.000019,
+          "=inputs.body_mass * 0.000019 / 100"
+        ],
+        [
+          "Molybdenum",
+          0.000013,
+          "=inputs.body_mass * 0.000013 / 100"
+        ],
+        [
+          "Nickel",
+          0.000014,
+          "=inputs.body_mass * 0.000014 / 100"
+        ],
+        [
+          "Niobium",
+          0.00016,
+          "=inputs.body_mass * 0.00016 / 100"
+        ],
+        [
+          "Nitrogen",
+          3,
+          "=inputs.body_mass * 3 / 100"
+        ],
+        [
+          "Oxygen",
+          65,
+          "=inputs.body_mass * 65 / 100"
+        ],
+        [
+          "Phosphorus",
+          1,
+          "=inputs.body_mass * 1.0 / 100"
+        ],
+        [
+          "Potassium",
+          0.2,
+          "=inputs.body_mass * 0.20 / 100"
+        ],
+        [
+          "Radium",
+          1e-13,
+          "=inputs.body_mass * 0.0000000000001 / 100"
+        ],
+        [
+          "Rubidium",
+          0.00046,
+          "=inputs.body_mass * 0.00046 / 100"
+        ],
+        [
+          "Selenium",
+          0.000019,
+          "=inputs.body_mass * 0.000019 / 100"
+        ],
+        [
+          "Silicon",
+          0.002,
+          "=inputs.body_mass * 0.0020 / 100"
+        ],
+        [
+          "Silver",
+          0.000001,
+          "=inputs.body_mass * 0.0000010 / 100"
+        ],
+        [
+          "Sodium",
+          0.15,
+          "=inputs.body_mass * 0.15 / 100"
+        ],
+        [
+          "Strontium",
+          0.00046,
+          "=inputs.body_mass * 0.00046 / 100"
+        ],
+        [
+          "Sulfur",
+          0.25,
+          "=inputs.body_mass * 0.25 / 100"
+        ],
+        [
+          "Tellurium",
+          0.000012,
+          "=inputs.body_mass * 0.000012 / 100"
+        ],
+        [
+          "Tin",
+          0.000024,
+          "=inputs.body_mass * 0.000024 / 100"
+        ],
+        [
+          "Titanium",
+          0.000013,
+          "=inputs.body_mass * 0.000013 / 100"
+        ],
+        [
+          "Uranium",
+          1.3e-7,
+          "=inputs.body_mass * 0.00000013 / 100"
+        ],
+        [
+          "Vanadium",
+          0.000026,
+          "=inputs.body_mass * 0.000026 / 100"
+        ],
+        [
+          "Zinc",
+          0.0032,
+          "=inputs.body_mass * 0.0032 / 100"
+        ],
+        [
+          "Zirconium",
+          0.0006,
+          "=inputs.body_mass * 0.0006 / 100"
+        ]
+      ]
+    }
+  ]
+}

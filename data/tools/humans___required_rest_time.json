@@ -1,0 +1,89 @@
+{
+  "id": "humans___required_rest_time",
+  "title": "Humans - Required Rest Time",
+  "description": "Relaxation rest time vs. working time and activity. Calculate required rest or relaxation time related to working time and power expenditure using the formula: tr = tt (qt - qm) / (qt - qr)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "rest_time_calculator",
+      "content": "Required Rest Time Calculator",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "tt",
+          "label": "Task/Work Time (tt)",
+          "type": "number",
+          "unit": "minutes",
+          "defaultValue": 60
+        },
+        {
+          "id": "qt",
+          "label": "Task Power Consumption (qt)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 600
+        },
+        {
+          "id": "qm",
+          "label": "Maximum Power Consumption Without Recovery (qm)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 350
+        },
+        {
+          "id": "qr",
+          "label": "Resting Power Consumption (qr)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tr",
+          "label": "Required Rest Time (tr)",
+          "formula": "inputs.tt * (inputs.qt - inputs.qm) / (inputs.qt - inputs.qr)",
+          "unit": "minutes",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "rest_time_reference",
+      "content": "Reference Values",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Maximum power consumption (male)",
+          "350 W",
+          "Approximately for most male workers"
+        ],
+        [
+          "Maximum power consumption (female)",
+          "300 W",
+          "Approximately for most female workers"
+        ],
+        [
+          "Resting power consumption",
+          "70 - 100 W",
+          "Common range"
+        ],
+        [
+          "Example: Male worker heavy work",
+          "30 min",
+          "For 600 W task, 100 W rest, 60 min work time"
+        ]
+      ]
+    }
+  ]
+}

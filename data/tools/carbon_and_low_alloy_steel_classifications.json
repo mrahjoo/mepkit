@@ -1,0 +1,12 @@
+{
+  "id": "carbon_and_low_alloy_steel_classifications",
+  "title": "Carbon and Low-Alloy Steel Classifications",
+  "description": "Steel classification tool that covers carbon steel and low-alloy steel compositions, manufacturing methods, finishing techniques, product forms, deoxidation practices, microstructure types, strength levels, heat treatments, and quality descriptors according to ASTM standards.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Steel Classification Overview\n\nSteel is considered to be carbon steel when no minimum content is specified or required for chromium, cobalt, columbium (niobium), molybdenum, nickel, titanium, tungsten, vanadium or zirconium.\n\n### Classification Factors\n\n- **Composition**: Carbon, low-alloy or stainless steel\n- **Manufacturing Methods**: Open hearth, basic oxygen process, or electric furnace methods\n- **Finishing Method**: Hot rolling or cold rolling\n- **Product Form**: Bar, plate, sheet, strip, tubing or structural shape\n- **Deoxidation Practice**: Killed, semi-killed, capped or rimmed steel\n- **Microstructure**: Ferritic, pearlitic and martensitic\n- **Strength Level**: As specified in ASTM standards\n- **Heat Treatment**: Annealing, quenching and tempering, and thermomechanical processing\n- **Quality Descriptors**: Forging quality and commercial quality\n\nFor more information, visit [Key to Metals - Steel Classifications](http://www.keytometals.com/page.aspx?ID=CheckArticle&LN=EN&site=KTS&NM=62)"
+    }
+  ]
+}

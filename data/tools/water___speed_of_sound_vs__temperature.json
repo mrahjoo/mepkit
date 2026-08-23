@@ -1,0 +1,188 @@
+{
+  "id": "water___speed_of_sound_vs__temperature",
+  "title": "Water - Speed of Sound vs. Temperature",
+  "description": "Speed of sound in water at temperatures ranging 32 - 212°F (0 - 100°C) - Imperial and SI units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Speed of Sound in Water\n\nCalculate the speed of sound in water based on temperature. This tool provides data for temperatures ranging from 32°F to 212°F (0°C to 100°C) in both imperial and SI units.\n\n**Note:** Speed of sound in water increases with temperature up to approximately 74°C, then decreases at higher temperatures."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_f",
+          "label": "Temperature (°F)",
+          "type": "number",
+          "defaultValue": 68,
+          "unit": "°F"
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "defaultValue": "imperial",
+          "options": [
+            {
+              "label": "Imperial (ft/s)",
+              "value": "imperial"
+            },
+            {
+              "label": "SI (m/s)",
+              "value": "si"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "speed_of_sound_result",
+          "label": "Speed of Sound",
+          "formula": "inputs.unit_system == 'imperial' ? (1403 + (inputs.temperature_f - 32) * 5/9 * 0.16) * 3.28 : 1403 + (inputs.temperature_f - 32) * 5/9 * 0.16",
+          "unit": "inputs.unit_system == 'imperial' ? 'ft/s' : 'm/s'",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Speed of Sound (ft/s)"
+      ],
+      "rows": [
+        [
+          32,
+          4603
+        ],
+        [
+          40,
+          4672
+        ],
+        [
+          50,
+          4748
+        ],
+        [
+          60,
+          4814
+        ],
+        [
+          70,
+          4871
+        ],
+        [
+          80,
+          4919
+        ],
+        [
+          90,
+          4960
+        ],
+        [
+          100,
+          4995
+        ],
+        [
+          120,
+          5049
+        ],
+        [
+          140,
+          5091
+        ],
+        [
+          160,
+          5101
+        ],
+        [
+          180,
+          5095
+        ],
+        [
+          200,
+          5089
+        ],
+        [
+          212,
+          5062
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Speed of Sound in Water (m/s)",
+        "Speed of Sound in Seawater (m/s)"
+      ],
+      "rows": [
+        [
+          0,
+          1403,
+          1449
+        ],
+        [
+          5,
+          1427,
+          null
+        ],
+        [
+          10,
+          1447,
+          1490
+        ],
+        [
+          20,
+          1481,
+          1522
+        ],
+        [
+          30,
+          1507,
+          1546
+        ],
+        [
+          40,
+          1526,
+          1563
+        ],
+        [
+          50,
+          1541,
+          null
+        ],
+        [
+          60,
+          1552,
+          null
+        ],
+        [
+          70,
+          1555,
+          null
+        ],
+        [
+          80,
+          1555,
+          null
+        ],
+        [
+          90,
+          1550,
+          null
+        ],
+        [
+          100,
+          1543,
+          null
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Reference Information\n\n- **Seawater salinity:** S = 35 (35.17 g/kg)\n- **Conversion factor:** 1 m/s = 3.28 ft/s\n- **Temperature range:** 32°F to 212°F (0°C to 100°C)\n- **Note:** Speed of sound reaches maximum around 74°C (165°F) in fresh water, after which it decreases with further temperature increase."
+    }
+  ]
+}

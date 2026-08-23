@@ -1,0 +1,738 @@
+{
+  "id": "steel_pipes___heat_loss_diagram",
+  "title": "Steel Pipes - Heat Loss Diagram",
+  "description": "Heat loss from steel pipes and tubes (nominal bore 1/2 to 12 inches) at various temperature differences between pipes and ambient air, with correction factors for different installation applications.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "heat_loss_table",
+      "headers": [
+        "Nominal Bore (mm)",
+        "Bore Size (inch)",
+        "50°C",
+        "60°C",
+        "75°C",
+        "100°C",
+        "110°C",
+        "125°C",
+        "140°C",
+        "150°C",
+        "165°C",
+        "195°C",
+        "225°C",
+        "280°C"
+      ],
+      "rows": [
+        [
+          15,
+          "1/2",
+          30,
+          40,
+          60,
+          90,
+          130,
+          155,
+          180,
+          205,
+          235,
+          280,
+          375,
+          575
+        ],
+        [
+          20,
+          "3/4",
+          35,
+          50,
+          70,
+          110,
+          160,
+          190,
+          220,
+          255,
+          290,
+          370,
+          465,
+          660
+        ],
+        [
+          25,
+          "1",
+          40,
+          60,
+          90,
+          130,
+          200,
+          235,
+          275,
+          305,
+          355,
+          455,
+          565,
+          815
+        ],
+        [
+          32,
+          "1 1/4",
+          50,
+          70,
+          110,
+          160,
+          240,
+          290,
+          330,
+          375,
+          435,
+          555,
+          700,
+          1000
+        ],
+        [
+          40,
+          "1 1/2",
+          55,
+          80,
+          120,
+          180,
+          270,
+          320,
+          375,
+          420,
+          485,
+          625,
+          790,
+          1120
+        ],
+        [
+          50,
+          "2",
+          65,
+          95,
+          150,
+          220,
+          330,
+          395,
+          465,
+          520,
+          600,
+          770,
+          975,
+          1390
+        ],
+        [
+          65,
+          "2 1/2",
+          80,
+          120,
+          170,
+          260,
+          390,
+          465,
+          540,
+          615,
+          715,
+          910,
+          1150,
+          1650
+        ],
+        [
+          80,
+          "3",
+          100,
+          140,
+          210,
+          300,
+          470,
+          560,
+          650,
+          740,
+          860,
+          1090,
+          1380,
+          1980
+        ],
+        [
+          100,
+          "4",
+          120,
+          170,
+          260,
+          380,
+          585,
+          700,
+          820,
+          925,
+          1065,
+          1370,
+          1740,
+          2520
+        ],
+        [
+          150,
+          "6",
+          170,
+          250,
+          370,
+          540,
+          815,
+          970,
+          1130,
+          1290,
+          1470,
+          1910,
+          2430,
+          3500
+        ],
+        [
+          200,
+          "8",
+          220,
+          320,
+          470,
+          690,
+          1040,
+          1240,
+          1440,
+          1650,
+          1900,
+          2440,
+          3100,
+          4430
+        ],
+        [
+          250,
+          "10",
+          270,
+          390,
+          570,
+          835,
+          1250,
+          1510,
+          1750,
+          1995,
+          2300,
+          2980,
+          3780,
+          5600
+        ],
+        [
+          300,
+          "12",
+          315,
+          460,
+          670,
+          980,
+          1470,
+          1760,
+          2060,
+          2340,
+          2690,
+          3370,
+          4430,
+          6450
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "correction_factors_table",
+      "headers": [
+        "Application",
+        "Correction Factor"
+      ],
+      "rows": [
+        [
+          "Single pipe freely exposed",
+          1.1
+        ],
+        [
+          "More than one pipe freely exposed",
+          1
+        ],
+        [
+          "More than one pipe along the ceiling",
+          0.65
+        ],
+        [
+          "Single pipe along skirting or riser",
+          1
+        ],
+        [
+          "More than one pipe along skirting or riser",
+          0.9
+        ],
+        [
+          "Single pipe along ceiling",
+          0.75
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "heat_loss_calculator",
+      "inputs": [
+        {
+          "id": "nominal_bore_mm",
+          "label": "Nominal Bore (mm)",
+          "type": "select",
+          "options": [
+            {
+              "label": "15 (1/2\")",
+              "value": 15
+            },
+            {
+              "label": "20 (3/4\")",
+              "value": 20
+            },
+            {
+              "label": "25 (1\")",
+              "value": 25
+            },
+            {
+              "label": "32 (1 1/4\")",
+              "value": 32
+            },
+            {
+              "label": "40 (1 1/2\")",
+              "value": 40
+            },
+            {
+              "label": "50 (2\")",
+              "value": 50
+            },
+            {
+              "label": "65 (2 1/2\")",
+              "value": 65
+            },
+            {
+              "label": "80 (3\")",
+              "value": 80
+            },
+            {
+              "label": "100 (4\")",
+              "value": 100
+            },
+            {
+              "label": "150 (6\")",
+              "value": 150
+            },
+            {
+              "label": "200 (8\")",
+              "value": 200
+            },
+            {
+              "label": "250 (10\")",
+              "value": 250
+            },
+            {
+              "label": "300 (12\")",
+              "value": 300
+            }
+          ]
+        },
+        {
+          "id": "temp_difference",
+          "label": "Temperature Difference (°C)",
+          "type": "select",
+          "options": [
+            {
+              "label": "50°C",
+              "value": 50
+            },
+            {
+              "label": "60°C",
+              "value": 60
+            },
+            {
+              "label": "75°C",
+              "value": 75
+            },
+            {
+              "label": "100°C",
+              "value": 100
+            },
+            {
+              "label": "110°C",
+              "value": 110
+            },
+            {
+              "label": "125°C",
+              "value": 125
+            },
+            {
+              "label": "140°C",
+              "value": 140
+            },
+            {
+              "label": "150°C",
+              "value": 150
+            },
+            {
+              "label": "165°C",
+              "value": 165
+            },
+            {
+              "label": "195°C",
+              "value": 195
+            },
+            {
+              "label": "225°C",
+              "value": 225
+            },
+            {
+              "label": "280°C",
+              "value": 280
+            }
+          ]
+        },
+        {
+          "id": "correction_factor",
+          "label": "Correction Factor",
+          "type": "select",
+          "options": [
+            {
+              "label": "Single pipe freely exposed",
+              "value": 1.1
+            },
+            {
+              "label": "More than one pipe freely exposed",
+              "value": 1
+            },
+            {
+              "label": "More than one pipe along the ceiling",
+              "value": 0.65
+            },
+            {
+              "label": "Single pipe along skirting or riser",
+              "value": 1
+            },
+            {
+              "label": "More than one pipe along skirting or riser",
+              "value": 0.9
+            },
+            {
+              "label": "Single pipe along ceiling",
+              "value": 0.75
+            }
+          ]
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length (m)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_loss_per_meter",
+          "label": "Heat Loss (W/m)",
+          "unit": "W/m",
+          "format": "decimal"
+        },
+        {
+          "id": "corrected_heat_loss_per_meter",
+          "label": "Corrected Heat Loss (W/m)",
+          "unit": "W/m",
+          "format": "decimal"
+        },
+        {
+          "id": "total_heat_loss",
+          "label": "Total Heat Loss",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "heat_loss_chart",
+      "content": "Heat Loss vs Temperature Difference",
+      "options": {
+        "title": {
+          "text": "Steel Pipes - Heat Loss Diagram"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "15mm (1/2\")",
+            "20mm (3/4\")",
+            "25mm (1\")",
+            "32mm (1 1/4\")",
+            "40mm (1 1/2\")",
+            "50mm (2\")",
+            "65mm (2 1/2\")",
+            "80mm (3\")",
+            "100mm (4\")",
+            "150mm (6\")",
+            "200mm (8\")",
+            "250mm (10\")",
+            "300mm (12\")"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature Difference (°C)",
+          "data": [
+            50,
+            60,
+            75,
+            100,
+            110,
+            125,
+            140,
+            150,
+            165,
+            195,
+            225,
+            280
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Heat Loss (W/m)"
+        },
+        "series": [
+          {
+            "name": "15mm (1/2\")",
+            "type": "line",
+            "data": [
+              30,
+              40,
+              60,
+              90,
+              130,
+              155,
+              180,
+              205,
+              235,
+              280,
+              375,
+              575
+            ]
+          },
+          {
+            "name": "20mm (3/4\")",
+            "type": "line",
+            "data": [
+              35,
+              50,
+              70,
+              110,
+              160,
+              190,
+              220,
+              255,
+              290,
+              370,
+              465,
+              660
+            ]
+          },
+          {
+            "name": "25mm (1\")",
+            "type": "line",
+            "data": [
+              40,
+              60,
+              90,
+              130,
+              200,
+              235,
+              275,
+              305,
+              355,
+              455,
+              565,
+              815
+            ]
+          },
+          {
+            "name": "32mm (1 1/4\")",
+            "type": "line",
+            "data": [
+              50,
+              70,
+              110,
+              160,
+              240,
+              290,
+              330,
+              375,
+              435,
+              555,
+              700,
+              1000
+            ]
+          },
+          {
+            "name": "40mm (1 1/2\")",
+            "type": "line",
+            "data": [
+              55,
+              80,
+              120,
+              180,
+              270,
+              320,
+              375,
+              420,
+              485,
+              625,
+              790,
+              1120
+            ]
+          },
+          {
+            "name": "50mm (2\")",
+            "type": "line",
+            "data": [
+              65,
+              95,
+              150,
+              220,
+              330,
+              395,
+              465,
+              520,
+              600,
+              770,
+              975,
+              1390
+            ]
+          },
+          {
+            "name": "65mm (2 1/2\")",
+            "type": "line",
+            "data": [
+              80,
+              120,
+              170,
+              260,
+              390,
+              465,
+              540,
+              615,
+              715,
+              910,
+              1150,
+              1650
+            ]
+          },
+          {
+            "name": "80mm (3\")",
+            "type": "line",
+            "data": [
+              100,
+              140,
+              210,
+              300,
+              470,
+              560,
+              650,
+              740,
+              860,
+              1090,
+              1380,
+              1980
+            ]
+          },
+          {
+            "name": "100mm (4\")",
+            "type": "line",
+            "data": [
+              120,
+              170,
+              260,
+              380,
+              585,
+              700,
+              820,
+              925,
+              1065,
+              1370,
+              1740,
+              2520
+            ]
+          },
+          {
+            "name": "150mm (6\")",
+            "type": "line",
+            "data": [
+              170,
+              250,
+              370,
+              540,
+              815,
+              970,
+              1130,
+              1290,
+              1470,
+              1910,
+              2430,
+              3500
+            ]
+          },
+          {
+            "name": "200mm (8\")",
+            "type": "line",
+            "data": [
+              220,
+              320,
+              470,
+              690,
+              1040,
+              1240,
+              1440,
+              1650,
+              1900,
+              2440,
+              3100,
+              4430
+            ]
+          },
+          {
+            "name": "250mm (10\")",
+            "type": "line",
+            "data": [
+              270,
+              390,
+              570,
+              835,
+              1250,
+              1510,
+              1750,
+              1995,
+              2300,
+              2980,
+              3780,
+              5600
+            ]
+          },
+          {
+            "name": "300mm (12\")",
+            "type": "line",
+            "data": [
+              315,
+              460,
+              670,
+              980,
+              1470,
+              1760,
+              2060,
+              2340,
+              2690,
+              3370,
+              4430,
+              6450
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

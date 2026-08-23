@@ -1,0 +1,108 @@
+{
+  "id": "environmental_noise_directive___eu",
+  "title": "Environmental Noise Directive - EU",
+  "description": "The EU environmental noise exposure metrics Leq24h, LDay, LEvening, LNight, Ldn, and Lden for road, rail and air traffic noise sources. Calculates cumulative exposure (Lden) over a 24-hour period based on day, evening, and night noise levels.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Environmental Noise Directive Exposure Calculator\n\nThe EU Environment Noise Directive defines noise exposure indicators:\n- **Ld** - day noise indicator (07:00 - 19:00, 12 hours)\n- **Le** - evening noise indicator (19:00 - 23:00, 4 hours)\n- **Ln** - night noise indicator (23:00 - 07:00, 8 hours)\n\n### Cumulative Exposure Formula\n\nLden = 10 log[(1 / 24) (td × 10^(Ld/10) + te × 10^((Le + 5)/10) + tn × 10^((Ln + 10)/10))]\n\nWhere:\n- **Lden** = cumulative exposure (dBA)\n- **Ld** = day exposure (dBA)\n- **Le** = evening exposure (dBA)\n- **Ln** = night exposure (dBA)\n- **td** = day hours\n- **te** = evening hours\n- **tn** = night hours"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ld",
+          "label": "Ld - Day Exposure",
+          "type": "number",
+          "unit": "dBA",
+          "defaultValue": 60
+        },
+        {
+          "id": "le",
+          "label": "Le - Evening Exposure",
+          "type": "number",
+          "unit": "dBA",
+          "defaultValue": 55
+        },
+        {
+          "id": "ln",
+          "label": "Ln - Night Exposure",
+          "type": "number",
+          "unit": "dBA",
+          "defaultValue": 50
+        },
+        {
+          "id": "td",
+          "label": "td - Day Hours",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": 12
+        },
+        {
+          "id": "te",
+          "label": "te - Evening Hours",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": 4
+        },
+        {
+          "id": "tn",
+          "label": "tn - Night Hours",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": 8
+        }
+      ],
+      "outputs": [
+        {
+          "id": "lden",
+          "label": "Lden - Cumulative Exposure",
+          "unit": "dBA",
+          "format": "decimal",
+          "formula": "10 * Math.log10((1 / 24) * (inputs.td * Math.pow(10, inputs.ld / 10) + inputs.te * Math.pow(10, (inputs.le + 5) / 10) + inputs.tn * Math.pow(10, (inputs.ln + 10) / 10)))"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Area Type",
+        "Day (dBA)",
+        "Night (dBA)"
+      ],
+      "rows": [
+        [
+          "Purely industrial",
+          70,
+          70
+        ],
+        [
+          "Predominant commercial and industrial",
+          65,
+          50
+        ],
+        [
+          "Mixed areas",
+          60,
+          45
+        ],
+        [
+          "Predominant residential",
+          55,
+          40
+        ],
+        [
+          "Purely residential",
+          50,
+          35
+        ],
+        [
+          "Hospitals etc.",
+          45,
+          35
+        ]
+      ]
+    }
+  ]
+}

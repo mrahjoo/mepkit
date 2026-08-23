@@ -1,0 +1,133 @@
+{
+  "id": "nitrogen____enthalpy__internal_energy_and_entropy_",
+  "title": "Nitrogen - Enthalpy, Internal Energy and Entropy vs. Temperature",
+  "description": "Calculate enthalpy, internal energy, and entropy properties of nitrogen as a function of temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Nitrogen Thermodynamic Properties Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 298.15
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enthalpy",
+          "label": "Enthalpy",
+          "unit": "kJ/kmol",
+          "formula": "inputs.temperature * 0.0291",
+          "format": "decimal"
+        },
+        {
+          "id": "internal_energy",
+          "label": "Internal Energy",
+          "unit": "kJ/kmol",
+          "formula": "inputs.temperature * 0.0208",
+          "format": "decimal"
+        },
+        {
+          "id": "entropy",
+          "label": "Entropy",
+          "unit": "kJ/(kmol·K)",
+          "formula": "inputs.temperature * 0.00691",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (K)",
+        "Enthalpy (kJ/kmol)",
+        "Internal Energy (kJ/kmol)",
+        "Entropy (kJ/(kmol·K))"
+      ],
+      "rows": [
+        [
+          100,
+          2971,
+          2118,
+          150.88
+        ],
+        [
+          150,
+          4464,
+          3182,
+          166.03
+        ],
+        [
+          200,
+          5957,
+          4247,
+          177.61
+        ],
+        [
+          250,
+          7449,
+          5311,
+          186.78
+        ],
+        [
+          298.15,
+          8670,
+          6190,
+          191.61
+        ],
+        [
+          300,
+          8942,
+          6376,
+          192.8
+        ],
+        [
+          400,
+          11902,
+          8494,
+          202.58
+        ],
+        [
+          500,
+          14863,
+          10613,
+          210.62
+        ],
+        [
+          600,
+          17823,
+          12731,
+          217.28
+        ],
+        [
+          700,
+          20784,
+          14850,
+          222.99
+        ],
+        [
+          800,
+          23744,
+          16968,
+          227.96
+        ],
+        [
+          900,
+          26705,
+          19087,
+          232.35
+        ],
+        [
+          1000,
+          29665,
+          21205,
+          236.27
+        ]
+      ]
+    }
+  ]
+}

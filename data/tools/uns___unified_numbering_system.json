@@ -1,0 +1,112 @@
+{
+  "id": "uns___unified_numbering_system",
+  "title": "UNS - Unified Numbering System",
+  "description": "The Unified Numbering System (UNS) was developed by ASTM and SAE to correlate different numbering systems for commercial metals and alloys. The UNS number is an identification number that categorizes metals and alloys into 19 series, each representing different metal types and their compositions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "UNS Series",
+        "Metal Type",
+        "Category"
+      ],
+      "rows": [
+        [
+          "A00001 to A99999",
+          "Aluminum and aluminum alloys",
+          "Nonferrous"
+        ],
+        [
+          "C00001 to C99999",
+          "Copper and copper alloys",
+          "Nonferrous"
+        ],
+        [
+          "D00001 to D99999",
+          "Specified mechanical property steels",
+          "Ferrous"
+        ],
+        [
+          "E00001 to E99999",
+          "Rare earth and rare earthlike metals and alloys",
+          "Nonferrous"
+        ],
+        [
+          "F00001 to F99999",
+          "Cast irons",
+          "Ferrous"
+        ],
+        [
+          "G00001 to G99999",
+          "AISI and SAE carbon and alloy steels (except tool steels)",
+          "Ferrous"
+        ],
+        [
+          "H00001 to H99999",
+          "AISI and SAE H-steels",
+          "Ferrous"
+        ],
+        [
+          "J00001 to J99999",
+          "Cast steels (except tool steels)",
+          "Ferrous"
+        ],
+        [
+          "K00001 to K99999",
+          "Miscellaneous steels and ferrous alloys",
+          "Ferrous"
+        ],
+        [
+          "L00001 to L99999",
+          "Low-melting metals and alloys",
+          "Nonferrous"
+        ],
+        [
+          "M00001 to M99999",
+          "Miscellaneous nonferrous metals and alloys",
+          "Nonferrous"
+        ],
+        [
+          "N00001 to N99999",
+          "Nickel and nickel alloys",
+          "Nonferrous"
+        ],
+        [
+          "P00001 to P99999",
+          "Precious metals and alloys",
+          "Nonferrous"
+        ],
+        [
+          "R00001 to R99999",
+          "Reactive and refractory metals and alloys",
+          "Nonferrous"
+        ],
+        [
+          "S00001 to S99999",
+          "Heat and corrosion resistant (stainless) steels",
+          "Ferrous"
+        ],
+        [
+          "T00001 to T99999",
+          "Tool steels, wrought and cast",
+          "Ferrous"
+        ],
+        [
+          "W00001 to W99999",
+          "Welding filler metals",
+          "Ferrous"
+        ],
+        [
+          "Z00001 to Z99999",
+          "Zinc and zinc alloys",
+          "Nonferrous"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nThe Unified Numbering System (UNS) provides a correlation between different commercial numbering systems for metals and alloys, developed jointly by ASTM and SAE.\n\n### Key Information\n\n- **Purpose**: Identification and classification of metals and alloys\n- **Ferrous Metals and Alloys**: Series D, F, G, H, J, K, S, T, W\n- **Nonferrous Metals and Alloys**: Series A, C, E, L, M, N, P, R, Z\n- **Format**: Each series contains 99,999 designations\n\nThe UNS number itself is not a specification but rather serves as a reference identifier that correlates to specifications defined elsewhere."
+    }
+  ]
+}

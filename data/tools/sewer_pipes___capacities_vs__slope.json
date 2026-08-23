@@ -1,0 +1,76 @@
+{
+  "id": "sewer_pipes___capacities_vs__slope",
+  "title": "Sewer Pipes - Capacities vs. Slope",
+  "description": "Carrying capacities of sewer and wastewater pipes - gpm and liter per second. Calculate pipe capacity based on diameter and slope, and convert between decline and slope units.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sewer Pipe Capacity Calculator\n\nCalculate the capacity of sewer and wastewater pipes based on diameter and slope. These calculations are based on clean plastic pipes using the Manning formula with roughness coefficient 0.015 and 50% fill."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter_inches",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 4
+        },
+        {
+          "id": "slope_percent",
+          "label": "Slope/Decline",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "capacity_gpm",
+          "label": "Capacity (Imperial)",
+          "unit": "gpm",
+          "formula": "inputs.pipe_diameter_inches * inputs.slope_percent * 0.633",
+          "format": "decimal"
+        },
+        {
+          "id": "capacity_lps",
+          "label": "Capacity (SI)",
+          "unit": "liter/s",
+          "formula": "inputs.capacity_gpm * 0.06309",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Decline and Slope Conversion\n\nConvert between decline (%) and slope units using the following relationships:\n\n- _d = 8.33 × s(in/ft)_\n- _d = 100 × s(ft/ft)_\n- _d = 100 × s(m/m)_\n- _d = s(ft/100ft)_\n\nWhere _d_ = decline (%) and _s_ = slope"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "slope_in_per_ft",
+          "label": "Slope",
+          "type": "number",
+          "unit": "in/ft",
+          "defaultValue": 0.125
+        }
+      ],
+      "outputs": [
+        {
+          "id": "decline_percent",
+          "label": "Decline",
+          "unit": "%",
+          "formula": "inputs.slope_in_per_ft * 8.33",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Data\n\n### Conversions\n- 1 gal (US)/min = 6.30888×10⁻⁵ m³/s\n- 1 gal (US)/min = 0.227 m³/h\n- 1 gal (US)/min = 0.06309 dm³(liter)/s\n- 1 gal (US)/min = 2.228×10⁻³ ft³/s\n- 1 gal (US)/min = 0.1337 ft³/min\n- 1 gal (US)/min = 0.8327 Imperial gal (UK)/min\n\n### Example\nThe capacity of a 4 inch sewer pipe with decline 0.5% is approximately **25 gpm (1.6 liter/s)**."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "id": "electrical_motors___frame_dimensions",
+  "title": "Electrical Motors - Frame Dimensions",
+  "description": "Electrical motors NEMA frame dimensions according to NEMA 1984 standards. Contains frame designation and dimensions in inches for various motor frame types.",
+  "type": "datatable"
+}

@@ -1,0 +1,149 @@
+{
+  "id": "kirchhoff_s_voltage_and_current_laws",
+  "title": "Kirchhoff's Voltage and Current Laws",
+  "description": "A tool for analyzing electric circuits using Kirchhoff's Current Law (KCL) and Kirchhoff's Voltage Law (KVL). Calculate unknown currents and voltages in circuit junctions and loops.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Kirchhoff's Laws Calculator\n\n### Kirchhoff's Current Law (KCL)\nAt any junction in an electric circuit, the total current flowing towards the junction is equal to the total current flowing away from the junction.\n\n**Formula:** Σ I = I₁ + I₂ + ... + Iₙ = 0\n\n### Kirchhoff's Voltage Law (KVL)\nIn a closed loop in a network, the sum of the voltage drops around the loop is zero.\n\n**Formula:** Σ U = U₁ + U₂ + ... + Uₙ = 0"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Kirchhoff's Current Law Analysis"
+      ],
+      "inputs": [
+        {
+          "id": "i1",
+          "label": "Current I₁",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "A"
+        },
+        {
+          "id": "i2",
+          "label": "Current I₂",
+          "type": "number",
+          "defaultValue": 0.2,
+          "unit": "A"
+        },
+        {
+          "id": "i3",
+          "label": "Current I₃",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "A"
+        },
+        {
+          "id": "i4",
+          "label": "Current I₄",
+          "type": "number",
+          "defaultValue": -0.05,
+          "unit": "A"
+        },
+        {
+          "id": "i5",
+          "label": "Current I₅",
+          "type": "number",
+          "defaultValue": -0.15,
+          "unit": "A"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "i_total",
+          "label": "Total Current (Sum of Known Currents)",
+          "formula": "inputs.i1 + inputs.i2 + inputs.i3 + inputs.i4 + inputs.i5",
+          "unit": "A",
+          "format": "decimal"
+        },
+        {
+          "id": "i6",
+          "label": "Unknown Current I₆ (from KCL)",
+          "formula": "-(inputs.i1 + inputs.i2 + inputs.i3 + inputs.i4 + inputs.i5)",
+          "unit": "A",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Current",
+        "Value (A)",
+        "Direction"
+      ],
+      "rows": [
+        [
+          "I₁",
+          "0.1",
+          "Towards junction"
+        ],
+        [
+          "I₂",
+          "0.2",
+          "Towards junction"
+        ],
+        [
+          "I₃",
+          "0.1",
+          "Towards junction"
+        ],
+        [
+          "I₄",
+          "-0.05",
+          "Away from junction"
+        ],
+        [
+          "I₅",
+          "-0.15",
+          "Away from junction"
+        ],
+        [
+          "I₆",
+          "-0.2",
+          "Away from junction"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Kirchhoff's Voltage Law Analysis"
+      ],
+      "inputs": [
+        {
+          "id": "u1",
+          "label": "Voltage U₁",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "V"
+        },
+        {
+          "id": "u2",
+          "label": "Voltage U₂",
+          "type": "number",
+          "defaultValue": -5,
+          "unit": "V"
+        },
+        {
+          "id": "u3",
+          "label": "Voltage U₃",
+          "type": "number",
+          "defaultValue": -3,
+          "unit": "V"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "u_total",
+          "label": "Sum of Voltages (KVL Check)",
+          "formula": "inputs.u1 + inputs.u2 + inputs.u3",
+          "unit": "V",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

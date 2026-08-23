@@ -1,0 +1,61 @@
+{
+  "id": "water_hammer",
+  "title": "Water Hammer",
+  "description": "A calculator for estimating pressure spikes (water hammer) caused by sudden changes in flow rate in pipes. Calculates the surge pressure resulting from rapid valve closure or opening, pump start/stop events, or pipeline bursts.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Water Hammer Calculator\n\nA **Water Hammer** (or **Surge**) is a pressure spike caused by sudden variation of flow rate in pipes. This calculator estimates the pressure spike using the formula:\n\n**Δp = 0.070 × Δv × l / Δt**\n\nWhere:\n- **Δp** = pressure spike (psi)\n- **Δv** = change in flow velocity (ft/s)\n- **l** = upstream pipe length (ft)\n- **Δt** = valve closing time (s)\n\n## Unit Conversions\n- 1 ft = 0.3048 m\n- 1 ft/s = 0.3048 m/s\n- 1 psi = 6894.8 Pa\n- 1 psi = 0.0689476 bar"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "velocity_change",
+          "label": "Change in Velocity",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "ft/s"
+        },
+        {
+          "id": "pipe_length",
+          "label": "Upstream Pipe Length",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "ft"
+        },
+        {
+          "id": "closing_time",
+          "label": "Valve Closing Time",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_spike_psi",
+          "label": "Pressure Spike (Imperial)",
+          "formula": "0.070 * inputs.velocity_change * inputs.pipe_length / inputs.closing_time",
+          "unit": "psi",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_spike_bar",
+          "label": "Pressure Spike (Metric)",
+          "formula": "(0.070 * inputs.velocity_change * inputs.pipe_length / inputs.closing_time) * 0.0689476",
+          "unit": "bar",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_spike_pa",
+          "label": "Pressure Spike (Pa)",
+          "formula": "(0.070 * inputs.velocity_change * inputs.pipe_length / inputs.closing_time) * 6894.8",
+          "unit": "Pa",
+          "format": "scientific"
+        }
+      ]
+    }
+  ]
+}

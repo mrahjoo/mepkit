@@ -1,0 +1,150 @@
+{
+  "id": "hydraulic_force_vs__pressure_and_cylinder_size",
+  "title": "Hydraulic Force vs. Pressure and Cylinder Size",
+  "description": "Calculator for hydraulic force produced by double acting hydraulic pistons based on pressure and cylinder dimensions. Supports both imperial (psi, inches) and metric (bar, mm) units.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Hydraulic Force Calculator\n\nCalculate the force produced by a double-acting hydraulic piston based on pressure and cylinder dimensions.\n\n**Formula for rod side force (F1):**\nF1 = P1 × (π × (d2² - d1²) / 4)\n\n**Formula for opposite rod side force (F2):**\nF2 = P2 × (π × d2² / 4)\n\nWhere:\n- F1, F2 = rod force (N or lb)\n- P1, P2 = pressure (bar or psi)\n- d1 = rod diameter (mm or in)\n- d2 = piston diameter (mm or in)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Metric Units (Rod Side - F1)"
+      ],
+      "inputs": [
+        {
+          "id": "metric_piston_diameter_f1",
+          "label": "Piston Diameter - d2",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "metric_rod_diameter_f1",
+          "label": "Rod Diameter - d1",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 20
+        },
+        {
+          "id": "metric_pressure_f1",
+          "label": "Cylinder Pressure - P1",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "metric_force_f1",
+          "label": "Rod Force - F1",
+          "formula": "inputs.metric_pressure_f1 * (3.14159265359 * (Math.pow(inputs.metric_piston_diameter_f1, 2) - Math.pow(inputs.metric_rod_diameter_f1, 2)) / 4) * 100",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Metric Units (Opposite Rod Side - F2)"
+      ],
+      "inputs": [
+        {
+          "id": "metric_piston_diameter_f2",
+          "label": "Piston Diameter - d2",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "metric_pressure_f2",
+          "label": "Cylinder Pressure - P2",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "metric_force_f2",
+          "label": "Rod Force - F2",
+          "formula": "inputs.metric_pressure_f2 * (3.14159265359 * Math.pow(inputs.metric_piston_diameter_f2, 2) / 4) * 100",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Imperial Units (Rod Side - F1)"
+      ],
+      "inputs": [
+        {
+          "id": "imperial_piston_diameter_f1",
+          "label": "Piston Diameter - d2",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 2
+        },
+        {
+          "id": "imperial_rod_diameter_f1",
+          "label": "Rod Diameter - d1",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 0.75
+        },
+        {
+          "id": "imperial_pressure_f1",
+          "label": "Cylinder Pressure - P1",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "imperial_force_f1",
+          "label": "Rod Force - F1",
+          "formula": "inputs.imperial_pressure_f1 * (3.14159265359 * (Math.pow(inputs.imperial_piston_diameter_f1, 2) - Math.pow(inputs.imperial_rod_diameter_f1, 2)) / 4)",
+          "unit": "lbf",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Imperial Units (Opposite Rod Side - F2)"
+      ],
+      "inputs": [
+        {
+          "id": "imperial_piston_diameter_f2",
+          "label": "Piston Diameter - d2",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 2
+        },
+        {
+          "id": "imperial_pressure_f2",
+          "label": "Cylinder Pressure - P2",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "imperial_force_f2",
+          "label": "Rod Force - F2",
+          "formula": "inputs.imperial_pressure_f2 * (3.14159265359 * Math.pow(inputs.imperial_piston_diameter_f2, 2) / 4)",
+          "unit": "lbf",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

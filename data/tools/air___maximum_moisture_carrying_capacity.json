@@ -1,0 +1,233 @@
+{
+  "id": "air___maximum_moisture_carrying_capacity",
+  "title": "Air - Maximum Moisture Carrying Capacity",
+  "description": "Maximum water content in humid air vs. temperature. Shows how the maximum moisture content possible in air at saturation varies with temperature.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Max Water Content (g/m³)",
+        "Max Water Content (lb/ft³)"
+      ],
+      "rows": [
+        [
+          -25,
+          -13,
+          0.64,
+          0.04
+        ],
+        [
+          -20,
+          -4,
+          1.05,
+          0.066
+        ],
+        [
+          -15,
+          5,
+          1.58,
+          0.099
+        ],
+        [
+          -10,
+          14,
+          2.31,
+          0.14
+        ],
+        [
+          -5,
+          23,
+          3.37,
+          0.21
+        ],
+        [
+          0,
+          32,
+          4.89,
+          0.31
+        ],
+        [
+          5,
+          41,
+          6.82,
+          0.43
+        ],
+        [
+          10,
+          50,
+          9.39,
+          0.59
+        ],
+        [
+          15,
+          59,
+          12.8,
+          0.8
+        ],
+        [
+          20,
+          68,
+          17.3,
+          1.07
+        ],
+        [
+          30,
+          86,
+          30.4,
+          1.9
+        ],
+        [
+          40,
+          104,
+          51.1,
+          3.2
+        ],
+        [
+          50,
+          122,
+          83,
+          5.2
+        ],
+        [
+          60,
+          140,
+          130,
+          8.1
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Air - Moisture Carrying Capacity vs Temperature"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Temperature (°C)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Max Water Content (g/m³)"
+        },
+        "series": [
+          {
+            "data": [
+              [
+                -25,
+                0.64
+              ],
+              [
+                -20,
+                1.05
+              ],
+              [
+                -15,
+                1.58
+              ],
+              [
+                -10,
+                2.31
+              ],
+              [
+                -5,
+                3.37
+              ],
+              [
+                0,
+                4.89
+              ],
+              [
+                5,
+                6.82
+              ],
+              [
+                10,
+                9.39
+              ],
+              [
+                15,
+                12.8
+              ],
+              [
+                20,
+                17.3
+              ],
+              [
+                30,
+                30.4
+              ],
+              [
+                40,
+                51.1
+              ],
+              [
+                50,
+                83
+              ],
+              [
+                60,
+                130
+              ]
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Max Water Content"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temp_initial_celsius",
+          "label": "Initial Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "temp_final_celsius",
+          "label": "Final Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 50
+        },
+        {
+          "id": "moisture_initial",
+          "label": "Initial Max Moisture Content",
+          "type": "number",
+          "unit": "g/m³",
+          "defaultValue": 17.3
+        },
+        {
+          "id": "moisture_final",
+          "label": "Final Max Moisture Content",
+          "type": "number",
+          "unit": "g/m³",
+          "defaultValue": 83
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moisture_increase",
+          "label": "Moisture Carrying Capacity Increase",
+          "formula": "((inputs.moisture_final - inputs.moisture_initial) / inputs.moisture_initial) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Insights\n\n- **Temperature Effect**: The maximum moisture content in air increases significantly with temperature\n- **Exponential Relationship**: The relationship is not linear; small temperature increases at lower temperatures have less effect than at higher temperatures\n- **Practical Application**: This explains why heated air is far more effective than cold air in drying processes\n- **Example**: Air heated from 20°C to 50°C increases its moisture carrying capacity by approximately 380%\n\n## Note\n- Values are given in g/m³ (grams per cubic meter), which equals 10⁻³ kg/m³\n- Alternative unit: lb/ft³ (pounds per cubic foot)"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "ansi___american_national_standards_institute",
+  "title": "ANSI - American National Standards Institute",
+  "description": "ANSI provides a forum for development of American national standards.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Standard",
+        "Title",
+        "Status",
+        "Year"
+      ],
+      "rows": [
+        [
+          "ANSI/NEMA",
+          "Electrical Standards",
+          "Active",
+          2024
+        ],
+        [
+          "ANSI/ISO",
+          "International Standards Adoption",
+          "Active",
+          2024
+        ],
+        [
+          "ANSI/UL",
+          "Safety Standards",
+          "Active",
+          2024
+        ],
+        [
+          "ANSI/ASME",
+          "Engineering Standards",
+          "Active",
+          2024
+        ]
+      ]
+    }
+  ]
+}

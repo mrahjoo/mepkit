@@ -1,0 +1,139 @@
+{
+  "id": "sanitary_piping___drainage_fixtures_unit_loads",
+  "title": "Sanitary Piping - Drainage Fixtures Unit Loads",
+  "description": "Maximum Drainage Fixture Unit (DFU) loads in sanitary piping systems. A Fixture Unit is equal to one cubic foot of water drained in a 1 1/4 inch pipe over one minute (≈ 7.48 U.S. gpm, ≈ 0.47 l/s).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "dfu_stacks_branches",
+      "headers": [
+        "Pipe Size (inches)",
+        "Pipe Size (mm)",
+        "Horizontal Branch Max DFU",
+        "Stack < 3 Stories Max DFU",
+        "Stack > 3 Stories Max DFU",
+        "Total for Stack",
+        "Total for One Story"
+      ],
+      "rows": [
+        [
+          "1 1/2",
+          "40",
+          "3",
+          "4",
+          "8",
+          "2",
+          ""
+        ],
+        [
+          "2",
+          "50",
+          "6",
+          "10",
+          "24",
+          "6",
+          ""
+        ],
+        [
+          "2 1/2",
+          "65",
+          "12",
+          "20",
+          "42",
+          "9",
+          ""
+        ],
+        [
+          "3",
+          "80",
+          "20",
+          "48",
+          "72",
+          "20",
+          ""
+        ],
+        [
+          "4",
+          "100",
+          "160",
+          "240",
+          "500",
+          "90",
+          ""
+        ],
+        [
+          "5",
+          "125",
+          "360",
+          "540",
+          "1100",
+          "200",
+          ""
+        ],
+        [
+          "6",
+          "150",
+          "620",
+          "960",
+          "1900",
+          "350",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "dfu_building_drains",
+      "headers": [
+        "Pipe Size (inches)",
+        "Pipe Size (mm)",
+        "1/4 in/ft (2.1 cm/m) Slope Max DFU",
+        "1/2 in/ft (4.2 cm/m) Slope Max DFU"
+      ],
+      "rows": [
+        [
+          "2",
+          "50",
+          "21",
+          "26"
+        ],
+        [
+          "2 1/2",
+          "65",
+          "24",
+          "31"
+        ],
+        [
+          "3",
+          "80",
+          "42",
+          "50"
+        ],
+        [
+          "4",
+          "100",
+          "216",
+          "250"
+        ],
+        [
+          "5",
+          "125",
+          "480",
+          "575"
+        ],
+        [
+          "6",
+          "150",
+          "840",
+          "1000"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "notes",
+      "content": "## Notes\n\n- **Fixture Unit Definition**: A fixture unit is equal to one cubic foot of water drained in a 1 1/4 inch pipe over one minute (≈ 7.48 U.S. gpm, ≈ 0.47 l/s)\n- **Stacks**: Vertical runs of plumbing waste or drainage lines\n- **Water Closet Restrictions**:\n  - 1 1/2\", 2\", 2 1/2\" pipe sizes: No water closet permitted\n  - 3\" pipe size: Maximum 2 water closets\n  - 3\" and larger stacks (>3 stories): Maximum 6 water closets\n\n## Tables\n\n### Table 1: Drainage Fixture Units (DFU) in Stacks and Horizontal Fixture Branches\nThis table shows the maximum DFU values for horizontal fixture branches and various stack configurations.\n\n### Table 2: Drainage Fixture Units (DFU) in Building Drains and Building Drain Branches from Stacks\nThis table shows the maximum DFU values based on pipe slope in building drains and drain branches from stacks.\n\nAll values are based on the major U.S. plumbing codes."
+    }
+  ]
+}

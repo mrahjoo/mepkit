@@ -1,0 +1,279 @@
+{
+  "id": "polypropylene_fiber_ropes___strengths",
+  "title": "Polypropylene Fiber Ropes - Strengths",
+  "description": "Polypropylene fiber 3-strand and 8 strand rope - minimum breaking strength and safe load calculator. Calculate safe loads and masses for various rope diameters.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "rope_strength_calc",
+      "content": "Calculate polypropylene rope strength properties based on rope diameter",
+      "inputs": [
+        {
+          "id": "rope_diameter",
+          "label": "Rope Diameter",
+          "type": "select",
+          "options": [
+            {
+              "value": "0.25",
+              "label": "1/4 inch"
+            },
+            {
+              "value": "0.3125",
+              "label": "5/16 inch"
+            },
+            {
+              "value": "0.375",
+              "label": "3/8 inch"
+            },
+            {
+              "value": "0.4375",
+              "label": "7/16 inch"
+            },
+            {
+              "value": "0.5",
+              "label": "1/2 inch"
+            },
+            {
+              "value": "0.5625",
+              "label": "9/16 inch"
+            },
+            {
+              "value": "0.625",
+              "label": "5/8 inch"
+            },
+            {
+              "value": "0.75",
+              "label": "3/4 inch"
+            },
+            {
+              "value": "0.875",
+              "label": "7/8 inch"
+            },
+            {
+              "value": "1.0",
+              "label": "1 inch"
+            },
+            {
+              "value": "1.0625",
+              "label": "1 1/16 inch"
+            },
+            {
+              "value": "1.125",
+              "label": "1 1/8 inch"
+            },
+            {
+              "value": "1.25",
+              "label": "1 1/4 inch"
+            },
+            {
+              "value": "1.375",
+              "label": "1 3/8 inch"
+            },
+            {
+              "value": "1.5",
+              "label": "1 1/2 inch"
+            },
+            {
+              "value": "1.625",
+              "label": "1 5/8 inch"
+            },
+            {
+              "value": "1.75",
+              "label": "1 3/4 inch"
+            },
+            {
+              "value": "2.0",
+              "label": "2 inch"
+            }
+          ],
+          "defaultValue": "0.375"
+        },
+        {
+          "id": "safety_factor",
+          "label": "Safety Factor",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "min_breaking_strength_lbf",
+          "label": "Minimum Breaking Strength",
+          "unit": "lbf",
+          "format": "decimal",
+          "formula": "IF(inputs.rope_diameter=0.25,1125,IF(inputs.rope_diameter=0.3125,1710,IF(inputs.rope_diameter=0.375,2430,IF(inputs.rope_diameter=0.4375,3150,IF(inputs.rope_diameter=0.5,3780,IF(inputs.rope_diameter=0.5625,4590,IF(inputs.rope_diameter=0.625,5580,IF(inputs.rope_diameter=0.75,7650,IF(inputs.rope_diameter=0.875,10350,IF(inputs.rope_diameter=1.0,12825,IF(inputs.rope_diameter=1.0625,14400,IF(inputs.rope_diameter=1.125,16000,IF(inputs.rope_diameter=1.25,19350,IF(inputs.rope_diameter=1.375,21150,IF(inputs.rope_diameter=1.5,27350,IF(inputs.rope_diameter=1.625,31950,IF(inputs.rope_diameter=1.75,36900,IF(inputs.rope_diameter=2.0,46800,0))))))))))))))))))))"
+        },
+        {
+          "id": "safe_load_lbf",
+          "label": "Safe Load (Safety Factor 12)",
+          "unit": "lbf",
+          "format": "decimal",
+          "formula": "inputs.min_breaking_strength_lbf / inputs.safety_factor"
+        },
+        {
+          "id": "safe_load_kn",
+          "label": "Safe Load",
+          "unit": "kN",
+          "format": "decimal",
+          "formula": "IF(inputs.rope_diameter=0.25,0.417,IF(inputs.rope_diameter=0.3125,0.634,IF(inputs.rope_diameter=0.375,0.90,IF(inputs.rope_diameter=0.4375,1.17,IF(inputs.rope_diameter=0.5,1.40,IF(inputs.rope_diameter=0.5625,1.70,IF(inputs.rope_diameter=0.625,2.07,IF(inputs.rope_diameter=0.75,2.84,IF(inputs.rope_diameter=0.875,3.84,IF(inputs.rope_diameter=1.0,4.76,IF(inputs.rope_diameter=1.0625,5.34,IF(inputs.rope_diameter=1.125,5.92,IF(inputs.rope_diameter=1.25,7.16,IF(inputs.rope_diameter=1.375,7.83,IF(inputs.rope_diameter=1.5,10.1,IF(inputs.rope_diameter=1.625,11.8,IF(inputs.rope_diameter=1.75,13.7,IF(inputs.rope_diameter=2.0,17.3,0))))))))))))))))))))"
+        },
+        {
+          "id": "max_safe_mass_kg",
+          "label": "Maximum Safe Mass",
+          "unit": "kg",
+          "format": "decimal",
+          "formula": "(inputs.safe_load_kn * 1000) / 9.81"
+        },
+        {
+          "id": "weight_per_length_kg_m",
+          "label": "Weight per Length",
+          "unit": "kg/m",
+          "format": "decimal",
+          "formula": "IF(inputs.rope_diameter=0.25,0.02,IF(inputs.rope_diameter=0.3125,0.03,IF(inputs.rope_diameter=0.375,0.04,IF(inputs.rope_diameter=0.4375,0.05,IF(inputs.rope_diameter=0.5,0.07,IF(inputs.rope_diameter=0.5625,0.09,IF(inputs.rope_diameter=0.625,0.11,IF(inputs.rope_diameter=0.75,0.15,IF(inputs.rope_diameter=0.875,0.21,IF(inputs.rope_diameter=1.0,0.27,IF(inputs.rope_diameter=1.0625,0.30,IF(inputs.rope_diameter=1.125,0.34,IF(inputs.rope_diameter=1.25,0.41,IF(inputs.rope_diameter=1.375,0.45,IF(inputs.rope_diameter=1.5,0.59,IF(inputs.rope_diameter=1.625,0.68,IF(inputs.rope_diameter=1.75,0.79,IF(inputs.rope_diameter=2.0,1.03,0))))))))))))))))))))"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "rope_properties_table",
+      "content": "Polypropylene Rope Properties Reference Table",
+      "headers": [
+        "Rope Diameter (in)",
+        "Min Breaking Strength (lbf)",
+        "Safe Load (lbf)",
+        "Safe Load (kN)",
+        "Weight (kg/m)"
+      ],
+      "rows": [
+        [
+          "1/4",
+          "1125",
+          "94",
+          "0.417",
+          "0.02"
+        ],
+        [
+          "5/16",
+          "1710",
+          "143",
+          "0.634",
+          "0.03"
+        ],
+        [
+          "3/8",
+          "2430",
+          "203",
+          "0.90",
+          "0.04"
+        ],
+        [
+          "7/16",
+          "3150",
+          "263",
+          "1.17",
+          "0.05"
+        ],
+        [
+          "1/2",
+          "3780",
+          "315",
+          "1.40",
+          "0.07"
+        ],
+        [
+          "9/16",
+          "4590",
+          "383",
+          "1.70",
+          "0.09"
+        ],
+        [
+          "5/8",
+          "5580",
+          "465",
+          "2.07",
+          "0.11"
+        ],
+        [
+          "3/4",
+          "7650",
+          "638",
+          "2.84",
+          "0.15"
+        ],
+        [
+          "7/8",
+          "10350",
+          "863",
+          "3.84",
+          "0.21"
+        ],
+        [
+          "1",
+          "12825",
+          "1070",
+          "4.76",
+          "0.27"
+        ],
+        [
+          "1 1/16",
+          "14400",
+          "1200",
+          "5.34",
+          "0.30"
+        ],
+        [
+          "1 1/8",
+          "16000",
+          "1330",
+          "5.92",
+          "0.34"
+        ],
+        [
+          "1 1/4",
+          "19350",
+          "1610",
+          "7.16",
+          "0.41"
+        ],
+        [
+          "1 3/8",
+          "21150",
+          "1760",
+          "7.83",
+          "0.45"
+        ],
+        [
+          "1 1/2",
+          "27350",
+          "2280",
+          "10.1",
+          "0.59"
+        ],
+        [
+          "1 5/8",
+          "31950",
+          "2660",
+          "11.8",
+          "0.68"
+        ],
+        [
+          "1 3/4",
+          "36900",
+          "3080",
+          "13.7",
+          "0.79"
+        ],
+        [
+          "2",
+          "46800",
+          "3900",
+          "17.3",
+          "1.03"
+        ]
+      ]
+    }
+  ]
+}

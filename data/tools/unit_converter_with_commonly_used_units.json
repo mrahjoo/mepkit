@@ -1,0 +1,677 @@
+{
+  "id": "unit_converter_with_commonly_used_units",
+  "title": "Unit Converter with commonly used Units",
+  "description": "A comprehensive unit converter supporting multiple categories including acceleration, angle, area, density, energy, force, length, mass, power, pressure, temperature, velocity, volume, and many more. Convert between commonly used units across various measurement systems.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "## Unit Converter Calculator",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Value to Convert",
+          "type": "number",
+          "defaultValue": 2000
+        },
+        {
+          "id": "category",
+          "label": "Category",
+          "type": "select",
+          "options": [
+            {
+              "value": "length",
+              "label": "Length"
+            },
+            {
+              "value": "mass",
+              "label": "Mass/Weight"
+            },
+            {
+              "value": "area",
+              "label": "Area"
+            },
+            {
+              "value": "volume",
+              "label": "Volume"
+            },
+            {
+              "value": "temperature",
+              "label": "Temperature"
+            },
+            {
+              "value": "pressure",
+              "label": "Pressure"
+            },
+            {
+              "value": "force",
+              "label": "Force"
+            },
+            {
+              "value": "energy",
+              "label": "Energy"
+            },
+            {
+              "value": "power",
+              "label": "Power"
+            },
+            {
+              "value": "velocity",
+              "label": "Velocity/Speed"
+            },
+            {
+              "value": "density",
+              "label": "Density"
+            },
+            {
+              "value": "acceleration",
+              "label": "Acceleration"
+            },
+            {
+              "value": "angle",
+              "label": "Angle"
+            },
+            {
+              "value": "time",
+              "label": "Time"
+            },
+            {
+              "value": "frequency",
+              "label": "Frequency"
+            }
+          ],
+          "defaultValue": "pressure"
+        },
+        {
+          "id": "from_unit",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "pa",
+              "label": "Pascal (Pa)"
+            },
+            {
+              "value": "bar",
+              "label": "Bar"
+            },
+            {
+              "value": "atm",
+              "label": "Atmosphere (atm)"
+            },
+            {
+              "value": "psi",
+              "label": "PSI (psi)"
+            },
+            {
+              "value": "mmhg",
+              "label": "mm Mercury (mm Hg)"
+            },
+            {
+              "value": "mhg",
+              "label": "m Water Column (m H2O)"
+            },
+            {
+              "value": "m",
+              "label": "Meter (m)"
+            },
+            {
+              "value": "ft",
+              "label": "Foot (ft)"
+            },
+            {
+              "value": "in",
+              "label": "Inch (in)"
+            },
+            {
+              "value": "km",
+              "label": "Kilometer (km)"
+            },
+            {
+              "value": "mi",
+              "label": "Mile (mi)"
+            },
+            {
+              "value": "kg",
+              "label": "Kilogram (kg)"
+            },
+            {
+              "value": "lb",
+              "label": "Pound (lb)"
+            },
+            {
+              "value": "oz",
+              "label": "Ounce (oz)"
+            },
+            {
+              "value": "g",
+              "label": "Gram (g)"
+            },
+            {
+              "value": "m2",
+              "label": "Square Meter (m²)"
+            },
+            {
+              "value": "ft2",
+              "label": "Square Foot (ft²)"
+            },
+            {
+              "value": "in2",
+              "label": "Square Inch (in²)"
+            },
+            {
+              "value": "m3",
+              "label": "Cubic Meter (m³)"
+            },
+            {
+              "value": "ft3",
+              "label": "Cubic Foot (ft³)"
+            },
+            {
+              "value": "l",
+              "label": "Liter (l)"
+            },
+            {
+              "value": "gal",
+              "label": "Gallon (gal)"
+            },
+            {
+              "value": "c",
+              "label": "Celsius (°C)"
+            },
+            {
+              "value": "f",
+              "label": "Fahrenheit (°F)"
+            },
+            {
+              "value": "k",
+              "label": "Kelvin (K)"
+            },
+            {
+              "value": "n",
+              "label": "Newton (N)"
+            },
+            {
+              "value": "kn",
+              "label": "Kilonewton (kN)"
+            },
+            {
+              "value": "lbf",
+              "label": "Pound-force (lbf)"
+            },
+            {
+              "value": "j",
+              "label": "Joule (J)"
+            },
+            {
+              "value": "kj",
+              "label": "Kilojoule (kJ)"
+            },
+            {
+              "value": "btu",
+              "label": "BTU"
+            },
+            {
+              "value": "cal",
+              "label": "Calorie (cal)"
+            },
+            {
+              "value": "w",
+              "label": "Watt (W)"
+            },
+            {
+              "value": "kw",
+              "label": "Kilowatt (kW)"
+            },
+            {
+              "value": "hp",
+              "label": "Horsepower (hp)"
+            },
+            {
+              "value": "ms",
+              "label": "Meter/second (m/s)"
+            },
+            {
+              "value": "kmh",
+              "label": "Kilometer/hour (km/h)"
+            },
+            {
+              "value": "mph",
+              "label": "Mile/hour (mph)"
+            },
+            {
+              "value": "fts",
+              "label": "Foot/second (ft/s)"
+            },
+            {
+              "value": "kgm3",
+              "label": "kg/m³"
+            },
+            {
+              "value": "lbft3",
+              "label": "lb/ft³"
+            },
+            {
+              "value": "ms2",
+              "label": "m/s²"
+            },
+            {
+              "value": "fts2",
+              "label": "ft/s²"
+            },
+            {
+              "value": "deg",
+              "label": "Degree (°)"
+            },
+            {
+              "value": "rad",
+              "label": "Radian (rad)"
+            },
+            {
+              "value": "s",
+              "label": "Second (s)"
+            },
+            {
+              "value": "min",
+              "label": "Minute (min)"
+            },
+            {
+              "value": "h",
+              "label": "Hour (h)"
+            },
+            {
+              "value": "d",
+              "label": "Day (d)"
+            },
+            {
+              "value": "hz",
+              "label": "Hertz (Hz)"
+            },
+            {
+              "value": "rpm",
+              "label": "RPM"
+            }
+          ],
+          "defaultValue": "pa"
+        },
+        {
+          "id": "to_unit",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "pa",
+              "label": "Pascal (Pa)"
+            },
+            {
+              "value": "bar",
+              "label": "Bar"
+            },
+            {
+              "value": "atm",
+              "label": "Atmosphere (atm)"
+            },
+            {
+              "value": "psi",
+              "label": "PSI (psi)"
+            },
+            {
+              "value": "mmhg",
+              "label": "mm Mercury (mm Hg)"
+            },
+            {
+              "value": "mhg",
+              "label": "m Water Column (m H2O)"
+            },
+            {
+              "value": "m",
+              "label": "Meter (m)"
+            },
+            {
+              "value": "ft",
+              "label": "Foot (ft)"
+            },
+            {
+              "value": "in",
+              "label": "Inch (in)"
+            },
+            {
+              "value": "km",
+              "label": "Kilometer (km)"
+            },
+            {
+              "value": "mi",
+              "label": "Mile (mi)"
+            },
+            {
+              "value": "kg",
+              "label": "Kilogram (kg)"
+            },
+            {
+              "value": "lb",
+              "label": "Pound (lb)"
+            },
+            {
+              "value": "oz",
+              "label": "Ounce (oz)"
+            },
+            {
+              "value": "g",
+              "label": "Gram (g)"
+            },
+            {
+              "value": "m2",
+              "label": "Square Meter (m²)"
+            },
+            {
+              "value": "ft2",
+              "label": "Square Foot (ft²)"
+            },
+            {
+              "value": "in2",
+              "label": "Square Inch (in²)"
+            },
+            {
+              "value": "m3",
+              "label": "Cubic Meter (m³)"
+            },
+            {
+              "value": "ft3",
+              "label": "Cubic Foot (ft³)"
+            },
+            {
+              "value": "l",
+              "label": "Liter (l)"
+            },
+            {
+              "value": "gal",
+              "label": "Gallon (gal)"
+            },
+            {
+              "value": "c",
+              "label": "Celsius (°C)"
+            },
+            {
+              "value": "f",
+              "label": "Fahrenheit (°F)"
+            },
+            {
+              "value": "k",
+              "label": "Kelvin (K)"
+            },
+            {
+              "value": "n",
+              "label": "Newton (N)"
+            },
+            {
+              "value": "kn",
+              "label": "Kilonewton (kN)"
+            },
+            {
+              "value": "lbf",
+              "label": "Pound-force (lbf)"
+            },
+            {
+              "value": "j",
+              "label": "Joule (J)"
+            },
+            {
+              "value": "kj",
+              "label": "Kilojoule (kJ)"
+            },
+            {
+              "value": "btu",
+              "label": "BTU"
+            },
+            {
+              "value": "cal",
+              "label": "Calorie (cal)"
+            },
+            {
+              "value": "w",
+              "label": "Watt (W)"
+            },
+            {
+              "value": "kw",
+              "label": "Kilowatt (kW)"
+            },
+            {
+              "value": "hp",
+              "label": "Horsepower (hp)"
+            },
+            {
+              "value": "ms",
+              "label": "Meter/second (m/s)"
+            },
+            {
+              "value": "kmh",
+              "label": "Kilometer/hour (km/h)"
+            },
+            {
+              "value": "mph",
+              "label": "Mile/hour (mph)"
+            },
+            {
+              "value": "fts",
+              "label": "Foot/second (ft/s)"
+            },
+            {
+              "value": "kgm3",
+              "label": "kg/m³"
+            },
+            {
+              "value": "lbft3",
+              "label": "lb/ft³"
+            },
+            {
+              "value": "ms2",
+              "label": "m/s²"
+            },
+            {
+              "value": "fts2",
+              "label": "ft/s²"
+            },
+            {
+              "value": "deg",
+              "label": "Degree (°)"
+            },
+            {
+              "value": "rad",
+              "label": "Radian (rad)"
+            },
+            {
+              "value": "s",
+              "label": "Second (s)"
+            },
+            {
+              "value": "min",
+              "label": "Minute (min)"
+            },
+            {
+              "value": "h",
+              "label": "Hour (h)"
+            },
+            {
+              "value": "d",
+              "label": "Day (d)"
+            },
+            {
+              "value": "hz",
+              "label": "Hertz (Hz)"
+            },
+            {
+              "value": "rpm",
+              "label": "RPM"
+            }
+          ],
+          "defaultValue": "mhg"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Value",
+          "formula": "inputs.value * (1.020e-4)",
+          "format": "decimal",
+          "unit": "m H2O"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "## Conversion Reference Chart",
+      "options": {
+        "title": {
+          "text": "Common Unit Conversions"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Length",
+            "Mass",
+            "Area",
+            "Volume",
+            "Temperature",
+            "Pressure",
+            "Force",
+            "Energy",
+            "Power",
+            "Velocity"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              1,
+              1,
+              1,
+              1,
+              100,
+              1,
+              1,
+              1000,
+              1000,
+              1
+            ],
+            "type": "bar",
+            "name": "Conversion Factor Example"
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "content": "## Quick Reference: Common Unit Conversions",
+      "headers": [
+        "Category",
+        "From Unit",
+        "To Unit",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          "Pressure",
+          "Pa",
+          "m H2O",
+          "1.020e-4"
+        ],
+        [
+          "Pressure",
+          "1 atm",
+          "Pascal",
+          "101325"
+        ],
+        [
+          "Area",
+          "1 sq mi",
+          "sq ft",
+          "2.788e7"
+        ],
+        [
+          "Length",
+          "1 m",
+          "ft",
+          "3.28084"
+        ],
+        [
+          "Length",
+          "1 km",
+          "mi",
+          "0.621137"
+        ],
+        [
+          "Mass",
+          "1 kg",
+          "lb",
+          "2.2046"
+        ],
+        [
+          "Mass",
+          "1 oz",
+          "g",
+          "28.35"
+        ],
+        [
+          "Volume",
+          "1 l",
+          "gal(US)",
+          "0.2642"
+        ],
+        [
+          "Volume",
+          "1 m³",
+          "ft³",
+          "35.315"
+        ],
+        [
+          "Temperature",
+          "°C to °F",
+          "Formula",
+          "(°C × 1.8) + 32"
+        ],
+        [
+          "Force",
+          "1 N",
+          "lbf",
+          "0.2248"
+        ],
+        [
+          "Energy",
+          "1 J",
+          "cal",
+          "0.2390"
+        ],
+        [
+          "Energy",
+          "1 kWh",
+          "J",
+          "3.6e6"
+        ],
+        [
+          "Power",
+          "1 W",
+          "hp",
+          "0.001341"
+        ],
+        [
+          "Velocity",
+          "1 m/s",
+          "mph",
+          "2.237"
+        ],
+        [
+          "Density",
+          "1 kg/m³",
+          "lb/ft³",
+          "0.062428"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "stress__strain_and_young_s_modulus",
+  "title": "Stress, Strain and Young's Modulus",
+  "description": "Calculate stress, strain, and Young's modulus for materials under applied forces. Includes tensile, compressive, and shear stress calculations, along with strain and elasticity modulus computations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Young's Modulus (GPa)",
+        "Shear Modulus (GPa)",
+        "Bulk Modulus (GPa)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          70,
+          24,
+          70
+        ],
+        [
+          "Brass",
+          91,
+          36,
+          61
+        ],
+        [
+          "Copper",
+          110,
+          42,
+          140
+        ],
+        [
+          "Glass",
+          55,
+          23,
+          37
+        ],
+        [
+          "Iron",
+          91,
+          70,
+          100
+        ],
+        [
+          "Lead",
+          16,
+          5.6,
+          7.7
+        ],
+        [
+          "Steel",
+          200,
+          84,
+          160
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Normal Stress (Tensile/Compressive)",
+      "inputs": [
+        {
+          "id": "normal_force",
+          "label": "Normal Force (N)",
+          "type": "number",
+          "defaultValue": 10000
+        },
+        {
+          "id": "area",
+          "label": "Cross-sectional Area (m²)",
+          "type": "number",
+          "defaultValue": 0.00785
+        }
+      ],
+      "outputs": [
+        {
+          "id": "normal_stress",
+          "label": "Normal Stress (Pa)",
+          "formula": "inputs.normal_force / inputs.area",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "normal_stress_mpa",
+          "label": "Normal Stress (MPa)",
+          "formula": "(inputs.normal_force / inputs.area) / 1000000",
+          "unit": "MPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Shear Stress",
+      "inputs": [
+        {
+          "id": "shear_force",
+          "label": "Shear Force (N)",
+          "type": "number",
+          "defaultValue": 5000
+        },
+        {
+          "id": "shear_area",
+          "label": "Shear Area (m²)",
+          "type": "number",
+          "defaultValue": 0.01
+        }
+      ],
+      "outputs": [
+        {
+          "id": "shear_stress",
+          "label": "Shear Stress (Pa)",
+          "formula": "inputs.shear_force / inputs.shear_area",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "shear_stress_mpa",
+          "label": "Shear Stress (MPa)",
+          "formula": "(inputs.shear_force / inputs.shear_area) / 1000000",
+          "unit": "MPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Strain (Deformation)",
+      "inputs": [
+        {
+          "id": "change_length",
+          "label": "Change of Length (m)",
+          "type": "number",
+          "defaultValue": 0.00127
+        },
+        {
+          "id": "initial_length",
+          "label": "Initial Length (m)",
+          "type": "number",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "strain",
+          "label": "Strain (dimensionless)",
+          "formula": "inputs.change_length / inputs.initial_length",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Young's Modulus (Modulus of Elasticity)",
+      "inputs": [
+        {
+          "id": "stress_value",
+          "label": "Stress (Pa)",
+          "type": "number",
+          "defaultValue": 127000000
+        },
+        {
+          "id": "strain_value",
+          "label": "Strain (dimensionless)",
+          "type": "number",
+          "defaultValue": 0.000635
+        }
+      ],
+      "outputs": [
+        {
+          "id": "youngs_modulus",
+          "label": "Young's Modulus (Pa)",
+          "formula": "inputs.stress_value / inputs.strain_value",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "youngs_modulus_gpa",
+          "label": "Young's Modulus (GPa)",
+          "formula": "(inputs.stress_value / inputs.strain_value) / 1000000000",
+          "unit": "GPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Change of Length",
+      "inputs": [
+        {
+          "id": "applied_stress",
+          "label": "Applied Stress (Pa)",
+          "type": "number",
+          "defaultValue": 127000000
+        },
+        {
+          "id": "rod_length",
+          "label": "Rod Length (m)",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "elasticity_modulus",
+          "label": "Young's Modulus (Pa)",
+          "type": "number",
+          "defaultValue": 200000000000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "length_change",
+          "label": "Change of Length (m)",
+          "formula": "(inputs.applied_stress * inputs.rod_length) / inputs.elasticity_modulus",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "length_change_mm",
+          "label": "Change of Length (mm)",
+          "formula": "((inputs.applied_stress * inputs.rod_length) / inputs.elasticity_modulus) * 1000",
+          "unit": "mm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Strain Energy",
+      "inputs": [
+        {
+          "id": "normal_force_energy",
+          "label": "Normal Force (N)",
+          "type": "number",
+          "defaultValue": 10000
+        },
+        {
+          "id": "deformation_length",
+          "label": "Deformation Length (m)",
+          "type": "number",
+          "defaultValue": 0.00127
+        }
+      ],
+      "outputs": [
+        {
+          "id": "strain_energy",
+          "label": "Strain Energy (J)",
+          "formula": "0.5 * inputs.normal_force_energy * inputs.deformation_length",
+          "unit": "J",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

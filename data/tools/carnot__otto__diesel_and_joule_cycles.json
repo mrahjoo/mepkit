@@ -1,0 +1,143 @@
+{
+  "id": "carnot__otto__diesel_and_joule_cycles",
+  "title": "Carnot, Otto, Diesel and Joule Cycles",
+  "description": "The Carnot, Otto, Diesel and Joule cycles describes the processes common in combustion displacement and gas turbine engines.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Carnot Cycle\n\nThe Carnot cycle is the ideal cycle with the best possible efficiency for a machine operating between two temperature levels Tmax and Tmin.\n\nHeat addition and heat rejection occur isothermally in the cycle between point 1 and 2, and 3 and 4.\n\n**Formula:** μ = 1 - Tmin / Tmax"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "carnot_tmin",
+          "label": "Minimum Temperature (Tmin)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        },
+        {
+          "id": "carnot_tmax",
+          "label": "Maximum Temperature (Tmax)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 600
+        }
+      ],
+      "outputs": [
+        {
+          "id": "carnot_efficiency",
+          "label": "Carnot Efficiency (μ)",
+          "formula": "1 - inputs.carnot_tmin / inputs.carnot_tmax",
+          "format": "decimal",
+          "unit": "0..1"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Otto Cycle\n\nThe Otto cycle is a constant-volume cycle where addition of heat or combustion takes place isochorically.\n\nHeat addition and heat rejection occur isothermally in the cycle between point 2 and 3, and 4 and 1.\n\n**Formula:** μ = 1 - ε^(1 - κ)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "otto_epsilon",
+          "label": "Compression Ratio (ε)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 8
+        },
+        {
+          "id": "otto_kappa",
+          "label": "Isentropic Exponent (κ)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 1.4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "otto_efficiency",
+          "label": "Otto Efficiency (μ)",
+          "formula": "1 - Math.pow(inputs.otto_epsilon, 1 - inputs.otto_kappa)",
+          "format": "decimal",
+          "unit": "0..1"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Diesel Cycle\n\nThe Diesel cycle is a constant-pressure cycle where the addition of heat and combustion takes place isobaric.\n\nHeat addition and heat rejection occur isothermic in the cycle between point 2 and 3, and 4 and 1.\n\n**Formula:** μ = 1 - (Φ^κ - 1) / (ε^(κ - 1) × κ × (Φ - 1))"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "diesel_epsilon",
+          "label": "Compression Ratio (ε)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 16
+        },
+        {
+          "id": "diesel_kappa",
+          "label": "Isentropic Exponent (κ)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 1.4
+        },
+        {
+          "id": "diesel_phi",
+          "label": "Injection Ratio (Φ)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 1.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "diesel_efficiency",
+          "label": "Diesel Efficiency (μ)",
+          "formula": "1 - (Math.pow(inputs.diesel_phi, inputs.diesel_kappa) - 1) / (Math.pow(inputs.diesel_epsilon, inputs.diesel_kappa - 1) * inputs.diesel_kappa * (inputs.diesel_phi - 1))",
+          "format": "decimal",
+          "unit": "0..1"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Joule Cycle\n\nThe Joule cycle is a comparison cycle for gas turbines with continuous flow.\n\n**Formula:** η = 1 - T1 / T2"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "joule_t1",
+          "label": "Temperature 1 (T1)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        },
+        {
+          "id": "joule_t2",
+          "label": "Temperature 2 (T2)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 600
+        }
+      ],
+      "outputs": [
+        {
+          "id": "joule_efficiency",
+          "label": "Joule Efficiency (η)",
+          "formula": "1 - inputs.joule_t1 / inputs.joule_t2",
+          "format": "decimal",
+          "unit": "0..1"
+        }
+      ]
+    }
+  ]
+}

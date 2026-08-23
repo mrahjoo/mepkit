@@ -1,0 +1,58 @@
+{
+  "id": "sae_multigrade_oils___viscosities_and_densities",
+  "title": "SAE Multigrade Oils - Viscosities and Densities",
+  "description": "Viscosities and densities of SAE Grade oils.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "SAE Multigrade",
+        "Viscosity (Centistokes at 40°C)",
+        "Viscosity (Centistokes at 100°C)",
+        "Viscosity (10⁻⁶ reyns at 104°F)",
+        "Viscosity (10⁻⁶ reyns at 212°F)",
+        "Density (kg/m³)",
+        "Density (lb/in³)"
+      ],
+      "rows": [
+        [
+          "5W-30",
+          64,
+          11,
+          8.2,
+          1,
+          860,
+          0.0311
+        ],
+        [
+          "10W-30",
+          69,
+          11,
+          8.8,
+          1.1,
+          865,
+          0.0312
+        ],
+        [
+          "10W-40",
+          94,
+          14.3,
+          11.9,
+          1.5,
+          865,
+          0.0312
+        ],
+        [
+          "20W-50",
+          166,
+          18.7,
+          21.3,
+          2.7,
+          872,
+          0.0315
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "id": "light_oil_suction___flow_velocities",
+  "title": "Light Oil Suction - Flow Velocities",
+  "description": "Recommended max. suction flow velocities when pumping light oils. Calculate flow velocity based on pipe bore and volume flow rate to ensure optimal suction conditions and avoid cavitation issues.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate the flow velocity in suction lines for light oils based on pipe bore diameter and volumetric flow rate.",
+      "inputs": [
+        {
+          "id": "pipe_bore_mm",
+          "label": "Pipe Bore",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 100
+        },
+        {
+          "id": "flow_rate",
+          "label": "Volumetric Flow Rate",
+          "type": "number",
+          "unit": "L/min",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_velocity_ms",
+          "label": "Flow Velocity",
+          "unit": "m/s",
+          "format": "decimal",
+          "formula": "(inputs.flow_rate / 1000) / (60 * 3.14159 * (inputs.pipe_bore_mm / 2000) ** 2)"
+        },
+        {
+          "id": "flow_velocity_fts",
+          "label": "Flow Velocity",
+          "unit": "ft/s",
+          "format": "decimal",
+          "formula": "((inputs.flow_rate / 1000) / (60 * 3.14159 * (inputs.pipe_bore_mm / 2000) ** 2)) * 3.28084"
+        },
+        {
+          "id": "recommended_max_ms",
+          "label": "Recommended Max Velocity",
+          "unit": "m/s",
+          "format": "decimal",
+          "formula": "IF(inputs.pipe_bore_mm <= 25, 0.5, IF(inputs.pipe_bore_mm <= 50, 0.5, IF(inputs.pipe_bore_mm <= 75, 0.5, IF(inputs.pipe_bore_mm <= 100, 0.55, IF(inputs.pipe_bore_mm <= 150, 0.6, IF(inputs.pipe_bore_mm <= 200, 0.7, IF(inputs.pipe_bore_mm <= 250, 0.9, IF(inputs.pipe_bore_mm <= 300, 0.9, 0.9))))))))"
+        },
+        {
+          "id": "velocity_status",
+          "label": "Status",
+          "format": "decimal",
+          "formula": "IF(inputs.flow_rate / 1000 / (60 * 3.14159 * (inputs.pipe_bore_mm / 2000) ** 2) <= IF(inputs.pipe_bore_mm <= 25, 0.5, IF(inputs.pipe_bore_mm <= 50, 0.5, IF(inputs.pipe_bore_mm <= 75, 0.5, IF(inputs.pipe_bore_mm <= 100, 0.55, IF(inputs.pipe_bore_mm <= 150, 0.6, IF(inputs.pipe_bore_mm <= 200, 0.7, IF(inputs.pipe_bore_mm <= 250, 0.9, IF(inputs.pipe_bore_mm <= 300, 0.9, 0.9)))))))), 1, 0)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Bore (inches)",
+        "Pipe Bore (mm)",
+        "Light Oil Velocity (m/s)",
+        "Light Oil Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          1,
+          25,
+          0.5,
+          1.5
+        ],
+        [
+          2,
+          50,
+          0.5,
+          1.5
+        ],
+        [
+          3,
+          75,
+          0.5,
+          1.6
+        ],
+        [
+          4,
+          100,
+          0.55,
+          1.8
+        ],
+        [
+          6,
+          150,
+          0.6,
+          2
+        ],
+        [
+          8,
+          200,
+          0.7,
+          2.3
+        ],
+        [
+          10,
+          250,
+          0.9,
+          3
+        ],
+        [
+          12,
+          300,
+          0.9,
+          3
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Recommended Max. Suction Flow Velocities for Light Oils",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            25,
+            50,
+            75,
+            100,
+            150,
+            200,
+            250,
+            300
+          ],
+          "name": "Pipe Bore (mm)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Flow Velocity (m/s)"
+        },
+        "series": [
+          {
+            "data": [
+              0.5,
+              0.5,
+              0.5,
+              0.55,
+              0.6,
+              0.7,
+              0.9,
+              0.9
+            ],
+            "type": "line",
+            "name": "Max Velocity (m/s)",
+            "smooth": true,
+            "itemStyle": {
+              "color": "#FF6B6B"
+            }
+          }
+        ],
+        "grid": {
+          "left": "10%",
+          "right": "10%",
+          "bottom": "15%",
+          "top": "15%",
+          "containLabel": true
+        }
+      }
+    }
+  ]
+}

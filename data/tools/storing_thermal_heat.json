@@ -1,0 +1,196 @@
+{
+  "id": "storing_thermal_heat",
+  "title": "Storing Thermal Heat",
+  "description": "Calculate the thermal energy stored as sensible heat in a material by raising its temperature using the formula q = V ρ cp dt = m cp dt",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Storing Thermal Heat\n\nThermal energy can be stored as sensible heat in a material by raising its temperature.\n\nThe heat or energy storage can be calculated as:\n\n**q = V ρ cp dt = m cp dt**\n\nWhere:\n- **q** = sensible heat stored in the material (J, Btu)\n- **V** = volume of substance (m³, ft³)\n- **ρ** = density of substance (kg/m³, lb/ft³)\n- **m** = mass of substance (kg, lb)\n- **cp** = specific heat of substance (J/kg°C, Btu/lb°F)\n- **dt** = temperature change (°C, °F)\n\nThis calculator computes the thermal energy stored based on volume, density, specific heat, and temperature change."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "volume",
+          "label": "Volume (V)",
+          "type": "number",
+          "unit": "m³ or ft³",
+          "defaultValue": 2
+        },
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³ or lb/ft³",
+          "defaultValue": 2400
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat (cp)",
+          "type": "number",
+          "unit": "J/kg°C or Btu/lb°F",
+          "defaultValue": 790
+        },
+        {
+          "id": "temp_change",
+          "label": "Temperature Change (dt)",
+          "type": "number",
+          "unit": "°C or °F",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_stored_j",
+          "label": "Heat Stored",
+          "formula": "inputs.volume * inputs.density * inputs.specific_heat * inputs.temp_change",
+          "unit": "J or Btu",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_stored_kj",
+          "label": "Heat Stored",
+          "formula": "(inputs.volume * inputs.density * inputs.specific_heat * inputs.temp_change) / 1000",
+          "unit": "kJ",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_stored_kwh",
+          "label": "Heat Stored",
+          "formula": "(inputs.volume * inputs.density * inputs.specific_heat * inputs.temp_change) / 3600000",
+          "unit": "kWh",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Density (kg/m³)",
+        "Specific Heat (J/kg°C)",
+        "Energy Density (kJ/m³°C)",
+        "Temperature Range (°C)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          2700,
+          920,
+          2484,
+          "max. 660 (melting point)"
+        ],
+        [
+          "Brick",
+          1969,
+          921,
+          1813,
+          "—"
+        ],
+        [
+          "Cast Iron",
+          7200,
+          540,
+          3889,
+          "max. 1150 (melting point)"
+        ],
+        [
+          "Concrete",
+          2305,
+          920,
+          2122,
+          "—"
+        ],
+        [
+          "Fireclay",
+          2200,
+          1000,
+          2200,
+          "—"
+        ],
+        [
+          "50% Ethylene Glycol - 50% Water",
+          1075,
+          3480,
+          3741,
+          "0 - 100"
+        ],
+        [
+          "Dowtherm A",
+          867,
+          2200,
+          1907,
+          "12 - 260"
+        ],
+        [
+          "Draw salt (50% NaNO₃ - 50% KNO₃)",
+          1733,
+          1550,
+          2686,
+          "220 - 540"
+        ],
+        [
+          "Granite",
+          2400,
+          790,
+          1896,
+          "—"
+        ],
+        [
+          "Liquid Sodium",
+          750,
+          1260,
+          945,
+          "100 - 760"
+        ],
+        [
+          "Molten Salt (50% KNO₃ - 40% NaNO₂ - 7% NaNO₃)",
+          1680,
+          1560,
+          2620,
+          "142 - 540"
+        ],
+        [
+          "Oak",
+          769,
+          2385,
+          1833,
+          "—"
+        ],
+        [
+          "Pine",
+          496,
+          2803,
+          1391,
+          "—"
+        ],
+        [
+          "Taconite",
+          3200,
+          800,
+          2560,
+          "—"
+        ],
+        [
+          "Therminol 66",
+          750,
+          2100,
+          1575,
+          "-9 - 343"
+        ],
+        [
+          "Water",
+          1000,
+          4190,
+          4190,
+          "0 - 100"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Material Properties Reference\n\nSelect material properties from the table above. For example:\n- **Granite**: density = 2400 kg/m³, specific heat = 790 J/kg°C\n- **Water**: density = 1000 kg/m³, specific heat = 4190 J/kg°C\n- **Cast Iron**: density = 7200 kg/m³, specific heat = 540 J/kg°C\n\n**Conversion Factor**: 1 kJ/kgK = 0.2389 Btu/lb°F"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "resistor_standard_values",
+  "title": "Resistor Standard Values",
+  "description": "Preferred number series for resistors according IEC 60063. Calculate voltage, resistance, and current using Ohm's Law.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Resistor Standard Values\n\nPreferred number series for resistors according IEC 60063 are indicated below.\n\n### Resistors with 10% tolerance\n\nStandard values: 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82 (ohm, kohm, and higher decades)\n\n### Resistors with 5% tolerance\n\nStandard values: 10, 11, 12, 13, 15, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 43, 47, 51, 56, 62, 68, 75, 82, 91 (ohm, kohm, and higher decades)\n\n### Ohm's Law\n\nOhm's law can be expressed as:\n\n**U = R × I** (Voltage = Resistance × Current)\n\nor\n\n**R = U / I** (Resistance = Voltage / Current)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage (U)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 5
+        },
+        {
+          "id": "current",
+          "label": "Current (I)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "resistance",
+          "label": "Resistance (R)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "calculated_resistance",
+          "label": "Calculated Resistance",
+          "formula": "inputs.voltage / inputs.current",
+          "unit": "Ω",
+          "format": "decimal"
+        },
+        {
+          "id": "calculated_voltage",
+          "label": "Calculated Voltage",
+          "formula": "inputs.resistance * inputs.current",
+          "unit": "V",
+          "format": "decimal"
+        },
+        {
+          "id": "calculated_current",
+          "label": "Calculated Current",
+          "formula": "inputs.voltage / inputs.resistance",
+          "unit": "A",
+          "format": "decimal"
+        },
+        {
+          "id": "power",
+          "label": "Power (P)",
+          "formula": "inputs.voltage * inputs.current",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Tolerance",
+        "10% Standard Values",
+        "5% Standard Values"
+      ],
+      "rows": [
+        [
+          "Base Series",
+          "10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82",
+          "10, 11, 12, 13, 15, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 43, 47, 51, 56, 62, 68, 75, 82, 91"
+        ],
+        [
+          "Example (Ω)",
+          "10Ω, 12Ω, 15Ω, 18Ω, 22Ω, 27Ω, 33Ω, 39Ω, 47Ω, 56Ω, 68Ω, 82Ω",
+          "10Ω, 11Ω, 12Ω, 13Ω, 15Ω, 16Ω, 18Ω, 20Ω, 22Ω, 24Ω, 27Ω, 30Ω, 33Ω, 36Ω, 39Ω, 43Ω, 47Ω, 51Ω, 56Ω, 62Ω, 68Ω, 75Ω, 82Ω, 91Ω"
+        ],
+        [
+          "Example (kΩ)",
+          "10kΩ, 12kΩ, 15kΩ, 18kΩ, 22kΩ, 27kΩ, 33kΩ, 39kΩ, 47kΩ, 56kΩ, 68kΩ, 82kΩ",
+          "10kΩ, 11kΩ, 12kΩ, 13kΩ, 15kΩ, 16kΩ, 18kΩ, 20kΩ, 22kΩ, 24kΩ, 27kΩ, 30kΩ, 33kΩ, 36kΩ, 39kΩ, 43kΩ, 47kΩ, 51kΩ, 56kΩ, 62kΩ, 68kΩ, 75kΩ, 82kΩ, 91kΩ"
+        ]
+      ]
+    }
+  ]
+}

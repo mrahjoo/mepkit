@@ -1,0 +1,285 @@
+{
+  "id": "air_viscosity__dynamic_and_kinematic_viscosity_at_",
+  "title": "Air Viscosity: Dynamic and Kinematic Viscosity",
+  "description": "Calculate air dynamic or kinematic viscosity at given temperatures and atmospheric pressure. Temperature must be within -100 to 1600 °C, -150 to 2900 °F, 175 to 1900 K, or 310 to 3400 °R for valid values. Outputs are provided in multiple units including Pa·s, cP, mPa·s, lb·f·s/ft², cSt, m²/s, and ft²/s.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "C",
+              "label": "°C"
+            },
+            {
+              "value": "F",
+              "label": "°F"
+            },
+            {
+              "value": "K",
+              "label": "K"
+            },
+            {
+              "value": "R",
+              "label": "°R"
+            }
+          ],
+          "defaultValue": "C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dynamic_viscosity_pas",
+          "label": "Dynamic Viscosity (Pa·s)",
+          "formula": "inputs.temperature * 0.00001 + 0.018",
+          "unit": "Pa·s",
+          "format": "decimal"
+        },
+        {
+          "id": "dynamic_viscosity_cp",
+          "label": "Dynamic Viscosity (cP)",
+          "formula": "(inputs.temperature * 0.00001 + 0.018) * 1000",
+          "unit": "cP",
+          "format": "decimal"
+        },
+        {
+          "id": "dynamic_viscosity_mpas",
+          "label": "Dynamic Viscosity (mPa·s)",
+          "formula": "(inputs.temperature * 0.00001 + 0.018) * 1000",
+          "unit": "mPa·s",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_viscosity_cst",
+          "label": "Kinematic Viscosity (cSt)",
+          "formula": "inputs.temperature * 0.00015 + 0.013",
+          "unit": "cSt",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_viscosity_m2s",
+          "label": "Kinematic Viscosity (m²/s)",
+          "formula": "(inputs.temperature * 0.00015 + 0.013) * 0.000001",
+          "unit": "m²/s",
+          "format": "scientific"
+        },
+        {
+          "id": "kinematic_viscosity_ft2s",
+          "label": "Kinematic Viscosity (ft²/s)",
+          "formula": "(inputs.temperature * 0.00015 + 0.013) * 0.0000107639",
+          "unit": "ft²/s",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Dynamic Viscosity (μPa·s)",
+        "Kinematic Viscosity (cSt)",
+        "Dynamic Viscosity (cP)",
+        "Kinematic Viscosity (m²/s ×10⁻⁶)"
+      ],
+      "rows": [
+        [
+          "-75",
+          "13.18",
+          "7.40",
+          "0.01318",
+          "7.4"
+        ],
+        [
+          "-50",
+          "14.56",
+          "9.22",
+          "0.01456",
+          "9.22"
+        ],
+        [
+          "-25",
+          "15.88",
+          "11.18",
+          "0.01588",
+          "11.18"
+        ],
+        [
+          "0",
+          "17.15",
+          "13.28",
+          "0.01715",
+          "13.28"
+        ],
+        [
+          "10",
+          "17.64",
+          "14.16",
+          "0.01764",
+          "14.16"
+        ],
+        [
+          "20",
+          "18.13",
+          "15.06",
+          "0.01813",
+          "15.06"
+        ],
+        [
+          "30",
+          "18.60",
+          "15.98",
+          "0.01860",
+          "15.98"
+        ],
+        [
+          "50",
+          "19.53",
+          "17.88",
+          "0.01953",
+          "17.88"
+        ],
+        [
+          "100",
+          "21.74",
+          "22.97",
+          "0.02174",
+          "22.97"
+        ],
+        [
+          "200",
+          "25.73",
+          "34.47",
+          "0.02573",
+          "34.47"
+        ],
+        [
+          "300",
+          "29.28",
+          "47.54",
+          "0.02928",
+          "47.54"
+        ],
+        [
+          "500",
+          "35.47",
+          "77.72",
+          "0.03547",
+          "77.72"
+        ],
+        [
+          "700",
+          "40.85",
+          "112.6",
+          "0.04085",
+          "112.6"
+        ],
+        [
+          "1000",
+          "47.88",
+          "172.7",
+          "0.04788",
+          "172.7"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Air Viscosity vs Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Dynamic Viscosity (μPa·s)",
+            "Kinematic Viscosity (cSt)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "-75",
+            "-50",
+            "-25",
+            "0",
+            "20",
+            "50",
+            "100",
+            "200",
+            "300",
+            "500",
+            "700",
+            "1000"
+          ],
+          "name": "Temperature (°C)"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Dynamic Viscosity (μPa·s)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Kinematic Viscosity (cSt)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Dynamic Viscosity (μPa·s)",
+            "data": [
+              13.18,
+              14.56,
+              15.88,
+              17.15,
+              18.13,
+              19.53,
+              21.74,
+              25.73,
+              29.28,
+              35.47,
+              40.85,
+              47.88
+            ],
+            "type": "line",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Kinematic Viscosity (cSt)",
+            "data": [
+              7.4,
+              9.22,
+              11.18,
+              13.28,
+              15.06,
+              17.88,
+              22.97,
+              34.47,
+              47.54,
+              77.72,
+              112.6,
+              172.7
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}

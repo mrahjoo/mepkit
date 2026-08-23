@@ -1,0 +1,87 @@
+{
+  "id": "pendulum",
+  "title": "Pendulum",
+  "description": "A simple pendulum oscillates in the vertical plane due to gravity. Calculate the oscillating period or length of a pendulum using the fundamental pendulum equation.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Simple Pendulum Calculator\n\nA simple (mathematical) pendulum consists of a rigid body suspended from a fixed horizontal axis about which the body oscillates in a vertical plane due to gravity.\n\n**Formula:**\n\n_T = 2π√(l/ag)_\n\nWhere:\n- **T** = oscillating period for one cycle (s)\n- **l** = length of the pendulum (m)\n- **ag** = acceleration of gravity (9.81 m/s²)\n\nRearranged to solve for length:\n\n_l = (T/(2π))² × ag_"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Pendulum Period Calculator",
+        "Pendulum Length Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Pendulum Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.249
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "period",
+          "label": "Oscillating Period",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "calculatedPeriod",
+          "label": "Calculated Period",
+          "formula": "2 * 3.14159265359 * sqrt(inputs.length / inputs.gravity)",
+          "unit": "s",
+          "format": "decimal"
+        },
+        {
+          "id": "calculatedLength",
+          "label": "Calculated Length",
+          "formula": "((inputs.period / (2 * 3.14159265359)) ^ 2) * inputs.gravity",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Period (s)",
+        "Length (m)",
+        "Type"
+      ],
+      "rows": [
+        [
+          1,
+          0.249,
+          "Pendulum Clock"
+        ],
+        [
+          10,
+          24.9,
+          "Large Pendulum"
+        ],
+        [
+          100,
+          2487,
+          "Extremely Large Pendulum"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Examples\n\n**Pendulum Clock (1 second period):**\n- l = ((1)/(2π))² × 9.81 = 0.249 m\n- Pendulum clocks were the world standard for accurate timekeeping for 270 years until the quartz clock was invented in 1927.\n\n**Longer Period (10 seconds):**\n- l = ((10)/(2π))² × 9.81 = 24.9 m\n\n**Very Long Period (100 seconds):**\n- l = ((100)/(2π))² × 9.81 = 2487 m\n\n## Types of Pendulums\n\n1. **Compound or Physical Pendulum** - A rigid body suspended from a fixed horizontal axis\n2. **Simple or Mathematical Pendulum** - Mass concentrated in a single point, connected by a weightless chord\n3. **Conical Pendulum** - Weight moves in uniform speed around a circle in the horizontal plane\n4. **Torsional Pendulum** - A disk fixed to a slender rod that oscillates about the rod's axis"
+    }
+  ]
+}

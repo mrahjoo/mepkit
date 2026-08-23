@@ -1,0 +1,171 @@
+{
+  "id": "methanol_freeze_protected_heat_transfer_liquids",
+  "title": "Methanol Freeze Protected Heat Transfer Liquids",
+  "description": "Freezing and flash points for methanol or methyl based heat-transfer fluids or brines. Determine freezing and flash points based on methanol concentration.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Methanol Freeze Protected Heat Transfer Liquids\n\nThis tool helps you determine the freezing and flash points of methanol-based heat transfer fluids based on methanol concentration.\n\n### Warning\n- HIGH flammability if pure\n- HIGH toxicity\n\n### Physical Properties of Methanol\n- Molecular Weight: 32.04\n- Boiling Point: 64.7°C\n- Melting Point: -97.8°C\n- Flash Point: 12°C (54°F) closed cup\n- Auto ignition Temperature: 878°F\n- Vapor Pressure: 92 mm Hg at 20°C\n- Density/Specific Gravity: 0.7915 at 20/4°C (water = 1)\n- Vapor Density: 1.11 (air = 1)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "methanol_concentration",
+          "label": "Methanol Concentration",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 50
+        },
+        {
+          "id": "temperature_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "celsius"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "fahrenheit"
+            }
+          ],
+          "defaultValue": "celsius"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "freezing_point_c",
+          "label": "Freezing Point",
+          "unit": "°C",
+          "formula": "IF(inputs.methanol_concentration==0, 0, IF(inputs.methanol_concentration<=10, -7, IF(inputs.methanol_concentration<=20, -18, IF(inputs.methanol_concentration<=30, -26, IF(inputs.methanol_concentration<=40, -40, IF(inputs.methanol_concentration<=50, -54, IF(inputs.methanol_concentration<=60, -71, IF(inputs.methanol_concentration<=70, -82, IF(inputs.methanol_concentration<=80, -87, IF(inputs.methanol_concentration<=90, -90, -98))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "freezing_point_f",
+          "label": "Freezing Point",
+          "unit": "°F",
+          "formula": "(inputs.methanol_concentration==0) ? 32 : (inputs.methanol_concentration<=10) ? 20 : (inputs.methanol_concentration<=20) ? 0 : (inputs.methanol_concentration<=30) ? -15 : (inputs.methanol_concentration<=40) ? -40 : (inputs.methanol_concentration<=50) ? -65 : (inputs.methanol_concentration<=60) ? -95 : (inputs.methanol_concentration<=70) ? -115 : (inputs.methanol_concentration<=80) ? -125 : (inputs.methanol_concentration<=90) ? -130 : -144",
+          "format": "decimal"
+        },
+        {
+          "id": "flash_point_c",
+          "label": "Flash Point",
+          "unit": "°C",
+          "formula": "IF(inputs.methanol_concentration==0, null, IF(inputs.methanol_concentration<=10, 54, IF(inputs.methanol_concentration<=20, 43, IF(inputs.methanol_concentration<=30, 35, IF(inputs.methanol_concentration<=40, 29, IF(inputs.methanol_concentration<=50, 24, IF(inputs.methanol_concentration<=60, 21, IF(inputs.methanol_concentration<=70, 16, IF(inputs.methanol_concentration<=80, 12, IF(inputs.methanol_concentration<=90, 12, 12))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "flash_point_f",
+          "label": "Flash Point",
+          "unit": "°F",
+          "formula": "IF(inputs.methanol_concentration==0, null, IF(inputs.methanol_concentration<=10, 130, IF(inputs.methanol_concentration<=20, 110, IF(inputs.methanol_concentration<=30, 95, IF(inputs.methanol_concentration<=40, 85, IF(inputs.methanol_concentration<=50, 75, IF(inputs.methanol_concentration<=60, 70, IF(inputs.methanol_concentration<=70, 60, IF(inputs.methanol_concentration<=80, 54, IF(inputs.methanol_concentration<=90, 54, 54))))))))))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Methanol Concentration (%)",
+        "By Volume (%)",
+        "Freezing Point (°C)",
+        "Freezing Point (°F)",
+        "Flash Point (°C)",
+        "Flash Point (°F)"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          0,
+          32,
+          "-",
+          "-"
+        ],
+        [
+          10,
+          13,
+          -7,
+          20,
+          54,
+          130
+        ],
+        [
+          20,
+          24,
+          -18,
+          0,
+          43,
+          110
+        ],
+        [
+          30,
+          35,
+          -26,
+          -15,
+          35,
+          95
+        ],
+        [
+          40,
+          46,
+          -40,
+          -40,
+          29,
+          85
+        ],
+        [
+          50,
+          56,
+          -54,
+          -65,
+          24,
+          75
+        ],
+        [
+          60,
+          66,
+          -71,
+          -95,
+          21,
+          70
+        ],
+        [
+          70,
+          75,
+          -82,
+          -115,
+          16,
+          60
+        ],
+        [
+          80,
+          83,
+          -87,
+          -125,
+          12,
+          54
+        ],
+        [
+          90,
+          92,
+          -90,
+          -130,
+          12,
+          54
+        ],
+        [
+          100,
+          100,
+          -98,
+          -144,
+          12,
+          54
+        ]
+      ]
+    }
+  ]
+}

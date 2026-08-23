@@ -1,0 +1,45 @@
+{
+  "id": "subjective_effect_of_change_in_sound_pressure_leve",
+  "title": "Subjective Effect of Change in Sound Pressure Level",
+  "description": "Change in sound pressure level and the subjective human perception. Studies show that a 10 dB increase is perceived as twice as loud, and a 20 dB increase is perceived as four times as loud.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Subjective Effect of Change in Sound Pressure Level\n\nChange in sound pressure level and the subjective human perception.\n\nThere are variations in the individual perception of strength of sound. Studies have shown that in general the sound is perceived twice as loud if the sound level is increased by **10 dB**. Similarly, a **20 dB** increase in the sound pressure level is perceived as four times as loud by a normal human hearer."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Sound Awareness",
+        "Change in Sound Pressure (dB)"
+      ],
+      "rows": [
+        [
+          "Insignificant",
+          1
+        ],
+        [
+          "Just perceptible",
+          3
+        ],
+        [
+          "Clearly noticeable",
+          5
+        ],
+        [
+          "Twice or half as loud",
+          10
+        ],
+        [
+          "Significant",
+          15
+        ],
+        [
+          "Much louder or quieter, four times as loud",
+          20
+        ]
+      ]
+    }
+  ]
+}

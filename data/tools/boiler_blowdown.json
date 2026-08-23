@@ -1,0 +1,198 @@
+{
+  "id": "boiler_blowdown",
+  "title": "Boiler Blowdown",
+  "description": "Calculator and reference guide for boiler blowdown water quality requirements based on ASME guidelines. Calculates electrical conductivity from TDS and compares against maximum allowable impurities for different boiler pressure ranges. Includes water quality references and guidelines for maintaining proper dissolved solids levels to prevent scale formation, carryover, corrosion, and embrittlement.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "tds_conductivity_calc",
+      "content": "## TDS to Conductivity Calculator\n\nConvert between Total Dissolved Solids (TDS) and electrical conductivity for boiler water quality monitoring.\n\n**Note:** Conductivity conversion assumes approximately 0.67 μS/cm per ppm TDS (typical for boiler feed water). This is an approximation; actual conversion may vary based on water composition.",
+      "inputs": [
+        {
+          "id": "tds_ppm",
+          "label": "Total Dissolved Solids (TDS)",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 2500
+        },
+        {
+          "id": "conductivity_factor",
+          "label": "Conductivity Factor",
+          "type": "number",
+          "unit": "μS/cm per ppm",
+          "defaultValue": 0.67
+        }
+      ],
+      "outputs": [
+        {
+          "id": "conductivity_result",
+          "label": "Electrical Conductivity",
+          "formula": "inputs.tds_ppm * inputs.conductivity_factor",
+          "unit": "μS/cm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "asme_guidelines",
+      "content": "## ASME Guidelines - Maximum Allowable Water Impurities in Watertube Boilers",
+      "headers": [
+        "Boiler Pressure (psig)",
+        "Iron (ppm)",
+        "Copper (ppm)",
+        "Hardness CaCO₃ (ppm)",
+        "Silica (ppm)",
+        "Alkalinity CaCO₃ (ppm)",
+        "TDS (ppm)",
+        "Conductivity (μS/cm)"
+      ],
+      "rows": [
+        [
+          "0 - 300",
+          "0.1",
+          "0.05",
+          "0.3",
+          "150",
+          "700",
+          "3500",
+          "7000"
+        ],
+        [
+          "300 - 450",
+          "0.05",
+          "0.025",
+          "0.3",
+          "90",
+          "600",
+          "3000",
+          "6000"
+        ],
+        [
+          "450 - 600",
+          "0.03",
+          "0.02",
+          "0.2",
+          "40",
+          "500",
+          "2500",
+          "5000"
+        ],
+        [
+          "600 - 750",
+          "0.025",
+          "0.02",
+          "0.2",
+          "30",
+          "400",
+          "1000",
+          "4000"
+        ],
+        [
+          "750 - 900",
+          "0.02",
+          "0.015",
+          "0.1",
+          "20",
+          "300",
+          "750",
+          "3000"
+        ],
+        [
+          "900 - 1000",
+          "0.02",
+          "0.015",
+          "0.05",
+          "8",
+          "200",
+          "625",
+          "2000"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "tds_conductivity_chart",
+      "content": "## TDS vs Maximum Allowable Limits by Boiler Pressure",
+      "options": {
+        "title": {
+          "text": "ASME Maximum TDS & Conductivity by Boiler Pressure"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Max TDS (ppm)",
+            "Max Conductivity (μS/cm)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0-300",
+            "300-450",
+            "450-600",
+            "600-750",
+            "750-900",
+            "900-1000"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "TDS (ppm)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Conductivity (μS/cm)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Max TDS (ppm)",
+            "data": [
+              3500,
+              3000,
+              2500,
+              1000,
+              750,
+              625
+            ],
+            "type": "line",
+            "yAxisIndex": 0,
+            "smooth": true,
+            "itemStyle": {
+              "color": "#1f77b4"
+            }
+          },
+          {
+            "name": "Max Conductivity (μS/cm)",
+            "data": [
+              7000,
+              6000,
+              5000,
+              4000,
+              3000,
+              2000
+            ],
+            "type": "line",
+            "yAxisIndex": 1,
+            "smooth": true,
+            "itemStyle": {
+              "color": "#ff7f0e"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "water_quality_reference",
+      "content": "## Water Quality Reference Standards\n\n### Electrical Conductivity Ranges\n\n| Water Type | Conductivity (μS/cm) |\n|---|---|\n| Ultrapure water (20°C) | 0.042 |\n| Deionized water | 0.5 - 5 |\n| Soft ground water | 100 - 300 |\n| Sea water | 45,000 - 55,000 |\n| Concentrated acids/lyes | > 100,000 |\n\n### Key Blowdown Principles\n\n- **Short, frequent blowdowns** are more effective at removing boiler water sludge than infrequent long blowdowns\n- **Manual blowdown** required at boiler bottom to remove settled solids\n- **Automatic continuous blowdown** uses calibrated valve near water surface for predetermined rates\n- **Blowdown tanks** required by UPC/UMC codes for installations exceeding 15 psig\n- **Recommended maximum TDS levels** typically 2,000 - 10,000 ppm depending on boiler type\n\n### Problems from Inadequate Blowdown\n\n- Scale formation\n- Carryover\n- Corrosion\n- Embrittlement\n\n**Safety Warning:** High pressure and temperature generate large amounts of flash steam during blowdown. Hot water and steam are dangerous—proper design, construction, and operational care required."
+    }
+  ]
+}

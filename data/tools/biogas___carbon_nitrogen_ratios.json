@@ -1,0 +1,93 @@
+{
+  "id": "biogas___carbon_nitrogen_ratios",
+  "title": "Biogas - Carbon Nitrogen Ratios",
+  "description": "Carbon - Nitrogen ratios for biogas produced from various raw materials. Reference table showing C:N ratios for different organic waste sources used in anaerobic digestion.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Source",
+        "Carbon - Nitrogen Ratio"
+      ],
+      "rows": [
+        [
+          "Alfalfa hay",
+          "18 : 1"
+        ],
+        [
+          "Bagasse from sugarcane or sorghum stalks",
+          "150 : 1"
+        ],
+        [
+          "Chicken manure",
+          "25 : 1"
+        ],
+        [
+          "Clover",
+          "2.7 : 1"
+        ],
+        [
+          "Cow dung",
+          "25 : 1"
+        ],
+        [
+          "Cow urine",
+          "0.8 : 1"
+        ],
+        [
+          "Grass clippings",
+          "12 : 1"
+        ],
+        [
+          "Kitchen refuse",
+          "6 - 10 : 1"
+        ],
+        [
+          "Lucerne",
+          "2 : 1"
+        ],
+        [
+          "Pig droppings",
+          "20 : 1"
+        ],
+        [
+          "Pig urine",
+          "6 : 1"
+        ],
+        [
+          "Potato tops",
+          "25 : 1"
+        ],
+        [
+          "Sawdust",
+          "200 - 500 : 1"
+        ],
+        [
+          "Seaweed",
+          "80 : 1"
+        ],
+        [
+          "Straw",
+          "60 - 200 : 1"
+        ],
+        [
+          "Sewage sludge",
+          "13 : 1"
+        ],
+        [
+          "Silage liquor",
+          "11 : 1"
+        ],
+        [
+          "Slaughterhouse wastes",
+          "3 - 4 : 1"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Important Note\n\nWhen the Carbon Nitrogen ratio exceeds approximately 30, biogas production diminishes. This is an important consideration when selecting raw materials or blending feedstock for anaerobic digestion systems.\n\n## About Biogas\n\nBiogas is a mixture of gases produced by anaerobic (absence of oxygen) bacterial breakdown of organic matter. Biogas can be produced from raw materials such as:\n- Agricultural waste\n- Manure\n- Municipal waste\n- Plant material\n- Sewage\n- Green waste\n- Food waste"
+    }
+  ]
+}

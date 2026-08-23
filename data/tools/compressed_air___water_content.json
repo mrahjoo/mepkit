@@ -1,0 +1,150 @@
+{
+  "id": "compressed_air___water_content",
+  "title": "Compressed Air - Water Content",
+  "description": "Saturation pressure and maximum water content in compressed air. Calculate the mass of water in saturated air based on temperature and pressure conditions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Water Content Calculator\n\nThis calculator helps determine the maximum water content in compressed air at saturated conditions. The water content depends on both the temperature and pressure of the air.\n\n**Note:** The maximum water content decreases with increasing pressure and increases with increasing temperature."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "pressure",
+          "label": "Gauge Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 8
+        },
+        {
+          "id": "humidity_ratio",
+          "label": "Humidity Ratio",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 70
+        }
+      ],
+      "outputs": [
+        {
+          "id": "saturation_water_content",
+          "label": "Water Content at 100% Saturation",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "inputs.temperature >= 20 && inputs.temperature < 40 ? (0.018 - (0.018 - 0.0062) * (inputs.pressure - 2) / (14 - 2)) : inputs.temperature >= 40 && inputs.temperature < 60 ? (0.059 - (0.059 - 0.017) * (inputs.pressure - 2) / (14 - 2)) : inputs.temperature >= 0 && inputs.temperature < 20 ? (0.0045 - (0.0045 - 0.00030) * (inputs.pressure - 2) / (14 - 2)) : 0.059"
+        },
+        {
+          "id": "actual_water_content",
+          "label": "Water Content at Current Humidity",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "(inputs.temperature >= 20 && inputs.temperature < 40 ? (0.018 - (0.018 - 0.0062) * (inputs.pressure - 2) / (14 - 2)) : inputs.temperature >= 40 && inputs.temperature < 60 ? (0.059 - (0.059 - 0.017) * (inputs.pressure - 2) / (14 - 2)) : inputs.temperature >= 0 && inputs.temperature < 20 ? (0.0045 - (0.0045 - 0.00030) * (inputs.pressure - 2) / (14 - 2)) : 0.059) * (inputs.humidity_ratio / 100)"
+        },
+        {
+          "id": "water_content_lb",
+          "label": "Water Content at 100% Saturation (Imperial)",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "(inputs.temperature >= 20 && inputs.temperature < 40 ? (0.018 - (0.018 - 0.0062) * (inputs.pressure - 2) / (14 - 2)) : inputs.temperature >= 40 && inputs.temperature < 60 ? (0.059 - (0.059 - 0.017) * (inputs.pressure - 2) / (14 - 2)) : inputs.temperature >= 0 && inputs.temperature < 20 ? (0.0045 - (0.0045 - 0.00030) * (inputs.pressure - 2) / (14 - 2)) : 0.059) * 0.0624"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Pressure 2 bar",
+        "Pressure 4 bar",
+        "Pressure 6 bar",
+        "Pressure 8 bar",
+        "Pressure 10 bar",
+        "Pressure 12 bar",
+        "Pressure 14 bar"
+      ],
+      "rows": [
+        [
+          "0",
+          "0.0045",
+          "0.0015",
+          "0.00091",
+          "0.00065",
+          "0.00051",
+          "0.00041",
+          "0.00035"
+        ],
+        [
+          "20",
+          "0.018",
+          "0.0058",
+          "0.0035",
+          "0.0025",
+          "0.0019",
+          "0.0016",
+          "0.0013"
+        ],
+        [
+          "40",
+          "0.059",
+          "0.019",
+          "0.011",
+          "0.0079",
+          "0.0062",
+          "0.0050",
+          "0.0043"
+        ],
+        [
+          "60",
+          "0.18",
+          "0.053",
+          "0.031",
+          "0.022",
+          "0.017",
+          "0.014",
+          "0.012"
+        ],
+        [
+          "80",
+          "0.65",
+          "0.14",
+          "0.078",
+          "0.054",
+          "0.041",
+          "0.034",
+          "0.028"
+        ],
+        [
+          "100",
+          "",
+          "0.38",
+          "0.19",
+          "0.13",
+          "0.094",
+          "0.076",
+          "0.063"
+        ],
+        [
+          "120",
+          "",
+          "0.49",
+          "0.29",
+          "0.21",
+          "0.16",
+          "0.13",
+          "0.11"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Water Content Reference Table\n\nMass of water (kg H₂O/m³ free saturated air)\n\n*Note: 1 kg/m³ = 0.0624 lb/ft³*\n\n### Example Calculation\n\nFree air enters a compressor at atmospheric conditions:\n- **Inlet:** 20°C, 70% humidity ratio\n- **Outlet:** 40°C, 8 bar gauge pressure, 100% saturated\n\n**Step 1:** Water content at inlet (20°C, saturated) ≈ 0.018 kg/m³\n\n**Step 2:** Water content at 70% saturation = 0.018 × (70/100) = 0.0126 kg/m³\n\n**Step 3:** Water content at outlet (40°C, 8 bar, saturated) ≈ 0.0062 kg/m³\n\n**Step 4:** Water extracted = 0.0126 - 0.0062 = **0.0064 kg/m³**"
+    }
+  ]
+}

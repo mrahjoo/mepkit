@@ -1,0 +1,121 @@
+{
+  "id": "single_phase_power_equations",
+  "title": "Single Phase Power Equations",
+  "description": "Power equations for single phased electrical systems. Calculate real power, total power, and brake horsepower.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Single Phase Power Equations\n\nPower equations for single phased electrical systems.\n\n## Real Power\n\nWapplied = U × I × PF / 1000\n\nwhere:\n- Wapplied = real power (kilowatts, kW)\n- U = voltage (volts, V)\n- I = current (amps, A)\n- PF = power factor (0.7 - 1.0)\n\n## Total Power\n\nW = U × I / 1000\n\nwhere:\n- W = total power (kilowatts, kW)\n- U = voltage (volts, V)\n- I = current (amps, A)\n\n## Brake Horsepower\n\nWBHP = U × I × PF × μ / 746\n\nwhere:\n- WBHP = brake horsepower (hp)\n- U = voltage (volts, V)\n- I = current (amps, A)\n- PF = power factor (0.7 - 1.0)\n- μ = device efficiency (0 - 1.0)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage (U)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 12
+        },
+        {
+          "id": "current",
+          "label": "Current (I)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 8
+        },
+        {
+          "id": "power_factor",
+          "label": "Power Factor (PF)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 1
+        },
+        {
+          "id": "efficiency",
+          "label": "Efficiency (μ)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.96
+        }
+      ],
+      "outputs": [
+        {
+          "id": "real_power",
+          "label": "Real Power (Wapplied)",
+          "formula": "inputs.voltage * inputs.current * inputs.power_factor / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "total_power",
+          "label": "Total Power (W)",
+          "formula": "inputs.voltage * inputs.current / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "brake_horsepower",
+          "label": "Brake Horsepower (WBHP)",
+          "formula": "inputs.voltage * inputs.current * inputs.power_factor * inputs.efficiency / 746",
+          "unit": "hp",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Voltage",
+          "U",
+          "V",
+          "Electrical potential difference"
+        ],
+        [
+          "Current",
+          "I",
+          "A",
+          "Electrical current flow"
+        ],
+        [
+          "Power Factor",
+          "PF",
+          "-",
+          "Ratio of real power to apparent power (0.7 - 1.0)"
+        ],
+        [
+          "Efficiency",
+          "μ",
+          "-",
+          "Device efficiency ratio (0 - 1.0)"
+        ],
+        [
+          "Real Power",
+          "Wapplied",
+          "kW",
+          "Actual power consumed or delivered"
+        ],
+        [
+          "Total Power",
+          "W",
+          "kW",
+          "Total apparent power"
+        ],
+        [
+          "Brake Horsepower",
+          "WBHP",
+          "hp",
+          "Actual power delivered to or by a shaft"
+        ]
+      ]
+    }
+  ]
+}

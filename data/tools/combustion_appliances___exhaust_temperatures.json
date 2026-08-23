@@ -1,0 +1,118 @@
+{
+  "id": "combustion_appliances___exhaust_temperatures",
+  "title": "Combustion Appliances - Exhaust Temperatures",
+  "description": "Exhaust and outlet temperatures for fuels like natural gas, liquefied petroleum, diesel and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Combustion Appliances - Exhaust Temperatures\n\nThis calculator provides reference exhaust and outlet temperatures for various combustion appliances using different fuel types including natural gas, liquefied petroleum gas (LPG), diesel, and other fuels.\n\n**How to use:** Select an appliance type from the table below to view its exhaust temperature range in both Fahrenheit and Celsius."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Appliance Type",
+        "Exhaust Temperature (°F)",
+        "Exhaust Temperature (°C)"
+      ],
+      "rows": [
+        [
+          "Chemical Oxidation",
+          "1350 - 1475",
+          "730 - 800"
+        ],
+        [
+          "Annealing furnace",
+          "1100 - 1200",
+          "590 - 650"
+        ],
+        [
+          "Fluidized-bed combustion",
+          "1600 - 1800",
+          "870 - 980"
+        ],
+        [
+          "Natural-gas fired heating appliance with draft hood",
+          "360",
+          "182"
+        ],
+        [
+          "Liquefied-petroleum gas-fired heating appliance with draft hood",
+          "360",
+          "182"
+        ],
+        [
+          "Gas-fired heating appliance, no draft hood",
+          "460",
+          "238"
+        ],
+        [
+          "Glass melting furnace",
+          "1200 - 1600",
+          "650 - 870"
+        ],
+        [
+          "Oil-fired heating appliance, residential",
+          "560",
+          "293"
+        ],
+        [
+          "Oil-fired heating appliance, forced draft over 400,000 Btu/h",
+          "360",
+          "182"
+        ],
+        [
+          "Conventional incinerator",
+          "1400",
+          "760"
+        ],
+        [
+          "Controlled air incinerator",
+          "1800 - 2400",
+          "982 - 1316"
+        ],
+        [
+          "Pathological incinerator",
+          "1800 - 2800",
+          "982 - 1538"
+        ],
+        [
+          "Gas turbine exhaust",
+          "700 - 1100",
+          "370 - 590"
+        ],
+        [
+          "Diesel exhaust",
+          "1000 - 1200",
+          "540 - 650"
+        ],
+        [
+          "Ceramic kilns",
+          "1800 - 2400",
+          "982 - 1316"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temp_fahrenheit",
+          "label": "Temperature (°F)",
+          "type": "number",
+          "defaultValue": 360,
+          "unit": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temp_celsius",
+          "label": "Temperature (°C)",
+          "formula": "(inputs.temp_fahrenheit - 32) * 5 / 9",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

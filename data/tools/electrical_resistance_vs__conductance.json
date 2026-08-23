@@ -1,0 +1,70 @@
+{
+  "id": "electrical_resistance_vs__conductance",
+  "title": "Electrical Resistance vs. Conductance",
+  "description": "The reciprocal of electrical resistance is conductance. This tool calculates the relationship between resistance (Ω) and conductance (S) using the formulas R = U / I and G = 1 / R.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Resistance (Ω)",
+        "Conductance (S)"
+      ],
+      "rows": [
+        [
+          0.5,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0.5
+        ],
+        [
+          5,
+          0.2
+        ],
+        [
+          10,
+          0.1
+        ],
+        [
+          20,
+          0.05
+        ],
+        [
+          50,
+          0.02
+        ],
+        [
+          100,
+          0.01
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "resistance",
+          "label": "Resistance",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "conductance",
+          "label": "Conductance",
+          "unit": "S",
+          "format": "decimal",
+          "formula": "1 / inputs.resistance"
+        }
+      ]
+    }
+  ]
+}

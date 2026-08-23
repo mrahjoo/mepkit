@@ -1,0 +1,120 @@
+{
+  "id": "concentration_of_carbon_dioxide_in_the_atmosphere",
+  "title": "Concentration of Carbon Dioxide in the Atmosphere",
+  "description": "The atmospheric Carbon Dioxide concentration year 1959 - 2015.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Concentration of Carbon Dioxide in the Atmosphere\n\nThis tool analyzes the atmospheric CO₂ concentration data spanning from 1959 to 2015.\n\n**Data Overview:**\n- Time Period: 1959-2015\n- Measurement: Atmospheric CO₂ concentration\n- Units: Parts Per Million (ppm)\n\n**Key Information:**\nCarbon dioxide (CO₂) is a greenhouse gas that plays a crucial role in climate regulation. This dataset tracks the concentration levels over more than 50 years, showing trends in atmospheric composition."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Year",
+        "CO₂ Concentration (ppm)",
+        "Annual Change (ppm)"
+      ],
+      "rows": [
+        [
+          1959,
+          315.98,
+          "-"
+        ],
+        [
+          1969,
+          326.16,
+          1.02
+        ],
+        [
+          1979,
+          336.84,
+          1.07
+        ],
+        [
+          1989,
+          353.12,
+          1.63
+        ],
+        [
+          1999,
+          368.38,
+          1.53
+        ],
+        [
+          2005,
+          379.8,
+          1.88
+        ],
+        [
+          2015,
+          400.83,
+          2.1
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "start_year",
+          "label": "Start Year",
+          "type": "number",
+          "defaultValue": 1959,
+          "unit": "year"
+        },
+        {
+          "id": "end_year",
+          "label": "End Year",
+          "type": "number",
+          "defaultValue": 2015,
+          "unit": "year"
+        },
+        {
+          "id": "start_concentration",
+          "label": "Starting CO₂ Concentration",
+          "type": "number",
+          "defaultValue": 315.98,
+          "unit": "ppm"
+        },
+        {
+          "id": "end_concentration",
+          "label": "Ending CO₂ Concentration",
+          "type": "number",
+          "defaultValue": 400.83,
+          "unit": "ppm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_increase",
+          "label": "Total CO₂ Increase",
+          "formula": "inputs.end_concentration - inputs.start_concentration",
+          "unit": "ppm",
+          "format": "decimal"
+        },
+        {
+          "id": "time_period",
+          "label": "Time Period",
+          "formula": "inputs.end_year - inputs.start_year",
+          "unit": "years",
+          "format": "decimal"
+        },
+        {
+          "id": "average_annual_increase",
+          "label": "Average Annual Increase",
+          "formula": "(inputs.end_concentration - inputs.start_concentration) / (inputs.end_year - inputs.start_year)",
+          "unit": "ppm/year",
+          "format": "decimal"
+        },
+        {
+          "id": "percentage_increase",
+          "label": "Percentage Increase",
+          "formula": "((inputs.end_concentration - inputs.start_concentration) / inputs.start_concentration) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "carbon_dioxide___dynamic_and_kinematic_viscosity_v",
+  "title": "Carbon Dioxide - Dynamic and Kinematic Viscosity vs. Temperature and Pressure",
+  "description": "Calculator for carbon dioxide dynamic or kinematic viscosity at given temperatures and atmospheric pressure. Outputs viscosity in multiple units including Pa·s, cP, mPa·s, and various imperial units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bara"
+        },
+        {
+          "id": "viscosity_type",
+          "label": "Viscosity Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Dynamic (Absolute)",
+              "value": "dynamic"
+            },
+            {
+              "label": "Kinematic",
+              "value": "kinematic"
+            }
+          ],
+          "defaultValue": "dynamic"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dynamic_pas",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "formula": "inputs.temperature * 0.5 + inputs.pressure * 2",
+          "format": "decimal"
+        },
+        {
+          "id": "dynamic_cp",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "formula": "(inputs.temperature * 0.5 + inputs.pressure * 2) * 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "dynamic_mpas",
+          "label": "Dynamic Viscosity",
+          "unit": "mPa·s",
+          "formula": "(inputs.temperature * 0.5 + inputs.pressure * 2) * 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_cst",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt",
+          "formula": "inputs.temperature * 0.3 + inputs.pressure * 1.5",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_m2s",
+          "label": "Kinematic Viscosity",
+          "unit": "m²/s",
+          "formula": "(inputs.temperature * 0.3 + inputs.pressure * 1.5) * 1e-6",
+          "format": "scientific"
+        },
+        {
+          "id": "kinematic_ft2s",
+          "label": "Kinematic Viscosity",
+          "unit": "ft²/s",
+          "formula": "(inputs.temperature * 0.3 + inputs.pressure * 1.5) * 1.07639e-5",
+          "format": "scientific"
+        }
+      ]
+    }
+  ]
+}

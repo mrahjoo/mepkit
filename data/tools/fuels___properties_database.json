@@ -1,0 +1,12 @@
+{
+  "id": "fuels___properties_database",
+  "title": "Fuels - Properties Database",
+  "description": "Online petroleum-based fuels properties database. Access comprehensive fuel specifications and properties for various petroleum-based fuels.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Fuels - Properties Database\n\nOnline petroleum-based fuels properties database for accessing comprehensive fuel specifications and properties.\n\n## Resource\n\n- [AFDC Fuels Properties Database](http://www.afdc.energy.gov/afdc/fuels/properties.html)\n\n## Description\n\nThis tool provides access to the Alternative Fuels Data Center (AFDC) fuels properties database, which contains detailed information about various petroleum-based fuels including:\n\n- Physical and chemical properties\n- Performance characteristics\n- Specifications and standards\n- Comparative data across fuel types\n\nUse the provided link to access the online database for the most current fuel properties information."
+    }
+  ]
+}

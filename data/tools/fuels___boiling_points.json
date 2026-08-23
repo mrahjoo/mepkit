@@ -1,0 +1,145 @@
+{
+  "id": "fuels___boiling_points",
+  "title": "Fuels - Boiling Points",
+  "description": "Fuels and their boiling points. The boiling point of a substance is the temperature at which it can change state from a liquid to a gas throughout the bulk of the liquid.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel",
+        "Boiling Point (°F)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          70
+        ],
+        [
+          "Acetone",
+          134
+        ],
+        [
+          "Acetylene",
+          -119.2
+        ],
+        [
+          "Benzene",
+          176.2
+        ],
+        [
+          "Butylene",
+          21.2
+        ],
+        [
+          "Ethyl Alcohol",
+          172
+        ],
+        [
+          "Ethane",
+          -127.5
+        ],
+        [
+          "Ethylene",
+          -154.7
+        ],
+        [
+          "Fuels Oil No.1",
+          "304 - 574"
+        ],
+        [
+          "Gasoline",
+          "100 - 400"
+        ],
+        [
+          "IsoButane",
+          10.9
+        ],
+        [
+          "Isobutene",
+          19.6
+        ],
+        [
+          "Isopropyl alcohol",
+          181
+        ],
+        [
+          "Iso-Octane",
+          243.9
+        ],
+        [
+          "IsoPentane",
+          82.2
+        ],
+        [
+          "Kerosine",
+          "304 - 574"
+        ],
+        [
+          "Methane (Natural Gas)",
+          -258.7
+        ],
+        [
+          "Methyl Alcohol",
+          149
+        ],
+        [
+          "n-Butane",
+          31.1
+        ],
+        [
+          "n-Heptane",
+          209.1
+        ],
+        [
+          "n-Hexane",
+          155.7
+        ],
+        [
+          "n-Octane",
+          258.3
+        ],
+        [
+          "n-Pentane",
+          97
+        ],
+        [
+          "n-Pentene",
+          86
+        ],
+        [
+          "Naphthalene",
+          424.4
+        ],
+        [
+          "NeoPentane",
+          49.1
+        ],
+        [
+          "NeoHexane",
+          121.5
+        ],
+        [
+          "Propane",
+          -43.8
+        ],
+        [
+          "Propylene",
+          -53.9
+        ],
+        [
+          "Triptane",
+          177.6
+        ],
+        [
+          "Toluene",
+          231.1
+        ],
+        [
+          "Xylene",
+          281.1
+        ]
+      ]
+    }
+  ]
+}

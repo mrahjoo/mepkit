@@ -1,0 +1,96 @@
+{
+  "id": "bimetallic_strips",
+  "title": "Bimetallic Strips",
+  "description": "Heat and bending of bimetallic strips. Calculate the bending displacement of bimetallic strips due to temperature changes using the thermal expansion coefficient, length, temperature difference, and thickness.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Bimetallic Strips Calculator\n\nBi-metallic strips are subject to bending due to heat and can be used to convert change in temperature to mechanical displacement.\n\nBending occurs towards the side of the metal with the lowest temperature coefficient of expansion.\n\n### Formula\n\n**s = α × L² × dt / t**\n\nWhere:\n- **s** = bending (m)\n- **α** = thermal expansion coefficient difference (K⁻¹), typically 13-19×10⁻⁶ K⁻¹\n- **L** = length of bimetallic strip (m)\n- **dt** = temperature difference (°C)\n- **t** = thickness of bimetallic strip (m)\n\n### Common Materials\n\n- Steel: 12×10⁻⁶ K⁻¹\n- Copper: 16.6×10⁻⁶ K⁻¹\n- Brass: 18.7×10⁻⁶ K⁻¹"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "alpha",
+          "label": "Thermal Expansion Coefficient (α)",
+          "type": "number",
+          "defaultValue": 0.000014,
+          "unit": "K⁻¹"
+        },
+        {
+          "id": "length",
+          "label": "Length of Bimetallic Strip (L)",
+          "type": "number",
+          "defaultValue": 0.05,
+          "unit": "m"
+        },
+        {
+          "id": "temperature_diff",
+          "label": "Temperature Difference (dt)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "°C"
+        },
+        {
+          "id": "thickness",
+          "label": "Thickness of Bimetallic Strip (t)",
+          "type": "number",
+          "defaultValue": 0.002,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "bending",
+          "label": "Bending Displacement (s)",
+          "formula": "(inputs.alpha * inputs.length * inputs.length * inputs.temperature_diff) / inputs.thickness",
+          "unit": "m",
+          "format": "scientific"
+        },
+        {
+          "id": "bending_mm",
+          "label": "Bending Displacement (s)",
+          "formula": "((inputs.alpha * inputs.length * inputs.length * inputs.temperature_diff) / inputs.thickness) * 1000",
+          "unit": "mm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material 1",
+        "Material 2",
+        "α (K⁻¹)",
+        "Common Use"
+      ],
+      "rows": [
+        [
+          "Steel",
+          "Copper",
+          "4.6×10⁻⁶",
+          "Thermostats"
+        ],
+        [
+          "Steel",
+          "Brass",
+          "6.7×10⁻⁶",
+          "Temperature sensors"
+        ],
+        [
+          "Invar",
+          "Copper",
+          "14.8×10⁻⁶",
+          "Precision instruments"
+        ],
+        [
+          "Steel",
+          "Aluminum",
+          "8.5×10⁻⁶",
+          "Thermal switches"
+        ]
+      ]
+    }
+  ]
+}

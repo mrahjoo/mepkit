@@ -1,0 +1,61 @@
+{
+  "id": "vector_addition",
+  "title": "Vector Addition",
+  "description": "Calculate the resulting vector when adding two coplanar vectors using trigonometric methods. Supports calculation of resultant magnitude and angles between vectors and resultant using the cosine and sine rules.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Vector Addition Calculator\n\nAdd two coplanar vectors using trigonometric calculation with the cosine and sine rules.\n\n**Vector Quantities:** Can be used for forces, velocities, or any other vector quantities.\n\n**Formulas:**\n- Resultant magnitude: FR = √(F₁² + F₂² - 2·F₁·F₂·cos(180° - θ))\n- Angle to vector 1: α = sin⁻¹(F₁·sin(180° - θ) / FR)\n- Angle to vector 2: β = sin⁻¹(F₂·sin(180° - θ) / FR)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "vector1_magnitude",
+          "label": "Vector 1 Magnitude",
+          "type": "number",
+          "defaultValue": 3,
+          "unit": "units"
+        },
+        {
+          "id": "vector2_magnitude",
+          "label": "Vector 2 Magnitude",
+          "type": "number",
+          "defaultValue": 8,
+          "unit": "units"
+        },
+        {
+          "id": "angle_between",
+          "label": "Angle Between Vectors",
+          "type": "number",
+          "defaultValue": 80,
+          "unit": "degrees"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "resultant_magnitude",
+          "label": "Resultant Magnitude",
+          "formula": "Math.sqrt(inputs.vector1_magnitude**2 + inputs.vector2_magnitude**2 - 2*inputs.vector1_magnitude*inputs.vector2_magnitude*Math.cos((180-inputs.angle_between)*Math.PI/180))",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "angle_to_vector1",
+          "label": "Angle to Vector 1",
+          "formula": "Math.asin(inputs.vector1_magnitude*Math.sin((180-inputs.angle_between)*Math.PI/180)/Math.sqrt(inputs.vector1_magnitude**2 + inputs.vector2_magnitude**2 - 2*inputs.vector1_magnitude*inputs.vector2_magnitude*Math.cos((180-inputs.angle_between)*Math.PI/180)))*180/Math.PI",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "angle_to_vector2",
+          "label": "Angle to Vector 2",
+          "formula": "Math.asin(inputs.vector2_magnitude*Math.sin((180-inputs.angle_between)*Math.PI/180)/Math.sqrt(inputs.vector1_magnitude**2 + inputs.vector2_magnitude**2 - 2*inputs.vector1_magnitude*inputs.vector2_magnitude*Math.cos((180-inputs.angle_between)*Math.PI/180)))*180/Math.PI",
+          "unit": "degrees",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "income_tax",
+  "title": "Income Tax",
+  "description": "Income tax vs. taxable income. Calculate taxable income and income taxes based on revenues, costs, depreciation, and operating expenses.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Description",
+        "Variable",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Revenues",
+          "R",
+          ""
+        ],
+        [
+          "Operating Costs",
+          "C",
+          ""
+        ],
+        [
+          "Assets Depreciation",
+          "D",
+          ""
+        ],
+        [
+          "Operating Expenses",
+          "OE",
+          ""
+        ],
+        [
+          "Taxable Income",
+          "TI",
+          ""
+        ],
+        [
+          "Tax Rate",
+          "tr",
+          ""
+        ],
+        [
+          "Income Taxes",
+          "IT",
+          ""
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "revenues",
+          "label": "Revenues (R)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "$"
+        },
+        {
+          "id": "operating_costs",
+          "label": "Operating Costs (C)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "$"
+        },
+        {
+          "id": "depreciation",
+          "label": "Assets Depreciation (D)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "$"
+        },
+        {
+          "id": "operating_expenses",
+          "label": "Operating Expenses (OE)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "$"
+        },
+        {
+          "id": "tax_rate",
+          "label": "Tax Rate (tr)",
+          "type": "number",
+          "defaultValue": 0.25,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "taxable_income",
+          "label": "Taxable Income (TI)",
+          "formula": "inputs.revenues - inputs.operating_costs - inputs.depreciation - inputs.operating_expenses",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "income_taxes",
+          "label": "Income Taxes (IT)",
+          "formula": "(inputs.revenues - inputs.operating_costs - inputs.depreciation - inputs.operating_expenses) * (inputs.tax_rate / 100)",
+          "unit": "$",
+          "format": "currency"
+        }
+      ]
+    }
+  ]
+}

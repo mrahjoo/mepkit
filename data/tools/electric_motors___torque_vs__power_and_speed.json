@@ -1,0 +1,381 @@
+{
+  "id": "electric_motors___torque_vs__power_and_speed",
+  "title": "Electric Motors - Torque vs. Power and Speed",
+  "description": "Calculate and compare torque, power, and speed relationships for electric motors. Includes imperial and SI unit conversions with reference data tables for common motor ratings.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Electric Motors - Torque vs. Power and Speed\n\n**Work** is the result of a force acting over some distance. Work is quantified in joules (Nm) or foot-pounds.\n\n**Torque** is a rotating force produced by a motor's crankshaft. The more torque the motor produces, the greater is its ability to perform work. Since torque is a vector acting in a direction it is commonly quantified by the units Nm or pound-feet.\n\n**Power** is how rapidly work is accomplished - work in a given amount of time. Power is quantified in watts (J/s) or horse power.\n\nNote that the driving force of an electric motor is **torque** - not power. The torque is the twisting force that makes the motor run and the torque is active from 0% to 100% operating speed. The power produced by the motor is zero at zero speed.\n\n**Note!** that the full torque from zero speed is a major advantage for electric vehicles.\n\n## Equations\n\n**Torque in Imperial units:**\n- T(lbf·in) = P(hp) × 63025 / n(rpm)\n- T(lbf·ft) = P(hp) × 5252 / n(rpm)\n- 1 ft·lbf = 1.356 Nm\n\n**Torque in SI units:**\n- T(Nm) = P(W) × 9.549 / n(rpm)\n\n**Conversions:**\n- 1 hp = 0.746 kW\n- 1 lb·ft = 1.355 Nm"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "power_kw",
+          "label": "Power",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 10
+        },
+        {
+          "id": "speed_rpm",
+          "label": "Motor Speed",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 1500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque_nm",
+          "label": "Torque",
+          "unit": "Nm",
+          "formula": "inputs.power_kw * 1000 * 9.549 / inputs.speed_rpm",
+          "format": "decimal"
+        },
+        {
+          "id": "torque_lbf_ft",
+          "label": "Torque",
+          "unit": "lbf·ft",
+          "formula": "inputs.power_kw * 1000 * 9.549 / inputs.speed_rpm / 1.356",
+          "format": "decimal"
+        },
+        {
+          "id": "torque_lbf_in",
+          "label": "Torque",
+          "unit": "lbf·in",
+          "formula": "inputs.power_kw * 1000 * 9.549 / inputs.speed_rpm / 1.356 * 12",
+          "format": "decimal"
+        },
+        {
+          "id": "power_hp",
+          "label": "Power",
+          "unit": "hp",
+          "formula": "inputs.power_kw / 0.746",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Power (kW)",
+        "Motor Speed (rpm)",
+        "Torque (lbf·in)",
+        "Torque (lbf·ft)",
+        "Torque (Nm)"
+      ],
+      "rows": [
+        [
+          1,
+          2000,
+          18,
+          1.5,
+          2.1
+        ],
+        [
+          1,
+          1750,
+          21,
+          1.7,
+          2.4
+        ],
+        [
+          1,
+          1000,
+          36,
+          3,
+          4.1
+        ],
+        [
+          1,
+          500,
+          72,
+          6,
+          8.1
+        ],
+        [
+          1.5,
+          2000,
+          27,
+          2.3,
+          3.1
+        ],
+        [
+          1.5,
+          1750,
+          32,
+          2.6,
+          3.6
+        ],
+        [
+          1.5,
+          1000,
+          54,
+          4.5,
+          6.1
+        ],
+        [
+          1.5,
+          500,
+          108,
+          9,
+          12.2
+        ],
+        [
+          2,
+          2000,
+          37,
+          3,
+          4.1
+        ],
+        [
+          2,
+          1750,
+          42,
+          3.5,
+          4.8
+        ],
+        [
+          2,
+          1000,
+          72,
+          6,
+          8.1
+        ],
+        [
+          2,
+          500,
+          144,
+          12,
+          16.3
+        ],
+        [
+          3,
+          2000,
+          55,
+          4.6,
+          6.2
+        ],
+        [
+          3,
+          1750,
+          63,
+          5.3,
+          7.1
+        ],
+        [
+          3,
+          1000,
+          108,
+          9,
+          12.2
+        ],
+        [
+          3,
+          500,
+          216,
+          18,
+          24.4
+        ],
+        [
+          5,
+          2000,
+          91,
+          7.6,
+          10.3
+        ],
+        [
+          5,
+          1750,
+          105,
+          8.8,
+          11.9
+        ],
+        [
+          5,
+          1000,
+          180,
+          15,
+          20.3
+        ],
+        [
+          5,
+          500,
+          360,
+          30,
+          40.7
+        ],
+        [
+          7.5,
+          2000,
+          137,
+          11.4,
+          15.5
+        ],
+        [
+          7.5,
+          1750,
+          157,
+          13.1,
+          17.8
+        ],
+        [
+          7.5,
+          1000,
+          270,
+          22.5,
+          30.5
+        ],
+        [
+          7.5,
+          500,
+          540,
+          45,
+          61
+        ],
+        [
+          10,
+          2000,
+          183,
+          15.2,
+          20.6
+        ],
+        [
+          10,
+          1750,
+          210,
+          17.5,
+          23.7
+        ],
+        [
+          10,
+          1000,
+          360,
+          30,
+          40.7
+        ],
+        [
+          10,
+          500,
+          720,
+          60,
+          81.4
+        ],
+        [
+          15,
+          2000,
+          274,
+          22.8,
+          30.9
+        ],
+        [
+          15,
+          1750,
+          315,
+          26.2,
+          35.5
+        ],
+        [
+          15,
+          1000,
+          540,
+          45,
+          61
+        ],
+        [
+          15,
+          500,
+          1080,
+          90,
+          122
+        ],
+        [
+          20,
+          2000,
+          365,
+          30.4,
+          41.2
+        ],
+        [
+          20,
+          1750,
+          420,
+          35,
+          47.4
+        ],
+        [
+          20,
+          1000,
+          720,
+          60,
+          81.4
+        ],
+        [
+          20,
+          500,
+          1440,
+          120,
+          162.8
+        ],
+        [
+          25,
+          2000,
+          457,
+          38.1,
+          51.6
+        ],
+        [
+          25,
+          1750,
+          525,
+          43.8,
+          59.3
+        ],
+        [
+          25,
+          1000,
+          900,
+          75,
+          101.8
+        ],
+        [
+          25,
+          500,
+          1800,
+          150,
+          203.5
+        ],
+        [
+          30,
+          2000,
+          548,
+          45.7,
+          61.9
+        ],
+        [
+          30,
+          1750,
+          630,
+          52.5,
+          71.2
+        ],
+        [
+          30,
+          1000,
+          1080,
+          90,
+          122
+        ],
+        [
+          30,
+          500,
+          2160,
+          180,
+          244.1
+        ]
+      ]
+    }
+  ]
+}

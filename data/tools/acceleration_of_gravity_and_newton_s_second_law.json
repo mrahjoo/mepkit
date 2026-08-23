@@ -1,0 +1,166 @@
+{
+  "id": "acceleration_of_gravity_and_newton_s_second_law",
+  "title": "Acceleration of Gravity and Newton's Second Law",
+  "description": "Calculate weight, velocity, and distance traveled for free-falling objects using Newton's Second Law and gravitational acceleration.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Acceleration of Gravity and Newton's Second Law\n\nNewton's Second Law for gravity force (weight) is expressed as:\n\n**W = m × g**\n\nWhere:\n- **W** = Weight/Gravity force (N)\n- **m** = Mass (kg)\n- **g** = Acceleration of gravity (9.81 m/s² or 32.174 ft/s²)\n\n### Free Falling Object Calculations\n\n**Velocity:** v = g × t\n\n**Distance:** s = ½ × g × t²\n\n**Time to fall:** t = √(2s / g)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "kg"
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "select",
+          "defaultValue": 9.81,
+          "options": [
+            {
+              "label": "SI Units (m/s²)",
+              "value": 9.81
+            },
+            {
+              "label": "Imperial Units (ft/s²)",
+              "value": 32.174
+            }
+          ]
+        },
+        {
+          "id": "time",
+          "label": "Time",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "s"
+        },
+        {
+          "id": "distance",
+          "label": "Distance",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight",
+          "label": "Weight (W = m × g)",
+          "formula": "inputs.mass * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity (v = g × t)",
+          "formula": "inputs.gravity * inputs.time",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "distance_fallen",
+          "label": "Distance Fallen (s = ½ × g × t²)",
+          "formula": "0.5 * inputs.gravity * inputs.time * inputs.time",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "time_to_fall",
+          "label": "Time to Fall from Distance (t = √(2s / g))",
+          "formula": "inputs.distance > 0 ? Math.sqrt(2 * inputs.distance / inputs.gravity) : 0",
+          "unit": "s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Time (s)",
+        "Velocity (m/s)",
+        "Distance (m)",
+        "Velocity (km/h)",
+        "Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          1,
+          9.8,
+          4.9,
+          35.3,
+          32.2
+        ],
+        [
+          2,
+          19.6,
+          19.6,
+          70.6,
+          64.3
+        ],
+        [
+          3,
+          29.4,
+          44.1,
+          106,
+          96.5
+        ],
+        [
+          4,
+          39.2,
+          78.5,
+          141,
+          128.7
+        ],
+        [
+          5,
+          49.1,
+          122.6,
+          177,
+          160.9
+        ],
+        [
+          6,
+          58.9,
+          176.6,
+          212,
+          193
+        ],
+        [
+          7,
+          68.7,
+          240.3,
+          247,
+          225.2
+        ],
+        [
+          8,
+          78.5,
+          313.9,
+          283,
+          257.4
+        ],
+        [
+          9,
+          88.3,
+          397.3,
+          318,
+          289.6
+        ],
+        [
+          10,
+          98.1,
+          490.5,
+          353,
+          321.7
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,761 @@
+{
+  "id": "pvc_polyvinyl_chloride___chemical_resistance",
+  "title": "PVC Polyvinyl Chloride - Chemical Resistance",
+  "description": "Chemical resistance of Polyvinyl Chloride (PVC) to common products. R = resistant up to 60°C (140°F), R23 = resistant up to 23°C (73°F), N = not resistant.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Chemical Product",
+        "Resistance"
+      ],
+      "rows": [
+        [
+          "Acetic Acid 0-25% (vinegar)",
+          "R"
+        ],
+        [
+          "Acetic Acid 25-50%",
+          "R23"
+        ],
+        [
+          "Alcohol - Butyl",
+          "R"
+        ],
+        [
+          "Alcohol - Isopropyl",
+          "R"
+        ],
+        [
+          "Alum (Aluminum Sulfate)",
+          "R"
+        ],
+        [
+          "Aluminum Chloride, Aqueous",
+          "R"
+        ],
+        [
+          "Aluminum Potassium Sulfate",
+          "R"
+        ],
+        [
+          "Ammonium Bisulfide",
+          "R"
+        ],
+        [
+          "Ammonium Hydroxide 10%",
+          "R"
+        ],
+        [
+          "Ammonium Nitrate",
+          "R"
+        ],
+        [
+          "Ammonium Persulfate",
+          "R"
+        ],
+        [
+          "Ammonium Phosphate",
+          "R"
+        ],
+        [
+          "Ammonium Sulfate",
+          "R"
+        ],
+        [
+          "Barium Carbonate",
+          "R"
+        ],
+        [
+          "Barium Chloride",
+          "R"
+        ],
+        [
+          "Barium Sulfate",
+          "R"
+        ],
+        [
+          "Barium Sulfide",
+          "R"
+        ],
+        [
+          "Beer",
+          "R"
+        ],
+        [
+          "Benzene",
+          "N"
+        ],
+        [
+          "Benzoic Acid",
+          "R"
+        ],
+        [
+          "Benzyl Alcohol",
+          "N"
+        ],
+        [
+          "Butyric Acid 0-50%",
+          "R23"
+        ],
+        [
+          "Cadmium Cyanide",
+          "R"
+        ],
+        [
+          "Calcium Bisulfide",
+          "N"
+        ],
+        [
+          "Calcium Carbonate",
+          "R"
+        ],
+        [
+          "Calcium Chlorate",
+          "R"
+        ],
+        [
+          "Calcium Chloride",
+          "R"
+        ],
+        [
+          "Calcium Hydroxide",
+          "R"
+        ],
+        [
+          "Calcium Hypochlorite",
+          "R"
+        ],
+        [
+          "Calcium Nitrate",
+          "R"
+        ],
+        [
+          "Calcium Sulfate",
+          "R"
+        ],
+        [
+          "Carbon Dioxide",
+          "R"
+        ],
+        [
+          "Carbon Monoxide",
+          "R"
+        ],
+        [
+          "Carbonic Acid",
+          "R"
+        ],
+        [
+          "Chlorine - 0-20 ppm",
+          "R23"
+        ],
+        [
+          "Chlorine, liquid",
+          "N"
+        ],
+        [
+          "Chlorinated Water",
+          "R"
+        ],
+        [
+          "Chloroacetic Acid 0-50%",
+          "R"
+        ],
+        [
+          "Citric Acid",
+          "R"
+        ],
+        [
+          "Coconut Oil",
+          "R"
+        ],
+        [
+          "Coffee",
+          "R"
+        ],
+        [
+          "Coke Oven Gas",
+          "R"
+        ],
+        [
+          "Copper Chloride",
+          "R"
+        ],
+        [
+          "Copper Cyanide",
+          "R"
+        ],
+        [
+          "Copper Fluoride",
+          "R"
+        ],
+        [
+          "Copper Nitrate",
+          "R"
+        ],
+        [
+          "Copper Sulfate",
+          "R"
+        ],
+        [
+          "Corn Oil",
+          "R"
+        ],
+        [
+          "Corn Syrup",
+          "R"
+        ],
+        [
+          "Cottonseed Oil",
+          "R"
+        ],
+        [
+          "Crude Oil",
+          "R"
+        ],
+        [
+          "Cyclohexane",
+          "N"
+        ],
+        [
+          "Diesel Fuel",
+          "R"
+        ],
+        [
+          "Dioctyl Phthalate",
+          "N"
+        ],
+        [
+          "Dipropylene Glycol",
+          "R"
+        ],
+        [
+          "Ethylene Glycol",
+          "R"
+        ],
+        [
+          "Fatty Acids",
+          "R"
+        ],
+        [
+          "Ferric Chloride",
+          "R"
+        ],
+        [
+          "Ferric Nitrate",
+          "R"
+        ],
+        [
+          "Ferric Sulfate",
+          "R"
+        ],
+        [
+          "Ferrous Chloride",
+          "R"
+        ],
+        [
+          "Ferrous Nitrate",
+          "R"
+        ],
+        [
+          "Ferrous Sulfate",
+          "R"
+        ],
+        [
+          "Fish Oil",
+          "R"
+        ],
+        [
+          "Fluoboric Acid",
+          "R"
+        ],
+        [
+          "Fluorsilicic Acid 30%",
+          "R"
+        ],
+        [
+          "Formaldehyde",
+          "R"
+        ],
+        [
+          "Formic Acid",
+          "R23"
+        ],
+        [
+          "Fuel JP-4,5",
+          "R"
+        ],
+        [
+          "Gas, Natural",
+          "R"
+        ],
+        [
+          "Gasoline",
+          "R"
+        ],
+        [
+          "Gasohol",
+          "R"
+        ],
+        [
+          "Gasoline, Sour",
+          "R"
+        ],
+        [
+          "Glycol, Acid",
+          "R"
+        ],
+        [
+          "Glucose",
+          "R"
+        ],
+        [
+          "Glycerin",
+          "R"
+        ],
+        [
+          "Glycol",
+          "R"
+        ],
+        [
+          "Glycolic Acid",
+          "R"
+        ],
+        [
+          "Heptane",
+          "R"
+        ],
+        [
+          "n-Hexane",
+          "R23"
+        ],
+        [
+          "Hydraulic oil (petroleum)",
+          "R23"
+        ],
+        [
+          "Hydrobromic Acid 20%",
+          "R"
+        ],
+        [
+          "Hydrocyanic Acid",
+          "R"
+        ],
+        [
+          "Hydrofluoric Acid",
+          "R23"
+        ],
+        [
+          "Hydrogen",
+          "R"
+        ],
+        [
+          "Hydrogen Cyanide",
+          "R"
+        ],
+        [
+          "Hydrogen Fluoride",
+          "N"
+        ],
+        [
+          "Hydrogen Peroxide 50%",
+          "R"
+        ],
+        [
+          "Hydrogen Sulfide Dry, Wet",
+          "R"
+        ],
+        [
+          "Hypochlorous Acid",
+          "R"
+        ],
+        [
+          "Iodine I2",
+          "N"
+        ],
+        [
+          "Kerosene",
+          "R"
+        ],
+        [
+          "Lactic Acid 25%",
+          "R"
+        ],
+        [
+          "Lead Acetate",
+          "R"
+        ],
+        [
+          "Magnesium Carbonate",
+          "R"
+        ],
+        [
+          "Magnesium Chloride",
+          "R"
+        ],
+        [
+          "Magnesium Nitrate",
+          "R"
+        ],
+        [
+          "Magnesium Sulfate",
+          "R"
+        ],
+        [
+          "Malic Acid",
+          "R"
+        ],
+        [
+          "Mercuric Chloride",
+          "R"
+        ],
+        [
+          "Mercurous Nitrate",
+          "R"
+        ],
+        [
+          "Methane",
+          "R"
+        ],
+        [
+          "Methanol",
+          "R"
+        ],
+        [
+          "Milk",
+          "R"
+        ],
+        [
+          "Mineral Oil",
+          "R"
+        ],
+        [
+          "Motor Oil",
+          "R"
+        ],
+        [
+          "Naphtha",
+          "R"
+        ],
+        [
+          "Naphthalene",
+          "R"
+        ],
+        [
+          "Nickel Chloride",
+          "R"
+        ],
+        [
+          "Nickel Nitrate",
+          "R"
+        ],
+        [
+          "Nickel Sulfate",
+          "R"
+        ],
+        [
+          "Nicotine",
+          "R"
+        ],
+        [
+          "Nitric Acid",
+          "R"
+        ],
+        [
+          "Nitro Benzene",
+          "N"
+        ],
+        [
+          "Nitro Glycerine",
+          "N"
+        ],
+        [
+          "Oleic Acid",
+          "R"
+        ],
+        [
+          "Olive Oil",
+          "R"
+        ],
+        [
+          "Oxalic Acid 50%",
+          "R"
+        ],
+        [
+          "Phosphoric Acid",
+          "R"
+        ],
+        [
+          "Picric Acid, Alcoholic",
+          "N"
+        ],
+        [
+          "Potassium Aluminum Sulfate",
+          "R"
+        ],
+        [
+          "Potassium Bicarbonate",
+          "R"
+        ],
+        [
+          "Potassium Carbonate",
+          "R"
+        ],
+        [
+          "Potassium Chloride",
+          "R"
+        ],
+        [
+          "Potassium Ferrocyanide",
+          "R"
+        ],
+        [
+          "Potassium Nitrate",
+          "R"
+        ],
+        [
+          "Potassium Permanganate 10%",
+          "R"
+        ],
+        [
+          "Potassium Persulfate",
+          "R"
+        ],
+        [
+          "Potassium Sulfate",
+          "R"
+        ],
+        [
+          "Pyridine",
+          "N"
+        ],
+        [
+          "Silver Nitrate",
+          "R"
+        ],
+        [
+          "Soaps",
+          "R"
+        ],
+        [
+          "Sodium Acetate",
+          "R"
+        ],
+        [
+          "Sodium Benzoate",
+          "R"
+        ],
+        [
+          "Sodium Bisulfate",
+          "R"
+        ],
+        [
+          "Sodium Bisulfite",
+          "R"
+        ],
+        [
+          "Sodium Bromide",
+          "R"
+        ],
+        [
+          "Sodium Carbonate",
+          "R"
+        ],
+        [
+          "Sodium Chlorate",
+          "R"
+        ],
+        [
+          "Sodium Chloride",
+          "R"
+        ],
+        [
+          "Sodium Chlorite",
+          "N"
+        ],
+        [
+          "Sodium Cyanide",
+          "R"
+        ],
+        [
+          "Sodium Dichromate",
+          "R"
+        ],
+        [
+          "Sodium Phosphate",
+          "R"
+        ],
+        [
+          "Sodium Ferricyanide",
+          "R"
+        ],
+        [
+          "Sodium Hydroxide",
+          "R"
+        ],
+        [
+          "Sodium Hypochlorite",
+          "R23"
+        ],
+        [
+          "Sodium Meta-Phosphate",
+          "R"
+        ],
+        [
+          "Sodium Nitrate",
+          "R"
+        ],
+        [
+          "Sodium Silicate",
+          "R"
+        ],
+        [
+          "Sodium Sulfate",
+          "R"
+        ],
+        [
+          "Sodium Sulfide",
+          "R"
+        ],
+        [
+          "Sodium Sulfite",
+          "R"
+        ],
+        [
+          "Sodium Thiosulfate",
+          "R"
+        ],
+        [
+          "Stannic Chloride",
+          "R"
+        ],
+        [
+          "Stannous Chloride",
+          "R"
+        ],
+        [
+          "Stearic Acid",
+          "R"
+        ],
+        [
+          "Sugar, Sucrose",
+          "R"
+        ],
+        [
+          "Sulfamic Acid",
+          "N"
+        ],
+        [
+          "Sulfuric Acid 0-80%",
+          "R"
+        ],
+        [
+          "Sulfuric Acid 90%",
+          "R23"
+        ],
+        [
+          "Sulfuric Acid > 93%",
+          "N"
+        ],
+        [
+          "Sulfurous Acid",
+          "R"
+        ],
+        [
+          "Tall Oil",
+          "R"
+        ],
+        [
+          "Tannic Acid",
+          "R"
+        ],
+        [
+          "Tartaric Acid",
+          "R"
+        ],
+        [
+          "Toluene (Toluol)",
+          "N"
+        ],
+        [
+          "Transformer Oil",
+          "R"
+        ],
+        [
+          "Trichloroacetic Acid 50%",
+          "R"
+        ],
+        [
+          "Trisodium Phosphate",
+          "R"
+        ],
+        [
+          "Urea",
+          "R"
+        ],
+        [
+          "Vegetable Oils",
+          "R"
+        ],
+        [
+          "Vinegar",
+          "R"
+        ],
+        [
+          "Water - Deionized",
+          "R"
+        ],
+        [
+          "Water - Demineralized",
+          "R"
+        ],
+        [
+          "Water - Distilled",
+          "R"
+        ],
+        [
+          "Water - Fresh",
+          "R"
+        ],
+        [
+          "Water - Salt",
+          "R"
+        ],
+        [
+          "Water - Sea",
+          "R"
+        ],
+        [
+          "White Liquor - Pulp Mill",
+          "R"
+        ],
+        [
+          "Wine",
+          "R"
+        ],
+        [
+          "Xylene (Xylol)",
+          "N"
+        ],
+        [
+          "Zinc Chloride",
+          "R"
+        ],
+        [
+          "Zinc Nitrate",
+          "R"
+        ],
+        [
+          "Zinc Sulfate",
+          "R"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Legend\n\n- **R** = Resistant up to 60°C (140°F)\n- **R23** = Resistant up to 23°C (73°F)\n- **N** = Not Resistant\n\n## Notes\n\nThis table provides chemical resistance ratings for PVC (Polyvinyl Chloride) when exposed to common products. Always verify compatibility for your specific application, as factors such as concentration, temperature, and duration of exposure can affect performance."
+    }
+  ]
+}

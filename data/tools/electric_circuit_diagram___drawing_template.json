@@ -1,0 +1,72 @@
+{
+  "id": "electric_circuit_diagram___drawing_template",
+  "title": "Electric Circuit Diagram - Drawing Template",
+  "description": "Online shareable electric circuit diagram. Use Google Drive to make and share electric circuit drawings.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Electric Circuit Diagram - Drawing Template\n\nOnline shareable electric circuit diagram tool for creating and sharing circuit drawings.\n\n### Features:\n- Create custom electric circuit diagrams\n- Share diagrams with others\n- Use Google Drive for storage and collaboration\n- Online drawing template with pre-built components\n\n### How to Use:\n1. Log into your Google Account\n2. Open the [Electric circuit - online drawing template](https://docs.google.com/drawings/d/1m8Z3-AqddgyrH17Ixbwq4FP0LAKRqtx4LdHKJDsaFg4/edit)\n3. Create a copy to your Google Drive\n4. Customize your electric circuit drawing\n5. Share or publish your completed diagram\n\n![Electric circuit online diagram template](https://docs.google.com/drawings/d/1m8Z3-AqddgyrH17Ixbwq4FP0LAKRqtx4LdHKJDsaFg4/edit)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component Type",
+        "Description",
+        "Symbol"
+      ],
+      "rows": [
+        [
+          "Resistor",
+          "Restricts current flow",
+          "Zigzag line"
+        ],
+        [
+          "Capacitor",
+          "Stores electrical charge",
+          "Two parallel lines"
+        ],
+        [
+          "Inductor",
+          "Stores energy in magnetic field",
+          "Coil"
+        ],
+        [
+          "Battery",
+          "Provides electrical power",
+          "Long and short lines"
+        ],
+        [
+          "Switch",
+          "Opens/closes circuit",
+          "Break in line with lever"
+        ],
+        [
+          "Diode",
+          "Allows current in one direction",
+          "Triangle with line"
+        ],
+        [
+          "LED",
+          "Light emitting diode",
+          "Triangle with arrows"
+        ],
+        [
+          "Ground",
+          "Reference point in circuit",
+          "Three parallel lines"
+        ],
+        [
+          "Wire",
+          "Conducts electricity",
+          "Solid line"
+        ],
+        [
+          "Junction",
+          "Connection point",
+          "Dot"
+        ]
+      ]
+    }
+  ]
+}

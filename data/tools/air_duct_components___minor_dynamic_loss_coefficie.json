@@ -1,0 +1,132 @@
+{
+  "id": "air_duct_components___minor_dynamic_loss_coefficie",
+  "title": "Air Duct Components - Minor Dynamic Loss Coefficients",
+  "description": "Calculate minor or dynamic pressure losses in air duct systems caused by changes in air direction, restrictions, or velocity changes. Uses the formula: Δp_minor_loss = ξ ρ v² / 2",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Component or Fitting",
+        "Minor Loss Coefficient (ξ)"
+      ],
+      "rows": [
+        [
+          "90° bend, sharp",
+          1.3
+        ],
+        [
+          "90° bend, with vanes",
+          0.7
+        ],
+        [
+          "90° bend, rounded radius/diameter duct <1",
+          0.5
+        ],
+        [
+          "90° bend, rounded radius/diameter duct >1",
+          0.25
+        ],
+        [
+          "45° bend, sharp",
+          0.5
+        ],
+        [
+          "45° bend, rounded radius/diameter duct <1",
+          0.2
+        ],
+        [
+          "45° bend, rounded radius/diameter duct >1",
+          0.05
+        ],
+        [
+          "T, flow to branch (applied to velocity in branch)",
+          0.3
+        ],
+        [
+          "Flow from duct to room",
+          1
+        ],
+        [
+          "Flow from room to duct",
+          0.35
+        ],
+        [
+          "Reduction, tapered",
+          0
+        ],
+        [
+          "Enlargement, abrupt",
+          "variable"
+        ],
+        [
+          "Enlargement, tapered angle < 8°",
+          "variable"
+        ],
+        [
+          "Enlargement, tapered angle > 8°",
+          "variable"
+        ],
+        [
+          "Grilles, 0.7 ratio free area to total surface",
+          3
+        ],
+        [
+          "Grilles, 0.6 ratio free area to total surface",
+          4
+        ],
+        [
+          "Grilles, 0.5 ratio free area to total surface",
+          6
+        ],
+        [
+          "Grilles, 0.4 ratio free area to total surface",
+          10
+        ],
+        [
+          "Grilles, 0.3 ratio free area to total surface",
+          20
+        ],
+        [
+          "Grilles, 0.2 ratio free area to total surface",
+          50
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "loss_coefficient",
+          "label": "Minor Loss Coefficient (ξ)",
+          "type": "number",
+          "defaultValue": 1.3,
+          "unit": "-"
+        },
+        {
+          "id": "air_density",
+          "label": "Air Density (ρ)",
+          "type": "number",
+          "defaultValue": 1.2,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "velocity",
+          "label": "Air Velocity (v)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "minor_loss",
+          "label": "Minor Pressure Loss (Δp)",
+          "formula": "inputs.loss_coefficient * inputs.air_density * inputs.velocity * inputs.velocity / 2",
+          "unit": "Pa",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

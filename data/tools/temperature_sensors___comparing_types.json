@@ -1,0 +1,101 @@
+{
+  "id": "temperature_sensors___comparing_types",
+  "title": "Temperature Sensors - Comparing Types",
+  "description": "Comparing advantages and disadvantages of thermocouples, RTDs and thermistors temperature sensors.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Temperature Sensors Comparison\n\nThis tool compares three main types of temperature sensors:\n\n### Thermocouple\nA thermocouple has two dissimilar conductors forming electrical junctions at differing temperatures. The thermocouple produces a temperature-dependent voltage as a result of the thermoelectric effect and can be interpreted as a temperature measurement.\n\n### RTD (Resistance Thermometer Detector)\nRTDs are made of a length of fine wire wrapped around a ceramic or glass core. The RTD wire is of pure material - typically platinum, nickel, or copper - with an accurate resistance/temperature relationship. The electrical resistance provides an indication of the temperature.\n\n### Thermistor\nA thermistor is a type of resistor made of ceramic or polymer materials. The resistance is - like the RTD - dependent on temperature. A PTC (Positive Temperature Coefficient) conducts better at lower temperatures. A NTC (Negative Temperature Coefficient) conducts better at higher temperatures."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Attribute",
+        "Thermocouple",
+        "RTD",
+        "Thermistor"
+      ],
+      "rows": [
+        [
+          "Cost",
+          "Low",
+          "High",
+          "Low"
+        ],
+        [
+          "Temperature Range",
+          "Very wide -350°F +3200°F",
+          "Wide -400°F +1200°F",
+          "Short to medium -100°F +500°F"
+        ],
+        [
+          "Interchangeability",
+          "Good",
+          "Excellent",
+          "Poor to fair"
+        ],
+        [
+          "Long-term Stability",
+          "Poor to fair",
+          "Good",
+          "Poor"
+        ],
+        [
+          "Accuracy",
+          "Medium",
+          "High",
+          "Medium"
+        ],
+        [
+          "Repeatability",
+          "Poor to fair",
+          "Excellent",
+          "Fair to good"
+        ],
+        [
+          "Sensitivity (output)",
+          "Low",
+          "Medium",
+          "Very high"
+        ],
+        [
+          "Response",
+          "Medium to fast",
+          "Medium",
+          "Medium to fast"
+        ],
+        [
+          "Linearity",
+          "Fair",
+          "Good",
+          "Poor"
+        ],
+        [
+          "Self Heating",
+          "No",
+          "Very low to low",
+          "High"
+        ],
+        [
+          "Point (end) Sensitive",
+          "Excellent",
+          "Fair",
+          "Good"
+        ],
+        [
+          "Lead Effect",
+          "High",
+          "Medium",
+          "Low"
+        ],
+        [
+          "Size/Packaging",
+          "Small to large",
+          "Medium to small",
+          "Small to medium"
+        ]
+      ]
+    }
+  ]
+}

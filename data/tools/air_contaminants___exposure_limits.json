@@ -1,0 +1,193 @@
+{
+  "id": "air_contaminants___exposure_limits",
+  "title": "Air Contaminants - Exposure Limits",
+  "description": "Exposure limits for various air contaminants. Permissible Exposure Limits (PEL) are 8-hour time weighted averages per OSHA standards.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pollutant",
+        "Permissible Exposure Limit (PEL)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          "200 ppm"
+        ],
+        [
+          "Acetic Acid",
+          "10 ppm"
+        ],
+        [
+          "Acetone",
+          "1000 ppm"
+        ],
+        [
+          "Ammonia",
+          "50 ppm"
+        ],
+        [
+          "Asbestos",
+          "0.1 fiber/cubic centimeter"
+        ],
+        [
+          "Benzene",
+          "1 ppm"
+        ],
+        [
+          "Bromine",
+          "0.1 ppm"
+        ],
+        [
+          "Cadmium",
+          "5 μg/m³"
+        ],
+        [
+          "Carbon dioxide",
+          "5000 ppm"
+        ],
+        [
+          "Carbon disulfide",
+          "200 ppm"
+        ],
+        [
+          "Carbon monoxide",
+          "50 ppm"
+        ],
+        [
+          "Carbon tetrachloride",
+          "10 ppm"
+        ],
+        [
+          "Chlorine",
+          "1 ppm"
+        ],
+        [
+          "Chloroform",
+          "50 ppm"
+        ],
+        [
+          "Cresol",
+          "5 ppm"
+        ],
+        [
+          "Ethanol (Ethyl alcohol)",
+          "1000 ppm"
+        ],
+        [
+          "Ethyl chloride",
+          "1000 ppm"
+        ],
+        [
+          "Fluorine",
+          "0.1 ppm"
+        ],
+        [
+          "Formaldehyde",
+          "0.75 ppm"
+        ],
+        [
+          "Gasoline",
+          "300 ppm"
+        ],
+        [
+          "Hydrogen cyanide",
+          "10 ppm"
+        ],
+        [
+          "Iodine",
+          "0.1 ppm"
+        ],
+        [
+          "Iron oxide (fume)",
+          "10 mg/m³"
+        ],
+        [
+          "Isopropyl alcohol",
+          "400 ppm"
+        ],
+        [
+          "Lead",
+          "50 μg/m³"
+        ],
+        [
+          "Manganese compounds",
+          "5 mg/m³"
+        ],
+        [
+          "Mercury",
+          "1 mg/10 m³"
+        ],
+        [
+          "Methanol (Methyl alcohol)",
+          "200 ppm"
+        ],
+        [
+          "Nitric oxide",
+          "25 ppm"
+        ],
+        [
+          "Nitrogen dioxide",
+          "5 ppm"
+        ],
+        [
+          "Ozone",
+          "0.05 ppm"
+        ],
+        [
+          "Particles",
+          "50 μg/m³ (1 year)"
+        ],
+        [
+          "Propane",
+          "1000 ppm"
+        ],
+        [
+          "Selenium compounds",
+          "0.2 mg/m³"
+        ],
+        [
+          "Sulfur dioxide",
+          "5 ppm"
+        ],
+        [
+          "Sulfur acid",
+          "1 mg/m³"
+        ],
+        [
+          "Tellurium compounds",
+          "0.1 mg/m³"
+        ],
+        [
+          "Tetraethyl lead",
+          "0.075 mg/m³"
+        ],
+        [
+          "Toluene",
+          "200 ppm"
+        ],
+        [
+          "Turpentine",
+          "100 ppm"
+        ],
+        [
+          "Vinyl chloride",
+          "1 ppm"
+        ],
+        [
+          "Zinc oxide, fume",
+          "5 mg/m³"
+        ],
+        [
+          "Zinc oxide, dust",
+          "15 mg/m³"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- **PEL**: Permissible Exposure Limit - 8-hour time weighted averages per OSHA standards\n- **Human carcinogens (confirmed)**: Asbestos, Benzene, Vinyl chloride\n- **Human carcinogens (suspected)**: Cadmium, Carbon tetrachloride, Formaldehyde\n- **Acceptable ceiling concentrations**: Chlorine, Chloroform, Iodine, Mercury, Nitrogen dioxide\n- **Simple asphyxiant**: Propane\n- **ppm**: Parts per million\n- **μg/m³**: Micrograms per cubic meter\n- **mg/m³**: Milligrams per cubic meter"
+    }
+  ]
+}

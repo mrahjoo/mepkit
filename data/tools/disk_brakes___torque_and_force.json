@@ -1,0 +1,65 @@
+{
+  "id": "disk_brakes___torque_and_force",
+  "title": "Disk Brakes - Torque and Force",
+  "description": "Forces and torque activated with disk brakes. Calculate braking torque capacity and required pad pressure.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Disk Brakes - Torque and Force\n\nThe torque capacity of a disk brake with two pads can be expressed as:\n\n**T = 2 μ F r** (1)\n\nWhere:\n- T = braking torque (Nm)\n- μ = coefficient of friction\n- F = force on each pad (N)\n- r = mean radius (from center wheel to center pad) (m)\n\nRequired pad pressure can be expressed as:\n\n**p = F / A** (2)\n\nWhere:\n- p = pressure (Pa)\n- A = pad area (m²)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Braking Torque",
+        "Pad Pressure"
+      ],
+      "inputs": [
+        {
+          "id": "coefficient_of_friction",
+          "label": "Coefficient of Friction (μ)",
+          "type": "number",
+          "defaultValue": 0.4,
+          "unit": ""
+        },
+        {
+          "id": "force_per_pad",
+          "label": "Force on Each Pad (F)",
+          "type": "number",
+          "defaultValue": 5000,
+          "unit": "N"
+        },
+        {
+          "id": "mean_radius",
+          "label": "Mean Radius (r)",
+          "type": "number",
+          "defaultValue": 0.15,
+          "unit": "m"
+        },
+        {
+          "id": "pad_area",
+          "label": "Pad Area (A)",
+          "type": "number",
+          "defaultValue": 0.025,
+          "unit": "m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "braking_torque",
+          "label": "Braking Torque (T)",
+          "formula": "2 * inputs.coefficient_of_friction * inputs.force_per_pad * inputs.mean_radius",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "pad_pressure",
+          "label": "Pad Pressure (p)",
+          "formula": "inputs.force_per_pad / inputs.pad_area",
+          "unit": "Pa",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

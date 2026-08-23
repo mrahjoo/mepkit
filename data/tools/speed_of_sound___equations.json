@@ -1,0 +1,126 @@
+{
+  "id": "speed_of_sound___equations",
+  "title": "Speed of Sound - Equations",
+  "description": "Calculate the speed of sound in gases, fluids, and solids using acoustic velocity equations. Supports calculations for ideal gases, liquids, and solids based on bulk modulus, density, temperature, and gas properties.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Bulk Modulus Elasticity - K - (10⁹ N/m²)",
+        "Density - ρ - (kg/m³)",
+        "Speed of Sound - c - (m/s)"
+      ],
+      "rows": [
+        [
+          "Water (10°C)",
+          2.09,
+          999.7,
+          "≈ 1446"
+        ],
+        [
+          "Oil",
+          1.35,
+          920,
+          "≈ 1212"
+        ],
+        [
+          "Ethyl Alcohol",
+          1.06,
+          810,
+          "≈ 1143"
+        ],
+        [
+          "Mercury",
+          28.5,
+          13595,
+          "≈ 1447"
+        ],
+        [
+          "Air (0°C)",
+          "-",
+          "-",
+          "331.2"
+        ],
+        [
+          "Air (20°C)",
+          "-",
+          "-",
+          "343.1"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "bulkModulus",
+          "label": "Bulk Modulus of Elasticity (K)",
+          "type": "number",
+          "unit": "10⁹ N/m²",
+          "defaultValue": 2.09
+        },
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 999.7
+        },
+        {
+          "id": "gasConstant",
+          "label": "Gas Constant (R) - Optional for gases",
+          "type": "number",
+          "unit": "J/kg·K",
+          "defaultValue": 286.9
+        },
+        {
+          "id": "temperature",
+          "label": "Absolute Temperature (T) - Optional for gases",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 273.15
+        },
+        {
+          "id": "heatRatio",
+          "label": "Ratio of Specific Heats (k) - For gases only",
+          "type": "number",
+          "unit": "dimensionless",
+          "defaultValue": 1.4
+        },
+        {
+          "id": "calculationType",
+          "label": "Calculation Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Liquids/Solids (K/ρ)",
+              "value": "liquid"
+            },
+            {
+              "label": "Ideal Gases (k·R·T)",
+              "value": "gas"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "speedOfSound",
+          "label": "Speed of Sound (c)",
+          "unit": "m/s",
+          "formula": "sqrt(inputs.bulkModulus * 1e9 / inputs.density)",
+          "format": "decimal"
+        },
+        {
+          "id": "speedOfSoundGas",
+          "label": "Speed of Sound in Gas (c)",
+          "unit": "m/s",
+          "formula": "sqrt(inputs.heatRatio * inputs.gasConstant * inputs.temperature)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

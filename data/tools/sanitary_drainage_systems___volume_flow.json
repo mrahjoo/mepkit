@@ -1,0 +1,40 @@
+{
+  "id": "sanitary_drainage_systems___volume_flow",
+  "title": "Sanitary Drainage Systems - Volume Flow",
+  "description": "Calculate the expected total drainage load for sanitary drainage systems using empirical equations. The expected total load accounts for intermittent fixture use, providing realistic values lower than theoretical total load.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sanitary Drainage Systems - Volume Flow\n\nThe **expected total load** for sanitary drainage systems is estimated using the empirical equation:\n\n**qet = k √(Σqn)**\n\nWhere:\n- **qet** = expected total drainage load (l/s or gpm)\n- **k** = system coefficient (0.3 - 0.8 depending on system type)\n- **Σqn** = total theoretical load from all fixtures (l/s or gpm)\n\n### System Coefficient (k) Guidelines:\n\n**Intermittent Use Systems (0.5 - 0.8):**\n- Hotels, Hospitals, Schools, Theaters, Factory Wardrobes\n- Closer to 0.8 for smaller systems\n- Closer to 0.5 for larger systems\n\n**Continuous Use Systems (0.3 - 0.6):**\n- Homes, Offices, Nursing Homes\n- Closer to 0.3 for larger systems\n- Closer to 0.6 for smaller systems\n\n**Note:** Minimum expected total load cannot be less than the largest single fixture load."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "system_coefficient",
+          "label": "System Coefficient (k)",
+          "type": "number",
+          "defaultValue": 0.6,
+          "unit": ""
+        },
+        {
+          "id": "theoretical_load",
+          "label": "Total Theoretical Load (Σqn)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "l/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "expected_load",
+          "label": "Expected Total Drainage Load (qet)",
+          "formula": "inputs.system_coefficient * Math.sqrt(inputs.theoretical_load)",
+          "unit": "l/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

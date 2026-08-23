@@ -1,0 +1,73 @@
+{
+  "id": "radius_of_gyration_in_structural_engineering",
+  "title": "Radius of Gyration in Structural Engineering",
+  "description": "Calculate the radius of gyration for various cross-sectional shapes in structural engineering. The radius of gyration describes the distribution of cross-sectional area around the centroidal axis.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Cross Section Type",
+        "Formula",
+        "Parameters",
+        "Radius of Gyration (r)"
+      ],
+      "rows": [
+        [
+          "Rectangle - Centered Axis",
+          "r = 0.289h",
+          "h = height",
+          "0.289 × height"
+        ],
+        [
+          "Rectangle - Eccentric Axis",
+          "r = 0.577h",
+          "h = height",
+          "0.577 × height"
+        ],
+        [
+          "Rectangle - Tilted Axis I",
+          "r = bh / (6√(b² + h²))",
+          "b = width, h = height",
+          "Width × Height / (6√(b² + h²))"
+        ],
+        [
+          "Rectangle - Tilted Axis II",
+          "r = √((h²cos²(a) + b²sin²(a)) / 12)",
+          "b = width, h = height, a = angle",
+          "√((h²cos²(a) + b²sin²(a)) / 12)"
+        ],
+        [
+          "Hollow Square",
+          "r = √((H² + h²) / 12)",
+          "H = outer dimension, h = inner dimension",
+          "√((H² + h²) / 12)"
+        ],
+        [
+          "Hollow Square - Tilted Axis",
+          "r = √((H² + h²) / 12)",
+          "H = outer dimension, h = inner dimension",
+          "√((H² + h²) / 12)"
+        ],
+        [
+          "Equilateral Triangle - Eccentric",
+          "r = h / √18",
+          "h = height",
+          "height / √18"
+        ],
+        [
+          "Triangle",
+          "r = h / √6",
+          "h = height",
+          "height / √6"
+        ],
+        [
+          "General Formula",
+          "r = √(I / A)",
+          "I = Area Moment of Inertia, A = cross-sectional area",
+          "√(I / A)"
+        ]
+      ]
+    }
+  ]
+}

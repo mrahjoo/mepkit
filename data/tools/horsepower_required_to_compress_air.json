@@ -1,0 +1,88 @@
+{
+  "id": "horsepower_required_to_compress_air",
+  "title": "Horsepower Required to Compress Air",
+  "description": "Calculate horsepower required by air compressors using adiabatic compression formula",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Horsepower Required to Compress Air\n\nCalculate the theoretical horsepower required for adiabatic compression of air using the formula:\n\n**HP = (144 N P1 V k / (33000 (k - 1))) ((P2 / P1)^((k - 1) / (N k)) - 1)**\n\nWhere:\n- **HP** = horsepower\n- **N** = number of compression stages\n- **k** = 1.41 (adiabatic expansion coefficient)\n- **P1** = absolute initial atmospheric pressure (psi)\n- **P2** = absolute final pressure after compression (psi)\n- **V** = volume of air at atmospheric pressure (scfm, ft³/min)\n\n**Note:** Add 15-20% for friction losses in practical applications."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "N",
+          "label": "Number of Compression Stages",
+          "type": "select",
+          "options": [
+            {
+              "value": 1,
+              "label": "Single-Stage"
+            },
+            {
+              "value": 2,
+              "label": "Two-Stage"
+            },
+            {
+              "value": 3,
+              "label": "Three-Stage"
+            }
+          ],
+          "defaultValue": 1
+        },
+        {
+          "id": "P1",
+          "label": "Initial Atmospheric Pressure (P1)",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 14.7
+        },
+        {
+          "id": "P2",
+          "label": "Final Compression Pressure (P2)",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 100
+        },
+        {
+          "id": "V",
+          "label": "Volume of Free Air",
+          "type": "number",
+          "unit": "scfm",
+          "defaultValue": 100
+        },
+        {
+          "id": "friction",
+          "label": "Include Friction Loss (%)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hp_theoretical",
+          "label": "Theoretical Horsepower",
+          "formula": "(144 * inputs.N * inputs.P1 * inputs.V * 1.41) / (33000 * (1.41 - 1)) * (Math.pow(inputs.P2 / inputs.P1, (1.41 - 1) / (inputs.N * 1.41)) - 1)",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "hp_with_friction",
+          "label": "Horsepower with Friction Loss",
+          "formula": "((144 * inputs.N * inputs.P1 * inputs.V * 1.41) / (33000 * (1.41 - 1)) * (Math.pow(inputs.P2 / inputs.P1, (1.41 - 1) / (inputs.N * 1.41)) - 1)) * (1 + inputs.friction / 100)",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "power_watts",
+          "label": "Power Required",
+          "formula": "((144 * inputs.N * inputs.P1 * inputs.V * 1.41) / (33000 * (1.41 - 1)) * (Math.pow(inputs.P2 / inputs.P1, (1.41 - 1) / (inputs.N * 1.41)) - 1)) * 745.7",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "staircase_calculator",
+  "title": "Staircase Calculator",
+  "description": "Calculate steps, unit rise and run in a staircase. This calculator can be used to calculate unit rise and run of straight stairs.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Staircase Calculator\n\nCalculate the unit rise and run for straight stairs.\n\n### General Guidelines\n- Unit run should not be less than **10 inches (25 cm)**\n- Unit rise should not exceed **7 3/4 inches (20 cm)**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "total_rise",
+          "label": "Total Rise",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 120
+        },
+        {
+          "id": "total_run",
+          "label": "Total Run",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 120
+        },
+        {
+          "id": "num_steps",
+          "label": "Number of Steps",
+          "type": "number",
+          "defaultValue": 13
+        }
+      ],
+      "outputs": [
+        {
+          "id": "unit_rise",
+          "label": "Unit Rise",
+          "formula": "inputs.total_rise / inputs.num_steps",
+          "unit": "inches",
+          "format": "decimal"
+        },
+        {
+          "id": "unit_run",
+          "label": "Unit Run",
+          "formula": "inputs.total_run / (inputs.num_steps - 1)",
+          "unit": "inches",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

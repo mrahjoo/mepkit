@@ -1,0 +1,408 @@
+{
+  "id": "isa_instrumentation_codes_used_in_process_control_",
+  "title": "ISA Instrumentation Codes used in Process Control Systems",
+  "description": "A calculator tool for determining ISA instrumentation codes based on process variable and instrument type. Select a process variable and instrument type to generate the corresponding ISA code used in P&ID diagrams.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "ISA Code Generator",
+      "inputs": [
+        {
+          "id": "process_variable",
+          "label": "Process Variable",
+          "type": "select",
+          "options": [
+            {
+              "label": "Analyses",
+              "value": "A"
+            },
+            {
+              "label": "Burner",
+              "value": "B"
+            },
+            {
+              "label": "Combustion",
+              "value": "B"
+            },
+            {
+              "label": "Users Choice",
+              "value": "C"
+            },
+            {
+              "label": "Users Choice",
+              "value": "D"
+            },
+            {
+              "label": "Voltage",
+              "value": "V"
+            },
+            {
+              "label": "Flow Rate",
+              "value": "F"
+            },
+            {
+              "label": "Users Choice",
+              "value": "G"
+            },
+            {
+              "label": "Current (electric)",
+              "value": "I"
+            },
+            {
+              "label": "Power",
+              "value": "J"
+            },
+            {
+              "label": "Time",
+              "value": "K"
+            },
+            {
+              "label": "Level",
+              "value": "L"
+            },
+            {
+              "label": "Users Choice",
+              "value": "M"
+            },
+            {
+              "label": "Users Choice",
+              "value": "N"
+            },
+            {
+              "label": "Users Choice",
+              "value": "O"
+            },
+            {
+              "label": "Pressure / Vacuum",
+              "value": "P"
+            },
+            {
+              "label": "Radiation",
+              "value": "R"
+            },
+            {
+              "label": "Speed (or Frequency)",
+              "value": "S"
+            },
+            {
+              "label": "Temperature",
+              "value": "T"
+            },
+            {
+              "label": "Multivariable",
+              "value": "U"
+            },
+            {
+              "label": "Vibration",
+              "value": "V"
+            },
+            {
+              "label": "Weight (force)",
+              "value": "W"
+            },
+            {
+              "label": "Unclassified",
+              "value": "X"
+            },
+            {
+              "label": "Event",
+              "value": "Y"
+            },
+            {
+              "label": "Position, dimension",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "id": "instrument_type",
+          "label": "Instrument Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Alarm",
+              "value": "A"
+            },
+            {
+              "label": "Users Choice",
+              "value": "B"
+            },
+            {
+              "label": "Controller",
+              "value": "C"
+            },
+            {
+              "label": "Control valve",
+              "value": "CV"
+            },
+            {
+              "label": "Trap",
+              "value": "CV"
+            },
+            {
+              "label": "Sensor (primary element)",
+              "value": "E"
+            },
+            {
+              "label": "Rupture disc",
+              "value": "E"
+            },
+            {
+              "label": "Sight or gage glass",
+              "value": "G"
+            },
+            {
+              "label": "Monitor",
+              "value": "G"
+            },
+            {
+              "label": "Indicator",
+              "value": "I"
+            },
+            {
+              "label": "Control Station",
+              "value": "K"
+            },
+            {
+              "label": "Light (pilot/operation)",
+              "value": "L"
+            },
+            {
+              "label": "Users Choice",
+              "value": "N"
+            },
+            {
+              "label": "Flow Resistance Orifice",
+              "value": "O"
+            },
+            {
+              "label": "Test point (sample point)",
+              "value": "P"
+            },
+            {
+              "label": "Recorder",
+              "value": "R"
+            },
+            {
+              "label": "Switch",
+              "value": "S"
+            },
+            {
+              "label": "Transmitter",
+              "value": "T"
+            },
+            {
+              "label": "Multifunction",
+              "value": "U"
+            },
+            {
+              "label": "Valve/Damper",
+              "value": "V"
+            },
+            {
+              "label": "Well",
+              "value": "W"
+            },
+            {
+              "label": "Unclassified",
+              "value": "X"
+            },
+            {
+              "label": "Relay",
+              "value": "Y"
+            },
+            {
+              "label": "Driver",
+              "value": "Z"
+            },
+            {
+              "label": "Actuator",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "id": "identification_number",
+          "label": "Identification Number (Optional)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "isa_code",
+          "label": "ISA Instrumentation Code",
+          "formula": "inputs.process_variable + inputs.instrument_type + (inputs.identification_number ? inputs.identification_number : '')",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Process Variable",
+        "Symbol",
+        "Instrument Type",
+        "Symbol"
+      ],
+      "rows": [
+        [
+          "Analyses",
+          "A",
+          "Alarm",
+          "A"
+        ],
+        [
+          "Burner",
+          "B",
+          "Users Choice",
+          "B"
+        ],
+        [
+          "Combustion",
+          "B",
+          "Controller",
+          "C"
+        ],
+        [
+          "Users Choice",
+          "C",
+          "Control valve",
+          "CV"
+        ],
+        [
+          "Users Choice",
+          "D",
+          "Trap",
+          "CV"
+        ],
+        [
+          "Voltage",
+          "V",
+          "Sensor (primary element)",
+          "E"
+        ],
+        [
+          "Flow Rate",
+          "F",
+          "Rupture disc",
+          "E"
+        ],
+        [
+          "Users Choice",
+          "G",
+          "Sight or gage glass",
+          "G"
+        ],
+        [
+          "Current (electric)",
+          "I",
+          "Monitor",
+          "G"
+        ],
+        [
+          "Power",
+          "J",
+          "Indicator",
+          "I"
+        ],
+        [
+          "Time",
+          "K",
+          "Control Station",
+          "K"
+        ],
+        [
+          "Level",
+          "L",
+          "Light (pilot/operation)",
+          "L"
+        ],
+        [
+          "Users Choice",
+          "M",
+          "Users Choice",
+          "N"
+        ],
+        [
+          "Users Choice",
+          "N",
+          "Flow Resistance Orifice",
+          "O"
+        ],
+        [
+          "Users Choice",
+          "O",
+          "Test point (sample point)",
+          "P"
+        ],
+        [
+          "Pressure / Vacuum",
+          "P",
+          "Recorder",
+          "R"
+        ],
+        [
+          "Radiation",
+          "R",
+          "Switch",
+          "S"
+        ],
+        [
+          "Speed (or Frequency)",
+          "S",
+          "Transmitter",
+          "T"
+        ],
+        [
+          "Temperature",
+          "T",
+          "Multifunction",
+          "U"
+        ],
+        [
+          "Multivariable",
+          "U",
+          "Valve/Damper",
+          "V"
+        ],
+        [
+          "Vibration",
+          "V",
+          "Well",
+          "W"
+        ],
+        [
+          "Weight (force)",
+          "W",
+          "Unclassified",
+          "X"
+        ],
+        [
+          "Unclassified",
+          "X",
+          "Relay",
+          "Y"
+        ],
+        [
+          "Event",
+          "Y",
+          "Driver",
+          "Z"
+        ],
+        [
+          "Position, dimension",
+          "Z",
+          "Actuator",
+          "Z"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Example\n\nA level indicator will receive the symbol **L** for the process variable \"Level\", and **I** for the \"Indicator\" type of instrument.\n\n**Combined ISA Code: LI**\n\nFor unique identification within a system, it is common to add a number to the ISA code. For example, the code for level indicator no. 8 would be: **LI-8** or **LI8**"
+    }
+  ]
+}

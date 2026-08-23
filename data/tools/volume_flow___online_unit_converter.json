@@ -1,0 +1,134 @@
+{
+  "id": "volume_flow___online_unit_converter",
+  "title": "Volume Flow - Online Unit Converter",
+  "description": "Convert between volume flow units like gpm, liter/sec, cfm, m3/h. This calculator allows conversion between common fluid flow units including US gpd, US gpm, cfm, IMP gpd, IMP gpm, m³/s, m³/min, m³/h, liter/sec, liter/min, and liter/h.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "flow_converter",
+      "content": "Volume Flow Unit Converter",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Flow Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "from_unit",
+          "label": "Convert From",
+          "type": "select",
+          "options": [
+            {
+              "value": "m3_s",
+              "label": "m³/s (cubic meter per second)"
+            },
+            {
+              "value": "m3_min",
+              "label": "m³/min (cubic meter per minute)"
+            },
+            {
+              "value": "m3_h",
+              "label": "m³/h (cubic meter per hour)"
+            },
+            {
+              "value": "liter_s",
+              "label": "liter/sec"
+            },
+            {
+              "value": "liter_min",
+              "label": "liter/min"
+            },
+            {
+              "value": "liter_h",
+              "label": "liter/h"
+            },
+            {
+              "value": "us_gpd",
+              "label": "US gpd (gallons per day)"
+            },
+            {
+              "value": "us_gpm",
+              "label": "US gpm (gallons per minute)"
+            },
+            {
+              "value": "cfm",
+              "label": "cfm (cubic feet per minute)"
+            },
+            {
+              "value": "imp_gpd",
+              "label": "IMP gpd (imperial gallons per day)"
+            },
+            {
+              "value": "imp_gpm",
+              "label": "IMP gpm (imperial gallons per minute)"
+            }
+          ],
+          "defaultValue": "m3_h"
+        },
+        {
+          "id": "to_unit",
+          "label": "Convert To",
+          "type": "select",
+          "options": [
+            {
+              "value": "m3_s",
+              "label": "m³/s (cubic meter per second)"
+            },
+            {
+              "value": "m3_min",
+              "label": "m³/min (cubic meter per minute)"
+            },
+            {
+              "value": "m3_h",
+              "label": "m³/h (cubic meter per hour)"
+            },
+            {
+              "value": "liter_s",
+              "label": "liter/sec"
+            },
+            {
+              "value": "liter_min",
+              "label": "liter/min"
+            },
+            {
+              "value": "liter_h",
+              "label": "liter/h"
+            },
+            {
+              "value": "us_gpd",
+              "label": "US gpd (gallons per day)"
+            },
+            {
+              "value": "us_gpm",
+              "label": "US gpm (gallons per minute)"
+            },
+            {
+              "value": "cfm",
+              "label": "cfm (cubic feet per minute)"
+            },
+            {
+              "value": "imp_gpd",
+              "label": "IMP gpd (imperial gallons per day)"
+            },
+            {
+              "value": "imp_gpm",
+              "label": "IMP gpm (imperial gallons per minute)"
+            }
+          ],
+          "defaultValue": "imp_gpm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Flow",
+          "formula": "inputs.value * (inputs.from_unit === 'm3_h' && inputs.to_unit === 'imp_gpm' ? 3.67 : inputs.from_unit === 'us_gpm' && inputs.to_unit === 'm3_h' ? 0.227 : inputs.from_unit === 'cfm' && inputs.to_unit === 'm3_h' ? 1.699 : 1)",
+          "unit": "varies by selection",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

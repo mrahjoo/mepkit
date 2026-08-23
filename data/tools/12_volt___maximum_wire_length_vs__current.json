@@ -1,0 +1,178 @@
+{
+  "id": "12_volt___maximum_wire_length_vs__current",
+  "title": "12 Volt - Maximum Wire Length vs. Current",
+  "description": "Maximum wire length calculator for 12 volt copper conductor systems. Calculate the maximum length of copper wires based on current, cross-sectional area, and acceptable voltage drop for typical electrical circuits and automotive applications.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Maximum Wire Length Calculator\n\nThis calculator determines the maximum length of copper wires for 12 volt systems based on current, wire cross-sectional area, and voltage drop constraints.\n\n**Important Notes:**\n- For typical electrical circuits with two wires (back and forth), the calculated length is the total wire length. The maximum distance between source and equipment is **half** the calculated distance.\n- In automotive applications where equipment is grounded to the chassis, the maximum distance **equals** the calculated length.\n- Formula: L = U / (R × I), where U is voltage drop, R is resistance per meter, and I is current."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": "volts"
+        },
+        {
+          "id": "current",
+          "label": "Current",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "amps"
+        },
+        {
+          "id": "cross_section",
+          "label": "Cross Sectional Area",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "mm²"
+        },
+        {
+          "id": "voltage_drop_percent",
+          "label": "Voltage Drop",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "voltage_drop_volts",
+          "label": "Voltage Drop",
+          "formula": "inputs.voltage * inputs.voltage_drop_percent / 100",
+          "unit": "volts",
+          "format": "decimal"
+        },
+        {
+          "id": "resistance_per_meter",
+          "label": "Resistance per Meter (Copper)",
+          "formula": "0.01754 / inputs.cross_section",
+          "unit": "ohm/m",
+          "format": "scientific"
+        },
+        {
+          "id": "max_length_meters",
+          "label": "Maximum Wire Length (Total)",
+          "formula": "inputs.voltage * (inputs.voltage_drop_percent / 100) / (0.01754 / inputs.cross_section * inputs.current)",
+          "unit": "meters",
+          "format": "decimal"
+        },
+        {
+          "id": "max_length_feet",
+          "label": "Maximum Wire Length (Total)",
+          "formula": "inputs.voltage * (inputs.voltage_drop_percent / 100) / (0.01754 / inputs.cross_section * inputs.current) * 3.28084",
+          "unit": "feet",
+          "format": "decimal"
+        },
+        {
+          "id": "max_distance_meters",
+          "label": "Maximum Distance (Single Direction)",
+          "formula": "inputs.voltage * (inputs.voltage_drop_percent / 100) / (0.01754 / inputs.cross_section * inputs.current) / 2",
+          "unit": "meters",
+          "format": "decimal"
+        },
+        {
+          "id": "max_distance_feet",
+          "label": "Maximum Distance (Single Direction)",
+          "formula": "inputs.voltage * (inputs.voltage_drop_percent / 100) / (0.01754 / inputs.cross_section * inputs.current) / 2 * 3.28084",
+          "unit": "feet",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Current (A)",
+        "Wire 5.26 mm² (m)",
+        "Wire 8.37 mm² (m)",
+        "Wire 13.3 mm² (m)",
+        "Wire 26.7 mm² (m)",
+        "Wire 33.6 mm² (m)"
+      ],
+      "rows": [
+        [
+          2,
+          "19.3",
+          "30.7",
+          "48.8",
+          "97.5",
+          "123"
+        ],
+        [
+          4,
+          "9.7",
+          "15.3",
+          "24.4",
+          "48.8",
+          "61.5"
+        ],
+        [
+          6,
+          "6.4",
+          "10.2",
+          "16.3",
+          "32.5",
+          "41"
+        ],
+        [
+          8,
+          "4.8",
+          "7.7",
+          "12.2",
+          "24.4",
+          "30.8"
+        ],
+        [
+          10,
+          "3.9",
+          "6.1",
+          "9.8",
+          "19.5",
+          "24.6"
+        ],
+        [
+          15,
+          "2.6",
+          "4.1",
+          "6.5",
+          "13",
+          "16.4"
+        ],
+        [
+          20,
+          "1.9",
+          "3.1",
+          "4.9",
+          "9.8",
+          "12.3"
+        ],
+        [
+          25,
+          "1.6",
+          "2.4",
+          "3.9",
+          "7.8",
+          "9.8"
+        ],
+        [
+          30,
+          "1.3",
+          "2",
+          "3.3",
+          "6.5",
+          "8.2"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Information\n\n**Copper Resistivity Data:**\n- Resistivity of copper at 20°C: 0.01754 ohm·mm²/m\n\n**Wire Gauge Reference:**\n- #2 (33.6 mm²)\n- #4 (26.7 mm²)\n- #6 (13.3 mm²)\n- #8 (8.37 mm²)\n- #10 (5.26 mm²)\n\n**Scaling Factors:**\n- Double the distance if 4% voltage drop is acceptable\n- Multiply distance by 2 for 24 volt systems\n- Multiply distance by 4 for 48 volt systems\n\n**Example:**\nFor a 50W light bulb at 12V: I = P/U = 50W/12V = 4.2A. With #10 wire (5.26 mm²) at 2% voltage drop, maximum wire length is approximately 8m total (4m single direction)."
+    }
+  ]
+}

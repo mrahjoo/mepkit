@@ -1,0 +1,73 @@
+{
+  "id": "motors___speed_vs__pulley_diameter",
+  "title": "Motors - Speed vs. Pulley Diameter",
+  "description": "Calculate and analyze the relationship between motor speed and pulley diameter for belt-driven systems",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Motor Speed (RPM)",
+        "Pulley Diameter (inches)",
+        "Belt Speed (ft/min)",
+        "Driven Pulley Speed (RPM)"
+      ],
+      "rows": [
+        [
+          1200,
+          4,
+          1256.6,
+          3600
+        ],
+        [
+          1200,
+          5,
+          1570.8,
+          2880
+        ],
+        [
+          1200,
+          6,
+          1884.9,
+          2400
+        ],
+        [
+          1500,
+          4,
+          1570.8,
+          4500
+        ],
+        [
+          1500,
+          5,
+          1963.5,
+          3600
+        ],
+        [
+          1500,
+          6,
+          2356.2,
+          3000
+        ],
+        [
+          1800,
+          4,
+          1884.9,
+          5400
+        ],
+        [
+          1800,
+          5,
+          2356.2,
+          4320
+        ],
+        [
+          1800,
+          6,
+          2827.4,
+          3600
+        ]
+      ]
+    }
+  ]
+}

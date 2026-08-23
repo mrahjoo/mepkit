@@ -1,0 +1,125 @@
+{
+  "id": "moist_air___degree_of_saturation",
+  "title": "Moist Air - Degree of Saturation",
+  "description": "Humidity ratio of moist air to humidity ratio of saturated moist air. The Degree of Saturation is the ratio of the humidity ratio of moist air to the humidity ratio of saturated moist air at the same temperature and pressure.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate the Degree of Saturation using humidity ratios or pressure-based method.",
+      "inputs": [
+        {
+          "id": "method",
+          "label": "Calculation Method",
+          "type": "select",
+          "options": [
+            {
+              "value": "humidity_ratio",
+              "label": "Humidity Ratio Method"
+            },
+            {
+              "value": "pressure",
+              "label": "Pressure Method"
+            }
+          ],
+          "defaultValue": "humidity_ratio"
+        },
+        {
+          "id": "humidity_ratio",
+          "label": "Humidity Ratio (x)",
+          "type": "number",
+          "unit": "kgH2O/kgdry_air",
+          "defaultValue": 0.01
+        },
+        {
+          "id": "humidity_ratio_saturated",
+          "label": "Humidity Ratio at Saturation (xs)",
+          "type": "number",
+          "unit": "kgH2O/kgdry_air",
+          "defaultValue": 0.02
+        },
+        {
+          "id": "relative_humidity",
+          "label": "Relative Humidity (φ)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 60
+        },
+        {
+          "id": "vapor_pressure",
+          "label": "Vapor Pressure (pw)",
+          "type": "number",
+          "unit": "mbar",
+          "defaultValue": 15
+        },
+        {
+          "id": "saturation_vapor_pressure",
+          "label": "Saturation Vapor Pressure (pws)",
+          "type": "number",
+          "unit": "mbar",
+          "defaultValue": 25
+        },
+        {
+          "id": "atmospheric_pressure",
+          "label": "Atmospheric Pressure (pa)",
+          "type": "number",
+          "unit": "mbar",
+          "defaultValue": 1013.25
+        }
+      ],
+      "outputs": [
+        {
+          "id": "degree_of_saturation",
+          "label": "Degree of Saturation (μ)",
+          "formula": "inputs.method === 'humidity_ratio' ? inputs.humidity_ratio / inputs.humidity_ratio_saturated : (inputs.relative_humidity / 100) * (inputs.atmospheric_pressure - inputs.saturation_vapor_pressure) / (inputs.atmospheric_pressure - inputs.vapor_pressure)",
+          "unit": "-",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Method",
+        "Input Parameter 1",
+        "Input Parameter 2",
+        "Input Parameter 3",
+        "Degree of Saturation (μ)"
+      ],
+      "rows": [
+        [
+          "Humidity Ratio",
+          "x = 0.01 kgH2O/kgdry_air",
+          "xs = 0.02 kgH2O/kgdry_air",
+          "-",
+          "0.50"
+        ],
+        [
+          "Humidity Ratio",
+          "x = 0.015 kgH2O/kgdry_air",
+          "xs = 0.025 kgH2O/kgdry_air",
+          "-",
+          "0.60"
+        ],
+        [
+          "Pressure",
+          "φ = 60%",
+          "pw = 15 mbar",
+          "pws = 25 mbar, pa = 1013.25 mbar",
+          "0.59"
+        ],
+        [
+          "Pressure",
+          "φ = 80%",
+          "pw = 20 mbar",
+          "pws = 25 mbar, pa = 1013.25 mbar",
+          "0.79"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formulas\n\n**Method 1 - Humidity Ratio:**\n\nμ = x / xs\n\nwhere:\n- μ = degree of saturation\n- x = humidity ratio of the air (kgH2O/kgdry_air)\n- xs = humidity ratio of the air at saturation (kgH2O/kgdry_air)\n\n**Method 2 - Pressure-based:**\n\nμ = φ × (pa - pws) / (pa - pw)\n\nwhere:\n- μ = degree of saturation\n- φ = relative humidity (%)\n- pw = vapor pressure (mbar)\n- pws = saturation vapor pressure (mbar)\n- pa = atmospheric pressure (mbar)"
+    }
+  ]
+}

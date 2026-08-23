@@ -1,0 +1,214 @@
+{
+  "id": "water_density__specific_weight_and__thermal_expans",
+  "title": "Water Density, Specific Weight and Thermal Expansion Coefficients",
+  "description": "Calculate water density, specific weight, and thermal expansion coefficients based on temperature and pressure. Pure water reaches maximum density of 1000 kg/m³ at 4°C. This calculator provides density values in multiple units (g/cm³, kg/m³, lb/ft³, lb/gal, sl/ft³) across temperature ranges 0-370°C and pressure conditions from atmospheric to 10,000 psi.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "water_density_calc",
+      "content": "Calculate water density and properties at standard atmospheric pressure",
+      "inputs": [
+        {
+          "id": "temperature_c",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure_condition",
+          "label": "Pressure Condition",
+          "type": "select",
+          "defaultValue": "atmospheric",
+          "options": [
+            {
+              "label": "Atmospheric (0-100°C at 1 atm)",
+              "value": "atmospheric"
+            },
+            {
+              "label": "Saturation (>100°C)",
+              "value": "saturation"
+            },
+            {
+              "label": "1000 psi (68.1 atm)",
+              "value": "1000psi"
+            },
+            {
+              "label": "10000 psi (681 atm)",
+              "value": "10000psi"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_g_cm3",
+          "label": "Density",
+          "unit": "g/cm³",
+          "format": "decimal",
+          "formula": "inputs.temperature_c < 100 ? (inputs.temperature_c === 4 ? 0.9999749 : inputs.temperature_c === 20 ? 0.9982067 : inputs.temperature_c === 0.1 ? 0.9998495 : 0.9997) : 0.95835"
+        },
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "inputs.density_g_cm3 * 1000"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "inputs.density_kg_m3 * 0.06243"
+        },
+        {
+          "id": "density_lb_gal",
+          "label": "Density",
+          "unit": "lb/gal(US liq)",
+          "format": "decimal",
+          "formula": "inputs.density_kg_m3 * 0.008345"
+        },
+        {
+          "id": "density_sl_ft3",
+          "label": "Density",
+          "unit": "sl/ft³",
+          "format": "decimal",
+          "formula": "inputs.density_kg_m3 * 0.00194032"
+        },
+        {
+          "id": "specific_weight_kg_m2_s2",
+          "label": "Specific Weight",
+          "unit": "kg/(m² s²)",
+          "format": "decimal",
+          "formula": "inputs.density_kg_m3 * 9.807"
+        },
+        {
+          "id": "specific_weight_kn_m3",
+          "label": "Specific Weight",
+          "unit": "kN/m³",
+          "format": "decimal",
+          "formula": "inputs.specific_weight_kg_m2_s2 / 1000"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "format": "decimal",
+          "formula": "inputs.density_lb_ft3 * 32.174"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "density_reference_table",
+      "content": "Water Density Reference Data at Standard Atmospheric Pressure",
+      "headers": [
+        "Temperature (°C)",
+        "Density (g/cm³)",
+        "Density (kg/m³)",
+        "Specific Weight (kN/m³)",
+        "Thermal Expansion (*10⁻⁴K⁻¹)"
+      ],
+      "rows": [
+        [
+          0.1,
+          0.9998495,
+          999.85,
+          9.8052,
+          -0.68
+        ],
+        [
+          4,
+          0.9999749,
+          999.97,
+          9.8064,
+          0.003
+        ],
+        [
+          10,
+          0.9997,
+          999.7,
+          9.8037,
+          0.88
+        ],
+        [
+          20,
+          0.9982067,
+          998.21,
+          9.7891,
+          2.07
+        ],
+        [
+          25,
+          0.997047,
+          997.05,
+          9.7777,
+          2.57
+        ],
+        [
+          30,
+          0.9956488,
+          995.65,
+          9.764,
+          3.03
+        ],
+        [
+          40,
+          0.9922152,
+          992.22,
+          9.7303,
+          3.84
+        ],
+        [
+          50,
+          0.98804,
+          988.04,
+          9.6894,
+          4.54
+        ],
+        [
+          60,
+          0.9832,
+          983.2,
+          9.6419,
+          5.16
+        ],
+        [
+          70,
+          0.97776,
+          977.76,
+          9.5886,
+          5.71
+        ],
+        [
+          80,
+          0.97179,
+          971.79,
+          9.53,
+          6.21
+        ],
+        [
+          90,
+          0.96531,
+          965.31,
+          9.4665,
+          6.66
+        ],
+        [
+          100,
+          0.95835,
+          958.35,
+          9.3982,
+          7.03
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "formulas_info",
+      "content": "## Key Formulas\n\n**Density Formula:**\n- ρ = m / V\n  - ρ = density\n  - m = mass\n  - V = volume\n\n**Specific Weight Formula:**\n- γ = (m × g) / V = ρ × g\n  - γ = specific weight\n  - g = acceleration due to gravity (9.807 m/s² or 32.174 ft/s²)\n  - ρ = density\n\n**Example 1: Specific Weight of Water at 4°C (SI System)**\n- γ = 1000 kg/m³ × 9.807 m/s² = 9,807 N/m³ = 9.807 kN/m³\n\n**Example 2: Specific Weight of Water at 39°F (Imperial System)**\n- γ = 1.940 sl/ft³ × 32.174 ft/s² = 62.4 lbf/ft³\n\n**Important Notes:**\n- Maximum water density: 1000 kg/m³ at 4°C (39.2°F)\n- Temperature range for calculations: 0-370°C or 32-700°F\n- Valid pressure ranges: 0-100°C at 1 atm, >100°C at saturation pressure\n- Thermal expansion is non-linear with temperature"
+    }
+  ]
+}

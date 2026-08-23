@@ -1,0 +1,128 @@
+{
+  "id": "hydrocarbon_mixtures___molecular_weight_vs__gravit",
+  "title": "Hydrocarbon Mixtures - Molecular Weight vs. Gravity and Average Boiling Point",
+  "description": "Calculate average molecular weight of hydrocarbon mixtures based on specific gravity and mean average boiling point using Riazi-Daubert equations (1980 and extended models). Supports both Fahrenheit/Rankine and Celsius/Kelvin temperature scales.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Riazi-Daubert 1980 (Low Boiling Point)",
+        "Riazi-Daubert Extended (High Boiling Point)"
+      ],
+      "content": "Calculate molecular weight for hydrocarbon mixtures using two Riazi-Daubert models",
+      "inputs": [
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "celsius"
+            },
+            {
+              "label": "Rankine (°R)",
+              "value": "rankine"
+            },
+            {
+              "label": "Kelvin (K)",
+              "value": "kelvin"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "fahrenheit"
+            }
+          ],
+          "defaultValue": "celsius"
+        },
+        {
+          "id": "mabp",
+          "label": "Mean Average Boiling Point (MeABP)",
+          "type": "number",
+          "unit": "°C / °R / K / °F",
+          "defaultValue": 292
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity (S) at 60°F",
+          "type": "number",
+          "unit": "dimensionless",
+          "defaultValue": 0.763
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mw_riazi_1980",
+          "label": "MW (Riazi-Daubert 1980)",
+          "unit": "kg/kmol",
+          "format": "decimal",
+          "formula": "IF(inputs.temp_unit == 'celsius', 1.6607E-04 * (inputs.mabp + 273)^2.1962 * inputs.specific_gravity^-1.0164, IF(inputs.temp_unit == 'kelvin', 1.6607E-04 * inputs.mabp^2.1962 * inputs.specific_gravity^-1.0164, IF(inputs.temp_unit == 'fahrenheit', 4.5673E-05 * (inputs.mabp + 460)^2.1962 * inputs.specific_gravity^-1.0164, 4.5673E-05 * inputs.mabp^2.1962 * inputs.specific_gravity^-1.0164)))"
+        },
+        {
+          "id": "mw_riazi_extended",
+          "label": "MW (Riazi-Daubert Extended)",
+          "unit": "kg/kmol",
+          "format": "decimal",
+          "formula": "IF(inputs.temp_unit == 'celsius', 42.965 * (inputs.mabp + 273)^1.26007 * inputs.specific_gravity^4.98308 * EXP(2.097E-04 * (inputs.mabp + 273) - 7.78712 * inputs.specific_gravity + 2.08476E-03 * (inputs.mabp + 273) * inputs.specific_gravity), IF(inputs.temp_unit == 'kelvin', 42.965 * inputs.mabp^1.26007 * inputs.specific_gravity^4.98308 * EXP(2.097E-04 * inputs.mabp - 7.78712 * inputs.specific_gravity + 2.08476E-03 * inputs.mabp * inputs.specific_gravity), IF(inputs.temp_unit == 'fahrenheit', 20.486 * (inputs.mabp + 460)^1.26007 * inputs.specific_gravity^4.98308 * EXP(1.165E-04 * (inputs.mabp + 460) - 7.78712 * inputs.specific_gravity + 1.1582E-03 * (inputs.mabp + 460) * inputs.specific_gravity), 20.486 * inputs.mabp^1.26007 * inputs.specific_gravity^4.98308 * EXP(1.165E-04 * inputs.mabp - 7.78712 * inputs.specific_gravity + 1.1582E-03 * inputs.mabp * inputs.specific_gravity))))"
+        },
+        {
+          "id": "mw_difference",
+          "label": "MW Difference",
+          "unit": "%",
+          "format": "decimal",
+          "formula": "ABS(outputs.mw_riazi_1980 - outputs.mw_riazi_extended) / outputs.mw_riazi_1980 * 100"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature Unit",
+        "MeABP Value",
+        "Specific Gravity",
+        "MW (1980)",
+        "MW (Extended)",
+        "Difference (%)"
+      ],
+      "rows": [
+        [
+          "Celsius",
+          292,
+          0.763,
+          124.6,
+          124.8,
+          0.2
+        ],
+        [
+          "Celsius",
+          298,
+          0.869,
+          217,
+          232,
+          6.5
+        ],
+        [
+          "Rankine",
+          752,
+          0.763,
+          124.6,
+          124.8,
+          0.2
+        ],
+        [
+          "Kelvin",
+          571,
+          0.869,
+          217,
+          232,
+          6.5
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Calculation Method\n\n### Riazi-Daubert 1980 Model\n- **For Rankine (°R):** MW = 4.5673E-05 × TR^2.1962 × S^-1.0164\n- **For Kelvin (K):** MW = 1.6607E-04 × TK^2.1962 × S^-1.0164\n- **Valid Range:** MeABP 20-400°C, MW 70-300 kg/kmol, API 14-93°\n\n### Riazi-Daubert Extended Model\n- **For Rankine (°R):** MW = 20.486 × TR^1.26007 × S^4.98308 × e^(1.165E-04×TR - 7.78712×S + 1.1582E-03×TR×S)\n- **For Kelvin (K):** MW = 42.965 × TK^1.26007 × S^4.98308 × e^(2.097E-04×TK - 7.78712×S + 2.08476E-03×TK×S)\n- **Valid Range:** MeABP 20-560°C, MW 70-700 kg/kmol, API 14-93°\n- **Recommended for:** Hydrocarbons > C25, boiling point > 400°C\n\n### Where:\n- TR = Mean Average Boiling Point in °R (Rankine)\n- TK = Mean Average Boiling Point in K (Kelvin)\n- S = Specific gravity at 60°F (15.6°C)\n\n**Average Error:** ~7%\n\n**Temperature Conversions:**\n- °F to °R: Add 460\n- °C to K: Add 273"
+    }
+  ]
+}

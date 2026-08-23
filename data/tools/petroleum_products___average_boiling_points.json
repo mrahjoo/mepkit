@@ -1,0 +1,245 @@
+{
+  "id": "petroleum_products___average_boiling_points",
+  "title": "Petroleum Products - Average Boiling Points",
+  "description": "Calculate average boiling points (ABP) of petroleum mixtures using mole, weight, volume, cubic average, and mean average boiling temperature methods. Includes distillation analysis and correction factor calculations.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "abp_calculator",
+      "content": "Average Boiling Point Calculator",
+      "inputs": [
+        {
+          "id": "t10_percent",
+          "label": "Temperature at 10% (T10%)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 132
+        },
+        {
+          "id": "t30_percent",
+          "label": "Temperature at 30% (T30%)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 136
+        },
+        {
+          "id": "t50_percent",
+          "label": "Temperature at 50% (T50%)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 143
+        },
+        {
+          "id": "t70_percent",
+          "label": "Temperature at 70% (T70%)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 153
+        },
+        {
+          "id": "t90_percent",
+          "label": "Temperature at 90% (T90%)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 163
+        },
+        {
+          "id": "slope_method",
+          "label": "Slope Calculation Method",
+          "type": "select",
+          "defaultValue": "d86",
+          "options": [
+            {
+              "label": "D86 Analysis",
+              "value": "d86"
+            },
+            {
+              "label": "D2887 Analysis",
+              "value": "d2887"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "vabp",
+          "label": "Volume Average Boiling Point (VABP)",
+          "formula": "0.2 * (inputs.t10_percent + inputs.t30_percent + inputs.t50_percent + inputs.t70_percent + inputs.t90_percent)",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "slope",
+          "label": "Distillation Curve Slope",
+          "formula": "(inputs.t90_percent - inputs.t10_percent) / 80",
+          "unit": "°C/% recovered",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "gasoline_compounds",
+      "content": "Gasoline Mixture Composition - Example",
+      "headers": [
+        "Compound",
+        "Mol Weight (g/mol)",
+        "Density @15°C (g/cm³)",
+        "Boiling Point (°C)",
+        "Volume Fraction (Xvol)",
+        "Mole Fraction (Xmol)",
+        "Weight Fraction (Xw)"
+      ],
+      "rows": [
+        [
+          "Iso-pentane",
+          72.2,
+          0.62,
+          28,
+          0.1,
+          0.13,
+          0.084
+        ],
+        [
+          "3-methylpentane",
+          86.2,
+          0.66,
+          63,
+          0.2,
+          0.23,
+          0.18
+        ],
+        [
+          "Iso-octane",
+          114.2,
+          0.69,
+          99,
+          0.3,
+          0.27,
+          0.282
+        ],
+        [
+          "Meta-xylene",
+          106.2,
+          0.86,
+          139,
+          0.2,
+          0.24,
+          0.234
+        ],
+        [
+          "Hexylcyclohexane",
+          168.3,
+          0.808,
+          225,
+          0.2,
+          0.14,
+          0.22
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "abp_results",
+      "content": "Average Boiling Point Results",
+      "headers": [
+        "ABP Type",
+        "Temperature (°C)",
+        "Description"
+      ],
+      "rows": [
+        [
+          "MABP",
+          109.3,
+          "Mole Average Boiling Point"
+        ],
+        [
+          "WABP",
+          123.6,
+          "Weight Average Boiling Point"
+        ],
+        [
+          "VABP",
+          117.9,
+          "Volume Average Boiling Point"
+        ],
+        [
+          "CABP",
+          106.5,
+          "Cubic Average Boiling Point"
+        ],
+        [
+          "MeABP",
+          107.9,
+          "Mean Average Boiling Point"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "distillation_curve",
+      "content": "Distillation Curve Analysis",
+      "options": {
+        "title": {
+          "text": "Distillation Curve - D86 Analysis"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "IBP",
+            "10%",
+            "20%",
+            "30%",
+            "50%",
+            "70%",
+            "80%",
+            "90%",
+            "FBP"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Temperature (°C)"
+        },
+        "series": [
+          {
+            "name": "D86 Analysis",
+            "type": "line",
+            "data": [
+              121,
+              132,
+              134,
+              136,
+              143,
+              153,
+              157,
+              163,
+              183
+            ],
+            "smooth": true
+          },
+          {
+            "name": "D2887 Analysis",
+            "type": "line",
+            "data": [
+              85,
+              115,
+              123,
+              129,
+              144,
+              160,
+              167,
+              176,
+              197
+            ],
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

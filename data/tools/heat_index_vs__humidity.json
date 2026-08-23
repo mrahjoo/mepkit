@@ -1,0 +1,216 @@
+{
+  "id": "heat_index_vs__humidity",
+  "title": "Heat Index vs. Humidity",
+  "description": "The influence of humidity on the apparent temperature and the heat index. The Heat Index indicates how hot it feels when relative humidity is combined with temperature.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Heat Index vs. Humidity\n\nThe **Heat Index** - or the **Apparent Temperature** - is used to indicate how hot it feels when relative humidity is combined with temperature.\n\nWith increased humidity it feels hotter as indicated in the Heat Index table below."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "dryTemp_F",
+          "label": "Dry Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 85
+        },
+        {
+          "id": "relHumidity",
+          "label": "Relative Humidity",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 80
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heatIndex",
+          "label": "Heat Index (Apparent Temperature)",
+          "unit": "°F",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Dry Temperature (°F)",
+        "Humidity 0%",
+        "Humidity 10%",
+        "Humidity 20%",
+        "Humidity 30%",
+        "Humidity 40%",
+        "Humidity 50%",
+        "Humidity 60%",
+        "Humidity 70%",
+        "Humidity 80%",
+        "Humidity 90%",
+        "Humidity 100%"
+      ],
+      "rows": [
+        [
+          70,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          70,
+          71,
+          71,
+          72
+        ],
+        [
+          75,
+          69,
+          70,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80
+        ],
+        [
+          80,
+          73,
+          75,
+          77,
+          78,
+          79,
+          81,
+          82,
+          85,
+          86,
+          88,
+          91
+        ],
+        [
+          85,
+          78,
+          80,
+          82,
+          84,
+          86,
+          88,
+          90,
+          93,
+          97,
+          102,
+          108
+        ],
+        [
+          90,
+          83,
+          85,
+          87,
+          90,
+          93,
+          96,
+          100,
+          106,
+          113,
+          122,
+          "-"
+        ],
+        [
+          95,
+          87,
+          90,
+          93,
+          96,
+          101,
+          107,
+          114,
+          124,
+          136,
+          "-",
+          "-"
+        ],
+        [
+          100,
+          91,
+          95,
+          99,
+          104,
+          110,
+          120,
+          132,
+          144,
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          105,
+          95,
+          100,
+          105,
+          113,
+          123,
+          135,
+          149,
+          "-",
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          110,
+          99,
+          105,
+          112,
+          123,
+          137,
+          150,
+          "-",
+          "-",
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          115,
+          103,
+          111,
+          120,
+          135,
+          151,
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          120,
+          107,
+          116,
+          130,
+          148,
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Heat and Humidity Index Danger Zones\n\n* **90 - 104°F**: Heat cramps or heat exhaustion possible\n* **105 - 130°F**: Heat cramps or heat exhaustion likely, heatstroke possible\n* **130°F and more**: Heat stroke highly likely"
+    }
+  ]
+}

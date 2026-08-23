@@ -1,0 +1,205 @@
+{
+  "id": "pressure_gradient_diagrams",
+  "title": "Pressure Gradient Diagrams",
+  "description": "Static pressure graphical presentation throughout a fluid flow system. Visualize pressure gradient, major head losses due to friction, and minor head losses due to valves and components across different flow conditions.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Pressure Gradient Diagram Calculator",
+      "inputs": [
+        {
+          "id": "pump_head",
+          "label": "Pump Head",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 50
+        },
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 10
+        },
+        {
+          "id": "pipe_friction_loss",
+          "label": "Major Head Loss (Friction)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 15
+        },
+        {
+          "id": "minor_loss_valves",
+          "label": "Minor Head Loss (Valves/Components)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "system_elevation",
+          "label": "System Elevation Change",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "condition_type",
+          "label": "Flow Condition",
+          "type": "select",
+          "options": [
+            {
+              "label": "Normal Flow Rate",
+              "value": "normal"
+            },
+            {
+              "label": "Maximum Flow Rate",
+              "value": "maximum"
+            },
+            {
+              "label": "Minimum Flow Rate",
+              "value": "minimum"
+            }
+          ],
+          "defaultValue": "normal"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_head_loss",
+          "label": "Total Head Loss",
+          "unit": "m",
+          "formula": "inputs.pipe_friction_loss + inputs.minor_loss_valves + inputs.system_elevation",
+          "format": "decimal"
+        },
+        {
+          "id": "available_head",
+          "label": "Available Head at System",
+          "unit": "m",
+          "formula": "inputs.pump_head - (inputs.pipe_friction_loss + inputs.minor_loss_valves)",
+          "format": "decimal"
+        },
+        {
+          "id": "static_pressure",
+          "label": "Static Pressure at System End",
+          "unit": "kPa",
+          "formula": "(inputs.pump_head - inputs.system_elevation - inputs.minor_loss_valves) * 9.81",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_at_intake",
+          "label": "Pressure at Pump Intake",
+          "unit": "kPa",
+          "formula": "inputs.pump_head * 9.81",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Pressure Gradient Analysis Across System",
+      "headers": [
+        "System Location",
+        "Head (m)",
+        "Static Pressure (kPa)",
+        "Dynamic Loss (m)"
+      ],
+      "rows": [
+        [
+          "Pump Intake",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "After Pump",
+          "50",
+          "490.5",
+          "0"
+        ],
+        [
+          "After Friction Loss",
+          "35",
+          "343.35",
+          "15"
+        ],
+        [
+          "After Minor Losses",
+          "30",
+          "294.3",
+          "5"
+        ],
+        [
+          "System Outlet",
+          "20",
+          "196.2",
+          "10"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Pressure Gradient Diagram",
+      "options": {
+        "title": {
+          "text": "Pressure Gradient Along System"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Head (m)",
+            "Static Pressure (kPa)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Pump Intake",
+            "After Pump",
+            "After Friction",
+            "After Valves",
+            "Outlet"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Head (m)"
+          },
+          {
+            "type": "value",
+            "name": "Static Pressure (kPa)"
+          }
+        ],
+        "series": [
+          {
+            "name": "Head (m)",
+            "type": "line",
+            "data": [
+              0,
+              50,
+              35,
+              30,
+              20
+            ],
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Static Pressure (kPa)",
+            "type": "line",
+            "data": [
+              0,
+              490.5,
+              343.35,
+              294.3,
+              196.2
+            ],
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}

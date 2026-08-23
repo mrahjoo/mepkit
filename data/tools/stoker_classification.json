@@ -1,0 +1,47 @@
+{
+  "id": "stoker_classification",
+  "title": "Stoker Classification",
+  "description": "Coal stokers classified on basis of coal burning capacities according to ASHRAE standards. Determines stoker class based on coal burning capacity in lbs/hour.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Stoker Class",
+        "Coal Burning Capacity (lbs/hour)",
+        "Coal Burning Capacity (kg/hour)",
+        "Typical Use"
+      ],
+      "rows": [
+        [
+          "Class 1 Stokers",
+          "10 to 100",
+          "4.5 to 45",
+          "Small residential/light commercial"
+        ],
+        [
+          "Class 2 Stokers",
+          "100 to 300",
+          "45 to 135",
+          "Medium commercial applications"
+        ],
+        [
+          "Class 3 Stokers",
+          "300 to 1200",
+          "135 to 540",
+          "Large commercial/industrial"
+        ],
+        [
+          "Class 4 Stokers",
+          "More than 1200",
+          "More than 540",
+          "Heavy industrial applications"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Optimal Operating Conditions\n\n**Bituminous Coal Specifications:**\n- Ash fusion temperature: 2200°F to 2600°F (ideal range)\n\n**Coal Size Requirements:**\n- Recommended size range: 3/4-inch to 1 1/4-inch\n- Size varies depending on stoker construction\n\n**Coal Treatment:**\n- Oil treatment is common to reduce dust problems\n- Oil treatment extends lifetime of mechanical conveyors and feed screws\n- Helps reduce wear on mechanical components"
+    }
+  ]
+}

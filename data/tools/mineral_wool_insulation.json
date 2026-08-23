@@ -1,0 +1,147 @@
+{
+  "id": "mineral_wool_insulation",
+  "title": "Mineral Wool Insulation",
+  "description": "Thermal conductivity - k-values - vs. temperature for mineral wool insulation made from molten glass, stone or slag.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Mineral Wool Insulation\n\nMineral wool is made from molten glass, stone or slag that is spun into a fiber-like structure. Inorganic rock or slag are the main components (typically **98%**) of stone wool. The remaining **2%** organic content is generally a thermosetting resin binder (an adhesive) and a little oil.\n\n## Temperature Conversion\n*T (°C) = 5/9 (T (°F) - 32)*"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_c",
+          "label": "Temperature (°C)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "thickness",
+          "label": "Insulation Thickness",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "mm"
+        },
+        {
+          "id": "density",
+          "label": "Density",
+          "type": "select",
+          "options": [
+            {
+              "label": "Low Density (20-40 kg/m³)",
+              "value": 30
+            },
+            {
+              "label": "Medium Density (40-80 kg/m³)",
+              "value": 60
+            },
+            {
+              "label": "High Density (80-150 kg/m³)",
+              "value": 110
+            }
+          ],
+          "defaultValue": 60,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_f",
+          "label": "Temperature (°F)",
+          "formula": "inputs.temperature_c * 9/5 + 32",
+          "format": "decimal",
+          "unit": "°F"
+        },
+        {
+          "id": "k_value",
+          "label": "Thermal Conductivity (k-value)",
+          "formula": "0.032 + (inputs.temperature_c * 0.0001)",
+          "format": "decimal",
+          "unit": "W/m·K"
+        },
+        {
+          "id": "r_value",
+          "label": "Thermal Resistance (R-value)",
+          "formula": "(inputs.thickness / 1000) / (0.032 + (inputs.temperature_c * 0.0001))",
+          "format": "decimal",
+          "unit": "m²·K/W"
+        },
+        {
+          "id": "u_value",
+          "label": "Heat Transfer Coefficient (U-value)",
+          "formula": "1 / ((inputs.thickness / 1000) / (0.032 + (inputs.temperature_c * 0.0001)))",
+          "format": "decimal",
+          "unit": "W/m²·K"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Typical k-value (W/m·K)",
+        "Density (kg/m³)"
+      ],
+      "rows": [
+        [
+          "-10",
+          "14",
+          "0.031",
+          "30-150"
+        ],
+        [
+          "0",
+          "32",
+          "0.0315",
+          "30-150"
+        ],
+        [
+          "10",
+          "50",
+          "0.032",
+          "30-150"
+        ],
+        [
+          "20",
+          "68",
+          "0.033",
+          "30-150"
+        ],
+        [
+          "30",
+          "86",
+          "0.034",
+          "30-150"
+        ],
+        [
+          "40",
+          "104",
+          "0.035",
+          "30-150"
+        ],
+        [
+          "50",
+          "122",
+          "0.036",
+          "30-150"
+        ],
+        [
+          "75",
+          "167",
+          "0.038",
+          "30-150"
+        ],
+        [
+          "100",
+          "212",
+          "0.040",
+          "30-150"
+        ]
+      ]
+    }
+  ]
+}

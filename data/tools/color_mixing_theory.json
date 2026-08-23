@@ -1,0 +1,91 @@
+{
+  "id": "color_mixing_theory",
+  "title": "Color Mixing Theory",
+  "description": "Subtractive and additive color mixing theory calculator. Explore how primary colors mix to create secondary colors in both pigment and light-based color models.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Subtractive Mixing Color Theory\n\nSubtractive color mixing theory deals with pigments or dyes with three primary colors magenta, yellow and cyan - which can be mixed together to form colors in the visible light spectrum. By mixing the primaries the subtractive secondaries black (magenta, yellow and cyan), red (magenta and yellow), blue (magenta and cyan) and green (cyan and yellow) can be made."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Primary Colors",
+        "Mixed Color",
+        "Mixed Color",
+        "Mixed Color",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Magenta",
+          "Yellow",
+          "Cyan",
+          "",
+          "Black"
+        ],
+        [
+          "Magenta",
+          "",
+          "Cyan",
+          "",
+          "Blue"
+        ],
+        [
+          "Magenta",
+          "Yellow",
+          "",
+          "",
+          "Red"
+        ],
+        [
+          "",
+          "Yellow",
+          "Cyan",
+          "",
+          "Green"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Additive Mixing Color Theory\n\nAdditive color mixing theory deals with mixing of light. The primary colors red, blue and green can be paired to form white (red, blue and green), magenta (red and blue), yellow (red and green) and cyan (green and blue)."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Primary Colors",
+        "Mixed Color",
+        "Mixed Color",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Red",
+          "Blue",
+          "Green",
+          "White"
+        ],
+        [
+          "Red",
+          "Blue",
+          "",
+          "Magenta"
+        ],
+        [
+          "Red",
+          "",
+          "Green",
+          "Yellow"
+        ],
+        [
+          "",
+          "Blue",
+          "Green",
+          "Cyan"
+        ]
+      ]
+    }
+  ]
+}

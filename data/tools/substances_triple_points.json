@@ -1,0 +1,258 @@
+{
+  "id": "substances_triple_points",
+  "title": "Substances Triple Points",
+  "description": "Triple points for common substances. The triple point is the combination of temperature and pressure at which the three phases (gas, liquid, and solid) of a substance coexist in thermodynamic equilibrium.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Triple Points Data for Common Substances",
+      "headers": [
+        "Substance",
+        "Temperature (°C)",
+        "Pressure (kPa)"
+      ],
+      "rows": [
+        [
+          "Acetylene",
+          -80.7,
+          120
+        ],
+        [
+          "Air",
+          -213.4,
+          5.265
+        ],
+        [
+          "Ammonia",
+          -77.75,
+          6.076
+        ],
+        [
+          "Argon",
+          -189.34,
+          68.9
+        ],
+        [
+          "Arsenic",
+          820,
+          3628
+        ],
+        [
+          "Butane",
+          -138.6,
+          0.0007
+        ],
+        [
+          "Carbon (graphite)",
+          4492,
+          10132
+        ],
+        [
+          "Carbon dioxide",
+          -56.6,
+          517
+        ],
+        [
+          "Carbon monoxide",
+          -205.05,
+          15.37
+        ],
+        [
+          "Chloroform",
+          -97.72,
+          0.87
+        ],
+        [
+          "Deuterium",
+          -254.52,
+          17.1
+        ],
+        [
+          "Ethane",
+          -183.26,
+          0.0008
+        ],
+        [
+          "Ethanol",
+          -123,
+          4.3e-7
+        ],
+        [
+          "Ethylene",
+          -169.2,
+          0.12
+        ],
+        [
+          "Formic acid",
+          8.25,
+          2.2
+        ],
+        [
+          "Hexafluoroethane",
+          -100.07,
+          26.6
+        ],
+        [
+          "Hydrogen",
+          -259.31,
+          7.04
+        ],
+        [
+          "Hydrogen chloride",
+          -114.19,
+          13.9
+        ],
+        [
+          "Iodine",
+          113.5,
+          12.07
+        ],
+        [
+          "Isobutane",
+          -159.6,
+          0.000019481
+        ],
+        [
+          "Krypton",
+          -157.39,
+          74.12
+        ],
+        [
+          "Mercury",
+          -39,
+          1.65e-7
+        ],
+        [
+          "Methane",
+          -182.47,
+          11.7
+        ],
+        [
+          "Neon",
+          -248.58,
+          43.2
+        ],
+        [
+          "Nitric oxide",
+          -163.65,
+          21.92
+        ],
+        [
+          "Nitrogen",
+          -209.97,
+          12.6
+        ],
+        [
+          "Nitrous oxide",
+          -90.81,
+          87.85
+        ],
+        [
+          "Oxygen",
+          -218.79,
+          0.152
+        ],
+        [
+          "Palladium",
+          1552,
+          0.0035
+        ],
+        [
+          "Platinum",
+          1772,
+          0.0002
+        ],
+        [
+          "Radon",
+          -71,
+          70
+        ],
+        [
+          "Sulfur dioxide",
+          -75.46,
+          1.67
+        ],
+        [
+          "Titanium",
+          1668,
+          0.0053
+        ],
+        [
+          "Uranium hexafluoride",
+          64.02,
+          151.7
+        ],
+        [
+          "Water",
+          0.01,
+          0.611657
+        ],
+        [
+          "Xenon",
+          -111.8,
+          81.5
+        ],
+        [
+          "Zinc",
+          419.5,
+          0.065
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Convert Triple Point Temperature and Pressure",
+      "inputs": [
+        {
+          "id": "temp_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure_kpa",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 0.611657,
+          "unit": "kPa"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temp_kelvin",
+          "label": "Temperature",
+          "unit": "K",
+          "formula": "inputs.temp_celsius + 273.15",
+          "format": "decimal"
+        },
+        {
+          "id": "temp_fahrenheit",
+          "label": "Temperature",
+          "unit": "°F",
+          "formula": "inputs.temp_celsius * 9/5 + 32",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_psi",
+          "label": "Pressure",
+          "unit": "psi",
+          "formula": "inputs.pressure_kpa * 0.145",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_atm",
+          "label": "Pressure",
+          "unit": "atm",
+          "formula": "inputs.pressure_kpa / 101.325",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Additional Information\n\n**Conversion Factor:** 1 kPa (10³ Pa) = 0.145 psi\n\nThe triple point is **not the same** as the [critical point](critical-point-d_997.html). The critical point represents the temperature and pressure above which distinct gas and liquid phases do not exist, whereas the triple point is where all three phases coexist in equilibrium."
+    }
+  ]
+}

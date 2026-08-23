@@ -1,0 +1,508 @@
+{
+  "id": "house_gas_pipes___capacities_vs__dimensions",
+  "title": "House Gas Pipes - Capacities vs. Dimensions",
+  "description": "Carrying capacity of house gas pipes - in imperial and metric units. Gas carrying capacities of pipe lines size 1/2\" to 8\" with pressure drop of 0.3 inches of water for low pressure gas with specific gravity 0.6.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "gas_capacity_table",
+      "headers": [
+        "Pipe Length (feet)",
+        "1/2\"",
+        "3/4\"",
+        "1\"",
+        "1 1/4\"",
+        "1 1/2\"",
+        "2\"",
+        "3\"",
+        "4\"",
+        "6\"",
+        "8\""
+      ],
+      "rows": [
+        [
+          15,
+          76,
+          172,
+          345,
+          750,
+          1220,
+          2480,
+          6500,
+          13880,
+          38700,
+          79000
+        ],
+        [
+          30,
+          52,
+          120,
+          241,
+          535,
+          850,
+          1780,
+          4700,
+          9700,
+          27370,
+          55850
+        ],
+        [
+          45,
+          43,
+          99,
+          199,
+          435,
+          700,
+          1475,
+          3900,
+          7900,
+          23350,
+          45600
+        ],
+        [
+          60,
+          38,
+          86,
+          173,
+          380,
+          610,
+          1290,
+          3450,
+          6800,
+          19330,
+          39500
+        ],
+        [
+          75,
+          null,
+          77,
+          155,
+          345,
+          545,
+          1120,
+          3000,
+          6000,
+          17310,
+          35300
+        ],
+        [
+          90,
+          null,
+          70,
+          141,
+          310,
+          490,
+          1000,
+          2700,
+          5500,
+          15800,
+          32250
+        ],
+        [
+          105,
+          null,
+          65,
+          131,
+          285,
+          450,
+          920,
+          2450,
+          5100,
+          14620,
+          29850
+        ],
+        [
+          120,
+          null,
+          null,
+          120,
+          270,
+          420,
+          860,
+          2300,
+          4800,
+          13680,
+          27920
+        ],
+        [
+          150,
+          null,
+          null,
+          109,
+          242,
+          380,
+          780,
+          2090,
+          4350,
+          12240,
+          25000
+        ],
+        [
+          180,
+          null,
+          null,
+          100,
+          225,
+          350,
+          720,
+          1950,
+          4000,
+          11160,
+          22800
+        ],
+        [
+          210,
+          null,
+          null,
+          null,
+          205,
+          320,
+          660,
+          1780,
+          3700,
+          10330,
+          21100
+        ],
+        [
+          240,
+          null,
+          null,
+          null,
+          190,
+          300,
+          620,
+          1680,
+          3490,
+          9600,
+          19740
+        ],
+        [
+          270,
+          null,
+          null,
+          null,
+          178,
+          285,
+          580,
+          1580,
+          3250,
+          9000,
+          18660
+        ],
+        [
+          300,
+          null,
+          null,
+          null,
+          170,
+          270,
+          545,
+          1490,
+          3000,
+          8500,
+          17660
+        ],
+        [
+          450,
+          null,
+          null,
+          null,
+          140,
+          226,
+          450,
+          1230,
+          2500,
+          7000,
+          14420
+        ],
+        [
+          600,
+          null,
+          null,
+          null,
+          119,
+          192,
+          390,
+          1030,
+          2130,
+          6000,
+          12480
+        ]
+      ],
+      "content": "Gas Carrying Capacity Table - Cubic Feet per Hour (ft³/h)\n\nThis table shows the gas carrying capacities in cubic feet per hour for house piping with different nominal pipe diameters and lengths. The data is based on low pressure gas with specific gravity 0.6 and a pressure drop of 0.3 inches of water for the whole length of the pipe."
+    },
+    {
+      "type": "chart",
+      "id": "gas_capacity_chart",
+      "content": "Gas Pipe Capacity - Flow Rate vs. Pipe Length",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "1/2\"",
+            "3/4\"",
+            "1\"",
+            "1 1/4\"",
+            "1 1/2\"",
+            "2\"",
+            "3\"",
+            "4\"",
+            "6\"",
+            "8\""
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            15,
+            30,
+            45,
+            60,
+            75,
+            90,
+            105,
+            120,
+            150,
+            180,
+            210,
+            240,
+            270,
+            300,
+            450,
+            600
+          ],
+          "name": "Pipe Length (feet)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Gas Capacity (ft³/h)"
+        },
+        "series": [
+          {
+            "name": "1/2\"",
+            "type": "line",
+            "data": [
+              76,
+              52,
+              43,
+              38,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "3/4\"",
+            "type": "line",
+            "data": [
+              172,
+              120,
+              99,
+              86,
+              77,
+              70,
+              65,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "1\"",
+            "type": "line",
+            "data": [
+              345,
+              241,
+              199,
+              173,
+              155,
+              141,
+              131,
+              120,
+              109,
+              100,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "1 1/4\"",
+            "type": "line",
+            "data": [
+              750,
+              535,
+              435,
+              380,
+              345,
+              310,
+              285,
+              270,
+              242,
+              225,
+              205,
+              190,
+              178,
+              170,
+              140,
+              119
+            ]
+          },
+          {
+            "name": "1 1/2\"",
+            "type": "line",
+            "data": [
+              1220,
+              850,
+              700,
+              610,
+              545,
+              490,
+              450,
+              420,
+              380,
+              350,
+              320,
+              300,
+              285,
+              270,
+              226,
+              192
+            ]
+          },
+          {
+            "name": "2\"",
+            "type": "line",
+            "data": [
+              2480,
+              1780,
+              1475,
+              1290,
+              1120,
+              1000,
+              920,
+              860,
+              780,
+              720,
+              660,
+              620,
+              580,
+              545,
+              450,
+              390
+            ]
+          },
+          {
+            "name": "3\"",
+            "type": "line",
+            "data": [
+              6500,
+              4700,
+              3900,
+              3450,
+              3000,
+              2700,
+              2450,
+              2300,
+              2090,
+              1950,
+              1780,
+              1680,
+              1580,
+              1490,
+              1230,
+              1030
+            ]
+          },
+          {
+            "name": "4\"",
+            "type": "line",
+            "data": [
+              13880,
+              9700,
+              7900,
+              6800,
+              6000,
+              5500,
+              5100,
+              4800,
+              4350,
+              4000,
+              3700,
+              3490,
+              3250,
+              3000,
+              2500,
+              2130
+            ]
+          },
+          {
+            "name": "6\"",
+            "type": "line",
+            "data": [
+              38700,
+              27370,
+              23350,
+              19330,
+              17310,
+              15800,
+              14620,
+              13680,
+              12240,
+              11160,
+              10330,
+              9600,
+              9000,
+              8500,
+              7000,
+              6000
+            ]
+          },
+          {
+            "name": "8\"",
+            "type": "line",
+            "data": [
+              79000,
+              55850,
+              45600,
+              39500,
+              35300,
+              32250,
+              29850,
+              27920,
+              25000,
+              22800,
+              21100,
+              19740,
+              18660,
+              17660,
+              14420,
+              12480
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

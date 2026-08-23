@@ -1,0 +1,115 @@
+{
+  "id": "drawings___standard_metric_sizes",
+  "title": "Drawings - Standard Metric Sizes",
+  "description": "Standard metric drawing sheet sizes based on ISO A-series paper standards. The ISO A0 size is defined as having an area of one square meter, with each smaller sheet size being exactly half the area of the previous size.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Designation",
+        "Size A (mm)",
+        "Size B (mm)",
+        "Size C (mm)",
+        "Size D (mm)"
+      ],
+      "rows": [
+        [
+          "A0",
+          841,
+          1189,
+          791,
+          1139
+        ],
+        [
+          "A1",
+          594,
+          841,
+          554,
+          804
+        ],
+        [
+          "A2",
+          420,
+          594,
+          380,
+          554
+        ],
+        [
+          "A3",
+          297,
+          420,
+          267,
+          390
+        ],
+        [
+          "A4",
+          210,
+          297,
+          180,
+          267
+        ],
+        [
+          "A5",
+          148,
+          210,
+          "-",
+          "-"
+        ],
+        [
+          "A6",
+          105,
+          148,
+          "-",
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sizeA",
+          "label": "Size A (mm)",
+          "type": "number",
+          "defaultValue": 210,
+          "unit": "mm"
+        },
+        {
+          "id": "sizeB",
+          "label": "Size B (mm)",
+          "type": "number",
+          "defaultValue": 297,
+          "unit": "mm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "area",
+          "label": "Sheet Area",
+          "formula": "inputs.sizeA * inputs.sizeB",
+          "unit": "mm²",
+          "format": "decimal"
+        },
+        {
+          "id": "areaCm2",
+          "label": "Sheet Area",
+          "formula": "(inputs.sizeA * inputs.sizeB) / 100",
+          "unit": "cm²",
+          "format": "decimal"
+        },
+        {
+          "id": "areaM2",
+          "label": "Sheet Area",
+          "formula": "(inputs.sizeA * inputs.sizeB) / 1000000",
+          "unit": "m²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About ISO A-Series Sheet Sizes\n\nThe ISO A0 sheet size is defined as having an area of exactly one square meter (1 m²). Each subsequent size in the series is derived by dividing the previous size in half:\n\n- An A0 sheet cut in half gives two A1 sheets\n- An A1 sheet cut in half gives two A2 sheets\n- And so on...\n\nThis creates a geometric progression where each size maintains the same aspect ratio (1:√2) while halving the area."
+    }
+  ]
+}

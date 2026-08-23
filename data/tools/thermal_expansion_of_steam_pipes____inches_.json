@@ -1,0 +1,133 @@
+{
+  "id": "thermal_expansion_of_steam_pipes____inches_",
+  "title": "Thermal Expansion of Steam Pipes - (inches)",
+  "description": "Expansion of steam pipes heated from room temperature to operation temperature.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 100
+        },
+        {
+          "id": "initial_temperature",
+          "label": "Initial Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 70
+        },
+        {
+          "id": "final_temperature",
+          "label": "Final Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 400
+        },
+        {
+          "id": "thermal_expansion_coefficient",
+          "label": "Thermal Expansion Coefficient",
+          "type": "number",
+          "unit": "in/(in·°F)",
+          "defaultValue": 0.0000063
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_change",
+          "label": "Temperature Change",
+          "formula": "inputs.final_temperature - inputs.initial_temperature",
+          "unit": "°F"
+        },
+        {
+          "id": "thermal_expansion",
+          "label": "Thermal Expansion",
+          "formula": "inputs.pipe_length * inputs.thermal_expansion_coefficient * (inputs.final_temperature - inputs.initial_temperature)",
+          "unit": "inches",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Material",
+        "Initial Temp (°F)",
+        "Final Temp (°F)",
+        "Pipe Length (in)",
+        "Thermal Expansion Coefficient (in/in·°F)",
+        "Expansion (in)"
+      ],
+      "rows": [
+        [
+          "Carbon Steel",
+          70,
+          400,
+          100,
+          0.0000063,
+          0.2079
+        ],
+        [
+          "Stainless Steel 304",
+          70,
+          400,
+          100,
+          0.0000096,
+          0.3168
+        ],
+        [
+          "Copper",
+          70,
+          400,
+          100,
+          0.0000093,
+          0.3069
+        ],
+        [
+          "Aluminum",
+          70,
+          400,
+          100,
+          0.0000131,
+          0.4323
+        ],
+        [
+          "Carbon Steel",
+          70,
+          600,
+          100,
+          0.0000063,
+          0.3339
+        ],
+        [
+          "Stainless Steel 304",
+          70,
+          600,
+          100,
+          0.0000096,
+          0.5088
+        ],
+        [
+          "Copper",
+          70,
+          600,
+          100,
+          0.0000093,
+          0.4959
+        ],
+        [
+          "Aluminum",
+          70,
+          600,
+          100,
+          0.0000131,
+          0.6953
+        ]
+      ]
+    }
+  ]
+}

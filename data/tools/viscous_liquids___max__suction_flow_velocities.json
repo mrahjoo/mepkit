@@ -1,0 +1,73 @@
+{
+  "id": "viscous_liquids___max__suction_flow_velocities",
+  "title": "Viscous Liquids - Max. Suction Flow Velocities",
+  "description": "Recommended max. pump suction flow velocity for viscous fluids. Avoid higher velocities in suction pipes as they increase pressure loss and may cause cavitation. This tool provides maximum suction velocity recommendations based on pipe bore size.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "suction_velocity_table",
+      "headers": [
+        "Pipe Bore (inches)",
+        "Pipe Bore (mm)",
+        "Max. Suction Velocity (m/s)",
+        "Max. Suction Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          1,
+          25,
+          0.3,
+          1
+        ],
+        [
+          2,
+          50,
+          0.33,
+          1.1
+        ],
+        [
+          3,
+          75,
+          0.36,
+          1.2
+        ],
+        [
+          4,
+          100,
+          0.4,
+          1.3
+        ],
+        [
+          6,
+          150,
+          0.43,
+          1.4
+        ],
+        [
+          8,
+          200,
+          0.45,
+          1.5
+        ],
+        [
+          10,
+          250,
+          0.5,
+          1.7
+        ],
+        [
+          12,
+          300,
+          0.5,
+          1.7
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "description_markdown",
+      "content": "## Guidelines\n\nThese recommended velocities help prevent:\n- **Excessive pressure loss** in suction pipes\n- **Pump cavitation** caused by high velocity effects\n\n### Important Notes\n\nThese values depend significantly on the specific fluid properties being pumped. Actual maximum safe velocities may vary based on:\n- Fluid viscosity\n- Temperature\n- Fluid type (motor oil, diesel, peanut oil, etc.)\n- System design and operating conditions\n\n### Key Principle\n\nFor viscous liquids, as a rule of thumb, suction velocities in front of pumps should remain below the values shown in the reference table to ensure optimal pump performance and prevent cavitation."
+    }
+  ]
+}

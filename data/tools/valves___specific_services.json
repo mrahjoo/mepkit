@@ -1,0 +1,38 @@
+{
+  "id": "valves___specific_services",
+  "title": "Valves - Specific Services",
+  "description": "Simplified valve selection guide based on specific service types. Provides recommendations for main and secondary valve types for gases, liquids, slurries, and steam applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Service Type",
+        "Main Valve Types",
+        "Secondary Valve Types"
+      ],
+      "rows": [
+        [
+          "Gases",
+          "Butterfly valves, Check valves, Diaphragm valves, Lubricated plug valves, Screw down stop valves",
+          "Pressure control valves, Pressure relief valves, Pressure reducing valves, Safety valves, Relief valves"
+        ],
+        [
+          "Liquids - clear up to sludges and sewage",
+          "Butterfly valves, Screw down stop valves, Gate valves, Lubricated plug valves, Diaphragm valves, Pinch valves",
+          ""
+        ],
+        [
+          "Slurries and liquids with solids",
+          "Butterfly valves, Pinch valves, Gate valves, Screw down stop valves, Lubricated plug valves",
+          ""
+        ],
+        [
+          "Steam",
+          "Butterfly valves, Gate valves, Screw down stop valves, Turbine valves",
+          "Check valves, Pressure control valves, Pre superheated valves, Safety and relief valves"
+        ]
+      ]
+    }
+  ]
+}

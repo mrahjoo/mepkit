@@ -1,0 +1,123 @@
+{
+  "id": "vehicle___distance_traveled_vs__velcocity_and_time",
+  "title": "Vehicle - Distance Traveled vs. Velocity and Time Used (mph)",
+  "description": "Speed (mph) and time (hours) and distance traveled (miles) chart.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "distance_calculator",
+      "content": "Calculate the distance traveled based on velocity and time",
+      "inputs": [
+        {
+          "id": "velocity_mph",
+          "label": "Velocity (mph)",
+          "type": "number",
+          "unit": "mph",
+          "defaultValue": 60
+        },
+        {
+          "id": "time_hours",
+          "label": "Time (hours)",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance_miles",
+          "label": "Distance Traveled",
+          "unit": "miles",
+          "format": "decimal",
+          "formula": "inputs.velocity_mph * inputs.time_hours"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "distance_vs_time_chart",
+      "content": "Distance traveled over time at given velocity",
+      "options": {
+        "title": {
+          "text": "Distance Traveled vs. Time"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Time (hours)",
+          "data": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Distance (miles)"
+        },
+        "series": [
+          {
+            "name": "Distance",
+            "type": "line",
+            "data": [
+              0,
+              60,
+              120,
+              180,
+              240,
+              300
+            ]
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    },
+    {
+      "type": "datatable",
+      "id": "distance_time_table",
+      "content": "Table showing time, velocity, and distance traveled",
+      "headers": [
+        "Time (hours)",
+        "Velocity (mph)",
+        "Distance (miles)"
+      ],
+      "rows": [
+        [
+          0,
+          60,
+          0
+        ],
+        [
+          1,
+          60,
+          60
+        ],
+        [
+          2,
+          60,
+          120
+        ],
+        [
+          3,
+          60,
+          180
+        ],
+        [
+          4,
+          60,
+          240
+        ],
+        [
+          5,
+          60,
+          300
+        ]
+      ]
+    }
+  ]
+}

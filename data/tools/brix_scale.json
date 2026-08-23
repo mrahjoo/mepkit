@@ -1,0 +1,36 @@
+{
+  "id": "brix_scale",
+  "title": "Brix Scale",
+  "description": "The content of sucrose - Brix scale vs. Specific Gravity and Plato - used in the sugar, fruit juice and wine making industry.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Brix Scale\n\nThe Brix Scale is used in the sugar, fruit juice and wine making industry. Degrees Brix - symbol _°Bx_ - is the sugar content of an aqueous solution.\n\n*   One degree Brix is _1 gram_ of sucrose in _100 grams_ of solution\n\n### Key Information\n- **Brix vs. Specific Gravity**: Brix is directly related to the specific gravity (SG) of a solution\n- **Brix to Plato**: The conversion factor is 1.04\n  - _1 Brix = 1.04 Plato_"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Brix to Plato Conversion"
+      ],
+      "inputs": [
+        {
+          "id": "brix_value",
+          "label": "Degrees Brix (°Bx)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "°Bx"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "plato_value",
+          "label": "Degrees Plato (°P)",
+          "formula": "inputs.brix_value * 1.04",
+          "unit": "°P",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

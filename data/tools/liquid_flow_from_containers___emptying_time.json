@@ -1,0 +1,72 @@
+{
+  "id": "liquid_flow_from_containers___emptying_time",
+  "title": "Liquid Flow from Containers - Emptying Time",
+  "description": "Calculator for estimating volume flow and time required to drain a container or tank through an aperture. Based on discharge equation V = Cd A (2 g H)^0.5. The calculator divides the container into slices and makes iterative calculations for improved accuracy.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate volume flow and emptying time for liquid containers",
+      "inputs": [
+        {
+          "id": "bottom_area",
+          "label": "Bottom Area of Tank/Container",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 2.5
+        },
+        {
+          "id": "height",
+          "label": "Height Between Surface and Aperture (H)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3
+        },
+        {
+          "id": "aperture_area",
+          "label": "Aperture Area (A)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 0.008
+        },
+        {
+          "id": "discharge_coeff",
+          "label": "Discharge Coefficient (Cd)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.6
+        },
+        {
+          "id": "num_slices",
+          "label": "Number of Slices (for iterative calculation)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_flow",
+          "label": "Volume Flow",
+          "formula": "inputs.discharge_coeff * inputs.aperture_area * (2 * 9.81 * inputs.height) ** 0.5",
+          "unit": "m³/s",
+          "format": "decimal"
+        },
+        {
+          "id": "emptying_time",
+          "label": "Emptying Time",
+          "formula": "(inputs.bottom_area * inputs.height) / (inputs.discharge_coeff * inputs.aperture_area * (2 * 9.81) ** 0.5 * (inputs.height ** 0.5))",
+          "unit": "s",
+          "format": "decimal"
+        },
+        {
+          "id": "outlet_velocity",
+          "label": "Outlet Velocity",
+          "formula": "0.97 * (2 * 9.81 * inputs.height) ** 0.5",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

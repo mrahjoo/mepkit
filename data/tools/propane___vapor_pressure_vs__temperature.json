@@ -1,0 +1,30 @@
+{
+  "id": "propane___vapor_pressure_vs__temperature",
+  "title": "Propane - Vapor Pressure vs. Temperature",
+  "description": "Vapor pressure vs. temperature calculator for propane",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate vapor pressure of propane at a given temperature using the Antoine equation",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "vapor_pressure",
+          "label": "Vapor Pressure",
+          "unit": "bar",
+          "format": "decimal",
+          "formula": "10^(5.8526 - 451.04 / (inputs.temperature + 273.15 + 79.97))"
+        }
+      ]
+    }
+  ]
+}

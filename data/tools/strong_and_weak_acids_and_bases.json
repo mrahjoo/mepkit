@@ -1,0 +1,146 @@
+{
+  "id": "strong_and_weak_acids_and_bases",
+  "title": "Strong and Weak Acids and Bases",
+  "description": "A comprehensive tool for understanding strong and weak acids and bases, their dissociation behavior, Ka and pKa values, and examples of each category. Strong acids and bases completely ionize in solution, while weak acids and bases only partially dissociate at equilibrium.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Strong and Weak Acids and Bases\n\nA **strong acid** or **strong base** completely ionizes (dissociates) in a solution. In water, one mole of a strong acid HA dissolves yielding one mole of H+ (as hydronium ion H₃O+) and one mole of the conjugate base, A−. Essentially, none of the non-ionized acid HA remains.\n\nA **weak acid** or **weak base** only **partially dissociates**. At equilibrium, both the acid and the conjugate base are present in solution.\n\nStronger acids have a larger acid dissociation constant (Ka) and a smaller logarithmic constant (pKa = −log Ka) than weaker acids. The stronger an acid is, the more easily it loses a proton, H+."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Strong Acids",
+        "Formula",
+        "Strong Bases",
+        "Formula"
+      ],
+      "rows": [
+        [
+          "Hydrobromic acid",
+          "HBr",
+          "Barium hydroxide",
+          "Ba(OH)₂"
+        ],
+        [
+          "Hydrochloric acid",
+          "HCl",
+          "Calcium hydroxide",
+          "Ca(OH)₂"
+        ],
+        [
+          "Hydroiodic acid",
+          "HI",
+          "Lithium hydroxide",
+          "LiOH"
+        ],
+        [
+          "Nitric acid",
+          "HNO₃",
+          "Potassium hydroxide",
+          "KOH"
+        ],
+        [
+          "Perchloric acid",
+          "HClO₄",
+          "Sodium hydroxide",
+          "NaOH"
+        ],
+        [
+          "Sulfuric acid",
+          "H₂SO₄",
+          "Strontium hydroxide",
+          "Sr(OH)₂"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Weak Acids",
+        "Formula",
+        "Weak Bases",
+        "Formula"
+      ],
+      "rows": [
+        [
+          "Acetic acid",
+          "CH₃COOH",
+          "Ammonia",
+          "NH₃"
+        ],
+        [
+          "Carbonic acid",
+          "H₂CO₃",
+          "Diethylamine",
+          "(CH₃CH₂)₂NH"
+        ],
+        [
+          "Formic acid",
+          "CHOOH",
+          "Methylamine",
+          "CH₃NH₂"
+        ],
+        [
+          "Hydrocyanic acid",
+          "HCN",
+          "Sodium bicarbonate",
+          "NaHCO₃"
+        ],
+        [
+          "Hydrofluoric acid",
+          "HF",
+          "",
+          ""
+        ],
+        [
+          "Phosphoric acid",
+          "H₃PO₄",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "Ka",
+          "label": "Acid Dissociation Constant (Ka)",
+          "type": "number",
+          "defaultValue": 0.001
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pKa",
+          "label": "pKa",
+          "formula": "-log10(inputs.Ka)",
+          "format": "decimal",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pKa_value",
+          "label": "pKa Value",
+          "type": "number",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Ka_from_pKa",
+          "label": "Acid Dissociation Constant (Ka)",
+          "formula": "10^(-inputs.pKa_value)",
+          "format": "scientific",
+          "unit": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "viscosities",
+  "title": "Viscosities",
+  "description": "Viscosities of products and chemical species at varying conditions.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate viscosity of various chemical species and products at different temperatures and pressures.",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 1
+        },
+        {
+          "id": "species",
+          "label": "Chemical Species",
+          "type": "select",
+          "options": [
+            {
+              "label": "Water",
+              "value": "water"
+            },
+            {
+              "label": "Ethanol",
+              "value": "ethanol"
+            },
+            {
+              "label": "Glycerin",
+              "value": "glycerin"
+            },
+            {
+              "label": "Oil",
+              "value": "oil"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "viscosity",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "format": "decimal",
+          "formula": "inputs.temperature * 0.5"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            20,
+            40,
+            60,
+            80,
+            100
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Viscosity (cP)"
+        },
+        "series": [
+          {
+            "name": "Water",
+            "data": [
+              1.79,
+              1,
+              0.65,
+              0.47,
+              0.36,
+              0.28
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Ethanol",
+            "data": [
+              1.47,
+              1.08,
+              0.82,
+              0.63,
+              0.5,
+              0.41
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Glycerin",
+            "data": [
+              12100,
+              934,
+              152,
+              39.3,
+              13.4,
+              6.5
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Water",
+            "Ethanol",
+            "Glycerin"
+          ]
+        }
+      }
+    }
+  ]
+}

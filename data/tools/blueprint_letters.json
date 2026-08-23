@@ -1,0 +1,47 @@
+{
+  "id": "blueprint_letters",
+  "title": "Blueprint Letters",
+  "description": "Letters commonly used to differentiate blueprint drawings. Includes Architectural, Electrical, Mechanical, Plumbing, and Structural blueprint pages.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Letter",
+        "Type",
+        "Description"
+      ],
+      "rows": [
+        [
+          "A",
+          "Architectural",
+          "Architectural pages includes plans for building and surrounding areas."
+        ],
+        [
+          "E",
+          "Electrical",
+          "Electrical plans shows the buildings electrical system."
+        ],
+        [
+          "M",
+          "Mechanical",
+          "Mechanical plans shows heating, air conditioning and process piping systems."
+        ],
+        [
+          "P",
+          "Plumbing",
+          "Plumbing plans shows the plumbing system."
+        ],
+        [
+          "S",
+          "Structural",
+          "Structural plans shows the structure of the building including concrete, masonry, wood framing, roof plans."
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Blueprint Drawing Reference\n\nBlueprints are often differentiated by the following letters:\n\n- **A** - Architectural pages\n- **E** - Electrical pages\n- **M** - Mechanical pages\n- **P** - Plumbing pages\n- **S** - Structural pages\n\n### Detailed Descriptions\n\n**Architectural pages** includes plans for building and surrounding areas.\n\n**Electrical plans** shows the buildings electrical system.\n\n**Mechanical plans** shows heating, air conditioning and process piping systems.\n\n**Plumbing plans** shows the plumbing system.\n\n**Structural plans** shows the structure of the building including concrete, masonry, wood framing, roof plans."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "taylor_series",
+  "title": "Taylor Series",
+  "description": "A representation of a function as an infinite sum of terms calculated from the values of its derivatives at a single point.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Taylor Series\n\nA Taylor series is a representation of a function as an infinite sum of terms calculated from the values of its derivatives at a single point.\n\n## Generic Formula\n\nf(x) = f(a) + f'(a)(x - a)/1! + f''(a)(x - a)²/2! + ...\n\n## Common Taylor Series Examples\n\n- **e^x** = 1 + x/1! + x²/2! + x³/3! + ...\n- **a^x** = 1 + x·ln(a)/1! + (x·ln(a))²/2! + (x·ln(a))³/3! + ...\n- **ln(1 + x)** = x - x²/2 + x³/3 - x⁴/4 + x⁵/5 + ...\n- **sin(x)** = x - x³/3! + x⁵/5! - x⁷/7! + ...\n- **cos(x)** = 1 - x²/2! + x⁴/4! - x⁶/6! + ...\n- **tan(x)** = x + x³/3 + 2x⁵/15 + 17x⁷/315 + ..."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "function_type",
+          "label": "Function Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "e^x",
+              "value": "exp"
+            },
+            {
+              "label": "sin(x)",
+              "value": "sin"
+            },
+            {
+              "label": "cos(x)",
+              "value": "cos"
+            },
+            {
+              "label": "ln(1 + x)",
+              "value": "ln"
+            },
+            {
+              "label": "a^x",
+              "value": "power"
+            }
+          ],
+          "defaultValue": "exp"
+        },
+        {
+          "id": "x_value",
+          "label": "x Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "a_value",
+          "label": "Base (a) - for a^x only",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "terms",
+          "label": "Number of Terms",
+          "type": "number",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "series_sum",
+          "label": "Taylor Series Sum (first n terms)",
+          "formula": "SUM of taylor series approximation based on function_type",
+          "format": "decimal"
+        },
+        {
+          "id": "actual_value",
+          "label": "Actual Function Value",
+          "formula": "Actual computed value of the selected function",
+          "format": "decimal"
+        },
+        {
+          "id": "error",
+          "label": "Approximation Error",
+          "formula": "ABS(inputs.series_sum - inputs.actual_value)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

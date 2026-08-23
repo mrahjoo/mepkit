@@ -1,0 +1,145 @@
+{
+  "id": "ice___thermal_properties",
+  "title": "Ice - Thermal Properties",
+  "description": "Thermal and thermodynamic properties of ice like density, thermal conductivity and specific heat at temperatures from 0 to -100 °C",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Ice Thermal Properties Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density",
+          "label": "Density",
+          "formula": "920.0 - (inputs.temperature * -0.009)",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "formula": "2.22 + (inputs.temperature * -0.0078)",
+          "unit": "W/mK",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat",
+          "formula": "2.050 + (inputs.temperature * -0.0065)",
+          "unit": "kJ/kgK",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Thermal Conductivity (W/mK)",
+        "Specific Heat (kJ/kgK)"
+      ],
+      "rows": [
+        [
+          0,
+          916.2,
+          2.22,
+          2.05
+        ],
+        [
+          -5,
+          917.5,
+          2.25,
+          2.027
+        ],
+        [
+          -10,
+          918.9,
+          2.3,
+          2
+        ],
+        [
+          -15,
+          919.4,
+          2.34,
+          1.972
+        ],
+        [
+          -20,
+          919.4,
+          2.39,
+          1.943
+        ],
+        [
+          -25,
+          919.6,
+          2.45,
+          1.913
+        ],
+        [
+          -30,
+          920,
+          2.5,
+          1.882
+        ],
+        [
+          -35,
+          920.4,
+          2.57,
+          1.851
+        ],
+        [
+          -40,
+          920.8,
+          2.63,
+          1.818
+        ],
+        [
+          -50,
+          921.6,
+          2.76,
+          1.751
+        ],
+        [
+          -60,
+          922.4,
+          2.9,
+          1.681
+        ],
+        [
+          -70,
+          923.3,
+          3.05,
+          1.609
+        ],
+        [
+          -80,
+          924.1,
+          3.19,
+          1.536
+        ],
+        [
+          -90,
+          924.9,
+          3.34,
+          1.463
+        ],
+        [
+          -100,
+          925.7,
+          3.48,
+          1.389
+        ]
+      ]
+    }
+  ]
+}

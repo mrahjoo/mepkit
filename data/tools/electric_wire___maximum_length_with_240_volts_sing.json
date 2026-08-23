@@ -1,0 +1,80 @@
+{
+  "id": "electric_wire___maximum_length_with_240_volts_sing",
+  "title": "Electric Wire - Maximum Length with 240 Volts Single-Phase Power",
+  "description": "Maximum length of 240 V single phase electric wire with max. 2% voltage drop.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "wire_gauge",
+          "label": "Wire Gauge (AWG)",
+          "type": "select",
+          "options": [
+            {
+              "value": "14",
+              "label": "14 AWG"
+            },
+            {
+              "value": "12",
+              "label": "12 AWG"
+            },
+            {
+              "value": "10",
+              "label": "10 AWG"
+            },
+            {
+              "value": "8",
+              "label": "8 AWG"
+            },
+            {
+              "value": "6",
+              "label": "6 AWG"
+            },
+            {
+              "value": "4",
+              "label": "4 AWG"
+            },
+            {
+              "value": "2",
+              "label": "2 AWG"
+            },
+            {
+              "value": "1",
+              "label": "1 AWG"
+            },
+            {
+              "value": "0",
+              "label": "1/0 AWG"
+            },
+            {
+              "value": "00",
+              "label": "2/0 AWG"
+            },
+            {
+              "value": "000",
+              "label": "3/0 AWG"
+            }
+          ]
+        },
+        {
+          "id": "current",
+          "label": "Current",
+          "type": "number",
+          "unit": "Amps",
+          "defaultValue": 15
+        }
+      ],
+      "outputs": [
+        {
+          "id": "max_length",
+          "label": "Maximum Wire Length",
+          "unit": "feet",
+          "formula": "(2 * 240 * wire_gauge_area) / (10 * inputs.current)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

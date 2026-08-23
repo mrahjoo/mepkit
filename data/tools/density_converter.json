@@ -1,0 +1,6 @@
+{
+  "id": "density_converter",
+  "title": "Density Converter",
+  "description": "Convert between common density units using conversion factors. Density is the ratio of mass per unit volume (ρ = m / V). Supports conversions between kg/m³, g/cm³, oz/in³, oz/gal, lb/ft³, lb/in³, lb/yd³, lb/gal, and long ton/yd³.",
+  "type": "calculator"
+}

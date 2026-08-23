@@ -1,0 +1,87 @@
+{
+  "id": "extension_cords___load_rating_vs__wire_gauge_and_l",
+  "title": "Extension Cords - Load Rating vs. Wire Gauge and Length",
+  "description": "Size of extension cords - full load ratings with 115 V. Determines the required wire gauge for extension cords based on length and amperage requirements.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Extension Cords - Load Rating vs. Wire Gauge and Length\n\nSize of extension cords - full load ratings with 115 V.\n\n**Conversion:** 1 ft (foot) = 0.3048 m\n\n## How to Use\n\nEnter the extension cord length and the required amperage (full load rating) to determine the minimum recommended wire gauge (AWG).\n\n### Example\nA 500 feet extension cord with full load rating of 5 amps should be at least AWG 8."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "length_feet",
+          "label": "Extension Cord Length",
+          "type": "number",
+          "unit": "feet",
+          "defaultValue": 500
+        },
+        {
+          "id": "amperage",
+          "label": "Full Load Rating",
+          "type": "number",
+          "unit": "amps",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "length_meters",
+          "label": "Extension Cord Length",
+          "unit": "meters",
+          "formula": "inputs.length_feet * 0.3048",
+          "format": "decimal"
+        },
+        {
+          "id": "recommendation",
+          "label": "Minimum Recommended Wire Gauge",
+          "unit": "AWG",
+          "formula": "inputs.amperage <= 7 && inputs.length_feet <= 50 ? '18' : inputs.amperage <= 7 && inputs.length_feet <= 100 ? '16' : inputs.amperage <= 7 && inputs.length_feet <= 150 ? '14' : inputs.amperage <= 12 && inputs.length_feet <= 50 ? '16' : inputs.amperage <= 12 && inputs.length_feet <= 100 ? '14' : inputs.amperage <= 12 && inputs.length_feet <= 150 ? '12' : inputs.amperage <= 16 && inputs.length_feet <= 50 ? '14' : inputs.amperage <= 16 && inputs.length_feet <= 100 ? '12' : inputs.amperage <= 16 && inputs.length_feet <= 150 ? '10' : 'Consult manual'",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Amperage (amps)",
+        "Length ≤ 50 ft (AWG)",
+        "Length 51-100 ft (AWG)",
+        "Length 101-150 ft (AWG)",
+        "Length 151-200 ft (AWG)"
+      ],
+      "rows": [
+        [
+          "≤ 7",
+          "18",
+          "16",
+          "14",
+          "12"
+        ],
+        [
+          "8-12",
+          "16",
+          "14",
+          "12",
+          "10"
+        ],
+        [
+          "13-16",
+          "14",
+          "12",
+          "10",
+          "8"
+        ],
+        [
+          "17-20",
+          "12",
+          "10",
+          "8",
+          "6"
+        ]
+      ]
+    }
+  ]
+}

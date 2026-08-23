@@ -1,0 +1,79 @@
+{
+  "id": "electromagnetic_spectrum",
+  "title": "Electromagnetic Spectrum",
+  "description": "The electromagnetic spectrum with wavelengths and frequencies. Explore the distribution of electromagnetic radiation according to energy, frequency, and wavelength across different types of radiation.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type",
+        "Wavelength (m)",
+        "Frequency (Hz)",
+        "Energy (eV)"
+      ],
+      "rows": [
+        [
+          "Electricity",
+          "5×10⁵",
+          "50 - 60",
+          ""
+        ],
+        [
+          "Long wave, television",
+          "10⁵ - 10²",
+          "< 3×10⁹",
+          ""
+        ],
+        [
+          "Short wave, radio",
+          "10² - 10⁻¹",
+          "10⁸ - 3×10⁹",
+          "< 10⁻⁵"
+        ],
+        [
+          "Microwaves",
+          "10⁻¹ - 10⁻³",
+          "3×10⁹ - 3×10¹²",
+          "10⁻⁵ - 10⁻²"
+        ],
+        [
+          "Infrared light",
+          "10⁻³ - 7×10⁻⁷",
+          "3×10¹² - 3×10¹⁴",
+          "10⁻² - 2"
+        ],
+        [
+          "Visible light",
+          "7×10⁻⁷ - 4×10⁻⁷",
+          "4.3×10¹⁴ - 7.5×10¹⁴",
+          "2 - 3"
+        ],
+        [
+          "Ultraviolet light",
+          "4×10⁻⁷ - 10⁻⁹",
+          "7.5×10¹⁴ - 3×10¹⁷",
+          "3 - 10³"
+        ],
+        [
+          "X-rays",
+          "10⁻⁹ - 10⁻¹¹",
+          "3×10¹⁷ - 3×10¹⁹",
+          "10³ - 10⁵"
+        ],
+        [
+          "Gamma rays",
+          "10⁻¹¹ - 10⁻¹³",
+          "3×10¹⁹ - 10²¹",
+          "> 10⁵"
+        ],
+        [
+          "Cosmic rays",
+          "10⁻¹³ - 10⁻²⁰",
+          "10²¹ - 10²⁵",
+          ""
+        ]
+      ]
+    }
+  ]
+}

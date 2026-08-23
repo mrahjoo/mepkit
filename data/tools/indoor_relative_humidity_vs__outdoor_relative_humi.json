@@ -1,0 +1,49 @@
+{
+  "id": "indoor_relative_humidity_vs__outdoor_relative_humi",
+  "title": "Indoor Relative Humidity vs. Outdoor Relative Humidity and Temperature",
+  "description": "Recommended indoor relative humidity vs. outdoor relative humidity and temperature. When cold humid outdoor air is supplied and heated in a building, the relative humidity of the air is decreased.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Outdoor Temperature (°C)",
+        "Outdoor Relative Humidity (%)",
+        "Indoor Temperature (°C)",
+        "Indoor Relative Humidity (%)"
+      ],
+      "rows": [
+        [
+          -7,
+          0,
+          21,
+          0
+        ],
+        [
+          -7,
+          20,
+          21,
+          3
+        ],
+        [
+          -7,
+          40,
+          21,
+          6
+        ],
+        [
+          -7,
+          60,
+          21,
+          8
+        ],
+        [
+          -7,
+          80,
+          21,
+          11
+        ]
+      ]
+    }
+  ]
+}

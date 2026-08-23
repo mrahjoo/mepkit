@@ -1,0 +1,82 @@
+{
+  "id": "intermittent_combustion_and_boiler_efficiency",
+  "title": "Intermittent Combustion and Boiler Efficiency",
+  "description": "Efficiency reduction due to intermittent boiler operation",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Intermittent Combustion and Boiler Efficiency\n\nBoiler combustion efficiency is reduced by intermittent operation due to:\n\n- **Energy loss in the flue gas** - either by unburned fuel with the excess of fuel or by heating more air than necessary with the excess of air\n- **Radiation and convection loss** from the exterior surface of the boiler\n\nEnergy loss due to radiation and convection increases with intermittent operation and reduced combustion time."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "continuous_efficiency",
+          "label": "Continuous Operation Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 85
+        },
+        {
+          "id": "operating_hours_per_day",
+          "label": "Operating Hours per Day",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": 8
+        },
+        {
+          "id": "standby_loss_percent",
+          "label": "Standby Loss Rate",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 2
+        },
+        {
+          "id": "radiation_convection_loss",
+          "label": "Radiation and Convection Loss",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "operating_fraction",
+          "label": "Daily Operating Fraction",
+          "formula": "inputs.operating_hours_per_day / 24",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "standby_fraction",
+          "label": "Daily Standby Fraction",
+          "formula": "(24 - inputs.operating_hours_per_day) / 24",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "effective_standby_loss",
+          "label": "Effective Standby Loss",
+          "formula": "(inputs.standby_loss_percent * (24 - inputs.operating_hours_per_day)) / 24",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "intermittent_efficiency",
+          "label": "Intermittent Operation Efficiency",
+          "formula": "inputs.continuous_efficiency - inputs.radiation_convection_loss - inputs.standby_loss_percent * ((24 - inputs.operating_hours_per_day) / 24)",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "efficiency_reduction",
+          "label": "Efficiency Reduction",
+          "formula": "inputs.continuous_efficiency - (inputs.continuous_efficiency - inputs.radiation_convection_loss - inputs.standby_loss_percent * ((24 - inputs.operating_hours_per_day) / 24))",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

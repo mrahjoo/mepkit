@@ -1,0 +1,155 @@
+{
+  "id": "elevators___force_and_power",
+  "title": "Elevators - Force and Power",
+  "description": "Calculate the force and power required to lift an elevator between different elevation levels, including constant speed force and acceleration forces.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "## Force and Power Calculator",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass of Elevator and Passengers",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 2000
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "h0",
+          "label": "Initial Elevation",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "h1",
+          "label": "Final Elevation",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 15
+        },
+        {
+          "id": "time",
+          "label": "Time to Move Elevator",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 20
+        },
+        {
+          "id": "v0",
+          "label": "Initial Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        },
+        {
+          "id": "v1",
+          "label": "Final Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        },
+        {
+          "id": "ta",
+          "label": "Start/Stop (Acceleration) Time",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "fc",
+          "label": "Force at Constant Speed",
+          "formula": "inputs.mass * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "fa",
+          "label": "Acceleration/Deceleration Force",
+          "formula": "inputs.mass * (inputs.v1 - inputs.v0) / inputs.ta",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "work",
+          "label": "Work Done",
+          "formula": "inputs.mass * inputs.gravity * (inputs.h1 - inputs.h0)",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "power",
+          "label": "Power Required",
+          "formula": "inputs.mass * inputs.gravity * (inputs.h1 - inputs.h0) / inputs.time",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "power_kw",
+          "label": "Power Required",
+          "formula": "inputs.mass * inputs.gravity * (inputs.h1 - inputs.h0) / inputs.time / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "## Power vs. Lifting Height and Time",
+      "options": {
+        "title": {
+          "text": "Power vs. Lifting Height and Time"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Power (W)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Lifting Height (m)",
+          "data": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Power (W)"
+        },
+        "series": [
+          {
+            "name": "Power (W)",
+            "type": "line",
+            "data": [
+              4905,
+              9810,
+              14715,
+              19620,
+              24525,
+              29430
+            ],
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

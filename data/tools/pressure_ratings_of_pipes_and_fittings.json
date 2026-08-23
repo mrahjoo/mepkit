@@ -1,0 +1,174 @@
+{
+  "id": "pressure_ratings_of_pipes_and_fittings",
+  "title": "Pressure Ratings of Pipes and Fittings",
+  "description": "Pressure ratings of pipes and tubes and their fittings - carbon steel, stainless steel, plastic, copper and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pressure Ratings of Pipes and Fittings\n\nThis calculator helps you determine the pressure ratings for various types of pipes and fittings used in mechanical, electrical, and plumbing systems.\n\n### Material Types\n- Carbon Steel\n- Stainless Steel\n- Plastic (PVC, CPVC, PEX)\n- Copper\n- Aluminum\n- Cast Iron\n\n### Standard Specifications\n- ANSI/ASME B16.5 (Flanges)\n- ANSI/ASME B16.11 (Forged Fittings)\n- ANSI/ASME B16.9 (Factory-Made Wrought Steel Buttwelding Fittings)\n- ASTM Standards\n- ISO Standards\n\n### Factors Affecting Pressure Ratings\n- Material composition\n- Pipe schedule and wall thickness\n- Operating temperature\n- Connection type (threaded, welded, flanged)\n- Safety factor"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "material_type",
+          "label": "Material Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Carbon Steel",
+              "value": "carbon_steel"
+            },
+            {
+              "label": "Stainless Steel",
+              "value": "stainless_steel"
+            },
+            {
+              "label": "Plastic (PVC)",
+              "value": "plastic_pvc"
+            },
+            {
+              "label": "Copper",
+              "value": "copper"
+            },
+            {
+              "label": "Aluminum",
+              "value": "aluminum"
+            },
+            {
+              "label": "Cast Iron",
+              "value": "cast_iron"
+            }
+          ]
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 1
+        },
+        {
+          "id": "pipe_schedule",
+          "label": "Pipe Schedule",
+          "type": "select",
+          "options": [
+            {
+              "label": "SCH 10",
+              "value": 10
+            },
+            {
+              "label": "SCH 20",
+              "value": 20
+            },
+            {
+              "label": "SCH 30",
+              "value": 30
+            },
+            {
+              "label": "SCH 40",
+              "value": 40
+            },
+            {
+              "label": "SCH 60",
+              "value": 60
+            },
+            {
+              "label": "SCH 80",
+              "value": 80
+            },
+            {
+              "label": "SCH 120",
+              "value": 120
+            }
+          ]
+        },
+        {
+          "id": "operating_temperature",
+          "label": "Operating Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 68
+        },
+        {
+          "id": "safety_factor",
+          "label": "Safety Factor",
+          "type": "number",
+          "defaultValue": 4,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_rating",
+          "label": "Pressure Rating",
+          "unit": "PSI",
+          "format": "decimal",
+          "formula": "inputs.pipe_schedule * inputs.safety_factor * (100 - inputs.operating_temperature / 10) / 100"
+        },
+        {
+          "id": "recommended_operating_pressure",
+          "label": "Recommended Operating Pressure",
+          "unit": "PSI",
+          "format": "decimal",
+          "formula": "inputs.pressure_rating * 0.6"
+        },
+        {
+          "id": "burst_pressure",
+          "label": "Burst Pressure (Estimated)",
+          "unit": "PSI",
+          "format": "decimal",
+          "formula": "inputs.pressure_rating * 3"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material Type",
+        "Temperature Range (°F)",
+        "Common Schedules",
+        "Max PSI (1\" Pipe)"
+      ],
+      "rows": [
+        [
+          "Carbon Steel",
+          "-20 to 650",
+          "SCH 40, SCH 80",
+          "1440"
+        ],
+        [
+          "Stainless Steel",
+          "-320 to 800",
+          "SCH 10, SCH 40, SCH 80",
+          "2160"
+        ],
+        [
+          "Plastic (PVC)",
+          "32 to 140",
+          "SCH 40, SCH 80",
+          "600"
+        ],
+        [
+          "Copper",
+          "-100 to 400",
+          "Type K, L, M",
+          "2800"
+        ],
+        [
+          "Aluminum",
+          "-100 to 350",
+          "SCH 40",
+          "1100"
+        ],
+        [
+          "Cast Iron",
+          "32 to 366",
+          "Class 125, 250",
+          "200"
+        ]
+      ]
+    }
+  ]
+}

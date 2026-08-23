@@ -1,0 +1,85 @@
+{
+  "id": "specific_heat___online_unit_converter",
+  "title": "Specific Heat - Online Unit Converter",
+  "description": "Online specific heat converter with the most commonly used units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Specific Heat Unit Converter",
+      "inputs": [
+        {
+          "id": "specificHeatValue",
+          "label": "Specific Heat Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "inputUnit",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "J/(kg·K) - Joules per kilogram per Kelvin",
+              "value": "j_kg_k"
+            },
+            {
+              "label": "J/(g·°C) - Joules per gram per Celsius",
+              "value": "j_g_c"
+            },
+            {
+              "label": "cal/(g·°C) - Calories per gram per Celsius",
+              "value": "cal_g_c"
+            },
+            {
+              "label": "BTU/(lb·°F) - BTU per pound per Fahrenheit",
+              "value": "btu_lb_f"
+            },
+            {
+              "label": "kcal/(kg·°C) - Kilocalories per kilogram per Celsius",
+              "value": "kcal_kg_c"
+            }
+          ],
+          "defaultValue": "j_kg_k"
+        },
+        {
+          "id": "outputUnit",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "J/(kg·K) - Joules per kilogram per Kelvin",
+              "value": "j_kg_k"
+            },
+            {
+              "label": "J/(g·°C) - Joules per gram per Celsius",
+              "value": "j_g_c"
+            },
+            {
+              "label": "cal/(g·°C) - Calories per gram per Celsius",
+              "value": "cal_g_c"
+            },
+            {
+              "label": "BTU/(lb·°F) - BTU per pound per Fahrenheit",
+              "value": "btu_lb_f"
+            },
+            {
+              "label": "kcal/(kg·°C) - Kilocalories per kilogram per Celsius",
+              "value": "kcal_kg_c"
+            }
+          ],
+          "defaultValue": "j_g_c"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "convertedValue",
+          "label": "Converted Value",
+          "formula": "inputs.specificHeatValue * (inputs.inputUnit === 'j_kg_k' ? 1 : inputs.inputUnit === 'j_g_c' ? 1000 : inputs.inputUnit === 'cal_g_c' ? 4186 : inputs.inputUnit === 'btu_lb_f' ? 4186.8 : inputs.inputUnit === 'kcal_kg_c' ? 4186 : 1) / (inputs.outputUnit === 'j_kg_k' ? 1 : inputs.outputUnit === 'j_g_c' ? 1000 : inputs.outputUnit === 'cal_g_c' ? 4186 : inputs.outputUnit === 'btu_lb_f' ? 4186.8 : inputs.outputUnit === 'kcal_kg_c' ? 4186 : 1)",
+          "unit": "varies",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

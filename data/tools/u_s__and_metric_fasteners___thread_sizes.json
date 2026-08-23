@@ -1,0 +1,208 @@
+{
+  "id": "u_s__and_metric_fasteners___thread_sizes",
+  "title": "U.S. and Metric Fasteners - Thread Sizes",
+  "description": "Compare and analyze U.S. and Metric fastener thread sizes. This tool provides detailed technical data for threading specifications in both imperial and metric standards, essential for engineers and designers working with fasteners.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fastener Type",
+        "U.S. Thread Size",
+        "Metric Thread Size",
+        "Pitch (mm)",
+        "Major Diameter (mm)"
+      ],
+      "rows": [
+        [
+          "Bolt",
+          "#0-80",
+          "M1.6",
+          "0.35",
+          "1.6"
+        ],
+        [
+          "Bolt",
+          "#1-64",
+          "M1.8",
+          "0.35",
+          "1.8"
+        ],
+        [
+          "Bolt",
+          "#2-56",
+          "M2.2",
+          "0.40",
+          "2.2"
+        ],
+        [
+          "Bolt",
+          "#3-48",
+          "M2.5",
+          "0.45",
+          "2.5"
+        ],
+        [
+          "Bolt",
+          "#4-40",
+          "M2.8",
+          "0.40",
+          "2.8"
+        ],
+        [
+          "Bolt",
+          "#5-40",
+          "M3.2",
+          "0.35",
+          "3.2"
+        ],
+        [
+          "Bolt",
+          "#6-32",
+          "M3.5",
+          "0.60",
+          "3.5"
+        ],
+        [
+          "Bolt",
+          "#8-32",
+          "M4.2",
+          "0.70",
+          "4.2"
+        ],
+        [
+          "Bolt",
+          "#10-24",
+          "M5.1",
+          "0.80",
+          "5.1"
+        ],
+        [
+          "Bolt",
+          "#12-24",
+          "M5.8",
+          "0.75",
+          "5.8"
+        ],
+        [
+          "Bolt",
+          "1/4\"-20",
+          "M6.3",
+          "1.00",
+          "6.3"
+        ],
+        [
+          "Bolt",
+          "5/16\"-18",
+          "M8.0",
+          "1.25",
+          "8.0"
+        ],
+        [
+          "Bolt",
+          "3/8\"-16",
+          "M9.5",
+          "1.50",
+          "9.5"
+        ],
+        [
+          "Bolt",
+          "7/16\"-14",
+          "M11.0",
+          "1.50",
+          "11.0"
+        ],
+        [
+          "Bolt",
+          "1/2\"-13",
+          "M12.0",
+          "1.75",
+          "12.0"
+        ],
+        [
+          "Bolt",
+          "9/16\"-12",
+          "M14.0",
+          "2.00",
+          "14.0"
+        ],
+        [
+          "Bolt",
+          "5/8\"-11",
+          "M16.0",
+          "2.00",
+          "16.0"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "cross"
+          }
+        },
+        "legend": {
+          "data": [
+            "U.S. Thread Size",
+            "Metric Thread Size"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "#0-80",
+            "#1-64",
+            "#2-56",
+            "#3-48",
+            "#4-40",
+            "#5-40",
+            "#6-32",
+            "#8-32",
+            "#10-24",
+            "#12-24",
+            "1/4\"-20",
+            "5/16\"-18",
+            "3/8\"-16",
+            "7/16\"-14",
+            "1/2\"-13",
+            "9/16\"-12",
+            "5/8\"-11"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Diameter (mm)"
+        },
+        "series": [
+          {
+            "name": "Major Diameter (mm)",
+            "data": [
+              1.6,
+              1.8,
+              2.2,
+              2.5,
+              2.8,
+              3.2,
+              3.5,
+              4.2,
+              5.1,
+              5.8,
+              6.3,
+              8,
+              9.5,
+              11,
+              12,
+              14,
+              16
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

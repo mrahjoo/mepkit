@@ -1,0 +1,6 @@
+{
+  "id": "liquids___dielectric_constants",
+  "title": "Liquids - Dielectric Constants",
+  "description": "Dielectric constants or permittivities of common fluids and liquids. The Dielectric Constant (permittivity - ε) is a dimensionless constant that indicates how easy a material can be polarized by imposition of an electric field on an insulating material. This reference provides dielectric constant values for various liquids at different temperatures, as well as typical values for common plastic materials.",
+  "type": "datatable"
+}

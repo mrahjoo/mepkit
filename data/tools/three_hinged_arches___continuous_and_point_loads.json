@@ -1,0 +1,381 @@
+{
+  "id": "three_hinged_arches___continuous_and_point_loads",
+  "title": "Three-Hinged Arches - Continuous and Point Loads",
+  "description": "Calculator for bending moments and support reactions in three-hinged arches with continuous and point loads",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Three-Hinged Arches Analysis\n\nCalculate bending moments and support reactions for three-hinged arches under various loading conditions including:\n- Continuous uniform loads\n- Half continuous loads\n- Horizontal continuous loads\n- Eccentric point loads"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Continuous Load - Uniform Load"
+      ],
+      "inputs": [
+        {
+          "id": "q_cont",
+          "label": "Continuous load (q)",
+          "type": "number",
+          "unit": "N/m",
+          "defaultValue": 100
+        },
+        {
+          "id": "L_cont",
+          "label": "Horizontal distance between supports (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "yc_cont",
+          "label": "Y-coordinate for center hinge (yc)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "xm_cont",
+          "label": "X-coordinate for point m (xm)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "ym_cont",
+          "label": "Y-coordinate for point m (ym)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "R1y_cont",
+          "label": "Support reaction R1y",
+          "formula": "inputs.q_cont * inputs.L_cont / 2",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R2y_cont",
+          "label": "Support reaction R2y",
+          "formula": "inputs.q_cont * inputs.L_cont / 2",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R1x_cont",
+          "label": "Support reaction R1x",
+          "formula": "inputs.q_cont * inputs.L_cont * inputs.L_cont / (8 * inputs.yc_cont)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R2x_cont",
+          "label": "Support reaction R2x",
+          "formula": "inputs.q_cont * inputs.L_cont * inputs.L_cont / (8 * inputs.yc_cont)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "Mm_cont",
+          "label": "Bending moment Mm",
+          "formula": "(inputs.q_cont * inputs.L_cont * inputs.L_cont / 8) * (4 * (inputs.xm_cont / inputs.L_cont - (inputs.xm_cont / inputs.L_cont) * (inputs.xm_cont / inputs.L_cont)) - inputs.ym_cont / inputs.yc_cont))",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Half Continuous Load"
+      ],
+      "inputs": [
+        {
+          "id": "q_half",
+          "label": "Continuous load (q)",
+          "type": "number",
+          "unit": "N/m",
+          "defaultValue": 100
+        },
+        {
+          "id": "L_half",
+          "label": "Horizontal distance between supports (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "yc_half",
+          "label": "Y-coordinate for center hinge (yc)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "xm_half",
+          "label": "X-coordinate for point m (xm)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "ym_half",
+          "label": "Y-coordinate for point m (ym)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "R1y_half",
+          "label": "Support reaction R1y",
+          "formula": "3 * inputs.q_half * inputs.L_half / 8",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R2y_half",
+          "label": "Support reaction R2y",
+          "formula": "inputs.q_half * inputs.L_half / 8",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R1x_half",
+          "label": "Support reaction R1x",
+          "formula": "inputs.q_half * inputs.L_half * inputs.L_half / (16 * inputs.yc_half)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R2x_half",
+          "label": "Support reaction R2x",
+          "formula": "inputs.q_half * inputs.L_half * inputs.L_half / (16 * inputs.yc_half)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "Mm_half",
+          "label": "Bending moment Mm",
+          "formula": "(inputs.q_half * inputs.L_half * inputs.L_half / 16) * (8 * (inputs.xm_half / inputs.L_half - (inputs.xm_half / inputs.L_half) * (inputs.xm_half / inputs.L_half)) - 2 * inputs.xm_half / inputs.L_half - inputs.ym_half / inputs.yc_half)",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Horizontal Continuous Load"
+      ],
+      "inputs": [
+        {
+          "id": "q_horiz",
+          "label": "Continuous load (q)",
+          "type": "number",
+          "unit": "N/m",
+          "defaultValue": 100
+        },
+        {
+          "id": "L_horiz",
+          "label": "Horizontal distance between supports (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "yc_horiz",
+          "label": "Y-coordinate for center hinge (yc)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "xm_horiz",
+          "label": "X-coordinate for point m (xm)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "xk_horiz",
+          "label": "X-coordinate for point k (xk)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 7
+        },
+        {
+          "id": "yk_horiz",
+          "label": "Y-coordinate for point k (yk)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "R1y_horiz",
+          "label": "Support reaction R1y",
+          "formula": "- inputs.q_horiz * inputs.yc_horiz * inputs.yc_horiz / (2 * inputs.L_horiz)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R2y_horiz",
+          "label": "Support reaction R2y",
+          "formula": "inputs.q_horiz * inputs.yc_horiz * inputs.yc_horiz / (2 * inputs.L_horiz)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R1x_horiz",
+          "label": "Support reaction R1x",
+          "formula": "- 3 * inputs.q_horiz * inputs.yc_horiz / 4",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R2x_horiz",
+          "label": "Support reaction R2x",
+          "formula": "inputs.q_horiz * inputs.yc_horiz / 4",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "Mm_horiz",
+          "label": "Bending moment Mm",
+          "formula": "(inputs.q_horiz * inputs.L_horiz * inputs.L_horiz / 2) * (inputs.xm_horiz / inputs.L_horiz - 3 * inputs.xm_horiz / inputs.L_horiz + (inputs.xm_horiz / inputs.L_horiz) * (inputs.xm_horiz / inputs.L_horiz))",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "Mk_horiz",
+          "label": "Bending moment Mk",
+          "formula": "(inputs.q_horiz * inputs.L_horiz * inputs.L_horiz / 4) * (2 * (inputs.L_horiz - inputs.xk_horiz) / inputs.L_horiz - inputs.yk_horiz / inputs.yc_horiz)",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Eccentric Point Load"
+      ],
+      "inputs": [
+        {
+          "id": "F_point",
+          "label": "Point force (F)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 1000
+        },
+        {
+          "id": "a_point",
+          "label": "Distance a (from support 1 to load)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 4
+        },
+        {
+          "id": "b_point",
+          "label": "Distance b (from load to support 2)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 6
+        },
+        {
+          "id": "yc_point",
+          "label": "Y-coordinate for center hinge (yc)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "xm_point",
+          "label": "X-coordinate for point m (xm)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "ym_point",
+          "label": "Y-coordinate for point m (ym)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3
+        },
+        {
+          "id": "xk_point",
+          "label": "X-coordinate for point k (xk)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 7
+        },
+        {
+          "id": "yk_point",
+          "label": "Y-coordinate for point k (yk)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "L_point",
+          "label": "Total span L",
+          "formula": "inputs.a_point + inputs.b_point",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "R1y_point",
+          "label": "Support reaction R1y",
+          "formula": "inputs.F_point * inputs.b_point / (inputs.a_point + inputs.b_point)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R2y_point",
+          "label": "Support reaction R2y",
+          "formula": "inputs.F_point * inputs.a_point / (inputs.a_point + inputs.b_point)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R1x_point",
+          "label": "Support reaction R1x",
+          "formula": "inputs.F_point * inputs.a_point / (2 * inputs.yc_point)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R2x_point",
+          "label": "Support reaction R2x",
+          "formula": "inputs.F_point * inputs.a_point / (2 * inputs.yc_point)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "Mm_point",
+          "label": "Bending moment Mm",
+          "formula": "(inputs.F_point * inputs.a_point / 2) * (2 * (inputs.b_point / inputs.a_point) * (inputs.xm_point / (inputs.a_point + inputs.b_point)) - inputs.ym_point / inputs.yc_point)",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "Mk_point",
+          "label": "Bending moment Mk",
+          "formula": "(inputs.F_point * inputs.a_point / 2) * (2 * ((inputs.a_point + inputs.b_point) - inputs.xk_point) / (inputs.a_point + inputs.b_point) - inputs.yk_point / inputs.yc_point)",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

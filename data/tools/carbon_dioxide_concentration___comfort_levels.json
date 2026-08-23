@@ -1,0 +1,144 @@
+{
+  "id": "carbon_dioxide_concentration___comfort_levels",
+  "title": "Carbon Dioxide Concentration - Comfort Levels",
+  "description": "CO2 acceptance and comfort level calculator. Assess indoor air quality based on CO2 concentration levels and their effects on human health and comfort.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "CO2 Comfort Level Assessment",
+      "inputs": [
+        {
+          "id": "co2_concentration",
+          "label": "CO2 Concentration",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 800
+        },
+        {
+          "id": "ventilation_rate",
+          "label": "Ventilation Rate",
+          "type": "number",
+          "unit": "cfm",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "comfort_level",
+          "label": "Comfort Level",
+          "formula": "if(inputs.co2_concentration < 600, 'Acceptable', if(inputs.co2_concentration < 1000, 'Complaints of Stuffiness', if(inputs.co2_concentration < 2500, 'General Drowsiness', if(inputs.co2_concentration < 5000, 'Adverse Health Effects', if(inputs.co2_concentration < 10000, 'Maximum Working Period (8h)', 'Dangerous Levels')))))",
+          "unit": ""
+        },
+        {
+          "id": "health_status",
+          "label": "Health Status",
+          "formula": "if(inputs.co2_concentration < 450, 'Normal Outdoor Level', if(inputs.co2_concentration < 600, 'Acceptable for Most', if(inputs.co2_concentration < 1000, 'Complaints Expected', if(inputs.co2_concentration < 2500, 'Drowsiness Expected', if(inputs.co2_concentration < 5000, 'Health Effects Possible', if(inputs.co2_concentration < 30000, 'Severe Effects', 'Extreme Danger'))))))",
+          "unit": ""
+        },
+        {
+          "id": "recommended_action",
+          "label": "Recommended Action",
+          "formula": "if(inputs.co2_concentration < 1000, 'No action needed', if(inputs.co2_concentration < 5000, 'Increase ventilation', 'Evacuate and seek fresh air'))",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "CO2 Comfort and Health Standards",
+      "headers": [
+        "CO2 Level (ppm)",
+        "Condition",
+        "Effects"
+      ],
+      "rows": [
+        [
+          "350 - 450",
+          "Normal Outdoor Level",
+          "Baseline reference"
+        ],
+        [
+          "< 600",
+          "Acceptable Levels",
+          "Good air quality for most"
+        ],
+        [
+          "600 - 1000",
+          "Complaints of Stuffiness",
+          "Odor complaints begin"
+        ],
+        [
+          "1000",
+          "ASHRAE & OSHA Standards",
+          "Ventilation guideline threshold"
+        ],
+        [
+          "1000 - 2500",
+          "General Drowsiness",
+          "Cognitive impact begins"
+        ],
+        [
+          "2500 - 5000",
+          "Adverse Health Effects",
+          "Significant health concerns"
+        ],
+        [
+          "5000 - 10000",
+          "Max Working Period (8h)",
+          "Occupational exposure limit"
+        ],
+        [
+          "30000",
+          "Max Working Period (15min)",
+          "Short-term exposure limit"
+        ],
+        [
+          "30000 - 40000",
+          "Extreme Levels",
+          "Intoxication, nausea, increased pulse"
+        ],
+        [
+          "50000",
+          "Severe Extreme Levels",
+          "Headaches, sight impairment"
+        ],
+        [
+          "100000",
+          "Critical Danger",
+          "Unconsciousness, death risk"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "ASHRAE Standard 62-1989 Recommendations",
+      "headers": [
+        "Space Type",
+        "Ventilation Rate",
+        "Approximate CO2 Level"
+      ],
+      "rows": [
+        [
+          "Classrooms & Conference Rooms",
+          "15 cfm/person",
+          "~1000 ppm"
+        ],
+        [
+          "Office Space & Restaurants",
+          "20 cfm/person",
+          "~800 ppm"
+        ],
+        [
+          "Hospitals",
+          "25 cfm/person",
+          "~600-700 ppm"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Ventilation Conversion\n\n1 cfm (cubic feet per minute) = 1.7 m³/h = 0.47 l/s"
+    }
+  ]
+}

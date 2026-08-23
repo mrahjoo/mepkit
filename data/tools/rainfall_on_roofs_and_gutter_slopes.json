@@ -1,0 +1,69 @@
+{
+  "id": "rainfall_on_roofs_and_gutter_slopes",
+  "title": "Rainfall on Roofs and Gutter Slopes",
+  "description": "Draining of roof areas and recommended gutter slopes based on rainfall intensity of 100 mm per hour (4 inches per hour)",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Rainfall on Roofs and Gutter Slopes\n\nDraining of roof areas and recommended gutter slopes when draining roof areas.\n\n## Recommended Gutter Slopes for Draining Roof Areas\n\nThe following table provides recommended gutter capacities based on gutter diameter and slope at a rainfall intensity of **100 mm per hour (4 inches per hour)**.\n\n| Gutter Diameter | Gutter Slope | 0.5% | 1% | 2% |\n|---|---|---|---|---|\n| **mm (inches)** | | **m² (ft²)** | **m² (ft²)** | **m² (ft²)** |\n| 80 (3\") | - | 16 (170) | 22 (240) | 32 (350) |\n| 100 (4\") | - | 33 (360) | 47 (510) | 67 (720) |\n| 125 (5\") | - | 58 (625) | 82 (880) | 116 (1250) |\n| 150 (6\") | - | 89 (960) | 126 (1360) | 178 (1920) |\n\n## Slope Definitions\n\n- **0.5%** = 0.5 cm per 100 cm run = 0.0625 inch per 1 ft run\n- **1%** = 1 cm per 100 cm run = 0.125 inch per 1 ft run\n- **2%** = 2 cm per 100 cm run = 0.250 inch per 1 ft run\n\n## Gutter Size vs. Downspout Size\n\n- 100 mm (4\") gutter → 75 mm (3\") downspout\n- 125 mm (5\") gutter → 100 mm (4\") downspout\n- 150 mm (6\") gutter → 100 mm (4\") downspout\n\n**Note:** Anticipated rainfall intensity should always be checked with local authorities. As a reference, the maximum rainfall intensity used in the UK is normally 75 mm per hour."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "roof_area",
+          "label": "Roof Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 45
+        },
+        {
+          "id": "gutter_slope",
+          "label": "Gutter Slope",
+          "type": "select",
+          "options": [
+            {
+              "value": "0.5",
+              "label": "0.5% (0.5 cm per 100 cm)"
+            },
+            {
+              "value": "1",
+              "label": "1% (1 cm per 100 cm)"
+            },
+            {
+              "value": "2",
+              "label": "2% (2 cm per 100 cm)"
+            }
+          ],
+          "defaultValue": "1"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "recommended_gutter_diameter",
+          "label": "Recommended Gutter Diameter",
+          "unit": "mm",
+          "formula": "IF(inputs.roof_area <= 16, 80, IF(inputs.roof_area <= 33, 100, IF(inputs.roof_area <= 58, 125, 150)))"
+        },
+        {
+          "id": "drainage_capacity",
+          "label": "Drainage Capacity at Selected Slope",
+          "unit": "m²",
+          "formula": "IF(inputs.gutter_slope == '0.5', IF(inputs.roof_area <= 16, 16, IF(inputs.roof_area <= 33, 33, IF(inputs.roof_area <= 58, 58, 89))), IF(inputs.gutter_slope == '1', IF(inputs.roof_area <= 22, 22, IF(inputs.roof_area <= 47, 47, IF(inputs.roof_area <= 82, 82, 126))), IF(inputs.gutter_slope == '2', IF(inputs.roof_area <= 32, 32, IF(inputs.roof_area <= 67, 67, IF(inputs.roof_area <= 116, 116, 178))), 0)))"
+        },
+        {
+          "id": "downspout_size",
+          "label": "Recommended Downspout Size",
+          "unit": "mm",
+          "formula": "IF(inputs.roof_area <= 33, 75, IF(inputs.roof_area <= 125, 100, 100))"
+        },
+        {
+          "id": "is_suitable",
+          "label": "Roof Area Suitability",
+          "formula": "IF(inputs.roof_area <= IF(inputs.gutter_slope == '0.5', 89, IF(inputs.gutter_slope == '1', 126, 178)), 'YES - Suitable for 150mm gutter', IF(inputs.roof_area <= IF(inputs.gutter_slope == '0.5', 58, IF(inputs.gutter_slope == '1', 82, 116)), 'YES - Suitable for 125mm gutter', IF(inputs.roof_area <= IF(inputs.gutter_slope == '0.5', 33, IF(inputs.gutter_slope == '1', 47, 67)), 'YES - Suitable for 100mm gutter', IF(inputs.roof_area <= IF(inputs.gutter_slope == '0.5', 16, IF(inputs.gutter_slope == '1', 22, 32)), 'YES - Suitable for 80mm gutter', 'NO - Area exceeds all gutter capacities'))))"
+        }
+      ]
+    }
+  ]
+}

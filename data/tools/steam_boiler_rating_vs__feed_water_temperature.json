@@ -1,0 +1,99 @@
+{
+  "id": "steam_boiler_rating_vs__feed_water_temperature",
+  "title": "Steam Boiler Rating vs. Feed Water Temperature",
+  "description": "Boiler output vs. feed water temperature. Steam generating boiler output is reduced with lower feedwater temperature.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "boiler_calculator",
+      "content": "Calculate steam boiler output rating based on feed water temperature.",
+      "inputs": [
+        {
+          "id": "rated_output",
+          "label": "Rated Boiler Output",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "%"
+        },
+        {
+          "id": "feedwater_temperature",
+          "label": "Feed Water Temperature",
+          "type": "number",
+          "defaultValue": 60,
+          "unit": "°C"
+        },
+        {
+          "id": "reference_temperature",
+          "label": "Reference Temperature",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output_rating",
+          "label": "Boiler Output Rating",
+          "formula": "inputs.rated_output * (1 - 0.01 * (inputs.feedwater_temperature - inputs.reference_temperature) * 0.5)",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "boiler_rating_chart",
+      "content": "Steam boiler rating vs. feed water temperature",
+      "options": {
+        "title": {
+          "text": "Steam Boiler Rating vs. Feed Water Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+          ],
+          "name": "Feed Water Temperature (°C)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Output Rating (%)"
+        },
+        "series": [
+          {
+            "name": "Boiler Output Rating",
+            "type": "line",
+            "data": [
+              100,
+              99.5,
+              99,
+              98.5,
+              98,
+              97.5,
+              97,
+              96.5,
+              96,
+              95.5,
+              95
+            ],
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

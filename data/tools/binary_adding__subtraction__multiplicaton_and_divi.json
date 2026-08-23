@@ -1,0 +1,73 @@
+{
+  "id": "binary_adding__subtraction__multiplicaton_and_divi",
+  "title": "Binary Adding, Subtraction, Multiplication and Division",
+  "description": "Adding, subtracting, multiplying and dividing binary numbers. A binary signal or number is one that can take only one value: 1 or 0 -or on or off.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Binary Operations\n\nA binary signal or number is one that can take only one value: **1 or 0** -or **on or off**.\n\n### Addition Binary Numbers\n\nRule to follow when binary numbers are added:\n\n- **0 + 0 = 0**\n- **0 + 1 = 1**\n- **1 + 0 = 1**\n- **1 + 1 = 0** (with a carry of 1)\n\n### Subtraction Binary Numbers\n\nRule to follow when binary numbers are subtracted:\n\n- **0 - 0 = 0**\n- **1 - 0 = 1**\n- **1 - 1 = 0**\n- **0 - 1 = 1** (with a borrow of 1)\n\n### Multiplication of Binary Numbers\n\nRule to follow when binary numbers are multiplied:\n\n- **0 × 0 = 0**\n- **0 × 1 = 0**\n- **1 × 0 = 0**\n- **1 × 1 = 1**\n\n### Division of Binary Numbers\n\nRule to follow when binary numbers are divided:\n\n- **0 / 1 = 0**\n- **1 / 1 = 1**"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Operation",
+        "Decimal",
+        "Binary",
+        "Result (Decimal)",
+        "Result (Binary)"
+      ],
+      "rows": [
+        [
+          "Addition",
+          "5 + 6",
+          "101 + 110",
+          "11",
+          "1011"
+        ],
+        [
+          "Addition",
+          "6 + 6",
+          "110 + 110",
+          "12",
+          "1100"
+        ],
+        [
+          "Addition",
+          "15 + 20",
+          "1111 + 10100",
+          "35",
+          "100011"
+        ],
+        [
+          "Addition",
+          "3.25 + 5.75",
+          "11.01 + 101.11",
+          "9.00",
+          "1001.00"
+        ],
+        [
+          "Subtraction",
+          "9 - 5",
+          "1001 - 101",
+          "4",
+          "0100"
+        ],
+        [
+          "Subtraction",
+          "16 - 3",
+          "10000 - 11",
+          "13",
+          "01101"
+        ],
+        [
+          "Subtraction",
+          "6.25 - 4.50",
+          "110.01 - 100.10",
+          "1.75",
+          "001.11"
+        ]
+      ]
+    }
+  ]
+}

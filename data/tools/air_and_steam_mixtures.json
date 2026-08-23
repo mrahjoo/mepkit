@@ -1,0 +1,77 @@
+{
+  "id": "air_and_steam_mixtures",
+  "title": "Air and Steam Mixtures",
+  "description": "Calculate the effective pressure and resulting temperature of air and steam mixtures using Dalton's Law of Partial Pressures. Understand how air contamination affects heat transfer in steam systems.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Mixture Pressure (psig)",
+        "Mixture Pressure (bar)",
+        "0% Air - Pure Steam (°F)",
+        "0% Air - Pure Steam (°C)",
+        "5% Air (°F)",
+        "5% Air (°C)",
+        "10% Air (°F)",
+        "10% Air (°C)",
+        "15% Air (°F)",
+        "15% Air (°C)"
+      ],
+      "rows": [
+        [
+          2,
+          0.15,
+          219,
+          104,
+          216,
+          102,
+          213,
+          101,
+          210,
+          99
+        ],
+        [
+          5,
+          0.35,
+          227,
+          108,
+          225,
+          107,
+          222,
+          106,
+          219,
+          104
+        ],
+        [
+          10,
+          0.7,
+          239,
+          115,
+          237,
+          114,
+          233,
+          112,
+          230,
+          110
+        ],
+        [
+          20,
+          1.4,
+          259,
+          126,
+          256,
+          124,
+          252,
+          122,
+          249,
+          121
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Dalton's Law of Partial Pressure\n\nThe total pressure in a mixture of steam and air:\n\n**p = pa + ps**\n\nWhere:\n- **pa** = partial pressure of air (Pa, bar, psi)\n- **ps** = partial pressure of steam (Pa, bar, psi)\n\n## Effective Partial Pressure\n\nThe effective partial pressure of steam:\n\n**ps_effective = (vs / V) × p**\n\nWhere:\n- **ps_effective** = effective steam pressure, absolute (Pa, bar, psi)\n- **vs** = volume of steam (m³, in³)\n- **V** = volume of mixture (m³, in³)\n- **p** = absolute pressure (Pa, bar, psi)\n\n## Key Impact\n\nAir in steam reduces the effective steam pressure, which lowers the saturation temperature. This significantly reduces heat transfer capability in heat exchangers.\n\n**Example:** A steam/air mixture with 3 parts steam and 1 part air at 5 bar absolute has:\n- Effective pressure: 3.75 bar (instead of 5 bar)\n- Resulting temperature: ~139°C (instead of expected 152°C)"
+    }
+  ]
+}

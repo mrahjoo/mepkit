@@ -1,0 +1,6 @@
+{
+  "id": "html_color_codes",
+  "title": "HTML Color Codes",
+  "description": "Safe html color codes - Early browsers did not support more than 256 \"safe\" colors. This tool provides a comprehensive reference of 216 safe web colors made from combinations of hexadecimal values (0, 33, 66, 99, CC, FF).",
+  "type": "chart-table"
+}

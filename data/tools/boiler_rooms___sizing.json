@@ -1,0 +1,47 @@
+{
+  "id": "boiler_rooms___sizing",
+  "title": "Boiler Rooms - Sizing",
+  "description": "Minimum area in a boiler room. The required area and volume of a boiler room is influenced by the combustion technology used - where combustion and handling of coal requires a lot more space than combustion of gas or oil.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Combustion Technology",
+        "Minimum Area (m²)",
+        "Minimum Volume (m³)",
+        "Space Requirements"
+      ],
+      "rows": [
+        [
+          "Coal",
+          "15",
+          "45",
+          "Highest space requirement"
+        ],
+        [
+          "Oil",
+          "10",
+          "30",
+          "Medium space requirement"
+        ],
+        [
+          "Gas",
+          "8",
+          "24",
+          "Lowest space requirement"
+        ],
+        [
+          "Biomass",
+          "12",
+          "36",
+          "High space requirement"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nThe required area and volume of a boiler room is influenced by the combustion technology used - where combustion and handling of coal requires a lot more space than combustion of gas or oil.\n\n### Key Considerations:\n\n- **Coal combustion**: Requires the most space due to fuel handling, storage, and ash removal\n- **Oil combustion**: Requires medium space for tank placement and burner access\n- **Gas combustion**: Requires the least space, most compact solution\n- **Biomass**: Similar to coal, requires significant space for fuel preparation\n\n### Minimum Space Requirements by Fuel Type:\n\nThe diagram referenced indicates the minimum space required for boilers using combustion oil as a baseline for comparison with other fuel types."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "noise___epa_protective_levels",
+  "title": "Noise - EPA Protective Levels",
+  "description": "The noise level should not exceed certain values to protect public health and welfare according to EPA guidelines for Ldn (Day-Night Sound Levels) and Leq (Equivalent Sound Level).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Effect",
+        "Level",
+        "Area",
+        "Type"
+      ],
+      "rows": [
+        [
+          "Hearing",
+          "Leq(24) < 70 dBA",
+          "All areas",
+          "Hearing protection"
+        ],
+        [
+          "Outdoor activity interference and annoyance",
+          "Leq < 55 dBA",
+          "Outdoors in residential areas and farms",
+          "Outdoor activity"
+        ],
+        [
+          "Outdoor activity interference and annoyance",
+          "Leq(24) < 55 dBA",
+          "Outdoor areas (school yards, playgrounds, etc.)",
+          "Outdoor activity"
+        ],
+        [
+          "Indoor activity interference and annoyance",
+          "Leq < 45 dBA",
+          "Indoor residential areas",
+          "Indoor activity"
+        ],
+        [
+          "Indoor activity interference and annoyance",
+          "Leq(24) < 45 dBA",
+          "Indoor areas (schools, etc.)",
+          "Indoor activity"
+        ],
+        [
+          "Public health and welfare",
+          "Ldn < 55 dB",
+          "Outdoor sensitive areas (residences, schools, hospitals)",
+          "Yearly Ldn outdoor"
+        ],
+        [
+          "Public health and welfare",
+          "Ldn < 45 dB",
+          "Inside buildings",
+          "Yearly Ldn indoor"
+        ]
+      ]
+    }
+  ]
+}

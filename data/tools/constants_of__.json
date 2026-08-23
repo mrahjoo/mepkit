@@ -1,0 +1,87 @@
+{
+  "id": "constants_of__",
+  "title": "Constants of π",
+  "description": "The mathematical π constants.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Constant",
+        "Formula",
+        "Value"
+      ],
+      "rows": [
+        [
+          "π",
+          "π",
+          "3.14159265358979323846"
+        ],
+        [
+          "1/π",
+          "1/π",
+          "0.31830988618379067154"
+        ],
+        [
+          "π²",
+          "π²",
+          "9.86960440108935861883"
+        ],
+        [
+          "ln(π)",
+          "ln(π)",
+          "1.14472988584940017414"
+        ],
+        [
+          "log₁₀(π)",
+          "log₁₀(π)",
+          "0.49714987269413385435"
+        ],
+        [
+          "log₁₀(√π)",
+          "log₁₀(√π)",
+          "0.39908934179057524788"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "π Mathematical Constants"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "π",
+            "1/π",
+            "π²",
+            "ln(π)",
+            "log₁₀(π)",
+            "log₁₀(√π)"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Value",
+            "type": "bar",
+            "data": [
+              3.14159265,
+              0.31830989,
+              9.8696044,
+              1.14472989,
+              0.49714987,
+              0.39908934
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

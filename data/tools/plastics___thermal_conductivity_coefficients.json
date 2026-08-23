@@ -1,0 +1,89 @@
+{
+  "id": "plastics___thermal_conductivity_coefficients",
+  "title": "Plastics - Thermal Conductivity Coefficients",
+  "description": "Reference data table for thermal conductivity coefficients of various plastic materials",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Thermal Conductivity (W/m·K)"
+      ],
+      "rows": [
+        [
+          "Acetal (Delrin)",
+          0.2
+        ],
+        [
+          "Acrylic (PMMA)",
+          0.19
+        ],
+        [
+          "Celluloid (Cellulose Acetate)",
+          0.16
+        ],
+        [
+          "Epoxy",
+          0.23
+        ],
+        [
+          "Mylar (Polyethylene Terephthalate)",
+          0.14
+        ],
+        [
+          "Nylon 6",
+          0.24
+        ],
+        [
+          "Nylon 6,6",
+          0.25
+        ],
+        [
+          "Phenolic",
+          0.15
+        ],
+        [
+          "Polycarbonate",
+          0.2
+        ],
+        [
+          "Polyethylene (Low Density)",
+          0.33
+        ],
+        [
+          "Polyethylene (High Density)",
+          0.42
+        ],
+        [
+          "Polypropylene",
+          0.12
+        ],
+        [
+          "Polystyrene",
+          0.13
+        ],
+        [
+          "Polyurethane (Foam)",
+          0.025
+        ],
+        [
+          "Polyurethane (Solid)",
+          0.25
+        ],
+        [
+          "Polyvinyl Chloride (PVC)",
+          0.16
+        ],
+        [
+          "Teflon (PTFE)",
+          0.25
+        ],
+        [
+          "Urea Formaldehyde",
+          0.13
+        ]
+      ]
+    }
+  ]
+}

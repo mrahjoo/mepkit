@@ -1,0 +1,131 @@
+{
+  "id": "paper_drafting_sizes___comparing_iso_and_u_s__draw",
+  "title": "Paper Drafting Sizes - Comparing ISO and U.S. Drawing Sheets",
+  "description": "ISO vs. U.S. and Canadian drawing sheets comparison. Compare ISO drawing sheets (based on ISO 216) with American drawing sheets (based on ANSI/ASME 14.1).",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "ISO",
+        "Width (mm)",
+        "Width (inches)",
+        "Length (mm)",
+        "Length (inches)",
+        "USA Letter",
+        "USA Sizes (inches)"
+      ],
+      "rows": [
+        [
+          "A0",
+          841,
+          33.11,
+          1189,
+          46.81,
+          "E",
+          "34.0 x 44.0"
+        ],
+        [
+          "A1",
+          594,
+          23.39,
+          841,
+          33.11,
+          "D",
+          "22.0 x 34.0"
+        ],
+        [
+          "A2",
+          420,
+          16.54,
+          594,
+          23.39,
+          "C",
+          "17.0 x 22.0"
+        ],
+        [
+          "A3",
+          297,
+          11.69,
+          420,
+          16.54,
+          "B",
+          "11.0 x 17.0"
+        ],
+        [
+          "A4",
+          210,
+          8.27,
+          297,
+          11.69,
+          "A",
+          "8.5 x 11.0"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "F",
+          "28.0 x 40.0"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "ISO vs USA Paper Sizes Comparison"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "ISO Width (mm)",
+            "ISO Length (mm)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "A0",
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Dimensions (mm)"
+        },
+        "series": [
+          {
+            "name": "ISO Width (mm)",
+            "type": "bar",
+            "data": [
+              841,
+              594,
+              420,
+              297,
+              210
+            ]
+          },
+          {
+            "name": "ISO Length (mm)",
+            "type": "bar",
+            "data": [
+              1189,
+              841,
+              594,
+              420,
+              297
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

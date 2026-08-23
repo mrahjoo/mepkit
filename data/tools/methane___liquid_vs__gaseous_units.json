@@ -1,0 +1,213 @@
+{
+  "id": "methane___liquid_vs__gaseous_units",
+  "title": "Methane - Liquid vs. Gaseous Units",
+  "description": "Convert between liquid and gaseous LNG and Methane units. Commonly used units to measure Natural Gas or Methane - LNG - volume and weight.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Convert between liquid and gaseous methane units using the conversion multipliers table.",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Input Value",
+          "type": "number",
+          "defaultValue": 10
+        },
+        {
+          "id": "fromUnit",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "therm",
+              "label": "therm"
+            },
+            {
+              "value": "bbl_liquid",
+              "label": "bbl liquid"
+            },
+            {
+              "value": "m3_gas",
+              "label": "m³ gas"
+            },
+            {
+              "value": "m3_liquid",
+              "label": "m³ liquid"
+            },
+            {
+              "value": "ft3_gas",
+              "label": "ft³ gas"
+            },
+            {
+              "value": "ft3_liquid",
+              "label": "ft³ liquid"
+            },
+            {
+              "value": "long_ton_liquid",
+              "label": "long ton liquid"
+            },
+            {
+              "value": "thermie",
+              "label": "thermie"
+            }
+          ],
+          "defaultValue": "m3_liquid"
+        },
+        {
+          "id": "toUnit",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "therm",
+              "label": "therm"
+            },
+            {
+              "value": "bbl_liquid",
+              "label": "bbl liquid"
+            },
+            {
+              "value": "m3_gas",
+              "label": "m³ gas"
+            },
+            {
+              "value": "m3_liquid",
+              "label": "m³ liquid"
+            },
+            {
+              "value": "ft3_gas",
+              "label": "ft³ gas"
+            },
+            {
+              "value": "ft3_liquid",
+              "label": "ft³ liquid"
+            },
+            {
+              "value": "long_ton_liquid",
+              "label": "long ton liquid"
+            },
+            {
+              "value": "thermie",
+              "label": "thermie"
+            }
+          ],
+          "defaultValue": "m3_gas"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Value",
+          "formula": "inputs.value * conversionFactor(inputs.fromUnit, inputs.toUnit)",
+          "unit": "depends on toUnit"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Conversion Multipliers Table",
+      "headers": [
+        "From Unit",
+        "To: long ton liquid",
+        "To: ft³ liquid",
+        "To: ft³ gas",
+        "To: m³ liquid",
+        "To: m³ gas",
+        "To: bbl liquid",
+        "To: therm",
+        "To: thermie"
+      ],
+      "rows": [
+        [
+          "therm",
+          74.12,
+          6268,
+          3920000,
+          177.44,
+          105228,
+          1116.2,
+          1,
+          1000000
+        ],
+        [
+          "bbl liquid",
+          1868,
+          157985,
+          98790000,
+          4472,
+          2652000,
+          28132,
+          1000000,
+          25207000
+        ],
+        [
+          "m³ gas",
+          0.0664,
+          5.615,
+          3512,
+          0.159,
+          94.27,
+          1,
+          35.54,
+          859.8
+        ],
+        [
+          "m³ liquid",
+          704374,
+          59560000,
+          37250000000,
+          1686000,
+          1000000000,
+          10610000,
+          377000000,
+          9503000000
+        ],
+        [
+          "ft³ gas",
+          0.4177,
+          35.315,
+          22090,
+          1,
+          593,
+          6.29,
+          223.55,
+          5635.2
+        ],
+        [
+          "ft³ liquid",
+          19.91,
+          1599,
+          1000000,
+          45.27,
+          26847,
+          284.785,
+          10121,
+          255115
+        ],
+        [
+          "long ton liquid",
+          0.011826,
+          1,
+          625.43,
+          0.0283,
+          16.789,
+          0.1781,
+          6.329,
+          159.54
+        ],
+        [
+          "long ton liquid (ref)",
+          1,
+          84.56,
+          52886,
+          2.394,
+          1419.7,
+          15.06,
+          535.2,
+          13491
+        ]
+      ]
+    }
+  ]
+}

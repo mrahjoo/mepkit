@@ -1,0 +1,83 @@
+{
+  "id": "ditch_filling_materials___densities",
+  "title": "Ditch Filling Materials - Densities",
+  "description": "Weight or density of ditch filling materials. Reference table for typical densities of common ditch-filling materials in both imperial (lb/ft³) and metric (kg/m³) units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "density_table",
+      "headers": [
+        "Material",
+        "Condition",
+        "Density (lb/ft³)",
+        "Density (kg/m³)"
+      ],
+      "rows": [
+        [
+          "Sand",
+          "Dry",
+          100,
+          1600
+        ],
+        [
+          "Sand",
+          "Ordinary damp",
+          115,
+          1850
+        ],
+        [
+          "Sand",
+          "Wet",
+          120,
+          1900
+        ],
+        [
+          "Clay",
+          "Damp",
+          120,
+          1900
+        ],
+        [
+          "Clay",
+          "Saturated",
+          130,
+          2300
+        ],
+        [
+          "Topsoil",
+          "Saturated",
+          115,
+          1850
+        ],
+        [
+          "Sand and gravel",
+          "Damp",
+          100,
+          1600
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "density_converter",
+      "content": "Convert between density units for ditch filling materials",
+      "inputs": [
+        {
+          "id": "density_imperial",
+          "label": "Density (lb/ft³)",
+          "type": "number",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_metric",
+          "label": "Density (kg/m³)",
+          "formula": "inputs.density_imperial * 16",
+          "unit": "kg/m³"
+        }
+      ]
+    }
+  ]
+}

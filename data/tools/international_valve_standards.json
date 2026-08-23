@@ -1,0 +1,82 @@
+{
+  "id": "international_valve_standards",
+  "title": "International Valve Standards",
+  "description": "International valve standards for piping systems.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# International Valve Standards\n\nInternational valve standards for piping systems.\n\n## Overview\nThis tool provides calculations and reference data for international valve standards used in piping systems, including pressure ratings, flow calculations, and sizing parameters."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "valve_type",
+          "label": "Valve Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Ball Valve",
+              "value": "ball"
+            },
+            {
+              "label": "Gate Valve",
+              "value": "gate"
+            },
+            {
+              "label": "Globe Valve",
+              "value": "globe"
+            },
+            {
+              "label": "Check Valve",
+              "value": "check"
+            },
+            {
+              "label": "Butterfly Valve",
+              "value": "butterfly"
+            }
+          ],
+          "defaultValue": "ball"
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "pressure_rating",
+          "label": "Pressure Rating",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 10
+        },
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_velocity",
+          "label": "Flow Velocity",
+          "unit": "m/s",
+          "formula": "inputs.flow_rate / ((inputs.pipe_diameter / 1000)^2 * 3.14159 / 4) / 3.6",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_drop",
+          "label": "Pressure Drop",
+          "unit": "kPa",
+          "formula": "inputs.pressure_rating * 0.1",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

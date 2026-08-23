@@ -1,0 +1,38 @@
+{
+  "id": "human_body___specific_heat",
+  "title": "Human Body - Specific Heat",
+  "description": "Specific heat of the human body compared to substances like protein and wood. The human body's specific heat capacity is primarily influenced by its high water content (up to 60% in adults).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Specific Heat - cp - (J/(kg·°C))"
+      ],
+      "rows": [
+        [
+          "Human Body (average) 1",
+          3470
+        ],
+        [
+          "Human Body (average) 2",
+          2980
+        ],
+        [
+          "Protein",
+          1700
+        ],
+        [
+          "Wood",
+          1700
+        ],
+        [
+          "Water",
+          4187
+        ]
+      ],
+      "content": "Specific heat capacity values for human body and common substances"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "electrical_metal_tubing__emt____conduits",
+  "title": "Electrical Metal Tubing (EMT) - Conduits",
+  "description": "Trade sizes and max. distance between conduit supports for Electrical Metallic Tubing (EMT) - Thinwall Conduit. Reference: NEC Article 344 and Article 358.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Conduit Trade Size (in)",
+        "Outside Diameter (mm)",
+        "Inside Diameter (in)",
+        "Outside Diameter (in)",
+        "Inside Diameter (mm)",
+        "Max Distance Between Supports - Rigid Metal/PVC (mm)",
+        "Max Distance Between Supports (ft)",
+        "Max Distance Between Supports (m)"
+      ],
+      "rows": [
+        [
+          "1/2",
+          "16",
+          "0.706",
+          "0.63",
+          "17.9",
+          "17.9",
+          "10",
+          "3"
+        ],
+        [
+          "3/4",
+          "21",
+          "0.922",
+          "0.827",
+          "23.4",
+          "23.4",
+          "10",
+          "3"
+        ],
+        [
+          "1",
+          "27",
+          "1.163",
+          "1.063",
+          "29.5",
+          "29.5",
+          "12",
+          "3"
+        ],
+        [
+          "1 1/4",
+          "35",
+          "1.510",
+          "1.378",
+          "38.4",
+          "38.4",
+          "14",
+          "5"
+        ],
+        [
+          "1 1/2",
+          "41",
+          "1.740",
+          "1.610",
+          "44.2",
+          "44.2",
+          "14",
+          "5"
+        ],
+        [
+          "2",
+          "53",
+          "2.197",
+          "2.087",
+          "55.8",
+          "55.8",
+          "16",
+          "5"
+        ],
+        [
+          "2 1/2",
+          "63",
+          "2.875",
+          "2.726",
+          "73.0",
+          "73.0",
+          "16",
+          "6"
+        ],
+        [
+          "3",
+          "78",
+          "3.500",
+          "3.366",
+          "88.9",
+          "88.9",
+          "20",
+          "6"
+        ],
+        [
+          "3 1/2",
+          "91",
+          "4.000",
+          "3.858",
+          "101.6",
+          "101.6",
+          "20",
+          "7"
+        ],
+        [
+          "4",
+          "103",
+          "4.500",
+          "4.331",
+          "114.3",
+          "114.3",
+          "20",
+          "7"
+        ]
+      ]
+    }
+  ]
+}

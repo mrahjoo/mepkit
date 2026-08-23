@@ -1,0 +1,444 @@
+{
+  "id": "inches_vs__feet__yards_and_meters___conversion_cha",
+  "title": "Inches vs. Feet, Yards and Meters - Conversion Chart",
+  "description": "Convert between inches, feet, yards and meters with this comprehensive conversion chart and calculator.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "conversion_calculator",
+      "content": "Conversion Calculator",
+      "inputs": [
+        {
+          "id": "input_value",
+          "label": "Value to Convert",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "inches"
+        },
+        {
+          "id": "unit_from",
+          "label": "From Unit",
+          "type": "select",
+          "defaultValue": "inches",
+          "options": [
+            {
+              "value": "inches",
+              "label": "Inches"
+            },
+            {
+              "value": "feet",
+              "label": "Feet"
+            },
+            {
+              "value": "yards",
+              "label": "Yards"
+            },
+            {
+              "value": "metres",
+              "label": "Metres"
+            }
+          ]
+        },
+        {
+          "id": "unit_to",
+          "label": "To Unit",
+          "type": "select",
+          "defaultValue": "feet",
+          "options": [
+            {
+              "value": "inches",
+              "label": "Inches"
+            },
+            {
+              "value": "feet",
+              "label": "Feet"
+            },
+            {
+              "value": "yards",
+              "label": "Yards"
+            },
+            {
+              "value": "metres",
+              "label": "Metres"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "converted_value",
+          "label": "Converted Value",
+          "formula": "inputs.input_value",
+          "unit": "result",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "conversion_table",
+      "content": "Inches vs. Feet, Yards and Meters Conversion Table",
+      "headers": [
+        "Inches",
+        "Feet",
+        "Yards",
+        "Metres"
+      ],
+      "rows": [
+        [
+          0.01,
+          0.0008333,
+          0.0002778,
+          0.000254
+        ],
+        [
+          0.02,
+          0.0016666,
+          0.0005556,
+          0.000508
+        ],
+        [
+          0.03,
+          0.0024999,
+          0.0008334,
+          0.000762
+        ],
+        [
+          0.04,
+          0.0033332,
+          0.0011112,
+          0.001016
+        ],
+        [
+          0.05,
+          0.0041665,
+          0.001389,
+          0.00127
+        ],
+        [
+          0.06,
+          0.0049998,
+          0.0016668,
+          0.001524
+        ],
+        [
+          0.07,
+          0.0058331,
+          0.0019446,
+          0.001778
+        ],
+        [
+          0.08,
+          0.0066664,
+          0.0022224,
+          0.002032
+        ],
+        [
+          0.09,
+          0.0074997,
+          0.0025002,
+          0.002286
+        ],
+        [
+          0.1,
+          0.008333,
+          0.002778,
+          0.00254
+        ],
+        [
+          0.2,
+          0.016666,
+          0.005556,
+          0.00508
+        ],
+        [
+          0.3,
+          0.024999,
+          0.008334,
+          0.00762
+        ],
+        [
+          0.4,
+          0.033332,
+          0.011112,
+          0.01016
+        ],
+        [
+          0.5,
+          0.041665,
+          0.01389,
+          0.0127
+        ],
+        [
+          0.6,
+          0.049998,
+          0.016668,
+          0.01524
+        ],
+        [
+          0.7,
+          0.058331,
+          0.019446,
+          0.01778
+        ],
+        [
+          0.8,
+          0.066664,
+          0.022224,
+          0.02032
+        ],
+        [
+          0.9,
+          0.074997,
+          0.025002,
+          0.02286
+        ],
+        [
+          1,
+          0.08333,
+          0.02778,
+          0.0254
+        ],
+        [
+          2,
+          0.16666,
+          0.05556,
+          0.0508
+        ],
+        [
+          3,
+          0.24999,
+          0.08334,
+          0.0762
+        ],
+        [
+          4,
+          0.33332,
+          0.11112,
+          0.1016
+        ],
+        [
+          5,
+          0.41665,
+          0.1389,
+          0.127
+        ],
+        [
+          6,
+          0.49998,
+          0.16668,
+          0.1524
+        ],
+        [
+          7,
+          0.58331,
+          0.19446,
+          0.1778
+        ],
+        [
+          8,
+          0.66664,
+          0.22224,
+          0.2032
+        ],
+        [
+          9,
+          0.74997,
+          0.25002,
+          0.2286
+        ],
+        [
+          10,
+          0.8333,
+          0.2778,
+          0.254
+        ],
+        [
+          20,
+          1.6666,
+          0.5556,
+          0.508
+        ],
+        [
+          30,
+          2.4999,
+          0.8334,
+          0.762
+        ],
+        [
+          40,
+          3.3332,
+          1.1112,
+          1.016
+        ],
+        [
+          50,
+          4.1665,
+          1.389,
+          1.27
+        ],
+        [
+          60,
+          4.9998,
+          1.6668,
+          1.524
+        ],
+        [
+          70,
+          5.8331,
+          1.9446,
+          1.778
+        ],
+        [
+          80,
+          6.6664,
+          2.2224,
+          2.032
+        ],
+        [
+          90,
+          7.4997,
+          2.5002,
+          2.286
+        ],
+        [
+          100,
+          8.333,
+          2.778,
+          2.54
+        ],
+        [
+          200,
+          16.666,
+          5.556,
+          5.08
+        ],
+        [
+          300,
+          24.999,
+          8.334,
+          7.62
+        ],
+        [
+          400,
+          33.332,
+          11.112,
+          10.16
+        ],
+        [
+          500,
+          41.665,
+          13.89,
+          12.7
+        ],
+        [
+          600,
+          49.998,
+          16.668,
+          15.24
+        ],
+        [
+          700,
+          58.331,
+          19.446,
+          17.78
+        ],
+        [
+          800,
+          66.664,
+          22.224,
+          20.32
+        ],
+        [
+          900,
+          74.997,
+          25.002,
+          22.86
+        ],
+        [
+          1000,
+          83.33,
+          27.78,
+          25.4
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "conversion_chart",
+      "content": "Feet, Yards and Meters vs. Inches Chart",
+      "options": {
+        "title": {
+          "text": "Inches vs. Feet, Yards and Meters",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Feet",
+            "Yards",
+            "Metres"
+          ],
+          "top": "bottom"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0.01,
+            0.1,
+            1,
+            10,
+            100,
+            1000
+          ],
+          "name": "Inches"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Converted Value"
+        },
+        "series": [
+          {
+            "name": "Feet",
+            "type": "line",
+            "data": [
+              0.0008333,
+              0.008333,
+              0.08333,
+              0.8333,
+              8.333,
+              83.33
+            ]
+          },
+          {
+            "name": "Yards",
+            "type": "line",
+            "data": [
+              0.0002778,
+              0.002778,
+              0.02778,
+              0.2778,
+              2.778,
+              27.78
+            ]
+          },
+          {
+            "name": "Metres",
+            "type": "line",
+            "data": [
+              0.000254,
+              0.00254,
+              0.0254,
+              0.254,
+              2.54,
+              25.4
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

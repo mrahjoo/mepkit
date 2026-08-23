@@ -1,0 +1,131 @@
+{
+  "id": "noise_criterion_vs__noise_rating_and_db_a_",
+  "title": "Noise Criterion vs. Noise Rating and dB(A)",
+  "description": "Comparing Noise Criterion (NC, NCB, RNC) to Noise Rating (NR) and dB(A). Determines appropriate noise criteria for different room types and occupancy levels.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Noise Criterion vs. Noise Rating and dB(A)\n\n[Noise Criterion](nc-noise-criterion-d_725.html \"nc noise criterion\") - _[NC](nc-noise-criterion-d_725.html \"nc noise criterion\")_ - were established in U.S. for rating indoor noise, noise from air-conditioning equipment etc.\n\nIn Europe it is common to use [Noise Rating Curves](nr-noise-rating-d_60.html \"nr noise rating curves\") - _[NR](nr-noise-rating-d_60.html \"nr noise rating curves\")_.\n\n[dB(A)](decibel-d_59.html \"decibel dBA dBB dBC\") _- LA_ - is a weighted method compensating for the human hearing of sound pressure at different frequencies.\n\nChoosing appropriate noise criteria is important when specifying acceptable levels of noise."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Room Type & Occupancy",
+        "NC/NCB/RNC (dB)",
+        "NR (dB)",
+        "dB(A)",
+        "RC"
+      ],
+      "rows": [
+        [
+          "Very quiet - Concert and opera halls, recording studios, theaters",
+          "10-20",
+          "20",
+          "25-30",
+          "20"
+        ],
+        [
+          "Private bedrooms, theaters, TV/radio studios, conference rooms, libraries",
+          "20-25",
+          "25",
+          "25-30",
+          "25"
+        ],
+        [
+          "Private living rooms, board rooms, hotel bedrooms",
+          "30-40",
+          "30",
+          "30-35",
+          "30"
+        ],
+        [
+          "Quiet - Public rooms in hotels, offices, classrooms, courtrooms",
+          "30-40",
+          "35",
+          "40-45",
+          "35"
+        ],
+        [
+          "Moderate noisy - Drawing offices, bathrooms, reception areas, lobbies, stores",
+          "35-45",
+          "40",
+          "45-55",
+          "40"
+        ],
+        [
+          "Noisy - Kitchens, laundry rooms, computer rooms, supermarkets",
+          "40-50",
+          "45",
+          "45-55",
+          "45"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "room_type",
+          "label": "Room Type & Occupancy",
+          "type": "select",
+          "options": [
+            {
+              "value": "1",
+              "label": "Very quiet - Concert halls, recording studios, theaters"
+            },
+            {
+              "value": "2",
+              "label": "Private bedrooms, theaters, conference rooms, libraries"
+            },
+            {
+              "value": "3",
+              "label": "Private living rooms, board rooms, hotel bedrooms"
+            },
+            {
+              "value": "4",
+              "label": "Quiet - Public rooms, offices, classrooms"
+            },
+            {
+              "value": "5",
+              "label": "Moderate noisy - Drawing offices, reception areas, stores"
+            },
+            {
+              "value": "6",
+              "label": "Noisy - Kitchens, computer rooms, supermarkets"
+            }
+          ],
+          "defaultValue": "1"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "nc_range",
+          "label": "Noise Criterion NC/NCB/RNC Range",
+          "formula": "inputs.room_type == 1 ? '10-20' : inputs.room_type == 2 ? '20-25' : inputs.room_type == 3 ? '30-40' : inputs.room_type == 4 ? '30-40' : inputs.room_type == 5 ? '35-45' : '40-50'",
+          "unit": "dB"
+        },
+        {
+          "id": "nr_level",
+          "label": "Noise Rating (NR) Level",
+          "formula": "inputs.room_type == 1 ? 20 : inputs.room_type == 2 ? 25 : inputs.room_type == 3 ? 30 : inputs.room_type == 4 ? 35 : inputs.room_type == 5 ? 40 : 45",
+          "unit": "dB",
+          "format": "decimal"
+        },
+        {
+          "id": "db_a_range",
+          "label": "dB(A) Range",
+          "formula": "inputs.room_type == 1 ? '25-30' : inputs.room_type == 2 ? '25-30' : inputs.room_type == 3 ? '30-35' : inputs.room_type == 4 ? '40-45' : inputs.room_type == 5 ? '45-55' : '45-55'",
+          "unit": "dB"
+        },
+        {
+          "id": "rc_level",
+          "label": "RC Level",
+          "formula": "inputs.room_type == 1 ? 20 : inputs.room_type == 2 ? 25 : inputs.room_type == 3 ? 30 : inputs.room_type == 4 ? 35 : inputs.room_type == 5 ? 40 : 45",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

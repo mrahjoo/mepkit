@@ -1,0 +1,137 @@
+{
+  "id": "poisson_s_ratios_metals",
+  "title": "Poisson's Ratios for Metals",
+  "description": "A comprehensive reference tool displaying Poisson's ratios for various metals. Poisson's ratio is a key material property that describes the relationship between transverse strain and axial strain under stress.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Metal",
+        "Poisson's Ratio"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          0.34
+        ],
+        [
+          "Brass",
+          0.34
+        ],
+        [
+          "Bronze",
+          0.34
+        ],
+        [
+          "Copper",
+          0.34
+        ],
+        [
+          "Iron",
+          0.27
+        ],
+        [
+          "Steel",
+          0.3
+        ],
+        [
+          "Nickel",
+          0.31
+        ],
+        [
+          "Tin",
+          0.33
+        ],
+        [
+          "Titanium",
+          0.34
+        ],
+        [
+          "Tungsten",
+          0.28
+        ],
+        [
+          "Zinc",
+          0.25
+        ],
+        [
+          "Gold",
+          0.42
+        ],
+        [
+          "Silver",
+          0.37
+        ],
+        [
+          "Lead",
+          0.44
+        ],
+        [
+          "Magnesium",
+          0.29
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Aluminum",
+            "Brass",
+            "Bronze",
+            "Copper",
+            "Iron",
+            "Steel",
+            "Nickel",
+            "Tin",
+            "Titanium",
+            "Tungsten",
+            "Zinc",
+            "Gold",
+            "Silver",
+            "Lead",
+            "Magnesium"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Poisson's Ratio"
+        },
+        "series": [
+          {
+            "data": [
+              0.34,
+              0.34,
+              0.34,
+              0.34,
+              0.27,
+              0.3,
+              0.31,
+              0.33,
+              0.34,
+              0.28,
+              0.25,
+              0.42,
+              0.37,
+              0.44,
+              0.29
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          }
+        ],
+        "title": {
+          "text": "Poisson's Ratios for Various Metals"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

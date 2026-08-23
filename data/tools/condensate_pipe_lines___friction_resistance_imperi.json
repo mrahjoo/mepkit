@@ -1,0 +1,116 @@
+{
+  "id": "condensate_pipe_lines___friction_resistance_imperi",
+  "title": "Condensate Pipe Lines - Friction Resistance Imperial Units",
+  "description": "Friction or major resistance in condensate pipe lines. The table shows frictional resistance (major loss in inches H2O per 100 ft of pipe) for various pipe sizes and condensate mass flow rates. Avoid friction resistance above 10 inches Water gauge per 100 ft of pipe.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Size (inch)",
+        "5 lb/h",
+        "7 lb/h",
+        "10 lb/h",
+        "14 lb/h",
+        "16 lb/h",
+        "20 lb/h"
+      ],
+      "rows": [
+        [
+          "1/2",
+          100,
+          240,
+          290,
+          350,
+          430,
+          460,
+          520
+        ],
+        [
+          "3/4",
+          230,
+          560,
+          680,
+          820,
+          990,
+          1000,
+          1200
+        ],
+        [
+          "1",
+          440,
+          1070,
+          1200,
+          1550,
+          1800,
+          2000,
+          2260
+        ],
+        [
+          "1 1/4",
+          950,
+          2300,
+          2700,
+          3300,
+          4000,
+          4300,
+          4800
+        ],
+        [
+          "1 1/2",
+          1400,
+          3500,
+          4200,
+          5500,
+          6100,
+          6600,
+          7100
+        ],
+        [
+          "2",
+          2800,
+          6800,
+          8100,
+          9900,
+          11800,
+          12700,
+          14200
+        ],
+        [
+          "2 1/2",
+          5700,
+          13800,
+          16500,
+          20000,
+          23900,
+          25700,
+          28900
+        ],
+        [
+          "3",
+          9000,
+          21500,
+          25800,
+          31000,
+          37000,
+          39800,
+          44700
+        ],
+        [
+          "4",
+          18600,
+          44000,
+          52000,
+          63400,
+          75500,
+          81000,
+          90900
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- **Friction Resistance**: Measured in inches H2O per 100 ft of pipe\n- **Running Load Rule of Thumb**: If startup conditions are unknown, double the running load to size condensate pipe lines\n- **Maximum Recommended**: Avoid friction resistance above 10 inches Water gauge - H2O - per 100 ft of pipe\n- **Unit Conversion**: 1 in = 25.4 mm\n\n### Example - Sizing Condensate Pipe\n\nFor a steam distribution system with a running load of 2000 lb/h - the startup condensate load is doubled to 4000 lb/h.\n\nUsing the 10 inch H2O column - a 1 1/2 inch pipe is acceptable."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "2nd_law_of_thermodynamics",
+  "title": "2nd Law of Thermodynamics",
+  "description": "Calculator for the Second Law of Thermodynamics, including heat engine efficiency and entropy calculations using the Carnot cycle principles.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# 2nd Law of Thermodynamics Calculator\n\nThe Second Law of Thermodynamics constrains energy transformation by identifying that energy goes downhill. Entropy (S), produced by all processes, is associated with the loss of ability to do work.\n\n## Key Principles\n\n- **100% energy cannot be transformed to work**\n- **Entropy can be produced but never destroyed**\n- The efficiency of a heat machine depends on the temperature difference between hot and cold reservoirs"
+    },
+    {
+      "type": "calculator",
+      "content": "## Heat Engine Efficiency",
+      "inputs": [
+        {
+          "id": "T_hot",
+          "label": "Hot Reservoir Temperature (Th)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 373
+        },
+        {
+          "id": "T_cold",
+          "label": "Cold Reservoir Temperature (Tc)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 273
+        }
+      ],
+      "outputs": [
+        {
+          "id": "efficiency",
+          "label": "Thermal Efficiency (η)",
+          "formula": "1 - inputs.T_cold / inputs.T_hot",
+          "format": "decimal",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Entropy Change Calculation",
+      "inputs": [
+        {
+          "id": "delta_enthalpy",
+          "label": "Change in Enthalpy (ΔH)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 419
+        },
+        {
+          "id": "T_avg",
+          "label": "Average Temperature (Ta)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 323
+        }
+      ],
+      "outputs": [
+        {
+          "id": "delta_entropy",
+          "label": "Change in Entropy (ΔS)",
+          "formula": "inputs.delta_enthalpy / inputs.T_avg",
+          "format": "decimal",
+          "unit": "kJ/kg·K"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formulas\n\n### Heat Engine Efficiency (Carnot Cycle)\n\n**η = (Th - Tc) / Th = 1 - Tc / Th**\n\nWhere:\n- η = thermal efficiency\n- Th = hot reservoir temperature (K)\n- Tc = cold reservoir temperature (K)\n\n### Entropy Change\n\n**ΔS = ΔH / Ta**\n\nWhere:\n- ΔS = change in entropy (kJ/kg·K)\n- ΔH = change in enthalpy or internal energy (kJ/kg)\n- Ta = average temperature (K)"
+    }
+  ]
+}

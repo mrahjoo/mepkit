@@ -1,0 +1,175 @@
+{
+  "id": "positive_displacement_pumps",
+  "title": "Positive Displacement Pumps",
+  "description": "A Positive Displacement Pump has an expanding cavity on the suction side and a decreasing cavity on the discharge side. This tool provides calculators for speed corrections based on liquid viscosity and water temperature for both reciprocating and rotary pumps.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Reciprocating Pumps - Speed Correction vs. Viscosity\n\nSpeed reduction percentage based on liquid viscosity (SSU) for reciprocating pumps."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Liquid Viscosity (SSU)",
+        "Speed Reduction (%)"
+      ],
+      "rows": [
+        [
+          250,
+          0
+        ],
+        [
+          500,
+          4
+        ],
+        [
+          1000,
+          11
+        ],
+        [
+          2000,
+          20
+        ],
+        [
+          3000,
+          26
+        ],
+        [
+          4000,
+          30
+        ],
+        [
+          5000,
+          35
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reciprocating Pumps - Speed Correction vs. Water Temperature\n\nSpeed reduction percentage based on water temperature (°C) for reciprocating pumps."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Water Temperature (°C)",
+        "Speed Reduction (%)"
+      ],
+      "rows": [
+        [
+          21,
+          0
+        ],
+        [
+          27,
+          9
+        ],
+        [
+          38,
+          18
+        ],
+        [
+          52,
+          25
+        ],
+        [
+          66,
+          29
+        ],
+        [
+          93,
+          34
+        ],
+        [
+          121,
+          38
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Rotary Pumps - Speed Correction vs. Viscosity\n\nSpeed reduction percentage based on liquid viscosity (SSU) for rotary pumps."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Liquid Viscosity (SSU)",
+        "Speed Reduction (%)"
+      ],
+      "rows": [
+        [
+          600,
+          2
+        ],
+        [
+          800,
+          6
+        ],
+        [
+          1000,
+          10
+        ],
+        [
+          1500,
+          12
+        ],
+        [
+          2000,
+          14
+        ],
+        [
+          4000,
+          20
+        ],
+        [
+          6000,
+          30
+        ],
+        [
+          8000,
+          40
+        ],
+        [
+          10000,
+          50
+        ],
+        [
+          20000,
+          55
+        ],
+        [
+          30000,
+          57
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "baseline_speed",
+          "label": "Baseline Speed",
+          "type": "number",
+          "unit": "RPM",
+          "defaultValue": 1000
+        },
+        {
+          "id": "speed_reduction_percent",
+          "label": "Speed Reduction",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "corrected_speed",
+          "label": "Corrected Speed",
+          "unit": "RPM",
+          "formula": "inputs.baseline_speed * (1 - inputs.speed_reduction_percent / 100)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

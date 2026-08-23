@@ -1,0 +1,189 @@
+{
+  "id": "tree_species___water_demand",
+  "title": "Tree Species - Water Demand",
+  "description": "Trees species and relative water demand. Displays a comprehensive list of conifer and broad-leaved trees categorized by their relative water demand levels: low, moderate, and high.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Water Demand Level",
+        "Tree Species"
+      ],
+      "rows": [
+        [
+          "Low",
+          "Birch"
+        ],
+        [
+          "Low",
+          "Elder"
+        ],
+        [
+          "Low",
+          "Fig"
+        ],
+        [
+          "Low",
+          "Hazel"
+        ],
+        [
+          "Low",
+          "Holly"
+        ],
+        [
+          "Low",
+          "Honey locust"
+        ],
+        [
+          "Low",
+          "Hornbeam"
+        ],
+        [
+          "Low",
+          "Laburnum"
+        ],
+        [
+          "Low",
+          "Magnolia"
+        ],
+        [
+          "Low",
+          "Mulberry"
+        ],
+        [
+          "Low",
+          "Tulip tree"
+        ],
+        [
+          "Moderate",
+          "Acasia false"
+        ],
+        [
+          "Moderate",
+          "Alder"
+        ],
+        [
+          "Moderate",
+          "Apple"
+        ],
+        [
+          "Moderate",
+          "Ash"
+        ],
+        [
+          "Moderate",
+          "Bay laurel"
+        ],
+        [
+          "Moderate",
+          "Beech"
+        ],
+        [
+          "Moderate",
+          "Blacthorn"
+        ],
+        [
+          "Moderate",
+          "Cedar"
+        ],
+        [
+          "Moderate",
+          "Cherry"
+        ],
+        [
+          "Moderate",
+          "Chestnut"
+        ],
+        [
+          "Moderate",
+          "Douglas fir"
+        ],
+        [
+          "Moderate",
+          "Lime"
+        ],
+        [
+          "Moderate",
+          "Maple"
+        ],
+        [
+          "Moderate",
+          "Mountain ash"
+        ],
+        [
+          "Moderate",
+          "Pear"
+        ],
+        [
+          "Moderate",
+          "Pine"
+        ],
+        [
+          "Moderate",
+          "Plane"
+        ],
+        [
+          "Moderate",
+          "Plum"
+        ],
+        [
+          "Moderate",
+          "Spruce"
+        ],
+        [
+          "Moderate",
+          "Sycamore"
+        ],
+        [
+          "Moderate",
+          "Tree of heaven"
+        ],
+        [
+          "Moderate",
+          "Walnut"
+        ],
+        [
+          "Moderate",
+          "Wellingtonia"
+        ],
+        [
+          "Moderate",
+          "Whitebeam"
+        ],
+        [
+          "Moderate",
+          "Yew"
+        ],
+        [
+          "High",
+          "Cypros"
+        ],
+        [
+          "High",
+          "Elm"
+        ],
+        [
+          "High",
+          "Aucalyptus"
+        ],
+        [
+          "High",
+          "Oak"
+        ],
+        [
+          "High",
+          "Popar"
+        ],
+        [
+          "High",
+          "Willow"
+        ],
+        [
+          "High",
+          "Hawthorn"
+        ]
+      ]
+    }
+  ]
+}

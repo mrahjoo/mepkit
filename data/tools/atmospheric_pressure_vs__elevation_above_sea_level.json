@@ -1,0 +1,66 @@
+{
+  "id": "atmospheric_pressure_vs__elevation_above_sea_level",
+  "title": "Atmospheric Pressure vs. Elevation above Sea Level",
+  "description": "Calculate air pressure at a given elevation above sea level using the barometric formula. Input altitude in meters and get atmospheric pressure in various units (Pa, kPa, psia, inches Hg, mm Hg, kg/cm²).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pressure_calculator",
+      "content": "Atmospheric Pressure Calculator",
+      "inputs": [
+        {
+          "id": "altitude_m",
+          "label": "Altitude above Sea Level",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_pa",
+          "label": "Atmospheric Pressure (Pa)",
+          "formula": "101325 * Math.pow(1 - 2.25577e-5 * inputs.altitude_m, 5.25588)",
+          "format": "decimal",
+          "unit": "Pa"
+        },
+        {
+          "id": "pressure_kpa",
+          "label": "Atmospheric Pressure (kPa)",
+          "formula": "101325 * Math.pow(1 - 2.25577e-5 * inputs.altitude_m, 5.25588) / 1000",
+          "format": "decimal",
+          "unit": "kPa"
+        },
+        {
+          "id": "pressure_psia",
+          "label": "Atmospheric Pressure (psia)",
+          "formula": "101325 * Math.pow(1 - 2.25577e-5 * inputs.altitude_m, 5.25588) / 6894.757",
+          "format": "decimal",
+          "unit": "psia"
+        },
+        {
+          "id": "pressure_incheshg",
+          "label": "Atmospheric Pressure (inches Hg)",
+          "formula": "101325 * Math.pow(1 - 2.25577e-5 * inputs.altitude_m, 5.25588) / 3386.39",
+          "format": "decimal",
+          "unit": "inches Hg"
+        },
+        {
+          "id": "pressure_mmhg",
+          "label": "Atmospheric Pressure (mm Hg)",
+          "formula": "101325 * Math.pow(1 - 2.25577e-5 * inputs.altitude_m, 5.25588) / 133.322",
+          "format": "decimal",
+          "unit": "mm Hg"
+        },
+        {
+          "id": "pressure_kgcm2",
+          "label": "Atmospheric Pressure (kg/cm²)",
+          "formula": "101325 * Math.pow(1 - 2.25577e-5 * inputs.altitude_m, 5.25588) / 98066.5",
+          "format": "decimal",
+          "unit": "kg/cm²"
+        }
+      ]
+    }
+  ]
+}

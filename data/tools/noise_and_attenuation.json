@@ -1,0 +1,43 @@
+{
+  "id": "noise_and_attenuation",
+  "title": "Noise and Attenuation",
+  "description": "Noise is usually defined as unwanted sound - noise, noise generation, silencers and attenuation in HVAC systems.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Description",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Noise Level",
+          "Sound pressure level",
+          "dB",
+          "dB"
+        ],
+        [
+          "Attenuation",
+          "Reduction in sound level",
+          "dB",
+          "dB"
+        ],
+        [
+          "Frequency",
+          "Sound frequency",
+          "Hz",
+          "Hz"
+        ],
+        [
+          "Silencer Efficiency",
+          "Effectiveness of noise reduction",
+          "%",
+          "%"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "id": "salinity_of_water",
+  "title": "Salinity of Water",
+  "description": "Salinity - salt content - of fresh, brackish and sea water. Calculate and analyze dissolved salt content in various water types.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Salinity of Water\n\nSalinity is the saltiness or measure of dissolved salt in water.\n\n**Standard Conversion:**\n- 35 g dissolved salt / kg sea water = 35 ppt = 35 o/oo = 3.5% = 35000 ppm = 35000 mg/l\n\n## Water Type Classifications by Salinity (ppm)\n\n| Water Type | Salinity Range (ppm) |\n|---|---|\n| Fresh Water (City Water) | < 100 |\n| Water Supply | < 500 |\n| Drinking Water (US Limit) | < 1,000 |\n| Agriculture Irrigation | < 2,000 |\n| Brackish Water (Mild) | 1,000 - 5,000 |\n| Brackish Water (Moderate) | 5,000 - 15,000 |\n| Brackish Water (Heavy) | 15,000 - 35,000 |\n| Seawater | 30,000 - 50,000 |\n| Brine | > 50,000 |\n| Dead Sea | 330,000 |"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "salt_concentration",
+          "label": "Salt Concentration",
+          "type": "number",
+          "unit": "ppm",
+          "defaultValue": 35000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ppt",
+          "label": "Salinity (ppt)",
+          "formula": "inputs.salt_concentration / 1000",
+          "unit": "ppt"
+        },
+        {
+          "id": "percent",
+          "label": "Salinity (%)",
+          "formula": "inputs.salt_concentration / 10000",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "mg_per_liter",
+          "label": "Concentration",
+          "formula": "inputs.salt_concentration",
+          "unit": "mg/l",
+          "format": "decimal"
+        },
+        {
+          "id": "grams_per_kg",
+          "label": "Dissolved Salt",
+          "formula": "inputs.salt_concentration / 1000",
+          "unit": "g/kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Mass (gram/kg water)",
+        "Percentage"
+      ],
+      "rows": [
+        [
+          "Pure water",
+          965.31,
+          96.53
+        ],
+        [
+          "Chlorine",
+          19.1,
+          1.91
+        ],
+        [
+          "Sodium",
+          10.62,
+          1.06
+        ],
+        [
+          "Magnesium",
+          1.28,
+          0.13
+        ],
+        [
+          "Sulfur",
+          2.66,
+          0.27
+        ],
+        [
+          "Calcium",
+          0.4,
+          0.04
+        ],
+        [
+          "Potassium",
+          0.38,
+          0.04
+        ],
+        [
+          "Minor constituents",
+          0.24,
+          0.02
+        ],
+        [
+          "Trace constituents",
+          0.01,
+          0
+        ],
+        [
+          "TOTAL",
+          1000,
+          100
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Dissolved Salts in Sea Water Composition",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "item",
+          "formatter": "{b}: {c}g/kg ({d}%)"
+        },
+        "series": [
+          {
+            "type": "pie",
+            "radius": "50%",
+            "data": [
+              {
+                "value": 965.31,
+                "name": "Pure water"
+              },
+              {
+                "value": 19.1,
+                "name": "Chlorine"
+              },
+              {
+                "value": 10.62,
+                "name": "Sodium"
+              },
+              {
+                "value": 1.28,
+                "name": "Magnesium"
+              },
+              {
+                "value": 2.66,
+                "name": "Sulfur"
+              },
+              {
+                "value": 0.4,
+                "name": "Calcium"
+              },
+              {
+                "value": 0.38,
+                "name": "Potassium"
+              },
+              {
+                "value": 0.24,
+                "name": "Minor constituents"
+              },
+              {
+                "value": 0.01,
+                "name": "Trace constituents"
+              }
+            ],
+            "emphasis": {
+              "itemStyle": {
+                "shadowBlur": 10,
+                "shadowOffsetX": 0,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

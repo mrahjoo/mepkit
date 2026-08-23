@@ -1,0 +1,107 @@
+{
+  "id": "stress_in_thin_walled_cylinders_or_tubes",
+  "title": "Stress in Thin-Walled Cylinders or Tubes",
+  "description": "Calculate hoop and longitudinal stresses in thin-walled cylinders or tubes subjected to internal pressure. This tool applies when wall thickness is less than 1/20 of the tube or cylinder diameter.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Stress Calculations for Thin-Walled Cylinders",
+      "inputs": [
+        {
+          "id": "internal_pressure",
+          "label": "Internal Pressure (p)",
+          "type": "number",
+          "unit": "MPa",
+          "defaultValue": 1
+        },
+        {
+          "id": "internal_diameter",
+          "label": "Internal Diameter (d)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 300
+        },
+        {
+          "id": "wall_thickness",
+          "label": "Wall Thickness (t)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hoop_stress",
+          "label": "Hoop (Circumferential) Stress",
+          "formula": "inputs.internal_pressure * inputs.internal_diameter / (2 * inputs.wall_thickness)",
+          "unit": "MPa",
+          "format": "decimal"
+        },
+        {
+          "id": "longitudinal_stress",
+          "label": "Longitudinal (Axial) Stress",
+          "formula": "inputs.internal_pressure * inputs.internal_diameter / (4 * inputs.wall_thickness)",
+          "unit": "MPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Stress Type",
+        "Formula",
+        "Value (MPa)"
+      ],
+      "rows": [
+        [
+          "Hoop Stress (σh)",
+          "p × d / (2 × t)",
+          "outputs.hoop_stress"
+        ],
+        [
+          "Longitudinal Stress (σl)",
+          "p × d / (4 × t)",
+          "outputs.longitudinal_stress"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Stress Comparison Chart",
+      "options": {
+        "title": {
+          "text": "Hoop vs Longitudinal Stress"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Hoop Stress",
+            "Longitudinal Stress"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Stress (MPa)"
+        },
+        "series": [
+          {
+            "name": "Stress",
+            "data": [
+              "outputs.hoop_stress",
+              "outputs.longitudinal_stress"
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

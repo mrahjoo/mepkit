@@ -1,0 +1,45 @@
+{
+  "id": "radiation___surface__emissivity_coefficients",
+  "title": "Radiation - Surface Emissivity Coefficients",
+  "description": "Radiation emissivity of common materials like water, ice, snow, grass and more. The emissivity coefficient indicates the radiation of heat from a body according to the Stefan-Boltzmann Law, compared with the radiation of heat from an ideal black body where the emissivity coefficient ε = 1.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Emissivity Coefficient - ε -"
+      ],
+      "rows": [
+        [
+          "Water (0 - 100 °C)",
+          "0.95 - 0.963"
+        ],
+        [
+          "Ice",
+          "0.96 - 0.99"
+        ],
+        [
+          "Snow",
+          "0.96 - 0.98"
+        ],
+        [
+          "Sand",
+          "0.9"
+        ],
+        [
+          "Granite",
+          "0.96"
+        ],
+        [
+          "Green Grass",
+          "0.975 - 0.986"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About Emissivity Coefficients\n\nThe emissivity coefficient - **ε** - indicates the radiation of heat from a body according to the **Stefan-Boltzmann Law**, compared with the radiation of heat from an ideal **black body** where the emissivity coefficient **ε = 1**.\n\nEmissivity values range from 0 to 1, where:\n- **ε = 1** represents a perfect black body (ideal radiator)\n- **ε = 0** represents a perfect reflector (no radiation)\n- Materials typically have values between 0.8 and 0.99\n\n### Key Points:\n- Higher emissivity means the material is a better radiator\n- Most natural materials have high emissivity coefficients (0.9+)\n- Emissivity can vary with temperature, surface condition, and wavelength"
+    }
+  ]
+}

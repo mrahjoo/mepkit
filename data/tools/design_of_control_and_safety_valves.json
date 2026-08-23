@@ -1,0 +1,12 @@
+{
+  "id": "design_of_control_and_safety_valves",
+  "title": "Design of Control and Safety Valves",
+  "description": "Sizing and dimensions of control valves & equipment in steam and condensate systems.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Design of Control and Safety Valves\n\nThis tool assists in the sizing and dimensions of control valves & equipment in steam and condensate systems.\n\n## Features:\n- Valve sizing calculations\n- Pressure drop analysis\n- Flow rate determination\n- Equipment dimensioning\n\nEnter your system parameters below to generate sizing recommendations."
+    }
+  ]
+}

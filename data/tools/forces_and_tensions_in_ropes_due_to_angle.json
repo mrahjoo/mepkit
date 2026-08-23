@@ -1,0 +1,172 @@
+{
+  "id": "forces_and_tensions_in_ropes_due_to_angle",
+  "title": "Forces and Tensions in Ropes due to Angle",
+  "description": "Reduced load capacities in ropes, cables or lines - due to acting angle. Calculate increased force or tension in a rope or cable based on angles and load.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Rope Angle with Load (degrees)",
+        "Angle β (degrees)",
+        "Increased Force or Tension Factor θ"
+      ],
+      "rows": [
+        [
+          0,
+          90,
+          1
+        ],
+        [
+          5,
+          85,
+          1
+        ],
+        [
+          10,
+          80,
+          1.02
+        ],
+        [
+          15,
+          75,
+          1.04
+        ],
+        [
+          20,
+          70,
+          1.07
+        ],
+        [
+          25,
+          65,
+          1.1
+        ],
+        [
+          30,
+          60,
+          1.16
+        ],
+        [
+          35,
+          55,
+          1.22
+        ],
+        [
+          40,
+          50,
+          1.31
+        ],
+        [
+          45,
+          45,
+          1.41
+        ],
+        [
+          50,
+          40,
+          1.56
+        ],
+        [
+          55,
+          35,
+          1.74
+        ],
+        [
+          60,
+          30,
+          2
+        ],
+        [
+          65,
+          25,
+          2.37
+        ],
+        [
+          70,
+          20,
+          2.92
+        ],
+        [
+          75,
+          15,
+          3.86
+        ],
+        [
+          80,
+          10,
+          5.76
+        ],
+        [
+          85,
+          5,
+          11.5
+        ]
+      ],
+      "content": "Reference table for increased force or tension factors based on rope angle with load"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "height",
+          "label": "Vertical Distance (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3.1
+        },
+        {
+          "id": "depth",
+          "label": "Horizontal Distance (d)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 4.3
+        },
+        {
+          "id": "load",
+          "label": "Load (F)",
+          "type": "number",
+          "unit": "kN",
+          "defaultValue": 500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "angle_alpha",
+          "label": "Angle α",
+          "formula": "Math.atan(inputs.height / inputs.depth) * 180 / Math.PI",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "angle_beta",
+          "label": "Angle β",
+          "formula": "Math.atan(inputs.depth / inputs.height) * 180 / Math.PI",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "tension_factor",
+          "label": "Tension Factor θ",
+          "formula": "1 / Math.cos(Math.atan(inputs.height / inputs.depth))",
+          "format": "decimal"
+        },
+        {
+          "id": "rope_force",
+          "label": "Force in Rope (Frope)",
+          "formula": "(1 / Math.cos(Math.atan(inputs.height / inputs.depth))) * inputs.load",
+          "unit": "kN",
+          "format": "decimal"
+        },
+        {
+          "id": "beam_force",
+          "label": "Force in Beam (Fbeam)",
+          "formula": "Math.sqrt(Math.pow((1 / Math.cos(Math.atan(inputs.height / inputs.depth))) * inputs.load, 2) + Math.pow(inputs.load, 2))",
+          "unit": "kN",
+          "format": "decimal"
+        }
+      ],
+      "content": "Calculate the forces and tensions in ropes based on angle and load"
+    }
+  ]
+}

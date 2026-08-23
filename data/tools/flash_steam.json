@@ -1,0 +1,109 @@
+{
+  "id": "flash_steam",
+  "title": "Flash Steam",
+  "description": "Generation of flash steam in steam and condensate systems. Thermodynamic fundamentals, heat loss, energy recovery and more.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Flash Steam Calculator\n\nThis tool helps you calculate the generation of flash steam in steam and condensate systems.\n\n### Key Concepts:\n- **Flash Steam**: Steam produced when high-pressure condensate is exposed to lower pressure\n- **Thermodynamic Fundamentals**: Based on saturation properties at different pressures\n- **Energy Recovery**: Harness waste heat from condensate return systems\n\n### How it works:\n1. Enter the condensate mass flow rate\n2. Specify the initial and final pressures\n3. The calculator determines the quality and percentage of flash steam generated\n4. Calculate energy recovery potential"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "condensate_flow",
+          "label": "Condensate Mass Flow Rate",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/h"
+        },
+        {
+          "id": "initial_pressure",
+          "label": "Initial Pressure",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "bar"
+        },
+        {
+          "id": "final_pressure",
+          "label": "Final Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bar"
+        },
+        {
+          "id": "condensate_temp_drop",
+          "label": "Temperature Drop Factor",
+          "type": "number",
+          "defaultValue": 0.85,
+          "unit": "factor"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flash_steam_percentage",
+          "label": "Flash Steam Percentage",
+          "formula": "(inputs.condensate_flow * inputs.condensate_temp_drop * (inputs.initial_pressure - inputs.final_pressure) / inputs.initial_pressure) * 100 / inputs.condensate_flow",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "flash_steam_mass",
+          "label": "Flash Steam Mass Flow",
+          "formula": "inputs.condensate_flow * ((inputs.condensate_flow * inputs.condensate_temp_drop * (inputs.initial_pressure - inputs.final_pressure) / inputs.initial_pressure) * 100 / inputs.condensate_flow) / 100",
+          "unit": "kg/h",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_recovery",
+          "label": "Energy Recovery Potential",
+          "formula": "inputs.flash_steam_mass * 2674.9",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Flash Steam Generation vs Pressure Drop"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0.5 bar",
+            "1 bar",
+            "2 bar",
+            "3 bar",
+            "4 bar",
+            "5 bar"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Flash Steam %"
+        },
+        "series": [
+          {
+            "name": "Flash Steam Generation",
+            "data": [
+              12.5,
+              15.2,
+              18.7,
+              21.3,
+              23.8,
+              25.9
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

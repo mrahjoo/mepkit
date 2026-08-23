@@ -1,0 +1,67 @@
+{
+  "id": "thermodynamics",
+  "title": "Thermodynamics",
+  "description": "Calculate heat, work, temperature and energy. The thermodynamics of steam and condensate systems. Water and Ice properties.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Symbol",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Temperature",
+          "T",
+          "°C",
+          "Temperature of the substance"
+        ],
+        [
+          "Pressure",
+          "P",
+          "bar",
+          "Pressure of the substance"
+        ],
+        [
+          "Heat Capacity",
+          "c",
+          "kJ/(kg·K)",
+          "Heat capacity at constant pressure"
+        ],
+        [
+          "Density",
+          "ρ",
+          "kg/m³",
+          "Density of the substance"
+        ],
+        [
+          "Enthalpy",
+          "h",
+          "kJ/kg",
+          "Specific enthalpy"
+        ],
+        [
+          "Entropy",
+          "s",
+          "kJ/(kg·K)",
+          "Specific entropy"
+        ],
+        [
+          "Internal Energy",
+          "u",
+          "kJ/kg",
+          "Specific internal energy"
+        ],
+        [
+          "Quality",
+          "x",
+          "-",
+          "Dryness fraction (0-1)"
+        ]
+      ]
+    }
+  ]
+}

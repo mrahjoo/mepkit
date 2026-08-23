@@ -1,0 +1,104 @@
+{
+  "id": "fixtures_hot_water_consumption",
+  "title": "Fixtures Hot Water Consumption",
+  "description": "Hot water consumption of fixtures like basins, showers, sinks and baths.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Fixture",
+        "Consumption (liter/h)"
+      ],
+      "rows": [
+        [
+          "Basin",
+          80
+        ],
+        [
+          "Shower",
+          160
+        ],
+        [
+          "Sink",
+          160
+        ],
+        [
+          "Bath",
+          300
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Calculate total hot water consumption by fixture count",
+      "inputs": [
+        {
+          "id": "basins",
+          "label": "Number of Basins",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "units"
+        },
+        {
+          "id": "showers",
+          "label": "Number of Showers",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "units"
+        },
+        {
+          "id": "sinks",
+          "label": "Number of Sinks",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "units"
+        },
+        {
+          "id": "baths",
+          "label": "Number of Baths",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "units"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "basins_consumption",
+          "label": "Basins Consumption",
+          "formula": "inputs.basins * 80",
+          "unit": "liter/h",
+          "format": "decimal"
+        },
+        {
+          "id": "showers_consumption",
+          "label": "Showers Consumption",
+          "formula": "inputs.showers * 160",
+          "unit": "liter/h",
+          "format": "decimal"
+        },
+        {
+          "id": "sinks_consumption",
+          "label": "Sinks Consumption",
+          "formula": "inputs.sinks * 160",
+          "unit": "liter/h",
+          "format": "decimal"
+        },
+        {
+          "id": "baths_consumption",
+          "label": "Baths Consumption",
+          "formula": "inputs.baths * 300",
+          "unit": "liter/h",
+          "format": "decimal"
+        },
+        {
+          "id": "total_consumption",
+          "label": "Total Hot Water Consumption",
+          "formula": "(inputs.basins * 80) + (inputs.showers * 160) + (inputs.sinks * 160) + (inputs.baths * 300)",
+          "unit": "liter/h",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

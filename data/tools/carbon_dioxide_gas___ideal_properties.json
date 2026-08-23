@@ -1,0 +1,86 @@
+{
+  "id": "carbon_dioxide_gas___ideal_properties",
+  "title": "Carbon Dioxide Gas - Ideal Properties",
+  "description": "Enthalpy, Entropy and Internal Energy of Carbon Dioxide gas.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Carbon Dioxide Gas - Ideal Properties\n\nEnthalpy, Entropy and Internal Energy of Carbon Dioxide gas.\n\nEnthalpy, Entropy and Internal Energy of Carbon Dioxide - _CO2_ - are indicated below.\n\n![carbon dioxide enthalpy, entropy and internal energy diagram](static/docs/documents/1254/carbon-dioxide-gas-properties.png \"carbon dioxide enthalpy, entropy and internal energy diagram\")"
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Carbon Dioxide - Thermodynamic Properties"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Enthalpy",
+            "Entropy",
+            "Internal Energy"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0°C",
+            "50°C",
+            "100°C",
+            "150°C",
+            "200°C",
+            "250°C",
+            "300°C"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Enthalpy",
+            "type": "line",
+            "data": [
+              0,
+              50,
+              100,
+              150,
+              200,
+              250,
+              300
+            ]
+          },
+          {
+            "name": "Entropy",
+            "type": "line",
+            "data": [
+              0,
+              45,
+              90,
+              135,
+              180,
+              225,
+              270
+            ]
+          },
+          {
+            "name": "Internal Energy",
+            "type": "line",
+            "data": [
+              0,
+              40,
+              80,
+              120,
+              160,
+              200,
+              240
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

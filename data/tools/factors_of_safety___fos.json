@@ -1,0 +1,126 @@
+{
+  "id": "factors_of_safety___fos",
+  "title": "Factors of Safety - FOS",
+  "description": "Calculate the Factor of Safety (FOS) for structural and mechanical engineering applications. FOS is expressed as the ratio of failure load or stress to allowable load or stress, helping engineers ensure safe design margins.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Factors of Safety - FOS Calculator\n\nFactors of Safety are used in engineering design to ensure structural integrity and safety. The basic formulas are:\n\n**Formula 1 - Load Based:**\n- FOS = Ffail / Fallow\n\n**Formula 2 - Normal Stress Based:**\n- FOS = σfail / σallow\n\n**Formula 3 - Shear Stress Based:**\n- FOS = τfail / τallow\n\nWhere:\n- FOS = Factor of Safety\n- Ffail / σfail / τfail = failure load/stress\n- Fallow / σallow / τallow = allowable load/stress"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "calculation_type",
+          "label": "Calculation Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "load",
+              "label": "FOS from Load (Ffail / Fallow)"
+            },
+            {
+              "value": "normal_stress",
+              "label": "FOS from Normal Stress (σfail / σallow)"
+            },
+            {
+              "value": "shear_stress",
+              "label": "FOS from Shear Stress (τfail / τallow)"
+            }
+          ],
+          "defaultValue": "load"
+        },
+        {
+          "id": "failure_value",
+          "label": "Failure Load/Stress",
+          "type": "number",
+          "unit": "N or N/m²"
+        },
+        {
+          "id": "allowable_value",
+          "label": "Allowable Load/Stress",
+          "type": "number",
+          "unit": "N or N/m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "fos_result",
+          "label": "Factor of Safety (FOS)",
+          "formula": "inputs.failure_value / inputs.allowable_value",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Equipment",
+        "Factor of Safety - FOS"
+      ],
+      "rows": [
+        [
+          "Aircraft components",
+          "1.5 - 2.5"
+        ],
+        [
+          "Boilers",
+          "3.5 - 6"
+        ],
+        [
+          "Bolts",
+          "8.5"
+        ],
+        [
+          "Cast-iron wheels",
+          "20"
+        ],
+        [
+          "Engine components",
+          "6 - 8"
+        ],
+        [
+          "Heavy duty shafting",
+          "10 - 12"
+        ],
+        [
+          "Lifting equipment - hooks",
+          "8 - 9"
+        ],
+        [
+          "Pressure vessels",
+          "3.5 - 6"
+        ],
+        [
+          "Turbine components - static",
+          "6 - 8"
+        ],
+        [
+          "Turbine components - rotating",
+          "2 - 3"
+        ],
+        [
+          "Spring, large heavy-duty",
+          "4.5"
+        ],
+        [
+          "Structural steel work in buildings",
+          "4 - 6"
+        ],
+        [
+          "Structural steel work in bridges",
+          "5 - 7"
+        ],
+        [
+          "Wire ropes",
+          "8 - 9"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## General Recommendations for FOS\n\n| Application Type | Material Reliability | Conditions | Recommended FOS |\n|---|---|---|---|\n| Highly reliable materials | Highly reliable | Not severe, weight-critical | 1.3 - 1.5 |\n| Reliable materials | Reliable | Not severe | 1.5 - 2 |\n| Ordinary materials | Ordinary | Not severe | 2 - 2.5 |\n| Less tried/brittle materials | Less reliable | Not severe | 2.5 - 3 |\n| Unreliable properties or reliable materials | Variable | Severe or difficult | 3 - 4 |\n\nNote: FOS values are often specified in technical standards and design codes, particularly for statutory items such as cranes and pressure vessels."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "sound_attenuation___main_duct_to_branch_ducts",
+  "title": "Sound Attenuation - Main Duct to Branch Ducts",
+  "description": "Calculate sound attenuation when main ducts are split into branches. The sound power level reduction is based on the branch area relative to the main duct area using the formula: dLN = 10 log(Ab / Am)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sound Attenuation - Main Duct to Branch Ducts\n\nWhen main ducts are split into branches, the sound power level (*Lw*) is reduced according to the size of the branch or amount of air to the branch.\n\n### Formula\n\n**dLN = 10 log(Ab / Am)**\n\nWhere:\n- **dLN** = Sound attenuation (dB)\n- **Ab** = Branch area (m², ft²)\n- **Am** = Main duct area (m², ft²)\n\n### How it Works\n\nThe attenuation depends on the ratio of the branch duct area to the main duct area. A smaller branch receives more attenuation (reduction in sound power level)."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "branch_area",
+          "label": "Branch Area (Ab)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 0.2
+        },
+        {
+          "id": "main_area",
+          "label": "Main Duct Area (Am)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "attenuation",
+          "label": "Sound Attenuation (dLN)",
+          "unit": "dB",
+          "formula": "10 * Math.log10(inputs.branch_area / inputs.main_area)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Description",
+        "Branch Area Ratio",
+        "Sound Attenuation (dB)"
+      ],
+      "rows": [
+        [
+          "Branch receives 20% of air",
+          "20%",
+          "−7.0"
+        ],
+        [
+          "Branch receives 50% of air",
+          "50%",
+          "−3.0"
+        ],
+        [
+          "Branch receives 80% of air",
+          "80%",
+          "−0.97"
+        ],
+        [
+          "Main duct continues at 80%",
+          "80%",
+          "−0.97"
+        ],
+        [
+          "Main duct continues at 50%",
+          "50%",
+          "−3.0"
+        ],
+        [
+          "Main duct continues at 20%",
+          "20%",
+          "−7.0"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Example\n\nIn a typical scenario where **20% of the air** goes to the branch duct and **80%** continues in the main duct:\n\n- **Branch duct area** = 20% of main duct area\n- **Main duct area (after branch)** = 80% of main duct area\n\n**Sound attenuation in branch:**\n- dLN_branch = 10 log(0.20 / 1.0) = **−7 dB**\n\n**Sound attenuation in main duct:**\n- dLN_main = 10 log(0.80 / 1.0) = **−0.97 dB**\n\nThe branch duct experiences greater attenuation due to its smaller area."
+    }
+  ]
+}

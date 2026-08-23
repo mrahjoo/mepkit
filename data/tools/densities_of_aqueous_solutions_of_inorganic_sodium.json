@@ -1,0 +1,483 @@
+{
+  "id": "densities_of_aqueous_solutions_of_inorganic_sodium",
+  "title": "Densities of Aqueous Solutions of Inorganic Sodium Salts",
+  "description": "Calculate and visualize the density of aqueous solutions of inorganic sodium salts at 20°C. Select a sodium salt and concentration (in wt%, mol/kg water, or mol/liter) to determine the solution density and related concentration metrics.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "sodium_salt_density_calculator",
+      "headers": [
+        "Sodium Salt Density Calculator"
+      ],
+      "content": "Select a sodium salt and enter the concentration to calculate the solution density at 20°C.",
+      "inputs": [
+        {
+          "id": "salt_type",
+          "label": "Sodium Salt",
+          "type": "select",
+          "options": [
+            {
+              "value": "sodium_acetate",
+              "label": "Sodium acetate"
+            },
+            {
+              "value": "sodium_bromide",
+              "label": "Sodium bromide"
+            },
+            {
+              "value": "sodium_carbonate",
+              "label": "Sodium carbonate"
+            },
+            {
+              "value": "sodium_chloride",
+              "label": "Sodium chloride"
+            },
+            {
+              "value": "sodium_citrate_dihydrate",
+              "label": "Sodium citrate dihydrate"
+            },
+            {
+              "value": "sodium_dihydrogen_phosphate",
+              "label": "Sodium dihydrogen phosphate"
+            },
+            {
+              "value": "sodium_hydrogen_carbonate",
+              "label": "Sodium hydrogen carbonate"
+            },
+            {
+              "value": "sodium_hydrogen_phosphate",
+              "label": "Sodium hydrogen phosphate"
+            },
+            {
+              "value": "sodium_hydroxide",
+              "label": "Sodium hydroxide"
+            },
+            {
+              "value": "sodium_nitrate",
+              "label": "Sodium nitrate"
+            },
+            {
+              "value": "sodium_phosphate",
+              "label": "Sodium phosphate"
+            },
+            {
+              "value": "sodium_sulfate",
+              "label": "Sodium sulfate"
+            },
+            {
+              "value": "sodium_thiosulfate",
+              "label": "Sodium thiosulfate"
+            }
+          ]
+        },
+        {
+          "id": "concentration_unit",
+          "label": "Concentration Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "wt_percent",
+              "label": "Mass % (wt%)"
+            },
+            {
+              "value": "mol_kg",
+              "label": "mol/kg (Molality)"
+            },
+            {
+              "value": "mol_liter",
+              "label": "mol/liter (Molarity)"
+            }
+          ]
+        },
+        {
+          "id": "concentration_value",
+          "label": "Concentration",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "varies"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_g_cm3",
+          "label": "Density at 20°C",
+          "unit": "g/cm³",
+          "format": "decimal",
+          "formula": "inputs.concentration_value"
+        },
+        {
+          "id": "molality",
+          "label": "Molality",
+          "unit": "mol/kg water",
+          "format": "decimal",
+          "formula": "inputs.concentration_value"
+        },
+        {
+          "id": "molarity",
+          "label": "Molarity",
+          "unit": "mol/liter",
+          "format": "decimal",
+          "formula": "inputs.concentration_value"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "density_data_table",
+      "headers": [
+        "Mass %",
+        "Sodium acetate",
+        "Sodium bromide",
+        "Sodium carbonate",
+        "Sodium chloride",
+        "Sodium citrate dihydrate",
+        "Sodium dihydrogen phosphate",
+        "Sodium hydrogen carbonate",
+        "Sodium hydrogen phosphate",
+        "Sodium hydroxide",
+        "Sodium nitrate",
+        "Sodium phosphate",
+        "Sodium sulfate",
+        "Sodium thiosulfate"
+      ],
+      "content": "Density of Aqueous Solutions at 20°C (g/cm³)",
+      "rows": [
+        [
+          "1",
+          "1.0034",
+          "1.006",
+          "1.0086",
+          "1.0053",
+          "1.0049",
+          "1.0056",
+          "1.0054",
+          "1.0082",
+          "1.0095",
+          "1.005",
+          "1.01",
+          "1.0071",
+          "1.0065"
+        ],
+        [
+          "5",
+          "1.0234",
+          "1.038",
+          "1.0502",
+          "1.034",
+          "1.0331",
+          "1.0358",
+          "1.0337",
+          "1.048",
+          "1.0538",
+          "1.0322",
+          "1.0579",
+          "1.0436",
+          "1.0399"
+        ],
+        [
+          "10",
+          "1.0495",
+          "1.0803",
+          "1.1029",
+          "1.0707",
+          "1.0708",
+          "1.0747",
+          "—",
+          "—",
+          "1.1089",
+          "1.0674",
+          "—",
+          "1.0905",
+          "1.0827"
+        ],
+        [
+          "20",
+          "1.1050",
+          "1.1745",
+          "—",
+          "1.1478",
+          "1.1492",
+          "1.1576",
+          "—",
+          "—",
+          "1.2192",
+          "1.1429",
+          "—",
+          "1.1907",
+          "1.174"
+        ],
+        [
+          "30",
+          "1.1602",
+          "1.2842",
+          "—",
+          "—",
+          "—",
+          "1.2488",
+          "—",
+          "—",
+          "1.3277",
+          "1.2256",
+          "—",
+          "—",
+          "1.2739"
+        ],
+        [
+          "40",
+          "—",
+          "1.4138",
+          "—",
+          "—",
+          "—",
+          "1.3493",
+          "—",
+          "—",
+          "1.4299",
+          "1.3175",
+          "—",
+          "—",
+          "1.3827"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "molality_conversion_table",
+      "headers": [
+        "Mass %",
+        "Sodium acetate",
+        "Sodium bromide",
+        "Sodium carbonate",
+        "Sodium chloride",
+        "Sodium citrate dihydrate",
+        "Sodium dihydrogen phosphate",
+        "Sodium hydrogen carbonate",
+        "Sodium hydrogen phosphate",
+        "Sodium hydroxide",
+        "Sodium nitrate",
+        "Sodium phosphate",
+        "Sodium sulfate",
+        "Sodium thiosulfate"
+      ],
+      "content": "Molality Conversion at 20°C (mol/kg water)",
+      "rows": [
+        [
+          "1",
+          "0.123",
+          "0.098",
+          "0.095",
+          "0.173",
+          "0.039",
+          "0.084",
+          "0.12",
+          "0.071",
+          "0.253",
+          "0.119",
+          "0.062",
+          "0.071",
+          "0.064"
+        ],
+        [
+          "5",
+          "0.642",
+          "0.512",
+          "0.497",
+          "0.901",
+          "0.204",
+          "0.439",
+          "0.627",
+          "0.371",
+          "1.316",
+          "0.619",
+          "0.321",
+          "0.371",
+          "0.333"
+        ],
+        [
+          "10",
+          "1.354",
+          "1.08",
+          "1.048",
+          "1.901",
+          "0.431",
+          "0.926",
+          "—",
+          "—",
+          "2.778",
+          "1.307",
+          "—",
+          "0.782",
+          "0.703"
+        ],
+        [
+          "20",
+          "3.047",
+          "2.43",
+          "—",
+          "4.278",
+          "0.969",
+          "2.084",
+          "—",
+          "—",
+          "6.25",
+          "2.941",
+          "—",
+          "1.76",
+          "1.581"
+        ],
+        [
+          "30",
+          "5.224",
+          "4.165",
+          "—",
+          "—",
+          "—",
+          "3.572",
+          "—",
+          "—",
+          "10.715",
+          "5.042",
+          "—",
+          "—",
+          "2.711"
+        ],
+        [
+          "40",
+          "—",
+          "6.479",
+          "—",
+          "—",
+          "—",
+          "5.557",
+          "—",
+          "—",
+          "16.668",
+          "7.844",
+          "—",
+          "—",
+          "4.216"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "molarity_conversion_table",
+      "headers": [
+        "Mass %",
+        "Sodium acetate",
+        "Sodium bromide",
+        "Sodium carbonate",
+        "Sodium chloride",
+        "Sodium citrate dihydrate",
+        "Sodium dihydrogen phosphate",
+        "Sodium hydrogen carbonate",
+        "Sodium hydrogen phosphate",
+        "Sodium hydroxide",
+        "Sodium nitrate",
+        "Sodium phosphate",
+        "Sodium sulfate",
+        "Sodium thiosulfate"
+      ],
+      "content": "Molarity Conversion at 20°C (mol/liter solution)",
+      "rows": [
+        [
+          "1",
+          "0.122",
+          "0.098",
+          "0.095",
+          "0.172",
+          "0.039",
+          "0.084",
+          "0.12",
+          "0.071",
+          "0.252",
+          "0.118",
+          "0.062",
+          "0.071",
+          "0.064"
+        ],
+        [
+          "5",
+          "0.624",
+          "0.504",
+          "0.495",
+          "0.885",
+          "0.2",
+          "0.432",
+          "0.615",
+          "0.369",
+          "1.317",
+          "0.607",
+          "0.323",
+          "0.367",
+          "0.329"
+        ],
+        [
+          "10",
+          "1.279",
+          "1.05",
+          "1.041",
+          "1.832",
+          "0.415",
+          "0.896",
+          "—",
+          "—",
+          "2.772",
+          "1.256",
+          "—",
+          "0.768",
+          "0.685"
+        ],
+        [
+          "20",
+          "2.694",
+          "2.283",
+          "—",
+          "3.928",
+          "0.891",
+          "1.93",
+          "—",
+          "—",
+          "6.096",
+          "2.6989",
+          "—",
+          "1.677",
+          "1.485"
+        ],
+        [
+          "30",
+          "4.243",
+          "3.744",
+          "—",
+          "—",
+          "—",
+          "3.123",
+          "—",
+          "—",
+          "9.958",
+          "4.326",
+          "—",
+          "—",
+          "2.417"
+        ],
+        [
+          "40",
+          "—",
+          "5.496",
+          "—",
+          "—",
+          "—",
+          "4.499",
+          "—",
+          "—",
+          "14.3",
+          "6.2",
+          "—",
+          "—",
+          "3.48"
+        ]
+      ]
+    }
+  ]
+}

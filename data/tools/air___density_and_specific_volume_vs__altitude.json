@@ -1,0 +1,266 @@
+{
+  "id": "air___density_and_specific_volume_vs__altitude",
+  "title": "Air - Density and Specific Volume vs. Altitude",
+  "description": "Calculate and visualize air density and specific volume as functions of altitude above sea level. The tool provides pressure-altitude relationships, density corrections, and volume correction factors based on standard atmospheric conditions.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "density_calculator",
+      "content": "Air Density and Specific Volume Calculator",
+      "headers": [
+        "Inputs",
+        "Outputs"
+      ],
+      "inputs": [
+        {
+          "id": "altitude_m",
+          "label": "Altitude",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "temperature_c",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "reference_density",
+          "label": "Reference Density (at sea level, 20°C)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.204
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_kpa",
+          "label": "Atmospheric Pressure",
+          "unit": "kPa",
+          "formula": "101.325 * (1 - 0.0065 * inputs.altitude_m / 288.15) ^ 5.255",
+          "format": "decimal"
+        },
+        {
+          "id": "density_kgm3",
+          "label": "Air Density",
+          "unit": "kg/m³",
+          "formula": "inputs.reference_density * (1 - 0.0065 * inputs.altitude_m / 288.15) ^ 4.255 * 293.15 / (inputs.temperature_c + 273.15)",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_volume",
+          "label": "Specific Volume",
+          "unit": "m³/kg",
+          "formula": "1 / (inputs.reference_density * (1 - 0.0065 * inputs.altitude_m / 288.15) ^ 4.255 * 293.15 / (inputs.temperature_c + 273.15))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "altitude_pressure_table",
+      "content": "Air Pressure vs. Altitude (SI Units)",
+      "headers": [
+        "Altitude (m)",
+        "Pressure (mmHg)",
+        "Pressure (kPa)"
+      ],
+      "rows": [
+        [
+          0,
+          760,
+          101.3
+        ],
+        [
+          75,
+          753,
+          100.4
+        ],
+        [
+          150,
+          746,
+          99.5
+        ],
+        [
+          250,
+          739,
+          98.5
+        ],
+        [
+          300,
+          733,
+          97.7
+        ],
+        [
+          450,
+          719,
+          95.9
+        ],
+        [
+          600,
+          706,
+          94.1
+        ],
+        [
+          750,
+          693,
+          92.4
+        ],
+        [
+          900,
+          681,
+          90.8
+        ],
+        [
+          1000,
+          668,
+          89.1
+        ],
+        [
+          1200,
+          656,
+          87.5
+        ],
+        [
+          1350,
+          644,
+          85.9
+        ],
+        [
+          1500,
+          632,
+          84.3
+        ],
+        [
+          1800,
+          609,
+          81.2
+        ],
+        [
+          2100,
+          586,
+          78.1
+        ],
+        [
+          2400,
+          564,
+          75.2
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "volume_correction_table",
+      "content": "Volume Correction Factor vs. Altitude",
+      "headers": [
+        "Altitude (m)",
+        "Altitude (ft)",
+        "Volume Correction Factor"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          480,
+          1600,
+          1.05
+        ],
+        [
+          990,
+          3300,
+          1.11
+        ],
+        [
+          1500,
+          5000,
+          1.17
+        ],
+        [
+          1980,
+          6600,
+          1.24
+        ],
+        [
+          2460,
+          8200,
+          1.31
+        ],
+        [
+          2970,
+          9900,
+          1.39
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "altitude_pressure_chart",
+      "content": "Pressure vs. Altitude",
+      "options": {
+        "title": {
+          "text": "Air Pressure vs. Altitude"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Altitude (m)",
+          "data": [
+            0,
+            75,
+            150,
+            250,
+            300,
+            450,
+            600,
+            750,
+            900,
+            1000,
+            1200,
+            1350,
+            1500,
+            1800,
+            2100,
+            2400
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Pressure (kPa)"
+        },
+        "series": [
+          {
+            "data": [
+              101.3,
+              100.4,
+              99.5,
+              98.5,
+              97.7,
+              95.9,
+              94.1,
+              92.4,
+              90.8,
+              89.1,
+              87.5,
+              85.9,
+              84.3,
+              81.2,
+              78.1,
+              75.2
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Pressure (kPa)"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

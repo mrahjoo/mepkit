@@ -1,0 +1,113 @@
+{
+  "id": "compressed_air___laboratory_consumption",
+  "title": "Compressed Air - Laboratory Consumption",
+  "description": "Compressed air supply to laboratories. Calculate the required compressed air capacity based on the number of outlets, accounting for diversity and simultaneous use factors.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Number of Outlets",
+        "Demand (scfm)",
+        "Demand (nl/s)"
+      ],
+      "rows": [
+        [
+          1,
+          1,
+          0.5
+        ],
+        [
+          2,
+          1.8,
+          0.9
+        ],
+        [
+          3,
+          2.4,
+          1.2
+        ],
+        [
+          4,
+          3,
+          1.5
+        ],
+        [
+          5,
+          3.5,
+          1.75
+        ],
+        [
+          6,
+          4,
+          2
+        ],
+        [
+          7,
+          4.4,
+          2.2
+        ],
+        [
+          8,
+          4.8,
+          2.4
+        ],
+        [
+          9,
+          5.1,
+          2.55
+        ],
+        [
+          10,
+          5.5,
+          2.75
+        ],
+        [
+          15,
+          7,
+          3.5
+        ],
+        [
+          20,
+          8.2,
+          4.1
+        ],
+        [
+          25,
+          9.2,
+          4.6
+        ],
+        [
+          30,
+          10,
+          5
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "num_outlets",
+          "label": "Number of Outlets",
+          "type": "number",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "demand_cfm",
+          "label": "Demand (cfm)",
+          "formula": "inputs.num_outlets * 0.55",
+          "unit": "cfm"
+        },
+        {
+          "id": "demand_nl_s",
+          "label": "Demand (nl/s)",
+          "formula": "inputs.num_outlets * 0.275",
+          "unit": "nl/s"
+        }
+      ]
+    }
+  ]
+}

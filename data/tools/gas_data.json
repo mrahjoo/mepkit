@@ -1,0 +1,12 @@
+{
+  "id": "gas_data",
+  "title": "Gas Data",
+  "description": "We care about your privacy! This tool handles gas data calculations and processing with respect to user privacy and GDPR compliance.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Gas Data\n\nWe care about your privacy!\n\nWhen visiting our site, pre-selected companies may access and use certain information on your device and about this web page to serve relevant ads or personalised content. Please note that ads help keep our service free. Personal data will be processed based on consent in accordance with Art.6(1)(a) of the GDPR framework in [EU law](https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1528874672298&uri=CELEX%3A32016R0679), or as legitimate interest in accordance with Art.6(1)(f) of the same.\n\n### Learn more why you are seeing this\n\nTo offer you free, high-quality content and deliver the best possible user experience on our website, we and our technology partners (1730) require your consent to store and access personal data on your device. This includes using cookies, unique identifiers and information about your browse activity to show you relevant ads.\n\nYou can change or withdraw your consent anytime via our footer link or [privacy policy page](https://www.engineeringtoolbox.com/privacy-policy-d_2228.html)."
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "id": "electric_motors___efficiency",
+  "title": "Electric Motors - Efficiency",
+  "description": "Electrical motor efficiency is the ratio between shaft output power and electrical input power. This tool calculates motor efficiency based on input and output power, and displays NEMA Design B efficiency standards.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Efficiency Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "output_power_w",
+          "label": "Shaft Output Power",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 1000
+        },
+        {
+          "id": "input_power_w",
+          "label": "Electrical Input Power",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 1200
+        },
+        {
+          "id": "output_power_hp",
+          "label": "Shaft Output Power (Alternative)",
+          "type": "number",
+          "unit": "hp",
+          "defaultValue": 1.34
+        }
+      ],
+      "outputs": [
+        {
+          "id": "efficiency_watt",
+          "label": "Motor Efficiency (from Watt)",
+          "formula": "inputs.output_power_w / inputs.input_power_w",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "efficiency_hp",
+          "label": "Motor Efficiency (from Horsepower)",
+          "formula": "(inputs.output_power_hp * 746) / inputs.input_power_w",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "copper_loss",
+          "label": "Copper Loss (example: R=1Ω, I=10A)",
+          "formula": "1 * (10 * 10)",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Power (hp)",
+        "Minimum Nominal Efficiency (%)"
+      ],
+      "rows": [
+        [
+          "1 - 4",
+          78.8
+        ],
+        [
+          "5 - 9",
+          84
+        ],
+        [
+          "10 - 19",
+          85.5
+        ],
+        [
+          "20 - 49",
+          88.5
+        ],
+        [
+          "50 - 99",
+          90.2
+        ],
+        [
+          "100 - 124",
+          91.7
+        ],
+        [
+          "> 125",
+          92.4
+        ]
+      ],
+      "content": "NEMA Design B Electrical Motors - Minimum Efficiency Standards\n\nThese efficiency values apply to Single Speed 1200, 1800, 3600 RPM motors. Open Drip Proof (ODP) or Totally Enclosed Fan Cooled (TEFC) motors 1 hp and larger that operate more than 500 hours per year."
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Power Range (hp)",
+        "Efficiency (%)"
+      ],
+      "rows": [
+        [
+          "1-4",
+          78.8
+        ],
+        [
+          "5-9",
+          84
+        ],
+        [
+          "10-19",
+          85.5
+        ],
+        [
+          "20-49",
+          88.5
+        ],
+        [
+          "50-99",
+          90.2
+        ],
+        [
+          "100-124",
+          91.7
+        ],
+        [
+          ">125",
+          92.4
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Power Range (hp)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Efficiency (%)"
+        },
+        "series": [
+          {
+            "data": [
+              78.8,
+              84,
+              85.5,
+              88.5,
+              90.2,
+              91.7,
+              92.4
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "NEMA Design B Efficiency"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "NEMA Design B Efficiency"
+          ]
+        }
+      }
+    }
+  ]
+}

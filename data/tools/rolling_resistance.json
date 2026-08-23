@@ -1,0 +1,218 @@
+{
+  "id": "rolling_resistance",
+  "title": "Rolling Resistance Calculator",
+  "description": "Calculate the rolling resistance force based on the rolling resistance coefficient and weight of an object. Rolling resistance is the force that resists the motion of a body rolling on a surface.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "rolling_resistance_calc",
+      "headers": [
+        "Rolling Resistance Calculator"
+      ],
+      "content": "Calculate rolling resistance using the formula: Fr = c × W, where W = m × g",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1500
+        },
+        {
+          "id": "rolling_coefficient",
+          "label": "Rolling Resistance Coefficient (c)",
+          "type": "number",
+          "unit": "dimensionless",
+          "defaultValue": 0.03
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight",
+          "label": "Weight (W)",
+          "formula": "inputs.mass * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "rolling_resistance_force",
+          "label": "Rolling Resistance Force (Fr)",
+          "formula": "inputs.rolling_coefficient * inputs.mass * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "rolling_resistance_force_kn",
+          "label": "Rolling Resistance Force (Fr)",
+          "formula": "inputs.rolling_coefficient * inputs.mass * inputs.gravity / 1000",
+          "unit": "kN",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "rolling_coefficients_table",
+      "headers": [
+        "Surface/Material",
+        "Rolling Resistance Coefficient (c)"
+      ],
+      "rows": [
+        [
+          "Railroad steel wheels on steel rails, ball bearings",
+          "0.001-0.002"
+        ],
+        [
+          "Bicycle tire on wooden track",
+          "0.001"
+        ],
+        [
+          "Low resistance tubeless tires",
+          "0.002-0.005"
+        ],
+        [
+          "Bicycle tire on concrete",
+          "0.002"
+        ],
+        [
+          "Bicycle tire on asphalt road",
+          "0.004"
+        ],
+        [
+          "Dirty tram rails",
+          "0.005"
+        ],
+        [
+          "Truck tire on asphalt",
+          "0.006-0.01"
+        ],
+        [
+          "Bicycle tire on rough paved road",
+          "0.008"
+        ],
+        [
+          "Ordinary car tires on concrete, new asphalt",
+          "0.01-0.015"
+        ],
+        [
+          "Car tires on tar or asphalt",
+          "0.02"
+        ],
+        [
+          "Car tires on gravel - rolled new",
+          "0.02"
+        ],
+        [
+          "Car tires on cobbles - large worn",
+          "0.03"
+        ],
+        [
+          "Car tire on solid sand, gravel loose worn",
+          "0.04-0.08"
+        ],
+        [
+          "Car tire on loose sand",
+          "0.2-0.4"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "rolling_resistance_chart",
+      "headers": [
+        "Rolling Resistance vs Mass"
+      ],
+      "content": "This chart shows how rolling resistance force varies with object mass for different rolling coefficients",
+      "options": {
+        "title": {
+          "text": "Rolling Resistance Force vs Mass"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "c = 0.01",
+            "c = 0.02",
+            "c = 0.03",
+            "c = 0.05"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Mass (kg)",
+          "data": [
+            500,
+            1000,
+            1500,
+            2000,
+            2500,
+            3000
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Rolling Resistance (N)"
+        },
+        "series": [
+          {
+            "name": "c = 0.01",
+            "type": "line",
+            "data": [
+              49.05,
+              98.1,
+              147.15,
+              196.2,
+              245.25,
+              294.3
+            ]
+          },
+          {
+            "name": "c = 0.02",
+            "type": "line",
+            "data": [
+              98.1,
+              196.2,
+              294.3,
+              392.4,
+              490.5,
+              588.6
+            ]
+          },
+          {
+            "name": "c = 0.03",
+            "type": "line",
+            "data": [
+              147.15,
+              294.3,
+              441.45,
+              588.6,
+              735.75,
+              882.9
+            ]
+          },
+          {
+            "name": "c = 0.05",
+            "type": "line",
+            "data": [
+              245.25,
+              490.5,
+              735.75,
+              981,
+              1226.25,
+              1471.5
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

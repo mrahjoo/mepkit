@@ -1,0 +1,415 @@
+{
+  "id": "horsepower_required__to_pump_water",
+  "title": "Horsepower Required to Pump Water",
+  "description": "Calculate the water horsepower required to pump water using flow rate and head, or delivered pressure. Includes both imperial and metric unit calculations.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Horsepower Required to Pump Water\n\nEnergy imparted to water by the pump is called _water horsepower_ and can be calculated using two methods:\n\n**Method 1 - Using Flow and Head:**\n- Pwhp = q h SG / (3960 μ)\n- q = flow (gal/min)\n- h = head (ft)\n- SG = specific gravity (1 for water)\n- μ = pump efficiency (decimal)\n\n**Method 2 - Using Delivered Pressure:**\n- Pwhp = q dp / (1715 μ)\n- dp = delivered pressure (psi)\n\n**Metric Units:**\n- P = q h ρ / (6116×10³ μ)\n- q = flow (liter/min)\n- h = head (m)\n- ρ = density (kg/m³)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "calculation_method",
+          "label": "Calculation Method",
+          "type": "select",
+          "options": [
+            {
+              "label": "Imperial - Flow and Head",
+              "value": "imperial_head"
+            },
+            {
+              "label": "Imperial - Delivered Pressure",
+              "value": "imperial_pressure"
+            },
+            {
+              "label": "Metric - Flow and Head",
+              "value": "metric"
+            }
+          ],
+          "defaultValue": "imperial_head"
+        },
+        {
+          "id": "flow_gpm",
+          "label": "Flow Rate (gal/min)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "gal/min"
+        },
+        {
+          "id": "head_ft",
+          "label": "Head (ft)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "ft"
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "pump_efficiency_imperial",
+          "label": "Pump Efficiency",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "decimal (0-1)"
+        },
+        {
+          "id": "delivered_pressure_psi",
+          "label": "Delivered Pressure (psi)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "psi"
+        },
+        {
+          "id": "flow_liter_min",
+          "label": "Flow Rate (liter/min)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "liter/min"
+        },
+        {
+          "id": "head_m",
+          "label": "Head (m)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        },
+        {
+          "id": "density",
+          "label": "Density (kg/m³)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "pump_efficiency_metric",
+          "label": "Pump Efficiency",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "decimal (0-1)"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_horsepower_imperial",
+          "label": "Water Horsepower",
+          "formula": "IF(inputs.calculation_method == 'imperial_head', (inputs.flow_gpm * inputs.head_ft * inputs.specific_gravity) / (3960 * inputs.pump_efficiency_imperial), (inputs.flow_gpm * inputs.delivered_pressure_psi) / (1715 * inputs.pump_efficiency_imperial))",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "power_metric",
+          "label": "Power Required",
+          "formula": "(inputs.flow_liter_min * inputs.head_m * inputs.density) / (6116 * 1000 * inputs.pump_efficiency_metric)",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Height (ft)",
+        "5 gpm",
+        "10 gpm",
+        "15 gpm",
+        "20 gpm",
+        "25 gpm",
+        "30 gpm",
+        "35 gpm",
+        "40 gpm",
+        "50 gpm"
+      ],
+      "rows": [
+        [
+          5,
+          0.00631,
+          0.0126,
+          0.0189,
+          0.0253,
+          0.0316,
+          0.0379,
+          0.0442,
+          0.0505,
+          0.0631
+        ],
+        [
+          10,
+          0.0126,
+          0.0253,
+          0.0379,
+          0.0505,
+          0.0631,
+          0.0758,
+          0.0884,
+          0.101,
+          0.126
+        ],
+        [
+          15,
+          0.0189,
+          0.0379,
+          0.0568,
+          0.0758,
+          0.0947,
+          0.114,
+          0.133,
+          0.152,
+          0.189
+        ],
+        [
+          20,
+          0.0253,
+          0.0505,
+          0.0758,
+          0.101,
+          0.126,
+          0.152,
+          0.177,
+          0.202,
+          0.253
+        ],
+        [
+          25,
+          0.0316,
+          0.0631,
+          0.0947,
+          0.126,
+          0.158,
+          0.189,
+          0.221,
+          0.253,
+          0.316
+        ],
+        [
+          30,
+          0.0379,
+          0.0758,
+          0.114,
+          0.152,
+          0.189,
+          0.227,
+          0.265,
+          0.303,
+          0.379
+        ],
+        [
+          35,
+          0.0442,
+          0.0884,
+          0.133,
+          0.177,
+          0.221,
+          0.265,
+          0.309,
+          0.354,
+          0.442
+        ],
+        [
+          40,
+          0.0505,
+          0.101,
+          0.152,
+          0.202,
+          0.253,
+          0.303,
+          0.354,
+          0.404,
+          0.505
+        ],
+        [
+          45,
+          0.0568,
+          0.114,
+          0.17,
+          0.227,
+          0.284,
+          0.341,
+          0.398,
+          0.455,
+          0.568
+        ],
+        [
+          50,
+          0.0631,
+          0.126,
+          0.189,
+          0.253,
+          0.316,
+          0.379,
+          0.442,
+          0.505,
+          0.631
+        ],
+        [
+          60,
+          0.0758,
+          0.152,
+          0.227,
+          0.303,
+          0.379,
+          0.455,
+          0.53,
+          0.606,
+          0.758
+        ],
+        [
+          70,
+          0.0884,
+          0.177,
+          0.265,
+          0.354,
+          0.442,
+          0.53,
+          0.619,
+          0.707,
+          0.884
+        ],
+        [
+          80,
+          0.101,
+          0.202,
+          0.303,
+          0.404,
+          0.505,
+          0.606,
+          0.707,
+          0.808,
+          1.01
+        ],
+        [
+          90,
+          0.114,
+          0.227,
+          0.341,
+          0.455,
+          0.568,
+          0.682,
+          0.795,
+          0.909,
+          1.14
+        ],
+        [
+          100,
+          0.126,
+          0.253,
+          0.379,
+          0.505,
+          0.631,
+          0.758,
+          0.884,
+          1.01,
+          1.26
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "Power vs. Head and Flow (Ideal Pump Efficiency = 1.0)"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Flow Rate (gpm)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Power (hp)"
+        },
+        "series": [
+          {
+            "name": "5 gpm",
+            "type": "line",
+            "data": [
+              0.00631,
+              0.0126,
+              0.0189,
+              0.0253,
+              0.0316,
+              0.0379,
+              0.0442,
+              0.0505,
+              0.0568,
+              0.0631,
+              0.0758,
+              0.0884,
+              0.101,
+              0.114,
+              0.126
+            ]
+          },
+          {
+            "name": "10 gpm",
+            "type": "line",
+            "data": [
+              0.0126,
+              0.0253,
+              0.0379,
+              0.0505,
+              0.0631,
+              0.0758,
+              0.0884,
+              0.101,
+              0.114,
+              0.126,
+              0.152,
+              0.177,
+              0.202,
+              0.227,
+              0.253
+            ]
+          },
+          {
+            "name": "20 gpm",
+            "type": "line",
+            "data": [
+              0.0253,
+              0.0505,
+              0.0758,
+              0.101,
+              0.126,
+              0.152,
+              0.177,
+              0.202,
+              0.227,
+              0.253,
+              0.303,
+              0.354,
+              0.404,
+              0.455,
+              0.505
+            ]
+          },
+          {
+            "name": "50 gpm",
+            "type": "line",
+            "data": [
+              0.0631,
+              0.126,
+              0.189,
+              0.253,
+              0.316,
+              0.379,
+              0.442,
+              0.505,
+              0.568,
+              0.631,
+              0.758,
+              0.884,
+              1.01,
+              1.14,
+              1.26
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

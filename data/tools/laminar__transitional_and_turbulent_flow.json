@@ -1,0 +1,87 @@
+{
+  "id": "laminar__transitional_and_turbulent_flow",
+  "title": "Laminar, Transitional and Turbulent Flow",
+  "description": "Analyze fluid flow type based on Reynolds Number. Determine whether flow is laminar, transitional, or turbulent in pipes based on Reynolds Number calculations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Laminar, Transitional and Turbulent Flow\n\nHeat transfer, pressure and head loss in a fluid varies with laminar, transitional or turbulent flow.\n\n## Overview\n\nThere are three main types of fluid flow in pipes:\n\n- **Laminar Flow**: Occurs with small pipes and low flow velocities. Flow behaves like concentric cylinders, with shear stress dependent on viscosity.\n- **Turbulent Flow**: Occurs at high flow rates with larger pipes. Vortices and eddies make flow unpredictable. Shear stress depends on density.\n- **Transitional Flow**: A mixture of laminar and turbulent flow, occurring between the two.\n\n## Reynolds Number Classification\n\nThe flow type is determined by the dimensionless Reynolds Number:\n\n- **Laminar**: Re < 2,300\n- **Transitional**: 2,300 ≤ Re ≤ 4,000\n- **Turbulent**: Re > 4,000"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "velocity",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 1.5
+        },
+        {
+          "id": "diameter",
+          "label": "Pipe Diameter (D)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "viscosity",
+          "label": "Dynamic Viscosity (μ)",
+          "type": "number",
+          "unit": "Pa·s",
+          "defaultValue": 0.001
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number (Re)",
+          "formula": "(inputs.density * inputs.velocity * inputs.diameter) / inputs.viscosity",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_type",
+          "label": "Flow Type",
+          "formula": "inputs.reynolds_number < 2300 ? 'Laminar' : (inputs.reynolds_number <= 4000 ? 'Transitional' : 'Turbulent')"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Flow Type",
+        "Reynolds Number Range",
+        "Characteristics",
+        "Shear Stress Dependency"
+      ],
+      "rows": [
+        [
+          "Laminar",
+          "Re < 2,300",
+          "Small pipes, low velocities, concentric cylinder flow",
+          "Viscosity (μ)"
+        ],
+        [
+          "Transitional",
+          "2,300 ≤ Re ≤ 4,000",
+          "Mixture of laminar and turbulent, turbulence in center",
+          "Viscosity & Density"
+        ],
+        [
+          "Turbulent",
+          "Re > 4,000",
+          "Large pipes, high velocities, vortices and eddies",
+          "Density (ρ)"
+        ]
+      ]
+    }
+  ]
+}

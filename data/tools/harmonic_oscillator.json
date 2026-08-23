@@ -1,0 +1,75 @@
+{
+  "id": "harmonic_oscillator",
+  "title": "Harmonic Oscillator",
+  "description": "A simple harmonic oscillator calculator. Calculates the time period of a simple harmonic oscillator based on mass and spring constant.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Harmonic Oscillator\n\nA simple harmonic motion can be used as a mathematical model for a variety of motions such as the oscillation of a spring.\n\n## Formula\n\nThe time period of a simple harmonic oscillator is calculated using:\n\n**T = 2π√(m/k)**\n\nWhere:\n- **T** = time period (s)\n- **m** = mass (kg)\n- **k** = spring constant (N/m)\n\n## Example\n\nA mass of 500 kg is connected to a spring with spring constant 16000 N/m.\n\nT = 2π√(500/16000) = 1.1 s"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 500,
+          "unit": "kg"
+        },
+        {
+          "id": "spring_constant",
+          "label": "Spring Constant",
+          "type": "number",
+          "defaultValue": 16000,
+          "unit": "N/m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "time_period",
+          "label": "Time Period",
+          "unit": "s",
+          "format": "decimal",
+          "formula": "6.283185307179586 * sqrt(inputs.mass / inputs.spring_constant)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Mass (kg)",
+        "Spring Constant (N/m)",
+        "Time Period (s)"
+      ],
+      "rows": [
+        [
+          100,
+          10000,
+          0.628
+        ],
+        [
+          250,
+          15000,
+          0.812
+        ],
+        [
+          500,
+          16000,
+          1.1
+        ],
+        [
+          750,
+          20000,
+          1.217
+        ],
+        [
+          1000,
+          25000,
+          1.256
+        ]
+      ]
+    }
+  ]
+}

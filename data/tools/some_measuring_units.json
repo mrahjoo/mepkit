@@ -1,0 +1,53 @@
+{
+  "id": "some_measuring_units",
+  "title": "Some Measuring Units",
+  "description": "Commonly used measuring units - like gross, dozen, quire, sheets and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Unit Name",
+        "Equivalent",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          "Dozen",
+          "12 units",
+          "12"
+        ],
+        [
+          "Gross",
+          "12 dozen = 144 units",
+          "144"
+        ],
+        [
+          "Great Gross",
+          "12 gross = 144 dozen",
+          "1728"
+        ],
+        [
+          "Quire",
+          "24 sheets",
+          "24"
+        ],
+        [
+          "Ream (Standard)",
+          "20 quires = 480 sheets",
+          "480"
+        ],
+        [
+          "Score",
+          "20 units",
+          "20"
+        ],
+        [
+          "Ream (Printing Paper)",
+          "500 sheets",
+          "500"
+        ]
+      ]
+    }
+  ]
+}

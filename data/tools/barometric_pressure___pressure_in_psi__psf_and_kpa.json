@@ -1,0 +1,109 @@
+{
+  "id": "barometric_pressure___pressure_in_psi__psf_and_kpa",
+  "title": "Barometric Pressure - Pressure in psi, psf and kPa",
+  "description": "Convert between barometric pressure inches Hg, psi, psf and kPa. This tool provides conversion relationships between barometric pressure measurements in different units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Barometer (inches Hg)",
+        "Pressure (psi)",
+        "Pressure (psf)",
+        "Pressure (kPa)"
+      ],
+      "rows": [
+        [
+          28,
+          13.75,
+          1980,
+          193
+        ],
+        [
+          28.25,
+          13.87,
+          1997,
+          195.6
+        ],
+        [
+          28.5,
+          13.99,
+          2015,
+          198.3
+        ],
+        [
+          28.75,
+          14.12,
+          2033,
+          201
+        ],
+        [
+          29,
+          14.24,
+          2050,
+          203.6
+        ],
+        [
+          29.25,
+          14.36,
+          2069,
+          206.3
+        ],
+        [
+          29.5,
+          14.48,
+          2086,
+          209
+        ],
+        [
+          29.75,
+          14.61,
+          2103,
+          211.6
+        ],
+        [
+          29.92,
+          14.7,
+          2116,
+          213.3
+        ],
+        [
+          30,
+          14.75,
+          2121,
+          214
+        ],
+        [
+          30.25,
+          14.85,
+          2139,
+          216.7
+        ],
+        [
+          30.5,
+          14.98,
+          2156,
+          219.3
+        ],
+        [
+          30.75,
+          15.1,
+          2174,
+          222
+        ],
+        [
+          31,
+          15.22,
+          2192,
+          224.7
+        ],
+        [
+          31.25,
+          15.34,
+          2210,
+          227.3
+        ]
+      ]
+    }
+  ]
+}

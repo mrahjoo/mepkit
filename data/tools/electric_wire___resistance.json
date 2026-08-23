@@ -1,0 +1,78 @@
+{
+  "id": "electric_wire___resistance",
+  "title": "Electric Wire - Resistance",
+  "description": "Electric resistance in wire made of Copper, Aluminum, Brass, Constantan, Nichrome, Platinum, Silver or Tungsten.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate electrical resistance in wires",
+      "inputs": [
+        {
+          "id": "resistivity",
+          "label": "Resistivity",
+          "type": "select",
+          "defaultValue": "copper",
+          "options": [
+            {
+              "label": "Copper",
+              "value": 0.0000017
+            },
+            {
+              "label": "Aluminum",
+              "value": 0.0000028
+            },
+            {
+              "label": "Brass",
+              "value": 0.000006
+            },
+            {
+              "label": "Constantan",
+              "value": 0.000049
+            },
+            {
+              "label": "Nichrome",
+              "value": 0.000001
+            },
+            {
+              "label": "Platinum",
+              "value": 0.000011
+            },
+            {
+              "label": "Silver",
+              "value": 0.0000016
+            },
+            {
+              "label": "Tungsten",
+              "value": 0.0000056
+            }
+          ],
+          "unit": "Ω·m"
+        },
+        {
+          "id": "length",
+          "label": "Wire Length",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        },
+        {
+          "id": "area",
+          "label": "Cross-sectional Area",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "mm²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "resistance",
+          "label": "Resistance",
+          "formula": "inputs.resistivity * inputs.length / (inputs.area / 1000000)",
+          "unit": "Ω",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

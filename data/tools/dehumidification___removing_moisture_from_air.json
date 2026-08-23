@@ -1,0 +1,123 @@
+{
+  "id": "dehumidification___removing_moisture_from_air",
+  "title": "Dehumidification - Removing Moisture from Air",
+  "description": "Calculator for air dehumidification methods including cooling (vapor condensation), adsorption (silica gel and activated alumina), and absorption of water vapor.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Dehumidification Methods\n\nAir can be dehumidified through three main methods:\n\n1. **Cooling** - Condensation of vapor by cooling air below dew point\n2. **Adsorption** - Using materials like silica gel or activated alumina to hold moisture on their surface\n3. **Absorption** - Using absorbent materials like calcium chloride solution\n\nSelect the method below to calculate dehumidification parameters."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "method",
+          "label": "Dehumidification Method",
+          "type": "select",
+          "options": [
+            {
+              "label": "Cooling (Vapor Condensation)",
+              "value": "cooling"
+            },
+            {
+              "label": "Adsorption - Silica Gel",
+              "value": "silica_gel"
+            },
+            {
+              "label": "Adsorption - Activated Alumina",
+              "value": "activated_alumina"
+            },
+            {
+              "label": "Absorption",
+              "value": "absorption"
+            }
+          ]
+        },
+        {
+          "id": "air_mass",
+          "label": "Air Mass",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "kg"
+        },
+        {
+          "id": "initial_humidity",
+          "label": "Initial Absolute Humidity",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "g/kg"
+        },
+        {
+          "id": "final_humidity",
+          "label": "Final Absolute Humidity",
+          "type": "number",
+          "defaultValue": 8,
+          "unit": "g/kg"
+        },
+        {
+          "id": "adsorbent_mass",
+          "label": "Adsorbent Material Mass",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "kg"
+        },
+        {
+          "id": "reactivation_temp",
+          "label": "Reactivation Temperature",
+          "type": "number",
+          "defaultValue": 165,
+          "unit": "°C"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat of Adsorbent",
+          "type": "number",
+          "defaultValue": 1.13,
+          "unit": "kJ/kgK"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moisture_removed",
+          "label": "Moisture Removed from Air",
+          "formula": "inputs.air_mass * (inputs.initial_humidity - inputs.final_humidity) / 1000",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "moisture_reduction_percent",
+          "label": "Moisture Reduction",
+          "formula": "(inputs.initial_humidity - inputs.final_humidity) / inputs.initial_humidity * 100",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "adsorbent_capacity_utilization",
+          "label": "Adsorbent Capacity Utilized (Silica Gel)",
+          "formula": "inputs.moisture_removed / (inputs.adsorbent_mass * 0.40) * 100",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "reactivation_heat_required",
+          "label": "Heat Required for Reactivation",
+          "formula": "inputs.moisture_removed * 4800",
+          "unit": "kJ",
+          "format": "decimal"
+        },
+        {
+          "id": "adsorbent_temp_rise",
+          "label": "Temperature Rise of Adsorbent (for reactivation energy)",
+          "formula": "inputs.reactivation_heat_required / (inputs.adsorbent_mass * inputs.specific_heat)",
+          "unit": "K",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Adsorbent Material Properties\n\n### Silica Gel (SiO₂)\n- **Adsorption Capacity**: 40% of its own mass\n- **Bulk Density**: 480 - 720 kg/m³\n- **Void Volume**: 50 - 70% by volume\n- **Specific Heat**: 1.13 kJ/kgK\n- **Reactivation Temp**: 160 - 170°C\n- **Reactivation Heat**: 4800 kJ/kg water removed\n\n### Activated Alumina (Al₂O₃)\n- **Adsorption Capacity**: 60% of its own mass\n- **Bulk Density**: 800 - 870 kg/m³\n- **Void Volume**: 50 - 70% by volume\n- **Specific Heat**: 1.0 kJ/kgK\n- **Reactivation Temp**: 160 - 170°C\n- **Reactivation Heat**: 4800 kJ/kg water removed"
+    }
+  ]
+}

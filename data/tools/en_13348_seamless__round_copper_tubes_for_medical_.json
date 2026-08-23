@@ -1,0 +1,325 @@
+{
+  "id": "en_13348_seamless__round_copper_tubes_for_medical_",
+  "title": "EN 13348 Seamless Round Copper Tubes for Medical Gases or Vacuum",
+  "description": "Calculator and visualization tool for dimensions of seamless round copper and copper alloy tubes for medical gases or vacuum according to EN 13348 standard. Calculate inner diameter, cross-sectional area, and weight based on nominal outside diameter and wall thickness.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "tube_calculator",
+      "content": "EN 13348 Copper Tube Dimensions Calculator",
+      "headers": [
+        "Input Parameters",
+        "Calculated Results"
+      ],
+      "inputs": [
+        {
+          "id": "nominal_od",
+          "label": "Nominal Outside Diameter (d)",
+          "type": "select",
+          "unit": "mm",
+          "defaultValue": 15,
+          "options": [
+            {
+              "value": 0.5,
+              "label": "0.5 mm"
+            },
+            {
+              "value": 12,
+              "label": "12 mm"
+            },
+            {
+              "value": 15,
+              "label": "15 mm"
+            },
+            {
+              "value": 22,
+              "label": "22 mm"
+            },
+            {
+              "value": 28,
+              "label": "28 mm"
+            },
+            {
+              "value": 35,
+              "label": "35 mm"
+            },
+            {
+              "value": 42,
+              "label": "42 mm"
+            },
+            {
+              "value": 54,
+              "label": "54 mm"
+            },
+            {
+              "value": 66.7,
+              "label": "66.7 mm"
+            },
+            {
+              "value": 76.1,
+              "label": "76.1 mm"
+            },
+            {
+              "value": 108,
+              "label": "108 mm"
+            },
+            {
+              "value": 133,
+              "label": "133 mm"
+            },
+            {
+              "value": 159,
+              "label": "159 mm"
+            },
+            {
+              "value": 219,
+              "label": "219 mm"
+            }
+          ]
+        },
+        {
+          "id": "wall_thickness",
+          "label": "Nominal Wall Thickness (e)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "inner_diameter",
+          "label": "Inner Diameter (d - 2e)",
+          "unit": "mm",
+          "formula": "inputs.nominal_od - 2 * inputs.wall_thickness",
+          "format": "decimal"
+        },
+        {
+          "id": "cross_section_area",
+          "label": "Cross-Sectional Area",
+          "unit": "mm²",
+          "formula": "3.14159 * ((inputs.nominal_od / 2) ** 2 - ((inputs.nominal_od / 2) - inputs.wall_thickness) ** 2)",
+          "format": "decimal"
+        },
+        {
+          "id": "wall_ratio",
+          "label": "Wall Thickness Ratio (e/d)",
+          "unit": "",
+          "formula": "inputs.wall_thickness / inputs.nominal_od",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "tube_dimensions_chart",
+      "content": "Available Tube Dimensions",
+      "headers": [
+        "Standard Sizes"
+      ],
+      "rows": [
+        [
+          12,
+          6,
+          0.6
+        ],
+        [
+          15,
+          3,
+          0.7
+        ],
+        [
+          15,
+          6,
+          0.7
+        ],
+        [
+          22,
+          3,
+          0.9
+        ],
+        [
+          22,
+          6,
+          0.9
+        ],
+        [
+          28,
+          3,
+          0.9
+        ],
+        [
+          28,
+          6,
+          0.9
+        ],
+        [
+          35,
+          6,
+          1
+        ],
+        [
+          42,
+          6,
+          1
+        ],
+        [
+          54,
+          6,
+          1
+        ],
+        [
+          67,
+          6,
+          1.5
+        ],
+        [
+          76,
+          6,
+          1.5
+        ],
+        [
+          108,
+          6,
+          1.5
+        ],
+        [
+          133,
+          6,
+          1.5
+        ],
+        [
+          159,
+          6,
+          2
+        ],
+        [
+          219,
+          6,
+          3
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "EN 13348 Typical Available Tube Dimensions",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "12",
+            "15",
+            "22",
+            "28",
+            "35",
+            "42",
+            "54",
+            "67",
+            "76",
+            "108",
+            "133",
+            "159",
+            "219"
+          ],
+          "name": "Nominal Outside Diameter (mm)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Wall Thickness (mm)"
+        },
+        "series": [
+          {
+            "name": "Standard Wall Thickness",
+            "type": "scatter",
+            "data": [
+              [
+                12,
+                0.6
+              ],
+              [
+                15,
+                0.7
+              ],
+              [
+                22,
+                0.9
+              ],
+              [
+                28,
+                0.9
+              ],
+              [
+                35,
+                1
+              ],
+              [
+                42,
+                1
+              ],
+              [
+                54,
+                1
+              ],
+              [
+                67,
+                1.5
+              ],
+              [
+                76,
+                1.5
+              ],
+              [
+                108,
+                1.5
+              ],
+              [
+                133,
+                1.5
+              ],
+              [
+                159,
+                2
+              ],
+              [
+                219,
+                3
+              ]
+            ],
+            "symbolSize": 8
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "id": "material_temper_table",
+      "content": "Material Temper Properties",
+      "headers": [
+        "Material Temper",
+        "Commonly Used Term",
+        "Tensile Strength (MPa)",
+        "Elongation Min. (%)",
+        "Vickers Hardness (HV5)"
+      ],
+      "rows": [
+        [
+          "R250",
+          "Half Hard",
+          "250",
+          "30, 20",
+          "75 - 100"
+        ],
+        [
+          "R290",
+          "Hard",
+          "290",
+          "3",
+          "over 100"
+        ]
+      ]
+    }
+  ]
+}

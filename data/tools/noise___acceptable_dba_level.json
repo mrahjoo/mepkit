@@ -1,0 +1,127 @@
+{
+  "id": "noise___acceptable_dba_level",
+  "title": "Noise - Acceptable dBA Level",
+  "description": "Acceptable noise - dBA - level at typical common locations. The A weighted noise or sound measurement adapts to how the human ear responds to sound and allows measurement with low-cost instruments.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Acceptable dBA Levels by Location\n\nMaximum acceptable Equivalent Sound Level (Leq) at various locations:\n\n- **dB(A)**: A-weighted noise or sound measurement adapted to human hearing\n- **Leq**: Equivalent Sound Level - the steady-state sound level that contains the same acoustic energy as the fluctuating level over a given time period"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Location",
+        "Effects",
+        "Maximum Leq (dBA)",
+        "Time (hours)",
+        "Time of Day"
+      ],
+      "rows": [
+        [
+          "Bedroom",
+          "Sleep disturbance, annoyance",
+          "30",
+          "8",
+          "Night"
+        ],
+        [
+          "Living area",
+          "Annoyance, speech interference",
+          "50",
+          "16",
+          "Day"
+        ],
+        [
+          "Outdoor living area",
+          "Moderate annoyance",
+          "50",
+          "16",
+          "Day"
+        ],
+        [
+          "Outdoor living area",
+          "Serious annoyance",
+          "55",
+          "16",
+          "Day"
+        ],
+        [
+          "Outdoor living area",
+          "Sleep disturbance (with open windows)",
+          "45",
+          "8",
+          "Night"
+        ],
+        [
+          "School classroom",
+          "Speech interference, communication disturbance",
+          "35",
+          "8",
+          "Day"
+        ],
+        [
+          "Hospitals patient rooms",
+          "Sleep disturbance, communication interference",
+          "30 - 35",
+          "8",
+          "Day and Night"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Maximum Acceptable Noise Levels by Location"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Maximum Leq (dBA)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Bedroom",
+            "Living area",
+            "Outdoor (Moderate)",
+            "Outdoor (Serious)",
+            "Outdoor (Night)",
+            "School",
+            "Hospital"
+          ],
+          "axisLabel": {
+            "interval": 0,
+            "rotate": 45
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "dBA Level"
+        },
+        "series": [
+          {
+            "name": "Maximum Leq (dBA)",
+            "data": [
+              30,
+              50,
+              50,
+              55,
+              45,
+              35,
+              32.5
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470C6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

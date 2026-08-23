@@ -1,0 +1,76 @@
+{
+  "id": "gear_reducing_formulas",
+  "title": "Gear Reducing Formulas",
+  "description": "Output torque, speed and horsepower with gears.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Gear Reducing Formulas\n\nCalculate output torque, speed, and horsepower for gear transmissions using the formulas below."
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Gear Output Torque",
+        "Gear Output Speed",
+        "Gear Output Horsepower"
+      ],
+      "inputs": [
+        {
+          "id": "input_torque",
+          "label": "Input Torque (Nm)",
+          "type": "number",
+          "defaultValue": 500
+        },
+        {
+          "id": "transmission_ratio",
+          "label": "Transmission Ratio",
+          "type": "number",
+          "defaultValue": 3.8
+        },
+        {
+          "id": "efficiency",
+          "label": "Efficiency (%)",
+          "type": "number",
+          "defaultValue": 0.9
+        },
+        {
+          "id": "input_speed",
+          "label": "Input Speed (rpm)",
+          "type": "number",
+          "defaultValue": 2000
+        },
+        {
+          "id": "input_power",
+          "label": "Input Power (kW)",
+          "type": "number",
+          "defaultValue": 300
+        }
+      ],
+      "outputs": [
+        {
+          "id": "output_torque",
+          "label": "Output Torque (Nm)",
+          "formula": "inputs.input_torque * inputs.transmission_ratio * inputs.efficiency",
+          "unit": "Nm"
+        },
+        {
+          "id": "output_speed",
+          "label": "Output Speed (rpm)",
+          "formula": "inputs.input_speed / inputs.transmission_ratio",
+          "unit": "rpm"
+        },
+        {
+          "id": "output_power",
+          "label": "Output Power (kW)",
+          "formula": "inputs.input_power * inputs.efficiency",
+          "unit": "kW"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Formulas\n\n**Gear Output Torque:** Mo = Mi × r × μ\n\n**Gear Output Speed:** So = Si / r\n\n**Gear Output Horsepower:** Po = Pi × μ\n\nWhere:\n- Mo = output torque (Nm)\n- Mi = input torque (Nm)\n- r = gear transmission ratio\n- μ = gear efficiency\n- So = output speed (rpm)\n- Si = input speed (rpm)\n- Po = output horsepower (W, hp)\n- Pi = input horsepower (W, hp)"
+    }
+  ]
+}

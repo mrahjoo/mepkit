@@ -1,0 +1,266 @@
+{
+  "id": "stoichiometric_combustion",
+  "title": "Stoichiometric Combustion",
+  "description": "Calculate and analyze stoichiometric combustion parameters, excess air ratios, and flue gas composition for various fuel types.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Stoichiometric Combustion\n\nStoichiometric or Theoretical Combustion is the ideal combustion process where fuel is burned completely.\n\nA complete combustion is a process burning all the carbon (C) to (CO2), all the hydrogen (H) to (H2O) and all the sulphur (S) to (SO2).\n\nThe combustion process can be expressed:\n\n**(C + H (fuel)) + (O2 + N2 (Air)) → (Combustion Process) → (CO2 + H2O + N2 (Heat))**\n\n## Key Concepts:\n\n- **Stoichiometric Ratio**: The perfect ideal fuel ratio where chemical mixing proportion is correct and all fuel and air is consumed without excess.\n- **Excess Air**: Additional air supplied beyond the stoichiometric requirement (typically 10-20% in practice).\n- **Fuel-Lean Mixture**: Air content higher than stoichiometric ratio.\n- **Fuel-Rich Mixture**: Air content less than stoichiometric ratio.\n\n## Example - Methane Combustion (CH4):\n\n**Stoichiometric (0% excess air):**\n_CH4 + 2(O2 + 3.76 N2) → CO2 + 2 H2O + 7.52 N2_\n\n**With 25% excess air:**\n_CH4 + 1.25 × 2(O2 + 3.76 N2) → CO2 + 2 H2O + 0.5 O2 + 9.4 N2_"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fuel_type",
+          "label": "Fuel Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Natural Gas",
+              "value": "natural_gas"
+            },
+            {
+              "label": "Propane Butane",
+              "value": "propane_butane"
+            },
+            {
+              "label": "Fuel Oil",
+              "value": "fuel_oil"
+            },
+            {
+              "label": "Bituminous Coal",
+              "value": "bituminous_coal"
+            },
+            {
+              "label": "Anthracite Coal",
+              "value": "anthracite_coal"
+            }
+          ]
+        },
+        {
+          "id": "excess_air_pct",
+          "label": "Excess Air",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "co2_concentration",
+          "label": "CO2 in Flue Gas",
+          "unit": "% volume",
+          "formula": "inputs.fuel_type === 'natural_gas' ? (inputs.excess_air_pct === 0 ? 12 : inputs.excess_air_pct === 20 ? 10.5 : inputs.excess_air_pct === 40 ? 9 : inputs.excess_air_pct === 60 ? 8 : inputs.excess_air_pct === 80 ? 7 : inputs.excess_air_pct === 100 ? 6 : 11) : inputs.fuel_type === 'propane_butane' ? (inputs.excess_air_pct === 0 ? 14 : inputs.excess_air_pct === 20 ? 12 : inputs.excess_air_pct === 40 ? 10 : inputs.excess_air_pct === 60 ? 9 : inputs.excess_air_pct === 80 ? 8 : inputs.excess_air_pct === 100 ? 6 : 12) : inputs.fuel_type === 'fuel_oil' ? (inputs.excess_air_pct === 0 ? 15.5 : inputs.excess_air_pct === 20 ? 13.5 : inputs.excess_air_pct === 40 ? 12 : inputs.excess_air_pct === 60 ? 10 : inputs.excess_air_pct === 80 ? 9 : inputs.excess_air_pct === 100 ? 8 : 12.5) : inputs.fuel_type === 'bituminous_coal' ? (inputs.excess_air_pct === 0 ? 18 : inputs.excess_air_pct === 20 ? 15.5 : inputs.excess_air_pct === 40 ? 13.5 : inputs.excess_air_pct === 60 ? 12 : inputs.excess_air_pct === 80 ? 11 : inputs.excess_air_pct === 100 ? 9.5 : 14) : inputs.fuel_type === 'anthracite_coal' ? (inputs.excess_air_pct === 0 ? 20 : inputs.excess_air_pct === 20 ? 16.5 : inputs.excess_air_pct === 40 ? 14 : inputs.excess_air_pct === 60 ? 12.5 : inputs.excess_air_pct === 80 ? 11.5 : inputs.excess_air_pct === 100 ? 10 : 15) : 0"
+        },
+        {
+          "id": "o2_concentration",
+          "label": "O2 in Flue Gas",
+          "unit": "% volume",
+          "formula": "inputs.excess_air_pct === 0 ? 0 : inputs.excess_air_pct === 20 ? 3 : inputs.excess_air_pct === 40 ? 5 : inputs.excess_air_pct === 60 ? 7.5 : inputs.excess_air_pct === 80 ? 9 : inputs.excess_air_pct === 100 ? 10 : 0"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Excess Air (%)",
+        "Natural Gas (CO2 %)",
+        "Propane Butane (CO2 %)",
+        "Fuel Oil (CO2 %)",
+        "Bituminous Coal (CO2 %)",
+        "Anthracite Coal (CO2 %)",
+        "O2 in Flue Gas (%)"
+      ],
+      "rows": [
+        [
+          0,
+          12,
+          14,
+          15.5,
+          18,
+          20,
+          0
+        ],
+        [
+          20,
+          10.5,
+          12,
+          13.5,
+          15.5,
+          16.5,
+          3
+        ],
+        [
+          40,
+          9,
+          10,
+          12,
+          13.5,
+          14,
+          5
+        ],
+        [
+          60,
+          8,
+          9,
+          10,
+          12,
+          12.5,
+          7.5
+        ],
+        [
+          80,
+          7,
+          8,
+          9,
+          11,
+          11.5,
+          9
+        ],
+        [
+          100,
+          6,
+          6,
+          8,
+          9.5,
+          10,
+          10
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "CO2 and O2 Concentration vs Excess Air",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Natural Gas",
+            "Propane Butane",
+            "Fuel Oil",
+            "Bituminous Coal",
+            "Anthracite Coal",
+            "O2 in Flue Gas"
+          ],
+          "top": "bottom"
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0%",
+            "20%",
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+          ],
+          "name": "Excess Air"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "CO2 Concentration (% volume)"
+          },
+          {
+            "type": "value",
+            "name": "O2 Concentration (% volume)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Natural Gas",
+            "type": "line",
+            "data": [
+              12,
+              10.5,
+              9,
+              8,
+              7,
+              6
+            ],
+            "smooth": true
+          },
+          {
+            "name": "Propane Butane",
+            "type": "line",
+            "data": [
+              14,
+              12,
+              10,
+              9,
+              8,
+              6
+            ],
+            "smooth": true
+          },
+          {
+            "name": "Fuel Oil",
+            "type": "line",
+            "data": [
+              15.5,
+              13.5,
+              12,
+              10,
+              9,
+              8
+            ],
+            "smooth": true
+          },
+          {
+            "name": "Bituminous Coal",
+            "type": "line",
+            "data": [
+              18,
+              15.5,
+              13.5,
+              12,
+              11,
+              9.5
+            ],
+            "smooth": true
+          },
+          {
+            "name": "Anthracite Coal",
+            "type": "line",
+            "data": [
+              20,
+              16.5,
+              14,
+              12.5,
+              11.5,
+              10
+            ],
+            "smooth": true
+          },
+          {
+            "name": "O2 in Flue Gas",
+            "type": "line",
+            "data": [
+              0,
+              3,
+              5,
+              7.5,
+              9,
+              10
+            ],
+            "smooth": true,
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}

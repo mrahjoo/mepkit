@@ -1,0 +1,231 @@
+{
+  "id": "domestic_service_water_supply_systems",
+  "title": "Domestic Service Water Supply Systems",
+  "description": "Tool for designing domestic water supply systems with gravity tanks or pressurized tanks, including buffer tank capacity estimation and system comparison analysis.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Domestic Service Water Supply Systems\n\nThe purpose of a domestic service water supply system is to provide consumers with enough hot and cold water.\n\nIn old buildings it is common to have gravity storage tanks on the top floor. More commonly used in new systems are pressurized tanks and supply pumps.\n\n## System Types\n\n### Gravity Tank System\n- Tank located at least 30 ft (10 m) above highest outlet\n- Pressure reducing valves required on lower floors in tall buildings\n- Tank volume compensates for limited supply line capacity\n- Drawbacks: freezing risk in winter, structural impact\n\n### Pressurized Tank System\n- Partly filled with air/gas behind membrane\n- Air compensates for pressure variations\n- Limited compensating capacity for main supply line shortage\n- More common in modern installations"
+    },
+    {
+      "type": "calculator",
+      "content": "Buffer Tank Capacity Calculator",
+      "inputs": [
+        {
+          "id": "peak_consumption",
+          "label": "Peak Water Consumption",
+          "type": "number",
+          "unit": "L/min",
+          "defaultValue": 50
+        },
+        {
+          "id": "supply_capacity",
+          "label": "Supply Line Capacity",
+          "type": "number",
+          "unit": "L/min",
+          "defaultValue": 30
+        },
+        {
+          "id": "consumption_duration",
+          "label": "Peak Consumption Duration",
+          "type": "number",
+          "unit": "minutes",
+          "defaultValue": 10
+        },
+        {
+          "id": "system_type",
+          "label": "System Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Gravity Tank",
+              "value": "gravity"
+            },
+            {
+              "label": "Pressurized Tank",
+              "value": "pressurized"
+            }
+          ],
+          "defaultValue": "pressurized"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "deficit_flow",
+          "label": "Flow Deficit",
+          "formula": "inputs.peak_consumption - inputs.supply_capacity",
+          "unit": "L/min"
+        },
+        {
+          "id": "required_volume",
+          "label": "Required Buffer Tank Volume",
+          "formula": "(inputs.peak_consumption - inputs.supply_capacity) * inputs.consumption_duration",
+          "unit": "liters",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Water Supply System Analysis",
+      "headers": [
+        "Time (min)",
+        "Consumption (L/min)",
+        "Supply Capacity (L/min)",
+        "Tank Level Change (L/min)"
+      ],
+      "rows": [
+        [
+          0,
+          30,
+          30,
+          0
+        ],
+        [
+          2,
+          50,
+          30,
+          -20
+        ],
+        [
+          4,
+          50,
+          30,
+          -20
+        ],
+        [
+          6,
+          50,
+          30,
+          -20
+        ],
+        [
+          8,
+          50,
+          30,
+          -20
+        ],
+        [
+          10,
+          50,
+          30,
+          -20
+        ],
+        [
+          12,
+          35,
+          30,
+          5
+        ],
+        [
+          14,
+          30,
+          30,
+          0
+        ],
+        [
+          16,
+          25,
+          30,
+          5
+        ],
+        [
+          18,
+          20,
+          30,
+          10
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "Water Supply System - Capacity vs. Consumption",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Consumption (L/min)",
+            "Supply Capacity (L/min)",
+            "Tank Level Change (L/min)"
+          ],
+          "top": "bottom"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+          ],
+          "name": "Time (minutes)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Flow Rate (L/min)"
+        },
+        "series": [
+          {
+            "data": [
+              30,
+              50,
+              50,
+              50,
+              50,
+              50,
+              35,
+              30,
+              25,
+              20
+            ],
+            "type": "line",
+            "name": "Consumption (L/min)",
+            "smooth": true
+          },
+          {
+            "data": [
+              30,
+              30,
+              30,
+              30,
+              30,
+              30,
+              30,
+              30,
+              30,
+              30
+            ],
+            "type": "line",
+            "name": "Supply Capacity (L/min)",
+            "smooth": true
+          },
+          {
+            "data": [
+              0,
+              -20,
+              -20,
+              -20,
+              -20,
+              -20,
+              5,
+              0,
+              -5,
+              -10
+            ],
+            "type": "bar",
+            "name": "Tank Level Change (L/min)"
+          }
+        ]
+      }
+    }
+  ]
+}

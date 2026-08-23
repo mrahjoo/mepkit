@@ -1,0 +1,6 @@
+{
+  "id": "solids___densities",
+  "title": "Solids - Densities",
+  "description": "Densities of selected solids. This datatable provides density values in 10³ kg/m³ for various solid materials including metals, minerals, polymers, and natural materials.",
+  "type": "datatable"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "air_ducts___sizing",
+  "title": "Air Ducts - Sizing",
+  "description": "Required duct area vs. air flow.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Air Flow (CFM)",
+        "Air Velocity (ft/min)",
+        "Required Duct Area (sq in)"
+      ],
+      "rows": [
+        [
+          100,
+          400,
+          1.5
+        ],
+        [
+          200,
+          400,
+          3
+        ],
+        [
+          300,
+          400,
+          4.5
+        ],
+        [
+          400,
+          400,
+          6
+        ],
+        [
+          500,
+          400,
+          7.5
+        ],
+        [
+          600,
+          400,
+          9
+        ],
+        [
+          700,
+          400,
+          10.5
+        ],
+        [
+          800,
+          400,
+          12
+        ],
+        [
+          900,
+          400,
+          13.5
+        ],
+        [
+          1000,
+          400,
+          15
+        ]
+      ]
+    }
+  ]
+}

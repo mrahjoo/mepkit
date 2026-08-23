@@ -1,0 +1,72 @@
+{
+  "id": "air_properties__temperature__pressure___density_da",
+  "title": "Air Properties: Temperature, Pressure & Density Calculator",
+  "description": "Calculate air density based on temperature and pressure using the standard formula: ρ = 1.325 × P_inHg / T_R, where density is expressed in lb/ft³, pressure in inches of mercury, and temperature in Rankine. Also supports the formula using absolute pressure in psia.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Air Density Calculator\n\nCalculate the density of air based on temperature and pressure conditions.\n\n### Formula\n**ρ = 1.325 × P_inHg / T_R**\n\nWhere:\n- ρ = density (lb/ft³)\n- P_inHg = absolute pressure (inches Hg)\n- T_R = absolute temperature (Rankine)\n\nAlternative formula:\n**ρ = 2.7 × (P_psig + 14.7) / (T_F + 459.7)**\n\nWhere:\n- P_psig = gauge pressure (psig)\n- T_F = temperature (°F)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_f",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 100
+        },
+        {
+          "id": "pressure_inHg",
+          "label": "Absolute Pressure",
+          "type": "number",
+          "unit": "inHg",
+          "defaultValue": 29.92
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_lbft3",
+          "label": "Air Density",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "1.325 * inputs.pressure_inHg / (inputs.temperature_f + 459.7)"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_f_alt",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 100
+        },
+        {
+          "id": "pressure_psig",
+          "label": "Gauge Pressure",
+          "type": "number",
+          "unit": "psig",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_lbft3_alt",
+          "label": "Air Density",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "2.7 * (inputs.pressure_psig + 14.7) / (inputs.temperature_f_alt + 459.7)"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Example Calculation\n\nFor air at 29.92 inches Hg and 100°F:\n\nρ = 1.325 × 29.92 / (100 + 459.7)\nρ = 1.325 × 29.92 / 559.7\nρ ≈ 0.0708 lb/ft³\n\nWeight of 10 ft³ of air:\nW = 10 ft³ × 0.0708 lb/ft³ ≈ 0.708 lb"
+    }
+  ]
+}

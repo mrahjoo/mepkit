@@ -1,0 +1,113 @@
+{
+  "id": "heat_traced_pipes___wrapping_factor",
+  "title": "Heat Traced Pipes - Wrapping Factor",
+  "description": "Wrapping factor when the heat loss from a pipe or tube is higher than the capacity of the heat trace cable. Calculates the \"heat loss - cable output\" ratio to determine if spiral wrapping is needed.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "wrapping_factor_calculator",
+      "content": "Heat Loss to Cable Output Ratio Calculator",
+      "inputs": [
+        {
+          "id": "Qhl",
+          "label": "Heat Loss from Insulated Pipe",
+          "type": "number",
+          "unit": "W/m",
+          "defaultValue": 150
+        },
+        {
+          "id": "Qt",
+          "label": "Heat Output from Heat Trace Cable",
+          "type": "number",
+          "unit": "W/m",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "HR",
+          "label": "Heat Loss - Cable Output Ratio (HR)",
+          "formula": "inputs.Qhl / inputs.Qt",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "wrapping_required",
+          "label": "Wrapping Required",
+          "formula": "inputs.Qhl / inputs.Qt > 1 ? 'Yes' : 'No'",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "wrapping_factor_chart",
+      "content": "Heat Loss - Cable Output Ratio Analysis",
+      "options": {
+        "title": {
+          "text": "HR Ratio and Wrapping Requirements",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "HR < 1",
+            "HR = 1",
+            "HR = 2",
+            "HR = 3",
+            "HR = 4",
+            "HR = 5"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "HR Ratio"
+        },
+        "series": [
+          {
+            "name": "HR Ratio",
+            "type": "line",
+            "data": [
+              0.8,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "smooth": true,
+            "itemStyle": {
+              "color": "#5470c6"
+            },
+            "areaStyle": {}
+          },
+          {
+            "name": "Wrapping Threshold",
+            "type": "line",
+            "data": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "lineStyle": {
+              "type": "dashed",
+              "color": "#ee6666"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "wrapping_info",
+      "content": "## Wrapping Factor Information\n\n**Formula:** HR = Qhl / Qt\n\nWhere:\n- **HR** = Heat loss - cable output ratio\n- **Qhl** = Heat loss from the insulated pipe or tube (W/m)\n- **Qt** = Heat output from the heat trace (W/m)\n\n**Interpretation:**\n- If **HR ≤ 1**: No wrapping needed - single cable is sufficient\n- If **HR > 1**: Spiral wrapping required - pitch distance depends on pipe diameter and HR value\n\n**Example:**\nFor a 4\" pipe with HR = 3, the pitch (distance between spirals) is approximately 5-6 inches (125-150 mm)."
+    }
+  ]
+}

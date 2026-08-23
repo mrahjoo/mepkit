@@ -1,0 +1,231 @@
+{
+  "id": "electrical_dc_motors___full_load_currents",
+  "title": "Electrical DC Motors - Full-load Currents",
+  "description": "Full load amps in 120 and 240 volts electrical DC motors. This tool provides reference data for full-load current ratings of DC motors at different voltage levels.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "dc_motor_currents_table",
+      "headers": [
+        "Motor Rating (hp)",
+        "Current at 120V (amps)",
+        "Current at 240V (amps)"
+      ],
+      "rows": [
+        [
+          "1/4",
+          3.1,
+          1.6
+        ],
+        [
+          "1/3",
+          4.1,
+          2
+        ],
+        [
+          "1/2",
+          5.4,
+          2.7
+        ],
+        [
+          "3/4",
+          7.6,
+          3.8
+        ],
+        [
+          "1",
+          9.5,
+          4.7
+        ],
+        [
+          "1 1/2",
+          13.2,
+          6.6
+        ],
+        [
+          "2",
+          17,
+          8.5
+        ],
+        [
+          "3",
+          25,
+          12.2
+        ],
+        [
+          "5",
+          40,
+          20
+        ],
+        [
+          "7 1/2",
+          48,
+          29
+        ],
+        [
+          "10",
+          76,
+          38
+        ],
+        [
+          "15",
+          "-",
+          55
+        ],
+        [
+          "20",
+          "-",
+          72
+        ],
+        [
+          "25",
+          "-",
+          89
+        ],
+        [
+          "30",
+          "-",
+          106
+        ],
+        [
+          "50",
+          "-",
+          173
+        ],
+        [
+          "75",
+          "-",
+          255
+        ],
+        [
+          "100",
+          "-",
+          341
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "dc_motor_calculator",
+      "content": "DC Motor Full-load Current Calculator",
+      "inputs": [
+        {
+          "id": "motor_hp",
+          "label": "Motor Rating (hp)",
+          "type": "select",
+          "options": [
+            {
+              "label": "1/4",
+              "value": 0.25
+            },
+            {
+              "label": "1/3",
+              "value": 0.33
+            },
+            {
+              "label": "1/2",
+              "value": 0.5
+            },
+            {
+              "label": "3/4",
+              "value": 0.75
+            },
+            {
+              "label": "1",
+              "value": 1
+            },
+            {
+              "label": "1 1/2",
+              "value": 1.5
+            },
+            {
+              "label": "2",
+              "value": 2
+            },
+            {
+              "label": "3",
+              "value": 3
+            },
+            {
+              "label": "5",
+              "value": 5
+            },
+            {
+              "label": "7 1/2",
+              "value": 7.5
+            },
+            {
+              "label": "10",
+              "value": 10
+            },
+            {
+              "label": "15",
+              "value": 15
+            },
+            {
+              "label": "20",
+              "value": 20
+            },
+            {
+              "label": "25",
+              "value": 25
+            },
+            {
+              "label": "30",
+              "value": 30
+            },
+            {
+              "label": "50",
+              "value": 50
+            },
+            {
+              "label": "75",
+              "value": 75
+            },
+            {
+              "label": "100",
+              "value": 100
+            }
+          ]
+        },
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "select",
+          "options": [
+            {
+              "label": "120V",
+              "value": 120
+            },
+            {
+              "label": "240V",
+              "value": 240
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "full_load_current",
+          "label": "Full-load Current",
+          "formula": "inputs.motor_hp > 0 ? (inputs.voltage == 120 ? (inputs.motor_hp == 0.25 ? 3.1 : inputs.motor_hp == 0.33 ? 4.1 : inputs.motor_hp == 0.5 ? 5.4 : inputs.motor_hp == 0.75 ? 7.6 : inputs.motor_hp == 1 ? 9.5 : inputs.motor_hp == 1.5 ? 13.2 : inputs.motor_hp == 2 ? 17 : inputs.motor_hp == 3 ? 25 : inputs.motor_hp == 5 ? 40 : inputs.motor_hp == 7.5 ? 48 : inputs.motor_hp == 10 ? 76 : 0) : (inputs.motor_hp == 0.25 ? 1.6 : inputs.motor_hp == 0.33 ? 2.0 : inputs.motor_hp == 0.5 ? 2.7 : inputs.motor_hp == 0.75 ? 3.8 : inputs.motor_hp == 1 ? 4.7 : inputs.motor_hp == 1.5 ? 6.6 : inputs.motor_hp == 2 ? 8.5 : inputs.motor_hp == 3 ? 12.2 : inputs.motor_hp == 5 ? 20 : inputs.motor_hp == 7.5 ? 29 : inputs.motor_hp == 10 ? 38 : inputs.motor_hp == 15 ? 55 : inputs.motor_hp == 20 ? 72 : inputs.motor_hp == 25 ? 89 : inputs.motor_hp == 30 ? 106 : inputs.motor_hp == 50 ? 173 : inputs.motor_hp == 75 ? 255 : inputs.motor_hp == 100 ? 341 : 0)) : 0",
+          "unit": "amps",
+          "format": "decimal"
+        },
+        {
+          "id": "power_kw",
+          "label": "Power Equivalent",
+          "formula": "inputs.motor_hp * 0.75",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "reference_info",
+      "content": "## Reference Information\n\n**Conversion Factor:**\n- 1 hp = 0.75 kW\n\n**Notes:**\n- This table provides full-load current ratings for DC motors at 120V and 240V\n- For motor ratings above 10 hp, 120V data is not available\n- These are standard ratings and actual values may vary by manufacturer"
+    }
+  ]
+}

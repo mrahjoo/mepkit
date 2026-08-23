@@ -1,0 +1,51 @@
+{
+  "id": "piston_engines___displacement",
+  "title": "Piston Engines - Displacement",
+  "description": "Calculate piston engine displacement using bore, stroke, and number of cylinders",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Piston Engine Displacement Calculator\n\nCalculate the displacement of a piston engine using the formula:\n\n**V = (π / 4) × s × b² × noc**\n\nWhere:\n- **V** = engine displacement (in³, cm³)\n- **s** = stroke (in, cm)\n- **b** = bore diameter (in, cm)\n- **noc** = number of cylinders"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "stroke",
+          "label": "Stroke",
+          "type": "number",
+          "defaultValue": 3.31,
+          "unit": "in"
+        },
+        {
+          "id": "bore",
+          "label": "Bore Diameter",
+          "type": "number",
+          "defaultValue": 3.625,
+          "unit": "in"
+        },
+        {
+          "id": "cylinders",
+          "label": "Number of Cylinders",
+          "type": "number",
+          "defaultValue": 8,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "displacement",
+          "label": "Displacement",
+          "formula": "(3.14159265359 / 4) * inputs.stroke * inputs.bore * inputs.bore * inputs.cylinders",
+          "unit": "in³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Example - V8 Engine\n\nFor a V8 engine with:\n- Stroke: 3.31 in\n- Bore: 3.625 in\n- Cylinders: 8\n\n**Result: ~273 cu in**"
+    }
+  ]
+}

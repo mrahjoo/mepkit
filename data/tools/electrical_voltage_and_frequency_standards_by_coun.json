@@ -1,0 +1,138 @@
+{
+  "id": "electrical_voltage_and_frequency_standards_by_coun",
+  "title": "Electrical Voltage and Frequency Standards by Country",
+  "description": "Typical voltages and frequencies used for domestic appliances in different countries.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Country",
+        "Voltage (V, volts)",
+        "Frequency (Hz, hertz)"
+      ],
+      "rows": [
+        [
+          "Argentina",
+          220,
+          50
+        ],
+        [
+          "Australia",
+          230,
+          50
+        ],
+        [
+          "Austria",
+          230,
+          50
+        ],
+        [
+          "Brazil",
+          110,
+          60
+        ],
+        [
+          "Canada",
+          120,
+          60
+        ],
+        [
+          "China",
+          220,
+          50
+        ],
+        [
+          "Denmark",
+          230,
+          50
+        ],
+        [
+          "France",
+          230,
+          50
+        ],
+        [
+          "Germany",
+          230,
+          50
+        ],
+        [
+          "India",
+          230,
+          50
+        ],
+        [
+          "Ireland",
+          230,
+          50
+        ],
+        [
+          "Israel",
+          230,
+          50
+        ],
+        [
+          "Italy",
+          230,
+          50
+        ],
+        [
+          "Japan",
+          100,
+          "50/60"
+        ],
+        [
+          "New Zealand",
+          230,
+          50
+        ],
+        [
+          "Norway",
+          230,
+          50
+        ],
+        [
+          "Philippines",
+          220,
+          60
+        ],
+        [
+          "Russia",
+          220,
+          50
+        ],
+        [
+          "South Africa",
+          220,
+          50
+        ],
+        [
+          "Spain",
+          230,
+          50
+        ],
+        [
+          "Sweden",
+          230,
+          50
+        ],
+        [
+          "Thailand",
+          220,
+          50
+        ],
+        [
+          "UK",
+          230,
+          50
+        ],
+        [
+          "USA",
+          120,
+          60
+        ]
+      ]
+    }
+  ]
+}

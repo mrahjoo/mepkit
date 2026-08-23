@@ -1,0 +1,69 @@
+{
+  "id": "lubricated_bolts_and_reduced_torque",
+  "title": "Lubricated Bolts and Reduced Torque",
+  "description": "Lubrication effect on bolt tension and torque. Calculate the reduced torque required for lubricated bolts compared to dry bolts.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Lubricant",
+        "Torque Reduction (%)"
+      ],
+      "rows": [
+        [
+          "Graphite",
+          "50 - 55"
+        ],
+        [
+          "White Grease",
+          "35 - 45"
+        ],
+        [
+          "SAE 30 oil",
+          "35 - 45"
+        ],
+        [
+          "SAE 40 oil",
+          "30 - 40"
+        ],
+        [
+          "No lube",
+          "0"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "dry_bolt_torque",
+          "label": "Dry Bolt Torque",
+          "type": "number",
+          "unit": "lbf ft",
+          "defaultValue": 628
+        },
+        {
+          "id": "torque_reduction_percent",
+          "label": "Torque Reduction (%)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 40
+        }
+      ],
+      "outputs": [
+        {
+          "id": "lubricated_torque",
+          "label": "Lubricated Bolt Torque",
+          "unit": "lbf ft",
+          "formula": "inputs.dry_bolt_torque * (1 - inputs.torque_reduction_percent / 100)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Example - Reduction of Torque when Bolt is Lubricated\n\nThe maximum tightening torque for a slightly lubricated 1\" Grade 5 coarse bolt is _483 lbf ft_. Dry bolt torque is approximately 30% higher - or _628 lbf ft_.\n\n_Tdry = (483 lbf ft) (1 + (30%) / (100%))_\n\n   _= 628 lbf ft_\n\nIf the bolt is lubricated with SAE 30 oil - the torque compared to a dry bolt is reduced with approximately _40%_.\n\n_TSAE30 = (628 lbf ft) (1 - (40%) / (100%))_\n\n   _= 377 lbf ft_\n\n**Note:** If torque specified for a dry or slightly oiled bolt is applied to a lubricated bolt - the bolt may overload and break."
+    }
+  ]
+}

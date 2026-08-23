@@ -1,0 +1,473 @@
+{
+  "id": "surface_tension",
+  "title": "Surface Tension",
+  "description": "Calculate and reference surface tension values for various fluids. Surface tension is the energy required to stretch a unit change of surface area, defined as σ = Fs / l where σ is surface tension (N/m), Fs is stretching force (N), and l is unit length (m).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid",
+        "Surface Tension (N/m)",
+        "Temperature/Notes"
+      ],
+      "rows": [
+        [
+          "Water",
+          0.072,
+          "20°C"
+        ],
+        [
+          "Water, soapy",
+          0.035,
+          "20°C (avg 0.025-0.045)"
+        ],
+        [
+          "Water-d2, Heavy Water",
+          0.071,
+          "20°C"
+        ],
+        [
+          "Mercury, Quicksilver",
+          0.485,
+          "25°C"
+        ],
+        [
+          "Glycerol",
+          0.064,
+          "25°C"
+        ],
+        [
+          "Hydrazine",
+          0.066,
+          "25°C"
+        ],
+        [
+          "Ethylene glycol",
+          0.0477,
+          "25°C"
+        ],
+        [
+          "Diethylene glycol",
+          0.045,
+          "25°C"
+        ],
+        [
+          "Ethanolamine, glycinol",
+          0.048,
+          "25°C"
+        ],
+        [
+          "Formamide",
+          0.057,
+          "25°C"
+        ],
+        [
+          "Aniline, Benzenamine",
+          0.042,
+          "25°C"
+        ],
+        [
+          "Benzonitrile, Phenyl cyanide",
+          0.039,
+          "25°C"
+        ],
+        [
+          "Benzylamine",
+          0.039,
+          "25°C"
+        ],
+        [
+          "Isobenzene, Phenyl iodide",
+          0.039,
+          "25°C"
+        ],
+        [
+          "Bromine",
+          0.041,
+          "25°C"
+        ],
+        [
+          "Nitrobenzene",
+          0.041,
+          "50°C"
+        ],
+        [
+          "Furfural",
+          0.043,
+          "25°C"
+        ],
+        [
+          "Anisole, Methoxybenzene",
+          0.035,
+          "25°C"
+        ],
+        [
+          "Bromobenzene",
+          0.035,
+          "25°C"
+        ],
+        [
+          "p-Cresol",
+          0.035,
+          "25°C"
+        ],
+        [
+          "Ethyl benzoate",
+          0.035,
+          "25°C"
+        ],
+        [
+          "Clorobenzene, Phenyl chloride",
+          0.033,
+          "25°C"
+        ],
+        [
+          "Cyclohexanol",
+          0.033,
+          "25°C"
+        ],
+        [
+          "Acetic anhydride, Acetyl acetat",
+          0.032,
+          "25°C"
+        ],
+        [
+          "Carbon disulfide",
+          0.032,
+          "25°C"
+        ],
+        [
+          "Ethylbenzene, Phenylethane",
+          0.029,
+          "25°C"
+        ],
+        [
+          "Benzene, Annulene",
+          0.028,
+          "25°C"
+        ],
+        [
+          "Heptanoic acid, Enanthic acid",
+          0.028,
+          "25°C"
+        ],
+        [
+          "Toluene, Methylbenzene",
+          0.028,
+          "25°C"
+        ],
+        [
+          "m-Xylene",
+          0.028,
+          "25°C"
+        ],
+        [
+          "p-Xylene",
+          0.028,
+          "25°C"
+        ],
+        [
+          "o-Xylene",
+          0.029,
+          "25°C"
+        ],
+        [
+          "n-Propyl benzene",
+          0.03,
+          "25°C"
+        ],
+        [
+          "Acetic acid, Ethanoic acid",
+          0.027,
+          "25°C"
+        ],
+        [
+          "Carbon tetrachloride",
+          0.027,
+          "25°C"
+        ],
+        [
+          "Chloroform",
+          0.0271,
+          "25°C"
+        ],
+        [
+          "Hexadekane, Cetane",
+          0.027,
+          "25°C"
+        ],
+        [
+          "Hexanenitrile, Capronitrile",
+          0.027,
+          "25°C"
+        ],
+        [
+          "Cyclohexene",
+          0.026,
+          "25°C"
+        ],
+        [
+          "1-Chlorohexane, Hexyl chloride",
+          0.026,
+          "25°C"
+        ],
+        [
+          "1-Hexanol, Caproyl alcohol",
+          0.026,
+          "25°C"
+        ],
+        [
+          "1-Butanol, Butyl alcohol",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Allyl alcohol",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Butyl acetat",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Diethyl sulfide, Ethyl sulfide",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Ethyl bromide",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Ethyl mercaptan",
+          0.024,
+          "25°C"
+        ],
+        [
+          "Isobutyric acid",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Methyl acetat",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Methyl formate",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Pentyl acetat",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Undecane, Hendecane",
+          0.025,
+          "25°C"
+        ],
+        [
+          "Acetaldehyde",
+          0.021,
+          "25°C"
+        ],
+        [
+          "Acetone, 2-Propanone",
+          0.024,
+          "25°C"
+        ],
+        [
+          "Bromoethane",
+          0.024,
+          "25°C"
+        ],
+        [
+          "1-Chloropentane",
+          0.024,
+          "25°C"
+        ],
+        [
+          "Cyclohexane",
+          0.024,
+          "25°C"
+        ],
+        [
+          "Decane",
+          0.024,
+          "25°C"
+        ],
+        [
+          "Dibutylamine",
+          0.024,
+          "25°C"
+        ],
+        [
+          "Ethyl acetate",
+          0.024,
+          "25°C"
+        ],
+        [
+          "n-Propyl alcohol",
+          0.024,
+          "25°C"
+        ],
+        [
+          "Trichloromethane, Chloroform",
+          0.023,
+          "25°C"
+        ],
+        [
+          "n-Butane",
+          0.023,
+          "25°C"
+        ],
+        [
+          "Butylamine",
+          0.023,
+          "25°C"
+        ],
+        [
+          "1-Propanol, Propyl alcohol",
+          0.023,
+          "25°C"
+        ],
+        [
+          "Isobutyl acetat. 2-Methylpropyl acetat",
+          0.023,
+          "25°C"
+        ],
+        [
+          "Ethanol, Ethyl Alcohol",
+          0.022,
+          "25°C"
+        ],
+        [
+          "Isopropanol, 2-propanol",
+          0.022,
+          "25°C"
+        ],
+        [
+          "Methanol, Methyl alcohol",
+          0.022,
+          "25°C"
+        ],
+        [
+          "Nonane",
+          0.022,
+          "25°C"
+        ],
+        [
+          "Cyclopentane",
+          0.022,
+          "25°C"
+        ],
+        [
+          "Ammonia, R-717",
+          0.021,
+          "25°C"
+        ],
+        [
+          "Octane",
+          0.021,
+          "25°C"
+        ],
+        [
+          "n-Heptane",
+          0.02,
+          "25°C"
+        ],
+        [
+          "Ethylamine, Ethanamine",
+          0.019,
+          "25°C"
+        ],
+        [
+          "n-Hexane",
+          0.018,
+          "25°C"
+        ],
+        [
+          "1-Hexene",
+          0.018,
+          "25°C"
+        ],
+        [
+          "Diethyl ether, Ethyl ether",
+          0.017,
+          "25°C"
+        ],
+        [
+          "Pentane",
+          0.015,
+          "25°C"
+        ],
+        [
+          "Chlorodifluoromethane, HCFC-22",
+          0.008,
+          "25°C"
+        ],
+        [
+          "Dichlorodifluoromethane, CFC-12",
+          0.0086,
+          "25°C"
+        ],
+        [
+          "Isobutane, 2-Methylpropane",
+          0.01,
+          "25°C"
+        ],
+        [
+          "Propane, LPG",
+          0.007,
+          "25°C"
+        ],
+        [
+          "Carbon dioxide",
+          0.00056,
+          "25°C"
+        ],
+        [
+          "Ethane",
+          0.00048,
+          "25°C"
+        ],
+        [
+          "Xenon",
+          0.00044,
+          "10°C"
+        ],
+        [
+          "Trifluormethane, Fluoroform",
+          0.00003,
+          "25°C"
+        ],
+        [
+          "Acetonitrile, Methyl cyanide",
+          0.287,
+          "25°C"
+        ],
+        [
+          "Pyridine",
+          0.037,
+          "25°C"
+        ],
+        [
+          "Formixc acis, Methanoic acid",
+          0.037,
+          "25°C"
+        ],
+        [
+          "Nitromethane, Nitrocarbol",
+          0.036,
+          "25°C"
+        ]
+      ]
+    }
+  ]
+}

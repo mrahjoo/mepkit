@@ -1,0 +1,65 @@
+{
+  "id": "circles_on_the_outside_of_a_circle",
+  "title": "Circles on the Outside of a Circle",
+  "description": "Calculate properties of circles arranged on the outside of a circle. This tool helps determine spacing, positioning, and geometric relationships when multiple circles are positioned around a central circle.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Circle Arrangement Calculator",
+      "inputs": [
+        {
+          "id": "radius_center",
+          "label": "Radius of Center Circle",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "units"
+        },
+        {
+          "id": "radius_outer",
+          "label": "Radius of Outer Circles",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "units"
+        },
+        {
+          "id": "num_circles",
+          "label": "Number of Circles",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "circles"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "angle_between",
+          "label": "Angle Between Circles",
+          "formula": "360 / inputs.num_circles",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "distance_center",
+          "label": "Distance from Center",
+          "formula": "inputs.radius_center + inputs.radius_outer",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "circumference_path",
+          "label": "Circumference of Path",
+          "formula": "2 * 3.14159265359 * (inputs.radius_center + inputs.radius_outer)",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "spacing_between",
+          "label": "Arc Length Between Centers",
+          "formula": "(2 * 3.14159265359 * (inputs.radius_center + inputs.radius_outer)) / inputs.num_circles",
+          "unit": "units",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

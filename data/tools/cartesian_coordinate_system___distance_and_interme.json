@@ -1,0 +1,123 @@
+{
+  "id": "cartesian_coordinate_system___distance_and_interme",
+  "title": "Cartesian Coordinate System - Distance and Intermediate Position Between Two Points",
+  "description": "Calculate the distance between two points and their intermediate position in a rectangular Cartesian coordinate system. The tool supports finding the distance between any two points and determining intermediate positions including the midpoint.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Input Parameters",
+        "Point Coordinates"
+      ],
+      "inputs": [
+        {
+          "id": "x1",
+          "label": "x1 coordinate of Point P1",
+          "type": "number",
+          "defaultValue": 4
+        },
+        {
+          "id": "y1",
+          "label": "y1 coordinate of Point P1",
+          "type": "number",
+          "defaultValue": 5
+        },
+        {
+          "id": "x2",
+          "label": "x2 coordinate of Point P2",
+          "type": "number",
+          "defaultValue": 7
+        },
+        {
+          "id": "y2",
+          "label": "y2 coordinate of Point P2",
+          "type": "number",
+          "defaultValue": 9
+        },
+        {
+          "id": "r1",
+          "label": "r1 ratio (distance P1 to P / distance P1 to P2)",
+          "type": "number",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "r2",
+          "label": "r2 ratio (distance P2 to P / distance P1 to P2)",
+          "type": "number",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance",
+          "label": "Distance between P1 and P2",
+          "formula": "sqrt((inputs.x2 - inputs.x1)^2 + (inputs.y2 - inputs.y1)^2)",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "intermediate_x",
+          "label": "Intermediate X coordinate",
+          "formula": "inputs.x1 + inputs.r1 * (inputs.x2 - inputs.x1)",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "intermediate_y",
+          "label": "Intermediate Y coordinate",
+          "formula": "inputs.y1 + inputs.r1 * (inputs.y2 - inputs.y1)",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "midpoint_x",
+          "label": "Midpoint X coordinate",
+          "formula": "(inputs.x1 + inputs.x2) / 2",
+          "unit": "units",
+          "format": "decimal"
+        },
+        {
+          "id": "midpoint_y",
+          "label": "Midpoint Y coordinate",
+          "formula": "(inputs.y1 + inputs.y2) / 2",
+          "unit": "units",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Point P1",
+        "Point P2",
+        "Intermediate Point P",
+        "Midpoint"
+      ],
+      "rows": [
+        [
+          "X Coordinate",
+          "inputs.x1",
+          "inputs.x2",
+          "inputs.x1 + inputs.r1 * (inputs.x2 - inputs.x1)",
+          "(inputs.x1 + inputs.x2) / 2"
+        ],
+        [
+          "Y Coordinate",
+          "inputs.y1",
+          "inputs.y2",
+          "inputs.y1 + inputs.r1 * (inputs.y2 - inputs.y1)",
+          "(inputs.y1 + inputs.y2) / 2"
+        ],
+        [
+          "Distance from P1",
+          "0",
+          "sqrt((inputs.x2 - inputs.x1)^2 + (inputs.y2 - inputs.y1)^2)",
+          "inputs.r1 * sqrt((inputs.x2 - inputs.x1)^2 + (inputs.y2 - inputs.y1)^2)",
+          "0.5 * sqrt((inputs.x2 - inputs.x1)^2 + (inputs.y2 - inputs.y1)^2)"
+        ]
+      ]
+    }
+  ]
+}

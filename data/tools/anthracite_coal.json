@@ -1,0 +1,148 @@
+{
+  "id": "anthracite_coal",
+  "title": "Anthracite Coal",
+  "description": "Anthracite coal is available in a number of different grades or sizes. Each size is suited for different sizes of grates and firepots, including buckwheat, egg, stove, chestnut, pea, and broken grades.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Anthracite Coal Grades\n\nAnthracite coal is available in a number of different grades or sizes:\n\n* **Buckwheat** - Used in automatic coal firing burners in domestic, commercial and industrial stokers\n* **Egg** - Used in large firepots, usually with beds more than 16 inches deep\n* **Stove** - Used for heating buildings. Mostly replaced with gas or oil\n* **Chestnut** - Used in medium firepots, usually with beds ranging 10-15 inches\n* **Pea** - Small grade anthracite\n* **Broken** - Broken pieces of anthracite coal\n\nEach size is suited for different sizes of grates and firepots."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "coal_weight",
+          "label": "Coal Weight",
+          "type": "number",
+          "unit": "tons",
+          "defaultValue": 1
+        },
+        {
+          "id": "coal_grade",
+          "label": "Coal Grade",
+          "type": "select",
+          "options": [
+            {
+              "label": "Buckwheat",
+              "value": 0.85
+            },
+            {
+              "label": "Egg",
+              "value": 0.9
+            },
+            {
+              "label": "Stove",
+              "value": 0.88
+            },
+            {
+              "label": "Chestnut",
+              "value": 0.87
+            },
+            {
+              "label": "Pea",
+              "value": 0.82
+            },
+            {
+              "label": "Broken",
+              "value": 0.8
+            }
+          ]
+        },
+        {
+          "id": "carbon_content",
+          "label": "Carbon Content Adjustment",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 95
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy_output",
+          "label": "Energy Output",
+          "unit": "BTU",
+          "formula": "inputs.coal_weight * inputs.coal_grade * inputs.carbon_content * 13000",
+          "format": "decimal"
+        },
+        {
+          "id": "efficiency_rating",
+          "label": "Efficiency Rating",
+          "unit": "%",
+          "formula": "inputs.coal_grade * 100",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Coal Grade",
+        "Efficiency Rating",
+        "Typical Firepot Depth"
+      ],
+      "rows": [
+        [
+          "Buckwheat",
+          85,
+          "Automatic Burners"
+        ],
+        [
+          "Egg",
+          90,
+          ">16 inches"
+        ],
+        [
+          "Stove",
+          88,
+          "General Heating"
+        ],
+        [
+          "Chestnut",
+          87,
+          "10-15 inches"
+        ],
+        [
+          "Pea",
+          82,
+          "Small Grates"
+        ],
+        [
+          "Broken",
+          80,
+          "Variable"
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Buckwheat",
+            "Egg",
+            "Stove",
+            "Chestnut",
+            "Pea",
+            "Broken"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              85,
+              90,
+              88,
+              87,
+              82,
+              80
+            ],
+            "type": "bar",
+            "name": "Efficiency Rating (%)"
+          }
+        ]
+      }
+    }
+  ]
+}

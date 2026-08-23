@@ -1,0 +1,46 @@
+{
+  "id": "lng___liquefied_natural_gas",
+  "title": "LNG - Liquefied Natural Gas",
+  "description": "LNG or Liquefied Natural Gas. Natural Gas cooled down to condensate at -161°C (-258°F). Calculate conversions and properties of liquefied natural gas including volume and density relationships.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# LNG - Liquefied Natural Gas\n\nLNG is Natural Gas cooled down to condensate at **-161°C (-258°F)**.\n\nNatural gas consists primarily of methane. Impurities and heavy hydrocarbons from the gaseous fossil fuel are removed before the cooling process.\n\n**Key Properties:**\n- Density range: 410 to 500 kg/m³\n- Volume ratio: Liquid volume is approximately 1/600 of gaseous volume at atmospheric conditions"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "gaseous_volume",
+          "label": "Gaseous Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 600
+        },
+        {
+          "id": "lng_density",
+          "label": "LNG Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 455
+        }
+      ],
+      "outputs": [
+        {
+          "id": "liquid_volume",
+          "label": "Liquid Volume",
+          "formula": "inputs.gaseous_volume / 600",
+          "unit": "m³"
+        },
+        {
+          "id": "lng_mass",
+          "label": "LNG Mass",
+          "formula": "(inputs.gaseous_volume / 600) * inputs.lng_density",
+          "unit": "kg",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

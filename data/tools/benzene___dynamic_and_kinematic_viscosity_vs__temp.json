@@ -1,0 +1,310 @@
+{
+  "id": "benzene___dynamic_and_kinematic_viscosity_vs__temp",
+  "title": "Benzene - Dynamic and Kinematic Viscosity vs. Temperature and Pressure",
+  "description": "Calculator and reference data for liquid benzene dynamic and kinematic viscosity at given temperatures and pressures. Outputs viscosity in multiple unit systems including SI (Pa·s, cSt) and Imperial (lb/ft·s, lb/ft·h) units.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "viscosity_calculator",
+      "content": "Benzene Viscosity Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "bara",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dynamic_viscosity_pas",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "format": "decimal",
+          "formula": "inputs.temperature > 278 && inputs.temperature < 550 ? (inputs.temperature < 300 ? 0.138 : inputs.temperature < 320 ? 0.321 : inputs.temperature < 340 ? 0.661 : inputs.temperature < 360 ? 1.24 : inputs.temperature < 380 ? 2.16 : inputs.temperature < 400 ? 3.53 : inputs.temperature < 450 ? 9.72 : inputs.temperature < 500 ? 21.7 : 42.1) / 1000 : 0.077"
+        },
+        {
+          "id": "kinematic_viscosity_cst",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt",
+          "format": "decimal",
+          "formula": "inputs.temperature > 278 && inputs.temperature < 550 ? (inputs.temperature < 300 ? 2.0 : inputs.temperature < 320 ? 4.65 : inputs.temperature < 340 ? 9.59 : inputs.temperature < 360 ? 18.0 : inputs.temperature < 380 ? 31.3 : inputs.temperature < 400 ? 51.2 : inputs.temperature < 450 ? 141 : inputs.temperature < 500 ? 314 : 611) : 14.5"
+        },
+        {
+          "id": "dynamic_viscosity_cp",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "format": "decimal",
+          "formula": "inputs.temperature > 278 && inputs.temperature < 550 ? (inputs.temperature < 300 ? 0.138 : inputs.temperature < 320 ? 0.321 : inputs.temperature < 340 ? 0.661 : inputs.temperature < 360 ? 1.24 : inputs.temperature < 380 ? 2.16 : inputs.temperature < 400 ? 3.53 : inputs.temperature < 450 ? 9.72 : inputs.temperature < 500 ? 21.7 : 42.1) : 0.77"
+        },
+        {
+          "id": "dynamic_viscosity_lbfft2",
+          "label": "Dynamic Viscosity",
+          "unit": "lbf·s/ft²",
+          "format": "scientific",
+          "formula": "(inputs.temperature > 278 && inputs.temperature < 550 ? (inputs.temperature < 300 ? 0.138 : inputs.temperature < 320 ? 0.321 : inputs.temperature < 340 ? 0.661 : inputs.temperature < 360 ? 1.24 : inputs.temperature < 380 ? 2.16 : inputs.temperature < 400 ? 3.53 : inputs.temperature < 450 ? 9.72 : inputs.temperature < 500 ? 21.7 : 42.1) : 0.77) * 0.0208854"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "viscosity_table",
+      "content": "Benzene Viscosity Reference Data",
+      "headers": [
+        "State",
+        "Temperature (°C)",
+        "Pressure (bara)",
+        "Dynamic Viscosity (cP)",
+        "Kinematic Viscosity (cSt)"
+      ],
+      "rows": [
+        [
+          "Liquid at equilibrium",
+          5.55,
+          278.7,
+          0.696,
+          0.048
+        ],
+        [
+          "Liquid",
+          6.9,
+          280,
+          0.747,
+          0.0515
+        ],
+        [
+          "Liquid",
+          26.9,
+          300,
+          2,
+          0.138
+        ],
+        [
+          "Liquid",
+          46.9,
+          320,
+          4.65,
+          0.321
+        ],
+        [
+          "Liquid",
+          66.9,
+          340,
+          9.59,
+          0.661
+        ],
+        [
+          "Liquid",
+          86.9,
+          360,
+          18,
+          1.24
+        ],
+        [
+          "Liquid",
+          107,
+          380,
+          31.3,
+          2.16
+        ],
+        [
+          "Liquid",
+          127,
+          400,
+          51.2,
+          3.53
+        ],
+        [
+          "Liquid",
+          177,
+          450,
+          141,
+          9.72
+        ],
+        [
+          "Liquid",
+          227,
+          500,
+          314,
+          21.7
+        ],
+        [
+          "Liquid",
+          277,
+          550,
+          611,
+          42.1
+        ],
+        [
+          "Gas at equilibrium",
+          5.6,
+          278.7,
+          0.696,
+          0.048
+        ],
+        [
+          "Gas",
+          6.9,
+          280,
+          0.747,
+          0.051
+        ],
+        [
+          "Gas",
+          26.9,
+          300,
+          2,
+          0.138
+        ],
+        [
+          "Gas",
+          46.9,
+          320,
+          4.65,
+          0.321
+        ],
+        [
+          "Gas",
+          66.9,
+          340,
+          9.59,
+          0.661
+        ],
+        [
+          "Gas",
+          86.9,
+          360,
+          18,
+          1.24
+        ],
+        [
+          "Gas",
+          107,
+          380,
+          31.3,
+          2.16
+        ],
+        [
+          "Gas",
+          127,
+          400,
+          51.2,
+          3.53
+        ],
+        [
+          "Gas",
+          177,
+          450,
+          141,
+          9.72
+        ],
+        [
+          "Gas",
+          227,
+          500,
+          314,
+          21.7
+        ],
+        [
+          "Gas",
+          277,
+          550,
+          611,
+          42.1
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "viscosity_vs_temperature_chart",
+      "content": "Dynamic Viscosity vs Temperature",
+      "options": {
+        "title": {
+          "text": "Benzene Dynamic Viscosity vs Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Liquid",
+            "Gas"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "278.7K",
+            "280K",
+            "300K",
+            "320K",
+            "340K",
+            "360K",
+            "380K",
+            "400K",
+            "450K",
+            "500K",
+            "550K"
+          ],
+          "name": "Temperature"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Viscosity (cP)"
+        },
+        "series": [
+          {
+            "name": "Liquid",
+            "data": [
+              0.696,
+              0.747,
+              2,
+              4.65,
+              9.59,
+              18,
+              31.3,
+              51.2,
+              141,
+              314,
+              611
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Gas",
+            "data": [
+              0.696,
+              0.747,
+              2,
+              4.65,
+              9.59,
+              18,
+              31.3,
+              51.2,
+              141,
+              314,
+              611
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "unit_conversion_guide",
+      "content": "## Unit Conversion Reference\n\n### Dynamic (Absolute) Viscosity\n- 1 cP = 0.001 Pa·s = 0.01 P\n- 1 Pa·s = 1 kg/(m·s) = 1000 cP\n- 1 lb/(ft·s) = 1.48816 Pa·s = 1488.16 cP\n- 1 lb/(ft·h) = 0.00041338 Pa·s = 0.41338 cP\n\n### Kinematic Viscosity\n- 1 cSt = 1 mm²/s = 1×10⁻⁶ m²/s\n- 1 m²/s = 1×10⁶ cSt\n- 1 ft²/s = 92903.04 cSt\n- 1 St = 100 cSt\n\nFor full unit conversion details, see the [Dynamic Viscosity Converter](dynamic-viscosity-d_571.html) and [Kinematic Viscosity Converter](kinematic-viscosity-d_570.html)."
+    }
+  ]
+}

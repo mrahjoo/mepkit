@@ -1,0 +1,181 @@
+{
+  "id": "propane_butane_mixture___evaporation_pressure",
+  "title": "Propane Butane Mixture - Evaporation Pressure",
+  "description": "Evaporation pressure of propane butane mixture vs. temperature. This tool provides vapor pressure data for mixtures of propane (C3H8) and butane (C4H10) at different temperatures and composition ratios.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "evaporation_pressure_calculator",
+      "content": "Calculate evaporation pressure for a propane-butane mixture based on temperature and composition.",
+      "inputs": [
+        {
+          "id": "temperature_f",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 32
+        },
+        {
+          "id": "propane_percent",
+          "label": "Propane Content",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "vapor_pressure",
+          "label": "Vapor Pressure (Gauge)",
+          "unit": "psig",
+          "formula": "inputs.temperature_f * 1.8 + inputs.propane_percent * 0.5",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "evaporation_pressure_table",
+      "content": "Vapor Pressure Data for Propane-Butane Mixtures",
+      "headers": [
+        "Temperature (°F)",
+        "100% Propane",
+        "70% Propane / 30% Butane",
+        "50% Propane / 50% Butane",
+        "30% Propane / 70% Butane",
+        "100% Butane"
+      ],
+      "rows": [
+        [
+          -44,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -30,
+          6.8,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -20,
+          11.5,
+          4.7,
+          0,
+          0,
+          0
+        ],
+        [
+          -10,
+          17.5,
+          9,
+          3.5,
+          0,
+          0
+        ],
+        [
+          0,
+          24.5,
+          15,
+          7.6,
+          2.3,
+          0
+        ],
+        [
+          10,
+          34,
+          20.5,
+          12.3,
+          5.9,
+          0
+        ],
+        [
+          20,
+          42,
+          28,
+          17.8,
+          10.2,
+          0
+        ],
+        [
+          30,
+          53,
+          36.5,
+          24.5,
+          15.4,
+          0
+        ],
+        [
+          40,
+          65,
+          46,
+          32.4,
+          21.5,
+          3.1
+        ],
+        [
+          50,
+          78,
+          56,
+          41,
+          28.5,
+          6.9
+        ],
+        [
+          60,
+          93,
+          68,
+          50,
+          36.5,
+          11.5
+        ],
+        [
+          70,
+          110,
+          82,
+          61,
+          45,
+          17
+        ],
+        [
+          80,
+          128,
+          96,
+          74,
+          54,
+          23
+        ],
+        [
+          90,
+          150,
+          114,
+          88,
+          66,
+          30
+        ],
+        [
+          100,
+          177,
+          134,
+          104,
+          79,
+          38
+        ],
+        [
+          110,
+          204,
+          158,
+          122,
+          93,
+          47
+        ]
+      ]
+    }
+  ]
+}

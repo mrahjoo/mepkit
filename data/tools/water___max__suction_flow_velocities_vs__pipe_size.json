@@ -1,0 +1,108 @@
+{
+  "id": "water___max__suction_flow_velocities_vs__pipe_size",
+  "title": "Water - Max. Suction Flow Velocities vs. Pipe Size",
+  "description": "Recommended maximum water flow velocities on suction sides of pumps. Keep suction fluid flow speed below specified values to avoid capacity problems, cavitation, and high power consumption.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Water - Max. Suction Flow Velocities",
+      "headers": [
+        "Pipe Bore (inches)",
+        "Pipe Bore (mm)",
+        "Max. Suction Velocity (m/s)",
+        "Max. Suction Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          1,
+          25,
+          0.5,
+          1.5
+        ],
+        [
+          2,
+          50,
+          0.5,
+          1.6
+        ],
+        [
+          3,
+          75,
+          0.5,
+          1.7
+        ],
+        [
+          4,
+          100,
+          0.55,
+          1.8
+        ],
+        [
+          6,
+          150,
+          0.6,
+          2
+        ],
+        [
+          8,
+          200,
+          0.75,
+          2.5
+        ],
+        [
+          10,
+          250,
+          0.9,
+          3
+        ],
+        [
+          12,
+          300,
+          1.4,
+          4.5
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Calculate Flow Velocity from Flow Rate and Pipe Size",
+      "inputs": [
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 10
+        },
+        {
+          "id": "pipe_bore_mm",
+          "label": "Pipe Bore",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_velocity_ms",
+          "label": "Flow Velocity",
+          "unit": "m/s",
+          "formula": "inputs.flow_rate / (3.6 * (inputs.pipe_bore_mm / 1000) ** 2 * 3.14159 / 4)",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_velocity_fts",
+          "label": "Flow Velocity",
+          "unit": "ft/s",
+          "formula": "inputs.flow_rate / (3.6 * (inputs.pipe_bore_mm / 1000) ** 2 * 3.14159 / 4) * 3.28084",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n**Key Points:**\n- Capacity problems, cavitation, and high power consumption in pumps often result from suction side conditions\n- As a rule of thumb, keep suction fluid flow speed below the recommended values in the table above\n- Use the calculator above to determine your system's flow velocity for a given flow rate and pipe size\n- Compare your calculated velocity against the maximum recommended velocity for your pipe size\n\n**Related Topics:**\n- Cavitation and NPSH (Net Positive Suction Head) - important for understanding suction-side performance"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "fire_wood___the_cord",
+  "title": "Fire Wood - the Cord",
+  "description": "Calculate the number of cords in a pile of firewood by measuring length, width, and height. A cord is a standardized unit of stacked wood volume: 128 cubic feet or 3.62 cubic meters.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Fire Wood - the Cord\n\nThe cord is the most commonly used measurement unit for purchasing fuel wood.\n\nA cord is a stacked unit volume of wood where:\n- **1 cord = (4 ft) × (4 ft) × (8 ft) = 128 cubic feet**\n- **1 cord = (1.22 m) × (1.22 m) × (2.44 m) = 3.62 m³**\n\nThis volume includes bark and air space. Due to the irregular shape of wood, the air space in the cord can be as high as 40%. The net cord volume can therefore be as low as 75 cubic feet, with typical ranges of 80-100 cubic feet.\n\n### How to Calculate the Cords\n\nMeasure the **length (l)**, **width (w)**, and **height (h)** of the pile. Calculate the volume and divide by:\n- **128** if using feet\n- **3.62** if using meters"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Length",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": "ft"
+        },
+        {
+          "id": "width",
+          "label": "Width",
+          "type": "number",
+          "defaultValue": 2.5,
+          "unit": "ft"
+        },
+        {
+          "id": "height",
+          "label": "Height",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "ft"
+        },
+        {
+          "id": "unit",
+          "label": "Unit",
+          "type": "select",
+          "defaultValue": "feet",
+          "options": [
+            {
+              "label": "Feet",
+              "value": "feet"
+            },
+            {
+              "label": "Meters",
+              "value": "meters"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume",
+          "label": "Total Volume",
+          "formula": "inputs.length * inputs.width * inputs.height",
+          "unit": "cubic feet / m³"
+        },
+        {
+          "id": "cords",
+          "label": "Number of Cords",
+          "formula": "inputs.unit === 'feet' ? (inputs.length * inputs.width * inputs.height) / 128 : (inputs.length * inputs.width * inputs.height) / 3.62",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Firewood Type",
+        "Classification",
+        "Quality & Notes"
+      ],
+      "rows": [
+        [
+          "Ash, white",
+          "Hardwood",
+          "Good firewood"
+        ],
+        [
+          "Beech",
+          "Hardwood",
+          "Good firewood"
+        ],
+        [
+          "Birch, yellow",
+          "Hardwood",
+          "Good firewood"
+        ],
+        [
+          "Chestnut",
+          "Hardwood",
+          "Excessive sparking, can be dangerous"
+        ],
+        [
+          "Cottonwood",
+          "Hardwood",
+          "Good firewood"
+        ],
+        [
+          "Elm, white",
+          "Hardwood",
+          "Difficult to split, burns well"
+        ],
+        [
+          "Hickory",
+          "Hardwood",
+          "Slow steady fire, best firewood"
+        ],
+        [
+          "Maple, sugar",
+          "Hardwood",
+          "Good firewood"
+        ],
+        [
+          "Oak, red",
+          "Hardwood",
+          "Slow steady fire"
+        ],
+        [
+          "Oak, white",
+          "Hardwood",
+          "Slow steady fire"
+        ],
+        [
+          "Pine, yellow",
+          "Softwood",
+          "Quick hot fire, smokier than hardwood"
+        ],
+        [
+          "Pine, white",
+          "Softwood",
+          "Quick hot fire, smokier than hardwood"
+        ],
+        [
+          "Walnut, black",
+          "Hardwood",
+          "Good firewood"
+        ]
+      ]
+    }
+  ]
+}

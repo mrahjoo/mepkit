@@ -1,0 +1,67 @@
+{
+  "id": "sound_level___online_calculator",
+  "title": "Sound Level - Online Calculator",
+  "description": "Calculate sound level, pressure and intensity. An online sound level, sound pressure and sound intensity calculator.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Sound Pressure Level (SPL)",
+          "94",
+          "dB",
+          "Decibels relative to 20 µPa"
+        ],
+        [
+          "Sound Pressure",
+          "1.0",
+          "Pa",
+          "Pressure in Pascals"
+        ],
+        [
+          "Sound Intensity",
+          "0.1",
+          "W/m²",
+          "Intensity in Watts per square meter"
+        ],
+        [
+          "Reference Pressure",
+          "20",
+          "µPa",
+          "Reference pressure (standard: 20 µPa)"
+        ],
+        [
+          "Reference Intensity",
+          "1e-12",
+          "W/m²",
+          "Reference intensity (standard: 1e-12 W/m²)"
+        ],
+        [
+          "Threshold of Hearing",
+          "0",
+          "dB",
+          "Minimum audible sound level"
+        ],
+        [
+          "Normal Conversation",
+          "60",
+          "dB",
+          "Typical conversation level"
+        ],
+        [
+          "Threshold of Pain",
+          "130",
+          "dB",
+          "Sound level causing pain"
+        ]
+      ]
+    }
+  ]
+}

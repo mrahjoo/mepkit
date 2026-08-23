@@ -1,0 +1,12 @@
+{
+  "id": "nfpa___national_fire_protection_association",
+  "title": "NFPA - National Fire Protection Association",
+  "description": "The U.S. authority on fire, electrical and building safety. NFPA develops, publishes, and disseminates more than 300 consensus codes and standards intended to minimize the possibility and effects of fire and other risks.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# NFPA - National Fire Protection Association\n\n[NFPA](http://www.nfpa.org/) - is the U.S. authority on fire, electrical and building safety.\n\n## Overview\nNFPA develops, publishes, and disseminates more than 300 consensus codes and standards intended to minimize the possibility and effects of fire and other risks. Virtually every building, process, service, design, and installation in society today is affected by NFPA documents.\n\n## Key Areas\n- Fire Safety\n- Electrical Safety\n- Building Safety\n- Consensus Codes and Standards\n\n## Learn More\nVisit [www.nfpa.org](http://www.nfpa.org/) for more information about NFPA codes and standards."
+    }
+  ]
+}

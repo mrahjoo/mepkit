@@ -1,0 +1,235 @@
+{
+  "id": "evaporative_cooling",
+  "title": "Evaporative Cooling",
+  "description": "Analyze direct and indirect evaporative cooling systems showing temperature and humidity changes. Compare dry bulb temperature reduction, relative humidity changes, and cooling effectiveness for both direct and indirect evaporative cooling processes.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "### Direct Evaporative Cooling Analysis\nDirect evaporative cooling reduces dry bulb temperature while maintaining constant wet bulb temperature. Calculate the final temperature and humidity after direct evaporation.",
+      "inputs": [
+        {
+          "id": "initial_temp_f",
+          "label": "Initial Dry Bulb Temperature",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "°F"
+        },
+        {
+          "id": "initial_rh",
+          "label": "Initial Relative Humidity",
+          "type": "number",
+          "defaultValue": 60,
+          "unit": "%"
+        },
+        {
+          "id": "humidification_level",
+          "label": "Humidification Level",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "final_temp_direct",
+          "label": "Final Dry Bulb Temperature (Direct)",
+          "formula": "inputs.initial_temp_f - (inputs.initial_temp_f - 61) * (inputs.humidification_level / 100)",
+          "unit": "°F",
+          "format": "decimal"
+        },
+        {
+          "id": "final_rh_direct",
+          "label": "Final Relative Humidity (Direct)",
+          "formula": "inputs.initial_rh + (100 - inputs.initial_rh) * (inputs.humidification_level / 100)",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Indirect Evaporative Cooling Analysis\nIndirect evaporative cooling reduces dry bulb temperature while reducing wet bulb temperature. Moisture is not added to primary air.",
+      "inputs": [
+        {
+          "id": "initial_temp_f_indirect",
+          "label": "Initial Dry Bulb Temperature",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "°F"
+        },
+        {
+          "id": "initial_rh_indirect",
+          "label": "Initial Relative Humidity",
+          "type": "number",
+          "defaultValue": 60,
+          "unit": "%"
+        },
+        {
+          "id": "secondary_humidification",
+          "label": "Secondary Air Humidification Level",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "final_temp_indirect",
+          "label": "Final Dry Bulb Temperature (Indirect)",
+          "formula": "inputs.initial_temp_f_indirect - (inputs.initial_temp_f_indirect - 70) * (inputs.secondary_humidification / 100) * 0.5",
+          "unit": "°F",
+          "format": "decimal"
+        },
+        {
+          "id": "final_rh_indirect",
+          "label": "Final Relative Humidity (Indirect)",
+          "formula": "inputs.initial_rh_indirect + (83 - inputs.initial_rh_indirect) * (inputs.secondary_humidification / 100)",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "### Evaporative Cooling Comparison",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Initial State",
+            "Direct Evaporative (100%)",
+            "Indirect Evaporative (100%)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Initial",
+            "After Cooling"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Temperature (°F)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Relative Humidity (%)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Initial State - Temp",
+            "data": [
+              70,
+              70
+            ],
+            "yAxisIndex": 0,
+            "type": "line"
+          },
+          {
+            "name": "Direct Evaporative - Temp",
+            "data": [
+              70,
+              61
+            ],
+            "yAxisIndex": 0,
+            "type": "line"
+          },
+          {
+            "name": "Indirect Evaporative - Temp",
+            "data": [
+              70,
+              65
+            ],
+            "yAxisIndex": 0,
+            "type": "line"
+          },
+          {
+            "name": "Initial State - RH",
+            "data": [
+              60,
+              60
+            ],
+            "yAxisIndex": 1,
+            "type": "line"
+          },
+          {
+            "name": "Direct Evaporative - RH",
+            "data": [
+              60,
+              100
+            ],
+            "yAxisIndex": 1,
+            "type": "line"
+          },
+          {
+            "name": "Indirect Evaporative - RH",
+            "data": [
+              60,
+              83
+            ],
+            "yAxisIndex": 1,
+            "type": "line"
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "content": "### System Comparison Summary",
+      "headers": [
+        "Property",
+        "Direct Evaporative",
+        "Indirect Evaporative"
+      ],
+      "rows": [
+        [
+          "Dry Bulb Temperature",
+          "Reduced significantly",
+          "Reduced moderately"
+        ],
+        [
+          "Wet Bulb Temperature",
+          "Unchanged",
+          "Reduced"
+        ],
+        [
+          "Relative Humidity",
+          "Increased significantly",
+          "Increased moderately"
+        ],
+        [
+          "Specific Humidity",
+          "Increased",
+          "Unchanged"
+        ],
+        [
+          "Moisture Added to Primary Air",
+          "Yes",
+          "No"
+        ],
+        [
+          "Final Temp (70°F, 60% RH)",
+          "~61°F",
+          "~65°F"
+        ],
+        [
+          "Final RH (70°F, 60% RH)",
+          "~100%",
+          "~83%"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Benefits of Evaporative Cooling\n\n- **Cost Effective**: Can reduce DX compressor system size and runtime\n- **Environmentally Friendly**: No refrigerants required\n- **High Temperature Performance**: More effective than DX systems at higher temperatures\n\n## Safety Considerations\n\n⚠️ **Legionella Risk**: Water systems operating between 69°F (20.5°C) and 122°F (50°C) are potential legionella sources. Proper maintenance and water treatment are essential."
+    }
+  ]
+}

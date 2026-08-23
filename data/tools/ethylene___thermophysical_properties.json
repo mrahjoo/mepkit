@@ -1,0 +1,286 @@
+{
+  "id": "ethylene___thermophysical_properties",
+  "title": "Ethylene - Thermophysical Properties",
+  "description": "Comprehensive thermophysical properties of Ethylene (C2H4), a highly flammable, colorless gas. This tool provides detailed chemical, physical and thermal properties at standard conditions (25°C, 1 bar) and includes critical point data, phase diagrams, and conversion between different unit systems.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value (SI)",
+        "Unit (SI)",
+        "Value (Imperial)",
+        "Unit (Imperial)"
+      ],
+      "rows": [
+        [
+          "Autoignition temperature",
+          "723",
+          "K",
+          "842",
+          "°F"
+        ],
+        [
+          "Boiling Point",
+          "169",
+          "K",
+          "-155",
+          "°F"
+        ],
+        [
+          "Critical density",
+          "214",
+          "kg/m³",
+          "13.4",
+          "lb/ft³"
+        ],
+        [
+          "Critical pressure",
+          "5.06",
+          "MPa",
+          "734",
+          "psi"
+        ],
+        [
+          "Critical temperature",
+          "282.4",
+          "K",
+          "48.6",
+          "°F"
+        ],
+        [
+          "Critical volume",
+          "0.00467",
+          "m³/kg",
+          "0.0748",
+          "ft³/lb"
+        ],
+        [
+          "Density (gas)",
+          "1.138",
+          "kg/m³",
+          "0.07104",
+          "lb/ft³"
+        ],
+        [
+          "Density (liquid) at -104°C",
+          "577",
+          "kg/m³",
+          "36.0",
+          "lb/ft³"
+        ],
+        [
+          "Flammable",
+          "yes",
+          "highly",
+          "yes",
+          "highly"
+        ],
+        [
+          "Flash point",
+          "137",
+          "K",
+          "-213",
+          "°F"
+        ],
+        [
+          "Gas constant (R)",
+          "296.4",
+          "J/kg K",
+          "55.08",
+          "ft lbf/lb °R"
+        ],
+        [
+          "Gibbs free energy of formation",
+          "68",
+          "kJ/mol",
+          "1042",
+          "Btu/lb"
+        ],
+        [
+          "Heat of combustion",
+          "-1411",
+          "kJ/mol",
+          "-21626",
+          "Btu/lb"
+        ],
+        [
+          "Heat of formation",
+          "52.4",
+          "kJ/mol",
+          "803",
+          "Btu/lb"
+        ],
+        [
+          "Heat of evaporation at -104°C",
+          "13.6",
+          "kJ/mol",
+          "207.7",
+          "Btu/lb"
+        ],
+        [
+          "Heat capacity Cp (gas)",
+          "1.53",
+          "kJ/kg K",
+          "0.365",
+          "Btu/lb°F"
+        ],
+        [
+          "Heat capacity Cp (liquid)",
+          "2.40",
+          "kJ/kg K",
+          "0.574",
+          "Btu/lb°F"
+        ],
+        [
+          "Heat capacity Cv (gas)",
+          "1.24",
+          "kJ/kg K",
+          "0.295",
+          "Btu/lb°F"
+        ],
+        [
+          "Heat capacity Cv (liquid)",
+          "1.38",
+          "kJ/kg K",
+          "0.330",
+          "Btu/lb°F"
+        ],
+        [
+          "Ionization potential",
+          "10.5",
+          "eV",
+          "",
+          ""
+        ],
+        [
+          "log KOW (Octanol/Water Partition)",
+          "1.13",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Melting point",
+          "104.15",
+          "K",
+          "-272.2",
+          "°F"
+        ],
+        [
+          "Molecular Weight",
+          "28.054",
+          "g/mol",
+          "0.06185",
+          "lb/mol"
+        ],
+        [
+          "Solubility in water (25°C)",
+          "0.131",
+          "mg/ml",
+          "",
+          ""
+        ],
+        [
+          "Sound velocity",
+          "330",
+          "m/s",
+          "1082",
+          "ft/s"
+        ],
+        [
+          "Specific Gravity (gas, relative to air)",
+          "0.978",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Specific Heat Ratio Cp/Cv (gas)",
+          "1.24",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Specific Heat Ratio Cp/Cv (liquid)",
+          "1.74",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Specific Volume",
+          "0.879",
+          "m³/kg",
+          "14.1",
+          "ft³/lb"
+        ],
+        [
+          "Standard molar entropy S° (gas)",
+          "219.32",
+          "J/mol K",
+          "1.87",
+          "Btu/lb °F"
+        ],
+        [
+          "Standard molar entropy S° (liquid)",
+          "117.8",
+          "J/mol K",
+          "1.00",
+          "Btu/lb °F"
+        ],
+        [
+          "Surface tension at -104°C",
+          "0.016",
+          "N/m",
+          "",
+          ""
+        ],
+        [
+          "Thermal Conductivity",
+          "0.020",
+          "W/m°C",
+          "0.0118",
+          "Btu/hr ft °F"
+        ],
+        [
+          "Triple point pressure",
+          "0.000122",
+          "MPa",
+          "0.0177",
+          "psi"
+        ],
+        [
+          "Triple point temperature",
+          "104.0",
+          "K",
+          "-272.49",
+          "°F"
+        ],
+        [
+          "Vapor (saturation) pressure",
+          "6.9449",
+          "MPa",
+          "1007.30",
+          "psi"
+        ],
+        [
+          "Viscosity, dynamic",
+          "0.0103",
+          "cP",
+          "0.22",
+          "lbf s/ft² ×10⁻⁶"
+        ],
+        [
+          "Viscosity, kinematic",
+          "9.05",
+          "cSt",
+          "97.4",
+          "ft²/s ×10⁻⁶"
+        ]
+      ]
+    }
+  ]
+}

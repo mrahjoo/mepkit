@@ -1,0 +1,406 @@
+{
+  "id": "fuel_oil_storage_tanks",
+  "title": "Fuel Oil Storage Tanks",
+  "description": "Fuel oil storage tanks dimensions according to National Board Standards and European Standards EN-12285-1 and EN-12285-2",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Fuel Oil Storage Tanks\n\nFuel oil storage tanks dimensions and specifications according to **National Board Standards** and **European Standards** EN-12285-1 and EN-12285-2.\n\n## National Board Standard Capacities\n\nDimensions of cylindrical fuel oil storage tanks with various capacities ranging from 65 to 30000 gallons.\n\n## European Standards Double-Jacketed Tanks\n\nDouble-jacketed tanks complying with EN-12285-1 and EN-12285-2 standards with capacities from 1500 to 120000 litres."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Capacity (gallons)",
+        "Diameter (inches)",
+        "Length (feet-inches)",
+        "Shell Thickness (inches)",
+        "Head Thickness (inches)",
+        "Weight (lb)"
+      ],
+      "rows": [
+        [
+          550,
+          48,
+          "6-0",
+          "3/16",
+          "3/16",
+          800
+        ],
+        [
+          1000,
+          48,
+          "10-10",
+          "3/16",
+          "3/16",
+          1300
+        ],
+        [
+          1100,
+          48,
+          "11-11",
+          "3/16",
+          "3/16",
+          1400
+        ],
+        [
+          1500,
+          48,
+          "15-8",
+          "3/16",
+          "3/16",
+          1650
+        ],
+        [
+          2000,
+          65,
+          "11-10",
+          "3/16",
+          "3/16",
+          2050
+        ],
+        [
+          2500,
+          65,
+          "14-10",
+          "3/16",
+          "3/16",
+          2275
+        ],
+        [
+          3000,
+          65,
+          "17-8",
+          "3/16",
+          "3/16",
+          2940
+        ],
+        [
+          4000,
+          65,
+          "23-8",
+          "3/16",
+          "3/16",
+          3600
+        ],
+        [
+          5000,
+          72,
+          "23-8",
+          "1/4",
+          "1/4",
+          5800
+        ],
+        [
+          7500,
+          84,
+          "26-6",
+          "1/4",
+          "1/4",
+          7150
+        ],
+        [
+          10000,
+          96,
+          "26-6",
+          "1/4",
+          "5/16",
+          8540
+        ],
+        [
+          12000,
+          96,
+          "31-6",
+          "1/4",
+          "5/16",
+          10500
+        ],
+        [
+          15000,
+          108,
+          "31-6",
+          "5/16",
+          "5/16",
+          13300
+        ],
+        [
+          20000,
+          120,
+          "34-6",
+          "5/16",
+          "5/16",
+          15500
+        ],
+        [
+          25000,
+          120,
+          "42-6",
+          "3/8",
+          "3/8",
+          22300
+        ],
+        [
+          30000,
+          120,
+          "51-3",
+          "3/8",
+          "3/8",
+          28000
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Capacity (litre)",
+        "Diameter (mm)",
+        "Length (mm)",
+        "Weight (kg)"
+      ],
+      "rows": [
+        [
+          1500,
+          1250,
+          1580,
+          580
+        ],
+        [
+          2000,
+          1250,
+          2000,
+          700
+        ],
+        [
+          3000,
+          1250,
+          2720,
+          880
+        ],
+        [
+          4000,
+          1250,
+          3560,
+          1100
+        ],
+        [
+          5000,
+          1500,
+          3150,
+          1200
+        ],
+        [
+          6000,
+          1500,
+          3710,
+          1370
+        ],
+        [
+          8000,
+          1900,
+          3260,
+          1760
+        ],
+        [
+          10000,
+          1900,
+          3960,
+          2060
+        ],
+        [
+          12000,
+          1900,
+          4670,
+          2380
+        ],
+        [
+          15000,
+          1900,
+          5910,
+          2940
+        ],
+        [
+          20000,
+          1900,
+          7860,
+          3820
+        ],
+        [
+          25000,
+          1900,
+          9810,
+          4720
+        ],
+        [
+          30000,
+          1900,
+          11510,
+          5571
+        ],
+        [
+          40000,
+          2500,
+          8830,
+          6390
+        ],
+        [
+          50000,
+          2500,
+          10820,
+          7600
+        ],
+        [
+          60000,
+          2500,
+          12970,
+          9100
+        ],
+        [
+          80000,
+          3000,
+          12220,
+          11160
+        ],
+        [
+          100000,
+          3000,
+          15080,
+          13590
+        ],
+        [
+          120000,
+          3000,
+          17700,
+          15930
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Fuel Oil Storage Tank Capacity vs Diameter (National Board Standards)"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            550,
+            1000,
+            1100,
+            1500,
+            2000,
+            2500,
+            3000,
+            4000,
+            5000,
+            7500,
+            10000,
+            12000,
+            15000,
+            20000,
+            25000,
+            30000
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Diameter (inches)"
+        },
+        "series": [
+          {
+            "name": "Diameter (inches)",
+            "data": [
+              48,
+              48,
+              48,
+              48,
+              65,
+              65,
+              65,
+              65,
+              72,
+              84,
+              96,
+              96,
+              108,
+              120,
+              120,
+              120
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "European Standard Tank Capacity vs Weight"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            1500,
+            2000,
+            3000,
+            4000,
+            5000,
+            6000,
+            8000,
+            10000,
+            12000,
+            15000,
+            20000,
+            25000,
+            30000,
+            40000,
+            50000,
+            60000,
+            80000,
+            100000,
+            120000
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Weight (kg)"
+        },
+        "series": [
+          {
+            "name": "Weight (kg)",
+            "data": [
+              580,
+              700,
+              880,
+              1100,
+              1200,
+              1370,
+              1760,
+              2060,
+              2380,
+              2940,
+              3820,
+              4720,
+              5571,
+              6390,
+              7600,
+              9100,
+              11160,
+              13590,
+              15930
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

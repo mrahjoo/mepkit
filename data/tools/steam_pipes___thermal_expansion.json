@@ -1,0 +1,71 @@
+{
+  "id": "steam_pipes___thermal_expansion",
+  "title": "Steam Pipes - Thermal Expansion",
+  "description": "Thermal expansion of steam pipes heated from room temperature to operation temperature (mm per 100 m pipe).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "pipe_material",
+          "label": "Pipe Material",
+          "type": "select",
+          "options": [
+            {
+              "label": "Carbon Steel",
+              "value": "carbon_steel"
+            },
+            {
+              "label": "Stainless Steel",
+              "value": "stainless_steel"
+            },
+            {
+              "label": "Copper",
+              "value": "copper"
+            },
+            {
+              "label": "Aluminum",
+              "value": "aluminum"
+            }
+          ],
+          "defaultValue": "carbon_steel"
+        },
+        {
+          "id": "initial_temperature",
+          "label": "Initial Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "final_temperature",
+          "label": "Final (Operation) Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 200
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_expansion",
+          "label": "Thermal Expansion",
+          "unit": "mm",
+          "formula": "inputs.pipe_length * (inputs.final_temperature - inputs.initial_temperature) * 0.012",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

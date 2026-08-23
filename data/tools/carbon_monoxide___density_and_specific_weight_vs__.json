@@ -1,0 +1,368 @@
+{
+  "id": "carbon_monoxide___density_and_specific_weight_vs__",
+  "title": "Carbon Monoxide - Density and Specific Weight vs. Temperature and Pressure",
+  "description": "Calculator for estimating the density and specific weight of gaseous carbon monoxide at given temperature and pressure. Outputs density in kg/m³, lb/ft³, lb/gal(US liq), and sl/ft³. Specific weight given as N/m³ and lbf/ft³.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "co_density_calculator",
+      "content": "Carbon Monoxide Density and Specific Weight Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "temperature_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "defaultValue": "celsius",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "celsius"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "fahrenheit"
+            },
+            {
+              "label": "Kelvin (K)",
+              "value": "kelvin"
+            },
+            {
+              "label": "Rankine (°R)",
+              "value": "rankine"
+            }
+          ]
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bara"
+        },
+        {
+          "id": "pressure_unit",
+          "label": "Pressure Unit",
+          "type": "select",
+          "defaultValue": "bara",
+          "options": [
+            {
+              "label": "bara",
+              "value": "bara"
+            },
+            {
+              "label": "psia",
+              "value": "psia"
+            },
+            {
+              "label": "atm",
+              "value": "atm"
+            },
+            {
+              "label": "Pa",
+              "value": "pa"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "inputs.temperature * 0.001 + inputs.pressure * 0.5",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "formula": "inputs.temperature * 0.0000625 + inputs.pressure * 0.03125",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lb_gal",
+          "label": "Density",
+          "unit": "lb/gal(US liq)",
+          "formula": "inputs.temperature * 0.000084 + inputs.pressure * 0.042",
+          "format": "decimal"
+        },
+        {
+          "id": "density_sl_ft3",
+          "label": "Density",
+          "unit": "sl/ft³",
+          "formula": "inputs.temperature * 0.0000031 + inputs.pressure * 0.00155",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_weight_n_m3",
+          "label": "Specific Weight",
+          "unit": "N/m³",
+          "formula": "(inputs.temperature * 0.001 + inputs.pressure * 0.5) * 9.80665",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "formula": "inputs.temperature * 0.00000624 + inputs.pressure * 0.00312",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "co_density_table",
+      "content": "Carbon Monoxide Density and Specific Weight Reference Table",
+      "headers": [
+        "State",
+        "Temperature (K)",
+        "Temperature (°C)",
+        "Pressure (bara)",
+        "Density (kg/m³)",
+        "Density (lb/ft³)",
+        "Specific Weight (N/m³)",
+        "Specific Weight (lbf/ft³)"
+      ],
+      "rows": [
+        [
+          "Liquid at equilibrium",
+          "68.16",
+          "-204.99",
+          "0.155",
+          "849.5",
+          "53.03",
+          "8331",
+          "53.03"
+        ],
+        [
+          "Gas at equilibrium",
+          "68.16",
+          "-204.99",
+          "0.155",
+          "0.02771",
+          "0.04845",
+          "7.611",
+          "0.04845"
+        ],
+        [
+          "Gas",
+          "100",
+          "-173",
+          "1",
+          "0.1230",
+          "0.2150",
+          "33.78",
+          "0.2150"
+        ],
+        [
+          "Gas",
+          "200",
+          "-73.2",
+          "1",
+          "0.06029",
+          "0.1054",
+          "16.56",
+          "0.1054"
+        ],
+        [
+          "Gas",
+          "300",
+          "26.9",
+          "1",
+          "0.04010",
+          "0.07013",
+          "11.02",
+          "0.07013"
+        ],
+        [
+          "Gas",
+          "400",
+          "127",
+          "1",
+          "0.03006",
+          "0.05257",
+          "8.258",
+          "0.05257"
+        ],
+        [
+          "Gas",
+          "500",
+          "227",
+          "1",
+          "0.02405",
+          "0.04205",
+          "6.605",
+          "0.04205"
+        ],
+        [
+          "Liquid",
+          "100",
+          "-173",
+          "10",
+          "25.26",
+          "44.17",
+          "6939",
+          "44.17"
+        ],
+        [
+          "Gas",
+          "108.96",
+          "-164",
+          "10",
+          "1.393",
+          "2.436",
+          "382.7",
+          "2.436"
+        ],
+        [
+          "Gas",
+          "200",
+          "-73.2",
+          "10",
+          "0.6173",
+          "1.079",
+          "169.6",
+          "1.079"
+        ],
+        [
+          "Gas",
+          "300",
+          "26.9",
+          "10",
+          "0.4021",
+          "0.7032",
+          "110.5",
+          "0.7032"
+        ],
+        [
+          "Gas",
+          "400",
+          "127",
+          "10",
+          "0.3000",
+          "0.5246",
+          "82.40",
+          "0.5246"
+        ],
+        [
+          "Gas",
+          "500",
+          "227",
+          "10",
+          "0.2396",
+          "0.4190",
+          "65.82",
+          "0.4190"
+        ],
+        [
+          "Liquid",
+          "100",
+          "-173",
+          "50",
+          "25.86",
+          "45.226",
+          "7104",
+          "45.23"
+        ],
+        [
+          "Supercritical",
+          "200",
+          "-73.2",
+          "50",
+          "3.413",
+          "5.968",
+          "937.5",
+          "5.968"
+        ],
+        [
+          "Supercritical",
+          "300",
+          "26.9",
+          "50",
+          "2.023",
+          "3.538",
+          "555.7",
+          "3.538"
+        ],
+        [
+          "Supercritical",
+          "400",
+          "127",
+          "50",
+          "1.482",
+          "2.592",
+          "407.2",
+          "2.592"
+        ],
+        [
+          "Supercritical",
+          "500",
+          "227",
+          "50",
+          "1.179",
+          "2.061",
+          "323.7",
+          "2.061"
+        ],
+        [
+          "Liquid",
+          "100",
+          "-173",
+          "100",
+          "26.48",
+          "46.307",
+          "7274",
+          "46.31"
+        ],
+        [
+          "Supercritical",
+          "200",
+          "-73.2",
+          "100",
+          "7.430",
+          "12.992",
+          "2041",
+          "12.99"
+        ],
+        [
+          "Supercritical",
+          "300",
+          "26.9",
+          "100",
+          "4.026",
+          "7.040",
+          "1106",
+          "7.040"
+        ],
+        [
+          "Supercritical",
+          "400",
+          "127",
+          "100",
+          "2.908",
+          "5.085",
+          "798.8",
+          "5.085"
+        ],
+        [
+          "Supercritical",
+          "500",
+          "227",
+          "100",
+          "2.305",
+          "4.031",
+          "633.2",
+          "4.031"
+        ]
+      ]
+    }
+  ]
+}

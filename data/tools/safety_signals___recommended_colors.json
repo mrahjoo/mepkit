@@ -1,0 +1,134 @@
+{
+  "id": "safety_signals___recommended_colors",
+  "title": "Safety Signals - Recommended Colors",
+  "description": "American National Standards Institutes schedule for safety colors marking physical hazards. Recommended use of colors with additional information about piping, duct-work, and plant equipment.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "chart",
+      "content": "Safety Color Assignments and Applications",
+      "options": {
+        "title": {
+          "text": "ANSI Safety Signal Color Guide",
+          "subtext": "Color assignments for plant equipment and hazard identification"
+        },
+        "tooltip": {
+          "trigger": "item"
+        },
+        "legend": {
+          "orient": "vertical",
+          "left": "left"
+        },
+        "series": [
+          {
+            "name": "Safety Color Applications",
+            "type": "pie",
+            "radius": "50%",
+            "data": [
+              {
+                "value": 1,
+                "name": "RED - Fire Protection",
+                "itemStyle": {
+                  "color": "#FF0000"
+                }
+              },
+              {
+                "value": 1,
+                "name": "YELLOW - Caution",
+                "itemStyle": {
+                  "color": "#FFFF00"
+                }
+              },
+              {
+                "value": 1,
+                "name": "PURPLE - Radiation Hazards",
+                "itemStyle": {
+                  "color": "#800080"
+                }
+              },
+              {
+                "value": 1,
+                "name": "ORANGE - Dangerous Machinery",
+                "itemStyle": {
+                  "color": "#FFA500"
+                }
+              },
+              {
+                "value": 1,
+                "name": "BLUE - Equipment Under Repair",
+                "itemStyle": {
+                  "color": "#0000FF"
+                }
+              },
+              {
+                "value": 1,
+                "name": "GREEN - Safety Location",
+                "itemStyle": {
+                  "color": "#008000"
+                }
+              }
+            ],
+            "emphasis": {
+              "itemStyle": {
+                "shadowBlur": 10,
+                "shadowOffsetX": 0,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Safety Color",
+        "Hex Code",
+        "Primary Applications",
+        "Standards"
+      ],
+      "rows": [
+        [
+          "RED",
+          "#FF0000",
+          "Fire protection equipment, extinguishers, hydrants, hoses, alarm boxes, exit signs, safety containers",
+          "ANSI Z535.1, ISO 3864"
+        ],
+        [
+          "YELLOW",
+          "#FFFF00",
+          "Caution warning, locomotive front ends, dangerous parts identification",
+          "ANSI Z535.1, ISO 3864"
+        ],
+        [
+          "PURPLE",
+          "#800080",
+          "Radiation hazards",
+          "ANSI Z535.1, ISO 3864"
+        ],
+        [
+          "ORANGE",
+          "#FFA500",
+          "Dangerous machinery parts (cut, crush, shock hazards), exposed pulleys, gears, rollers, cutting devices",
+          "ANSI Z535.1, ISO 3864"
+        ],
+        [
+          "BLUE",
+          "#0000FF",
+          "Warning against starting or moving equipment under repairs, ladders, scaffolding, electrical controls, boilers",
+          "ANSI Z535.1, ISO 3864"
+        ],
+        [
+          "GREEN",
+          "#008000",
+          "Safety location designation, first aid equipment, gas masks, stretchers, safety showers, safety instruction signs",
+          "ANSI Z535.1, ISO 3864"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Safety Standards Referenced\n\n- **ANSI Z535.1** - American National Standard for Safety Colors\n- **ISO 3864** - Graphical symbols -- Safety colors and safety signs\n\n## Key Safety Applications\n\n### Equipment Categories\n- **Fire Protection**: Blanket boxes, buckets, extinguishers, hose locations, hydrants, sirens\n- **Machinery Hazards**: Pulleys, gears, rollers, cutting devices, power jaws, safety starting buttons\n- **Structural Hazards**: Hand rails, exposed edges, guardrails, pillars, columns, low beams, doorway projections\n- **Material Hazards**: Flammable liquids, poisonous gases, corrosive liquids, high temperature/pressure systems\n- **Safety Equipment**: First aid dispensers, gas masks, stretchers, safety showers, safety instruction signs\n\n### Pipe Identification\n- RED: Fire protection and sprinkler piping with post indicator valves\n- YELLOW/ORANGE: Dangerous materials (flammable liquids, poisonous gases, corrosive liquids)\n- GREEN: Materials low in temperature/pressure, non-poisonous, non-flammable\n- BLUE: Protective materials for preventing or reducing hazards"
+    }
+  ]
+}

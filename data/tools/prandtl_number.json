@@ -1,0 +1,72 @@
+{
+  "id": "prandtl_number",
+  "title": "Prandtl Number Calculator",
+  "description": "Calculate the Prandtl Number, a dimensionless number representing the ratio of momentum diffusivity (kinematic viscosity) to thermal diffusivity. Used in heat transfer and convection calculations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "prandtl_calculator",
+      "content": "Prandtl Number Calculator",
+      "inputs": [
+        {
+          "id": "dynamic_viscosity",
+          "label": "Dynamic Viscosity (μ)",
+          "type": "number",
+          "defaultValue": 36.3,
+          "unit": "lbm/(ft hr)"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat (cp)",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "Btu/lbm°F"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity (k)",
+          "type": "number",
+          "defaultValue": 0.06,
+          "unit": "Btu/(h ft²°F/ft)"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "prandtl_number",
+          "label": "Prandtl Number (Pr)",
+          "formula": "(inputs.dynamic_viscosity * inputs.specific_heat) / inputs.thermal_conductivity",
+          "format": "decimal",
+          "unit": "dimensionless"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "prandtl_ranges",
+      "content": "Typical Prandtl Number Ranges",
+      "headers": [
+        "Fluid Type",
+        "Prandtl Number Range"
+      ],
+      "rows": [
+        [
+          "Gases",
+          "0.7 - 1.0"
+        ],
+        [
+          "Water",
+          "1 - 10"
+        ],
+        [
+          "Liquid Metals",
+          "0.001 - 0.03"
+        ],
+        [
+          "Oils",
+          "50 - 2000"
+        ]
+      ]
+    }
+  ]
+}

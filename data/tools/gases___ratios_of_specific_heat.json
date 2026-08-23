@@ -1,0 +1,197 @@
+{
+  "id": "gases___ratios_of_specific_heat",
+  "title": "Gases - Ratios of Specific Heat",
+  "description": "A reference tool for the ratios of specific heat (k = cp/cv) for various gases. The ratio of specific heat is a dimensionless property that represents the relationship between specific heat at constant pressure and specific heat at constant volume for ideal gases.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Ratio of Specific Heat (k)"
+      ],
+      "rows": [
+        [
+          "Acetylene",
+          1.3
+        ],
+        [
+          "Air, Standard",
+          1.4
+        ],
+        [
+          "Ammonia",
+          1.32
+        ],
+        [
+          "Argon",
+          1.66
+        ],
+        [
+          "Benzene",
+          1.12
+        ],
+        [
+          "N-butane",
+          1.18
+        ],
+        [
+          "Iso-butane",
+          1.19
+        ],
+        [
+          "Carbon Dioxide",
+          1.28
+        ],
+        [
+          "Carbon Disulphide",
+          1.21
+        ],
+        [
+          "Carbon Monoxide",
+          1.4
+        ],
+        [
+          "Chlorine",
+          1.33
+        ],
+        [
+          "Ethane",
+          1.18
+        ],
+        [
+          "Ethyl alcohol",
+          1.13
+        ],
+        [
+          "Ethyl chloride",
+          1.19
+        ],
+        [
+          "Ethylene",
+          1.24
+        ],
+        [
+          "Helium",
+          1.66
+        ],
+        [
+          "N-heptane",
+          1.05
+        ],
+        [
+          "Hexane",
+          1.06
+        ],
+        [
+          "Hydrochloric acid",
+          1.41
+        ],
+        [
+          "Hydrogen",
+          1.41
+        ],
+        [
+          "Hydrogen chloride",
+          1.41
+        ],
+        [
+          "Hydrogen sulphide",
+          1.32
+        ],
+        [
+          "Methane",
+          1.32
+        ],
+        [
+          "Methyl alcohol",
+          1.2
+        ],
+        [
+          "Methyl butane",
+          1.08
+        ],
+        [
+          "Methyl chloride",
+          1.2
+        ],
+        [
+          "Natural Gas (Methane)",
+          1.32
+        ],
+        [
+          "Nitric oxide",
+          1.4
+        ],
+        [
+          "Nitrogen",
+          1.4
+        ],
+        [
+          "Nitrous oxide",
+          1.31
+        ],
+        [
+          "N-octane",
+          1.05
+        ],
+        [
+          "Oxygen",
+          1.4
+        ],
+        [
+          "N-pentane",
+          1.08
+        ],
+        [
+          "Iso-pentane",
+          1.08
+        ],
+        [
+          "Propane",
+          1.13
+        ],
+        [
+          "R-11",
+          1.14
+        ],
+        [
+          "R-12",
+          1.14
+        ],
+        [
+          "R-22",
+          1.18
+        ],
+        [
+          "R-114",
+          1.09
+        ],
+        [
+          "R-123",
+          1.1
+        ],
+        [
+          "R-134a",
+          1.2
+        ],
+        [
+          "Steam (water)",
+          1.33
+        ],
+        [
+          "Sulphur dioxide",
+          1.26
+        ],
+        [
+          "Toluene",
+          1.09
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Relationships\n\n### Internal Energy\nFor an ideal gas: **du = c_v dT**\n\n### Enthalpy\nFor an ideal gas: **dh = c_p dT**\n\n### Specific Heat Relationship\nFor an ideal gas: **c_p - c_v = R**\n\nwhere R is the individual gas constant\n\n### Ratio of Specific Heat\n**k = c_p / c_v**\n\nwhere:\n- k = Ratio of Specific Heat (dimensionless)\n- c_p = specific heat at constant pressure (kJ/kgK)\n- c_v = specific heat at constant volume (kJ/kgK)\n\nThe ratio is dimensionless and has the same value in both SI and Imperial units."
+    }
+  ]
+}

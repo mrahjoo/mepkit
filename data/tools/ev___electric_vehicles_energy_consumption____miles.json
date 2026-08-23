@@ -1,0 +1,111 @@
+{
+  "id": "ev___electric_vehicles_energy_consumption____miles",
+  "title": "EV - Electric Vehicles Energy Consumption - miles/kWh vs. kWh/100 km",
+  "description": "Convert between energy consumption units like miles/kWh and kWh/100 km for electric vehicles.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Convert between miles/kWh and kWh/100 km energy consumption units",
+      "inputs": [
+        {
+          "id": "miles_per_kwh",
+          "label": "Energy Consumption (miles/kWh)",
+          "type": "number",
+          "defaultValue": 2.9,
+          "unit": "miles/kWh"
+        },
+        {
+          "id": "kwh_per_100km",
+          "label": "Energy Consumption (kWh/100 km)",
+          "type": "number",
+          "defaultValue": 21.6,
+          "unit": "kWh/100 km"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result_kwh_100km",
+          "label": "Converted to kWh/100 km",
+          "formula": "100 / (1.6 * inputs.miles_per_kwh)",
+          "unit": "kWh/100 km",
+          "format": "decimal"
+        },
+        {
+          "id": "result_miles_per_kwh",
+          "label": "Converted to miles/kWh",
+          "formula": "100 / (1.6 * inputs.kwh_per_100km)",
+          "unit": "miles/kWh",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Energy Consumption Conversion Chart",
+      "options": {
+        "title": {
+          "text": "EV Energy Consumption: miles/kWh vs. kWh/100 km"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "miles/kWh"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "kWh/100 km"
+        },
+        "series": [
+          {
+            "data": [
+              [
+                1.5,
+                41.67
+              ],
+              [
+                2,
+                31.25
+              ],
+              [
+                2.5,
+                25
+              ],
+              [
+                2.9,
+                21.55
+              ],
+              [
+                3,
+                20.83
+              ],
+              [
+                3.5,
+                17.86
+              ],
+              [
+                4,
+                15.63
+              ],
+              [
+                4.5,
+                13.89
+              ],
+              [
+                5,
+                12.5
+              ]
+            ],
+            "type": "scatter",
+            "symbolSize": 8,
+            "label": {
+              "show": false
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

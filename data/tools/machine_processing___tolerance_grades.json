@@ -1,0 +1,186 @@
+{
+  "id": "machine_processing___tolerance_grades",
+  "title": "Machine Processing - Tolerance Grades",
+  "description": "Machine processing and tolerance grades. A tolerance is the total permissible variation of size, where the tolerance is the difference between the limits of size. This tool shows the range of tolerance grades that various machine processes may produce under normal conditions according to ANSI B4.1 Standard.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Tolerance Grades",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "rows": [
+        [
+          "Lapping and Honing",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cylindrical Grinding",
+          "",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Surface Grinding",
+          "",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Diamond Turning",
+          "",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Diamond Boring",
+          "",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Broaching",
+          "",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Reaming",
+          "",
+          "",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Turning",
+          "",
+          "",
+          "",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Boring",
+          "",
+          "",
+          "",
+          "",
+          "●",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Milling",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "●",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Planning and Shaping",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "●",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Drilling",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "●",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## ANSI B4.1 Standard Tolerances\n\n![Machine processing and tolerance grades - ANSI B4.1 Standard Tolerances](static/docs/documents/1367/ansi-standard-tolerances.png \"Machine processing and tolerance grades - ANSI B4.1 Standard Tolerances\")\n\n**Note:** 1 inch (in) = 25.4 mm"
+    }
+  ]
+}

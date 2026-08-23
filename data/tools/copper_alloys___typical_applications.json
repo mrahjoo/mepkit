@@ -1,0 +1,64 @@
+{
+  "id": "copper_alloys___typical_applications",
+  "title": "Copper Alloys - Typical Applications",
+  "description": "Typical use of copper alloys in architecture, automotive, electrical, building wire, energy, tube, pipe fittings, fuel gas, industrial and marine applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Application Category",
+        "Description",
+        "Common Uses"
+      ],
+      "rows": [
+        [
+          "Architecture",
+          "Structural and decorative applications in building design",
+          "Roofing, facades, gutters, downspouts"
+        ],
+        [
+          "Automotive",
+          "Components in vehicle manufacturing",
+          "Radiators, connectors, bearings, bushings"
+        ],
+        [
+          "Electrical",
+          "Conductive and switching applications",
+          "Wiring, busbars, motor components, transformers"
+        ],
+        [
+          "Building Wire",
+          "Residential and commercial wiring",
+          "House wiring, power distribution, telecommunications"
+        ],
+        [
+          "Energy",
+          "Power generation and transmission",
+          "Heat exchangers, condensers, electrical contacts"
+        ],
+        [
+          "Tube and Pipe Fittings",
+          "Plumbing and fluid transfer systems",
+          "Water pipes, gas lines, refrigeration tubing"
+        ],
+        [
+          "Fuel Gas",
+          "Gas handling and safety applications",
+          "Gas tubing, fittings, safety components"
+        ],
+        [
+          "Industrial",
+          "Manufacturing and processing equipment",
+          "Heat exchangers, pumps, valves, fasteners"
+        ],
+        [
+          "Marine",
+          "Saltwater and marine environments",
+          "Seawater tubing, propeller shafts, fasteners, corrosion-resistant components"
+        ]
+      ],
+      "content": "Copper and its alloys are widely utilized across multiple industries due to their excellent electrical conductivity, thermal properties, corrosion resistance, and malleability. The table below outlines typical applications of copper alloys across various sectors."
+    }
+  ]
+}

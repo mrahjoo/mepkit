@@ -1,0 +1,43 @@
+{
+  "id": "ice___properties",
+  "title": "Ice - Properties",
+  "description": "Properties like Youngs modulus, tensile strength, compressive strength and fracture of toughness for ice.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Symbol",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Young's modulus of elasticity",
+          "E",
+          9.1,
+          "GPa"
+        ],
+        [
+          "Fracture toughness",
+          "Kc",
+          0.12,
+          "MPa m^(1/2)"
+        ],
+        [
+          "Ultimate tensile strength",
+          "σu",
+          1,
+          "MPa"
+        ],
+        [
+          "Compressive strength",
+          "σc",
+          6,
+          "MPa"
+        ]
+      ]
+    }
+  ]
+}

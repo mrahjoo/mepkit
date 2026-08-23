@@ -1,0 +1,133 @@
+{
+  "id": "ip___ingress_protection_ratings",
+  "title": "IP - Ingress Protection Ratings",
+  "description": "Ingress Protection (IP) ratings specify the environmental protection an enclosure provides. Ratings consist of up to three numbers indicating protection against solid objects, liquids, and mechanical impacts.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Rating",
+        "Protection Type",
+        "Description"
+      ],
+      "rows": [
+        [
+          "0",
+          "Solid Objects",
+          "No special protection"
+        ],
+        [
+          "1",
+          "Solid Objects",
+          "Protected against solid objects over 50 mm (e.g. accidental touch by hands)"
+        ],
+        [
+          "2",
+          "Solid Objects",
+          "Protected against solid objects over 12 mm (e.g. persons fingers)"
+        ],
+        [
+          "3",
+          "Solid Objects",
+          "Protected against solid objects over 2.5 mm (tools and wires)"
+        ],
+        [
+          "4",
+          "Solid Objects",
+          "Protected against solid objects over 1 mm (tools, wires, and small wires)"
+        ],
+        [
+          "5",
+          "Solid Objects",
+          "Protected against dust limited ingress (no harmful deposit)"
+        ],
+        [
+          "6",
+          "Solid Objects",
+          "Totally protected against dust"
+        ],
+        [
+          "0",
+          "Liquids",
+          "No protection"
+        ],
+        [
+          "1",
+          "Liquids",
+          "Protection against vertically falling drops of water (e.g. condensation)"
+        ],
+        [
+          "2",
+          "Liquids",
+          "Protection against direct sprays of water up to 15° from the vertical"
+        ],
+        [
+          "3",
+          "Liquids",
+          "Protected against direct sprays of water up to 60° from the vertical"
+        ],
+        [
+          "4",
+          "Liquids",
+          "Protection against water sprayed from all directions (limited ingress permitted)"
+        ],
+        [
+          "5",
+          "Liquids",
+          "Protected against low pressure jets of water from all directions (limited ingress)"
+        ],
+        [
+          "6",
+          "Liquids",
+          "Protected against temporary flooding of water (e.g. for use on ship decks - limited ingress permitted)"
+        ],
+        [
+          "7",
+          "Liquids",
+          "Protected against the effect of immersion between 15 cm and 1 m"
+        ],
+        [
+          "8",
+          "Liquids",
+          "Protects against long periods of immersion under pressure"
+        ],
+        [
+          "0",
+          "Mechanical Impacts",
+          "No protection"
+        ],
+        [
+          "1",
+          "Mechanical Impacts",
+          "Protects against impact of 0.225 joule (e.g. 150 g weight falling from 15 cm height)"
+        ],
+        [
+          "2",
+          "Mechanical Impacts",
+          "Protected against impact of 0.375 joule (e.g. 250 g weight falling from 15 cm height)"
+        ],
+        [
+          "3",
+          "Mechanical Impacts",
+          "Protected against impact of 0.5 joule (e.g. 250 g weight falling from 20 cm height)"
+        ],
+        [
+          "4",
+          "Mechanical Impacts",
+          "Protected against impact of 2.0 joule (e.g. 500 g weight falling from 40 cm height)"
+        ],
+        [
+          "5",
+          "Mechanical Impacts",
+          "Protected against impact of 6.0 joule (e.g. 1.5 kg weight falling from 40 cm height)"
+        ],
+        [
+          "6",
+          "Mechanical Impacts",
+          "Protected against impact of 20.0 joule (e.g. 5 kg weight falling from 40 cm height)"
+        ]
+      ]
+    }
+  ]
+}

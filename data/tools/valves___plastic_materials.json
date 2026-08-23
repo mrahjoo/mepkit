@@ -1,0 +1,93 @@
+{
+  "id": "valves___plastic_materials",
+  "title": "Valves - Plastic Materials",
+  "description": "A comprehensive calculator tool for determining properties and specifications of plastic material valves. Useful for engineers and designers working with fluid mechanics systems, material selection, and valve specifications.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Valves - Plastic Materials Calculator\n\nThis tool helps engineers and designers calculate and evaluate plastic material valve properties and specifications. The Engineering ToolBox provides comprehensive technical data for material selection, fluid mechanics applications, and system design.\n\n### About This Tool\n\nPlastic material valves are widely used in various engineering applications due to their corrosion resistance, lightweight properties, and cost-effectiveness. This calculator assists in determining appropriate valve specifications based on material properties and application requirements.\n\n### Key Applications\n\n- Fluid mechanics system design\n- Material selection for valve applications\n- HVAC system integration\n- Water distribution system planning\n- Chemical processing applications\n\n### Data Source\n\nBased on technical resources from The Engineering ToolBox - a comprehensive source for engineering calculations and material property data."
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "material_type",
+          "label": "Plastic Material Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "PVC (Polyvinyl Chloride)",
+              "value": 1
+            },
+            {
+              "label": "CPVC (Chlorinated PVC)",
+              "value": 2
+            },
+            {
+              "label": "PP (Polypropylene)",
+              "value": 3
+            },
+            {
+              "label": "PE (Polyethylene)",
+              "value": 4
+            },
+            {
+              "label": "PVDF (Polyvinylidene Fluoride)",
+              "value": 5
+            }
+          ],
+          "defaultValue": 1
+        },
+        {
+          "id": "operating_temperature",
+          "label": "Operating Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "pressure_rating",
+          "label": "Pressure Rating",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 10
+        },
+        {
+          "id": "valve_size",
+          "label": "Valve Size (Diameter)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_derating",
+          "label": "Temperature Derating Factor",
+          "formula": "IF(inputs.operating_temperature <= 20, 1.0, IF(inputs.operating_temperature <= 40, 0.95, IF(inputs.operating_temperature <= 60, 0.85, 0.75)))",
+          "unit": "factor",
+          "format": "decimal"
+        },
+        {
+          "id": "effective_pressure",
+          "label": "Effective Pressure Rating",
+          "formula": "inputs.pressure_rating * inputs.temperature_derating",
+          "unit": "bar",
+          "format": "decimal"
+        },
+        {
+          "id": "valve_area",
+          "label": "Valve Cross-sectional Area",
+          "formula": "(inputs.valve_size ^ 2) * 3.14159 / 4",
+          "unit": "mm²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

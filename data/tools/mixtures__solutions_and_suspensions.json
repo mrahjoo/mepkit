@@ -1,0 +1,45 @@
+{
+  "id": "mixtures__solutions_and_suspensions",
+  "title": "Mixtures, Solutions and Suspensions",
+  "description": "Understand the differences between mixtures, solutions, and suspensions with definitions, properties, and real-world examples.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Mixtures\n\nA **mixture** is a combination of substances which are not chemically joined together.\n\n**Properties:**\n- Mixtures have the same properties as their components\n- There is no fixed proportion between the components\n- The components can be separated from the mixture\n\n**Examples:**\n- Sugar and salt\n- Air with nitrogen and oxygen\n\n## Solutions\n\nA **solution** is a homogeneous mixture in which one substance (solute) is dissolved in another substance (solvent).\n\n**Properties:**\n- The components in a solution may *not* be separated by leaving it to stand, or by filtration\n- A material that dissolves in a liquid is said to be soluble\n- A solution is saturated if no more solute can be dissolved with temperature remaining constant\n\n**Examples:**\n- Salt in sea water\n\n## Suspensions\n\nA **suspension** is a mixture of liquids with particles of a solid which may not dissolve in the liquid.\n\n**Properties:**\n- The solid may be separated from the liquid by leaving it to stand, or by filtration\n\n**Examples:**\n- Sand in water"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type",
+        "Composition",
+        "Separability",
+        "Properties",
+        "Example"
+      ],
+      "rows": [
+        [
+          "Mixture",
+          "Two or more substances not chemically joined",
+          "Can be separated",
+          "Same as components, no fixed proportion",
+          "Sugar and salt"
+        ],
+        [
+          "Solution",
+          "Solute dissolved in solvent (homogeneous)",
+          "Cannot be separated by filtration or settling",
+          "Homogeneous, uniform throughout",
+          "Salt in sea water"
+        ],
+        [
+          "Suspension",
+          "Solid particles dispersed in liquid",
+          "Can be separated by settling or filtration",
+          "Heterogeneous, particles visible/separable",
+          "Sand in water"
+        ]
+      ]
+    }
+  ]
+}

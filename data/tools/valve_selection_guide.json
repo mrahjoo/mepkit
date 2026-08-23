@@ -1,0 +1,133 @@
+{
+  "id": "valve_selection_guide",
+  "title": "Valve Selection Guide",
+  "description": "Applications guide for selecting valves based on conveyed fluid type, nature of fluid, valve function, and disc type. The suitability of a valve for a particular application is decided by the materials used in relation to the conveyed fluid as well as its mechanical design.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "valve_selection_table",
+      "headers": [
+        "Conveyed Fluid",
+        "Nature of Fluid",
+        "Valve Function",
+        "Recommended Valve Type"
+      ],
+      "rows": [
+        [
+          "Liquid",
+          "Neutral (Water, Oil, etc)",
+          "On/Off",
+          "Gate"
+        ],
+        [
+          "Liquid",
+          "Neutral (Water, Oil, etc)",
+          "Throttling",
+          "Globe"
+        ],
+        [
+          "Liquid",
+          "Neutral (Water, Oil, etc)",
+          "Control valve, modulating",
+          "Globe"
+        ],
+        [
+          "Gas",
+          "Neutral (Air, Steam etc)",
+          "On/Off",
+          "Gate"
+        ],
+        [
+          "Gas",
+          "Neutral (Air, Steam etc)",
+          "Throttling",
+          "Globe"
+        ],
+        [
+          "Gas",
+          "Neutral (Air, Steam etc)",
+          "Control valve, modulating",
+          "Globe"
+        ],
+        [
+          "Liquid",
+          "Corrosive (Acid, alkaline etc)",
+          "On/Off",
+          "Gate, Plug Gate, Rotary Ball, Diaphragm"
+        ],
+        [
+          "Liquid",
+          "Corrosive (Acid, alkaline etc)",
+          "Control valve, modulating",
+          "Diaphragm, Butterfly"
+        ],
+        [
+          "Gas",
+          "Corrosive (Acid vapors, chlorine etc)",
+          "On/Off",
+          "Butterfly"
+        ],
+        [
+          "Gas",
+          "Corrosive (Acid vapors, chlorine etc)",
+          "Control valve, modulating",
+          "Butterfly, Globe, Diaphragm"
+        ],
+        [
+          "Liquid",
+          "Hygienic (Food, beverages, drugs etc)",
+          "On/Off",
+          "Butterfly"
+        ],
+        [
+          "Liquid",
+          "Hygienic (Food, beverages, drugs etc)",
+          "Control valve, modulating",
+          "Butterfly, Diaphragm, Squeeze"
+        ],
+        [
+          "Liquid",
+          "Slurry",
+          "On/Off",
+          "Rotary Ball, Butterfly, Diaphragm, Plug"
+        ],
+        [
+          "Liquid",
+          "Slurry",
+          "Control valve, modulating",
+          "Butterfly, Diaphragm, Squeeze, Pinch"
+        ],
+        [
+          "Liquid",
+          "Fibrous Suspensions",
+          "On/Off, Control valve, modulating",
+          "Gate, Diaphragm, Squeeze, Pinch"
+        ],
+        [
+          "Gas",
+          "Vacuum",
+          "On/Off",
+          "Gate, Globe, Rotary Ball, Butterfly"
+        ],
+        [
+          "Solids",
+          "Abrasive Powder (Silica, etc)",
+          "On/Off, Control valve, modulating",
+          "Pinch, Squeeze, Spiral Sock"
+        ],
+        [
+          "Solids",
+          "Lubricating powder (graphite, talcum, etc)",
+          "On/Off, Control valve, modulating",
+          "Pinch, Gate, Spiral Sock, Squeeze"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "selection_guide_info",
+      "content": "## How to Use This Valve Selection Guide\n\n**Step 1:** Identify the type of conveyed fluid (Liquid, Gas, or Solids)\n\n**Step 2:** Determine the nature of the fluid (Neutral, Corrosive, Hygienic, Slurry, Fibrous Suspensions, etc.)\n\n**Step 3:** Define the required valve function (On/Off, Throttling, or Control valve, modulating)\n\n**Step 4:** Review the recommended valve types in the selection table\n\n## Important Considerations\n\n- **Material Compatibility:** Ensure the valve materials are compatible with the conveyed fluid to prevent corrosion and degradation\n- **Mechanical Design:** Consider pressure ratings, temperature limits, and flow characteristics\n- **Application Requirements:** Match the valve function to your specific application needs\n- **Installation Environment:** Account for operating conditions, maintenance accessibility, and safety requirements\n\nFor more detailed technical specifications, consult with valve manufacturers and industry standards."
+    }
+  ]
+}

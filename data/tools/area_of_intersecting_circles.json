@@ -1,0 +1,109 @@
+{
+  "id": "area_of_intersecting_circles",
+  "title": "Area of Intersecting Circles",
+  "description": "Calculate area of intersecting circles",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Intersecting Circles Calculator",
+      "inputs": [
+        {
+          "id": "radius1",
+          "label": "Radius 1",
+          "type": "number",
+          "unit": "units",
+          "defaultValue": 5
+        },
+        {
+          "id": "radius2",
+          "label": "Radius 2",
+          "type": "number",
+          "unit": "units",
+          "defaultValue": 5
+        },
+        {
+          "id": "distance",
+          "label": "Distance Between Centers",
+          "type": "number",
+          "unit": "units",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "area1",
+          "label": "Area of Circle 1",
+          "formula": "inputs.radius1 * inputs.radius1 * 3.14159265359",
+          "unit": "square units",
+          "format": "decimal"
+        },
+        {
+          "id": "area2",
+          "label": "Area of Circle 2",
+          "formula": "inputs.radius2 * inputs.radius2 * 3.14159265359",
+          "unit": "square units",
+          "format": "decimal"
+        },
+        {
+          "id": "intersection_area",
+          "label": "Intersection Area",
+          "formula": "inputs.radius1 * inputs.radius1 * Math.acos((inputs.distance * inputs.distance + inputs.radius1 * inputs.radius1 - inputs.radius2 * inputs.radius2) / (2 * inputs.distance * inputs.radius1)) + inputs.radius2 * inputs.radius2 * Math.acos((inputs.distance * inputs.distance + inputs.radius2 * inputs.radius2 - inputs.radius1 * inputs.radius1) / (2 * inputs.distance * inputs.radius2)) - 0.5 * Math.sqrt((inputs.radius1 + inputs.radius2 + inputs.distance) * (inputs.radius1 + inputs.radius2 - inputs.distance) * (inputs.radius1 - inputs.radius2 + inputs.distance) * (-inputs.radius1 + inputs.radius2 + inputs.distance))",
+          "unit": "square units",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Measurement",
+        "Circle 1",
+        "Circle 2",
+        "Intersection"
+      ],
+      "rows": [
+        [
+          "Radius",
+          "inputs.radius1",
+          "inputs.radius2",
+          "-"
+        ],
+        [
+          "Area",
+          "=inputs.radius1*inputs.radius1*3.14159265359",
+          "=inputs.radius2*inputs.radius2*3.14159265359",
+          "Calculated"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "type": "bar",
+        "title": "Circle Areas Comparison",
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Circle 1",
+            "Circle 2",
+            "Intersection"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              "=inputs.radius1*inputs.radius1*3.14159265359",
+              "=inputs.radius2*inputs.radius2*3.14159265359",
+              "Intersection Area"
+            ],
+            "type": "bar"
+          }
+        ]
+      }
+    }
+  ]
+}

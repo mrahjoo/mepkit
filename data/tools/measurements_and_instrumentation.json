@@ -1,0 +1,43 @@
+{
+  "id": "measurements_and_instrumentation",
+  "title": "Measurements and Instrumentation",
+  "description": "Measurement and instrumentation strategies.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Strategy",
+        "Description",
+        "Application"
+      ],
+      "rows": [
+        [
+          "Direct Measurement",
+          "Measuring physical quantities directly using instruments",
+          "Temperature, pressure, flow rate sensors"
+        ],
+        [
+          "Indirect Measurement",
+          "Calculating values from other measured quantities",
+          "Efficiency calculations from power and input"
+        ],
+        [
+          "Calibration",
+          "Ensuring measurement accuracy by comparing to known standards",
+          "Sensor validation and accuracy verification"
+        ],
+        [
+          "Data Logging",
+          "Recording measurements over time for analysis",
+          "Trend analysis and historical data tracking"
+        ],
+        [
+          "Signal Conditioning",
+          "Converting raw signals into usable form",
+          "Amplification, filtering, noise reduction"
+        ]
+      ]
+    }
+  ]
+}

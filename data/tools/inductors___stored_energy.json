@@ -1,0 +1,125 @@
+{
+  "id": "inductors___stored_energy",
+  "title": "Inductors - Stored Energy",
+  "description": "Energy stored in a magnetic field of an inductor",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Input",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "inductance",
+          "label": "Inductance (L)",
+          "type": "number",
+          "unit": "H",
+          "defaultValue": 10
+        },
+        {
+          "id": "current",
+          "label": "Current (I)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy",
+          "label": "Energy Stored (W)",
+          "unit": "J",
+          "format": "decimal",
+          "formula": "0.5 * inputs.inductance * inputs.current * inputs.current"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Inductance (H)",
+        "Current (A)",
+        "Energy Stored (J)"
+      ],
+      "rows": [
+        [
+          1,
+          1,
+          0.5
+        ],
+        [
+          5,
+          2,
+          10
+        ],
+        [
+          10,
+          3,
+          45
+        ],
+        [
+          10,
+          5,
+          125
+        ],
+        [
+          20,
+          5,
+          250
+        ],
+        [
+          50,
+          10,
+          2500
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Inductance (H)",
+        "Energy Stored (J)"
+      ],
+      "content": "Energy Stored vs Inductance (at I = 5A)",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            1,
+            5,
+            10,
+            20,
+            30,
+            40,
+            50
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              12.5,
+              62.5,
+              125,
+              250,
+              375,
+              500,
+              625
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Energy Stored (J)"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

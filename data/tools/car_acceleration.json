@@ -1,0 +1,81 @@
+{
+  "id": "car_acceleration",
+  "title": "Car Acceleration Calculator",
+  "description": "Calculate car acceleration, force, work, and power based on initial velocity, final velocity, time, mass, and distance parameters.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Acceleration Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "initial_velocity",
+          "label": "Initial Velocity (m/s)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m/s"
+        },
+        {
+          "id": "final_velocity",
+          "label": "Final Velocity (m/s)",
+          "type": "number",
+          "defaultValue": 27.8,
+          "unit": "m/s"
+        },
+        {
+          "id": "time",
+          "label": "Time (s)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "s"
+        },
+        {
+          "id": "mass",
+          "label": "Mass (kg)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg"
+        },
+        {
+          "id": "distance",
+          "label": "Distance (m)",
+          "type": "number",
+          "defaultValue": 139,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "acceleration",
+          "label": "Acceleration",
+          "formula": "(inputs.final_velocity - inputs.initial_velocity) / inputs.time",
+          "unit": "m/s²",
+          "format": "decimal"
+        },
+        {
+          "id": "force",
+          "label": "Acceleration Force",
+          "formula": "inputs.mass * ((inputs.final_velocity - inputs.initial_velocity) / inputs.time)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "work",
+          "label": "Acceleration Work",
+          "formula": "inputs.mass * ((inputs.final_velocity - inputs.initial_velocity) / inputs.time) * inputs.distance",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "power",
+          "label": "Acceleration Power",
+          "formula": "(inputs.mass * ((inputs.final_velocity - inputs.initial_velocity) / inputs.time) * inputs.distance) / inputs.time",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

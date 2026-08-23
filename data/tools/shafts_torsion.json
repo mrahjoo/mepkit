@@ -1,0 +1,261 @@
+{
+  "id": "shafts_torsion",
+  "title": "Shafts Torsion",
+  "description": "Calculator for shear stress, angular deflection, and diameter of solid and hollow circular shafts subjected to torsion",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Shear Stress in Circular Shafts\n\nWhen a shaft is subjected to torque, shearing stress is produced. The shear stress varies from zero at the axis to maximum at the outer surface.\n\n**Formula:** τ = T × r / J\n\nWhere:\n- τ = shear stress (Pa)\n- T = twisting moment (Nm)\n- r = distance from center (m)\n- J = Polar Moment of Inertia (m⁴)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Solid Circular Shaft - Shear Stress"
+      ],
+      "inputs": [
+        {
+          "id": "torque_solid",
+          "label": "Torque (T)",
+          "type": "number",
+          "unit": "Nm",
+          "defaultValue": 1000
+        },
+        {
+          "id": "diameter_solid",
+          "label": "Diameter (D)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        }
+      ],
+      "outputs": [
+        {
+          "id": "shear_stress_solid",
+          "label": "Maximum Shear Stress",
+          "formula": "(inputs.torque_solid * (inputs.diameter_solid / 2)) / (3.14159 * Math.pow(inputs.diameter_solid, 4) / 32)",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "shear_stress_solid_mpa",
+          "label": "Maximum Shear Stress",
+          "formula": "((inputs.torque_solid * (inputs.diameter_solid / 2)) / (3.14159 * Math.pow(inputs.diameter_solid, 4) / 32)) / 1000000",
+          "unit": "MPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Hollow Circular Shaft - Shear Stress"
+      ],
+      "inputs": [
+        {
+          "id": "torque_hollow",
+          "label": "Torque (T)",
+          "type": "number",
+          "unit": "Nm",
+          "defaultValue": 1000
+        },
+        {
+          "id": "outer_diameter",
+          "label": "Outer Diameter (D)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "inner_diameter",
+          "label": "Inner Diameter (d)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.03
+        }
+      ],
+      "outputs": [
+        {
+          "id": "shear_stress_hollow",
+          "label": "Maximum Shear Stress",
+          "formula": "(inputs.torque_hollow * (inputs.outer_diameter / 2)) / (3.14159 * (Math.pow(inputs.outer_diameter, 4) - Math.pow(inputs.inner_diameter, 4)) / 32)",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "shear_stress_hollow_mpa",
+          "label": "Maximum Shear Stress",
+          "formula": "((inputs.torque_hollow * (inputs.outer_diameter / 2)) / (3.14159 * (Math.pow(inputs.outer_diameter, 4) - Math.pow(inputs.inner_diameter, 4)) / 32)) / 1000000",
+          "unit": "MPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Torsional Deflection of Shaft\n\nThe angular deflection of a shaft under torsion:\n\n**Solid Shaft:** α = 32 L T / (G π D⁴)\n\n**Hollow Shaft:** α = 32 L T / (G π (D⁴ - d⁴))\n\nWhere:\n- α = angular deflection (radians)\n- L = length of shaft (m)\n- G = Shear Modulus of Rigidity (Pa)\n- D = outer diameter (m)\n- d = inner diameter (m)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Solid Circular Shaft - Angular Deflection"
+      ],
+      "inputs": [
+        {
+          "id": "length_solid_def",
+          "label": "Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "torque_solid_def",
+          "label": "Torque (T)",
+          "type": "number",
+          "unit": "Nm",
+          "defaultValue": 1000
+        },
+        {
+          "id": "diameter_solid_def",
+          "label": "Diameter (D)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "shear_modulus_solid",
+          "label": "Shear Modulus (G)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 79000000000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "deflection_radians_solid",
+          "label": "Angular Deflection",
+          "formula": "(inputs.length_solid_def * inputs.torque_solid_def) / ((3.14159 * Math.pow(inputs.diameter_solid_def, 4) / 32) * inputs.shear_modulus_solid)",
+          "unit": "radians",
+          "format": "decimal"
+        },
+        {
+          "id": "deflection_degrees_solid",
+          "label": "Angular Deflection",
+          "formula": "((inputs.length_solid_def * inputs.torque_solid_def) / ((3.14159 * Math.pow(inputs.diameter_solid_def, 4) / 32) * inputs.shear_modulus_solid)) * (180 / 3.14159)",
+          "unit": "degrees",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Hollow Circular Shaft - Angular Deflection"
+      ],
+      "inputs": [
+        {
+          "id": "length_hollow_def",
+          "label": "Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "torque_hollow_def",
+          "label": "Torque (T)",
+          "type": "number",
+          "unit": "Nm",
+          "defaultValue": 1000
+        },
+        {
+          "id": "outer_diameter_def",
+          "label": "Outer Diameter (D)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "inner_diameter_def",
+          "label": "Inner Diameter (d)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.03
+        },
+        {
+          "id": "shear_modulus_hollow",
+          "label": "Shear Modulus (G)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 79000000000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "deflection_radians_hollow",
+          "label": "Angular Deflection",
+          "formula": "(inputs.length_hollow_def * inputs.torque_hollow_def) / ((3.14159 * (Math.pow(inputs.outer_diameter_def, 4) - Math.pow(inputs.inner_diameter_def, 4)) / 32) * inputs.shear_modulus_hollow)",
+          "unit": "radians",
+          "format": "decimal"
+        },
+        {
+          "id": "deflection_degrees_hollow",
+          "label": "Angular Deflection",
+          "formula": "((inputs.length_hollow_def * inputs.torque_hollow_def) / ((3.14159 * (Math.pow(inputs.outer_diameter_def, 4) - Math.pow(inputs.inner_diameter_def, 4)) / 32) * inputs.shear_modulus_hollow)) * (180 / 3.14159)",
+          "unit": "degrees",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Polar Moment of Inertia\n\nMeasure of shaft's ability to resist torsion:\n\n**Solid Shaft:** J = π D⁴ / 32\n\n**Hollow Shaft:** J = π (D⁴ - d⁴) / 32\n\nWhere:\n- D = outer diameter (m)\n- d = inner diameter (m)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Polar Moment of Inertia Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "shaft_type",
+          "label": "Shaft Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Solid",
+              "value": "solid"
+            },
+            {
+              "label": "Hollow",
+              "value": "hollow"
+            }
+          ],
+          "defaultValue": "solid"
+        },
+        {
+          "id": "diameter_j",
+          "label": "Outer Diameter (D)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "inner_diameter_j",
+          "label": "Inner Diameter (d)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.03
+        }
+      ],
+      "outputs": [
+        {
+          "id": "polar_moment",
+          "label": "Polar Moment of Inertia",
+          "formula": "inputs.shaft_type === 'solid' ? (3.14159 * Math.pow(inputs.diameter_j, 4) / 32) : (3.14159 * (Math.pow(inputs.diameter_j, 4) - Math.pow(inputs.inner_diameter_j, 4)) / 32)",
+          "unit": "m⁴",
+          "format": "scientific"
+        }
+      ]
+    }
+  ]
+}

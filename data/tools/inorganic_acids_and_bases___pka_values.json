@@ -1,0 +1,537 @@
+{
+  "id": "inorganic_acids_and_bases___pka_values",
+  "title": "Inorganic Acids and Bases - pKa Values",
+  "description": "A comprehensive reference table of pKa values for inorganic acids and bases measured at 25°C. Includes definitions of acid dissociation constants and pKa values. The table covers monoprotic acids, diprotic acids, triprotic acids, tetraprotic acids, and hydrated metal ions. For bases, pKa values are given for their conjugate acids and are marked with an asterisk (*).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Acid name",
+        "Formula",
+        "pKa1",
+        "pKa2",
+        "pKa3",
+        "pKa4"
+      ],
+      "rows": [
+        [
+          "Ammonia",
+          "NH3",
+          "9.24*",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Arsenious acid",
+          "H3AsO3",
+          "9.29",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Boric acid",
+          "H3BO3",
+          "9.24",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Chlorous acid",
+          "HClO2",
+          "1.94",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cyanic acid",
+          "HOCN",
+          "3.46",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydrazoic acid",
+          "HN3",
+          "4.72",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydrazine",
+          "N2H4",
+          "8.1*",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydrobromic acid",
+          "HBr",
+          "-9",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydrochloric acid",
+          "HCl",
+          "-7",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydrocyanic acid",
+          "HCN",
+          "9.21",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydrofluoric acid",
+          "HF",
+          "3.17",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydroiodic acid",
+          "HI",
+          "-10",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydrogen peroxide",
+          "H2O2",
+          "11.65",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hydroxylamine",
+          "H2NOH",
+          "5.94",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hypobromous acid",
+          "HOBr",
+          "8.62",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hypochlorous acid",
+          "HOCl",
+          "7.54",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hypoiodous acid",
+          "HOI",
+          "10.64",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hypophosphorous acid",
+          "H3PO2",
+          "1.23",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Iodic acid",
+          "HIO3",
+          "0.78",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Nitrous acid",
+          "HNO2",
+          "3.25",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Nitric acid",
+          "HNO3",
+          "-1.37",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Perchloric acid",
+          "HClO4",
+          "-1.620",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Periodic acid",
+          "HIO4",
+          "1.64",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sulfamic acid",
+          "H2NSO3H",
+          "1.05",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Tetrafluoroboric acid",
+          "HBF4",
+          "0.5",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Thiocyanic acid",
+          "HSCN",
+          "-1.8",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Water",
+          "H2O",
+          "13.995",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Boric acid",
+          "H3BO3",
+          "9.2720",
+          "1420",
+          "",
+          ""
+        ],
+        [
+          "Carbonic acid",
+          "H2CO3",
+          "6.35",
+          "10.33",
+          "",
+          ""
+        ],
+        [
+          "Chromic acid",
+          "H2CrO4",
+          "-0.98",
+          "6.49",
+          "",
+          ""
+        ],
+        [
+          "Germanic acid",
+          "H2GeO3",
+          "9.01",
+          "12.3",
+          "",
+          ""
+        ],
+        [
+          "Hydrogen selenide",
+          "H2Se",
+          "3.89",
+          "11.0",
+          "",
+          ""
+        ],
+        [
+          "Hydrogen sulfide",
+          "H2S",
+          "7.02",
+          "19",
+          "",
+          ""
+        ],
+        [
+          "Hydrogen telluride",
+          "H2Te",
+          "2.618",
+          "11",
+          "",
+          ""
+        ],
+        [
+          "Phosphorous acid",
+          "H3PO3",
+          "1.320",
+          "6.720",
+          "",
+          ""
+        ],
+        [
+          "Selenous acid",
+          "H2SeO3",
+          "2.62",
+          "8.32",
+          "",
+          ""
+        ],
+        [
+          "Selenic acid",
+          "H2SeO4",
+          "<0",
+          "1.7",
+          "",
+          ""
+        ],
+        [
+          "Silicic acid",
+          "H2SiO3",
+          "9.91",
+          "11.81",
+          "",
+          ""
+        ],
+        [
+          "Sulfurous acid",
+          "H2SO3",
+          "1.85",
+          "7.20",
+          "",
+          ""
+        ],
+        [
+          "Sulfuric acid",
+          "H2SO4",
+          "-3",
+          "1.99",
+          "",
+          ""
+        ],
+        [
+          "Tellur(VI)ic acid",
+          "H6TeO6",
+          "7.6818",
+          "1118",
+          "",
+          ""
+        ],
+        [
+          "Tellurous acid",
+          "H2TeO3",
+          "6.27",
+          "8.43",
+          "",
+          ""
+        ],
+        [
+          "Arsenic acid",
+          "H3AsO4",
+          "2.26",
+          "6.76",
+          "11.29",
+          ""
+        ],
+        [
+          "Phosphoric acid",
+          "H3PO4",
+          "2.16",
+          "7.21",
+          "12.32",
+          ""
+        ],
+        [
+          "Pyrophosphoric acid",
+          "H4P2O7",
+          "0.91",
+          "2.10",
+          "6.70",
+          "9.32"
+        ],
+        [
+          "Orthosilicic acid",
+          "H4SiO4",
+          "9.930",
+          "11.830",
+          "1230",
+          "1230"
+        ],
+        [
+          "Aluminium (III) ion",
+          "Al3+",
+          "4.85",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Barium (II) ion",
+          "Ba2+",
+          "13.4",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Beryllium(II) ion",
+          "Be2+",
+          "5.7",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Calcium(II) ion",
+          "Ca2+",
+          "12.6",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Chromium (III) ion",
+          "Cr3+",
+          "3.95",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Copper (II) ion",
+          "Ba2+",
+          "7.34",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Iron (III) ion",
+          "Fe3+",
+          "2.17",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Lead (II) ion",
+          "Ba2+",
+          "7.8",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Lithium (I) ion",
+          "Li+",
+          "13.8",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Magnesium (II) ion",
+          "Mg2+",
+          "11.4",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Manganese (II) ion",
+          "Mn2+",
+          "10.59",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Nickel (II) ion",
+          "Ni2+",
+          "9.86",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sodium (I) ion",
+          "Na2+",
+          "14.8",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Scandium (III) ion",
+          "Sc3+",
+          "4.61",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Strontium (II) ion",
+          "Sr2+",
+          "13.2",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Uranium (IV) ion",
+          "U4+",
+          "0.68",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Vanadium (III) ion",
+          "V3+",
+          "2.9",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Zinc (II) ion",
+          "Zn2+",
+          "8.96",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Definitions\n\n### Acid Dissociation Constant (Ka)\n\nAn **acid dissociation constant, Ka**, is a quantitative measure of the strength of an acid in solution. It is the **equilibrium** constant for a chemical reaction known as dissociation of acid–base reactions.\n\nIn aqueous solution, the equilibrium of acid dissociation can be written as:\n\n**HA + H₂O ⇌ A⁻ + H₃O⁺**\n\nwhere HA is an acid that dissociates into A⁻ (the conjugate base) and a hydrogen ion which combines with water to form a hydronium ion.\n\nThe **dissociation constant** is defined as:\n\n**Ka = [A⁻][H⁺] / [HA]**\n\n### pKa Value\n\nFor many practical purposes, the logarithmic constant is more convenient:\n\n**pKa = -log₁₀(Ka)**\n\nThe larger the pKa value, the smaller the extent of dissociation at any given pH—that is, the weaker the acid.\n\n#### Acid Strength Classification:\n- **Strong acids**: pKa < -2 (dissociation is effectively complete)\n- **Weak acids**: pKa approximately -2 to 12 in water\n\n### Henderson-Hasselbalch Equation\n\nAfter rearranging and using pH = -log₁₀[H⁺]:\n\n**pH = pKa + log([A⁻]/[HA])**\n\nA solution with 50% dissociation has pH equal to the pKa of the acid.\n\n### Polyprotic Acids\n\n**Polyprotic acids** can lose more than one proton, with multiple dissociation constants (Ka₁, Ka₂, etc.) and corresponding pKa₁, pKa₂, etc.\n\n### Bases\n\nFor bases, the pKa value is given for the **conjugate acid** BH⁺:\n\n**BH⁺ ⇌ B + H⁺**\n\nThe **pKb** for a base can be calculated from the pKa of its conjugate acid:\n\n**pKb = 14 - pKa** (at 25°C, where pKw = 14)\n\n---\n\n## Notes\n\n- pKa values in the table are measured at 25°C unless otherwise indicated with a superscript temperature.\n- For bases, pKa values are marked with an asterisk (\\*) and represent the pKa of their conjugate acid.\n- All data applies to dilute aqueous solutions at ambient temperature."
+    }
+  ]
+}

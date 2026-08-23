@@ -1,0 +1,71 @@
+{
+  "id": "liquids___dynamic_viscosities",
+  "title": "Liquids - Dynamic Viscosities",
+  "description": "Calculate and reference dynamic viscosities of various liquids. Dynamic viscosity is a measure of a fluid's resistance to shear stress.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Liquids - Dynamic Viscosities\n\nDynamic viscosity (also known as absolute viscosity) is a measure of a fluid's internal resistance to flow. It quantifies how much a fluid resists being deformed by shear stress.\n\n### About Dynamic Viscosity\n\nDynamic viscosity is typically denoted by the symbol μ (mu) and is measured in:\n- **SI units**: Pascal-seconds (Pa·s) or Newtons-seconds per square meter (N·s/m²)\n- **CGS units**: Poise (P) or centipoise (cP), where 1 Pa·s = 10 Poise\n- **US customary units**: Pound-force-seconds per square foot (lbf·s/ft²)\n\nIt is temperature-dependent and generally decreases as temperature increases for most liquids."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "liquid_type",
+          "label": "Liquid Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Water",
+              "value": "water"
+            },
+            {
+              "label": "Glycerin",
+              "value": "glycerin"
+            },
+            {
+              "label": "Motor Oil (SAE 10W)",
+              "value": "motor_oil_10w"
+            },
+            {
+              "label": "Honey",
+              "value": "honey"
+            },
+            {
+              "label": "Olive Oil",
+              "value": "olive_oil"
+            },
+            {
+              "label": "Ethanol",
+              "value": "ethanol"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "viscosity_pa_s",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "format": "scientific",
+          "formula": "inputs.liquid_type === 'water' ? 0.001 * Math.exp((1.37023 * (20 - inputs.temperature)) / (96 + inputs.temperature)) : inputs.liquid_type === 'glycerin' ? 1412 * Math.pow(10, -0.6 * inputs.temperature / 100) : inputs.liquid_type === 'motor_oil_10w' ? 0.1 * Math.exp((4.5 * (40 - inputs.temperature)) / 100) : inputs.liquid_type === 'honey' ? 10 * Math.exp((0.05 * (20 - inputs.temperature))) : inputs.liquid_type === 'olive_oil' ? 0.08 * Math.exp((3 * (20 - inputs.temperature)) / 100) : 0.0011 * Math.exp((0.03 * (20 - inputs.temperature)))"
+        },
+        {
+          "id": "viscosity_cp",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "format": "decimal",
+          "formula": "(inputs.liquid_type === 'water' ? 0.001 * Math.exp((1.37023 * (20 - inputs.temperature)) / (96 + inputs.temperature)) : inputs.liquid_type === 'glycerin' ? 1412 * Math.pow(10, -0.6 * inputs.temperature / 100) : inputs.liquid_type === 'motor_oil_10w' ? 0.1 * Math.exp((4.5 * (40 - inputs.temperature)) / 100) : inputs.liquid_type === 'honey' ? 10 * Math.exp((0.05 * (20 - inputs.temperature))) : inputs.liquid_type === 'olive_oil' ? 0.08 * Math.exp((3 * (20 - inputs.temperature)) / 100) : 0.0011 * Math.exp((0.03 * (20 - inputs.temperature)))) * 1000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "id": "pneumatic_cylinder___excerted_force_vs__pressure",
+  "title": "Pneumatic Cylinder - Excerted Force vs. Pressure",
+  "description": "Calculate the force exerted by single acting and double acting pneumatic cylinders based on pressure and piston diameter",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pneumatic Cylinder Force Calculator\n\n## Single Acting Cylinder\n\nThe force exerted by a single acting pneumatic cylinder is calculated as:\n\n**F = p π d² / 4**\n\nWhere:\n- F = Force exerted (N)\n- p = Gauge pressure (Pa)\n- d = Full bore piston diameter (m)\n\n## Double Acting Cylinder (Outstroke)\n\n**F = p π d₁² / 4**\n\n## Double Acting Cylinder (Instroke)\n\n**F = p π (d₁² - d₂²) / 4**\n\nWhere:\n- d₁ = Full bore piston diameter (m)\n- d₂ = Piston rod diameter (m)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cylinder_type",
+          "label": "Cylinder Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Single Acting",
+              "value": "single"
+            },
+            {
+              "label": "Double Acting - Outstroke",
+              "value": "double_out"
+            },
+            {
+              "label": "Double Acting - Instroke",
+              "value": "double_in"
+            }
+          ],
+          "defaultValue": "single"
+        },
+        {
+          "id": "pressure",
+          "label": "Gauge Pressure",
+          "type": "number",
+          "defaultValue": 100000,
+          "unit": "Pa"
+        },
+        {
+          "id": "diameter_1",
+          "label": "Piston Diameter (d₁)",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "m"
+        },
+        {
+          "id": "diameter_2",
+          "label": "Rod Diameter (d₂)",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force",
+          "label": "Exerted Force",
+          "formula": "inputs.pressure * 3.14159 * inputs.diameter_1 * inputs.diameter_1 / 4",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "force_kn",
+          "label": "Exerted Force",
+          "formula": "inputs.pressure * 3.14159 * inputs.diameter_1 * inputs.diameter_1 / 4 / 1000",
+          "unit": "kN",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Pressure (kPa)",
+        "Force (N) - 50mm dia.",
+        "Force (N) - 75mm dia.",
+        "Force (N) - 100mm dia."
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          100,
+          196,
+          441,
+          785
+        ],
+        [
+          200,
+          393,
+          883,
+          1571
+        ],
+        [
+          300,
+          589,
+          1324,
+          2356
+        ],
+        [
+          400,
+          785,
+          1766,
+          3142
+        ],
+        [
+          500,
+          982,
+          2207,
+          3927
+        ],
+        [
+          600,
+          1178,
+          2649,
+          4712
+        ],
+        [
+          700,
+          1374,
+          3090,
+          5498
+        ],
+        [
+          800,
+          1571,
+          3532,
+          6283
+        ],
+        [
+          900,
+          1767,
+          3973,
+          7069
+        ],
+        [
+          1000,
+          1963,
+          4415,
+          7854
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "Pneumatic Cylinder Force vs Pressure"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "50mm",
+            "75mm",
+            "100mm"
+          ]
+        },
+        "xAxis": {
+          "name": "Pressure (kPa)",
+          "type": "category"
+        },
+        "yAxis": {
+          "name": "Force (N)",
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "50mm",
+            "type": "line",
+            "data": [
+              0,
+              196,
+              393,
+              589,
+              785,
+              982,
+              1178,
+              1374,
+              1571,
+              1767,
+              1963
+            ]
+          },
+          {
+            "name": "75mm",
+            "type": "line",
+            "data": [
+              0,
+              441,
+              883,
+              1324,
+              1766,
+              2207,
+              2649,
+              3090,
+              3532,
+              3973,
+              4415
+            ]
+          },
+          {
+            "name": "100mm",
+            "type": "line",
+            "data": [
+              0,
+              785,
+              1571,
+              2356,
+              3142,
+              3927,
+              4712,
+              5498,
+              6283,
+              7069,
+              7854
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

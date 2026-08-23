@@ -1,0 +1,48 @@
+{
+  "id": "laplace_equation",
+  "title": "Laplace Equation",
+  "description": "Important in fluid dynamics describing the behavior of gravitational and fluid potentials. The Laplace equation is fundamental in electromagnetism, astronomy, and fluid dynamics for describing electric, gravitational, and fluid potentials.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Laplace Equation\n\nThe Laplace equation is a second-order partial differential equation that describes the behavior of potentials in various fields:\n\n## Applications\n* **Electromagnetism** - Electric potentials\n* **Astronomy** - Gravitational potentials\n* **Fluid Dynamics** - Fluid potentials\n\n## General Form\nIn Cartesian coordinates, the Laplace equation is expressed as:\n\n∇²φ = ∂²φ/∂x² + ∂²φ/∂y² + ∂²φ/∂z² = 0\n\nwhere φ represents the potential function.\n\n## Learn More\n[Wikipedia - Laplace's Equation](https://en.wikipedia.org/wiki/Laplaces_equation)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "second_derivative_x",
+          "label": "Second Derivative (∂²φ/∂x²)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "second_derivative_y",
+          "label": "Second Derivative (∂²φ/∂y²)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "second_derivative_z",
+          "label": "Second Derivative (∂²φ/∂z²)",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "laplacian",
+          "label": "Laplacian (∇²φ)",
+          "formula": "inputs.second_derivative_x + inputs.second_derivative_y + inputs.second_derivative_z",
+          "unit": "potential units"
+        },
+        {
+          "id": "satisfies_laplace",
+          "label": "Satisfies Laplace Equation",
+          "formula": "inputs.second_derivative_x + inputs.second_derivative_y + inputs.second_derivative_z === 0 ? 'Yes' : 'No'"
+        }
+      ]
+    }
+  ]
+}

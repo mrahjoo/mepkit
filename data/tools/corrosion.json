@@ -1,0 +1,49 @@
+{
+  "id": "corrosion",
+  "title": "Corrosion",
+  "description": "Corrosion in piping systems caused by thermodynamic and electrochemical processes - corrosion problems and methods of protection and prevention.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Corrosion Type",
+        "Cause",
+        "Prevention Method",
+        "Protection Level"
+      ],
+      "rows": [
+        [
+          "General Corrosion",
+          "Thermodynamic oxidation",
+          "Coatings and inhibitors",
+          "High"
+        ],
+        [
+          "Pitting",
+          "Electrochemical attack",
+          "Stainless steel or alloys",
+          "Medium"
+        ],
+        [
+          "Galvanic Corrosion",
+          "Dissimilar metals contact",
+          "Isolate metals or use sacrificial anodes",
+          "Medium"
+        ],
+        [
+          "Stress Corrosion Cracking",
+          "Stress + corrosive environment",
+          "Stress relief and material selection",
+          "High"
+        ],
+        [
+          "Erosion Corrosion",
+          "Fluid flow and chemical attack",
+          "Reduce flow velocity and use resistant materials",
+          "Low"
+        ]
+      ]
+    }
+  ]
+}

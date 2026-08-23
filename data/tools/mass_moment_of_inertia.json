@@ -1,0 +1,273 @@
+{
+  "id": "mass_moment_of_inertia",
+  "title": "Mass Moment of Inertia",
+  "description": "Calculate the Moment of Inertia for various geometric shapes and mass distributions. Moment of Inertia measures an object's resistance to change in rotation direction.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Shape",
+        "Formula",
+        "Parameters",
+        "Moment of Inertia (kg m²)"
+      ],
+      "rows": [
+        [
+          "Point Mass",
+          "I = m r²",
+          "m (kg), r (m)",
+          "=inputs.mass_point * inputs.distance_point ^ 2"
+        ],
+        [
+          "Thin-walled Hollow Cylinder",
+          "I = m r²",
+          "m (kg), r (m)",
+          "=inputs.mass_cylinder * inputs.radius_cylinder ^ 2"
+        ],
+        [
+          "Hollow Cylinder",
+          "I = 1/2 m (ri² + ro²)",
+          "m (kg), ri (m), ro (m)",
+          "=0.5 * inputs.mass_hollow_cyl * (inputs.radius_inner ^ 2 + inputs.radius_outer ^ 2)"
+        ],
+        [
+          "Solid Cylinder",
+          "I = 1/2 m r²",
+          "m (kg), r (m)",
+          "=0.5 * inputs.mass_solid_cyl * inputs.radius_solid_cyl ^ 2"
+        ],
+        [
+          "Circular Disk",
+          "I = 1/2 m r²",
+          "m (kg), r (m)",
+          "=0.5 * inputs.mass_disk * inputs.radius_disk ^ 2"
+        ],
+        [
+          "Thin-walled Hollow Sphere",
+          "I = 2/3 m r²",
+          "m (kg), r (m)",
+          "=0.667 * inputs.mass_sphere_hollow * inputs.radius_sphere_hollow ^ 2"
+        ],
+        [
+          "Solid Sphere",
+          "I = 2/5 m r²",
+          "m (kg), r (m)",
+          "=0.4 * inputs.mass_sphere_solid * inputs.radius_sphere_solid ^ 2"
+        ],
+        [
+          "Rectangular Plane (center axis)",
+          "I = 1/12 m (a² + b²)",
+          "m (kg), a (m), b (m)",
+          "=inputs.mass_rect / 12 * (inputs.side_a ^ 2 + inputs.side_b ^ 2)"
+        ],
+        [
+          "Rectangular Plane (edge axis)",
+          "I = 1/3 m a²",
+          "m (kg), a (m)",
+          "=inputs.mass_rect_edge / 3 * inputs.side_a_edge ^ 2"
+        ],
+        [
+          "Slender Rod (center axis)",
+          "I = 1/12 m L²",
+          "m (kg), L (m)",
+          "=inputs.mass_rod / 12 * inputs.length_rod ^ 2"
+        ],
+        [
+          "Slender Rod (end axis)",
+          "I = 1/3 m L²",
+          "m (kg), L (m)",
+          "=inputs.mass_rod_end / 3 * inputs.length_rod_end ^ 2"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Point Mass Moment of Inertia Calculator",
+      "inputs": [
+        {
+          "id": "mass_point",
+          "label": "Mass (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "distance_point",
+          "label": "Distance from Axis (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moi_point",
+          "label": "Moment of Inertia",
+          "unit": "kg m²",
+          "formula": "inputs.mass_point * inputs.distance_point ^ 2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Solid Cylinder/Disk Moment of Inertia Calculator",
+      "inputs": [
+        {
+          "id": "mass_solid_cyl",
+          "label": "Mass (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "radius_solid_cyl",
+          "label": "Radius (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moi_solid_cyl",
+          "label": "Moment of Inertia",
+          "unit": "kg m²",
+          "formula": "0.5 * inputs.mass_solid_cyl * inputs.radius_solid_cyl ^ 2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Hollow Cylinder Moment of Inertia Calculator",
+      "inputs": [
+        {
+          "id": "mass_hollow_cyl",
+          "label": "Mass (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "radius_inner",
+          "label": "Inner Radius (ri)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "radius_outer",
+          "label": "Outer Radius (ro)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moi_hollow_cyl",
+          "label": "Moment of Inertia",
+          "unit": "kg m²",
+          "formula": "0.5 * inputs.mass_hollow_cyl * (inputs.radius_inner ^ 2 + inputs.radius_outer ^ 2)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Solid Sphere Moment of Inertia Calculator",
+      "inputs": [
+        {
+          "id": "mass_sphere_solid",
+          "label": "Mass (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "radius_sphere_solid",
+          "label": "Radius (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moi_sphere_solid",
+          "label": "Moment of Inertia",
+          "unit": "kg m²",
+          "formula": "0.4 * inputs.mass_sphere_solid * inputs.radius_sphere_solid ^ 2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Slender Rod (Center Axis) Moment of Inertia Calculator",
+      "inputs": [
+        {
+          "id": "mass_rod",
+          "label": "Mass (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "length_rod",
+          "label": "Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moi_rod_center",
+          "label": "Moment of Inertia",
+          "unit": "kg m²",
+          "formula": "inputs.mass_rod / 12 * inputs.length_rod ^ 2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Rectangular Plane (Center Axis) Moment of Inertia Calculator",
+      "inputs": [
+        {
+          "id": "mass_rect",
+          "label": "Mass (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "side_a",
+          "label": "Side A (a)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "side_b",
+          "label": "Side B (b)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moi_rect_center",
+          "label": "Moment of Inertia",
+          "unit": "kg m²",
+          "formula": "inputs.mass_rect / 12 * (inputs.side_a ^ 2 + inputs.side_b ^ 2)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

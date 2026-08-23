@@ -1,0 +1,123 @@
+{
+  "id": "fluid_flow___euler_equations",
+  "title": "Fluid Flow - Euler Equations",
+  "description": "The behavior of ideal compressible gas can be described with Euler equations. The Euler Equations govern the motion of compressible, inviscid fluids.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Euler Equations for Compressible Fluid Flow\n\nThe Euler equations describe the motion of ideal compressible fluids without viscosity. These conservation equations form the foundation for understanding gas dynamics and fluid behavior.\n\n### Key Equations:\n\n**Conservation of Mass (Continuity Equation):**\n$$\\frac{\\partial \\rho}{\\partial t} + \\nabla \\cdot (\\rho \\mathbf{v}) = 0$$\n\n**Conservation of Momentum:**\n$$\\frac{\\partial (\\rho \\mathbf{v})}{\\partial t} + \\nabla \\cdot (\\rho \\mathbf{v} \\otimes \\mathbf{v}) + \\nabla p = 0$$\n\n**Conservation of Energy:**\n$$\\frac{\\partial E}{\\partial t} + \\nabla \\cdot ((E + p)\\mathbf{v}) = 0$$\n\nWhere:\n- **ρ** = Density\n- **v** = Velocity vector\n- **p** = Pressure\n- **E** = Total energy per unit volume\n\n### Reference:\n[Euler Equations (Fluid Dynamics) - Wikipedia](https://en.wikipedia.org/wiki/Euler_equations_\\(fluid_dynamics\\))"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.225
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 10
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure (p)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        },
+        {
+          "id": "gamma",
+          "label": "Heat Capacity Ratio (γ)",
+          "type": "number",
+          "unit": "dimensionless",
+          "defaultValue": 1.4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "momentum",
+          "label": "Momentum per Unit Volume",
+          "unit": "kg/(m²·s)",
+          "formula": "inputs.density * inputs.velocity",
+          "format": "decimal"
+        },
+        {
+          "id": "kinetic_energy",
+          "label": "Kinetic Energy per Unit Volume",
+          "unit": "J/m³",
+          "formula": "0.5 * inputs.density * inputs.velocity * inputs.velocity",
+          "format": "decimal"
+        },
+        {
+          "id": "total_energy",
+          "label": "Total Energy per Unit Volume (Internal + Kinetic)",
+          "unit": "J/m³",
+          "formula": "(inputs.pressure / (inputs.gamma - 1)) + (0.5 * inputs.density * inputs.velocity * inputs.velocity)",
+          "format": "decimal"
+        },
+        {
+          "id": "speed_of_sound",
+          "label": "Speed of Sound",
+          "unit": "m/s",
+          "formula": "Math.sqrt(inputs.gamma * inputs.pressure / inputs.density)",
+          "format": "decimal"
+        },
+        {
+          "id": "mach_number",
+          "label": "Mach Number",
+          "unit": "dimensionless",
+          "formula": "inputs.velocity / Math.sqrt(inputs.gamma * inputs.pressure / inputs.density)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Flow Parameter",
+        "Subsonic (M<1)",
+        "Sonic (M=1)",
+        "Supersonic (M>1)"
+      ],
+      "rows": [
+        [
+          "Velocity Regime",
+          "v < a",
+          "v = a",
+          "v > a"
+        ],
+        [
+          "Mach Number Range",
+          "0 - 1",
+          "1",
+          "1+"
+        ],
+        [
+          "Compressibility Effects",
+          "Weak",
+          "Critical",
+          "Strong"
+        ],
+        [
+          "Shock Formation",
+          "None",
+          "Critical",
+          "Present"
+        ],
+        [
+          "Flow Behavior",
+          "Streamlines Smooth",
+          "Transition Zone",
+          "Complex Patterns"
+        ]
+      ]
+    }
+  ]
+}

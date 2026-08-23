@@ -1,0 +1,73 @@
+{
+  "id": "bodies_moving_on_inclined_planes___acting_forces",
+  "title": "Bodies Moving on Inclined Planes - Acting Forces Calculator",
+  "description": "Calculate the pulling force required to move a body up an inclined plane with or without friction. Uses the formulas Fp = W·sin(α) for frictionless surfaces and Fp = W(sin(α) + μ·cos(α)) when friction is included.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "inclined_plane_calculator",
+      "content": "Calculate forces on inclined planes",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass of Body",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1000
+        },
+        {
+          "id": "angle",
+          "label": "Elevation Angle",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 10
+        },
+        {
+          "id": "friction_coefficient",
+          "label": "Friction Coefficient (μ)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight",
+          "label": "Weight (W = m × ag)",
+          "formula": "inputs.mass * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "pulling_force_no_friction",
+          "label": "Pulling Force (No Friction)",
+          "formula": "inputs.mass * inputs.gravity * Math.sin(inputs.angle * Math.PI / 180)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "pulling_force_with_friction",
+          "label": "Pulling Force (With Friction)",
+          "formula": "inputs.mass * inputs.gravity * (Math.sin(inputs.angle * Math.PI / 180) + inputs.friction_coefficient * Math.cos(inputs.angle * Math.PI / 180))",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "friction_force",
+          "label": "Friction Component",
+          "formula": "inputs.mass * inputs.gravity * inputs.friction_coefficient * Math.cos(inputs.angle * Math.PI / 180)",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

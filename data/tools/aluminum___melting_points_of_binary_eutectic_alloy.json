@@ -1,0 +1,103 @@
+{
+  "id": "aluminum___melting_points_of_binary_eutectic_alloy",
+  "title": "Aluminum - Melting Points of Binary Eutectic Alloys",
+  "description": "Al - Aluminum - binary eutectic alloys and their melting points. An eutectic mixture is the composition where the melting point is as low as possible. This datatable contains binary eutectic Aluminum alloys with their composition and melting points in both Kelvin and Fahrenheit.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloy Component",
+        "Weight of Alloy Component (%)",
+        "Melting Point (K)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Au - Gold (Aurum)",
+          90,
+          842,
+          1056
+        ],
+        [
+          "Ca - Calcium",
+          73,
+          818,
+          1013
+        ],
+        [
+          "Cd - Cadmium",
+          90,
+          1650,
+          2511
+        ],
+        [
+          "Ce - Cerium",
+          92,
+          928,
+          1211
+        ],
+        [
+          "Cu - Copper",
+          33,
+          821,
+          1018
+        ],
+        [
+          "Fe - Iron (Ferrum)",
+          49.34,
+          1426,
+          2107
+        ],
+        [
+          "Ge - Germanium",
+          55,
+          700,
+          801
+        ],
+        [
+          "In - Indium",
+          18,
+          910,
+          1179
+        ],
+        [
+          "Mg - Magnesium",
+          67,
+          710,
+          819
+        ],
+        [
+          "Ni - Nickel",
+          87,
+          1658,
+          2525
+        ],
+        [
+          "Pt - Platinum",
+          90,
+          1533,
+          2300
+        ],
+        [
+          "Si - Silicon",
+          13,
+          850,
+          1071
+        ],
+        [
+          "Th - Thorium",
+          97,
+          1510,
+          2259
+        ],
+        [
+          "Zn - Zinc",
+          95,
+          655,
+          720
+        ]
+      ]
+    }
+  ]
+}

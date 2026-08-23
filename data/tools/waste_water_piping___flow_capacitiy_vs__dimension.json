@@ -1,0 +1,232 @@
+{
+  "id": "waste_water_piping___flow_capacitiy_vs__dimension",
+  "title": "Waste Water Piping - Flow Capacity vs. Dimension",
+  "description": "Calculator and reference tool for determining flow rate capacities in sewage piping systems. Provides flow rate limits based on pipe diameter and velocity constraints to avoid settling, sedimentation, erosion, and abrasion issues.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Waste Water Piping - Flow Capacity vs. Dimension\n\nIn sewage piping and pumping systems the fluid flow rate must be kept within certain limits to avoid operating problems.\n\n### Flow Velocity Requirements\n\nThe flow velocity must exceed certain minimum limits to maintain trouble-free operation:\n- **Horizontal wastewater pipes with solids**: minimum 3 ft/sec (0.9 m/s)\n- **Wastewater systems with organic solids**: minimum 2 ft/sec (0.6 m/s)\n\n### Flow Velocity Limits\n\nThe flow velocity should not exceed certain maximum limits to avoid erosion and abrasion:\n- **High-grit sewage systems**: maximum 12 ft/sec (3.6 m/s)\n- **Low-grit sewage systems**: maximum 18 ft/sec (5.4 m/s)\n\n**Note**: Based on clean pipes. The friction coefficient may vary with pipe material."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "select",
+          "options": [
+            {
+              "value": 3,
+              "label": "3 inches"
+            },
+            {
+              "value": 4,
+              "label": "4 inches"
+            },
+            {
+              "value": 6,
+              "label": "6 inches"
+            },
+            {
+              "value": 8,
+              "label": "8 inches"
+            },
+            {
+              "value": 10,
+              "label": "10 inches"
+            },
+            {
+              "value": 12,
+              "label": "12 inches"
+            }
+          ]
+        },
+        {
+          "id": "velocity_type",
+          "label": "Velocity Constraint",
+          "type": "select",
+          "options": [
+            {
+              "value": "min_low",
+              "label": "Minimum (2 ft/sec)"
+            },
+            {
+              "value": "min_high",
+              "label": "Minimum (3 ft/sec)"
+            },
+            {
+              "value": "max_high_grit",
+              "label": "Maximum - High Grit (12 ft/sec)"
+            },
+            {
+              "value": "max_low_grit",
+              "label": "Maximum - Low Grit (18 ft/sec)"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate Capacity",
+          "unit": "US GPM",
+          "format": "decimal",
+          "formula": "inputs.pipe_diameter === 3 ? (inputs.velocity_type === 'min_low' ? 45 : inputs.velocity_type === 'min_high' ? 65 : inputs.velocity_type === 'max_high_grit' ? 270 : 400) : inputs.pipe_diameter === 4 ? (inputs.velocity_type === 'min_low' ? 80 : inputs.velocity_type === 'min_high' ? 120 : inputs.velocity_type === 'max_high_grit' ? 480 : 700) : inputs.pipe_diameter === 6 ? (inputs.velocity_type === 'min_low' ? 180 : inputs.velocity_type === 'min_high' ? 260 : inputs.velocity_type === 'max_high_grit' ? 1050 : 1600) : inputs.pipe_diameter === 8 ? (inputs.velocity_type === 'min_low' ? 300 : inputs.velocity_type === 'min_high' ? 500 : inputs.velocity_type === 'max_high_grit' ? 1900 : 2800) : inputs.pipe_diameter === 10 ? (inputs.velocity_type === 'min_low' ? 500 : inputs.velocity_type === 'min_high' ? 750 : inputs.velocity_type === 'max_high_grit' ? 3000 : 4400) : inputs.pipe_diameter === 12 ? (inputs.velocity_type === 'min_low' ? 700 : inputs.velocity_type === 'min_high' ? 1100 : inputs.velocity_type === 'max_high_grit' ? 4300 : 6400) : 0"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Diameter (inches)",
+        "Min Velocity (2 ft/sec)",
+        "Min Velocity (3 ft/sec)",
+        "Max Velocity (12 ft/sec)",
+        "Max Velocity (18 ft/sec)"
+      ],
+      "rows": [
+        [
+          3,
+          45,
+          65,
+          270,
+          400
+        ],
+        [
+          4,
+          80,
+          120,
+          480,
+          700
+        ],
+        [
+          6,
+          180,
+          260,
+          1050,
+          1600
+        ],
+        [
+          8,
+          300,
+          500,
+          1900,
+          2800
+        ],
+        [
+          10,
+          500,
+          750,
+          3000,
+          4400
+        ],
+        [
+          12,
+          700,
+          1100,
+          4300,
+          6400
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "2 ft/sec",
+            "3 ft/sec",
+            "12 ft/sec",
+            "18 ft/sec"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            3,
+            4,
+            6,
+            8,
+            10,
+            12
+          ],
+          "name": "Pipe Diameter (inches)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Flow Rate (US GPM)"
+        },
+        "series": [
+          {
+            "name": "2 ft/sec",
+            "data": [
+              45,
+              80,
+              180,
+              300,
+              500,
+              700
+            ],
+            "type": "line",
+            "smooth": true,
+            "itemStyle": {
+              "color": "#5470C6"
+            }
+          },
+          {
+            "name": "3 ft/sec",
+            "data": [
+              65,
+              120,
+              260,
+              500,
+              750,
+              1100
+            ],
+            "type": "line",
+            "smooth": true,
+            "itemStyle": {
+              "color": "#91CC75"
+            }
+          },
+          {
+            "name": "12 ft/sec",
+            "data": [
+              270,
+              480,
+              1050,
+              1900,
+              3000,
+              4300
+            ],
+            "type": "line",
+            "smooth": true,
+            "itemStyle": {
+              "color": "#FAC858"
+            }
+          },
+          {
+            "name": "18 ft/sec",
+            "data": [
+              400,
+              700,
+              1600,
+              2800,
+              4400,
+              6400
+            ],
+            "type": "line",
+            "smooth": true,
+            "itemStyle": {
+              "color": "#EE6666"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "id": "intermediate_metal_conduit___imc",
+  "title": "Intermediate Metal Conduit - IMC",
+  "description": "Lighter and lower cost metal conduits. Calculator for Intermediate Metal Conduit (IMC) properties and specifications covered by NEC Article 342.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "trade_size",
+          "label": "Trade Size",
+          "type": "select",
+          "defaultValue": "1/2",
+          "options": [
+            {
+              "value": "1/2",
+              "label": "1/2\""
+            },
+            {
+              "value": "3/4",
+              "label": "3/4\""
+            },
+            {
+              "value": "1",
+              "label": "1\""
+            },
+            {
+              "value": "1 1/4",
+              "label": "1 1/4\""
+            },
+            {
+              "value": "1 1/2",
+              "label": "1 1/2\""
+            },
+            {
+              "value": "2",
+              "label": "2\""
+            },
+            {
+              "value": "2 1/2",
+              "label": "2 1/2\""
+            },
+            {
+              "value": "3",
+              "label": "3\""
+            },
+            {
+              "value": "3 1/2",
+              "label": "3 1/2\""
+            },
+            {
+              "value": "4",
+              "label": "4\""
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "outside_diameter",
+          "label": "Average Outside Diameter",
+          "unit": "mm",
+          "formula": "if(inputs.trade_size == '1/2', 16, if(inputs.trade_size == '3/4', 21, if(inputs.trade_size == '1', 27, if(inputs.trade_size == '1 1/4', 35, if(inputs.trade_size == '1 1/2', 41, if(inputs.trade_size == '2', 53, if(inputs.trade_size == '2 1/2', 63, if(inputs.trade_size == '3', 78, if(inputs.trade_size == '3 1/2', 91, if(inputs.trade_size == '4', 103, 0))))))))),0)"
+        },
+        {
+          "id": "wall_thickness",
+          "label": "Average Wall Thickness",
+          "unit": "in",
+          "formula": "if(inputs.trade_size == '1/2', 0.815, if(inputs.trade_size == '3/4', 1.029, if(inputs.trade_size == '1', 1.29, if(inputs.trade_size == '1 1/4', 1.638, if(inputs.trade_size == '1 1/2', 1.883, if(inputs.trade_size == '2', 2.36, if(inputs.trade_size == '2 1/2', 2.857, if(inputs.trade_size == '3', 3.476, if(inputs.trade_size == '3 1/2', 3.971, if(inputs.trade_size == '4', 4.466, 0))))))))),0)"
+        },
+        {
+          "id": "weight_kg_per_30m",
+          "label": "Weight per 30m",
+          "unit": "kg/30m",
+          "formula": "if(inputs.trade_size == '1/2', 28, if(inputs.trade_size == '3/4', 38, if(inputs.trade_size == '1', 54, if(inputs.trade_size == '1 1/4', 72, if(inputs.trade_size == '1 1/2', 88, if(inputs.trade_size == '2', 116, if(inputs.trade_size == '2 1/2', 200, if(inputs.trade_size == '3', 246, if(inputs.trade_size == '3 1/2', 285, if(inputs.trade_size == '4', 318, 0))))))))),0)"
+        },
+        {
+          "id": "weight_lbs_per_100ft",
+          "label": "Weight per 100ft",
+          "unit": "lbs/100ft",
+          "formula": "if(inputs.trade_size == '1/2', 62, if(inputs.trade_size == '3/4', 84, if(inputs.trade_size == '1', 119, if(inputs.trade_size == '1 1/4', 158, if(inputs.trade_size == '1 1/2', 194, if(inputs.trade_size == '2', 256, if(inputs.trade_size == '2 1/2', 441, if(inputs.trade_size == '3', 543, if(inputs.trade_size == '3 1/2', 629, if(inputs.trade_size == '4', 700, 0))))))))),0)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Trade Size",
+        "Outside Diameter (mm)",
+        "Wall Thickness (in)",
+        "Weight (kg/30m)",
+        "Weight (lbs/100ft)"
+      ],
+      "rows": [
+        [
+          "1/2",
+          "16",
+          "0.815",
+          "28",
+          "62"
+        ],
+        [
+          "3/4",
+          "21",
+          "1.029",
+          "38",
+          "84"
+        ],
+        [
+          "1",
+          "27",
+          "1.29",
+          "54",
+          "119"
+        ],
+        [
+          "1 1/4",
+          "35",
+          "1.638",
+          "72",
+          "158"
+        ],
+        [
+          "1 1/2",
+          "41",
+          "1.883",
+          "88",
+          "194"
+        ],
+        [
+          "2",
+          "53",
+          "2.36",
+          "116",
+          "256"
+        ],
+        [
+          "2 1/2",
+          "63",
+          "2.857",
+          "200",
+          "441"
+        ],
+        [
+          "3",
+          "78",
+          "3.476",
+          "246",
+          "543"
+        ],
+        [
+          "3 1/2",
+          "91",
+          "3.971",
+          "285",
+          "629"
+        ],
+        [
+          "4",
+          "103",
+          "4.466",
+          "318",
+          "700"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About IMC\n\nIntermediate Metal Conduit (IMC) is a lighter and lower cost alternative to rigid metal conduit. IMC provides excellent protection for electrical wiring while being more economical and easier to install.\n\n### Standards\n- IMC is covered by **Article 342** of the National Electric Code (NEC)\n\n### Key Features\n- Lighter weight than rigid conduit\n- Lower cost\n- Durable metal construction\n- Suitable for various electrical applications\n\n### Related Products\n- Electrical Metal Tubing (EMT)\n- Rigid Aluminum Conduit (RAC)\n- Rigid Metal Conduit (RMC)"
+    }
+  ]
+}

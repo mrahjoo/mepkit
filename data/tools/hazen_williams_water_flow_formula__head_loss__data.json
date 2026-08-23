@@ -1,0 +1,72 @@
+{
+  "id": "hazen_williams_water_flow_formula__head_loss__data",
+  "title": "Hazen-Williams Water Flow Formula: Head Loss Calculator",
+  "description": "Calculate friction head loss in water pipes using the Hazen-Williams empirical equation. Determine head loss per 100 feet of pipe and total head loss for a given pipe length.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hazen-Williams Head Loss Calculator\n\nThe Hazen-Williams equation calculates friction head loss in water pipes:\n\n**h₁₀₀ft = 0.2083 × (100 / c)^1.852 × q^1.852 / d^4.8655**\n\nWhere:\n- **h₁₀₀ft** = friction head loss (ft H₂O per 100 ft pipe)\n- **c** = Hazen-Williams roughness constant\n- **q** = volume flow rate (gal/min)\n- **d** = inside pipe diameter (inches)\n\n### Flow Velocity\n\n**v = 0.408709 × q / d²**\n\nWhere:\n- **v** = flow velocity (ft/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "unit": "gal/min",
+          "type": "number",
+          "defaultValue": 200
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Inside Diameter",
+          "unit": "inches",
+          "type": "number",
+          "defaultValue": 3.048
+        },
+        {
+          "id": "roughness_constant",
+          "label": "Hazen-Williams Roughness Constant",
+          "unit": "",
+          "type": "number",
+          "defaultValue": 140
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "unit": "ft",
+          "type": "number",
+          "defaultValue": 30
+        }
+      ],
+      "outputs": [
+        {
+          "id": "head_loss_per_100ft",
+          "label": "Head Loss per 100 ft",
+          "unit": "ft H₂O/100 ft",
+          "formula": "0.2083 * Math.pow(100 / inputs.roughness_constant, 1.852) * Math.pow(inputs.flow_rate, 1.852) / Math.pow(inputs.pipe_diameter, 4.8655)",
+          "format": "decimal"
+        },
+        {
+          "id": "total_head_loss",
+          "label": "Total Head Loss",
+          "unit": "ft H₂O",
+          "formula": "(0.2083 * Math.pow(100 / inputs.roughness_constant, 1.852) * Math.pow(inputs.flow_rate, 1.852) / Math.pow(inputs.pipe_diameter, 4.8655)) * (inputs.pipe_length / 100)",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_velocity",
+          "label": "Flow Velocity",
+          "unit": "ft/s",
+          "formula": "0.408709 * inputs.flow_rate / Math.pow(inputs.pipe_diameter, 2)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Limitations\n\nThe Hazen-Williams equation is assumed to be relatively accurate for water flow when:\n- Reynolds Number is above 10⁵ (turbulent flow)\n- Water temperature is in the range 40–75°F (5–25°C)\n- Kinematic viscosity is approximately 1.1 cSt\n\nFor hotter water or other fluids, the Darcy-Weisbach method is recommended.\n\n### Example\n\n**Given:**\n- Flow rate: 200 gal/min\n- Pipe diameter: 3.048 inches\n- Roughness constant (PEH pipe): 140\n- Pipe length: 30 ft\n\n**Results:**\n- Head loss per 100 ft: 9 ft H₂O\n- Total head loss (30 ft): 2.7 ft H₂O"
+    }
+  ]
+}

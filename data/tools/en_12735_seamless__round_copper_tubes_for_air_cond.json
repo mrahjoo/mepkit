@@ -1,0 +1,133 @@
+{
+  "id": "en_12735_seamless__round_copper_tubes_for_air_cond",
+  "title": "EN 12735 Seamless Round Copper Tubes for Air Conditioning and Refrigeration",
+  "description": "Dimensions and specifications for seamless, round copper tubes used in air conditioning and refrigeration systems according to EN 12735 standard",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Diameter (mm)",
+        "Outside Diameter (mm)",
+        "Wall Thickness (mm)",
+        "Inside Diameter (mm)",
+        "Weight (kg/m)",
+        "Burst Pressure (bar)"
+      ],
+      "rows": [
+        [
+          6,
+          6,
+          0.8,
+          4.4,
+          0.14,
+          115
+        ],
+        [
+          8,
+          8,
+          1,
+          6,
+          0.22,
+          115
+        ],
+        [
+          10,
+          10,
+          1,
+          8,
+          0.28,
+          92
+        ],
+        [
+          12,
+          12,
+          1,
+          10,
+          0.34,
+          77
+        ],
+        [
+          14,
+          14,
+          1.2,
+          11.6,
+          0.46,
+          85
+        ],
+        [
+          16,
+          16,
+          1.2,
+          13.6,
+          0.53,
+          75
+        ],
+        [
+          18,
+          18,
+          1.2,
+          15.6,
+          0.6,
+          67
+        ],
+        [
+          20,
+          20,
+          1.2,
+          17.6,
+          0.67,
+          60
+        ],
+        [
+          22,
+          22,
+          1.5,
+          19,
+          0.92,
+          75
+        ],
+        [
+          25,
+          25,
+          1.5,
+          22,
+          1.05,
+          66
+        ],
+        [
+          28,
+          28,
+          1.5,
+          25,
+          1.18,
+          59
+        ],
+        [
+          32,
+          32,
+          2,
+          28,
+          1.77,
+          73
+        ],
+        [
+          35,
+          35,
+          2,
+          31,
+          1.93,
+          66
+        ],
+        [
+          40,
+          40,
+          2,
+          36,
+          2.21,
+          58
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "propane___thermal_conductivity_vs__temperature_and",
+  "title": "Propane - Thermal Conductivity vs. Temperature and Pressure",
+  "description": "Calculate the thermal conductivity of propane at given temperature and pressure. Thermal conductivity is a material property that describes the ability to conduct heat, measured in W/m·K or Btu/h·ft·°F. This tool provides estimates based on propane's thermophysical properties.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 25
+        },
+        {
+          "id": "pressure_bara",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "bara",
+          "defaultValue": 1
+        },
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "celsius",
+              "label": "°C"
+            },
+            {
+              "value": "fahrenheit",
+              "label": "°F"
+            },
+            {
+              "value": "kelvin",
+              "label": "K"
+            },
+            {
+              "value": "rankine",
+              "label": "°R"
+            }
+          ],
+          "defaultValue": "celsius"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_conductivity_mw_mk",
+          "label": "Thermal Conductivity",
+          "unit": "mW/(m·K)",
+          "format": "decimal",
+          "formula": "inputs.temperature_celsius * 0.05 + 18"
+        },
+        {
+          "id": "thermal_conductivity_kcal",
+          "label": "Thermal Conductivity",
+          "unit": "kcal(IT)/(h·m·K)",
+          "format": "decimal",
+          "formula": "inputs.thermal_conductivity_mw_mk * 0.000861"
+        },
+        {
+          "id": "thermal_conductivity_btu",
+          "label": "Thermal Conductivity",
+          "unit": "Btu(IT)/(h·ft·°F)",
+          "format": "decimal",
+          "formula": "inputs.thermal_conductivity_mw_mk * 0.000577"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            -50,
+            -25,
+            0,
+            25,
+            50,
+            75,
+            100,
+            125,
+            150,
+            175,
+            200
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Thermal Conductivity (mW/m·K)"
+        },
+        "series": [
+          {
+            "name": "1 bara",
+            "data": [
+              134,
+              147,
+              156,
+              183,
+              211,
+              242,
+              274,
+              307,
+              343,
+              380,
+              420
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "10 bara",
+            "data": [
+              136,
+              149,
+              159,
+              186,
+              215,
+              247,
+              280,
+              315,
+              350,
+              387,
+              427
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "50 bara",
+            "data": [
+              138,
+              152,
+              162,
+              190,
+              221,
+              254,
+              290,
+              328,
+              368,
+              410,
+              454
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ],
+        "title": {
+          "text": "Propane Thermal Conductivity vs. Temperature"
+        }
+      }
+    }
+  ]
+}

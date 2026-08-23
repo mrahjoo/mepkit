@@ -1,0 +1,100 @@
+{
+  "id": "capillarity",
+  "title": "Capillarity",
+  "description": "Capillarity - or capillary action - is the ability of a narrow tube to draw a liquid upwards against the force of gravity. Calculate the height of liquid in a tube due to capillary action using the formula: h = 2 σ cos(θ) / (ρ g r)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate capillary rise height in a tube",
+      "inputs": [
+        {
+          "id": "surfaceTension",
+          "label": "Surface Tension (σ)",
+          "type": "number",
+          "unit": "N/m",
+          "defaultValue": 0.0728
+        },
+        {
+          "id": "contactAngle",
+          "label": "Contact Angle (θ)",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 0
+        },
+        {
+          "id": "density",
+          "label": "Liquid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (g)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "radius",
+          "label": "Tube Radius (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.001
+        }
+      ],
+      "outputs": [
+        {
+          "id": "height",
+          "label": "Capillary Rise Height (h)",
+          "unit": "m",
+          "formula": "(2 * inputs.surfaceTension * cos(inputs.contactAngle * 3.14159 / 180)) / (inputs.density * inputs.gravity * inputs.radius)",
+          "format": "decimal"
+        },
+        {
+          "id": "heightMm",
+          "label": "Capillary Rise Height (h)",
+          "unit": "mm",
+          "formula": "((2 * inputs.surfaceTension * cos(inputs.contactAngle * 3.14159 / 180)) / (inputs.density * inputs.gravity * inputs.radius)) * 1000",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Surface Tension of Common Liquids at 20°C",
+      "headers": [
+        "Liquid",
+        "Surface Tension (N/m)",
+        "Surface Tension (dynes/cm)"
+      ],
+      "rows": [
+        [
+          "Ethyl Alcohol",
+          0.0223,
+          22.3
+        ],
+        [
+          "Mercury",
+          0.465,
+          465
+        ],
+        [
+          "Water 20°C",
+          0.0728,
+          72.75
+        ],
+        [
+          "Water 100°C",
+          0.0599,
+          58.9
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### About Capillarity\n\nCapillarity is the ability of a narrow tube to draw a liquid upwards against the force of gravity. The height of liquid in a tube due to capillarity is calculated using:\n\n**h = 2 σ cos(θ) / (ρ g r)**\n\nWhere:\n- **h** = height of liquid (m)\n- **σ** = surface tension (N/m)\n- **θ** = contact angle (0° for clean tube)\n- **ρ** = density of liquid (kg/m³)\n- **g** = acceleration of gravity (9.81 m/s²)\n- **r** = radius of tube (m)\n\n### Example\nFor a clean glass tube with 2 mm diameter containing water at 20°C (density 1000 kg/m³):\n- h = 2 (0.0728 N/m) cos(0°) / ((1000 kg/m³)(9.81 m/s²)(0.001 m))\n- h = 0.0074 m = 7.4 mm"
+    }
+  ]
+}

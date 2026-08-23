@@ -1,0 +1,485 @@
+{
+  "id": "hydrocarbons__alcohols_and_acids___boiling_points",
+  "title": "Hydrocarbons, Alcohols and Acids - Boiling Points",
+  "description": "Calculator tool for boiling points of hydrocarbons, alcohols, and carboxylic acids. Select the compound type and carbon number to determine the boiling point in both Celsius and Fahrenheit.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Boiling Point Lookup\n\nThis tool provides boiling point data for various hydrocarbons, alcohols, and carboxylic acids based on carbon number and compound type.\n\n**Compound Types:**\n- Alkanes (2,2-dimethylalkane, 2-methylalkane, 3-methylalkane, N-alkane)\n- Alkenes (2-methylalkene, 1-alkene)\n- Alkynes (1-alkyne)\n- Cyclic compounds (Alkylcyclohexane, Alkylcyclopentane, Cycloalkene, Cycloalkane)\n- Aromatic compounds (Alkylbenzene, 1-alkylnaphthalene)\n- Alcohols (1-alkanol, 2-alkanol, 3-alkanol, 4-alkanol)\n- Carboxylic acids (Alkanoic acid)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "compound_type",
+          "label": "Compound Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "2,2-Dimethylalkane",
+              "value": "2_2_dimethylalkane"
+            },
+            {
+              "label": "2-Methylalkane",
+              "value": "2_methylalkane"
+            },
+            {
+              "label": "2-Methylalkene",
+              "value": "2_methylalkene"
+            },
+            {
+              "label": "3-Methylalkane",
+              "value": "3_methylalkane"
+            },
+            {
+              "label": "1-Alkene",
+              "value": "1_alkene"
+            },
+            {
+              "label": "N-Alkane",
+              "value": "n_alkane"
+            },
+            {
+              "label": "1-Alkyne",
+              "value": "1_alkyne"
+            },
+            {
+              "label": "Alkylcyclohexane",
+              "value": "alkylcyclohexane"
+            },
+            {
+              "label": "Alkylcyclopentane",
+              "value": "alkylcyclopentane"
+            },
+            {
+              "label": "Alkylbenzene",
+              "value": "alkylbenzene"
+            },
+            {
+              "label": "Cycloalkene",
+              "value": "cycloalkene"
+            },
+            {
+              "label": "Cycloalkane",
+              "value": "cycloalkane"
+            },
+            {
+              "label": "2-Alkanol",
+              "value": "2_alkanol"
+            },
+            {
+              "label": "4-Alkanol",
+              "value": "4_alkanol"
+            },
+            {
+              "label": "3-Alkanol",
+              "value": "3_alkanol"
+            },
+            {
+              "label": "1-Alkylnaphthalene",
+              "value": "1_alkylnaphthalene"
+            },
+            {
+              "label": "1-Alkanol",
+              "value": "1_alkanol"
+            },
+            {
+              "label": "Alkanoic Acid",
+              "value": "alkanoic_acid"
+            }
+          ]
+        },
+        {
+          "id": "carbon_number",
+          "label": "Carbon Number",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "boiling_point_celsius",
+          "label": "Boiling Point",
+          "unit": "°C",
+          "format": "decimal",
+          "formula": "Lookup from compound type and carbon number database"
+        },
+        {
+          "id": "boiling_point_fahrenheit",
+          "label": "Boiling Point",
+          "unit": "°F",
+          "format": "decimal",
+          "formula": "inputs.boiling_point_celsius * 9/5 + 32"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Compound Type",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16"
+      ],
+      "rows": [
+        [
+          "2,2-Dimethylalkane",
+          "",
+          "10",
+          "50",
+          "79",
+          "106",
+          "133",
+          "155",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2-Methylalkane",
+          "-12",
+          "28",
+          "60",
+          "90",
+          "117",
+          "143",
+          "167",
+          "189",
+          "211",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2-Methylalkene",
+          "-7",
+          "31",
+          "62",
+          "92",
+          "118",
+          "145",
+          "167",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "3-Methylalkane",
+          "",
+          "63",
+          "92",
+          "120",
+          "144",
+          "168",
+          "192",
+          "212",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1-Alkene",
+          "-104",
+          "-48",
+          "-6",
+          "30",
+          "64",
+          "94",
+          "121",
+          "147",
+          "172",
+          "193",
+          "213",
+          "233",
+          "251",
+          "",
+          "",
+          ""
+        ],
+        [
+          "N-Alkane",
+          "-162",
+          "-89",
+          "-42",
+          "-1",
+          "36",
+          "69",
+          "98",
+          "126",
+          "151",
+          "174",
+          "196",
+          "216",
+          "235",
+          "254",
+          "270",
+          "287"
+        ],
+        [
+          "1-Alkyne",
+          "",
+          "-84",
+          "-23",
+          "8",
+          "40",
+          "71",
+          "100",
+          "126",
+          "151",
+          "174",
+          "196",
+          "215",
+          "234",
+          "284",
+          "",
+          ""
+        ],
+        [
+          "Alkylcyclohexane",
+          "",
+          "101",
+          "132",
+          "156",
+          "178",
+          "204",
+          "225",
+          "244",
+          "263",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Alkylcyclopentane",
+          "",
+          "72",
+          "104",
+          "131",
+          "156",
+          "180",
+          "206",
+          "224",
+          "242",
+          "262",
+          "279",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Alkylbenzene",
+          "",
+          "80",
+          "111",
+          "136",
+          "159",
+          "183",
+          "205",
+          "226",
+          "242",
+          "263",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cycloalkene",
+          "",
+          "-36",
+          "2",
+          "44",
+          "83",
+          "115",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cycloalkane",
+          "",
+          "-33",
+          "13",
+          "49",
+          "81",
+          "119",
+          "151",
+          "173",
+          "202",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2-Alkanol",
+          "",
+          "82",
+          "99",
+          "119",
+          "138",
+          "159",
+          "179",
+          "194",
+          "212",
+          "231",
+          "249",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "4-Alkanol",
+          "",
+          "",
+          "161",
+          "176",
+          "193",
+          "214",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "3-Alkanol",
+          "",
+          "",
+          "123",
+          "135",
+          "163",
+          "184",
+          "197",
+          "217",
+          "230",
+          "246",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1-Alkylnaphthalene",
+          "",
+          "",
+          "",
+          "218",
+          "240",
+          "258",
+          "273",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1-Alkanol",
+          "65",
+          "78",
+          "97",
+          "118",
+          "138",
+          "157",
+          "178",
+          "195",
+          "214",
+          "229",
+          "246",
+          "264",
+          "287",
+          "296",
+          "",
+          ""
+        ],
+        [
+          "Alkanoic Acid",
+          "101",
+          "118",
+          "142",
+          "164",
+          "186",
+          "202",
+          "222",
+          "240",
+          "256",
+          "270",
+          "280",
+          "296",
+          "308",
+          "351",
+          "",
+          ""
+        ]
+      ]
+    }
+  ]
+}

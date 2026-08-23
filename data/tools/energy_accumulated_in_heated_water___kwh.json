@@ -1,0 +1,44 @@
+{
+  "id": "energy_accumulated_in_heated_water___kwh",
+  "title": "Energy Accumulated in Heated Water - kWh",
+  "description": "Calculate the thermal energy stored in heated water using the formula E = cp × ΔT × m, where cp is the specific heat of water (4.2 kJ/kg°C), ΔT is the temperature difference, and m is the mass of water. The result is converted to kWh.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate energy accumulated in heated water",
+      "inputs": [
+        {
+          "id": "temperature_difference",
+          "label": "Temperature Difference",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 70
+        },
+        {
+          "id": "volume",
+          "label": "Volume",
+          "type": "number",
+          "unit": "liter",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy_stored_kj",
+          "label": "Energy Stored",
+          "unit": "kJ",
+          "formula": "4.2 * inputs.temperature_difference * inputs.volume",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_stored_kwh",
+          "label": "Energy Stored",
+          "unit": "kWh",
+          "formula": "(4.2 * inputs.temperature_difference * inputs.volume) / 3600",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

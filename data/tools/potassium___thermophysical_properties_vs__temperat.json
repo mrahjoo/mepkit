@@ -1,0 +1,406 @@
+{
+  "id": "potassium___thermophysical_properties_vs__temperat",
+  "title": "Potassium - Thermophysical Properties vs. Temperature",
+  "description": "Thermophysical properties of potassium for temperatures ranging 350 - 850 °C including latent heat, density, thermal conductivity, viscosity, vapor pressure, and surface tension.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "potassium_calculator",
+      "content": "Select a temperature to view corresponding thermophysical properties of potassium.",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "select",
+          "unit": "°C",
+          "options": [
+            {
+              "value": 350,
+              "label": "350"
+            },
+            {
+              "value": 400,
+              "label": "400"
+            },
+            {
+              "value": 450,
+              "label": "450"
+            },
+            {
+              "value": 500,
+              "label": "500"
+            },
+            {
+              "value": 550,
+              "label": "550"
+            },
+            {
+              "value": 600,
+              "label": "600"
+            },
+            {
+              "value": 650,
+              "label": "650"
+            },
+            {
+              "value": 700,
+              "label": "700"
+            },
+            {
+              "value": 750,
+              "label": "750"
+            },
+            {
+              "value": 800,
+              "label": "800"
+            },
+            {
+              "value": 850,
+              "label": "850"
+            }
+          ],
+          "defaultValue": 500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "latent_heat",
+          "label": "Latent Heat",
+          "unit": "kJ/kg",
+          "formula": "IF(inputs.temperature=350,2093,IF(inputs.temperature=400,2078,IF(inputs.temperature=450,2060,IF(inputs.temperature=500,2040,IF(inputs.temperature=550,2020,IF(inputs.temperature=600,2000,IF(inputs.temperature=650,1980,IF(inputs.temperature=700,1960,IF(inputs.temperature=750,1938,IF(inputs.temperature=800,1913,IF(inputs.temperature=850,1883,0)))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "liquid_density",
+          "label": "Liquid Density",
+          "unit": "kg/m³",
+          "formula": "IF(inputs.temperature=350,763,IF(inputs.temperature=400,748,IF(inputs.temperature=450,735,IF(inputs.temperature=500,725,IF(inputs.temperature=550,715,IF(inputs.temperature=600,705,IF(inputs.temperature=650,695,IF(inputs.temperature=700,685,IF(inputs.temperature=750,675,IF(inputs.temperature=800,665,IF(inputs.temperature=850,653,0)))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "vapor_density",
+          "label": "Vapor Density",
+          "unit": "kg/m³",
+          "formula": "IF(inputs.temperature=350,0.002,IF(inputs.temperature=400,0.006,IF(inputs.temperature=450,0.015,IF(inputs.temperature=500,0.031,IF(inputs.temperature=550,0.062,IF(inputs.temperature=600,0.111,IF(inputs.temperature=650,0.193,IF(inputs.temperature=700,0.314,IF(inputs.temperature=750,0.486,IF(inputs.temperature=800,0.716,IF(inputs.temperature=850,1.054,0)))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "liquid_thermal_conductivity",
+          "label": "Liquid Thermal Conductivity",
+          "unit": "W/m°C",
+          "formula": "IF(inputs.temperature=350,51.1,IF(inputs.temperature=400,49.1,IF(inputs.temperature=450,47.1,IF(inputs.temperature=500,45.1,IF(inputs.temperature=550,43.3,IF(inputs.temperature=600,41.8,IF(inputs.temperature=650,40.1,IF(inputs.temperature=700,38.1,IF(inputs.temperature=750,36.3,IF(inputs.temperature=800,34.8,IF(inputs.temperature=850,33.3,0)))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "liquid_viscosity",
+          "label": "Liquid Viscosity",
+          "unit": "cP",
+          "formula": "IF(inputs.temperature=350,0.21,IF(inputs.temperature=400,0.19,IF(inputs.temperature=450,0.18,IF(inputs.temperature=500,0.17,IF(inputs.temperature=550,0.15,IF(inputs.temperature=600,0.14,IF(inputs.temperature=650,0.13,IF(inputs.temperature=700,0.12,IF(inputs.temperature=750,0.12,IF(inputs.temperature=800,0.11,IF(inputs.temperature=850,0.10,0)))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "vapor_viscosity",
+          "label": "Vapor Viscosity",
+          "unit": "10⁻² cP",
+          "formula": "IF(inputs.temperature=350,0.15,IF(inputs.temperature=400,0.16,IF(inputs.temperature=450,0.16,IF(inputs.temperature=500,0.17,IF(inputs.temperature=550,0.17,IF(inputs.temperature=600,0.18,IF(inputs.temperature=650,0.19,IF(inputs.temperature=700,0.19,IF(inputs.temperature=750,0.20,IF(inputs.temperature=800,0.20,IF(inputs.temperature=850,0.21,0)))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "vapor_pressure",
+          "label": "Vapor Pressure",
+          "unit": "bar",
+          "formula": "IF(inputs.temperature=350,0.01,IF(inputs.temperature=400,0.01,IF(inputs.temperature=450,0.02,IF(inputs.temperature=500,0.05,IF(inputs.temperature=550,0.10,IF(inputs.temperature=600,0.19,IF(inputs.temperature=650,0.35,IF(inputs.temperature=700,0.61,IF(inputs.temperature=750,0.99,IF(inputs.temperature=800,1.55,IF(inputs.temperature=850,2.34,0)))))))))))",
+          "format": "decimal"
+        },
+        {
+          "id": "vapor_specific_heat",
+          "label": "Vapor Specific Heat",
+          "unit": "kJ/kg°C",
+          "formula": "5.3",
+          "format": "decimal"
+        },
+        {
+          "id": "liquid_surface_tension",
+          "label": "Liquid Surface Tension",
+          "unit": "10⁻² N/m",
+          "formula": "IF(inputs.temperature=350,9.5,IF(inputs.temperature=400,9.0,IF(inputs.temperature=450,8.7,IF(inputs.temperature=500,8.4,IF(inputs.temperature=550,8.2,IF(inputs.temperature=600,7.9,IF(inputs.temperature=650,7.5,IF(inputs.temperature=700,7.1,IF(inputs.temperature=750,6.7,IF(inputs.temperature=800,6.3,IF(inputs.temperature=850,5.9,0)))))))))))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "potassium_datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Latent Heat (kJ/kg)",
+        "Liquid Density (kg/m³)",
+        "Vapor Density (kg/m³)",
+        "Liquid Thermal Conductivity (W/m°C)",
+        "Liquid Viscosity (cP)",
+        "Vapor Viscosity (10⁻² cP)",
+        "Vapor Pressure (bar)",
+        "Vapor Specific Heat (kJ/kg°C)",
+        "Liquid Surface Tension (10⁻² N/m)"
+      ],
+      "rows": [
+        [
+          350,
+          2093,
+          763,
+          0.002,
+          51.1,
+          0.21,
+          0.15,
+          0.01,
+          5.3,
+          9.5
+        ],
+        [
+          400,
+          2078,
+          748,
+          0.006,
+          49.1,
+          0.19,
+          0.16,
+          0.01,
+          5.3,
+          9
+        ],
+        [
+          450,
+          2060,
+          735,
+          0.015,
+          47.1,
+          0.18,
+          0.16,
+          0.02,
+          5.3,
+          8.7
+        ],
+        [
+          500,
+          2040,
+          725,
+          0.031,
+          45.1,
+          0.17,
+          0.17,
+          0.05,
+          5.3,
+          8.4
+        ],
+        [
+          550,
+          2020,
+          715,
+          0.062,
+          43.3,
+          0.15,
+          0.17,
+          0.1,
+          5.3,
+          8.2
+        ],
+        [
+          600,
+          2000,
+          705,
+          0.111,
+          41.8,
+          0.14,
+          0.18,
+          0.19,
+          5.3,
+          7.9
+        ],
+        [
+          650,
+          1980,
+          695,
+          0.193,
+          40.1,
+          0.13,
+          0.19,
+          0.35,
+          5.3,
+          7.5
+        ],
+        [
+          700,
+          1960,
+          685,
+          0.314,
+          38.1,
+          0.12,
+          0.19,
+          0.61,
+          5.3,
+          7.1
+        ],
+        [
+          750,
+          1938,
+          675,
+          0.486,
+          36.3,
+          0.12,
+          0.2,
+          0.99,
+          5.3,
+          6.7
+        ],
+        [
+          800,
+          1913,
+          665,
+          0.716,
+          34.8,
+          0.11,
+          0.2,
+          1.55,
+          5.3,
+          6.3
+        ],
+        [
+          850,
+          1883,
+          653,
+          1.054,
+          33.3,
+          0.1,
+          0.21,
+          2.34,
+          5.3,
+          5.9
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "potassium_chart",
+      "options": {
+        "title": {
+          "text": "Potassium Thermophysical Properties vs. Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Latent Heat",
+            "Liquid Density",
+            "Liquid Thermal Conductivity",
+            "Vapor Pressure"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            350,
+            400,
+            450,
+            500,
+            550,
+            600,
+            650,
+            700,
+            750,
+            800,
+            850
+          ],
+          "name": "Temperature (°C)"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Latent Heat (kJ/kg)"
+          },
+          {
+            "type": "value",
+            "name": "Liquid Density (kg/m³)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Latent Heat",
+            "data": [
+              2093,
+              2078,
+              2060,
+              2040,
+              2020,
+              2000,
+              1980,
+              1960,
+              1938,
+              1913,
+              1883
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Liquid Density",
+            "data": [
+              763,
+              748,
+              735,
+              725,
+              715,
+              705,
+              695,
+              685,
+              675,
+              665,
+              653
+            ],
+            "type": "line",
+            "smooth": true,
+            "yAxisIndex": 1
+          },
+          {
+            "name": "Liquid Thermal Conductivity",
+            "data": [
+              51.1,
+              49.1,
+              47.1,
+              45.1,
+              43.3,
+              41.8,
+              40.1,
+              38.1,
+              36.3,
+              34.8,
+              33.3
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Vapor Pressure",
+            "data": [
+              0.01,
+              0.01,
+              0.02,
+              0.05,
+              0.1,
+              0.19,
+              0.35,
+              0.61,
+              0.99,
+              1.55,
+              2.34
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

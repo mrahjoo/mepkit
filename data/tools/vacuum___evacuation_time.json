@@ -1,0 +1,80 @@
+{
+  "id": "vacuum___evacuation_time",
+  "title": "Vacuum - Evacuation Time",
+  "description": "Calculate the evacuation time for a vacuum pump using the formula: t = V / q ln(p0 / p1), where t is evacuation time, V is enclosed evacuated volume, q is volume flow rate capacity of the vacuum pump, p0 is initialization pressure (atmospheric), and p1 is end vacuum pressure.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "volume",
+          "label": "Enclosed Evacuated Volume (V)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m³"
+        },
+        {
+          "id": "flowRate",
+          "label": "Volume Flow Rate Capacity (q)",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "m³/s"
+        },
+        {
+          "id": "initialPressure",
+          "label": "Initial Pressure (p0)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "mbar"
+        },
+        {
+          "id": "endPressure",
+          "label": "End Vacuum Pressure (p1)",
+          "type": "number",
+          "defaultValue": 500,
+          "unit": "mbar"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "evacuationTime",
+          "label": "Evacuation Time (t)",
+          "formula": "inputs.volume / inputs.flowRate * Math.log(inputs.initialPressure / inputs.endPressure)",
+          "unit": "s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "End Pressure (mbar)",
+        "Evacuation Time (s)",
+        "Natural Log Constant (N)"
+      ],
+      "rows": [
+        [
+          500,
+          "=inputs.volume / inputs.flowRate * Math.log(inputs.initialPressure / 500)",
+          1.386
+        ],
+        [
+          100,
+          "=inputs.volume / inputs.flowRate * Math.log(inputs.initialPressure / 100)",
+          2.303
+        ],
+        [
+          10,
+          "=inputs.volume / inputs.flowRate * Math.log(inputs.initialPressure / 10)",
+          3.219
+        ]
+      ]
+    }
+  ]
+}

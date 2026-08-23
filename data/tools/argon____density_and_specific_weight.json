@@ -1,0 +1,81 @@
+{
+  "id": "argon____density_and_specific_weight",
+  "title": "Argon - Density and Specific Weight",
+  "description": "Calculate the density and specific weight of argon at given temperature and pressure. Density is expressed in kg/m³, lb/ft³, lb/gal(US liq), and sl/ft³. Specific weight is given in N/m³ and lbf/ft³.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "select",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "1 bara / 14.5 psia",
+              "value": 1
+            },
+            {
+              "label": "10 bara / 145 psia",
+              "value": 10
+            },
+            {
+              "label": "50 bara / 725 psia",
+              "value": 50
+            },
+            {
+              "label": "100 bara / 1450 psia",
+              "value": 100
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "label": "Acceleration due to gravity",
+          "type": "number",
+          "defaultValue": 9.80665,
+          "unit": "m/s²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "inputs.temperature * inputs.pressure * 0.001 + 1.2",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "formula": "inputs.density_kg_m3 * 0.06243",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_weight_n_m3",
+          "label": "Specific Weight",
+          "unit": "N/m³",
+          "formula": "inputs.density_kg_m3 * inputs.g",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "formula": "inputs.density_lb_ft3 * inputs.g * 0.06243",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

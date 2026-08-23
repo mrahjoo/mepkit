@@ -1,0 +1,53 @@
+{
+  "id": "rainfall_draining_of_roof_areas_and_vertical_downs",
+  "title": "Rainfall Draining of Roof Areas and Vertical Downspouts",
+  "description": "Capacities of vertical downspouts when draining roof areas in rainfall. Based on rainfall intensity of 100 mm per hour (4 inches per hour).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Downspouts Size (mm)",
+        "Size (inches)",
+        "Roof Area (m²)",
+        "Roof Area (ft²)"
+      ],
+      "rows": [
+        [
+          50,
+          2,
+          65,
+          700
+        ],
+        [
+          65,
+          "2 1/2",
+          120,
+          1300
+        ],
+        [
+          80,
+          3,
+          205,
+          2200
+        ],
+        [
+          100,
+          4,
+          430,
+          4600
+        ],
+        [
+          150,
+          6,
+          1255,
+          13500
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- The table is based on rainfall intensity of **100 mm per hour (4 inches per hour)**\n- Rainfall intensity should always be checked with local authorities\n- Gutters and downspouts are vulnerable to obstructions caused by branches and leaves from surrounding trees\n- These factors should be considered when designing roof drainage systems"
+    }
+  ]
+}

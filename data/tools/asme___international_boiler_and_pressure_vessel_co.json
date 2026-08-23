@@ -1,0 +1,92 @@
+{
+  "id": "asme___international_boiler_and_pressure_vessel_co",
+  "title": "ASME - International Boiler and Pressure Vessel Code",
+  "description": "The ASME International Boiler and Pressure Vessel Code (BPVC) is made of 11 sections and contains over 15 divisions and subsections. This comprehensive reference tool provides guidance on power boilers, materials, nuclear facility components, heating boilers, nondestructive examination, pressure vessels, welding and brazing qualifications, and transport tanks.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## ASME - International Boiler and Pressure Vessel Code Overview\n\nThe [ASME - American Society of Mechanical Engineers](asme-d_7.html \"ASME - American Society of Mechanical Engineers\") - International Boiler and Pressure Vessel Code (BPVC) is made of 11 sections and contains over 15 divisions and subsections.\n\n### Code Sections\n\n**I. Power Boilers** - Requirements for all methods of construction of power, electric, and miniature boilers; high temperature water boilers used in stationary service; and power boilers used in locomotive, portable, and traction service.\n\n**II. Materials** - Ferrous and nonferrous material specifications, welding rods, electrodes, filler metals, and material properties.\n\n**III. Rules for Construction of Nuclear Facility Components** - Requirements for nuclear facility components including Class 1, 2, 3, and MC components.\n\n**IV. Heating Boilers** - Requirements for design, fabrication, installation and inspection of steam generating boilers and hot water boilers for low pressure service.\n\n**V. Nondestructive Examination** - Requirements and methods for nondestructive examination to detect surface and internal discontinuities.\n\n**VI. Recommended Rules for the Care and Operation of Heating Boilers** - Guidelines for operation and maintenance of heating boilers.\n\n**VII. Recommended Guidelines for the Care of Power Boilers** - Guidelines to promote safety in the use of stationary, portable, and traction type boilers.\n\n**VIII. Pressure Vessels** - Requirements for design, fabrication, inspection, testing, and certification of pressure vessels.\n\n**IX. Welding and Brazing Qualifications** - Rules for qualification of welding and brazing procedures and personnel.\n\n**X. Fiber-Reinforced Plastic Pressure Vessels** - Requirements for construction of FRP pressure vessels.\n\n**XI. Rules for In-service Inspection of Nuclear Power Plant Components** - Rules for examination and inspection of nuclear power plant components.\n\n**XII. Rules for Construction and Continued Service of Transport Tanks** - Requirements for construction and continued service of pressure vessels for dangerous goods transportation."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "vessel_pressure",
+          "label": "Vessel Operating Pressure (psig)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "psig"
+        },
+        {
+          "id": "vessel_temperature",
+          "label": "Vessel Operating Temperature (°F)",
+          "type": "number",
+          "defaultValue": 250,
+          "unit": "°F"
+        },
+        {
+          "id": "boiler_type",
+          "label": "Boiler/Vessel Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Power Boiler",
+              "value": "power"
+            },
+            {
+              "label": "Heating Boiler",
+              "value": "heating"
+            },
+            {
+              "label": "Pressure Vessel (Division 1)",
+              "value": "pressure_vessel_div1"
+            },
+            {
+              "label": "Pressure Vessel (Division 2)",
+              "value": "pressure_vessel_div2"
+            },
+            {
+              "label": "Pressure Vessel (Division 3)",
+              "value": "pressure_vessel_div3"
+            },
+            {
+              "label": "FRP Pressure Vessel",
+              "value": "frp_vessel"
+            },
+            {
+              "label": "Transport Tank",
+              "value": "transport_tank"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "code_section",
+          "label": "Applicable ASME Code Section",
+          "formula": "IF(inputs.boiler_type='power','Section I - Power Boilers',IF(inputs.boiler_type='heating','Section IV - Heating Boilers',IF(inputs.boiler_type='pressure_vessel_div1','Section VIII Division 1 - Pressure Vessels',IF(inputs.boiler_type='pressure_vessel_div2','Section VIII Division 2 - Alternative Rules',IF(inputs.boiler_type='pressure_vessel_div3','Section VIII Division 3 - High Pressure Vessels',IF(inputs.boiler_type='frp_vessel','Section X - FRP Pressure Vessels','Section XII - Transport Tanks'))))))"
+        },
+        {
+          "id": "pressure_applicability",
+          "label": "Pressure Applicability Status",
+          "formula": "IF(inputs.vessel_pressure>15,'Meets minimum pressure requirements',IF(inputs.boiler_type='heating'AND inputs.vessel_pressure>160,'Exceeds heating boiler pressure threshold','Below applicability threshold'))"
+        },
+        {
+          "id": "temperature_applicability",
+          "label": "Temperature Applicability Status",
+          "formula": "IF(inputs.boiler_type='heating'AND inputs.vessel_temperature>250,'Exceeds high temperature threshold',IF(inputs.boiler_type='power'AND inputs.vessel_temperature>250,'High temperature power boiler',IF(inputs.vessel_temperature<=250,'Within standard temperature range','Elevated temperature service')))"
+        },
+        {
+          "id": "inspection_requirement",
+          "label": "Primary Inspection Focus",
+          "formula": "IF(inputs.boiler_type='power','Fabrication methods (welding/riveting), feedwater heaters, superheaters',IF(inputs.boiler_type='heating','Design, fabrication, installation inspection',IF(FIND(inputs.boiler_type,'pressure_vessel')>0,'Design, fabrication, testing, and certification','Manufacturing and continued service requirements')))"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Applicability Rules\n\n### Power Boilers (Section I)\n- Steam or other vapor generation at pressures exceeding **15 psig**\n- High temperature water boilers for pressures exceeding **160 psig** OR temperatures exceeding **250°F**\n- Includes superheaters, economizers, and other pressure parts connected directly to the boiler without intervening valves\n\n### Heating Boilers (Section IV)\n- Low pressure steam generating boilers\n- Hot water boilers directly fired by oil, gas, electricity, or coal\n- Limited to standard operating ranges\n\n### Pressure Vessels (Section VIII)\n- **Division 1**: Internal or external pressures exceeding **15 psig**\n- **Division 2**: Alternative rules for pressures exceeding **15 psig**\n- **Division 3**: High pressure vessels generally above **10,000 psi**\n\n### Transport Tanks (Section XII)\n- Pressure vessels for dangerous goods transportation\n- Pressures from full vacuum to **3,000 psig**\n- Volumes greater than **120 gallons**"
+    }
+  ]
+}

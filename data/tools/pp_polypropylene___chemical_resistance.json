@@ -1,0 +1,433 @@
+{
+  "id": "pp_polypropylene___chemical_resistance",
+  "title": "PP Polypropylene - Chemical Resistance",
+  "description": "Chemical resistance ratings of polypropylene (PP) against common chemicals, acids, bases, and organic solvents at different temperatures. Ratings indicate level of chemical attack: 1=Excellent, 2=Good, 3=Acceptable, 4=Unacceptable, 5=Inferior.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Product",
+        "Rating at 20°C (68°F)",
+        "Rating at 60°C (140°F)",
+        "Category"
+      ],
+      "rows": [
+        [
+          "Benzoic acid",
+          1,
+          2,
+          "Acids"
+        ],
+        [
+          "Boric acid",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Hydrobromic acid 25%",
+          2,
+          3,
+          "Acids"
+        ],
+        [
+          "Citric acid",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Hydrocyanic acid",
+          2,
+          2,
+          "Acids"
+        ],
+        [
+          "Hydrofluoric acid",
+          2,
+          2,
+          "Acids"
+        ],
+        [
+          "Phosphoric acid 25%",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Phosphoric acid 85%",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Phthalic acid",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Tannic acid",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Chromic acid",
+          1,
+          2,
+          "Acids"
+        ],
+        [
+          "Maleic acid",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Oleic acid",
+          2,
+          3,
+          "Acids"
+        ],
+        [
+          "Oxalic acid",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Nitric acid 5%",
+          2,
+          3,
+          "Acids"
+        ],
+        [
+          "Nitric acid 65%",
+          4,
+          4,
+          "Acids"
+        ],
+        [
+          "Chlorhydric acid 10%",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Chlorhydric acid 37%",
+          2,
+          3,
+          "Acids"
+        ],
+        [
+          "Butyric acid",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Sulphuric acid 10%",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Sulphuric acid 78%",
+          2,
+          4,
+          "Acids"
+        ],
+        [
+          "Sulphuric acid 93%",
+          3,
+          4,
+          "Acids"
+        ],
+        [
+          "Tartaric acid",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Acetic acid 10%",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Acetic acid 50%",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Acetic acid 75%",
+          1,
+          1,
+          "Acids"
+        ],
+        [
+          "Acetic acid 100%",
+          2,
+          3,
+          "Acids"
+        ],
+        [
+          "Perchloric acid",
+          1,
+          2,
+          "Acids"
+        ],
+        [
+          "Aqua ammonia",
+          1,
+          1,
+          "Bases"
+        ],
+        [
+          "Calciumhydroxide",
+          1,
+          1,
+          "Bases"
+        ],
+        [
+          "Potassiumhydroxide",
+          1,
+          1,
+          "Bases"
+        ],
+        [
+          "Caustic soda",
+          1,
+          1,
+          "Bases"
+        ],
+        [
+          "Acid salt",
+          1,
+          1,
+          "Bases"
+        ],
+        [
+          "Basic salt",
+          1,
+          1,
+          "Bases"
+        ],
+        [
+          "Neutral salt",
+          1,
+          1,
+          "Bases"
+        ],
+        [
+          "Potassium bicarbonate",
+          1,
+          2,
+          "Bases"
+        ],
+        [
+          "Potassium permanganate",
+          1,
+          2,
+          "Bases"
+        ],
+        [
+          "Sodium cyanide",
+          1,
+          1,
+          "Bases"
+        ],
+        [
+          "Natriumferricyanid",
+          1,
+          2,
+          "Bases"
+        ],
+        [
+          "Sodium hypochlorite",
+          2,
+          3,
+          "Bases"
+        ],
+        [
+          "Acetone",
+          2,
+          2,
+          "Organic Solvents"
+        ],
+        [
+          "Aniline",
+          1,
+          1,
+          "Organic Solvents"
+        ],
+        [
+          "Benzol",
+          3,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Petrol",
+          4,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Butyl alcohol",
+          1,
+          1,
+          "Organic Solvents"
+        ],
+        [
+          "Ethyl acetate",
+          2,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Ethyl alcohol",
+          1,
+          1,
+          "Organic Solvents"
+        ],
+        [
+          "Ethyl dichloride",
+          3,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Ethyl ether",
+          4,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Phenol",
+          2,
+          2,
+          "Organic Solvents"
+        ],
+        [
+          "Formalin 37%",
+          1,
+          2,
+          "Organic Solvents"
+        ],
+        [
+          "Heptanes",
+          3,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Chlorobenzene",
+          3,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Chloroform",
+          4,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Carbon disulphide",
+          4,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Carbon tetrachloride",
+          4,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Methyl alcohol",
+          1,
+          1,
+          "Organic Solvents"
+        ],
+        [
+          "Methylene (di)chloride",
+          4,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Methyl ethyle ketone",
+          3,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Nitrobenzene",
+          3,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Toluene",
+          3,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Trichlorethylene",
+          4,
+          4,
+          "Organic Solvents"
+        ],
+        [
+          "Chlorine (damp)",
+          2,
+          4,
+          "Gases"
+        ],
+        [
+          "Chlorine (dry)",
+          2,
+          4,
+          "Gases"
+        ],
+        [
+          "Carbon dioxide",
+          1,
+          1,
+          "Gases"
+        ],
+        [
+          "Carbon monoxide",
+          1,
+          1,
+          "Gases"
+        ],
+        [
+          "Sulphur dioxide (damp)",
+          2,
+          3,
+          "Gases"
+        ],
+        [
+          "Sulphur dioxide (dry)",
+          2,
+          3,
+          "Gases"
+        ],
+        [
+          "Hydrogen sulphide",
+          1,
+          1,
+          "Gases"
+        ]
+      ]
+    }
+  ]
+}

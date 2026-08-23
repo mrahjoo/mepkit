@@ -1,0 +1,114 @@
+{
+  "id": "building_materials___vapour_resistance",
+  "title": "Building Materials - Vapour Resistance",
+  "description": "Diffusion of vapor through building materials. Calculate vapor resistance based on material thickness and vapor resistivity.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Vapor Resistance Calculator",
+      "inputs": [
+        {
+          "id": "thickness",
+          "label": "Thickness of Material",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "vapor_resistivity",
+          "label": "Vapor Resistivity",
+          "type": "number",
+          "unit": "G Ns/(kg m)",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "vapor_resistance",
+          "label": "Vapor Resistance",
+          "formula": "inputs.thickness * inputs.vapor_resistivity",
+          "unit": "Ns/kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Vapor Resistivity (G Ns/(kg m))"
+      ],
+      "rows": [
+        [
+          "Brickwork",
+          "45 - 70"
+        ],
+        [
+          "Concrete blocks, light weight",
+          "15 - 150"
+        ],
+        [
+          "Render",
+          "100"
+        ],
+        [
+          "Plaster, cement",
+          "75 - 205"
+        ],
+        [
+          "Wood, pine",
+          "45 - 1850"
+        ],
+        [
+          "Plywood",
+          "150 - 2000"
+        ],
+        [
+          "Fiberboard",
+          "15 - 375"
+        ],
+        [
+          "Hardboard",
+          "230 - 1000"
+        ],
+        [
+          "Plasterboard",
+          "30 - 60"
+        ],
+        [
+          "Straw-board, compressed",
+          "45 - 70"
+        ],
+        [
+          "Wood-wool, slab",
+          "15 - 40"
+        ],
+        [
+          "Polystyrene, expanded",
+          "100 - 750"
+        ],
+        [
+          "Glass wool",
+          "5 - 7"
+        ],
+        [
+          "Phenolic, closed cells",
+          "150 - 750"
+        ],
+        [
+          "Gloss paint, average",
+          "40 - 200"
+        ],
+        [
+          "Polyethylene sheet",
+          "110 - 120"
+        ],
+        [
+          "Aluminum foil",
+          "4000"
+        ]
+      ]
+    }
+  ]
+}

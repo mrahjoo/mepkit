@@ -1,0 +1,77 @@
+{
+  "id": "stainless_steel_pipes___american_vs__european_stan",
+  "title": "Stainless Steel Pipes - American vs. European Standards",
+  "description": "American - US - vs. European - German, British (UK) and Swedish - stainless steel pipe standards. Compare American (AISI) and European stainless steel standards across UK (BSI), Germany (Werkstoff Nr., DIN 17006), and Sweden (SIS) designations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "USA (AISI)",
+        "UK (BSI)",
+        "Germany (Werkstoff Nr.)",
+        "Germany (DIN 17006)",
+        "Sweden (SIS)"
+      ],
+      "rows": [
+        [
+          "304",
+          "304S15, 304S16",
+          "1.4301, 1.4303",
+          "X 5 CrNi 18 10, X 5 CrNi 18 12",
+          "23 32"
+        ],
+        [
+          "304L",
+          "304S11",
+          "1.4306",
+          "X 2 CrNi 18 11",
+          "23 52"
+        ],
+        [
+          "310",
+          "310S24",
+          "1.4845",
+          "X 12 CrNi 25 21",
+          ""
+        ],
+        [
+          "316",
+          "316S31",
+          "1.4401",
+          "X 5 CrNiMo 17 12 2",
+          "23 47"
+        ],
+        [
+          "316L",
+          "316S11",
+          "1.4404",
+          "X 2 CrNiMo 17 13 2",
+          "23 48"
+        ],
+        [
+          "317L",
+          "317S12",
+          "1.4438",
+          "X 2 CrNiMo 18 16 4",
+          "23 67"
+        ],
+        [
+          "321",
+          "321S31",
+          "1.4541, 1.4878",
+          "X 6 CrNiTi 18 10, X 12 CrNiTi 18 9",
+          "23 37"
+        ],
+        [
+          "347",
+          "347S31",
+          "1.4550",
+          "X 6 CrNiNb 18 10",
+          "23 38"
+        ]
+      ],
+      "content": "## Standards Referenced\n\n* **A312/A312M-02** - Standard Specification for Seamless and Welded Austenitic Stainless Steel Pipes covers seamless, straight-seam welded, and heavily cold worked welded austenitic stainless steel pipe intended for high-temperature and general corrosive service.\n* **BS 3605-(1-2):1991** - Austenitic stainless steel pipes and tubes for pressure purposes"
+    }
+  ]
+}

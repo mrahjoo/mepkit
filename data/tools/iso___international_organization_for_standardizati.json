@@ -1,0 +1,65 @@
+{
+  "id": "iso___international_organization_for_standardizati",
+  "title": "ISO - International Organization for Standardization",
+  "description": "ISO Standards Calculator - An international standard setting body that standardizes technical rules worldwide. This tool helps understand and work with ISO standard numbering formats and versions including International, European (EN), and British (BS) standards.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## ISO Standards Overview\n\nISO (International Organization for Standardization) is the world's largest developer of voluntary international standards. ISO standards cover a wide variety of domains including:\n\n- Mechanical, Machinery, Chemistry, Coatings\n- Construction, Metals, Aerospace, Fuels\n- Energy, Transportation, Information\n- Image Technology, Quality, Measurements\n- Safety, Environment, Medical, Consumer Goods\n\n### ISO Numbering Format\n\nISO standards follow the format:\n\n**ISO nnnnn:yyyy: Title**\n\nWhere:\n- **nnnnn** = standard number (5 digits)\n- **yyyy** = year published (4 digits)\n- **Title** = description of the subject\n\n### Standard Versions\n\n- **ISO nnnnn** = International Standard\n- **EN ISO nnnnn** = European version\n- **BS EN ISO nnnnn** = British version\n- **ISO TR nnnnn** = Technical Report"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "standard_number",
+          "label": "ISO Standard Number",
+          "type": "number",
+          "defaultValue": 228
+        },
+        {
+          "id": "year_published",
+          "label": "Year Published",
+          "type": "number",
+          "defaultValue": 2000
+        },
+        {
+          "id": "standard_type",
+          "label": "Standard Type",
+          "type": "select",
+          "defaultValue": "ISO",
+          "options": [
+            {
+              "label": "International Standard (ISO)",
+              "value": "ISO"
+            },
+            {
+              "label": "European Standard (EN ISO)",
+              "value": "EN ISO"
+            },
+            {
+              "label": "British Standard (BS EN ISO)",
+              "value": "BS EN ISO"
+            },
+            {
+              "label": "Technical Report (ISO TR)",
+              "value": "ISO TR"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "formatted_standard",
+          "label": "Formatted ISO Standard",
+          "formula": "inputs.standard_type + ' ' + TEXT(inputs.standard_number,'00000') + ':' + TEXT(inputs.year_published,'0000')"
+        },
+        {
+          "id": "standard_info",
+          "label": "Standard Information",
+          "formula": "inputs.standard_type"
+        }
+      ]
+    }
+  ]
+}

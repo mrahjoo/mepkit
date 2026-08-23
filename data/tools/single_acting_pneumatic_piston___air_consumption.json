@@ -1,0 +1,104 @@
+{
+  "id": "single_acting_pneumatic_piston___air_consumption",
+  "title": "Single Acting Pneumatic Piston - Air Consumption",
+  "description": "Calculate air volume used by a single-acting piston.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Single Acting Pneumatic Piston - Air Consumption\n\nCalculate air volume used by a single-acting piston.\n\n## Conversion Factors\n\n- 1 cubic feet = 0.028 m³\n- 1 in = 25.4 mm"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "piston_diameter",
+          "label": "Piston Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "stroke_length",
+          "label": "Stroke Length",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 100
+        },
+        {
+          "id": "number_of_cycles",
+          "label": "Number of Cycles",
+          "type": "number",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "air_volume_per_cycle",
+          "label": "Air Volume per Cycle",
+          "formula": "(3.14159 * (inputs.piston_diameter / 2) ^ 2 * inputs.stroke_length) / 1000",
+          "unit": "cm³",
+          "format": "decimal"
+        },
+        {
+          "id": "total_air_volume",
+          "label": "Total Air Volume",
+          "formula": "((3.14159 * (inputs.piston_diameter / 2) ^ 2 * inputs.stroke_length) / 1000) * inputs.number_of_cycles",
+          "unit": "cm³",
+          "format": "decimal"
+        },
+        {
+          "id": "total_air_volume_cubic_feet",
+          "label": "Total Air Volume",
+          "formula": "(((3.14159 * (inputs.piston_diameter / 2) ^ 2 * inputs.stroke_length) / 1000) * inputs.number_of_cycles) / 28314.85",
+          "unit": "ft³",
+          "format": "decimal"
+        },
+        {
+          "id": "total_air_volume_m3",
+          "label": "Total Air Volume",
+          "formula": "(((3.14159 * (inputs.piston_diameter / 2) ^ 2 * inputs.stroke_length) / 1000) * inputs.number_of_cycles) / 1000000",
+          "unit": "m³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Piston Diameter",
+          "inputs.piston_diameter mm"
+        ],
+        [
+          "Stroke Length",
+          "inputs.stroke_length mm"
+        ],
+        [
+          "Number of Cycles",
+          "inputs.number_of_cycles"
+        ],
+        [
+          "Air Volume per Cycle",
+          "((3.14159 * (inputs.piston_diameter / 2) ^ 2 * inputs.stroke_length) / 1000)"
+        ],
+        [
+          "Total Air Volume (cm³)",
+          "(((3.14159 * (inputs.piston_diameter / 2) ^ 2 * inputs.stroke_length) / 1000) * inputs.number_of_cycles)"
+        ],
+        [
+          "Total Air Volume (ft³)",
+          "(((3.14159 * (inputs.piston_diameter / 2) ^ 2 * inputs.stroke_length) / 1000) * inputs.number_of_cycles) / 28314.85"
+        ],
+        [
+          "Total Air Volume (m³)",
+          "(((3.14159 * (inputs.piston_diameter / 2) ^ 2 * inputs.stroke_length) / 1000) * inputs.number_of_cycles) / 1000000"
+        ]
+      ]
+    }
+  ]
+}

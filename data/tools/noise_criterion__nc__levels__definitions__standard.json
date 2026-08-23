@@ -1,0 +1,575 @@
+{
+  "id": "noise_criterion__nc__levels__definitions__standard",
+  "title": "Noise Criterion (NC) Levels: Definitions & Standards",
+  "description": "NC Noise Criterion rating system for indoor noise from air-conditioning and similar equipment. Displays octave band sound pressure level criteria from 63 to 8000 Hz, and recommended NC levels for various room types and spaces.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "nc_criteria_table",
+      "content": "NC - Noise Criterion Sound Pressure Levels (dB) by Octave Band Center Frequency",
+      "headers": [
+        "Noise Criterion",
+        "63 Hz",
+        "125 Hz",
+        "250 Hz",
+        "500 Hz",
+        "1000 Hz",
+        "2000 Hz",
+        "4000 Hz",
+        "8000 Hz"
+      ],
+      "rows": [
+        [
+          "NC-15",
+          47,
+          36,
+          29,
+          22,
+          17,
+          14,
+          12,
+          11
+        ],
+        [
+          "NC-20",
+          51,
+          40,
+          33,
+          26,
+          22,
+          19,
+          17,
+          16
+        ],
+        [
+          "NC-25",
+          54,
+          44,
+          37,
+          31,
+          27,
+          24,
+          22,
+          21
+        ],
+        [
+          "NC-30",
+          57,
+          48,
+          41,
+          35,
+          31,
+          29,
+          28,
+          27
+        ],
+        [
+          "NC-35",
+          60,
+          52,
+          45,
+          40,
+          36,
+          34,
+          33,
+          32
+        ],
+        [
+          "NC-40",
+          64,
+          56,
+          50,
+          45,
+          41,
+          39,
+          38,
+          37
+        ],
+        [
+          "NC-45",
+          67,
+          60,
+          54,
+          49,
+          46,
+          44,
+          43,
+          42
+        ],
+        [
+          "NC-50",
+          71,
+          64,
+          58,
+          54,
+          51,
+          49,
+          48,
+          47
+        ],
+        [
+          "NC-55",
+          74,
+          67,
+          62,
+          58,
+          56,
+          54,
+          53,
+          52
+        ],
+        [
+          "NC-60",
+          77,
+          71,
+          67,
+          63,
+          61,
+          59,
+          58,
+          57
+        ],
+        [
+          "NC-65",
+          80,
+          75,
+          71,
+          68,
+          66,
+          64,
+          63,
+          62
+        ],
+        [
+          "NC-70",
+          83,
+          79,
+          75,
+          72,
+          71,
+          70,
+          69,
+          68
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "nc_criteria_chart",
+      "content": "NC Criteria Curves - Sound Pressure Levels by Frequency",
+      "options": {
+        "title": {
+          "text": "NC - Noise Criterion Curves"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "NC-15",
+            "NC-20",
+            "NC-25",
+            "NC-30",
+            "NC-35",
+            "NC-40",
+            "NC-45",
+            "NC-50",
+            "NC-55",
+            "NC-60",
+            "NC-65",
+            "NC-70"
+          ]
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "63 Hz",
+            "125 Hz",
+            "250 Hz",
+            "500 Hz",
+            "1000 Hz",
+            "2000 Hz",
+            "4000 Hz",
+            "8000 Hz"
+          ],
+          "name": "Octave Band Center Frequency"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Sound Pressure Level (dB)"
+        },
+        "series": [
+          {
+            "name": "NC-15",
+            "data": [
+              47,
+              36,
+              29,
+              22,
+              17,
+              14,
+              12,
+              11
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-20",
+            "data": [
+              51,
+              40,
+              33,
+              26,
+              22,
+              19,
+              17,
+              16
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-25",
+            "data": [
+              54,
+              44,
+              37,
+              31,
+              27,
+              24,
+              22,
+              21
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-30",
+            "data": [
+              57,
+              48,
+              41,
+              35,
+              31,
+              29,
+              28,
+              27
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-35",
+            "data": [
+              60,
+              52,
+              45,
+              40,
+              36,
+              34,
+              33,
+              32
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-40",
+            "data": [
+              64,
+              56,
+              50,
+              45,
+              41,
+              39,
+              38,
+              37
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-45",
+            "data": [
+              67,
+              60,
+              54,
+              49,
+              46,
+              44,
+              43,
+              42
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-50",
+            "data": [
+              71,
+              64,
+              58,
+              54,
+              51,
+              49,
+              48,
+              47
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-55",
+            "data": [
+              74,
+              67,
+              62,
+              58,
+              56,
+              54,
+              53,
+              52
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-60",
+            "data": [
+              77,
+              71,
+              67,
+              63,
+              61,
+              59,
+              58,
+              57
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-65",
+            "data": [
+              80,
+              75,
+              71,
+              68,
+              66,
+              64,
+              63,
+              62
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "NC-70",
+            "data": [
+              83,
+              79,
+              75,
+              72,
+              71,
+              70,
+              69,
+              68
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "id": "recommended_nc_levels",
+      "content": "Recommended NC Levels by Room Type and Space",
+      "headers": [
+        "Type of Room - Space Type",
+        "Recommended NC Level",
+        "Equivalent Sound Level dBA"
+      ],
+      "rows": [
+        [
+          "Apartment Houses",
+          "25-35",
+          "35-45"
+        ],
+        [
+          "Assembly Halls",
+          "25-30",
+          "35-40"
+        ],
+        [
+          "Churches, Synagogues, Mosques",
+          "30-35",
+          "40-45"
+        ],
+        [
+          "Courtrooms",
+          "30-40",
+          "40-50"
+        ],
+        [
+          "Factories",
+          "40-65",
+          "50-75"
+        ],
+        [
+          "Private Homes, rural and suburban",
+          "20-30",
+          "30-38"
+        ],
+        [
+          "Private Homes, urban",
+          "25-30",
+          "34-42"
+        ],
+        [
+          "Hotel Individual rooms or suites",
+          "25-35",
+          "35-45"
+        ],
+        [
+          "Hotel Meeting or banquet rooms",
+          "25-35",
+          "35-45"
+        ],
+        [
+          "Hotel Service and Support Areas",
+          "40-45",
+          "45-50"
+        ],
+        [
+          "Hotel Halls, corridors, lobbies",
+          "35-40",
+          "50-55"
+        ],
+        [
+          "Offices Conference rooms",
+          "25-30",
+          "35-40"
+        ],
+        [
+          "Offices Private",
+          "30-35",
+          "40-45"
+        ],
+        [
+          "Offices Open-plan areas",
+          "35-40",
+          "45-50"
+        ],
+        [
+          "Offices Business machines/computers",
+          "40-45",
+          "50-55"
+        ],
+        [
+          "Hospitals Private rooms",
+          "25-30",
+          "35-40"
+        ],
+        [
+          "Hospitals Operating rooms",
+          "25-30",
+          "35-40"
+        ],
+        [
+          "Hospitals Wards",
+          "30-35",
+          "40-45"
+        ],
+        [
+          "Hospitals Laboratories",
+          "35-40",
+          "45-50"
+        ],
+        [
+          "Hospitals Corridors",
+          "30-35",
+          "40-45"
+        ],
+        [
+          "Hospitals Public areas",
+          "35-40",
+          "45-50"
+        ],
+        [
+          "Schools Lecture and classrooms",
+          "25-30",
+          "35-40"
+        ],
+        [
+          "Schools Open-plan classrooms",
+          "35-40",
+          "45-50"
+        ],
+        [
+          "Movie motion picture theaters",
+          "30-35",
+          "40-45"
+        ],
+        [
+          "Libraries",
+          "35-40",
+          "40-50"
+        ],
+        [
+          "Legitimate theaters",
+          "20-25",
+          "30-65"
+        ],
+        [
+          "Private Residences",
+          "25-35",
+          "35-45"
+        ],
+        [
+          "Restaurants",
+          "40-45",
+          "50-55"
+        ],
+        [
+          "TV Broadcast studios",
+          "15-25",
+          "25-35"
+        ],
+        [
+          "Recording Studios",
+          "15-20",
+          "25-30"
+        ],
+        [
+          "Concert and recital halls",
+          "15-20",
+          "25-30"
+        ],
+        [
+          "Sport Coliseums",
+          "45-55",
+          "55-65"
+        ],
+        [
+          "Sound broadcasting",
+          "15-20",
+          "25-30"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "nc_description",
+      "content": "## About Noise Criterion (NC)\n\nNoise Criterion (NC) levels were established in the U.S. to rate indoor noise from air-conditioning equipment and similar sources. In Europe, the alternative Noise Rating Curve (NR) is commonly used.\n\n### How NC Works\n\nThe NC method is based on measurements of sound pressure levels across octave bands ranging from 63 to 8000 Hz. A set of NC criteria curves defines the limits that must not be exceeded to meet occupant acceptance in specific spaces.\n\nThe NC rating is determined by:\n1. Plotting measured sound pressure at each octave band\n2. Finding the lowest NC curve not exceeded by the measured spectrum\n3. Assigning that NC curve number as the rating\n\n### Example\n\nFor measured sound pressure levels:\n- 62.5 Hz: 40 dB\n- 125 Hz: 50 dB\n- 250 Hz: 55 dB\n- 500 Hz: 60 dB\n- 1000 Hz: 50 dB\n- 2000 Hz: 55 dB\n- 4000 Hz: 45 dB\n- 8000 Hz: 45 dB\n\nThe resulting Noise Criterion rating would be approximately NC-57 dB.\n\n### NCB Curves\n\nBalanced Noise Criteria (NCB) curves are a newer standard used to specify acceptable background noise levels in occupied spaces, including noise from air-conditioning systems and other ambient noise sources. They are intended to replace the traditional NC curves."
+    }
+  ]
+}

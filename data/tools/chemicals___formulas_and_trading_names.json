@@ -1,0 +1,348 @@
+{
+  "id": "chemicals___formulas_and_trading_names",
+  "title": "Chemicals - Formulas and Trading Names",
+  "description": "Formulas and trading names for some common chemicals. A comprehensive reference tool for looking up chemical formulas, common names, and trade names.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Common used name, trade names",
+        "Chemical Name",
+        "Chemical Formula"
+      ],
+      "rows": [
+        [
+          "acetone",
+          "acetone",
+          "(CH3)2 CO"
+        ],
+        [
+          "acetylene",
+          "acetylene",
+          "C2H2"
+        ],
+        [
+          "ammonia",
+          "ammonia",
+          "NH3"
+        ],
+        [
+          "ammonium",
+          "ammonium hydroxide",
+          "NH4OH"
+        ],
+        [
+          "aniline",
+          "aniline",
+          "C6H5 NH2"
+        ],
+        [
+          "bauxite",
+          "hydrated aluminium oxides",
+          "Al2O3 2H2O"
+        ],
+        [
+          "bleaching powder",
+          "calcium hypochlorite",
+          "CaCl (OCl)"
+        ],
+        [
+          "blue vitrol",
+          "copper sulfate",
+          "CuSO4 5H2O"
+        ],
+        [
+          "borax",
+          "sodium tetraborate",
+          "Na2B4O7 10H2O"
+        ],
+        [
+          "butter of zinc",
+          "zinc chloride",
+          "ZnCl2 3H2O"
+        ],
+        [
+          "cadmium sulfate",
+          "cadmium sulfate",
+          "CdSO4"
+        ],
+        [
+          "calcium chloride",
+          "calcium chloride",
+          "CaCl2"
+        ],
+        [
+          "carbide",
+          "calcium carbide",
+          "CaC2"
+        ],
+        [
+          "carbolic acid",
+          "phenol",
+          "C6H5OH"
+        ],
+        [
+          "carbon dioxide",
+          "carbon dioxide",
+          "CO2"
+        ],
+        [
+          "carborundum",
+          "silicon carbide",
+          "SiC"
+        ],
+        [
+          "caustic potash",
+          "potassium hydroxide",
+          "KOH"
+        ],
+        [
+          "caustic soda",
+          "sodium hydroxide",
+          "NaOH"
+        ],
+        [
+          "chalk",
+          "calcium carbonate",
+          "CaCO3"
+        ],
+        [
+          "ether",
+          "di-ethyl ether",
+          "(C2H5)2O"
+        ],
+        [
+          "glycerine or glycerol",
+          "glycerine",
+          "C3H5 (OH)3"
+        ],
+        [
+          "graphite",
+          "crystaline carbon",
+          "C"
+        ],
+        [
+          "green vitrol",
+          "ferrous sulfate",
+          "FeSO4 7H2O"
+        ],
+        [
+          "gypsum",
+          "calcium sulfate",
+          "CaSO4 2H2O"
+        ],
+        [
+          "heating gas",
+          "propane",
+          "C3H8"
+        ],
+        [
+          "hydrochloric acid",
+          "hydrochloric acid",
+          "HCl"
+        ],
+        [
+          "hydrofluoric acid",
+          "hydrofluoric acid",
+          "HF"
+        ],
+        [
+          "hydrogen sulfide",
+          "hydrogen sulfide",
+          "H2S"
+        ],
+        [
+          "iron chloride",
+          "ferrous chloride",
+          "FeCl2 4H2O"
+        ],
+        [
+          "iron sulfide",
+          "ferrous sulfide",
+          "FeS"
+        ],
+        [
+          "laughing gas",
+          "nitrous oxide",
+          "N2O"
+        ],
+        [
+          "lead sulfide",
+          "lead sulfide",
+          "PbS"
+        ],
+        [
+          "limestone",
+          "calcium carbonate",
+          "CaCO3"
+        ],
+        [
+          "magnesia",
+          "magnesium oxide",
+          "MgO"
+        ],
+        [
+          "marsh gas",
+          "methane",
+          "CH4"
+        ],
+        [
+          "minumum",
+          "plumbate",
+          "2PbO PbO2"
+        ],
+        [
+          "nitric acid",
+          "nitric acid",
+          "HNO3"
+        ],
+        [
+          "phosphoric acid",
+          "ortho phosphoric acid",
+          "H3PO4"
+        ],
+        [
+          "potash",
+          "potassium carbonate",
+          "K2CO3"
+        ],
+        [
+          "potassium bromide",
+          "potassium bromide",
+          "KBr"
+        ],
+        [
+          "potassium chlorate",
+          "potassium chlorate",
+          "KClO3"
+        ],
+        [
+          "potassium chloride",
+          "potassium chloride",
+          "KCl"
+        ],
+        [
+          "potassium chromate",
+          "potassium chromate",
+          "K2CrO4"
+        ],
+        [
+          "potassium cyanide",
+          "potassium cyanide",
+          "KCN"
+        ],
+        [
+          "potassium dichromate",
+          "potassium dichromate",
+          "K2Cr2O7"
+        ],
+        [
+          "potassium ionide",
+          "potassium ionide",
+          "KI"
+        ],
+        [
+          "prussic acid",
+          "hydrogen cyanide",
+          "HCN"
+        ],
+        [
+          "quicklime",
+          "calcium monoxide",
+          "CaO"
+        ],
+        [
+          "red prussiate",
+          "potassium ferrocyanide",
+          "K3Fe(CN)6"
+        ],
+        [
+          "salammoniac",
+          "ammonium chloride",
+          "NH4Cl"
+        ],
+        [
+          "silver bromide",
+          "silver bromide",
+          "AgBr"
+        ],
+        [
+          "silver nitrate",
+          "silver nitrate",
+          "AGNO3"
+        ],
+        [
+          "slaked lime",
+          "calcium hydroxide",
+          "Ca(OH)2"
+        ],
+        [
+          "soda ash",
+          "hydrated sodium carbonate",
+          "Na2CO3 10H2O"
+        ],
+        [
+          "sodium monoxide",
+          "sodium oxide",
+          "Na2O"
+        ],
+        [
+          "soot",
+          "amorphous carbon",
+          "C"
+        ],
+        [
+          "sulphuric acid",
+          "sulphuric acid",
+          "H2SO4"
+        ],
+        [
+          "table salt",
+          "sodium chloride",
+          "NaCl"
+        ],
+        [
+          "tinstone, tin putty",
+          "stannic oxide",
+          "SnO2"
+        ],
+        [
+          "trilene",
+          "trichlorethylene",
+          "C2HCl3"
+        ],
+        [
+          "urea",
+          "urea",
+          "CO(NH2)2"
+        ],
+        [
+          "white lead",
+          "basic lead carbonate",
+          "2PbCO3 Pb(OH)2"
+        ],
+        [
+          "white vitrol",
+          "zinc sulphate",
+          "ZnSO4 7H2O"
+        ],
+        [
+          "yellow prussiate of potassium",
+          "potassium ferrocyanide",
+          "K4Fe(CN)6 3H2O"
+        ],
+        [
+          "zinc blende",
+          "zinc sulphide",
+          "ZnS"
+        ],
+        [
+          "zinc or chinese white",
+          "zinc oxide",
+          "ZnO"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "id": "net_present_worth__npw__of_a_cash_stream",
+  "title": "Net Present Worth (NPW) of a Cash Stream",
+  "description": "Calculate the present value of a stream of payments using a discounting rate. Net Present Worth (NPW) or Net Present Value (NPV) determines the profitability of an investment by discounting future cash flows to their present value.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Period",
+        "Cash Flow",
+        "Cash Flow (Discounted)"
+      ],
+      "rows": [
+        [
+          "0",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "",
+          ""
+        ],
+        [
+          "4",
+          "",
+          ""
+        ],
+        [
+          "5",
+          "",
+          ""
+        ],
+        [
+          "6",
+          "",
+          ""
+        ],
+        [
+          "7",
+          "",
+          ""
+        ],
+        [
+          "8",
+          "",
+          ""
+        ],
+        [
+          "9",
+          "",
+          ""
+        ],
+        [
+          "10",
+          "",
+          ""
+        ],
+        [
+          "11",
+          "",
+          ""
+        ],
+        [
+          "12",
+          "",
+          ""
+        ],
+        [
+          "13",
+          "",
+          ""
+        ],
+        [
+          "14",
+          "",
+          ""
+        ],
+        [
+          "15",
+          "",
+          ""
+        ],
+        [
+          "16",
+          "",
+          ""
+        ],
+        [
+          "17",
+          "",
+          ""
+        ],
+        [
+          "18",
+          "",
+          ""
+        ],
+        [
+          "19",
+          "",
+          ""
+        ],
+        [
+          "20",
+          "",
+          ""
+        ],
+        [
+          "SUM",
+          "",
+          ""
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "discount_rate",
+          "label": "Discount rate",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "npw",
+          "label": "Net Present Worth (NPW)",
+          "formula": "sum of discounted cash flows",
+          "unit": "currency",
+          "format": "currency"
+        }
+      ],
+      "content": "Enter cash flows for each period (negative for money out, positive for money in). The discounted cash flow is calculated as: Cash Flow / (1 + discount_rate)^period"
+    }
+  ]
+}

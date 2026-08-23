@@ -1,0 +1,258 @@
+{
+  "id": "human_heat_gain",
+  "title": "Human Heat Gain",
+  "description": "Heat gain from persons in air conditioned spaces - in btu/hr. Calculate sensible and latent heat loads based on typical applications and number of occupants.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Select an application type and enter the number of occupants to calculate total sensible and latent heat gain.",
+      "inputs": [
+        {
+          "id": "application",
+          "label": "Typical Application",
+          "type": "select",
+          "options": [
+            {
+              "label": "Theater-Matinee, Auditorium",
+              "value": 1
+            },
+            {
+              "label": "Theater-Evening, School",
+              "value": 2
+            },
+            {
+              "label": "Offices, Hotels, Apartments",
+              "value": 3
+            },
+            {
+              "label": "Retail & Department Stores",
+              "value": 4
+            },
+            {
+              "label": "Drug Store",
+              "value": 5
+            },
+            {
+              "label": "Bank",
+              "value": 6
+            },
+            {
+              "label": "Restaurant",
+              "value": 7
+            },
+            {
+              "label": "Factory - light work",
+              "value": 8
+            },
+            {
+              "label": "Dance Hall",
+              "value": 9
+            },
+            {
+              "label": "Factory - moderate work",
+              "value": 10
+            },
+            {
+              "label": "Bowling Alley",
+              "value": 11
+            },
+            {
+              "label": "Factory - heavy work, Gymnasium",
+              "value": 12
+            }
+          ]
+        },
+        {
+          "id": "num_occupants",
+          "label": "Number of Occupants",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "persons"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sensible_heat",
+          "label": "Total Sensible Heat",
+          "unit": "Btu/hr",
+          "format": "decimal",
+          "formula": "IF(inputs.application==1, inputs.num_occupants*200, IF(inputs.application==2, inputs.num_occupants*215, IF(inputs.application==3, inputs.num_occupants*215, IF(inputs.application==4, inputs.num_occupants*220, IF(inputs.application==5, inputs.num_occupants*220, IF(inputs.application==6, inputs.num_occupants*220, IF(inputs.application==7, inputs.num_occupants*240, IF(inputs.application==8, inputs.num_occupants*240, IF(inputs.application==9, inputs.num_occupants*270, IF(inputs.application==10, inputs.num_occupants*330, IF(inputs.application==11, inputs.num_occupants*510, IF(inputs.application==12, inputs.num_occupants*510, 0))))))))))))"
+        },
+        {
+          "id": "latent_heat",
+          "label": "Total Latent Heat",
+          "unit": "Btu/hr",
+          "format": "decimal",
+          "formula": "IF(inputs.application==1, inputs.num_occupants*130, IF(inputs.application==2, inputs.num_occupants*135, IF(inputs.application==3, inputs.num_occupants*185, IF(inputs.application==4, inputs.num_occupants*230, IF(inputs.application==5, inputs.num_occupants*280, IF(inputs.application==6, inputs.num_occupants*280, IF(inputs.application==7, inputs.num_occupants*310, IF(inputs.application==8, inputs.num_occupants*510, IF(inputs.application==9, inputs.num_occupants*580, IF(inputs.application==10, inputs.num_occupants*670, IF(inputs.application==11, inputs.num_occupants*940, IF(inputs.application==12, inputs.num_occupants*940, 0))))))))))))"
+        },
+        {
+          "id": "total_heat",
+          "label": "Total Heat Gain",
+          "unit": "Btu/hr",
+          "format": "decimal",
+          "formula": "outputs.sensible_heat + outputs.latent_heat"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Typical Application",
+        "Sensible Heat (Btu/hr)",
+        "Latent Heat (Btu/hr)",
+        "Total Heat (Btu/hr)"
+      ],
+      "rows": [
+        [
+          "Theater-Matinee, Auditorium",
+          200,
+          130,
+          330
+        ],
+        [
+          "Theater-Evening, School",
+          215,
+          135,
+          350
+        ],
+        [
+          "Offices, Hotels, Apartments",
+          215,
+          185,
+          400
+        ],
+        [
+          "Retail & Department Stores",
+          220,
+          230,
+          450
+        ],
+        [
+          "Drug Store",
+          220,
+          280,
+          500
+        ],
+        [
+          "Bank",
+          220,
+          280,
+          500
+        ],
+        [
+          "Restaurant",
+          240,
+          310,
+          550
+        ],
+        [
+          "Factory - light work",
+          240,
+          510,
+          750
+        ],
+        [
+          "Dance Hall",
+          270,
+          580,
+          850
+        ],
+        [
+          "Factory - moderate work",
+          330,
+          670,
+          1000
+        ],
+        [
+          "Bowling Alley",
+          510,
+          940,
+          1450
+        ],
+        [
+          "Factory - heavy work, Gymnasium",
+          510,
+          940,
+          1450
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Heat Gain by Application Type"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Sensible Heat",
+            "Latent Heat"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Theater-Matinee",
+            "Theater-Evening",
+            "Offices",
+            "Retail",
+            "Drug Store",
+            "Bank",
+            "Restaurant",
+            "Factory-Light",
+            "Dance Hall",
+            "Factory-Moderate",
+            "Bowling Alley",
+            "Factory-Heavy"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Heat (Btu/hr)"
+        },
+        "series": [
+          {
+            "name": "Sensible Heat",
+            "type": "bar",
+            "data": [
+              200,
+              215,
+              215,
+              220,
+              220,
+              220,
+              240,
+              240,
+              270,
+              330,
+              510,
+              510
+            ]
+          },
+          {
+            "name": "Latent Heat",
+            "type": "bar",
+            "data": [
+              130,
+              135,
+              185,
+              230,
+              280,
+              280,
+              310,
+              510,
+              580,
+              670,
+              940,
+              940
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

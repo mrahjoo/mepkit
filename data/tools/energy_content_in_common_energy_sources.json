@@ -1,0 +1,127 @@
+{
+  "id": "energy_content_in_common_energy_sources",
+  "title": "Energy Content in common Energy Sources",
+  "description": "Heating fuels and their energy content. Reference table showing energy content in commonly used energy sources measured in BTU (British Thermal Units).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Energy Source",
+        "Unit",
+        "Energy Content (Btu)"
+      ],
+      "rows": [
+        [
+          "Electricity",
+          "1 Kilowatt-hour",
+          3412
+        ],
+        [
+          "Butane",
+          "1 Cubic Foot (cu.ft.)",
+          3200
+        ],
+        [
+          "Coal",
+          "1 Ton",
+          28000000
+        ],
+        [
+          "Crude Oil",
+          "1 Barrel - 42 gallons",
+          5800000
+        ],
+        [
+          "Fuel Oil no.1",
+          "1 Gallon",
+          137400
+        ],
+        [
+          "Fuel Oil no.2",
+          "1 Gallon",
+          139600
+        ],
+        [
+          "Fuel Oil no.3",
+          "1 Gallon",
+          141800
+        ],
+        [
+          "Fuel Oil no.4",
+          "1 Gallon",
+          145100
+        ],
+        [
+          "Fuel Oil no.5",
+          "1 Gallon",
+          148800
+        ],
+        [
+          "Fuel Oil no.6",
+          "1 Gallon",
+          152400
+        ],
+        [
+          "Diesel Fuel",
+          "1 Gallon",
+          139000
+        ],
+        [
+          "Gasoline",
+          "1 Gallon",
+          124000
+        ],
+        [
+          "Natural Gas",
+          "1 Cubic Foot (cu.ft.)",
+          "950 - 1150"
+        ],
+        [
+          "Heating Oil",
+          "1 Gallon",
+          139000
+        ],
+        [
+          "Kerosene",
+          "1 Gallon",
+          135000
+        ],
+        [
+          "Pellets",
+          "1 Ton",
+          16500000
+        ],
+        [
+          "Propane LPG (Liquid Petroleum Gas)",
+          "1 Gallon",
+          91330
+        ],
+        [
+          "Propane gas 60 oF",
+          "1 Cubic Foot (cu.ft.)",
+          2550
+        ],
+        [
+          "Residual Fuel Oil",
+          "1 Barrel - 42 gallons",
+          6287000
+        ],
+        [
+          "Wood - air dried",
+          "1 Cord",
+          20000000
+        ],
+        [
+          "Wood - air dried",
+          "1 pound",
+          8000
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About BTU (British Thermal Unit)\n\nThe BTU is the unit of heat in the imperial system, defined as:\n\n- The amount of heat required to raise the temperature of one pound of water through 1 °F (58.5 °F - 59.5 °F) at sea level (30 inches of mercury).\n\n**Conversion Factors:**\n- 1 Btu = 1055.06 J\n- 1 Btu = 107.6 kpm\n- 1 Btu = 2.931×10⁻⁴ kWh\n- 1 Btu = 0.252 kcal\n- 1 Btu = 778.16 ft lbf\n- 1 Btu = 252 cal\n- 1 Btu = 0.293 watt hours\n\n**Example:** An item using one kilowatt-hour of electricity will generate 3412 Btu.\n\n## Unit Conversion References\n\n- 1 Gallon (U.S.) = 3.785×10⁻³ m³ = 3.785 dm³ (liter)\n- 1 ft³ = 0.02832 m³\n- 1 barrel (US, oil) = 1.33 barrel (US, liq) = 5.61458 cu foot = 42 gallons (US, liq) = 158.9873 liter\n- 1 lbm = 0.4536 kg\n- 1 ton (short) = 2000 lbs = 907 kg"
+    }
+  ]
+}

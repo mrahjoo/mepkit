@@ -1,0 +1,43 @@
+{
+  "id": "u_s__standard_architectural_drawing_sizes",
+  "title": "U.S. Standard Architectural Drawing Sizes",
+  "description": "US architectural drawing sizes and formats.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Designation",
+        "Size (mm)",
+        "Size (inches)"
+      ],
+      "rows": [
+        [
+          "ARCH A",
+          "228.6 x 304.8",
+          "9 x 12"
+        ],
+        [
+          "ARCH B",
+          "304.8 x 457.2",
+          "12 x 18"
+        ],
+        [
+          "ARCH C",
+          "457.2 x 609.6",
+          "18 x 24"
+        ],
+        [
+          "ARCH D",
+          "609.6 x 914.4",
+          "24 x 36"
+        ],
+        [
+          "ARCH E",
+          "914.4 x 1219.2",
+          "36 x 48"
+        ]
+      ]
+    }
+  ]
+}

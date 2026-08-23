@@ -1,0 +1,182 @@
+{
+  "id": "sound_power",
+  "title": "Sound Power",
+  "description": "Calculate sound power in watts and sound power level in decibels. Includes conversions between acoustic power, sound intensity, and sound pressure levels.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sound Power Calculator\n\nCalculate sound power and sound power levels using standard acoustic formulas.\n\n**Key Concepts:**\n- Sound Power (W): Energy rate emitted by a sound source\n- Sound Power Level (dB): Logarithmic scale relative to 10⁻¹² W reference\n- Sound Intensity (W/m²): Sound power per unit area\n- Sound Intensity Level (dB): Logarithmic scale relative to 10⁻¹² W/m² reference"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sound_power_w",
+          "label": "Sound Power",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 0.01
+        },
+        {
+          "id": "sound_intensity",
+          "label": "Sound Intensity",
+          "type": "number",
+          "unit": "W/m²",
+          "defaultValue": 0.001
+        },
+        {
+          "id": "distance",
+          "label": "Distance from Source",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "sound_power_level_db",
+          "label": "Sound Power Level",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sound_power_level",
+          "label": "Sound Power Level",
+          "unit": "dB",
+          "formula": "10 * Math.log10(inputs.sound_power_w / 1e-12)",
+          "format": "decimal"
+        },
+        {
+          "id": "sound_power_from_level",
+          "label": "Sound Power from Level",
+          "unit": "W",
+          "formula": "Math.pow(10, (inputs.sound_power_level_db - 120) / 10)",
+          "format": "scientific"
+        },
+        {
+          "id": "intensity_from_power",
+          "label": "Sound Intensity at Distance",
+          "unit": "W/m²",
+          "formula": "inputs.sound_power_w / (4 * Math.PI * Math.pow(inputs.distance, 2))",
+          "format": "scientific"
+        },
+        {
+          "id": "intensity_level",
+          "label": "Sound Intensity Level",
+          "unit": "dB",
+          "formula": "10 * Math.log10(inputs.sound_intensity / 1e-12)",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_level",
+          "label": "Sound Pressure Level (approx)",
+          "unit": "dB",
+          "formula": "10 * Math.log10(inputs.sound_intensity / 1e-12) + 0.2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Source",
+        "Sound Power (W)",
+        "Sound Power Level (dB)"
+      ],
+      "rows": [
+        [
+          "Saturn Rocket",
+          "100,000,000",
+          "200"
+        ],
+        [
+          "Turbo Jet Plane Engine",
+          "100,000",
+          "170"
+        ],
+        [
+          "Jet Plane Take-off",
+          "1,000",
+          "150"
+        ],
+        [
+          "Large centrifugal fan",
+          "100",
+          "140"
+        ],
+        [
+          "Axial fan",
+          "10",
+          "130"
+        ],
+        [
+          "Tractor 150 hp",
+          "1",
+          "120"
+        ],
+        [
+          "Chain Saw",
+          "0.1",
+          "110"
+        ],
+        [
+          "Helicopter",
+          "0.01",
+          "100"
+        ],
+        [
+          "Pneumatic Jackhammer",
+          "0.001",
+          "90"
+        ],
+        [
+          "Vacuum Cleaner",
+          "0.0001",
+          "80"
+        ],
+        [
+          "Toilet Flushing",
+          "0.00001",
+          "70"
+        ],
+        [
+          "Busy restaurant",
+          "0.000001",
+          "60"
+        ],
+        [
+          "Quiet Office",
+          "0.0000001",
+          "50"
+        ],
+        [
+          "Bird Singing",
+          "0.00000001",
+          "40"
+        ],
+        [
+          "Quiet Conversation",
+          "0.000000001",
+          "30"
+        ],
+        [
+          "Rustling leaves",
+          "0.0000000001",
+          "20"
+        ],
+        [
+          "Human Breath",
+          "0.00000000001",
+          "10"
+        ],
+        [
+          "Threshold",
+          "0.000000000001",
+          "0"
+        ]
+      ]
+    }
+  ]
+}

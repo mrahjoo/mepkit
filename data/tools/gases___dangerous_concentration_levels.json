@@ -1,0 +1,77 @@
+{
+  "id": "gases___dangerous_concentration_levels",
+  "title": "Gases - Dangerous Concentration Levels",
+  "description": "Dangerous vs. tolerable concentration levels for some industrial gases.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Tolerable > 1 hour (o/oo)",
+        "Tolerable < 1 hour (o/oo)",
+        "Immediately Dangerous (o/oo)"
+      ],
+      "rows": [
+        [
+          "Ammonia",
+          0.1,
+          0.3,
+          3.5
+        ],
+        [
+          "Bromine Vapor",
+          0.001,
+          0.004,
+          0.05
+        ],
+        [
+          "Carbon Dioxide",
+          10,
+          30,
+          40
+        ],
+        [
+          "Carbon Monoxide",
+          0.2,
+          0.5,
+          2
+        ],
+        [
+          "Chlorine Vapor",
+          0.001,
+          0.004,
+          0.05
+        ],
+        [
+          "Hydrochloric Acid",
+          0.01,
+          0.05,
+          1.5
+        ],
+        [
+          "Hydrogen Sulphide",
+          "",
+          0.2,
+          0.6
+        ],
+        [
+          "Iodine Vapor",
+          0.0005,
+          0.003,
+          0.05
+        ],
+        [
+          "Sulphuric Acid",
+          "",
+          0.05,
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "**Unit Conversion:**\n\n- _1 ppm = 10⁻⁶ = 0.0001 o/o = 0.001 o/oo_\n- _1 o/oo = 1000 ppm_\n\n**Abbreviations:**\n- o/oo = parts per thousand\n- ppm = parts per million"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "voltage_sources_vs__current_sources",
+  "title": "Voltage Sources vs. Current Sources",
+  "description": "Voltage and Current Sources - Comparison and characteristics of voltage sources and current sources in electrical circuits",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Characteristic",
+        "Voltage Source",
+        "Current Source"
+      ],
+      "rows": [
+        [
+          "Definition",
+          "Maintains a fixed supply voltage independent of circuit load resistance and applied current",
+          "Maintains a fixed supply current independent of circuit load resistance and applied voltage"
+        ],
+        [
+          "Output",
+          "Constant voltage",
+          "Constant current"
+        ],
+        [
+          "Load Dependency",
+          "Voltage remains constant regardless of load",
+          "Current remains constant regardless of load"
+        ],
+        [
+          "Ideal Condition",
+          "Prefers open circuits (no connection between poles)",
+          "Prefers closed circuits (short circuits)"
+        ],
+        [
+          "Internal Resistance",
+          "Very low (ideally zero)",
+          "Very high (ideally infinite)"
+        ],
+        [
+          "Real-world Limits",
+          "Limited maximum current and voltage",
+          "Limited maximum voltage and current"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Differences\n\n### Voltage Source\n* Maintains a **fixed supply voltage** to an electrical circuit\n* Voltage is independent of the circuit load resistance and the applied current\n* Real voltage and current sources have limits to the voltage/currents they can provide\n* A voltage source \"prefer\" open circuits (no connection between the poles)\n\n### Current Source\n* Maintains a **fixed supply current** through an electric circuit\n* Current is independent of the circuit load resistance and applied voltage\n* Real voltage and current sources have limits to the voltage/currents they can provide\n* Current sources \"prefer\" closed circuits (short cuts)"
+    }
+  ]
+}

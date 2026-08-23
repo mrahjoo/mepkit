@@ -1,0 +1,178 @@
+{
+  "id": "flow_coefficient_cv_vs__flow_factor_kv",
+  "title": "Flow Coefficient Cv vs. Flow Factor Kv",
+  "description": "Comparing flow coefficients Cv to flow factors Kv. Convert between imperial (Cv) and metric (Kv) flow coefficients for control valves.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Flow Coefficient Cv vs. Flow Factor Kv\n\nThe flow coefficient - **Cv** - or the flow factor - **Kv** - are commonly used to specify capacities of control valves.\n\n## Flow Coefficient - Cv\n\nBased on the imperial units system, the flow coefficient **Cv** is defined as:\n- The flow of water through a valve at 60°F in U.S. gallon/minute at a pressure drop of 1 lb/in²\n- Commonly used in the U.S.\n\n## Flow Factor - Kv\n\nThe metric equivalent based on the SI-system, the flow factor **Kv** is defined as:\n- The flow of water with temperature ranging 5-30°C through a valve in cubic meters per hour (m³/h) at a pressure drop of 1 bar\n- Commonly used outside the U.S.\n\n## Conversion Formulas\n\n- **Cv = 1.16 × Kv**\n- **Kv = 0.862 × Cv**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cv_value",
+          "label": "Flow Coefficient (Cv)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "gal/min/psi"
+        },
+        {
+          "id": "kv_value",
+          "label": "Flow Factor (Kv)",
+          "type": "number",
+          "defaultValue": 8.62,
+          "unit": "m³/h/bar"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "kv_from_cv",
+          "label": "Kv (calculated from Cv)",
+          "formula": "inputs.cv_value * 0.862",
+          "unit": "m³/h/bar",
+          "format": "decimal"
+        },
+        {
+          "id": "cv_from_kv",
+          "label": "Cv (calculated from Kv)",
+          "formula": "inputs.kv_value * 1.16",
+          "unit": "gal/min/psi",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Cv (gal/min/psi)",
+        "Kv (m³/h/bar)",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          1,
+          0.862,
+          "1.16"
+        ],
+        [
+          5,
+          4.31,
+          "1.16"
+        ],
+        [
+          10,
+          8.62,
+          "1.16"
+        ],
+        [
+          25,
+          21.55,
+          "1.16"
+        ],
+        [
+          50,
+          43.1,
+          "1.16"
+        ],
+        [
+          100,
+          86.2,
+          "1.16"
+        ],
+        [
+          200,
+          172.4,
+          "1.16"
+        ],
+        [
+          500,
+          431,
+          "1.16"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Flow Coefficient Cv vs. Flow Factor Kv Conversion"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Cv (gal/min/psi)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Kv (m³/h/bar)"
+        },
+        "series": [
+          {
+            "data": [
+              [
+                1,
+                0.862
+              ],
+              [
+                5,
+                4.31
+              ],
+              [
+                10,
+                8.62
+              ],
+              [
+                25,
+                21.55
+              ],
+              [
+                50,
+                43.1
+              ],
+              [
+                100,
+                86.2
+              ],
+              [
+                200,
+                172.4
+              ],
+              [
+                500,
+                431
+              ]
+            ],
+            "type": "scatter",
+            "name": "Cv to Kv Relationship",
+            "symbolSize": 8
+          },
+          {
+            "data": [
+              [
+                0,
+                0
+              ],
+              [
+                500,
+                431
+              ]
+            ],
+            "type": "line",
+            "name": "Linear Trend (Kv = 0.862 × Cv)",
+            "smooth": false
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Cv to Kv Relationship",
+            "Linear Trend"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "american_vs__british_piping_standards",
+  "title": "American vs. British Piping Standards",
+  "description": "US American (ASTM) vs. British (BSi) piping standards - specifications, grades and material descriptions. Compare ASTM International standards with British Standards Institute piping specifications for carbon steel, alloy steel, and stainless steel pipes.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "piping_standards_comparison",
+      "headers": [
+        "ASTM Standard",
+        "BSi Standard",
+        "Material Description"
+      ],
+      "rows": [
+        [
+          "A120",
+          "1387 (BS EN 10255:2004)",
+          "Carbon Steel"
+        ],
+        [
+          "A53 Gr. A",
+          "3601/320",
+          "Carbon Steel"
+        ],
+        [
+          "A53 Gr. B",
+          "3601/410",
+          "Carbon Steel"
+        ],
+        [
+          "A106 Gr. A",
+          "3602/360",
+          "Carbon Steel"
+        ],
+        [
+          "A106 Gr. B",
+          "3602/410",
+          "Carbon Steel"
+        ],
+        [
+          "A333 Gr. 3",
+          "3603/503",
+          "Killed Carbon Steel"
+        ],
+        [
+          "A333 Gr. 6",
+          "3603/410",
+          "Low-Temperature Carbon Steel"
+        ],
+        [
+          "A333 Gr. 8",
+          "3603/590",
+          "3.5% Nickel"
+        ],
+        [
+          "API 5L Gr. A",
+          "3601/23",
+          "Carbon Steel"
+        ],
+        [
+          "API 5L Gr. B",
+          "3601/27",
+          "Carbon Steel"
+        ],
+        [
+          "A335 Gr. P5",
+          "3604/625",
+          "5% Cr 1/2% Mo"
+        ],
+        [
+          "A335 Gr. P9",
+          "3604/629",
+          "9% Cr 1% Mo"
+        ],
+        [
+          "A335 Gr. P11",
+          "3604/621",
+          "1 1/4% Cr 1/2% Mo"
+        ],
+        [
+          "A335 Gr. P12",
+          "3604/620",
+          "1% Cr 1/2% Mo"
+        ],
+        [
+          "A335 Gr. P22",
+          "3604/622",
+          "2 1/4% Cr 1% Mo"
+        ],
+        [
+          "A312 Gr. Tp 304",
+          "3605/304 S18 (EN58E)",
+          "Austenitic Chromium Nickel"
+        ],
+        [
+          "A312 Gr. Tp 304H",
+          "3605/304 S59",
+          "Austenitic Chromium Nickel"
+        ],
+        [
+          "A312 Gr. Tp 304L",
+          "3605/304 S14",
+          "Austenitic Chromium Nickel (Extra Low Carbon)"
+        ],
+        [
+          "A312 Gr. Tp 316",
+          "3605/316 S18 (EN58J)",
+          "Austenitic Chromium Nickel Molybdenum"
+        ],
+        [
+          "A312 Gr. Tp 316L",
+          "3605/316 S14",
+          "Austenitic Chromium Nickel Molybdenum (Extra Low Carbon)"
+        ],
+        [
+          "A312 Gr. Tp 321",
+          "3605/321 S18 (EN58B)",
+          "Austenitic Chromium Nickel Titanium Stabilized"
+        ],
+        [
+          "A312 Gr. Tp 347",
+          "3605/347 S18 (EN58G)",
+          "Austenitic Chromium Nickel Niobium Stabilized"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "standard_descriptions",
+      "content": "## ASTM Standard Descriptions\n\n- **A 333** - Seamless and Welded Pipe for Low-Temperature Service\n- **A 53** - Welded and Seamless Steel Pipe\n- **A 106** - Seamless C-Steel Pipe for High Temperature Service\n- **A 335** - Seamless Ferritic Alloy Steel Pipe for High Temperature Service\n- **A 312** - Seamless and Welded Austenitic Stainless Steel Pipe\n- **API 5L** - Specification for Line Pipe\n\n## British Standards Descriptions\n\n- **BS 1387** - Steel Tubes and Tubulars Suitable for Screwing to BS 21 Pipe Threads (Replaced by BS EN 10255:2004)\n- **BS 3601** - Steel Pipes and Tubes for Pressure Purposes Carbon Steel (Replaced by BS EN 10216-1:2002 and BS EN 10217-1:2002)\n- **BS 3602** - Carbon and Carbon Manganese Steel with Specified Elevated Temperature Properties (Replaced by BS EN 10216-2:2002)\n- **BS 3603** - Carbon and Alloy Steel with Specified Low Temperature Properties (Replaced by EN10216-4:2002)\n- **BS 3604** - Ferritic Alloy Steel with Specified Elevated Temperature Properties\n- **BS 3605** - Seamless and Welded Austenitic Stainless Steel Pipe (Replaced by BS EN 10216-5:2004)"
+    }
+  ]
+}

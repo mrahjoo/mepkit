@@ -1,0 +1,106 @@
+{
+  "id": "measurements___absolute_vs__relative_frequencies",
+  "title": "Measurements - Absolute vs. Relative Frequencies",
+  "description": "Absolute and relative measurements to characterize and compare data sets. Calculate absolute frequencies, relative frequencies, and analyze measurement data.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Measurements - Absolute vs. Relative Frequencies\n\nAbsolute and relative measurements to characterize and compare data sets.\n\nMeasurements are important in all production processes to achieve required quality.\n\n### Sample Measurement Data\nExample weight samples of a product:\n\n| Sample No. | Sample Value (x) |\n|---|---|\n| 1 | 1.0 |\n| 2 | 1.1 |\n| 3 | 0.9 |\n| 4 | 1.0 |\n| 5 | 1.0 |\n| 6 | 0.9 |\n| 7 | 1.1 |\n| 8 | 1.0 |\n| 9 | 1.1 |\n\n### Key Concepts\n\n**Absolute Frequency (h):** The count of how many times each value appears in the data set.\n\n**Data Set Size Formula:**\n\n_n = h₁ + h₂ + ... + hₖ = Σ hᵢ_\n\nWhere: n = number of samples, h = absolute frequency\n\n**Relative Frequency (f):**\n\n_fᵢ = hᵢ / n_\n\nWhere: fᵢ = relative frequency of sample\n\n**Sum of Relative Frequencies:**\n\n_Σ fᵢ = 1_"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "num_samples",
+          "label": "Number of Samples (n)",
+          "type": "number",
+          "defaultValue": 9,
+          "unit": "samples"
+        },
+        {
+          "id": "absolute_freq_1",
+          "label": "Absolute Frequency Value 1 (h₁)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "count"
+        },
+        {
+          "id": "absolute_freq_2",
+          "label": "Absolute Frequency Value 2 (h₂)",
+          "type": "number",
+          "defaultValue": 4,
+          "unit": "count"
+        },
+        {
+          "id": "absolute_freq_3",
+          "label": "Absolute Frequency Value 3 (h₃)",
+          "type": "number",
+          "defaultValue": 3,
+          "unit": "count"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_absolute_freq",
+          "label": "Total Absolute Frequency (Σ h)",
+          "formula": "inputs.absolute_freq_1 + inputs.absolute_freq_2 + inputs.absolute_freq_3",
+          "unit": "count"
+        },
+        {
+          "id": "relative_freq_1",
+          "label": "Relative Frequency 1 (f₁)",
+          "formula": "inputs.absolute_freq_1 / inputs.num_samples",
+          "format": "decimal",
+          "unit": "ratio"
+        },
+        {
+          "id": "relative_freq_2",
+          "label": "Relative Frequency 2 (f₂)",
+          "formula": "inputs.absolute_freq_2 / inputs.num_samples",
+          "format": "decimal",
+          "unit": "ratio"
+        },
+        {
+          "id": "relative_freq_3",
+          "label": "Relative Frequency 3 (f₃)",
+          "formula": "inputs.absolute_freq_3 / inputs.num_samples",
+          "format": "decimal",
+          "unit": "ratio"
+        },
+        {
+          "id": "sum_relative_freq",
+          "label": "Sum of Relative Frequencies (Σ f)",
+          "formula": "(inputs.absolute_freq_1 / inputs.num_samples) + (inputs.absolute_freq_2 / inputs.num_samples) + (inputs.absolute_freq_3 / inputs.num_samples)",
+          "format": "decimal",
+          "unit": "ratio"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Sample Value (x)",
+        "Absolute Frequency (h)",
+        "Relative Frequency (f)"
+      ],
+      "rows": [
+        [
+          "0.9",
+          2,
+          "0.22"
+        ],
+        [
+          "1.0",
+          4,
+          "0.44"
+        ],
+        [
+          "1.1",
+          3,
+          "0.33"
+        ]
+      ]
+    }
+  ]
+}

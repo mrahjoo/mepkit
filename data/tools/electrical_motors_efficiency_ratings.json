@@ -1,0 +1,146 @@
+{
+  "id": "electrical_motors_efficiency_ratings",
+  "title": "Electrical Motors Efficiency Ratings",
+  "description": "NEMA - electrical motor efficiency ratings. The efficiency of an electrical motor is the ratio of mechanical power output to electric power input.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Electrical Motors Efficiency Ratings\n\nThe efficiency of an electrical motor is the ratio of **mechanical power output** to the **electric power input**.\n\nNEMA has established the following efficiency index standards for electric motors based on NEMA Letter Index ratings."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "NEMA Letter Index",
+        "Nominal Efficiency (%)",
+        "Minimum Efficiency (%)"
+      ],
+      "rows": [
+        [
+          "A",
+          "",
+          "95.0"
+        ],
+        [
+          "B",
+          "95.0",
+          "94.1"
+        ],
+        [
+          "C",
+          "94.1",
+          "93.0"
+        ],
+        [
+          "D",
+          "93.0",
+          "91.7"
+        ],
+        [
+          "E",
+          "91.7",
+          "90.2"
+        ],
+        [
+          "F",
+          "90.2",
+          "88.5"
+        ],
+        [
+          "G",
+          "88.5",
+          "86.5"
+        ],
+        [
+          "H",
+          "86.5",
+          "84.0"
+        ],
+        [
+          "K",
+          "84.0",
+          "81.5"
+        ],
+        [
+          "L",
+          "81.5",
+          "78.5"
+        ],
+        [
+          "M",
+          "78.5",
+          "75.5"
+        ],
+        [
+          "N",
+          "75.5",
+          "72.0"
+        ],
+        [
+          "P",
+          "72.0",
+          "68.0"
+        ],
+        [
+          "R",
+          "68.0",
+          "64.0"
+        ],
+        [
+          "S",
+          "64.0",
+          "59.5"
+        ],
+        [
+          "T",
+          "59.5",
+          "55.0"
+        ],
+        [
+          "U",
+          "55.0",
+          "50.5"
+        ],
+        [
+          "V",
+          "50.5",
+          "46.0"
+        ],
+        [
+          "W",
+          "",
+          "46.0"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Motor Efficiency Calculator",
+      "inputs": [
+        {
+          "id": "electrical_power_input",
+          "label": "Electrical Power Input",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 1000
+        },
+        {
+          "id": "mechanical_power_output",
+          "label": "Mechanical Power Output",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 950
+        }
+      ],
+      "outputs": [
+        {
+          "id": "motor_efficiency",
+          "label": "Motor Efficiency",
+          "unit": "%",
+          "format": "decimal",
+          "formula": "(inputs.mechanical_power_output / inputs.electrical_power_input) * 100"
+        }
+      ]
+    }
+  ]
+}

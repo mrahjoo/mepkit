@@ -1,0 +1,598 @@
+{
+  "id": "greek_alphabet",
+  "title": "Greek Alphabet",
+  "description": "A comprehensive reference for the Greek alphabet with character representations, HTML entities, decimal and hexadecimal codes, and their scientific and engineering applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Character",
+        "Symbol",
+        "Entity",
+        "Decimal",
+        "Hex",
+        "Normal Font",
+        "Symbol Font"
+      ],
+      "rows": [
+        [
+          "Greek capital letter alpha",
+          "Α",
+          "&Alpha;",
+          "Α",
+          "Α",
+          "A",
+          "Α"
+        ],
+        [
+          "Greek capital letter beta",
+          "Β",
+          "&Beta;",
+          "Β",
+          "Β",
+          "B",
+          "Β"
+        ],
+        [
+          "Greek capital letter gamma",
+          "Γ",
+          "&Gamma;",
+          "Γ",
+          "Γ",
+          "G",
+          "Γ"
+        ],
+        [
+          "Greek capital letter delta",
+          "Δ",
+          "&Delta;",
+          "Δ",
+          "Δ",
+          "D",
+          "Δ"
+        ],
+        [
+          "Greek capital letter epsilon",
+          "Ε",
+          "&Epsilon;",
+          "Ε",
+          "Ε",
+          "E",
+          "Ε"
+        ],
+        [
+          "Greek capital letter zeta",
+          "Ζ",
+          "&Zeta;",
+          "Ζ",
+          "Ζ",
+          "Z",
+          "Ζ"
+        ],
+        [
+          "Greek capital letter eta",
+          "Η",
+          "&Eta;",
+          "Η",
+          "Η",
+          "H",
+          "Η"
+        ],
+        [
+          "Greek capital letter theta",
+          "Θ",
+          "&Theta;",
+          "Θ",
+          "Θ",
+          "Q",
+          "Θ"
+        ],
+        [
+          "Greek capital letter iota",
+          "Ι",
+          "&Iota;",
+          "Ι",
+          "Ι",
+          "I",
+          "Ι"
+        ],
+        [
+          "Greek capital letter kappa",
+          "Κ",
+          "&Kappa;",
+          "Κ",
+          "Κ",
+          "K",
+          "Κ"
+        ],
+        [
+          "Greek capital letter lambda",
+          "Λ",
+          "&Lambda;",
+          "Λ",
+          "Λ",
+          "L",
+          "Λ"
+        ],
+        [
+          "Greek capital letter mu",
+          "Μ",
+          "&Mu;",
+          "Μ",
+          "Μ",
+          "M",
+          "Μ"
+        ],
+        [
+          "Greek capital letter nu",
+          "Ν",
+          "&Nu;",
+          "Ν",
+          "Ν",
+          "N",
+          "Ν"
+        ],
+        [
+          "Greek capital letter xi",
+          "Ξ",
+          "&Xi;",
+          "Ξ",
+          "Ξ",
+          "X",
+          "Ξ"
+        ],
+        [
+          "Greek capital letter omicron",
+          "Ο",
+          "&Omicron;",
+          "Ο",
+          "Ο",
+          "O",
+          "Ο"
+        ],
+        [
+          "Greek capital letter pi",
+          "Π",
+          "&Pi;",
+          "Π",
+          "Π",
+          "P",
+          "Π"
+        ],
+        [
+          "Greek capital letter rho",
+          "Ρ",
+          "&Rho;",
+          "Ρ",
+          "Ρ",
+          "R",
+          "Ρ"
+        ],
+        [
+          "Greek capital letter sigma",
+          "Σ",
+          "&Sigma;",
+          "Σ",
+          "Σ",
+          "S",
+          "Σ"
+        ],
+        [
+          "Greek capital letter tau",
+          "Τ",
+          "&Tau;",
+          "Τ",
+          "Τ",
+          "T",
+          "Τ"
+        ],
+        [
+          "Greek capital letter upsilon",
+          "Υ",
+          "&Upsilon;",
+          "Υ",
+          "Υ",
+          "U",
+          "Υ"
+        ],
+        [
+          "Greek capital letter phi",
+          "Φ",
+          "&Phi;",
+          "Φ",
+          "Φ",
+          "F",
+          "Φ"
+        ],
+        [
+          "Greek capital letter chi",
+          "Χ",
+          "&Chi;",
+          "Χ",
+          "Χ",
+          "C",
+          "Χ"
+        ],
+        [
+          "Greek capital letter psi",
+          "Ψ",
+          "&Psi;",
+          "Ψ",
+          "Ψ",
+          "Y",
+          "Ψ"
+        ],
+        [
+          "Greek capital letter omega",
+          "Ω",
+          "&Omega;",
+          "Ω",
+          "Ω",
+          "W",
+          "Ω"
+        ],
+        [
+          "Greek small letter alpha",
+          "α",
+          "&alpha;",
+          "α",
+          "α",
+          "a",
+          "α"
+        ],
+        [
+          "Greek small letter beta",
+          "β",
+          "&beta;",
+          "β",
+          "β",
+          "b",
+          "β"
+        ],
+        [
+          "Greek small letter gamma",
+          "γ",
+          "&gamma;",
+          "γ",
+          "γ",
+          "g",
+          "γ"
+        ],
+        [
+          "Greek small letter delta",
+          "δ",
+          "&delta;",
+          "δ",
+          "δ",
+          "d",
+          "δ"
+        ],
+        [
+          "Greek small letter epsilon",
+          "ε",
+          "&epsilon;",
+          "ε",
+          "ε",
+          "e",
+          "ε"
+        ],
+        [
+          "Greek small letter zeta",
+          "ζ",
+          "&zeta;",
+          "ζ",
+          "ζ",
+          "z",
+          "ζ"
+        ],
+        [
+          "Greek small letter eta",
+          "η",
+          "&eta;",
+          "η",
+          "η",
+          "h",
+          "η"
+        ],
+        [
+          "Greek small letter theta",
+          "θ",
+          "&theta;",
+          "θ",
+          "θ",
+          "q",
+          "θ"
+        ],
+        [
+          "Greek small letter iota",
+          "ι",
+          "&iota;",
+          "ι",
+          "ι",
+          "i",
+          "ι"
+        ],
+        [
+          "Greek small letter kappa",
+          "κ",
+          "&kappa;",
+          "κ",
+          "κ",
+          "k",
+          "κ"
+        ],
+        [
+          "Greek small letter lambda",
+          "λ",
+          "&lambda;",
+          "λ",
+          "λ",
+          "l",
+          "λ"
+        ],
+        [
+          "Greek small letter mu",
+          "μ",
+          "&mu;",
+          "μ",
+          "μ",
+          "m",
+          "μ"
+        ],
+        [
+          "Greek small letter nu",
+          "ν",
+          "&nu;",
+          "ν",
+          "ν",
+          "n",
+          "ν"
+        ],
+        [
+          "Greek small letter xi",
+          "ξ",
+          "&xi;",
+          "ξ",
+          "ξ",
+          "x",
+          "ξ"
+        ],
+        [
+          "Greek small letter omicron",
+          "ο",
+          "&omicron;",
+          "ο",
+          "ο",
+          "o",
+          "ο"
+        ],
+        [
+          "Greek small letter pi",
+          "π",
+          "&pi;",
+          "π",
+          "π",
+          "p",
+          "π"
+        ],
+        [
+          "Greek small letter rho",
+          "ρ",
+          "&rho;",
+          "ρ",
+          "ρ",
+          "r",
+          "ρ"
+        ],
+        [
+          "Greek small letter final sigma",
+          "ς",
+          "&sigmaf;",
+          "ς",
+          "ς",
+          "z",
+          "ς"
+        ],
+        [
+          "Greek small letter sigma",
+          "σ",
+          "&sigma;",
+          "σ",
+          "σ",
+          "s",
+          "σ"
+        ],
+        [
+          "Greek small letter tau",
+          "τ",
+          "&tau;",
+          "τ",
+          "τ",
+          "t",
+          "τ"
+        ],
+        [
+          "Greek small letter upsilon",
+          "υ",
+          "&upsilon;",
+          "υ",
+          "υ",
+          "u",
+          "υ"
+        ],
+        [
+          "Greek small letter phi",
+          "φ",
+          "&phi;",
+          "φ",
+          "φ",
+          "j",
+          "φ"
+        ],
+        [
+          "Greek small letter chi",
+          "χ",
+          "&chi;",
+          "χ",
+          "χ",
+          "c",
+          "χ"
+        ],
+        [
+          "Greek small letter psi",
+          "ψ",
+          "&psi;",
+          "ψ",
+          "ψ",
+          "y",
+          "ψ"
+        ],
+        [
+          "Greek small letter omega",
+          "ω",
+          "&omega;",
+          "ω",
+          "ω",
+          "w",
+          "ω"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Character",
+        "Symbol",
+        "Typically Used For"
+      ],
+      "rows": [
+        [
+          "Greek small letter alpha",
+          "α",
+          "Angles, angular acceleration"
+        ],
+        [
+          "Greek small letter beta",
+          "β",
+          "Angles, coefficients"
+        ],
+        [
+          "Greek small letter gamma",
+          "γ",
+          "Shear strain, kinematic viscosity"
+        ],
+        [
+          "Greek small letter delta",
+          "δ",
+          "Differences, damping coefficient"
+        ],
+        [
+          "Greek small letter epsilon",
+          "ε",
+          "Linear strain"
+        ],
+        [
+          "Greek small letter zeta",
+          "ζ",
+          ""
+        ],
+        [
+          "Greek small letter eta",
+          "η",
+          "Dynamic viscosity, efficiency"
+        ],
+        [
+          "Greek small letter theta",
+          "θ",
+          "Angles, temperature"
+        ],
+        [
+          "Greek small letter iota",
+          "ι",
+          ""
+        ],
+        [
+          "Greek small letter kappa",
+          "κ",
+          "Compressibility of fluids"
+        ],
+        [
+          "Greek small letter lambda",
+          "λ",
+          "Wavelength, thermal conductivity"
+        ],
+        [
+          "Greek small letter mu",
+          "μ",
+          "Coefficient of friction, dynamic viscosity, Poisson's ratio"
+        ],
+        [
+          "Greek small letter nu",
+          "ν",
+          "Kinematic viscosity"
+        ],
+        [
+          "Greek small letter xi",
+          "ξ",
+          ""
+        ],
+        [
+          "Greek small letter omicron",
+          "ο",
+          ""
+        ],
+        [
+          "Greek small letter pi",
+          "π",
+          "Mathematical constant"
+        ],
+        [
+          "Greek small letter rho",
+          "ρ",
+          "Density"
+        ],
+        [
+          "Greek small letter final sigma",
+          "ς",
+          ""
+        ],
+        [
+          "Greek small letter sigma",
+          "σ",
+          "Normal stress, standard deviation"
+        ],
+        [
+          "Greek small letter tau",
+          "τ",
+          "Shear stress"
+        ],
+        [
+          "Greek small letter upsilon",
+          "υ",
+          ""
+        ],
+        [
+          "Greek small letter phi",
+          "φ",
+          "Angles, flow rate, potential energy"
+        ],
+        [
+          "Greek small letter chi",
+          "χ",
+          ""
+        ],
+        [
+          "Greek small letter psi",
+          "ψ",
+          "Gears helix angle"
+        ],
+        [
+          "Greek small letter omega",
+          "ω",
+          "Angular velocity, solid angle"
+        ]
+      ]
+    }
+  ]
+}

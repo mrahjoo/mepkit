@@ -1,0 +1,125 @@
+{
+  "id": "silver_binary_eutectic_alloys___melting_points",
+  "title": "Silver Binary Eutectic Alloys - Melting Points",
+  "description": "Ag - Silver - binary eutectic alloys and melting points. The melting point of an alloy of two or more metals depends on the relative proportions of the ingredients. An eutectic mixture is where the melting point is as low as possible.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloy Component",
+        "Weight of Alloy Component (%)",
+        "Melting Point (K)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Al - Aluminum",
+          25,
+          835,
+          1044
+        ],
+        [
+          "As - Arsenic",
+          18,
+          813,
+          1004
+        ],
+        [
+          "Ca - Calcium",
+          18,
+          820,
+          1017
+        ],
+        [
+          "Ce - Cerium",
+          84,
+          798,
+          977
+        ],
+        [
+          "Cu - Copper",
+          28,
+          1050,
+          1431
+        ],
+        [
+          "Ge - Germanium",
+          18,
+          924,
+          1204
+        ],
+        [
+          "La - Lanthanum",
+          77,
+          791,
+          964
+        ],
+        [
+          "Li - Lithium",
+          89,
+          418,
+          293
+        ],
+        [
+          "Mg - Magnesium",
+          52,
+          745,
+          882
+        ],
+        [
+          "Pb - Lead (Plumbum)",
+          97.5,
+          577,
+          579
+        ],
+        [
+          "Pd - Palladium",
+          25.6,
+          924,
+          1204
+        ],
+        [
+          "Sb - Antimony (Stibium)",
+          44,
+          758,
+          905
+        ],
+        [
+          "Si - Silicon",
+          2.96,
+          1110,
+          1539
+        ],
+        [
+          "Sr - Strontium",
+          73,
+          709,
+          817
+        ],
+        [
+          "Te - Tellurium",
+          69,
+          623,
+          662
+        ],
+        [
+          "Th - Thorium",
+          15,
+          1167,
+          1641
+        ],
+        [
+          "Zr - Zirconium",
+          93,
+          1100,
+          1521
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- An **eutectic mixture** is the mixture where the melting point is as low as possible\n- **Temperature Conversion Formula**: T (°C) = 5/9 × (T (°F) - 32)"
+    }
+  ]
+}

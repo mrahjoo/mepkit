@@ -1,0 +1,131 @@
+{
+  "id": "symbols_used_to_denote_a_chemical_reactions_and_pr",
+  "title": "Symbols Used to Denote a Chemical Reactions and Process or Condition",
+  "description": "Explanation of symbols used as subscripts or superscripts to tell more about the type of chemical reaction, process or condition. This tool helps identify and understand the meaning of various symbols used in thermodynamic expressions and chemical equations.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Subscript Symbols Used to Denote Chemical Reactions or Process Conditions\n\n| Subscript Symbol | Process |\n|------------------|----------|\n| ads | adsorption |\n| at | atomization |\n| c | combustion reaction |\n| dil | dilution (of a solution) |\n| dpl | displacement |\n| f | formation reaction |\n| fus | melting, fusion (solid → liquid) |\n| imm | immersion |\n| mix | mixing of fluids |\n| r | reaction in general |\n| sol | solution (of solute in solvent) |\n| sub | sublimation (solid → gas) |\n| trs | transition (between two phases) |\n| vap | vaporization, evaporation (liquid → gas) |\n\n## Superscript Symbols Used to Denote Chemical Reactions or Process Conditions\n\n| Superscript Symbol | Process |\n|--------------------|----------|\n| app | apparent |\n| ≠, ‡ | activated complex, transition state |\n| E | excess quantity |\n| id | ideal |\n| ∞ | infinite dilution |\n| * | pure substance |\n| °, θ | standard |"
+    },
+    {
+      "type": "markdown",
+      "content": "## Examples of Use\n\n**ΔGᵣ** : Change in Gibbs free energy by (a given) reaction\n\n**ΔHₛₒₗ** : Change in enthalpy by (a given) solution\n\n**ΔSᵥₐₚ** : Change in entropy by (a given) evaporation\n\n**pθ** : Pressure at standard state (normally 1 bar)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Symbol Type",
+        "Symbol",
+        "Meaning"
+      ],
+      "rows": [
+        [
+          "Subscript",
+          "ads",
+          "adsorption"
+        ],
+        [
+          "Subscript",
+          "at",
+          "atomization"
+        ],
+        [
+          "Subscript",
+          "c",
+          "combustion reaction"
+        ],
+        [
+          "Subscript",
+          "dil",
+          "dilution (of a solution)"
+        ],
+        [
+          "Subscript",
+          "dpl",
+          "displacement"
+        ],
+        [
+          "Subscript",
+          "f",
+          "formation reaction"
+        ],
+        [
+          "Subscript",
+          "fus",
+          "melting, fusion (solid → liquid)"
+        ],
+        [
+          "Subscript",
+          "imm",
+          "immersion"
+        ],
+        [
+          "Subscript",
+          "mix",
+          "mixing of fluids"
+        ],
+        [
+          "Subscript",
+          "r",
+          "reaction in general"
+        ],
+        [
+          "Subscript",
+          "sol",
+          "solution (of solute in solvent)"
+        ],
+        [
+          "Subscript",
+          "sub",
+          "sublimation (solid → gas)"
+        ],
+        [
+          "Subscript",
+          "trs",
+          "transition (between two phases)"
+        ],
+        [
+          "Subscript",
+          "vap",
+          "vaporization, evaporation (liquid → gas)"
+        ],
+        [
+          "Superscript",
+          "app",
+          "apparent"
+        ],
+        [
+          "Superscript",
+          "≠, ‡",
+          "activated complex, transition state"
+        ],
+        [
+          "Superscript",
+          "E",
+          "excess quantity"
+        ],
+        [
+          "Superscript",
+          "id",
+          "ideal"
+        ],
+        [
+          "Superscript",
+          "∞",
+          "infinite dilution"
+        ],
+        [
+          "Superscript",
+          "*",
+          "pure substance"
+        ],
+        [
+          "Superscript",
+          "°, θ",
+          "standard"
+        ]
+      ]
+    }
+  ]
+}

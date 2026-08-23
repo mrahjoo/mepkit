@@ -1,0 +1,47 @@
+{
+  "id": "strouhal_number",
+  "title": "Strouhal Number",
+  "description": "A dimensionless calculator for analyzing oscillating unsteady fluid flow dynamics problems. The Strouhal Number represents the ratio of inertial forces due to flow unsteadiness to inertial forces due to velocity changes in the flow field.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Strouhal Number Calculator\n\nThe Strouhal Number is expressed as:\n\n**St = ω × l / v**\n\nWhere:\n- **St** = Strouhal Number\n- **ω** = oscillation frequency\n- **l** = characteristic length\n- **v** = flow velocity\n\nThe Strouhal Number is useful for analyzing unsteady, oscillating flow problems and represents the ratio of inertial forces due to flow unsteadiness to inertial forces due to velocity changes."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "omega",
+          "label": "Oscillation Frequency (ω)",
+          "type": "number",
+          "unit": "Hz",
+          "defaultValue": 10
+        },
+        {
+          "id": "length",
+          "label": "Characteristic Length (l)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "velocity",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "strouhal",
+          "label": "Strouhal Number (St)",
+          "formula": "(inputs.omega * inputs.length) / inputs.velocity",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

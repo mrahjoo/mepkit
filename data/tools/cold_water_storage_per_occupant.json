@@ -1,0 +1,155 @@
+{
+  "id": "cold_water_storage_per_occupant",
+  "title": "Cold Water Storage per Occupant",
+  "description": "Cold water storage for occupants in common types of buildings as factories, hospitals, houses and more",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Typical cold water storage per occupant by building type",
+      "headers": [
+        "Type of Building",
+        "Storage (liters)",
+        "Storage (gallons)"
+      ],
+      "rows": [
+        [
+          "Factories (no process)",
+          10,
+          2
+        ],
+        [
+          "Hospitals, per bed",
+          135,
+          30
+        ],
+        [
+          "Hospitals, per staff on duty",
+          45,
+          10
+        ],
+        [
+          "Hostels",
+          90,
+          20
+        ],
+        [
+          "Hotels",
+          135,
+          30
+        ],
+        [
+          "Houses and flats",
+          135,
+          30
+        ],
+        [
+          "Offices with canteens",
+          45,
+          10
+        ],
+        [
+          "Offices without canteen",
+          35,
+          8
+        ],
+        [
+          "Restaurant per meal",
+          7,
+          1.5
+        ],
+        [
+          "Schools, boarding",
+          90,
+          20
+        ],
+        [
+          "Schools, day",
+          30,
+          7
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Calculate total cold water storage required",
+      "inputs": [
+        {
+          "id": "building_type",
+          "label": "Building Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Factories (no process)",
+              "value": 10
+            },
+            {
+              "label": "Hospitals, per bed",
+              "value": 135
+            },
+            {
+              "label": "Hospitals, per staff on duty",
+              "value": 45
+            },
+            {
+              "label": "Hostels",
+              "value": 90
+            },
+            {
+              "label": "Hotels",
+              "value": 135
+            },
+            {
+              "label": "Houses and flats",
+              "value": 135
+            },
+            {
+              "label": "Offices with canteens",
+              "value": 45
+            },
+            {
+              "label": "Offices without canteen",
+              "value": 35
+            },
+            {
+              "label": "Restaurant per meal",
+              "value": 7
+            },
+            {
+              "label": "Schools, boarding",
+              "value": 90
+            },
+            {
+              "label": "Schools, day",
+              "value": 30
+            }
+          ],
+          "defaultValue": 135
+        },
+        {
+          "id": "occupant_count",
+          "label": "Number of Occupants",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "occupants"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_storage_liters",
+          "label": "Total Cold Water Storage",
+          "formula": "inputs.building_type * inputs.occupant_count",
+          "unit": "liters",
+          "format": "decimal"
+        },
+        {
+          "id": "total_storage_gallons",
+          "label": "Total Cold Water Storage",
+          "formula": "(inputs.building_type * inputs.occupant_count) / 4.54609",
+          "unit": "gallons",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

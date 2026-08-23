@@ -1,0 +1,73 @@
+{
+  "id": "pipes___insulated_heat_loss_diagrams",
+  "title": "Pipes - Insulated Heat Loss Diagrams",
+  "description": "Heat loss (W/ft) diagrams for 1/2 to 6 inches insulated pipes - ranging insulation thickness 0.5 to 4 inches and temperature differences 50 to 350 degF. Based on metal pipes with fiber glass insulation (thermal conductivity 0.25 Btu/h oF ft2/in) and moderate wind conditions (20 mph) with 10% safety factor.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Insulation Thickness (inches)",
+        "Pipe Size Range",
+        "Temperature Difference Range (degF)",
+        "Heat Loss Range (W/ft)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "0.5",
+          "1/2 to 6",
+          "50 to 350",
+          "Refer to diagram",
+          "Highest heat loss"
+        ],
+        [
+          "1.0",
+          "1/2 to 6",
+          "50 to 350",
+          "Refer to diagram",
+          "Standard insulation"
+        ],
+        [
+          "1.5",
+          "1/2 to 6",
+          "50 to 350",
+          "Refer to diagram",
+          "Standard insulation"
+        ],
+        [
+          "2.0",
+          "1/2 to 6",
+          "50 to 350",
+          "Refer to diagram",
+          "Standard insulation"
+        ],
+        [
+          "2.5",
+          "1/2 to 6",
+          "50 to 350",
+          "Refer to diagram",
+          "Standard insulation"
+        ],
+        [
+          "3.0",
+          "1/2 to 6",
+          "50 to 350",
+          "Refer to diagram",
+          "Standard insulation"
+        ],
+        [
+          "4.0",
+          "1/2 to 6",
+          "50 to 350",
+          "Refer to diagram",
+          "Lowest heat loss"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Adjustment Factors\n\n- **Indoor location**: Reduce values by 10%\n- **Mineral wool insulation**: Increase values by 6%\n- **Rigid cellular polyurethane**: Reduce values by 30%\n\n## Unit Conversions\n\n- 1 W/ft = 3.41 Btu/h ft = 3.28 W/m\n- 1 oF = 0.555 oC\n\n## Assumptions\n\n- Material: Metal pipes with fiber glass insulation\n- Thermal conductivity: 0.25 Btu/h oF ft²/in\n- Outdoor conditions: Moderate wind (20 mph)\n- Safety factor: 10% included"
+    }
+  ]
+}

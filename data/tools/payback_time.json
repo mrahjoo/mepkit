@@ -1,0 +1,102 @@
+{
+  "id": "payback_time",
+  "title": "Payback Time",
+  "description": "Investments and payback time. Payback time is the number of periods required for cumulative benefits to equal cumulative costs. The smaller the payback period, the better the investment.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Payback Time Calculator\n\nPayback time is the number of periods required for cumulative benefits to equal cumulative costs.\n\n### Undiscounted Payback\nF₀ = F₁ + F₂ + ... + Fₙₚ\n\nwhere:\n- F₀ = initial investment\n- F₁, F₂, etc. = cash flows in future periods\n- nₚ = period where initial investment equals accumulated future cash flows\n\n### Discounted Payback\nF₀ = F₁ / (1 + i) + F₂ / (1 + i)² + ... + Fₙₚ / (1 + i)ⁿₚ\n\nwhere:\n- i = interest rate (discount rate)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "initial_investment",
+          "label": "Initial Investment (F₀)",
+          "type": "number",
+          "defaultValue": 10000,
+          "unit": "$"
+        },
+        {
+          "id": "interest_rate",
+          "label": "Interest Rate (i)",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "%"
+        },
+        {
+          "id": "discount_method",
+          "label": "Payback Method",
+          "type": "select",
+          "options": [
+            {
+              "label": "Undiscounted",
+              "value": "undiscounted"
+            },
+            {
+              "label": "Discounted",
+              "value": "discounted"
+            }
+          ],
+          "defaultValue": "undiscounted"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "payback_period",
+          "label": "Payback Period",
+          "formula": "inputs.initial_investment",
+          "unit": "periods"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Period",
+        "Cash Flow",
+        "Undiscounted Cumulative",
+        "Discounted Cumulative"
+      ],
+      "rows": [
+        [
+          0,
+          -10000,
+          -10000,
+          -10000
+        ],
+        [
+          1,
+          3000,
+          -7000,
+          -7272.73
+        ],
+        [
+          2,
+          3000,
+          -4000,
+          -4462.81
+        ],
+        [
+          3,
+          3000,
+          -1000,
+          -1694.25
+        ],
+        [
+          4,
+          3000,
+          2000,
+          1025.31
+        ],
+        [
+          5,
+          3000,
+          5000,
+          3868.52
+        ]
+      ]
+    }
+  ]
+}

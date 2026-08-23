@@ -1,0 +1,92 @@
+{
+  "id": "unit_factor_method",
+  "title": "Unit Factor Method",
+  "description": "Convert between units with the unit factor or factor-label method, also known as dimensional analysis",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Unit Factor Method\n\n## Overview\n\nUnit converting from one system to another can be done with the **unit factor** method - also called dimensional analysis.\n\nThe relationship between two different units can be expressed as:\n\n**u1 = x × u2**\n\n_where_\n- u1 = unit 1\n- u2 = unit 2  \n- x = converting factor from u2 to u1\n\n## Unit Factor Method\n\nDividing the relationship with both sides creates two **unit factors** for the relationship.\n\n### Example: Inches vs. Millimeters\nConverting a value from one unit to another can be done by multiplying both sides with the value.\n\n### Example: Converting 10 mm to inches\nUsing the conversion factor: 1 inch = 25.4 mm\n\n## Factor-Label Method\n\nThe factor-label method is a sequential combination of conversion factors where numerator and denominator of the conversion factor fractions can be cancelled out to achieve a desired set of dimensional units.\n\n### Example: Converting 2.5 feet to mm\nUsing: 1 foot = 12 inches, 1 inch = 25.4 mm"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Value to Convert",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "units"
+        },
+        {
+          "id": "conversionFactor",
+          "label": "Conversion Factor",
+          "type": "number",
+          "defaultValue": 25.4,
+          "unit": "units"
+        },
+        {
+          "id": "method",
+          "label": "Conversion Method",
+          "type": "select",
+          "defaultValue": "multiply",
+          "options": [
+            {
+              "label": "Multiply (to larger unit)",
+              "value": "multiply"
+            },
+            {
+              "label": "Divide (to smaller unit)",
+              "value": "divide"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Value",
+          "formula": "inputs.method === 'multiply' ? inputs.value * inputs.conversionFactor : inputs.value / inputs.conversionFactor",
+          "unit": "converted units",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Original",
+            "Converted"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              "inputs.value",
+              "inputs.method === 'multiply' ? inputs.value * inputs.conversionFactor : inputs.value / inputs.conversionFactor"
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "containLabel": true
+        }
+      }
+    }
+  ]
+}

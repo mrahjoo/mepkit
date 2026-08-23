@@ -1,0 +1,37 @@
+{
+  "id": "fire_stop_ratings",
+  "title": "Fire-Stop Ratings",
+  "description": "Openings for electrical and HVAC installations in smoke and fire-rated constructions must be sealed to resist the passage of heat, fire and smoke. Fire stop systems are categorized by their flame, temperature, and smoke ratings according to ASTM E814 standards.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Rating Type",
+        "Unit",
+        "Description",
+        "Test Standard"
+      ],
+      "rows": [
+        [
+          "F-rating (Flame)",
+          "Hours",
+          "Time that a barrier can withstand fire before being consumed or permitting passage of flame. Must also withstand hose stream test.",
+          "ASTM E814"
+        ],
+        [
+          "T-rating (Thermal)",
+          "Hours",
+          "Time that temperature on non-fire side does not exceed 325°F (163°C) above ambient. Prevents reaching flash point of materials on protected side.",
+          "ASTM E814"
+        ],
+        [
+          "L-rating (Smoke)",
+          "CFM (Cubic Feet per Minute)",
+          "Amount of air or cold smoke that can leak through penetration. Tested at differential pressure of 0.30 inches water column (75 Pa) at 75°F and 400°F.",
+          "ASTM E814"
+        ]
+      ]
+    }
+  ]
+}

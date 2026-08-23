@@ -1,0 +1,111 @@
+{
+  "id": "understanding_convective_heat_transfer__coefficien",
+  "title": "Understanding Convective Heat Transfer: Coefficients, Formulas & Examples",
+  "description": "Tool for understanding convective heat transfer, coefficients, and calculating heat transfer rates using Newton's Law of Cooling. Includes typical coefficients for various fluid flow applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Understanding Convective Heat Transfer\n\nConvective heat transfer is the heat energy transferred between a surface and a moving fluid with different temperatures. This is a combination of diffusion and bulk motion of molecules.\n\n## Newton's Law of Cooling\n\nThe fundamental equation for convection heat transfer is:\n\n**q = hc × A × ΔT**\n\nWhere:\n- **q** = heat transferred per unit time (W, Btu/hr)\n- **hc** = convective heat transfer coefficient (W/(m²°C), Btu/(ft² h °F))\n- **A** = heat transfer area of the surface (m², ft²)\n- **ΔT** = temperature difference between surface and bulk fluid (°C, °F)\n\n## Types of Convection\n\n- **Forced/Assisted Convection**: Fluid flow induced by external force (pump, fan, mixer)\n- **Natural/Free Convection**: Caused by buoyancy forces due to temperature-induced density differences\n- **Boiling/Condensing**: Also classified as convective heat transfer processes"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "hc",
+          "label": "Convective Heat Transfer Coefficient",
+          "type": "number",
+          "defaultValue": 2000,
+          "unit": "W/(m²°C)"
+        },
+        {
+          "id": "area",
+          "label": "Heat Transfer Surface Area",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m²"
+        },
+        {
+          "id": "temp_diff",
+          "label": "Temperature Difference (ΔT)",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_transfer",
+          "label": "Heat Transfer Rate",
+          "formula": "inputs.hc * inputs.area * inputs.temp_diff",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_transfer_kw",
+          "label": "Heat Transfer Rate",
+          "formula": "(inputs.hc * inputs.area * inputs.temp_diff) / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid Flow Type",
+        "Minimum hc",
+        "Maximum hc",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Free Convection - Air/Gases/Dry Vapors",
+          0.5,
+          1000,
+          "W/(m²K)"
+        ],
+        [
+          "Free Convection - Water/Liquids",
+          50,
+          3000,
+          "W/(m²K)"
+        ],
+        [
+          "Forced Convection - Air/Gases/Dry Vapors",
+          10,
+          1000,
+          "W/(m²K)"
+        ],
+        [
+          "Forced Convection - Water/Liquids",
+          50,
+          10000,
+          "W/(m²K)"
+        ],
+        [
+          "Forced Convection - Liquid Metals",
+          5000,
+          40000,
+          "W/(m²K)"
+        ],
+        [
+          "Boiling Water",
+          3000,
+          100000,
+          "W/(m²K)"
+        ],
+        [
+          "Condensing Water Vapor",
+          5000,
+          100000,
+          "W/(m²K)"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Unit Conversion Factors\n\n- 1 W/(m²K) = 0.85984 kcal/(h m² °C) = 0.1761 Btu/(ft² h °F)\n- 1 Btu/(ft² h °F) = 5.678 W/(m² K) = 4.882 kcal/(h m² °C)\n- 1 kcal/(h m² °C) = 1.163 W/(m²K) = 0.205 Btu/(ft² h °F)\n\n## Convective Heat Transfer Coefficient for Air\n\nFor air flow, the convective heat transfer coefficient can be approximated using empirical equations (valid for velocities 2-20 m/s):\n\n**In kcal/m²h°C:**\nhc = 10.45 - v + 10√v\n\n**In W/m²°C:**\nhc = 1.16 (10.45 - v + 10√v)\n\nWhere v = relative speed between object surface and air (m/s)"
+    }
+  ]
+}

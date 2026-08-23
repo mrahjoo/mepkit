@@ -1,0 +1,76 @@
+{
+  "id": "toggle_joint",
+  "title": "Toggle Joint",
+  "description": "Calculate the horizontal force acting in a toggle joint mechanism. The toggle joint consists of two arms linked together with a fixed point, a movable horizontal point, and an effort force acting vertically. This calculator supports both equal and unequal arm lengths.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Toggle Joint Calculator\n\nThe toggle mechanism is made of two arms linked together. Point 1 is fixed, point 3 can move horizontally. The effort force acts vertically in point 2.\n\n### Equal Arm Lengths\n**P = F × a / (2 × h)**\n\n### Unequal Arm Lengths\n**P = F × a / b**\n\nWhere:\n- **P** = horizontal force in point 3 (N, lb)\n- **F** = effort force (N, lb)\n- **a** = length of arm (m, ft, mm, in)\n- **h** = height (m, ft, mm, in)\n- **b** = length of second arm (m, ft, mm, in)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Effort Force (F)",
+          "type": "number",
+          "defaultValue": 883,
+          "unit": "N"
+        },
+        {
+          "id": "arm_a",
+          "label": "Arm Length A",
+          "type": "number",
+          "defaultValue": 1983,
+          "unit": "mm"
+        },
+        {
+          "id": "height",
+          "label": "Height (h)",
+          "type": "number",
+          "defaultValue": 258,
+          "unit": "mm"
+        },
+        {
+          "id": "arm_type",
+          "label": "Arm Configuration",
+          "type": "select",
+          "defaultValue": "equal",
+          "options": [
+            {
+              "value": "equal",
+              "label": "Equal Lengths"
+            },
+            {
+              "value": "unequal",
+              "label": "Unequal Lengths"
+            }
+          ]
+        },
+        {
+          "id": "arm_b",
+          "label": "Arm Length B (for unequal lengths)",
+          "type": "number",
+          "defaultValue": 1983,
+          "unit": "mm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "horizontal_force",
+          "label": "Horizontal Force (P)",
+          "formula": "inputs.arm_type === 'equal' ? (inputs.force * inputs.arm_a) / (2 * inputs.height) : (inputs.force * inputs.arm_a) / inputs.arm_b",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "force_ratio",
+          "label": "Force Ratio",
+          "formula": "outputs.horizontal_force / inputs.force",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

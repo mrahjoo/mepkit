@@ -1,0 +1,65 @@
+{
+  "id": "belts___power_transmission_and_efficiency",
+  "title": "Belts - Power Transmission and Efficiency",
+  "description": "Calculate belts power transmission and efficiency",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Input Parameters",
+        "Values"
+      ],
+      "inputs": [
+        {
+          "id": "F2",
+          "label": "Force F2 (Tight Side)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 0
+        },
+        {
+          "id": "F1",
+          "label": "Force F1 (Slack Side)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 0
+        },
+        {
+          "id": "radius_a",
+          "label": "Radius of Pulley (ra)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "omega_a",
+          "label": "Angular Velocity (ωa)",
+          "type": "number",
+          "unit": "rad/s",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque",
+          "label": "Torque (T)",
+          "formula": "(inputs.F2 - inputs.F1) * inputs.radius_a",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "power",
+          "label": "Power Transmitted (P)",
+          "formula": "(inputs.F2 - inputs.F1) * inputs.radius_a * inputs.omega_a",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formulas\n\n**Torque:**\n\nT = (F₂ - F₁) × rₐ\n\nwhere:\n- T = torque (Nm)\n- F = force (N)\n- r = radius of wheel or pulley\n\n**Power Transmitted:**\n\nP = T × ωₐ = (F₂ - F₁) × rₐ × ωₐ\n\nwhere:\n- P = power transmitted (watts)\n- ωₐ = angular velocity (rad/s)"
+    }
+  ]
+}

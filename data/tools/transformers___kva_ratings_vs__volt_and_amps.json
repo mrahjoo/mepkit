@@ -1,0 +1,245 @@
+{
+  "id": "transformers___kva_ratings_vs__volt_and_amps",
+  "title": "Transformers - kVA Ratings vs. Volt and Amps",
+  "description": "Reference tables for single-phase and three-phase transformer full load currents based on kVA ratings and voltage levels. Includes transformer principles and calculation examples.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Transformers - kVA Ratings vs. Volt and Amps\n\nA transformer transfers electrical energy from one circuit to another through inductively coupled conductors. For an ideal transformer:\n\n**U1 / U2 = N1 / N2 = I2 / I1**\n\nWhere:\n- U = electrical potential difference (Voltage)\n- N = number of turns of wire\n- I = current (Amps)\n\n### Example\nA transformer with 500 primary turns, 3000 secondary turns and 230 V primary voltage:\n\nU2 = U1 × N2 / N1 = 230 × 3000 / 500 = 1380 V = 1.38 kV"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "kVA Rating",
+        "120 V (A)",
+        "240 V (A)",
+        "480 V (A)"
+      ],
+      "rows": [
+        [
+          0.05,
+          0.42,
+          0.21,
+          0.1
+        ],
+        [
+          0.075,
+          0.63,
+          0.31,
+          0.16
+        ],
+        [
+          0.1,
+          0.83,
+          0.42,
+          0.21
+        ],
+        [
+          0.15,
+          1.25,
+          0.63,
+          0.31
+        ],
+        [
+          0.25,
+          2.08,
+          1.04,
+          0.52
+        ],
+        [
+          0.5,
+          4.17,
+          2.08,
+          1.04
+        ],
+        [
+          0.75,
+          6.25,
+          3.13,
+          1.56
+        ],
+        [
+          1,
+          8.33,
+          4.17,
+          2.08
+        ],
+        [
+          1.5,
+          12.5,
+          6.25,
+          3.13
+        ],
+        [
+          2,
+          16.7,
+          8.33,
+          4.17
+        ],
+        [
+          3,
+          25,
+          12.5,
+          6.3
+        ],
+        [
+          5,
+          41.7,
+          20.8,
+          10.4
+        ],
+        [
+          7.5,
+          62.5,
+          31.3,
+          15.6
+        ],
+        [
+          10,
+          83.3,
+          41.7,
+          20.8
+        ],
+        [
+          15,
+          125,
+          62.5,
+          31.3
+        ],
+        [
+          25,
+          208,
+          104.2,
+          52.1
+        ],
+        [
+          37.5,
+          313,
+          156.3,
+          78.1
+        ],
+        [
+          50,
+          417,
+          208.3,
+          104.2
+        ],
+        [
+          75,
+          625,
+          313,
+          156
+        ],
+        [
+          100,
+          833,
+          417,
+          208
+        ],
+        [
+          167,
+          1392,
+          696,
+          348
+        ],
+        [
+          200,
+          1667,
+          833,
+          417
+        ],
+        [
+          250,
+          2083,
+          1042,
+          521
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Three-Phase Transformer Full Load Current (Ampere)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "kVA Rating",
+        "240 V (A)",
+        "480 V (A)"
+      ],
+      "rows": [
+        [
+          3,
+          7.2,
+          3.6
+        ],
+        [
+          6,
+          14.4,
+          7.2
+        ],
+        [
+          9,
+          21.7,
+          10.8
+        ],
+        [
+          15,
+          36.1,
+          18
+        ],
+        [
+          22,
+          53,
+          26.5
+        ],
+        [
+          30,
+          72.2,
+          36.1
+        ],
+        [
+          45,
+          108,
+          54.1
+        ],
+        [
+          75,
+          180,
+          90.2
+        ],
+        [
+          112.5,
+          271,
+          135
+        ],
+        [
+          150,
+          361,
+          180
+        ],
+        [
+          225,
+          541,
+          271
+        ],
+        [
+          300,
+          722,
+          361
+        ],
+        [
+          500,
+          1203,
+          601
+        ],
+        [
+          750,
+          1806,
+          903
+        ]
+      ]
+    }
+  ]
+}

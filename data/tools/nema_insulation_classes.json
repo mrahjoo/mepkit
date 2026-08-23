@@ -1,0 +1,145 @@
+{
+  "id": "nema_insulation_classes",
+  "title": "NEMA Insulation Classes",
+  "description": "Electrical insulation systems rated by standard NEMA classifications to maximize allowable operating temperatures.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## NEMA Insulation Classes\n\nElectrical insulation systems are rated by standard NEMA (National Electrical Manufacturers Association) classifications according to maximum allowable operating temperature.\n\n### Key Information:\n- Reference ambient temperature: 40°C\n- Operating temperature = Reference temperature + Allowable temperature rise + Hot spot allowance (typically 10°C)\n- Each 10°C rise above rating may reduce motor lifetime by one half\n- Class B is most common for U.S. 60-cycle motors\n- Class F is most common for international and 50-cycle motors"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature Class",
+        "Max Temp (°C)",
+        "Max Temp (°F)",
+        "Temp Rise @ 1.0 SF (°C)",
+        "Temp Rise @ 1.15 SF (°C)"
+      ],
+      "rows": [
+        [
+          "A",
+          105,
+          221,
+          60,
+          70
+        ],
+        [
+          "B",
+          130,
+          266,
+          80,
+          90
+        ],
+        [
+          "F",
+          155,
+          311,
+          105,
+          115
+        ],
+        [
+          "H",
+          180,
+          356,
+          125,
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "tempCelsius",
+          "label": "Temperature (°C)",
+          "type": "number",
+          "defaultValue": 40,
+          "unit": "°C"
+        },
+        {
+          "id": "tempRise",
+          "label": "Allowable Temperature Rise (°C)",
+          "type": "number",
+          "defaultValue": 105,
+          "unit": "°C"
+        },
+        {
+          "id": "hotSpot",
+          "label": "Hot Spot Allowance (°C)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "operatingTempC",
+          "label": "Operating Temperature",
+          "formula": "inputs.tempCelsius + inputs.tempRise + inputs.hotSpot",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "operatingTempF",
+          "label": "Operating Temperature",
+          "formula": "(inputs.tempCelsius + inputs.tempRise + inputs.hotSpot) * 9 / 5 + 32",
+          "unit": "°F",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Motor Lifetime Comparison by Insulation Class",
+      "options": {
+        "title": {
+          "text": "Estimated Motor Lifetime by Insulation Class (at 180°C)",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Class A",
+            "Class B",
+            "Class F",
+            "Class H"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Lifetime (hours)",
+          "scale": true
+        },
+        "series": [
+          {
+            "data": [
+              300,
+              1800,
+              8500,
+              50000
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#1f77b4"
+            }
+          }
+        ],
+        "grid": {
+          "left": "10%",
+          "right": "10%",
+          "bottom": "15%",
+          "top": "15%",
+          "containLabel": true
+        }
+      }
+    }
+  ]
+}

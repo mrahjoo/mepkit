@@ -1,0 +1,73 @@
+{
+  "id": "ammonia___dynamic_and_kinematic_viscosity_vs__temp",
+  "title": "Ammonia - Dynamic and Kinematic Viscosity vs. Temperature",
+  "description": "Calculator for dynamic and kinematic viscosity of ammonia gas at given temperatures and atmospheric pressure. Temperature range: -33 to 427 °C (-28 to 800 °F, 240 to 700 K, 432 to 1260 °R). Outputs available in multiple units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "viscosity_type",
+          "label": "Viscosity Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Dynamic (Absolute)",
+              "value": "dynamic"
+            },
+            {
+              "label": "Kinematic",
+              "value": "kinematic"
+            }
+          ],
+          "defaultValue": "dynamic"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "viscosity_pas",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "format": "decimal",
+          "formula": "0.00001028 * inputs.temperature_celsius + 0.0000089"
+        },
+        {
+          "id": "viscosity_cp",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "format": "decimal",
+          "formula": "(0.00001028 * inputs.temperature_celsius + 0.0000089) * 1000"
+        },
+        {
+          "id": "viscosity_cst",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt",
+          "format": "decimal",
+          "formula": "0.000156 * inputs.temperature_celsius + 0.0015"
+        },
+        {
+          "id": "viscosity_m2s",
+          "label": "Kinematic Viscosity",
+          "unit": "m²/s",
+          "format": "scientific",
+          "formula": "(0.000156 * inputs.temperature_celsius + 0.0015) * 1e-6"
+        },
+        {
+          "id": "viscosity_ft2s",
+          "label": "Kinematic Viscosity",
+          "unit": "ft²/s",
+          "format": "scientific",
+          "formula": "(0.000156 * inputs.temperature_celsius + 0.0015) * 1.07639e-5"
+        }
+      ]
+    }
+  ]
+}

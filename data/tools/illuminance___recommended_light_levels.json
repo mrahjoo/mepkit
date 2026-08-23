@@ -1,0 +1,197 @@
+{
+  "id": "illuminance___recommended_light_levels",
+  "title": "Illuminance - Recommended Light Levels",
+  "description": "Light Level or Illuminance is the total luminous flux incident on a surface per unit area. This tool provides recommended light levels for various indoor work spaces and outdoor conditions, along with calculation capabilities.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Illuminance - Recommended Light Levels\n\nLight Level or Illuminance is the total luminous flux incident on a surface per unit area (E = Φ / A, where E is illuminance in lux, Φ is luminous flux in lumens, and A is area in m²).\n\n### Measuring Units\n- **Lux (lx)**: 1 lumen per square meter (metric SI system)\n- **Foot candle (ftcd)**: 1 lumen per square foot (Imperial system)\n- **Conversion**: 1 lux = 0.0929 foot candle; 1 foot candle = 10.752 lux"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Activity",
+        "Illuminance (lx)"
+      ],
+      "rows": [
+        [
+          "Public areas with dark surroundings",
+          "20 - 50"
+        ],
+        [
+          "Simple orientation for short visits",
+          "50 - 100"
+        ],
+        [
+          "Areas with traffic and corridors (stairways, escalators, lifts, storage)",
+          "100"
+        ],
+        [
+          "Working areas where visual tasks are only occasionally performed",
+          "100 - 150"
+        ],
+        [
+          "Warehouses, homes, theaters, archives, loading bays",
+          "150"
+        ],
+        [
+          "Coffee break room, technical facilities, waiting rooms",
+          "200"
+        ],
+        [
+          "Easy office work",
+          "250"
+        ],
+        [
+          "Class rooms",
+          "300"
+        ],
+        [
+          "Normal office work, PC work, study library, groceries, kitchens, auditoriums",
+          "500"
+        ],
+        [
+          "Supermarkets, mechanical workshops, office landscapes",
+          "750"
+        ],
+        [
+          "Normal drawing work, detailed mechanical workshops, operation theaters",
+          "1000"
+        ],
+        [
+          "Detailed drawing work, very detailed mechanical works, electronic workshops",
+          "1500 - 2000"
+        ],
+        [
+          "Performance of visual tasks of low contrast and very small size",
+          "2000 - 5000"
+        ],
+        [
+          "Performance of very prolonged and exacting visual tasks",
+          "5000 - 10000"
+        ],
+        [
+          "Performance of very special visual tasks of extremely low contrast",
+          "10000 - 20000"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "num_lamps",
+          "label": "Number of Lamps",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "pcs"
+        },
+        {
+          "id": "lumens_per_lamp",
+          "label": "Lumens per Lamp",
+          "type": "number",
+          "defaultValue": 10600,
+          "unit": "lm"
+        },
+        {
+          "id": "area",
+          "label": "Area",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "m²"
+        },
+        {
+          "id": "utilization_coefficient",
+          "label": "Coefficient of Utilization (Cu)",
+          "type": "number",
+          "defaultValue": 0.6,
+          "unit": ""
+        },
+        {
+          "id": "light_loss_factor",
+          "label": "Light Loss Factor (LLF)",
+          "type": "number",
+          "defaultValue": 0.8,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_lumens",
+          "label": "Total Lumens",
+          "formula": "inputs.num_lamps * inputs.lumens_per_lamp",
+          "unit": "lm",
+          "format": "decimal"
+        },
+        {
+          "id": "illuminance",
+          "label": "Illuminance (Lux)",
+          "formula": "(inputs.num_lamps * inputs.lumens_per_lamp * inputs.utilization_coefficient * inputs.light_loss_factor) / inputs.area",
+          "unit": "lx",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Condition",
+        "Illuminance (ftcd)",
+        "Illuminance (lux)"
+      ],
+      "rows": [
+        [
+          "Sunlight",
+          "10000",
+          "107527"
+        ],
+        [
+          "Full Daylight",
+          "1000",
+          "10752"
+        ],
+        [
+          "Overcast Day",
+          "100",
+          "1075"
+        ],
+        [
+          "Very Dark Day",
+          "10",
+          "107"
+        ],
+        [
+          "Twilight",
+          "1",
+          "10.8"
+        ],
+        [
+          "Deep Twilight",
+          "0.1",
+          "1.08"
+        ],
+        [
+          "Full Moon",
+          "0.01",
+          "0.108"
+        ],
+        [
+          "Quarter Moon",
+          "0.001",
+          "0.0108"
+        ],
+        [
+          "Starlight",
+          "0.0001",
+          "0.0011"
+        ],
+        [
+          "Overcast Night",
+          "0.00001",
+          "0.0001"
+        ]
+      ]
+    }
+  ]
+}

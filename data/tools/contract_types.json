@@ -1,0 +1,64 @@
+{
+  "id": "contract_types",
+  "title": "Contract Types",
+  "description": "Common types of contracts used in the engineering and construction industry including Lump Sum, Unit Price, Cost Plus, Incentive, and Percentage of Construction Fee contracts.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Contract Types\n\nCommon types of contracts used in the engineering and construction industry:\n\n## Main Contract Types\n\n1. **Lump Sum Contract** - Fixed price for a described and specified project. Also called \"Fixed Fee Contract\". Suitable when scope and schedule are well-defined.\n\n2. **Unit Price Contract** - Based on estimated quantities and unit prices. Final price depends on actual quantities needed. Common for construction and supplier projects.\n\n3. **Cost Plus Contract** - Purchaser pays all labor and material costs plus contractor overhead and profit (usually as a percentage).\n   - Cost + Fixed Percentage Contract\n   - Cost + Fixed Fee Contract\n   - Cost + Fixed Fee with Guaranteed Maximum Price Contract\n   - Cost + Fixed Fee with Bonus Contract\n   - Cost + Fixed Fee with Guaranteed Maximum Price and Bonus Contract\n   - Cost + Fixed Fee with Agreement for Sharing Any Cost Savings Contract\n\n4. **Incentive Contracts** - Compensation based on engineering/contracting performance against agreed targets (budget, schedule, quality).\n   - Fixed Price Incentive Contracts\n   - Cost Reimbursement Incentive Contracts\n\n5. **Percentage of Construction Fee Contracts** - Common for engineering contracts. Compensation based on percentage of construction costs.\n\n## When to Use Each Type\n\n- **Lump Sum**: When scope and schedule are sufficiently defined\n- **Unit Price**: For construction where items are known but quantities vary\n- **Cost Plus**: When scope is indeterminate or highly uncertain\n- **Incentive**: When performance targets are critical\n- **Percentage of Fee**: Standard for engineering contracts\n"
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Contract Types Overview",
+          "subtext": "Engineering and Construction Industry"
+        },
+        "tooltip": {
+          "trigger": "item"
+        },
+        "legend": {
+          "orient": "vertical",
+          "left": "left"
+        },
+        "series": [
+          {
+            "name": "Contract Types",
+            "type": "pie",
+            "radius": "50%",
+            "data": [
+              {
+                "value": 20,
+                "name": "Lump Sum Contract"
+              },
+              {
+                "value": 15,
+                "name": "Unit Price Contract"
+              },
+              {
+                "value": 35,
+                "name": "Cost Plus Contract"
+              },
+              {
+                "value": 20,
+                "name": "Incentive Contracts"
+              },
+              {
+                "value": 10,
+                "name": "Percentage of Fee"
+              }
+            ],
+            "emphasis": {
+              "itemStyle": {
+                "shadowBlur": 10,
+                "shadowOffsetX": 0,
+                "shadowColor": "rgba(0, 0, 0, 0.5)"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

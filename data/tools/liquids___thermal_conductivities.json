@@ -1,0 +1,269 @@
+{
+  "id": "liquids___thermal_conductivities",
+  "title": "Liquids - Thermal Conductivities",
+  "description": "Some fluids and their thermal conductivities at temperature 300 K (26.8 °C, 80.3 °F)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid",
+        "Thermal Conductivity (W/m K)"
+      ],
+      "rows": [
+        [
+          "Acetic acid",
+          0.193
+        ],
+        [
+          "Acetone",
+          0.18
+        ],
+        [
+          "Alcohol, ethyl (ethanol)",
+          0.171
+        ],
+        [
+          "Alcohol, methyl (methanol)",
+          0.204
+        ],
+        [
+          "Alcohol, propyl",
+          0.161
+        ],
+        [
+          "Ammonia, saturated",
+          0.507
+        ],
+        [
+          "Aniline",
+          0.172
+        ],
+        [
+          "Antifreeze-water mixture 38%",
+          0.45
+        ],
+        [
+          "Benzene",
+          0.167
+        ],
+        [
+          "Benzine",
+          0.16
+        ],
+        [
+          "Carbon Disulfide",
+          0.161
+        ],
+        [
+          "Carbon Tetrachloride",
+          0.104
+        ],
+        [
+          "Castor Oil",
+          0.18
+        ],
+        [
+          "Chloroform",
+          0.129
+        ],
+        [
+          "Decane",
+          0.147
+        ],
+        [
+          "Dichlorodifluoromethane refrigerant R-12",
+          0.071
+        ],
+        [
+          "Diesel oil",
+          0.13
+        ],
+        [
+          "Dodecane",
+          0.14
+        ],
+        [
+          "Engine Oil, unused",
+          0.145
+        ],
+        [
+          "Ethanol",
+          0.17
+        ],
+        [
+          "Ether",
+          0.13
+        ],
+        [
+          "Ethyl acetate",
+          0.137
+        ],
+        [
+          "Ethyl chloride",
+          0.11
+        ],
+        [
+          "Ethyl ether",
+          0.13
+        ],
+        [
+          "Ethylene glycol",
+          0.258
+        ],
+        [
+          "Fuel oil",
+          0.14
+        ],
+        [
+          "Gasoline, petrol",
+          0.13
+        ],
+        [
+          "Glycerine",
+          0.285
+        ],
+        [
+          "Heating oil",
+          0.12
+        ],
+        [
+          "Hexane",
+          0.124
+        ],
+        [
+          "Hydrochloric acid 10%",
+          0.5
+        ],
+        [
+          "Hydrofluoric acid",
+          2.33
+        ],
+        [
+          "Isobutyl alcohol",
+          0.134
+        ],
+        [
+          "Kerosene (paraffin)",
+          0.145
+        ],
+        [
+          "Linseed oil",
+          0.15
+        ],
+        [
+          "Lubricating Machine oil",
+          0.126
+        ],
+        [
+          "Medicinal paraffin",
+          0.127
+        ],
+        [
+          "Mercury",
+          8.4
+        ],
+        [
+          "Methane (93.2 K)",
+          0.2153
+        ],
+        [
+          "Methanol",
+          0.2
+        ],
+        [
+          "n-Butyl alcohol",
+          0.167
+        ],
+        [
+          "n-Heptane",
+          0.14
+        ],
+        [
+          "n-Octane",
+          0.147
+        ],
+        [
+          "n-Pentane",
+          0.136
+        ],
+        [
+          "n-Propyl alcohol",
+          0.168
+        ],
+        [
+          "Nitric acid",
+          0.26
+        ],
+        [
+          "Nitrogen (69.1 K)",
+          0.1511
+        ],
+        [
+          "Oil, cylinder",
+          0.152
+        ],
+        [
+          "Oil, transformer",
+          0.136
+        ],
+        [
+          "Petroleum",
+          0.159
+        ],
+        [
+          "Petroleum ether",
+          0.14
+        ],
+        [
+          "Phenol",
+          0.19
+        ],
+        [
+          "Propylene glycol",
+          0.147
+        ],
+        [
+          "Salt solution 20%",
+          0.58
+        ],
+        [
+          "Sulfuric acid concentrated",
+          0.5
+        ],
+        [
+          "Tar",
+          0.19
+        ],
+        [
+          "Toluene",
+          0.151
+        ],
+        [
+          "Transformer oil",
+          0.13
+        ],
+        [
+          "Trichlor ethylene",
+          0.16
+        ],
+        [
+          "Trichlorofluoromethane refrigerant R-11",
+          0.093
+        ],
+        [
+          "Turpentine oil",
+          0.128
+        ],
+        [
+          "Water, Fresh",
+          0.609
+        ],
+        [
+          "Xenon (173 K)",
+          0.07
+        ]
+      ]
+    }
+  ]
+}

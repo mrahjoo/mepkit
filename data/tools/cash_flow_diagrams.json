@@ -1,0 +1,171 @@
+{
+  "id": "cash_flow_diagrams",
+  "title": "Cash Flow Diagrams",
+  "description": "Calculate the future value of money using cash flow diagrams for loan and investment transactions with discount rates and present value analysis.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Cash Flow Diagrams\n\nThe future value of money.\n\n### Cash Flow Diagram - Loan Transaction\n\nA loan transaction starts with a positive cash flow when the loan is received - and continuous with negative cash flows for the pay offs.\n\n*   **Upward arrows** - positive cash flow (receiving the loan)\n*   **Downward arrows** - negative cash flow (pay off)\n\nThe **Present Value** of the cash flows can be calculated by multiplying each cash flow with a **Discount Rate**.\n\n### Cash Flow Diagram - Investment Transaction\n\nAn investment transaction starts with a negative cash flow when the investment is done - and continuous with positive cash flows when receiving the pay backs.\n\n*   **Upward arrows** - positive cash flows (pay back)\n*   **Downward arrows** - negative cash flow (investing)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Loan Transaction Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "loan_amount",
+          "label": "Loan Amount",
+          "type": "number",
+          "defaultValue": 10000,
+          "unit": "$"
+        },
+        {
+          "id": "discount_rate",
+          "label": "Discount Rate",
+          "type": "number",
+          "defaultValue": 0.05,
+          "unit": "%"
+        },
+        {
+          "id": "periods",
+          "label": "Number of Periods",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "years"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "present_value",
+          "label": "Present Value",
+          "formula": "inputs.loan_amount / Math.pow((1 + inputs.discount_rate), inputs.periods)",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "future_value",
+          "label": "Future Value",
+          "formula": "inputs.loan_amount * Math.pow((1 + inputs.discount_rate), inputs.periods)",
+          "unit": "$",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Investment Transaction Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "investment_amount",
+          "label": "Investment Amount",
+          "type": "number",
+          "defaultValue": 5000,
+          "unit": "$"
+        },
+        {
+          "id": "annual_return",
+          "label": "Annual Return Rate",
+          "type": "number",
+          "defaultValue": 0.08,
+          "unit": "%"
+        },
+        {
+          "id": "investment_periods",
+          "label": "Number of Periods",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "years"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "investment_present_value",
+          "label": "Present Value of Investment",
+          "formula": "inputs.investment_amount",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "investment_future_value",
+          "label": "Future Value of Investment",
+          "formula": "inputs.investment_amount * Math.pow((1 + inputs.annual_return), inputs.investment_periods)",
+          "unit": "$",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Cash Flow Timeline Visualization"
+      ],
+      "options": {
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "legend": {
+          "data": [
+            "Loan Transaction",
+            "Investment Transaction"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Year 0",
+            "Year 1",
+            "Year 2",
+            "Year 3",
+            "Year 4",
+            "Year 5"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "axisLabel": {
+            "formatter": "{value}$"
+          }
+        },
+        "series": [
+          {
+            "name": "Loan Transaction",
+            "type": "bar",
+            "data": [
+              10000,
+              -2000,
+              -2000,
+              -2000,
+              -2000,
+              -2000
+            ],
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          },
+          {
+            "name": "Investment Transaction",
+            "type": "bar",
+            "data": [
+              -5000,
+              400,
+              432,
+              467,
+              504,
+              544
+            ],
+            "itemStyle": {
+              "color": "#91cc75"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

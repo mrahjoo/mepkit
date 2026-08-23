@@ -1,0 +1,73 @@
+{
+  "id": "binary_to_decimal__hexadecimal_and_ascii_converter",
+  "title": "Binary to Decimal, Hexadecimal and ASCII Converter",
+  "description": "A comprehensive converter tool that transforms between binary, decimal, hexadecimal, and ASCII representations. Convert binary numbers (1-8 bits), decimal numbers, and hexadecimal numbers with real-time conversion to all formats and their ASCII character equivalents.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Conversion Type",
+        "Input Value",
+        "Binary",
+        "Decimal",
+        "Hexadecimal",
+        "ASCII"
+      ],
+      "rows": [
+        [
+          "Binary Input",
+          "10100100",
+          "10100100",
+          "164",
+          "A4",
+          "¤"
+        ],
+        [
+          "Decimal Input",
+          "164",
+          "10100100",
+          "164",
+          "A4",
+          "¤"
+        ],
+        [
+          "Hexadecimal Input",
+          "A4",
+          "10100100",
+          "164",
+          "A4",
+          "¤"
+        ],
+        [
+          "Binary Input",
+          "01000001",
+          "01000001",
+          "65",
+          "41",
+          "A"
+        ],
+        [
+          "Decimal Input",
+          "65",
+          "01000001",
+          "65",
+          "41",
+          "A"
+        ],
+        [
+          "Hexadecimal Input",
+          "41",
+          "01000001",
+          "65",
+          "41",
+          "A"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Reference Guide\n\n### Binary to Decimal\nBinary is a base-2 numeral system using only digits 0 and 1. Each bit position represents a power of 2.\n\n**Example: 10100100**\n- = 1×2⁷ + 0×2⁶ + 1×2⁵ + 0×2⁴ + 0×2³ + 1×2² + 0×2¹ + 0×2⁰\n- = 128 + 0 + 32 + 0 + 0 + 4 + 0 + 0\n- = 164\n\n### Decimal to Binary\nDecimal is a base-10 numeral system. Divide repeatedly by 2 and read remainders from bottom to top.\n\n### Hexadecimal Conversions\nHexadecimal (base-16) uses digits 0-9 and letters A-F (representing 10-15).\n\n**Example: A4 (hex)**\n- = A×16¹ + 4×16⁰\n- = 10×16 + 4×1\n- = 160 + 4\n- = 164\n\n### ASCII Representation\n8-bit binary values can represent ASCII characters. For example:\n- Binary 01000001 = Decimal 65 = ASCII 'A'\n- Binary 10100100 = Decimal 164 = Extended ASCII '¤'"
+    }
+  ]
+}

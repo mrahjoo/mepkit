@@ -1,0 +1,61 @@
+{
+  "id": "electrical_motors___horsepower_vs__voltage_and_amp",
+  "title": "Electrical Motors - Horsepower vs. Voltage and Amps",
+  "description": "Electrical motors horsepower rating vs. their ampere rating. Calculate ampere ratings based on power rating (hp), voltage (VAC), and efficiency (%).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "power_rating",
+          "label": "Power Rating",
+          "type": "number",
+          "unit": "hp",
+          "defaultValue": 1
+        },
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "select",
+          "defaultValue": "115",
+          "options": [
+            {
+              "label": "115 VAC",
+              "value": "115"
+            },
+            {
+              "label": "230 VAC",
+              "value": "230"
+            }
+          ]
+        },
+        {
+          "id": "efficiency",
+          "label": "Efficiency",
+          "type": "select",
+          "defaultValue": "70",
+          "options": [
+            {
+              "label": "50%",
+              "value": "50"
+            },
+            {
+              "label": "70%",
+              "value": "70"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ampere_rating",
+          "label": "Ampere Rating",
+          "unit": "amps",
+          "formula": "(inputs.power_rating * 745.7) / (inputs.voltage * inputs.efficiency / 100)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

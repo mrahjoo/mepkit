@@ -1,0 +1,71 @@
+{
+  "id": "oil_fuels___viscosities_vs__temperatures",
+  "title": "Oil Fuels - Viscosities vs. Temperatures",
+  "description": "Viscosities of fuel oils vs. temperature. Saybolt Universal Seconds (SSU) - kinematic viscosity versus temperature for typical fuel oils.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Viscosity (cSt)",
+        "Viscosity (SSU)"
+      ],
+      "rows": [
+        [
+          32,
+          90,
+          900,
+          4095
+        ],
+        [
+          40,
+          104,
+          600,
+          2730
+        ],
+        [
+          50,
+          122,
+          300,
+          1365
+        ],
+        [
+          60,
+          140,
+          150,
+          683
+        ],
+        [
+          70,
+          158,
+          90,
+          410
+        ],
+        [
+          80,
+          176,
+          60,
+          273
+        ],
+        [
+          90,
+          194,
+          45,
+          205
+        ],
+        [
+          100,
+          212,
+          35,
+          160
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Information\n\n- **Temperature Conversion**: TF = TC × 9/5 + 32\n- **Viscosity Conversion**: SSU (Saybolt Universal Seconds) ≈ centiStokes (cSt) × 4.55\n  - *Note: This equation is approximate and valid only for a specific range of viscosities. For more accurate conversions, refer to ASTM D2161.*\n- **Pumping Limit**: 4 - 5000 SSU is the maximum practical limit for pumping\n- **Atomization Range**: 150 - 300 SSU for fuel oil no. 5 and 6\n\n## References\n- [Kinematic Viscosity vs. Dynamic Viscosity](dynamic-absolute-kinematic-viscosity-d_412.html)\n- [Viscosity Converter Chart](viscosity-converter-d_413.html)\n- ASTM D2161: Standard Practice for Conversion of Kinematic Viscosity to Saybolt Universal Viscosity"
+    }
+  ]
+}

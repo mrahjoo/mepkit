@@ -1,0 +1,236 @@
+{
+  "id": "moist_air___weight_of_water_vapor",
+  "title": "Moist Air - Weight of Water Vapor",
+  "description": "Weight of water vapor in air. Grains of moisture per pound of dry air at standard atmospheric pressure at relative humidity ranging 10-90%.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Relative Humidity 10%",
+        "Relative Humidity 20%",
+        "Relative Humidity 30%",
+        "Relative Humidity 40%",
+        "Relative Humidity 50%",
+        "Relative Humidity 60%",
+        "Relative Humidity 70%",
+        "Relative Humidity 80%",
+        "Relative Humidity 90%"
+      ],
+      "rows": [
+        [
+          -1,
+          3,
+          5,
+          7,
+          9,
+          12,
+          14,
+          17,
+          19,
+          21
+        ],
+        [
+          4,
+          4,
+          7,
+          11,
+          14,
+          18,
+          22,
+          26,
+          29,
+          33
+        ],
+        [
+          10,
+          6,
+          10,
+          14,
+          20,
+          26,
+          32,
+          38,
+          42,
+          48
+        ],
+        [
+          16,
+          8,
+          16,
+          22,
+          30,
+          39,
+          48,
+          54,
+          62,
+          70
+        ],
+        [
+          21,
+          11,
+          21,
+          34,
+          44,
+          55,
+          66,
+          78,
+          88,
+          100
+        ],
+        [
+          27,
+          16,
+          30,
+          46,
+          62,
+          78,
+          92,
+          108,
+          125,
+          140
+        ],
+        [
+          32,
+          21,
+          42,
+          65,
+          85,
+          108,
+          128,
+          152,
+          173,
+          190
+        ],
+        [
+          38,
+          29,
+          58,
+          87,
+          116,
+          147,
+          176,
+          208,
+          null,
+          null
+        ]
+      ],
+      "content": "Water Vapor Content (grains per pound dry air)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Relative Humidity 10%",
+        "Relative Humidity 20%",
+        "Relative Humidity 30%",
+        "Relative Humidity 40%",
+        "Relative Humidity 50%",
+        "Relative Humidity 60%",
+        "Relative Humidity 70%",
+        "Relative Humidity 80%",
+        "Relative Humidity 90%"
+      ],
+      "rows": [
+        [
+          -1,
+          0.0004,
+          0.0007,
+          0.001,
+          0.0013,
+          0.0017,
+          0.002,
+          0.0024,
+          0.0027,
+          0.003
+        ],
+        [
+          4,
+          0.0006,
+          0.001,
+          0.0016,
+          0.002,
+          0.0026,
+          0.0031,
+          0.0037,
+          0.0041,
+          0.0047
+        ],
+        [
+          10,
+          0.0009,
+          0.0014,
+          0.002,
+          0.0029,
+          0.0037,
+          0.0046,
+          0.0054,
+          0.006,
+          0.0069
+        ],
+        [
+          16,
+          0.0011,
+          0.0023,
+          0.0031,
+          0.0043,
+          0.0056,
+          0.0069,
+          0.0077,
+          0.0089,
+          0.01
+        ],
+        [
+          21,
+          0.0016,
+          0.003,
+          0.0049,
+          0.0063,
+          0.0079,
+          0.0094,
+          0.0112,
+          0.0126,
+          0.0143
+        ],
+        [
+          27,
+          0.0023,
+          0.0043,
+          0.0066,
+          0.0089,
+          0.0112,
+          0.0132,
+          0.0154,
+          0.0179,
+          0.02
+        ],
+        [
+          32,
+          0.003,
+          0.006,
+          0.0093,
+          0.0122,
+          0.0154,
+          0.0183,
+          0.0217,
+          0.0247,
+          0.0272
+        ],
+        [
+          38,
+          0.0041,
+          0.0083,
+          0.0124,
+          0.0166,
+          0.021,
+          0.0252,
+          0.0297,
+          null,
+          null
+        ]
+      ],
+      "content": "Water Vapor Content (pounds water vapor per pound dry air)"
+    }
+  ]
+}

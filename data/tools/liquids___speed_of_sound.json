@@ -1,0 +1,346 @@
+{
+  "id": "liquids___speed_of_sound",
+  "title": "Liquids - Speed of Sound",
+  "description": "Speed of sound in common fluids like water, glycerol, kerosene and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Liquids - Speed of Sound\n\nSpeed of sound in common fluids like water, glycerol, kerosene and more.\n\nThe speed of sound in some common liquids are indicated in the table below. Speed of sound in air at standard conditions is 343 m/s.\n\n**Note:** Speed is a scalar quantity. Velocity is vector quantity with direction.\n\n**Conversion:** 1 m/s = 3.6 km/h = 196.85 ft/min = 3.28 ft/s = 2.237 mph"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Liquid",
+        "Speed of Sound (m/s)"
+      ],
+      "rows": [
+        [
+          "Acetic acid (19.6 °C)",
+          1173
+        ],
+        [
+          "Acetone (25 °C)",
+          1170
+        ],
+        [
+          "Alcohol, ethyl (ethanol) (25 °C)",
+          1144
+        ],
+        [
+          "Alcohol, methyl (25 °C)",
+          1103
+        ],
+        [
+          "Alcohol, propyl",
+          1205
+        ],
+        [
+          "Aniline (25 °C)",
+          1640
+        ],
+        [
+          "Argon (-243 °C)",
+          840
+        ],
+        [
+          "Benzene (25 °C)",
+          1298
+        ],
+        [
+          "Bromobenzene (20 °C)",
+          1169
+        ],
+        [
+          "Bismuth (280 °C)",
+          1651
+        ],
+        [
+          "Butane (-0.5 °C)",
+          1038
+        ],
+        [
+          "1-Butanol (20 °C)",
+          1262
+        ],
+        [
+          "Caesium (40 °C)",
+          980
+        ],
+        [
+          "Carbon bisulfide",
+          1160
+        ],
+        [
+          "Carbon disulfide (25 °C)",
+          1242
+        ],
+        [
+          "Carbon tetrachloride (25 °C)",
+          930
+        ],
+        [
+          "Castor oil",
+          1474
+        ],
+        [
+          "Chloroform (25 °C)",
+          984
+        ],
+        [
+          "Chlorobenzene (25 °C)",
+          1270
+        ],
+        [
+          "Cyclohexane (20 °C)",
+          1280
+        ],
+        [
+          "Cyclohexanol (25 °C)",
+          1465
+        ],
+        [
+          "1-Decene (20 °C)",
+          1250
+        ],
+        [
+          "Diethyl-ether (25 °C)",
+          951
+        ],
+        [
+          "Ethane (-88.6 °C)",
+          1316
+        ],
+        [
+          "Ethanol (20 °C)",
+          1159
+        ],
+        [
+          "Ether",
+          985
+        ],
+        [
+          "Ethylene (-103.8 °C)",
+          1307
+        ],
+        [
+          "Ethylene glycol (25 °C)",
+          1660
+        ],
+        [
+          "Fluorbenzene (20 °C)",
+          1183
+        ],
+        [
+          "Glycerine",
+          1920
+        ],
+        [
+          "Glycerol (25 °C)",
+          1920
+        ],
+        [
+          "Helium (-269 °C)",
+          180
+        ],
+        [
+          "Heptane",
+          1138
+        ],
+        [
+          "Hexane",
+          1203
+        ],
+        [
+          "n-Hexanol (25 °C)",
+          1303
+        ],
+        [
+          "Hydrogen (-255 °C)",
+          1246
+        ],
+        [
+          "Indium (160 °C)",
+          2313
+        ],
+        [
+          "Iodobenzene (20 °C)",
+          1114
+        ],
+        [
+          "Kerosene",
+          1324
+        ],
+        [
+          "Lead (340 °C)",
+          1766
+        ],
+        [
+          "Mercury (25 °C)",
+          1450
+        ],
+        [
+          "Methane (-170 °C)",
+          1420
+        ],
+        [
+          "Methanol (20 °C)",
+          1116
+        ],
+        [
+          "Napthalene (100 °C)",
+          1248
+        ],
+        [
+          "Neon (-243 °C)",
+          540
+        ],
+        [
+          "Nitrobenzene (25 °C)",
+          1463
+        ],
+        [
+          "Nitrogen (-195.8 °C)",
+          851
+        ],
+        [
+          "Octane",
+          1171
+        ],
+        [
+          "Oil (castor) (25 °C)",
+          1490
+        ],
+        [
+          "Oil (lubricating) (25 °C)",
+          1461
+        ],
+        [
+          "Oxygen (-202 °C)",
+          1056
+        ],
+        [
+          "Pentane (20 °C)",
+          1036
+        ],
+        [
+          "Petroleum",
+          1330
+        ],
+        [
+          "Potassium (80 °C)",
+          1869
+        ],
+        [
+          "n-Pentanol (25 °C)",
+          1277
+        ],
+        [
+          "Phenol",
+          1274
+        ],
+        [
+          "Propane (-42.1 °C)",
+          1161
+        ],
+        [
+          "n-Propanol (25 °C)",
+          1207
+        ],
+        [
+          "Pyridine (25 °C)",
+          1417
+        ],
+        [
+          "Rubidium (50 °C)",
+          1247
+        ],
+        [
+          "Sodium (110 °C)",
+          2520
+        ],
+        [
+          "Tin (240 °C)",
+          2471
+        ],
+        [
+          "Toluene (25 °C)",
+          1306
+        ],
+        [
+          "Turpentine",
+          1240
+        ],
+        [
+          "Water",
+          1493
+        ],
+        [
+          "Water (0 °C)",
+          1402
+        ],
+        [
+          "Water (20 °C)",
+          1482
+        ],
+        [
+          "Seawater (3.5% salinity)",
+          1533
+        ],
+        [
+          "Seawater (3.5% salinity, 20 °C)",
+          1522
+        ],
+        [
+          "Zinc (450 °C)",
+          2780
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Seawater - Speed of Sound vs. Temperature",
+      "options": {
+        "title": {
+          "text": "Speed of Sound in Seawater vs. Temperature"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25,
+            30
+          ],
+          "name": "Temperature (°C)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Speed of Sound (m/s)"
+        },
+        "series": [
+          {
+            "data": [
+              1449,
+              1471,
+              1490,
+              1507,
+              1522,
+              1534,
+              1546
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Speed of Sound"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

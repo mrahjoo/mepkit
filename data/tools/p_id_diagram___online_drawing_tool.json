@@ -1,0 +1,65 @@
+{
+  "id": "p_id_diagram___online_drawing_tool",
+  "title": "P&ID Diagram - Online Drawing Tool",
+  "description": "Draw P&ID diagrams online in the browser with Google Docs. A free online P&ID diagram drawing template enabled for Google Docs with full collaboration features.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## P&ID Diagram - Online Drawing Tool\n\nDraw P&ID diagrams online in the browser with Google Docs.\n\n### Features:\n- **Free to Use**: No cost to create and customize P&ID diagrams\n- **Online Collaboration**: Share and collaborate with others in real-time\n- **Easy Customization**: Select, copy, paste and customize components\n- **Export & Publish**: Export diagrams and publish them publicly\n- **Integration**: Combine with Google Documents and Spreadsheets for shared functional descriptions and item lists\n- **Browser-Based**: No software installation required\n\n### Getting Started:\n1. Log in to your [Google Account](https://www.google.com/accounts/) (free to create)\n2. Copy the [P&ID Drawing Template](https://docs.google.com/drawings/d/1e57jdajSDZWkeobjvz-st-50_8HyoZ7GwT37S-zSQNU/edit?usp=sharing) to your Google Drive\n3. Select and customize components for your diagram\n4. Share with team members for online collaboration\n5. Export your completed diagram\n\n**Note**: A credit to the Engineering ToolBox on your drawing would be appreciated.\n\n![P&ID diagram template](static/docs/documents/1639/pi_d_diagram_template.png)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "diagram_width",
+          "label": "Diagram Width",
+          "type": "number",
+          "unit": "pixels",
+          "defaultValue": 800
+        },
+        {
+          "id": "diagram_height",
+          "label": "Diagram Height",
+          "type": "number",
+          "unit": "pixels",
+          "defaultValue": 600
+        },
+        {
+          "id": "num_components",
+          "label": "Number of Components",
+          "type": "number",
+          "defaultValue": 5
+        },
+        {
+          "id": "collaboration_users",
+          "label": "Collaboration Users",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "canvas_area",
+          "label": "Canvas Area",
+          "formula": "inputs.diagram_width * inputs.diagram_height",
+          "unit": "sq pixels"
+        },
+        {
+          "id": "cost_per_user",
+          "label": "Cost per User",
+          "formula": "0",
+          "unit": "USD",
+          "format": "currency"
+        },
+        {
+          "id": "total_cost",
+          "label": "Total Cost",
+          "formula": "0 * inputs.collaboration_users",
+          "unit": "USD",
+          "format": "currency"
+        }
+      ]
+    }
+  ]
+}

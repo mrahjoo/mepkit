@@ -1,0 +1,318 @@
+{
+  "id": "adiabatic_flame_temperatures",
+  "title": "Adiabatic Flame Temperatures",
+  "description": "Adiabatic flame temperatures for various fuels (hydrogen, methane, propane, octane and others) with oxygen or air as oxidizers in a constant pressure adiabatic reaction. Temperatures are given in Kelvin.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel",
+        "Adiabatic Flame Temperature with Oxygen (K)",
+        "Adiabatic Flame Temperature with Air (K)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          3817,
+          2228
+        ],
+        [
+          "Acetone",
+          3705,
+          2253
+        ],
+        [
+          "Acetylene - C2H2",
+          3997,
+          2607
+        ],
+        [
+          "Benzene - C6H6",
+          3784,
+          2363
+        ],
+        [
+          "n-Butane - C4H10",
+          3867,
+          2248
+        ],
+        [
+          "iso-Butane - C4H10",
+          3861,
+          2246
+        ],
+        [
+          "Butylene - C4H8",
+          3867,
+          2494
+        ],
+        [
+          "Carbon disulfide",
+          0,
+          2257
+        ],
+        [
+          "Cyanogen",
+          4855,
+          2596
+        ],
+        [
+          "Cyclohexane",
+          3865,
+          2250
+        ],
+        [
+          "Cyclopropane",
+          3904,
+          2370
+        ],
+        [
+          "Decane",
+          3833,
+          2286
+        ],
+        [
+          "Ethane - C2H6",
+          3903,
+          2222
+        ],
+        [
+          "Ethanol",
+          3730,
+          2238
+        ],
+        [
+          "Ethylene - C2H4",
+          3932,
+          2375
+        ],
+        [
+          "Hexane",
+          3855,
+          2238
+        ],
+        [
+          "Hydrogen - H2",
+          3473,
+          2483
+        ],
+        [
+          "Methane - CH4",
+          3953,
+          2236
+        ],
+        [
+          "Methanol",
+          3656,
+          2222
+        ],
+        [
+          "Neopentane - C5H12",
+          3850,
+          2511
+        ],
+        [
+          "n-Hexane - C10H8",
+          3682,
+          2494
+        ],
+        [
+          "Naphthalene - C6H14",
+          3943,
+          2533
+        ],
+        [
+          "Neohexane - C6H14",
+          3838,
+          2508
+        ],
+        [
+          "n-Heptane - C7H16",
+          3851,
+          2469
+        ],
+        [
+          "Oxirane",
+          3796,
+          2177
+        ],
+        [
+          "n-Pentane - C5H12",
+          3848,
+          2505
+        ],
+        [
+          "iso-Pentane - C5H12",
+          3857,
+          2508
+        ],
+        [
+          "n-Pentene - C5H10",
+          3865,
+          2569
+        ],
+        [
+          "Propane - C3H8",
+          2526,
+          2250
+        ],
+        [
+          "Propylene - C3H6",
+          3902,
+          2528
+        ],
+        [
+          "Toluene - C7H8",
+          3786,
+          2344
+        ],
+        [
+          "Triptane - C7H16",
+          3836,
+          2497
+        ],
+        [
+          "p-Xylene - C8H10",
+          3788,
+          2483
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Adiabatic Flame Temperatures Comparison",
+      "options": {
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Acetaldehyde",
+            "Acetone",
+            "Acetylene",
+            "Benzene",
+            "n-Butane",
+            "iso-Butane",
+            "Butylene",
+            "Cyanogen",
+            "Cyclohexane",
+            "Cyclopropane",
+            "Decane",
+            "Ethane",
+            "Ethanol",
+            "Ethylene",
+            "Hexane",
+            "Hydrogen",
+            "Methane",
+            "Methanol",
+            "Neopentane",
+            "n-Hexane",
+            "Naphthalene",
+            "Neohexane",
+            "n-Heptane",
+            "Oxirane",
+            "n-Pentane",
+            "iso-Pentane",
+            "n-Pentene",
+            "Propane",
+            "Propylene",
+            "Toluene",
+            "Triptane",
+            "p-Xylene"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Temperature (K)"
+        },
+        "series": [
+          {
+            "name": "Oxygen as Oxidizer",
+            "data": [
+              3817,
+              3705,
+              3997,
+              3784,
+              3867,
+              3861,
+              3867,
+              4855,
+              3865,
+              3904,
+              3833,
+              3903,
+              3730,
+              3932,
+              3855,
+              3473,
+              3953,
+              3656,
+              3850,
+              3682,
+              3943,
+              3838,
+              3851,
+              3796,
+              3848,
+              3857,
+              3865,
+              2526,
+              3902,
+              3786,
+              3836,
+              3788
+            ],
+            "type": "bar"
+          },
+          {
+            "name": "Air as Oxidizer",
+            "data": [
+              2228,
+              2253,
+              2607,
+              2363,
+              2248,
+              2246,
+              2494,
+              2596,
+              2250,
+              2370,
+              2286,
+              2222,
+              2238,
+              2375,
+              2238,
+              2483,
+              2236,
+              2222,
+              2511,
+              2494,
+              2533,
+              2508,
+              2469,
+              2177,
+              2505,
+              2508,
+              2569,
+              2250,
+              2528,
+              2344,
+              2497,
+              2483
+            ],
+            "type": "bar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## Combustion Conditions\n\n- Reactants enter the combustion process at **25°C (77°F)** and **1 atm** pressure\n- Products leave the process at **1 atm** pressure\n- Combustion is **stoichiometric** without any excess air\n\n## Key Notes\n\n- **Excess air** will reduce the adiabatic flame temperature and is often introduced to avoid flame temperatures exceeding limits set by the materials in the combustion system\n- **Methane** (CH₄) is the major part in Natural gas\n- Fuel classifications:\n  - **Paraffins/Alkanes**: n-Butane, iso-Butane, Ethane, Hexane, n-Pentane, iso-Pentane, Propane, Neopentane, Triptane\n  - **Olefins/Alkenes**: Butylene, Ethylene, n-Pentene, Propylene\n  - **Aromatics**: Benzene, Toluene, p-Xylene, Naphthalene\n  - **Other Hydrocarbons**: Acetylene, Naphthalene"
+    }
+  ]
+}

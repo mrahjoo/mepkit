@@ -1,0 +1,79 @@
+{
+  "id": "chimneys___roof_termination",
+  "title": "Chimneys - Roof Termination",
+  "description": "Chimneys and single wall vents roof termination. Roof terminations for chimneys and single wall vents - no caps.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Chimneys and Single Wall Vents Roof Termination\n\nThis tool provides guidance on roof terminations for chimneys and single wall vents without caps.\n\n![chimney termination roof](static/docs/documents/1672/chimney_termination_roof.png \"chimney termination roof\")\n\n### Overview\nProper roof termination is critical for:\n- Preventing water intrusion\n- Ensuring proper draft and ventilation\n- Meeting building code requirements\n- Extending the life of the chimney system"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "chimney_diameter",
+          "label": "Chimney Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 8
+        },
+        {
+          "id": "roof_pitch",
+          "label": "Roof Pitch",
+          "type": "select",
+          "options": [
+            {
+              "value": 4,
+              "label": "4/12"
+            },
+            {
+              "value": 6,
+              "label": "6/12"
+            },
+            {
+              "value": 8,
+              "label": "8/12"
+            },
+            {
+              "value": 10,
+              "label": "10/12"
+            },
+            {
+              "value": 12,
+              "label": "12/12"
+            }
+          ],
+          "defaultValue": 6
+        },
+        {
+          "id": "clearance_requirement",
+          "label": "Required Clearance from Roof",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 12
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_height_above_roof",
+          "label": "Total Height Above Roof",
+          "formula": "inputs.chimney_diameter / 2 + inputs.clearance_requirement",
+          "unit": "inches"
+        },
+        {
+          "id": "flashing_width",
+          "label": "Flashing Width Required",
+          "formula": "inputs.chimney_diameter + 4",
+          "unit": "inches"
+        },
+        {
+          "id": "flashing_length",
+          "label": "Flashing Length Required",
+          "formula": "(inputs.chimney_diameter + 4) * (inputs.roof_pitch / 12 + 1)",
+          "unit": "inches"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "moist_air___vapor_pressure",
+  "title": "Moist Air - Vapor Pressure",
+  "description": "Vapor pressures vs. dry and wet bulb temperatures in moist air.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Dry Bulb",
+        "Wet Bulb",
+        "Vapor Pressure (kPa)"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          0,
+          0.611
+        ],
+        [
+          5,
+          5,
+          5,
+          0.872
+        ],
+        [
+          10,
+          10,
+          10,
+          1.228
+        ],
+        [
+          15,
+          15,
+          15,
+          1.705
+        ],
+        [
+          20,
+          20,
+          20,
+          2.337
+        ],
+        [
+          25,
+          25,
+          25,
+          3.169
+        ],
+        [
+          30,
+          30,
+          30,
+          4.246
+        ],
+        [
+          35,
+          35,
+          35,
+          5.628
+        ],
+        [
+          40,
+          40,
+          40,
+          7.375
+        ]
+      ]
+    }
+  ]
+}

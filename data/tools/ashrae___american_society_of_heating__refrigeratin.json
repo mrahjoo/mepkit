@@ -1,0 +1,75 @@
+{
+  "id": "ashrae___american_society_of_heating__refrigeratin",
+  "title": "ASHRAE - American Society of Heating, Refrigerating and Air-Conditioning Engineers",
+  "description": "ASHRAE Standards calculator for HVAC & R (heating, ventilation, air-conditioning, and refrigeration) applications. Access to ASHRAE's 175+ standards for testing methods, design requirements, and recommended practices.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## ASHRAE Standards Reference\n\n[ASHRAE](http://www.ashrae.org/) - American Society of Heating, Refrigerating and Air-Conditioning Engineers - is an international organization operated for the exclusive purpose of advancing the arts and sciences of HVAC & R (heating, ventilation, air-conditioning, and refrigeration), the allied arts and sciences, and the related human factors for the benefit of the public.\n\n### Key Information\n\nASHRAE has over 175 standards, some written jointly with ANSI and IES. ASHRAE standards describe:\n\n- Uniform methods of testing\n- Design requirements\n- Standard practices and recommendations\n- Comprehensive handbooks on:\n  - Fundamentals\n  - Applications\n  - Refrigeration\n  - Other related subjects\n\n### Organization Purpose\n\nASHRAE operates exclusively to advance the arts and sciences of HVAC & R and the related human factors for the benefit of the public."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "standard_number",
+          "label": "ASHRAE Standard Number",
+          "type": "select",
+          "options": [
+            {
+              "label": "ASHRAE 55 - Thermal Environmental Conditions",
+              "value": "55"
+            },
+            {
+              "label": "ASHRAE 62 - Ventilation and Acceptable Indoor Air Quality",
+              "value": "62"
+            },
+            {
+              "label": "ASHRAE 90 - Energy Standard for Buildings",
+              "value": "90"
+            },
+            {
+              "label": "ASHRAE 127 - Packaged Refrigeration Equipment",
+              "value": "127"
+            }
+          ]
+        },
+        {
+          "id": "application_type",
+          "label": "Application Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Heating",
+              "value": "heating"
+            },
+            {
+              "label": "Ventilation",
+              "value": "ventilation"
+            },
+            {
+              "label": "Air-Conditioning",
+              "value": "air_conditioning"
+            },
+            {
+              "label": "Refrigeration",
+              "value": "refrigeration"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "standard_selected",
+          "label": "Standard Selected",
+          "formula": "inputs.standard_number"
+        },
+        {
+          "id": "application_selected",
+          "label": "Application Type",
+          "formula": "inputs.application_type"
+        }
+      ]
+    }
+  ]
+}

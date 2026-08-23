@@ -1,0 +1,59 @@
+{
+  "id": "comparing_hydraulic_pumps",
+  "title": "Comparing Hydraulic Pumps",
+  "description": "Comparing different types of hydraulic pumps and their maximum pressures and flow.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Pump",
+        "Maximum Pressure (bar)",
+        "Maximum Flow (l/min)",
+        "Comment"
+      ],
+      "rows": [
+        [
+          "Centrifugal",
+          20,
+          3000,
+          ""
+        ],
+        [
+          "Gear",
+          175,
+          300,
+          "Positive displacement"
+        ],
+        [
+          "Vane",
+          175,
+          500,
+          "Positive and variable displacement"
+        ],
+        [
+          "Axial Piston - port-plate",
+          300,
+          500,
+          "Positive and variable displacement"
+        ],
+        [
+          "Axial Piston - valved",
+          700,
+          650,
+          "Positive and variable displacement"
+        ],
+        [
+          "In-line Piston",
+          1000,
+          100,
+          "Positive and variable displacement"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Unit Conversions\n\n* 1 bar = 1×10⁵ Pa = 14.5 psi\n* 1 l/s = 2.1 cfm = 15.9 gal (US)/min"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "equilibrium",
+  "title": "Equilibrium",
+  "description": "The mechanical, thermal, electrostatic, phase or chemical states of equilibrium.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Equilibrium\n\nA system has reached equilibrium when there is no change in the macroscopic state of the system.\n\n## Types of Equilibrium\n\n### Mechanical Equilibrium\nMechanical systems have reached equilibrium when there is no movement between the systems.\n\n### Thermal Equilibrium\nThermodynamic systems have reached equilibrium when there is no heat transfer between the systems. This state of equilibrium requires the systems to have the same temperature.\n\n### Electrostatic Equilibrium\nElectrostatic systems have reached equilibrium when there is no net charge flow between the systems.\n\n### Phase Equilibrium\nMaterial substance systems have reached equilibrium when there is no net phase transformation, like melting, between the systems.\n\n### Chemical Equilibrium\nChemical systems have reached equilibrium when there is no net chemical reaction between the system."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Equilibrium Type",
+        "Definition",
+        "Key Condition"
+      ],
+      "rows": [
+        [
+          "Mechanical Equilibrium",
+          "No movement between systems",
+          "Static state"
+        ],
+        [
+          "Thermal Equilibrium",
+          "No heat transfer between systems",
+          "Equal temperature"
+        ],
+        [
+          "Electrostatic Equilibrium",
+          "No net charge flow between systems",
+          "Charge balance"
+        ],
+        [
+          "Phase Equilibrium",
+          "No net phase transformation",
+          "Stable phases"
+        ],
+        [
+          "Chemical Equilibrium",
+          "No net chemical reaction",
+          "Constant composition"
+        ]
+      ]
+    }
+  ]
+}

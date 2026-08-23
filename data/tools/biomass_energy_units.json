@@ -1,0 +1,92 @@
+{
+  "id": "biomass_energy_units",
+  "title": "Biomass Energy Units",
+  "description": "Convert between different biomass energy units for biomass, wood, oil, and natural gas",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Biomass Energy Units Converter\n\nConvert between different biomass energy units including bone-dry wood, air-dry wood, wood chips, oil barrels, and natural gas.\n\n## Reference Conversion Factors:\n- **1 metric tonne bone dry wood fuel** = 18 GJ = 5 MWh = 500 litres oil = 500 m³ natural gas\n- **1 tonne air-dry wood fuel** = 3 MWh = 11 GJ\n- **1 cubic metre of wood chip** = 1.0 MWh = 3.6 GJ\n- **1 barrel of oil** = 6.1 GJ = 1.7 MWh = 1.7 m³ wood chip = 0.5 m³ solid bone-dry wood\n- **1 m³ solid bone-dry wood** = 0.68 tonnes"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Biomass Energy Unit Conversions"
+      ],
+      "inputs": [
+        {
+          "id": "bone_dry_wood_tonnes",
+          "label": "Bone Dry Wood",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "metric tonnes"
+        },
+        {
+          "id": "air_dry_wood_tonnes",
+          "label": "Air-Dry Wood",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "tonnes"
+        },
+        {
+          "id": "wood_chip_m3",
+          "label": "Wood Chip",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m³"
+        },
+        {
+          "id": "oil_barrels",
+          "label": "Oil Barrels",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "barrels"
+        },
+        {
+          "id": "oil_litres",
+          "label": "Oil",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "litres"
+        },
+        {
+          "id": "natural_gas_m3",
+          "label": "Natural Gas",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "gj_energy",
+          "label": "Total Energy",
+          "unit": "GJ",
+          "formula": "(inputs.bone_dry_wood_tonnes * 18) + (inputs.air_dry_wood_tonnes * 11) + (inputs.wood_chip_m3 * 3.6) + (inputs.oil_barrels * 6.1) + (inputs.oil_litres / 500 * 18) + (inputs.natural_gas_m3 / 500 * 18)",
+          "format": "decimal"
+        },
+        {
+          "id": "mwh_energy",
+          "label": "Total Energy",
+          "unit": "MWh",
+          "formula": "(inputs.bone_dry_wood_tonnes * 5) + (inputs.air_dry_wood_tonnes * 3) + (inputs.wood_chip_m3 * 1.0) + (inputs.oil_barrels * 1.7) + (inputs.oil_litres / 500 * 5) + (inputs.natural_gas_m3 / 500 * 5)",
+          "format": "decimal"
+        },
+        {
+          "id": "bone_dry_wood_equiv_tonnes",
+          "label": "Bone Dry Wood Equivalent",
+          "unit": "metric tonnes",
+          "formula": "inputs.bone_dry_wood_tonnes + (inputs.air_dry_wood_tonnes / 1) + (inputs.wood_chip_m3 / 1.47) + (inputs.oil_barrels * 0.5 / 1) + (inputs.oil_litres / 500) + (inputs.natural_gas_m3 / 500)",
+          "format": "decimal"
+        },
+        {
+          "id": "wood_chip_equiv_m3",
+          "label": "Wood Chip Equivalent",
+          "unit": "m³",
+          "formula": "(inputs.bone_dry_wood_tonnes * 1.47) + (inputs.air_dry_wood_tonnes * 1.47) + inputs.wood_chip_m3 + (inputs.oil_barrels * 1.7) + (inputs.oil_litres / 500 * 1.0) + (inputs.natural_gas_m3 / 500 * 1.0)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

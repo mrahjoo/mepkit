@@ -1,0 +1,6 @@
+{
+  "id": "beams_fixed_at_both_ends_with_continuous_and_point",
+  "title": "Beams Fixed at Both Ends with Continuous and Point Loads",
+  "description": "Load and deflection formulas for beams fixed at both ends with single point loads, uniform continuous loads, declining distributed loads, and partly uniform loads",
+  "type": "calculator-chart"
+}

@@ -1,0 +1,119 @@
+{
+  "id": "brick_densities",
+  "title": "Brick Densities",
+  "description": "Densities of common types of bricks. Typical values for brick densities are indicated. Values vary with product content and production processes.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Brick Type",
+        "Density (kg/m³)"
+      ],
+      "rows": [
+        [
+          "Blue",
+          2405
+        ],
+        [
+          "Diatomaceous",
+          480
+        ],
+        [
+          "Engineering",
+          2165
+        ],
+        [
+          "Fiber brick",
+          1890
+        ],
+        [
+          "Flettons",
+          1795
+        ],
+        [
+          "London stock",
+          1845
+        ],
+        [
+          "Red facings",
+          1765
+        ],
+        [
+          "Sand cement",
+          2085
+        ],
+        [
+          "Sand lime",
+          1845
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Calculate brick mass based on volume and density",
+      "inputs": [
+        {
+          "id": "brick_type",
+          "label": "Brick Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Blue",
+              "value": 2405
+            },
+            {
+              "label": "Diatomaceous",
+              "value": 480
+            },
+            {
+              "label": "Engineering",
+              "value": 2165
+            },
+            {
+              "label": "Fiber brick",
+              "value": 1890
+            },
+            {
+              "label": "Flettons",
+              "value": 1795
+            },
+            {
+              "label": "London stock",
+              "value": 1845
+            },
+            {
+              "label": "Red facings",
+              "value": 1765
+            },
+            {
+              "label": "Sand cement",
+              "value": 2085
+            },
+            {
+              "label": "Sand lime",
+              "value": 1845
+            }
+          ],
+          "defaultValue": 2405
+        },
+        {
+          "id": "volume",
+          "label": "Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "unit": "kg",
+          "formula": "inputs.brick_type * inputs.volume",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

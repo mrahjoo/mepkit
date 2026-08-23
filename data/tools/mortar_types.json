@@ -1,0 +1,156 @@
+{
+  "id": "mortar_types",
+  "title": "Mortar Types",
+  "description": "ASTM mortar types with minimum required compressive strength and material quantities according to ASTM C 270",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Specification",
+        "Type M",
+        "Type S",
+        "Type N",
+        "Type O"
+      ],
+      "rows": [
+        [
+          "Strength (psi)",
+          "2500",
+          "1800",
+          "750",
+          "350"
+        ],
+        [
+          "Volume Ratio",
+          "1:1/4:3",
+          "1:1/2:4 1/2",
+          "1:1:6",
+          "1:2:9"
+        ],
+        [
+          "Cement (Volume %)",
+          "0.33",
+          "0.22",
+          "0.17",
+          "0.11"
+        ],
+        [
+          "Lime (Volume %)",
+          "0.08",
+          "0.11",
+          "0.17",
+          "0.22"
+        ],
+        [
+          "Sand (Volume %)",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "Cement (Weight %)",
+          "31.3",
+          "20.9",
+          "15.7",
+          "10.4"
+        ],
+        [
+          "Lime (Weight %)",
+          "3.3",
+          "4.4",
+          "6.7",
+          "8.9"
+        ],
+        [
+          "Sand (Weight %)",
+          "80",
+          "80",
+          "80",
+          "80"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mortar_type",
+          "label": "Select Mortar Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Type M - High Strength (2500 psi)",
+              "value": "M"
+            },
+            {
+              "label": "Type S - Medium-High Strength (1800 psi)",
+              "value": "S"
+            },
+            {
+              "label": "Type N - Medium Strength (750 psi)",
+              "value": "N"
+            },
+            {
+              "label": "Type O - Low Strength (350 psi)",
+              "value": "O"
+            }
+          ],
+          "defaultValue": "M"
+        },
+        {
+          "id": "total_volume",
+          "label": "Total Mortar Volume Needed",
+          "type": "number",
+          "unit": "cubic feet",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cement_volume",
+          "label": "Cement (by Volume)",
+          "unit": "cubic feet",
+          "formula": "inputs.total_volume * (inputs.mortar_type === 'M' ? 0.33 : inputs.mortar_type === 'S' ? 0.22 : inputs.mortar_type === 'N' ? 0.17 : 0.11)"
+        },
+        {
+          "id": "lime_volume",
+          "label": "Lime (by Volume)",
+          "unit": "cubic feet",
+          "formula": "inputs.total_volume * (inputs.mortar_type === 'M' ? 0.08 : inputs.mortar_type === 'S' ? 0.11 : inputs.mortar_type === 'N' ? 0.17 : 0.22)"
+        },
+        {
+          "id": "sand_volume",
+          "label": "Sand (by Volume)",
+          "unit": "cubic feet",
+          "formula": "inputs.total_volume * 1"
+        },
+        {
+          "id": "cement_weight",
+          "label": "Cement (by Weight)",
+          "unit": "percent",
+          "formula": "inputs.mortar_type === 'M' ? 31.3 : inputs.mortar_type === 'S' ? 20.9 : inputs.mortar_type === 'N' ? 15.7 : 10.4"
+        },
+        {
+          "id": "lime_weight",
+          "label": "Lime (by Weight)",
+          "unit": "percent",
+          "formula": "inputs.mortar_type === 'M' ? 3.3 : inputs.mortar_type === 'S' ? 4.4 : inputs.mortar_type === 'N' ? 6.7 : 8.9"
+        },
+        {
+          "id": "sand_weight",
+          "label": "Sand (by Weight)",
+          "unit": "percent",
+          "formula": "80"
+        },
+        {
+          "id": "compressive_strength",
+          "label": "Compressive Strength",
+          "unit": "psi",
+          "formula": "inputs.mortar_type === 'M' ? 2500 : inputs.mortar_type === 'S' ? 1800 : inputs.mortar_type === 'N' ? 750 : 350"
+        }
+      ]
+    }
+  ]
+}

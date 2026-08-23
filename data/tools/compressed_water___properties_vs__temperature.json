@@ -1,0 +1,234 @@
+{
+  "id": "compressed_water___properties_vs__temperature",
+  "title": "Compressed Water - Properties vs. Temperature",
+  "description": "Specific volume, enthalpy and entropy of compressed water at various temperatures and pressures",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Compressed Water - Properties vs. Temperature\n\nThis tool provides specific volume (_v_), enthalpy (_h_), and entropy (_s_) of compressed water as functions of temperature and pressure.\n\n## Key Parameters:\n- **Temperature (t)**: 0.01°C to 374.15°C\n- **Pressure (p)**: 1 to 1000 bar\n\n## Output Properties:\n- **Specific Volume (v)**: m³/kg\n- **Enthalpy (h)**: kJ/kg\n- **Entropy (s)**: kJ/kg·K"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature (t)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure (p)",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_volume",
+          "label": "Specific Volume (v)",
+          "unit": "m³/kg",
+          "formula": "0.001 * (1 - 0.0001 * inputs.pressure) + 0.0001 * inputs.temperature",
+          "format": "decimal"
+        },
+        {
+          "id": "enthalpy",
+          "label": "Enthalpy (h)",
+          "unit": "kJ/kg",
+          "formula": "419 * (inputs.temperature / 100) - 2 * (inputs.pressure / 100)",
+          "format": "decimal"
+        },
+        {
+          "id": "entropy",
+          "label": "Entropy (s)",
+          "unit": "kJ/kg·K",
+          "formula": "1.307 * (inputs.temperature / 100) - 0.008 * (inputs.pressure / 100)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Pressure (bar)",
+        "v-vf (m³/kg)",
+        "h-hf (kJ/kg)",
+        "s-sf (kJ/kg·K)"
+      ],
+      "rows": [
+        [
+          0.01,
+          1,
+          -0.0005,
+          10,
+          0
+        ],
+        [
+          100,
+          1,
+          -0.0006,
+          7,
+          -0.008
+        ],
+        [
+          200,
+          1,
+          -0.0009,
+          4,
+          -0.013
+        ],
+        [
+          250,
+          1,
+          -0.0011,
+          0,
+          -0.014
+        ],
+        [
+          300,
+          1,
+          -0.0007,
+          -2,
+          -0.007
+        ],
+        [
+          0.01,
+          221.22,
+          -0.0011,
+          22,
+          0.001
+        ],
+        [
+          100,
+          221.22,
+          -0.0012,
+          17,
+          -0.017
+        ],
+        [
+          200,
+          221.22,
+          -0.002,
+          9,
+          -0.031
+        ],
+        [
+          250,
+          221.22,
+          -0.0029,
+          1,
+          -0.04
+        ],
+        [
+          300,
+          221.22,
+          -0.0051,
+          -12,
+          -0.053
+        ],
+        [
+          350,
+          221.22,
+          -0.0107,
+          -34,
+          -0.071
+        ],
+        [
+          0.01,
+          500,
+          -0.0023,
+          49,
+          0
+        ],
+        [
+          100,
+          500,
+          -0.0024,
+          38,
+          -0.037
+        ],
+        [
+          200,
+          500,
+          -0.0042,
+          23,
+          -0.068
+        ],
+        [
+          250,
+          500,
+          -0.0064,
+          8,
+          -0.091
+        ],
+        [
+          300,
+          500,
+          -0.0117,
+          -21,
+          -0.134
+        ],
+        [
+          350,
+          500,
+          -0.0298,
+          -94,
+          -0.235
+        ],
+        [
+          0.01,
+          1000,
+          -0.0044,
+          96,
+          -0.007
+        ],
+        [
+          100,
+          1000,
+          -0.0044,
+          76,
+          -0.07
+        ],
+        [
+          200,
+          1000,
+          -0.0075,
+          51,
+          -0.124
+        ],
+        [
+          250,
+          1000,
+          -0.0111,
+          28,
+          -0.164
+        ],
+        [
+          300,
+          1000,
+          -0.0191,
+          -17,
+          -0.235
+        ],
+        [
+          350,
+          1000,
+          -0.0427,
+          -119,
+          -0.385
+        ],
+        [
+          374.15,
+          1000,
+          -0.18,
+          -415,
+          -0.853
+        ]
+      ]
+    }
+  ]
+}

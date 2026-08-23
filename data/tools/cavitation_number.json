@@ -1,0 +1,54 @@
+{
+  "id": "cavitation_number",
+  "title": "Cavitation Number Calculator",
+  "description": "Calculate the Cavitation Number (Cavitation Parameter), a dimensionless number useful for analyzing fluid flow dynamics and predicting cavitation occurrence. The Cavitation Number represents the ratio of pressure difference to dynamic pressure.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Cavitation Number\n\nThe Cavitation Number (σ) is a dimensionless parameter used to analyze fluid flow dynamics and predict cavitation occurrence.\n\n**Formula:**\n\nσ = (pr - pv) / (1/2 × ρ × v²)\n\n**Where:**\n- σ = Cavitation number (dimensionless)\n- pr = Reference pressure (Pa)\n- pv = Vapor pressure of the fluid (Pa)\n- ρ = Density of the fluid (kg/m³)\n- v = Velocity of fluid (m/s)\n\n**Note:** Lower Cavitation Numbers indicate higher risk of cavitation occurring in the system."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pr",
+          "label": "Reference Pressure (pr)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        },
+        {
+          "id": "pv",
+          "label": "Vapor Pressure (pv)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 2337
+        },
+        {
+          "id": "rho",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "v",
+          "label": "Fluid Velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sigma",
+          "label": "Cavitation Number (σ)",
+          "formula": "(inputs.pr - inputs.pv) / (0.5 * inputs.rho * inputs.v * inputs.v)",
+          "unit": "dimensionless",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

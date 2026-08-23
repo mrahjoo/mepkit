@@ -1,0 +1,447 @@
+{
+  "id": "minerals_and_other_materials___specific_gravities",
+  "title": "Minerals and other Materials - Specific Gravities",
+  "description": "Specific gravities for minerals and other materials. This tool provides a reference table of specific gravity values for various minerals and materials commonly used in industrial and geological applications.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Minerals and other Materials - Specific Gravities\n\nThis calculator provides specific gravity values for a comprehensive range of minerals and materials. Specific gravity is the ratio of the density of a substance to the density of water, making it a dimensionless quantity useful for material identification and industrial applications."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Mineral",
+        "Formula",
+        "Specific Gravity"
+      ],
+      "rows": [
+        [
+          "Andesite",
+          "",
+          "2.8"
+        ],
+        [
+          "Barite",
+          "",
+          "4.3"
+        ],
+        [
+          "Basalt",
+          "",
+          "2.9"
+        ],
+        [
+          "Bauxite",
+          "",
+          "2.4"
+        ],
+        [
+          "Biotite",
+          "complex",
+          "2.8 - 3.2"
+        ],
+        [
+          "Calcite",
+          "CaCO3",
+          "2.71"
+        ],
+        [
+          "Cement clinker",
+          "",
+          "3.1"
+        ],
+        [
+          "Cement raw material",
+          "",
+          "2.7"
+        ],
+        [
+          "Chrome ore",
+          "",
+          "4.1"
+        ],
+        [
+          "Clay",
+          "",
+          "2.2"
+        ],
+        [
+          "Clay, calcined",
+          "",
+          "2.3"
+        ],
+        [
+          "Coal",
+          "",
+          "1.6"
+        ],
+        [
+          "Coke",
+          "",
+          "1.5"
+        ],
+        [
+          "Copper ore",
+          "",
+          "3.0"
+        ],
+        [
+          "Coral",
+          "",
+          "2.7"
+        ],
+        [
+          "Diorite",
+          "",
+          "2.8"
+        ],
+        [
+          "Dolomite",
+          "CaMg(CO3)2",
+          "2.85"
+        ],
+        [
+          "Emery",
+          "",
+          "3.5"
+        ],
+        [
+          "Feldspar",
+          "",
+          "2.6"
+        ],
+        [
+          "Ferrochrome",
+          "",
+          "6.7"
+        ],
+        [
+          "Ferromanganese",
+          "",
+          "5.9"
+        ],
+        [
+          "Ferrosilicon",
+          "",
+          "4.9"
+        ],
+        [
+          "Flint",
+          "",
+          "2.7"
+        ],
+        [
+          "Fluorspar",
+          "",
+          "3.0"
+        ],
+        [
+          "Gabbro",
+          "",
+          "2.8"
+        ],
+        [
+          "Galena",
+          "",
+          "5.4"
+        ],
+        [
+          "Garnet",
+          "",
+          "3.3"
+        ],
+        [
+          "Glass",
+          "",
+          "2.6"
+        ],
+        [
+          "Gneiss",
+          "",
+          "2.7"
+        ],
+        [
+          "Gold ore",
+          "",
+          "2.9"
+        ],
+        [
+          "Granite",
+          "",
+          "2.7"
+        ],
+        [
+          "Graphite",
+          "",
+          "1.8"
+        ],
+        [
+          "Gravel",
+          "",
+          "2.7"
+        ],
+        [
+          "Gypsum",
+          "CaSO4.2H2O",
+          "2.3"
+        ],
+        [
+          "Gypsum rock",
+          "",
+          "2.7"
+        ],
+        [
+          "Hematite",
+          "Fe2O3",
+          "5.2 - 5.3"
+        ],
+        [
+          "Illite",
+          "complex",
+          "2.6 - 2.86"
+        ],
+        [
+          "Ilmenite",
+          "",
+          "4.3"
+        ],
+        [
+          "Iron ore",
+          "",
+          "4.0"
+        ],
+        [
+          "K Feldspar",
+          "KAlSi3O8",
+          "2.54 - 2.57"
+        ],
+        [
+          "Kaolinite",
+          "Al2Si2O5(OH)4",
+          "2.61 - 2.66"
+        ],
+        [
+          "Kyanite",
+          "",
+          "3.2"
+        ],
+        [
+          "Lead ore",
+          "",
+          "3.4"
+        ],
+        [
+          "Lead-zinc ore",
+          "",
+          "3.4"
+        ],
+        [
+          "Limestone",
+          "",
+          "2.7"
+        ],
+        [
+          "Limestone for cement",
+          "",
+          "2.7"
+        ],
+        [
+          "Magnesite, dead burned",
+          "",
+          "5.2"
+        ],
+        [
+          "Manganese ore",
+          "",
+          "3.7"
+        ],
+        [
+          "Mica",
+          "",
+          "2.9"
+        ],
+        [
+          "Molybdenum",
+          "",
+          "2.7"
+        ],
+        [
+          "Montmorillonite",
+          "complex",
+          "2.74 - 2.78"
+        ],
+        [
+          "Muscovite",
+          "varies",
+          "2.76 - 3.0"
+        ],
+        [
+          "Na Feldspar",
+          "NaAlSi2O8",
+          "2.62 - 2.76"
+        ],
+        [
+          "Nickel ore",
+          "",
+          "3.3"
+        ],
+        [
+          "Oil shale",
+          "",
+          "1.8"
+        ],
+        [
+          "Phosphate fertilizer",
+          "",
+          "2.7"
+        ],
+        [
+          "Phosphate rock",
+          "",
+          "2.7"
+        ],
+        [
+          "Potash ore",
+          "",
+          "2.4"
+        ],
+        [
+          "Potash salt",
+          "",
+          "2.2"
+        ],
+        [
+          "Pumice",
+          "",
+          "2.0"
+        ],
+        [
+          "Pyrite ore",
+          "",
+          "3.5"
+        ],
+        [
+          "Pyrrhotite ore",
+          "",
+          "4.0"
+        ],
+        [
+          "Quartz",
+          "SiO2",
+          "2.65"
+        ],
+        [
+          "Quartz",
+          "",
+          "2.6"
+        ],
+        [
+          "Quartzite",
+          "",
+          "2.7"
+        ],
+        [
+          "Rutile ore",
+          "",
+          "2.8"
+        ],
+        [
+          "Sandstone",
+          "",
+          "2.7"
+        ],
+        [
+          "Serpentine",
+          "Mg3Si2O5(OH)4",
+          "2.5 - 2.6"
+        ],
+        [
+          "Shale",
+          "",
+          "2.6"
+        ],
+        [
+          "Silica",
+          "",
+          "2.7"
+        ],
+        [
+          "Silica sand",
+          "",
+          "2.7"
+        ],
+        [
+          "Silicon carbide",
+          "",
+          "2.7"
+        ],
+        [
+          "Silver ore",
+          "",
+          "2.7"
+        ],
+        [
+          "Sinter",
+          "",
+          "3.0"
+        ],
+        [
+          "Slag",
+          "",
+          "2.9"
+        ],
+        [
+          "Slate",
+          "",
+          "2.5"
+        ],
+        [
+          "Sodium silicate",
+          "",
+          "2.1"
+        ],
+        [
+          "Spodumene ore",
+          "",
+          "2.8"
+        ],
+        [
+          "Syenite",
+          "",
+          "2.7"
+        ],
+        [
+          "Tile",
+          "",
+          "2.6"
+        ],
+        [
+          "Tin ore",
+          "",
+          "3.9"
+        ],
+        [
+          "Titanium ore",
+          "",
+          "4.2"
+        ],
+        [
+          "Trap rock",
+          "",
+          "2.9"
+        ],
+        [
+          "Uranium ore",
+          "",
+          "2.7"
+        ],
+        [
+          "Zinc ore",
+          "",
+          "3.7"
+        ]
+      ]
+    }
+  ]
+}

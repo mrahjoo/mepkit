@@ -1,0 +1,65 @@
+{
+  "id": "p_id___piping_and_instrumentation_diagram",
+  "title": "P&ID - Piping and Instrumentation Diagram",
+  "description": "Schematic illustration of a functional relationship between piping, instrumentation and system components. A P&ID shows all piping including physical sequences of branches, reducers, valves, equipment, instrumentation and control interlocks.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## P&ID - Piping and Instrumentation Diagram\n\nA P&ID (Piping and Instrumentation Diagram) is a schematic illustration of a functional relationship between piping, instrumentation and system components.\n\n### Key Elements to Include:\n\n- Instrumentation and designations\n- Mechanical equipment with names and numbers\n- All valves and their identifications\n- Process piping, sizes and identification\n- Miscellaneous components (vents, drains, special fittings, sampling lines, reducers, increasers and swagers)\n- Permanent start-up and flush lines\n- Flow directions\n- Interconnections references\n- Control inputs and outputs, interlocks\n- Interfaces for class changes\n- Seismic category\n- Quality level\n- Annunciation inputs\n- Computer control system input\n- Vendor and contractor interfaces\n- Identification of components and subsystems delivered by others\n- Intended physical sequence of the equipment\n\n### Should NOT Include:\n\n- Equipment rating or capacities\n- Instrument root valves\n- Control relays\n- Manual switches and indicating lights\n- Primary instrument tubing and valves\n- Pressure temperature and flow data\n- Elbows and similar standard fittings\n- Extensive explanatory notes"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component Type",
+        "Description",
+        "Identification Required",
+        "Purpose in P&ID"
+      ],
+      "rows": [
+        [
+          "Piping",
+          "Process flow lines with sizes",
+          "Yes - with size designation",
+          "Define fluid paths and line sizing"
+        ],
+        [
+          "Valves",
+          "Control, isolation, relief, check valves",
+          "Yes - unique identification",
+          "Control and regulate flow"
+        ],
+        [
+          "Equipment",
+          "Pumps, compressors, reactors, heat exchangers",
+          "Yes - name and number",
+          "Primary process equipment"
+        ],
+        [
+          "Instrumentation",
+          "Sensors, transmitters, indicators, controllers",
+          "Yes - per ISA standards",
+          "Monitor and control parameters"
+        ],
+        [
+          "Fittings",
+          "Reducers, increasers, swagers, tees",
+          "Only special fittings",
+          "Connect piping components"
+        ],
+        [
+          "Interlocks",
+          "Control logic and interconnections",
+          "Yes - with reference",
+          "Safety and operational logic"
+        ],
+        [
+          "Vents & Drains",
+          "Atmospheric or process connections",
+          "Yes - identified",
+          "System maintenance and safety"
+        ]
+      ]
+    }
+  ]
+}

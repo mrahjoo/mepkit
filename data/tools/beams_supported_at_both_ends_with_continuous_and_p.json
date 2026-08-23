@@ -1,0 +1,6 @@
+{
+  "id": "beams_supported_at_both_ends_with_continuous_and_p",
+  "title": "Beams Supported at Both Ends with Continuous and Point Loads",
+  "description": "Calculate stress, deflection, and reaction forces for beams supported at both ends with various loading conditions including uniform continuous loads, point loads, and eccentric loads.",
+  "type": "chart-table"
+}

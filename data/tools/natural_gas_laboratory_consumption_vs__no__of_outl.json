@@ -1,0 +1,69 @@
+{
+  "id": "natural_gas_laboratory_consumption_vs__no__of_outl",
+  "title": "Natural Gas Laboratory Consumption vs. no. of Outlets",
+  "description": "Calculate and analyze natural gas laboratory consumption in relation to the number of outlets. This tool helps engineers and facility managers understand gas consumption patterns and optimize outlet configurations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "gas_consumption_table",
+      "headers": [
+        "Number of Outlets",
+        "Gas Consumption (Cubic Meters)",
+        "Average Consumption per Outlet (Cubic Meters)"
+      ],
+      "rows": [
+        [
+          1,
+          5.2,
+          5.2
+        ],
+        [
+          2,
+          9.8,
+          4.9
+        ],
+        [
+          3,
+          14.1,
+          4.7
+        ],
+        [
+          4,
+          18.5,
+          4.625
+        ],
+        [
+          5,
+          22.6,
+          4.52
+        ],
+        [
+          6,
+          26.8,
+          4.467
+        ],
+        [
+          7,
+          30.9,
+          4.414
+        ],
+        [
+          8,
+          34.8,
+          4.35
+        ],
+        [
+          9,
+          38.6,
+          4.289
+        ],
+        [
+          10,
+          42.3,
+          4.23
+        ]
+      ]
+    }
+  ]
+}

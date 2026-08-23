@@ -1,0 +1,160 @@
+{
+  "id": "api_gravity__definition__calculation__and_converte",
+  "title": "API Gravity: Definition, Calculation, and Converter",
+  "description": "API expresses the gravity or density of liquid petroleum products. Convert between API Gravity and Specific Gravity using standard formulas.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# API Gravity: Definition, Calculation, and Converter\n\nAPI expresses the gravity or density of liquid petroleum products. It is devised jointly by the American Petroleum Institute and NIST.\n\n## Formulas\n\n**API Gravity from Specific Gravity:**\n\n°API = (141.5 / SG) - 131.5\n\n**Specific Gravity from API Gravity:**\n\nSG = 141.5 / (°API + 131.5)\n\nWhere:\n- °API = Degrees API Gravity\n- SG = Specific Gravity (at 60°F)\n\n**Note:** Oil with the least specific gravity has the highest API gravity. Density is temperature-dependent; the standard measuring temperature is 15°C or 60°F."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sg_input",
+          "label": "Specific Gravity (SG)",
+          "type": "number",
+          "defaultValue": 0.85,
+          "unit": "-"
+        },
+        {
+          "id": "api_input",
+          "label": "API Gravity (°API)",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "°API"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "api_from_sg",
+          "label": "API Gravity from SG",
+          "formula": "(141.5 / inputs.sg_input) - 131.5",
+          "unit": "°API",
+          "format": "decimal"
+        },
+        {
+          "id": "sg_from_api",
+          "label": "Specific Gravity from API",
+          "formula": "141.5 / (inputs.api_input + 131.5)",
+          "unit": "-",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Degree API",
+        "Specific Gravity",
+        "Weight (lb/US gal)",
+        "Weight (kg/m³)"
+      ],
+      "rows": [
+        [
+          1,
+          1.068,
+          8.894,
+          1067
+        ],
+        [
+          5,
+          1.037,
+          8.633,
+          1035
+        ],
+        [
+          8,
+          1.014,
+          8.447,
+          1013
+        ],
+        [
+          10,
+          1,
+          8.328,
+          998.9
+        ],
+        [
+          15,
+          0.9659,
+          8.044,
+          964.8
+        ],
+        [
+          20,
+          0.934,
+          7.778,
+          933.1
+        ],
+        [
+          25,
+          0.9042,
+          7.53,
+          903.2
+        ],
+        [
+          30,
+          0.8762,
+          7.297,
+          875.3
+        ],
+        [
+          35,
+          0.8498,
+          7.078,
+          848.9
+        ],
+        [
+          40,
+          0.8251,
+          6.871,
+          824.3
+        ],
+        [
+          45,
+          0.8017,
+          6.677,
+          800.8
+        ],
+        [
+          50,
+          0.7796,
+          6.493,
+          778.8
+        ],
+        [
+          55,
+          0.7587,
+          6.319,
+          757.9
+        ],
+        [
+          60,
+          0.7389,
+          6.154,
+          738.1
+        ],
+        [
+          70,
+          0.7022,
+          5.848,
+          701.5
+        ],
+        [
+          80,
+          0.669,
+          5.572,
+          668.3
+        ],
+        [
+          90,
+          0.6388,
+          5.32,
+          638.1
+        ]
+      ]
+    }
+  ]
+}

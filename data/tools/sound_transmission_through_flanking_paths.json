@@ -1,0 +1,93 @@
+{
+  "id": "sound_transmission_through_flanking_paths",
+  "title": "Sound Transmission through Flanking Paths",
+  "description": "Sound transmitted through duct walls, floors and ceilings. Noise transmitted through duct walls, or through floors and ceilings with lower transmission loss - TL -, may dramatically diminish the effect of silencers and other acoustic enclosures.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Sound Transmission through Flanking Paths\n\nNoise transmitted through duct walls, or through floors and ceilings with lower transmission loss - _TL_ -, may dramatically diminish the effect of silencers and other acoustic enclosures.\n\nThis tool calculates sound transmission through flanking paths considering transmission loss through various materials and configurations."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "source_sound_level",
+          "label": "Source Sound Level",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 80
+        },
+        {
+          "id": "duct_wall_tl",
+          "label": "Duct Wall Transmission Loss",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 20
+        },
+        {
+          "id": "floor_ceiling_tl",
+          "label": "Floor/Ceiling Transmission Loss",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 30
+        },
+        {
+          "id": "area_ratio",
+          "label": "Area Ratio (Flanking/Direct)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "duct_wall_transmission",
+          "label": "Duct Wall Sound Level",
+          "formula": "inputs.source_sound_level - inputs.duct_wall_tl",
+          "unit": "dB",
+          "format": "decimal"
+        },
+        {
+          "id": "floor_ceiling_transmission",
+          "label": "Floor/Ceiling Sound Level",
+          "formula": "inputs.source_sound_level - inputs.floor_ceiling_tl",
+          "unit": "dB",
+          "format": "decimal"
+        },
+        {
+          "id": "combined_flanking_level",
+          "label": "Combined Flanking Path Level",
+          "formula": "inputs.source_sound_level - (inputs.duct_wall_tl + inputs.floor_ceiling_tl) / 2 - 10 * Math.log10(inputs.area_ratio)",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Path Type",
+        "Transmission Loss (dB)",
+        "Sound Level at Receiver (dB)"
+      ],
+      "rows": [
+        [
+          "Duct Wall",
+          "inputs.duct_wall_tl",
+          "inputs.source_sound_level - inputs.duct_wall_tl"
+        ],
+        [
+          "Floor/Ceiling",
+          "inputs.floor_ceiling_tl",
+          "inputs.source_sound_level - inputs.floor_ceiling_tl"
+        ],
+        [
+          "Direct Path",
+          "0",
+          "inputs.source_sound_level"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "recommended_relative_humidity",
+  "title": "Recommended Relative Humidity",
+  "description": "Recommended relative humidity level. Relative humidity above 70% may cause condensation on cold surfaces, while below 25% feels uncomfortable dry. Human comfort requires relative humidity between 25-60% RH.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Condition",
+        "Relative Humidity Range",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Human Comfort",
+          "25% - 60% RH",
+          "Optimal range for human comfort"
+        ],
+        [
+          "Uncomfortable Dry",
+          "Below 25% RH",
+          "Static electricity, paint cracking, wood shrinkage"
+        ],
+        [
+          "Uncomfortable Wet",
+          "Above 60% RH",
+          "Moisture sensation increases"
+        ],
+        [
+          "Condensation Risk",
+          "Above 70% RH",
+          "Mold, corrosion, and moisture deterioration on cold surfaces"
+        ],
+        [
+          "Special Conditions",
+          "Below 70% RH",
+          "Lower thresholds may apply in specific environments"
+        ]
+      ]
+    }
+  ]
+}

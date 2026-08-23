@@ -1,0 +1,217 @@
+{
+  "id": "pumps__fans_and_turbines___horsepower",
+  "title": "Pumps, Fans and Turbines - Horsepower",
+  "description": "Calculator for horsepower calculations related to pumps, fans, and turbines. Includes water horsepower, brake horsepower, and electrical motor input calculations with various unit options.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Horsepower Calculations - Pumps, Fans and Turbines",
+      "headers": [
+        "Parameter",
+        "Formula",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Water Horsepower (mass flow - lbm/min)",
+          "Php = (inputs.mass_flow_min * inputs.head * 32) / 33000",
+          "Power in horsepower based on mass flow rate per minute and head height"
+        ],
+        [
+          "Water Horsepower (mass flow - lbm/s)",
+          "Php = (inputs.mass_flow_sec * inputs.head * 32) / 550",
+          "Power in horsepower based on mass flow rate per second and head height"
+        ],
+        [
+          "Water Horsepower (volume flow - ft³/min)",
+          "Php = (inputs.spec_weight * inputs.vol_flow_cfm * inputs.head) / 33000",
+          "Power in horsepower based on volume flow rate and specific weight"
+        ],
+        [
+          "Water Horsepower (flow in gal/min)",
+          "Pwhp = (inputs.spec_gravity * inputs.vol_flow_gpm * inputs.head) / 3960",
+          "Power in horsepower based on flow rate in gallons per minute"
+        ],
+        [
+          "Brake Horsepower - Pump/Fan",
+          "Pbhp = (inputs.spec_weight * inputs.vol_flow_cfm * inputs.head / 33000) / inputs.efficiency",
+          "Actual horsepower available for work on the fluid in a pump or fan"
+        ],
+        [
+          "Brake Horsepower - Turbine",
+          "Pbhp = inputs.efficiency * (inputs.spec_weight * inputs.vol_flow_cfm * inputs.head / 33000)",
+          "Actual horsepower available from a turbine"
+        ],
+        [
+          "Input Horsepower to Motor",
+          "Php_el = inputs.brake_hp / inputs.motor_efficiency",
+          "Input power required from electrical motor"
+        ],
+        [
+          "Horsepower to Kilowatts",
+          "PkW = inputs.horsepower * 0.746",
+          "Conversion from horsepower to kilowatts"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Water Horsepower Calculator",
+      "inputs": [
+        {
+          "id": "calc_method",
+          "label": "Calculation Method",
+          "type": "select",
+          "options": [
+            {
+              "value": "mass_min",
+              "label": "Mass Flow (lbm/min)"
+            },
+            {
+              "value": "mass_sec",
+              "label": "Mass Flow (lbm/s)"
+            },
+            {
+              "value": "vol_cfm",
+              "label": "Volume Flow (ft³/min)"
+            },
+            {
+              "value": "vol_gpm",
+              "label": "Volume Flow (gpm)"
+            }
+          ],
+          "defaultValue": "vol_gpm"
+        },
+        {
+          "id": "mass_flow_min",
+          "label": "Mass Flow Rate",
+          "type": "number",
+          "unit": "lbm/min",
+          "defaultValue": 50
+        },
+        {
+          "id": "mass_flow_sec",
+          "label": "Mass Flow Rate",
+          "type": "number",
+          "unit": "lbm/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "vol_flow_cfm",
+          "label": "Volume Flow Rate",
+          "type": "number",
+          "unit": "ft³/min",
+          "defaultValue": 10
+        },
+        {
+          "id": "vol_flow_gpm",
+          "label": "Volume Flow Rate",
+          "type": "number",
+          "unit": "gal/min",
+          "defaultValue": 100
+        },
+        {
+          "id": "head",
+          "label": "Head/Height",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 600
+        },
+        {
+          "id": "spec_weight",
+          "label": "Specific Weight",
+          "type": "number",
+          "unit": "lbf/ft³",
+          "defaultValue": 62.4
+        },
+        {
+          "id": "spec_gravity",
+          "label": "Specific Gravity",
+          "type": "number",
+          "unit": "dimensionless",
+          "defaultValue": 1
+        },
+        {
+          "id": "efficiency",
+          "label": "Overall Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 85
+        },
+        {
+          "id": "motor_efficiency",
+          "label": "Motor Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 90
+        },
+        {
+          "id": "brake_hp",
+          "label": "Brake Horsepower",
+          "type": "number",
+          "unit": "hp",
+          "defaultValue": 10
+        },
+        {
+          "id": "horsepower",
+          "label": "Horsepower",
+          "type": "number",
+          "unit": "hp",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_hp_mass_min",
+          "label": "Water Horsepower (mass/min)",
+          "formula": "(inputs.mass_flow_min * inputs.head * 32) / 33000",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "water_hp_mass_sec",
+          "label": "Water Horsepower (mass/sec)",
+          "formula": "(inputs.mass_flow_sec * inputs.head * 32) / 550",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "water_hp_vol_cfm",
+          "label": "Water Horsepower (ft³/min)",
+          "formula": "(inputs.spec_weight * inputs.vol_flow_cfm * inputs.head) / 33000",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "water_hp_gpm",
+          "label": "Water Horsepower (gal/min)",
+          "formula": "(inputs.spec_gravity * inputs.vol_flow_gpm * inputs.head) / 3960",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "brake_hp_pump",
+          "label": "Brake Horsepower (Pump/Fan)",
+          "formula": "(inputs.spec_weight * inputs.vol_flow_cfm * inputs.head / 33000) / (inputs.efficiency / 100)",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "input_hp_motor",
+          "label": "Input Horsepower to Motor",
+          "formula": "inputs.brake_hp / (inputs.motor_efficiency / 100)",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "horsepower_kw",
+          "label": "Power in Kilowatts",
+          "formula": "inputs.horsepower * 0.746",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

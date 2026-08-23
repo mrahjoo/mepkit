@@ -1,0 +1,186 @@
+{
+  "id": "dust_explosions___substances__critical_temperature",
+  "title": "Dust Explosions - Substances, Critical Temperatures and Concentrations",
+  "description": "Critical temperatures and concentration parameters for substances like coal, zinc, uranium and more. Analyze dust explosion hazards based on ignition temperature, minimum explosive concentration, and relative explosion hazard levels.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "dust_substances_table",
+      "headers": [
+        "Substance",
+        "Ignition Temperature (°C)",
+        "Min. Explosive Concentration (oz/ft³)",
+        "Relative Explosion Hazard"
+      ],
+      "rows": [
+        [
+          "Alfalfa",
+          460,
+          "",
+          ""
+        ],
+        [
+          "Aluminum",
+          650,
+          0.045,
+          "Severe"
+        ],
+        [
+          "Al-Mg alloy",
+          "",
+          0.02,
+          "Severe"
+        ],
+        [
+          "Cereal grass",
+          550,
+          "",
+          ""
+        ],
+        [
+          "Chromium",
+          "",
+          0.23,
+          "Strong"
+        ],
+        [
+          "Coal",
+          610,
+          0.055,
+          "Strong"
+        ],
+        [
+          "Copper",
+          900,
+          "",
+          "Fire"
+        ],
+        [
+          "Corn",
+          400,
+          "",
+          ""
+        ],
+        [
+          "Epoxy Resin",
+          530,
+          0.02,
+          "Severe"
+        ],
+        [
+          "Flax shive",
+          430,
+          "",
+          ""
+        ],
+        [
+          "Grain dust (winter wheat, corn, oats)",
+          430,
+          "",
+          ""
+        ],
+        [
+          "Iron",
+          420,
+          0.1,
+          "Strong"
+        ],
+        [
+          "Magnesium",
+          520,
+          0.02,
+          "Severe"
+        ],
+        [
+          "Rice",
+          440,
+          "",
+          ""
+        ],
+        [
+          "Silicon",
+          "",
+          0.11,
+          "Strong"
+        ],
+        [
+          "Soy flour",
+          540,
+          "",
+          ""
+        ],
+        [
+          "Tin",
+          630,
+          0.19,
+          "Moderate"
+        ],
+        [
+          "Titanium",
+          460,
+          0.045,
+          "Severe"
+        ],
+        [
+          "Uranium (finely divided metal dust)",
+          20,
+          0.06,
+          "Severe"
+        ],
+        [
+          "Wheat flour",
+          380,
+          "",
+          ""
+        ],
+        [
+          "Wheat straw",
+          470,
+          "",
+          ""
+        ],
+        [
+          "Zinc",
+          600,
+          0.48,
+          "Moderate"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "dust_explosion_rules",
+      "content": "## Basic Rules for Dust Explosions\n\nBasic rules to observe for dust to be capable of causing a dust explosion:\n\n1. **The dust must be combustible** - The substance must be capable of undergoing combustion\n2. **The dust must be airborne** - The particles must be suspended in air\n3. **The dust must have a size distribution capable of flame propagation** - Particle size affects combustibility\n4. **The dust concentration must be within the explosive concentration range** - Must be between lower and upper explosive limits\n5. **An ignition source with high enough temperature must be present** - Temperature must exceed the ignition temperature\n6. **The atmosphere must contain sufficient oxygen to support and sustain combustion** - Typically requires >8% oxygen\n\n## Key Parameters\n\n- **Ignition Temperature of Dust Cloud (°C)**: The minimum temperature at which a dust cloud will spontaneously ignite\n- **Minimum Explosive Concentration (oz/ft³)**: The lower explosive limit - the minimum dust concentration required for explosion\n- **Relative Explosion Hazard**: Classification of explosion severity (Fire < Moderate < Strong < Severe)"
+    },
+    {
+      "type": "calculator",
+      "id": "concentration_converter",
+      "inputs": [
+        {
+          "id": "concentration_oz_ft3",
+          "label": "Concentration (oz/ft³)",
+          "type": "number",
+          "defaultValue": 0.045,
+          "unit": "oz/ft³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "concentration_g_m3",
+          "label": "Concentration",
+          "formula": "(inputs.concentration_oz_ft3 * 28.35) / 0.02832",
+          "unit": "g/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "concentration_mg_cm3",
+          "label": "Concentration",
+          "formula": "(inputs.concentration_oz_ft3 * 28.35) / 28320",
+          "unit": "mg/cm³",
+          "format": "scientific"
+        }
+      ]
+    }
+  ]
+}

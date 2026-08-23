@@ -1,0 +1,201 @@
+{
+  "id": "spherical_and_cylindrical_coordinates",
+  "title": "Spherical and Cylindrical Coordinates",
+  "description": "3D cylindrical and spherical coordinate systems converter for transforming between Cartesian, spherical, and cylindrical coordinates",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Spherical and Cylindrical Coordinates\n\n3D cylindrical and spherical coordinate systems for converting between Cartesian, spherical, and cylindrical coordinates."
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Spherical Coordinates: Cartesian to Spherical"
+      ],
+      "inputs": [
+        {
+          "id": "cart_x",
+          "label": "X (Cartesian)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "cart_y",
+          "label": "Y (Cartesian)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "cart_z",
+          "label": "Z (Cartesian)",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sph_r",
+          "label": "r (Radial Distance)",
+          "formula": "Math.sqrt(inputs.cart_x**2 + inputs.cart_y**2 + inputs.cart_z**2)",
+          "unit": "units"
+        },
+        {
+          "id": "sph_phi",
+          "label": "Φ (Azimuthal Angle)",
+          "formula": "Math.atan2(inputs.cart_y, inputs.cart_x) * 180 / Math.PI",
+          "unit": "degrees"
+        },
+        {
+          "id": "sph_theta",
+          "label": "θ (Polar Angle)",
+          "formula": "Math.acos(inputs.cart_z / Math.sqrt(inputs.cart_x**2 + inputs.cart_y**2 + inputs.cart_z**2)) * 180 / Math.PI",
+          "unit": "degrees"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Spherical Coordinates: Spherical to Cartesian"
+      ],
+      "inputs": [
+        {
+          "id": "sph_r_in",
+          "label": "r (Radial Distance)",
+          "type": "number",
+          "defaultValue": 1.7321,
+          "unit": "units"
+        },
+        {
+          "id": "sph_phi_in",
+          "label": "Φ (Azimuthal Angle)",
+          "type": "number",
+          "defaultValue": 45,
+          "unit": "degrees"
+        },
+        {
+          "id": "sph_theta_in",
+          "label": "θ (Polar Angle)",
+          "type": "number",
+          "defaultValue": 54.74,
+          "unit": "degrees"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cart_x_out",
+          "label": "X (Cartesian)",
+          "formula": "inputs.sph_r_in * Math.cos(inputs.sph_phi_in * Math.PI / 180) * Math.sin(inputs.sph_theta_in * Math.PI / 180)",
+          "unit": "units"
+        },
+        {
+          "id": "cart_y_out",
+          "label": "Y (Cartesian)",
+          "formula": "inputs.sph_r_in * Math.sin(inputs.sph_phi_in * Math.PI / 180) * Math.sin(inputs.sph_theta_in * Math.PI / 180)",
+          "unit": "units"
+        },
+        {
+          "id": "cart_z_out",
+          "label": "Z (Cartesian)",
+          "formula": "inputs.sph_r_in * Math.cos(inputs.sph_theta_in * Math.PI / 180)",
+          "unit": "units"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Cylindrical Coordinates: Cartesian to Cylindrical"
+      ],
+      "inputs": [
+        {
+          "id": "cyl_cart_x",
+          "label": "X (Cartesian)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "cyl_cart_y",
+          "label": "Y (Cartesian)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "cyl_cart_z",
+          "label": "Z (Cartesian)",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cyl_rho",
+          "label": "ρ (Radial Distance)",
+          "formula": "Math.sqrt(inputs.cyl_cart_x**2 + inputs.cyl_cart_y**2)",
+          "unit": "units"
+        },
+        {
+          "id": "cyl_phi",
+          "label": "Φ (Azimuthal Angle)",
+          "formula": "Math.atan2(inputs.cyl_cart_y, inputs.cyl_cart_x) * 180 / Math.PI",
+          "unit": "degrees"
+        },
+        {
+          "id": "cyl_z",
+          "label": "Z (Height)",
+          "formula": "inputs.cyl_cart_z",
+          "unit": "units"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Cylindrical Coordinates: Cylindrical to Cartesian"
+      ],
+      "inputs": [
+        {
+          "id": "cyl_rho_in",
+          "label": "ρ (Radial Distance)",
+          "type": "number",
+          "defaultValue": 1.4142,
+          "unit": "units"
+        },
+        {
+          "id": "cyl_phi_in",
+          "label": "Φ (Azimuthal Angle)",
+          "type": "number",
+          "defaultValue": 45,
+          "unit": "degrees"
+        },
+        {
+          "id": "cyl_z_in",
+          "label": "Z (Height)",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cyl_x_out",
+          "label": "X (Cartesian)",
+          "formula": "inputs.cyl_rho_in * Math.cos(inputs.cyl_phi_in * Math.PI / 180)",
+          "unit": "units"
+        },
+        {
+          "id": "cyl_y_out",
+          "label": "Y (Cartesian)",
+          "formula": "inputs.cyl_rho_in * Math.sin(inputs.cyl_phi_in * Math.PI / 180)",
+          "unit": "units"
+        },
+        {
+          "id": "cyl_z_out",
+          "label": "Z (Height)",
+          "formula": "inputs.cyl_z_in",
+          "unit": "units"
+        }
+      ]
+    }
+  ]
+}

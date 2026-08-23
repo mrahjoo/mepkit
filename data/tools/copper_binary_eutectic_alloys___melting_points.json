@@ -1,0 +1,91 @@
+{
+  "id": "copper_binary_eutectic_alloys___melting_points",
+  "title": "Copper Binary Eutectic Alloys - Melting Points",
+  "description": "Cu - Copper - binary eutectic alloys and their melting points. The melting point of an alloy depends on the relative proportions of the ingredients. An eutectic mixture is where the melting point is as low as possible.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloy Component",
+        "Weight of Alloy Component (%)",
+        "Melting Point (°C)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Ge - Germanium",
+          37,
+          913,
+          1184
+        ],
+        [
+          "Mg - Magnesium",
+          69.3,
+          758,
+          905
+        ],
+        [
+          "Mn - Manganese",
+          34,
+          1143,
+          1598
+        ],
+        [
+          "Pb - Lead (Plumbum)",
+          36,
+          1230,
+          1755
+        ],
+        [
+          "Pr - Praseodymium",
+          83,
+          745,
+          882
+        ],
+        [
+          "Sb - Antimony (Stibium)",
+          76,
+          800,
+          981
+        ],
+        [
+          "Si - Silicon",
+          16,
+          1075,
+          1476
+        ],
+        [
+          "Te - Tellurium",
+          82,
+          617,
+          1207
+        ],
+        [
+          "Ti - Titanium",
+          22,
+          1133,
+          1580
+        ],
+        [
+          "Tl - Thallium",
+          35.3,
+          1357,
+          1983
+        ],
+        [
+          "U - Uranium",
+          25,
+          1213,
+          1724
+        ],
+        [
+          "Zr - Zirconium",
+          13,
+          1253,
+          1796
+        ]
+      ]
+    }
+  ]
+}

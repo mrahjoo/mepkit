@@ -1,0 +1,58 @@
+{
+  "id": "water_supply___cross_contamination_control",
+  "title": "Water Supply - Cross-Contamination Control",
+  "description": "Calculator to determine the required air gap size for water supply fixtures to prevent cross-contamination based on fixture size and surface type.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Water Supply - Cross-Contamination Control\n\nIt is fundamental to keep the potable water in the water supply systems uncontaminated. A cross-contamination between potentially contaminated water and public water supply systems can occur when the pressure in the supply system is interrupted by a water main break, power failure or some other disruptions in the water service.\n\n## Prevention Methods\n\nCross-contamination can be prevented by:\n- **Vacuum Breakers** in pipe lines or hoses\n- **Air Gaps** between fixtures and potentially contaminated water surfaces\n- **Check Valves** to prevent backflow\n\n## Air Gap Requirements\n\nThe air gap should be larger for larger fixtures and closed surfaces than for smaller fixtures and open surfaces:\n\n- **1/2\" fixture**: Minimum 1\" for open surface, 1.5\" for closed surface\n- **1\" fixture**: Minimum 2\" for open surface, 3\" for closed surface"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fixture_size",
+          "label": "Fixture Size",
+          "type": "select",
+          "options": [
+            {
+              "label": "1/2 inch",
+              "value": 0.5
+            },
+            {
+              "label": "1 inch",
+              "value": 1
+            }
+          ],
+          "defaultValue": 0.5
+        },
+        {
+          "id": "surface_type",
+          "label": "Surface Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Open Surface",
+              "value": "open"
+            },
+            {
+              "label": "Closed Surface",
+              "value": "closed"
+            }
+          ],
+          "defaultValue": "open"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "required_air_gap",
+          "label": "Required Air Gap",
+          "formula": "inputs.fixture_size === 0.5 && inputs.surface_type === 'open' ? 1 : inputs.fixture_size === 0.5 && inputs.surface_type === 'closed' ? 1.5 : inputs.fixture_size === 1 && inputs.surface_type === 'open' ? 2 : 3",
+          "unit": "inches",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

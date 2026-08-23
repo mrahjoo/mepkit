@@ -1,0 +1,160 @@
+{
+  "id": "boolean_algebra",
+  "title": "Boolean Algebra",
+  "description": "Logic functions where the values of variables are true (1) or false (0).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Boolean Algebra\n\nIn boolean algebra the values of variables are true _(1)_ or false _(0)_.\n\n## Logic Gates\n\nSelect an operation and provide inputs to see the result."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "operation",
+          "label": "Operation",
+          "type": "select",
+          "options": [
+            {
+              "value": "buf",
+              "label": "BUF - Buffer (y = a)"
+            },
+            {
+              "value": "and",
+              "label": "AND - Logical AND (y = a & b)"
+            },
+            {
+              "value": "or",
+              "label": "OR - Logical OR (y = a | b)"
+            },
+            {
+              "value": "xor",
+              "label": "XOR - Exclusive OR (y = a ⊻ b)"
+            },
+            {
+              "value": "not",
+              "label": "NOT - Logical NOT (y = ¬a)"
+            },
+            {
+              "value": "nand",
+              "label": "NAND - NOT AND (y = ¬(a & b))"
+            },
+            {
+              "value": "nor",
+              "label": "NOR - NOT OR (y = ¬(a | b))"
+            },
+            {
+              "value": "xnor",
+              "label": "XNOR - Exclusive NOR (y = ¬(a ⊻ b))"
+            }
+          ]
+        },
+        {
+          "id": "a",
+          "label": "Input A",
+          "type": "select",
+          "defaultValue": 0,
+          "options": [
+            {
+              "value": 0,
+              "label": "False (0)"
+            },
+            {
+              "value": 1,
+              "label": "True (1)"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "label": "Input B",
+          "type": "select",
+          "defaultValue": 0,
+          "options": [
+            {
+              "value": 0,
+              "label": "False (0)"
+            },
+            {
+              "value": 1,
+              "label": "True (1)"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Output (y)",
+          "formula": "inputs.operation == 'buf' ? inputs.a : inputs.operation == 'and' ? (inputs.a & inputs.b) : inputs.operation == 'or' ? (inputs.a | inputs.b) : inputs.operation == 'xor' ? (inputs.a ^ inputs.b) : inputs.operation == 'not' ? (1 - inputs.a) : inputs.operation == 'nand' ? (1 - (inputs.a & inputs.b)) : inputs.operation == 'nor' ? (1 - (inputs.a | inputs.b)) : inputs.operation == 'xnor' ? (1 - (inputs.a ^ inputs.b)) : 0"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "a",
+        "b",
+        "BUF(a)",
+        "AND(a,b)",
+        "OR(a,b)",
+        "XOR(a,b)",
+        "NOT(a)",
+        "NAND(a,b)",
+        "NOR(a,b)",
+        "XNOR(a,b)"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ]
+}

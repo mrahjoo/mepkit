@@ -1,0 +1,62 @@
+{
+  "id": "ev___electric_vehicles_range_vs__state_of_charge__",
+  "title": "EV - Electric Vehicles Range vs. State of Charge (SOC) Calculator",
+  "description": "Calculator to estimate the range of an electric vehicle based on battery size, state of charge (SOC), and energy consumption. Can also be used to estimate required state of charge from desired range.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "EV Range Calculator",
+      "inputs": [
+        {
+          "id": "battery_size",
+          "label": "Battery Size",
+          "type": "number",
+          "unit": "kWh",
+          "defaultValue": 64
+        },
+        {
+          "id": "soc",
+          "label": "State of Charge (SOC)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 40
+        },
+        {
+          "id": "optimistic_consumption",
+          "label": "Optimistic Energy Consumption",
+          "type": "number",
+          "unit": "kWh/100km",
+          "defaultValue": 17
+        },
+        {
+          "id": "pessimistic_consumption",
+          "label": "Pessimistic Energy Consumption",
+          "type": "number",
+          "unit": "kWh/100km",
+          "defaultValue": 25.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "available_energy",
+          "label": "Available Energy",
+          "unit": "kWh",
+          "formula": "(inputs.battery_size * inputs.soc) / 100"
+        },
+        {
+          "id": "optimistic_range",
+          "label": "Optimistic Range",
+          "unit": "km",
+          "formula": "(inputs.available_energy / inputs.optimistic_consumption) * 100"
+        },
+        {
+          "id": "pessimistic_range",
+          "label": "Pessimistic Range",
+          "unit": "km",
+          "formula": "(inputs.available_energy / inputs.pessimistic_consumption) * 100"
+        }
+      ]
+    }
+  ]
+}

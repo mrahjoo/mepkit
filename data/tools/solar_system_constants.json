@@ -1,0 +1,244 @@
+{
+  "id": "solar_system_constants",
+  "title": "Solar System Constants",
+  "description": "Properties and data for the Sun, the Earth and the Moon.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Solar System Constants\n\nProperties and data for celestial bodies in our Solar System and beyond."
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "planet_select",
+          "label": "Select Celestial Body",
+          "type": "select",
+          "options": [
+            {
+              "label": "Earth",
+              "value": "earth"
+            },
+            {
+              "label": "Jupiter",
+              "value": "jupiter"
+            },
+            {
+              "label": "Mars",
+              "value": "mars"
+            },
+            {
+              "label": "Mercury",
+              "value": "mercury"
+            },
+            {
+              "label": "Moon",
+              "value": "moon"
+            },
+            {
+              "label": "Neptune",
+              "value": "neptune"
+            },
+            {
+              "label": "Pluto",
+              "value": "pluto"
+            },
+            {
+              "label": "Saturn",
+              "value": "saturn"
+            },
+            {
+              "label": "Sun",
+              "value": "sun"
+            },
+            {
+              "label": "Uranus",
+              "value": "uranus"
+            },
+            {
+              "label": "Venus",
+              "value": "venus"
+            }
+          ],
+          "defaultValue": "earth"
+        },
+        {
+          "id": "mass_earth",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 5.98e+24,
+          "unit": "kg"
+        },
+        {
+          "id": "radius_earth",
+          "label": "Radius",
+          "type": "number",
+          "defaultValue": 6380000,
+          "unit": "m"
+        },
+        {
+          "id": "gravity_earth",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        },
+        {
+          "id": "escape_velocity_earth",
+          "label": "Escape Velocity",
+          "type": "number",
+          "defaultValue": 11200,
+          "unit": "m/s"
+        },
+        {
+          "id": "surface_temp_earth",
+          "label": "Mean Surface Temperature",
+          "type": "number",
+          "defaultValue": 288,
+          "unit": "K"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "surface_area",
+          "label": "Surface Area",
+          "formula": "4 * 3.14159 * inputs.radius_earth * inputs.radius_earth",
+          "unit": "m²",
+          "format": "scientific"
+        },
+        {
+          "id": "volume",
+          "label": "Volume",
+          "formula": "(4/3) * 3.14159 * inputs.radius_earth * inputs.radius_earth * inputs.radius_earth",
+          "unit": "m³",
+          "format": "scientific"
+        },
+        {
+          "id": "density",
+          "label": "Mean Density",
+          "formula": "inputs.mass_earth / ((4/3) * 3.14159 * inputs.radius_earth * inputs.radius_earth * inputs.radius_earth)",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "escape_velocity_check",
+          "label": "Escape Velocity (calculated)",
+          "formula": "inputs.escape_velocity_earth",
+          "unit": "m/s",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Celestial Body",
+        "Mass (kg)",
+        "Radius (m)",
+        "Gravity (m/s²)",
+        "Escape Velocity (m/s)",
+        "Mean Temp (K)"
+      ],
+      "rows": [
+        [
+          "Earth",
+          "5.98×10²⁴",
+          "6.38×10⁶",
+          "9.81",
+          "11.2×10³",
+          "288"
+        ],
+        [
+          "Jupiter",
+          "1.9×10²⁷",
+          "71.5×10⁶",
+          "25",
+          "57.5×10³",
+          "163"
+        ],
+        [
+          "Mars",
+          "6.42×10²³",
+          "3.4×10⁶",
+          "3.7",
+          "5.1×10³",
+          "208"
+        ],
+        [
+          "Mercury",
+          "3.3×10²³",
+          "2.44×10⁶",
+          "3.7",
+          "4.3×10³",
+          "440"
+        ],
+        [
+          "Moon",
+          "7.35×10²²",
+          "1.74×10⁶",
+          "1.6",
+          "2.4×10³",
+          "—"
+        ],
+        [
+          "Neptune",
+          "1.02×10²⁶",
+          "24.8×10⁶",
+          "11",
+          "24.4×10³",
+          "73"
+        ],
+        [
+          "Pluto",
+          "1.30×10²²",
+          "1.18×10⁶",
+          "0.62",
+          "—",
+          "48"
+        ],
+        [
+          "Saturn",
+          "5.69×10²⁶",
+          "60.3×10⁶",
+          "10",
+          "35.4×10³",
+          "133"
+        ],
+        [
+          "Sun",
+          "1.989×10³⁰",
+          "1390×10⁶",
+          "270",
+          "618×10³",
+          "—"
+        ],
+        [
+          "Uranus",
+          "8.68×10²⁵",
+          "25.6×10⁶",
+          "8.9",
+          "21.9×10³",
+          "78"
+        ],
+        [
+          "Venus",
+          "4.87×10²⁴",
+          "6.05×10⁶",
+          "8.9",
+          "10.3×10³",
+          "737"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notable Constants\n\n- **Astronomical Unit (AU)**: ~1.5 × 10¹¹ m (Earth-Sun distance)\n- **Earth's orbital period**: 365.3 days\n- **Moon's orbital period**: 27.3 days\n- **Surface pressure on Earth**: 1.014 bar\n- **Surface pressure on Venus**: 90 bar\n- **Distance to Proxima Centauri**: 270,000 AU"
+    }
+  ]
+}

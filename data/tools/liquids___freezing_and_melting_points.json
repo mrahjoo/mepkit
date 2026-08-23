@@ -1,0 +1,331 @@
+{
+  "id": "liquids___freezing_and_melting_points",
+  "title": "Liquids - Freezing and Melting Points",
+  "description": "Common fluids and their freezing and melting points at 1 atm. Includes data for pure compounds, alcohols, hydrocarbons, and other common liquids.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid",
+        "Freezing or Melting Point (K)",
+        "Temperature (°C)",
+        "Temperature (°F)"
+      ],
+      "rows": [
+        [
+          "Acetic acid",
+          290,
+          16.84,
+          62.31
+        ],
+        [
+          "Acetone",
+          179,
+          -94.16,
+          -137.49
+        ],
+        [
+          "Alcohol, allyl",
+          144,
+          -129.16,
+          -200.49
+        ],
+        [
+          "Alcohol, ethyl (ethanol)",
+          158.6,
+          -114.56,
+          -174.21
+        ],
+        [
+          "Alcohol, isobutyl",
+          165,
+          -108.16,
+          -162.69
+        ],
+        [
+          "Alcohol, methyl (methanol)",
+          175.5,
+          -97.66,
+          -143.79
+        ],
+        [
+          "Alcohol, propyl",
+          146,
+          -127.16,
+          -196.89
+        ],
+        [
+          "Aniline",
+          267,
+          -6.16,
+          20.91
+        ],
+        [
+          "Anisole",
+          235.5,
+          -37.66,
+          -35.79
+        ],
+        [
+          "Benzene",
+          278.7,
+          5.54,
+          41.97
+        ],
+        [
+          "Benzonitrile",
+          260.3,
+          -12.86,
+          8.85
+        ],
+        [
+          "Bromine",
+          265.95,
+          -7.21,
+          19.02
+        ],
+        [
+          "Bromobenzene",
+          242.4,
+          -30.76,
+          -23.37
+        ],
+        [
+          "Butane",
+          135,
+          -138.16,
+          -216.69
+        ],
+        [
+          "Camphor",
+          452,
+          178.84,
+          353.91
+        ],
+        [
+          "Carbon Dioxide",
+          194.5,
+          -78.66,
+          -109.59
+        ],
+        [
+          "Carbon Disulfide",
+          161.2,
+          -112.04,
+          -169.67
+        ],
+        [
+          "Carbon Tetrachloride (Tetrachloromethane)",
+          250.4,
+          -22.76,
+          -8.97
+        ],
+        [
+          "Castor Oil",
+          263.2,
+          -10.04,
+          13.93
+        ],
+        [
+          "Chlorobenzene",
+          227.8,
+          -45.36,
+          -49.65
+        ],
+        [
+          "Chloroform (Trichloromethane)",
+          209.6,
+          -63.56,
+          -82.41
+        ],
+        [
+          "3-Chloropropene (Allyl Chloride)",
+          138.5,
+          -134.66,
+          -210.39
+        ],
+        [
+          "Cyclohexane",
+          280,
+          6.84,
+          44.31
+        ],
+        [
+          "Decane",
+          243.5,
+          -29.66,
+          -21.39
+        ],
+        [
+          "Dodecane",
+          247.2,
+          -25.96,
+          -14.73
+        ],
+        [
+          "Ether",
+          157,
+          -116.16,
+          -176.89
+        ],
+        [
+          "Ethyl acetat",
+          189.4,
+          -83.76,
+          -118.77
+        ],
+        [
+          "Ethylene bromide",
+          283,
+          9.84,
+          49.71
+        ],
+        [
+          "Ethylene Glycol",
+          260.2,
+          -13.04,
+          8.53
+        ],
+        [
+          "Formic acid",
+          281,
+          7.84,
+          46.11
+        ],
+        [
+          "Trichlorofluoromethane refrigerant R-11",
+          162,
+          -111.16,
+          -188.09
+        ],
+        [
+          "Dichlorodifluoromethane refrigerant R-12",
+          115,
+          -158.16,
+          -252.69
+        ],
+        [
+          "Glycerine",
+          290.8,
+          17.64,
+          63.75
+        ],
+        [
+          "n-Heptane",
+          182.5,
+          -90.66,
+          -131.19
+        ],
+        [
+          "Hexane",
+          178,
+          -95.16,
+          -139.29
+        ],
+        [
+          "Iodine",
+          386.6,
+          113.44,
+          236.19
+        ],
+        [
+          "Isopentane (2-Methylbutane)",
+          113.1,
+          -160.06,
+          -256.11
+        ],
+        [
+          "Linseed oil",
+          253,
+          -20.16,
+          -4.29
+        ],
+        [
+          "Mercury",
+          234.13,
+          -39.03,
+          -38.25
+        ],
+        [
+          "Methylcyclopentane",
+          130.5,
+          -142.66,
+          -224.79
+        ],
+        [
+          "Naphtalene",
+          353,
+          79.84,
+          175.71
+        ],
+        [
+          "Nitrobenzene",
+          278.7,
+          5.54,
+          41.97
+        ],
+        [
+          "Nitrogen",
+          63.14,
+          -210.02,
+          -346.04
+        ],
+        [
+          "n-Octane",
+          216.4,
+          -56.76,
+          -70.17
+        ],
+        [
+          "Pentane",
+          143.3,
+          -129.86,
+          -201.75
+        ],
+        [
+          "Phenol",
+          316.2,
+          43.04,
+          109.47
+        ],
+        [
+          "Propylene",
+          87.9,
+          -185.26,
+          -301.47
+        ],
+        [
+          "Propylene glycol",
+          213,
+          -60.16,
+          -76.29
+        ],
+        [
+          "Toluene",
+          178,
+          -95.16,
+          -139.29
+        ],
+        [
+          "Turpentine",
+          214,
+          -59.16,
+          -74.49
+        ],
+        [
+          "Water, Fresh",
+          273,
+          -0.16,
+          31.71
+        ],
+        [
+          "Water, Sea",
+          270.6,
+          -2.56,
+          27.39
+        ]
+      ]
+    }
+  ]
+}

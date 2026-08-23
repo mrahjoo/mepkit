@@ -1,0 +1,191 @@
+{
+  "id": "capacitors___stored_energy",
+  "title": "Capacitors - Stored Energy",
+  "description": "Calculate energy stored in a capacitor, power generated during discharge, and discharge time at constant power load",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "energy_calc",
+      "content": "## Energy Stored in Capacitor\n\nCalculate the energy stored using the formula: W = 1/2 × C × U²",
+      "inputs": [
+        {
+          "id": "capacitance",
+          "label": "Capacitance (C)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "µF"
+        },
+        {
+          "id": "voltage",
+          "label": "Voltage (U)",
+          "type": "number",
+          "defaultValue": 230,
+          "unit": "V"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy_stored",
+          "label": "Energy Stored (W)",
+          "formula": "0.5 * (inputs.capacitance * 1e-6) * (inputs.voltage ** 2)",
+          "unit": "J",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "power_calc",
+      "content": "## Power Generated During Discharge\n\nCalculate the potential power generated using: P = dW / dt",
+      "inputs": [
+        {
+          "id": "energy",
+          "label": "Energy (W)",
+          "type": "number",
+          "defaultValue": 0.26,
+          "unit": "J"
+        },
+        {
+          "id": "discharge_time",
+          "label": "Discharge Time (dt)",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "µs"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power",
+          "label": "Power Generated (P)",
+          "formula": "(inputs.energy) / (inputs.discharge_time * 1e-6)",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "discharge_time_calc",
+      "content": "## Time to Discharge at Constant Power Load\n\nCalculate discharge time using: dt = 1/2 × C × (Us² - Uf²) / P",
+      "inputs": [
+        {
+          "id": "cap_discharge",
+          "label": "Capacitance (C)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "µF"
+        },
+        {
+          "id": "start_voltage",
+          "label": "Start Voltage (Us)",
+          "type": "number",
+          "defaultValue": 230,
+          "unit": "V"
+        },
+        {
+          "id": "final_voltage",
+          "label": "Final Voltage (Uf)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "V"
+        },
+        {
+          "id": "power_load",
+          "label": "Power Load (P)",
+          "type": "number",
+          "defaultValue": 52000,
+          "unit": "W"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "discharge_time_result",
+          "label": "Discharge Time (dt)",
+          "formula": "0.5 * (inputs.cap_discharge * 1e-6) * ((inputs.start_voltage ** 2) - (inputs.final_voltage ** 2)) / inputs.power_load",
+          "unit": "s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "breakdown_voltage_table",
+      "content": "## Breakdown (Puncture) Voltage\n\nPuncture voltage at 1 MHz (V/mil, V/0.001 inch)",
+      "headers": [
+        "Material",
+        "Breakdown Voltage (V/mil)"
+      ],
+      "rows": [
+        [
+          "Air",
+          240
+        ],
+        [
+          "Alsimag",
+          240
+        ],
+        [
+          "Bakelite",
+          300
+        ],
+        [
+          "Bakelite, mica-filled",
+          "325 - 375"
+        ],
+        [
+          "Cellulose acetate",
+          "250 - 600"
+        ],
+        [
+          "Formica",
+          450
+        ],
+        [
+          "Glass, window",
+          "200 - 250"
+        ],
+        [
+          "Glass, Pyrex",
+          335
+        ],
+        [
+          "Mica, ruby",
+          "3800 - 5600"
+        ],
+        [
+          "Mycalex",
+          250
+        ],
+        [
+          "Plexiglas",
+          990
+        ],
+        [
+          "Polyethylene",
+          1200
+        ],
+        [
+          "Polystyrene",
+          "500 - 700"
+        ],
+        [
+          "Porcelain",
+          "40 - 100"
+        ],
+        [
+          "Quartz, fused",
+          1000
+        ],
+        [
+          "Steatite, low-loss",
+          "150 - 315"
+        ],
+        [
+          "Teflon",
+          "1000 - 2000"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "id": "flash_points___liquids",
+  "title": "Flash Points - Liquids",
+  "description": "The flash point of a chemical substance is the lowest temperature where enough fluid can evaporate to form a combustible concentration of gas. This tool provides flash points for common liquids and fuels at atmospheric pressure.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Flash Points - Liquids\n\nThe [flash point](https://en.wikipedia.org/wiki/Flash_point) of a chemical substance is the lowest temperature where enough fluid can evaporate to form a combustible concentration of gas.\n\nThe flash point is an indication of how easy a chemical may burn. Materials with higher flash points are less flammable or hazardous than chemicals with lower flash points.\n\n**Note!** - The Auto-Ignition Temperature is not the same as Flash Point. The Auto-Ignition Temperature indicates the minimum temperature required to ignite a gas or vapor in air without a spark or flame being present."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "flashpoint_f",
+          "label": "Flash Point",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flashpoint_c",
+          "label": "Flash Point",
+          "unit": "°C",
+          "formula": "5/9 * (inputs.flashpoint_f - 32)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel",
+        "Flash Point (°F)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          "-36"
+        ],
+        [
+          "Acetone",
+          "0"
+        ],
+        [
+          "Acentonitrile",
+          "43"
+        ],
+        [
+          "Acrylonitrile",
+          "32"
+        ],
+        [
+          "Allyamine",
+          "-20"
+        ],
+        [
+          "Aniline",
+          "158"
+        ],
+        [
+          "Anisole",
+          "126"
+        ],
+        [
+          "Benzene",
+          "12"
+        ],
+        [
+          "Benzaldehyde",
+          "145"
+        ],
+        [
+          "Biodiesel",
+          "266"
+        ],
+        [
+          "Butanal",
+          "-7.6"
+        ],
+        [
+          "n-Butane",
+          "-76"
+        ],
+        [
+          "1-Butanol",
+          "99"
+        ],
+        [
+          "Carbon Disulfide",
+          "-22"
+        ],
+        [
+          "Cyclohexanone",
+          "111"
+        ],
+        [
+          "Diesel Fuel (1-D)",
+          "100"
+        ],
+        [
+          "Diesel Fuel (2-D)",
+          "126"
+        ],
+        [
+          "Diesel Fuel (4-D)",
+          "130"
+        ],
+        [
+          "Diethanolamine",
+          "342"
+        ],
+        [
+          "Diethylene glycol diethyl ether",
+          "180"
+        ],
+        [
+          "Diethyl ether",
+          "-49"
+        ],
+        [
+          "Diisopropyl ether",
+          "-18"
+        ],
+        [
+          "Dimethyl sulfate",
+          "181"
+        ],
+        [
+          "Dimethyl sulfide",
+          "-35"
+        ],
+        [
+          "Ethyl Alcohol (Ethanol)",
+          "63"
+        ],
+        [
+          "Ethylamine",
+          "3.2"
+        ],
+        [
+          "Formaldehyde",
+          "185"
+        ],
+        [
+          "Fuels Oil No.1",
+          "100 - 162"
+        ],
+        [
+          "Fuels Oil No.2",
+          "126 - 204"
+        ],
+        [
+          "Fuels Oil No.4",
+          "142 - 240"
+        ],
+        [
+          "Fuels Oil No.5 Lite",
+          "156 - 336"
+        ],
+        [
+          "Fuels Oil No.5 Heavy",
+          "160 - 250"
+        ],
+        [
+          "Fuels Oil No.6",
+          "150"
+        ],
+        [
+          "Furfural",
+          "140"
+        ],
+        [
+          "Furfuryl alcohol",
+          "167"
+        ],
+        [
+          "Gasoline",
+          "-45"
+        ],
+        [
+          "Gear oil",
+          "375 - 580"
+        ],
+        [
+          "Hexylamine",
+          "84"
+        ],
+        [
+          "Iso-Butane",
+          "-117"
+        ],
+        [
+          "Iso-Pentane",
+          "less than -60"
+        ],
+        [
+          "Iso-Octane",
+          "10"
+        ],
+        [
+          "Isopropylbenzene hydroperoxide",
+          "347"
+        ],
+        [
+          "Jet fuel (A/A-1)",
+          "100 - 150"
+        ],
+        [
+          "Kerosene (paraffin)",
+          "100 - 162"
+        ],
+        [
+          "Methyl Alcohol (Methanol)",
+          "52"
+        ],
+        [
+          "Methylamine",
+          "32"
+        ],
+        [
+          "Motor oil",
+          "420 - 485"
+        ],
+        [
+          "Naphtha",
+          "32 - 86"
+        ],
+        [
+          "n-Pentane",
+          "less than -40"
+        ],
+        [
+          "n-Hexane",
+          "-7"
+        ],
+        [
+          "n-Heptane",
+          "25"
+        ],
+        [
+          "n-Octane",
+          "56"
+        ],
+        [
+          "Naphthalene",
+          "174"
+        ],
+        [
+          "NeoHexane",
+          "-54"
+        ],
+        [
+          "Paraldehyde",
+          "97"
+        ],
+        [
+          "Peroxyacetic acid",
+          "106"
+        ],
+        [
+          "Petroleum ether",
+          "< 0"
+        ],
+        [
+          "Propanal",
+          "-22"
+        ],
+        [
+          "Propane",
+          "-156"
+        ],
+        [
+          "2-Propanol",
+          "54"
+        ],
+        [
+          "Propylamine",
+          "-35"
+        ],
+        [
+          "Styrene",
+          "90"
+        ],
+        [
+          "Tetrohydrofuran",
+          "151"
+        ],
+        [
+          "Toluene",
+          "40"
+        ],
+        [
+          "Triethanolamine",
+          "354"
+        ],
+        [
+          "Triethylamine",
+          "19"
+        ],
+        [
+          "o-Xylene",
+          "63"
+        ],
+        [
+          "m-Xylene",
+          "81"
+        ],
+        [
+          "p-Xylene",
+          "81"
+        ]
+      ]
+    }
+  ]
+}

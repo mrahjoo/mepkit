@@ -1,0 +1,223 @@
+{
+  "id": "urban_tree_heights",
+  "title": "Urban Tree Heights",
+  "description": "Height of trees commonly used in towns and urban areas.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Tree Species",
+        "Height after 25 years (m)",
+        "Mature Height (m)"
+      ],
+      "rows": [
+        [
+          "Acacia",
+          14,
+          21
+        ],
+        [
+          "Ailanthus",
+          18,
+          21
+        ],
+        [
+          "Almond",
+          7,
+          8
+        ],
+        [
+          "Birch",
+          10,
+          18
+        ],
+        [
+          "Catalpa",
+          10,
+          12
+        ],
+        [
+          "Cherry, gean",
+          12,
+          15
+        ],
+        [
+          "Cherry, bird",
+          7,
+          14
+        ],
+        [
+          "Chestnut",
+          7,
+          12
+        ],
+        [
+          "Crab apple",
+          6,
+          12
+        ],
+        [
+          "Hawthorn",
+          6,
+          8
+        ],
+        [
+          "Lime",
+          10,
+          18
+        ],
+        [
+          "Maidenhair",
+          7,
+          30
+        ],
+        [
+          "Maple, field",
+          7,
+          10
+        ],
+        [
+          "Maple, silver",
+          15,
+          25
+        ],
+        [
+          "Mountain ash",
+          7,
+          8
+        ],
+        [
+          "Oak, evergreen",
+          7,
+          28
+        ],
+        [
+          "Oak, scarlet",
+          15,
+          18
+        ],
+        [
+          "Plane",
+          12,
+          28
+        ],
+        [
+          "Sycamore",
+          12,
+          25
+        ],
+        [
+          "Tulip tree",
+          12,
+          30
+        ],
+        [
+          "Whitebeam",
+          7,
+          12
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Height after 25 years (m)",
+            "Mature Height (m)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Acacia",
+            "Ailanthus",
+            "Almond",
+            "Birch",
+            "Catalpa",
+            "Cherry, gean",
+            "Cherry, bird",
+            "Chestnut",
+            "Crab apple",
+            "Hawthorn",
+            "Lime",
+            "Maidenhair",
+            "Maple, field",
+            "Maple, silver",
+            "Mountain ash",
+            "Oak, evergreen",
+            "Oak, scarlet",
+            "Plane",
+            "Sycamore",
+            "Tulip tree",
+            "Whitebeam"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Height (m)"
+        },
+        "series": [
+          {
+            "name": "Height after 25 years (m)",
+            "data": [
+              14,
+              18,
+              7,
+              10,
+              10,
+              12,
+              7,
+              7,
+              6,
+              6,
+              10,
+              7,
+              7,
+              15,
+              7,
+              7,
+              15,
+              12,
+              12,
+              12,
+              7
+            ],
+            "type": "bar"
+          },
+          {
+            "name": "Mature Height (m)",
+            "data": [
+              21,
+              21,
+              8,
+              18,
+              12,
+              15,
+              14,
+              12,
+              12,
+              8,
+              18,
+              30,
+              10,
+              25,
+              8,
+              28,
+              18,
+              28,
+              25,
+              30,
+              12
+            ],
+            "type": "bar"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "id": "natural_gas_pipes___low_pressure_capacities_vs__si",
+  "title": "Natural Gas Pipes - Low Pressure Capacities vs. Size",
+  "description": "Sizing low pressure natural gas pipe lines - Imperial units. This tool provides capacity tables for steel pipes (Schedule 40) and copper tubing (type K and type L) at various pipe lengths.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Natural Gas Pipes - Low Pressure Capacities vs. Size\n\nSizing low pressure natural gas pipe lines - Imperial units.\n\n## Overview\nThis tool helps determine the capacity of natural gas pipes for low pressure applications (less than 1.5 psig). Use the fittings factor of 1.5 (equivalent pipe length = pipe length + 50%).\n\n**Key Notes:**\n- Pressure drop: 0.5 inches water column\n- Specific gravity of natural gas: 0.6\n- 1 MBH = 1000 BTU/hour\n- 1 CFH ≈ 1 MBH"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Size (in)",
+        "Inside Diameter (in)",
+        "10 ft",
+        "20 ft",
+        "40 ft",
+        "80 ft",
+        "150 ft",
+        "300 ft"
+      ],
+      "rows": [
+        [
+          "1/2",
+          "0.622",
+          "120",
+          "85",
+          "60",
+          "42",
+          "31",
+          "22"
+        ],
+        [
+          "3/4",
+          "0.824",
+          "272",
+          "192",
+          "136",
+          "96",
+          "70",
+          "50"
+        ],
+        [
+          "1",
+          "1.049",
+          "547",
+          "387",
+          "273",
+          "193",
+          "141",
+          "100"
+        ],
+        [
+          "1 1/4",
+          "1.380",
+          "1200",
+          "849",
+          "600",
+          "424",
+          "310",
+          "219"
+        ],
+        [
+          "1 1/2",
+          "1.610",
+          "1860",
+          "1316",
+          "930",
+          "658",
+          "480",
+          "340"
+        ],
+        [
+          "2",
+          "2.067",
+          "3759",
+          "2658",
+          "1880",
+          "1330",
+          "971",
+          "686"
+        ],
+        [
+          "2 1/2",
+          "2.469",
+          "6169",
+          "4362",
+          "3084",
+          "2189",
+          "1593",
+          "1126"
+        ],
+        [
+          "3",
+          "3.068",
+          "11225",
+          "7938",
+          "5613",
+          "3969",
+          "2898",
+          "2049"
+        ],
+        [
+          "4",
+          "4.026",
+          "23479",
+          "16602",
+          "11740",
+          "8301",
+          "6062",
+          "4287"
+        ],
+        [
+          "5",
+          "5.047",
+          "42945",
+          "30367",
+          "21473",
+          "15183",
+          "11088",
+          "7841"
+        ],
+        [
+          "6",
+          "6.065",
+          "69671",
+          "49265",
+          "34836",
+          "24632",
+          "17989",
+          "12720"
+        ],
+        [
+          "8",
+          "7.981",
+          "141832",
+          "100290",
+          "70916",
+          "50145",
+          "36621",
+          "25895"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Steel Pipe - Schedule 40 (Continued)\n\n**Capacity of Pipe (MBH ≈ CFH)** at various pipe lengths\n\n- Pressure less than 1.5 psig\n- Common fittings factor: 1.5 (equivalent pipe length = pipe length + 50%)\n- Pressure drop: 0.5 inches water column\n- Specific gravity of natural gas: 0.6"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Size (in)",
+        "Outside Diameter (in)",
+        "Inside Diameter (in)",
+        "10 ft",
+        "20 ft",
+        "40 ft",
+        "80 ft"
+      ],
+      "rows": [
+        [
+          "1/4",
+          "3/8",
+          "0.305",
+          "15",
+          "10",
+          "7",
+          "5"
+        ],
+        [
+          "3/8",
+          "1/2",
+          "0.402",
+          "33",
+          "24",
+          "17",
+          "12"
+        ],
+        [
+          "1/2",
+          "5/8",
+          "0.527",
+          "74",
+          "52",
+          "37",
+          "26"
+        ],
+        [
+          "5/8",
+          "3/4",
+          "0.652",
+          "138",
+          "97",
+          "69",
+          "49"
+        ],
+        [
+          "3/4",
+          "7/8",
+          "0.745",
+          "203",
+          "143",
+          "101",
+          "72"
+        ],
+        [
+          "1",
+          "1 1/8",
+          "0.995",
+          "469",
+          "332",
+          "235",
+          "166"
+        ],
+        [
+          "1 1/4",
+          "1 3/8",
+          "1.245",
+          "894",
+          "632",
+          "447",
+          "316"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Copper Tubing - Type K\n\n**Capacity of Pipe (MBH ≈ CFH)** at various pipe lengths\n\n- Pressure less than 1.5 psig\n- Common fittings factor: 1.5 (equivalent pipe length = pipe length + 50%)\n- Pressure drop: 0.5 inches water column\n- Specific gravity of natural gas: 0.6"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Size (in)",
+        "Outside Diameter (in)",
+        "Inside Diameter (in)",
+        "10 ft",
+        "20 ft",
+        "40 ft",
+        "80 ft"
+      ],
+      "rows": [
+        [
+          "1/4",
+          "3/8",
+          "0.315",
+          "16",
+          "11",
+          "8",
+          "6"
+        ],
+        [
+          "3/8",
+          "1/2",
+          "0.430",
+          "41",
+          "29",
+          "20",
+          "14"
+        ],
+        [
+          "1/2",
+          "5/8",
+          "0.545",
+          "81",
+          "58",
+          "41",
+          "29"
+        ],
+        [
+          "5/8",
+          "3/4",
+          "0.666",
+          "146",
+          "103",
+          "73",
+          "52"
+        ],
+        [
+          "3/4",
+          "7/8",
+          "0.785",
+          "236",
+          "167",
+          "118",
+          "84"
+        ],
+        [
+          "1",
+          "1 1/8",
+          "1.025",
+          "511",
+          "362",
+          "256",
+          "181"
+        ],
+        [
+          "1 1/4",
+          "1 3/8",
+          "1.265",
+          "936",
+          "662",
+          "468",
+          "331"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Copper Tubing - Type L\n\n**Capacity of Pipe (MBH ≈ CFH)** at various pipe lengths\n\n- Pressure less than 1.5 psig\n- Common fittings factor: 1.5 (equivalent pipe length = pipe length + 50%)\n- Pressure drop: 0.5 inches water column\n- Specific gravity of natural gas: 0.6\n\n## Unit Conversions\n- 1 Btu/h = 0.293 W\n- 1 lb = 0.4536 kg\n- 1 ft (foot) = 0.3048 m\n- 1 in water = 248.8 N/m² (Pa)\n- 1 psi (lb/in²) = 6,894.8 Pa (N/m²)\n- 1 MBH = 1000 BTU/hour"
+    }
+  ]
+}

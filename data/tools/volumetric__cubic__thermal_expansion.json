@@ -1,0 +1,68 @@
+{
+  "id": "volumetric__cubic__thermal_expansion",
+  "title": "Volumetric (Cubic) Thermal Expansion Calculator",
+  "description": "Calculate volumetric thermal expansion of fluids using the volumetric expansion coefficient and temperature change. This calculator computes the change in volume (dV) and final volume when initial volume, expansion coefficient, and temperatures are known.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Volumetric (Cubic) Thermal Expansion\n\nThe change in a unit's volume when temperature changes can be expressed as:\n\n**dV = V₀ β (t₁ - t₀)**\n\nWhere:\n- **dV** = change in volume (m³ or ft³)\n- **V₀** = initial volume (m³ or ft³)\n- **β** = volumetric temperature expansion coefficient (1/°C or 1/°F)\n- **t₁** = final temperature (°C or °F)\n- **t₀** = initial temperature (°C or °F)\n\n### Common Volumetric Expansion Coefficients:\n- Water at 20°C: 0.000207 (1/°C)\n- Water at 40°C: 0.000385 (1/°C)\n- Ethyl alcohol: 0.00109 (1/°C)\n- Oil: 0.00070 (1/°C)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "initial_volume",
+          "label": "Initial Volume (V₀)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "m³"
+        },
+        {
+          "id": "expansion_coefficient",
+          "label": "Volumetric Expansion Coefficient (β)",
+          "type": "number",
+          "defaultValue": 0.0007,
+          "unit": "1/°C"
+        },
+        {
+          "id": "initial_temperature",
+          "label": "Initial Temperature (t₀)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "final_temperature",
+          "label": "Final Temperature (t₁)",
+          "type": "number",
+          "defaultValue": 40,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_change",
+          "label": "Volume Change (dV)",
+          "formula": "inputs.initial_volume * inputs.expansion_coefficient * (inputs.final_temperature - inputs.initial_temperature)",
+          "unit": "m³",
+          "format": "decimal"
+        },
+        {
+          "id": "final_volume",
+          "label": "Final Volume (V₁)",
+          "formula": "inputs.initial_volume + (inputs.initial_volume * inputs.expansion_coefficient * (inputs.final_temperature - inputs.initial_temperature))",
+          "unit": "m³",
+          "format": "decimal"
+        },
+        {
+          "id": "temperature_difference",
+          "label": "Temperature Change (Δt)",
+          "formula": "inputs.final_temperature - inputs.initial_temperature",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

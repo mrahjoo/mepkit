@@ -1,0 +1,309 @@
+{
+  "id": "silicone___chemical_resistance",
+  "title": "Silicone - Chemical Resistance",
+  "description": "A comprehensive reference table for silicone chemical resistance to various substances at different temperatures. The table classifies substances as resistant, conditionally resistant, or not resistant. Note: Be careful with silicone tubes and gaskets with oil products as resistance depends on product content.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Classification"
+      ],
+      "rows": [
+        [
+          "Acetamide, 150 oC",
+          "resistant"
+        ],
+        [
+          "Acetic acid, 20 oC",
+          "resistant"
+        ],
+        [
+          "Acetone, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Ammonium hydroxide (conc.), 20 oC",
+          "resistant"
+        ],
+        [
+          "Aniline, 100 oC",
+          "resistant"
+        ],
+        [
+          "Petrol, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Ball bearing fat, 150 oC",
+          "resistant"
+        ],
+        [
+          "Brake fluid AT, 100 oC",
+          "resistant"
+        ],
+        [
+          "Butanol, 117 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Butylacetate, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Calcium hydroxide, (saturated), 20 oC",
+          "resistant"
+        ],
+        [
+          "Carbon tetrachloride, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Chlorbenzene, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Carbolineum, 20 oC",
+          "resistant"
+        ],
+        [
+          "Clophene, 150 oC",
+          "resistant"
+        ],
+        [
+          "Cloroform, 20 oC",
+          "not resistant"
+        ],
+        [
+          "Compressor oil, light, 150 oC",
+          "resistant"
+        ],
+        [
+          "Diphenyl, 150 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Diesel oil, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Dinamo oil, 150 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Hydrofluor acid 5%, 20 oC",
+          "not resistant"
+        ],
+        [
+          "Gear oil DTE BB, 150 oC",
+          "resistant"
+        ],
+        [
+          "Gear oil DTE HH, 150 oC",
+          "resistant"
+        ],
+        [
+          "Gear oil DTE extra heavy, 150 oC",
+          "resistant"
+        ],
+        [
+          "Gear oil Type SEA 90, 150 oC",
+          "resistant"
+        ],
+        [
+          "Glycerin, 100 oC",
+          "resistant"
+        ],
+        [
+          "Hexa ethoxydisiloxane, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "High pressure compressor oil, 150 oC",
+          "resistant"
+        ],
+        [
+          "Isopropyl alcohol 82",
+          "conditionally resistant"
+        ],
+        [
+          "Mineral oil, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Potassium, 20 oC%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Potassium hydroxide 50%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Potassium permanganate solution, 20 oC",
+          "resistant"
+        ],
+        [
+          "Prestone, 20 oC",
+          "resistant"
+        ],
+        [
+          "Salt, cooking solution 10%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Linseed oil, 100 oC",
+          "resistant"
+        ],
+        [
+          "Methanol 65",
+          "conditionally resistant"
+        ],
+        [
+          "Methylen chloride, 20 oC",
+          "not resistant"
+        ],
+        [
+          "Mineral oil ASTM No. 1, 150 oC",
+          "resistant"
+        ],
+        [
+          "Mineral oil ASTM No. 3, 150 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Mineral oil SEA 10, 150 oC",
+          "resistant"
+        ],
+        [
+          "Mineral oil SEA, 20 oC, 150 oC",
+          "resistant"
+        ],
+        [
+          "Mineral oil SEA 30, 150 oC",
+          "resistant"
+        ],
+        [
+          "Mono styrene, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Motor oil viscose static, 150 oC",
+          "resistant"
+        ],
+        [
+          "Sodium, 20 oC%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Soda 50%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Nitrobenzene, 20 oC",
+          "resistant"
+        ],
+        [
+          "Oleic acid, 150 oC",
+          "not resistant"
+        ],
+        [
+          "Olive oil, 150 oC",
+          "resistant"
+        ],
+        [
+          "Perchlor, 20 oC",
+          "not resistant"
+        ],
+        [
+          "Petroleum ether, 20 oC",
+          "not resistant"
+        ],
+        [
+          "Petroleum, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Phenol 60",
+          "resistant"
+        ],
+        [
+          "Phosphoric acid 30%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Pyridine, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Regulator oil, 150 oC",
+          "not resistant"
+        ],
+        [
+          "Castor oil, 150 oC",
+          "resistant"
+        ],
+        [
+          "Hydrochlorid acid 10%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Nitric acid conc., 20 oC",
+          "not resistant"
+        ],
+        [
+          "Nitric acid 10%, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Sulfuric acid, conc., 20 oC",
+          "not resistant"
+        ],
+        [
+          "Sulfuric acid, 10%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Shock absorber oil, 20 oC",
+          "resistant"
+        ],
+        [
+          "Turbentine oil, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Toluene, 20 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Transformer oil, 150 oC",
+          "conditionally resistant"
+        ],
+        [
+          "Tri, 20 oC",
+          "not resistant"
+        ],
+        [
+          "Tri glycol, 20 oC",
+          "resistant"
+        ],
+        [
+          "Vaseline, 150 oC",
+          "resistant"
+        ],
+        [
+          "Water, 100 oC",
+          "resistant"
+        ],
+        [
+          "Hydrogen peroxide 30%, 20 oC",
+          "resistant"
+        ],
+        [
+          "Hydrogen superoxide 30%, 20 oC",
+          "resistant"
+        ]
+      ]
+    }
+  ]
+}

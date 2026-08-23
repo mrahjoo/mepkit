@@ -1,0 +1,102 @@
+{
+  "id": "laminar_flow___friction_coefficients",
+  "title": "Laminar Flow - Friction Coefficients",
+  "description": "Calculate friction coefficients for laminar fluid flow using the formula λ = 64 / Re. Valid for Reynolds Number less than 2300.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate friction coefficient for laminar flow conditions",
+      "inputs": [
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number (Re)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "non-dimensional"
+        },
+        {
+          "id": "dynamic_viscosity",
+          "label": "Dynamic Viscosity (μ)",
+          "type": "number",
+          "defaultValue": 0.001,
+          "unit": "Ns/m²"
+        },
+        {
+          "id": "hydraulic_diameter",
+          "label": "Hydraulic Diameter (dh)",
+          "type": "number",
+          "defaultValue": 0.05,
+          "unit": "m"
+        },
+        {
+          "id": "mean_velocity",
+          "label": "Mean Velocity (u)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m/s"
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "friction_coefficient_re",
+          "label": "Friction Coefficient (from Re)",
+          "formula": "64 / inputs.reynolds_number",
+          "format": "decimal",
+          "unit": "non-dimensional"
+        },
+        {
+          "id": "friction_coefficient_direct",
+          "label": "Friction Coefficient (direct)",
+          "formula": "(64 * inputs.dynamic_viscosity) / (inputs.hydraulic_diameter * inputs.mean_velocity * inputs.fluid_density)",
+          "format": "decimal",
+          "unit": "non-dimensional"
+        },
+        {
+          "id": "kinematic_viscosity",
+          "label": "Kinematic Viscosity (ν)",
+          "formula": "inputs.dynamic_viscosity / inputs.fluid_density",
+          "format": "decimal",
+          "unit": "m²/s"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Friction Coefficient vs Reynolds Number for Laminar Flow",
+      "options": {
+        "title": {
+          "text": "Laminar Flow: Friction Coefficient vs Reynolds Number"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "log",
+          "name": "Reynolds Number (Re)",
+          "min": 100,
+          "max": 2300
+        },
+        "yAxis": {
+          "type": "log",
+          "name": "Friction Coefficient (λ)"
+        },
+        "series": [
+          {
+            "name": "λ = 64/Re",
+            "type": "line",
+            "smooth": true,
+            "data": []
+          }
+        ]
+      }
+    }
+  ]
+}

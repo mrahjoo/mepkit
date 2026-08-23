@@ -1,0 +1,69 @@
+{
+  "id": "soil___water_content",
+  "title": "Soil - Water Content",
+  "description": "Water or moisture content in soil",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Soil - Water Content\n\nWater or moisture content in soil can be expressed as:\n\n**w = 100 × Mw / Ms**\n\nWhere:\n- **w** = moisture content (%)\n- **Mw** = mass of water in soil (kg, lb)\n- **Ms** = dry mass of soil (kg, lb)\n\nWater content can be tested according to ASTM D 2216-92 by determining the mass of the wet soil specimen and then drying the soil in an oven for 12-16 hours at a temperature of 110°C. Values can vary from essentially 0% (near surface rubble, gravel or clean sand) up to 1200% (organic soil like fibrous peat)."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass_water",
+          "label": "Mass of Water (Mw)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 10
+        },
+        {
+          "id": "mass_dry_soil",
+          "label": "Dry Mass of Soil (Ms)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_content",
+          "label": "Water Content",
+          "unit": "%",
+          "format": "decimal",
+          "formula": "100 * inputs.mass_water / inputs.mass_dry_soil"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Soil Type",
+        "Typical Water Content Range (%)"
+      ],
+      "rows": [
+        [
+          "Clean Sand / Gravel",
+          "0 - 10"
+        ],
+        [
+          "Silty Sand",
+          "5 - 15"
+        ],
+        [
+          "Silt",
+          "10 - 30"
+        ],
+        [
+          "Clay",
+          "15 - 50"
+        ],
+        [
+          "Organic Soil / Peat",
+          "100 - 1200"
+        ]
+      ]
+    }
+  ]
+}

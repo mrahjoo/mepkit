@@ -1,0 +1,114 @@
+{
+  "id": "carbon_monoxide_and_health_effects",
+  "title": "Carbon Monoxide and Health Effects",
+  "description": "A comprehensive guide to carbon monoxide (CO) poisoning symptoms, health effects, and exposure concentration thresholds. Includes data on toxic symptoms at various CO concentrations and inhalation times.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Carbon Monoxide and Health Effects\n\nCarbon monoxide - _CO_ - is an odorless, tasteless, colorless and **toxic** gas.\n\n## Carbon Monoxide Poisoning Symptoms\n\n### Low to Moderate Poisoning\n- Headache\n- Fatigue\n- Shortness of breath\n- Nausea\n- Dizziness\n\n### Severe Poisoning\n- Confusion\n- Vomiting\n- Loss of muscle coordination\n- Unconsciousness\n\nCarbon monoxide is a by-product from combustion processes. Any combustion process, fuel burning appliance, vehicle or other device has the potential to produce toxic carbon monoxide gas.\n\nCarbon monoxide is **dangerous** because it inhibits the blood's ability to carry oxygen to vital organs such as the heart and brain. Inhaled _CO_ will combine with the oxygen carrying hemoglobin in the blood and will form carboxyhemoglobin (_COHb_) which is not usable for oxygen transport."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "CO Concentration (ppm)",
+        "Inhalation Time",
+        "Toxic Symptoms"
+      ],
+      "rows": [
+        [
+          "9",
+          "Short term exposure",
+          "ASHRAE recommended maximum allowable concentration in living area"
+        ],
+        [
+          "35",
+          "8 hours",
+          "The maximum exposure allowed by OSHA in the workplace over an eight hour period"
+        ],
+        [
+          "200",
+          "2-3 hours",
+          "Slight headache, tiredness, fatigue, nausea and dizziness"
+        ],
+        [
+          "400",
+          "1-2 hours",
+          "Serious headache-other symptoms intensify. Life threatening after 3 hours"
+        ],
+        [
+          "800",
+          "45 minutes",
+          "Dizziness, nausea and convulsions. Unconscious within 2 hours. Death after 2-3 hours"
+        ],
+        [
+          "1600",
+          "20 minutes",
+          "Headache, dizziness and nausea. Death within 1 hour"
+        ],
+        [
+          "3200",
+          "5-10 minutes",
+          "Headache, dizziness, nausea. Death within 1 hour"
+        ],
+        [
+          "6400",
+          "1-2 minutes",
+          "Headache, dizziness, nausea. Death within 25-30 minutes"
+        ],
+        [
+          "12800",
+          "1-3 minutes",
+          "Death within 1-3 minutes"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Exposure (hours)",
+        "Perceptible (ppm)",
+        "Sickness (ppm)",
+        "Deadly (ppm)"
+      ],
+      "rows": [
+        [
+          "0.5",
+          "600",
+          "1000",
+          "2000"
+        ],
+        [
+          "1",
+          "200",
+          "600",
+          "1600"
+        ],
+        [
+          "2",
+          "100",
+          "300",
+          "1000"
+        ],
+        [
+          "4",
+          "50",
+          "150",
+          "400"
+        ],
+        [
+          "6",
+          "25",
+          "120",
+          "200"
+        ],
+        [
+          "8",
+          "25",
+          "100",
+          "150"
+        ]
+      ]
+    }
+  ]
+}

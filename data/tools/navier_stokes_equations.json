@@ -1,0 +1,167 @@
+{
+  "id": "navier_stokes_equations",
+  "title": "Navier-Stokes Equations",
+  "description": "The Navier-Stokes equations are the fundamental partial differentials equations used to describe incompressible fluid flows. These equations describe incompressible fluid flow and are essential in computational fluid dynamics.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Navier-Stokes Equations\n\nThe Navier-Stokes equations are the fundamental partial differential equations used to describe incompressible fluid flows.\n\n## Overview\nA theoretical introduction to The Navier-Stokes Equations. The Navier-Stokes Equations are the fundamental partial differentials equations describing incompressible fluid flow.\n\n## References\n- [Wolfram MathWorld - Navier-Stokes Equations](http://scienceworld.wolfram.com/physics/Navier-StokesEquations.html)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Input Parameters",
+        "Values"
+      ],
+      "inputs": [
+        {
+          "id": "velocity_x",
+          "label": "Velocity (X-component)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "velocity_y",
+          "label": "Velocity (Y-component)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        },
+        {
+          "id": "viscosity",
+          "label": "Dynamic Viscosity",
+          "type": "number",
+          "unit": "Pa·s",
+          "defaultValue": 0.001
+        },
+        {
+          "id": "density",
+          "label": "Fluid Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "kinematic_viscosity",
+          "label": "Kinematic Viscosity",
+          "formula": "inputs.viscosity / inputs.density",
+          "unit": "m²/s",
+          "format": "scientific"
+        },
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number (characteristic)",
+          "formula": "(inputs.density * Math.sqrt(inputs.velocity_x * inputs.velocity_x + inputs.velocity_y * inputs.velocity_y)) / inputs.viscosity",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Velocity",
+          "u, v, w",
+          "m/s",
+          "Flow velocity components in x, y, z directions"
+        ],
+        [
+          "Pressure",
+          "p",
+          "Pa",
+          "Fluid pressure"
+        ],
+        [
+          "Density",
+          "ρ",
+          "kg/m³",
+          "Fluid mass density"
+        ],
+        [
+          "Dynamic Viscosity",
+          "μ",
+          "Pa·s",
+          "Measure of fluid resistance to shear stress"
+        ],
+        [
+          "Kinematic Viscosity",
+          "ν",
+          "m²/s",
+          "Ratio of dynamic viscosity to density"
+        ],
+        [
+          "External Force",
+          "f",
+          "N/m³",
+          "Body forces per unit volume"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Velocity Field Visualization",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Low Re",
+            "Moderate Re",
+            "High Re",
+            "Turbulent"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Flow Characteristics"
+        },
+        "series": [
+          {
+            "name": "Viscous Effects",
+            "type": "line",
+            "data": [
+              95,
+              75,
+              40,
+              15
+            ],
+            "smooth": true
+          },
+          {
+            "name": "Inertial Effects",
+            "type": "line",
+            "data": [
+              5,
+              25,
+              60,
+              85
+            ],
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

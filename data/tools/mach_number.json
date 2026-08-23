@@ -1,0 +1,149 @@
+{
+  "id": "mach_number",
+  "title": "Mach Number",
+  "description": "Calculate the Mach Number, a dimensionless value useful for analyzing fluid flow dynamics problems where compressibility is significant. Determine if flow is subsonic, transonic, supersonic, or hypersonic.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate Mach Number from fluid flow speed and speed of sound",
+      "inputs": [
+        {
+          "id": "flow_speed",
+          "label": "Fluid Flow Speed (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 250
+        },
+        {
+          "id": "speed_of_sound",
+          "label": "Speed of Sound (c)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 340
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mach_number",
+          "label": "Mach Number (M)",
+          "formula": "inputs.flow_speed / inputs.speed_of_sound",
+          "format": "decimal"
+        },
+        {
+          "id": "cauchy_number",
+          "label": "Cauchy Number (C)",
+          "formula": "(inputs.flow_speed / inputs.speed_of_sound) ^ 2",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Calculate Mach Number from density and bulk modulus elasticity",
+      "inputs": [
+        {
+          "id": "flow_speed_alt",
+          "label": "Fluid Flow Speed (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 250
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "bulk_modulus",
+          "label": "Bulk Modulus Elasticity (E)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 2200000000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mach_number_alt",
+          "label": "Mach Number (M)",
+          "formula": "inputs.flow_speed_alt * (inputs.fluid_density / inputs.bulk_modulus) ^ 0.5",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Mach Number Classification",
+      "headers": [
+        "Mach Number Range",
+        "Flow Type",
+        "Description"
+      ],
+      "rows": [
+        [
+          "< 1",
+          "Subsonic",
+          "Flow speed is lower than the speed of sound"
+        ],
+        [
+          "~ 1",
+          "Transonic",
+          "Flow speed is approximately equal to the speed of sound"
+        ],
+        [
+          "> 1",
+          "Supersonic",
+          "Flow speed is higher than the speed of sound"
+        ],
+        [
+          ">> 1",
+          "Hypersonic",
+          "Flow speed is much higher than the speed of sound"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Mach Number Classification Zones",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Subsonic",
+            "Transonic",
+            "Supersonic",
+            "Hypersonic"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Mach Number"
+        },
+        "series": [
+          {
+            "data": [
+              0.5,
+              1,
+              1.5,
+              3
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": [
+                "#3498db",
+                "#f39c12",
+                "#e74c3c",
+                "#c0392b"
+              ]
+            }
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

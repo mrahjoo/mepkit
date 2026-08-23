@@ -1,0 +1,161 @@
+{
+  "id": "constants_of_e",
+  "title": "Constants of e",
+  "description": "The mathematical e constants - Euler's number and related values",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Constants of e\n\nThe mathematical e constants.\n\n## Definition\n\ne is a mathematical constant - also called the Euler's number. e is a real and irrational number and defined as:\n\n- **e = lim(x→∞) (1 + 1/x)^x = lim(x→∞) (1 + x)^(1/x)**\n- **e ≈ 2.71828 18284 59045 23536 02874 71352 66249 77572 47093**\n- **1/e ≈ 0.36787 94411 71442 32159 55237 70161 46086 74458 11131**\n- **e² ≈ 7.38905 60989 30650 22723 04274 60575 00781 31803 15570**\n- **M = log₁₀(e) ≈ 0.43429 44819 03251 82765 11289 18916 60508 22943 97005**\n- **1/M = ln(10) ≈ 2.30258 50929 94045 68401 79914 54684 36420 76011 01488**\n- **log₁₀(M) ≈ 9.63778 43113 00536 78912 29674**\n\n## Key Properties\n\n**Derivatives of e:**\n- (e^x)' = e^x\n\n**Integrals of e:**\n- ∫ e^x dx = e^x + c\n\n**Base e logarithm:**\n- ln(x) = log_e(x)\n\n**Exponential function:**\n- f(x) = exp(x) = e^x\n\n**Euler's equation:**\n- e^(iθ) = cos(θ) + i sin(θ)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "x_value",
+          "label": "x value",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "e_constant",
+          "label": "e (Euler's number)",
+          "formula": "2.718281828459045",
+          "format": "decimal"
+        },
+        {
+          "id": "e_inverse",
+          "label": "1/e",
+          "formula": "0.36787944117144233",
+          "format": "decimal"
+        },
+        {
+          "id": "e_squared",
+          "label": "e²",
+          "formula": "7.389056098930650",
+          "format": "decimal"
+        },
+        {
+          "id": "exp_x",
+          "label": "e^x",
+          "formula": "Math.exp(inputs.x_value)",
+          "format": "decimal"
+        },
+        {
+          "id": "ln_x",
+          "label": "ln(x)",
+          "formula": "Math.log(inputs.x_value)",
+          "format": "decimal"
+        },
+        {
+          "id": "log10_e",
+          "label": "log₁₀(e)",
+          "formula": "0.434294481903252",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Constant",
+        "Value",
+        "Description"
+      ],
+      "rows": [
+        [
+          "e",
+          "2.71828 18284 59045",
+          "Euler's number"
+        ],
+        [
+          "1/e",
+          "0.36787 94411 71442",
+          "Reciprocal of e"
+        ],
+        [
+          "e²",
+          "7.38905 60989 30650",
+          "e squared"
+        ],
+        [
+          "log₁₀(e)",
+          "0.43429 44819 03251",
+          "Base 10 logarithm of e"
+        ],
+        [
+          "ln(10)",
+          "2.30258 50929 94045",
+          "Natural logarithm of 10"
+        ],
+        [
+          "log₁₀(M)",
+          "9.63778 43113 00536",
+          "Base 10 logarithm of M"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Exponential Function e^x"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "x"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "e^x"
+        },
+        "series": [
+          {
+            "name": "e^x",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              [
+                -2,
+                0.135
+              ],
+              [
+                -1,
+                0.368
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2.718
+              ],
+              [
+                2,
+                7.389
+              ],
+              [
+                3,
+                20.086
+              ],
+              [
+                4,
+                54.598
+              ],
+              [
+                5,
+                148.413
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

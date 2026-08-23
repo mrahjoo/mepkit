@@ -1,0 +1,201 @@
+{
+  "id": "plato_and_brix_vs__specific_gravity",
+  "title": "Plato and Brix vs. Specific Gravity",
+  "description": "Convert between units like Plato, Brix and SG (Specific Gravity) used to measure sucrose dissolved in water. Brix measures the amount of sucrose dissolved in water (expressed as % g/g), while Plato measures the weight of solids dissolved in water (also expressed in %).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "brix",
+          "label": "Brix (°Bx)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "°Bx"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "plato",
+          "label": "Plato",
+          "unit": "%",
+          "format": "decimal",
+          "formula": "inputs.brix * 1.04"
+        },
+        {
+          "id": "sg",
+          "label": "Specific Gravity (SG)",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "1000 + (inputs.brix * 4.2)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Brix (°Bx)",
+        "Plato",
+        "SG"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          1000
+        ],
+        [
+          1,
+          1,
+          1004
+        ],
+        [
+          2,
+          2.1,
+          1008
+        ],
+        [
+          3,
+          3.1,
+          1012
+        ],
+        [
+          4,
+          4.2,
+          1016
+        ],
+        [
+          5,
+          5.2,
+          1020
+        ],
+        [
+          6,
+          6.2,
+          1025
+        ],
+        [
+          7,
+          7.3,
+          1029
+        ],
+        [
+          8,
+          8.3,
+          1033
+        ],
+        [
+          9,
+          9.4,
+          1037
+        ],
+        [
+          10,
+          10.4,
+          1042
+        ],
+        [
+          11,
+          11.4,
+          1046
+        ],
+        [
+          12,
+          12.5,
+          1050
+        ],
+        [
+          13,
+          13.5,
+          1055
+        ],
+        [
+          14,
+          14.6,
+          1059
+        ],
+        [
+          15,
+          15.6,
+          1064
+        ],
+        [
+          16,
+          16.6,
+          1068
+        ],
+        [
+          17,
+          17.7,
+          1073
+        ],
+        [
+          18,
+          18.7,
+          1077
+        ],
+        [
+          19,
+          19.8,
+          1082
+        ],
+        [
+          20,
+          20.8,
+          1087
+        ],
+        [
+          21,
+          21.8,
+          1091
+        ],
+        [
+          22,
+          22.9,
+          1096
+        ],
+        [
+          23,
+          23.9,
+          1101
+        ],
+        [
+          24,
+          25,
+          1106
+        ],
+        [
+          25,
+          26,
+          1111
+        ],
+        [
+          26,
+          27,
+          1115
+        ],
+        [
+          27,
+          28.1,
+          1120
+        ],
+        [
+          28,
+          29.1,
+          1125
+        ],
+        [
+          29,
+          30.2,
+          1130
+        ],
+        [
+          30,
+          31.2,
+          1135
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "id": "air___scfm_versus_acfm_and_icfm",
+  "title": "Air - SCFM versus ACFM and ICFM",
+  "description": "Calculate ACFM (Actual Cubic Feet per Minute) from SCFM (Standard Cubic Feet per Minute) and ICFM (Inlet Cubic Feet per Minute) based on pressure, temperature, and humidity conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Air Temperature (°F)",
+        "Air Temperature (°C)",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          0,
+          -17.2,
+          1.152
+        ],
+        [
+          10,
+          -12.2,
+          1.128
+        ],
+        [
+          20,
+          -6.7,
+          1.104
+        ],
+        [
+          30,
+          -1.1,
+          1.082
+        ],
+        [
+          40,
+          4.4,
+          1.06
+        ],
+        [
+          50,
+          10,
+          1.039
+        ],
+        [
+          60,
+          15.6,
+          1.019
+        ],
+        [
+          70,
+          21.1,
+          1
+        ],
+        [
+          80,
+          26.7,
+          0.981
+        ],
+        [
+          90,
+          32.2,
+          0.964
+        ],
+        [
+          100,
+          37.8,
+          0.946
+        ],
+        [
+          110,
+          43.3,
+          0.93
+        ],
+        [
+          120,
+          48.9,
+          0.914
+        ],
+        [
+          130,
+          54.4,
+          0.898
+        ],
+        [
+          140,
+          60,
+          0.883
+        ],
+        [
+          150,
+          65.6,
+          0.869
+        ],
+        [
+          160,
+          71.1,
+          0.855
+        ],
+        [
+          170,
+          76.7,
+          0.841
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### SCFM to ACFM Calculation\n\n**Formula:**\nACFM = SCFM × (Pstd / (Pact - Psat × Φ)) × (Tact / Tstd)\n\nWhere:\n- SCFM = Standard Cubic Feet per Minute\n- Pstd = Standard absolute air pressure (14.696 psia)\n- Pact = Absolute pressure at actual level (psia)\n- Psat = Saturation pressure at actual temperature (psi)\n- Φ = Relative humidity (0-1)\n- Tact = Actual ambient air temperature (°R)\n- Tstd = Standard temperature (520 °R)",
+      "inputs": [
+        {
+          "id": "scfm",
+          "label": "SCFM (Standard CFM)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "CFM"
+        },
+        {
+          "id": "pstd",
+          "label": "Standard Pressure (Pstd)",
+          "type": "number",
+          "defaultValue": 14.696,
+          "unit": "psia"
+        },
+        {
+          "id": "pact",
+          "label": "Actual Pressure (Pact)",
+          "type": "number",
+          "defaultValue": 12.23,
+          "unit": "psia"
+        },
+        {
+          "id": "psat",
+          "label": "Saturation Pressure (Psat)",
+          "type": "number",
+          "defaultValue": 0.5069,
+          "unit": "psia"
+        },
+        {
+          "id": "humidity",
+          "label": "Relative Humidity (Φ)",
+          "type": "number",
+          "defaultValue": 0.8,
+          "unit": "ratio"
+        },
+        {
+          "id": "tact",
+          "label": "Actual Temperature (Tact)",
+          "type": "number",
+          "defaultValue": 540,
+          "unit": "°R"
+        },
+        {
+          "id": "tstd",
+          "label": "Standard Temperature (Tstd)",
+          "type": "number",
+          "defaultValue": 520,
+          "unit": "°R"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "acfm",
+          "label": "ACFM (Actual CFM)",
+          "formula": "inputs.scfm * (inputs.pstd / (inputs.pact - inputs.psat * inputs.humidity)) * (inputs.tact / inputs.tstd)",
+          "unit": "CFM",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### ACFM to ICFM Calculation\n\n**Formula:**\nICFM = ACFM × (Pact / Pf) × (Tf / Tact)\n\nWhere:\n- ACFM = Actual Cubic Feet per Minute\n- Pact = Actual pressure (psia)\n- Pf = Pressure after filter or inlet equipment (psia)\n- Tf = Temperature after filter or inlet equipment (°R)\n- Tact = Actual ambient air temperature (°R)",
+      "inputs": [
+        {
+          "id": "acfm_input",
+          "label": "ACFM (Actual CFM)",
+          "type": "number",
+          "defaultValue": 129.1,
+          "unit": "CFM"
+        },
+        {
+          "id": "pact_icfm",
+          "label": "Actual Pressure (Pact)",
+          "type": "number",
+          "defaultValue": 12.23,
+          "unit": "psia"
+        },
+        {
+          "id": "pf",
+          "label": "Pressure After Filter (Pf)",
+          "type": "number",
+          "defaultValue": 11.73,
+          "unit": "psia"
+        },
+        {
+          "id": "tf",
+          "label": "Temperature After Filter (Tf)",
+          "type": "number",
+          "defaultValue": 540,
+          "unit": "°R"
+        },
+        {
+          "id": "tact_icfm",
+          "label": "Actual Temperature (Tact)",
+          "type": "number",
+          "defaultValue": 540,
+          "unit": "°R"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "icfm",
+          "label": "ICFM (Inlet CFM)",
+          "formula": "inputs.acfm_input * (inputs.pact_icfm / inputs.pf) * (inputs.tf / inputs.tact_icfm)",
+          "unit": "CFM",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

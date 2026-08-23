@@ -1,0 +1,101 @@
+{
+  "id": "law_of_tangents",
+  "title": "Law of Tangents",
+  "description": "Triangles and law of tangents. Calculate the angles or sides of a triangle using the Law of Tangents, Pythagorean theorem, Law of sines, and related formulas.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Law of Tangents\n\nThe Law of Tangents can be expressed as:\n\n**(a + b) / (a - b) = tan(1/2 (A + B)) / tan(1/2 (A - B))**\n\nWhere:\n- a, b, c = length of sides in triangle (m, ft, ...)\n- A, B, C = angles in the triangle (degrees)\n\n## Related Formulas\n\n### Pythagorean Theorem\n**a² + b² = c²**\n\n### Law of Sines\n**a / sin(A) = b / sin(B) = c / sin(C)**\n\n### Calculate Angles from Sides\n- **A = arccos((b² + c² - a²) / (2bc))**\n- **B = arccos((a² + c² - b²) / (2ac))**\n- **C = arccos((a² + b² - c²) / (2ab))**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sideA",
+          "label": "Side a",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "m"
+        },
+        {
+          "id": "sideB",
+          "label": "Side b",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "m"
+        },
+        {
+          "id": "sideC",
+          "label": "Side c",
+          "type": "number",
+          "defaultValue": 7,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "angleA",
+          "label": "Angle A",
+          "formula": "arccos((inputs.sideB^2 + inputs.sideC^2 - inputs.sideA^2) / (2 * inputs.sideB * inputs.sideC)) * 180 / PI()",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "angleB",
+          "label": "Angle B",
+          "formula": "arccos((inputs.sideA^2 + inputs.sideC^2 - inputs.sideB^2) / (2 * inputs.sideA * inputs.sideC)) * 180 / PI()",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "angleC",
+          "label": "Angle C",
+          "formula": "arccos((inputs.sideA^2 + inputs.sideB^2 - inputs.sideC^2) / (2 * inputs.sideA * inputs.sideB)) * 180 / PI()",
+          "unit": "degrees",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Side a",
+          "5",
+          "m"
+        ],
+        [
+          "Side b",
+          "6",
+          "m"
+        ],
+        [
+          "Side c",
+          "7",
+          "m"
+        ],
+        [
+          "Angle A",
+          "38.21°",
+          "degrees"
+        ],
+        [
+          "Angle B",
+          "46.57°",
+          "degrees"
+        ],
+        [
+          "Angle C",
+          "95.22°",
+          "degrees"
+        ]
+      ]
+    }
+  ]
+}

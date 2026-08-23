@@ -1,0 +1,299 @@
+{
+  "id": "energy_equation___pressure_loss_vs__head_loss",
+  "title": "Energy Equation - Pressure Loss vs. Head Loss",
+  "description": "Calculate and visualize pressure loss and head loss in fluid flow systems using the Energy Equation. Includes major friction losses and minor dynamic losses for both laminar and turbulent flow regimes.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pressure_head_loss_calculator",
+      "headers": [
+        "Flow Parameters & Calculations"
+      ],
+      "content": "Energy Equation Calculator - Pressure Loss and Head Loss",
+      "inputs": [
+        {
+          "id": "velocity",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "m/s"
+        },
+        {
+          "id": "density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "defaultValue": 1.23,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "duct_length",
+          "label": "Duct/Pipe Length (l)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        },
+        {
+          "id": "hydraulic_diameter",
+          "label": "Hydraulic Diameter (dh)",
+          "type": "number",
+          "defaultValue": 0.315,
+          "unit": "m"
+        },
+        {
+          "id": "friction_coefficient",
+          "label": "Friction Coefficient (λ)",
+          "type": "number",
+          "defaultValue": 0.017,
+          "unit": "-"
+        },
+        {
+          "id": "minor_loss_coefficient",
+          "label": "Minor Loss Coefficient (ξ)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "-"
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (g)",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        },
+        {
+          "id": "roughness_absolute",
+          "label": "Absolute Roughness (k)",
+          "type": "number",
+          "defaultValue": 0.00015,
+          "unit": "m"
+        },
+        {
+          "id": "viscosity_dynamic",
+          "label": "Dynamic Viscosity (μ)",
+          "type": "number",
+          "defaultValue": 0.0000179,
+          "unit": "Ns/m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number (Re)",
+          "formula": "(inputs.hydraulic_diameter * inputs.velocity * inputs.density) / inputs.viscosity_dynamic",
+          "format": "decimal",
+          "unit": "-"
+        },
+        {
+          "id": "relative_roughness",
+          "label": "Relative Roughness (k/dh)",
+          "formula": "inputs.roughness_absolute / inputs.hydraulic_diameter",
+          "format": "scientific",
+          "unit": "-"
+        },
+        {
+          "id": "dynamic_pressure",
+          "label": "Dynamic Pressure (ρv²/2)",
+          "formula": "(inputs.density * inputs.velocity * inputs.velocity) / 2",
+          "format": "decimal",
+          "unit": "Pa"
+        },
+        {
+          "id": "major_loss_pressure",
+          "label": "Major Pressure Loss (Δpmajor)",
+          "formula": "inputs.friction_coefficient * (inputs.duct_length / inputs.hydraulic_diameter) * ((inputs.density * inputs.velocity * inputs.velocity) / 2)",
+          "format": "decimal",
+          "unit": "Pa"
+        },
+        {
+          "id": "minor_loss_pressure",
+          "label": "Minor Pressure Loss (Δpminor)",
+          "formula": "inputs.minor_loss_coefficient * inputs.density * inputs.velocity * inputs.velocity / 2",
+          "format": "decimal",
+          "unit": "Pa"
+        },
+        {
+          "id": "total_pressure_loss",
+          "label": "Total Pressure Loss (Δploss)",
+          "formula": "(inputs.friction_coefficient * (inputs.duct_length / inputs.hydraulic_diameter) * ((inputs.density * inputs.velocity * inputs.velocity) / 2)) + (inputs.minor_loss_coefficient * inputs.density * inputs.velocity * inputs.velocity / 2)",
+          "format": "decimal",
+          "unit": "Pa"
+        },
+        {
+          "id": "velocity_head",
+          "label": "Velocity Head (v²/2g)",
+          "formula": "(inputs.velocity * inputs.velocity) / (2 * inputs.gravity)",
+          "format": "decimal",
+          "unit": "m"
+        },
+        {
+          "id": "major_loss_head",
+          "label": "Major Head Loss (Δhmajor)",
+          "formula": "inputs.friction_coefficient * (inputs.duct_length / inputs.hydraulic_diameter) * ((inputs.velocity * inputs.velocity) / (2 * inputs.gravity))",
+          "format": "decimal",
+          "unit": "m"
+        },
+        {
+          "id": "minor_loss_head",
+          "label": "Minor Head Loss (Δhminor)",
+          "formula": "inputs.minor_loss_coefficient * (inputs.velocity * inputs.velocity) / (2 * inputs.gravity)",
+          "format": "decimal",
+          "unit": "m"
+        },
+        {
+          "id": "total_head_loss",
+          "label": "Total Head Loss (Δhloss)",
+          "formula": "(inputs.friction_coefficient * (inputs.duct_length / inputs.hydraulic_diameter) * ((inputs.velocity * inputs.velocity) / (2 * inputs.gravity))) + (inputs.minor_loss_coefficient * (inputs.velocity * inputs.velocity) / (2 * inputs.gravity))",
+          "format": "decimal",
+          "unit": "m"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "friction_regime_table",
+      "headers": [
+        "Flow Regime",
+        "Reynolds Number Range",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Laminar",
+          "Re < 2,300",
+          "Smooth, orderly flow. Friction coefficient λ = 64/Re. Roughness is negligible."
+        ],
+        [
+          "Transitional",
+          "2,300 ≤ Re ≤ 4,000",
+          "Flow varies between laminar and turbulent. Friction coefficient cannot be determined."
+        ],
+        [
+          "Turbulent",
+          "Re > 4,000",
+          "Chaotic, mixed flow. Friction coefficient depends on Reynolds number and relative roughness (k/dh). Use Colebrook Equation or Moody Diagram."
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "roughness_table",
+      "headers": [
+        "Material",
+        "Absolute Roughness k (10⁻³ m)",
+        "Absolute Roughness k (feet)"
+      ],
+      "rows": [
+        [
+          "Copper, Lead, Brass, Aluminum (new)",
+          "0.001 - 0.002",
+          "3.3 - 6.7 × 10⁻⁶"
+        ],
+        [
+          "PVC and Plastic Pipes",
+          "0.0015 - 0.007",
+          "0.5 - 2.33 × 10⁻⁵"
+        ],
+        [
+          "Stainless steel, electropolished",
+          "0.0001 - 0.0008",
+          "0.000328 - 0.00262 × 10⁻³"
+        ],
+        [
+          "Steel commercial pipe",
+          "0.045 - 0.09",
+          "1.5 - 3 × 10⁻⁴"
+        ],
+        [
+          "Galvanized steel",
+          "0.15",
+          "5 × 10⁻⁴"
+        ],
+        [
+          "New cast iron",
+          "0.25 - 0.8",
+          "8 - 27 × 10⁻⁴"
+        ],
+        [
+          "Ordinary concrete",
+          "0.3 - 1",
+          "1 - 3.33 × 10⁻³"
+        ],
+        [
+          "Coarse concrete",
+          "0.3 - 5",
+          "1 - 16.7 × 10⁻³"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "loss_comparison_chart",
+      "content": "Pressure Loss and Head Loss Comparison",
+      "options": {
+        "title": {
+          "text": "Pressure Loss vs Head Loss Analysis",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Pressure Loss (Pa)",
+            "Head Loss (m)"
+          ],
+          "top": "bottom"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Major Loss",
+            "Minor Loss",
+            "Total Loss"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Pressure Loss (Pa)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Head Loss (m)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Pressure Loss (Pa)",
+            "data": [
+              0,
+              0,
+              0
+            ],
+            "type": "bar",
+            "yAxisIndex": 0,
+            "itemStyle": {
+              "color": "#FF6B6B"
+            }
+          },
+          {
+            "name": "Head Loss (m)",
+            "data": [
+              0,
+              0,
+              0
+            ],
+            "type": "line",
+            "yAxisIndex": 1,
+            "itemStyle": {
+              "color": "#4ECDC4"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

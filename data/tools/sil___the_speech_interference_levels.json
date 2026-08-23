@@ -1,0 +1,52 @@
+{
+  "id": "sil___the_speech_interference_levels",
+  "title": "SIL - the Speech Interference Levels",
+  "description": "Background noise frequencies that interferes with speech. Speech Interference Levels (SIL) are arithmetic average sound pressure levels at the 500, 1000 and 2000 Hz center frequencies and a measure of the degree to which background noise interferes with speech.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Voice Level",
+        "SIL Range (dB)",
+        "Distance (feet)",
+        "Distance (meters)",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Normal",
+          "30-40",
+          "3-6",
+          "0.9-1.8",
+          "Conversational speech at comfortable level"
+        ],
+        [
+          "Raised",
+          "40-50",
+          "2-3",
+          "0.6-0.9",
+          "Elevated voice to overcome moderate noise"
+        ],
+        [
+          "Very Loud",
+          "50-60",
+          "1-2",
+          "0.3-0.6",
+          "Shouting required in high noise environments"
+        ],
+        [
+          "Shouting",
+          "60+",
+          "<1",
+          "<0.3",
+          "Maximum effort speech in extreme noise"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### About Speech Interference Levels (SIL)\n\nSpeech Interference Levels are calculated as the arithmetic average of sound pressure levels at three center frequencies:\n- **500 Hz**\n- **1000 Hz**\n- **2000 Hz**\n\nThese frequencies represent the range most important for speech intelligibility.\n\n### Example\n\nIf the background noise sound pressure level is **75 dB** and the distance between two persons is **6 m**, they would need to raise their voice to more than a very loud level to be understood, according to the SIL diagram.\n\n### Conversion Factor\n\n1 ft = 0.3048 m"
+    }
+  ]
+}

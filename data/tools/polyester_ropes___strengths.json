@@ -1,0 +1,244 @@
+{
+  "id": "polyester_ropes___strengths",
+  "title": "Polyester Ropes - Strengths",
+  "description": "Polyester 3-strand and 8-strand rope - minimum breaking strength and safe load. Calculate safe mass and load values for different rope diameters.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "rope_specifications",
+      "headers": [
+        "Rope Diameter (in)",
+        "Minimum Breaking Strength (mm)",
+        "Safe Load (lbf)",
+        "Weight (kN)",
+        "Weight (lbf)",
+        "Weight (kN)",
+        "Weight (lbm/ft)",
+        "Weight (kg/m)"
+      ],
+      "rows": [
+        [
+          "3/16",
+          5,
+          765,
+          3.4,
+          63.8,
+          0.284,
+          0.011,
+          0.016
+        ],
+        [
+          "1/4",
+          6,
+          1315,
+          5.85,
+          110,
+          0.487,
+          0.02,
+          0.029
+        ],
+        [
+          "5/16",
+          8,
+          2050,
+          9.1,
+          171,
+          0.76,
+          0.031,
+          0.045
+        ],
+        [
+          "3/8",
+          10,
+          2900,
+          12.9,
+          242,
+          1.07,
+          0.044,
+          0.065
+        ],
+        [
+          "7/16",
+          11,
+          3915,
+          17.4,
+          326,
+          1.45,
+          0.059,
+          0.088
+        ],
+        [
+          "1/2",
+          12,
+          5085,
+          22.6,
+          424,
+          1.88,
+          0.077,
+          0.115
+        ],
+        [
+          "9/16",
+          14,
+          6435,
+          28.6,
+          536,
+          2.39,
+          0.098,
+          0.146
+        ],
+        [
+          "5/8",
+          16,
+          7825,
+          34.8,
+          652,
+          2.9,
+          0.12,
+          0.179
+        ],
+        [
+          "3/4",
+          18,
+          11200,
+          49.8,
+          933,
+          4.15,
+          0.172,
+          0.256
+        ],
+        [
+          "7/8",
+          22,
+          15225,
+          67.7,
+          1270,
+          5.65,
+          0.234,
+          0.348
+        ],
+        [
+          "1",
+          24,
+          19775,
+          88,
+          1650,
+          7.34,
+          0.304,
+          0.452
+        ],
+        [
+          "1 1/16",
+          26,
+          22225,
+          99,
+          1850,
+          8.23,
+          0.342,
+          0.509
+        ],
+        [
+          "1 1/8",
+          28,
+          24800,
+          110,
+          2070,
+          9.21,
+          0.385,
+          0.573
+        ],
+        [
+          "1 1/4",
+          30,
+          29800,
+          133,
+          2480,
+          11,
+          0.465,
+          0.692
+        ],
+        [
+          "1 3/8",
+          32,
+          32500,
+          145,
+          2710,
+          12.1,
+          0.465,
+          0.759
+        ],
+        [
+          "1 1/2",
+          36,
+          42200,
+          188,
+          3520,
+          15.7,
+          0.51,
+          0.997
+        ],
+        [
+          "1 5/8",
+          40,
+          49250,
+          219,
+          4100,
+          18.2,
+          0.67,
+          1.16
+        ],
+        [
+          "1 3/4",
+          44,
+          57000,
+          254,
+          4750,
+          21.1,
+          0.78,
+          1.35
+        ],
+        [
+          "2",
+          48,
+          72000,
+          320,
+          6000,
+          26.7,
+          0.91,
+          1.74
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "safe_mass_calculator",
+      "content": "## Maximum Safe Mass Calculator\n\nCalculate the maximum safe mass that a polyester rope can support using the formula:\n\n**m = F / g**\n\nWhere:\n- F = Safe Load force (kN)\n- g = acceleration of gravity (9.81 m/s²)\n- m = mass (kg)",
+      "inputs": [
+        {
+          "id": "safe_load_kn",
+          "label": "Safe Load",
+          "type": "number",
+          "unit": "kN",
+          "defaultValue": 1.07
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        }
+      ],
+      "outputs": [
+        {
+          "id": "safe_mass_kg",
+          "label": "Maximum Safe Mass",
+          "formula": "(inputs.safe_load_kn * 1000) / inputs.gravity",
+          "unit": "kg",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

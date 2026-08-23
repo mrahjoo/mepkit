@@ -1,0 +1,40 @@
+{
+  "id": "globe_temperature",
+  "title": "Globe Temperature",
+  "description": "Calculate the resultant or globe temperature, a more representative measure of temperature comfort than air temperature alone. The globe temperature combines mean radiation temperature and air temperature using the formula: tg = 0.5 × tmr + 0.5 × ta",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Globe Temperature Calculator\n\nThe **Resultant Temperature**, also called the **Globe Temperature**, can be used as a more representative measure of temperature comfort than air temperature alone.\n\n### Formula\n\n**tg = 0.5 × tmr + 0.5 × ta**\n\nWhere:\n- **tg** = Globe (resultant) temperature (°C or °F)\n- **tmr** = Mean radiation temperature (°C or °F)\n- **ta** = Air temperature (°C or °F)\n\nGlobe temperatures can be measured with acceptable results in the centre of black globes with diameters ranging 25 - 150 mm."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "tmr",
+          "label": "Mean Radiation Temperature (tmr)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 25
+        },
+        {
+          "id": "ta",
+          "label": "Air Temperature (ta)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tg",
+          "label": "Globe Temperature (tg)",
+          "formula": "0.5 * inputs.tmr + 0.5 * inputs.ta",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

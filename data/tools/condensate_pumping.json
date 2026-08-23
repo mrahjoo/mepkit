@@ -1,0 +1,127 @@
+{
+  "id": "condensate_pumping",
+  "title": "Condensate Pumping",
+  "description": "Calculate Net Positive Suction Head (NPSH) for condensate pumping systems to prevent cavitation in centrifugal pumps handling hot condensate near boiling temperatures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "npsh_calculator",
+      "content": "NPSH Calculator for Condensate Pumping",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Water Density",
+          "type": "number",
+          "unit": "lb/ft³",
+          "defaultValue": 62.4
+        },
+        {
+          "id": "pa",
+          "label": "Absolute Pressure in Receiver",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 14.7
+        },
+        {
+          "id": "pvp",
+          "label": "Absolute Evaporation Pressure",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 0.9
+        },
+        {
+          "id": "hs",
+          "label": "Static Suction Head",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0
+        },
+        {
+          "id": "hf",
+          "label": "Friction Loss in Suction Piping",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "npsh",
+          "label": "Net Positive Suction Head (NPSH)",
+          "unit": "ft",
+          "formula": "(144 / inputs.density) * (inputs.pa - inputs.pvp) + inputs.hs - inputs.hf",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "npsh_reference",
+      "content": "NPSH Reference Data for Common Condensate Temperatures",
+      "headers": [
+        "Temperature (°F)",
+        "Temperature (°C)",
+        "Vapor Pressure (psi)",
+        "Density (lb/ft³)",
+        "Typical Cavitation Risk"
+      ],
+      "rows": [
+        [
+          100,
+          37.8,
+          0.949,
+          62,
+          "Low"
+        ],
+        [
+          120,
+          48.9,
+          1.695,
+          61.7,
+          "Low"
+        ],
+        [
+          140,
+          60,
+          2.892,
+          61.4,
+          "Moderate"
+        ],
+        [
+          160,
+          71.1,
+          4.741,
+          61,
+          "Moderate"
+        ],
+        [
+          180,
+          82.2,
+          7.51,
+          60.6,
+          "High"
+        ],
+        [
+          200,
+          93.3,
+          11.526,
+          60.1,
+          "High"
+        ],
+        [
+          212,
+          100,
+          14.696,
+          59.8,
+          "Critical"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "npsh_guidelines",
+      "content": "## NPSH Guidelines\n\n### Recommended NPSH Values\n- **Minimum Required**: Consult pump manufacturer specifications\n- **Typical Safety Margin**: Add 2-3 ft to manufacturer's minimum\n- **Positive Value**: Indicates protection against cavitation\n- **Negative Value**: High risk of cavitation - system modifications needed\n\n### Methods to Increase NPSH\n1. **Increase Receiver Pressure** - Pressurize receiver above atmospheric\n2. **Reduce Vapor Pressure** - Cool condensate with heat exchanger\n3. **Increase Static Head** - Elevate receiver or lower pump\n4. **Reduce Friction Loss** - Increase piping diameter, reduce fittings\n5. **Use Pressure-Powered Pump** - Alternative to centrifugal pump\n\n### Temperature Effects\nHot condensate near 211°F (100°C) has vapor pressure approaching atmospheric pressure, making cavitation likely. Temperature reduction is often the most practical solution."
+    }
+  ]
+}

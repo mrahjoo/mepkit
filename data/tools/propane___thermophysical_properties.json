@@ -1,0 +1,234 @@
+{
+  "id": "propane___thermophysical_properties",
+  "title": "Propane - Thermophysical Properties",
+  "description": "Calculator for propane thermophysical properties at 25°C (77°F, 298K) and atmospheric pressure. Provides molecular weight, density, viscosity, thermal conductivity, specific heat, and other key thermodynamic properties of propane (C3H8).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Propane - Thermophysical Properties\n\nThermophysical properties of Propane (C3H8) at standard conditions (25°C / 77°F / 298K and atmospheric pressure).\n\n### Reference Properties\n- **Molecular Weight:** 44.097 g/mol\n- **Critical Temperature:** 96°C (205°F)\n- **Critical Pressure:** 4.26 MN/m² (618 psia)\n- **Boiling Point:** -42.2°C (-44°F)\n- **Flammability:** Yes"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Unit 1",
+        "Value 1",
+        "Unit 2",
+        "Value 2"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "g/mol",
+          "44.097",
+          "-",
+          "-"
+        ],
+        [
+          "Specific Gravity of gas (air = 1)",
+          "-",
+          "1.52",
+          "-",
+          "-"
+        ],
+        [
+          "Specific Volume",
+          "ft³/lb",
+          "8.84",
+          "m³/kg",
+          "0.552"
+        ],
+        [
+          "Density of liquid at atmospheric pressure",
+          "lb/ft³",
+          "36.2",
+          "kg/m³",
+          "580"
+        ],
+        [
+          "Vapor pressure at 25°C",
+          "psia",
+          "135.7",
+          "MN/m²",
+          "0.936"
+        ],
+        [
+          "Absolute Viscosity",
+          "lbm/ft·s",
+          "5.38×10⁻⁶",
+          "cP",
+          "0.0074"
+        ],
+        [
+          "Sound velocity in gas",
+          "m/s",
+          "253",
+          "-",
+          "-"
+        ],
+        [
+          "Specific Heat (cp)",
+          "Btu/lb·°F",
+          "0.39",
+          "J/kg·K",
+          "1630"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          "-",
+          "1.13",
+          "-",
+          "-"
+        ],
+        [
+          "Gas constant (R)",
+          "ft·lb/lb·°R",
+          "35.0",
+          "J/kg·°C",
+          "188"
+        ],
+        [
+          "Thermal Conductivity",
+          "Btu/hr·ft·°F",
+          "0.010",
+          "W/m·°C",
+          "0.017"
+        ],
+        [
+          "Boiling Point",
+          "°F",
+          "-44",
+          "°C",
+          "-42.2"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "Btu/lb",
+          "184",
+          "J/kg",
+          "428000"
+        ],
+        [
+          "Freezing/Melting Point",
+          "°F",
+          "-309.8",
+          "°C",
+          "-189.9"
+        ],
+        [
+          "Latent Heat of Fusion",
+          "Btu/lb",
+          "19.1",
+          "J/kg",
+          "44400"
+        ],
+        [
+          "Critical Temperature",
+          "°F",
+          "205",
+          "°C",
+          "96"
+        ],
+        [
+          "Critical Pressure",
+          "psia",
+          "618",
+          "MN/m²",
+          "4.26"
+        ],
+        [
+          "Critical Volume",
+          "ft³/lb",
+          "0.073",
+          "m³/kg",
+          "0.0045"
+        ],
+        [
+          "Heat of combustion",
+          "Btu/ft³",
+          "2450",
+          "kJ/kg",
+          "50340"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure_atm",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "atm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "molecular_weight",
+          "label": "Molecular Weight",
+          "formula": "44.097",
+          "unit": "g/mol",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_gravity_gas",
+          "label": "Specific Gravity of gas (air = 1)",
+          "formula": "1.52",
+          "unit": "-",
+          "format": "decimal"
+        },
+        {
+          "id": "density_liquid",
+          "label": "Density of liquid at atmospheric pressure",
+          "formula": "580",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "vapor_pressure",
+          "label": "Vapor pressure at 25°C",
+          "formula": "0.936",
+          "unit": "MN/m²",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat (cp)",
+          "formula": "1630",
+          "unit": "J/kg·K",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "formula": "0.017",
+          "unit": "W/m·°C",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_temperature",
+          "label": "Critical Temperature",
+          "formula": "96",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_pressure",
+          "label": "Critical Pressure",
+          "formula": "4.26",
+          "unit": "MN/m²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

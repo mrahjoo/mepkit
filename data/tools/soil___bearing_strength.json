@@ -1,0 +1,49 @@
+{
+  "id": "soil___bearing_strength",
+  "title": "Soil - Bearing Strength",
+  "description": "Allowable loads on soil. Reference table for bearing strength of various soil types measured in kPa (kiloPascals).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Soil Type",
+        "Bearing Load (kPa)"
+      ],
+      "rows": [
+        [
+          "Clay, soft",
+          "100"
+        ],
+        [
+          "Sand, dry fine",
+          "200"
+        ],
+        [
+          "Sand with clay, dry fine",
+          "300"
+        ],
+        [
+          "Sand, coarse",
+          "300"
+        ],
+        [
+          "Clay, dry hard",
+          "350"
+        ],
+        [
+          "Gravel",
+          "400"
+        ],
+        [
+          "Rock",
+          "1000 - 4000"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Notes\n\n- **1 kPa** = 1 kN/m² = 10³ N/m²\n- Always check local building codes before designing foundations\n- Bearing strength values shown are allowable loads and should be verified with site-specific soil testing"
+    }
+  ]
+}

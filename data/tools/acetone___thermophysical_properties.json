@@ -1,0 +1,548 @@
+{
+  "id": "acetone___thermophysical_properties",
+  "title": "Acetone - Thermophysical Properties",
+  "description": "Comprehensive thermophysical properties of acetone (2-propanone, CH3-CO-CH3) including density, critical properties, heat capacity, viscosity, and other thermal and physical characteristics. Values are provided for liquid acetone at 25°C and 1 bara unless otherwise specified.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Acidity (pKa1)",
+          "20",
+          ""
+        ],
+        [
+          "Autoignition temperature",
+          "738",
+          "K"
+        ],
+        [
+          "Autoignition temperature",
+          "465",
+          "°C"
+        ],
+        [
+          "Autoignition temperature",
+          "869",
+          "°F"
+        ],
+        [
+          "Boiling Point",
+          "329.2",
+          "K"
+        ],
+        [
+          "Boiling Point",
+          "56.08",
+          "°C"
+        ],
+        [
+          "Boiling Point",
+          "132.9",
+          "°F"
+        ],
+        [
+          "Critical density",
+          "4.70",
+          "mol/dm³"
+        ],
+        [
+          "Critical density",
+          "273",
+          "kg/m³"
+        ],
+        [
+          "Critical density",
+          "0.530",
+          "slug/ft³"
+        ],
+        [
+          "Critical density",
+          "17.0",
+          "lb/ft³"
+        ],
+        [
+          "Critical pressure",
+          "4.69",
+          "MPa"
+        ],
+        [
+          "Critical pressure",
+          "46.9",
+          "bar"
+        ],
+        [
+          "Critical pressure",
+          "46.3",
+          "atm"
+        ],
+        [
+          "Critical pressure",
+          "681",
+          "psi"
+        ],
+        [
+          "Critical temperature",
+          "508.1",
+          "K"
+        ],
+        [
+          "Critical temperature",
+          "235.0",
+          "°C"
+        ],
+        [
+          "Critical temperature",
+          "454.9",
+          "°F"
+        ],
+        [
+          "Critical volume",
+          "213",
+          "cm³/mol"
+        ],
+        [
+          "Critical volume",
+          "0.00366",
+          "m³/kg"
+        ],
+        [
+          "Critical volume",
+          "1.89",
+          "ft³/slug"
+        ],
+        [
+          "Critical volume",
+          "0.0587",
+          "ft³/lb"
+        ],
+        [
+          "Density",
+          "13507",
+          "mol/m³"
+        ],
+        [
+          "Density",
+          "784.5",
+          "kg/m³"
+        ],
+        [
+          "Density",
+          "1.522",
+          "slug/ft³"
+        ],
+        [
+          "Density",
+          "48.97",
+          "lb/ft³"
+        ],
+        [
+          "Flammable (gas and liquid)",
+          "yes",
+          ""
+        ],
+        [
+          "Flash point",
+          "256",
+          "K"
+        ],
+        [
+          "Flash point",
+          "-17",
+          "°C"
+        ],
+        [
+          "Flash point",
+          "1",
+          "°F"
+        ],
+        [
+          "Gas constant (R)",
+          "143.2",
+          "J/kg·K"
+        ],
+        [
+          "Gas constant (R)",
+          "0.03977",
+          "Wh/(kg·K)"
+        ],
+        [
+          "Gas constant (R)",
+          "856.1",
+          "ft·lbf/(slug·°R)"
+        ],
+        [
+          "Gas constant (R)",
+          "26.61",
+          "ft·lbf/(lb·°R)"
+        ],
+        [
+          "Gibbs free energy of formation (gas)",
+          "-153",
+          "kJ/mol"
+        ],
+        [
+          "Gibbs free energy of formation (gas)",
+          "-2634",
+          "kJ/kg"
+        ],
+        [
+          "Gibbs free energy of formation (gas)",
+          "-1133",
+          "Btu/lb"
+        ],
+        [
+          "Heat of combustion (gas)",
+          "-1821",
+          "kJ/mol"
+        ],
+        [
+          "Heat of combustion (gas)",
+          "-31354",
+          "kJ/kg"
+        ],
+        [
+          "Heat of combustion (gas)",
+          "-13.5",
+          "Btu/lb"
+        ],
+        [
+          "Heat of combustion (liquid)",
+          "-1789",
+          "kJ/mol"
+        ],
+        [
+          "Heat of combustion (liquid)",
+          "-30803",
+          "kJ/kg"
+        ],
+        [
+          "Heat of combustion (liquid)",
+          "-13.2",
+          "Btu/lb"
+        ],
+        [
+          "Heat of formation (gas)",
+          "-218.0",
+          "kJ/mol"
+        ],
+        [
+          "Heat of formation (gas)",
+          "-3753",
+          "kJ/kg"
+        ],
+        [
+          "Heat of formation (gas)",
+          "-1614",
+          "Btu/lb"
+        ],
+        [
+          "Heat of formation (liquid)",
+          "-249",
+          "kJ/mol"
+        ],
+        [
+          "Heat of formation (liquid)",
+          "-4287",
+          "kJ/kg"
+        ],
+        [
+          "Heat of formation (liquid)",
+          "-1843",
+          "Btu/lb"
+        ],
+        [
+          "Heat of fusion (at -97°C)",
+          "5.7",
+          "kJ/mol"
+        ],
+        [
+          "Heat of fusion (at -97°C)",
+          "98",
+          "kJ/kg"
+        ],
+        [
+          "Heat of fusion (at -97°C)",
+          "42.19",
+          "Btu/lb"
+        ],
+        [
+          "Heat of evaporation",
+          "31.0",
+          "kJ/mol"
+        ],
+        [
+          "Heat of evaporation",
+          "534",
+          "kJ/kg"
+        ],
+        [
+          "Heat of evaporation",
+          "229",
+          "Btu/lb"
+        ],
+        [
+          "Specific Heat capacity, Cp (gas)",
+          "75.0",
+          "J/mol·K"
+        ],
+        [
+          "Specific Heat capacity, Cp (gas)",
+          "1.29",
+          "kJ/kg·K"
+        ],
+        [
+          "Specific Heat capacity, Cp (gas)",
+          "0.308",
+          "Btu/(lb·°F)"
+        ],
+        [
+          "Specific Heat capacity, Cp (liquid)",
+          "124.5",
+          "J/mol·K"
+        ],
+        [
+          "Specific Heat capacity, Cp (liquid)",
+          "2.14",
+          "kJ/kg·K"
+        ],
+        [
+          "Specific Heat capacity, Cp (liquid)",
+          "0.512",
+          "Btu/(lb·°F)"
+        ],
+        [
+          "Specific Heat capacity, Cv (liquid)",
+          "90.0",
+          "J/mol·K"
+        ],
+        [
+          "Specific Heat capacity, Cv (liquid)",
+          "1.55",
+          "kJ/kg·K"
+        ],
+        [
+          "Specific Heat capacity, Cv (liquid)",
+          "0.370",
+          "Btu/(lb·°F)"
+        ],
+        [
+          "Ionization potential",
+          "9.69",
+          "eV"
+        ],
+        [
+          "log KOW (Octanol/Water Partition Coefficient)",
+          "-0.24",
+          ""
+        ],
+        [
+          "Melting point",
+          "178.25",
+          "K"
+        ],
+        [
+          "Melting point",
+          "-94.9",
+          "°C"
+        ],
+        [
+          "Melting point",
+          "-138.8",
+          "°F"
+        ],
+        [
+          "Molecular Weight",
+          "58.079",
+          "g/mol"
+        ],
+        [
+          "Molecular Weight",
+          "0.12804",
+          "lb/mol"
+        ],
+        [
+          "Solubility in water (at 25°C)",
+          "1000",
+          "mg/ml"
+        ],
+        [
+          "Solubility in water (at 25°C)",
+          "Miscible with water",
+          ""
+        ],
+        [
+          "Sound velocity",
+          "1164",
+          "m/s"
+        ],
+        [
+          "Sound velocity",
+          "3818",
+          "ft/s"
+        ],
+        [
+          "Sound velocity",
+          "2607",
+          "mi/h"
+        ],
+        [
+          "Specific Gravity (gas, relative to air)",
+          "2.0",
+          ""
+        ],
+        [
+          "Specific Gravity (liquid, relative to water)",
+          "0.79",
+          ""
+        ],
+        [
+          "Specific Heat Ratio (liquid) - Cp/Cv",
+          "1.38",
+          ""
+        ],
+        [
+          "Specific Volume",
+          "0.0000740",
+          "m³/mol"
+        ],
+        [
+          "Specific Volume",
+          "0.00127",
+          "m³/kg"
+        ],
+        [
+          "Specific Volume",
+          "0.657",
+          "ft³/slug"
+        ],
+        [
+          "Specific Volume",
+          "0.0204",
+          "ft³/lb"
+        ],
+        [
+          "Standard molar entropy, S° (gas)",
+          "295",
+          "J/mol·K"
+        ],
+        [
+          "Standard molar entropy, S° (gas)",
+          "5.08",
+          "kJ/kg·K"
+        ],
+        [
+          "Standard molar entropy, S° (gas)",
+          "1.21",
+          "Btu/(lb·°F)"
+        ],
+        [
+          "Surface tension",
+          "23.1",
+          "dynes/cm"
+        ],
+        [
+          "Surface tension",
+          "0.02308",
+          "N/m"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.18",
+          "W/m·°C"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.104002",
+          "Btu/(hr·ft·°F)"
+        ],
+        [
+          "Triple point pressure",
+          "2.33 ×10⁻⁶",
+          "MPa"
+        ],
+        [
+          "Triple point pressure",
+          "2.33 ×10⁻⁵",
+          "bar"
+        ],
+        [
+          "Triple point pressure",
+          "2.30 ×10⁻⁵",
+          "atm"
+        ],
+        [
+          "Triple point pressure",
+          "3.38 ×10⁻⁴",
+          "psi"
+        ],
+        [
+          "Triple point temperature",
+          "178.5",
+          "K"
+        ],
+        [
+          "Triple point temperature",
+          "-94.7",
+          "°C"
+        ],
+        [
+          "Triple point temperature",
+          "-138.37",
+          "°F"
+        ],
+        [
+          "Vapor (saturation) pressure",
+          "0.0308",
+          "MPa"
+        ],
+        [
+          "Vapor (saturation) pressure",
+          "231.0",
+          "mm Hg"
+        ],
+        [
+          "Vapor (saturation) pressure",
+          "0.3039",
+          "atm"
+        ],
+        [
+          "Vapor (saturation) pressure",
+          "4.47",
+          "psi"
+        ],
+        [
+          "Viscosity, dynamic (absolute)",
+          "0.309",
+          "cP"
+        ],
+        [
+          "Viscosity, dynamic (absolute)",
+          "207.6",
+          "lbm/(ft·s ×10⁻⁶)"
+        ],
+        [
+          "Viscosity, dynamic (absolute)",
+          "6.45",
+          "lbf·s/ft² ×10⁻⁶"
+        ],
+        [
+          "Viscosity, kinematic",
+          "0.394",
+          "cSt"
+        ],
+        [
+          "Viscosity, kinematic",
+          "4.2",
+          "ft²/s ×10⁻⁶"
+        ]
+      ]
+    }
+  ]
+}

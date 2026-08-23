@@ -1,0 +1,79 @@
+{
+  "id": "water_sprinkler_protected_areas_and_hazard_classif",
+  "title": "Water Sprinkler Protected Areas and Hazard Classification",
+  "description": "Maximum fire sprinkler protected area vs. classification and construction. This tool provides a comprehensive table of maximum protection areas per sprinkler based on hazard classification and ceiling/sidewall construction types.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Hazard Classification",
+        "Ceiling and Sidewall Construction",
+        "Maximum Protected Area (ft²)",
+        "Maximum Protected Area (m²)"
+      ],
+      "rows": [
+        [
+          "Light",
+          "Standard pendent and upright sprinklers - Unobstructed",
+          225,
+          20.9
+        ],
+        [
+          "Light",
+          "Non combustible obstructed",
+          225,
+          20.9
+        ],
+        [
+          "Light",
+          "Combustible obstructed",
+          168,
+          15.6
+        ],
+        [
+          "Light",
+          "Standard sidewall sprinklers - Combustible finish",
+          120,
+          11.1
+        ],
+        [
+          "Light",
+          "Standard sidewall sprinklers - Noncombustible finish",
+          196,
+          18.2
+        ],
+        [
+          "Ordinary",
+          "Standard pendent and upright sprinklers - All",
+          130,
+          12.1
+        ],
+        [
+          "Ordinary",
+          "Standard sidewall sprinklers - Combustible finish",
+          80,
+          7.4
+        ],
+        [
+          "Ordinary",
+          "Standard sidewall sprinklers - Noncombustible or limited combustible finish",
+          100,
+          9.3
+        ],
+        [
+          "Extra",
+          "Standard pendent and upright sprinklers - All",
+          100,
+          9.3
+        ],
+        [
+          "High-piled",
+          "Standard pendent and upright sprinklers - All",
+          100,
+          9.3
+        ]
+      ]
+    }
+  ]
+}

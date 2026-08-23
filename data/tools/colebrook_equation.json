@@ -1,0 +1,86 @@
+{
+  "id": "colebrook_equation",
+  "title": "Colebrook Equation",
+  "description": "Calculate friction coefficients for turbulent fluid flow in ducts, tubes, and pipes using the Colebrook equation. This tool is used for determining resistance and pressure loss in ventilation systems, pipes with water or oil, and compressed air applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Colebrook Equation Calculator",
+      "inputs": [
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number (Re)",
+          "type": "number",
+          "defaultValue": 96000,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "roughness",
+          "label": "Surface Roughness (k)",
+          "type": "number",
+          "defaultValue": 0.0001,
+          "unit": "m"
+        },
+        {
+          "id": "hydraulic_diameter",
+          "label": "Hydraulic Diameter (dh)",
+          "type": "number",
+          "defaultValue": 0.315,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "friction_coefficient",
+          "label": "Friction Coefficient (λ)",
+          "formula": "1 / ((-2 * Math.log10((2.51 / (Math.sqrt(inputs.reynolds_number))) + ((inputs.roughness / inputs.hydraulic_diameter) / 3.72))) ** 2)",
+          "unit": "dimensionless",
+          "format": "decimal"
+        },
+        {
+          "id": "relative_roughness",
+          "label": "Relative Roughness (k/dh)",
+          "formula": "inputs.roughness / inputs.hydraulic_diameter",
+          "unit": "dimensionless",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Reynolds Number",
+          "inputs.reynolds_number",
+          "dimensionless"
+        ],
+        [
+          "Surface Roughness",
+          "inputs.roughness",
+          "m"
+        ],
+        [
+          "Hydraulic Diameter",
+          "inputs.hydraulic_diameter",
+          "m"
+        ],
+        [
+          "Relative Roughness",
+          "outputs.relative_roughness",
+          "dimensionless"
+        ],
+        [
+          "Friction Coefficient",
+          "outputs.friction_coefficient",
+          "dimensionless"
+        ]
+      ]
+    }
+  ]
+}

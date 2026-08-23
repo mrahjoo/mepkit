@@ -1,0 +1,250 @@
+{
+  "id": "liquids___latent_heat_of_evaporation",
+  "title": "Liquids - Latent Heat of Evaporation",
+  "description": "Latent heat of vaporization for fluids like alcohol, ether, nitrogen, water and more. Calculate the heat required to convert a unit mass of liquid into vapor without a change in temperature.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "latent_heat_table",
+      "content": "Latent Heat of Evaporation for Common Liquids",
+      "headers": [
+        "Product",
+        "Latent Heat (kJ/kg)",
+        "Latent Heat (Btu/lb)"
+      ],
+      "rows": [
+        [
+          "Acetic acid",
+          402,
+          173
+        ],
+        [
+          "Acetone",
+          518,
+          223
+        ],
+        [
+          "Alcohol",
+          896,
+          385
+        ],
+        [
+          "Alcohol, ethyl (ethanol)",
+          846,
+          364
+        ],
+        [
+          "Alcohol, methyl (methanol)",
+          1100,
+          473
+        ],
+        [
+          "Alcohol, propyl",
+          779,
+          335
+        ],
+        [
+          "Ammonia",
+          1369,
+          589
+        ],
+        [
+          "Aniline",
+          450,
+          193
+        ],
+        [
+          "Benzene",
+          390,
+          168
+        ],
+        [
+          "Bromine",
+          193,
+          83
+        ],
+        [
+          "Carbon disulphide",
+          351,
+          151
+        ],
+        [
+          "Carbon tetrachloride",
+          194,
+          83
+        ],
+        [
+          "Carbon dioxide",
+          574,
+          247
+        ],
+        [
+          "Chloroform",
+          247,
+          106
+        ],
+        [
+          "Decane",
+          263,
+          113
+        ],
+        [
+          "Dodecane",
+          256,
+          110
+        ],
+        [
+          "Ether",
+          377,
+          162
+        ],
+        [
+          "Ethylene glycol",
+          800,
+          344
+        ],
+        [
+          "Refrigerant R-11",
+          180,
+          77
+        ],
+        [
+          "Refrigerant R-12",
+          165,
+          71
+        ],
+        [
+          "Refrigerant R-22",
+          232,
+          100
+        ],
+        [
+          "Glycerine",
+          974,
+          419
+        ],
+        [
+          "Helium",
+          21,
+          9
+        ],
+        [
+          "Heptane",
+          318,
+          137
+        ],
+        [
+          "Hexane",
+          365,
+          157
+        ],
+        [
+          "Hydrogen",
+          461,
+          198
+        ],
+        [
+          "Iodine",
+          164,
+          71
+        ],
+        [
+          "Kerosene",
+          251,
+          108
+        ],
+        [
+          "Mercury",
+          295,
+          127
+        ],
+        [
+          "Nitrogen",
+          199,
+          86
+        ],
+        [
+          "Octane",
+          298,
+          128
+        ],
+        [
+          "Oxygen",
+          214,
+          92
+        ],
+        [
+          "Propane",
+          428,
+          184
+        ],
+        [
+          "Propylene",
+          342,
+          147
+        ],
+        [
+          "Propylene glycol",
+          914,
+          393
+        ],
+        [
+          "Sulphur",
+          1510,
+          650
+        ],
+        [
+          "Toluene",
+          351,
+          151
+        ],
+        [
+          "Turpentine",
+          293,
+          126
+        ],
+        [
+          "Water",
+          2256,
+          970.4
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "evaporation_heat_calc",
+      "content": "Calculate Evaporation Heat: q = he × m",
+      "inputs": [
+        {
+          "id": "he",
+          "label": "Latent Heat of Evaporation (he)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 2256
+        },
+        {
+          "id": "m",
+          "label": "Mass of Liquid (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "q",
+          "label": "Evaporation Heat (q)",
+          "unit": "kJ",
+          "formula": "inputs.he * inputs.m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "conversion_info",
+      "content": "## Unit Conversion\n\n1 kJ/kg = 0.43 Btu/lbm = 0.24 kcal/kg\n\n## Formula\n\nThe heat required to evaporate a fluid:\n\n**q = he × m**\n\nWhere:\n- **q** = evaporation heat (kJ)\n- **he** = latent heat of evaporation (kJ/kg)\n- **m** = mass of liquid (kg)\n\n## Example\n\nFor 10 kg of water with latent heat of evaporation of 2256 kJ/kg:\n\nq = 2256 kJ/kg × 10 kg = **22,560 kJ**"
+    }
+  ]
+}

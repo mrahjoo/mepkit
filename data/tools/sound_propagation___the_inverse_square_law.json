@@ -1,0 +1,216 @@
+{
+  "id": "sound_propagation___the_inverse_square_law",
+  "title": "Sound Propagation - the Inverse Square Law",
+  "description": "Calculate sound pressure level reduction based on distance from source using the Inverse Square Law. In a free field, doubling the distance reduces sound pressure level by 6 decibels.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "inverse_square_calculator",
+      "content": "Calculate the sound pressure level at a new distance using the Inverse Square Law formula: Lp2 = Lp1 - 20 * log(R2/R1)",
+      "inputs": [
+        {
+          "id": "lp1",
+          "label": "Lp1 - Sound pressure level at location 1",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 110
+        },
+        {
+          "id": "r1",
+          "label": "R1 - Distance from source to location 1",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "r2",
+          "label": "R2 - Distance from source to location 2",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dl",
+          "label": "dL - Difference in sound pressure level",
+          "unit": "dB",
+          "formula": "20 * Math.log10(inputs.r2 / inputs.r1)",
+          "format": "decimal"
+        },
+        {
+          "id": "lp2",
+          "label": "Lp2 - Sound pressure level at location 2",
+          "unit": "dB",
+          "formula": "inputs.lp1 - (20 * Math.log10(inputs.r2 / inputs.r1))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "inverse_square_table",
+      "content": "Sound Propagation - the Inverse Square Law Reference Data",
+      "headers": [
+        "Distance (feet)",
+        "Sound Pressure Lp (decibel)"
+      ],
+      "rows": [
+        [
+          1.25,
+          134
+        ],
+        [
+          2.5,
+          128
+        ],
+        [
+          5,
+          122
+        ],
+        [
+          10,
+          116
+        ],
+        [
+          20,
+          110
+        ],
+        [
+          40,
+          104
+        ],
+        [
+          80,
+          98
+        ],
+        [
+          160,
+          92
+        ],
+        [
+          320,
+          86
+        ],
+        [
+          640,
+          78
+        ],
+        [
+          1280,
+          74
+        ],
+        [
+          2560,
+          68
+        ],
+        [
+          5120,
+          62
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "inverse_square_chart",
+      "content": "Sound Pressure Level vs. Distance from Source",
+      "options": {
+        "title": {
+          "text": "Sound Pressure Level vs. Distance from Source - Inverse Square Law"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "log",
+          "name": "Distance (feet)",
+          "nameLocation": "middle",
+          "nameGap": 25
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Sound Pressure Level (dB)",
+          "nameLocation": "middle",
+          "nameGap": 40
+        },
+        "series": [
+          {
+            "name": "Sound Pressure Level",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              [
+                1.25,
+                134
+              ],
+              [
+                2.5,
+                128
+              ],
+              [
+                5,
+                122
+              ],
+              [
+                10,
+                116
+              ],
+              [
+                20,
+                110
+              ],
+              [
+                40,
+                104
+              ],
+              [
+                80,
+                98
+              ],
+              [
+                160,
+                92
+              ],
+              [
+                320,
+                86
+              ],
+              [
+                640,
+                78
+              ],
+              [
+                1280,
+                74
+              ],
+              [
+                2560,
+                68
+              ],
+              [
+                5120,
+                62
+              ]
+            ],
+            "symbolSize": 6,
+            "itemStyle": {
+              "color": "#2563eb"
+            },
+            "lineStyle": {
+              "color": "#2563eb",
+              "width": 2
+            }
+          }
+        ],
+        "grid": {
+          "left": "10%",
+          "right": "5%",
+          "bottom": "15%",
+          "top": "10%",
+          "containLabel": true
+        }
+      }
+    }
+  ]
+}

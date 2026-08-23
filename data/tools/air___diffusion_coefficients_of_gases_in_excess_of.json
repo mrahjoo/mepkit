@@ -1,0 +1,317 @@
+{
+  "id": "air___diffusion_coefficients_of_gases_in_excess_of",
+  "title": "Air - Diffusion Coefficients of Gases in Excess of Air",
+  "description": "Diffusion coefficients (D12) for gases in large excess of air at temperatures ranging 0 - 400 °C. Calculate and visualize how the diffusion coefficient varies with temperature for different gases based on Fick's first law of diffusion.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "diffusion_data_table",
+      "headers": [
+        "Gas",
+        "Formula",
+        "0 °C",
+        "20 °C",
+        "100 °C",
+        "200 °C",
+        "300 °C",
+        "400 °C"
+      ],
+      "rows": [
+        [
+          "Argon",
+          "Ar",
+          "0.167",
+          "0.189",
+          "0.289",
+          "0.437",
+          "0.612",
+          "0.81"
+        ],
+        [
+          "Methane",
+          "CH4",
+          "",
+          "0.21",
+          "0.321",
+          "0.485",
+          "0.678",
+          "0.899"
+        ],
+        [
+          "Carbon monoxide",
+          "CO",
+          "",
+          "0.208",
+          "0.315",
+          "0.475",
+          "0.662",
+          "0.875"
+        ],
+        [
+          "Carbon dioxide",
+          "CO2",
+          "",
+          "0.16",
+          "0.252",
+          "0.39",
+          "0.549",
+          "0.728"
+        ],
+        [
+          "Hydrogen",
+          "H2",
+          "",
+          "0.668",
+          "0.756",
+          "1.153",
+          "1.747",
+          "2.444",
+          "3.238"
+        ],
+        [
+          "Water vapour",
+          "H2O",
+          "",
+          "0.219",
+          "0.242",
+          "0.399",
+          "0.638",
+          "0.873",
+          "1.135"
+        ],
+        [
+          "Helium",
+          "He",
+          "",
+          "0.617",
+          "0.697",
+          "1.057",
+          "1.594",
+          "2.221",
+          "2.933"
+        ],
+        [
+          "Sulfur hexafluoride",
+          "SF6",
+          "",
+          "0.15",
+          "0.233",
+          "0.329",
+          "0.438"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "diffusion_calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "gas_type",
+          "label": "Gas Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Argon (Ar)",
+              "value": "argon"
+            },
+            {
+              "label": "Methane (CH4)",
+              "value": "methane"
+            },
+            {
+              "label": "Carbon monoxide (CO)",
+              "value": "carbon_monoxide"
+            },
+            {
+              "label": "Carbon dioxide (CO2)",
+              "value": "carbon_dioxide"
+            },
+            {
+              "label": "Hydrogen (H2)",
+              "value": "hydrogen"
+            },
+            {
+              "label": "Water vapour (H2O)",
+              "value": "water_vapour"
+            },
+            {
+              "label": "Helium (He)",
+              "value": "helium"
+            },
+            {
+              "label": "Sulfur hexafluoride (SF6)",
+              "value": "sulfur_hexafluoride"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "diffusion_coefficient",
+          "label": "Diffusion Coefficient (D12)",
+          "unit": "cm²/s",
+          "format": "decimal",
+          "formula": "Interpolated value based on inputs.temperature and inputs.gas_type"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "diffusion_temperature_chart",
+      "content": "Diffusion Coefficient vs Temperature for Different Gases",
+      "options": {
+        "title": {
+          "text": "Diffusion Coefficients of Gases in Air vs Temperature"
+        },
+        "xAxis": {
+          "name": "Temperature (°C)",
+          "type": "category",
+          "data": [
+            "0",
+            "20",
+            "100",
+            "200",
+            "300",
+            "400"
+          ]
+        },
+        "yAxis": {
+          "name": "Diffusion Coefficient D12 (cm²/s)",
+          "type": "value"
+        },
+        "legend": {
+          "data": [
+            "Argon (Ar)",
+            "Methane (CH4)",
+            "Carbon monoxide (CO)",
+            "Carbon dioxide (CO2)",
+            "Hydrogen (H2)",
+            "Water vapour (H2O)",
+            "Helium (He)",
+            "Sulfur hexafluoride (SF6)"
+          ]
+        },
+        "series": [
+          {
+            "name": "Argon (Ar)",
+            "data": [
+              0.167,
+              0.189,
+              0.289,
+              0.437,
+              0.612,
+              0.81
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Methane (CH4)",
+            "data": [
+              null,
+              0.21,
+              0.321,
+              0.485,
+              0.678,
+              0.899
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Carbon monoxide (CO)",
+            "data": [
+              null,
+              0.208,
+              0.315,
+              0.475,
+              0.662,
+              0.875
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Carbon dioxide (CO2)",
+            "data": [
+              null,
+              0.16,
+              0.252,
+              0.39,
+              0.549,
+              0.728
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Hydrogen (H2)",
+            "data": [
+              null,
+              0.668,
+              0.756,
+              1.153,
+              1.747,
+              2.444,
+              3.238
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Water vapour (H2O)",
+            "data": [
+              null,
+              0.219,
+              0.242,
+              0.399,
+              0.638,
+              0.873,
+              1.135
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Helium (He)",
+            "data": [
+              null,
+              0.617,
+              0.697,
+              1.057,
+              1.594,
+              2.221,
+              2.933
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Sulfur hexafluoride (SF6)",
+            "data": [
+              null,
+              0.15,
+              0.233,
+              0.329,
+              0.438,
+              null
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

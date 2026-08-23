@@ -1,0 +1,143 @@
+{
+  "id": "food_products___viscosities",
+  "title": "Food Products - Viscosities",
+  "description": "Absolute (dynamic) viscosity for common food products.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Food",
+        "Temperature (°C)",
+        "Absolute Viscosity (Pa·s)"
+      ],
+      "rows": [
+        [
+          "Apple juice, 20 °Brix",
+          27,
+          0.0021
+        ],
+        [
+          "Apple juice, 60 °Brix",
+          27,
+          0.03
+        ],
+        [
+          "Corn oil",
+          25,
+          0.0565
+        ],
+        [
+          "Corn oil",
+          38,
+          0.0317
+        ],
+        [
+          "Cottonseed oil",
+          20,
+          0.0704
+        ],
+        [
+          "Cottonseed oil",
+          38,
+          0.0306
+        ],
+        [
+          "Cream 10% fat",
+          40,
+          0.00148
+        ],
+        [
+          "Cream 10% fat",
+          60,
+          0.00107
+        ],
+        [
+          "Cream 20% fat",
+          60,
+          0.00171
+        ],
+        [
+          "Cream 30% fat",
+          60,
+          0.00289
+        ],
+        [
+          "Milk, homogenized",
+          20,
+          0.002
+        ],
+        [
+          "Milk, homogenized",
+          40,
+          0.0015
+        ],
+        [
+          "Milk, homogenized",
+          60,
+          0.00078
+        ],
+        [
+          "Milk, homogenized",
+          80,
+          0.0006
+        ],
+        [
+          "Milk, raw",
+          0,
+          0.00344
+        ],
+        [
+          "Milk, raw",
+          10,
+          0.00264
+        ],
+        [
+          "Milk, raw",
+          20,
+          0.00199
+        ],
+        [
+          "Milk, raw",
+          30,
+          0.00149
+        ],
+        [
+          "Milk, raw",
+          40,
+          0.00123
+        ],
+        [
+          "Peanut oil",
+          25,
+          0.066
+        ],
+        [
+          "Peanut oil",
+          38,
+          0.025
+        ],
+        [
+          "Safflower oil",
+          25,
+          0.052
+        ],
+        [
+          "Safflower oil",
+          38,
+          0.029
+        ],
+        [
+          "Soybean oil",
+          30,
+          0.04
+        ],
+        [
+          "Water",
+          20.2,
+          0.001
+        ]
+      ]
+    }
+  ]
+}

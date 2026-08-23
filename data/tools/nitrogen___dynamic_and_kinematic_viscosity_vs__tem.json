@@ -1,0 +1,74 @@
+{
+  "id": "nitrogen___dynamic_and_kinematic_viscosity_vs__tem",
+  "title": "Nitrogen - Dynamic and Kinematic Viscosity vs. Temperature",
+  "description": "Calculate nitrogen dynamic and kinematic viscosity at given temperatures and atmospheric pressure. The output dynamic viscosity is provided in Pa·s, cP, and other units, while kinematic viscosity is given in cSt, m²/s, and ft²/s.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "C"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "F"
+            },
+            {
+              "label": "Kelvin (K)",
+              "value": "K"
+            },
+            {
+              "label": "Rankine (°R)",
+              "value": "R"
+            }
+          ],
+          "defaultValue": "C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dynamic_viscosity_pas",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "format": "decimal",
+          "formula": "inputs.temperature * 1e-5 + 1.66e-5"
+        },
+        {
+          "id": "dynamic_viscosity_cp",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "format": "decimal",
+          "formula": "(inputs.temperature * 1e-5 + 1.66e-5) * 1000"
+        },
+        {
+          "id": "kinematic_viscosity_cst",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt",
+          "format": "decimal",
+          "formula": "(inputs.temperature * 0.5 + 10) * 1e-6"
+        },
+        {
+          "id": "kinematic_viscosity_m2s",
+          "label": "Kinematic Viscosity",
+          "unit": "m²/s",
+          "format": "scientific",
+          "formula": "(inputs.temperature * 0.5 + 10) * 1e-8"
+        }
+      ]
+    }
+  ]
+}

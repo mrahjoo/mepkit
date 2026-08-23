@@ -1,0 +1,130 @@
+{
+  "id": "cooling_tower_efficiency",
+  "title": "Cooling Tower Efficiency",
+  "description": "Calculate cooling tower efficiency based on inlet temperature, outlet temperature, and wet bulb temperature of air. Cooling tower efficiency represents the effectiveness of evaporative cooling systems in reducing water temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "efficiency_calculator",
+      "content": "Calculate cooling tower efficiency using the formula: μ = (ti - to) × 100 / (ti - twb)",
+      "inputs": [
+        {
+          "id": "ti",
+          "label": "Inlet Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 40
+        },
+        {
+          "id": "to",
+          "label": "Outlet Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 30
+        },
+        {
+          "id": "twb",
+          "label": "Wet Bulb Temperature of Air",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "efficiency",
+          "label": "Cooling Tower Efficiency",
+          "formula": "(inputs.ti - inputs.to) * 100 / (inputs.ti - inputs.twb)",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "range",
+          "label": "Temperature Range",
+          "formula": "inputs.ti - inputs.to",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "approach",
+          "label": "Approach Temperature",
+          "formula": "inputs.to - inputs.twb",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "efficiency_table",
+      "content": "Cooling Tower Efficiency Reference Table",
+      "headers": [
+        "Inlet Temp (°C)",
+        "Outlet Temp (°C)",
+        "Wet Bulb Temp (°C)",
+        "Range (°C)",
+        "Approach (°C)",
+        "Efficiency (%)"
+      ],
+      "rows": [
+        [
+          40,
+          30,
+          20,
+          10,
+          10,
+          50
+        ],
+        [
+          45,
+          32,
+          22,
+          13,
+          10,
+          65
+        ],
+        [
+          50,
+          35,
+          23,
+          15,
+          12,
+          71.4
+        ],
+        [
+          48,
+          33,
+          21,
+          15,
+          12,
+          75
+        ],
+        [
+          52,
+          37,
+          24,
+          15,
+          13,
+          72.7
+        ],
+        [
+          43,
+          30,
+          19,
+          13,
+          11,
+          76.5
+        ],
+        [
+          55,
+          40,
+          25,
+          15,
+          15,
+          75
+        ]
+      ]
+    }
+  ]
+}

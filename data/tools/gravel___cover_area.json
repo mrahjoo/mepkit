@@ -1,0 +1,33 @@
+{
+  "id": "gravel___cover_area",
+  "title": "Gravel - Cover Area",
+  "description": "Gravel aggregate covering area.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Coverage Area",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Gravel",
+          "≈ 50-100",
+          "sq ft per lb"
+        ],
+        [
+          "Crushed Stone",
+          "≈ 60-80",
+          "sq ft per lb"
+        ],
+        [
+          "Pea Gravel",
+          "≈ 45-90",
+          "sq ft per lb"
+        ]
+      ]
+    }
+  ]
+}

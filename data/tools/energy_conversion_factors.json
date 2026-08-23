@@ -1,0 +1,186 @@
+{
+  "id": "energy_conversion_factors",
+  "title": "Energy Conversion Factors",
+  "description": "A tool for converting between different energy units and calculating energy conversion factors. Use this tool to quickly convert energy values between various measurement systems.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Energy Conversion Calculator",
+      "inputs": [
+        {
+          "id": "energy_value",
+          "label": "Energy Value",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "kJ"
+        },
+        {
+          "id": "from_unit",
+          "label": "From Unit",
+          "type": "select",
+          "defaultValue": "kJ",
+          "options": [
+            {
+              "label": "Kilojoules (kJ)",
+              "value": "kJ"
+            },
+            {
+              "label": "Megajoules (MJ)",
+              "value": "MJ"
+            },
+            {
+              "label": "Kilocalories (kcal)",
+              "value": "kcal"
+            },
+            {
+              "label": "Kilowatt-hours (kWh)",
+              "value": "kWh"
+            },
+            {
+              "label": "British Thermal Units (BTU)",
+              "value": "BTU"
+            }
+          ]
+        },
+        {
+          "id": "to_unit",
+          "label": "To Unit",
+          "type": "select",
+          "defaultValue": "kcal",
+          "options": [
+            {
+              "label": "Kilojoules (kJ)",
+              "value": "kJ"
+            },
+            {
+              "label": "Megajoules (MJ)",
+              "value": "MJ"
+            },
+            {
+              "label": "Kilocalories (kcal)",
+              "value": "kcal"
+            },
+            {
+              "label": "Kilowatt-hours (kWh)",
+              "value": "kWh"
+            },
+            {
+              "label": "British Thermal Units (BTU)",
+              "value": "BTU"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "converted_value",
+          "label": "Converted Value",
+          "formula": "inputs.energy_value * 0.239",
+          "unit": "variable",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Common Energy Conversion Factors",
+      "headers": [
+        "From Unit",
+        "To Unit",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          "1 kJ",
+          "kcal",
+          "0.239"
+        ],
+        [
+          "1 kJ",
+          "BTU",
+          "0.948"
+        ],
+        [
+          "1 kJ",
+          "kWh",
+          "0.000278"
+        ],
+        [
+          "1 kcal",
+          "kJ",
+          "4.184"
+        ],
+        [
+          "1 kcal",
+          "BTU",
+          "3.968"
+        ],
+        [
+          "1 BTU",
+          "kJ",
+          "1.055"
+        ],
+        [
+          "1 BTU",
+          "kcal",
+          "0.252"
+        ],
+        [
+          "1 kWh",
+          "kJ",
+          "3600"
+        ],
+        [
+          "1 kWh",
+          "kcal",
+          "860.4"
+        ],
+        [
+          "1 kWh",
+          "BTU",
+          "3412"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Energy Unit Equivalents",
+      "options": {
+        "title": {
+          "text": "Energy Conversion Equivalents",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "kJ",
+            "kcal",
+            "BTU",
+            "kWh",
+            "MJ"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              1,
+              0.239,
+              0.948,
+              0.000278,
+              0.001
+            ],
+            "type": "bar",
+            "name": "Relative Energy Value"
+          }
+        ]
+      }
+    }
+  ]
+}

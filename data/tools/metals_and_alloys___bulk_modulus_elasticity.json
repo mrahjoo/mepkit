@@ -1,0 +1,145 @@
+{
+  "id": "metals_and_alloys___bulk_modulus_elasticity",
+  "title": "Metals and Alloys - Bulk Modulus Elasticity",
+  "description": "The Bulk Modulus - resistance to uniform compression - for common metals and alloys. This tool provides reference values and allows calculation of bulk modulus using the relationship with modulus of elasticity and Poisson's ratio.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Bulk Modulus Elasticity\n\nThe Bulk Modulus Elasticity - or Volume Modulus - is a measure of the substance's resistance to uniform compression. It is the ratio of stress to the change in volume in a material subjected to axial loading.\n\n### Relationship Formula\n\nBulk Modulus is related to Modulus of Elasticity and Poisson's Ratio as:\n\n**K = E / 3 (1 - 2r)**\n\nWhere:\n- **K** = Bulk Modulus (Pa or psi)\n- **E** = Modulus of Elasticity (Pa or psi)\n- **r** = Poisson's Ratio"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "modulus_elasticity",
+          "label": "Modulus of Elasticity (E)",
+          "type": "number",
+          "defaultValue": 200,
+          "unit": "GPa"
+        },
+        {
+          "id": "poissons_ratio",
+          "label": "Poisson's Ratio (r)",
+          "type": "number",
+          "defaultValue": 0.3,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "bulk_modulus",
+          "label": "Bulk Modulus (K)",
+          "formula": "inputs.modulus_elasticity / (3 * (1 - 2 * inputs.poissons_ratio))",
+          "unit": "GPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Bulk Modulus (10⁶ psi)",
+        "Bulk Modulus (GPa)"
+      ],
+      "rows": [
+        [
+          "Aluminum, various alloys",
+          "9.9 - 10.2",
+          "68 - 70"
+        ],
+        [
+          "Boron Carbide (B4)",
+          "29 - 34.8",
+          "200 - 240"
+        ],
+        [
+          "Brass, 70-30",
+          "15.7",
+          "108"
+        ],
+        [
+          "Brass, cast",
+          "16.8",
+          "116"
+        ],
+        [
+          "Concrete",
+          "0.87 - 4.1",
+          "6 - 28"
+        ],
+        [
+          "Copper",
+          "17.9",
+          "123"
+        ],
+        [
+          "Diamond (carbon)",
+          "80 - 93",
+          "550 - 640"
+        ],
+        [
+          "Iron, cast",
+          "8.4 - 15.5",
+          "58 - 107"
+        ],
+        [
+          "Iron, malleable",
+          "17.2",
+          "119"
+        ],
+        [
+          "Magnesium alloy",
+          "4.8",
+          "33.1"
+        ],
+        [
+          "Monel metal",
+          "22.5",
+          "155"
+        ],
+        [
+          "Phosphor bronze",
+          "16.3",
+          "112"
+        ],
+        [
+          "Silver",
+          "13.9 - 15.4",
+          "96 - 106"
+        ],
+        [
+          "Stainless Steels (18-8)",
+          "23.6",
+          "163"
+        ],
+        [
+          "Steel, cast",
+          "20.2",
+          "139"
+        ],
+        [
+          "Steel, cold rolled",
+          "23.1",
+          "159"
+        ],
+        [
+          "Steel, various",
+          "22.6 - 24.0",
+          "156 - 165"
+        ],
+        [
+          "Tin",
+          "6.1 - 8.4",
+          "42 - 60"
+        ],
+        [
+          "Tungsten",
+          "44.5 - 15.5",
+          "307 - 314"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "coal___classification",
+  "title": "Coal - Classification",
+  "description": "Coal classification tool based on volatile matter content. This tool provides comprehensive classification of coal types from Anthracite to Non-coking coals, including their characteristics, volatile matter ranges, and typical properties such as sulfur content, moisture content, fixed carbon content, density, bulk density, and ash content.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Class",
+        "Volatile Matter (weight %)",
+        "General Description",
+        "Category"
+      ],
+      "rows": [
+        [
+          "101",
+          "< 6.1",
+          "Anthracite",
+          ""
+        ],
+        [
+          "102",
+          "3.1 - 9.0",
+          "",
+          ""
+        ],
+        [
+          "201",
+          "9.1 - 13.5",
+          "Dry steam coals",
+          "Low volatile steam coals"
+        ],
+        [
+          "202",
+          "13.6 - 15.0",
+          "",
+          ""
+        ],
+        [
+          "203",
+          "15.1 - 17.0",
+          "Cooking steams coals",
+          ""
+        ],
+        [
+          "204",
+          "17.1 - 19.5",
+          "",
+          ""
+        ],
+        [
+          "206",
+          "19.1 - 19.5",
+          "Heat altered low volatile steam coals",
+          ""
+        ],
+        [
+          "301",
+          "19.6 - 32.0",
+          "Prime cooking coals",
+          "Medium volatile coals"
+        ],
+        [
+          "305",
+          "19.6 - 32.0",
+          "Mainly heat altered coals",
+          ""
+        ],
+        [
+          "306",
+          "19.6 - 32.0",
+          "",
+          ""
+        ],
+        [
+          "401",
+          "32.1 - 36.0",
+          "Very strongly coking coals",
+          "High volatile coals"
+        ],
+        [
+          "402",
+          "> 36.0",
+          "",
+          ""
+        ],
+        [
+          "501",
+          "32.1 - 36.0",
+          "Strongly coking coals",
+          ""
+        ],
+        [
+          "502",
+          "> 36.0",
+          "",
+          ""
+        ],
+        [
+          "601",
+          "32.1 - 36.0",
+          "Medium coking coals",
+          ""
+        ],
+        [
+          "602",
+          "> 36.0",
+          "",
+          ""
+        ],
+        [
+          "701",
+          "32.1 - 36.0",
+          "Weakly coking coals",
+          ""
+        ],
+        [
+          "702",
+          "> 36.0",
+          "",
+          ""
+        ],
+        [
+          "801",
+          "32.1 - 36.0",
+          "Very weakly coking coals",
+          ""
+        ],
+        [
+          "802",
+          "> 36.0",
+          "",
+          ""
+        ],
+        [
+          "901",
+          "32.1 - 36.0",
+          "Non-coking coals",
+          ""
+        ],
+        [
+          "902",
+          "> 36.0",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Typical Coal Properties\n\n#### Sulfur Content\n- Anthracite Coal: 0.6 - 0.77 weight %\n- Bituminous Coal: 0.7 - 4.0 weight %\n- Lignite Coal: 0.4 weight %\n\n#### Moisture Content\n- Anthracite Coal: 2.8 - 16.3 weight %\n- Bituminous Coal: 2.2 - 15.9 weight %\n- Lignite Coal: 39 weight %\n\n#### Fixed Carbon Content\n- Anthracite Coal: 80.5 - 85.7 weight %\n- Bituminous Coal: 44.9 - 78.2 weight %\n- Lignite Coal: 31.4 weight %\n\n#### Density\n- Typical Range: 1100 - 1800 (kg/m³)\n\n#### Bulk Density\n- Anthracite Coal: 50 - 58 (lb/ft³), 800 - 929 (kg/m³)\n- Bituminous Coal: 42 - 57 (lb/ft³), 673 - 913 (kg/m³)\n- Lignite Coal: 40 - 54 (lb/ft³), 641 - 865 (kg/m³)\n\n#### Ash Content\n- Anthracite Coal: 9.7 - 20.2 weight %\n- Bituminous Coal: 3.3 - 11.7 weight %\n- Lignite Coal: 4.2 weight %"
+    }
+  ]
+}

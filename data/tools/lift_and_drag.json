@@ -1,0 +1,171 @@
+{
+  "id": "lift_and_drag",
+  "title": "Lift and Drag",
+  "description": "Lift and drag forces acting on a body like an air foil in a fluid flow.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Lift and Drag Calculator\n\nCalculate the lifting force, drag force, and required thrust power for a body in fluid flow using the following formulas:\n\n**Lifting Force:** FL = cL × ½ × ρ × v² × A\n\n**Drag Force:** FD = cD × ½ × ρ × v² × A\n\n**Required Thrust Power:** P = FD × v\n\nWhere:\n- FL = lifting force (N)\n- FD = drag force (N)\n- cL = lifting coefficient\n- cD = drag coefficient\n- ρ = density of fluid (kg/m³)\n- v = flow velocity (m/s)\n- A = body area (m²)\n- P = power (W)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cL",
+          "label": "Lifting Coefficient (cL)",
+          "type": "number",
+          "defaultValue": 0.7
+        },
+        {
+          "id": "cD",
+          "label": "Drag Coefficient (cD)",
+          "type": "number",
+          "defaultValue": 0.06
+        },
+        {
+          "id": "rho",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.2
+        },
+        {
+          "id": "v",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 100
+        },
+        {
+          "id": "A",
+          "label": "Body Area (A)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "FL",
+          "label": "Lifting Force",
+          "unit": "N",
+          "formula": "inputs.cL * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.A",
+          "format": "decimal"
+        },
+        {
+          "id": "FD",
+          "label": "Drag Force",
+          "unit": "N",
+          "formula": "inputs.cD * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.A",
+          "format": "decimal"
+        },
+        {
+          "id": "P",
+          "label": "Required Thrust Power",
+          "unit": "W",
+          "formula": "(inputs.cD * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.A) * inputs.v",
+          "format": "decimal"
+        },
+        {
+          "id": "FL_kN",
+          "label": "Lifting Force",
+          "unit": "kN",
+          "formula": "(inputs.cL * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.A) / 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "FD_kN",
+          "label": "Drag Force",
+          "unit": "kN",
+          "formula": "(inputs.cD * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.A) / 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "P_kW",
+          "label": "Required Thrust Power",
+          "unit": "kW",
+          "formula": "((inputs.cD * 0.5 * inputs.rho * inputs.v * inputs.v * inputs.A) * inputs.v) / 1000",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Lifting Coefficient",
+          "cL",
+          "0.7",
+          "-"
+        ],
+        [
+          "Drag Coefficient",
+          "cD",
+          "0.06",
+          "-"
+        ],
+        [
+          "Fluid Density",
+          "ρ",
+          "1.2",
+          "kg/m³"
+        ],
+        [
+          "Flow Velocity",
+          "v",
+          "100",
+          "m/s"
+        ],
+        [
+          "Body Area",
+          "A",
+          "20",
+          "m²"
+        ],
+        [
+          "Lifting Force",
+          "FL",
+          "84000",
+          "N"
+        ],
+        [
+          "Lifting Force",
+          "FL",
+          "84",
+          "kN"
+        ],
+        [
+          "Drag Force",
+          "FD",
+          "7200",
+          "N"
+        ],
+        [
+          "Drag Force",
+          "FD",
+          "7.2",
+          "kN"
+        ],
+        [
+          "Required Thrust Power",
+          "P",
+          "720000",
+          "W"
+        ],
+        [
+          "Required Thrust Power",
+          "P",
+          "720",
+          "kW"
+        ]
+      ]
+    }
+  ]
+}

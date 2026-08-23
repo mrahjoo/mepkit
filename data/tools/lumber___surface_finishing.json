@@ -1,0 +1,97 @@
+{
+  "id": "lumber___surface_finishing",
+  "title": "Lumber - Surface Finishing",
+  "description": "Lumber and surface finishing abbreviations reference guide",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Lumber - Surface Finishing\n\nLumber and surface finishing abbreviations and their meanings.\n\n![surface finishing lumber](static/docs/documents/1720/surface_finishing_lumber.png \"surface finishing lumber\")"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Abbreviation",
+        "Surface Finishing Description"
+      ],
+      "rows": [
+        [
+          "S1S",
+          "Smooth surface, one side"
+        ],
+        [
+          "S1S1E",
+          "Smooth surface, one side, one end"
+        ],
+        [
+          "S1S2E",
+          "Smooth surface, one side, two ends"
+        ],
+        [
+          "S2S",
+          "Smooth surface, two sides"
+        ],
+        [
+          "S2S1E",
+          "Smooth surface, two sides, one end"
+        ],
+        [
+          "S2S2E",
+          "Smooth surface, two sides, two ends"
+        ],
+        [
+          "S3S",
+          "Smooth surface, three sides"
+        ],
+        [
+          "S3S1E",
+          "Smooth surface, three sides, one end"
+        ],
+        [
+          "S3S2E",
+          "Smooth surface, three sides, two ends"
+        ],
+        [
+          "S4S",
+          "Smooth surface, four sides"
+        ],
+        [
+          "S4S1E",
+          "Smooth surface, four sides, one end"
+        ],
+        [
+          "S4S2E",
+          "Smooth surface, four sides, two ends"
+        ],
+        [
+          "R/E",
+          "Resawn (same as S1S or S1S2E)"
+        ],
+        [
+          "R/O or R/S",
+          "Rough sawn (no smooth surfaces)"
+        ],
+        [
+          "CM",
+          "Center matched"
+        ],
+        [
+          "D & M",
+          "Dressed and matched"
+        ],
+        [
+          "T & G",
+          "Tongue and grooved"
+        ],
+        [
+          "EV1S",
+          "Edge vee on one side"
+        ],
+        [
+          "S1E",
+          "Surfaced one edge"
+        ]
+      ]
+    }
+  ]
+}

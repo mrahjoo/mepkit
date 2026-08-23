@@ -1,0 +1,153 @@
+{
+  "id": "fixture_water_consumption_and_required_water_suppl",
+  "title": "Fixture Water Consumption and Required Water Supply",
+  "description": "Supply requirements for common fixtures. Each fixture in a water supply system represents a certain demand of water.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fixture",
+        "Flow rate (gpm)",
+        "Flow rate (l/min)",
+        "Minimum Supply Pressure (psi)",
+        "Minimum Supply Pressure (kPa)"
+      ],
+      "rows": [
+        [
+          "Aspirator",
+          2.5,
+          10,
+          8,
+          55
+        ],
+        [
+          "Bathtub faucet",
+          5,
+          19,
+          8,
+          55
+        ],
+        [
+          "Bidet",
+          2,
+          7.5,
+          4,
+          28
+        ],
+        [
+          "Combination fixture",
+          4,
+          15,
+          8,
+          55
+        ],
+        [
+          "Dish washing machine",
+          4,
+          15,
+          8,
+          55
+        ],
+        [
+          "Drinking fountain jet",
+          0.75,
+          3,
+          8,
+          55
+        ],
+        [
+          "Hose bib or sillcock, 1/2\"",
+          5,
+          19,
+          8,
+          55
+        ],
+        [
+          "Laundry faucet 1/2\"",
+          5,
+          19,
+          8,
+          55
+        ],
+        [
+          "Laundry machine",
+          4,
+          15,
+          8,
+          55
+        ],
+        [
+          "Lavatory faucet, ordinary",
+          2,
+          7.5,
+          8,
+          55
+        ],
+        [
+          "Lavatory faucet, self closing",
+          2.5,
+          10,
+          8,
+          55
+        ],
+        [
+          "Shower head",
+          5,
+          19,
+          8,
+          55
+        ],
+        [
+          "Shower, temperature controlled",
+          3,
+          10,
+          20,
+          138
+        ],
+        [
+          "Sink faucet 3/8\", 1/2\"",
+          4.5,
+          17,
+          8,
+          55
+        ],
+        [
+          "Sink faucet 3/4\"",
+          6,
+          23,
+          8,
+          55
+        ],
+        [
+          "Urinal flush valve",
+          15,
+          56,
+          15,
+          110
+        ],
+        [
+          "Water closet with flush valve",
+          35,
+          132,
+          25,
+          170
+        ],
+        [
+          "Water closet with gravity tank",
+          2.5,
+          10,
+          8,
+          55
+        ],
+        [
+          "Water closet with close coupled tank, ballcock",
+          3,
+          11,
+          8,
+          55
+        ]
+      ]
+    }
+  ]
+}

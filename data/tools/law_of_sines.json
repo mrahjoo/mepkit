@@ -1,0 +1,108 @@
+{
+  "id": "law_of_sines",
+  "title": "Law of Sines",
+  "description": "Calculate the angles in a generic triangle using the Law of Sines",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Law of Sines\n\nThe \"Law of Sines\" can be used to calculate the angles of a triangle.\n\nThe Law of Sines states that the ratio of the length of a side of a triangle to the sine of the angle opposite that side is constant for all three sides and angles.\n\n**Variables:**\n- a, b, c = length of sides in triangle (m, ft ...)\n- A, B, C = angles in the triangle (degrees)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "side_a",
+          "label": "Side a",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        },
+        {
+          "id": "side_b",
+          "label": "Side b",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "m"
+        },
+        {
+          "id": "side_c",
+          "label": "Side c",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "m"
+        },
+        {
+          "id": "angle_A",
+          "label": "Angle A",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "degrees"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "angle_B",
+          "label": "Angle B",
+          "unit": "degrees",
+          "format": "decimal",
+          "formula": "ASIN(inputs.side_b * SIN(RADIANS(inputs.angle_A)) / inputs.side_a) * 180 / PI()"
+        },
+        {
+          "id": "angle_C",
+          "label": "Angle C",
+          "unit": "degrees",
+          "format": "decimal",
+          "formula": "180 - inputs.angle_A - ASIN(inputs.side_b * SIN(RADIANS(inputs.angle_A)) / inputs.side_a) * 180 / PI()"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Side a",
+          "inputs.side_a",
+          "m",
+          "Length of side a"
+        ],
+        [
+          "Side b",
+          "inputs.side_b",
+          "m",
+          "Length of side b"
+        ],
+        [
+          "Side c",
+          "inputs.side_c",
+          "m",
+          "Length of side c"
+        ],
+        [
+          "Angle A",
+          "inputs.angle_A",
+          "degrees",
+          "Angle A of the triangle"
+        ],
+        [
+          "Angle B",
+          "ASIN(inputs.side_b * SIN(RADIANS(inputs.angle_A)) / inputs.side_a) * 180 / PI()",
+          "degrees",
+          "Calculated angle B"
+        ],
+        [
+          "Angle C",
+          "180 - inputs.angle_A - ASIN(inputs.side_b * SIN(RADIANS(inputs.angle_A)) / inputs.side_a) * 180 / PI()",
+          "degrees",
+          "Calculated angle C"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "domestic_water_supply___lime_deposits",
+  "title": "Domestic Water Supply - Lime Deposits",
+  "description": "Lime deposited vs. temperature and water consumption. Calculate lime deposits in water supply systems based on dissolved calcium and magnesium (hard water) at various temperatures and consumption rates.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Water Hardness (mg/L)",
+        "Annual Consumption (m³/year)",
+        "Estimated Lime Deposits (kg/year)"
+      ],
+      "rows": [
+        [
+          40,
+          170,
+          1500,
+          3.5
+        ],
+        [
+          50,
+          170,
+          1500,
+          4.2
+        ],
+        [
+          60,
+          170,
+          2000,
+          5
+        ],
+        [
+          70,
+          170,
+          2000,
+          6.2
+        ],
+        [
+          80,
+          170,
+          2500,
+          8.5
+        ],
+        [
+          90,
+          170,
+          3000,
+          11
+        ],
+        [
+          40,
+          170,
+          2000,
+          4.5
+        ],
+        [
+          50,
+          170,
+          2500,
+          5.8
+        ],
+        [
+          60,
+          170,
+          2500,
+          6.8
+        ],
+        [
+          70,
+          170,
+          3000,
+          8.5
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 60
+        },
+        {
+          "id": "water_hardness",
+          "label": "Water Hardness (Dissolved Ca & Mg)",
+          "type": "number",
+          "unit": "mg/L",
+          "defaultValue": 170
+        },
+        {
+          "id": "annual_consumption",
+          "label": "Annual Water Consumption",
+          "type": "number",
+          "unit": "m³/year",
+          "defaultValue": 2000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "lime_deposits",
+          "label": "Estimated Annual Lime Deposits",
+          "formula": "(inputs.water_hardness / 170) * (inputs.annual_consumption / 2000) * (inputs.temperature / 60) * 5",
+          "unit": "kg/year",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

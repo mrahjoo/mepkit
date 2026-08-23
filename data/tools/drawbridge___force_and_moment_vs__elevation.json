@@ -1,0 +1,165 @@
+{
+  "id": "drawbridge___force_and_moment_vs__elevation",
+  "title": "Drawbridge - Force and Moment vs. Elevation",
+  "description": "Calculate the resultant force and moment acting on a drawbridge at various elevation angles. For horizontal beams, F = q*L and M = F*a. For elevated beams, the moment varies with the lifting angle: M = F*cos(α)*L/2.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "drawbridge_calculator",
+      "content": "Drawbridge Force and Moment Calculator",
+      "inputs": [
+        {
+          "id": "force_F",
+          "label": "Resultant Force F",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 13145
+        },
+        {
+          "id": "distance_a",
+          "label": "Distance a (horizontal position)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "length_L",
+          "label": "Length of Beam L",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moment_horizontal",
+          "label": "Moment at 0° (Horizontal)",
+          "formula": "inputs.force_F * inputs.distance_a",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "elevation_table",
+      "content": "Force and Moment vs. Elevation Angle",
+      "headers": [
+        "Elevation Angle (°)",
+        "cos(α)",
+        "Moment M (Nm)",
+        "Moment (% of Max)"
+      ],
+      "rows": [
+        [
+          "0",
+          "1.000",
+          "=inputs.force_F * inputs.distance_a * 1.0",
+          "=100.0"
+        ],
+        [
+          "10",
+          "0.985",
+          "=inputs.force_F * inputs.distance_a * 0.985",
+          "=inputs.force_F * inputs.distance_a * 0.985 / (inputs.force_F * inputs.distance_a) * 100"
+        ],
+        [
+          "20",
+          "0.940",
+          "=inputs.force_F * inputs.distance_a * 0.940",
+          "=inputs.force_F * inputs.distance_a * 0.940 / (inputs.force_F * inputs.distance_a) * 100"
+        ],
+        [
+          "30",
+          "0.866",
+          "=inputs.force_F * inputs.distance_a * 0.866",
+          "=inputs.force_F * inputs.distance_a * 0.866 / (inputs.force_F * inputs.distance_a) * 100"
+        ],
+        [
+          "40",
+          "0.766",
+          "=inputs.force_F * inputs.distance_a * 0.766",
+          "=inputs.force_F * inputs.distance_a * 0.766 / (inputs.force_F * inputs.distance_a) * 100"
+        ],
+        [
+          "50",
+          "0.643",
+          "=inputs.force_F * inputs.distance_a * 0.643",
+          "=inputs.force_F * inputs.distance_a * 0.643 / (inputs.force_F * inputs.distance_a) * 100"
+        ],
+        [
+          "60",
+          "0.500",
+          "=inputs.force_F * inputs.distance_a * 0.500",
+          "=inputs.force_F * inputs.distance_a * 0.500 / (inputs.force_F * inputs.distance_a) * 100"
+        ],
+        [
+          "70",
+          "0.342",
+          "=inputs.force_F * inputs.distance_a * 0.342",
+          "=inputs.force_F * inputs.distance_a * 0.342 / (inputs.force_F * inputs.distance_a) * 100"
+        ],
+        [
+          "80",
+          "0.174",
+          "=inputs.force_F * inputs.distance_a * 0.174",
+          "=inputs.force_F * inputs.distance_a * 0.174 / (inputs.force_F * inputs.distance_a) * 100"
+        ],
+        [
+          "90",
+          "0.000",
+          "=inputs.force_F * inputs.distance_a * 0.000",
+          "=0.0"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "moment_vs_elevation_chart",
+      "content": "Moment vs. Elevation Angle",
+      "options": {
+        "title": {
+          "text": "Drawbridge Lifting Moment vs. Elevation Angle"
+        },
+        "xAxis": {
+          "name": "Elevation Angle (degrees)",
+          "type": "category",
+          "data": [
+            "0°",
+            "10°",
+            "20°",
+            "30°",
+            "40°",
+            "50°",
+            "60°",
+            "70°",
+            "80°",
+            "90°"
+          ]
+        },
+        "yAxis": {
+          "name": "Moment (% of Max)"
+        },
+        "series": [
+          {
+            "name": "Moment (%)",
+            "type": "line",
+            "data": [
+              100,
+              98.5,
+              94,
+              86.6,
+              76.6,
+              64.3,
+              50,
+              34.2,
+              17.4,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

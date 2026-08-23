@@ -1,0 +1,174 @@
+{
+  "id": "12_volt___amps__amps_vs__wire_gauge__choosing_the_",
+  "title": "12 Volt - Amps: Amps vs. Wire Gauge - Choosing the Right Wire Size",
+  "description": "Maximum current (amps) in a 12V electrical circuit vs. size (AWG) and length of wire. For a 12V system, the maximum voltage drop should be less than 0.36V (3% of 12V).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "12V Wire Gauge Reference Table - Maximum Current (amps) by Length and AWG",
+      "headers": [
+        "Length (feet)",
+        "#10 AWG",
+        "#12 AWG",
+        "#14 AWG",
+        "#16 AWG",
+        "#10 AWG",
+        "#8 AWG",
+        "#6 AWG",
+        "#4 AWG",
+        "#2 AWG",
+        "#1/0 AWG"
+      ],
+      "rows": [
+        [
+          5,
+          10,
+          15,
+          20,
+          25,
+          30,
+          40,
+          50,
+          60,
+          70,
+          ""
+        ],
+        [
+          15,
+          16,
+          12,
+          10,
+          10,
+          8,
+          8,
+          6,
+          6,
+          4,
+          4
+        ],
+        [
+          20,
+          14,
+          12,
+          10,
+          8,
+          8,
+          6,
+          6,
+          4,
+          4,
+          4
+        ],
+        [
+          25,
+          14,
+          10,
+          8,
+          8,
+          6,
+          6,
+          4,
+          4,
+          2,
+          2
+        ],
+        [
+          30,
+          12,
+          10,
+          8,
+          6,
+          6,
+          4,
+          4,
+          2,
+          2,
+          2
+        ],
+        [
+          40,
+          12,
+          8,
+          6,
+          6,
+          4,
+          4,
+          2,
+          2,
+          1,
+          "1/0"
+        ],
+        [
+          50,
+          10,
+          8,
+          6,
+          4,
+          4,
+          2,
+          2,
+          1,
+          "1/0",
+          "1/0"
+        ],
+        [
+          60,
+          10,
+          6,
+          6,
+          4,
+          2,
+          2,
+          1,
+          "1/0",
+          "2/0",
+          "2/0"
+        ],
+        [
+          70,
+          10,
+          6,
+          4,
+          2,
+          2,
+          2,
+          "1/0",
+          "2/0",
+          "2/0",
+          "3/0"
+        ],
+        [
+          80,
+          8,
+          6,
+          4,
+          2,
+          2,
+          1,
+          "1/0",
+          "2/0",
+          "3/0",
+          "3/0"
+        ],
+        [
+          90,
+          8,
+          4,
+          4,
+          2,
+          1,
+          "1/0",
+          "2/0",
+          "3/0",
+          "3/0",
+          "4/0"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Wire Gauge Design Procedure\n\n1. Calculate total length of wire from source to device and back again\n2. Determine amount of current in wire\n3. Determine correct wire gauge in the intersection of amps and feet\n\n## Important Notes\n\n- **Voltage Drop**: Wire size is based on 3% (0.36V) voltage drop in a 12 Volt circuit\n- **Safety**: Failure to use an adequate size may result in a fire. Always secure electric wires with fuses\n- **Oversizing**: Always oversize wires if voltage drop is critical\n- **Conversion**: 1 ft (foot) = 0.3048 m\n\n## Examples\n\n- A 12V gauge #6 (13.3 mm²) cable with length 15m can handle approximately 15 amps\n- A 12V gauge #10 (5.26 mm²) cable with length 15m can handle approximately 5 amps"
+    }
+  ]
+}

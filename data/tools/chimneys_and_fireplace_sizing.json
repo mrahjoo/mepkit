@@ -1,0 +1,80 @@
+{
+  "id": "chimneys_and_fireplace_sizing",
+  "title": "Chimneys and Fireplace Sizing",
+  "description": "Chimneys and fireplaces for stoves burning wood or coal as fuel. Reference tables for prefab/metal chimneys and masonry flues with sizing specifications and common venting uses.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Prefab or Metal Chimneys",
+      "headers": [
+        "Chimney Size (Inside diameter in inches)",
+        "Inside Area (square inches)",
+        "Common Venting Uses"
+      ],
+      "rows": [
+        [
+          6,
+          28.3,
+          "Stoves, Central Heaters"
+        ],
+        [
+          7,
+          38.5,
+          "Stoves, Central Heaters"
+        ],
+        [
+          8,
+          50.3,
+          "Stoves, Small Fireplaces, Central Heaters"
+        ],
+        [
+          10,
+          78.6,
+          "Stoves, Fireplaces, Central Heaters"
+        ],
+        [
+          12,
+          113,
+          "Fireplaces, Central Heaters"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Masonry Flues",
+      "headers": [
+        "Flue Size (Outside Diameter in inches)",
+        "Inside Area (square inches)",
+        "Common Venting Uses"
+      ],
+      "rows": [
+        [
+          "7 1/2 x 7 1/2",
+          31,
+          "Stoves, Central Heaters"
+        ],
+        [
+          "8 1/2 x 8 1/2",
+          41,
+          "Stoves, Central Heaters"
+        ],
+        [
+          "8 1/2 x 13",
+          70,
+          "Stoves, Fireplaces, Central Heaters"
+        ],
+        [
+          "13 x 13",
+          99,
+          "Fireplaces"
+        ],
+        [
+          "13 x 18",
+          156,
+          "Fireplaces"
+        ]
+      ]
+    }
+  ]
+}

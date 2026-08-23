@@ -1,0 +1,294 @@
+{
+  "id": "orifice__nozzle__and_venturi_flow_meters__principl",
+  "title": "Orifice, Nozzle, and Venturi Flow Meters: Principles, Calculations & Data",
+  "description": "Flow meter calculations based on Bernoulli and Continuity equations for orifice plates, venturi meters, and nozzles. Includes discharge coefficients, mass flow calculations, and performance comparisons.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Meter Type",
+        "Discharge Coeff (cd)",
+        "Rangeability",
+        "Pressure Loss",
+        "Accuracy",
+        "Upstream Pipe Length",
+        "Viscosity Effect",
+        "Relative Cost"
+      ],
+      "rows": [
+        [
+          "Orifice Plate",
+          "0.60",
+          "4:1",
+          "Medium",
+          "2-4% FS",
+          "10-30D",
+          "High",
+          "Low"
+        ],
+        [
+          "Venturi Meter",
+          "0.975",
+          "4:1",
+          "Low",
+          "1% FR",
+          "5-20D",
+          "High",
+          "Medium"
+        ],
+        [
+          "Nozzle (ISA 1932)",
+          "0.95-0.995",
+          "4:1",
+          "Medium",
+          "1-2% FR",
+          "10-30D",
+          "High",
+          "Medium"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Diameter Ratio (d)",
+        "Re=10⁴",
+        "Re=10⁵",
+        "Re=10⁶",
+        "Re=10⁷"
+      ],
+      "rows": [
+        [
+          "0.2",
+          "0.60",
+          "0.595",
+          "0.594",
+          "0.594"
+        ],
+        [
+          "0.4",
+          "0.61",
+          "0.603",
+          "0.598",
+          "0.598"
+        ],
+        [
+          "0.5",
+          "0.62",
+          "0.608",
+          "0.603",
+          "0.603"
+        ],
+        [
+          "0.6",
+          "0.63",
+          "0.61",
+          "0.608",
+          "0.608"
+        ],
+        [
+          "0.7",
+          "0.64",
+          "0.614",
+          "0.609",
+          "0.609"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Orifice Diameter (mm)",
+        "Kv (m³/h)"
+      ],
+      "rows": [
+        [
+          "0.8",
+          "0.02"
+        ],
+        [
+          "1.2",
+          "0.05"
+        ],
+        [
+          "1.6",
+          "0.08"
+        ],
+        [
+          "2.4",
+          "0.17"
+        ],
+        [
+          "3.2",
+          "0.26"
+        ],
+        [
+          "3.6",
+          "0.31"
+        ],
+        [
+          "4.8",
+          "0.45"
+        ],
+        [
+          "6.4",
+          "0.60"
+        ],
+        [
+          "8",
+          "1.5"
+        ],
+        [
+          "9",
+          "1.7"
+        ],
+        [
+          "13",
+          "3"
+        ],
+        [
+          "16",
+          "4"
+        ],
+        [
+          "18",
+          "4.5"
+        ],
+        [
+          "19",
+          "6.5"
+        ],
+        [
+          "25",
+          "11"
+        ],
+        [
+          "32",
+          "15"
+        ],
+        [
+          "38",
+          "22"
+        ],
+        [
+          "51",
+          "41"
+        ],
+        [
+          "64",
+          "51"
+        ],
+        [
+          "76",
+          "86"
+        ],
+        [
+          "80",
+          "99"
+        ],
+        [
+          "100",
+          "150"
+        ],
+        [
+          "125",
+          "264"
+        ],
+        [
+          "150",
+          "383"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cd",
+          "label": "Discharge Coefficient (cd)",
+          "type": "number",
+          "defaultValue": 0.6
+        },
+        {
+          "id": "D2",
+          "label": "Orifice/Meter Diameter (m)",
+          "type": "number",
+          "defaultValue": 0.05,
+          "unit": "m"
+        },
+        {
+          "id": "D1",
+          "label": "Pipe Diameter (m)",
+          "type": "number",
+          "defaultValue": 0.102,
+          "unit": "m"
+        },
+        {
+          "id": "p1",
+          "label": "Upstream Pressure (Pa)",
+          "type": "number",
+          "defaultValue": 20000,
+          "unit": "Pa"
+        },
+        {
+          "id": "p2",
+          "label": "Downstream Pressure (Pa)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "Pa"
+        },
+        {
+          "id": "rho",
+          "label": "Fluid Density (kg/m³)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "d_ratio",
+          "label": "Diameter Ratio (d)",
+          "formula": "inputs.D2 / inputs.D1",
+          "format": "decimal"
+        },
+        {
+          "id": "A1",
+          "label": "Upstream Area (m²)",
+          "formula": "(3.14159 / 4) * inputs.D1 * inputs.D1",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "A2",
+          "label": "Meter Area (m²)",
+          "formula": "(3.14159 / 4) * inputs.D2 * inputs.D2",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "dp",
+          "label": "Pressure Difference (Pa)",
+          "formula": "inputs.p1 - inputs.p2",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "mass_flow",
+          "label": "Mass Flow (kg/s)",
+          "formula": "inputs.cd * (3.14159 / 4) * inputs.D2 * inputs.D2 * inputs.rho * Math.sqrt(2 * (inputs.p1 - inputs.p2) / (inputs.rho * (1 - Math.pow(inputs.D2 / inputs.D1, 4))))",
+          "unit": "kg/s",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_flow",
+          "label": "Volume Flow (m³/s)",
+          "formula": "inputs.cd * (3.14159 / 4) * inputs.D2 * inputs.D2 * Math.sqrt(2 * (inputs.p1 - inputs.p2) / (inputs.rho * (1 - Math.pow(inputs.D2 / inputs.D1, 4))))",
+          "unit": "m³/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

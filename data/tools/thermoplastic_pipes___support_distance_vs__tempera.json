@@ -1,0 +1,133 @@
+{
+  "id": "thermoplastic_pipes___support_distance_vs__tempera",
+  "title": "Thermoplastic Pipes - Support Distance vs. Temperature",
+  "description": "Maximum space between supports for PVC, CPVC, PVDF and PP pipes vs. temperature. Reference tool for determining support spacing requirements based on pipe material and operating temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "PVC - Max Support Distance (m)",
+        "PVC - Max Support Distance (ft)",
+        "CPVC - Max Support Distance (m)",
+        "CPVC - Max Support Distance (ft)",
+        "PVDF - Max Support Distance (m)",
+        "PVDF - Max Support Distance (ft)",
+        "PP - Max Support Distance (m)",
+        "PP - Max Support Distance (ft)"
+      ],
+      "rows": [
+        [
+          20,
+          68,
+          1.83,
+          6,
+          1.83,
+          6,
+          2.13,
+          7,
+          1.52,
+          5
+        ],
+        [
+          25,
+          77,
+          1.83,
+          6,
+          1.83,
+          6,
+          2.13,
+          7,
+          1.52,
+          5
+        ],
+        [
+          30,
+          86,
+          1.68,
+          5.5,
+          1.83,
+          6,
+          2.13,
+          7,
+          1.37,
+          4.5
+        ],
+        [
+          40,
+          104,
+          1.37,
+          4.5,
+          1.83,
+          6,
+          2.13,
+          7,
+          1.22,
+          4
+        ],
+        [
+          50,
+          122,
+          1.22,
+          4,
+          1.68,
+          5.5,
+          2.13,
+          7,
+          1.07,
+          3.5
+        ],
+        [
+          60,
+          140,
+          1.07,
+          3.5,
+          1.52,
+          5,
+          2.13,
+          7,
+          0.91,
+          3
+        ],
+        [
+          70,
+          158,
+          0.91,
+          3,
+          1.37,
+          4.5,
+          2.04,
+          6.7,
+          0.76,
+          2.5
+        ],
+        [
+          80,
+          176,
+          0.76,
+          2.5,
+          1.22,
+          4,
+          1.98,
+          6.5,
+          0.61,
+          2
+        ],
+        [
+          90,
+          194,
+          0.61,
+          2,
+          1.07,
+          3.5,
+          1.83,
+          6,
+          0.46,
+          1.5
+        ]
+      ]
+    }
+  ]
+}

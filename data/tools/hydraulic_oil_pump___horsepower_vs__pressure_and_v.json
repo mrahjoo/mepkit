@@ -1,0 +1,100 @@
+{
+  "id": "hydraulic_oil_pump___horsepower_vs__pressure_and_v",
+  "title": "Hydraulic Oil Pump - Horsepower vs. Pressure and Volume Flow",
+  "description": "Calculate the power required for hydraulic pumping based on flow rate, pressure, and efficiency.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Hydraulic Oil Pump - Horsepower vs. Pressure and Volume Flow\n\nThe power required for hydraulic pumping.\n\n## Formula\n\n**PHP = q × p / ((μ / 100) × 1714)**\n\nWhere:\n- **PHP** = horsepower (HP)\n- **q** = flow (gpm)\n- **p** = required pressure (psi)\n- **μ** = overall efficiency (%)\n\n## Example\n\nFor a pump with flow 20 gpm and 1500 psi increase in pressure at 100% efficiency:\n\nPHP = (20 × 1500) / 1714 = 17.5 HP"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "flow",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "gpm",
+          "defaultValue": 20
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 1500
+        },
+        {
+          "id": "efficiency",
+          "label": "Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "horsepower",
+          "label": "Horsepower Required",
+          "formula": "inputs.flow * inputs.pressure / ((inputs.efficiency / 100) * 1714)",
+          "unit": "HP",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Flow (gpm)",
+        "Pressure (psi)",
+        "Efficiency (%)",
+        "Horsepower (HP)"
+      ],
+      "rows": [
+        [
+          10,
+          1000,
+          100,
+          5.84
+        ],
+        [
+          10,
+          1500,
+          100,
+          8.76
+        ],
+        [
+          20,
+          1000,
+          100,
+          11.68
+        ],
+        [
+          20,
+          1500,
+          100,
+          17.52
+        ],
+        [
+          20,
+          1500,
+          85,
+          20.61
+        ],
+        [
+          30,
+          2000,
+          100,
+          35.01
+        ],
+        [
+          30,
+          2000,
+          90,
+          38.9
+        ]
+      ]
+    }
+  ]
+}

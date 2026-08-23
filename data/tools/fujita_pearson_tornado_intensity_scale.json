@@ -1,0 +1,61 @@
+{
+  "id": "fujita_pearson_tornado_intensity_scale",
+  "title": "Fujita-Pearson Tornado Intensity Scale",
+  "description": "A tornado intensity rating scale based on damage to human-built structures and vegetation",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Fujita-Pearson Tornado Intensity Scale\n\nThe Fujita-Pearson scale for rating tornado intensity is based on the damage tornadoes inflict on human-built structures and vegetation.\n\n## Scale Overview\n\n| Scale | Strength | Name | Max Wind (mph) | Path Length (mi) | Damage |\n|-------|----------|------|----------------|------------------|--------|\n| F0 | Weak | Gale | < 73 | < 1 | Light |\n| F1 | Weak | Moderate | 73 - 112 | 1 - 3.1 | Moderate |\n| F2 | Strong | Significant | 113 - 157 | 3.2 - 9.9 | Considerable |\n| F3 | Strong | Severe | 158 - 206 | 10 - 31 | Severe |\n| F4 | Violent | Devastating | 207 - 260 | 32 - 99 | Devastating |\n| F5 | Violent | Incredible | 261 - 318 | 100 - 315 | Incredible |\n\n## Conversion Factors\n- 1 mph = 0.44703 m/s = 1.609 km/h\n- 1 mile = 1.6093 km\n- 1 yard = 0.9144 m"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "wind_speed_mph",
+          "label": "Maximum Wind Speed",
+          "type": "number",
+          "unit": "mph",
+          "defaultValue": 100
+        },
+        {
+          "id": "path_length_miles",
+          "label": "Tornado Path Length",
+          "type": "number",
+          "unit": "miles",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "wind_speed_kmh",
+          "label": "Wind Speed",
+          "unit": "km/h",
+          "formula": "inputs.wind_speed_mph * 1.609",
+          "format": "decimal"
+        },
+        {
+          "id": "wind_speed_ms",
+          "label": "Wind Speed",
+          "unit": "m/s",
+          "formula": "inputs.wind_speed_mph * 0.44703",
+          "format": "decimal"
+        },
+        {
+          "id": "path_length_km",
+          "label": "Path Length",
+          "unit": "km",
+          "formula": "inputs.path_length_miles * 1.6093",
+          "format": "decimal"
+        },
+        {
+          "id": "scale_rating",
+          "label": "Fujita-Pearson Scale Rating",
+          "unit": "",
+          "formula": "inputs.wind_speed_mph < 73 ? 'F0 (Weak - Gale)' : inputs.wind_speed_mph < 113 ? 'F1 (Weak - Moderate)' : inputs.wind_speed_mph < 158 ? 'F2 (Strong - Significant)' : inputs.wind_speed_mph < 207 ? 'F3 (Strong - Severe)' : inputs.wind_speed_mph < 261 ? 'F4 (Violent - Devastating)' : inputs.wind_speed_mph < 319 ? 'F5 (Violent - Incredible)' : 'F6+ (Extreme)'",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

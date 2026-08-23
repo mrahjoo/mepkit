@@ -1,0 +1,143 @@
+{
+  "id": "sound___leq___equivalent_level",
+  "title": "Sound - Leq - Equivalent Level",
+  "description": "Calculate equivalent sound level (Leq) which quantifies the noise environment as a single value. The EPA-adopted system descriptor represents varying sound sources over a given time period as a single number, correlating with effects of noise on people.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "leq_calculator",
+      "content": "Equivalent Sound Level Calculator - Calculate combined Leq from multiple sound sources with different durations.",
+      "inputs": [
+        {
+          "id": "leq1",
+          "label": "Leq 1 - Equivalent Sound Level 1",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 60
+        },
+        {
+          "id": "time1_hours",
+          "label": "Time 1 - Hours",
+          "type": "number",
+          "unit": "h",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "time1_minutes",
+          "label": "Time 1 - Minutes",
+          "type": "number",
+          "unit": "min",
+          "defaultValue": 0
+        },
+        {
+          "id": "time1_seconds",
+          "label": "Time 1 - Seconds",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 0
+        },
+        {
+          "id": "leq2",
+          "label": "Leq 2 - Equivalent Sound Level 2",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 74
+        },
+        {
+          "id": "time2_hours",
+          "label": "Time 2 - Hours",
+          "type": "number",
+          "unit": "h",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "time2_minutes",
+          "label": "Time 2 - Minutes",
+          "type": "number",
+          "unit": "min",
+          "defaultValue": 0
+        },
+        {
+          "id": "time2_seconds",
+          "label": "Time 2 - Seconds",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "time1_total_seconds",
+          "label": "Time 1 - Total Seconds",
+          "formula": "inputs.time1_hours * 3600 + inputs.time1_minutes * 60 + inputs.time1_seconds",
+          "unit": "s",
+          "format": "decimal"
+        },
+        {
+          "id": "time2_total_seconds",
+          "label": "Time 2 - Total Seconds",
+          "formula": "inputs.time2_hours * 3600 + inputs.time2_minutes * 60 + inputs.time2_seconds",
+          "unit": "s",
+          "format": "decimal"
+        },
+        {
+          "id": "total_time_seconds",
+          "label": "Total Time",
+          "formula": "(inputs.time1_hours * 3600 + inputs.time1_minutes * 60 + inputs.time1_seconds) + (inputs.time2_hours * 3600 + inputs.time2_minutes * 60 + inputs.time2_seconds)",
+          "unit": "s",
+          "format": "decimal"
+        },
+        {
+          "id": "leq_total",
+          "label": "Leq Total - Equivalent Sound Level",
+          "formula": "10 * Math.log10((1 / ((inputs.time1_hours * 3600 + inputs.time1_minutes * 60 + inputs.time1_seconds) + (inputs.time2_hours * 3600 + inputs.time2_minutes * 60 + inputs.time2_seconds))) * ((inputs.time1_hours * 3600 + inputs.time1_minutes * 60 + inputs.time1_seconds) * Math.pow(10, inputs.leq1 / 10) + (inputs.time2_hours * 3600 + inputs.time2_minutes * 60 + inputs.time2_seconds) * Math.pow(10, inputs.leq2 / 10)))",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "leq_results_table",
+      "content": "Equivalent Sound Level Results Summary",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Leq 1",
+          "inputs.leq1",
+          "dB"
+        ],
+        [
+          "Time 1",
+          "inputs.time1_hours + ' h, ' + inputs.time1_minutes + ' min, ' + inputs.time1_seconds + ' s'",
+          ""
+        ],
+        [
+          "Leq 2",
+          "inputs.leq2",
+          "dB"
+        ],
+        [
+          "Time 2",
+          "inputs.time2_hours + ' h, ' + inputs.time2_minutes + ' min, ' + inputs.time2_seconds + ' s'",
+          ""
+        ],
+        [
+          "Leq Total",
+          "10 * Math.log10((1 / ((inputs.time1_hours * 3600 + inputs.time1_minutes * 60 + inputs.time1_seconds) + (inputs.time2_hours * 3600 + inputs.time2_minutes * 60 + inputs.time2_seconds))) * ((inputs.time1_hours * 3600 + inputs.time1_minutes * 60 + inputs.time1_seconds) * Math.pow(10, inputs.leq1 / 10) + (inputs.time2_hours * 3600 + inputs.time2_minutes * 60 + inputs.time2_seconds) * Math.pow(10, inputs.leq2 / 10)))",
+          "dB"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "leq_info",
+      "content": "## Equivalent Sound Level - Leq\n\nEquivalent Sound Level quantifies the noise environment to a single value of sound level for any desired duration. It represents a varying sound source over a given time as a single number.\n\n### Formula\n\nEquivalent sound levels can be combined as:\n\n**Leq_total = 10 log(1 / (t1 + t2 ... tn) (t1 10^(Leq_1/10) + t2 10^(Leq_2/10) + ... + tn 10^(Leq_n/10)))**\n\nWhere:\n- **Leq_total** = total equivalent sound level (dB)\n- **t1, t2, ... tn** = time periods (s)\n- **Leq_1, Leq_2, ... Leq_n** = equivalent sound levels (dB)\n\n### Example\n\nA machine generates sound at 60 dB for 0.5 hours (idling) and 74 dB for 0.5 hours (working).\n\nThe combined equivalent sound level is calculated as:\n\n**Leq_total = 10 log((1 / 1 hour) (0.5 × 10^(60/10) + 0.5 × 10^(74/10))) = 71.2 dB**"
+    }
+  ]
+}

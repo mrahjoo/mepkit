@@ -1,0 +1,61 @@
+{
+  "id": "health_and_relative_humidity_of_air",
+  "title": "Health and Relative Humidity of Air",
+  "description": "The optimum relative humidity ranges for bacteria, viruses, fungi, mites, asthma and other health conditions. Relative humidity (RH) should be within certain limits for control of the health aspect.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Health Condition",
+        "Optimal RH Range (%)"
+      ],
+      "rows": [
+        [
+          "Bacteria",
+          "20 - 70"
+        ],
+        [
+          "Viruses",
+          "40 - 80"
+        ],
+        [
+          "Fungi",
+          "0 - 70"
+        ],
+        [
+          "Mites",
+          "0 - 60"
+        ],
+        [
+          "Respiratory Infections",
+          "40 - 50"
+        ],
+        [
+          "Allergic Rhinitis and Asthma",
+          "40 - 60"
+        ],
+        [
+          "Chemical Interactions",
+          "0 - 40"
+        ],
+        [
+          "Ozone Production",
+          "75 - 100"
+        ],
+        [
+          "Combined Health Conditions",
+          "40 - 60"
+        ],
+        [
+          "Human Comfort",
+          "30 - 60"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Guidelines\n\n- **Bacteria**: 20 - 70% RH\n- **Viruses**: 40 - 80% RH\n- **Fungi**: 0 - 70% RH\n- **Mites**: 0 - 60% RH\n- **Respiratory Infections**: 40 - 50% RH\n- **Allergic Rhinitis and Asthma**: 40 - 60% RH\n- **Chemical Interactions**: 0 - 40% RH\n- **Ozone Production**: 75 - 100% RH\n- **Combined Health Conditions**: 40 - 60% RH\n\n**General Comfort Range**: 30 - 60% RH is optimal for human comfort."
+    }
+  ]
+}

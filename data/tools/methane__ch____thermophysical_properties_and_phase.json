@@ -1,0 +1,197 @@
+{
+  "id": "methane__ch____thermophysical_properties_and_phase",
+  "title": "Methane (CH₄): Thermophysical Properties and Phase Diagram",
+  "description": "Comprehensive thermophysical properties calculator for methane (CH₄), including critical point parameters, density, viscosity, thermal conductivity, heat capacity, and phase diagram information. Methane is a colorless, odorless gas used as feedstock for chemical industry and as the main constituent of natural gas.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Autoignition Temperature",
+          "810 / 537 / 999",
+          "K / °C / °F"
+        ],
+        [
+          "Boiling Point",
+          "111.51 / -161.6 / -259.0",
+          "K / °C / °F"
+        ],
+        [
+          "Critical Density",
+          "10.139 / 162.7 / 0.3156 / 10.15",
+          "mol/dm³ / kg/m³ / slug/ft³ / lb/ft³"
+        ],
+        [
+          "Critical Pressure",
+          "4.5992 / 45.99 / 45.39 / 667.1",
+          "MPa / bar / atm / psi"
+        ],
+        [
+          "Critical Temperature",
+          "190.56 / -82.59 / -116.66",
+          "K / °C / °F"
+        ],
+        [
+          "Critical Volume",
+          "98.63 / 0.00615 / 3.169 / 0.0985",
+          "cm³/mol / m³/kg / ft³/slug / ft³/lb"
+        ],
+        [
+          "Density (gas at 25°C, 1 atm)",
+          "41.0 / 0.657 / 0.00127 / 0.0410",
+          "mol/m³ / kg/m³ / slug/ft³ / lb/ft³"
+        ],
+        [
+          "Density (gas at STP)",
+          "44.7 / 0.7168 / 0.00139 / 0.0447",
+          "mol/m³ / kg/m³ / slug/ft³ / lb/ft³"
+        ],
+        [
+          "Density (liquid at -162°C)",
+          "26429 / 422.6 / 0.820 / 26.38",
+          "mol/m³ / kg/m³ / slug/ft³ / lb/ft³"
+        ],
+        [
+          "Flammable",
+          "Yes",
+          ""
+        ],
+        [
+          "Flash Point",
+          "85 / -188 / -306",
+          "K / °C / °F"
+        ],
+        [
+          "Gas Constant (R)",
+          "518.28 / 0.1440 / 3099 / 96.329",
+          "J/(kg·K) / Wh/(kg·K) / ft·lbf/(slug·°R) / ft·lbf/(lb·°R)"
+        ],
+        [
+          "Gibbs Free Energy of Formation",
+          "-51 / -3179 / -1367",
+          "kJ/mol / kJ/kg / Btu/lb"
+        ],
+        [
+          "Heat of Vaporization",
+          "8.19 / 511 / 219.48",
+          "kJ/mol / kJ/kg / Btu/lb"
+        ],
+        [
+          "Specific Heat (Cp)",
+          "35.8 / 2.232 / 0.533",
+          "J/(mol·K) / kJ/(kg·K) / Btu/(lb·°F)"
+        ],
+        [
+          "Specific Heat (Cv)",
+          "27.4 / 1.709 / 0.408",
+          "J/(mol·K) / kJ/(kg·K) / Btu/(lb·°F)"
+        ],
+        [
+          "Heat of Combustion",
+          "-890.8 / -55528 / -23.9",
+          "kJ/mol / kJ/kg / Btu/lb"
+        ],
+        [
+          "Heat of Formation",
+          "-75.00 / -4675 / -2010",
+          "kJ/mol / kJ/kg / Btu/lb"
+        ],
+        [
+          "log KOW",
+          "1.09",
+          ""
+        ],
+        [
+          "Melting Point",
+          "90.55 / -182.6 / -296.7",
+          "K / °C / °F"
+        ],
+        [
+          "Molecular Weight",
+          "16.042 / 0.03537",
+          "g/mol / lb/mol"
+        ],
+        [
+          "Solubility in Water",
+          "0.022",
+          "mg/ml"
+        ],
+        [
+          "Sound Velocity",
+          "446",
+          "m/s"
+        ],
+        [
+          "Specific Gravity (relative to air)",
+          "0.554",
+          ""
+        ],
+        [
+          "Specific Heat Ratio (Cp/Cv)",
+          "1.31",
+          ""
+        ],
+        [
+          "Specific Volume",
+          "0.0244 / 1.52 / 784.44 / 24.38",
+          "m³/mol / m³/kg / ft³/slug / ft³/lb"
+        ],
+        [
+          "Standard Molar Entropy (S°)",
+          "186 / 11.59 / 2.77",
+          "J/(mol·K) / kJ/(kg·K) / Btu/(lb·°F)"
+        ],
+        [
+          "Surface Tension (at -161°C)",
+          "14 / 0.014",
+          "dynes/cm / N/m"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.0339 / 0.019587",
+          "W/(m·°C) / Btu/(hr·ft·°F)"
+        ],
+        [
+          "Triple Point Pressure",
+          "0.011696 / 0.117 / 0.115 / 1.70",
+          "MPa / bar / atm / psi"
+        ],
+        [
+          "Triple Point Temperature",
+          "90.69 / -182.456 / -296.42",
+          "K / °C / °F"
+        ],
+        [
+          "Vapor Pressure (saturation)",
+          "62.12 / 466000 / 613.07 / 9010",
+          "MPa / mm Hg / atm / psi"
+        ],
+        [
+          "Vapor Pressure (at 38°C)",
+          "34.47 / 258574 / 340.18 / 4999",
+          "MPa / mm Hg / atm / psi"
+        ],
+        [
+          "Viscosity (dynamic)",
+          "0.01107 / 7.44 / 0.23",
+          "cP / (lbm/(ft·s)×10⁻⁶) / (lbf·s/ft²)×10⁻⁶"
+        ],
+        [
+          "Viscosity (kinematic)",
+          "17.08 / 183.8",
+          "cSt / (ft²/s)×10⁻⁶"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Methane Phase Diagram\n\nMethane exhibits different phases (solid, liquid, gas) depending on temperature and pressure conditions:\n\n- **Critical Point**: At 190.56 K (-82.59°C) and 4.5992 MPa, there is no distinction between liquid and gas phases.\n- **Triple Point**: At 90.69 K (-182.456°C) and 0.011696 MPa, solid, liquid, and gas phases coexist in thermodynamic equilibrium.\n- **Boiling Point**: At normal pressure (1 atm), methane boils at 111.51 K (-161.6°C).\n\n## Key Properties at Standard Conditions (25°C, 1 atm)\n\n- **State**: Colorless, odorless gas\n- **Density**: 0.657 kg/m³\n- **Molecular Weight**: 16.042 g/mol\n- **Specific Gravity**: 0.554 (relative to air)\n- **Flammable**: Yes (Autoignition temp: 810 K / 537°C)\n- **Thermal Conductivity**: 0.0339 W/(m·°C)\n- **Specific Heat (Cp)**: 2.232 kJ/(kg·K)\n\n## Applications\n\nMethane is primarily used as:\n- Feedstock for chemical industry\n- Main constituent of natural gas\n- Energy source for heating and power generation"
+    }
+  ]
+}

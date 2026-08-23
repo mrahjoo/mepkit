@@ -1,0 +1,868 @@
+{
+  "id": "specific_heat_of_common_materials___engineering_re",
+  "title": "Specific Heat of Common Materials – Engineering Reference",
+  "description": "Specific heat of products like wet mud, granite, sandy clay, quartz sand and more. Reference table for specific heat capacity (J/kg·°C) of common substances including metals, gases, liquids, and solids.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Specific Heat - cp (J/kg·°C)"
+      ],
+      "rows": [
+        [
+          "Acetals",
+          1460
+        ],
+        [
+          "Air, dry (sea level)",
+          1005
+        ],
+        [
+          "Agate",
+          800
+        ],
+        [
+          "Alcohol, ethyl",
+          2440
+        ],
+        [
+          "Alcohol, metyl (wood)",
+          2530
+        ],
+        [
+          "Aluminum",
+          897
+        ],
+        [
+          "Aluminum bronze",
+          436
+        ],
+        [
+          "Alumina, AL2O3",
+          718
+        ],
+        [
+          "Ammonia, liquid",
+          4700
+        ],
+        [
+          "Ammonia, gas",
+          2060
+        ],
+        [
+          "Antimony",
+          209
+        ],
+        [
+          "Argon",
+          520
+        ],
+        [
+          "Arsenic",
+          348
+        ],
+        [
+          "Artificial wool",
+          1357
+        ],
+        [
+          "Asbestos",
+          816
+        ],
+        [
+          "Asphalt concrete (with aggregate)",
+          920
+        ],
+        [
+          "Barium",
+          290
+        ],
+        [
+          "Barium chloride",
+          380
+        ],
+        [
+          "Barytes",
+          460
+        ],
+        [
+          "Basalt",
+          860
+        ],
+        [
+          "Beef tallow",
+          870
+        ],
+        [
+          "Beryllium",
+          1020
+        ],
+        [
+          "Bismuth",
+          130
+        ],
+        [
+          "Bitumen",
+          1780
+        ],
+        [
+          "Boiler scale",
+          800
+        ],
+        [
+          "Bone",
+          440
+        ],
+        [
+          "Borax",
+          1000
+        ],
+        [
+          "Boron",
+          960
+        ],
+        [
+          "Boron nitride",
+          720
+        ],
+        [
+          "Brass",
+          375
+        ],
+        [
+          "Brick",
+          840
+        ],
+        [
+          "Bronze",
+          370
+        ],
+        [
+          "Brown iron ore",
+          670
+        ],
+        [
+          "Cadmium",
+          234
+        ],
+        [
+          "Calcium",
+          532
+        ],
+        [
+          "Calcium chloride",
+          690
+        ],
+        [
+          "Calcium silicate, CaSiO3",
+          710
+        ],
+        [
+          "Cellulose, cotton, wood pulp and regenerated",
+          "1300 - 1500"
+        ],
+        [
+          "Cellulose acetate, molded",
+          "1260 - 1800"
+        ],
+        [
+          "Cellulose acetate, sheet",
+          "1260 - 2100"
+        ],
+        [
+          "Cellulose nitrate, Celluloid",
+          "1300 - 1700"
+        ],
+        [
+          "Chalk",
+          750
+        ],
+        [
+          "Chamotte, fireclay",
+          800
+        ],
+        [
+          "Charcoal",
+          840
+        ],
+        [
+          "Chromium",
+          452
+        ],
+        [
+          "Chromium oxide",
+          750
+        ],
+        [
+          "Clay, sandy",
+          1381
+        ],
+        [
+          "Clay, dry",
+          880
+        ],
+        [
+          "Cobalt",
+          435
+        ],
+        [
+          "Coke",
+          840
+        ],
+        [
+          "Concrete",
+          880
+        ],
+        [
+          "Constantan",
+          410
+        ],
+        [
+          "Copper",
+          385
+        ],
+        [
+          "Cork",
+          2000
+        ],
+        [
+          "Diamond (carbon)",
+          516
+        ],
+        [
+          "Duralium",
+          920
+        ],
+        [
+          "Emery",
+          960
+        ],
+        [
+          "Epoxy cast resins",
+          1000
+        ],
+        [
+          "Fire brick",
+          880
+        ],
+        [
+          "Fluorspar CaF2",
+          830
+        ],
+        [
+          "Dichlorodifluoromethane R12, liquid",
+          871
+        ],
+        [
+          "Dichlorodifluoromethane R12, vapor",
+          595
+        ],
+        [
+          "Ice (0 °C)",
+          2093
+        ],
+        [
+          "India rubber",
+          1250
+        ],
+        [
+          "Germanium",
+          310
+        ],
+        [
+          "Glass, crown",
+          670
+        ],
+        [
+          "Glass, pyrex",
+          753
+        ],
+        [
+          "Glass-wool",
+          840
+        ],
+        [
+          "Gold",
+          129
+        ],
+        [
+          "Granite",
+          790
+        ],
+        [
+          "Graphite (carbon)",
+          717
+        ],
+        [
+          "Gypsum",
+          1090
+        ],
+        [
+          "Helium",
+          5193
+        ],
+        [
+          "Hydrogen",
+          14304
+        ],
+        [
+          "Ice, snow (-5 °C)",
+          2090
+        ],
+        [
+          "Indium",
+          240
+        ],
+        [
+          "Ingot iron",
+          490
+        ],
+        [
+          "Iodine",
+          218
+        ],
+        [
+          "Iridium",
+          134
+        ],
+        [
+          "Iron",
+          449
+        ],
+        [
+          "Lead",
+          129
+        ],
+        [
+          "Leather",
+          1500
+        ],
+        [
+          "Limestone",
+          909
+        ],
+        [
+          "Lithium",
+          3582
+        ],
+        [
+          "Lucite",
+          1460
+        ],
+        [
+          "Magnesia (Magnesium oxide), MgO",
+          874
+        ],
+        [
+          "Magnesium",
+          1050
+        ],
+        [
+          "Magnesium alloy",
+          1010
+        ],
+        [
+          "Manganese",
+          460
+        ],
+        [
+          "Marble",
+          880
+        ],
+        [
+          "Mercury",
+          140
+        ],
+        [
+          "Mica",
+          880
+        ],
+        [
+          "Molybdenum",
+          272
+        ],
+        [
+          "Monel metal",
+          430
+        ],
+        [
+          "Neon",
+          1030
+        ],
+        [
+          "Nickel",
+          461
+        ],
+        [
+          "Nitrogen",
+          1040
+        ],
+        [
+          "Niobium",
+          260
+        ],
+        [
+          "Nylon-6",
+          1600
+        ],
+        [
+          "Nylon-66",
+          1700
+        ],
+        [
+          "Olive oil",
+          1790
+        ],
+        [
+          "Osmium",
+          130
+        ],
+        [
+          "Oxygen",
+          918
+        ],
+        [
+          "Palladium",
+          240
+        ],
+        [
+          "Paper",
+          1336
+        ],
+        [
+          "Paraffin",
+          3260
+        ],
+        [
+          "Peat",
+          1900
+        ],
+        [
+          "Perlite",
+          387
+        ],
+        [
+          "Phenolic cast resins",
+          "1250 - 1670"
+        ],
+        [
+          "Phenol-formaldehyde molding compounds",
+          "2500 - 6000"
+        ],
+        [
+          "Phosphor bronze",
+          360
+        ],
+        [
+          "Phosphorus",
+          800
+        ],
+        [
+          "Pinchbeck",
+          380
+        ],
+        [
+          "Pit coal",
+          1020
+        ],
+        [
+          "Plaster",
+          1090
+        ],
+        [
+          "Platinum",
+          133
+        ],
+        [
+          "Plutonium",
+          140
+        ],
+        [
+          "Polycarbonate",
+          "1170 - 1250"
+        ],
+        [
+          "Polyethylene terephthalate",
+          1250
+        ],
+        [
+          "Polyimide aromatics",
+          1120
+        ],
+        [
+          "Polyisoprene natural rubber",
+          1880
+        ],
+        [
+          "Polyisoprene hard rubber",
+          1380
+        ],
+        [
+          "Polymethylmethacrylate",
+          1500
+        ],
+        [
+          "Polypropylene",
+          1920
+        ],
+        [
+          "Polystyrene",
+          "1300 - 1500"
+        ],
+        [
+          "Polytetrafluoroethylene moulding compound",
+          1000
+        ],
+        [
+          "Polytetrafluoroethylene (PTFE)",
+          1172
+        ],
+        [
+          "Polyurethane cast liquid",
+          1800
+        ],
+        [
+          "Polyurethane elastomer",
+          1800
+        ],
+        [
+          "Polyvinylchloride PVC",
+          "840 - 1170"
+        ],
+        [
+          "Porcelain",
+          1085
+        ],
+        [
+          "Potassium",
+          1000
+        ],
+        [
+          "Potassium chloride",
+          680
+        ],
+        [
+          "Pyroceram",
+          710
+        ],
+        [
+          "Quartz, SiO2",
+          730
+        ],
+        [
+          "Quartz glass",
+          700
+        ],
+        [
+          "Radium",
+          120
+        ],
+        [
+          "Red metal",
+          381
+        ],
+        [
+          "Rhenium",
+          140
+        ],
+        [
+          "Rhodium",
+          240
+        ],
+        [
+          "Rosin",
+          1300
+        ],
+        [
+          "Rubidium",
+          330
+        ],
+        [
+          "Salt, NaCl",
+          880
+        ],
+        [
+          "Sand, quartz",
+          830
+        ],
+        [
+          "Sandstone",
+          710
+        ],
+        [
+          "Scandium",
+          568
+        ],
+        [
+          "Selenium",
+          330
+        ],
+        [
+          "Silicon",
+          705
+        ],
+        [
+          "Silicon carbide",
+          670
+        ],
+        [
+          "Sillimanite",
+          1000
+        ],
+        [
+          "Silver",
+          235
+        ],
+        [
+          "Slate",
+          760
+        ],
+        [
+          "Sodium",
+          1260
+        ],
+        [
+          "Soil, dry",
+          800
+        ],
+        [
+          "Soil, wet",
+          1480
+        ],
+        [
+          "Soot",
+          840
+        ],
+        [
+          "Snow",
+          2090
+        ],
+        [
+          "Steatite",
+          830
+        ],
+        [
+          "Steel",
+          490
+        ],
+        [
+          "Sulfur, crystal",
+          700
+        ],
+        [
+          "Tantalum",
+          138
+        ],
+        [
+          "Tellurium",
+          201
+        ],
+        [
+          "Thorium",
+          140
+        ],
+        [
+          "Timber, alder",
+          1400
+        ],
+        [
+          "Timber, ash",
+          1600
+        ],
+        [
+          "Timber, birch",
+          1900
+        ],
+        [
+          "Timber, larch",
+          1400
+        ],
+        [
+          "Timber, maple",
+          1600
+        ],
+        [
+          "Timber, oak",
+          2400
+        ],
+        [
+          "Timber, pitchpine",
+          1300
+        ],
+        [
+          "Timber, pockwood",
+          2500
+        ],
+        [
+          "Timber, red beech",
+          1300
+        ],
+        [
+          "Timber, red pine",
+          1500
+        ],
+        [
+          "Timber, white pine",
+          1500
+        ],
+        [
+          "Timber, walnut",
+          1400
+        ],
+        [
+          "Tin",
+          228
+        ],
+        [
+          "Titanium",
+          523
+        ],
+        [
+          "Tungsten",
+          132
+        ],
+        [
+          "Tungsten carbide",
+          171
+        ],
+        [
+          "Uranium",
+          116
+        ],
+        [
+          "Vanadium",
+          500
+        ],
+        [
+          "Water, pure liquid (20 °C)",
+          4182
+        ],
+        [
+          "Water, vapor (27 °C)",
+          1864
+        ],
+        [
+          "Wax",
+          3400
+        ],
+        [
+          "Wet mud",
+          2512
+        ],
+        [
+          "Wood",
+          "1300 - 2400"
+        ],
+        [
+          "Zinc",
+          388
+        ],
+        [
+          "Zirconium",
+          280
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Substance",
+        "Specific Heat (J/kg·°C)"
+      ],
+      "options": {
+        "title": {
+          "text": "Specific Heat Capacity of Common Materials"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Hydrogen",
+            "Helium",
+            "Water (20°C)",
+            "Paraffin",
+            "Wax",
+            "Lithium",
+            "Timber, oak",
+            "Timber, pockwood",
+            "Ammonia (liquid)",
+            "Wet mud",
+            "Water vapor (27°C)",
+            "Polypropylene",
+            "Timber, birch",
+            "Peat",
+            "Polyisoprene natural rubber",
+            "Cork",
+            "Olive oil",
+            "Peat",
+            "Bitumen",
+            "Polyurethane",
+            "Leather",
+            "Acetals",
+            "Lucite",
+            "Nylon-6",
+            "Nylon-66",
+            "Polymethylmethacrylate",
+            "Artificial wool",
+            "India rubber",
+            "Sodium",
+            "Rosin",
+            "Wood",
+            "Timber, ash",
+            "Timber, maple"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Specific Heat (J/kg·°C)"
+        },
+        "series": [
+          {
+            "name": "Specific Heat Capacity",
+            "data": [
+              14304,
+              5193,
+              4182,
+              3260,
+              3400,
+              3582,
+              2400,
+              2500,
+              4700,
+              2512,
+              1864,
+              1920,
+              1900,
+              1900,
+              1880,
+              2000,
+              1790,
+              1900,
+              1780,
+              1800,
+              1500,
+              1460,
+              1460,
+              1600,
+              1700,
+              1500,
+              1357,
+              1250,
+              1260,
+              1300,
+              2400,
+              1600,
+              1600
+            ],
+            "type": "bar",
+            "smooth": false
+          }
+        ]
+      }
+    }
+  ]
+}

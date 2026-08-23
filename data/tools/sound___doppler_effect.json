@@ -1,0 +1,146 @@
+{
+  "id": "sound___doppler_effect",
+  "title": "Sound - Doppler Effect",
+  "description": "Calculate the observed frequency of sound due to relative motion between a source and a listener using the Doppler Effect formula.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Sound - Doppler Effect\n\nThe change in frequency of sound due to relative motion between a source and a listener is called the **Doppler Effect**.\n\nThe observed sound frequency for a listener can be expressed as:\n\n**fr = fs (c + vr) / (c + vs)**\n\nWhere:\n- **fr** = frequency observed by the receiver (Hz)\n- **fs** = frequency emitted from the source (Hz)\n- **c** = speed of sound (m/s)\n- **vr** = velocity of the receiver relative to the medium (m/s) - positive if moving towards the source\n- **vs** = velocity of the source relative to the medium (m/s) - positive if moving away from the receiver"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fs",
+          "label": "Source Frequency (fs)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "Hz"
+        },
+        {
+          "id": "c",
+          "label": "Speed of Sound (c)",
+          "type": "number",
+          "defaultValue": 343,
+          "unit": "m/s"
+        },
+        {
+          "id": "vr",
+          "label": "Receiver Velocity (vr)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m/s"
+        },
+        {
+          "id": "vs",
+          "label": "Source Velocity (vs)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "fr",
+          "label": "Observed Frequency (fr)",
+          "formula": "inputs.fs * (inputs.c + inputs.vr) / (inputs.c + inputs.vs)",
+          "unit": "Hz",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Source Frequency (Hz)",
+        "Speed of Sound (m/s)",
+        "Receiver Velocity (m/s)",
+        "Source Velocity (m/s)",
+        "Observed Frequency (Hz)"
+      ],
+      "rows": [
+        [
+          1000,
+          343,
+          0,
+          0,
+          1000
+        ],
+        [
+          1000,
+          343,
+          55.6,
+          0,
+          1162
+        ],
+        [
+          1000,
+          343,
+          -55.6,
+          0,
+          838
+        ],
+        [
+          1000,
+          343,
+          0,
+          55.6,
+          882
+        ],
+        [
+          1000,
+          343,
+          0,
+          -55.6,
+          1163
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Doppler Effect - Observed Frequency vs. Source Velocity"
+        },
+        "xAxis": {
+          "name": "Source Velocity (m/s)",
+          "type": "value"
+        },
+        "yAxis": {
+          "name": "Observed Frequency (Hz)",
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "fs = 1000 Hz, c = 343 m/s, vr = 0 m/s",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              [
+                -100,
+                1545
+              ],
+              [
+                -50,
+                1234
+              ],
+              [
+                0,
+                1000
+              ],
+              [
+                50,
+                835
+              ],
+              [
+                100,
+                720
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

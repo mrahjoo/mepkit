@@ -1,0 +1,339 @@
+{
+  "id": "moist_air___psychrometric_table_for_pressure_29_92",
+  "title": "Moist Air - Psychrometric Table for Pressure 29.92 inHg",
+  "description": "Dry and wet bulb temperatures, saturation pressure, water vapor weight, specific volume, heat and more for moist air at standard pressure of 29.92 inHg.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "psychrometric_calculator",
+      "content": "Calculate moist air properties for pressure 29.92 inHg",
+      "inputs": [
+        {
+          "id": "dry_bulb_temp",
+          "label": "Dry Bulb Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 70
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sat_vapor_pressure",
+          "label": "Saturated Water Vapor Pressure",
+          "unit": "inches of Mercury",
+          "formula": "inputs.dry_bulb_temp * 0.00369 + 0.0039",
+          "format": "decimal"
+        },
+        {
+          "id": "humidity_grains_per_ft3",
+          "label": "Heat Dry Air (Grains per Cu. Ft. of Vapor)",
+          "unit": "Grains per Cu. Ft.",
+          "formula": "inputs.dry_bulb_temp * 0.1124 + 0.054",
+          "format": "decimal"
+        },
+        {
+          "id": "saturation_humidity",
+          "label": "Air Saturated with Water Vapor",
+          "unit": "Grains per Pound of Dry Air",
+          "formula": "inputs.dry_bulb_temp * 1.56 + 0.569",
+          "format": "decimal"
+        },
+        {
+          "id": "wet_bulb_temp",
+          "label": "Wet Bulb Temperature",
+          "unit": "°F",
+          "formula": "inputs.dry_bulb_temp * 0.24",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_volume",
+          "label": "Specific Volume",
+          "unit": "Cu. Ft.",
+          "formula": "661.4 - inputs.dry_bulb_temp * 0.24",
+          "format": "decimal"
+        },
+        {
+          "id": "dry_air_weight",
+          "label": "Dry Air Weight in 1 Cu. Ft.",
+          "unit": "lb/Cu. Ft.",
+          "formula": "0.0764",
+          "format": "decimal"
+        },
+        {
+          "id": "enthalpy",
+          "label": "Total Enthalpy",
+          "unit": "Btu",
+          "formula": "inputs.dry_bulb_temp * 0.24 + 0.846",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "psychrometric_table",
+      "headers": [
+        "Dry Bulb Temp (°F)",
+        "Sat. Vapor Pressure (inHg)",
+        "Heat Dry Air (Grains/Cu.Ft.)",
+        "Saturation Humidity (Grains/lb)",
+        "Wet Bulb Temp (°F)",
+        "Specific Volume (Cu.Ft.)",
+        "Dry Air (lb/Cu.Ft.)",
+        "Total Enthalpy (Btu)"
+      ],
+      "rows": [
+        [
+          -40,
+          0.0039,
+          0.054,
+          0.569,
+          -9.6,
+          10.58,
+          661.4,
+          -9.515
+        ],
+        [
+          -30,
+          0.0069,
+          0.093,
+          1.004,
+          -7.2,
+          10.84,
+          646.1,
+          -7.05
+        ],
+        [
+          -20,
+          0.0126,
+          0.165,
+          1.834,
+          -4.8,
+          11.09,
+          631.3,
+          -4.524
+        ],
+        [
+          -10,
+          0.0222,
+          0.285,
+          3.233,
+          -2.4,
+          11.34,
+          617.2,
+          -1.92
+        ],
+        [
+          0,
+          0.0383,
+          0.481,
+          5.58,
+          0,
+          11.6,
+          603.2,
+          0.846
+        ],
+        [
+          10,
+          0.0631,
+          0.775,
+          9.19,
+          2.4,
+          11.86,
+          590.4,
+          3.799
+        ],
+        [
+          20,
+          0.103,
+          1.239,
+          15.04,
+          4.8,
+          12.14,
+          576.8,
+          7.099
+        ],
+        [
+          30,
+          0.164,
+          1.933,
+          23.99,
+          7.2,
+          12.41,
+          563.9,
+          10.88
+        ],
+        [
+          40,
+          0.2478,
+          2.864,
+          36.36,
+          9.6,
+          12.69,
+          551.4,
+          15.21
+        ],
+        [
+          50,
+          0.3626,
+          4.11,
+          53.41,
+          12,
+          13,
+          538.7,
+          20.27
+        ],
+        [
+          60,
+          0.5218,
+          5.801,
+          77.27,
+          14.4,
+          13.32,
+          524.5,
+          26.41
+        ],
+        [
+          70,
+          0.7392,
+          8.065,
+          110.28,
+          16.8,
+          13.67,
+          511.9,
+          34.01
+        ],
+        [
+          80,
+          1.0321,
+          11.06,
+          155.52,
+          19.2,
+          14.07,
+          497.7,
+          43.57
+        ],
+        [
+          90,
+          1.4215,
+          14.96,
+          217.13,
+          21.6,
+          14.52,
+          482.2,
+          55.75
+        ],
+        [
+          100,
+          1.9325,
+          19.98,
+          300.6,
+          24,
+          15.05,
+          465.2,
+          71.46
+        ],
+        [
+          110,
+          2.5955,
+          26.38,
+          413.5,
+          26.4,
+          15.68,
+          446.5,
+          91.94
+        ],
+        [
+          120,
+          3.4458,
+          34.44,
+          566.67,
+          28.8,
+          16.46,
+          425.4,
+          118.96
+        ],
+        [
+          130,
+          4.5251,
+          44.49,
+          775.8,
+          31.2,
+          17.44,
+          401.4,
+          155.1
+        ],
+        [
+          140,
+          5.8812,
+          56.91,
+          1065.1,
+          33.6,
+          18.71,
+          374.1,
+          204.32
+        ],
+        [
+          150,
+          7.569,
+          72.11,
+          1474.3,
+          36,
+          20.44,
+          342.5,
+          273.17
+        ],
+        [
+          160,
+          9.652,
+          90.57,
+          2073.2,
+          38.4,
+          22.89,
+          305.8,
+          373.13
+        ],
+        [
+          170,
+          12.199,
+          112.79,
+          2996.9,
+          40.8,
+          26.57,
+          263.5,
+          526.39
+        ],
+        [
+          180,
+          15.291,
+          139.36,
+          4550.4,
+          43.2,
+          32.65,
+          214.4,
+          783.01
+        ],
+        [
+          190,
+          19.014,
+          170.9,
+          7589.5,
+          45.6,
+          44.41,
+          157.6,
+          1283.53
+        ],
+        [
+          200,
+          23.467,
+          208.09,
+          15828.9,
+          48,
+          76.07,
+          92,
+          2638.88
+        ]
+      ]
+    }
+  ]
+}

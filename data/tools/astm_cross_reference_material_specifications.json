@@ -1,0 +1,319 @@
+{
+  "id": "astm_cross_reference_material_specifications",
+  "title": "ASTM Cross Reference Material Specifications",
+  "description": "Cross reference for fittings, flanges, unions and cast and forged valves. A comprehensive lookup tool for ASTM material specifications across different material types, service conditions, and component categories including forgings, castings, wrought fittings, and pipe.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "astm_cross_reference_table",
+      "headers": [
+        "Material Type",
+        "Service Condition",
+        "Forgings",
+        "Castings",
+        "Wrought Fittings",
+        "Pipe"
+      ],
+      "rows": [
+        [
+          "Carbon Steel",
+          "",
+          "A181-Gr.1, A181-Gr.2",
+          "",
+          "A234-WPA, WPB, WPC",
+          ""
+        ],
+        [
+          "Moderate & High Temp Service",
+          "",
+          "A105-Gr.1, A105-Gr.2",
+          "A216-WCA, WCB, WCC",
+          "",
+          "A106-Gr.B/API 5 LB"
+        ],
+        [
+          "Cold Temp Service",
+          "",
+          "A350-LF1, A350-LF2",
+          "A352-LCB, LCC",
+          "A420-WPL6",
+          "A33-Gr.6/A 671"
+        ],
+        [
+          "Carbon-1/2 Moly Alloy Steel",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1/2Cr-1/2Mo Alloy Steel",
+          "High Temp Service",
+          "A182-F1",
+          "A217-WC1",
+          "A234-WP1",
+          ""
+        ],
+        [
+          "1/2Cr-1/2Mo Alloy Steel",
+          "Cold Temp Service",
+          "",
+          "A352-LC1",
+          "",
+          ""
+        ],
+        [
+          "1/2Cr-1/2Mo Alloy Steel",
+          "Standard",
+          "A182-F2",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1/2Cr-1/2Mo-1 Alloy Steel",
+          "",
+          "",
+          "A217-WC4",
+          "",
+          ""
+        ],
+        [
+          "3/4Cr-1Mo-3/4NI Alloy Steel",
+          "",
+          "",
+          "A217-WC5",
+          "",
+          ""
+        ],
+        [
+          "1Cr-1/2Mo Alloy Steel",
+          "",
+          "A182-F12",
+          "",
+          "A234-WP12",
+          ""
+        ],
+        [
+          "1Cr-1Mo-Vd Alloy Steel",
+          "",
+          "A404-F24",
+          "A389-C24",
+          "",
+          ""
+        ],
+        [
+          "1-1/4Cr-1/2Mo Alloy Steel",
+          "",
+          "A182-F11",
+          "A217-WC6",
+          "A234-WP11",
+          ""
+        ],
+        [
+          "1-1/4Cr-1/2Mo-Vd Alloy Steel",
+          "",
+          "",
+          "A389-C23",
+          "",
+          ""
+        ],
+        [
+          "2-1/4Cr-1/2Mo-Vd Alloy Steel",
+          "",
+          "A182-F22",
+          "A217-WC9",
+          "A234-WP22",
+          ""
+        ],
+        [
+          "3Cr-1Mo Alloy Steel",
+          "",
+          "A182-F21",
+          "",
+          "",
+          ""
+        ],
+        [
+          "5Cr-1/2Mo Alloy Steel",
+          "",
+          "A182-F5",
+          "",
+          "A234-WP5",
+          ""
+        ],
+        [
+          "5Cr-1/2Mo-Si Alloy Steel",
+          "",
+          "",
+          "A217-Gr.C5",
+          "",
+          ""
+        ],
+        [
+          "7Cr-1/2Mo Alloy Steel",
+          "",
+          "A182-F7",
+          "",
+          "A234-WP7",
+          ""
+        ],
+        [
+          "9Cr-1Mo Alloy Steel",
+          "",
+          "A182-F9",
+          "A217-Gr.C12",
+          "A234-WP9",
+          ""
+        ],
+        [
+          "13Cr Alloy Steel",
+          "",
+          "A182-F6",
+          "A351-CA15",
+          "",
+          ""
+        ],
+        [
+          "Type 304 Stainless Steel",
+          "Standard",
+          "A182-F304",
+          "A351-Gr.CF8, CF8a",
+          "A403-WP304",
+          "A312-TP304"
+        ],
+        [
+          "Type 304 Stainless Steel",
+          "Low Carbon",
+          "A182-F304-L",
+          "A351-Gr.CF3, CF3a",
+          "A403-WP304-L",
+          "A312-Tp304L"
+        ],
+        [
+          "Type 304 Stainless Steel",
+          "High Temp Service",
+          "A182-F304-H",
+          "A351-Gr.CF10",
+          "A403-WP304-H",
+          "A312-TP304H"
+        ],
+        [
+          "Type 309 Stainless Steel",
+          "",
+          "",
+          "",
+          "A403-WP309",
+          ""
+        ],
+        [
+          "Type 310 Stainless Steel",
+          "",
+          "A182-F310",
+          "",
+          "A403-WP310",
+          "A312-TP310"
+        ],
+        [
+          "Type 316 Stainless Steel",
+          "Standard",
+          "A182-F316",
+          "A351-Gr.CF8M",
+          "A403-WP316",
+          "A312-TP316"
+        ],
+        [
+          "Type 316 Stainless Steel",
+          "Low Carbon",
+          "A182-F316-L",
+          "A351-Gr.CF3M",
+          "A403-WP316-L",
+          "A312-TP316L"
+        ],
+        [
+          "Type 316 Stainless Steel",
+          "High Temp Service",
+          "A182-F316-H",
+          "A351-Gr.CF10",
+          "A403-WP316-H",
+          "A312-TP316H"
+        ],
+        [
+          "Type 317 Stainless Steel",
+          "",
+          "",
+          "A403-WP317",
+          "",
+          ""
+        ],
+        [
+          "Type 321 Stainless Steel",
+          "Standard",
+          "A182-F321",
+          "",
+          "A403-WP321",
+          ""
+        ],
+        [
+          "Type 321 Stainless Steel",
+          "High Temp Service",
+          "A182-F321-H",
+          "",
+          "A403-WP321-H",
+          ""
+        ],
+        [
+          "Type 347 Stainless Steel",
+          "Standard",
+          "A182-F347",
+          "",
+          "A403-WP347",
+          ""
+        ],
+        [
+          "Type 347 Stainless Steel",
+          "High Temp Service",
+          "A182-F347-H",
+          "A351-Gr.CF8C",
+          "A403-WP347-H",
+          ""
+        ],
+        [
+          "Type 348 Stainless Steel",
+          "Standard",
+          "A182-F348",
+          "",
+          "A403-WP348",
+          ""
+        ],
+        [
+          "Type 348 Stainless Steel",
+          "High Temp Service",
+          "A182-F348-H",
+          "",
+          "",
+          ""
+        ],
+        [
+          "20 Ni-8 Cr Alloy",
+          "",
+          "A182-F10",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2 Nickel Alloy Steel",
+          "Low Temp Service",
+          "",
+          "A352-LC2",
+          "",
+          ""
+        ]
+      ],
+      "content": "ASTM Material Specifications Reference Table"
+    }
+  ]
+}

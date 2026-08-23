@@ -1,0 +1,102 @@
+{
+  "id": "single_and_three_phase_ac___electric_current_vs__p",
+  "title": "Single and Three Phase AC - Electric Current vs. Power",
+  "description": "Convert between single phase (120, 240 and 480 Voltage) and three phase (240 and 480 Voltage) AC power systems. Calculate electric current based on apparent power and voltage.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "apparent_power",
+          "label": "Apparent Power",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "VA"
+        },
+        {
+          "id": "phase_type",
+          "label": "Phase Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Single Phase",
+              "value": "single"
+            },
+            {
+              "label": "Three Phase",
+              "value": "three"
+            }
+          ],
+          "defaultValue": "single"
+        },
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "select",
+          "options": [
+            {
+              "label": "120 V",
+              "value": 120
+            },
+            {
+              "label": "208 V",
+              "value": 208
+            },
+            {
+              "label": "230 V",
+              "value": 230
+            },
+            {
+              "label": "240 V",
+              "value": 240
+            },
+            {
+              "label": "277 V",
+              "value": 277
+            },
+            {
+              "label": "347 V",
+              "value": 347
+            },
+            {
+              "label": "380 V",
+              "value": 380
+            },
+            {
+              "label": "400 V",
+              "value": 400
+            },
+            {
+              "label": "415 V",
+              "value": 415
+            },
+            {
+              "label": "480 V",
+              "value": 480
+            },
+            {
+              "label": "600 V",
+              "value": 600
+            }
+          ],
+          "defaultValue": 230
+        }
+      ],
+      "outputs": [
+        {
+          "id": "current",
+          "label": "Electric Current",
+          "unit": "A",
+          "formula": "inputs.apparent_power / (inputs.voltage * (inputs.phase_type === 'single' ? 1 : Math.sqrt(3)))",
+          "format": "decimal"
+        },
+        {
+          "id": "power_formula",
+          "label": "Formula Used",
+          "formula": "inputs.phase_type === 'single' ? 'I = P / V' : 'I = P / (V × √3)'"
+        }
+      ]
+    }
+  ]
+}

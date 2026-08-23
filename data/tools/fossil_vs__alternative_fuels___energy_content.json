@@ -1,0 +1,448 @@
+{
+  "id": "fossil_vs__alternative_fuels___energy_content",
+  "title": "Fossil vs. Alternative Fuels - Energy Content",
+  "description": "Calculate and compare energy content (calorific value) of various fossil and alternative fuels. Includes higher and lower heating values for gaseous, liquid, and solid fuels.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "fuel_energy_calculator",
+      "headers": [
+        "Input Parameters",
+        "Value"
+      ],
+      "content": "Calculate energy content and conversion between fuel types and energy units",
+      "inputs": [
+        {
+          "id": "fuel_type",
+          "label": "Fuel Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Natural gas (95% methane)",
+              "value": "natural_gas_95"
+            },
+            {
+              "label": "Natural gas (US marked)",
+              "value": "natural_gas_us"
+            },
+            {
+              "label": "Hydrogen",
+              "value": "hydrogen"
+            },
+            {
+              "label": "Still gas (refineries)",
+              "value": "still_gas"
+            },
+            {
+              "label": "Crude oil",
+              "value": "crude_oil"
+            },
+            {
+              "label": "Conventional gasoline",
+              "value": "gasoline"
+            },
+            {
+              "label": "Kerosene",
+              "value": "kerosene"
+            },
+            {
+              "label": "U.S. conventional diesel",
+              "value": "diesel"
+            },
+            {
+              "label": "LPG",
+              "value": "lpg"
+            },
+            {
+              "label": "LNG",
+              "value": "lng"
+            },
+            {
+              "label": "Ethanol",
+              "value": "ethanol"
+            },
+            {
+              "label": "Biodiesel",
+              "value": "biodiesel"
+            },
+            {
+              "label": "Petroleum coke",
+              "value": "petcoke"
+            },
+            {
+              "label": "Coal (bituminous)",
+              "value": "coal_bituminous"
+            },
+            {
+              "label": "Charcoal (wood)",
+              "value": "charcoal"
+            },
+            {
+              "label": "Wood (oak)",
+              "value": "wood_oak"
+            }
+          ]
+        },
+        {
+          "id": "amount",
+          "label": "Amount",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "kg or L"
+        },
+        {
+          "id": "heating_value_type",
+          "label": "Heating Value Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Gross (Higher) Heating Value (HHV)",
+              "value": "hhv"
+            },
+            {
+              "label": "Net (Lower) Heating Value (LHV)",
+              "value": "lhv"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy_mj",
+          "label": "Energy Content",
+          "unit": "MJ",
+          "formula": "inputs.amount * 45.0",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_btu",
+          "label": "Energy Content",
+          "unit": "Btu",
+          "formula": "inputs.energy_mj * 947.817",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_kwh",
+          "label": "Energy Content",
+          "unit": "kWh",
+          "formula": "inputs.energy_mj / 3.6",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "fuels_energy_table",
+      "headers": [
+        "Fuel Type",
+        "Density (kg/m³ or kg/L)",
+        "Gross Heating Value (MJ/kg)",
+        "Net Heating Value (MJ/kg)",
+        "Gross HV (Btu/lb)",
+        "Net HV (Btu/lb)"
+      ],
+      "rows": [
+        [
+          "Natural gas (95% methane)",
+          "0.747",
+          "54.0",
+          "48.7",
+          "23,216",
+          "20,956"
+        ],
+        [
+          "Natural gas (US marked)",
+          "0.777",
+          "52.2",
+          "47.1",
+          "22,453",
+          "20,267"
+        ],
+        [
+          "Hydrogen",
+          "0.09",
+          "142.2",
+          "120.2",
+          "61,127",
+          "51,682"
+        ],
+        [
+          "Still gas (refineries)",
+          "1.159",
+          "51.0",
+          "46.9",
+          "21,905",
+          "20,163"
+        ],
+        [
+          "Crude oil",
+          "846",
+          "45.5",
+          "42.7",
+          "19,580",
+          "18,352"
+        ],
+        [
+          "Conventional gasoline",
+          "744",
+          "46.5",
+          "43.4",
+          "20,007",
+          "18,679"
+        ],
+        [
+          "Reformulated gasoline",
+          "747",
+          "45.4",
+          "42.4",
+          "19,533",
+          "18,211"
+        ],
+        [
+          "Kerosene",
+          "790",
+          "46.4",
+          "—",
+          "19,948",
+          "—"
+        ],
+        [
+          "U.S. conventional diesel",
+          "836",
+          "45.8",
+          "42.8",
+          "19,676",
+          "18,397"
+        ],
+        [
+          "Low-sulfur diesel",
+          "846",
+          "45.6",
+          "42.6",
+          "19,594",
+          "18,320"
+        ],
+        [
+          "Petroleum naphtha",
+          "724",
+          "48.1",
+          "44.9",
+          "20,669",
+          "19,320"
+        ],
+        [
+          "LPG",
+          "507",
+          "50.2",
+          "46.6",
+          "21,561",
+          "20,038"
+        ],
+        [
+          "LNG",
+          "428",
+          "55.2",
+          "48.6",
+          "23,734",
+          "20,908"
+        ],
+        [
+          "Dimethyl ether (DME)",
+          "664",
+          "31.7",
+          "28.9",
+          "13,620",
+          "12,417"
+        ],
+        [
+          "Methyl ester (biodiesel)",
+          "887",
+          "40.2",
+          "37.5",
+          "17,269",
+          "16,134"
+        ],
+        [
+          "Fischer-Tropsch diesel",
+          "796",
+          "45.5",
+          "43.2",
+          "19,549",
+          "18,593"
+        ],
+        [
+          "Ethanol",
+          "788",
+          "29.8",
+          "27.0",
+          "12,832",
+          "11,587"
+        ],
+        [
+          "Liquid Hydrogen",
+          "71",
+          "141.8",
+          "120.1",
+          "60,964",
+          "51,621"
+        ],
+        [
+          "MTBE",
+          "742",
+          "38.0",
+          "35.1",
+          "16,319",
+          "15,094"
+        ],
+        [
+          "Butane",
+          "584",
+          "49.2",
+          "45.3",
+          "21,157",
+          "19,466"
+        ],
+        [
+          "Propane",
+          "507",
+          "50.2",
+          "46.3",
+          "21,597",
+          "19,904"
+        ],
+        [
+          "Petroleum coke",
+          "—",
+          "31.3",
+          "29.5",
+          "13,460",
+          "12,685"
+        ],
+        [
+          "Coal (wet basis)",
+          "—",
+          "24.0",
+          "22.7",
+          "10,304",
+          "9,773"
+        ],
+        [
+          "Coal (bituminous, wet)",
+          "—",
+          "27.3",
+          "26.1",
+          "11,723",
+          "11,230"
+        ],
+        [
+          "Coal (anthracite)",
+          "—",
+          "34.6",
+          "—",
+          "14,875",
+          "—"
+        ],
+        [
+          "Charcoal (wood)",
+          "—",
+          "34.7",
+          "—",
+          "14,918",
+          "—"
+        ],
+        [
+          "Farmed trees (dry)",
+          "—",
+          "20.6",
+          "19.6",
+          "8,852",
+          "8,406"
+        ],
+        [
+          "Wood (oak)",
+          "—",
+          "18.9",
+          "—",
+          "8,126",
+          "—"
+        ],
+        [
+          "Wood (redwood)",
+          "—",
+          "20.7",
+          "—",
+          "8,899",
+          "—"
+        ],
+        [
+          "Herbaceous biomass",
+          "—",
+          "18.1",
+          "17.2",
+          "7,791",
+          "7,399"
+        ],
+        [
+          "Corn stover (dry)",
+          "—",
+          "17.4",
+          "16.4",
+          "7,487",
+          "7,038"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "conversion_key_numbers",
+      "headers": [
+        "Conversion",
+        "Value",
+        "Energy Equivalent"
+      ],
+      "rows": [
+        [
+          "1 U.S. gallon gasoline",
+          "—",
+          "115,000 Btu = 121 MJ"
+        ],
+        [
+          "1 boe (barrel of oil equivalent)",
+          "42 US gallons",
+          "5.1 GJ = 4.8 million Btu"
+        ],
+        [
+          "1 metric tonne gasoline",
+          "1,342 liter",
+          "42.8 GJ"
+        ],
+        [
+          "1 U.S. gallon diesel",
+          "—",
+          "129,000 Btu = 136 MJ"
+        ],
+        [
+          "1 liter diesel",
+          "—",
+          "36.0 MJ"
+        ],
+        [
+          "1 metric tonne coal",
+          "bituminous",
+          "32-35 GJ"
+        ],
+        [
+          "1 cubic feet natural gas",
+          "—",
+          "950 Btu"
+        ],
+        [
+          "1 cubic meter natural gas",
+          "—",
+          "36.5 MJ"
+        ]
+      ]
+    }
+  ]
+}

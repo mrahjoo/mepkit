@@ -1,0 +1,109 @@
+{
+  "id": "car_fuel_consumption___liter_100_km",
+  "title": "Car Fuel Consumption - liter/100 km",
+  "description": "Calculate fuel consumption in liter per km - consumption chart and calculator.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate fuel consumption in liters per 100 km",
+      "inputs": [
+        {
+          "id": "fuel_consumed_liters",
+          "label": "Fuel Consumed",
+          "type": "number",
+          "unit": "liters",
+          "defaultValue": 50
+        },
+        {
+          "id": "distance_km",
+          "label": "Distance Traveled",
+          "type": "number",
+          "unit": "km",
+          "defaultValue": 500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "consumption_per_100km",
+          "label": "Fuel Consumption",
+          "unit": "L/100km",
+          "formula": "(inputs.fuel_consumed_liters / inputs.distance_km) * 100",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Common Vehicle Fuel Consumption Rates",
+      "headers": [
+        "Vehicle Type",
+        "Fuel Consumption (L/100km)"
+      ],
+      "rows": [
+        [
+          "Compact Car",
+          6.5
+        ],
+        [
+          "Mid-size Sedan",
+          7.5
+        ],
+        [
+          "SUV",
+          9.5
+        ],
+        [
+          "Pickup Truck",
+          11
+        ],
+        [
+          "Hybrid Car",
+          4.5
+        ],
+        [
+          "Electric Car",
+          "N/A (kWh/100km)"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Fuel Consumption Comparison",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Compact Car",
+            "Mid-size Sedan",
+            "SUV",
+            "Pickup Truck",
+            "Hybrid Car"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "L/100km"
+        },
+        "series": [
+          {
+            "data": [
+              6.5,
+              7.5,
+              9.5,
+              11,
+              4.5
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

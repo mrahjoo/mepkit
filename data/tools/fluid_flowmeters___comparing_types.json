@@ -1,0 +1,148 @@
+{
+  "id": "fluid_flowmeters___comparing_types",
+  "title": "Fluid Flowmeters - Comparing Types",
+  "description": "A comprehensive comparison of different fluid flowmeter types including differential pressure, velocity, positive displacement, mass, and open channel flowmeters with their characteristics, principles, and selection considerations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Flowmeter Type",
+        "Category",
+        "Turn Down Ratio",
+        "Accuracy",
+        "Pressure Recovery",
+        "Cost",
+        "Common Applications"
+      ],
+      "rows": [
+        [
+          "Orifice Plate",
+          "Differential Pressure",
+          "< 5:1",
+          "Poor at low flow",
+          "Low",
+          "Very Low",
+          "General applications"
+        ],
+        [
+          "Venturi Tube",
+          "Differential Pressure",
+          "10:1",
+          "Good",
+          "Up to 80%",
+          "Medium",
+          "Higher turn down applications"
+        ],
+        [
+          "Flow Nozzle",
+          "Differential Pressure",
+          "< 5:1",
+          "Similar to Orifice",
+          "Medium",
+          "Low",
+          "Air and gas flow"
+        ],
+        [
+          "Variable Area (Rotameter)",
+          "Differential Pressure",
+          "Up to 12:1",
+          "Up to 1% FS",
+          "N/A",
+          "Low",
+          "Laboratory and process control"
+        ],
+        [
+          "Pitot Tube",
+          "Velocity",
+          "Variable",
+          "Good",
+          "N/A",
+          "Very Low",
+          "Ventilation, HVAC, Aircraft"
+        ],
+        [
+          "Calorimetric Flowmeter",
+          "Velocity",
+          "Variable",
+          "High at low flow",
+          "N/A",
+          "Medium",
+          "Low flow measurement"
+        ],
+        [
+          "Turbine Flowmeter",
+          "Velocity",
+          "> 100:1",
+          "Better than ±0.1%",
+          "N/A",
+          "Medium",
+          "High accuracy applications"
+        ],
+        [
+          "Vortex Flowmeter",
+          "Velocity",
+          "Variable",
+          "Good",
+          "N/A",
+          "Medium",
+          "Industrial applications"
+        ],
+        [
+          "Electromagnetic Flowmeter",
+          "Velocity",
+          "Variable",
+          "Good",
+          "N/A",
+          "High",
+          "Conductive liquids, corrosive fluids"
+        ],
+        [
+          "Ultrasonic Doppler",
+          "Velocity",
+          "Variable",
+          "Good",
+          "N/A",
+          "High",
+          "Non-contact measurement"
+        ],
+        [
+          "Positive Displacement",
+          "Positive Displacement",
+          "Up to 70:1",
+          "Up to 0.1% FS",
+          "N/A",
+          "Medium",
+          "Oils, viscous fluids"
+        ],
+        [
+          "Thermal Mass Flowmeter",
+          "Mass Flow",
+          "Variable",
+          "Variable",
+          "N/A",
+          "Medium",
+          "Independent of density/pressure"
+        ],
+        [
+          "Coriolis Flowmeter",
+          "Mass Flow",
+          "> 100:1",
+          "Better than ±0.1%",
+          "N/A",
+          "High",
+          "Universal liquids, slurries, gases"
+        ],
+        [
+          "Weir/Flume",
+          "Open Channel",
+          "Variable",
+          "Good",
+          "N/A",
+          "Low",
+          "Open channels, rivers, water plants"
+        ]
+      ]
+    }
+  ]
+}

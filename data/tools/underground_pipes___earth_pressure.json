@@ -1,0 +1,157 @@
+{
+  "id": "underground_pipes___earth_pressure",
+  "title": "Underground Pipes - Earth Pressure",
+  "description": "Calculate the total pressure acting on an object buried in the ground, including pressure from soil, groundwater, and transport loads. This tool applies to objects such as pipes with diameters less than 3-500 mm.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pressure_calculator",
+      "content": "Calculate underground pressure based on soil properties and depth",
+      "inputs": [
+        {
+          "id": "rho_soil",
+          "label": "Density of soil above groundwater",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1800
+        },
+        {
+          "id": "rho_soil_submerged",
+          "label": "Density of soil below groundwater",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1100
+        },
+        {
+          "id": "depth_total",
+          "label": "Depth from surface to object",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "depth_groundwater",
+          "label": "Depth from groundwater level to object",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "transport_pressure",
+          "label": "Pressure from transport (wheel force 75 kN, dynamic factor 1.75)",
+          "type": "number",
+          "unit": "kPa",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "p_soil",
+          "label": "Pressure from soil",
+          "unit": "Pa",
+          "formula": "inputs.rho_soil * 9.81 * (inputs.depth_total - inputs.depth_groundwater) + inputs.rho_soil_submerged * 9.81 * inputs.depth_groundwater",
+          "format": "decimal"
+        },
+        {
+          "id": "p_soil_kpa",
+          "label": "Pressure from soil",
+          "unit": "kPa",
+          "formula": "(inputs.rho_soil * 9.81 * (inputs.depth_total - inputs.depth_groundwater) + inputs.rho_soil_submerged * 9.81 * inputs.depth_groundwater) / 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "p_water",
+          "label": "Pressure from groundwater",
+          "unit": "Pa",
+          "formula": "1000 * 9.81 * inputs.depth_groundwater",
+          "format": "decimal"
+        },
+        {
+          "id": "p_water_kpa",
+          "label": "Pressure from groundwater",
+          "unit": "kPa",
+          "formula": "1000 * 9.81 * inputs.depth_groundwater / 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "p_transport_kpa",
+          "label": "Pressure from transport",
+          "unit": "kPa",
+          "formula": "inputs.transport_pressure",
+          "format": "decimal"
+        },
+        {
+          "id": "p_total_kpa",
+          "label": "Total pressure acting on object",
+          "unit": "kPa",
+          "formula": "(inputs.rho_soil * 9.81 * (inputs.depth_total - inputs.depth_groundwater) + inputs.rho_soil_submerged * 9.81 * inputs.depth_groundwater) / 1000 + (1000 * 9.81 * inputs.depth_groundwater) / 1000 + inputs.transport_pressure",
+          "format": "decimal"
+        },
+        {
+          "id": "p_total_pa",
+          "label": "Total pressure acting on object",
+          "unit": "Pa",
+          "formula": "inputs.rho_soil * 9.81 * (inputs.depth_total - inputs.depth_groundwater) + inputs.rho_soil_submerged * 9.81 * inputs.depth_groundwater + 1000 * 9.81 * inputs.depth_groundwater + inputs.transport_pressure * 1000",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "results_table",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Soil density (above groundwater)",
+          "inputs.rho_soil",
+          "kg/m³"
+        ],
+        [
+          "Soil density (below groundwater)",
+          "inputs.rho_soil_submerged",
+          "kg/m³"
+        ],
+        [
+          "Total depth from surface",
+          "inputs.depth_total",
+          "m"
+        ],
+        [
+          "Depth from groundwater level",
+          "inputs.depth_groundwater",
+          "m"
+        ],
+        [
+          "Transport pressure",
+          "inputs.transport_pressure",
+          "kPa"
+        ],
+        [
+          "Pressure from soil",
+          "outputs.p_soil_kpa",
+          "kPa"
+        ],
+        [
+          "Pressure from groundwater",
+          "outputs.p_water_kpa",
+          "kPa"
+        ],
+        [
+          "Pressure from transport",
+          "outputs.p_transport_kpa",
+          "kPa"
+        ],
+        [
+          "Total pressure",
+          "outputs.p_total_kpa",
+          "kPa"
+        ]
+      ]
+    }
+  ]
+}

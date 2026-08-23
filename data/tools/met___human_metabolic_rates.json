@@ -1,0 +1,237 @@
+{
+  "id": "met___human_metabolic_rates",
+  "title": "Met - Human Metabolic Rates",
+  "description": "The metabolic rate, or human body heat or power production, is often measured in the unit \"Met\". This tool provides a comprehensive table of typical metabolic rates for common activities, measured in W/m², W (Watts), Btu/hr, and Met units. The metabolic rate of a relaxed seated person is one (1) Met, with a mean human body surface area of approximately 1.8 m² (19.4 ft²).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Activity",
+        "W/m²",
+        "W",
+        "Btu/hr",
+        "Met Units"
+      ],
+      "rows": [
+        [
+          "Reclining, Sleeping",
+          46,
+          83,
+          282,
+          0.8
+        ],
+        [
+          "Seated relaxed",
+          58,
+          104,
+          356,
+          1
+        ],
+        [
+          "Standing at rest",
+          70,
+          126,
+          430,
+          1.2
+        ],
+        [
+          "Sedentary activity (office, dwelling, school, laboratory)",
+          70,
+          126,
+          430,
+          1.2
+        ],
+        [
+          "Car driving",
+          80,
+          144,
+          491,
+          1.4
+        ],
+        [
+          "Graphic profession - Book Binder",
+          85,
+          153,
+          522,
+          1.5
+        ],
+        [
+          "Standing, light activity (shopping, laboratory, light industry)",
+          93,
+          167,
+          571,
+          1.6
+        ],
+        [
+          "Teacher",
+          95,
+          171,
+          583,
+          1.6
+        ],
+        [
+          "Domestic work - shaving, washing and dressing",
+          100,
+          180,
+          614,
+          1.7
+        ],
+        [
+          "Walking on the level, 2 km/h",
+          110,
+          198,
+          675,
+          1.9
+        ],
+        [
+          "Standing, medium activity (shop assistant, domestic work)",
+          116,
+          209,
+          712,
+          2
+        ],
+        [
+          "Building industry - Brick laying (Block of 15.3 kg)",
+          125,
+          225,
+          768,
+          2.2
+        ],
+        [
+          "Washing dishes standing",
+          145,
+          261,
+          890,
+          2.5
+        ],
+        [
+          "Domestic work - raking leaves on the lawn",
+          170,
+          306,
+          1043,
+          2.9
+        ],
+        [
+          "Domestic work - washing by hand and ironing (120-220 W)",
+          170,
+          306,
+          1043,
+          2.9
+        ],
+        [
+          "Iron and steel - ramming the mold with a pneumatic hammer",
+          175,
+          315,
+          1075,
+          3
+        ],
+        [
+          "Building industry - forming the mold",
+          180,
+          324,
+          1105,
+          3.1
+        ],
+        [
+          "Walking on the level, 5 km/h",
+          200,
+          360,
+          1228,
+          3.4
+        ],
+        [
+          "Forestry - cutting across the grain with a one-man power saw",
+          205,
+          369,
+          1259,
+          3.5
+        ],
+        [
+          "Volleyball, Bicycling (15 km/h)",
+          232,
+          418,
+          1424,
+          4
+        ],
+        [
+          "Calisthenics",
+          261,
+          470,
+          1602,
+          4.5
+        ],
+        [
+          "Building industry - loading a wheelbarrow with stones and mortar",
+          275,
+          495,
+          1688,
+          4.7
+        ],
+        [
+          "Golf, Softball",
+          290,
+          522,
+          1780,
+          5
+        ],
+        [
+          "Gymnastics",
+          319,
+          574,
+          1959,
+          5.5
+        ],
+        [
+          "Aerobic Dancing, Swimming",
+          348,
+          624,
+          2137,
+          6
+        ],
+        [
+          "Sports - Ice skating, 18 km/h, Bicycling (20 km/h)",
+          360,
+          648,
+          2210,
+          6.2
+        ],
+        [
+          "Agriculture - digging with a spade (24 lifts/min.)",
+          380,
+          674,
+          2333,
+          6.5
+        ],
+        [
+          "Skiing on level (good snow, 9 km/h), Backpacking, Skating ice or roller, Basketball, Tennis",
+          405,
+          729,
+          2487,
+          7
+        ],
+        [
+          "Handball, Hockey, Racquetball, Cross Country Skiing, Soccer",
+          464,
+          835,
+          2848,
+          8
+        ],
+        [
+          "Running 12 min/mile, Forestry - working with an axe (weight 2 kg, 33 blows/min.)",
+          500,
+          900,
+          3070,
+          8.5
+        ],
+        [
+          "Sports - Running 15 km/h",
+          550,
+          990,
+          3377,
+          9.5
+        ]
+      ]
+    }
+  ]
+}

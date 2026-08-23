@@ -1,0 +1,102 @@
+{
+  "id": "helium___thermophysical_properties",
+  "title": "Helium - Thermophysical Properties",
+  "description": "Chemical, physical and thermal properties of Helium (He) at 25°C (77°F, 298 K) and atmospheric pressure. Includes molecular weight, density, viscosity, specific heat, thermal conductivity, and other thermodynamic properties in both imperial and metric units.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          4.0026,
+          "g/mol"
+        ],
+        [
+          "Specific Gravity (air = 1)",
+          0.138,
+          "-"
+        ],
+        [
+          "Specific Volume",
+          "97.86 / 6.11",
+          "ft³/lb / m³/kg"
+        ],
+        [
+          "Density of liquid at atmospheric pressure",
+          "7.80 / 125",
+          "lb/ft³ / kg/m³"
+        ],
+        [
+          "Absolute Viscosity",
+          "13.4×10⁻⁶ / 0.02",
+          "lbm/ft·s / cP"
+        ],
+        [
+          "Sound velocity in gas",
+          1015,
+          "m/s"
+        ],
+        [
+          "Specific Heat (cp)",
+          "1.24 / 5188",
+          "Btu/lb·°F / J/kg·K"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          1.66,
+          "-"
+        ],
+        [
+          "Gas constant (R)",
+          "386 / 2077",
+          "ft·lb/lb·°R / J/kg·°C"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.086 / 0.149",
+          "Btu/hr·ft·°F / W/m·°C"
+        ],
+        [
+          "Boiling Point",
+          "-452 / 4.22",
+          "°F / K"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "10.0 / 23300",
+          "Btu/lb / J/kg"
+        ],
+        [
+          "Critical Temperature",
+          "-450.3 / 5.2",
+          "°F / K"
+        ],
+        [
+          "Critical Pressure",
+          "33.22",
+          "psia"
+        ],
+        [
+          "Critical Volume",
+          "0.231 / 0.0144",
+          "ft³/lb / m³/kg"
+        ],
+        [
+          "Flammable",
+          "No",
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Information\n\n**Standard Conditions:** 25°C (77°F, 298 K) and atmospheric pressure\n\n**Property Units:**\n- Imperial: ft³/lb, Btu/lb·°F, lbm/ft·s, Btu/hr·ft·°F\n- Metric: m³/kg, J/kg·K, cP (centipoise), W/m·°C\n\n**Related Resources:**\n- Density and specific weight at varying pressure and temperature\n- Atmospheric pressure reference\n- STP - Standard Temperature and Pressure\n- Comparable thermophysical properties for other gases and liquids\n\n**Safety:** Helium is non-flammable and inert."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "feed_pumps_in_steam_systems___suction_lift_head_vs",
+  "title": "Feed Pumps in Steam Systems - Suction Lift Head vs. Temperature",
+  "description": "Cavitation of impellers increases with water temperatures. This tool helps determine safe suction lift and pressure head limits based on feeding water temperature to avoid cavitation in feed pumps.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "suction_lift_table",
+      "headers": [
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Max Suction Lift (m)",
+        "Max Suction Lift (ft)",
+        "Min Pressure Head (m)",
+        "Min Pressure Head (ft)"
+      ],
+      "rows": [
+        [
+          55,
+          130,
+          3,
+          10,
+          "",
+          ""
+        ],
+        [
+          65,
+          150,
+          2,
+          7,
+          "",
+          ""
+        ],
+        [
+          77,
+          170,
+          0.6,
+          2,
+          "",
+          ""
+        ],
+        [
+          80,
+          175,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          87,
+          190,
+          "",
+          "",
+          1.5,
+          5
+        ],
+        [
+          95,
+          200,
+          "",
+          "",
+          3.5,
+          10
+        ],
+        [
+          99,
+          210,
+          "",
+          "",
+          4.5,
+          15
+        ],
+        [
+          100,
+          212,
+          "",
+          "",
+          5,
+          17
+        ]
+      ],
+      "content": "Feed Pumps in Steam Systems - Suction Lift Head vs. Temperature"
+    },
+    {
+      "type": "chart",
+      "id": "suction_head_chart",
+      "options": {
+        "title": {
+          "text": "Suction Lift Head vs Water Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°C)",
+          "data": [
+            55,
+            65,
+            77,
+            80,
+            87,
+            95,
+            99,
+            100
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Head (m)"
+        },
+        "series": [
+          {
+            "name": "Max Suction Lift (m)",
+            "data": [
+              3,
+              2,
+              0.6,
+              0,
+              null,
+              null,
+              null,
+              null
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Min Pressure Head (m)",
+            "data": [
+              null,
+              null,
+              null,
+              0,
+              1.5,
+              3.5,
+              4.5,
+              5
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      },
+      "content": "Chart showing the relationship between water temperature and suction/pressure head limits"
+    },
+    {
+      "type": "markdown",
+      "id": "cavitation_info",
+      "content": "## Important Information\n\n**Cavitation Risk:** Cavitation of impellers increases with water temperatures.\n\n**Temperature Threshold:** For water with temperature above **80°C (175°F)**, it is necessary to use a positive pressure head with the pump located at an elevation below the water or condensate receiver.\n\n**Common Operating Conditions:** In steam distribution systems, open vented condensate receivers typically operate with temperatures close to **100°C (212°F)**, especially in systems where:\n- Most of the steam consumed is returned as hot condensate\n- Make-up water is heated to reduce dissolved air content\n\n**Conversion:** 1 ft (foot) = 0.3048 m"
+    }
+  ]
+}

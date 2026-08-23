@@ -1,0 +1,71 @@
+{
+  "id": "insulation_and_heat_loss_from_steam_and_condesate_",
+  "title": "Insulation and Heat Loss from Steam and Condensate Pipe Lines",
+  "description": "Heat loss from uninsulated and insulated steam and condensate pipes and tanks. Calculate insulation thicknesses.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        },
+        {
+          "id": "steam_temperature",
+          "label": "Steam Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 150
+        },
+        {
+          "id": "ambient_temperature",
+          "label": "Ambient Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "insulation_thickness",
+          "label": "Insulation Thickness",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_loss_uninsulated",
+          "label": "Heat Loss (Uninsulated)",
+          "formula": "inputs.pipe_length * 3.14159 * inputs.pipe_diameter / 1000 * 10 * (inputs.steam_temperature - inputs.ambient_temperature)",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_loss_insulated",
+          "label": "Heat Loss (Insulated)",
+          "formula": "inputs.pipe_length * 3.14159 * inputs.pipe_diameter / 1000 * 5 * (inputs.steam_temperature - inputs.ambient_temperature) / (1 + inputs.insulation_thickness / 50)",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_savings",
+          "label": "Heat Loss Reduction",
+          "formula": "inputs.pipe_length * 3.14159 * inputs.pipe_diameter / 1000 * 10 * (inputs.steam_temperature - inputs.ambient_temperature) - (inputs.pipe_length * 3.14159 * inputs.pipe_diameter / 1000 * 5 * (inputs.steam_temperature - inputs.ambient_temperature) / (1 + inputs.insulation_thickness / 50))",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

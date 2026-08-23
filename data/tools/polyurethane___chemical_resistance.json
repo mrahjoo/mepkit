@@ -1,0 +1,357 @@
+{
+  "id": "polyurethane___chemical_resistance",
+  "title": "Polyurethane - Chemical Resistance",
+  "description": "Chemical resistance of Polyurethane (PUR). Reference guide for chemical compatibility of polyurethane materials with various liquids and compounds.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Liquid",
+        "Classification"
+      ],
+      "rows": [
+        [
+          "Acetic acid 20 – 80 10%",
+          "conditionally resistant"
+        ],
+        [
+          "Acetone",
+          "not resistant"
+        ],
+        [
+          "Aluminum chloride 10%",
+          "vastly resistant"
+        ],
+        [
+          "Aluminum Salts",
+          "resistant"
+        ],
+        [
+          "Ammonia 10%",
+          "resistant"
+        ],
+        [
+          "Ammonium carbonate",
+          "not resistant"
+        ],
+        [
+          "Ammonium chloride",
+          "vastly resistant"
+        ],
+        [
+          "Aniline",
+          "not resistant"
+        ],
+        [
+          "ASTM-Fuel No. I",
+          "resistant"
+        ],
+        [
+          "ASTM-Fuel No. II",
+          "conditionally resistant"
+        ],
+        [
+          "ASTM-Fuel No. III",
+          "conditionally resistant"
+        ],
+        [
+          "ASTM-Oil I",
+          "resistant"
+        ],
+        [
+          "ASTM-Oil II",
+          "resistant"
+        ],
+        [
+          "ASTM-Oil III",
+          "resistant"
+        ],
+        [
+          "Barium Salts",
+          "resistant"
+        ],
+        [
+          "Benzene",
+          "not resistant"
+        ],
+        [
+          "Bichromate of potash",
+          "vastly resistant"
+        ],
+        [
+          "Brake fluid ATE",
+          "not resistant"
+        ],
+        [
+          "Butanol",
+          "not resistant"
+        ],
+        [
+          "Butyl acetate",
+          "not resistant"
+        ],
+        [
+          "Calcium chloride 40%",
+          "vastly resistant"
+        ],
+        [
+          "Carbon disulfide",
+          "not resistant"
+        ],
+        [
+          "Carbon tetrachloride 100%",
+          "not resistant"
+        ],
+        [
+          "Chlorobenzene",
+          "not resistant"
+        ],
+        [
+          "Chloroform",
+          "not resistant"
+        ],
+        [
+          "Chloroprene",
+          "not resistant"
+        ],
+        [
+          "Chromic acid",
+          "not resistant"
+        ],
+        [
+          "Cutting oil",
+          "conditionally resistant"
+        ],
+        [
+          "Cyclohexan",
+          "conditionally resistant"
+        ],
+        [
+          "Cyclohexanone",
+          "not resistant"
+        ],
+        [
+          "Diesel oil",
+          "vastly resistant"
+        ],
+        [
+          "Diethylether",
+          "resistant"
+        ],
+        [
+          "Diethylprestone",
+          "resistant"
+        ],
+        [
+          "Dimethylformamide",
+          "not resistant"
+        ],
+        [
+          "Ethanol",
+          "conditionally resistant"
+        ],
+        [
+          "Ethyl alcohol 100%",
+          "conditionally resistant"
+        ],
+        [
+          "Ethyl ether",
+          "conditionally resistant"
+        ],
+        [
+          "Ethylacetate",
+          "not resistant"
+        ],
+        [
+          "Ethylencloride",
+          "vastly resistant"
+        ],
+        [
+          "Formaldehyde",
+          "resistant"
+        ],
+        [
+          "Formic acid 30%",
+          "not resistant"
+        ],
+        [
+          "R-12 dichlorodifluoromethane",
+          "conditionally resistant"
+        ],
+        [
+          "R-22 chlorodifluoromethane",
+          "conditionally resistant"
+        ],
+        [
+          "Gasoline",
+          "resistant"
+        ],
+        [
+          "Glycerin",
+          "resistant"
+        ],
+        [
+          "Glycol",
+          "resistant"
+        ],
+        [
+          "Hydraulic oil SAE 90",
+          "conditionally resistant"
+        ],
+        [
+          "Hydrochlorid acid",
+          "not resistant"
+        ],
+        [
+          "Isopropanol",
+          "not resistant"
+        ],
+        [
+          "Jet-fuel",
+          "resistant"
+        ],
+        [
+          "Kerosene",
+          "resistant"
+        ],
+        [
+          "Lactic acid 10%",
+          "not resistant"
+        ],
+        [
+          "Magnesium chloride 30%",
+          "vastly resistant"
+        ],
+        [
+          "Methanol < 5%",
+          "conditionally resistant"
+        ],
+        [
+          "Methylethylketon",
+          "conditionally resistant"
+        ],
+        [
+          "Mineral oil",
+          "conditionally resistant"
+        ],
+        [
+          "Motor oil",
+          "not resistant"
+        ],
+        [
+          "Mythyl acetate",
+          "not resistant"
+        ],
+        [
+          "Mythyl chloride",
+          "not resistant"
+        ],
+        [
+          "Mythylglycol",
+          "not resistant"
+        ],
+        [
+          "Mythylglycolacetate",
+          "not resistant"
+        ],
+        [
+          "Nitric acid 30%",
+          "not resistant"
+        ],
+        [
+          "Olive oil",
+          "resistant"
+        ],
+        [
+          "Ozone",
+          "resistant"
+        ],
+        [
+          "Paraffin oil",
+          "resistant"
+        ],
+        [
+          "Perchlore ethylene",
+          "not resistant"
+        ],
+        [
+          "Petroleum",
+          "vastly resistant"
+        ],
+        [
+          "Petroleum ether",
+          "resistant"
+        ],
+        [
+          "Phosphoric acid 50%",
+          "not resistant"
+        ],
+        [
+          "Potash lye 10%",
+          "resistant"
+        ],
+        [
+          "Potassium nitrate",
+          "vastly resistant"
+        ],
+        [
+          "Potassium permanganate",
+          "not resistant"
+        ],
+        [
+          "Sea water",
+          "resistant"
+        ],
+        [
+          "Silver salts 20%",
+          "resistant"
+        ],
+        [
+          "Soda lye 10%",
+          "resistant"
+        ],
+        [
+          "Sodium chloride 10%",
+          "vastly resistant"
+        ],
+        [
+          "Sulfuric acid 30%",
+          "short-term resistant"
+        ],
+        [
+          "Tataric acid < 10%",
+          "resistant"
+        ],
+        [
+          "Tetrahydrofuran",
+          "not resistant"
+        ],
+        [
+          "Toluene",
+          "not resistant"
+        ],
+        [
+          "Trachloroethylene",
+          "not resistant"
+        ],
+        [
+          "Trichlorethylene",
+          "not resistant"
+        ],
+        [
+          "Vegetable fats",
+          "resistant"
+        ],
+        [
+          "Vegetable oils",
+          "resistant"
+        ],
+        [
+          "Xylon",
+          "not resistant"
+        ]
+      ]
+    }
+  ]
+}

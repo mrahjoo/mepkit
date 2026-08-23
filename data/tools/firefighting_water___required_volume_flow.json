@@ -1,0 +1,124 @@
+{
+  "id": "firefighting_water___required_volume_flow",
+  "title": "Firefighting Water - Required Volume Flow",
+  "description": "Required water for firefighting. Water demand for firefighting can be estimated using the formula Q = 1020 n^(1/2) (1 - 0.01 n^(1/2)) where Q is water demand in gpm and n is population in thousands.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate firefighting water demand based on population",
+      "inputs": [
+        {
+          "id": "population",
+          "label": "Population",
+          "type": "number",
+          "unit": "thousands",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_demand_gpm",
+          "label": "Water Demand",
+          "unit": "gpm",
+          "formula": "1020 * Math.sqrt(inputs.population) * (1 - 0.01 * Math.sqrt(inputs.population))",
+          "format": "decimal"
+        },
+        {
+          "id": "water_demand_m3h",
+          "label": "Water Demand",
+          "unit": "m³/h",
+          "formula": "1020 * Math.sqrt(inputs.population) * (1 - 0.01 * Math.sqrt(inputs.population)) * 0.227",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Population (thousands)",
+        "Water Demand (gpm)",
+        "Water Demand (m³/h)"
+      ],
+      "rows": [
+        [
+          10,
+          3056.4,
+          693.9
+        ],
+        [
+          25,
+          6940.1,
+          1575.6
+        ],
+        [
+          50,
+          11924.4,
+          2705.8
+        ],
+        [
+          100,
+          18460.8,
+          4190.6
+        ],
+        [
+          250,
+          29205,
+          6631.5
+        ],
+        [
+          500,
+          41419.2,
+          9402.2
+        ],
+        [
+          1000,
+          56831.6,
+          12900.4
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Firefighting Water Demand vs. Population",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Population (thousands)",
+          "data": [
+            10,
+            25,
+            50,
+            100,
+            250,
+            500,
+            1000
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Water Demand (gpm)"
+        },
+        "series": [
+          {
+            "data": [
+              3056.4,
+              6940.1,
+              11924.4,
+              18460.8,
+              29205,
+              41419.2,
+              56831.6
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Water Demand (gpm)"
+          }
+        ]
+      }
+    }
+  ]
+}

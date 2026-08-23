@@ -1,0 +1,63 @@
+{
+  "id": "stress",
+  "title": "Stress",
+  "description": "Calculate normal stress and shear stress. Stress is the ratio between applied force and cross-sectional area where the applied force is acting.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Stress Calculator\n\nCalculate **Normal Stress** and **Shear Stress** based on applied forces and cross-sectional area.\n\n### Normal Stress\nNormal stress (σ) = FN / A, where FN is the normal force perpendicular to the area.\n\n### Shear Stress\nShear stress (τ) = FV / A, where FV is the shear force in the plane of the area."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Applied Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 10000
+        },
+        {
+          "id": "area",
+          "label": "Cross-sectional Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 0.00203
+        },
+        {
+          "id": "forceType",
+          "label": "Force Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Normal Force",
+              "value": "normal"
+            },
+            {
+              "label": "Shear Force",
+              "value": "shear"
+            }
+          ],
+          "defaultValue": "normal"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "stress",
+          "label": "Stress",
+          "formula": "inputs.force / inputs.area",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "stressMPa",
+          "label": "Stress (MPa)",
+          "formula": "(inputs.force / inputs.area) / 1000000",
+          "unit": "MPa",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

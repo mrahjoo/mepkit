@@ -1,0 +1,78 @@
+{
+  "id": "friction_flow_coeficients_from_moody_diagram",
+  "title": "Friction Flow Coeficients from Moody Diagram",
+  "description": "Online Moody friction flow factor calculator - as used in the Darcy-Weisbach major loss equation.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Reynolds Number (Re)",
+        "Relative Roughness (ε/D)",
+        "Friction Factor (f)"
+      ],
+      "rows": [
+        [
+          1000,
+          0.00001,
+          0.064
+        ],
+        [
+          10000,
+          0.00001,
+          0.0312
+        ],
+        [
+          100000,
+          0.00001,
+          0.0174
+        ],
+        [
+          1000000,
+          0.00001,
+          0.0116
+        ],
+        [
+          1000,
+          0.0001,
+          0.064
+        ],
+        [
+          10000,
+          0.0001,
+          0.0324
+        ],
+        [
+          100000,
+          0.0001,
+          0.0184
+        ],
+        [
+          1000000,
+          0.0001,
+          0.0133
+        ],
+        [
+          1000,
+          0.001,
+          0.064
+        ],
+        [
+          10000,
+          0.001,
+          0.0364
+        ],
+        [
+          100000,
+          0.001,
+          0.0228
+        ],
+        [
+          1000000,
+          0.001,
+          0.0177
+        ]
+      ]
+    }
+  ]
+}

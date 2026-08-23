@@ -1,0 +1,148 @@
+{
+  "id": "he_a_steel_beams",
+  "title": "HE-A Steel Beams",
+  "description": "HE-A Steel Beams properties and specifications table. A comprehensive reference for HE-A series steel beam dimensions and characteristics.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Designation",
+        "Height (mm)",
+        "Width (mm)",
+        "Web Thickness (mm)",
+        "Flange Thickness (mm)",
+        "Mass (kg/m)",
+        "Area (cm²)"
+      ],
+      "rows": [
+        [
+          "HE 100 A",
+          96,
+          100,
+          5,
+          8,
+          16.7,
+          21.2
+        ],
+        [
+          "HE 120 A",
+          114,
+          120,
+          5,
+          8,
+          19.9,
+          25.3
+        ],
+        [
+          "HE 140 A",
+          133,
+          140,
+          5.5,
+          8.5,
+          24.7,
+          31.4
+        ],
+        [
+          "HE 160 A",
+          152,
+          160,
+          6,
+          9,
+          30.4,
+          38.8
+        ],
+        [
+          "HE 180 A",
+          171,
+          180,
+          6,
+          9.5,
+          35.5,
+          45.3
+        ],
+        [
+          "HE 200 A",
+          190,
+          200,
+          6.5,
+          10,
+          42.3,
+          53.8
+        ],
+        [
+          "HE 220 A",
+          210,
+          220,
+          7,
+          11,
+          50.5,
+          64.3
+        ],
+        [
+          "HE 240 A",
+          230,
+          240,
+          7.5,
+          12,
+          60.3,
+          76.8
+        ],
+        [
+          "HE 260 A",
+          250,
+          260,
+          7.5,
+          12.5,
+          68.2,
+          86.8
+        ],
+        [
+          "HE 280 A",
+          270,
+          280,
+          8,
+          13,
+          76.4,
+          97.3
+        ],
+        [
+          "HE 300 A",
+          290,
+          300,
+          8.5,
+          14,
+          88.3,
+          112.5
+        ],
+        [
+          "HE 320 A",
+          310,
+          300,
+          9,
+          15.5,
+          97.6,
+          124.4
+        ],
+        [
+          "HE 340 A",
+          330,
+          300,
+          9.5,
+          16.5,
+          105.7,
+          134.8
+        ],
+        [
+          "HE 360 A",
+          350,
+          300,
+          10,
+          17.5,
+          112.5,
+          143.3
+        ]
+      ]
+    }
+  ]
+}

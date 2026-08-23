@@ -1,0 +1,86 @@
+{
+  "id": "polar_vs__cartesian_coordinates",
+  "title": "Polar vs. Cartesian Coordinates",
+  "description": "Convert between Polar and Cartesian coordinate systems. Transform 2D coordinates using mathematical formulas to switch between perpendicular Cartesian axes and distance/angle-based Polar coordinates.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Polar vs. Cartesian Coordinates\n\nIn the Cartesian system the coordinates are perpendicular to one another with the same unit length on both axes.\n\n**2D Cartesian coordinates**: (x, y)\n\nA Polar coordinate system is determined by a fixed point (origin or pole) and a zero direction (axis). Each point is determined by an angle and a distance relative to the zero axis and the origin.\n\n**Polar coordinates**: (r, θ)\n\n### Conversion Formulas\n\n**Cartesian to Polar:**\n- r = √(x² + y²)\n- θ = atan(y / x)\n\n**Polar to Cartesian:**\n- x = r cos(θ)\n- y = r sin(θ)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Cartesian to Polar Coordinates"
+      ],
+      "inputs": [
+        {
+          "id": "cartesian_x",
+          "label": "X Coordinate",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "cartesian_y",
+          "label": "Y Coordinate",
+          "type": "number",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "polar_r",
+          "label": "Distance (r)",
+          "unit": "units",
+          "format": "decimal",
+          "formula": "Math.sqrt(inputs.cartesian_x ** 2 + inputs.cartesian_y ** 2)"
+        },
+        {
+          "id": "polar_theta",
+          "label": "Angle (θ)",
+          "unit": "degrees",
+          "format": "decimal",
+          "formula": "Math.atan(inputs.cartesian_y / inputs.cartesian_x) * (180 / Math.PI)"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Polar to Cartesian Coordinates"
+      ],
+      "inputs": [
+        {
+          "id": "polar_r_input",
+          "label": "Distance (r)",
+          "type": "number",
+          "defaultValue": 3.6,
+          "unit": "units"
+        },
+        {
+          "id": "polar_theta_input",
+          "label": "Angle (θ)",
+          "type": "number",
+          "defaultValue": 56.31,
+          "unit": "degrees"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cartesian_x_result",
+          "label": "X Coordinate",
+          "unit": "units",
+          "format": "decimal",
+          "formula": "inputs.polar_r_input * Math.cos(inputs.polar_theta_input * (Math.PI / 180))"
+        },
+        {
+          "id": "cartesian_y_result",
+          "label": "Y Coordinate",
+          "unit": "units",
+          "format": "decimal",
+          "formula": "inputs.polar_r_input * Math.sin(inputs.polar_theta_input * (Math.PI / 180))"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "hydrocarbon_mixtures___average_boiling_points_vs__",
+  "title": "Hydrocarbon Mixtures - Average Boiling Points vs. Gravity and Molecular Weights",
+  "description": "Calculate average boiling point (ABP) of hydrocarbon mixtures based on molecular weight and specific gravity using Riazi-Daubert correlations. Two equations are provided: one for molecular weights 70-300 and another for 300-700.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "abp_calculator",
+      "content": "Average Boiling Point Calculator using Riazi-Daubert Correlations",
+      "inputs": [
+        {
+          "id": "molecular_weight",
+          "label": "Average Molecular Weight (M)",
+          "type": "number",
+          "defaultValue": 125,
+          "unit": "g/mol"
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity at 60°F (S)",
+          "type": "number",
+          "defaultValue": 0.763,
+          "unit": "dimensionless"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "equation_used",
+          "label": "Equation Used",
+          "formula": "IF(inputs.molecular_weight < 300, 'Eq. (1): MW 70-300', 'Eq. (2): MW 300-700')"
+        },
+        {
+          "id": "abp_kelvin_eq1",
+          "label": "ABP (Equation 1) - Kelvin",
+          "formula": "3.76587 * EXP(3.7741E-03 * inputs.molecular_weight + 2.98404 * inputs.specific_gravity - 4.25288E-03 * inputs.molecular_weight * inputs.specific_gravity) * POW(inputs.molecular_weight, 0.40167) * POW(inputs.specific_gravity, -1.58262)",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "abp_kelvin_eq2",
+          "label": "ABP (Equation 2) - Kelvin",
+          "formula": "9.3369 * EXP(1.6514E-04 * inputs.molecular_weight + 1.4103 * inputs.specific_gravity - 7.5152E-04 * inputs.molecular_weight * inputs.specific_gravity) * POW(inputs.molecular_weight, 0.5369) * POW(inputs.specific_gravity, -0.7276)",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "abp_celsius_eq1",
+          "label": "ABP (Equation 1) - Celsius",
+          "formula": "3.76587 * EXP(3.7741E-03 * inputs.molecular_weight + 2.98404 * inputs.specific_gravity - 4.25288E-03 * inputs.molecular_weight * inputs.specific_gravity) * POW(inputs.molecular_weight, 0.40167) * POW(inputs.specific_gravity, -1.58262) - 273.15",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "abp_celsius_eq2",
+          "label": "ABP (Equation 2) - Celsius",
+          "formula": "9.3369 * EXP(1.6514E-04 * inputs.molecular_weight + 1.4103 * inputs.specific_gravity - 7.5152E-04 * inputs.molecular_weight * inputs.specific_gravity) * POW(inputs.molecular_weight, 0.5369) * POW(inputs.specific_gravity, -0.7276) - 273.15",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "abp_fahrenheit_eq1",
+          "label": "ABP (Equation 1) - Fahrenheit",
+          "formula": "(3.76587 * EXP(3.7741E-03 * inputs.molecular_weight + 2.98404 * inputs.specific_gravity - 4.25288E-03 * inputs.molecular_weight * inputs.specific_gravity) * POW(inputs.molecular_weight, 0.40167) * POW(inputs.specific_gravity, -1.58262) - 273.15) * 9/5 + 32",
+          "unit": "°F",
+          "format": "decimal"
+        },
+        {
+          "id": "abp_fahrenheit_eq2",
+          "label": "ABP (Equation 2) - Fahrenheit",
+          "formula": "(9.3369 * EXP(1.6514E-04 * inputs.molecular_weight + 1.4103 * inputs.specific_gravity - 7.5152E-04 * inputs.molecular_weight * inputs.specific_gravity) * POW(inputs.molecular_weight, 0.5369) * POW(inputs.specific_gravity, -0.7276) - 273.15) * 9/5 + 32",
+          "unit": "°F",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "abp_results_table",
+      "content": "Summary Table of Calculated ABP Values",
+      "headers": [
+        "Molecular Weight (g/mol)",
+        "Specific Gravity",
+        "Equation",
+        "ABP (K)",
+        "ABP (°C)",
+        "ABP (°F)"
+      ],
+      "rows": [
+        [
+          125,
+          0.763,
+          "Eq. (1)",
+          418,
+          145,
+          293
+        ],
+        [
+          125,
+          0.763,
+          "Eq. (2)",
+          423,
+          150,
+          302
+        ],
+        [
+          391,
+          0.955,
+          "Eq. (2)",
+          737,
+          464,
+          867
+        ]
+      ]
+    }
+  ]
+}

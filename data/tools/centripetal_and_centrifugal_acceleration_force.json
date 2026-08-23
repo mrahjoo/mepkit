@@ -1,0 +1,134 @@
+{
+  "id": "centripetal_and_centrifugal_acceleration_force",
+  "title": "Centripetal and Centrifugal Acceleration Force",
+  "description": "Calculate centripetal and centrifugal acceleration and force for objects in circular motion. Choose between velocity-based or rpm-based calculations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Metric Units",
+        "Imperial Units"
+      ],
+      "rows": [
+        [
+          "Mass/Weight",
+          "1000 kg",
+          "3000 lb"
+        ],
+        [
+          "Radius",
+          "200 m",
+          "100 ft"
+        ],
+        [
+          "Velocity/Speed",
+          "50 km/h",
+          "15 miles/h"
+        ],
+        [
+          "Centripetal Acceleration",
+          "0.965 m/s²",
+          "4.84 ft/s²"
+        ],
+        [
+          "Centripetal Force",
+          "965 N",
+          "455 lbf"
+        ],
+        [
+          "Weight/Gravity Force",
+          "9810 N",
+          "9800 lbf"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Centripetal Acceleration and Force Calculator (Velocity-based)",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg"
+        },
+        {
+          "id": "radius",
+          "label": "Radius",
+          "type": "number",
+          "defaultValue": 200,
+          "unit": "m"
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity",
+          "type": "number",
+          "defaultValue": 13.89,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "centripetal_acceleration",
+          "label": "Centripetal Acceleration",
+          "formula": "(inputs.velocity ^ 2) / inputs.radius",
+          "unit": "m/s²",
+          "format": "decimal"
+        },
+        {
+          "id": "centripetal_force",
+          "label": "Centripetal Force",
+          "formula": "inputs.mass * ((inputs.velocity ^ 2) / inputs.radius)",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Centripetal Acceleration and Force Calculator (RPM-based)",
+      "inputs": [
+        {
+          "id": "mass_rpm",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg"
+        },
+        {
+          "id": "radius_rpm",
+          "label": "Radius",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "m"
+        },
+        {
+          "id": "rpm",
+          "label": "Revolution per Minute",
+          "type": "number",
+          "defaultValue": 1200,
+          "unit": "rpm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "centripetal_acceleration_rpm",
+          "label": "Centripetal Acceleration",
+          "formula": "((2 * 3.14159 * inputs.rpm / 60) ^ 2) * inputs.radius_rpm",
+          "unit": "m/s²",
+          "format": "decimal"
+        },
+        {
+          "id": "centripetal_force_rpm",
+          "label": "Centripetal Force",
+          "formula": "0.01097 * inputs.mass_rpm * inputs.radius_rpm * (inputs.rpm ^ 2)",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

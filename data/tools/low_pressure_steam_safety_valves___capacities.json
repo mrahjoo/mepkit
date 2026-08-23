@@ -1,0 +1,240 @@
+{
+  "id": "low_pressure_steam_safety_valves___capacities",
+  "title": "Low Pressure Steam Safety Valves - Capacities",
+  "description": "Sizing safety valves after boiler output power in low pressure systems (kW and Btu/hr). Determines the appropriate pipe size and safety valve capacity based on maximum boiler output.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "boiler_output_calculator",
+      "content": "Calculate required safety valve capacity based on boiler output",
+      "inputs": [
+        {
+          "id": "boiler_output_kw",
+          "label": "Boiler Output",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 100
+        },
+        {
+          "id": "measurement_system",
+          "label": "Measurement System",
+          "type": "select",
+          "options": [
+            {
+              "label": "Metric (kg/h, kW)",
+              "value": "metric"
+            },
+            {
+              "label": "Imperial (lb/h, Btu/hr)",
+              "value": "imperial"
+            }
+          ],
+          "defaultValue": "metric"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "boiler_output_display",
+          "label": "Selected Boiler Output",
+          "formula": "inputs.boiler_output_kw",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "recommended_valve_size",
+          "label": "Recommended Valve Size (DN)",
+          "formula": "inputs.boiler_output_kw >= 1465 ? 100 : inputs.boiler_output_kw >= 761 ? 80 : inputs.boiler_output_kw >= 551 ? 65 : inputs.boiler_output_kw >= 328 ? 50 : inputs.boiler_output_kw >= 220 ? 40 : inputs.boiler_output_kw >= 152 ? 32 : inputs.boiler_output_kw >= 89 ? 25 : inputs.boiler_output_kw >= 50 ? 20 : 15",
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "safety_valve_capacities_table",
+      "content": "Low Pressure Steam Safety Valves - Capacities Reference Table",
+      "headers": [
+        "Pipe Size (in)",
+        "DN (mm)",
+        "Capacity (kg/h)",
+        "Capacity (lb/h)",
+        "Max Boiler Output (kW)",
+        "Max Boiler Output (Btu/h)"
+      ],
+      "rows": [
+        [
+          "1/2",
+          "15",
+          "38",
+          "86",
+          "23",
+          "81 270"
+        ],
+        [
+          "3/4",
+          "20",
+          "82",
+          "185",
+          "50",
+          "174 825"
+        ],
+        [
+          "1",
+          "25",
+          "145",
+          "324",
+          "89",
+          "306 180"
+        ],
+        [
+          "1 1/4",
+          "32",
+          "249",
+          "557",
+          "152",
+          "526 365"
+        ],
+        [
+          "1 1/2",
+          "40",
+          "360",
+          "807",
+          "220",
+          "762 615"
+        ],
+        [
+          "2",
+          "50",
+          "536",
+          "1 199",
+          "328",
+          "1 133 055"
+        ],
+        [
+          "2 1/2",
+          "65",
+          "901",
+          "2 012",
+          "551",
+          "1 901 340"
+        ],
+        [
+          "3",
+          "80",
+          "1 244",
+          "2 779",
+          "761",
+          "2 626 155"
+        ],
+        [
+          "4",
+          "100",
+          "2 397",
+          "5 355",
+          "1 465",
+          "5 060 475"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "capacity_chart",
+      "content": "Capacity of Low Pressure Steam Safety Valves",
+      "options": {
+        "title": {
+          "text": "Low Pressure Steam Safety Valves - Capacities",
+          "subtext": "Maximum Boiler Output vs Pipe Size (DN)"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "cross"
+          }
+        },
+        "legend": {
+          "data": [
+            "Max Boiler Output (kW)",
+            "Max Boiler Output (Btu/h)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "15",
+            "20",
+            "25",
+            "32",
+            "40",
+            "50",
+            "65",
+            "80",
+            "100"
+          ],
+          "name": "Pipe Size DN (mm)"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Boiler Output (kW)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Boiler Output (Btu/h)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Max Boiler Output (kW)",
+            "data": [
+              23,
+              50,
+              89,
+              152,
+              220,
+              328,
+              551,
+              761,
+              1465
+            ],
+            "type": "line",
+            "smooth": true,
+            "yAxisIndex": 0,
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          },
+          {
+            "name": "Max Boiler Output (Btu/h)",
+            "data": [
+              81270,
+              174825,
+              306180,
+              526365,
+              762615,
+              1133055,
+              1901340,
+              2626155,
+              5060475
+            ],
+            "type": "line",
+            "smooth": true,
+            "yAxisIndex": 1,
+            "itemStyle": {
+              "color": "#ef4444"
+            }
+          }
+        ],
+        "grid": {
+          "bottom": 80
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "documentation",
+      "content": "## Technical Notes\n\n**System Pressure:** Low pressure steam at 100 kN/m² (1 bar) or 15 psi\n\n**Latent Heat:** 2201 kJ/kg (945 Btu/lb) for saturated steam\n\n### Key Principles\n\n- **Purpose:** Safety valves prevent system pressure from exceeding certification pressure\n- **Sizing Criterion:** Valve capacity must equal or exceed maximum boiler vapor output at working pressure\n- **Higher Pressure:** Compressed steam requires smaller valve (less volume)\n- **Lower Pressure:** Expanded steam requires larger valve (more volume)\n\n### Important Notes\n\n- Always consult manufacturer documentation before final design\n- This table is specifically for low pressure steam systems\n- For high pressure steam, different sizing applies\n- Proper valve selection is critical for system safety, especially with high-temperature steam and significant latent heat energy"
+    }
+  ]
+}

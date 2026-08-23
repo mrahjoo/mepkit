@@ -1,0 +1,6 @@
+{
+  "id": "non_ideal_gas___van_der_waal_s_equation_and_consta",
+  "title": "Non-ideal gas - Van der Waal's Equation and Constants",
+  "description": "The van der Waals constants for more than 200 gases used to correct for non-ideal behavior of gases caused by intermolecular forces and the volume occupied by the gas particles. The van der Waals equation is: (P + a(n/V)²)(V/n - b) = RT",
+  "type": "calculator"
+}

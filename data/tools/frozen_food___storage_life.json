@@ -1,0 +1,374 @@
+{
+  "id": "frozen_food___storage_life",
+  "title": "Frozen Food - Storage Life",
+  "description": "Practical storage life for common frozen food products. Recommended maximum freezing time for some common food products at different temperature levels.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "storage_life_table",
+      "headers": [
+        "Food",
+        "Storage Time at -12°C (10°F)",
+        "Storage Time at -18°C (0°F)",
+        "Storage Time at -24°C (-11°F)"
+      ],
+      "rows": [
+        [
+          "Apricots, raw",
+          4,
+          18,
+          ">24"
+        ],
+        [
+          "Apricots, in sugar",
+          3,
+          18,
+          ">24"
+        ],
+        [
+          "Asparagus, with green spears",
+          3,
+          12,
+          ">24"
+        ],
+        [
+          "Bacon, sliced and vacuum packed",
+          12,
+          12,
+          12
+        ],
+        [
+          "Beans, green",
+          4,
+          15,
+          ">24"
+        ],
+        [
+          "Beans, lima",
+          "",
+          18,
+          ">24"
+        ],
+        [
+          "Beef carcass, unpackaged",
+          8,
+          15,
+          24
+        ],
+        [
+          "Beef steaks/cuts",
+          8,
+          18,
+          24
+        ],
+        [
+          "Breads",
+          "",
+          3,
+          ""
+        ],
+        [
+          "Broccoli",
+          "",
+          15,
+          24
+        ],
+        [
+          "Brussels sprouts",
+          6,
+          15,
+          ">24"
+        ],
+        [
+          "Butter, lactic and unsalted pH 4.7",
+          15,
+          18,
+          20
+        ],
+        [
+          "Butter, lactic and salted pH 4.7",
+          8,
+          12,
+          14
+        ],
+        [
+          "Butter, sweet-cream and unsalted pH 6.6",
+          "",
+          ">24",
+          ">24"
+        ],
+        [
+          "Butter, sweet-cream and salted pH 6.6",
+          20,
+          ">24",
+          ">24"
+        ],
+        [
+          "Cakes",
+          "",
+          15,
+          24
+        ],
+        [
+          "Carrots",
+          10,
+          18,
+          ">24"
+        ],
+        [
+          "Cauliflower",
+          4,
+          12,
+          24
+        ],
+        [
+          "Cherries, raw",
+          4,
+          18,
+          ">24"
+        ],
+        [
+          "Cherries, in sugar",
+          3,
+          18,
+          ">24"
+        ],
+        [
+          "Chicken, whole",
+          9,
+          18,
+          ">24"
+        ],
+        [
+          "Chicken, parts/cuts",
+          9,
+          18,
+          ">24"
+        ],
+        [
+          "Clams",
+          4,
+          6,
+          ">9"
+        ],
+        [
+          "Corn on the cob",
+          "",
+          12,
+          18
+        ],
+        [
+          "Crab",
+          4,
+          6,
+          ">12"
+        ],
+        [
+          "Cream",
+          "",
+          12,
+          15
+        ],
+        [
+          "Cut corn",
+          4,
+          15,
+          ">24"
+        ],
+        [
+          "Dough, raw",
+          "",
+          12,
+          18
+        ],
+        [
+          "Duck, whole",
+          6,
+          12,
+          18
+        ],
+        [
+          "Egg, whole",
+          "",
+          12,
+          ">24"
+        ],
+        [
+          "Fish, fat - glazed",
+          3,
+          5,
+          ">9"
+        ],
+        [
+          "Fish, lean",
+          4,
+          9,
+          ">12"
+        ],
+        [
+          "Fruit juice concentrate",
+          "",
+          24,
+          ">24"
+        ],
+        [
+          "Geese, whole",
+          6,
+          12,
+          18
+        ],
+        [
+          "Ground beef",
+          6,
+          10,
+          15
+        ],
+        [
+          "Ice cream",
+          1,
+          6,
+          24
+        ],
+        [
+          "Lamb carcass, unpackaged",
+          18,
+          24,
+          ">24"
+        ],
+        [
+          "Lamb steaks",
+          12,
+          18,
+          24
+        ],
+        [
+          "Leeks, blanched",
+          "",
+          18,
+          ""
+        ],
+        [
+          "Liver",
+          4,
+          12,
+          18
+        ],
+        [
+          "Lobster",
+          4,
+          6,
+          ">12"
+        ],
+        [
+          "Mushrooms, cultivated",
+          2,
+          8,
+          ">24"
+        ],
+        [
+          "Onions",
+          "",
+          10,
+          15
+        ],
+        [
+          "Oysters",
+          4,
+          6,
+          ">9"
+        ],
+        [
+          "Peaches, raw",
+          4,
+          18,
+          ">24"
+        ],
+        [
+          "Peaches, in sugar",
+          3,
+          18,
+          ">24"
+        ],
+        [
+          "Peas, green",
+          6,
+          24,
+          ">24"
+        ],
+        [
+          "Peppers, red and green",
+          "",
+          6,
+          12
+        ],
+        [
+          "Pork carcass, unpackaged",
+          6,
+          10,
+          15
+        ],
+        [
+          "Pork steak/cuts",
+          6,
+          10,
+          15
+        ],
+        [
+          "Potatoes, french fried",
+          9,
+          24,
+          ">24"
+        ],
+        [
+          "Raspberries/Strawberries, raw",
+          5,
+          24,
+          ">24"
+        ],
+        [
+          "Raspberries/Strawberries, in sugar",
+          3,
+          24,
+          ">24"
+        ],
+        [
+          "Shrimps, in shell and cooked",
+          4,
+          6,
+          ">12"
+        ],
+        [
+          "Shrimps, peeled and cooked",
+          2,
+          5,
+          ">9"
+        ],
+        [
+          "Spinach, chopped",
+          4,
+          18,
+          ">24"
+        ],
+        [
+          "Turkey, whole",
+          8,
+          15,
+          ">24"
+        ],
+        [
+          "Veal carcass, unpackaged",
+          6,
+          12,
+          15
+        ],
+        [
+          "Veal, steaks/cuts",
+          6,
+          12,
+          15
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "farm_livestock___animals_and_water_consumption",
+  "title": "Farm Livestock - Animals and Water Consumption",
+  "description": "Average daily water consumption of various farm animals, including cattle, horses, sheep, and poultry.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Animal",
+        "Water Consumption (Gallons per Day)",
+        "Water Consumption (liters per day)"
+      ],
+      "rows": [
+        [
+          "Chickens/100",
+          6,
+          23
+        ],
+        [
+          "Cow, Dry",
+          15,
+          57
+        ],
+        [
+          "Milking Cows",
+          35,
+          130
+        ],
+        [
+          "Dairy Calves (1-4 months)",
+          2.4,
+          9
+        ],
+        [
+          "Dairy Heifers (5 - 24 months)",
+          6.6,
+          25
+        ],
+        [
+          "Dry Cows",
+          9.3,
+          41
+        ],
+        [
+          "Hog",
+          4,
+          15
+        ],
+        [
+          "Horse, Steer",
+          12,
+          45
+        ],
+        [
+          "Pig, feeder",
+          "1.1 - 2",
+          "5 - 9"
+        ],
+        [
+          "Sheep",
+          2,
+          7.5
+        ],
+        [
+          "Turkeys/100",
+          20,
+          75
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Animal",
+        "Gallons per Day",
+        "Liters per Day"
+      ],
+      "content": "Water Consumption by Farm Animal Type",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Chickens/100",
+            "Cow, Dry",
+            "Milking Cows",
+            "Dairy Calves",
+            "Dairy Heifers",
+            "Dry Cows",
+            "Hog",
+            "Horse, Steer",
+            "Pig, feeder",
+            "Sheep",
+            "Turkeys/100"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Gallons per Day",
+            "type": "bar",
+            "data": [
+              6,
+              15,
+              35,
+              2.4,
+              6.6,
+              9.3,
+              4,
+              12,
+              1.5,
+              2,
+              20
+            ]
+          },
+          {
+            "name": "Liters per Day",
+            "type": "bar",
+            "data": [
+              23,
+              57,
+              130,
+              9,
+              25,
+              41,
+              15,
+              45,
+              7,
+              7.5,
+              75
+            ]
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Gallons per Day",
+            "Liters per Day"
+          ]
+        }
+      }
+    }
+  ]
+}

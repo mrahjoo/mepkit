@@ -1,0 +1,173 @@
+{
+  "id": "acceleration_vs__velocity_equations",
+  "title": "Acceleration vs. Velocity Equations",
+  "description": "Useful equations related to acceleration, average velocity, final velocity and distance traveled.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Average Velocity\n\n**Formula:** va = (v1 + v0) / 2\n\nwhere:\n- va = average velocity (m/s)\n- v0 = initial velocity (m/s)\n- v1 = final velocity (m/s)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Average Velocity Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "v0_avg",
+          "label": "Initial Velocity (v0)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        },
+        {
+          "id": "v1_avg",
+          "label": "Final Velocity (v1)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 33.3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "va",
+          "label": "Average Velocity",
+          "formula": "(inputs.v1_avg + inputs.v0_avg) / 2",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Final Velocity\n\n**Formula:** v1 = v0 + a·t\n\nwhere:\n- a = acceleration (m/s²)\n- t = time taken (s)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Final Velocity Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "v0_final",
+          "label": "Initial Velocity (v0)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        },
+        {
+          "id": "a_final",
+          "label": "Acceleration (a)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 6.7
+        },
+        {
+          "id": "t_final",
+          "label": "Time (t)",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "v1_final",
+          "label": "Final Velocity",
+          "formula": "inputs.v0_final + inputs.a_final * inputs.t_final",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Distance Traveled\n\n**Formula:** s = (v0 + v1)·t / 2\n\nAlternative: s = v0·t + ½·a·t²\n\nwhere:\n- s = distance traveled (m)\n- v0 = initial velocity (m/s)\n- v1 = final velocity (m/s)\n- a = acceleration (m/s²)\n- t = time taken (s)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Distance Traveled Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "v0_dist",
+          "label": "Initial Velocity (v0)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        },
+        {
+          "id": "v1_dist",
+          "label": "Final Velocity (v1)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 33.3
+        },
+        {
+          "id": "t_dist",
+          "label": "Time (t)",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "s_dist",
+          "label": "Distance Traveled",
+          "formula": "(inputs.v0_dist + inputs.v1_dist) * inputs.t_dist / 2",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Acceleration\n\n**Formula:** a = (v1 - v0) / t\n\nAlternative: a = (v1² - v0²) / (2·s)\n\nwhere:\n- a = acceleration (m/s²)\n- v0 = initial velocity (m/s)\n- v1 = final velocity (m/s)\n- t = time taken (s)\n- s = distance traveled (m)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Acceleration Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "v0_accel",
+          "label": "Initial Velocity (v0)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0
+        },
+        {
+          "id": "v1_accel",
+          "label": "Final Velocity (v1)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 33.3
+        },
+        {
+          "id": "t_accel",
+          "label": "Time (t)",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "a_accel",
+          "label": "Acceleration",
+          "formula": "(inputs.v1_accel - inputs.v0_accel) / inputs.t_accel",
+          "unit": "m/s²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Example - Accelerating Motorcycle\n\nA motorcycle starts with an initial velocity of **0 km/h (0 m/s)** and accelerates to **120 km/h (33.3 m/s)** in **5 seconds**.\n\n**Average Velocity:**\n- va = (33.3 m/s + 0 m/s) / 2 = **16.7 m/s**\n\n**Distance Traveled:**\n- s = (0 m/s + 33.3 m/s) × 5 s / 2 = **83.3 m**\n\n**Acceleration:**\n- a = (33.3 m/s - 0 m/s) / 5 s = **6.7 m/s²**"
+    }
+  ]
+}

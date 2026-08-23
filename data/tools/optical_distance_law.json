@@ -1,0 +1,134 @@
+{
+  "id": "optical_distance_law",
+  "title": "Optical Distance Law",
+  "description": "Calculate illumination intensity based on luminous flux and distance from light source using the inverse square law. Also includes the cosine law of illumination for angled surfaces.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Optical Distance Law - Inverse Square Law (E = Φ / d²)",
+      "inputs": [
+        {
+          "id": "luminous_flux",
+          "label": "Luminous Flux (Φ)",
+          "unit": "lumen",
+          "type": "number",
+          "defaultValue": 10000
+        },
+        {
+          "id": "distance",
+          "label": "Distance from Light Source (d)",
+          "unit": "m",
+          "type": "number",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "illumination_intensity",
+          "label": "Illumination Intensity (E)",
+          "formula": "inputs.luminous_flux / (inputs.distance * inputs.distance)",
+          "unit": "lux",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Illumination Intensity Comparison (E₁/E₂ = d₂²/d₁²)",
+      "inputs": [
+        {
+          "id": "illumination_1",
+          "label": "Illumination Intensity at Distance 1 (E₁)",
+          "unit": "lux",
+          "type": "number",
+          "defaultValue": 2500
+        },
+        {
+          "id": "distance_1",
+          "label": "Distance 1 (d₁)",
+          "unit": "m",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "distance_2",
+          "label": "Distance 2 (d₂)",
+          "unit": "m",
+          "type": "number",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "illumination_2",
+          "label": "Illumination Intensity at Distance 2 (E₂)",
+          "formula": "inputs.illumination_1 * (inputs.distance_1 * inputs.distance_1) / (inputs.distance_2 * inputs.distance_2)",
+          "unit": "lux",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Cosine Law of Illumination (E = (Φ / d²) × cos(θ))",
+      "inputs": [
+        {
+          "id": "luminous_flux_cosine",
+          "label": "Luminous Flux (Φ)",
+          "unit": "lumen",
+          "type": "number",
+          "defaultValue": 10000
+        },
+        {
+          "id": "distance_cosine",
+          "label": "Distance from Light Source (d)",
+          "unit": "m",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "angle",
+          "label": "Angle (θ)",
+          "unit": "degrees",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "illumination_cosine",
+          "label": "Illumination Intensity with Angle (E)",
+          "formula": "(inputs.luminous_flux_cosine / (inputs.distance_cosine * inputs.distance_cosine)) * cos(inputs.angle * 3.14159265359 / 180)",
+          "unit": "lux",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Illumination Intensity vs. Distance",
+      "options": {
+        "title": {
+          "text": "Illumination Intensity vs. Distance from Source"
+        },
+        "xAxis": {
+          "name": "Distance (m)",
+          "type": "value"
+        },
+        "yAxis": {
+          "name": "Illumination Intensity (lux)",
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "E = Φ / d²",
+            "type": "line",
+            "smooth": true,
+            "data": []
+          }
+        ]
+      }
+    }
+  ]
+}

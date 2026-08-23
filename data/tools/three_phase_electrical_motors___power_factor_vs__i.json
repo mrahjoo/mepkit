@@ -1,0 +1,233 @@
+{
+  "id": "three_phase_electrical_motors___power_factor_vs__i",
+  "title": "Three-Phase Electrical Motors - Power Factor vs. Inductive Load",
+  "description": "Calculate power factor, active power, reactive power, and apparent power for three-phase electric motors. Understand the relationship between power factor, inductive loads, and system efficiency.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "power_factor_calculator",
+      "content": "Power Factor Calculations for Three-Phase Motors",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage (V)",
+          "type": "number",
+          "defaultValue": 400,
+          "unit": "V"
+        },
+        {
+          "id": "current",
+          "label": "Current (A)",
+          "type": "number",
+          "defaultValue": 200,
+          "unit": "A"
+        },
+        {
+          "id": "power_factor",
+          "label": "Power Factor (cos φ)",
+          "type": "number",
+          "defaultValue": 0.7,
+          "unit": ""
+        },
+        {
+          "id": "sqrt3",
+          "label": "√3 constant",
+          "type": "number",
+          "defaultValue": 1.732,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "active_power",
+          "label": "Active Power (P)",
+          "formula": "inputs.sqrt3 * inputs.voltage * inputs.current * inputs.power_factor",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "apparent_power",
+          "label": "Apparent Power (S)",
+          "formula": "inputs.sqrt3 * inputs.voltage * inputs.current",
+          "unit": "VA",
+          "format": "decimal"
+        },
+        {
+          "id": "reactive_power",
+          "label": "Reactive Power (Q)",
+          "formula": "Math.sqrt(Math.pow(inputs.sqrt3 * inputs.voltage * inputs.current, 2) - Math.pow(inputs.sqrt3 * inputs.voltage * inputs.current * inputs.power_factor, 2))",
+          "unit": "VAR",
+          "format": "decimal"
+        },
+        {
+          "id": "phase_angle",
+          "label": "Phase Angle (φ)",
+          "formula": "Math.acos(inputs.power_factor) * 180 / Math.PI",
+          "unit": "°",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "motor_power_factors",
+      "content": "Typical Motor Power Factors by Load Level",
+      "headers": [
+        "Power (hp)",
+        "Speed (rpm)",
+        "Unloaded",
+        "1/4 Load",
+        "1/2 Load",
+        "3/4 Load",
+        "Full Load"
+      ],
+      "rows": [
+        [
+          "0 - 5",
+          "1800",
+          "0.15 - 0.20",
+          "0.5 - 0.6",
+          "0.72",
+          "0.82",
+          "0.84"
+        ],
+        [
+          "5 - 20",
+          "1800",
+          "0.15 - 0.20",
+          "0.5 - 0.6",
+          "0.72",
+          "0.74",
+          "0.84"
+        ],
+        [
+          "20 - 100",
+          "1800",
+          "0.15 - 0.20",
+          "0.5 - 0.6",
+          "0.72",
+          "0.79",
+          "0.86"
+        ],
+        [
+          "100 - 300",
+          "1800",
+          "0.15 - 0.20",
+          "0.5 - 0.6",
+          "0.72",
+          "0.81",
+          "0.88"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "conductor_cross_section",
+      "content": "Conductor Cross-Section vs. Power Factor",
+      "headers": [
+        "Power Factor",
+        "1.0",
+        "0.9",
+        "0.8",
+        "0.7",
+        "0.6",
+        "0.5",
+        "0.4",
+        "0.3"
+      ],
+      "rows": [
+        [
+          "Cross-Section Factor",
+          "1",
+          "1.2",
+          "1.6",
+          "2.04",
+          "2.8",
+          "4.0",
+          "6.3",
+          "11.1"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "industry_power_factors",
+      "content": "Typical Power Factors by Industry",
+      "headers": [
+        "Industry",
+        "Power Factor (%)"
+      ],
+      "rows": [
+        [
+          "Brewery",
+          "75 - 80"
+        ],
+        [
+          "Cement",
+          "75 - 80"
+        ],
+        [
+          "Chemical",
+          "65 - 75"
+        ],
+        [
+          "Electro-chemical",
+          "65 - 75"
+        ],
+        [
+          "Foundry",
+          "75 - 80"
+        ],
+        [
+          "Forging",
+          "70 - 80"
+        ],
+        [
+          "Hospital",
+          "75 - 80"
+        ],
+        [
+          "Manufacturing, machines",
+          "60 - 65"
+        ],
+        [
+          "Manufacturing, paint",
+          "65 - 70"
+        ],
+        [
+          "Metalworking",
+          "65 - 70"
+        ],
+        [
+          "Mine, coal",
+          "65 - 80"
+        ],
+        [
+          "Office",
+          "80 - 90"
+        ],
+        [
+          "Oil pumping",
+          "40 - 60"
+        ],
+        [
+          "Plastic production",
+          "75 - 80"
+        ],
+        [
+          "Stamping",
+          "60 - 70"
+        ],
+        [
+          "Steel works",
+          "65 - 80"
+        ],
+        [
+          "Textiles",
+          "35 - 60"
+        ]
+      ]
+    }
+  ]
+}

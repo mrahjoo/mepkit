@@ -1,0 +1,88 @@
+{
+  "id": "coulomb_s_law",
+  "title": "Coulomb's Law",
+  "description": "Calculate the electric force acting between two point charges using Coulomb's Law. The electric force is determined by the charges and the distance between them.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Coulomb's Law\n\nCoulomb's law calculates the electric force acting between two electric charges *q1* and *q2*:\n\n**F = k q1 q2 / r²**\n\nWhere:\n- **F** = force of attraction or repulsion (N)\n- **k** = Coulomb's constant = 8.9875517873681764 × 10⁹ (Nm²/C²)\n- **q1, q2** = charges (Coulombs, C)\n- **r** = distance between charges (m)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "q1",
+          "label": "Charge 1 (q1)",
+          "type": "number",
+          "unit": "C",
+          "defaultValue": 0.000002
+        },
+        {
+          "id": "q2",
+          "label": "Charge 2 (q2)",
+          "type": "number",
+          "unit": "C",
+          "defaultValue": 0.000002
+        },
+        {
+          "id": "r",
+          "label": "Distance between charges (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.02
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force",
+          "label": "Electric Force",
+          "unit": "N",
+          "formula": "(8.9875517873681764e9 * inputs.q1 * inputs.q2) / (inputs.r * inputs.r)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Charge 1 (C)",
+        "Charge 2 (C)",
+        "Distance (m)",
+        "Force (N)"
+      ],
+      "rows": [
+        [
+          0.000001,
+          0.000001,
+          0.01,
+          8.987551787368176
+        ],
+        [
+          0.000002,
+          0.000002,
+          0.02,
+          89.87551787368176
+        ],
+        [
+          0.000001,
+          0.000002,
+          0.05,
+          7.190041429894541
+        ],
+        [
+          0.000003,
+          0.000003,
+          0.03,
+          89.87551787368176
+        ],
+        [
+          0.000001,
+          0.000001,
+          0.1,
+          0.8987551787368177
+        ]
+      ]
+    }
+  ]
+}

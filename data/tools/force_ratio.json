@@ -1,0 +1,80 @@
+{
+  "id": "force_ratio",
+  "title": "Force Ratio",
+  "description": "The force ratio is the load force versus the effort force. A machine is a device that can change the magnitude and line of the action of force. The force ratio can be expressed as Fr = F / S, where Fr is the force ratio (mechanical advantage), F is the load force (N, lbf), and S is the effort force (N, lbf).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "force_ratio_calculator",
+      "content": "Calculate the force ratio using the formula Fr = F / S",
+      "inputs": [
+        {
+          "id": "load_force",
+          "label": "Load Force (F)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 981
+        },
+        {
+          "id": "effort_force",
+          "label": "Effort Force (S)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 245
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force_ratio",
+          "label": "Force Ratio (Fr)",
+          "formula": "inputs.load_force / inputs.effort_force",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "force_ratio_examples",
+      "content": "Force Ratio Examples",
+      "headers": [
+        "Machine Type",
+        "Load Force (N)",
+        "Effort Force (N)",
+        "Force Ratio"
+      ],
+      "rows": [
+        [
+          "Pulley (4 ropes)",
+          981,
+          245,
+          4
+        ],
+        [
+          "Pulley (2 ropes)",
+          500,
+          250,
+          2
+        ],
+        [
+          "Pulley (6 ropes)",
+          1200,
+          200,
+          6
+        ],
+        [
+          "Gear System",
+          1000,
+          100,
+          10
+        ],
+        [
+          "Screw Jack",
+          750,
+          150,
+          5
+        ]
+      ]
+    }
+  ]
+}

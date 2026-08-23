@@ -1,0 +1,100 @@
+{
+  "id": "grit_size_vs__surface_roughness",
+  "title": "Grit Size vs. Surface Roughness",
+  "description": "Comparing sandpaper grit size and surface roughness. This tool provides the relationship between sandpaper grit size and the resulting surface roughness measurement.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Grit Size vs. Surface Roughness\n\nApproximate comparison of sandpaper grit size and surface roughness.\n\nThis calculator helps you understand the relationship between sandpaper grit size and the resulting surface roughness produced during sanding operations."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Grit Size",
+        "Surface Roughness (10⁻⁶ m)"
+      ],
+      "rows": [
+        [
+          80,
+          1.8
+        ],
+        [
+          120,
+          1.32
+        ],
+        [
+          150,
+          1.06
+        ],
+        [
+          180,
+          0.76
+        ],
+        [
+          240,
+          0.38
+        ],
+        [
+          320,
+          0.3
+        ],
+        [
+          500,
+          0.18
+        ],
+        [
+          600,
+          0.13
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Sandpaper Grit Size vs. Surface Roughness",
+          "left": "center"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            80,
+            120,
+            150,
+            180,
+            240,
+            320,
+            500,
+            600
+          ],
+          "name": "Grit Size"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Surface Roughness (10⁻⁶ m)"
+        },
+        "series": [
+          {
+            "data": [
+              1.8,
+              1.32,
+              1.06,
+              0.76,
+              0.38,
+              0.3,
+              0.18,
+              0.13
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Surface Roughness"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

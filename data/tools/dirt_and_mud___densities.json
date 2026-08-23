@@ -1,0 +1,90 @@
+{
+  "id": "dirt_and_mud___densities",
+  "title": "Dirt and Mud - Densities",
+  "description": "Reference table for dirt and mud density values used in engineering calculations and material specifications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material Type",
+        "Density (kg/m³)",
+        "Density (lb/ft³)",
+        "Moisture Content",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Clay, wet",
+          "1600",
+          "99.8",
+          "High",
+          "Saturated state"
+        ],
+        [
+          "Clay, dry",
+          "1400",
+          "87.4",
+          "Low",
+          "Dried state"
+        ],
+        [
+          "Mud, freshwater",
+          "1500",
+          "93.6",
+          "High",
+          "Soft, waterlogged"
+        ],
+        [
+          "Mud, saltwater",
+          "1520",
+          "94.9",
+          "High",
+          "Marine sediment"
+        ],
+        [
+          "Sandy soil, loose",
+          "1450",
+          "90.5",
+          "Medium",
+          "Not compacted"
+        ],
+        [
+          "Sandy soil, compacted",
+          "1550",
+          "96.8",
+          "Medium",
+          "Compacted state"
+        ],
+        [
+          "Silt, wet",
+          "1480",
+          "92.3",
+          "High",
+          "Saturated"
+        ],
+        [
+          "Silt, dry",
+          "1350",
+          "84.3",
+          "Low",
+          "Dried"
+        ],
+        [
+          "Loam, average",
+          "1450",
+          "90.5",
+          "Medium",
+          "Mixed composition"
+        ],
+        [
+          "Peat, wet",
+          "1100",
+          "68.7",
+          "Very High",
+          "Organic matter"
+        ]
+      ]
+    }
+  ]
+}

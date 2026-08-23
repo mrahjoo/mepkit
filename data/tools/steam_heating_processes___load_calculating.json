@@ -1,0 +1,163 @@
+{
+  "id": "steam_heating_processes___load_calculating",
+  "title": "Steam Heating Processes - Load Calculating",
+  "description": "Calculate heat transfer rates and steam requirements for both batch and continuous heating processes using steam. Determine the quantity of energy needed to change or maintain product/fluid temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Steam Heating Processes - Load Calculating\n\nThis tool calculates heat transfer and steam requirements for steam heating applications.\n\n## Non-Flow (Batch) Heating\n**Formula:** P = m × cp × dT / t\n\n- **P** = Mean heat transfer rate (kW)\n- **m** = Mass of product (kg)\n- **cp** = Specific heat of product (kJ/kg·°C)\n- **dT** = Temperature change (°C)\n- **t** = Total heating time (seconds)\n\n## Flow (Continuous) Heating\n**Formula:** P = cp × dT × (m/t)\n\n- **P** = Mean heat transfer rate (kW)\n- **m/t** = Mass flow rate (kg/s)\n- **cp** = Specific heat of product (kJ/kg·°C)\n- **dT** = Temperature change (°C)\n\n## Steam Requirement\n**Formula:** ms = P / he\n\n- **ms** = Mass of steam (kg/s)\n- **P** = Heat transfer rate (kW)\n- **he** = Evaporation energy of steam (kJ/kg)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Batch Heating",
+        "Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "batch_mass",
+          "label": "Product Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 50
+        },
+        {
+          "id": "batch_cp",
+          "label": "Specific Heat Capacity",
+          "type": "number",
+          "unit": "kJ/kg·°C",
+          "defaultValue": 4.19
+        },
+        {
+          "id": "batch_temp_initial",
+          "label": "Initial Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 35
+        },
+        {
+          "id": "batch_temp_final",
+          "label": "Final Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        },
+        {
+          "id": "batch_time",
+          "label": "Heating Time",
+          "type": "number",
+          "unit": "seconds",
+          "defaultValue": 1200
+        },
+        {
+          "id": "batch_steam_energy",
+          "label": "Steam Evaporation Energy",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 2085
+        }
+      ],
+      "outputs": [
+        {
+          "id": "batch_temp_change",
+          "label": "Temperature Change",
+          "unit": "°C",
+          "formula": "inputs.batch_temp_final - inputs.batch_temp_initial"
+        },
+        {
+          "id": "batch_heat_transfer_rate",
+          "label": "Heat Transfer Rate",
+          "unit": "kW",
+          "formula": "(inputs.batch_mass * inputs.batch_cp * (inputs.batch_temp_final - inputs.batch_temp_initial)) / inputs.batch_time"
+        },
+        {
+          "id": "batch_steam_rate",
+          "label": "Steam Flow Rate",
+          "unit": "kg/s",
+          "format": "decimal",
+          "formula": "((inputs.batch_mass * inputs.batch_cp * (inputs.batch_temp_final - inputs.batch_temp_initial)) / inputs.batch_time) / inputs.batch_steam_energy"
+        },
+        {
+          "id": "batch_steam_rate_hourly",
+          "label": "Steam Flow Rate",
+          "unit": "kg/h",
+          "format": "decimal",
+          "formula": "(((inputs.batch_mass * inputs.batch_cp * (inputs.batch_temp_final - inputs.batch_temp_initial)) / inputs.batch_time) / inputs.batch_steam_energy) * 3600"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Continuous Heating",
+        "Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "flow_rate",
+          "label": "Product Flow Rate",
+          "type": "number",
+          "unit": "kg/s",
+          "defaultValue": 3
+        },
+        {
+          "id": "flow_cp",
+          "label": "Specific Heat Capacity",
+          "type": "number",
+          "unit": "kJ/kg·°C",
+          "defaultValue": 4.19
+        },
+        {
+          "id": "flow_temp_initial",
+          "label": "Initial Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 10
+        },
+        {
+          "id": "flow_temp_final",
+          "label": "Final Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 60
+        },
+        {
+          "id": "flow_steam_energy",
+          "label": "Steam Evaporation Energy",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 2030
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_temp_change",
+          "label": "Temperature Change",
+          "unit": "°C",
+          "formula": "inputs.flow_temp_final - inputs.flow_temp_initial"
+        },
+        {
+          "id": "flow_heat_transfer_rate",
+          "label": "Heat Transfer Rate",
+          "unit": "kW",
+          "formula": "inputs.flow_cp * (inputs.flow_temp_final - inputs.flow_temp_initial) * inputs.flow_rate"
+        },
+        {
+          "id": "flow_steam_rate",
+          "label": "Steam Flow Rate",
+          "unit": "kg/s",
+          "format": "decimal",
+          "formula": "(inputs.flow_cp * (inputs.flow_temp_final - inputs.flow_temp_initial) * inputs.flow_rate) / inputs.flow_steam_energy"
+        },
+        {
+          "id": "flow_steam_rate_hourly",
+          "label": "Steam Flow Rate",
+          "unit": "kg/h",
+          "format": "decimal",
+          "formula": "((inputs.flow_cp * (inputs.flow_temp_final - inputs.flow_temp_initial) * inputs.flow_rate) / inputs.flow_steam_energy) * 3600"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "id": "boiler___exhaust_velocity",
+  "title": "Boiler - Exhaust Velocity",
+  "description": "Recommended boiler exhaust velocities for various boiler configurations and burner types.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Boiler - Exhaust Velocity\n\nThis tool provides recommended exhaust velocities for different boiler configurations and burner types.\n\n## Boiler Configuration Reference\n\n| Configuration | Velocity (m/s) | Velocity (ft/s) | Notes |\n|---|---|---|---|\n| Ducts at minimum load | < 4.0 | < 13 | Prevent excessive drafting |\n| Stack at minimum load | < 5.0 | < 16 | Minimum load conditions |\n| One-step burner (on - off) | 5.0 - 8.0 | 16 - 26 | Basic burner control |\n| Two-step burner (high - low) | 10 - 15 | 31 - 49 | Improved modulation |\n| Modulating burner | 15 - 25 | 49 - 82 | Full modulation capability |\n| Soot prevention | 3.0 - 4.0 | 9.8 - 13 | Keep surface free from soot |\n"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "burner_type",
+          "label": "Burner Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Ducts at minimum load",
+              "value": "ducts_min"
+            },
+            {
+              "label": "Stack at minimum load",
+              "value": "stack_min"
+            },
+            {
+              "label": "One-step burner (on - off)",
+              "value": "one_step"
+            },
+            {
+              "label": "Two-step burner (high - low)",
+              "value": "two_step"
+            },
+            {
+              "label": "Modulating burner",
+              "value": "modulating"
+            },
+            {
+              "label": "Soot prevention (minimum)",
+              "value": "soot_min"
+            }
+          ]
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "Metric (m/s)",
+              "value": "metric"
+            },
+            {
+              "label": "Imperial (ft/s)",
+              "value": "imperial"
+            }
+          ],
+          "defaultValue": "metric"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity_min",
+          "label": "Minimum Recommended Velocity",
+          "unit": "m/s",
+          "formula": "inputs.burner_type === 'ducts_min' ? 0 : inputs.burner_type === 'stack_min' ? 0 : inputs.burner_type === 'one_step' ? 5.0 : inputs.burner_type === 'two_step' ? 10 : inputs.burner_type === 'modulating' ? 15 : inputs.burner_type === 'soot_min' ? 3.0 : 0"
+        },
+        {
+          "id": "velocity_max",
+          "label": "Maximum Recommended Velocity",
+          "unit": "m/s",
+          "formula": "inputs.burner_type === 'ducts_min' ? 4.0 : inputs.burner_type === 'stack_min' ? 5.0 : inputs.burner_type === 'one_step' ? 8.0 : inputs.burner_type === 'two_step' ? 15 : inputs.burner_type === 'modulating' ? 25 : inputs.burner_type === 'soot_min' ? 4.0 : 0"
+        },
+        {
+          "id": "velocity_min_imperial",
+          "label": "Minimum Recommended Velocity (Imperial)",
+          "unit": "ft/s",
+          "formula": "(inputs.burner_type === 'ducts_min' ? 0 : inputs.burner_type === 'stack_min' ? 0 : inputs.burner_type === 'one_step' ? 5.0 : inputs.burner_type === 'two_step' ? 10 : inputs.burner_type === 'modulating' ? 15 : inputs.burner_type === 'soot_min' ? 3.0 : 0) * 3.28084"
+        },
+        {
+          "id": "velocity_max_imperial",
+          "label": "Maximum Recommended Velocity (Imperial)",
+          "unit": "ft/s",
+          "formula": "(inputs.burner_type === 'ducts_min' ? 4.0 : inputs.burner_type === 'stack_min' ? 5.0 : inputs.burner_type === 'one_step' ? 8.0 : inputs.burner_type === 'two_step' ? 15 : inputs.burner_type === 'modulating' ? 25 : inputs.burner_type === 'soot_min' ? 4.0 : 0) * 3.28084"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Boiler Exhaust Velocity Ranges by Configuration",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Ducts\n(min load)",
+            "Stack\n(min load)",
+            "One-step\n(on-off)",
+            "Two-step\n(high-low)",
+            "Modulating",
+            "Soot\nPrevention"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Velocity (m/s)"
+        },
+        "series": [
+          {
+            "name": "Minimum Velocity",
+            "type": "bar",
+            "data": [
+              0,
+              0,
+              5,
+              10,
+              15,
+              3
+            ],
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          },
+          {
+            "name": "Maximum Velocity",
+            "type": "bar",
+            "data": [
+              4,
+              5,
+              8,
+              15,
+              25,
+              4
+            ],
+            "itemStyle": {
+              "color": "#ef4444"
+            }
+          }
+        ],
+        "legend": {
+          "top": "bottom"
+        }
+      }
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Boiler Configuration",
+        "Min Velocity (m/s)",
+        "Max Velocity (m/s)",
+        "Min Velocity (ft/s)",
+        "Max Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          "Ducts at minimum load",
+          "0 (no limit)",
+          "< 4.0",
+          "0 (no limit)",
+          "< 13"
+        ],
+        [
+          "Stack at minimum load",
+          "0 (no limit)",
+          "< 5.0",
+          "0 (no limit)",
+          "< 16"
+        ],
+        [
+          "One-step burner (on - off)",
+          "5.0",
+          "8.0",
+          "16",
+          "26"
+        ],
+        [
+          "Two-step burner (high - low)",
+          "10",
+          "15",
+          "31",
+          "49"
+        ],
+        [
+          "Modulating burner",
+          "15",
+          "25",
+          "49",
+          "82"
+        ],
+        [
+          "Soot prevention (minimum)",
+          "3.0",
+          "4.0",
+          "9.8",
+          "13"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "id": "toluene___thermophysical_properties",
+  "title": "Toluene - Thermophysical Properties Calculator",
+  "description": "A comprehensive calculator for toluene thermophysical properties at 25°C (298 K) and 1 bara. Toluene (C₆H₅-CH₃) is a clear colorless liquid with high flammability, used in aviation and automotive fuels, as well as a solvent. This tool provides access to critical temperature, density, viscosity, heat capacity, and other thermophysical properties with unit conversions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "toluene_properties",
+      "content": "Select a thermophysical property of toluene and its unit system to retrieve the value.",
+      "inputs": [
+        {
+          "id": "property",
+          "label": "Property",
+          "type": "select",
+          "options": [
+            {
+              "label": "Autoignition Temperature",
+              "value": "autoignition_temp"
+            },
+            {
+              "label": "Boiling Point",
+              "value": "boiling_point"
+            },
+            {
+              "label": "Critical Density",
+              "value": "critical_density"
+            },
+            {
+              "label": "Critical Pressure",
+              "value": "critical_pressure"
+            },
+            {
+              "label": "Critical Temperature",
+              "value": "critical_temperature"
+            },
+            {
+              "label": "Critical Volume",
+              "value": "critical_volume"
+            },
+            {
+              "label": "Density",
+              "value": "density"
+            },
+            {
+              "label": "Flash Point",
+              "value": "flash_point"
+            },
+            {
+              "label": "Gas Constant (Individual, R)",
+              "value": "gas_constant"
+            },
+            {
+              "label": "Gibbs Free Energy of Formation (Gas)",
+              "value": "gibbs_free_energy"
+            },
+            {
+              "label": "Heat of Combustion (Liquid)",
+              "value": "heat_combustion"
+            },
+            {
+              "label": "Heat of Formation (Gas)",
+              "value": "heat_formation_gas"
+            },
+            {
+              "label": "Heat of Formation (Liquid)",
+              "value": "heat_formation_liquid"
+            },
+            {
+              "label": "Heat of Fusion",
+              "value": "heat_fusion"
+            },
+            {
+              "label": "Heat of Evaporation",
+              "value": "heat_evaporation"
+            },
+            {
+              "label": "Specific Heat Capacity, Cp (Gas)",
+              "value": "cp_gas"
+            },
+            {
+              "label": "Specific Heat Capacity, Cp (Liquid)",
+              "value": "cp_liquid"
+            },
+            {
+              "label": "Specific Heat Capacity, Cv (Liquid)",
+              "value": "cv_liquid"
+            },
+            {
+              "label": "Ionization Potential",
+              "value": "ionization_potential"
+            },
+            {
+              "label": "log KOW (Octanol/Water Partition Coefficient)",
+              "value": "log_kow"
+            },
+            {
+              "label": "Melting Point",
+              "value": "melting_point"
+            },
+            {
+              "label": "Molecular Weight",
+              "value": "molecular_weight"
+            },
+            {
+              "label": "Solubility in Water (at 25°C)",
+              "value": "solubility_water"
+            },
+            {
+              "label": "Sound Velocity",
+              "value": "sound_velocity"
+            },
+            {
+              "label": "Specific Gravity (Gas, relative to air)",
+              "value": "sg_gas"
+            },
+            {
+              "label": "Specific Gravity (Liquid, relative to water)",
+              "value": "sg_liquid"
+            },
+            {
+              "label": "Specific Heat Ratio (Liquid) - CP/CV",
+              "value": "heat_ratio"
+            },
+            {
+              "label": "Specific Volume",
+              "value": "specific_volume"
+            },
+            {
+              "label": "Standard Molar Entropy (Gas)",
+              "value": "molar_entropy_gas"
+            },
+            {
+              "label": "Standard Molar Entropy (Liquid)",
+              "value": "molar_entropy_liquid"
+            },
+            {
+              "label": "Surface Tension",
+              "value": "surface_tension"
+            },
+            {
+              "label": "Thermal Conductivity",
+              "value": "thermal_conductivity"
+            },
+            {
+              "label": "Triple Point Pressure",
+              "value": "triple_point_pressure"
+            },
+            {
+              "label": "Triple Point Temperature",
+              "value": "triple_point_temperature"
+            },
+            {
+              "label": "Vapor (Saturation) Pressure",
+              "value": "vapor_pressure"
+            },
+            {
+              "label": "Viscosity, Dynamic (Absolute)",
+              "value": "viscosity_dynamic"
+            },
+            {
+              "label": "Viscosity, Kinematic",
+              "value": "viscosity_kinematic"
+            }
+          ]
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "SI Units",
+              "value": "si"
+            },
+            {
+              "label": "Imperial Units",
+              "value": "imperial"
+            },
+            {
+              "label": "CGS Units",
+              "value": "cgs"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "property_value",
+          "label": "Property Value",
+          "formula": "inputs.property",
+          "unit": "inputs.unit_system"
+        },
+        {
+          "id": "property_unit",
+          "label": "Unit",
+          "formula": "inputs.unit_system",
+          "unit": ""
+        }
+      ]
+    }
+  ]
+}

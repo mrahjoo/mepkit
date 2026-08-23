@@ -1,0 +1,80 @@
+{
+  "id": "biogas___potential_from_animal_manure",
+  "title": "Biogas - Potential from Animal Manure",
+  "description": "Potential biogas production from animal manure. Biogas is a mixture of different gases produced by the breakdown of organic matter in the absence of oxygen.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Biogas Potential Calculator\n\nBiogas refers to a mixture of different gases produced by the breakdown of organic matter in the absence of oxygen. This calculator helps estimate potential biogas production from animal manure.\n\n### Reference Data\n\n| Animal | Manure (kg/day) | Biogas (m³/day) | Energy (MJ/day) |\n|--------|-----------------|-----------------|------------------|\n| Cow    | 40              | 1.2             | 26               |\n| Hen    | 0.19            | 0.18            | 3.8              |\n| Pig    | 2.3             | 0.18            | 3.8              |\n\n### Conversion Factors\n* 1 kg = 2.2046 lb\n* 1 J = 2.778×10⁻⁷ kWh = 9.478×10⁻⁴ Btu\n* 1 m³ = 35.31 ft³"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "animal_type",
+          "label": "Animal Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Cow",
+              "value": "cow"
+            },
+            {
+              "label": "Hen",
+              "value": "hen"
+            },
+            {
+              "label": "Pig",
+              "value": "pig"
+            }
+          ],
+          "defaultValue": "cow"
+        },
+        {
+          "id": "num_animals",
+          "label": "Number of Animals",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "daily_manure",
+          "label": "Daily Manure Production",
+          "unit": "kg/day",
+          "formula": "inputs.num_animals * (inputs.animal_type === 'cow' ? 40 : inputs.animal_type === 'hen' ? 0.19 : 2.3)",
+          "format": "decimal"
+        },
+        {
+          "id": "daily_biogas",
+          "label": "Daily Biogas Production",
+          "unit": "m³/day",
+          "formula": "inputs.num_animals * (inputs.animal_type === 'cow' ? 1.2 : 0.18)",
+          "format": "decimal"
+        },
+        {
+          "id": "daily_biogas_ft3",
+          "label": "Daily Biogas Production",
+          "unit": "ft³/day",
+          "formula": "inputs.num_animals * (inputs.animal_type === 'cow' ? 1.2 : 0.18) * 35.31",
+          "format": "decimal"
+        },
+        {
+          "id": "daily_energy",
+          "label": "Daily Energy Potential",
+          "unit": "MJ/day",
+          "formula": "inputs.num_animals * (inputs.animal_type === 'cow' ? 26 : inputs.animal_type === 'hen' ? 3.8 : 3.8)",
+          "format": "decimal"
+        },
+        {
+          "id": "daily_energy_kwh",
+          "label": "Daily Energy Potential",
+          "unit": "kWh/day",
+          "formula": "inputs.num_animals * (inputs.animal_type === 'cow' ? 26 : inputs.animal_type === 'hen' ? 3.8 : 3.8) * 1000000 * 2.778e-7",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

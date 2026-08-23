@@ -1,0 +1,33 @@
+{
+  "id": "conveyors___belt_speed",
+  "title": "Conveyors - Belt Speed",
+  "description": "Maximum conveyor belt speed for various material types including grain, coal, earth, ore and stone.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material Type",
+        "Maximum Belt Speed (m/s)",
+        "Maximum Belt Speed (ft/min)"
+      ],
+      "rows": [
+        [
+          "Grain and Free Flowing Material",
+          "3.5 - 4.5",
+          "700 - 900"
+        ],
+        [
+          "Mine Coal and Earth",
+          "2.5 - 3.5",
+          "500 - 700"
+        ],
+        [
+          "Primary Crushed Hard Ores and Stone",
+          "2.0 - 3.0",
+          "400 - 600"
+        ]
+      ]
+    }
+  ]
+}

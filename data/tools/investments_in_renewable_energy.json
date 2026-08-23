@@ -1,0 +1,182 @@
+{
+  "id": "investments_in_renewable_energy",
+  "title": "Investments in Renewable Energy",
+  "description": "Calculate the economics of renewable energy projects using three methods: payback time, simple annual method, and discounted cash flow analysis.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Renewable Energy Investment Analysis\n\nThis tool helps you evaluate the economic viability of renewable energy projects using three calculation methods:\n\n1. **Payback Time** - Time to recover the initial investment\n2. **Simple Annual Method** - Annual cost of produced/saved energy\n3. **Discounted Cash Flow** - Present value considering time value of money"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Payback Time Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "investment_payback",
+          "label": "Investment (I)",
+          "type": "number",
+          "unit": "$",
+          "defaultValue": 100000
+        },
+        {
+          "id": "energy_produced_payback",
+          "label": "Energy Produced/Saved per Year (E)",
+          "type": "number",
+          "unit": "kWh/year",
+          "defaultValue": 8000
+        },
+        {
+          "id": "energy_cost_payback",
+          "label": "Energy Cost per kWh (c)",
+          "type": "number",
+          "unit": "$/kWh",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "annual_savings_payback",
+          "label": "Annual Savings (A)",
+          "formula": "inputs.energy_produced_payback * inputs.energy_cost_payback",
+          "unit": "$/year",
+          "format": "currency"
+        },
+        {
+          "id": "payback_time",
+          "label": "Payback Time (t)",
+          "formula": "inputs.investment_payback / (inputs.energy_produced_payback * inputs.energy_cost_payback)",
+          "unit": "years",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Simple Annual Method Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "investment_simple",
+          "label": "Investment (I)",
+          "type": "number",
+          "unit": "$",
+          "defaultValue": 50000
+        },
+        {
+          "id": "lifetime",
+          "label": "Investment Lifetime (y)",
+          "type": "number",
+          "unit": "years",
+          "defaultValue": 25
+        },
+        {
+          "id": "annual_costs",
+          "label": "Average Annual Running Costs (C)",
+          "type": "number",
+          "unit": "$/year",
+          "defaultValue": 1200
+        },
+        {
+          "id": "energy_produced_simple",
+          "label": "Energy Produced/Saved per Year (E)",
+          "type": "number",
+          "unit": "kWh/year",
+          "defaultValue": 4000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "annual_depreciation",
+          "label": "Annual Depreciation (I/y)",
+          "formula": "inputs.investment_simple / inputs.lifetime",
+          "unit": "$/year",
+          "format": "currency"
+        },
+        {
+          "id": "energy_cost_simple",
+          "label": "Cost of Energy Produced (c)",
+          "formula": "(inputs.investment_simple / inputs.lifetime + inputs.annual_costs) / inputs.energy_produced_simple",
+          "unit": "$/kWh",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Discounted Cash Flow Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "investment_dcf",
+          "label": "Initial Investment (I)",
+          "type": "number",
+          "unit": "$",
+          "defaultValue": 100000
+        },
+        {
+          "id": "energy_saved_dcf",
+          "label": "Energy Produced/Saved per Year (E)",
+          "type": "number",
+          "unit": "kWh/year",
+          "defaultValue": 15000
+        },
+        {
+          "id": "energy_cost_dcf",
+          "label": "Energy Cost per kWh (c)",
+          "type": "number",
+          "unit": "$/kWh",
+          "defaultValue": 1
+        },
+        {
+          "id": "running_costs_dcf",
+          "label": "Annual Running Costs (C)",
+          "type": "number",
+          "unit": "$/year",
+          "defaultValue": 1000
+        },
+        {
+          "id": "monetary_interest",
+          "label": "Monetary Interest Rate (imn)",
+          "type": "number",
+          "unit": "decimal",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "inflation_rate",
+          "label": "Inflation Rate (iin)",
+          "type": "number",
+          "unit": "decimal",
+          "defaultValue": 0.02
+        },
+        {
+          "id": "project_years",
+          "label": "Project Lifetime (years)",
+          "type": "number",
+          "unit": "years",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "real_interest_rate",
+          "label": "Real Interest Rate (i)",
+          "formula": "(1 + inputs.monetary_interest) / (1 + inputs.inflation_rate) - 1",
+          "unit": "decimal",
+          "format": "decimal"
+        },
+        {
+          "id": "annual_cash_flow",
+          "label": "Annual Cash Flow (first year)",
+          "formula": "(inputs.energy_saved_dcf * inputs.energy_cost_dcf) - inputs.running_costs_dcf",
+          "unit": "$/year",
+          "format": "currency"
+        }
+      ]
+    }
+  ]
+}

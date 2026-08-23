@@ -1,0 +1,392 @@
+{
+  "id": "air_supply_to_boiler_house",
+  "title": "Air Supply to Boiler House",
+  "description": "Calculator tool for determining adequate combustion air supply requirements for boiler rooms based on fuel input and regulatory standards (ASME, NFPA, BOCA, SBCCI)",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "asme_calculation",
+      "content": "ASME CSD-1 Air Supply Calculation",
+      "inputs": [
+        {
+          "id": "fuel_input_btu",
+          "label": "Maximum Fuel Input",
+          "type": "number",
+          "unit": "Btu/hr",
+          "defaultValue": 100000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "asme_opening_area",
+          "label": "Required Air Opening Area (ASME)",
+          "formula": "inputs.fuel_input_btu / 2000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "nfpa_gas_calculation",
+      "content": "NFPA 54 - Gas Fuels Air Supply Calculation",
+      "inputs": [
+        {
+          "id": "fuel_input_gas_btu",
+          "label": "Maximum Fuel Input",
+          "type": "number",
+          "unit": "Btu/hr",
+          "defaultValue": 100000
+        },
+        {
+          "id": "duct_type_gas",
+          "label": "Duct Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "outdoor",
+              "label": "Outdoor Opening"
+            },
+            {
+              "value": "vertical",
+              "label": "Vertical Ducts"
+            },
+            {
+              "value": "horizontal",
+              "label": "Horizontal Ducts"
+            }
+          ],
+          "defaultValue": "outdoor"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "nfpa_gas_opening_outdoor",
+          "label": "Required Opening Area (Outdoor)",
+          "formula": "inputs.fuel_input_gas_btu / 4000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        },
+        {
+          "id": "nfpa_gas_opening_vertical",
+          "label": "Required Opening Area (Vertical Ducts)",
+          "formula": "inputs.fuel_input_gas_btu / 4000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        },
+        {
+          "id": "nfpa_gas_opening_horizontal",
+          "label": "Required Opening Area (Horizontal Ducts)",
+          "formula": "inputs.fuel_input_gas_btu / 2000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "nfpa_oil_calculation",
+      "content": "NFPA 31 - Oil Fuels Air Supply Calculation",
+      "inputs": [
+        {
+          "id": "fuel_input_oil_btu",
+          "label": "Maximum Fuel Input",
+          "type": "number",
+          "unit": "Btu/hr",
+          "defaultValue": 100000
+        },
+        {
+          "id": "duct_type_oil",
+          "label": "Duct Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "outdoor",
+              "label": "Outdoor Opening"
+            },
+            {
+              "value": "vertical",
+              "label": "Vertical Ducts"
+            },
+            {
+              "value": "horizontal",
+              "label": "Horizontal Ducts"
+            }
+          ],
+          "defaultValue": "outdoor"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "nfpa_oil_opening_outdoor",
+          "label": "Required Opening Area (Outdoor)",
+          "formula": "inputs.fuel_input_oil_btu / 4000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        },
+        {
+          "id": "nfpa_oil_opening_vertical",
+          "label": "Required Opening Area (Vertical Ducts)",
+          "formula": "inputs.fuel_input_oil_btu / 4000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        },
+        {
+          "id": "nfpa_oil_opening_horizontal",
+          "label": "Required Opening Area (Horizontal Ducts)",
+          "formula": "inputs.fuel_input_oil_btu / 2000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "boca_calculation",
+      "content": "BOCA - All Fuels Air Supply Calculation",
+      "inputs": [
+        {
+          "id": "fuel_input_boca_btu",
+          "label": "Maximum Fuel Input",
+          "type": "number",
+          "unit": "Btu/hr",
+          "defaultValue": 100000
+        },
+        {
+          "id": "duct_type_boca",
+          "label": "Duct Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "outdoor",
+              "label": "Outdoor Opening"
+            },
+            {
+              "value": "vertical",
+              "label": "Vertical Ducts"
+            },
+            {
+              "value": "horizontal",
+              "label": "Horizontal Ducts"
+            }
+          ],
+          "defaultValue": "outdoor"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "boca_opening_outdoor",
+          "label": "Required Opening Area (Outdoor)",
+          "formula": "inputs.fuel_input_boca_btu / 4000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        },
+        {
+          "id": "boca_opening_vertical",
+          "label": "Required Opening Area (Vertical Ducts)",
+          "formula": "inputs.fuel_input_boca_btu / 4000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        },
+        {
+          "id": "boca_opening_horizontal",
+          "label": "Required Opening Area (Horizontal Ducts)",
+          "formula": "inputs.fuel_input_boca_btu / 2000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "sbcci_gas_oil_calculation",
+      "content": "SBCCI - Gas and Oil Fuels Air Supply Calculation",
+      "inputs": [
+        {
+          "id": "fuel_input_sbcci_btu",
+          "label": "Maximum Fuel Input",
+          "type": "number",
+          "unit": "Btu/hr",
+          "defaultValue": 100000
+        },
+        {
+          "id": "duct_type_sbcci",
+          "label": "Duct Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "outdoor",
+              "label": "Outdoor Opening"
+            },
+            {
+              "value": "vertical",
+              "label": "Vertical Ducts"
+            },
+            {
+              "value": "horizontal",
+              "label": "Horizontal Ducts"
+            }
+          ],
+          "defaultValue": "outdoor"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sbcci_opening_outdoor",
+          "label": "Required Opening Area (Outdoor)",
+          "formula": "inputs.fuel_input_sbcci_btu / 4000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        },
+        {
+          "id": "sbcci_opening_vertical",
+          "label": "Required Opening Area (Vertical Ducts)",
+          "formula": "inputs.fuel_input_sbcci_btu / 4000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        },
+        {
+          "id": "sbcci_opening_horizontal",
+          "label": "Required Opening Area (Horizontal Ducts)",
+          "formula": "inputs.fuel_input_sbcci_btu / 2000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "sbcci_solid_fuel_calculation",
+      "content": "SBCCI - Solid Fuels Air Supply Calculation",
+      "inputs": [
+        {
+          "id": "fuel_input_solid_btu",
+          "label": "Maximum Fuel Input",
+          "type": "number",
+          "unit": "Btu/hr",
+          "defaultValue": 100000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sbcci_solid_opening",
+          "label": "Required Opening Area (Outdoor)",
+          "formula": "inputs.fuel_input_solid_btu * 2 / 1000",
+          "unit": "sq. in.",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "louver_free_area_calculation",
+      "content": "Louver and Grill Free Area Correction",
+      "inputs": [
+        {
+          "id": "calculated_area",
+          "label": "Calculated Opening Area",
+          "type": "number",
+          "unit": "sq. in.",
+          "defaultValue": 50
+        },
+        {
+          "id": "louver_type",
+          "label": "Louver Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "wood_low",
+              "label": "Wood Louvers (20%)"
+            },
+            {
+              "value": "wood_high",
+              "label": "Wood Louvers (25%)"
+            },
+            {
+              "value": "metal_low",
+              "label": "Metal Louvers (60%)"
+            },
+            {
+              "value": "metal_high",
+              "label": "Metal Louvers (75%)"
+            }
+          ],
+          "defaultValue": "metal_high"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "required_gross_area",
+          "label": "Required Gross Opening Area",
+          "formula": "inputs.calculated_area / 0.75",
+          "unit": "sq. in.",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "standards_comparison",
+      "content": "Combustion Air Standards Comparison",
+      "headers": [
+        "Standard",
+        "Outdoor Opening",
+        "Vertical Ducts",
+        "Horizontal Ducts",
+        "Min. Duct Dimension",
+        "Key Requirements"
+      ],
+      "rows": [
+        [
+          "ASME CSD-1 & VI",
+          "1 sq.in. per 2000 Btu/hr",
+          "—",
+          "—",
+          "N/A",
+          "1 required opening"
+        ],
+        [
+          "NFPA 54 (Gas)",
+          "1 sq.in. per 4000 Btu/hr",
+          "1 sq.in. per 4000 Btu/hr",
+          "1 sq.in. per 2000 Btu/hr",
+          "3 inches",
+          "2 openings required, damper interlocked"
+        ],
+        [
+          "NFPA 31 (Oil)",
+          "1 sq.in. per 4000 Btu/hr",
+          "1 sq.in. per 4000 Btu/hr",
+          "1 sq.in. per 2000 Btu/hr",
+          "3 inches",
+          "2 openings required"
+        ],
+        [
+          "BOCA (All Fuels)",
+          "1 sq.in. per 4000 Btu/hr",
+          "1 sq.in. per 4000 Btu/hr",
+          "1 sq.in. per 2000 Btu/hr",
+          "3 inches",
+          "2 openings required, damper interlocked"
+        ],
+        [
+          "SBCCI (Gas/Oil)",
+          "1 sq.in. per 4000 Btu/hr",
+          "1 sq.in. per 4000 Btu/hr",
+          "1 sq.in. per 2000 Btu/hr",
+          "3 inches",
+          "2 openings required"
+        ],
+        [
+          "SBCCI (Solid Fuels)",
+          "2 sq.in. per 1000 Btu/hr",
+          "—",
+          "—",
+          "3 inches",
+          "2 openings required"
+        ]
+      ]
+    }
+  ]
+}

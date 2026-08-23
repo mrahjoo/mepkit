@@ -1,0 +1,133 @@
+{
+  "id": "nickel_binary_eutectic_alloys___melting_points",
+  "title": "Nickel Binary Eutectic Alloys - Melting Points",
+  "description": "Ni - Nickel - binary eutectic alloys and melting points. The melting point of an alloy of two or more metals depends on the relative proportions of the ingredients. An eutectic mixture is the mixture where the melting point is as low as possible.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloy Component",
+        "Weight of Alloy Component (%)",
+        "Melting Point (K)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Sb - Antimony (Stibium)",
+          36.9,
+          1375,
+          2016
+        ],
+        [
+          "Sn - Tin (Stannum)",
+          32.2,
+          1403,
+          2066
+        ],
+        [
+          "Th - Thorium",
+          68,
+          1303,
+          1886
+        ],
+        [
+          "Ti - Titanium",
+          34,
+          1390,
+          2043
+        ],
+        [
+          "V - Vanadium",
+          48,
+          1473,
+          2192
+        ],
+        [
+          "W - Tungsten (Wolfram)",
+          45,
+          1773,
+          2732
+        ],
+        [
+          "Zn - Zinc",
+          71,
+          1148,
+          1607
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Weight (%)",
+            "Melting Point (K)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Sb",
+            "Sn",
+            "Th",
+            "Ti",
+            "V",
+            "W",
+            "Zn"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Weight (%)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Melting Point (K)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Weight (%)",
+            "data": [
+              36.9,
+              32.2,
+              68,
+              34,
+              48,
+              45,
+              71
+            ],
+            "type": "bar",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Melting Point (K)",
+            "data": [
+              1375,
+              1403,
+              1303,
+              1390,
+              1473,
+              1773,
+              1148
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## Temperature Conversion\n\n**Formula:** T (°C) = 5/9 × (T (°F) - 32)\n\nThis formula converts Fahrenheit to Celsius temperature scale."
+    }
+  ]
+}

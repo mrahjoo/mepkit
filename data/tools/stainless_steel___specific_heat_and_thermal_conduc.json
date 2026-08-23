@@ -1,0 +1,93 @@
+{
+  "id": "stainless_steel___specific_heat_and_thermal_conduc",
+  "title": "Stainless Steel - Specific Heat and Thermal Conductivities vs. Temperatures",
+  "description": "Specific heat and thermal conductivity of stainless steel vs. temperature",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Stainless Steel - Specific Heat and Thermal Conductivities vs. Temperatures\n\nThis tool provides specific heat capacity (c) and thermal conductivity (k) values for stainless steel at different temperatures.\n\n**Note:** Values are interpolated from the reference table. For accurate results, use temperatures within the range of 100-1500 K."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat Capacity (c)",
+          "unit": "kJ/kg K",
+          "formula": "inputs.temperature < 100 ? 0.272 : inputs.temperature < 200 ? 0.272 + (inputs.temperature - 100) * (0.402 - 0.272) / 100 : inputs.temperature < 300 ? 0.402 + (inputs.temperature - 200) * (0.477 - 0.402) / 100 : inputs.temperature < 400 ? 0.477 + (inputs.temperature - 300) * (0.515 - 0.477) / 100 : inputs.temperature < 600 ? 0.515 + (inputs.temperature - 400) * (0.557 - 0.515) / 200 : inputs.temperature < 800 ? 0.557 + (inputs.temperature - 600) * (0.582 - 0.557) / 200 : inputs.temperature < 1000 ? 0.582 + (inputs.temperature - 800) * (0.611 - 0.582) / 200 : inputs.temperature < 1200 ? 0.611 + (inputs.temperature - 1000) * (0.640 - 0.611) / 200 : inputs.temperature < 1500 ? 0.640 + (inputs.temperature - 1200) * (0.682 - 0.640) / 300 : 0.682"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity (k)",
+          "unit": "W/m K",
+          "formula": "inputs.temperature < 100 ? 9.2 : inputs.temperature < 200 ? 9.2 + (inputs.temperature - 100) * (12.6 - 9.2) / 100 : inputs.temperature < 300 ? 12.6 + (inputs.temperature - 200) * (14.9 - 12.6) / 100 : inputs.temperature < 400 ? 14.9 + (inputs.temperature - 300) * (16.6 - 14.9) / 100 : inputs.temperature < 600 ? 16.6 + (inputs.temperature - 400) * (19.8 - 16.6) / 200 : inputs.temperature < 800 ? 19.8 + (inputs.temperature - 600) * (22.6 - 19.8) / 200 : inputs.temperature < 1000 ? 22.6 + (inputs.temperature - 800) * (25.4 - 22.6) / 200 : inputs.temperature < 1200 ? 25.4 + (inputs.temperature - 1000) * (28.0 - 25.4) / 200 : inputs.temperature < 1500 ? 28.0 + (inputs.temperature - 1200) * (31.7 - 28.0) / 300 : 31.7"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (K)",
+        "Specific Heat (kJ/kg K)",
+        "Thermal Conductivity (W/m K)"
+      ],
+      "rows": [
+        [
+          100,
+          0.272,
+          9.2
+        ],
+        [
+          200,
+          0.402,
+          12.6
+        ],
+        [
+          300,
+          0.477,
+          14.9
+        ],
+        [
+          400,
+          0.515,
+          16.6
+        ],
+        [
+          600,
+          0.557,
+          19.8
+        ],
+        [
+          800,
+          0.582,
+          22.6
+        ],
+        [
+          1000,
+          0.611,
+          25.4
+        ],
+        [
+          1200,
+          0.64,
+          28
+        ],
+        [
+          1500,
+          0.682,
+          31.7
+        ]
+      ]
+    }
+  ]
+}

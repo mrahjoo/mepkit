@@ -1,0 +1,59 @@
+{
+  "id": "centroids_of_plane_areas",
+  "title": "Centroids of Plane Areas",
+  "description": "Calculate the centroid and area of various plane shapes: square, rectangle, circle, semi-circle, and right-angled triangle.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Centroids of Plane Areas\n\nThe centroid of an area is the point where the whole area is considered to be concentrated. This tool calculates the centroid coordinates (x, y) and area for common plane shapes.\n\n### Supported Shapes:\n- **Square**: Equal sides\n- **Rectangle**: Different length and width\n- **Circle**: Defined by radius\n- **Semi-Circle**: Half circle\n- **Right-angled Triangle**: Right angle at origin"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Shape",
+        "Parameter(s)",
+        "Centroid X",
+        "Centroid Y",
+        "Area"
+      ],
+      "rows": [
+        [
+          "Square",
+          "a = inputs.side_a",
+          "inputs.side_a / 2",
+          "inputs.side_a / 2",
+          "inputs.side_a ^ 2"
+        ],
+        [
+          "Rectangle",
+          "a = inputs.rect_a, b = inputs.rect_b",
+          "inputs.rect_a / 2",
+          "inputs.rect_b / 2",
+          "inputs.rect_a * inputs.rect_b"
+        ],
+        [
+          "Circle",
+          "r = inputs.radius",
+          "inputs.radius",
+          "inputs.radius",
+          "3.14159 * inputs.radius ^ 2"
+        ],
+        [
+          "Semi-Circle",
+          "r = inputs.semi_radius",
+          "4 * inputs.semi_radius / (3 * 3.14159)",
+          "inputs.semi_radius",
+          "3.14159 * inputs.semi_radius ^ 2 / 2"
+        ],
+        [
+          "Right-angled Triangle",
+          "b = inputs.triangle_b, h = inputs.triangle_h",
+          "inputs.triangle_b / 3",
+          "inputs.triangle_h / 3",
+          "inputs.triangle_b * inputs.triangle_h / 2"
+        ]
+      ]
+    }
+  ]
+}

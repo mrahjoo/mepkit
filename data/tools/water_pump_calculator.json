@@ -1,0 +1,117 @@
+{
+  "id": "water_pump_calculator",
+  "title": "Water Pump Calculator",
+  "description": "Water pump calculations for Pressure Head, Total Dynamic Head, Bowl Horsepower, Total Thrust acting on Driver Thrust Bearing, Field Head, Power Loss due to Shafting, Power Loss in Thrust Bearings, Motor Load, Field Efficiency, Input Horsepower (Power Supplied to Driver) and Shaft Elongation.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Inputs",
+        "Outputs"
+      ],
+      "inputs": [
+        {
+          "id": "flowRate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "gpm",
+          "defaultValue": 1000
+        },
+        {
+          "id": "pumpHead",
+          "label": "Pump Head",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 100
+        },
+        {
+          "id": "specificGravity",
+          "label": "Specific Gravity",
+          "type": "number",
+          "unit": "dimensionless",
+          "defaultValue": 1
+        },
+        {
+          "id": "pumpEfficiency",
+          "label": "Pump Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 85
+        },
+        {
+          "id": "motorEfficiency",
+          "label": "Motor Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 90
+        },
+        {
+          "id": "suction",
+          "label": "Suction Head",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0
+        },
+        {
+          "id": "discharge",
+          "label": "Discharge Head",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 50
+        },
+        {
+          "id": "velocityHead",
+          "label": "Velocity Head",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 5
+        },
+        {
+          "id": "frictionLoss",
+          "label": "Friction Loss",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressureHead",
+          "label": "Pressure Head",
+          "unit": "ft",
+          "formula": "inputs.discharge - inputs.suction",
+          "format": "decimal"
+        },
+        {
+          "id": "totalDynamicHead",
+          "label": "Total Dynamic Head",
+          "unit": "ft",
+          "formula": "inputs.discharge - inputs.suction + inputs.velocityHead + inputs.frictionLoss",
+          "format": "decimal"
+        },
+        {
+          "id": "bowlHP",
+          "label": "Bowl Horsepower",
+          "unit": "hp",
+          "formula": "(inputs.flowRate * inputs.totalDynamicHead * inputs.specificGravity) / 3960",
+          "format": "decimal"
+        },
+        {
+          "id": "inputHP",
+          "label": "Input Horsepower",
+          "unit": "hp",
+          "formula": "inputs.bowlHP / (inputs.pumpEfficiency / 100) / (inputs.motorEfficiency / 100)",
+          "format": "decimal"
+        },
+        {
+          "id": "fieldEfficiency",
+          "label": "Field Efficiency",
+          "unit": "%",
+          "formula": "(inputs.bowlHP / inputs.inputHP) * 100",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

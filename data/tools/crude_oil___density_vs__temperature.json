@@ -1,0 +1,69 @@
+{
+  "id": "crude_oil___density_vs__temperature",
+  "title": "Crude Oil - Density vs. Temperature",
+  "description": "Calculate crude oil density and volume changes across temperatures using ASTM D 1250-04 and IP 200/04 standards. Determine density at different temperatures and apply volume correction factors based on temperature changes.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Crude Oil Density & Temperature Correlation\n\nThis calculator helps you determine crude oil density changes across temperatures and calculate volume corrections using ASTM D 1250-04 and IP 200/04 standards.\n\n### Key Concepts:\n- **Density changes with temperature** along characteristic curves for different crude oils\n- **Volume Correction Factor (VCF)** = Density at observed temperature / Density at reference temperature\n- Volume increases with increasing temperature (density decreases)\n- Base reference temperature: 15°C (59°F)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "reference_density",
+          "label": "Reference Density (at 15°C)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 761
+        },
+        {
+          "id": "reference_temperature",
+          "label": "Reference Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 15
+        },
+        {
+          "id": "observed_temperature",
+          "label": "Observed Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 50
+        },
+        {
+          "id": "original_volume",
+          "label": "Original Volume",
+          "type": "number",
+          "unit": "liters or m³",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_change",
+          "label": "Temperature Change",
+          "formula": "inputs.observed_temperature - inputs.reference_temperature",
+          "unit": "°C"
+        },
+        {
+          "id": "corrected_volume",
+          "label": "Corrected Volume",
+          "formula": "inputs.original_volume * (inputs.reference_density / (inputs.reference_density * (1 - 0.0006 * (inputs.observed_temperature - inputs.reference_temperature))))",
+          "unit": "Same as input"
+        },
+        {
+          "id": "volume_correction_factor",
+          "label": "Volume Correction Factor (VCF)",
+          "formula": "inputs.reference_density / (inputs.reference_density * (1 - 0.0006 * (inputs.observed_temperature - inputs.reference_temperature)))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Example 1: Light Crude Oil\n**Given:** 100 liters of crude oil with density 761 kg/m³ at 50°C\n**Find:** Volume at 15°C (reference temperature)\n**Result:** 100 liters × 0.965 = **97 liters**\n\n### Example 2: Heavy Crude Oil\n**Given:** 1000 m³ of crude oil with density 970 kg/m³ at 15°C\n**Find:** Volume at 250°C\n**Result:** 1000 m³ × 1.188 = **1188 m³**\n\n### Notes:\n- Use the [API-to-gravity converter](api-gravity-d_1212.html) if you have density in °API\n- Volume increases with temperature (density decreases)\n- Always verify results follow this physical principle"
+    }
+  ]
+}

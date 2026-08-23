@@ -1,0 +1,47 @@
+{
+  "id": "electric_shocks",
+  "title": "Electric Shocks",
+  "description": "The physiological effects of electric shocks. The effect of an electrical shock on a body is primarily determined by the electric current flowing through the body.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Electric Current Physiological Effects\n\nThe effect of an electrical shock on a body is primarily determined by the electric current flowing through the body.\n\n### Current Type Notes\n- **AC** - Alternating Current\n- **DC** - Direct Current"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Electric Current (mA)",
+        "Current Type",
+        "Physiological Effect on the Body"
+      ],
+      "rows": [
+        [
+          "1",
+          "AC",
+          "Possible to feel"
+        ],
+        [
+          "5",
+          "DC",
+          "Possible to feel"
+        ],
+        [
+          "10",
+          "AC",
+          "Muscular contractions 'Can't let go'"
+        ],
+        [
+          "30",
+          "AC",
+          "Ventricular fibrillation and cardiac arrest"
+        ],
+        [
+          "300-500",
+          "DC",
+          "Ventricular fibrillation and cardiac arrest"
+        ]
+      ]
+    }
+  ]
+}

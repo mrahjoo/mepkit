@@ -1,0 +1,113 @@
+{
+  "id": "mixing_fluids",
+  "title": "Mixing Fluids",
+  "description": "Calculate the final mass and temperature when mixing fluids. Supports mixing two or more fluids with different temperatures and specific heat capacities.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate final mass and temperature when mixing fluids",
+      "inputs": [
+        {
+          "id": "m1",
+          "label": "Fluid 1 Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 10
+        },
+        {
+          "id": "t1",
+          "label": "Fluid 1 Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 10
+        },
+        {
+          "id": "c1",
+          "label": "Fluid 1 Specific Heat",
+          "type": "number",
+          "unit": "kJ/kg·°C",
+          "defaultValue": 4.2
+        },
+        {
+          "id": "m2",
+          "label": "Fluid 2 Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 2
+        },
+        {
+          "id": "t2",
+          "label": "Fluid 2 Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        },
+        {
+          "id": "c2",
+          "label": "Fluid 2 Specific Heat",
+          "type": "number",
+          "unit": "kJ/kg·°C",
+          "defaultValue": 4.2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "final_mass",
+          "label": "Final Mass",
+          "unit": "kg",
+          "formula": "inputs.m1 + inputs.m2",
+          "format": "decimal"
+        },
+        {
+          "id": "final_temperature",
+          "label": "Final Temperature",
+          "unit": "°C",
+          "formula": "(inputs.m1 * inputs.c1 * inputs.t1 + inputs.m2 * inputs.c2 * inputs.t2) / (inputs.m1 * inputs.c1 + inputs.m2 * inputs.c2)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Temperature Distribution in Mixed Fluids",
+      "options": {
+        "title": {
+          "text": "Fluid Mixing Analysis",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Fluid 1",
+            "Fluid 2",
+            "Final Mixture"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Temperature (°C)"
+        },
+        "series": [
+          {
+            "data": [
+              "inputs.t1",
+              "inputs.t2",
+              "(inputs.m1 * inputs.c1 * inputs.t1 + inputs.m2 * inputs.c2 * inputs.t2) / (inputs.m1 * inputs.c1 + inputs.m2 * inputs.c2)"
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

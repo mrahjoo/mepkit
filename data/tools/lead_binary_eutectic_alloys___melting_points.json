@@ -1,0 +1,66 @@
+{
+  "id": "lead_binary_eutectic_alloys___melting_points",
+  "title": "Lead Binary Eutectic Alloys - Melting Points",
+  "description": "Pb - Lead (Plumbum) - binary eutectic alloys and melting points. An eutectic mixture is the mixture where the melting point is as low as possible. This tool provides composition and melting points for Lead binary eutectic alloys.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloy Component",
+        "Weight of Alloy Component (%)",
+        "Melting Point (K)",
+        "Melting Point (°C)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Pr - Praseodymium",
+          31,
+          1315,
+          1041.85,
+          1908
+        ],
+        [
+          "Pt - Platinum",
+          5,
+          563,
+          289.85,
+          554
+        ],
+        [
+          "Sb - Antimony (Stibium)",
+          11,
+          520,
+          246.85,
+          477
+        ],
+        [
+          "Sn - Tin (Stannum)",
+          61,
+          460,
+          186.85,
+          369
+        ],
+        [
+          "Te - Tellurium",
+          78,
+          680,
+          406.85,
+          765
+        ],
+        [
+          "Ti - Titanium",
+          74,
+          998,
+          724.85,
+          1337
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "**Conversion Formula:**\n\n_T (°C) = 5/9 × (T (°F) - 32)_\n\n**Key Concept:**\n\nAn *eutectic mixture* is the mixture where the melting point is as low as possible. The melting point of an alloy depends on the relative proportions of the ingredients in the binary alloy composition."
+    }
+  ]
+}

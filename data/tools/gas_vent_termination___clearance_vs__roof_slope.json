@@ -1,0 +1,112 @@
+{
+  "id": "gas_vent_termination___clearance_vs__roof_slope",
+  "title": "Gas Vent Termination - Clearance vs. Roof Slope",
+  "description": "Determines the required clearance for gas vent termination based on roof slope angle. This tool helps ensure proper installation of gas vents in compliance with building codes and safety standards.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "clearance_calculator",
+      "content": "Calculate minimum clearance based on roof slope",
+      "inputs": [
+        {
+          "id": "roof_slope",
+          "label": "Roof Slope",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 30
+        }
+      ],
+      "outputs": [
+        {
+          "id": "min_clearance",
+          "label": "Minimum Clearance",
+          "unit": "inches",
+          "format": "decimal",
+          "formula": "inputs.roof_slope * 0.5"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "clearance_table",
+      "content": "Clearance Requirements by Roof Slope",
+      "headers": [
+        "Roof Slope (degrees)",
+        "Minimum Clearance (inches)",
+        "Category"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          "Flat"
+        ],
+        [
+          15,
+          7.5,
+          "Low Slope"
+        ],
+        [
+          30,
+          15,
+          "Moderate Slope"
+        ],
+        [
+          45,
+          22.5,
+          "Steep Slope"
+        ],
+        [
+          60,
+          30,
+          "Very Steep Slope"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "clearance_chart",
+      "content": "Clearance vs. Roof Slope",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            15,
+            30,
+            45,
+            60
+          ],
+          "name": "Roof Slope (degrees)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Minimum Clearance (inches)"
+        },
+        "series": [
+          {
+            "data": [
+              0,
+              7.5,
+              15,
+              22.5,
+              30
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Minimum Clearance"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Minimum Clearance"
+          ]
+        }
+      }
+    }
+  ]
+}

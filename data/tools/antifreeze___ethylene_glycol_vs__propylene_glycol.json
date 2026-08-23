@@ -1,0 +1,73 @@
+{
+  "id": "antifreeze___ethylene_glycol_vs__propylene_glycol",
+  "title": "Antifreeze - Ethylene Glycol vs. Propylene Glycol",
+  "description": "Comparing ethylene glycol and propylene glycol antifreeze properties",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Ethylene Glycol",
+        "Propylene Glycol",
+        "Comments"
+      ],
+      "rows": [
+        [
+          "Freeze point depression",
+          "More effective",
+          "Less effective",
+          "More antifreeze is needed of propylene glycol to achieve the same freeze point"
+        ],
+        [
+          "Heat transfer efficiency/capability",
+          "Better",
+          "Less",
+          "Ethylene glycol has superior heat transfer efficiency due to lower viscosity - but more fluid must be circulated to transfer the same amount of energy since Propylene glycol has higher specific heat"
+        ],
+        [
+          "Viscosity",
+          "Lower",
+          "Higher",
+          "Propylene glycol increases major head loss in the systems. Pumps head increased"
+        ],
+        [
+          "Flammability",
+          "Low",
+          "Low",
+          ""
+        ],
+        [
+          "Chemical oxygen demand",
+          "Low",
+          "Higher",
+          ""
+        ],
+        [
+          "Biodegrading",
+          "Degrades in 10 - 30 days",
+          "Needs more than 20 - 30 days to degrade",
+          ""
+        ],
+        [
+          "Carcinogenic",
+          "No",
+          "No",
+          "A carcinogen is any substance or agent that promotes cancer"
+        ],
+        [
+          "Toxic",
+          "High level of acute when taken orally, targets the kidneys",
+          "Lower level of acute",
+          "Ethylene glycol should never be used in any drinking water or food processing system"
+        ],
+        [
+          "Skin irritant",
+          "Low",
+          "Low",
+          "Propylene glycol is used in small amounts in cosmetics"
+        ]
+      ]
+    }
+  ]
+}

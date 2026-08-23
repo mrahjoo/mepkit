@@ -1,0 +1,150 @@
+{
+  "id": "electrical_induction_motors____slip",
+  "title": "Electrical Induction Motors - Slip",
+  "description": "Calculate the slip of an AC induction motor based on the synchronous speed of the magnetic field and the shaft rotating speed. Slip is the difference between the synchronous speed and actual shaft speed, expressed as a percentage.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "slip_calculator",
+      "content": "Calculate motor slip using the formula: s = (ns - na) × 100% / ns",
+      "inputs": [
+        {
+          "id": "synchronous_speed",
+          "label": "Synchronous Speed (ns)",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 3600
+        },
+        {
+          "id": "shaft_speed",
+          "label": "Shaft Rotating Speed (na)",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 3540
+        }
+      ],
+      "outputs": [
+        {
+          "id": "slip",
+          "label": "Slip",
+          "formula": "(inputs.synchronous_speed - inputs.shaft_speed) * 100 / inputs.synchronous_speed",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "motor_size_slip_chart",
+      "content": "Typical slip values for different motor sizes",
+      "headers": [
+        "Motor Size (hp)",
+        "Typical Slip (%)"
+      ],
+      "rows": [
+        [
+          "0.5",
+          5
+        ],
+        [
+          "5",
+          3
+        ],
+        [
+          "15",
+          2.5
+        ],
+        [
+          "50",
+          1.7
+        ],
+        [
+          "250",
+          0.8
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0.5 hp",
+            "5 hp",
+            "15 hp",
+            "50 hp",
+            "250 hp"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Slip (%)"
+        },
+        "series": [
+          {
+            "data": [
+              5,
+              3,
+              2.5,
+              1.7,
+              0.8
+            ],
+            "type": "bar",
+            "name": "Typical Slip"
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "id": "speed_poles_frequency_table",
+      "content": "Synchronous motor speed vs. number of poles and frequency",
+      "headers": [
+        "No. of Magnetic Poles",
+        "50 Hz (rpm)",
+        "60 Hz (rpm)"
+      ],
+      "rows": [
+        [
+          "2",
+          "3000",
+          "3600"
+        ],
+        [
+          "4",
+          "1500",
+          "1800"
+        ],
+        [
+          "6",
+          "1000",
+          "1200"
+        ],
+        [
+          "8",
+          "750",
+          "900"
+        ],
+        [
+          "10",
+          "600",
+          "720"
+        ],
+        [
+          "12",
+          "500",
+          "600"
+        ],
+        [
+          "16",
+          "375",
+          "450"
+        ],
+        [
+          "20",
+          "300",
+          "360"
+        ]
+      ]
+    }
+  ]
+}

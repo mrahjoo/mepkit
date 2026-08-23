@@ -1,0 +1,81 @@
+{
+  "id": "troy_weight",
+  "title": "Troy Weight",
+  "description": "A calculator for converting between troy weight units used for precious metals like gold and silver.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Troy Weight Converter",
+      "inputs": [
+        {
+          "id": "troy_oz",
+          "label": "Troy Ounces",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "pennyweight",
+          "label": "Pennyweights",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "grains",
+          "label": "Grains",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "carats",
+          "label": "Carats",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "grams",
+          "label": "Grams",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_troy_oz",
+          "label": "Total Troy Ounces",
+          "formula": "inputs.troy_oz + inputs.pennyweight/20 + inputs.grains/480 + inputs.carats/155.517 + inputs.grams/31.103",
+          "unit": "Troy Oz",
+          "format": "decimal"
+        },
+        {
+          "id": "total_pennyweight",
+          "label": "Total Pennyweights",
+          "formula": "(inputs.troy_oz + inputs.pennyweight/20 + inputs.grains/480 + inputs.carats/155.517 + inputs.grams/31.103) * 20",
+          "unit": "dwt",
+          "format": "decimal"
+        },
+        {
+          "id": "total_grains",
+          "label": "Total Grains",
+          "formula": "(inputs.troy_oz + inputs.pennyweight/20 + inputs.grains/480 + inputs.carats/155.517 + inputs.grams/31.103) * 480",
+          "unit": "gr",
+          "format": "decimal"
+        },
+        {
+          "id": "total_carats",
+          "label": "Total Carats",
+          "formula": "(inputs.troy_oz + inputs.pennyweight/20 + inputs.grains/480 + inputs.carats/155.517 + inputs.grams/31.103) * 155.517",
+          "unit": "ct",
+          "format": "decimal"
+        },
+        {
+          "id": "total_grams",
+          "label": "Total Grams",
+          "formula": "(inputs.troy_oz + inputs.pennyweight/20 + inputs.grains/480 + inputs.carats/155.517 + inputs.grams/31.103) * 31.103",
+          "unit": "g",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

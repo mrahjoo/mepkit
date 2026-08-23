@@ -1,0 +1,217 @@
+{
+  "id": "dynamic__absolute__and_kinematic_viscosity___defin",
+  "title": "Dynamic, Absolute, and Kinematic Viscosity – Definitions & Conversions",
+  "description": "Calculator for converting between dynamic (absolute) viscosity and kinematic viscosity. Includes conversions between Pa·s, cP, cSt, and SSU units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Viscosity Conversion Calculator\n\nViscosity is a measure of a fluid's resistance to flow. There are two related measures:\n\n- **Dynamic (Absolute) Viscosity**: A measure of internal resistance, typically expressed in Pa·s or cP\n- **Kinematic Viscosity**: The ratio of absolute viscosity to density, typically expressed in cSt or m²/s\n\n### Key Relationships:\n- ν = μ / ρ (Kinematic viscosity = Dynamic viscosity / Density)\n- 1 cP = 0.001 Pa·s\n- 1 cSt = 10⁻⁶ m²/s = 1 mm²/s"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Dynamic to Kinematic Viscosity"
+      ],
+      "inputs": [
+        {
+          "id": "dynamic_visc_cP",
+          "label": "Dynamic Viscosity",
+          "type": "number",
+          "unit": "cP (centiPoise)",
+          "defaultValue": 1
+        },
+        {
+          "id": "density",
+          "label": "Fluid Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "kinematic_visc_cSt",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt (centiStoke)",
+          "formula": "(inputs.dynamic_visc_cP / inputs.density) * 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_visc_m2s",
+          "label": "Kinematic Viscosity",
+          "unit": "m²/s",
+          "formula": "(inputs.dynamic_visc_cP / inputs.density) * 1e-6",
+          "format": "scientific"
+        },
+        {
+          "id": "dynamic_visc_Pa_s",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "formula": "inputs.dynamic_visc_cP * 0.001",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Kinematic to SSU Conversion"
+      ],
+      "inputs": [
+        {
+          "id": "kinematic_visc_cSt_input",
+          "label": "Kinematic Viscosity",
+          "type": "number",
+          "unit": "cSt (centiStoke)",
+          "defaultValue": 1
+        },
+        {
+          "id": "temperature_range",
+          "label": "Temperature Range",
+          "type": "select",
+          "options": [
+            {
+              "label": "Below 100 cSt",
+              "value": "low"
+            },
+            {
+              "label": "Above 100 cSt",
+              "value": "high"
+            }
+          ],
+          "defaultValue": "low"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ssu_viscosity",
+          "label": "Kinematic Viscosity in SSU",
+          "unit": "SSU (Saybolt Universal Seconds)",
+          "formula": "inputs.temperature_range === 'low' ? (0.226 * inputs.kinematic_visc_cSt_input + 195 / inputs.kinematic_visc_cSt_input) : (0.220 * inputs.kinematic_visc_cSt_input + 135 / inputs.kinematic_visc_cSt_input)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Liquid",
+        "Absolute Viscosity (Pa·s)",
+        "Absolute Viscosity (cP)"
+      ],
+      "rows": [
+        [
+          "Air",
+          "1.983×10⁻⁵",
+          "0.01983"
+        ],
+        [
+          "Water",
+          "0.001",
+          "1"
+        ],
+        [
+          "Olive Oil",
+          "0.1",
+          "100"
+        ],
+        [
+          "Glycerol",
+          "1",
+          "1000"
+        ],
+        [
+          "Liquid Honey",
+          "10",
+          "10000"
+        ],
+        [
+          "Golden Syrup",
+          "100",
+          "100000"
+        ],
+        [
+          "Glass",
+          "10⁴⁰",
+          "10⁴²"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Kinematic Viscosity (cSt)",
+        "SSU (SUS)",
+        "Typical Liquid"
+      ],
+      "rows": [
+        [
+          "0.1",
+          "-",
+          "Mercury"
+        ],
+        [
+          "1",
+          "31",
+          "Water (20°C)"
+        ],
+        [
+          "4.3",
+          "40",
+          "Milk, SAE 20 Oil"
+        ],
+        [
+          "15.7",
+          "80",
+          "No. 4 fuel oil"
+        ],
+        [
+          "20.6",
+          "100",
+          "Cream"
+        ],
+        [
+          "43.2",
+          "200",
+          "Vegetable oil"
+        ],
+        [
+          "110",
+          "500",
+          "SAE 30 Oil"
+        ],
+        [
+          "220",
+          "1000",
+          "Tomato Juice"
+        ],
+        [
+          "440",
+          "2000",
+          "SAE 140 Gear Oil"
+        ],
+        [
+          "1100",
+          "5000",
+          "Glycerine"
+        ],
+        [
+          "2200",
+          "10000",
+          "Honey"
+        ],
+        [
+          "6250",
+          "28000",
+          "Mayonnaise"
+        ],
+        [
+          "19000",
+          "86000",
+          "Sour cream"
+        ]
+      ]
+    }
+  ]
+}

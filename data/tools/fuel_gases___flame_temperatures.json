@@ -1,0 +1,72 @@
+{
+  "id": "fuel_gases___flame_temperatures",
+  "title": "Fuel Gases - Flame Temperatures",
+  "description": "Adiabatic flame temperatures for common fuel gases - propane, butane, acetylene and more - in air or oxygen atmospheres. Initial gas, air and oxygen temperature at 20°C. Stoichiometric Combustion - no excess air/oxygen.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Combustion with Oxygen (°C)",
+        "Combustion with Air (°C)"
+      ],
+      "rows": [
+        [
+          "Acetylene",
+          3480,
+          2500
+        ],
+        [
+          "Butane",
+          "-",
+          1970
+        ],
+        [
+          "Carbon Monoxide",
+          "-",
+          2121
+        ],
+        [
+          "Ethane",
+          "-",
+          1955
+        ],
+        [
+          "Hydrogen",
+          3200,
+          2210
+        ],
+        [
+          "MAPP",
+          2927,
+          2010
+        ],
+        [
+          "Methane",
+          "-",
+          1950
+        ],
+        [
+          "Natural Gas",
+          "-",
+          1960
+        ],
+        [
+          "Propane",
+          2526,
+          1967
+        ],
+        [
+          "Propane Butane Mix",
+          "-",
+          1970
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "**Note:** MAPP gas is a mixture of various hydrocarbons, principally, methyl acetylene and propadiene."
+    }
+  ]
+}

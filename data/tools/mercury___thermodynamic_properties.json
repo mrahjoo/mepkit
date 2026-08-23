@@ -1,0 +1,292 @@
+{
+  "id": "mercury___thermodynamic_properties",
+  "title": "Mercury - Thermodynamic Properties",
+  "description": "Properties of saturated liquid Mercury - Hg - density, specific heat capacity, kinematic viscosity, thermal conductivity and Prandtl number at various temperatures.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "mercury_properties_calculator",
+      "content": "Mercury Thermodynamic Properties Calculator",
+      "headers": [
+        "Property",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "unit": "kg/m³",
+          "formula": "13545 - 0.2 * (inputs.temperature - 20)",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat (cp)",
+          "unit": "10³ J/kg·K",
+          "formula": "0.139",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity (k)",
+          "unit": "W/m·K",
+          "formula": "8.69 + 0.0344 * (inputs.temperature - 20)",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_viscosity",
+          "label": "Kinematic Viscosity (ν)",
+          "unit": "10⁻⁶ m²/s",
+          "formula": "0.114 - 0.0005 * (inputs.temperature - 20)",
+          "format": "decimal"
+        },
+        {
+          "id": "prandtl_number",
+          "label": "Prandtl Number (Pr)",
+          "unit": "-",
+          "formula": "0.025 - 0.00006 * (inputs.temperature - 20)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "mercury_properties_table",
+      "content": "Mercury Thermodynamic Properties - Data Table",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Specific Heat (10³ J/kg·K)",
+        "Thermal Conductivity (W/m·K)",
+        "Kinematic Viscosity (10⁻⁶ m²/s)",
+        "Prandtl Number"
+      ],
+      "rows": [
+        [
+          0,
+          13595,
+          0.14,
+          8.2,
+          0.124,
+          0.029
+        ],
+        [
+          20,
+          13545,
+          0.139,
+          8.69,
+          0.114,
+          0.025
+        ],
+        [
+          50,
+          13472,
+          0.139,
+          9.4,
+          0.104,
+          0.021
+        ],
+        [
+          100,
+          13351,
+          0.137,
+          10.51,
+          0.093,
+          0.016
+        ],
+        [
+          150,
+          13231,
+          0.137,
+          11.49,
+          0.085,
+          0.013
+        ],
+        [
+          200,
+          13112,
+          0.157,
+          12.34,
+          0.08,
+          0.012
+        ],
+        [
+          250,
+          12993,
+          0.136,
+          13.07,
+          0.077,
+          0.01
+        ],
+        [
+          315.5,
+          null,
+          0.134,
+          14.02,
+          0.067,
+          0.008
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "mercury_density_vs_temperature",
+      "content": "Mercury - Density vs Temperature",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)"
+      ],
+      "options": {
+        "title": {
+          "text": "Mercury - Density vs Temperature"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            20,
+            50,
+            100,
+            150,
+            200,
+            250,
+            315.5
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Density (kg/m³)"
+        },
+        "series": [
+          {
+            "name": "Density",
+            "data": [
+              13595,
+              13545,
+              13472,
+              13351,
+              13231,
+              13112,
+              12993,
+              null
+            ],
+            "type": "line",
+            "smooth": true,
+            "symbol": "circle",
+            "symbolSize": 6
+          }
+        ]
+      }
+    },
+    {
+      "type": "chart",
+      "id": "mercury_thermal_conductivity_vs_temperature",
+      "content": "Mercury - Thermal Conductivity vs Temperature",
+      "headers": [
+        "Temperature (°C)",
+        "Thermal Conductivity (W/m·K)"
+      ],
+      "options": {
+        "title": {
+          "text": "Mercury - Thermal Conductivity vs Temperature"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            20,
+            50,
+            100,
+            150,
+            200,
+            250,
+            315.5
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Thermal Conductivity (W/m·K)"
+        },
+        "series": [
+          {
+            "name": "Thermal Conductivity",
+            "data": [
+              8.2,
+              8.69,
+              9.4,
+              10.51,
+              11.49,
+              12.34,
+              13.07,
+              14.02
+            ],
+            "type": "line",
+            "smooth": true,
+            "symbol": "circle",
+            "symbolSize": 6
+          }
+        ]
+      }
+    },
+    {
+      "type": "chart",
+      "id": "mercury_viscosity_vs_temperature",
+      "content": "Mercury - Kinematic Viscosity vs Temperature",
+      "headers": [
+        "Temperature (°C)",
+        "Kinematic Viscosity (10⁻⁶ m²/s)"
+      ],
+      "options": {
+        "title": {
+          "text": "Mercury - Kinematic Viscosity vs Temperature"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            20,
+            50,
+            100,
+            150,
+            200,
+            250,
+            315.5
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Kinematic Viscosity (10⁻⁶ m²/s)"
+        },
+        "series": [
+          {
+            "name": "Kinematic Viscosity",
+            "data": [
+              0.124,
+              0.114,
+              0.104,
+              0.093,
+              0.085,
+              0.08,
+              0.077,
+              0.067
+            ],
+            "type": "line",
+            "smooth": true,
+            "symbol": "circle",
+            "symbolSize": 6
+          }
+        ]
+      }
+    }
+  ]
+}

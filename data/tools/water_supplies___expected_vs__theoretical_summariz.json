@@ -1,0 +1,189 @@
+{
+  "id": "water_supplies___expected_vs__theoretical_summariz",
+  "title": "Water Supplies - Expected vs. Theoretical Summarized Demand",
+  "description": "Calculate the expected total water flow for a water supply system based on the total theoretical demand and the largest consumer demand. The formula accounts for intermittent use patterns in ordinary systems like homes, offices, and nursing homes.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Expected Water Demand Calculator",
+      "inputs": [
+        {
+          "id": "qnl",
+          "label": "Demand of Largest Consumer (qnl)",
+          "type": "number",
+          "unit": "l/s",
+          "defaultValue": 0.4
+        },
+        {
+          "id": "sum_qn",
+          "label": "Total Theoretical Water Flow (Σqn)",
+          "type": "number",
+          "unit": "l/s",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "qet",
+          "label": "Expected Total Water Flow (qet)",
+          "formula": "Math.max(inputs.qnl, inputs.qnl + 0.015 * (inputs.sum_qn - inputs.qnl) + 0.17 * Math.pow(inputs.sum_qn - inputs.qnl, 0.5))",
+          "unit": "l/s",
+          "format": "decimal"
+        },
+        {
+          "id": "difference",
+          "label": "Difference (Σqn - qet)",
+          "formula": "inputs.sum_qn - Math.max(inputs.qnl, inputs.qnl + 0.015 * (inputs.sum_qn - inputs.qnl) + 0.17 * Math.pow(inputs.sum_qn - inputs.qnl, 0.5))",
+          "unit": "l/s",
+          "format": "decimal"
+        },
+        {
+          "id": "reduction_percent",
+          "label": "Demand Reduction",
+          "formula": "((inputs.sum_qn - Math.max(inputs.qnl, inputs.qnl + 0.015 * (inputs.sum_qn - inputs.qnl) + 0.17 * Math.pow(inputs.sum_qn - inputs.qnl, 0.5))) / inputs.sum_qn * 100)",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Water Supplies - Expected vs. Theoretical Summarized Demand",
+      "headers": [
+        "Total Theoretical Demand (l/s)",
+        "Expected Demand (l/s)"
+      ],
+      "rows": [
+        [
+          0.2,
+          0.2
+        ],
+        [
+          0.8,
+          0.4
+        ],
+        [
+          1.6,
+          0.5
+        ],
+        [
+          4,
+          0.6
+        ],
+        [
+          8,
+          0.85
+        ],
+        [
+          15,
+          1.1
+        ],
+        [
+          20,
+          1.5
+        ],
+        [
+          30,
+          1.8
+        ],
+        [
+          40,
+          2.1
+        ],
+        [
+          65,
+          2.8
+        ],
+        [
+          70,
+          2.9
+        ],
+        [
+          100,
+          3.7
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Expected vs. Theoretical Demand Curve",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Total Theoretical Demand",
+            "Expected Demand"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Total Theoretical Demand (l/s)",
+          "data": [
+            0.2,
+            0.8,
+            1.6,
+            4,
+            8,
+            15,
+            20,
+            30,
+            40,
+            65,
+            70,
+            100
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Water Flow (l/s)"
+        },
+        "series": [
+          {
+            "name": "Total Theoretical Demand",
+            "type": "line",
+            "data": [
+              0.2,
+              0.8,
+              1.6,
+              4,
+              8,
+              15,
+              20,
+              30,
+              40,
+              65,
+              70,
+              100
+            ],
+            "smooth": true,
+            "lineStyle": {
+              "type": "dashed"
+            }
+          },
+          {
+            "name": "Expected Demand",
+            "type": "line",
+            "data": [
+              0.2,
+              0.4,
+              0.5,
+              0.6,
+              0.85,
+              1.1,
+              1.5,
+              1.8,
+              2.1,
+              2.8,
+              2.9,
+              3.7
+            ],
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

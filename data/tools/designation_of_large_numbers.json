@@ -1,0 +1,104 @@
+{
+  "id": "designation_of_large_numbers",
+  "title": "Designation of Large Numbers",
+  "description": "Designation of large numbers in US vs. other countries.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Power of 10",
+        "US Designation",
+        "Other Countries Designation"
+      ],
+      "rows": [
+        [
+          "10^6",
+          "million",
+          "million"
+        ],
+        [
+          "10^9",
+          "billion",
+          "milliard"
+        ],
+        [
+          "10^12",
+          "trillion",
+          "billion"
+        ],
+        [
+          "10^15",
+          "quadrillion",
+          "billiard"
+        ],
+        [
+          "10^18",
+          "quintillion",
+          "trillion"
+        ],
+        [
+          "10^100",
+          "googol",
+          ""
+        ],
+        [
+          "10^googol",
+          "googolplex",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "10^6",
+            "10^9",
+            "10^12",
+            "10^15",
+            "10^18"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "US Designation",
+            "data": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "bar"
+          },
+          {
+            "name": "Other Countries Designation",
+            "data": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "type": "bar"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "US Designation",
+            "Other Countries Designation"
+          ]
+        }
+      }
+    }
+  ]
+}

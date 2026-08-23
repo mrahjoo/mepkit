@@ -1,0 +1,289 @@
+{
+  "id": "hardwood_and_softwood_species",
+  "title": "Hardwood and Softwood Species",
+  "description": "Species of hardwood vs. softwood. Softwood comes from gymnosperms (mostly conifers), while hardwood comes from angiosperms (flowering plants).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type",
+        "Species"
+      ],
+      "rows": [
+        [
+          "Hardwood",
+          "Alder, red"
+        ],
+        [
+          "Hardwood",
+          "Apple"
+        ],
+        [
+          "Hardwood",
+          "Ash, black"
+        ],
+        [
+          "Hardwood",
+          "Ash, green"
+        ],
+        [
+          "Hardwood",
+          "Ash, white"
+        ],
+        [
+          "Hardwood",
+          "Aspen"
+        ],
+        [
+          "Hardwood",
+          "Basswood, American"
+        ],
+        [
+          "Hardwood",
+          "Beech, American"
+        ],
+        [
+          "Hardwood",
+          "Birch, paper"
+        ],
+        [
+          "Hardwood",
+          "Birch, sweet"
+        ],
+        [
+          "Hardwood",
+          "Birch, yellow"
+        ],
+        [
+          "Hardwood",
+          "Cherry, black"
+        ],
+        [
+          "Hardwood",
+          "Chestnut, American"
+        ],
+        [
+          "Hardwood",
+          "Cottonwood"
+        ],
+        [
+          "Hardwood",
+          "Elm, American"
+        ],
+        [
+          "Hardwood",
+          "Elm, cedar"
+        ],
+        [
+          "Hardwood",
+          "Elm, rock"
+        ],
+        [
+          "Hardwood",
+          "Hackberry"
+        ],
+        [
+          "Hardwood",
+          "Hickory, bitternut"
+        ],
+        [
+          "Hardwood",
+          "Hickory, mockernut"
+        ],
+        [
+          "Hardwood",
+          "Hickory, pignut"
+        ],
+        [
+          "Hardwood",
+          "Hickory, red"
+        ],
+        [
+          "Hardwood",
+          "Hickory, sand"
+        ],
+        [
+          "Hardwood",
+          "Hickory, water"
+        ],
+        [
+          "Hardwood",
+          "Magnolia"
+        ],
+        [
+          "Hardwood",
+          "Maple, silver"
+        ],
+        [
+          "Hardwood",
+          "Maple, sugar"
+        ],
+        [
+          "Hardwood",
+          "Oak, California black"
+        ],
+        [
+          "Hardwood",
+          "Oak, northern red"
+        ],
+        [
+          "Hardwood",
+          "Oak, southern red"
+        ],
+        [
+          "Hardwood",
+          "Oak, water"
+        ],
+        [
+          "Hardwood",
+          "Oak, white"
+        ],
+        [
+          "Hardwood",
+          "Oak, willow"
+        ],
+        [
+          "Hardwood",
+          "Sweetgum"
+        ],
+        [
+          "Hardwood",
+          "Sycamore, American"
+        ],
+        [
+          "Hardwood",
+          "Tupelo, black"
+        ],
+        [
+          "Hardwood",
+          "Tupelo, swamp"
+        ],
+        [
+          "Hardwood",
+          "Tupelo, water"
+        ],
+        [
+          "Hardwood",
+          "Walnut, black"
+        ],
+        [
+          "Hardwood",
+          "Yellow-poplar"
+        ],
+        [
+          "Softwood",
+          "Baldcypress"
+        ],
+        [
+          "Softwood",
+          "Cedar, eastern red"
+        ],
+        [
+          "Softwood",
+          "Cedar, incense"
+        ],
+        [
+          "Softwood",
+          "Cedar, Port-Orford"
+        ],
+        [
+          "Softwood",
+          "Cedar, western red"
+        ],
+        [
+          "Softwood",
+          "Cedar, yellow"
+        ],
+        [
+          "Softwood",
+          "Douglas-fir, coast type"
+        ],
+        [
+          "Softwood",
+          "Fir, balsam"
+        ],
+        [
+          "Softwood",
+          "Fir, grand"
+        ],
+        [
+          "Softwood",
+          "Fir, noble"
+        ],
+        [
+          "Softwood",
+          "Fir, Pacific silver"
+        ],
+        [
+          "Softwood",
+          "Fir, white"
+        ],
+        [
+          "Softwood",
+          "Hemlock, eastern"
+        ],
+        [
+          "Softwood",
+          "Hemlock, western"
+        ],
+        [
+          "Softwood",
+          "Larch, western"
+        ],
+        [
+          "Softwood",
+          "Pine, loblolly"
+        ],
+        [
+          "Softwood",
+          "Pine, lodgepole"
+        ],
+        [
+          "Softwood",
+          "Pine, longleaf"
+        ],
+        [
+          "Softwood",
+          "Pine, ponderosa"
+        ],
+        [
+          "Softwood",
+          "Pine, red"
+        ],
+        [
+          "Softwood",
+          "Pine, shortleaf"
+        ],
+        [
+          "Softwood",
+          "Pine, sugar"
+        ],
+        [
+          "Softwood",
+          "Pine, western white"
+        ],
+        [
+          "Softwood",
+          "Redwood, old growth"
+        ],
+        [
+          "Softwood",
+          "Spruce, black"
+        ],
+        [
+          "Softwood",
+          "Spruce, Engelmann"
+        ],
+        [
+          "Softwood",
+          "Spruce, Sitka"
+        ],
+        [
+          "Softwood",
+          "Tamarack"
+        ]
+      ]
+    }
+  ]
+}

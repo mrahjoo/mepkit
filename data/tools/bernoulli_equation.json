@@ -1,0 +1,216 @@
+{
+  "id": "bernoulli_equation",
+  "title": "Bernoulli Equation Calculator",
+  "description": "Calculate and analyze the Bernoulli Equation for fluid mechanics. Supports energy form, head form, and dynamic pressure calculations for steady state incompressible flow.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Location 1",
+        "Location 2",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Pressure (p)",
+          "inputs.p1",
+          "inputs.p2",
+          "Pa",
+          "Pressure in the fluid"
+        ],
+        [
+          "Fluid Density (ρ)",
+          "inputs.density",
+          "inputs.density",
+          "kg/m³",
+          "Density of fluid"
+        ],
+        [
+          "Velocity (v)",
+          "inputs.v1",
+          "inputs.v2",
+          "m/s",
+          "Velocity of fluid"
+        ],
+        [
+          "Elevation (h)",
+          "inputs.h1",
+          "inputs.h2",
+          "m",
+          "Height above reference point"
+        ],
+        [
+          "Energy per Unit Mass (E)",
+          "outputs.E1",
+          "outputs.E2",
+          "J/kg",
+          "Total energy per unit mass"
+        ],
+        [
+          "Head (h_head)",
+          "outputs.h_head1",
+          "outputs.h_head2",
+          "m",
+          "Pressure head + velocity head + elevation"
+        ],
+        [
+          "Dynamic Pressure (pd)",
+          "outputs.pd1",
+          "outputs.pd2",
+          "Pa",
+          "Dynamic pressure = 0.5 * ρ * v²"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "p1",
+          "label": "Pressure at Point 1 (p1)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        },
+        {
+          "id": "p2",
+          "label": "Pressure at Point 2 (p2)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        },
+        {
+          "id": "v1",
+          "label": "Velocity at Point 1 (v1)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 2
+        },
+        {
+          "id": "v2",
+          "label": "Velocity at Point 2 (v2)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 4
+        },
+        {
+          "id": "h1",
+          "label": "Elevation at Point 1 (h1)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "h2",
+          "label": "Elevation at Point 2 (h2)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "g",
+          "label": "Gravitational Acceleration (g)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "discharge_coeff",
+          "label": "Discharge Coefficient (c)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.98
+        },
+        {
+          "id": "energy_loss",
+          "label": "Energy Loss (Eloss)",
+          "type": "number",
+          "unit": "J/kg",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "E1",
+          "label": "Energy at Point 1",
+          "formula": "inputs.p1 / inputs.density + (inputs.v1 * inputs.v1) / 2 + inputs.g * inputs.h1",
+          "unit": "J/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "E2",
+          "label": "Energy at Point 2",
+          "formula": "inputs.p2 / inputs.density + (inputs.v2 * inputs.v2) / 2 + inputs.g * inputs.h2 + inputs.energy_loss",
+          "unit": "J/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "h_head1",
+          "label": "Total Head at Point 1",
+          "formula": "inputs.p1 / (inputs.density * inputs.g) + (inputs.v1 * inputs.v1) / (2 * inputs.g) + inputs.h1",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "h_head2",
+          "label": "Total Head at Point 2",
+          "formula": "inputs.p2 / (inputs.density * inputs.g) + (inputs.v2 * inputs.v2) / (2 * inputs.g) + inputs.h2 + inputs.energy_loss / inputs.g",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "pd1",
+          "label": "Dynamic Pressure at Point 1",
+          "formula": "0.5 * inputs.density * inputs.v1 * inputs.v1",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "pd2",
+          "label": "Dynamic Pressure at Point 2",
+          "formula": "0.5 * inputs.density * inputs.v2 * inputs.v2",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_head1",
+          "label": "Pressure Head at Point 1",
+          "formula": "inputs.p1 / (inputs.density * inputs.g)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_head2",
+          "label": "Pressure Head at Point 2",
+          "formula": "inputs.p2 / (inputs.density * inputs.g)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity_head1",
+          "label": "Velocity Head at Point 1",
+          "formula": "(inputs.v1 * inputs.v1) / (2 * inputs.g)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity_head2",
+          "label": "Velocity Head at Point 2",
+          "formula": "(inputs.v2 * inputs.v2) / (2 * inputs.g)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

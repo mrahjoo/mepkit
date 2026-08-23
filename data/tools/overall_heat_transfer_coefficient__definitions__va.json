@@ -1,0 +1,300 @@
+{
+  "id": "overall_heat_transfer_coefficient__definitions__va",
+  "title": "Overall Heat Transfer Coefficient: Definitions, Values & Applications",
+  "description": "Calculator for overall heat transfer coefficient and heat transfer through multi-layered walls, pipes, or heat exchangers with fluid flow on each side. Supports both metric and imperial units consistently.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "id": "intro_section",
+      "content": "# Overall Heat Transfer Coefficient Calculator\n\nHeat transfer through a multi-layered wall can be calculated using:\n\n**q = U A ΔT**\n\nWhere:\n- **q** = heat transfer (W or Btu/h)\n- **U** = overall heat transfer coefficient (W/(m²K) or Btu/(ft² h °F))\n- **A** = wall area (m² or ft²)\n- **ΔT** = temperature difference (°C or °F)\n\nFor multi-layered walls with equal area in all layers:\n\n**1/U = 1/hci + Σ(sn/kn) + 1/hco**\n\nWhere:\n- **hci, hco** = inside/outside convection coefficients\n- **sn** = thickness of layer n\n- **kn** = thermal conductivity of layer n"
+    },
+    {
+      "type": "calculator",
+      "id": "heat_transfer_calculator",
+      "content": "Multi-Layered Wall Heat Transfer Calculator",
+      "inputs": [
+        {
+          "id": "area",
+          "label": "Wall Area (A)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m² or ft²"
+        },
+        {
+          "id": "temp1",
+          "label": "Temperature 1 (t1)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "°C or °F"
+        },
+        {
+          "id": "temp2",
+          "label": "Temperature 2 (t2)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C or °F"
+        },
+        {
+          "id": "hci",
+          "label": "Inside Convection Coefficient (hci)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "W/(m²K) or Btu/(ft² h °F)"
+        },
+        {
+          "id": "s1",
+          "label": "Thickness Layer 1 (s1)",
+          "type": "number",
+          "defaultValue": 0.0001,
+          "unit": "m or ft"
+        },
+        {
+          "id": "k1",
+          "label": "Thermal Conductivity Layer 1 (k1)",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "W/(m K) or Btu/(hr ft °F)"
+        },
+        {
+          "id": "s2",
+          "label": "Thickness Layer 2 (s2)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m or ft"
+        },
+        {
+          "id": "k2",
+          "label": "Thermal Conductivity Layer 2 (k2)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "W/(m K) or Btu/(hr ft °F)"
+        },
+        {
+          "id": "s3",
+          "label": "Thickness Layer 3 (s3)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m or ft"
+        },
+        {
+          "id": "k3",
+          "label": "Thermal Conductivity Layer 3 (k3)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "W/(m K) or Btu/(hr ft °F)"
+        },
+        {
+          "id": "hco",
+          "label": "Outside Convection Coefficient (hco)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "W/(m²K) or Btu/(ft² h °F)"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "delta_t",
+          "label": "Temperature Difference (ΔT)",
+          "formula": "inputs.temp1 - inputs.temp2",
+          "unit": "°C or °F"
+        },
+        {
+          "id": "thermal_resistance",
+          "label": "Total Thermal Resistance (R)",
+          "formula": "(1 / inputs.hci) + (inputs.s1 / inputs.k1) + (inputs.s2 > 0 ? inputs.s2 / inputs.k2 : 0) + (inputs.s3 > 0 ? inputs.s3 / inputs.k3 : 0) + (1 / inputs.hco)",
+          "unit": "m²K/W or ft² h°F/Btu"
+        },
+        {
+          "id": "overall_htc",
+          "label": "Overall Heat Transfer Coefficient (U)",
+          "formula": "1 / ((1 / inputs.hci) + (inputs.s1 / inputs.k1) + (inputs.s2 > 0 ? inputs.s2 / inputs.k2 : 0) + (inputs.s3 > 0 ? inputs.s3 / inputs.k3 : 0) + (1 / inputs.hco))",
+          "unit": "W/(m²K) or Btu/(ft² h °F)",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_transfer",
+          "label": "Heat Transfer (q)",
+          "formula": "(1 / ((1 / inputs.hci) + (inputs.s1 / inputs.k1) + (inputs.s2 > 0 ? inputs.s2 / inputs.k2 : 0) + (inputs.s3 > 0 ? inputs.s3 / inputs.k3 : 0) + (1 / inputs.hco))) * inputs.area * (inputs.temp1 - inputs.temp2)",
+          "unit": "W or Btu/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "typical_values_table",
+      "content": "Typical Overall Heat Transfer Coefficients",
+      "headers": [
+        "Fluid Configuration",
+        "U Range (W/m²K)",
+        "Typical Application"
+      ],
+      "rows": [
+        [
+          "Free Convection Gas - Free Convection Gas",
+          "1 - 2",
+          "Window, room to outside air through glass"
+        ],
+        [
+          "Free Convection Gas - Forced liquid (flowing) water",
+          "5 - 15",
+          "Radiator central heating"
+        ],
+        [
+          "Free Convection Gas - Condensing Vapor Water",
+          "5 - 20",
+          "Steam radiators"
+        ],
+        [
+          "Forced Convection Gas - Free Convection Gas",
+          "3 - 10",
+          "Superheaters"
+        ],
+        [
+          "Forced Convection Gas - Forced Convection Gas",
+          "10 - 30",
+          "Heat exchanger gases"
+        ],
+        [
+          "Forced Convection Gas - Forced liquid (flowing) water",
+          "10 - 50",
+          "Gas coolers"
+        ],
+        [
+          "Forced Convection Gas - Condensing Vapor Water",
+          "10 - 50",
+          "Air heaters"
+        ],
+        [
+          "Liquid Free Convection - Forced Convection Gas",
+          "10 - 50",
+          "Gas boiler"
+        ],
+        [
+          "Liquid Free Convection - Free Convection Liquid",
+          "25 - 500",
+          "Oil bath for heating"
+        ],
+        [
+          "Liquid Free Convection - Forced Liquid (Water, no steering)",
+          "50 - 100",
+          "Heating coil in vessel water"
+        ],
+        [
+          "Liquid Free Convection - Forced Liquid (Water, with steering)",
+          "500 - 2000",
+          "Heating coil in vessel water with steering"
+        ],
+        [
+          "Liquid Free Convection - Condensing Vapor Water (stirrers)",
+          "300 - 1000",
+          "Steam jackets around vessels with stirrers"
+        ],
+        [
+          "Liquid Free Convection - Condensing Vapor Water (other liquids)",
+          "150 - 500",
+          "Steam jackets other liquids"
+        ],
+        [
+          "Forced liquid (flowing) water - Free Convection Gas",
+          "10 - 40",
+          "Combustion chamber + radiation"
+        ],
+        [
+          "Forced liquid (flowing) water - Free Convection Liquid",
+          "500 - 1500",
+          "Cooling coil - stirred"
+        ],
+        [
+          "Forced liquid (flowing) water - Forced liquid (flowing) water",
+          "900 - 2500",
+          "Heat exchanger water/water"
+        ],
+        [
+          "Forced liquid (flowing) water - Condensing Vapor Water",
+          "1000 - 4000",
+          "Condensers steam water"
+        ],
+        [
+          "Boiling liquid water - Free Convection Gas",
+          "10 - 40",
+          "Steam boiler + radiation"
+        ],
+        [
+          "Boiling liquid water - Forced Liquid (Water)",
+          "300 - 1000",
+          "Evaporation of refrigerators or brine coolers"
+        ],
+        [
+          "Boiling liquid water - Condensing Vapor Water",
+          "1500 - 6000",
+          "Evaporators steam/water"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "thermal_conductivity_table",
+      "content": "Thermal Conductivity of Common Materials",
+      "headers": [
+        "Material",
+        "Thermal Conductivity (W/(m K))",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Polypropylene (PP)",
+          "0.1 - 0.22",
+          "Varies with temperature"
+        ],
+        [
+          "Stainless Steel",
+          "16 - 24",
+          "Varies with temperature"
+        ],
+        [
+          "Aluminum",
+          "205 - 250",
+          "Varies with temperature"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "typical_resistances_table",
+      "content": "Typical Heat Transfer Thermal Resistances",
+      "headers": [
+        "Configuration",
+        "Thermal Resistance (m²K/W)"
+      ],
+      "rows": [
+        [
+          "Static air layer, 40 mm",
+          "0.18"
+        ],
+        [
+          "Inside heat transfer resistance, horizontal current",
+          "0.13"
+        ],
+        [
+          "Outside heat transfer resistance, horizontal current",
+          "0.04"
+        ],
+        [
+          "Inside heat transfer resistance, heat current downward to upward",
+          "0.10"
+        ],
+        [
+          "Outside heat transfer resistance, heat current downward",
+          "0.17"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "conversion_section",
+      "content": "## Unit Conversions\n\n**Thermal Conductivity:**\n- 1 W/(m K) = 0.5779 Btu/(ft h °F)\n\n**Heat Transfer Coefficient:**\n- 1 W/(m²K) = 0.85984 kcal/(h m² °C) = 0.1761 Btu/(ft² h °F)\n\n**Thermal Resistance:**\n- 1 m²K/W = 5.678 ft² h °F/Btu"
+    }
+  ]
+}

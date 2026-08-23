@@ -1,0 +1,167 @@
+{
+  "id": "pipe_and_tube_system_components___minor__dynamic__",
+  "title": "Pipe and Tube System Components - Minor (Dynamic) Loss Coefficients",
+  "description": "Calculate minor or dynamic pressure loss in pipe and tube system components using the formula: Δpminor_loss = ξ ρf v² / 2",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Component or Fitting",
+        "Minor Loss Coefficient (ξ)"
+      ],
+      "rows": [
+        [
+          "Tee, Flanged, Dividing Line Flow",
+          0.2
+        ],
+        [
+          "Tee, Threaded, Dividing Line Flow",
+          0.9
+        ],
+        [
+          "Tee, Flanged, Dividing Branched Flow",
+          1
+        ],
+        [
+          "Tee, Threaded, Dividing Branch Flow",
+          2
+        ],
+        [
+          "Union, Threaded",
+          0.08
+        ],
+        [
+          "Elbow, Flanged Regular 90°",
+          0.3
+        ],
+        [
+          "Elbow, Threaded Regular 90°",
+          1.5
+        ],
+        [
+          "Elbow, Threaded Regular 45°",
+          0.4
+        ],
+        [
+          "Elbow, Flanged Long Radius 90°",
+          0.2
+        ],
+        [
+          "Elbow, Threaded Long Radius 90°",
+          0.7
+        ],
+        [
+          "Elbow, Flanged Long Radius 45°",
+          0.2
+        ],
+        [
+          "Return Bend, Flanged 180°",
+          0.2
+        ],
+        [
+          "Return Bend, Threaded 180°",
+          1.5
+        ],
+        [
+          "Globe Valve, Fully Open",
+          10
+        ],
+        [
+          "Angle Valve, Fully Open",
+          2
+        ],
+        [
+          "Gate Valve, Fully Open",
+          0.15
+        ],
+        [
+          "Gate Valve, 1/4 Closed",
+          0.26
+        ],
+        [
+          "Gate Valve, 1/2 Closed",
+          2.1
+        ],
+        [
+          "Gate Valve, 3/4 Closed",
+          17
+        ],
+        [
+          "Swing Check Valve, Forward Flow",
+          2
+        ],
+        [
+          "Ball Valve, Fully Open",
+          0.05
+        ],
+        [
+          "Ball Valve, 1/3 Closed",
+          5.5
+        ],
+        [
+          "Ball Valve, 2/3 Closed",
+          200
+        ],
+        [
+          "Diaphragm Valve, Open",
+          2.3
+        ],
+        [
+          "Diaphragm Valve, Half Open",
+          4.3
+        ],
+        [
+          "Diaphragm Valve, 1/4 Open",
+          21
+        ],
+        [
+          "Water meter",
+          7
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "xi_coefficient",
+          "label": "Minor Loss Coefficient (ξ)",
+          "type": "number",
+          "defaultValue": 5.5,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density (ρf)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "flow_velocity",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "minor_pressure_loss",
+          "label": "Minor Pressure Loss (Δpminor_loss)",
+          "formula": "(inputs.xi_coefficient * inputs.fluid_density * inputs.flow_velocity * inputs.flow_velocity) / 2",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "minor_pressure_loss_kpa",
+          "label": "Minor Pressure Loss (Δpminor_loss)",
+          "formula": "((inputs.xi_coefficient * inputs.fluid_density * inputs.flow_velocity * inputs.flow_velocity) / 2) / 1000",
+          "unit": "kPa",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

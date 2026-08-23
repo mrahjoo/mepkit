@@ -1,0 +1,93 @@
+{
+  "id": "valve_type_classifications",
+  "title": "Valve Type Classifications",
+  "description": "Categories of valves and their applications for flow control, temperature regulation, and process automation.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Valve Type",
+        "Application Description"
+      ],
+      "rows": [
+        [
+          "Flow regulating valves",
+          "For controlling rate of flow."
+        ],
+        [
+          "Temperature regulating valves",
+          "For controlling fluid temperature in a system."
+        ],
+        [
+          "Automatic process control valves",
+          "For controlling rate of flow relative to value."
+        ],
+        [
+          "Anti vacuum valves",
+          "An automatic type of air valve preventing the formation of vacuum in tanks or pipelines."
+        ],
+        [
+          "Blow down valves",
+          "A valve which is used for cleaning sludge from a boiler."
+        ],
+        [
+          "Bulkhead valves",
+          "A gate valve."
+        ],
+        [
+          "Free ball valves",
+          "A valve in which a ball is free to rotate in any direction."
+        ],
+        [
+          "Fusible link or fire valves",
+          "A fire prevention valve which has a weighted lever hold open by a wire and fusible link which melts at an increase of room temperature."
+        ],
+        [
+          "Hydraulic valves",
+          "A control valve for water, oil, or hydraulic systems."
+        ],
+        [
+          "Jet dispersal valve",
+          "A valve incorporating an element by virtue of which the energy within the emitting jet is dissipated."
+        ],
+        [
+          "Penstock",
+          "A single faced type of valve consisting of an open frame and a door and used in terminal positions only. Normal located in tanks or channels for controlling flow in to a pipe."
+        ],
+        [
+          "Plate valves",
+          "A gate valve incorporating a sluicing effect."
+        ],
+        [
+          "Radiator valves",
+          "A valve controlling the flow of water through a radiator."
+        ],
+        [
+          "Rotary slide valve",
+          "A valve in which a rotation of internal parts regulates flow by opening ar closing a series of segmental ports."
+        ],
+        [
+          "Rotary valve",
+          "A spherical plug valve in which the plug, which rotates through 90o."
+        ],
+        [
+          "Solenoid valve",
+          "A valve operated by by an electrical solenoid."
+        ],
+        [
+          "Spectacle eye valve",
+          "A parallel slide valve."
+        ],
+        [
+          "Thermostatic mixing valve",
+          "A valve which combines temperature."
+        ],
+        [
+          "Throttle valve",
+          "A non tight closing butterfly valve."
+        ]
+      ]
+    }
+  ]
+}

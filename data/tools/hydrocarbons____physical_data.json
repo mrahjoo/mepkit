@@ -1,0 +1,6 @@
+{
+  "id": "hydrocarbons____physical_data",
+  "title": "Hydrocarbons - Physical Data",
+  "description": "Comprehensive physical data table for various classes of hydrocarbons including molecular weight, melting point, boiling point, density, flash point, and autoignition temperature. Includes n-alkanes, methylalkanes, alkenes, alkynes, cycloalkanes, aromatic hydrocarbons, and polycyclic aromatic hydrocarbons.",
+  "type": "datatable"
+}

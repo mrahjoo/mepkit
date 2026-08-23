@@ -1,0 +1,40 @@
+{
+  "id": "densities",
+  "title": "Densities",
+  "description": "Densities of solids, liquids and gases. Definitions and convertion calculators.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Densities Calculator\n\nThis tool provides calculations for material densities including solids, liquids, and gases.\n\n## Density Definition\n\nDensity (ρ) is defined as mass per unit volume:\n\n**ρ = m / V**\n\nWhere:\n- **m** = mass (in kilograms or grams)\n- **V** = volume (in cubic meters or cubic centimeters)\n\n## Common Densities\n\n### Solids\n- **Aluminum**: 2,700 kg/m³\n- **Iron**: 7,874 kg/m³\n- **Gold**: 19,300 kg/m³\n- **Lead**: 11,340 kg/m³\n\n### Liquids\n- **Water**: 1,000 kg/m³ (at 4°C)\n- **Ethanol**: 789 kg/m³\n- **Mercury**: 13,546 kg/m³\n- **Olive Oil**: 915 kg/m³\n\n### Gases\n- **Air**: 1.225 kg/m³ (at sea level, 15°C)\n- **Hydrogen**: 0.0899 kg/m³\n- **Oxygen**: 1.429 kg/m³\n- **Carbon Dioxide**: 1.977 kg/m³"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        },
+        {
+          "id": "volume",
+          "label": "Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density",
+          "label": "Density",
+          "formula": "inputs.mass / inputs.volume",
+          "unit": "kg/m³",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

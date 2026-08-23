@@ -1,0 +1,85 @@
+{
+  "id": "liquid__steam_and_gas___flow_coefficients_cv",
+  "title": "Liquid, Steam and Gas - Flow Coefficients Cv",
+  "description": "Calculate flow coefficients (Cv) for liquids, saturated steam, superheated steam, wet steam, and gases. The flow coefficient expresses the flow capacity in GPM that a valve will pass for a pressure drop of 1 psi.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid Type",
+        "Formula",
+        "Cv Result",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Liquid (Volume - Imperial)",
+          "Cv = q √(SG / dp)",
+          "=(inputs.liquid_flow_gpm * SQRT(inputs.liquid_sg / inputs.liquid_dp_psi))",
+          "q in GPM, SG relative to water, dp in psi"
+        ],
+        [
+          "Liquid (Volume - Metric)",
+          "Cv = 11.6 q √(SG / dp)",
+          "=(11.6 * inputs.liquid_flow_m3hr * SQRT(inputs.liquid_sg / inputs.liquid_dp_kpa))",
+          "q in m³/hr, SG relative to water, dp in kPa"
+        ],
+        [
+          "Liquid (Weight - Imperial)",
+          "Cv = w / (500 √(dp SG))",
+          "=(inputs.liquid_flow_lbhr / (500 * SQRT(inputs.liquid_dp_psia * inputs.liquid_sg)))",
+          "w in lb/hr, SG relative to water, dp in psia"
+        ],
+        [
+          "Liquid (Weight - Metric)",
+          "Cv = 5.8 w / (500 √(dp SG))",
+          "=(5.8 * inputs.liquid_flow_kghr / (500 * SQRT(inputs.liquid_dp_kpa * inputs.liquid_sg)))",
+          "w in kg/hr, SG relative to water, dp in kPa"
+        ],
+        [
+          "Saturated Steam (Critical)",
+          "Cv = m / (1.61 pi)",
+          "=(inputs.steam_flow_lbhr / (1.61 * inputs.steam_pi_psia))",
+          "m in lb/hr, pi inlet absolute pressure in psia"
+        ],
+        [
+          "Saturated Steam (Critical - Metric)",
+          "Kv = m / (12 pi)",
+          "=(inputs.steam_flow_kghr / (12 * inputs.steam_pi_bara))",
+          "m in kg/hr, pi inlet absolute pressure in bara"
+        ],
+        [
+          "Saturated Steam (Non-Critical)",
+          "Cv = m / (2.1 √((pi + po) dp))",
+          "=(inputs.steam_flow_lbhr / (2.1 * SQRT((inputs.steam_pi_psia + inputs.steam_po_psia) * inputs.steam_dp_psi)))",
+          "m in lb/hr, pi and po absolute pressures, dp = pi - po"
+        ],
+        [
+          "Superheated Steam",
+          "Cv = Cv_saturated (1 + 0.00065 dt)",
+          "=(inputs.steam_cv_saturated * (1 + 0.00065 * inputs.steam_dt_degf))",
+          "dt = temperature above saturation in °F"
+        ],
+        [
+          "Wet Saturated Steam",
+          "Cv = Cv_saturated √ζ",
+          "=(inputs.steam_cv_saturated * SQRT(inputs.steam_dryness_fraction))",
+          "ζ = dryness fraction (0 to 1)"
+        ],
+        [
+          "Gas (Critical Pressure Drop)",
+          "Cv = q √(SG (T + 460)) / (FL 834 pi)",
+          "=(inputs.gas_flow_cfh * SQRT(inputs.gas_sg * (inputs.gas_temp_degf + 460)) / (inputs.gas_fl * 834 * inputs.gas_pi_psia))",
+          "q in CFH, SG relative to air, T in °F, FL pressure recovery factor"
+        ],
+        [
+          "Gas (Non-Critical Pressure Drop)",
+          "Cv = q √(SG (T + 460)) / (1360 √(dp po))",
+          "=(inputs.gas_flow_cfh * SQRT(inputs.gas_sg * (inputs.gas_temp_degf + 460)) / (1360 * SQRT(inputs.gas_dp_psi * inputs.gas_po_psia)))",
+          "q in CFH, SG relative to air, T in °F, dp and po in psia"
+        ]
+      ]
+    }
+  ]
+}

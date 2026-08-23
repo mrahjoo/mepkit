@@ -1,0 +1,53 @@
+{
+  "id": "sun_charts",
+  "title": "Sun Charts",
+  "description": "Online solar chart creator. A tool that can be used to create sun elevation charts for your location.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Sun Charts\n\nOnline solar chart creator for calculating sun elevation charts based on your location.\n\n## Features\n- Create sun elevation charts for any location\n- Visualize solar angles throughout the day\n- Plan solar installations and shading analysis\n\n## Reference\n[Solar Chart Program - University of Oregon](http://solardat.uoregon.edu/SunChartProgram.html)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "latitude",
+          "label": "Latitude",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 45
+        },
+        {
+          "id": "longitude",
+          "label": "Longitude",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": -122
+        },
+        {
+          "id": "timezone",
+          "label": "Time Zone",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": -8
+        }
+      ],
+      "outputs": [
+        {
+          "id": "location_info",
+          "label": "Location Coordinates",
+          "formula": "inputs.latitude + ', ' + inputs.longitude",
+          "unit": "degrees"
+        },
+        {
+          "id": "timezone_display",
+          "label": "Time Zone Offset",
+          "formula": "inputs.timezone",
+          "unit": "hours",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

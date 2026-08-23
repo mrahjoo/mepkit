@@ -1,0 +1,52 @@
+{
+  "id": "steam_heating_systems___design",
+  "title": "Steam Heating Systems - Design",
+  "description": "Tool for understanding and designing steam heating systems, including single pipe systems with various configurations and steam trap systems for optimal heat distribution and control.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Steam Heating Systems - Design\n\nThe simplest steam heating system can be installed at relative low costs. The disadvantages with the simple system is the lack of modulating quality.\n\n### System Types\n\n#### 1. Single Pipe Steam System with Main Pipes Pitched Towards the Boiler\n- Steam and condensate use the same main pipes\n- Condensate flows in the opposite direction of the steam\n- Air valves necessary for evacuating air during start-up\n- Simple but heat emission is hard to control\n- Suitable for applications where heat is modulated in the boiler (warehouses, garages)\n- Should be avoided where individual radiator modulation is required\n- Good for temporarily heated applications in freezing conditions\n\n#### 2. Single Pipe Steam System with Main Steam Pipes Pitched Away from the Boiler\n- Better design with improved separation of steam and condensate\n- Better than the previous configuration\n\n#### 3. Single Pipe Steam System with Overhead Steam Distribution\n- Further improvement with overhead steam distribution\n- Better steam/condensate separation\n\n#### 4. Steam Trap System\n- Completely separates steam and condensate lines\n- Steam traps hold back steam in heating elements and pipes\n- Work on thermodynamic or mechanical principles\n- Advantages: Better individual modulation of radiators and heat exchangers\n- Disadvantages: More equipment and higher costs\n\n### Key Considerations\n- **Modulation Control**: Determines which system type is appropriate\n- **Freezing Protection**: Simple systems drain back to boiler during stops\n- **Cost vs. Performance**: More complex systems offer better control at higher cost\n- **Application Type**: Different systems suit different industrial applications"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "System Type",
+        "Complexity",
+        "Cost Level",
+        "Modulation Control",
+        "Best Use Case"
+      ],
+      "rows": [
+        [
+          "Single Pipe - Pitched Towards Boiler",
+          "Low",
+          "Low",
+          "Poor (boiler only)",
+          "Warehouses, Garages, Temporary heating"
+        ],
+        [
+          "Single Pipe - Pitched Away from Boiler",
+          "Low-Medium",
+          "Low-Medium",
+          "Fair",
+          "General industrial applications"
+        ],
+        [
+          "Single Pipe - Overhead Distribution",
+          "Medium",
+          "Medium",
+          "Good",
+          "Improved steam/condensate separation"
+        ],
+        [
+          "Steam Trap System",
+          "High",
+          "High",
+          "Excellent (individual control)",
+          "Applications requiring precise temperature control"
+        ]
+      ]
+    }
+  ]
+}

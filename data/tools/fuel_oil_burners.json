@@ -1,0 +1,77 @@
+{
+  "id": "fuel_oil_burners",
+  "title": "Fuel Oil Burners",
+  "description": "An oil burner is a mechanical device that combines fuel oil with proper amounts of air before delivering the mixture to the point of ignition in a combustion chamber. This tool provides information on different types of fuel oil burners including gun-type, pot-type, and rotary burners.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Burner Type",
+        "Operating Principle",
+        "Pressure Range",
+        "Applications",
+        "Advantages",
+        "Disadvantages"
+      ],
+      "rows": [
+        [
+          "Gun-type (Pressure Gun)",
+          "Atomizes fuel oil through nozzle with pressurized airflow",
+          "Residential: 80-130 psi | Commercial/Industrial: 100-300 psi",
+          "Residential to large industrial",
+          "Very flexible, works across wide range of applications",
+          "Higher operating cost"
+        ],
+        [
+          "Pot-type Burners",
+          "Fuel evaporates into combustion air (natural or forced draft)",
+          "Low pressure (gravity-fed)",
+          "Small to medium applications",
+          "Most inexpensive, lowest operating cost",
+          "Limited capacity"
+        ],
+        [
+          "Rotary Burners (Nozzle)",
+          "High-speed rotating nozzle with oil supplied through shaft",
+          "Low pressure (gravity)",
+          "Medium to large applications",
+          "Efficient fuel spray distribution",
+          "Complex mechanics"
+        ],
+        [
+          "Rotary Burners (Cup)",
+          "Cone-shaped rotating cup throws fuel oil by centrifugal force",
+          "Low pressure (gravity)",
+          "Medium to large applications",
+          "Efficient fuel spray distribution",
+          "Complex mechanics"
+        ],
+        [
+          "Vertical Rotary Burners",
+          "Vertical orientation with rotary mechanism",
+          "Low pressure (gravity)",
+          "Large industrial applications",
+          "High capacity potential",
+          "Space requirements"
+        ],
+        [
+          "Horizontal Rotary Burners",
+          "Horizontal orientation with rotary mechanism",
+          "Low pressure (gravity)",
+          "Large industrial applications",
+          "High capacity potential",
+          "Space requirements"
+        ],
+        [
+          "Wall-flame Rotary Burners",
+          "Wall-mounted rotary configuration",
+          "Low pressure (gravity)",
+          "Large industrial applications",
+          "Space efficient for wall mounting",
+          "Limited flexibility"
+        ]
+      ]
+    }
+  ]
+}

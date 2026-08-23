@@ -1,0 +1,44 @@
+{
+  "id": "hazard_vs__flash_points",
+  "title": "Hazard vs. Flash Points",
+  "description": "The flash point of a chemical indicates how easy it may ignite and burn. This tool helps you understand the relationship between flash point temperatures and hazard levels.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Hazard Level",
+        "Flash Point (°F)",
+        "Flash Point (°C)"
+      ],
+      "rows": [
+        [
+          "Very Low Hazard",
+          "> 200",
+          "> 93"
+        ],
+        [
+          "Moderate Low Hazard",
+          "150 to 200",
+          "66 to 93"
+        ],
+        [
+          "High to Moderate Hazard",
+          "100 to 150",
+          "38 to 66"
+        ],
+        [
+          "Extreme to High Hazard",
+          "0 to 100",
+          "-18 to 38"
+        ],
+        [
+          "Extreme Hazard",
+          "< 0",
+          "< -18"
+        ]
+      ],
+      "content": "Flash point is the lowest temperature at which a chemical will evaporate enough fluid to form a combustible concentration of gas. Materials with higher flash points are less flammable or hazardous than chemicals with lower flash points."
+    }
+  ]
+}

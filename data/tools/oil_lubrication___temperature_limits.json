@@ -1,0 +1,58 @@
+{
+  "id": "oil_lubrication___temperature_limits",
+  "title": "Oil Lubrication - Temperature Limits",
+  "description": "Temperature limits for lubricating oils. This table provides typical temperature limits in both Fahrenheit and Celsius for various types of lubricating oils including mineral, petroleum, synthetic, and specialty oils.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Oil Type",
+        "Temperature Limit (°F)",
+        "Temperature Limit (°C)"
+      ],
+      "rows": [
+        [
+          "Mineral",
+          300,
+          149
+        ],
+        [
+          "Petroleum",
+          300,
+          149
+        ],
+        [
+          "Petroleum, superrefined",
+          350,
+          177
+        ],
+        [
+          "Perfluorinated compounds",
+          600,
+          316
+        ],
+        [
+          "Polyphenolether",
+          500,
+          260
+        ],
+        [
+          "Silicones",
+          500,
+          260
+        ],
+        [
+          "Synthetic esters",
+          400,
+          204
+        ],
+        [
+          "Synthetic hydrocarbon",
+          400,
+          204
+        ]
+      ]
+    }
+  ]
+}

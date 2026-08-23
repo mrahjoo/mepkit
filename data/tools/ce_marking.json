@@ -1,0 +1,53 @@
+{
+  "id": "ce_marking",
+  "title": "CE Marking",
+  "description": "CE Marking is a self-certification procedure for manufacturers to verify product compliance with European Union directives. Learn about the 24 EU directives, manufacturer responsibilities, and compliance requirements for selling in the European common market.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# CE Marking\n\n_CE_ is an acronym for the French phrase \"Conformité Européenne\" and is similar to the UL or CSA marks in North America. Unlike UL or CSA which require independent laboratory testing, the CE mark can be applied by the manufacturer through a \"self certifying\" procedure that verify that the products are designed to the appropriate standards.\n\nThe European Union has issued 24 directives related to the CE mark.\n\n## Key Points\n\n*   The CE mark states that the manufacturer complies the product to be within applicable EU directives.\n*   **The CE Marking is NOT a safety mark** and must not be confused with a certificate.\n*   CE marking will never be granted by a third party test house or a certification body.\n\n## Manufacturer Responsibility\n\nThe manufacturer is responsible for non-compliance and liable for any damage caused by the product. If the manufacturer (or his authorized representative) is not based within the EU, the importer is responsible for the product in Europe.\n\nIf a product is not in compliance with the directives, it may be restricted, prohibited from sale or even withdrawn from the market.\n\n## Important Note\n\nBe aware that some European Directives, such as the Pressure Equipment Directive #97/23/CE, require a 3rd party (\"notified body\") for certain products with specific pressure and dimensional characteristics. In these cases, you are not allowed to apply the CE mark without approval from a notified body."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Directive",
+        "Description",
+        "Requires 3rd Party Review",
+        "Self-Certification Allowed"
+      ],
+      "rows": [
+        [
+          "General CE Directive",
+          "Products must comply with applicable EU directives",
+          "No",
+          "Yes"
+        ],
+        [
+          "Machinery Directive",
+          "For machinery and safety components",
+          "Yes",
+          "Conditional"
+        ],
+        [
+          "Pressure Equipment Directive 97/23/CE",
+          "For pressure equipment with specific characteristics",
+          "Yes",
+          "No"
+        ],
+        [
+          "Low Voltage Directive",
+          "For electrical equipment 50-1000V AC or 120-1500V DC",
+          "No",
+          "Yes"
+        ],
+        [
+          "Electromagnetic Compatibility Directive",
+          "For electromagnetic compatibility requirements",
+          "No",
+          "Yes"
+        ]
+      ]
+    }
+  ]
+}

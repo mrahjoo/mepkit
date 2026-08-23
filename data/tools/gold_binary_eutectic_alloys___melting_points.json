@@ -1,0 +1,176 @@
+{
+  "id": "gold_binary_eutectic_alloys___melting_points",
+  "title": "Gold Binary Eutectic Alloys - Melting Points",
+  "description": "Calculator for melting points of gold binary eutectic alloys. View composition data and convert between temperature scales (Kelvin, Celsius, Fahrenheit) for various Au-based alloys including Bismuth, Cadmium, Cerium, Germanium, Lanthanum, Magnesium, Manganese, Sodium, Lead, Antimony, Silicon, Tin, Tellurium, Thallium, and Uranium.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "alloy_data_table",
+      "headers": [
+        "Alloy Component",
+        "Element Symbol",
+        "Weight of Component (%)",
+        "Melting Point (K)",
+        "Melting Point (°C)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Bismuth",
+          "Bi",
+          "85",
+          "514",
+          "241",
+          "466"
+        ],
+        [
+          "Cadmium",
+          "Cd",
+          "57",
+          "773",
+          "500",
+          "932"
+        ],
+        [
+          "Cerium",
+          "Ce",
+          "81",
+          "793",
+          "520",
+          "968"
+        ],
+        [
+          "Germanium",
+          "Ge",
+          "12",
+          "629",
+          "356",
+          "673"
+        ],
+        [
+          "Lanthanum",
+          "La",
+          "78",
+          "834",
+          "561",
+          "1042"
+        ],
+        [
+          "Magnesium",
+          "Mg",
+          "62",
+          "848",
+          "575",
+          "1067"
+        ],
+        [
+          "Manganese",
+          "Mn",
+          "12",
+          "1233",
+          "960",
+          "1760"
+        ],
+        [
+          "Sodium (Natrium)",
+          "Na",
+          "2.3",
+          "1149",
+          "876",
+          "1609"
+        ],
+        [
+          "Lead (Plumbum)",
+          "Pb",
+          "85",
+          "488",
+          "215",
+          "419"
+        ],
+        [
+          "Antimony (Stibium)",
+          "Sb",
+          "24.8",
+          "633",
+          "360",
+          "680"
+        ],
+        [
+          "Silicon",
+          "Si",
+          "3.15",
+          "636",
+          "363",
+          "685"
+        ],
+        [
+          "Tin (Stannum)",
+          "Sn",
+          "19.9",
+          "551",
+          "278",
+          "532"
+        ],
+        [
+          "Tellurium",
+          "Te",
+          "83",
+          "689",
+          "416",
+          "781"
+        ],
+        [
+          "Thallium",
+          "Tl",
+          "73",
+          "404",
+          "131",
+          "268"
+        ],
+        [
+          "Uranium",
+          "U",
+          "16",
+          "1128",
+          "855",
+          "1571"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "temperature_converter",
+      "inputs": [
+        {
+          "id": "temp_fahrenheit",
+          "label": "Temperature (°F)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temp_celsius",
+          "label": "Temperature (°C)",
+          "formula": "5/9 * (inputs.temp_fahrenheit - 32)",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "temp_kelvin",
+          "label": "Temperature (K)",
+          "formula": "5/9 * (inputs.temp_fahrenheit - 32) + 273.15",
+          "unit": "K",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "description",
+      "content": "## Gold Binary Eutectic Alloys\n\nA **eutectic mixture** is the specific composition of two or more elements where the melting point reaches its minimum value. This table presents binary gold-based eutectic alloys with their composition by weight and corresponding melting points in Kelvin (K), Celsius (°C), and Fahrenheit (°F).\n\n### Temperature Conversion Formula\n\n**Celsius to Fahrenheit:** T (°C) = 5/9 × [T (°F) - 32]\n\n### Key Properties\n\n- The melting point of an alloy depends on the relative proportions of its components\n- Eutectic compositions represent the lowest possible melting point for that alloy system\n- Gold alloys with bismuth and lead have particularly low eutectic melting points\n- Gold alloys with manganese and sodium have higher melting points"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "valves___typical_operating_temperatures",
+  "title": "Valves - Typical Operating Temperatures",
+  "description": "Operating temperatures for typical categories of valves - ball valves, butterfly valves and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Valve Type",
+        "Minimum Temperature (°C)",
+        "Minimum Temperature (°F)",
+        "Maximum Temperature (°C)",
+        "Maximum Temperature (°F)"
+      ],
+      "rows": [
+        [
+          "Ball",
+          -55,
+          -65,
+          300,
+          575
+        ],
+        [
+          "Butterfly",
+          -30,
+          -20,
+          538,
+          1000
+        ],
+        [
+          "Butterfly Neck",
+          -18,
+          0,
+          260,
+          500
+        ],
+        [
+          "Gate",
+          -272,
+          -455,
+          675,
+          1250
+        ],
+        [
+          "Globe",
+          -272,
+          -455,
+          540,
+          1000
+        ],
+        [
+          "Plug Lubricated",
+          -40,
+          -40,
+          315,
+          600
+        ],
+        [
+          "Plug non lubricated",
+          -75,
+          -100,
+          220,
+          425
+        ],
+        [
+          "Swing Check",
+          -18,
+          0,
+          540,
+          1200
+        ],
+        [
+          "Swing Check Y-type",
+          -18,
+          0,
+          540,
+          1200
+        ],
+        [
+          "Lift Check",
+          -18,
+          0,
+          540,
+          1200
+        ],
+        [
+          "Tilting disc",
+          -260,
+          -450,
+          590,
+          1100
+        ],
+        [
+          "Diaphragm",
+          -50,
+          -60,
+          230,
+          450
+        ],
+        [
+          "Y Oblique",
+          -272,
+          -455,
+          540,
+          1000
+        ],
+        [
+          "Slide",
+          -18,
+          0,
+          650,
+          1200
+        ],
+        [
+          "Pinch",
+          -75,
+          -100,
+          260,
+          300
+        ],
+        [
+          "Needle",
+          -78,
+          -100,
+          260,
+          500
+        ]
+      ]
+    }
+  ]
+}

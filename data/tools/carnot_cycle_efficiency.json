@@ -1,0 +1,106 @@
+{
+  "id": "carnot_cycle_efficiency",
+  "title": "Carnot Cycle Efficiency",
+  "description": "The efficiency of the Carnot cycle. An ideal reversible cycle where heat is taken in at constant upper temperature and rejected at constant lower temperature. The Carnot efficiency limits the fraction of heat that can be used according to the second law of thermodynamics.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Carnot Cycle Efficiency\n\nThe efficiency of the Carnot cycle is calculated using the formula:\n\n**μC = (Ti - To) / Ti**\n\nWhere:\n- **μC** = efficiency of the Carnot cycle\n- **Ti** = temperature at the engine inlet (K)\n- **To** = temperature at engine exhaust (K)\n\nThe wider the range of temperatures, the more efficient the cycle becomes. The lowest temperature is typically limited by the ambient temperature (10-20°C), while the maximum temperature is limited by the metallurgical strength of available materials."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "Ti",
+          "label": "Inlet Temperature (Ti)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 373
+        },
+        {
+          "id": "To",
+          "label": "Exhaust Temperature (To)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 293
+        }
+      ],
+      "outputs": [
+        {
+          "id": "efficiency",
+          "label": "Carnot Efficiency",
+          "formula": "(inputs.Ti - inputs.To) / inputs.Ti",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "efficiency_percent",
+          "label": "Carnot Efficiency",
+          "formula": "((inputs.Ti - inputs.To) / inputs.Ti) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Inlet Temp (K)",
+        "Exhaust Temp (K)",
+        "Temperature Range (K)",
+        "Carnot Efficiency (%)"
+      ],
+      "rows": [
+        [
+          373,
+          293,
+          80,
+          21.45
+        ],
+        [
+          423,
+          293,
+          130,
+          30.73
+        ],
+        [
+          473,
+          293,
+          180,
+          38.06
+        ],
+        [
+          523,
+          293,
+          230,
+          44
+        ],
+        [
+          573,
+          293,
+          280,
+          48.87
+        ],
+        [
+          623,
+          293,
+          330,
+          53
+        ],
+        [
+          673,
+          293,
+          380,
+          56.46
+        ],
+        [
+          723,
+          293,
+          430,
+          59.48
+        ]
+      ]
+    }
+  ]
+}

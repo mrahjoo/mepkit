@@ -1,0 +1,189 @@
+{
+  "id": "gross_combustion_values_for_some_common_materials",
+  "title": "Gross Combustion Values for some common Materials",
+  "description": "Gross combustion values for materials like carbon, methane, ethylene and more - values in Btu/lb. This tool provides reference data for common combustible materials and includes conversion factors between different energy units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Formula",
+        "Gross Combustion Value (Btu/lb)"
+      ],
+      "rows": [
+        [
+          "Carbon",
+          "C",
+          14093
+        ],
+        [
+          "Hydrogen",
+          "H2",
+          61095
+        ],
+        [
+          "Carbon Monoxide",
+          "CO",
+          4347
+        ],
+        [
+          "Methane",
+          "CH4",
+          23875
+        ],
+        [
+          "Ethane",
+          "C2H6",
+          22323
+        ],
+        [
+          "Propane",
+          "C3H8",
+          21669
+        ],
+        [
+          "n-Butane",
+          "C4H10",
+          21321
+        ],
+        [
+          "Isobutane",
+          "C4H10",
+          21271
+        ],
+        [
+          "n-Pentane",
+          "C5H12",
+          21095
+        ],
+        [
+          "Isopentane",
+          "C5H12",
+          21047
+        ],
+        [
+          "Neopentane",
+          "C5H12",
+          20978
+        ],
+        [
+          "n-Hexane",
+          "C6H14",
+          20966
+        ],
+        [
+          "Ethylene",
+          "C2H4",
+          21636
+        ],
+        [
+          "Propylene",
+          "C3H6",
+          21048
+        ],
+        [
+          "n-Butene",
+          "C4H8",
+          20854
+        ],
+        [
+          "Isobutene",
+          "C4H8",
+          20737
+        ],
+        [
+          "n-Pentene",
+          "C5H10",
+          20720
+        ],
+        [
+          "Benzene",
+          "C6H6",
+          18184
+        ],
+        [
+          "Toluene",
+          "C7H8",
+          18501
+        ],
+        [
+          "Xylene",
+          "C8H10",
+          18651
+        ],
+        [
+          "Acetylene",
+          "C2H2",
+          21502
+        ],
+        [
+          "Naphthalene",
+          "C10H8",
+          17303
+        ],
+        [
+          "Methyl alcohol",
+          "CH3OH",
+          10258
+        ],
+        [
+          "Ethyl alcohol",
+          "C2H5OH",
+          13161
+        ],
+        [
+          "Ammonia",
+          "NH3",
+          9667
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "energy_btu_per_lb",
+          "label": "Energy Value",
+          "type": "number",
+          "unit": "Btu/lb",
+          "defaultValue": 20000
+        },
+        {
+          "id": "mass_lb",
+          "label": "Mass",
+          "type": "number",
+          "unit": "lb",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_energy_btu",
+          "label": "Total Energy",
+          "formula": "inputs.energy_btu_per_lb * inputs.mass_lb",
+          "unit": "Btu",
+          "format": "decimal"
+        },
+        {
+          "id": "total_energy_kj",
+          "label": "Total Energy (converted)",
+          "formula": "inputs.energy_btu_per_lb * inputs.mass_lb * 2.326",
+          "unit": "kJ",
+          "format": "decimal"
+        },
+        {
+          "id": "total_energy_kcal",
+          "label": "Total Energy (converted)",
+          "formula": "inputs.energy_btu_per_lb * inputs.mass_lb * 1.8",
+          "unit": "kcal",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- **1 kJ/kg** = 0.4299 Btu/lbm = 0.23884 kcal/kg\n- **1 Btu/lbm** = 2.326 kJ/kg = 1.8 kcal/kg"
+    }
+  ]
+}

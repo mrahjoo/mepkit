@@ -1,0 +1,238 @@
+{
+  "id": "ethane___thermophysical_properties",
+  "title": "Ethane - Thermophysical Properties",
+  "description": "Thermophysical properties of Ethane (C2H6) including molecular weight, density, viscosity, specific heat, thermal conductivity, critical parameters, and combustion properties at standard conditions and varying temperature and pressure.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "ethane_properties_table",
+      "content": "Thermophysical Properties of Ethane (C2H6)",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          30.07,
+          "g/mol"
+        ],
+        [
+          "Specific Gravity (air = 1)",
+          1.047,
+          "-"
+        ],
+        [
+          "Density of liquid at boiling point",
+          "34.1 / 546.49",
+          "lb/ft³ / kg/m³"
+        ],
+        [
+          "Absolute Viscosity",
+          "6.4×10⁻⁶ / 0.0094",
+          "lbm/ft·s / cP"
+        ],
+        [
+          "Sound velocity in gas",
+          316,
+          "m/s"
+        ],
+        [
+          "Specific Heat (cp)",
+          "0.41 / 1715",
+          "Btu/lb·°F / J/kg·K"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          1.2,
+          "-"
+        ],
+        [
+          "Gas constant (R)",
+          "51.4 / 276",
+          "ft·lb/lb·°R / J/kg·°C"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.010 / 0.017",
+          "Btu/hr·ft·°F / W/m·°C"
+        ],
+        [
+          "Boiling Point (at 1 atm)",
+          "-127 / -88.3",
+          "°F / °C"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "210 / 488000",
+          "Btu/lb / J/kg"
+        ],
+        [
+          "Melting Point (at 1 atm)",
+          "-278 / -172.2",
+          "°F / °C"
+        ],
+        [
+          "Latent Heat of Fusion",
+          "41 / 95300",
+          "Btu/lb / J/kg"
+        ],
+        [
+          "Critical Temperature",
+          "90.1 / 32.2",
+          "°F / °C"
+        ],
+        [
+          "Critical Pressure",
+          "709 / 4.89",
+          "psia / MN/m²"
+        ],
+        [
+          "Critical Volume",
+          "0.076 / 0.0047",
+          "ft³/lb / m³/kg"
+        ],
+        [
+          "Flammable",
+          "Yes",
+          "-"
+        ],
+        [
+          "Heat of Combustion",
+          "22300 / 51800",
+          "Btu/lb / kJ/kg"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "ethane_calculator",
+      "content": "Calculate ethane properties based on temperature and pressure",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 25
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 1.013
+        }
+      ],
+      "outputs": [
+        {
+          "id": "molecular_weight",
+          "label": "Molecular Weight",
+          "unit": "g/mol",
+          "formula": "30.07",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity (air = 1)",
+          "unit": "-",
+          "formula": "1.047",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat_cp",
+          "label": "Specific Heat (cp)",
+          "unit": "J/kg·K",
+          "formula": "1715",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "unit": "W/m·°C",
+          "formula": "0.017",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_temp",
+          "label": "Critical Temperature",
+          "unit": "°C",
+          "formula": "32.2",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_pressure",
+          "label": "Critical Pressure",
+          "unit": "MN/m²",
+          "formula": "4.89",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "ethane_phase_diagram",
+      "content": "Ethane Phase Diagram",
+      "options": {
+        "title": {
+          "text": "Ethane Phase Diagram"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Temperature (°C)",
+          "nameLocation": "middle",
+          "nameGap": 30
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Pressure (bar)",
+          "nameLocation": "middle",
+          "nameGap": 30
+        },
+        "series": [
+          {
+            "name": "Saturation Curve",
+            "type": "line",
+            "data": [
+              [
+                -172.2,
+                0.0001
+              ],
+              [
+                -100,
+                0.5
+              ],
+              [
+                -88.3,
+                1.013
+              ],
+              [
+                -50,
+                5
+              ],
+              [
+                0,
+                15
+              ],
+              [
+                32.2,
+                48.9
+              ]
+            ],
+            "smooth": true
+          }
+        ],
+        "legend": {
+          "data": [
+            "Saturation Curve"
+          ]
+        },
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "shipping_measuring_units",
+  "title": "Shipping Measuring Units",
+  "description": "Vessel and cargo capacities for shipping measurements and conversions.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Shipping Measuring Units\n\n### Internal Capacity of a Vessel\n- 1 register ton = 100 cubic feet\n\n### Measurement of Cargo\n- 40 cubic feet = 32.143 U.S. bushels = 31.16 Imperial bushels\n\n#### Bulk weights less than 2000 pounds\n- Approximately 40 cubic feet of merchandise considered as a shipping ton\n\n#### Bulk weights more than 2000 pounds\n- Freight charge based on weight"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Conversion Type",
+        "Formula",
+        "Result"
+      ],
+      "inputs": [
+        {
+          "id": "cubic_feet",
+          "label": "Cubic Feet",
+          "type": "number",
+          "defaultValue": 40
+        },
+        {
+          "id": "weight_pounds",
+          "label": "Weight (pounds)",
+          "type": "number",
+          "defaultValue": 2000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "register_tons",
+          "label": "Register Tons",
+          "formula": "inputs.cubic_feet / 100",
+          "unit": "register tons"
+        },
+        {
+          "id": "us_bushels",
+          "label": "U.S. Bushels",
+          "formula": "inputs.cubic_feet / 40 * 32.143",
+          "unit": "bushels"
+        },
+        {
+          "id": "imperial_bushels",
+          "label": "Imperial Bushels",
+          "formula": "inputs.cubic_feet / 40 * 31.16",
+          "unit": "bushels"
+        },
+        {
+          "id": "shipping_ton_status",
+          "label": "Shipping Ton Classification",
+          "formula": "inputs.weight_pounds < 2000 ? 'Weight-based (cubic feet)' : 'Weight-based (actual weight)'"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Measurement Type",
+        "Unit",
+        "Value",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Internal Vessel Capacity",
+          "Register Ton",
+          "100",
+          "cubic feet per register ton"
+        ],
+        [
+          "Cargo Measurement",
+          "Cubic Feet",
+          "40",
+          "Equivalent to shipping measures"
+        ],
+        [
+          "Cargo Measurement",
+          "U.S. Bushels",
+          "32.143",
+          "Per 40 cubic feet"
+        ],
+        [
+          "Cargo Measurement",
+          "Imperial Bushels",
+          "31.16",
+          "Per 40 cubic feet"
+        ],
+        [
+          "Bulk Weight Classification",
+          "Less than 2000 lbs",
+          "40 cubic feet",
+          "Considered as shipping ton"
+        ],
+        [
+          "Bulk Weight Classification",
+          "More than 2000 lbs",
+          "Weight-based",
+          "Freight charge based on actual weight"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Shipping Unit Conversions"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Cubic Feet to Register Tons",
+            "Cubic Feet to U.S. Bushels",
+            "Cubic Feet to Imperial Bushels"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Register Tons",
+            "type": "line",
+            "data": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8
+            ]
+          },
+          {
+            "name": "U.S. Bushels",
+            "type": "line",
+            "data": [
+              8.04,
+              16.07,
+              24.11,
+              32.14,
+              40.18,
+              48.21,
+              56.25,
+              64.29
+            ]
+          },
+          {
+            "name": "Imperial Bushels",
+            "type": "line",
+            "data": [
+              7.79,
+              15.58,
+              23.37,
+              31.16,
+              38.95,
+              46.74,
+              54.53,
+              62.32
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

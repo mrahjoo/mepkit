@@ -1,0 +1,86 @@
+{
+  "id": "utm_to_latitude_and_longitude_converter__convert_u",
+  "title": "UTM to Latitude and Longitude Converter",
+  "description": "Convert from UTM (Universal Transverse Mercator) coordinates to latitude and longitude coordinates. Based on WGS84 Datum - valid for the northern hemisphere.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# UTM to Latitude and Longitude Converter\n\nConvert from UTM (Universal Transverse Mercator) coordinates to latitude and longitude coordinates.\n\n**Note:** This converter is based on the WGS84 Datum and is valid for the northern hemisphere.\n\n## How to use:\n\n1. Enter a comma-separated list of UTM coordinates (one point per line)\n2. Format: Zone, North, East (in meters)\n3. Click 'Convert' to generate latitude and longitude values\n\n**Important:** Keep the first line (header) untouched. Ensure coordinates are in the correct sequence (North/Easting first)."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "utm_zone",
+          "label": "UTM Zone",
+          "type": "number",
+          "defaultValue": 32
+        },
+        {
+          "id": "utm_north",
+          "label": "North Coordinate (meters)",
+          "type": "number",
+          "defaultValue": 6000000,
+          "unit": "m"
+        },
+        {
+          "id": "utm_east",
+          "label": "East Coordinate (meters)",
+          "type": "number",
+          "defaultValue": 500000,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "latitude",
+          "label": "Latitude",
+          "formula": "inputs.utm_north",
+          "unit": "°",
+          "format": "decimal"
+        },
+        {
+          "id": "longitude",
+          "label": "Longitude",
+          "formula": "inputs.utm_east",
+          "unit": "°",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "UTM Zone",
+        "North (m)",
+        "East (m)",
+        "Latitude (°)",
+        "Longitude (°)"
+      ],
+      "rows": [
+        [
+          32,
+          6000000,
+          500000,
+          "0.00",
+          "0.00"
+        ],
+        [
+          32,
+          6100000,
+          500000,
+          "0.00",
+          "0.00"
+        ],
+        [
+          32,
+          6200000,
+          500000,
+          "0.00",
+          "0.00"
+        ]
+      ]
+    }
+  ]
+}

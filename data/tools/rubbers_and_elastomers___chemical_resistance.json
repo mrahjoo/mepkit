@@ -1,0 +1,76 @@
+{
+  "id": "rubbers_and_elastomers___chemical_resistance",
+  "title": "Rubbers and Elastomers - Chemical Resistance",
+  "description": "Resistance to chemicals - solvents and softeners - swelling properties. Data on rubbers and elastomers resistance to chemicals, weathering, ultraviolet light, heat and temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Rubber or Elastomer",
+        "Chemical Name",
+        "Chemical Resistant to",
+        "Solvent or Softener",
+        "Swelled by"
+      ],
+      "rows": [
+        [
+          "Polyisoprene",
+          "Natural or Synthetic Rubber NR, IR",
+          "Polyisoprene",
+          "Acetone, Acids, Alkalies, Alcohols",
+          "Carbon disulfide, Ketones, Petroleum products, Vegetable oils"
+        ],
+        [
+          "Butadiene",
+          "BR Cis4",
+          "Butadiene",
+          "Glycerol, Glycol, Acids, Alkalies, Weathering, Aging",
+          "Carbon disulfide, Hexane, Turpentine, Petroleum products, Acetone, Petroleum products, Vegetable oils"
+        ],
+        [
+          "Styrene-butadiene",
+          "Buna S, Styrene, SBR, GR-S",
+          "Styrene-butadiene",
+          "Glycerol, Glycol, Acids, Alcohols, Salts, Oxidation",
+          "Ketones, Petroleum products, Aromatics, Vegetable oils"
+        ],
+        [
+          "Acrylonitrile butadiene",
+          "Nitrile, Buna N, Hycar, NBR, GR-A",
+          "Acrylonitrile butadiene",
+          "Glycerol, Glycol, Acids, Ketones, Alcohols, Petroleum products, Salts, Heat or high temperature, Vegetable oils, Weathering",
+          "Carbon tetrachloride, Ketones, Bitumen - coal derivates, Aromatics, Acetone, Phenol, Turpentine"
+        ],
+        [
+          "Polychloroprene",
+          "Neoprene, CR, GR-M",
+          "Polychloroprene",
+          "Glycerol, Glycol, Alcohols, Petroleum products, Salts, Heat or high temperature, Ultraviolet light, Vegetable oils, Weathering, Aging, Ozone",
+          "Acetone, Benzene, Carbon tetrachloride, Carbon disulfide, Acids, Turpentine, Aromatics"
+        ],
+        [
+          "Isobutylene-isoprene",
+          "Butyl, IIR, GR-I",
+          "Isobutylene-isoprene",
+          "Phenol, Glycerol, Glycol, Alkalies, Salts, Ultraviolet, Vegetable oils, Weathering, Oxidation, Aging, Ozone",
+          "Carbon disulfide, Petroleum products, Hexane"
+        ],
+        [
+          "Polysulfide",
+          "Thikol, PS, GR-P",
+          "Polysulfide",
+          "Alcohols, Petroleum products, Ultraviolet light, Ozone",
+          "Carbon tetrachloride, Aromatics"
+        ],
+        [
+          "Polymethane",
+          "Adiprene, PU",
+          "Polymethane",
+          "Petroleum products, Vegetable oils, Oxidation, Ozone",
+          "Benzene, Carbon tetrachloride, Ketones, Aromatics"
+        ]
+      ]
+    }
+  ]
+}

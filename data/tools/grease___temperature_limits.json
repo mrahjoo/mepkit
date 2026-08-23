@@ -1,0 +1,52 @@
+{
+  "id": "grease___temperature_limits",
+  "title": "Grease - Temperature Limits",
+  "description": "Temperature limits for grease - a combination of oil and thickener.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nGrease is a combination of mineral or synthetic oil and thickener - also called soap. Rust and oxidation inhibitors are also often added.\n\n- Oil content ranges 70 - 97% - commonly about 80%\n- The temperature limit for a grease is limited by the oil and thickener used."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Grease Thickener",
+        "Temperature Limit (°F)",
+        "Temperature Limit (°C)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          180,
+          82
+        ],
+        [
+          "Barium",
+          225,
+          107
+        ],
+        [
+          "Calcium",
+          170,
+          77
+        ],
+        [
+          "Lithium",
+          300,
+          149
+        ],
+        [
+          "Sodium",
+          250,
+          121
+        ],
+        [
+          "Synthetics",
+          "< 500",
+          "< 260"
+        ]
+      ]
+    }
+  ]
+}

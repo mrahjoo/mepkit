@@ -1,0 +1,106 @@
+{
+  "id": "jet_fuel___density_vs__temperature",
+  "title": "Jet Fuel - Density vs. Temperature",
+  "description": "Correlations for jet fuel density and temperature based on ASTM D 1250-04 and IP 200/04 standards. Calculate volume correction factors and density changes across different temperatures using established petroleum measurement standards.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Volume Correction Factor"
+      ],
+      "rows": [
+        [
+          15,
+          800,
+          1
+        ],
+        [
+          30,
+          795,
+          1.006
+        ],
+        [
+          50,
+          787,
+          1.016
+        ],
+        [
+          75,
+          776,
+          1.031
+        ],
+        [
+          100,
+          765,
+          1.046
+        ],
+        [
+          150,
+          743,
+          1.077
+        ],
+        [
+          200,
+          721,
+          1.109
+        ],
+        [
+          250,
+          699,
+          1.144
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "initialVolume",
+          "label": "Initial Volume",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "liters"
+        },
+        {
+          "id": "initialDensity",
+          "label": "Initial Density",
+          "type": "number",
+          "defaultValue": 757,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "initialTemperature",
+          "label": "Initial Temperature",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "°C"
+        },
+        {
+          "id": "finalTemperature",
+          "label": "Final Temperature",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "correctionFactor",
+          "label": "Volume Correction Factor",
+          "formula": "inputs.initialDensity / 757 * ((15 - inputs.finalTemperature) / (15 - inputs.initialTemperature) + 1)",
+          "unit": "ratio"
+        },
+        {
+          "id": "finalVolume",
+          "label": "Final Volume",
+          "formula": "inputs.initialVolume * (inputs.initialDensity / 757) * ((15 - inputs.finalTemperature) / (15 - inputs.initialTemperature) + 1)",
+          "unit": "liters",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

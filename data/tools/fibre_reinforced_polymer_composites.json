@@ -1,0 +1,93 @@
+{
+  "id": "fibre_reinforced_polymer_composites",
+  "title": "Fibre-reinforced Polymer Composites",
+  "description": "Mechanical properties of fibers used to reinforce polymer composites.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fiber Type",
+        "Tensile Strength (MPa)",
+        "Tensile Modulus (GPa)",
+        "Elongation (%)",
+        "Density (kg/m³)",
+        "Density (lb/in³)"
+      ],
+      "rows": [
+        [
+          "E-Glass",
+          3500,
+          72.5,
+          10.5,
+          2630,
+          0.095
+        ],
+        [
+          "S-Glass",
+          4600,
+          88,
+          12.8,
+          2490,
+          0.09
+        ],
+        [
+          "AS-4 PAN-Based Carbon",
+          4000,
+          245,
+          35.5,
+          1800,
+          0.065
+        ],
+        [
+          "IM-7 PAN-Based Carbon",
+          4900,
+          317,
+          46,
+          1744,
+          0.063
+        ],
+        [
+          "P120 Pitch-Based Graphite",
+          2250,
+          827,
+          120,
+          2187,
+          0.079
+        ],
+        [
+          "Alumina/Silica",
+          1950,
+          297,
+          43,
+          3280,
+          0.12
+        ],
+        [
+          "Kevlar 29",
+          2860,
+          64,
+          9.3,
+          1440,
+          0.052
+        ],
+        [
+          "Kevlar 49",
+          3650,
+          124,
+          18,
+          1440,
+          0.052
+        ],
+        [
+          "Boron",
+          3620,
+          400,
+          58,
+          2574,
+          0.093
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "id": "pumps___specific_speed",
+  "title": "Pumps - Specific Speed Calculator",
+  "description": "Calculate the specific speed of a pump using the formula Ns = n × q^0.5 / h^0.75. Specific speed identifies the geometric similarity of pumps and is independent of pump size. Supports multiple unit systems including US gpm, British gpm, m³/h, and liters/min.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "specific_speed_calc",
+      "content": "Calculate Specific Speed with multiple unit options",
+      "inputs": [
+        {
+          "id": "pump_speed",
+          "label": "Pump Shaft Speed",
+          "type": "number",
+          "defaultValue": 1760,
+          "unit": "rpm"
+        },
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "defaultValue": 1500,
+          "unit": "gpm"
+        },
+        {
+          "id": "head_rise",
+          "label": "Head Rise",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "ft"
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "value": "us_gpm_ft",
+              "label": "US gpm, ft"
+            },
+            {
+              "value": "british_gpm_ft",
+              "label": "British gpm, ft"
+            },
+            {
+              "value": "m3h_m",
+              "label": "m³/h, m"
+            },
+            {
+              "value": "lpm_m",
+              "label": "liters/min, m"
+            }
+          ],
+          "defaultValue": "us_gpm_ft"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_speed",
+          "label": "Specific Speed (Ns)",
+          "formula": "inputs.pump_speed * Math.pow(inputs.flow_rate, 0.5) / Math.pow(inputs.head_rise, 0.75)",
+          "format": "decimal",
+          "unit": "Ns"
+        },
+        {
+          "id": "pump_type",
+          "label": "Pump Type Classification",
+          "formula": "inputs.specific_speed > 7000 ? 'Axial Flow (7000-20000)' : inputs.specific_speed > 2000 ? 'Mixed Flow (2000-8000)' : inputs.specific_speed > 500 ? 'Radial Flow (500-4000)' : 'Below typical range'",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "unit_conversion_table",
+      "content": "Specific Speed Unit Conversion Factors",
+      "headers": [
+        "From",
+        "To",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          "Ns (m³/h, m)",
+          "Ns (US gpm, ft)",
+          "0.861"
+        ],
+        [
+          "Ns (m³/h, m)",
+          "Ns (British gpm, ft)",
+          "0.787"
+        ],
+        [
+          "1 US gpm",
+          "m³/h",
+          "0.2271"
+        ],
+        [
+          "1 British gpm",
+          "m³/h",
+          "0.2728"
+        ],
+        [
+          "1 ft",
+          "m",
+          "0.3048"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "pump_classification",
+      "content": "Pump Classification by Specific Speed (US units: gpm, ft)",
+      "headers": [
+        "Pump Design",
+        "Specific Speed Range",
+        "Characteristics"
+      ],
+      "rows": [
+        [
+          "Radial Flow",
+          "500 - 4,000",
+          "Centrifugal impeller with radial vanes; double and single suction"
+        ],
+        [
+          "Mixed Flow",
+          "2,000 - 8,000",
+          "Mixed impeller single suction pumps"
+        ],
+        [
+          "Axial Flow",
+          "7,000 - 20,000",
+          "Propellers and axial fans"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "turbine_classification",
+      "content": "Turbine Classification by Specific Speed",
+      "headers": [
+        "Turbine Type",
+        "Specific Speed Range"
+      ],
+      "rows": [
+        [
+          "Francis Turbine",
+          "70 - 500"
+        ],
+        [
+          "Kaplan / Propeller Turbine",
+          "100 - 350"
+        ],
+        [
+          "Pelton / Turgo / Cross-flow Turbine",
+          "10 - 80"
+        ]
+      ]
+    }
+  ]
+}

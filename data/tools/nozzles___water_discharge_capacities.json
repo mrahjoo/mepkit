@@ -1,0 +1,113 @@
+{
+  "id": "nozzles___water_discharge_capacities",
+  "title": "Nozzles - Water Discharge Capacities",
+  "description": "Discharge capacities of water nozzles. Reference data for water temperature of 60°F (15.6°C).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Nozzle Size (inches)",
+        "Pressure (psi)",
+        "Discharge Capacity (gpm)",
+        "Discharge Capacity (m³/h)"
+      ],
+      "rows": [
+        [
+          0.5,
+          10,
+          3.8,
+          0.86
+        ],
+        [
+          0.5,
+          20,
+          5.4,
+          1.22
+        ],
+        [
+          0.5,
+          30,
+          6.6,
+          1.5
+        ],
+        [
+          0.5,
+          40,
+          7.6,
+          1.72
+        ],
+        [
+          0.5,
+          50,
+          8.5,
+          1.93
+        ],
+        [
+          0.75,
+          10,
+          8.6,
+          1.95
+        ],
+        [
+          0.75,
+          20,
+          12.2,
+          2.77
+        ],
+        [
+          0.75,
+          30,
+          14.9,
+          3.38
+        ],
+        [
+          0.75,
+          40,
+          17.2,
+          3.9
+        ],
+        [
+          0.75,
+          50,
+          19.1,
+          4.34
+        ],
+        [
+          1,
+          10,
+          15.3,
+          3.47
+        ],
+        [
+          1,
+          20,
+          21.6,
+          4.9
+        ],
+        [
+          1,
+          30,
+          26.5,
+          6.02
+        ],
+        [
+          1,
+          40,
+          30.6,
+          6.95
+        ],
+        [
+          1,
+          50,
+          34.2,
+          7.77
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- 1 in (inch) = 25.4 mm\n- 1 psi (lb/in²) = 6,894.8 Pa = 0.06895 bar\n- 1 gpm (US) = 6.30888×10⁻⁵ m³/s = 0.227 m³/h\n\n## Notes\n\n- Water temperature: 60°F (15.6°C)\n- Discharge capacity values are typical for standard nozzles\n- Actual discharge may vary based on nozzle design and water conditions"
+    }
+  ]
+}

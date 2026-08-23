@@ -1,0 +1,73 @@
+{
+  "id": "major_loss_online_calculator___the_darcy_weisbach_",
+  "title": "Major Loss Online Calculator - the Darcy-Weisbach Friction Loss Equation",
+  "description": "Calculate major friction losses in pipes using the Darcy-Weisbach equation. This calculator determines pressure drop due to friction in fluid flow through pipes based on friction factor, pipe length, diameter, and fluid velocity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Friction Factor",
+          "f",
+          "",
+          "",
+          "Darcy friction factor (dimensionless)"
+        ],
+        [
+          "Pipe Length",
+          "L",
+          "",
+          "m",
+          "Length of the pipe section"
+        ],
+        [
+          "Pipe Diameter",
+          "D",
+          "",
+          "m",
+          "Internal diameter of the pipe"
+        ],
+        [
+          "Fluid Velocity",
+          "v",
+          "",
+          "m/s",
+          "Average flow velocity in the pipe"
+        ],
+        [
+          "Gravitational Acceleration",
+          "g",
+          "9.81",
+          "m/s²",
+          "Standard gravity constant"
+        ],
+        [
+          "Major Loss (Head Loss)",
+          "hf",
+          "",
+          "m",
+          "Friction loss head (Darcy-Weisbach)"
+        ],
+        [
+          "Pressure Drop",
+          "ΔP",
+          "",
+          "Pa",
+          "Pressure drop due to friction"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Darcy-Weisbach Equation\n\nThe major loss (friction loss) in pipes is calculated using:\n\n**hf = f × (L/D) × (v²/2g)**\n\nWhere:\n- **hf** = friction loss (head loss) in meters\n- **f** = Darcy friction factor (dimensionless)\n- **L** = length of pipe (m)\n- **D** = pipe diameter (m)\n- **v** = flow velocity (m/s)\n- **g** = gravitational acceleration (9.81 m/s²)\n\nThe pressure drop equivalent is:\n\n**ΔP = ρ × g × hf**\n\nWhere:\n- **ρ** = fluid density (kg/m³)"
+    }
+  ]
+}

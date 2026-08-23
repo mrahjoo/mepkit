@@ -1,0 +1,52 @@
+{
+  "id": "vacuum_pumps___exhaust_pipe_capacities",
+  "title": "Vacuum Pumps - Exhaust Pipe Capacities",
+  "description": "Capacities of vacuum pump exhaust pipes. This tool provides guidance on selecting appropriate exhaust pipe sizes and lengths based on air flow rates.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Flow Rate (cfm)",
+        "Flow Rate (nl/s)",
+        "6\" Pipe Max Length (ft)",
+        "8\" Pipe Max Length (ft)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          600,
+          283,
+          120,
+          300,
+          "Recommended for typical applications"
+        ],
+        [
+          1200,
+          566,
+          60,
+          150,
+          "Requires parallel pipes or larger diameter"
+        ],
+        [
+          300,
+          141,
+          250,
+          500,
+          "Suitable for small pump systems"
+        ],
+        [
+          900,
+          424,
+          80,
+          200,
+          "Mid-range capacity"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Application Guidance\n\n### Example Calculation\n- **Exhaust Air Flow**: 1200 cfm\n- **Required Exhaust Piping Length**: 60 ft\n\n### Solution Options\n1. **Two 6\" pipes in parallel**: Each carrying 600 cfm provides ~120 ft maximum length\n2. **Single 8\" pipe**: Internal area is approximately twice that of a 6\" pipe, providing sufficient capacity for full 1200 cfm flow\n\n### Key Considerations\n- The internal cross-sectional area directly affects capacity\n- Doubling pipe diameter significantly increases capacity\n- Parallel pipe configurations can achieve required capacity with standard sizes\n- Pressure drop increases with flow velocity and pipe length"
+    }
+  ]
+}

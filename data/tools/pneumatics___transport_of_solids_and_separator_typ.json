@@ -1,0 +1,94 @@
+{
+  "id": "pneumatics___transport_of_solids_and_separator_typ",
+  "title": "Pneumatics - Transport of Solids and Separator Types",
+  "description": "Separators used in pneumatic solids transport systems and their minimum particle size. This tool helps identify the appropriate separator type based on particle size and provides minimum particle size recommendations for different separator principles.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pneumatic Transport System Overview\n\nIn a pneumatic transport system, solids like dust, flour, sugar, sand and many other products, are transported in a high speed air flow.\n\nThe table below indicates minimum particle size recommended for different types of separators.\n\n**Conversion Reference:** 1 micron = 0.001 mm"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Separator Principle",
+        "Minimum Particle Size (micron)"
+      ],
+      "rows": [
+        [
+          "Gravity",
+          "200"
+        ],
+        [
+          "Inertial",
+          "50-150"
+        ],
+        [
+          "Centrifugal, large diameter cyclone",
+          "40-60"
+        ],
+        [
+          "Centrifugal, small diameter cyclone",
+          "20-30"
+        ],
+        [
+          "Fan type",
+          "15-30"
+        ],
+        [
+          "Filter",
+          "0.5"
+        ],
+        [
+          "Scrubber",
+          "0.5-2.0"
+        ],
+        [
+          "Electrical",
+          "0.001-1.0"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "particle_size_micron",
+          "label": "Particle Size",
+          "type": "number",
+          "unit": "micron",
+          "defaultValue": 50
+        },
+        {
+          "id": "particle_size_mm",
+          "label": "Particle Size (optional conversion input)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 0.05
+        }
+      ],
+      "outputs": [
+        {
+          "id": "particle_size_converted_mm",
+          "label": "Particle Size in mm",
+          "formula": "inputs.particle_size_micron * 0.001",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "particle_size_converted_micron",
+          "label": "Particle Size in micron",
+          "formula": "inputs.particle_size_mm / 0.001",
+          "unit": "micron",
+          "format": "decimal"
+        },
+        {
+          "id": "separator_recommendation",
+          "label": "Recommended Separator Types",
+          "formula": "inputs.particle_size_micron >= 200 ? 'Gravity' : inputs.particle_size_micron >= 50 ? 'Gravity, Inertial, Centrifugal (large cyclone)' : inputs.particle_size_micron >= 20 ? 'Centrifugal (small cyclone), Inertial' : inputs.particle_size_micron >= 15 ? 'Fan type, Centrifugal (small cyclone)' : inputs.particle_size_micron >= 0.5 ? 'Filter, Scrubber, Fan type' : 'Electrical, Filter, Scrubber'",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

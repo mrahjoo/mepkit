@@ -1,0 +1,62 @@
+{
+  "id": "biomasses___higher_heating_values",
+  "title": "Biomasses - Higher Heating Values",
+  "description": "Higher Heating Values (HHV) of various biomass fuels and selected fuels measured in kJ/kg. HHV represents the total heat released when a fuel is burned completely.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Biomass Higher Heating Values Reference Data",
+      "headers": [
+        "Product",
+        "HHV (kJ/kg)"
+      ],
+      "rows": [
+        [
+          "Bituminous Coal",
+          "17000 - 23250"
+        ],
+        [
+          "Charcoal",
+          "29600"
+        ],
+        [
+          "Douglas fir",
+          "21000"
+        ],
+        [
+          "Douglas fir bark",
+          "22000"
+        ],
+        [
+          "Eucalyptus grandis",
+          "19400"
+        ],
+        [
+          "Beech",
+          "20300"
+        ],
+        [
+          "Sugar cane bagasse",
+          "17300"
+        ],
+        [
+          "Wheat straw",
+          "17500"
+        ],
+        [
+          "Poplar",
+          "20700"
+        ],
+        [
+          "Rice hulls",
+          "15300"
+        ],
+        [
+          "Rice straw",
+          "15800"
+        ]
+      ]
+    }
+  ]
+}

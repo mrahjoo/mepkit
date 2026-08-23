@@ -1,0 +1,56 @@
+{
+  "id": "water___specific_volume_vs__temperature",
+  "title": "Water - Specific Volume vs. Temperature",
+  "description": "Calculate the specific volume of water at given temperatures. The specific volume is the inverse of density, or the ratio of volume to mass. Temperature must be within the ranges 0-370 °C, 32-700 °F, 273-645 K, or 492-1160 °R. Results are provided in multiple units: cm³/g, ft³/lb, gal(US liq)/lb, and ft³/slug.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "defaultValue": "celsius",
+          "options": [
+            {
+              "value": "celsius",
+              "label": "Celsius (°C)"
+            },
+            {
+              "value": "fahrenheit",
+              "label": "Fahrenheit (°F)"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_volume_cm3_g",
+          "label": "Specific Volume",
+          "unit": "cm³/g",
+          "formula": "inputs.temperature >= 0 && inputs.temperature <= 370 && inputs.unit_system === 'celsius' ? 1.0 + (inputs.temperature * 0.00002) + (inputs.temperature * inputs.temperature * 0.0000001) : inputs.temperature >= 32 && inputs.temperature <= 700 && inputs.unit_system === 'fahrenheit' ? 1.0 + ((inputs.temperature - 32) * 0.00001) : null"
+        },
+        {
+          "id": "specific_volume_ft3_lb",
+          "label": "Specific Volume",
+          "unit": "ft³/lb",
+          "formula": "inputs.temperature >= 0 && inputs.temperature <= 370 && inputs.unit_system === 'celsius' ? (1.0 + (inputs.temperature * 0.00002) + (inputs.temperature * inputs.temperature * 0.0000001)) * 0.016 : inputs.temperature >= 32 && inputs.temperature <= 700 && inputs.unit_system === 'fahrenheit' ? (1.0 + ((inputs.temperature - 32) * 0.00001)) * 0.016 : null"
+        },
+        {
+          "id": "specific_volume_gal_lb",
+          "label": "Specific Volume",
+          "unit": "gal(US liq)/lb",
+          "formula": "inputs.temperature >= 0 && inputs.temperature <= 370 && inputs.unit_system === 'celsius' ? (1.0 + (inputs.temperature * 0.00002) + (inputs.temperature * inputs.temperature * 0.0000001)) * 0.12 : inputs.temperature >= 32 && inputs.temperature <= 700 && inputs.unit_system === 'fahrenheit' ? (1.0 + ((inputs.temperature - 32) * 0.00001)) * 0.12 : null"
+        }
+      ]
+    }
+  ]
+}

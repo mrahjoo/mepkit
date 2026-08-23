@@ -1,0 +1,89 @@
+{
+  "id": "ammonia___properties_at_gas_liquid_equilibrium_con",
+  "title": "Ammonia - Properties at Gas-Liquid Equilibrium Conditions",
+  "description": "Calculator for thermophysical properties of ammonia along the boiling and condensation curves, including density, viscosity, heat capacity, and thermal conductivity at gas-liquid equilibrium conditions. Provides data at critical point (405.56 K, 112.08 atm) and triple point (195.5 K, 0.0601 atm).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "ammonia_properties_calculator",
+      "headers": [
+        "Input Parameters",
+        "Output Properties"
+      ],
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 250
+        },
+        {
+          "id": "phase",
+          "label": "Phase",
+          "type": "select",
+          "options": [
+            {
+              "label": "Liquid",
+              "value": "liquid"
+            },
+            {
+              "label": "Gas",
+              "value": "gas"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "unit": "MPa",
+          "formula": "inputs.temperature < 200 ? 0.0000609 : inputs.temperature < 210 ? 0.0177 : inputs.temperature < 220 ? 0.0338 : inputs.temperature < 230 ? 0.0604 : inputs.temperature < 240 ? 0.1022 : inputs.temperature < 250 ? 0.1649 : inputs.temperature < 270 ? 0.3811 : inputs.temperature < 290 ? 0.7774 : inputs.temperature < 300 ? 1.062 : inputs.temperature < 310 ? 1.424 : inputs.temperature < 320 ? 1.873 : inputs.temperature < 330 ? 2.421 : inputs.temperature < 350 ? 3.866 : inputs.temperature < 370 ? 5.878 : inputs.temperature < 390 ? 8.605 : inputs.temperature < 405.4 ? 10.31 : 11.34"
+        },
+        {
+          "id": "density",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "inputs.phase === 'liquid' ? (inputs.temperature < 200 ? 732.9 : inputs.temperature < 210 ? 717.2 : inputs.temperature < 220 ? 705.8 : inputs.temperature < 230 ? 694.0 : inputs.temperature < 240 ? 681.8 : inputs.temperature < 250 ? 669.2 : inputs.temperature < 270 ? 642.9 : inputs.temperature < 290 ? 614.8 : inputs.temperature < 300 ? 600.0 : inputs.temperature < 310 ? 584.5 : inputs.temperature < 320 ? 568.2 : inputs.temperature < 330 ? 551.0 : inputs.temperature < 350 ? 512.4 : inputs.temperature < 370 ? 465.3 : inputs.temperature < 390 ? 399.6 : inputs.temperature < 405.4 ? 344.6 : 225.0) : (inputs.temperature < 200 ? 0.006091 : inputs.temperature < 210 ? 0.01774 : inputs.temperature < 220 ? 0.03379 : inputs.temperature < 230 ? 0.06041 : inputs.temperature < 240 ? 0.1022 : inputs.temperature < 250 ? 0.1649 : inputs.temperature < 270 ? 0.3811 : inputs.temperature < 290 ? 0.7744 : inputs.temperature < 300 ? 1.062 : inputs.temperature < 310 ? 1.424 : inputs.temperature < 320 ? 1.873 : inputs.temperature < 330 ? 2.421 : inputs.temperature < 350 ? 3.866 : inputs.temperature < 370 ? 5.878 : inputs.temperature < 390 ? 8.605 : inputs.temperature < 405.4 ? 10.31 : 11.33)"
+        },
+        {
+          "id": "specific_heat_cv",
+          "label": "Specific Heat Cv",
+          "unit": "kJ/kg·K",
+          "formula": "inputs.phase === 'liquid' ? (inputs.temperature < 200 ? 2.9342 : inputs.temperature < 210 ? 2.9077 : inputs.temperature < 220 ? 2.8893 : inputs.temperature < 230 ? 2.8716 : inputs.temperature < 240 ? 2.8544 : inputs.temperature < 250 ? 2.8376 : inputs.temperature < 270 ? 2.8051 : inputs.temperature < 290 ? 2.7753 : inputs.temperature < 300 ? 2.7620 : inputs.temperature < 310 ? 2.7512 : inputs.temperature < 320 ? 2.7430 : inputs.temperature < 330 ? 2.7383 : inputs.temperature < 350 ? 2.7460 : inputs.temperature < 370 ? 2.7960 : inputs.temperature < 390 ? 2.9546 : inputs.temperature < 405.4 ? 3.1771 : null) : (inputs.temperature < 200 ? 1.5566 : inputs.temperature < 210 ? 1.5885 : inputs.temperature < 220 ? 1.6196 : inputs.temperature < 230 ? 1.6584 : inputs.temperature < 240 ? 1.7053 : inputs.temperature < 250 ? 1.7602 : inputs.temperature < 270 ? 1.8938 : inputs.temperature < 290 ? 2.0567 : inputs.temperature < 300 ? 2.1480 : inputs.temperature < 310 ? 2.2456 : inputs.temperature < 320 ? 2.3490 : inputs.temperature < 330 ? 2.4583 : inputs.temperature < 350 ? 2.6983 : inputs.temperature < 370 ? 2.9795 : inputs.temperature < 390 ? 3.3443 : inputs.temperature < 405.4 ? 3.5982 : null)"
+        },
+        {
+          "id": "specific_heat_cp",
+          "label": "Specific Heat Cp",
+          "unit": "kJ/kg·K",
+          "formula": "inputs.phase === 'liquid' ? (inputs.temperature < 200 ? 4.2020 : inputs.temperature < 210 ? 4.2846 : inputs.temperature < 220 ? 4.3421 : inputs.temperature < 230 ? 4.3969 : inputs.temperature < 240 ? 4.4486 : inputs.temperature < 250 ? 4.4982 : inputs.temperature < 270 ? 4.5991 : inputs.temperature < 290 ? 4.7215 : inputs.temperature < 300 ? 4.8000 : inputs.temperature < 310 ? 4.8964 : inputs.temperature < 320 ? 5.0180 : inputs.temperature < 330 ? 5.1756 : inputs.temperature < 350 ? 5.6706 : inputs.temperature < 370 ? 6.7142 : inputs.temperature < 390 ? 10.3047 : inputs.temperature < 405.4 ? 22.7274 : null) : (inputs.temperature < 200 ? 1.5566 : inputs.temperature < 210 ? 1.5885 : inputs.temperature < 220 ? 1.6196 : inputs.temperature < 230 ? 1.6584 : inputs.temperature < 240 ? 1.7053 : inputs.temperature < 250 ? 1.7602 : inputs.temperature < 270 ? 1.8938 : inputs.temperature < 290 ? 2.0567 : inputs.temperature < 300 ? 2.1480 : inputs.temperature < 310 ? 2.2456 : inputs.temperature < 320 ? 2.3490 : inputs.temperature < 330 ? 2.4583 : inputs.temperature < 350 ? 2.6983 : inputs.temperature < 370 ? 2.9795 : inputs.temperature < 390 ? 3.3443 : inputs.temperature < 405.4 ? 3.5982 : null)"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "unit": "mW/m·K",
+          "formula": "inputs.phase === 'liquid' ? (inputs.temperature < 200 ? 818.99 : inputs.temperature < 210 ? 768.02 : inputs.temperature < 220 ? 733.17 : inputs.temperature < 230 ? 698.80 : inputs.temperature < 240 ? 665.09 : inputs.temperature < 250 ? 632.16 : inputs.temperature < 270 ? 568.85 : inputs.temperature < 290 ? 508.99 : inputs.temperature < 300 ? 480.30 : inputs.temperature < 310 ? 452.23 : inputs.temperature < 320 ? 424.80 : inputs.temperature < 330 ? 397.96 : inputs.temperature < 350 ? 345.32 : inputs.temperature < 370 ? 293.07 : inputs.temperature < 390 ? 239.65 : inputs.temperature < 405.4 ? 216.00 : null) : (inputs.temperature < 200 ? 19.636 : inputs.temperature < 210 ? 19.860 : inputs.temperature < 220 ? 20.132 : inputs.temperature < 230 ? 20.503 : inputs.temperature < 240 ? 20.978 : inputs.temperature < 250 ? 21.560 : inputs.temperature < 270 ? 23.079 : inputs.temperature < 290 ? 25.138 : inputs.temperature < 300 ? 26.410 : inputs.temperature < 310 ? 27.872 : inputs.temperature < 320 ? 29.570 : inputs.temperature < 330 ? 31.559 : inputs.temperature < 350 ? 36.900 : inputs.temperature < 370 ? 46.149 : inputs.temperature < 390 ? 70.114 : inputs.temperature < 405.4 ? 113.540 : null)"
+        },
+        {
+          "id": "dynamic_viscosity",
+          "label": "Dynamic Viscosity",
+          "unit": "µPa·s",
+          "formula": "inputs.phase === 'liquid' ? (inputs.temperature < 200 ? 559.57 : inputs.temperature < 210 ? 414.98 : inputs.temperature < 220 ? 346.68 : inputs.temperature < 230 ? 294.94 : inputs.temperature < 240 ? 254.85 : inputs.temperature < 250 ? 223.08 : inputs.temperature < 270 ? 176.06 : inputs.temperature < 290 ? 142.74 : inputs.temperature < 300 ? 129.30 : inputs.temperature < 310 ? 117.49 : inputs.temperature < 320 ? 106.90 : inputs.temperature < 330 ? 97.33 : inputs.temperature < 350 ? 80.43 : inputs.temperature < 370 ? 65.49 : inputs.temperature < 390 ? 50.88 : inputs.temperature < 405.4 ? 41.80 : null) : (inputs.temperature < 200 ? 6.8396 : inputs.temperature < 210 ? 7.2115 : inputs.temperature < 220 ? 7.4846 : inputs.temperature < 230 ? 7.7679 : inputs.temperature < 240 ? 8.0587 : inputs.temperature < 250 ? 8.3552 : inputs.temperature < 270 ? 8.9595 : inputs.temperature < 290 ? 9.5771 : inputs.temperature < 300 ? 9.894 : inputs.temperature < 310 ? 10.220 : inputs.temperature < 320 ? 10.560 : inputs.temperature < 330 ? 10.927 : inputs.temperature < 350 ? 11.792 : inputs.temperature < 370 ? 13.053 : inputs.temperature < 390 ? 15.527 : inputs.temperature < 405.4 ? 18.529 : null)"
+        },
+        {
+          "id": "kinematic_viscosity",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt",
+          "formula": "inputs.phase === 'liquid' ? (inputs.temperature < 200 ? 0.76347 : inputs.temperature < 210 ? 0.57862 : inputs.temperature < 220 ? 0.49119 : inputs.temperature < 230 ? 0.42500 : inputs.temperature < 240 ? 0.37380 : inputs.temperature < 250 ? 0.33336 : inputs.temperature < 270 ? 0.27386 : inputs.temperature < 290 ? 0.23216 : inputs.temperature < 300 ? 0.21550 : inputs.temperature < 310 ? 0.20101 : inputs.temperature < 320 ? 0.18814 : inputs.temperature < 330 ? 0.17665 : inputs.temperature < 350 ? 0.15696 : inputs.temperature < 370 ? 0.14075 : inputs.temperature < 390 ? 0.12731 : inputs.temperature < 405.4 ? 0.12132 : null) : (inputs.temperature < 200 ? 106.71 : inputs.temperature < 210 ? 41.315 : inputs.temperature < 220 ? 23.475 : inputs.temperature < 230 ? 14.159 : inputs.temperature < 240 ? 8.9843 : inputs.temperature < 250 ? 5.9525 : inputs.temperature < 270 ? 2.9023 : inputs.temperature < 290 ? 1.5768 : inputs.temperature < 300 ? 1.1991 : inputs.temperature < 310 ? 0.9275 : inputs.temperature < 320 ? 0.7278 : inputs.temperature < 330 ? 0.5783 : inputs.temperature < 350 ? 0.3763 : inputs.temperature < 370 ? 0.2523 : inputs.temperature < 390 ? 0.1721 : inputs.temperature < 405.4 ? 0.1413 : null)"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "critical_triple_info",
+      "content": "## Critical Point and Triple Point\n\n**Critical Point:** 405.56 K = 132.41 °C = 270.34 °F\n- Critical Pressure: 112.08 atm = 113.41 bar = 11.357 MPa = 1647.2 psi\n\n**Triple Point:** 195.5 K = -77.65 °C = -107.77 °F\n- Triple Point Pressure: 0.0601 atm = 0.0609 bar = 6090 Pa = 0.8832 psi\n\nAt the critical point, phase boundaries vanish and liquid and vapor can no longer be distinguished. Below the triple point, ammonia exists as a solid under equilibrium conditions."
+    }
+  ]
+}

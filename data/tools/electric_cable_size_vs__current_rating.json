@@ -1,0 +1,132 @@
+{
+  "id": "electric_cable_size_vs__current_rating",
+  "title": "Electric Cable Size vs. Current Rating",
+  "description": "Amps vs. cable size for fixed installations in buildings. Current ratings for fixed cable installations within buildings based on PVC-wiring and PVC-insulated cables. Operating temperature max. 70°C, ambient temperature max. 70°C.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Cross-Section (mm²)",
+        "A1 (2 cores)",
+        "A2 (3 cores)",
+        "B1 (2 cores)",
+        "B2 (3 cores)"
+      ],
+      "rows": [
+        [
+          1.5,
+          15.5,
+          13.5,
+          15.5,
+          13
+        ],
+        [
+          2.5,
+          19.5,
+          18,
+          18.5,
+          17.5
+        ],
+        [
+          4,
+          26,
+          24,
+          25,
+          23
+        ],
+        [
+          6,
+          34,
+          31,
+          32,
+          29
+        ],
+        [
+          10,
+          46,
+          42,
+          43,
+          39
+        ],
+        [
+          16,
+          61,
+          56,
+          57,
+          52
+        ],
+        [
+          25,
+          80,
+          73,
+          75,
+          68
+        ],
+        [
+          35,
+          99,
+          89,
+          92,
+          83
+        ],
+        [
+          50,
+          119,
+          108,
+          110,
+          99
+        ],
+        [
+          70,
+          151,
+          136,
+          139,
+          125
+        ],
+        [
+          95,
+          182,
+          164,
+          167,
+          150
+        ],
+        [
+          120,
+          210,
+          188,
+          192,
+          172
+        ],
+        [
+          150,
+          240,
+          216,
+          219,
+          196
+        ],
+        [
+          185,
+          273,
+          245,
+          248,
+          223
+        ],
+        [
+          240,
+          320,
+          286,
+          291,
+          261
+        ],
+        [
+          300,
+          367,
+          328,
+          334,
+          298
+        ]
+      ]
+    }
+  ]
+}

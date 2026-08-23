@@ -1,0 +1,16 @@
+{
+  "id": "surface_roughness_vs__mechanical_processing",
+  "title": "Surface Roughness vs. Mechanical Processing",
+  "description": "Mechanical production methods and their surface roughness. This tool helps you understand the surface roughness characteristics of various mechanical processing techniques including honing, drilling, grinding, casting, and many others.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Surface Roughness from Mechanical Processing\n\nThis tool provides information about surface roughness achieved through various mechanical production methods:\n\n**Abrasive Processes:**\n- Honing\n- Grinding\n- Polishing\n- Lapping\n- Superfinishing\n- Electrolytic grinding\n- Electro-polishing\n- Roller burnishing\n- Barrel finishing\n\n**Cutting Processes:**\n- Boring, turning\n- Reaming\n- Broaching\n- Drilling\n- Planning, shaping\n- Sawing\n- Snagging\n- Flame cutting\n\n**Special Processes:**\n- Electro-chemical\n- Laser\n- Electron beam\n\n**Forming Processes:**\n- Cold rolling, drawing\n- Extruding\n- Die casting\n- Investment casting\n- Forging\n- Hot rolling\n- Sand casting\n\nThe surface roughness (measured in microinches or micrometers) varies significantly depending on the specific mechanical processing method used."
+    },
+    {
+      "type": "markdown",
+      "content": "### Surface Roughness Reference Chart\n\nThe diagram below shows the relationship between different mechanical production methods and their resulting surface roughness values:\n\n![Mechanical production processing methods - surface roughness](static/docs/documents/1368/surface-roughness-production-methods.png \"Mechanical production processing methods - surface roughness\")\n\n**Key Factors Affecting Surface Roughness:**\n- Processing method and technique\n- Tool condition and sharpness\n- Feed rate and cutting speed\n- Material properties\n- Coolant/lubricant used\n- Machine tool accuracy and rigidity"
+    }
+  ]
+}

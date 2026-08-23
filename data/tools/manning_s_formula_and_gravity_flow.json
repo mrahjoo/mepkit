@@ -1,0 +1,117 @@
+{
+  "id": "manning_s_formula_and_gravity_flow",
+  "title": "Manning's Formula and Gravity Flow",
+  "description": "Calculate cross-sectional average velocity flow in open channels using Manning's equation. This tool implements Manning's formula for gravity flow in circular pipes: v = (kn / n) * Rh^(2/3) * S^(1/2), where v is velocity, kn is the unit conversion factor, n is Manning's roughness coefficient, Rh is hydraulic radius, and S is the pipe slope.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "mannings_calculator",
+      "content": "Manning's Formula and Gravity Flow Calculator",
+      "inputs": [
+        {
+          "id": "diameter",
+          "label": "Diameter of pipe",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "m"
+        },
+        {
+          "id": "slope",
+          "label": "Slope",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "m/m"
+        },
+        {
+          "id": "kn",
+          "label": "kn (unit conversion factor)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "manning_n",
+          "label": "Manning coefficient of roughness (n)",
+          "type": "number",
+          "defaultValue": 0.012,
+          "unit": "dimensionless"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cross_section_area",
+          "label": "Cross-sectional area of flow",
+          "formula": "3.14159 * (inputs.diameter / 2) ^ 2 / 2",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "wetted_perimeter",
+          "label": "Wetted perimeter",
+          "formula": "3.14159 * inputs.diameter / 2",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "hydraulic_radius",
+          "label": "Hydraulic radius (Rh)",
+          "formula": "(3.14159 * (inputs.diameter / 2) ^ 2 / 2) / (3.14159 * inputs.diameter / 2)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity",
+          "label": "Cross-sectional mean velocity (v)",
+          "formula": "(inputs.kn / inputs.manning_n) * ((3.14159 * (inputs.diameter / 2) ^ 2 / 2) / (3.14159 * inputs.diameter / 2)) ^ (2/3) * inputs.slope ^ (1/2)",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_flow",
+          "label": "Volume flow rate (q)",
+          "formula": "(3.14159 * (inputs.diameter / 2) ^ 2 / 2) * ((inputs.kn / inputs.manning_n) * ((3.14159 * (inputs.diameter / 2) ^ 2 / 2) / (3.14159 * inputs.diameter / 2)) ^ (2/3) * inputs.slope ^ (1/2))",
+          "unit": "m³/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "mannings_reference_table",
+      "content": "Manning Coefficient Reference Values",
+      "headers": [
+        "Channel Type",
+        "Manning Coefficient (n)",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Clean and smooth",
+          0.01,
+          "Clean, smooth channels"
+        ],
+        [
+          "Concrete",
+          0.012,
+          "Well-finished concrete"
+        ],
+        [
+          "Earth",
+          0.02,
+          "Natural earth channels"
+        ],
+        [
+          "Gravel",
+          0.025,
+          "Channels with gravel"
+        ],
+        [
+          "Stones and debris",
+          0.06,
+          "Stone and debris with 1/3 vegetation"
+        ]
+      ]
+    }
+  ]
+}

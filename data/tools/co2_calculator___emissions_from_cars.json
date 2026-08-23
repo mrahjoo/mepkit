@@ -1,0 +1,178 @@
+{
+  "id": "co2_calculator___emissions_from_cars",
+  "title": "CO2 Calculator - Emissions from Cars",
+  "description": "Online CO2 calculator for estimating CO2 emissions from travel by car. Compare your car emissions with alternative travel methods (plane, train, bus) by providing distance, fuel consumption, number of passengers, and fuel type.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "car_emissions_calculator",
+      "content": "CO2 Emissions from Car Travel",
+      "inputs": [
+        {
+          "id": "distance",
+          "label": "Distance",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "km"
+        },
+        {
+          "id": "fuel_consumption",
+          "label": "Fuel Consumption",
+          "type": "number",
+          "defaultValue": 7,
+          "unit": "L/100km"
+        },
+        {
+          "id": "passengers",
+          "label": "Number of Persons in Car",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "person(s)"
+        },
+        {
+          "id": "fuel_type",
+          "label": "Type of Fuel",
+          "type": "select",
+          "defaultValue": "gasoline",
+          "options": [
+            {
+              "label": "Gasoline",
+              "value": "gasoline"
+            },
+            {
+              "label": "Diesel",
+              "value": "diesel"
+            },
+            {
+              "label": "LPG",
+              "value": "lpg"
+            },
+            {
+              "label": "Low CO2 Electric",
+              "value": "low_co2_el"
+            },
+            {
+              "label": "Medium CO2 Electric",
+              "value": "medium_co2_el"
+            },
+            {
+              "label": "High CO2 Electric",
+              "value": "high_co2_el"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "car_emissions",
+          "label": "Total Car CO2 Emissions",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * inputs.fuel_consumption / 100 * (inputs.fuel_type === 'gasoline' ? 2.31 : inputs.fuel_type === 'diesel' ? 2.68 : inputs.fuel_type === 'lpg' ? 1.75 : inputs.fuel_type === 'low_co2_el' ? 0.05 : inputs.fuel_type === 'medium_co2_el' ? 0.15 : 0.25)"
+        },
+        {
+          "id": "per_person_emissions",
+          "label": "CO2 Emissions per Person",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "(inputs.distance * inputs.fuel_consumption / 100 * (inputs.fuel_type === 'gasoline' ? 2.31 : inputs.fuel_type === 'diesel' ? 2.68 : inputs.fuel_type === 'lpg' ? 1.75 : inputs.fuel_type === 'low_co2_el' ? 0.05 : inputs.fuel_type === 'medium_co2_el' ? 0.15 : 0.25)) / inputs.passengers"
+        },
+        {
+          "id": "plane_emissions",
+          "label": "Equivalent Plane Emissions",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * 0.82 * 0.255"
+        },
+        {
+          "id": "train_emissions",
+          "label": "Equivalent Train Emissions",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * 1.09 * 0.041"
+        },
+        {
+          "id": "bus_emissions",
+          "label": "Equivalent Bus Emissions",
+          "unit": "kg CO2",
+          "format": "decimal",
+          "formula": "inputs.distance * 1.03 * 0.089"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "emissions_comparison_chart",
+      "content": "Emissions Comparison",
+      "options": {
+        "title": {
+          "text": "CO2 Emissions Comparison: Car vs. Alternative Transport Methods"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "legend": {
+          "data": [
+            "Car (per person)",
+            "Plane",
+            "Train",
+            "Bus"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Transport Method"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "CO2 Emissions (kg)",
+          "axisLabel": {
+            "formatter": "{value}"
+          }
+        },
+        "series": [
+          {
+            "name": "Car (per person)",
+            "type": "bar",
+            "data": [
+              "(inputs.distance * inputs.fuel_consumption / 100 * (inputs.fuel_type === 'gasoline' ? 2.31 : inputs.fuel_type === 'diesel' ? 2.68 : inputs.fuel_type === 'lpg' ? 1.75 : inputs.fuel_type === 'low_co2_el' ? 0.05 : inputs.fuel_type === 'medium_co2_el' ? 0.15 : 0.25)) / inputs.passengers"
+            ]
+          },
+          {
+            "name": "Plane",
+            "type": "bar",
+            "data": [
+              "inputs.distance * 0.82 * 0.255"
+            ]
+          },
+          {
+            "name": "Train",
+            "type": "bar",
+            "data": [
+              "inputs.distance * 1.09 * 0.041"
+            ]
+          },
+          {
+            "name": "Bus",
+            "type": "bar",
+            "data": [
+              "inputs.distance * 1.03 * 0.089"
+            ]
+          }
+        ],
+        "color": [
+          "#FF6B6B",
+          "#4ECDC4",
+          "#45B7D1",
+          "#96CEB4"
+        ]
+      }
+    }
+  ]
+}

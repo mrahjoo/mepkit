@@ -1,0 +1,61 @@
+{
+  "id": "bfd___block_flow_diagram",
+  "title": "BFD - Block Flow Diagram",
+  "description": "A Block Flow Diagram is a schematic illustration of a major process showing unit operations as rectangles connected by flow streams with arrows indicating direction of flow.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Block ID",
+        "Unit Operation",
+        "Description",
+        "Input Streams",
+        "Output Streams",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "B-1",
+          "Mixer",
+          "Combines multiple input streams",
+          "Stream 1, Stream 2",
+          "Stream 3",
+          "Horizontal orientation"
+        ],
+        [
+          "B-2",
+          "Reactor",
+          "Chemical reaction unit",
+          "Stream 3",
+          "Stream 4",
+          "Temperature controlled"
+        ],
+        [
+          "B-3",
+          "Separator",
+          "Separates mixture components",
+          "Stream 4",
+          "Stream 5, Stream 6",
+          "Vertical orientation"
+        ],
+        [
+          "B-4",
+          "Heat Exchanger",
+          "Transfers heat between streams",
+          "Stream 5",
+          "Stream 7",
+          "Downstream operation"
+        ],
+        [
+          "B-5",
+          "Distillation Column",
+          "Separates by boiling point",
+          "Stream 7",
+          "Stream 8, Stream 9",
+          "Final purification"
+        ]
+      ]
+    }
+  ]
+}

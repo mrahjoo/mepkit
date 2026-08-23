@@ -1,0 +1,120 @@
+{
+  "id": "butterfly_valves___sizing_and_selection",
+  "title": "Butterfly Valves - Sizing and Selection",
+  "description": "Selecting and sizing butterfly valves for water applications.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Butterfly Valves - Sizing and Selection\n\nSelecting and sizing butterfly valves for water applications.\n\n### Resources\n\nA very nice tutorial about sizing butterfly valves, calculating CV etc.\n\n*   [Johnson Controls - Butterfly Valve Sizing Guide](http://cgproducts.johnsoncontrols.com/MET_PDF/347VB2.PDF?x=86)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "GPM",
+          "defaultValue": 100
+        },
+        {
+          "id": "pressure_drop",
+          "label": "Allowable Pressure Drop",
+          "type": "number",
+          "unit": "PSI",
+          "defaultValue": 5
+        },
+        {
+          "id": "valve_size",
+          "label": "Valve Size",
+          "type": "select",
+          "options": [
+            {
+              "value": 1,
+              "label": "1 inch"
+            },
+            {
+              "value": 1.5,
+              "label": "1.5 inch"
+            },
+            {
+              "value": 2,
+              "label": "2 inch"
+            },
+            {
+              "value": 3,
+              "label": "3 inch"
+            },
+            {
+              "value": 4,
+              "label": "4 inch"
+            },
+            {
+              "value": 6,
+              "label": "6 inch"
+            },
+            {
+              "value": 8,
+              "label": "8 inch"
+            }
+          ],
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cv_required",
+          "label": "CV Required",
+          "formula": "inputs.flow_rate / sqrt(inputs.pressure_drop)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Valve Size (inch)",
+        "Full Open CV",
+        "Typical Application"
+      ],
+      "rows": [
+        [
+          1,
+          95,
+          "Low flow applications"
+        ],
+        [
+          1.5,
+          130,
+          "Medium flow applications"
+        ],
+        [
+          2,
+          240,
+          "Standard applications"
+        ],
+        [
+          3,
+          550,
+          "High flow applications"
+        ],
+        [
+          4,
+          900,
+          "Large capacity systems"
+        ],
+        [
+          6,
+          2100,
+          "Industrial applications"
+        ],
+        [
+          8,
+          3700,
+          "Maximum capacity applications"
+        ]
+      ]
+    }
+  ]
+}

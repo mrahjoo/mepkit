@@ -1,0 +1,93 @@
+{
+  "id": "ph_in_human_biological_material",
+  "title": "pH in Human Biological Material",
+  "description": "A reference tool for pH values in various human biological materials and fluids",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Biological Material",
+        "pH Range",
+        "pH Value (typical)"
+      ],
+      "rows": [
+        [
+          "Blood (Arterial)",
+          "7.35 - 7.45",
+          "7.4"
+        ],
+        [
+          "Blood (Venous)",
+          "7.30 - 7.40",
+          "7.35"
+        ],
+        [
+          "Cerebrospinal Fluid",
+          "7.25 - 7.40",
+          "7.35"
+        ],
+        [
+          "Saliva",
+          "6.2 - 7.6",
+          "6.9"
+        ],
+        [
+          "Gastric Juice",
+          "1.5 - 3.5",
+          "2.0"
+        ],
+        [
+          "Pancreatic Juice",
+          "8.0 - 8.3",
+          "8.2"
+        ],
+        [
+          "Bile",
+          "7.0 - 7.3",
+          "7.15"
+        ],
+        [
+          "Urine",
+          "4.5 - 8.0",
+          "6.0"
+        ],
+        [
+          "Sweat",
+          "4.0 - 6.8",
+          "5.4"
+        ],
+        [
+          "Tears",
+          "7.0 - 7.5",
+          "7.4"
+        ],
+        [
+          "Vaginal Fluid",
+          "3.8 - 4.5",
+          "4.0"
+        ],
+        [
+          "Feces",
+          "6.0 - 7.5",
+          "7.0"
+        ],
+        [
+          "Intestinal Juice",
+          "7.0 - 8.0",
+          "7.5"
+        ],
+        [
+          "Semen",
+          "7.2 - 8.0",
+          "7.4"
+        ],
+        [
+          "Milk",
+          "6.5 - 6.9",
+          "6.7"
+        ]
+      ]
+    }
+  ]
+}

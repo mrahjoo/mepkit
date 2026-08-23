@@ -1,0 +1,324 @@
+{
+  "id": "noise_exposure___niosh_permissible_levels_and_dura",
+  "title": "Noise Exposure - NIOSH Permissible Levels and Duration",
+  "description": "Calculate the maximum time of exposure to noise levels according to NIOSH standards. Exposure to noise should be controlled so that it is less than a maximum combination of exposure level and duration, using the formula: t = 480 / 2^((L - 85)/3)",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "noise_calculator",
+      "content": "## Maximum Noise Exposure Time Calculator",
+      "inputs": [
+        {
+          "id": "noiseLevel",
+          "label": "Noise Exposure Level (dB(A))",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "dB(A)"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "maxDuration",
+          "label": "Maximum Exposure Duration",
+          "formula": "480 / Math.pow(2, (inputs.noiseLevel - 85) / 3)",
+          "unit": "minutes",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "exposure_table",
+      "content": "## Maximum Duration Time vs. Noise Level",
+      "headers": [
+        "Noise Exposure Level (dBA)",
+        "Hours",
+        "Minutes",
+        "Seconds"
+      ],
+      "rows": [
+        [
+          80,
+          0,
+          25,
+          24
+        ],
+        [
+          81,
+          0,
+          20,
+          10
+        ],
+        [
+          82,
+          0,
+          16,
+          0
+        ],
+        [
+          83,
+          0,
+          12,
+          42
+        ],
+        [
+          84,
+          0,
+          10,
+          5
+        ],
+        [
+          85,
+          0,
+          8,
+          0
+        ],
+        [
+          86,
+          0,
+          6,
+          21
+        ],
+        [
+          87,
+          0,
+          5,
+          2
+        ],
+        [
+          88,
+          0,
+          4,
+          0
+        ],
+        [
+          89,
+          0,
+          3,
+          10
+        ],
+        [
+          90,
+          0,
+          2,
+          31
+        ],
+        [
+          91,
+          0,
+          2,
+          0
+        ],
+        [
+          92,
+          0,
+          1,
+          35
+        ],
+        [
+          93,
+          0,
+          1,
+          16
+        ],
+        [
+          94,
+          0,
+          1,
+          0
+        ],
+        [
+          95,
+          0,
+          0,
+          47
+        ],
+        [
+          96,
+          0,
+          0,
+          37
+        ],
+        [
+          97,
+          0,
+          0,
+          30
+        ],
+        [
+          98,
+          0,
+          0,
+          23
+        ],
+        [
+          99,
+          0,
+          0,
+          18
+        ],
+        [
+          100,
+          0,
+          0,
+          15
+        ],
+        [
+          101,
+          0,
+          0,
+          11
+        ],
+        [
+          102,
+          0,
+          0,
+          9
+        ],
+        [
+          103,
+          0,
+          0,
+          7
+        ],
+        [
+          104,
+          0,
+          0,
+          5
+        ],
+        [
+          105,
+          0,
+          0,
+          4
+        ],
+        [
+          106,
+          0,
+          0,
+          3
+        ],
+        [
+          107,
+          0,
+          0,
+          2
+        ],
+        [
+          108,
+          0,
+          0,
+          2
+        ],
+        [
+          109,
+          0,
+          0,
+          1
+        ],
+        [
+          110,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "exposure_chart",
+      "content": "## Noise Level vs Maximum Exposure Duration",
+      "options": {
+        "title": {
+          "text": "Maximum Exposure Duration vs Noise Level"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Noise Exposure Level (dB(A))",
+          "data": [
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Maximum Duration (minutes)"
+        },
+        "series": [
+          {
+            "name": "Maximum Exposure Time",
+            "data": [
+              1524,
+              1210,
+              960,
+              762,
+              605,
+              480,
+              381,
+              302,
+              240,
+              190,
+              151,
+              120,
+              95,
+              75,
+              60,
+              47,
+              37,
+              30,
+              23,
+              18,
+              15,
+              11.9,
+              9.45,
+              7.5,
+              5.95,
+              4.72,
+              3.75,
+              2.97,
+              2.36,
+              1.87,
+              1.49
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

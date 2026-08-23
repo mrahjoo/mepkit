@@ -1,0 +1,102 @@
+{
+  "id": "buoyancy",
+  "title": "Buoyancy",
+  "description": "Buoyancy is the resultant force acting on a submerged body. Calculate the buoyant force using F = V × ρ × g, where V is the body volume, ρ is the fluid density, and g is gravitational acceleration.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "buoyancy_calculator",
+      "content": "Calculate buoyant force using Archimedes' principle",
+      "inputs": [
+        {
+          "id": "volume",
+          "label": "Body Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 0.012
+        },
+        {
+          "id": "density",
+          "label": "Fluid Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        }
+      ],
+      "outputs": [
+        {
+          "id": "buoyant_force",
+          "label": "Buoyant Force",
+          "formula": "inputs.volume * inputs.density * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "buoyancy_table",
+      "content": "Example Calculations",
+      "headers": [
+        "Description",
+        "Length (m)",
+        "Width (m)",
+        "Depth (m)",
+        "Density (kg/m³)",
+        "Gravity (m/s²)",
+        "Volume (m³)",
+        "Buoyant Force (N)"
+      ],
+      "rows": [
+        [
+          "Floating Box in Water",
+          0.3,
+          0.4,
+          0.1,
+          1000,
+          9.81,
+          0.012,
+          117.72
+        ],
+        [
+          "Larger Submerged Box",
+          0.5,
+          0.5,
+          0.2,
+          1000,
+          9.81,
+          0.05,
+          490.5
+        ],
+        [
+          "Small Submerged Object",
+          0.1,
+          0.1,
+          0.1,
+          1000,
+          9.81,
+          0.001,
+          9.81
+        ],
+        [
+          "Seawater Example",
+          0.3,
+          0.4,
+          0.1,
+          1025,
+          9.81,
+          0.012,
+          120.558
+        ]
+      ]
+    }
+  ]
+}

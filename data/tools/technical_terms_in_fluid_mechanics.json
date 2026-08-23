@@ -1,0 +1,263 @@
+{
+  "id": "technical_terms_in_fluid_mechanics",
+  "title": "Technical Terms in Fluid Mechanics",
+  "description": "Some commonly used technical terms in fluid mechanics",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Term",
+        "Category",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Acoustic theory",
+          "Sound & Waves",
+          "Relating to mathematical description of sound waves"
+        ],
+        [
+          "Aerodynamics",
+          "Flow of Gases",
+          "The study of the flow of gases"
+        ],
+        [
+          "Aeronautics",
+          "Flight Mechanics",
+          "The mathematics and mechanics of flying objects, in particular airplanes"
+        ],
+        [
+          "Bernoulli's equation",
+          "Fluid Dynamics",
+          "Describes the behavior of moving fluids along a streamline"
+        ],
+        [
+          "Boundary layer",
+          "Fluid Mechanics",
+          "The layer of fluid in the immediate vicinity of a bounding surface"
+        ],
+        [
+          "Cavitation",
+          "Fluid Phenomena",
+          "Formation of vapor bubbles in liquid flow, related to Net Positive Suction Head (NPSH)"
+        ],
+        [
+          "Compressible flow",
+          "Flow Types",
+          "Flow where the compressibility of the fluid must be taken into account"
+        ],
+        [
+          "Coanda effect",
+          "Fluid Behavior",
+          "The tendency of a stream of fluid to stay attached to a convex surface"
+        ],
+        [
+          "Conservation laws",
+          "Fundamental Principles",
+          "Particular measurable properties of an isolated physical system do not change as the system evolves"
+        ],
+        [
+          "Darcy-Weisbach Equation",
+          "Pressure Loss",
+          "Equation for pressure loss and head loss due to friction in ducts and tubes"
+        ],
+        [
+          "Density",
+          "Fluid Properties",
+          "Mass per unit volume of a fluid"
+        ],
+        [
+          "Euler equations",
+          "Governing Equations",
+          "Govern the motion of a compressible, inviscid fluid, representing conservation of mass, momentum, and energy"
+        ],
+        [
+          "Euler Number",
+          "Dimensionless Numbers",
+          "A dimensionless number in fluid mechanics"
+        ],
+        [
+          "Flow Coefficient (Cv, Kv)",
+          "Flow Measurement",
+          "Coefficients used to characterize flow through control valves"
+        ],
+        [
+          "Flow measurement",
+          "Instrumentation",
+          "Tools and methods for measuring fluid flow rates"
+        ],
+        [
+          "Fluids",
+          "General Fluid Mechanics",
+          "Substances that flow and conform to the shape of their containers"
+        ],
+        [
+          "Froude number",
+          "Dimensionless Numbers",
+          "A dimensionless number in fluid mechanics"
+        ],
+        [
+          "Gas",
+          "Fluid Types",
+          "A state of matter characterized by low density and high compressibility"
+        ],
+        [
+          "Hydraulics",
+          "Engineering Applications",
+          "Science and engineering concerned with the use of liquids to perform mechanical tasks"
+        ],
+        [
+          "Hydrodynamics",
+          "Fluid Dynamics",
+          "Fluid dynamics applied to liquids, such as water, alcohol, and oil"
+        ],
+        [
+          "Ideal Gas",
+          "Gas Laws",
+          "A gas that obeys the ideal gas law"
+        ],
+        [
+          "Knudsen number",
+          "Dimensionless Numbers",
+          "Used to determine the validity of continuum mechanics"
+        ],
+        [
+          "Laminar Flow",
+          "Flow Types",
+          "Flow characterized by smooth, parallel layers with no mixing between layers"
+        ],
+        [
+          "Laplace's equation",
+          "Mathematical Physics",
+          "Describes the behavior of gravitational, electric, and fluid potentials"
+        ],
+        [
+          "Lift (force)",
+          "Aerodynamics",
+          "Sum of all aerodynamic forces normal to the direction of external airflow"
+        ],
+        [
+          "Liquids",
+          "Fluid Types",
+          "A state of matter with definite volume but no definite shape"
+        ],
+        [
+          "Mach number",
+          "Dimensionless Numbers",
+          "Ratio of an object's speed to the speed of sound in that medium"
+        ],
+        [
+          "Navier-Stokes Equations",
+          "Governing Equations",
+          "Equations governing the motion of a non-turbulent, Newtonian fluid"
+        ],
+        [
+          "Newtonian Fluid",
+          "Fluid Types",
+          "A fluid with constant viscosity regardless of applied shear force"
+        ],
+        [
+          "Non-Newtonian fluid",
+          "Fluid Types",
+          "A fluid whose viscosity changes with the applied shear force"
+        ],
+        [
+          "Prandtl number",
+          "Dimensionless Numbers",
+          "Ratio of momentum diffusivity to thermal diffusivity"
+        ],
+        [
+          "Pressure",
+          "Fluid Properties",
+          "Force per unit area exerted by a fluid"
+        ],
+        [
+          "Reynolds Number",
+          "Dimensionless Numbers",
+          "Used to determine whether a flow is laminar or turbulent"
+        ],
+        [
+          "Richardson number",
+          "Dimensionless Numbers",
+          "Expresses the ratio of potential to kinetic energy"
+        ],
+        [
+          "Shock wave",
+          "Wave Phenomena",
+          "A strong pressure wave produced by explosions or violent pressure changes"
+        ],
+        [
+          "Sound barrier",
+          "Speed Phenomena",
+          "The apparent physical boundary stopping large objects from becoming supersonic"
+        ],
+        [
+          "Streamline - Stream function",
+          "Flow Visualization",
+          "The path that an imaginary particle would follow if embedded in the flow"
+        ],
+        [
+          "Strouhal number",
+          "Dimensionless Numbers",
+          "Describes oscillating flow mechanisms"
+        ],
+        [
+          "Supersonic Flow",
+          "Flow Types",
+          "Flow with speed above the speed of sound"
+        ],
+        [
+          "Surface tension",
+          "Fluid Properties",
+          "Force within the surface layer of a liquid causing it to behave as an elastic sheet"
+        ],
+        [
+          "Transonic",
+          "Flow Types",
+          "Flow with speed at velocities just below and above the speed of sound"
+        ],
+        [
+          "Turbulent Flow - Turbulence",
+          "Flow Types",
+          "Flow characterized by chaotic, irregular fluid motion"
+        ],
+        [
+          "Vapor pressure",
+          "Fluid Properties",
+          "Pressure at which the vapor of a substance is in equilibrium with its liquid or solid forms"
+        ],
+        [
+          "Velocity",
+          "Flow Properties",
+          "Speed and direction of fluid motion"
+        ],
+        [
+          "Venturi",
+          "Flow Control",
+          "A system for speeding the flow of a fluid by constricting it in a cone-shaped tube"
+        ],
+        [
+          "Viscosity",
+          "Fluid Properties",
+          "Measure of a fluid's resistance to flow"
+        ],
+        [
+          "Vorticity",
+          "Flow Characteristics",
+          "Circulation per unit area at a point in the flow field"
+        ],
+        [
+          "Wave drag",
+          "Aerodynamic Phenomena",
+          "Sudden and powerful drag appearing on aircraft flying at high-subsonic speeds"
+        ],
+        [
+          "Weber Number",
+          "Dimensionless Numbers",
+          "A dimensionless number in fluid mechanics"
+        ]
+      ]
+    }
+  ]
+}

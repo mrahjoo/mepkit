@@ -1,0 +1,76 @@
+{
+  "id": "triangle",
+  "title": "Triangle",
+  "description": "Triangle analytical geometry calculator for computing centroid coordinates and area",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Triangle Calculator\n\nCalculate the centroid coordinates and area of a triangle given three points in a coordinate system.\n\n**Centroid formulas:**\n- xs = (x1 + x2 + x3) / 3\n- ys = (y1 + y2 + y3) / 3\n\n**Area formula:**\n- A = ((x1·y2 - x2·y1) + (x2·y3 - x3·y2) + (x3·y1 - x1·y3)) / 2"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "x1",
+          "label": "Point 1 - X coordinate",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "y1",
+          "label": "Point 1 - Y coordinate",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "x2",
+          "label": "Point 2 - X coordinate",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "y2",
+          "label": "Point 2 - Y coordinate",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "x3",
+          "label": "Point 3 - X coordinate",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "y3",
+          "label": "Point 3 - Y coordinate",
+          "type": "number",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "centroid_x",
+          "label": "Centroid X coordinate",
+          "formula": "(inputs.x1 + inputs.x2 + inputs.x3) / 3",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "centroid_y",
+          "label": "Centroid Y coordinate",
+          "formula": "(inputs.y1 + inputs.y2 + inputs.y3) / 3",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "area",
+          "label": "Area",
+          "formula": "((inputs.x1 * inputs.y2 - inputs.x2 * inputs.y1) + (inputs.x2 * inputs.y3 - inputs.x3 * inputs.y2) + (inputs.x3 * inputs.y1 - inputs.x1 * inputs.y3)) / 2",
+          "format": "decimal",
+          "unit": "square units"
+        }
+      ]
+    }
+  ]
+}

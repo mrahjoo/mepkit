@@ -1,0 +1,155 @@
+{
+  "id": "pipes_and_cylinders___conductive_heat_loss",
+  "title": "Pipes and Cylinders - Conductive Heat Loss",
+  "description": "Calculate conductive heat loss through uninsulated or insulated pipes and cylinders using thermal conductivity and temperature differences.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pipes and Cylinders - Conductive Heat Loss\n\nCalculate conductive heat loss through the wall of uninsulated or insulated cylinders and pipes.\n\n## Uninsulated Cylinder or Pipe\n**Q = 2π L (tᵢ - tₒ) / (ln(rₒ / rᵢ) / k)**\n\n## Insulated Cylinder or Pipe\n**Q = 2π L (tᵢ - tₒ) / ((ln(rₒ / rᵢ) / k) + (ln(rₛ / rₒ) / kₛ))**\n\n## Insulated Cylinder or Pipe with Convective Heat Resistance\n**Q = 2π L (tᵢ - tₒ) / (1 / (hc rᵢ) + (ln(rₒ / rᵢ) / k) + (ln(rₛ / rₒ) / kₛ))**"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Configuration Type"
+      ],
+      "inputs": [
+        {
+          "id": "config_type",
+          "label": "Configuration Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Uninsulated Cylinder or Pipe",
+              "value": "uninsulated"
+            },
+            {
+              "label": "Insulated Cylinder or Pipe",
+              "value": "insulated"
+            },
+            {
+              "label": "Insulated with Convective Heat Resistance",
+              "value": "insulated_convective"
+            }
+          ],
+          "defaultValue": "uninsulated"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Basic Parameters"
+      ],
+      "inputs": [
+        {
+          "id": "L",
+          "label": "Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "ti",
+          "label": "Inside Temperature (tᵢ)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        },
+        {
+          "id": "to",
+          "label": "Outside Temperature (tₒ)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "ri",
+          "label": "Inside Radius (rᵢ)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "ro",
+          "label": "Outside Radius (rₒ)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.06
+        },
+        {
+          "id": "k",
+          "label": "Thermal Conductivity (k)",
+          "type": "number",
+          "unit": "W/mK",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Q_uninsulated",
+          "label": "Heat Transfer (Q) - Uninsulated",
+          "unit": "W",
+          "format": "decimal",
+          "formula": "2 * 3.14159 * inputs.L * (inputs.ti - inputs.to) / (Math.log(inputs.ro / inputs.ri) / inputs.k)"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Insulation Parameters"
+      ],
+      "inputs": [
+        {
+          "id": "rs",
+          "label": "Outside Radius of Insulation (rₛ)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.08
+        },
+        {
+          "id": "ks",
+          "label": "Thermal Conductivity of Insulation (kₛ)",
+          "type": "number",
+          "unit": "W/mK",
+          "defaultValue": 0.05
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Q_insulated",
+          "label": "Heat Transfer (Q) - Insulated",
+          "unit": "W",
+          "format": "decimal",
+          "formula": "2 * 3.14159 * inputs.L * (inputs.ti - inputs.to) / ((Math.log(inputs.ro / inputs.ri) / inputs.k) + (Math.log(inputs.rs / inputs.ro) / inputs.ks))"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Convective Heat Transfer Parameters"
+      ],
+      "inputs": [
+        {
+          "id": "hc",
+          "label": "Convective Heat Transfer Coefficient (hc)",
+          "type": "number",
+          "unit": "W/m²K",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Q_insulated_convective",
+          "label": "Heat Transfer (Q) - Insulated with Convective Resistance",
+          "unit": "W",
+          "format": "decimal",
+          "formula": "2 * 3.14159 * inputs.L * (inputs.ti - inputs.to) / ((1 / (inputs.hc * inputs.ri)) + (Math.log(inputs.ro / inputs.ri) / inputs.k) + (Math.log(inputs.rs / inputs.ro) / inputs.ks))"
+        }
+      ]
+    }
+  ]
+}

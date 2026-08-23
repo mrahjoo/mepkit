@@ -1,0 +1,72 @@
+{
+  "id": "propagation_of_sound_indoors___the_room_constant",
+  "title": "Propagation of Sound Indoors - the Room Constant",
+  "description": "Calculator for sound pressure level in rooms considering direct and reverberant sound, including room constant calculations based on acoustic absorption properties.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sound Pressure Level Calculator\n\nFor a continuing sound source in a room, the sound level is the sum of direct and reverberant sound.\n\n**Formula:** Lp = LN + 10 log(D / (4π r²) + 4 / R)\n\nWhere:\n- **Lp** = received sound pressure level (dB)\n- **LN** = sound power level from source (dB)\n- **D** = directivity coefficient (typical 1 for receivers in middle of room)\n- **R** = room constant (m² Sabin)\n- **r** = distance from source (m)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sound_power_level",
+          "label": "Sound Power Level (LN)",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 90
+        },
+        {
+          "id": "directivity_coefficient",
+          "label": "Directivity Coefficient (D)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 1
+        },
+        {
+          "id": "distance_from_source",
+          "label": "Distance from Source (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "total_absorption",
+          "label": "Total Room Sound Absorption (A)",
+          "type": "number",
+          "unit": "m² Sabin",
+          "defaultValue": 12.2
+        },
+        {
+          "id": "mean_absorption_coefficient",
+          "label": "Mean Absorption Coefficient (αm)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "room_constant",
+          "label": "Room Constant (R)",
+          "formula": "inputs.total_absorption / (1 - inputs.mean_absorption_coefficient)",
+          "unit": "m² Sabin",
+          "format": "decimal"
+        },
+        {
+          "id": "sound_pressure_level",
+          "label": "Sound Pressure Level (Lp)",
+          "formula": "inputs.sound_power_level + 10 * Math.log10(inputs.directivity_coefficient / (4 * Math.PI * inputs.distance_from_source * inputs.distance_from_source) + 4 / (inputs.total_absorption / (1 - inputs.mean_absorption_coefficient)))",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Room Constant Formula\n\n**R = A / (1 - αm)**\n\nOr for individual surfaces:\n\n**R = Σ(Si × αi) / (1 - αm)**\n\nWhere:\n- **R** = room constant (m² Sabine)\n- **A** = total room sound absorption (m² Sabine)\n- **αm** = mean absorption coefficient of the room\n- **Si** = individual surface area in the room (m²)\n- **αi** = absorption coefficient for individual surface"
+    }
+  ]
+}

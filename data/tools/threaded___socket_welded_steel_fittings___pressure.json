@@ -1,0 +1,38 @@
+{
+  "id": "threaded___socket_welded_steel_fittings___pressure",
+  "title": "Threaded & Socket Welded Steel Fittings - Pressure Classes vs. Schedules",
+  "description": "Pressure classes, schedules and weights of pipes for threaded & socket welded fittings. Provides reference data for standard (STD), extra strong (XS), and double extra strong (XXS) schedules across different pressure classes.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pipe Schedule and Designation\n\nThreaded fittings are available in pressure classes 2000, 3000 and 6000.\n\nSocket-welded fittings are available in pressure classes 3000, 6000 and 9000.\n\n### Legend\n- **Standard (STD)** - Standard wall thickness\n- **Extra Strong (XS)** - Extra strong wall thickness\n- **Double Extra Strong (XXS)** - Double extra strong wall thickness\n- **Schedule** - Numbers assigned to different wall thickness of pipe (i.e. schedule 80)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pressure Class",
+        "2000",
+        "3000",
+        "6000",
+        "9000"
+      ],
+      "rows": [
+        [
+          "Threaded Fittings",
+          "80/XS",
+          "160",
+          "XXS",
+          "—"
+        ],
+        [
+          "Socket-welded Fittings",
+          "—",
+          "80/XS",
+          "160",
+          "XXS"
+        ]
+      ]
+    }
+  ]
+}

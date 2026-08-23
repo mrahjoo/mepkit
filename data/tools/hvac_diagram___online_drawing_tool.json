@@ -1,0 +1,62 @@
+{
+  "id": "hvac_diagram___online_drawing_tool",
+  "title": "HVAC Diagram - Online Drawing Tool",
+  "description": "Draw HVAC diagrams online with this Google Drive drawing tool. FREE online HVAC diagram drawing template enabled for Google Drive. No installation required - just log in and copy the template to start creating your own diagrams. Select, copy and paste components, customize existing ones, share and collaborate online, and export diagrams to the public.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Feature",
+        "Description",
+        "Details"
+      ],
+      "rows": [
+        [
+          "Free Access",
+          "No installation required",
+          "Log in to Google Account (free) and copy the template"
+        ],
+        [
+          "Component Library",
+          "Pre-built HVAC components",
+          "Select, copy and paste components from template"
+        ],
+        [
+          "Customization",
+          "Modify existing components",
+          "Create new custom components based on templates"
+        ],
+        [
+          "Collaboration",
+          "Share and work together",
+          "Real-time online collaboration with team members"
+        ],
+        [
+          "Export Options",
+          "Multiple export formats",
+          "Export and publish diagrams to public or private sharing"
+        ],
+        [
+          "Integration",
+          "Combine with other Google tools",
+          "Link with Google Docs and Spreadsheets for documentation"
+        ],
+        [
+          "Template Access",
+          "Ready-to-use HVAC template",
+          "Access online drawing template with standard HVAC symbols"
+        ],
+        [
+          "Attribution",
+          "Creator credit",
+          "Credit to Engineering ToolBox appreciated on drawings"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## How to Get Started\n\n1. Visit [Google Drive](https://drive.google.com/)\n2. Log in with your free Google Account\n3. Open the [HVAC drawing template](https://docs.google.com/drawings/d/1vvLk-M1lQ0yWa-6xaNm6Qloj_LGAEF75T5g5AU_QtVk/edit?usp=sharing)\n4. Click 'File > Make a copy' to create your own version\n5. Start building your HVAC diagram\n\n## Key Benefits\n\n- **No Installation**: Works entirely in your web browser\n- **Free to Use**: Completely free Google Drive tools\n- **Easy Sharing**: Collaborate with team members in real-time\n- **Professional Templates**: Pre-built HVAC components and symbols\n- **Export & Publish**: Share diagrams publicly or privately\n- **Integration**: Combine with Google Docs and Spreadsheets"
+    }
+  ]
+}

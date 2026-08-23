@@ -1,0 +1,55 @@
+{
+  "id": "chemicals_hazard_rating_system",
+  "title": "Chemicals Hazard Rating System",
+  "description": "The National Fire Protection Association (NFPA) hazard system for chemical materials. The NFPA 704 Diamond indicates health, flammability, reactivity and special hazards for common chemicals.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Rating",
+        "Health",
+        "Flammability",
+        "Reactivity",
+        "Special Hazards"
+      ],
+      "rows": [
+        [
+          "4 - SEVERE",
+          "Deadly, even the slightest exposure would be life threatening",
+          "Flash Point Below 73°F - Extremely flammable, volatile and explosive",
+          "May Detonate - May explode at normal temperatures and pressures",
+          "Radiation, Acid, Alkali, Corrosive, Oxidizer, Use No Water"
+        ],
+        [
+          "3 - SERIOUS",
+          "Extreme Danger - Serious injury would result from exposure",
+          "Flash Point Below 100°F - Flammable, volatile or explosive at normal temperatures and pressure",
+          "Explosive - Capable of detonation or explosion by heat, shock or water",
+          ""
+        ],
+        [
+          "2 - MODERATE",
+          "Dangerous - Exposure would be hazardous to health",
+          "Flash Point Below 200°F - Moderately heated conditions may ignite",
+          "Unstable - Violent chemical changes possible at normal temperatures or when mixed with water",
+          ""
+        ],
+        [
+          "1 - SLIGHT",
+          "Irritation or minor injury would result from exposure",
+          "Flash Point Above 200°F - Substance must be preheated to ignite",
+          "Normally Stable - May become unstable at elevated temperatures or with water",
+          ""
+        ],
+        [
+          "0 - MINIMAL",
+          "No significant hazard or health risk",
+          "Will Not Burn",
+          "Stable - Remains stable with heat, pressure and water",
+          ""
+        ]
+      ]
+    }
+  ]
+}

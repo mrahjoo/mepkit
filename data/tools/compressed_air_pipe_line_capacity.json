@@ -1,0 +1,201 @@
+{
+  "id": "compressed_air_pipe_line_capacity",
+  "title": "Compressed Air Pipe Line Capacity",
+  "description": "Capacities of compressed air pipelines - pressure ranging 5 - 250 psi (0.5 - 17 bar). Estimate the flow capacity in a compressed air pipeline based on pipe size and applied pressure.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Compressed Air Pipe Line Capacity\n\nThis tool estimates the flow capacity in compressed air pipelines with pressure ranging **5 - 250 psi (0.5 - 17 bar)**.\n\n### Assumptions:\n- Schedule 40 pipe\n- For pipes 1/8\" to 1/2\": pressure drop 10% per 100 feet\n- For pipes 3/4\" to 3\": pressure drop 5% per 100 feet\n- Flow measured in SCFM (Standard Cubic Feet per Minute)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_size",
+          "label": "Pipe Size",
+          "type": "select",
+          "options": [
+            {
+              "label": "1/8\"",
+              "value": 0.125
+            },
+            {
+              "label": "1/4\"",
+              "value": 0.25
+            },
+            {
+              "label": "3/8\"",
+              "value": 0.375
+            },
+            {
+              "label": "1/2\"",
+              "value": 0.5
+            },
+            {
+              "label": "3/4\"",
+              "value": 0.75
+            },
+            {
+              "label": "1\"",
+              "value": 1
+            },
+            {
+              "label": "1.25\"",
+              "value": 1.25
+            },
+            {
+              "label": "1.5\"",
+              "value": 1.5
+            },
+            {
+              "label": "2\"",
+              "value": 2
+            },
+            {
+              "label": "3\"",
+              "value": 3
+            }
+          ],
+          "defaultValue": 1
+        },
+        {
+          "id": "applied_pressure_psi",
+          "label": "Applied Pressure",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 100
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "feet",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "capacity_scfm",
+          "label": "Flow Capacity",
+          "unit": "SCFM",
+          "format": "decimal",
+          "formula": "inputs.applied_pressure_psi > 0 ? inputs.applied_pressure_psi * 10 : 0"
+        },
+        {
+          "id": "pressure_drop_percent",
+          "label": "Pressure Drop",
+          "unit": "%",
+          "format": "decimal",
+          "formula": "inputs.pipe_size <= 0.5 ? 10 : 5"
+        },
+        {
+          "id": "pressure_drop_psi",
+          "label": "Pressure Drop",
+          "unit": "psi",
+          "format": "decimal",
+          "formula": "(inputs.pipe_size <= 0.5 ? 10 : 5) * inputs.applied_pressure_psi / 100 * (inputs.pipe_length / 100)"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Compressed Air Pipeline Capacity vs Pressure",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "5 psi\n(0.3 bar)",
+            "20 psi\n(1.4 bar)",
+            "40 psi\n(2.8 bar)",
+            "60 psi\n(4.1 bar)",
+            "80 psi\n(5.5 bar)",
+            "100 psi\n(6.9 bar)",
+            "150 psi\n(10.3 bar)",
+            "200 psi\n(13.8 bar)",
+            "250 psi\n(17.2 bar)"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Flow Capacity (SCFM)"
+        },
+        "series": [
+          {
+            "name": "1/2\" Pipe",
+            "data": [
+              15,
+              35,
+              65,
+              95,
+              125,
+              150,
+              220,
+              280,
+              330
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "1\" Pipe",
+            "data": [
+              40,
+              90,
+              170,
+              250,
+              330,
+              400,
+              600,
+              790,
+              950
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "1.5\" Pipe",
+            "data": [
+              90,
+              210,
+              400,
+              590,
+              780,
+              950,
+              1450,
+              1900,
+              2300
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "2\" Pipe",
+            "data": [
+              160,
+              380,
+              720,
+              1050,
+              1380,
+              1680,
+              2550,
+              3350,
+              4050
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ],
+        "legend": {
+          "left": "right"
+        }
+      }
+    }
+  ]
+}

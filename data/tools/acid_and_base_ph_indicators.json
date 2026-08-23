@@ -1,0 +1,377 @@
+{
+  "id": "acid_and_base_ph_indicators",
+  "title": "Acid and Base pH Indicators",
+  "description": "pH range vs. color change for acid and base indicators - together with pKa and structures of the indicators.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Acid and Base pH Indicators\n\nThe _ranges for the color changes_ are given in the table below, together with the corresponding _pKa value of the indicators_.\n\nThis tool displays pH indicators used in acid-base chemistry, showing their color transition ranges and corresponding pKa values."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Trade name",
+        "pH start",
+        "pH end",
+        "pKa",
+        "low pH color",
+        "high pH color"
+      ],
+      "rows": [
+        [
+          "Cresol red - step 1",
+          0.2,
+          1.8,
+          1,
+          "red",
+          "yellow"
+        ],
+        [
+          "Malachite green - step 1",
+          0.2,
+          1.8,
+          1.3,
+          "yellow",
+          "green"
+        ],
+        [
+          "Thymol blue - step 1",
+          1.2,
+          2.8,
+          1.7,
+          "red",
+          "yellow"
+        ],
+        [
+          "Methyl yellow",
+          2.9,
+          4,
+          3.3,
+          "red",
+          "yellow"
+        ],
+        [
+          "Methyl orange",
+          3.1,
+          4.4,
+          3.5,
+          "red",
+          "yellow"
+        ],
+        [
+          "Bromophenol blue",
+          3,
+          4.6,
+          4.1,
+          "yellow",
+          "blue"
+        ],
+        [
+          "Congo red",
+          3,
+          5,
+          "",
+          "blue-violet",
+          "red"
+        ],
+        [
+          "Methyl orange in xylene cyanol (screened)",
+          3.2,
+          4.2,
+          "",
+          "grey-violet",
+          "green"
+        ],
+        [
+          "Bromocresol green",
+          3.8,
+          5.4,
+          4.7,
+          "yellow",
+          "blue"
+        ],
+        [
+          "Methyl red",
+          4.4,
+          6.2,
+          5.1,
+          "red",
+          "yellow"
+        ],
+        [
+          "Methyl purple",
+          4.8,
+          5.4,
+          "",
+          "purple",
+          "green"
+        ],
+        [
+          "Bromocresol purple",
+          5.2,
+          6.8,
+          6.4,
+          "yellow",
+          "purple"
+        ],
+        [
+          "Azolitmin (litmus)",
+          4.5,
+          8.3,
+          "",
+          "red",
+          "blue"
+        ],
+        [
+          "Bromothymol blue",
+          6,
+          7.6,
+          7.3,
+          "yellow",
+          "blue"
+        ],
+        [
+          "Phenol red",
+          6.4,
+          8,
+          8,
+          "yellow",
+          "red"
+        ],
+        [
+          "Neutral red",
+          6.8,
+          8,
+          "",
+          "red",
+          "yellow"
+        ],
+        [
+          "Cresol red - step 2",
+          7.2,
+          8.8,
+          8.5,
+          "yellow",
+          "reddish-purple"
+        ],
+        [
+          "Naphtholphthalein",
+          7.3,
+          8.7,
+          "",
+          "pale red",
+          "greenish-blue"
+        ],
+        [
+          "Thymol blue - step 2",
+          8,
+          9.6,
+          9.2,
+          "yellow",
+          "blue"
+        ],
+        [
+          "Cresolphthalein",
+          8.2,
+          9.8,
+          "",
+          "colorless",
+          "purple"
+        ],
+        [
+          "Phenolphthalein",
+          8.3,
+          10,
+          9.5,
+          "colorless",
+          "red-pink"
+        ],
+        [
+          "Thymolphthalein",
+          9,
+          10.5,
+          9.2,
+          "colorless",
+          "blue"
+        ],
+        [
+          "Alizarin yellow R",
+          10.1,
+          12,
+          11.2,
+          "yellow",
+          "red"
+        ],
+        [
+          "Indigo carmine",
+          11.4,
+          13,
+          "",
+          "blue",
+          "yellow"
+        ],
+        [
+          "Malachite green - step 2",
+          11.5,
+          13.2,
+          "",
+          "green",
+          "colorless"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "pH",
+          "min": 0,
+          "max": 14
+        },
+        "yAxis": {
+          "type": "category",
+          "data": [
+            "Cresol red - step 1",
+            "Malachite green - step 1",
+            "Thymol blue - step 1",
+            "Methyl yellow",
+            "Methyl orange",
+            "Bromophenol blue",
+            "Congo red",
+            "Methyl orange in xylene cyanol",
+            "Bromocresol green",
+            "Methyl red",
+            "Methyl purple",
+            "Bromocresol purple",
+            "Azolitmin (litmus)",
+            "Bromothymol blue",
+            "Phenol red",
+            "Neutral red",
+            "Cresol red - step 2",
+            "Naphtholphthalein",
+            "Thymol blue - step 2",
+            "Cresolphthalein",
+            "Phenolphthalein",
+            "Thymolphthalein",
+            "Alizarin yellow R",
+            "Indigo carmine",
+            "Malachite green - step 2"
+          ]
+        },
+        "series": [
+          {
+            "name": "pH Range",
+            "type": "scatter",
+            "data": [
+              [
+                0.2,
+                0
+              ],
+              [
+                0.2,
+                1
+              ],
+              [
+                1.2,
+                2
+              ],
+              [
+                2.9,
+                3
+              ],
+              [
+                3.1,
+                4
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                3.2,
+                7
+              ],
+              [
+                3.8,
+                8
+              ],
+              [
+                4.4,
+                9
+              ],
+              [
+                4.8,
+                10
+              ],
+              [
+                5.2,
+                11
+              ],
+              [
+                4.5,
+                12
+              ],
+              [
+                6,
+                13
+              ],
+              [
+                6.4,
+                14
+              ],
+              [
+                6.8,
+                15
+              ],
+              [
+                7.2,
+                16
+              ],
+              [
+                7.3,
+                17
+              ],
+              [
+                8,
+                18
+              ],
+              [
+                8.2,
+                19
+              ],
+              [
+                8.3,
+                20
+              ],
+              [
+                9,
+                21
+              ],
+              [
+                10.1,
+                22
+              ],
+              [
+                11.4,
+                23
+              ],
+              [
+                11.5,
+                24
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

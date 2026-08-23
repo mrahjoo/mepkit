@@ -1,0 +1,109 @@
+{
+  "id": "oil_pipes___head_loss",
+  "title": "Oil Pipes - Head Loss",
+  "description": "Head or pressure loss due to friction in oil pipes - various viscosity and laminar flow. Calculates head loss in oil pipes with laminar flow based on viscosity, flow rate, and pipe diameter.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Oil Pipes - Head Loss Calculator\n\nHead or pressure loss due to friction in oil pipes with laminar flow (Reynolds Number < 2300).\n\n**Variables:**\n- **h** = head loss (meter oil per metre oil pipe)\n- **f** = flow of oil (liter/s)\n- **d** = internal diameter of pipe (mm)\n- **Viscosity** = kinematic viscosity (cSt)\n\n**Formulas by Viscosity:**\n- 4 cSt: h = 1.7×10⁴ f / d⁴\n- 25 cSt: h = 11×10⁴ f / d⁴\n- 45 cSt: h = 20×10⁴ f / d⁴\n- 250 cSt: h = 110×10⁴ f / d⁴\n- 500 cSt: h = 220×10⁴ f / d⁴"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "viscosity",
+          "label": "Viscosity (cSt)",
+          "type": "select",
+          "options": [
+            {
+              "value": 4,
+              "label": "4 cSt"
+            },
+            {
+              "value": 25,
+              "label": "25 cSt"
+            },
+            {
+              "value": 45,
+              "label": "45 cSt"
+            },
+            {
+              "value": 250,
+              "label": "250 cSt"
+            },
+            {
+              "value": 500,
+              "label": "500 cSt"
+            }
+          ],
+          "defaultValue": 25
+        },
+        {
+          "id": "flow",
+          "label": "Flow (l/s)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "l/s"
+        },
+        {
+          "id": "diameter",
+          "label": "Pipe Diameter (mm)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "mm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "head_loss",
+          "label": "Head Loss",
+          "unit": "m/m",
+          "format": "scientific",
+          "formula": "((inputs.viscosity === 4 ? 1.7e4 : inputs.viscosity === 25 ? 11e4 : inputs.viscosity === 45 ? 20e4 : inputs.viscosity === 250 ? 110e4 : 220e4) * inputs.flow) / Math.pow(inputs.diameter, 4)"
+        },
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number",
+          "format": "decimal",
+          "formula": "(1.49e5 * inputs.flow) / (inputs.diameter * inputs.viscosity)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Viscosity (cSt)",
+        "Formula",
+        "Coefficient (×10⁴)"
+      ],
+      "rows": [
+        [
+          "4",
+          "h = 1.7×10⁴ × f / d⁴",
+          "1.7"
+        ],
+        [
+          "25",
+          "h = 11×10⁴ × f / d⁴",
+          "11"
+        ],
+        [
+          "45",
+          "h = 20×10⁴ × f / d⁴",
+          "20"
+        ],
+        [
+          "250",
+          "h = 110×10⁴ × f / d⁴",
+          "110"
+        ],
+        [
+          "500",
+          "h = 220×10⁴ × f / d⁴",
+          "220"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "id": "liquids___vapor_pressures",
+  "title": "Liquids - Vapor Pressures",
+  "description": "Vapor and saturation pressure for some common liquids. The vapor pressure of a liquid is defined as the pressure exerted by the molecules that escape from the liquid to form a separate vapor phase above the liquid surface.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Vapor Pressure Reference\n\nThe **vapor pressure** of a liquid is the pressure exerted by molecules that escape from the liquid to form a separate vapor phase above the liquid surface.\n\n### Key Information\n\n- Vapor or saturation pressure depends on temperature\n- For solutions with multiple components:\n  - Higher vapor pressure components are called **light components**\n  - Lower vapor pressure components are called **heavy components**\n\n### Common Saturation Temperatures at Atmospheric Pressure\n\n- **Water**: 100°C (212°F)\n- **Ethyl alcohol**: 78.5°C (173°F)\n\n### Data Reference\n\nThe vapor pressure table below shows approximate values for temperatures in the range **20°C - 25°C (68°F - 77°F)**.\n\n**Conversion**: 1 kPa = 103 Pa = 0.145 psi"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid Name",
+        "Vapor Pressure (kPa)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde",
+          120
+        ],
+        [
+          "Acetic acid",
+          2.1
+        ],
+        [
+          "Acetic acid anhydride",
+          0.68
+        ],
+        [
+          "Acetone",
+          30
+        ],
+        [
+          "Allyl alcohol",
+          2.3
+        ],
+        [
+          "Allyl chloride",
+          40
+        ],
+        [
+          "Aluminum nitrate, 10% solution in water",
+          2.4
+        ],
+        [
+          "Aluminum sulphate, 10% solution in water",
+          2.4
+        ],
+        [
+          "Amyl acetate",
+          0.47
+        ],
+        [
+          "Aniline",
+          0.09
+        ],
+        [
+          "Beer",
+          2.4
+        ],
+        [
+          "Benzene",
+          14
+        ],
+        [
+          "Benzyl alcohol",
+          0.013
+        ],
+        [
+          "Bromine",
+          28
+        ],
+        [
+          "Butyl acetate",
+          1.5
+        ],
+        [
+          "Butyl alcohol, 1-butanol",
+          0.93
+        ],
+        [
+          "Butyric acid n",
+          0.43
+        ],
+        [
+          "Calcium chloride, 25% solution in water",
+          2.4
+        ],
+        [
+          "Calcium chloride, 5% solution in water",
+          2.4
+        ],
+        [
+          "Carbon disulphide",
+          48
+        ],
+        [
+          "Carbon tetrachloride",
+          15.3
+        ],
+        [
+          "Chloroform",
+          26
+        ],
+        [
+          "Cyclohexanol",
+          0.9
+        ],
+        [
+          "Cyclohexanone",
+          0.67
+        ],
+        [
+          "Ethyl acetate",
+          14
+        ],
+        [
+          "Ethyl alcohol",
+          12.4
+        ],
+        [
+          "Ethyl glycol",
+          0.7
+        ],
+        [
+          "Ethylene glycol",
+          0.007
+        ],
+        [
+          "Formic acid",
+          5.7
+        ],
+        [
+          "Furfurol, 2-Furaldehyde",
+          0.3
+        ],
+        [
+          "Heptane",
+          6
+        ],
+        [
+          "Hexane",
+          17.6
+        ],
+        [
+          "Isopropyl alcohol (rubbing alcohol)",
+          4.4
+        ],
+        [
+          "Kerosene",
+          0.7
+        ],
+        [
+          "Methyl acetate",
+          28.8
+        ],
+        [
+          "Methyl alcohol, methanol",
+          16.9
+        ],
+        [
+          "Methylene chloride, dichloromethane",
+          58
+        ],
+        [
+          "Milk",
+          2.4
+        ],
+        [
+          "Nitrobenzene",
+          0.03
+        ],
+        [
+          "Nonane",
+          0.6
+        ],
+        [
+          "Octane",
+          1.9
+        ],
+        [
+          "Pentane",
+          58
+        ],
+        [
+          "Phenol",
+          0.05
+        ],
+        [
+          "Propanol",
+          2.8
+        ],
+        [
+          "Propionic acid",
+          0.47
+        ],
+        [
+          "Sea water",
+          2.4
+        ],
+        [
+          "Sodium chloride, 25% solution in water",
+          2.4
+        ],
+        [
+          "Sodium hydroxide, 20% solution in water",
+          2.4
+        ],
+        [
+          "Sodium hydroxide, 30% solution in water",
+          2.4
+        ],
+        [
+          "Styrene",
+          0.85
+        ],
+        [
+          "Tetrachloroethane",
+          0.7
+        ],
+        [
+          "Tetrachloroethylene",
+          2.5
+        ],
+        [
+          "Toluene",
+          3.8
+        ],
+        [
+          "Trichloroethylene",
+          9.2
+        ],
+        [
+          "Water",
+          2.4
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "vapor_pressure_kpa",
+          "label": "Vapor Pressure",
+          "type": "number",
+          "unit": "kPa",
+          "defaultValue": 2.4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_pa",
+          "label": "Pressure in Pascal",
+          "unit": "Pa",
+          "formula": "inputs.vapor_pressure_kpa * 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_psi",
+          "label": "Pressure in PSI",
+          "unit": "psi",
+          "formula": "inputs.vapor_pressure_kpa * 0.145",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

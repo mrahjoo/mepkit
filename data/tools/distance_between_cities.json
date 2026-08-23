@@ -1,0 +1,6 @@
+{
+  "id": "distance_between_cities",
+  "title": "Distance between Cities",
+  "description": "Flight distances between cities worldwide. Choose your departure and destination cities to find the distance in kilometers or miles. Data includes distances for European, American, Middle Eastern, African, Asian, and Oceania cities.",
+  "type": "datatable"
+}

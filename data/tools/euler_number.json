@@ -1,0 +1,122 @@
+{
+  "id": "euler_number",
+  "title": "Euler Number",
+  "description": "A dimensionless value used for analyzing fluid flow dynamics problems where the pressure difference between two points is important. The Euler Number measures the ratio of pressure forces to inertial forces.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Euler Number Calculator\n\nThe **Euler Number** is a dimensionless value used for analyzing fluid flow dynamics problems where the pressure difference between two points is important.\n\n## Formula\n\n**Eu = dp / (ρ v²)**\n\nWhere:\n- **Eu** = Euler number (dimensionless)\n- **dp** = differential pressure (Pa)\n- **ρ** = density (kg/m³)\n- **v** = fluid flow velocity (m/s)\n\n## Note\nA perfect frictionless flow corresponds to an Euler number equal to 1.\n\n## Pressure Coefficient\n\n**Pressure Coefficient = dp / (½ ρ v²)**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "dp",
+          "label": "Differential Pressure",
+          "unit": "Pa",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "rho",
+          "label": "Fluid Density",
+          "unit": "kg/m³",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "v",
+          "label": "Fluid Flow Velocity",
+          "unit": "m/s",
+          "type": "number",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "euler_number_result",
+          "label": "Euler Number",
+          "formula": "inputs.dp / (inputs.rho * inputs.v * inputs.v)",
+          "unit": "-"
+        },
+        {
+          "id": "pressure_coefficient",
+          "label": "Pressure Coefficient",
+          "formula": "inputs.dp / (0.5 * inputs.rho * inputs.v * inputs.v)",
+          "unit": "-"
+        },
+        {
+          "id": "dynamic_pressure",
+          "label": "Dynamic Pressure",
+          "formula": "0.5 * inputs.rho * inputs.v * inputs.v",
+          "unit": "Pa"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Differential Pressure (dp)",
+          "inputs.dp",
+          "Pa",
+          "Pressure difference between two points"
+        ],
+        [
+          "Fluid Density (ρ)",
+          "inputs.rho",
+          "kg/m³",
+          "Density of the fluid"
+        ],
+        [
+          "Fluid Velocity (v)",
+          "inputs.v",
+          "m/s",
+          "Velocity of fluid flow"
+        ],
+        [
+          "Euler Number",
+          "inputs.dp / (inputs.rho * inputs.v * inputs.v)",
+          "-",
+          "Ratio of pressure forces to inertial forces"
+        ],
+        [
+          "Dynamic Pressure",
+          "0.5 * inputs.rho * inputs.v * inputs.v",
+          "Pa",
+          "Kinetic energy per unit volume"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Euler Number vs Velocity"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Velocity (m/s)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Euler Number"
+        },
+        "series": [
+          {
+            "data": "generateSeries",
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

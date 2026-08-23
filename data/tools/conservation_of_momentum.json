@@ -1,0 +1,161 @@
+{
+  "id": "conservation_of_momentum",
+  "title": "Conservation of Momentum",
+  "description": "A comprehensive tool for calculating linear and angular momentum in physics. Includes calculators for collision momentum, recoil velocity, and angular momentum conservation.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Conservation of Momentum\n\n### Linear Momentum\n\nThe momentum of a body is defined as the product of its mass and velocity:\n\n**ML = m × v**\n\nWhere:\n- ML = linear momentum (kg·m/s)\n- m = mass of body (kg)\n- v = velocity of body (m/s)\n\n**Conservation Principle:** The total linear momentum of a system before collision equals the total momentum after collision:\n\n**m₁v₁ + m₂v₂ + ... + mₙvₙ = m₁u₁ + m₂u₂ + ... + mₙuₙ**\n\n### Angular Momentum\n\nFor a rotating body:\n\n**MR = ω × I**\n\nWhere:\n- MR = angular momentum (kg·m²/s)\n- ω = angular velocity (rad/s)\n- I = moment of inertia (kg·m²)\n\n**Conservation of Angular Momentum:** ω₁I₁ = ω₂I₂"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Linear Momentum Collision Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "mass1",
+          "label": "Mass 1",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "kg"
+        },
+        {
+          "id": "velocity1_before",
+          "label": "Velocity 1 (Before Collision)",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "m/s"
+        },
+        {
+          "id": "mass2",
+          "label": "Mass 2",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "kg"
+        },
+        {
+          "id": "velocity2_before",
+          "label": "Velocity 2 (Before Collision)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "momentum_before",
+          "label": "Total Momentum Before Collision",
+          "formula": "inputs.mass1 * inputs.velocity1_before + inputs.mass2 * inputs.velocity2_before",
+          "unit": "kg·m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "combined_velocity",
+          "label": "Combined Velocity (if stuck together)",
+          "formula": "(inputs.mass1 * inputs.velocity1_before + inputs.mass2 * inputs.velocity2_before) / (inputs.mass1 + inputs.mass2)",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Recoil Velocity Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "projectile_weight",
+          "label": "Projectile Weight",
+          "type": "number",
+          "defaultValue": 0.035,
+          "unit": "lb"
+        },
+        {
+          "id": "projectile_velocity",
+          "label": "Projectile Velocity (Muzzle Speed)",
+          "type": "number",
+          "defaultValue": 2100,
+          "unit": "ft/s"
+        },
+        {
+          "id": "gun_weight",
+          "label": "Gun/Rifle Weight",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "lb"
+        },
+        {
+          "id": "slowdown_distance",
+          "label": "Recoil Slow Down Distance",
+          "type": "number",
+          "defaultValue": 0.125,
+          "unit": "ft"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "recoil_velocity",
+          "label": "Recoil Velocity",
+          "formula": "- (inputs.projectile_weight * inputs.projectile_velocity) / inputs.gun_weight",
+          "unit": "ft/s",
+          "format": "decimal"
+        },
+        {
+          "id": "recoil_kinetic_energy",
+          "label": "Recoil Kinetic Energy",
+          "formula": "0.5 * inputs.gun_weight * ((inputs.projectile_weight * inputs.projectile_velocity) / inputs.gun_weight) * ((inputs.projectile_weight * inputs.projectile_velocity) / inputs.gun_weight)",
+          "unit": "lb·ft",
+          "format": "decimal"
+        },
+        {
+          "id": "recoil_force",
+          "label": "Recoil Force (to slow down)",
+          "formula": "(0.5 * inputs.gun_weight * ((inputs.projectile_weight * inputs.projectile_velocity) / inputs.gun_weight) * ((inputs.projectile_weight * inputs.projectile_velocity) / inputs.gun_weight)) / inputs.slowdown_distance",
+          "unit": "lb",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Angular Momentum Conservation Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "initial_rpm",
+          "label": "Initial Rotation Velocity",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "rpm"
+        },
+        {
+          "id": "initial_radius",
+          "label": "Initial Radius",
+          "type": "number",
+          "defaultValue": 1.5,
+          "unit": "m"
+        },
+        {
+          "id": "final_radius",
+          "label": "Final Radius",
+          "type": "number",
+          "defaultValue": 2.5,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "final_rpm",
+          "label": "Final Rotation Velocity",
+          "formula": "inputs.initial_rpm * inputs.initial_radius / inputs.final_radius",
+          "unit": "rpm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "gases___gross_and_net_heat_values",
+  "title": "Gases - Gross and Net Heat Values",
+  "description": "Gross heat and net heat values for gases like hydrogen, methane and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Gross Heating Values (kcal/kg)",
+        "Net Heating Values (kcal/kg)",
+        "Gross Heating Values (kcal/nm³)",
+        "Net Heating Values (kcal/nm³)"
+      ],
+      "rows": [
+        [
+          "Hydrogen",
+          33889,
+          28555,
+          3050,
+          2570
+        ],
+        [
+          "Methane",
+          13284,
+          11946,
+          9530,
+          8570
+        ],
+        [
+          "Ethane",
+          12400,
+          11350,
+          16700,
+          15300
+        ],
+        [
+          "Ethylene",
+          12020,
+          11270,
+          15100,
+          14200
+        ],
+        [
+          "Natural Gas - approximately",
+          12000,
+          11000,
+          9000,
+          8000
+        ],
+        [
+          "Propane",
+          12030,
+          11080,
+          24200,
+          22250
+        ],
+        [
+          "Propylene",
+          11700,
+          10940,
+          22400,
+          20900
+        ],
+        [
+          "n-Butane",
+          11830,
+          10930,
+          31900,
+          29400
+        ],
+        [
+          "Iso-Butane",
+          11810,
+          10900,
+          31700,
+          29200
+        ],
+        [
+          "Butylene-1",
+          11580,
+          10830,
+          29900,
+          27900
+        ],
+        [
+          "Iso-Pentane (liquid)",
+          11600,
+          10730,
+          "-",
+          "-"
+        ],
+        [
+          "LPG (average)",
+          11920,
+          10997,
+          28000,
+          25775
+        ],
+        [
+          "Acetylene",
+          11932,
+          11514,
+          13980,
+          13490
+        ],
+        [
+          "Carbon Monoxide",
+          2411,
+          2411,
+          3014,
+          3014
+        ]
+      ]
+    }
+  ]
+}

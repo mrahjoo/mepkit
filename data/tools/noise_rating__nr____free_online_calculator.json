@@ -1,0 +1,73 @@
+{
+  "id": "noise_rating__nr____free_online_calculator",
+  "title": "Noise Rating (NR) - Free Online Calculator",
+  "description": "An online Noise Rating (NR) calculator for evaluating noise levels in various environments.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Frequency (Hz)",
+        "Sound Pressure Level (dB)",
+        "NR Curve Value (dB)",
+        "Difference (dB)"
+      ],
+      "rows": [
+        [
+          31.5,
+          0,
+          0,
+          0
+        ],
+        [
+          63,
+          0,
+          0,
+          0
+        ],
+        [
+          125,
+          0,
+          0,
+          0
+        ],
+        [
+          250,
+          0,
+          0,
+          0
+        ],
+        [
+          500,
+          0,
+          0,
+          0
+        ],
+        [
+          1000,
+          0,
+          0,
+          0
+        ],
+        [
+          2000,
+          0,
+          0,
+          0
+        ],
+        [
+          4000,
+          0,
+          0,
+          0
+        ],
+        [
+          8000,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ]
+}

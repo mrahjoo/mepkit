@@ -1,0 +1,6 @@
+{
+  "id": "flash_steam_generation___imperial_units__psig_",
+  "title": "Flash Steam Generation - Imperial Units (psig)",
+  "description": "Calculate the amount of flash steam generated when condensate passes through steam traps based on steam pressure before and after the trap. The tool uses imperial units (psig) and provides the percentage of condensate that evaporates as flash steam.",
+  "type": "calculator"
+}

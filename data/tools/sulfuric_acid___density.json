@@ -1,0 +1,76 @@
+{
+  "id": "sulfuric_acid___density",
+  "title": "Sulfuric Acid - Density",
+  "description": "Density of sulfuric acid at various temperatures and concentrations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Concentration (% mass H2SO4)",
+        "0°C",
+        "20°C",
+        "40°C",
+        "60°C",
+        "80°C",
+        "100°C"
+      ],
+      "rows": [
+        [
+          1,
+          1.0074,
+          1.0051,
+          0.9986,
+          0.9895,
+          0.9779,
+          0.9646
+        ],
+        [
+          20,
+          1.151,
+          1.1394,
+          1.1275,
+          1.1153,
+          1.1021,
+          1.0885
+        ],
+        [
+          40,
+          1.3179,
+          1.3028,
+          1.288,
+          1.2732,
+          1.2589,
+          1.2446
+        ],
+        [
+          60,
+          1.5154,
+          1.4983,
+          1.4816,
+          1.4656,
+          1.4497,
+          1.4344
+        ],
+        [
+          80,
+          1.7482,
+          1.7272,
+          1.7069,
+          1.6873,
+          1.668,
+          1.6493
+        ],
+        [
+          100,
+          1.8517,
+          1.8305,
+          1.8107,
+          1.7922,
+          null,
+          null
+        ]
+      ]
+    }
+  ]
+}

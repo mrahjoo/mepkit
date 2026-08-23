@@ -1,0 +1,76 @@
+{
+  "id": "sound___attenuation_and_the_directivity_coefficien",
+  "title": "Sound - Attenuation and the Directivity Coefficient",
+  "description": "Calculator for sound pressure level attenuation in a room based on the directivity coefficient, distance from source, and room acoustic properties.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sound Attenuation Calculator\n\nFor a continuing sound source, the sound level in a room is the sum of direct and reverberant sound.\n\n**Formula:**\n\nLp = LN + 10 log(D / (4π r²) + 4 / R)\n\nWhere:\n- **Lp** = received sound pressure level (dB)\n- **LN** = sound power level from source (dB)\n- **D** = directivity coefficient\n- **R** = room constant (m² Sabine)\n- **r** = distance from source (m)\n- **π** = 3.14159..."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "soundPowerLevel",
+          "label": "Sound Power Level (LN)",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 80
+        },
+        {
+          "id": "directivityCoefficient",
+          "label": "Directivity Coefficient (D)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "distance",
+          "label": "Distance from Source (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "roomConstant",
+          "label": "Room Constant (R)",
+          "type": "number",
+          "unit": "m² Sabine",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "directTerm",
+          "label": "Direct Sound Term",
+          "formula": "inputs.directivityCoefficient / (4 * 3.14159 * inputs.distance * inputs.distance)",
+          "format": "decimal"
+        },
+        {
+          "id": "reverberantTerm",
+          "label": "Reverberant Sound Term",
+          "formula": "4 / inputs.roomConstant",
+          "format": "decimal"
+        },
+        {
+          "id": "attenuation",
+          "label": "Attenuation (Lp - LN)",
+          "formula": "10 * Math.log10(inputs.directivityCoefficient / (4 * 3.14159 * inputs.distance * inputs.distance) + 4 / inputs.roomConstant)",
+          "unit": "dB",
+          "format": "decimal"
+        },
+        {
+          "id": "soundPressureLevel",
+          "label": "Sound Pressure Level (Lp)",
+          "formula": "inputs.soundPowerLevel + 10 * Math.log10(inputs.directivityCoefficient / (4 * 3.14159 * inputs.distance * inputs.distance) + 4 / inputs.roomConstant)",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Directivity Coefficient (D) Guide\n\nThe directivity coefficient depends on the location of the receiver relative to the sound source:\n- **D = 1**: Receiver in center of room (omnidirectional)\n- **D > 1**: Receiver closer to reflecting surfaces (boundary effect increases directivity)\n- **D < 1**: Receiver in free field conditions\n\n### Room Constant (R)\n\nThe room constant relates to the total room sound absorption (A in m² Sabine) and the room surface area (S in m²):\n\nR = A / (1 - α)\n\nWhere α is the average absorption coefficient of the room surfaces."
+    }
+  ]
+}

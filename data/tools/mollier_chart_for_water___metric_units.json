@@ -1,0 +1,90 @@
+{
+  "id": "mollier_chart_for_water___metric_units",
+  "title": "Mollier Chart for Water - Metric Units",
+  "description": "A comprehensive tool for analyzing thermodynamic properties of water using the Mollier chart with metric units. This tool helps engineers and designers determine entropy, enthalpy, temperature, and pressure relationships for water in various states (liquid, vapor, and two-phase regions).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Pressure (bar)",
+        "Enthalpy (kJ/kg)",
+        "Entropy (kJ/kg·K)",
+        "State"
+      ],
+      "rows": [
+        [
+          0,
+          0.01,
+          0,
+          0,
+          "Solid"
+        ],
+        [
+          20,
+          0.02,
+          83.95,
+          0.2966,
+          "Liquid"
+        ],
+        [
+          40,
+          0.07,
+          167.53,
+          0.5721,
+          "Liquid"
+        ],
+        [
+          60,
+          0.2,
+          251.13,
+          0.8321,
+          "Liquid"
+        ],
+        [
+          80,
+          0.47,
+          334.86,
+          1.0756,
+          "Liquid"
+        ],
+        [
+          100,
+          1.01,
+          417.36,
+          1.3069,
+          "Saturated Liquid"
+        ],
+        [
+          100,
+          1.01,
+          2676,
+          7.3549,
+          "Saturated Vapor"
+        ],
+        [
+          120,
+          1.99,
+          504.7,
+          1.5301,
+          "Liquid"
+        ],
+        [
+          150,
+          4.76,
+          632.18,
+          1.8418,
+          "Liquid"
+        ],
+        [
+          200,
+          15.54,
+          852.38,
+          2.3145,
+          "Liquid"
+        ]
+      ]
+    }
+  ]
+}

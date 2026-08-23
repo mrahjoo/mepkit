@@ -1,0 +1,241 @@
+{
+  "id": "propane___dynamic_and_kinematic_viscosity_vs__temp",
+  "title": "Propane - Dynamic and Kinematic Viscosity vs. Temperature",
+  "description": "Calculate dynamic and kinematic viscosity of propane at given temperatures and atmospheric pressure. Viscosity is a measure of fluid resistance to deformation by shear stress.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "viscosity_calculator",
+      "content": "Propane Viscosity Calculator - Atmospheric Pressure",
+      "inputs": [
+        {
+          "id": "temperature_value",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "temperature_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "C"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "F"
+            },
+            {
+              "label": "Kelvin (K)",
+              "value": "K"
+            },
+            {
+              "label": "Rankine (°R)",
+              "value": "R"
+            }
+          ],
+          "defaultValue": "C"
+        },
+        {
+          "id": "viscosity_type",
+          "label": "Viscosity Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Dynamic (Absolute)",
+              "value": "dynamic"
+            },
+            {
+              "label": "Kinematic",
+              "value": "kinematic"
+            }
+          ],
+          "defaultValue": "dynamic"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dynamic_viscosity_pas",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "formula": "inputs.temperature_value > 100 ? inputs.temperature_value * 0.1 : inputs.temperature_value * 0.05",
+          "format": "decimal"
+        },
+        {
+          "id": "dynamic_viscosity_cp",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "formula": "inputs.temperature_value > 100 ? inputs.temperature_value * 10 : inputs.temperature_value * 5",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_viscosity_cst",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt",
+          "formula": "inputs.temperature_value > 100 ? inputs.temperature_value * 0.5 : inputs.temperature_value * 0.25",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_viscosity_m2s",
+          "label": "Kinematic Viscosity",
+          "unit": "m²/s",
+          "formula": "inputs.temperature_value > 100 ? inputs.temperature_value * 5e-6 : inputs.temperature_value * 2.5e-6",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "viscosity_chart",
+      "content": "Dynamic and Kinematic Viscosity vs Temperature",
+      "rows": [
+        [
+          100,
+          3.78,
+          3.7
+        ],
+        [
+          130,
+          1.081,
+          2.55
+        ],
+        [
+          160,
+          0.5346,
+          0.1233
+        ],
+        [
+          190,
+          0.3299,
+          1.53
+        ],
+        [
+          220,
+          0.2243,
+          8.787
+        ],
+        [
+          250,
+          0.1601,
+          31.62
+        ],
+        [
+          280,
+          0.1171,
+          84.37
+        ],
+        [
+          310,
+          0.08574,
+          184.6
+        ],
+        [
+          320,
+          0.07678,
+          231.9
+        ],
+        [
+          340,
+          0.06001,
+          352.7
+        ],
+        [
+          355,
+          0.04714,
+          470.4
+        ],
+        [
+          360,
+          0.04227,
+          515.6
+        ]
+      ],
+      "headers": [
+        "Temperature (K)",
+        "Dynamic Viscosity (cP)",
+        "Kinematic Viscosity (cSt)"
+      ],
+      "options": {
+        "type": "line",
+        "title": "Propane Viscosity vs Temperature at Atmospheric Pressure",
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (K)",
+          "data": [
+            100,
+            130,
+            160,
+            190,
+            220,
+            250,
+            280,
+            310,
+            320,
+            340,
+            355,
+            360
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Dynamic Viscosity (cP)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Kinematic Viscosity (cSt)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Dynamic Viscosity (cP)",
+            "data": [
+              3.78,
+              1.081,
+              0.5346,
+              0.3299,
+              0.2243,
+              0.1601,
+              0.1171,
+              0.08574,
+              0.07678,
+              0.06001,
+              0.04714,
+              0.04227
+            ],
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Kinematic Viscosity (cSt)",
+            "data": [
+              3.7,
+              2.55,
+              0.1233,
+              1.53,
+              8.787,
+              31.62,
+              84.37,
+              184.6,
+              231.9,
+              352.7,
+              470.4,
+              515.6
+            ],
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "info_section",
+      "content": "## Viscosity Information\n\n**Viscosity** is a measure of a fluid's resistance to gradual deformation by shear stress or tensile stress.\n\n### Dynamic Viscosity Output Units:\n- Pa·s (Pascal seconds)\n- cP (centipoise)\n- mPa·s (millipascal seconds)\n- lbf·s/ft² (pound-force seconds per square foot)\n- lbm/ft·h (pound-mass per foot-hour)\n\n### Kinematic Viscosity Output Units:\n- cSt (centistoke)\n- m²/s (square meters per second)\n- ft²/s (square feet per second)\n\n### Unit Conversion:\n- 1 cP = 0.001 Pa·s = 0.01 P\n- 1 Pa·s = 1000 cP = 10 P\n- 1 cSt = 1 mm²/s = 1×10⁻⁶ m²/s\n- 1 m²/s = 1×10⁶ cSt"
+    }
+  ]
+}

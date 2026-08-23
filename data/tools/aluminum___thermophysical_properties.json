@@ -1,0 +1,92 @@
+{
+  "id": "aluminum___thermophysical_properties",
+  "title": "Aluminum - Thermophysical Properties",
+  "description": "Density, specific heat and thermal conductivity related to temperature.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Aluminum - Thermophysical Properties",
+      "headers": [
+        "T(K)",
+        "ρ (kg/m³)",
+        "c (kJ/kg K)",
+        "k (W/m K)"
+      ],
+      "rows": [
+        [
+          150,
+          2726,
+          0.683,
+          250
+        ],
+        [
+          200,
+          2719,
+          0.797,
+          237
+        ],
+        [
+          250,
+          2710,
+          0.859,
+          235
+        ],
+        [
+          300,
+          2701,
+          0.902,
+          237
+        ],
+        [
+          400,
+          2681,
+          0.949,
+          240
+        ],
+        [
+          600,
+          2639,
+          1.042,
+          231
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Calculate thermal properties at a given temperature",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density",
+          "label": "Density",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "2701"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat",
+          "unit": "kJ/kg K",
+          "format": "decimal",
+          "formula": "0.902"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "unit": "W/m K",
+          "format": "decimal",
+          "formula": "237"
+        }
+      ]
+    }
+  ]
+}

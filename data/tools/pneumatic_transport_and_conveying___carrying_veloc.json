@@ -1,0 +1,337 @@
+{
+  "id": "pneumatic_transport_and_conveying___carrying_veloc",
+  "title": "Pneumatic Transport and Conveying - Carrying Velocities",
+  "description": "Recommended air velocity for pneumatic transport of products like cement, coal, flour and more. This tool provides a lookup table for recommended air carrying velocities in pneumatic solid transport systems for various materials.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "carrying_velocities_table",
+      "content": "Pneumatic Transport and Conveying - Carrying Velocities Reference Table",
+      "headers": [
+        "Product",
+        "Approximate Density (lb/ft³)",
+        "Suction Pressure (in H2O)",
+        "Air Carrying Velocity (m/s)",
+        "Air Carrying Velocity (ft/min)"
+      ],
+      "rows": [
+        [
+          "Ashes, powdered clinker",
+          "",
+          "",
+          "30 - 43",
+          "6500 - 8500"
+        ],
+        [
+          "Ashes from coal",
+          "30",
+          "3",
+          "28",
+          "5500"
+        ],
+        [
+          "Beans",
+          "28",
+          "4",
+          "31",
+          "6000"
+        ],
+        [
+          "Buffing dust",
+          "",
+          "2.5",
+          "19",
+          "3700"
+        ],
+        [
+          "Cement",
+          "100",
+          "5",
+          "30 - 46",
+          "6500 - 9000"
+        ],
+        [
+          "Coal, powdered",
+          "",
+          "",
+          "20 - 28",
+          "4000 - 5500"
+        ],
+        [
+          "Coffee beans",
+          "",
+          "",
+          "15 - 20",
+          "3000 - 4000"
+        ],
+        [
+          "Cork",
+          "14",
+          "1.5",
+          "17 - 28",
+          "3000 - 5500"
+        ],
+        [
+          "Corn, wheat, rye",
+          "45",
+          "3.5",
+          "25 - 36",
+          "5500 - 7000"
+        ],
+        [
+          "Cotton, dry",
+          "5",
+          "2",
+          "22 - 30",
+          "3500 - 6500"
+        ],
+        [
+          "Flour",
+          "",
+          "",
+          "17 - 30",
+          "3500 - 6500"
+        ],
+        [
+          "Grain dust",
+          "",
+          "",
+          "10 - 15",
+          "2000 - 3000"
+        ],
+        [
+          "Grinding and foundry dust",
+          "30",
+          "2",
+          "17 - 23",
+          "3500 - 4500"
+        ],
+        [
+          "Jute",
+          "",
+          "",
+          "22 - 30",
+          "4500 - 6500"
+        ],
+        [
+          "Lead dust",
+          "",
+          "",
+          "20 - 30",
+          "4500 - 6500"
+        ],
+        [
+          "Leather dust",
+          "",
+          "",
+          "8 - 12",
+          "1800 - 2500"
+        ],
+        [
+          "Lime, hydrated",
+          "30",
+          "3",
+          "25 - 36",
+          "5500 - 7500"
+        ],
+        [
+          "Limestone dust",
+          "",
+          "",
+          "10 - 15",
+          "2000 - 3500"
+        ],
+        [
+          "Malt",
+          "35",
+          "3",
+          "24",
+          "4800"
+        ],
+        [
+          "Metal dust",
+          "",
+          "",
+          "15 - 18",
+          "3500 - 4000"
+        ],
+        [
+          "Metal turnings",
+          "",
+          "2.5",
+          "20",
+          "4500"
+        ],
+        [
+          "Mineral wool",
+          "12",
+          "2",
+          "22",
+          "3500"
+        ],
+        [
+          "Oats",
+          "",
+          "",
+          "22 - 30",
+          "4500 - 6500"
+        ],
+        [
+          "Paper cuttings",
+          "20",
+          "3",
+          "25",
+          "5000"
+        ],
+        [
+          "Plastic molding powder",
+          "",
+          "",
+          "15 - 17",
+          "3000 - 3500"
+        ],
+        [
+          "Plastic dust",
+          "",
+          "",
+          "10 - 12",
+          "2000 - 2500"
+        ],
+        [
+          "Pulp chips",
+          "",
+          "",
+          "22 - 36",
+          "4500 - 7000"
+        ],
+        [
+          "Rags, dry",
+          "30",
+          "2.5",
+          "20 - 33",
+          "4000 - 6500"
+        ],
+        [
+          "Rubber dust",
+          "",
+          "",
+          "10 - 15",
+          "2000 - 3000"
+        ],
+        [
+          "Salt",
+          "",
+          "",
+          "28",
+          "5500"
+        ],
+        [
+          "Sand",
+          "",
+          "",
+          "30 - 46",
+          "6000 - 9000"
+        ],
+        [
+          "Sandblast",
+          "",
+          "",
+          "17 - 23",
+          "3500 - 4500"
+        ],
+        [
+          "Sawdust and shavings, light",
+          "12",
+          "2.5",
+          "10 - 17",
+          "2000 - 3500"
+        ],
+        [
+          "Sawdust and shavings, heavy",
+          "",
+          "",
+          "17 - 23",
+          "3500 - 4500"
+        ],
+        [
+          "Shavings, light",
+          "9",
+          "2.5",
+          "22",
+          "3500"
+        ],
+        [
+          "Shavings, heavy",
+          "24",
+          "3",
+          "20",
+          "4000"
+        ],
+        [
+          "Sugar",
+          "",
+          "",
+          "30",
+          "6000"
+        ],
+        [
+          "Textile dust",
+          "",
+          "",
+          "10 - 15",
+          "2000 - 3500"
+        ],
+        [
+          "Vegetable Pulp, dry",
+          "",
+          "",
+          "23",
+          "4500"
+        ],
+        [
+          "Wood chips",
+          "",
+          "",
+          "20 - 25",
+          "4500 - 5500"
+        ],
+        [
+          "Wool",
+          "",
+          "",
+          "22 - 30",
+          "4500 - 6000"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "conversion_factors",
+      "content": "## Conversion Factors\n\n- **1 lb/ft³** = 16.018 kg/m³\n- **1 in H₂O** = 248.8 N/m² (Pa) = 0.0361 lb/in² (psi) = 25.4 kg/m²\n\n## Velocity Conversion\n\n- **1 m/s** ≈ 196.85 ft/min\n- **1 ft/min** ≈ 0.00508 m/s"
+    },
+    {
+      "type": "calculator",
+      "id": "velocity_converter",
+      "content": "Convert between different velocity units",
+      "inputs": [
+        {
+          "id": "velocity_mps",
+          "label": "Velocity",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity_ftmin",
+          "label": "Velocity",
+          "unit": "ft/min",
+          "formula": "inputs.velocity_mps * 196.85",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

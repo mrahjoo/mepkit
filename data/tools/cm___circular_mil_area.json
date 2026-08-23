@@ -1,0 +1,156 @@
+{
+  "id": "cm___circular_mil_area",
+  "title": "CM - Circular Mil Area",
+  "description": "Calculate circular mil area and related conversions for wire or cable cross-sections. A circular mil is the equivalent area of a circle whose diameter is 0.001 inch, or approximately 0.7854 millionths of a square inch.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate mils and circular mil area from wire diameter",
+      "inputs": [
+        {
+          "id": "diameter",
+          "label": "Wire Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 0.375
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mils",
+          "label": "Mils",
+          "formula": "inputs.diameter * 1000",
+          "unit": "mils"
+        },
+        {
+          "id": "circular_mil_area",
+          "label": "Circular Mil Area",
+          "formula": "Math.pow(inputs.diameter * 1000, 2)",
+          "unit": "cmil"
+        },
+        {
+          "id": "square_inch",
+          "label": "Square Inch",
+          "formula": "(Math.pow(inputs.diameter * 1000, 2)) * 0.7854e-6",
+          "format": "scientific",
+          "unit": "in²"
+        },
+        {
+          "id": "square_mil",
+          "label": "Square Mil",
+          "formula": "(Math.pow(inputs.diameter * 1000, 2)) * 0.7854",
+          "unit": "sq mil"
+        },
+        {
+          "id": "metric_m2",
+          "label": "Square Meter",
+          "formula": "(Math.pow(inputs.diameter * 1000, 2)) * 5.066e-10",
+          "format": "scientific",
+          "unit": "m²"
+        },
+        {
+          "id": "metric_cm2",
+          "label": "Square Centimeter",
+          "formula": "(Math.pow(inputs.diameter * 1000, 2)) * 5.066e-6",
+          "format": "scientific",
+          "unit": "cm²"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Conversion Factors",
+      "headers": [
+        "Unit",
+        "Conversion Factor"
+      ],
+      "rows": [
+        [
+          "1 Circular Mil",
+          "0.7854 × 10⁻⁶ Square Inch"
+        ],
+        [
+          "1 Circular Mil",
+          "0.7854 Square Mil"
+        ],
+        [
+          "1 Square Mil",
+          "1.27 Circular Mil"
+        ],
+        [
+          "1 Circular Mil",
+          "5.066 × 10⁻¹⁰ m²"
+        ],
+        [
+          "1 Circular Mil",
+          "5.066 × 10⁻⁶ cm²"
+        ],
+        [
+          "1 m²",
+          "1.974 × 10⁹ Circular Mil"
+        ],
+        [
+          "1 cm²",
+          "1.974 × 10⁵ Circular Mil"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Circular Mil Area vs Wire Diameter"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "name": "Diameter (inches)",
+          "type": "value"
+        },
+        "yAxis": {
+          "name": "Circular Mil Area (cmil)",
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Circular Mil Area",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              [
+                0.1,
+                10000
+              ],
+              [
+                0.2,
+                40000
+              ],
+              [
+                0.3,
+                90000
+              ],
+              [
+                0.375,
+                140625
+              ],
+              [
+                0.5,
+                250000
+              ],
+              [
+                0.75,
+                562500
+              ],
+              [
+                1,
+                1000000
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

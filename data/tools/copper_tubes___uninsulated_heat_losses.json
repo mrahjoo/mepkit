@@ -1,0 +1,195 @@
+{
+  "id": "copper_tubes___uninsulated_heat_losses",
+  "title": "Copper Tubes - Uninsulated Heat Losses",
+  "description": "Heat loss from uninsulated copper pipes - dimensions ranging 1/2 - 4 inches. Calculate heat loss at various temperature differences between pipe and ambient air.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Copper Tubes - Uninsulated Heat Losses\n\nHeat loss from uninsulated copper pipes - dimensions ranging **1/2 - 4 inches**.\n\nNote that **temperature difference** is used - and that **1 °C** of temperature difference equals to **1.8 °F** temperature difference."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "nominalBore",
+          "label": "Nominal Bore (inches)",
+          "type": "select",
+          "options": [
+            {
+              "value": 0.5,
+              "label": "1/2\""
+            },
+            {
+              "value": 0.75,
+              "label": "3/4\""
+            },
+            {
+              "value": 1,
+              "label": "1\""
+            },
+            {
+              "value": 1.25,
+              "label": "1 1/4\""
+            },
+            {
+              "value": 1.5,
+              "label": "1 1/2\""
+            },
+            {
+              "value": 2,
+              "label": "2\""
+            },
+            {
+              "value": 2.5,
+              "label": "2 1/2\""
+            },
+            {
+              "value": 3,
+              "label": "3\""
+            },
+            {
+              "value": 4,
+              "label": "4\""
+            }
+          ]
+        },
+        {
+          "id": "tempDifferenceCelsius",
+          "label": "Temperature Difference (°C)",
+          "type": "number",
+          "defaultValue": 55,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tempDifferenceFahrenheit",
+          "label": "Temperature Difference (°F)",
+          "formula": "inputs.tempDifferenceCelsius * 1.8",
+          "unit": "°F",
+          "format": "decimal"
+        },
+        {
+          "id": "heatLossWm",
+          "label": "Heat Loss (W/m)",
+          "formula": "IF(inputs.nominalBore=0.5, inputs.tempDifferenceCelsius*0.4, IF(inputs.nominalBore=0.75, inputs.tempDifferenceCelsius*0.509, IF(inputs.nominalBore=1, inputs.tempDifferenceCelsius*0.618, IF(inputs.nominalBore=1.25, inputs.tempDifferenceCelsius*0.745, IF(inputs.nominalBore=1.5, inputs.tempDifferenceCelsius*0.854, IF(inputs.nominalBore=2, inputs.tempDifferenceCelsius*1.073, IF(inputs.nominalBore=2.5, inputs.tempDifferenceCelsius*1.291, IF(inputs.nominalBore=3, inputs.tempDifferenceCelsius*1.509, IF(inputs.nominalBore=4, inputs.tempDifferenceCelsius*1.945, 0)))))))))",
+          "unit": "W/m",
+          "format": "decimal"
+        },
+        {
+          "id": "heatLossBtuHrFt",
+          "label": "Heat Loss (Btu/hr·ft)",
+          "formula": "inputs.heatLossWm * 0.3171",
+          "unit": "Btu/hr·ft",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Bore (inches)",
+        "Nominal Bore (mm)",
+        "@ 22°C ΔT (W/m)",
+        "@ 38°C ΔT (W/m)",
+        "@ 55°C ΔT (W/m)",
+        "@ 40°F ΔT (Btu/hr·ft)",
+        "@ 68°F ΔT (Btu/hr·ft)",
+        "@ 99°F ΔT (Btu/hr·ft)"
+      ],
+      "rows": [
+        [
+          "1/2\"",
+          "15",
+          "21",
+          "32",
+          "45",
+          "22",
+          "34",
+          "47"
+        ],
+        [
+          "3/4\"",
+          "22",
+          "28",
+          "43",
+          "60",
+          "29",
+          "45",
+          "64"
+        ],
+        [
+          "1\"",
+          "28",
+          "34",
+          "53",
+          "76",
+          "36",
+          "56",
+          "79"
+        ],
+        [
+          "1 1/4\"",
+          "35",
+          "41",
+          "64",
+          "89",
+          "43",
+          "67",
+          "93"
+        ],
+        [
+          "1 1/2\"",
+          "42",
+          "47",
+          "74",
+          "104",
+          "49",
+          "77",
+          "108"
+        ],
+        [
+          "2\"",
+          "54",
+          "59",
+          "93",
+          "131",
+          "62",
+          "97",
+          "136"
+        ],
+        [
+          "2 1/2\"",
+          "67",
+          "71",
+          "111",
+          "156",
+          "74",
+          "116",
+          "162"
+        ],
+        [
+          "3\"",
+          "76",
+          "83",
+          "129",
+          "181",
+          "87",
+          "135",
+          "189"
+        ],
+        [
+          "4\"",
+          "108",
+          "107",
+          "165",
+          "232",
+          "111",
+          "172",
+          "241"
+        ]
+      ]
+    }
+  ]
+}

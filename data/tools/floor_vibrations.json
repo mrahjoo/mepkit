@@ -1,0 +1,99 @@
+{
+  "id": "floor_vibrations",
+  "title": "Floor Vibrations",
+  "description": "Analyze floor vibrations from human activities and calculate resonance frequencies. Includes wooden beam floors and concrete floors on various ground materials.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material/Structure",
+        "Span/Type",
+        "Resonance Frequency (Hz)"
+      ],
+      "rows": [
+        [
+          "Wooden Beam Floor",
+          "3 m joist span",
+          12
+        ],
+        [
+          "Wooden Beam Floor",
+          "6 m joist span",
+          9
+        ],
+        [
+          "Wooden Beam Floor",
+          "9 m joist span",
+          7
+        ],
+        [
+          "Wooden Beam Floor",
+          "12 m joist span",
+          6
+        ],
+        [
+          "Wooden Beam Floor",
+          "18 m joist span",
+          5
+        ],
+        [
+          "Concrete Floor - Sand",
+          "Ground foundation",
+          20
+        ],
+        [
+          "Concrete Floor - Clay (wet)",
+          "Ground foundation",
+          15
+        ],
+        [
+          "Concrete Floor - Clay (hard)",
+          "Ground foundation",
+          30
+        ],
+        [
+          "Concrete Floor - Gravel",
+          "Ground foundation",
+          22
+        ],
+        [
+          "Concrete Floor - Limestone",
+          "Ground foundation",
+          40
+        ],
+        [
+          "Concrete Floor - Solid rock",
+          "Ground foundation",
+          45
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Calculate force frequency from running cadence (steps per minute)",
+      "inputs": [
+        {
+          "id": "cadence",
+          "label": "Running Cadence",
+          "type": "number",
+          "unit": "steps/min",
+          "defaultValue": 150
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force_frequency",
+          "label": "Force Frequency",
+          "unit": "Hz",
+          "formula": "inputs.cadence / 60",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Activity Frequency Ranges\n\n- **Everyday walking**: 1.0 - 2.0 Hz\n- **Everyday running**: 2.5 Hz (150 steps/min)\n- **Elite running**: 3.3 Hz (200 steps/min)\n- **Dancing**: 1.0 - 3.0 Hz\n\n## Typical Resonance Frequencies\n\n**Wooden Beam Floors**: 5 - 12 Hz (depends on joist span)\n\n**Concrete Floors on Ground**: 10 - 100 Hz (depends on soil type)\n\n### Ground Material Impact\n- Sand: 15 - 25 Hz\n- Clay (wet): 15 Hz\n- Clay (hard): 30 Hz\n- Gravel: 20 - 25 Hz\n- Limestone: 35 - 45 Hz\n- Solid rock: 40 - 50 Hz"
+    }
+  ]
+}

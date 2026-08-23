@@ -1,0 +1,103 @@
+{
+  "id": "noise_from_machines___enclosures_and_sound_pressur",
+  "title": "Noise from Machines - Enclosures and Sound Pressure Level Reductions",
+  "description": "Barriers and enclosures to reduce noise sound pressure levels from machines.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Enclosure Types and Sound Pressure Level Reductions\n\nThe noise levels from machines can be reduced with barriers or enclosures. Select an enclosure type to see the sound pressure level reduction in dBA."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "enclosure_type",
+          "label": "Type of Enclosure",
+          "type": "select",
+          "options": [
+            {
+              "value": 0,
+              "label": "No enclosure or barrier, machine alone"
+            },
+            {
+              "value": 2,
+              "label": "Machine on vibration isolators"
+            },
+            {
+              "value": 5,
+              "label": "Machine with barrier"
+            },
+            {
+              "value": 22.5,
+              "label": "Machine in a rigid and sealed enclosure"
+            },
+            {
+              "value": 42.5,
+              "label": "Machine in a rigid and sealed enclosure with sound absorption lining on inside walls - machine on vibration mounts"
+            }
+          ],
+          "defaultValue": 0
+        },
+        {
+          "id": "machine_noise_level",
+          "label": "Original Machine Noise Level",
+          "type": "number",
+          "unit": "dBA",
+          "defaultValue": 85
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sound_reduction",
+          "label": "Sound Pressure Level Reduction",
+          "unit": "dBA",
+          "formula": "inputs.enclosure_type",
+          "format": "decimal"
+        },
+        {
+          "id": "reduced_noise_level",
+          "label": "Reduced Noise Level",
+          "unit": "dBA",
+          "formula": "inputs.machine_noise_level - inputs.enclosure_type",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Enclosure",
+        "Description",
+        "Sound Pressure Level Reduction (dBA)"
+      ],
+      "rows": [
+        [
+          "1",
+          "No enclosure or barrier, machine alone",
+          "0"
+        ],
+        [
+          "2",
+          "Machine on vibration isolators",
+          "≈ 2"
+        ],
+        [
+          "3",
+          "Machine with barrier",
+          "≈ 5"
+        ],
+        [
+          "4",
+          "Machine in a rigid and sealed enclosure",
+          "≈ 20 - 25"
+        ],
+        [
+          "5",
+          "Machine in a rigid and sealed enclosure with sound absorption lining on inside walls - machine on vibration mounts",
+          "≈ 40 - 45"
+        ]
+      ]
+    }
+  ]
+}

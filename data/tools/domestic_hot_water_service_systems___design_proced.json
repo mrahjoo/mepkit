@@ -1,0 +1,203 @@
+{
+  "id": "domestic_hot_water_service_systems___design_proced",
+  "title": "Domestic Hot Water Service Systems - Design Procedures",
+  "description": "A comprehensive guide for designing hot water service systems, including demand calculation, calorifier selection, boiler sizing, and pipe design procedures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Consumer",
+        "Temperature (°C)"
+      ],
+      "rows": [
+        [
+          "Showers",
+          43
+        ],
+        [
+          "Lavatory - hand washing",
+          40
+        ],
+        [
+          "Lavatory - shaving",
+          45
+        ],
+        [
+          "Tubs",
+          43
+        ],
+        [
+          "Therapeutic baths",
+          35
+        ],
+        [
+          "Laundry, commercial",
+          "up to 82"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "accumulator_heat_supply",
+      "content": "## Maximum Heat Supply to Accumulator\n\nCalculate the heat (power) supply required to heat an accumulator tank.\n\n**Formula:** H = cp × V × (q2 - q1) / t",
+      "inputs": [
+        {
+          "id": "volume",
+          "label": "Accumulator Volume",
+          "type": "number",
+          "unit": "liters",
+          "defaultValue": 200
+        },
+        {
+          "id": "temp_cold",
+          "label": "Cold Feed Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 5
+        },
+        {
+          "id": "temp_hot",
+          "label": "Hot Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 50
+        },
+        {
+          "id": "heating_time",
+          "label": "Heating Time",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": 5.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_supply",
+          "label": "Required Heat Supply",
+          "formula": "(4.19 * inputs.volume * (inputs.temp_hot - inputs.temp_cold)) / (inputs.heating_time * 3600)",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "accumulator_volume",
+      "content": "## Accumulator Volume Required\n\nCalculate the required accumulated volume based on available heat supply and heating time.\n\n**Formula:** V = Ha × ta / (cp × (q2 - q1))",
+      "inputs": [
+        {
+          "id": "heat_available",
+          "label": "Available Heat Supply",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 5
+        },
+        {
+          "id": "heating_time_avail",
+          "label": "Available Heating Time",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": 8
+        },
+        {
+          "id": "temp_cold_vol",
+          "label": "Cold Feed Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 5
+        },
+        {
+          "id": "temp_hot_vol",
+          "label": "Hot Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "accumulator_vol",
+          "label": "Required Accumulator Volume",
+          "formula": "(inputs.heat_available * inputs.heating_time_avail * 3600) / (4.19 * (inputs.temp_hot_vol - inputs.temp_cold_vol))",
+          "unit": "liters",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "continuous_heating_power",
+      "content": "## Required Power for Continuous Water Heating\n\nCalculate the heat supply required for instantaneous heating with no accumulation.\n\n**Formula:** H = cp × v × (q2 - q1)",
+      "inputs": [
+        {
+          "id": "volume_flow",
+          "label": "Required Volume Flow",
+          "type": "number",
+          "unit": "liters/s",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "temp_cold_cont",
+          "label": "Cold Feed Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 5
+        },
+        {
+          "id": "temp_hot_cont",
+          "label": "Hot Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heating_power",
+          "label": "Required Heating Power",
+          "formula": "4.19 * inputs.volume_flow * (inputs.temp_hot_cont - inputs.temp_cold_cont)",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "heating_surface",
+      "content": "## Required Heating Surface Area\n\nCalculate the required heating surface of a heat exchanger.\n\n**Formula:** A = 1000 × H / (k × q_m)",
+      "inputs": [
+        {
+          "id": "heat_rate",
+          "label": "Rate of Heating",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 10
+        },
+        {
+          "id": "heat_coeff",
+          "label": "Overall Heat Transmission Coefficient",
+          "type": "number",
+          "unit": "W/m²K",
+          "defaultValue": 2000
+        },
+        {
+          "id": "mean_temp_diff",
+          "label": "Logarithmic Mean Temperature Difference",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heating_area",
+          "label": "Required Heating Surface Area",
+          "formula": "(1000 * inputs.heat_rate) / (inputs.heat_coeff * inputs.mean_temp_diff)",
+          "unit": "m²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

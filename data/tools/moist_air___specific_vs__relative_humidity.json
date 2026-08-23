@@ -1,0 +1,103 @@
+{
+  "id": "moist_air___specific_vs__relative_humidity",
+  "title": "Moist Air - Specific vs. Relative Humidity",
+  "description": "Specific humidity of moist air vs. relative humidity, water vapor and air density. Calculate specific humidity (humidity ratio) using relative humidity, water vapor density, and air density.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate specific humidity based on relative humidity and densities",
+      "inputs": [
+        {
+          "id": "relative_humidity",
+          "label": "Relative Humidity (φ)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 50
+        },
+        {
+          "id": "water_vapor_density",
+          "label": "Water Vapor Density (ρws)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 0.01
+        },
+        {
+          "id": "air_density",
+          "label": "Air Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_humidity",
+          "label": "Specific Humidity (x)",
+          "formula": "0.622 * inputs.relative_humidity * inputs.water_vapor_density / (inputs.air_density - inputs.water_vapor_density) / 100",
+          "unit": "kg_h2o/kg_dry_air",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Relative Humidity (%)",
+        "Water Vapor Density (kg/m³)",
+        "Air Density (kg/m³)",
+        "Specific Humidity (kg_h2o/kg_dry_air)"
+      ],
+      "rows": [
+        [
+          30,
+          0.008,
+          1.2,
+          0.00414
+        ],
+        [
+          40,
+          0.01,
+          1.2,
+          0.00552
+        ],
+        [
+          50,
+          0.013,
+          1.2,
+          0.00717
+        ],
+        [
+          60,
+          0.015,
+          1.2,
+          0.00862
+        ],
+        [
+          70,
+          0.018,
+          1.2,
+          0.01007
+        ],
+        [
+          80,
+          0.02,
+          1.2,
+          0.01152
+        ],
+        [
+          90,
+          0.023,
+          1.2,
+          0.01297
+        ],
+        [
+          100,
+          0.025,
+          1.2,
+          0.01442
+        ]
+      ]
+    }
+  ]
+}

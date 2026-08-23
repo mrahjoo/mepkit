@@ -1,0 +1,101 @@
+{
+  "id": "pythagorean_theorem",
+  "title": "Pythagorean Theorem",
+  "description": "Verifying square corners using the Pythagorean theorem. Calculate the hypotenuse length C from sides A and B using the formula C = √(A² + B²).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pythagorean Theorem\n\nThe Pythagorean theorem is often used to verify if a corner is square (90 degrees).\n\n**Formula:** C² = A² + B²\n\nOr expressed as: C = √(A² + B²)\n\n## Example\nWith A = 5 m and B = 10 m, the hypotenuse C = √((5)² + (10)²) = √125 ≈ 11.2 m"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sideA",
+          "label": "Side A",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "m"
+        },
+        {
+          "id": "sideB",
+          "label": "Side B",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hypotenuse",
+          "label": "Hypotenuse C",
+          "formula": "Math.sqrt(inputs.sideA * inputs.sideA + inputs.sideB * inputs.sideB)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "squareA",
+          "label": "A²",
+          "formula": "inputs.sideA * inputs.sideA",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "squareB",
+          "label": "B²",
+          "formula": "inputs.sideB * inputs.sideB",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "sumSquares",
+          "label": "A² + B²",
+          "formula": "inputs.sideA * inputs.sideA + inputs.sideB * inputs.sideB",
+          "unit": "m²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Triangle Type",
+        "Side A",
+        "Side B",
+        "Hypotenuse C",
+        "Square Corner?"
+      ],
+      "rows": [
+        [
+          "Reference (3-4-5)",
+          "3",
+          "4",
+          "5",
+          "Yes (90°)"
+        ],
+        [
+          "Example 1",
+          "5",
+          "10",
+          "11.2",
+          "Yes (90°)"
+        ],
+        [
+          "Example 2",
+          "6",
+          "8",
+          "10",
+          "Yes (90°)"
+        ],
+        [
+          "Example 3",
+          "7",
+          "9",
+          "11.4",
+          "Yes (90°)"
+        ]
+      ]
+    }
+  ]
+}

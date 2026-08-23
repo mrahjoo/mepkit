@@ -1,0 +1,80 @@
+{
+  "id": "binomial_theorem",
+  "title": "Binomial Theorem",
+  "description": "Binomial theorem for positive integers. This tool expands powers of sums using the binomial theorem formula.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate binomial expansion coefficients and terms",
+      "inputs": [
+        {
+          "id": "x",
+          "label": "x (first term)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "y",
+          "label": "y (second term)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "n",
+          "label": "n (power)",
+          "type": "number",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "expansion",
+          "label": "Binomial Expansion Result",
+          "formula": "Math.pow(inputs.x + inputs.y, inputs.n)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Term",
+        "Coefficient",
+        "x Power",
+        "y Power",
+        "Term Value"
+      ],
+      "rows": [
+        [
+          "0",
+          "1",
+          "n",
+          "0",
+          "x^n"
+        ],
+        [
+          "1",
+          "n",
+          "n-1",
+          "1",
+          "n*x^(n-1)*y"
+        ],
+        [
+          "2",
+          "n(n-1)/2!",
+          "n-2",
+          "2",
+          "n(n-1)/2!*x^(n-2)*y^2"
+        ],
+        [
+          "3",
+          "n(n-1)(n-2)/3!",
+          "n-3",
+          "3",
+          "n(n-1)(n-2)/3!*x^(n-3)*y^3"
+        ]
+      ]
+    }
+  ]
+}

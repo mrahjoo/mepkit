@@ -1,0 +1,108 @@
+{
+  "id": "acetylene___thermophysical_properties",
+  "title": "Acetylene - Thermophysical Properties",
+  "description": "Chemical, Physical and Thermal Properties of Acetylene (Ethyne - C2H2). A colorless gas widely used as a fuel and chemical building block with various thermophysical properties at 25°C (77°F, 298 K) and atmospheric pressure.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "26.04",
+          ""
+        ],
+        [
+          "Specific Gravity",
+          "0.90",
+          ""
+        ],
+        [
+          "Specific Volume",
+          "14.9 / 0.93",
+          "ft³/lb / m³/kg"
+        ],
+        [
+          "Density of liquid at atmospheric pressure",
+          "43.0 / 693",
+          "lb/ft³ / kg/m³"
+        ],
+        [
+          "Absolute Viscosity",
+          "6.72×10⁻⁶ / 0.01",
+          "lbm/ft·s / centipoises"
+        ],
+        [
+          "Sound velocity in gas",
+          "343",
+          "m/s"
+        ],
+        [
+          "Specific Heat (cp)",
+          "0.40 / 1674",
+          "Btu/lb·°F / J/kg·K"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          "1.25",
+          ""
+        ],
+        [
+          "Gas constant (R)",
+          "59.3 / 319",
+          "ft·lb/lb·°R / J/kg·°C"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.014 / 0.024",
+          "Btu/hr·ft·°F / W/m·°C"
+        ],
+        [
+          "Boiling Point (saturation at 14.7 psia)",
+          "-103 / -75",
+          "°F / °C"
+        ],
+        [
+          "Latent Heat of Evaporation at boiling point",
+          "264 / 614000",
+          "Btu/lb / J/kg"
+        ],
+        [
+          "Freezing or Melting Point at 1 atm",
+          "-116 / -82.2",
+          "°F / °C"
+        ],
+        [
+          "Latent Heat of Fusion",
+          "23 / 53500",
+          "Btu/lb / J/kg"
+        ],
+        [
+          "Critical Temperature",
+          "97.1 / 36.2",
+          "°F / °C"
+        ],
+        [
+          "Critical Pressure",
+          "907 / 6.25",
+          "psia / MN/m²"
+        ],
+        [
+          "Flammable",
+          "Yes",
+          ""
+        ],
+        [
+          "Heat of combustion",
+          "1450 / 21600 / 50200",
+          "Btu/ft³ / Btu/lb / kJ/kg"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "noise_criterion__nc____free_online_calculator",
+  "title": "Noise Criterion (NC) - Free Online Calculator",
+  "description": "Calculate Noise Criterion (NC) from octave band pressure levels.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "freq_63hz",
+          "label": "63 Hz Octave Band (dB)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "dB"
+        },
+        {
+          "id": "freq_125hz",
+          "label": "125 Hz Octave Band (dB)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "dB"
+        },
+        {
+          "id": "freq_250hz",
+          "label": "250 Hz Octave Band (dB)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "dB"
+        },
+        {
+          "id": "freq_500hz",
+          "label": "500 Hz Octave Band (dB)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "dB"
+        },
+        {
+          "id": "freq_1khz",
+          "label": "1 kHz Octave Band (dB)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "dB"
+        },
+        {
+          "id": "freq_2khz",
+          "label": "2 kHz Octave Band (dB)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "dB"
+        },
+        {
+          "id": "freq_4khz",
+          "label": "4 kHz Octave Band (dB)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "dB"
+        },
+        {
+          "id": "freq_8khz",
+          "label": "8 kHz Octave Band (dB)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "dB"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "nc_rating",
+          "label": "NC Rating",
+          "formula": "max(inputs.freq_63hz - 6, inputs.freq_125hz - 1, inputs.freq_250hz + 5, inputs.freq_500hz + 10, inputs.freq_1khz + 12, inputs.freq_2khz + 11, inputs.freq_4khz + 8, inputs.freq_8khz + 4)",
+          "unit": "NC",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

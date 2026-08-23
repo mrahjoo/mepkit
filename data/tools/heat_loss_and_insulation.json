@@ -1,0 +1,55 @@
+{
+  "id": "heat_loss_and_insulation",
+  "title": "Heat Loss and Insulation",
+  "description": "Calculate heat loss and insulation requirements for pipes, tanks, and other surfaces. This tool helps engineers and designers determine thermal performance and insulation specifications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Surface Area",
+          "",
+          "m²",
+          "Area of the surface losing heat"
+        ],
+        [
+          "Temperature Difference",
+          "",
+          "°C",
+          "Difference between inside and outside temperature"
+        ],
+        [
+          "Heat Transfer Coefficient",
+          "",
+          "W/m²K",
+          "Overall heat transfer coefficient"
+        ],
+        [
+          "Insulation Thickness",
+          "",
+          "mm",
+          "Thickness of insulation material"
+        ],
+        [
+          "Thermal Conductivity",
+          "",
+          "W/mK",
+          "Thermal conductivity of insulation material"
+        ],
+        [
+          "Heat Loss Rate",
+          "",
+          "W",
+          "Calculated heat loss rate"
+        ]
+      ]
+    }
+  ]
+}

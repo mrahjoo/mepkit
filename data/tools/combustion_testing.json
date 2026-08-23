@@ -1,0 +1,63 @@
+{
+  "id": "combustion_testing",
+  "title": "Combustion Testing",
+  "description": "Combustion testing of fuel oil and gas burners. Test burners for carbon dioxide, smoke, excess air, stack temperature, draft, and NOx to ensure safe and efficient operation.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Combustion Testing Parameters\n\nTo secure safe and efficient operation of gas or fuel oil burners, it is common to test the burners for:\n\n- **Carbon Dioxide (CO2)**: Low CO2 content (< 8%) indicates heat loss and inefficient operation. High CO2 may indicate excess smoke.\n- **Smoke**: Applicable to fuel oil burners only. Indicates poor burner performance.\n- **Excess Air (O2/CO2)**: Measures the ratio of oxygen to carbon dioxide in flue gas.\n- **Stack Temperature**: The net stack temperature is the difference between flue gas and room temperature. Typical values: 330-500°F (160-260°C).\n- **Draft**: Ensures proper air flow and combustion.\n- **NOx**: Nitrogen oxides emissions monitoring."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "co2_percent",
+          "label": "CO2 Content",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "%"
+        },
+        {
+          "id": "flue_gas_temp",
+          "label": "Flue Gas Temperature",
+          "type": "number",
+          "defaultValue": 400,
+          "unit": "°F"
+        },
+        {
+          "id": "room_temp",
+          "label": "Room Temperature",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "°F"
+        },
+        {
+          "id": "o2_percent",
+          "label": "Oxygen Content (O2)",
+          "type": "number",
+          "defaultValue": 3,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "net_stack_temp",
+          "label": "Net Stack Temperature",
+          "formula": "inputs.flue_gas_temp - inputs.room_temp",
+          "unit": "°F"
+        },
+        {
+          "id": "co2_efficiency",
+          "label": "CO2 Efficiency Status",
+          "formula": "inputs.co2_percent >= 8 ? 'Acceptable' : 'Low - Inefficient'"
+        },
+        {
+          "id": "temp_status",
+          "label": "Stack Temperature Status",
+          "formula": "inputs.flue_gas_temp - inputs.room_temp > 500 ? 'High - Check burner' : (inputs.flue_gas_temp - inputs.room_temp < 330 ? 'Low - Check draft' : 'Normal Range')"
+        }
+      ]
+    }
+  ]
+}

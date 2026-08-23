@@ -1,0 +1,88 @@
+{
+  "id": "average_velocity",
+  "title": "Average Velocity",
+  "description": "Distance traveled vs. time used. Calculate the average velocity of an object using the formula v = ds / dt",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Average Velocity\n\nThe average velocity of an object can be expressed as:\n\n**v = ds / dt**\n\nWhere:\n- **v** = average velocity of object (m/s, ft/s)\n- **ds** = distance traveled (m, ft)\n- **dt** = time taken (s)\n\n## Example\nA car travels a distance of 60 km in one hour:\n- v = (60 km × 1000 m/km) / (1 hour × 3600 s/hour)\n- v = 16.7 m/s\n- v = 60 km/h"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "distance",
+          "label": "Distance Traveled",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 60000
+        },
+        {
+          "id": "time",
+          "label": "Time Taken",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 3600
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity",
+          "label": "Average Velocity",
+          "formula": "inputs.distance / inputs.time",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity_kmh",
+          "label": "Average Velocity",
+          "formula": "(inputs.distance / inputs.time) * 3.6",
+          "unit": "km/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Distance (m)",
+        "Time (s)",
+        "Velocity (m/s)",
+        "Velocity (km/h)"
+      ],
+      "rows": [
+        [
+          1000,
+          60,
+          16.67,
+          60
+        ],
+        [
+          5000,
+          300,
+          16.67,
+          60
+        ],
+        [
+          60000,
+          3600,
+          16.67,
+          60
+        ],
+        [
+          100,
+          10,
+          10,
+          36
+        ],
+        [
+          500,
+          25,
+          20,
+          72
+        ]
+      ]
+    }
+  ]
+}

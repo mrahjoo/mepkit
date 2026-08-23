@@ -1,0 +1,405 @@
+{
+  "id": "angles_of_repose",
+  "title": "Angles of Repose",
+  "description": "Tipping or dumping angles for common materials like ashes, sand, earth, shingles and more. The angle of repose is the steepest angle of descent relative to the horizontal plane to which a material can be piled without slumping.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Angle of Repose (degrees)"
+      ],
+      "rows": [
+        [
+          "Alfalfa, ground",
+          "+45"
+        ],
+        [
+          "Alum, lumpy",
+          "30 - 45"
+        ],
+        [
+          "Alum, pulverized",
+          "30 - 45"
+        ],
+        [
+          "Alumina",
+          "30"
+        ],
+        [
+          "Asbestos, shredded",
+          "30"
+        ],
+        [
+          "Ashes, dry",
+          "33"
+        ],
+        [
+          "Ashes, moist",
+          "36"
+        ],
+        [
+          "Ashes, wet",
+          "30"
+        ],
+        [
+          "Asphalt",
+          "45"
+        ],
+        [
+          "Bagasse",
+          "45"
+        ],
+        [
+          "Baking powder",
+          "30 - 45"
+        ],
+        [
+          "Bark, wood refuse",
+          "45"
+        ],
+        [
+          "Bauxite, crushed",
+          "30 - 45"
+        ],
+        [
+          "Bentonite",
+          "45"
+        ],
+        [
+          "Bicarbonate of Soda",
+          "42"
+        ],
+        [
+          "Borax, fine",
+          "30 - 45"
+        ],
+        [
+          "Bran",
+          "30 - 45"
+        ],
+        [
+          "Brewers grain",
+          "45"
+        ],
+        [
+          "Brick",
+          "40"
+        ],
+        [
+          "Calcium Carbide",
+          "30 - 45"
+        ],
+        [
+          "Chalk, fine",
+          "45"
+        ],
+        [
+          "Chalk, lumpy",
+          "45"
+        ],
+        [
+          "Chromic acid, flake",
+          "25"
+        ],
+        [
+          "Chromium ore",
+          "30 - 45"
+        ],
+        [
+          "Cinders, dry",
+          "33"
+        ],
+        [
+          "Cinders, moist",
+          "34"
+        ],
+        [
+          "Cinders, wet",
+          "31"
+        ],
+        [
+          "Cinders and Clay",
+          "30"
+        ],
+        [
+          "Clay",
+          "45"
+        ],
+        [
+          "Clover seed",
+          "28"
+        ],
+        [
+          "Coal, hard",
+          "24"
+        ],
+        [
+          "Coal, soft",
+          "30"
+        ],
+        [
+          "Coconut, shredded",
+          "45"
+        ],
+        [
+          "Cofee, fresh beans",
+          "35 - 45"
+        ],
+        [
+          "Coke",
+          "23"
+        ],
+        [
+          "Concrete",
+          "30"
+        ],
+        [
+          "Cork, ground",
+          "45"
+        ],
+        [
+          "Corn, grits",
+          "30 - 45"
+        ],
+        [
+          "Cottonseed, cake lumpy",
+          "30 - 45"
+        ],
+        [
+          "Cryolite",
+          "30 - 45"
+        ],
+        [
+          "Cullet",
+          "30 - 45"
+        ],
+        [
+          "Dolomite, lumpy",
+          "30 - 45"
+        ],
+        [
+          "Earth, loose",
+          "28"
+        ],
+        [
+          "Earth, compact",
+          "50"
+        ],
+        [
+          "Feldspar, pulverized",
+          "45"
+        ],
+        [
+          "Fish, meal",
+          "45"
+        ],
+        [
+          "Flour, wheat",
+          "45"
+        ],
+        [
+          "Fluorspar, lumps",
+          "45"
+        ],
+        [
+          "Garbage",
+          "30"
+        ],
+        [
+          "Gluten, meal",
+          "30 - 45"
+        ],
+        [
+          "Graphite, flake",
+          "30 - 45"
+        ],
+        [
+          "Gravel",
+          "40"
+        ],
+        [
+          "Gypsum, pulverized",
+          "45"
+        ],
+        [
+          "Hops, moist",
+          "45"
+        ],
+        [
+          "Ilemenite",
+          "30 - 45"
+        ],
+        [
+          "Iron oxide pigment",
+          "40"
+        ],
+        [
+          "Kaolin, green crushed",
+          "35"
+        ],
+        [
+          "Lignite, dry",
+          "30 - 45"
+        ],
+        [
+          "Lime, hydrated",
+          "30 - 45"
+        ],
+        [
+          "Limestone, pulverized",
+          "45"
+        ],
+        [
+          "Linseed, meal",
+          "30 - 45"
+        ],
+        [
+          "Malt",
+          "30 - 45"
+        ],
+        [
+          "Marble, broken",
+          "30 - 45"
+        ],
+        [
+          "Mica, broken",
+          "30 - 45"
+        ],
+        [
+          "Milk. powdered",
+          "45"
+        ],
+        [
+          "Oats",
+          "32"
+        ],
+        [
+          "Oats, rolled",
+          "30 - 45"
+        ],
+        [
+          "Ore, dry",
+          "30"
+        ],
+        [
+          "Ore, damp or fresh mined",
+          "37"
+        ],
+        [
+          "Oyster shells, ground",
+          "30 - 45"
+        ],
+        [
+          "Peanuts, shelled and not shelled",
+          "30 - 45"
+        ],
+        [
+          "Potassium chloride",
+          "30 - 45"
+        ],
+        [
+          "Rice grits",
+          "30 - 45"
+        ],
+        [
+          "Rice, rough",
+          "30 - 45"
+        ],
+        [
+          "Rubber, ground scrap",
+          "45"
+        ],
+        [
+          "Rubble",
+          "45"
+        ],
+        [
+          "Salt, coarse",
+          "30 - 45"
+        ],
+        [
+          "Salt, fine",
+          "30 - 45"
+        ],
+        [
+          "Saltpeter",
+          "30 - 45"
+        ],
+        [
+          "Sand, dry",
+          "35"
+        ],
+        [
+          "Sand, damp",
+          "40"
+        ],
+        [
+          "Sand, with crushed stone",
+          "27"
+        ],
+        [
+          "Shale, broken",
+          "30 - 45"
+        ],
+        [
+          "Shingles",
+          "40"
+        ],
+        [
+          "Slate, pulverized",
+          "30 - 45"
+        ],
+        [
+          "Soap, chips",
+          "30 - 45"
+        ],
+        [
+          "Soap. powder",
+          "30 - 45"
+        ],
+        [
+          "Soda ash",
+          "30 - 45"
+        ],
+        [
+          "Stone",
+          "30"
+        ],
+        [
+          "Stone, broken",
+          "27"
+        ],
+        [
+          "Stone, crushed",
+          "30"
+        ],
+        [
+          "Sugar, granulated",
+          "30 - 45"
+        ],
+        [
+          "Sugar, raw cane",
+          "45"
+        ],
+        [
+          "Sulfur",
+          "30 - 45"
+        ],
+        [
+          "Tobacco",
+          "45"
+        ],
+        [
+          "Wheat",
+          "28"
+        ],
+        [
+          "Zinc oxide",
+          "45"
+        ]
+      ]
+    }
+  ]
+}

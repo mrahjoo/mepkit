@@ -1,0 +1,125 @@
+{
+  "id": "aisi_310_stainless_steel___properties",
+  "title": "AISI 310 Stainless Steel - Properties",
+  "description": "Thermal diffusivity, specific heat capacity, density and thermal conductivity of stainless steel AISI 310 vs. temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Thermal Conductivity (W/mK)"
+      ],
+      "rows": [
+        [
+          -125,
+          9.4
+        ],
+        [
+          -100,
+          10.1
+        ],
+        [
+          -75,
+          10.8
+        ],
+        [
+          -50,
+          11.2
+        ],
+        [
+          -25,
+          11.7
+        ],
+        [
+          0,
+          12.1
+        ],
+        [
+          25,
+          12.7
+        ],
+        [
+          50,
+          13.2
+        ],
+        [
+          100,
+          14.1
+        ],
+        [
+          150,
+          15
+        ],
+        [
+          200,
+          15.8
+        ],
+        [
+          250,
+          16.6
+        ],
+        [
+          300,
+          17.3
+        ],
+        [
+          350,
+          18
+        ],
+        [
+          400,
+          18.8
+        ],
+        [
+          450,
+          19.4
+        ],
+        [
+          500,
+          20.1
+        ],
+        [
+          550,
+          20.9
+        ],
+        [
+          600,
+          22.2
+        ],
+        [
+          650,
+          23
+        ],
+        [
+          700,
+          23.7
+        ],
+        [
+          750,
+          24
+        ],
+        [
+          800,
+          24.5
+        ],
+        [
+          850,
+          25.2
+        ],
+        [
+          900,
+          26
+        ],
+        [
+          950,
+          26.9
+        ],
+        [
+          1000,
+          27.7
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "fusion_and_evaporation_heat_of_common_materials",
+  "title": "Fusion and Evaporation Heat of Common Materials",
+  "description": "Melting points, heat of fusions, boiling points and heat to evaporate common substances - like hydrogen, water, gold and more. Displays thermal properties of materials at 1 atm pressure.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Melting Point (K)",
+        "Heat of Fusion (kcal/kg)",
+        "Boiling Point (K)",
+        "Heat of Evaporation (kcal/kg)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          933.47,
+          94.5,
+          2743,
+          2500
+        ],
+        [
+          "Bismuth",
+          544.7,
+          12.5,
+          1837,
+          190
+        ],
+        [
+          "Bromine",
+          266,
+          16,
+          332,
+          43
+        ],
+        [
+          "Copper",
+          1357.77,
+          32,
+          2835,
+          1210
+        ],
+        [
+          "Ethyl Alcohol",
+          159,
+          24.9,
+          351,
+          205
+        ],
+        [
+          "Gold",
+          1337.33,
+          15.4,
+          3243,
+          377
+        ],
+        [
+          "Hydrogen (H2)",
+          13.99,
+          14,
+          20.3,
+          108
+        ],
+        [
+          "Iron",
+          1811,
+          69.1,
+          3134,
+          1520
+        ],
+        [
+          "Lead",
+          601,
+          5.9,
+          2022,
+          208
+        ],
+        [
+          "Lithium",
+          453,
+          160,
+          1603,
+          511
+        ],
+        [
+          "Mercury",
+          234,
+          2.7,
+          630,
+          70
+        ],
+        [
+          "Nitrogen",
+          63.2,
+          6.1,
+          77.3,
+          48
+        ],
+        [
+          "Oxygen",
+          54.4,
+          3.3,
+          90.2,
+          50.9
+        ],
+        [
+          "Sulfuric acid (98%)",
+          283.46,
+          39,
+          610,
+          122
+        ],
+        [
+          "Water",
+          273.15,
+          79.7,
+          373.15,
+          539
+        ],
+        [
+          "Zinc",
+          693,
+          24,
+          1080,
+          475
+        ]
+      ]
+    }
+  ]
+}

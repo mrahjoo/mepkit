@@ -1,0 +1,184 @@
+{
+  "id": "beam_loads___support_force_calculator",
+  "title": "Beam Loads - Support Force Calculator",
+  "description": "Calculate support forces (R1 and R2) for beams with up to 6 asymmetrically distributed loads using force and moment balance equations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "support_force_calc",
+      "content": "Support Force Calculator",
+      "inputs": [
+        {
+          "id": "beam_length",
+          "label": "Length of Beam",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "f1_force",
+          "label": "Force F1",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 0
+        },
+        {
+          "id": "f1_distance",
+          "label": "Distance F1 from R1",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "f2_force",
+          "label": "Force F2",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 0
+        },
+        {
+          "id": "f2_distance",
+          "label": "Distance F2 from R1",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "f3_force",
+          "label": "Force F3",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 0
+        },
+        {
+          "id": "f3_distance",
+          "label": "Distance F3 from R1",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "f4_force",
+          "label": "Force F4",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 0
+        },
+        {
+          "id": "f4_distance",
+          "label": "Distance F4 from R1",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "f5_force",
+          "label": "Force F5",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 0
+        },
+        {
+          "id": "f5_distance",
+          "label": "Distance F5 from R1",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "f6_force",
+          "label": "Force F6",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 0
+        },
+        {
+          "id": "f6_distance",
+          "label": "Distance F6 from R1",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_load",
+          "label": "Total Load",
+          "unit": "N",
+          "formula": "inputs.f1_force + inputs.f2_force + inputs.f3_force + inputs.f4_force + inputs.f5_force + inputs.f6_force",
+          "format": "decimal"
+        },
+        {
+          "id": "total_moment",
+          "label": "Total Moment about R1",
+          "unit": "N⋅m",
+          "formula": "(inputs.f1_force * inputs.f1_distance) + (inputs.f2_force * inputs.f2_distance) + (inputs.f3_force * inputs.f3_distance) + (inputs.f4_force * inputs.f4_distance) + (inputs.f5_force * inputs.f5_distance) + (inputs.f6_force * inputs.f6_distance)",
+          "format": "decimal"
+        },
+        {
+          "id": "r2_force",
+          "label": "Support Force R2",
+          "unit": "N",
+          "formula": "inputs.total_moment / inputs.beam_length",
+          "format": "decimal"
+        },
+        {
+          "id": "r1_force",
+          "label": "Support Force R1",
+          "unit": "N",
+          "formula": "inputs.total_load - inputs.r2_force",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "load_summary",
+      "headers": [
+        "Load",
+        "Force (N)",
+        "Distance from R1 (m)",
+        "Moment (N⋅m)"
+      ],
+      "rows": [
+        [
+          "F1",
+          "inputs.f1_force",
+          "inputs.f1_distance",
+          "inputs.f1_force * inputs.f1_distance"
+        ],
+        [
+          "F2",
+          "inputs.f2_force",
+          "inputs.f2_distance",
+          "inputs.f2_force * inputs.f2_distance"
+        ],
+        [
+          "F3",
+          "inputs.f3_force",
+          "inputs.f3_distance",
+          "inputs.f3_force * inputs.f3_distance"
+        ],
+        [
+          "F4",
+          "inputs.f4_force",
+          "inputs.f4_distance",
+          "inputs.f4_force * inputs.f4_distance"
+        ],
+        [
+          "F5",
+          "inputs.f5_force",
+          "inputs.f5_distance",
+          "inputs.f5_force * inputs.f5_distance"
+        ],
+        [
+          "F6",
+          "inputs.f6_force",
+          "inputs.f6_distance",
+          "inputs.f6_force * inputs.f6_distance"
+        ]
+      ]
+    }
+  ]
+}

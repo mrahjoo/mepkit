@@ -1,0 +1,205 @@
+{
+  "id": "hazen_williams_friction_loss_coefficients__data___",
+  "title": "Hazen-Williams Friction Loss Coefficients: Data & Reference Guide",
+  "description": "Hazen-Williams friction loss coefficients for commonly used piping materials. Coefficients are used in the Hazen-Williams equation to calculate friction loss in ducts and pipes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Hazen-Williams Coefficient - c -"
+      ],
+      "rows": [
+        [
+          "ABS - Acrylonite Butadiene Styrene",
+          "130"
+        ],
+        [
+          "Aluminum",
+          "130 - 150"
+        ],
+        [
+          "Asbestos Cement",
+          "140"
+        ],
+        [
+          "Asphalt Lining",
+          "130 - 140"
+        ],
+        [
+          "Brass",
+          "130 - 140"
+        ],
+        [
+          "Brick sewer",
+          "90 - 100"
+        ],
+        [
+          "Cast-Iron - new unlined (CIP)",
+          "130"
+        ],
+        [
+          "Cast-Iron 10 years old",
+          "107 - 113"
+        ],
+        [
+          "Cast-Iron 20 years old",
+          "89 - 100"
+        ],
+        [
+          "Cast-Iron 30 years old",
+          "75 - 90"
+        ],
+        [
+          "Cast-Iron 40 years old",
+          "64-83"
+        ],
+        [
+          "Cast-Iron, asphalt coated",
+          "100"
+        ],
+        [
+          "Cast-Iron, cement lined",
+          "140"
+        ],
+        [
+          "Cast-Iron, bituminous lined",
+          "140"
+        ],
+        [
+          "Cast-Iron, sea-coated",
+          "120"
+        ],
+        [
+          "Cast-Iron, wrought plain",
+          "100"
+        ],
+        [
+          "Cement lining",
+          "130 - 140"
+        ],
+        [
+          "Concrete",
+          "100 - 140"
+        ],
+        [
+          "Concrete lined, steel forms",
+          "140"
+        ],
+        [
+          "Concrete lined, wooden forms",
+          "120"
+        ],
+        [
+          "Concrete, old",
+          "100 - 110"
+        ],
+        [
+          "Copper",
+          "130 - 140"
+        ],
+        [
+          "Corrugated Metal",
+          "60"
+        ],
+        [
+          "Ductile Iron Pipe (DIP)",
+          "140"
+        ],
+        [
+          "Ductile Iron, cement lined",
+          "120"
+        ],
+        [
+          "Fiber",
+          "140"
+        ],
+        [
+          "Fiber Glass Pipe - FRP",
+          "150"
+        ],
+        [
+          "Galvanized iron",
+          "120"
+        ],
+        [
+          "Glass",
+          "130"
+        ],
+        [
+          "Lead",
+          "130 - 140"
+        ],
+        [
+          "Metal Pipes - Very to extremely smooth",
+          "130 - 140"
+        ],
+        [
+          "Plastic",
+          "130 - 150"
+        ],
+        [
+          "Polyethylene, PE, PEH",
+          "140"
+        ],
+        [
+          "Polyvinyl chloride, PVC, CPVC",
+          "150"
+        ],
+        [
+          "Smooth Pipes",
+          "140"
+        ],
+        [
+          "Steel new unlined",
+          "140 - 150"
+        ],
+        [
+          "Steel, corrugated",
+          "60"
+        ],
+        [
+          "Steel, welded and seamless",
+          "100"
+        ],
+        [
+          "Steel, interior riveted, no projecting rivets",
+          "110"
+        ],
+        [
+          "Steel, projecting girth and horizontal rivets",
+          "100"
+        ],
+        [
+          "Steel, vitrified, spiral-riveted",
+          "90 - 110"
+        ],
+        [
+          "Steel, welded and seamless",
+          "100"
+        ],
+        [
+          "Tin",
+          "130"
+        ],
+        [
+          "Vitrified Clay",
+          "110"
+        ],
+        [
+          "Wrought iron, plain",
+          "100"
+        ],
+        [
+          "Wooden or Masonry Pipe - Smooth",
+          "120"
+        ],
+        [
+          "Wood Stave",
+          "110 - 120"
+        ]
+      ]
+    }
+  ]
+}

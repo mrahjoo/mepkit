@@ -1,0 +1,148 @@
+{
+  "id": "vehicle___distance_traveled_vs__velocity_and_time_",
+  "title": "Vehicle - Distance Traveled vs. Velocity and Time (km/h)",
+  "description": "Speed (km/h) vs. time (hours) and distance traveled (km).",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "distance_calculator",
+      "content": "Calculate distance traveled based on velocity and time",
+      "inputs": [
+        {
+          "id": "velocity",
+          "label": "Velocity",
+          "type": "number",
+          "unit": "km/h",
+          "defaultValue": 60
+        },
+        {
+          "id": "time",
+          "label": "Time",
+          "type": "number",
+          "unit": "hours",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance",
+          "label": "Distance Traveled",
+          "unit": "km",
+          "formula": "inputs.velocity * inputs.time",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "velocity_time_table",
+      "content": "Velocity and Time vs Distance Traveled",
+      "headers": [
+        "Time (hours)",
+        "Velocity (km/h)",
+        "Distance (km)"
+      ],
+      "rows": [
+        [
+          0.5,
+          60,
+          30
+        ],
+        [
+          1,
+          60,
+          60
+        ],
+        [
+          1.5,
+          60,
+          90
+        ],
+        [
+          2,
+          60,
+          120
+        ],
+        [
+          2.5,
+          60,
+          150
+        ],
+        [
+          3,
+          60,
+          180
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "distance_velocity_time_chart",
+      "content": "Distance vs Velocity and Time",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0.5h",
+            "1h",
+            "1.5h",
+            "2h",
+            "2.5h",
+            "3h"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Distance (km)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Velocity (km/h)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Distance (km)",
+            "data": [
+              30,
+              60,
+              90,
+              120,
+              150,
+              180
+            ],
+            "type": "line",
+            "smooth": true,
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Velocity (km/h)",
+            "data": [
+              60,
+              60,
+              60,
+              60,
+              60,
+              60
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Distance (km)",
+            "Velocity (km/h)"
+          ]
+        }
+      }
+    }
+  ]
+}

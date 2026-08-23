@@ -1,0 +1,65 @@
+{
+  "id": "plumbing_codes",
+  "title": "Plumbing Codes",
+  "description": "A comprehensive reference guide for plumbing and sanitation codes used in the United States and internationally. Contains information about major code standards, their governing organizations, and application requirements.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Code Name",
+        "Governing Organization",
+        "Abbreviation",
+        "Jurisdiction"
+      ],
+      "rows": [
+        [
+          "National Plumbing Code",
+          "Building Officials and Code Administrators International",
+          "BOCA",
+          "United States"
+        ],
+        [
+          "Uniform Plumbing Code",
+          "International Association of Plumbing and Mechanical Officials",
+          "IAPMO",
+          "United States"
+        ],
+        [
+          "International Plumbing Code",
+          "International Codes Council",
+          "ICC",
+          "United States"
+        ],
+        [
+          "Standard Plumbing Code",
+          "Southern Building Code Congress International",
+          "SBCCI",
+          "United States"
+        ],
+        [
+          "One and Two Family Dwelling Code",
+          "Council of American Building Officials",
+          "CABO",
+          "United States"
+        ],
+        [
+          "National Standard Plumbing Code",
+          "Plumbing, Heating, Cooling Contractors - National Association",
+          "PHCC",
+          "United States"
+        ],
+        [
+          "Safety Requirements for Plumbing",
+          "American National Standards Institute",
+          "ANSI A40",
+          "United States"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Information\n\n**Applicable to:**\n- Drinking supply water systems\n- Sewer or toilet facilities systems\n\n**Locations:**\n- Homes\n- Offices\n- Factories\n- Schools\n- Hospitals\n\n**Important Notes:**\n- Codes are adopted and altered by local authorities to fit local needs\n- Throughout the world, different countries and jurisdictions have their own local or common (as within EU) set of codes\n- Engineers must always check and adapt to the local regime"
+    }
+  ]
+}

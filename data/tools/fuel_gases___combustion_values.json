@@ -1,0 +1,135 @@
+{
+  "id": "fuel_gases___combustion_values",
+  "title": "Fuel Gases - Combustion Values",
+  "description": "Combustion values for fuel gases like natural gas, propane and butane - Btu per cubic feet.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Combustion Values Reference\n\nCombustion (heat) values for some fuel gases. Use the calculator below to convert between different energy units.\n\n**Conversion Factor:** 1 Btu/ft³ = 8.9 kcal/m³ = 3.73×10⁴ J/m³"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "combustion_value_btu",
+          "label": "Combustion Value",
+          "type": "number",
+          "unit": "Btu/ft³",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "combustion_value_kcal",
+          "label": "Combustion Value",
+          "unit": "kcal/m³",
+          "formula": "inputs.combustion_value_btu * 8.9",
+          "format": "decimal"
+        },
+        {
+          "id": "combustion_value_j",
+          "label": "Combustion Value",
+          "unit": "J/m³",
+          "formula": "inputs.combustion_value_btu * 37300",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel Gas",
+        "Combustion Value (Btu/ft³)",
+        "Specific Gravity"
+      ],
+      "rows": [
+        [
+          "Acetylene",
+          1498,
+          "0.91"
+        ],
+        [
+          "Blast furnace gas",
+          92,
+          "1.02"
+        ],
+        [
+          "Butane",
+          3184,
+          "1.95 (heavier than air)"
+        ],
+        [
+          "Butylene (Butene)",
+          3077,
+          "1.94"
+        ],
+        [
+          "Carbon Monoxide",
+          323,
+          "0.97"
+        ],
+        [
+          "Carburated Water Gas",
+          550,
+          "0.63"
+        ],
+        [
+          "Coke oven",
+          570,
+          "0.40"
+        ],
+        [
+          "Digester (Sewage) Gas",
+          690,
+          "0.80"
+        ],
+        [
+          "Ethane",
+          1783,
+          "1.06"
+        ],
+        [
+          "Hydrogen",
+          325,
+          "0.07"
+        ],
+        [
+          "Manufactured Gas",
+          "500 - 600",
+          "—"
+        ],
+        [
+          "Methane",
+          1011,
+          "0.55"
+        ],
+        [
+          "Natural Gas",
+          "950 - 1150",
+          "0.660 - 0.708 (lighter than air)"
+        ],
+        [
+          "Propane",
+          2504,
+          "1.77"
+        ],
+        [
+          "Propane-Butane Mix",
+          "2500 - 3200",
+          "—"
+        ],
+        [
+          "Propylene (Propene)",
+          2332,
+          "1.45"
+        ],
+        [
+          "Water Gas (bituminous)",
+          261,
+          "0.71"
+        ]
+      ]
+    }
+  ]
+}

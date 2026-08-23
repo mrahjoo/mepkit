@@ -1,0 +1,103 @@
+{
+  "id": "oxygen___enthalpy__internal_energy_and_entropy_vs_",
+  "title": "Oxygen - Enthalpy, Internal Energy and Entropy vs. Temperature",
+  "description": "Calculate thermodynamic properties of oxygen including enthalpy, internal energy, and entropy as functions of temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (K)",
+        "Enthalpy (kJ/kmol)",
+        "Internal Energy (kJ/kmol)",
+        "Entropy (kJ/(kmol·K))"
+      ],
+      "rows": [
+        [
+          298.15,
+          0,
+          0,
+          0
+        ],
+        [
+          300,
+          50.2,
+          35.8,
+          0.118
+        ],
+        [
+          400,
+          3030,
+          2156,
+          7.952
+        ],
+        [
+          500,
+          6087,
+          4327,
+          13.575
+        ],
+        [
+          600,
+          9246,
+          6554,
+          18.456
+        ],
+        [
+          700,
+          12503,
+          8828,
+          22.805
+        ],
+        [
+          800,
+          15854,
+          11145,
+          26.744
+        ],
+        [
+          900,
+          19296,
+          13503,
+          30.355
+        ],
+        [
+          1000,
+          22823,
+          15899,
+          33.707
+        ],
+        [
+          1200,
+          29885,
+          20876,
+          39.86
+        ],
+        [
+          1400,
+          37372,
+          26297,
+          45.417
+        ],
+        [
+          1600,
+          45262,
+          32138,
+          50.559
+        ],
+        [
+          1800,
+          53542,
+          38382,
+          55.385
+        ],
+        [
+          2000,
+          62202,
+          45018,
+          59.966
+        ]
+      ]
+    }
+  ]
+}

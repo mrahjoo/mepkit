@@ -1,0 +1,130 @@
+{
+  "id": "electrical_inductance___serial_and_parallel_connec",
+  "title": "Electrical Inductance - Serial and Parallel Connections",
+  "description": "Calculate electrical inductance in serial and parallel connected inductors. Choose between serial connection (L = L1 + L2 + ... + Ln) or parallel connection (1/L = 1/L1 + 1/L2 + ... + 1/Ln).",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "inductance_calculator",
+      "content": "Calculate total inductance for series and parallel configurations",
+      "inputs": [
+        {
+          "id": "connection_type",
+          "label": "Connection Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Serial Connection",
+              "value": "serial"
+            },
+            {
+              "label": "Parallel Connection",
+              "value": "parallel"
+            }
+          ],
+          "defaultValue": "serial"
+        },
+        {
+          "id": "L1",
+          "label": "L1 (First Inductance)",
+          "type": "number",
+          "unit": "H",
+          "defaultValue": 1
+        },
+        {
+          "id": "L2",
+          "label": "L2 (Second Inductance)",
+          "type": "number",
+          "unit": "H",
+          "defaultValue": 1
+        },
+        {
+          "id": "L3",
+          "label": "L3 (Third Inductance)",
+          "type": "number",
+          "unit": "H",
+          "defaultValue": 0
+        },
+        {
+          "id": "L4",
+          "label": "L4 (Fourth Inductance)",
+          "type": "number",
+          "unit": "H",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_inductance",
+          "label": "Total Inductance (L)",
+          "unit": "H",
+          "format": "decimal",
+          "formula": "inputs.connection_type === 'serial' ? inputs.L1 + inputs.L2 + (inputs.L3 > 0 ? inputs.L3 : 0) + (inputs.L4 > 0 ? inputs.L4 : 0) : 1 / (1/inputs.L1 + 1/inputs.L2 + (inputs.L3 > 0 ? 1/inputs.L3 : 0) + (inputs.L4 > 0 ? 1/inputs.L4 : 0))"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "inductance_comparison",
+      "content": "Comparison of inductance values in series vs parallel configurations",
+      "options": {
+        "title": {
+          "text": "Inductance Comparison: Series vs Parallel"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Series Connection",
+            "Parallel Connection"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "Total"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Inductance (H)"
+        },
+        "series": [
+          {
+            "name": "Series Connection",
+            "type": "bar",
+            "data": [
+              1,
+              1,
+              0.5,
+              0.5,
+              3
+            ]
+          },
+          {
+            "name": "Parallel Connection",
+            "type": "bar",
+            "data": [
+              1,
+              1,
+              0.5,
+              0.5,
+              0.235
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "formula_info",
+      "content": "## Formula Reference\n\n### Serial Connection (Equation 1)\n**L = L1 + L2 + ... + Ln**\n\nWhere:\n- **L** = Total inductance (henrys, H)\n- **L1, L2, ..., Ln** = Individual inductances in series\n\nIn serial connection, inductances add directly.\n\n### Parallel Connection (Equation 2)\n**1/L = 1/L1 + 1/L2 + ... + 1/Ln**\n\nWhere:\n- **L** = Total inductance (henrys, H)\n- **L1, L2, ..., Ln** = Individual inductances in parallel\n\nIn parallel connection, the reciprocals of inductances add up. The total inductance is always less than the smallest individual inductance."
+    }
+  ]
+}

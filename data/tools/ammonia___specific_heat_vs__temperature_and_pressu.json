@@ -1,0 +1,6 @@
+{
+  "id": "ammonia___specific_heat_vs__temperature_and_pressu",
+  "title": "Ammonia - Specific Heat vs. Temperature and Pressure",
+  "description": "Calculator and data table for estimating the specific heat of gaseous and liquid ammonia at constant volume (Cv) or constant pressure (Cp) at given temperature and pressure. Outputs multiple unit formats including kJ/(kmol·K), kJ/(kg·K), kWh/(kg·K), kcal/(kg·K), and Btu/(lbm·°R).",
+  "type": "datatable"
+}

@@ -1,0 +1,183 @@
+{
+  "id": "ionic_compounds_in_water___solubility_guidelines",
+  "title": "Ionic Compounds in Water - Solubility Guidelines",
+  "description": "Guidelines for predicting whether ionic compounds are soluble in water at room temperature. Provides solubility rules for common ions and compounds.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Solubility Guidelines\n\n## Usually Soluble Compounds\n- **Acetates**: Generally soluble except AgCH₃COO (moderately soluble)\n- **Ammonium salts**: NH₄⁺ compounds are soluble\n- **Chlorates & Perchlorates**: ClO₃⁻ and ClO₄⁻ compounds are soluble\n- **Group 1 Cations**: Na⁺, K⁺, Rb⁺, Cs⁺ salts are soluble\n- **Halides**: \n  - Cl⁻, Br⁻, I⁻ are generally soluble\n  - Exceptions: AgX, Hg₂X₂, PbX₂ are insoluble\n  - F⁻: MgF₂, CaF₂, SrF₂, BaF₂, PbF₂ are insoluble\n- **Nitrates & Nitrites**: NO₃⁻ and NO₂⁻ compounds are soluble\n- **Sulfates**: SO₄²⁻ compounds usually soluble\n  - Exceptions: BaSO₄, PbSO₄, HgSO₄ (insoluble)\n  - Moderately soluble: CaSO₄, SrSO₄, Ag₂SO₄\n\n## Usually Insoluble Compounds\n- **Carbonates (CO₃²⁻)**: Generally insoluble\n  - Exceptions: (NH₄)₂CO₃, Na₂CO₃, K₂CO₃\n- **Hydroxides (OH⁻)**: Generally insoluble\n  - Soluble: LiOH, NaOH, KOH, Ba(OH)₂\n  - Moderately soluble: Ca(OH)₂, Sr(OH)₂\n- **Phosphates (PO₄³⁻)**: Generally insoluble\n  - Soluble: (NH₄)₃PO₄, Na₃PO₄, K₃PO₄\n- **Sulfides (S²⁻)**: Generally insoluble\n  - Soluble: (NH₄)₂S, Na₂S, K₂S, MgS, CaS"
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Solubility Classification of Ionic Compounds",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "item"
+        },
+        "series": [
+          {
+            "name": "Solubility Status",
+            "type": "sunburst",
+            "data": [
+              {
+                "name": "Ionic Compounds",
+                "children": [
+                  {
+                    "name": "Usually Soluble",
+                    "children": [
+                      {
+                        "name": "Acetates"
+                      },
+                      {
+                        "name": "Ammonium (NH₄⁺)"
+                      },
+                      {
+                        "name": "Chlorates (ClO₃⁻)"
+                      },
+                      {
+                        "name": "Perchlorates (ClO₄⁻)"
+                      },
+                      {
+                        "name": "Group 1 Cations (Na⁺, K⁺, Rb⁺, Cs⁺)"
+                      },
+                      {
+                        "name": "Halides (Cl⁻, Br⁻, I⁻)"
+                      },
+                      {
+                        "name": "Nitrates (NO₃⁻)"
+                      },
+                      {
+                        "name": "Nitrites (NO₂⁻)"
+                      },
+                      {
+                        "name": "Sulfates (SO₄²⁻)"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Usually Insoluble",
+                    "children": [
+                      {
+                        "name": "Carbonates (CO₃²⁻)"
+                      },
+                      {
+                        "name": "Hydroxides (OH⁻)"
+                      },
+                      {
+                        "name": "Phosphates (PO₄³⁻)"
+                      },
+                      {
+                        "name": "Sulfides (S²⁻)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "radius": [
+              0,
+              "90%"
+            ],
+            "label": {
+              "rotate": "radial"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Compound Type",
+        "Solubility",
+        "Key Exceptions/Notes"
+      ],
+      "rows": [
+        [
+          "Acetates",
+          "Soluble",
+          "AgCH₃COO moderately soluble"
+        ],
+        [
+          "Ammonium",
+          "Soluble",
+          "All NH₄⁺ compounds soluble"
+        ],
+        [
+          "Chlorates",
+          "Soluble",
+          "ClO₃⁻ compounds soluble"
+        ],
+        [
+          "Perchlorates",
+          "Soluble",
+          "ClO₄⁻ compounds soluble"
+        ],
+        [
+          "Group 1 Cations",
+          "Soluble",
+          "Na⁺, K⁺, Rb⁺, Cs⁺ all soluble"
+        ],
+        [
+          "Halides (F⁻)",
+          "Insoluble",
+          "MgF₂, CaF₂, SrF₂, BaF₂, PbF₂ insoluble"
+        ],
+        [
+          "Halides (Cl⁻)",
+          "Soluble",
+          "AgCl, Hg₂Cl₂, PbCl₂ insoluble"
+        ],
+        [
+          "Halides (Br⁻)",
+          "Soluble",
+          "AgBr, Hg₂Br₂, PbBr₂ insoluble"
+        ],
+        [
+          "Halides (I⁻)",
+          "Soluble",
+          "AgI, Hg₂I₂, PbI₂ insoluble"
+        ],
+        [
+          "Nitrates",
+          "Soluble",
+          "All NO₃⁻ compounds soluble"
+        ],
+        [
+          "Nitrites",
+          "Soluble",
+          "AgNO₂ moderately soluble"
+        ],
+        [
+          "Sulfates",
+          "Soluble",
+          "BaSO₄, PbSO₄, HgSO₄ insoluble; CaSO₄, SrSO₄, Ag₂SO₄ moderately soluble"
+        ],
+        [
+          "Carbonates",
+          "Insoluble",
+          "(NH₄)₂CO₃, Na₂CO₃, K₂CO₃ soluble"
+        ],
+        [
+          "Hydroxides",
+          "Insoluble",
+          "LiOH, NaOH, KOH, Ba(OH)₂ soluble; Ca(OH)₂, Sr(OH)₂ moderately soluble"
+        ],
+        [
+          "Phosphates",
+          "Insoluble",
+          "(NH₄)₃PO₄, Na₃PO₄, K₃PO₄ soluble"
+        ],
+        [
+          "Sulfides",
+          "Insoluble",
+          "(NH₄)₂S, Na₂S, K₂S, MgS, CaS soluble"
+        ]
+      ]
+    }
+  ]
+}

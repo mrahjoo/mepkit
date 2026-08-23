@@ -1,0 +1,147 @@
+{
+  "id": "maximum_sound_pressure_levels_in_rooms",
+  "title": "Maximum Sound Pressure Levels in Rooms",
+  "description": "Maximum recommended sound pressure levels in rooms like kindergartens, auditoriums, libraries, cinemas and more. Sound pressure level is the pressure of sound related to a fixed reference of 2×10⁻⁵ Pa (0 dB on the decibel scale).",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Activity and Type of Area",
+        "Noise Rating (NR) Value",
+        "Sound Pressure Level (dBA)"
+      ],
+      "rows": [
+        [
+          "Kindergartens",
+          30,
+          35
+        ],
+        [
+          "Auditorium",
+          25,
+          30
+        ],
+        [
+          "Library",
+          30,
+          35
+        ],
+        [
+          "Cinema",
+          30,
+          35
+        ],
+        [
+          "Concert hall",
+          20,
+          25
+        ],
+        [
+          "Court room",
+          25,
+          30
+        ],
+        [
+          "Theater",
+          25,
+          30
+        ],
+        [
+          "Store, retail",
+          35,
+          40
+        ],
+        [
+          "Supermarkets",
+          40,
+          45
+        ],
+        [
+          "Hospital, corridor",
+          30,
+          35
+        ],
+        [
+          "Hospital, operating theater",
+          25,
+          30
+        ],
+        [
+          "Hospital, private room",
+          20,
+          25
+        ],
+        [
+          "Hotel, lobby",
+          35,
+          40
+        ],
+        [
+          "Hotel, restaurant",
+          40,
+          45
+        ],
+        [
+          "Hotel, ballroom",
+          30,
+          35
+        ],
+        [
+          "Church",
+          25,
+          30
+        ],
+        [
+          "Office",
+          30,
+          35
+        ],
+        [
+          "School, lecture room",
+          25,
+          30
+        ],
+        [
+          "School, corridor",
+          30,
+          35
+        ],
+        [
+          "School, gymnasium",
+          30,
+          35
+        ],
+        [
+          "Swimming pool",
+          35,
+          40
+        ],
+        [
+          "Studio, record",
+          20,
+          25
+        ],
+        [
+          "Studio, radio",
+          15,
+          20
+        ],
+        [
+          "Studio, television with audience",
+          25,
+          30
+        ],
+        [
+          "Studio, television without audience",
+          20,
+          25
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About Sound Pressure Levels\n\n[Sound pressure level](https://example.com/sound-pressure) is the pressure of sound related to a fixed reference. The reference is the threshold of hearing **2×10⁻⁵ Pa**, or in the logarithmic [decibel scale](https://example.com/decibel) the value **0 dB**.\n\nThe table above provides guidelines for maximum acceptable sound pressure levels in rooms with different types of activities."
+    }
+  ]
+}

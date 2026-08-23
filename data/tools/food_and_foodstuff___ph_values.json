@@ -1,0 +1,453 @@
+{
+  "id": "food_and_foodstuff___ph_values",
+  "title": "Food and Foodstuff - pH Values",
+  "description": "pH in common food products - like apples, butter, wines and more. pH is a measure of the hydrogen ion (H+) activity in a solution and, therefore, its acidity or alkalinity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Product",
+        "Approximate pH"
+      ],
+      "rows": [
+        [
+          "Abalone",
+          "6.1 - 6.5"
+        ],
+        [
+          "Aloe Vera",
+          "6.1"
+        ],
+        [
+          "Apples",
+          "2.9 - 3.3"
+        ],
+        [
+          "Apricots",
+          "3.6 - 4.0"
+        ],
+        [
+          "Apricots, canned",
+          "3.4 - 3.8"
+        ],
+        [
+          "Apricots, nectar",
+          "3.8"
+        ],
+        [
+          "Artichokes",
+          "5.5 - 6.0"
+        ],
+        [
+          "Asparagus",
+          "5.4 - 5.8"
+        ],
+        [
+          "Avocados",
+          "6.3 - 6.6"
+        ],
+        [
+          "Bananas",
+          "4.5 - 4.7"
+        ],
+        [
+          "Bass, sea, broiled",
+          "6.6 - 6.8"
+        ],
+        [
+          "Beans",
+          "5.0 - 6.0"
+        ],
+        [
+          "Beers",
+          "4.0 - 5.0"
+        ],
+        [
+          "Beets",
+          "4.9 - 5.5"
+        ],
+        [
+          "Beets, canned",
+          "4.9 - 5.5"
+        ],
+        [
+          "Blackberries",
+          "3.2 - 3.6"
+        ],
+        [
+          "Blueberries",
+          "3.1 - 3.4"
+        ],
+        [
+          "Bread, white",
+          "5.0 - 6.0"
+        ],
+        [
+          "Broccoli, cooked",
+          "5.3"
+        ],
+        [
+          "Butter",
+          "6.1 - 6.4"
+        ],
+        [
+          "Buttermilk",
+          "4.4 - 4.8"
+        ],
+        [
+          "Cabbage",
+          "5.2 - 5.4"
+        ],
+        [
+          "Cactus",
+          "4.7"
+        ],
+        [
+          "Calamari (squid)",
+          "5.8"
+        ],
+        [
+          "Capers",
+          "6.0"
+        ],
+        [
+          "Carp",
+          "6.0"
+        ],
+        [
+          "Carrots",
+          "4.9 - 5.3"
+        ],
+        [
+          "Celery",
+          "5.7 - 6.0"
+        ],
+        [
+          "Cheese",
+          "4.8 - 6.4"
+        ],
+        [
+          "Cherries",
+          "3.2 - 4.0"
+        ],
+        [
+          "Chili sauce",
+          "2.8 - 3.7"
+        ],
+        [
+          "Cider",
+          "2.9 - 3.3"
+        ],
+        [
+          "Coconut",
+          "5.5 - 7.8"
+        ],
+        [
+          "Coconut milk",
+          "6.1 - 7.0"
+        ],
+        [
+          "Cod liver",
+          "6.2"
+        ],
+        [
+          "Corn",
+          "6.0 - 6.5"
+        ],
+        [
+          "Crab meat",
+          "6.5 - 7.0"
+        ],
+        [
+          "Crackers",
+          "6.5 - 8.5"
+        ],
+        [
+          "Cranberry juice",
+          "2.3 - 2.5"
+        ],
+        [
+          "Curry sauce",
+          "6.0"
+        ],
+        [
+          "Cuttlefish",
+          "6.3"
+        ],
+        [
+          "Dates",
+          "6.5 - 8.5"
+        ],
+        [
+          "Eel",
+          "6.2"
+        ],
+        [
+          "Eggs, fresh",
+          "7.6 - 8.0"
+        ],
+        [
+          "Flour, wheat",
+          "5.5 - 6.5"
+        ],
+        [
+          "Fruit cocktail",
+          "3.6 - 4.0"
+        ],
+        [
+          "Gooseberries",
+          "2.8 - 3.0"
+        ],
+        [
+          "Grapefruit",
+          "3.0 - 3.7"
+        ],
+        [
+          "Grapes",
+          "3.5 - 4.5"
+        ],
+        [
+          "Herring",
+          "6.1"
+        ],
+        [
+          "Hominy (lye)",
+          "6.8 - 8.0"
+        ],
+        [
+          "Horseradish",
+          "5.4"
+        ],
+        [
+          "Jams, fruit",
+          "3.5 - 4.0"
+        ],
+        [
+          "Jellies, fruit",
+          "2.8 - 3.4"
+        ],
+        [
+          "Ketchup",
+          "3.9"
+        ],
+        [
+          "Leeks",
+          "5.5 - 6.2"
+        ],
+        [
+          "Lemons",
+          "2.2 - 2.4"
+        ],
+        [
+          "Lemon juice",
+          "2.0 - 2.6"
+        ],
+        [
+          "Limes",
+          "1.8 - 2.0"
+        ],
+        [
+          "Lime juice",
+          "2.0 - 2.4"
+        ],
+        [
+          "Mango",
+          "5.8 - 6.0"
+        ],
+        [
+          "Maple syrup",
+          "6.5 - 7.0"
+        ],
+        [
+          "Melons",
+          "6.0 - 6.7"
+        ],
+        [
+          "Milk, cows",
+          "6.3 - 6.6"
+        ],
+        [
+          "Molasses",
+          "4.9 - 5.4"
+        ],
+        [
+          "Mustard",
+          "3.5 - 6.0"
+        ],
+        [
+          "Nectarines",
+          "3.9 - 4.2"
+        ],
+        [
+          "Olives, green, fermented",
+          "3.6 - 4.6"
+        ],
+        [
+          "Olives, black",
+          "6.0 - 7.0"
+        ],
+        [
+          "Oranges",
+          "3.0 - 4.0"
+        ],
+        [
+          "Oysters",
+          "6.1 - 6.7"
+        ],
+        [
+          "Peaches",
+          "3.4 - 3.6"
+        ],
+        [
+          "Peanut butter",
+          "6.3"
+        ],
+        [
+          "Pears",
+          "3.6 - 4.0"
+        ],
+        [
+          "Peas",
+          "5.8 - 6.4"
+        ],
+        [
+          "Pickles, sour",
+          "3.0 - 3.4"
+        ],
+        [
+          "Pickles, dill",
+          "3.2 - 3.6"
+        ],
+        [
+          "Pimento",
+          "4.6 - 5.2"
+        ],
+        [
+          "Plums",
+          "2.8 - 3.0"
+        ],
+        [
+          "Potatoes",
+          "5.6 - 6.0"
+        ],
+        [
+          "Pumpkin",
+          "4.8 - 5.2"
+        ],
+        [
+          "Raspberries",
+          "3.2 - 3.6"
+        ],
+        [
+          "Rhubarb",
+          "3.1 - 3.2"
+        ],
+        [
+          "Salmon",
+          "6.1 - 6.3"
+        ],
+        [
+          "Sardines",
+          "5.7 - 6.6"
+        ],
+        [
+          "Sauerkraut",
+          "3.4 - 3.6"
+        ],
+        [
+          "Sherry",
+          "3.4"
+        ],
+        [
+          "Shrimp",
+          "6.8 - 7.0"
+        ],
+        [
+          "Soft drinks",
+          "2.0 - 4.0"
+        ],
+        [
+          "Soybean milk",
+          "7.0"
+        ],
+        [
+          "Soy sauce",
+          "4.4 - 5.4"
+        ],
+        [
+          "Spinach",
+          "5.1 - 5.7"
+        ],
+        [
+          "Squash",
+          "5.0 - 5.4"
+        ],
+        [
+          "Strawberries",
+          "3.0 - 3.5"
+        ],
+        [
+          "Strawberry jam",
+          "3.0 - 3.4"
+        ],
+        [
+          "Sweet potatoes",
+          "5.3 - 5.6"
+        ],
+        [
+          "Tea",
+          "7.2"
+        ],
+        [
+          "Tomatoes",
+          "4.0 - 4.4"
+        ],
+        [
+          "Tomatoes, juice",
+          "4.1 - 4.6"
+        ],
+        [
+          "Tomatoes, puree",
+          "4.3 - 4.5"
+        ],
+        [
+          "Tuna",
+          "5.9 - 6.1"
+        ],
+        [
+          "Turnips",
+          "5.2 - 5.6"
+        ],
+        [
+          "Vegetable juice",
+          "3.9 - 4.3"
+        ],
+        [
+          "Vinegar",
+          "2.4 - 3.4"
+        ],
+        [
+          "Vinegar, cider",
+          "3.1"
+        ],
+        [
+          "Water, drinking",
+          "6.5 - 8.0"
+        ],
+        [
+          "Watermelon",
+          "5.2 - 5.6"
+        ],
+        [
+          "Wines",
+          "2.8 - 3.8"
+        ],
+        [
+          "Yams cooked",
+          "5.5 - 6.8"
+        ]
+      ]
+    }
+  ]
+}

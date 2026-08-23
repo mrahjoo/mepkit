@@ -1,0 +1,72 @@
+{
+  "id": "electrical_motors___single_phase_230_v_circuit_wir",
+  "title": "Electrical Motors - Single Phase 230 V Circuit Wiring",
+  "description": "Copper wire gage and transformer size for single phase 230 volts electrical motors. Provides recommended wire gauge (AWG) and transformer apparent power (kVA) based on motor horsepower and distance from motor to transformer.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "motor_wiring_reference",
+      "headers": [
+        "Motor Power (hp)",
+        "Transformer Apparent Power (kVA)",
+        "Wire Gauge @ 100 ft (AWG)",
+        "Wire Gauge @ 150 ft (AWG)",
+        "Wire Gauge @ 200 ft (AWG)",
+        "Wire Gauge @ 300 ft (AWG)",
+        "Wire Gauge @ 500 ft (AWG)"
+      ],
+      "rows": [
+        [
+          "1.5",
+          "3",
+          "10",
+          "8",
+          "8",
+          "6",
+          "4"
+        ],
+        [
+          "2",
+          "3",
+          "10",
+          "8",
+          "8",
+          "8",
+          "4"
+        ],
+        [
+          "3",
+          "5",
+          "8",
+          "8",
+          "8",
+          "4",
+          "2"
+        ],
+        [
+          "5",
+          "7.5",
+          "6",
+          "4",
+          "4",
+          "2",
+          "0"
+        ],
+        [
+          "7.5",
+          "10",
+          "6",
+          "4",
+          "3",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- All wiring and electrical connections should comply with the National Electrical Code (NEC) and local codes and practices.\n- With undersized wire between motor and power source, the starting and load carrying capabilities of the motor will be limited.\n- Apparent Power is the power supplied to the electric circuit to cover the real and reactive power consumption in the loads."
+    }
+  ]
+}

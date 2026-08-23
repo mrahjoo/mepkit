@@ -1,0 +1,205 @@
+{
+  "id": "foods___thermal_conductivities",
+  "title": "Foods - Thermal Conductivities",
+  "description": "Thermal conductivity of selected foodstuff like apples, beef, sugar and more. This table presents thermal conductivity values for various food products along with their water content and measurement temperatures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Food",
+        "Water Content (%)",
+        "Temperature (°C)",
+        "Thermal Conductivity (W/(m K))"
+      ],
+      "rows": [
+        [
+          "Apple, whole",
+          "85",
+          "2 - 35",
+          "0.39"
+        ],
+        [
+          "Apple, juice",
+          "88",
+          "20",
+          "0.56"
+        ],
+        [
+          "Beef, freeze dried, 1 bar",
+          "-",
+          "0",
+          "0.07"
+        ],
+        [
+          "Beef, freeze dried, 10⁻⁶ bar",
+          "-",
+          "0",
+          "0.04"
+        ],
+        [
+          "Beef, lean, perpendicular to fibers",
+          "79",
+          "7",
+          "0.48"
+        ],
+        [
+          "Beef, lean, parallel to fibers",
+          "79",
+          "7",
+          "0.43"
+        ],
+        [
+          "Butter",
+          "15",
+          "45",
+          "0.2"
+        ],
+        [
+          "Cod",
+          "83",
+          "3",
+          "0.54"
+        ],
+        [
+          "Egg, white",
+          "-",
+          "35",
+          "0.58"
+        ],
+        [
+          "Egg, yolk",
+          "-",
+          "35",
+          "0.34"
+        ],
+        [
+          "Fish, loin",
+          "-",
+          "0 - 10",
+          "0.58"
+        ],
+        [
+          "Grapefruit, whole",
+          "-",
+          "30",
+          "0.45"
+        ],
+        [
+          "Honey",
+          "13",
+          "2",
+          "0.50"
+        ],
+        [
+          "Milk",
+          "-",
+          "37",
+          "0.53"
+        ],
+        [
+          "Milk, condensed",
+          "90",
+          "24",
+          "0.57"
+        ],
+        [
+          "Milk, skimmed",
+          "-",
+          "2",
+          "0.54"
+        ],
+        [
+          "Olive oil",
+          "-",
+          "15",
+          "0.19"
+        ],
+        [
+          "Pork, perpendicular to fibers",
+          "75",
+          "5",
+          "0.49"
+        ],
+        [
+          "Pork, parallel to fibers",
+          "75",
+          "5",
+          "0.44"
+        ],
+        [
+          "Pork, fat",
+          "-",
+          "25",
+          "0.15"
+        ],
+        [
+          "Potato, raw flesh",
+          "82",
+          "1 - 35",
+          "0.55"
+        ],
+        [
+          "Poultry, broiler muscle",
+          "70",
+          "4 - 25",
+          "0.41"
+        ],
+        [
+          "Salmon",
+          "75",
+          "4",
+          "0.50"
+        ],
+        [
+          "Salt",
+          "-",
+          "90",
+          "0.25"
+        ],
+        [
+          "Strawberry",
+          "-",
+          "15 - 25",
+          "0.68"
+        ],
+        [
+          "Sugars",
+          "-",
+          "30 - 60",
+          "0.09 - 0.22"
+        ],
+        [
+          "Turkey, breast perpendicular to fibers",
+          "75",
+          "3",
+          "0.50"
+        ],
+        [
+          "Turkey, breast parallel to fibers",
+          "75",
+          "3",
+          "0.52"
+        ],
+        [
+          "Oil, vegetable and animal",
+          "-",
+          "4 - 180",
+          "0.17"
+        ],
+        [
+          "Wheat flour",
+          "9",
+          "43",
+          "0.45"
+        ],
+        [
+          "Whey",
+          "-",
+          "80",
+          "0.64"
+        ]
+      ]
+    }
+  ]
+}

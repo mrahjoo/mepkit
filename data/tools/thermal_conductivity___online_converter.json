@@ -1,0 +1,94 @@
+{
+  "id": "thermal_conductivity___online_converter",
+  "title": "Thermal Conductivity - Online Converter",
+  "description": "Convert between thermal conductivity units. Thermal conductivity indicates a material's ability to conduct heat.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Thermal Conductivity Unit Converter",
+      "inputs": [
+        {
+          "id": "thermal_conductivity_value",
+          "label": "Thermal Conductivity Value",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "W/(m·K)"
+        },
+        {
+          "id": "source_unit",
+          "label": "From Unit",
+          "type": "select",
+          "defaultValue": "W/(m·K)",
+          "options": [
+            {
+              "label": "W/(m·K)",
+              "value": "W/(m·K)"
+            },
+            {
+              "label": "W/(cm·K)",
+              "value": "W/(cm·K)"
+            },
+            {
+              "label": "W/(m·°C)",
+              "value": "W/(m·°C)"
+            },
+            {
+              "label": "cal/(s·cm·K)",
+              "value": "cal/(s·cm·K)"
+            },
+            {
+              "label": "kcal/(h·m·K)",
+              "value": "kcal/(h·m·K)"
+            },
+            {
+              "label": "Btu/(h·ft·°F)",
+              "value": "Btu/(h·ft·°F)"
+            }
+          ]
+        },
+        {
+          "id": "target_unit",
+          "label": "To Unit",
+          "type": "select",
+          "defaultValue": "W/(cm·K)",
+          "options": [
+            {
+              "label": "W/(m·K)",
+              "value": "W/(m·K)"
+            },
+            {
+              "label": "W/(cm·K)",
+              "value": "W/(cm·K)"
+            },
+            {
+              "label": "W/(m·°C)",
+              "value": "W/(m·°C)"
+            },
+            {
+              "label": "cal/(s·cm·K)",
+              "value": "cal/(s·cm·K)"
+            },
+            {
+              "label": "kcal/(h·m·K)",
+              "value": "kcal/(h·m·K)"
+            },
+            {
+              "label": "Btu/(h·ft·°F)",
+              "value": "Btu/(h·ft·°F)"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "converted_value",
+          "label": "Converted Value",
+          "formula": "inputs.thermal_conductivity_value",
+          "unit": "target unit",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

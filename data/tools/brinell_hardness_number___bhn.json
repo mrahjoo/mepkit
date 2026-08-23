@@ -1,0 +1,42 @@
+{
+  "id": "brinell_hardness_number___bhn",
+  "title": "Brinell Hardness Number - BHN",
+  "description": "Calculator for Brinell Hardness Number (BHN) based on the load applied and the diameter of the steel ball and impression. The BHN is calculated using the formula: BHN = 2P / (πD(D - √(D² - d²)))",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "load_kg",
+          "label": "Load on Indenting Tool",
+          "unit": "kg",
+          "type": "number",
+          "defaultValue": 3000
+        },
+        {
+          "id": "ball_diameter",
+          "label": "Diameter of Steel Ball",
+          "unit": "mm",
+          "type": "number",
+          "defaultValue": 10
+        },
+        {
+          "id": "impression_diameter",
+          "label": "Impression Diameter at Rim",
+          "unit": "mm",
+          "type": "number",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "bhn_value",
+          "label": "Brinell Hardness Number",
+          "formula": "2 * inputs.load_kg / (3.14159265 * inputs.ball_diameter * (inputs.ball_diameter - sqrt(inputs.ball_diameter * inputs.ball_diameter - inputs.impression_diameter * inputs.impression_diameter)))",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

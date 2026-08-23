@@ -1,0 +1,113 @@
+{
+  "id": "inductance",
+  "title": "Inductance",
+  "description": "Calculate inductance of an air-filled cylindrical wire coil. Inductance is a property of an electrical conductor by which a change in current induces an electromagnetic field (EMF). This tool uses the empirical formula for air-core cylindrical coils.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Inductance Calculator\n\nInductance is a property of an electrical conductor by which a change in current flowing through it induces an electromagnetic field (EMF).\n\n### Coil Inductance Formula\n\nFor an air-filled cylindrical wire coil:\n\n**L = μ₀ n² A / (l + 0.45 d)**\n\nWhere:\n- **μ₀** = permeability for vacuum = 4π × 10⁻⁷ H/m ≈ 1.2567 × 10⁻⁶ H/m\n- **A** = cylinder cross-section area (m²)\n- **n** = number of wire turns\n- **l** = length of coil (m)\n- **d** = diameter of coil (m)\n\n*Note: This formula is valid for l > 0.5 d*\n\n### EMF Induced in a Coil\n\n**EMF = -L dI / dt**\n\nWhere:\n- **L** = inductance (henrys, H)\n- **dI** = change in current (amperes)\n- **dt** = time (s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "turns",
+          "label": "Number of Turns (n)",
+          "type": "number",
+          "defaultValue": 500
+        },
+        {
+          "id": "diameter",
+          "label": "Coil Diameter (d)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "length",
+          "label": "Coil Length (l)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "wire_diameter",
+          "label": "Wire Diameter",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.002
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cross_section_area",
+          "label": "Cross-Section Area (A)",
+          "formula": "Math.PI * (inputs.diameter / 2) ** 2",
+          "unit": "m²",
+          "format": "scientific"
+        },
+        {
+          "id": "inductance",
+          "label": "Inductance (L)",
+          "formula": "(1.2567e-6) * (inputs.turns ** 2) * (Math.PI * (inputs.diameter / 2) ** 2) / (inputs.length + 0.45 * inputs.diameter)",
+          "unit": "H",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Permeability of Vacuum",
+          "μ₀",
+          "1.2567 × 10⁻⁶",
+          "H/m"
+        ],
+        [
+          "Number of Turns",
+          "n",
+          "500",
+          "turns"
+        ],
+        [
+          "Coil Diameter",
+          "d",
+          "0.05",
+          "m"
+        ],
+        [
+          "Coil Length",
+          "l",
+          "0.1",
+          "m"
+        ],
+        [
+          "Wire Diameter",
+          "dw",
+          "0.002",
+          "m"
+        ],
+        [
+          "Cross-Section Area",
+          "A",
+          "1.9635 × 10⁻³",
+          "m²"
+        ],
+        [
+          "Inductance",
+          "L",
+          "1.474 × 10⁻³",
+          "H"
+        ]
+      ]
+    }
+  ]
+}

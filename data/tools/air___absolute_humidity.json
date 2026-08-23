@@ -1,0 +1,47 @@
+{
+  "id": "air___absolute_humidity",
+  "title": "Air - Absolute Humidity",
+  "description": "Absolute humidity is the actual mass of water vapor present in the air water vapor mixture. It can be expressed in SI units (kg/m³, g/m³) or imperial units (lbs/ft³, gr/ft³).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Absolute Humidity Calculator\n\nAbsolute humidity is the actual mass of water vapor present in an air-water vapor mixture.\n\n### Unit Systems\n\n**SI Units:**\n- kg/m³ (kilograms of water vapor per cubic meter)\n- g/m³ (grams of water vapor per cubic meter)\n\n**Imperial Units:**\n- lbs/ft³ (pounds of water vapor per cubic foot)\n- gr/ft³ (grains of water vapor per cubic foot)\n\n### Formula\n\nAbsolute Humidity is calculated as the mass of water vapor divided by the volume of the air-water vapor mixture:\n\n$$AH = \\frac{m_{H_2O}}{V}$$\n\nWhere:\n- **AH** = Absolute Humidity\n- **m_H₂O** = Mass of water vapor\n- **V** = Volume of air-water vapor mixture"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass_water_vapor",
+          "label": "Mass of Water Vapor",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 0.01
+        },
+        {
+          "id": "volume_air_mixture",
+          "label": "Volume of Air-Water Vapor Mixture",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "absolute_humidity_si",
+          "label": "Absolute Humidity (SI)",
+          "unit": "kg/m³",
+          "formula": "inputs.mass_water_vapor / inputs.volume_air_mixture",
+          "format": "decimal"
+        },
+        {
+          "id": "absolute_humidity_g",
+          "label": "Absolute Humidity (g/m³)",
+          "unit": "g/m³",
+          "formula": "(inputs.mass_water_vapor / inputs.volume_air_mixture) * 1000",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

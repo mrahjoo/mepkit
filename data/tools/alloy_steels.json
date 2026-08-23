@@ -1,0 +1,107 @@
+{
+  "id": "alloy_steels",
+  "title": "Alloy Steels",
+  "description": "Alloy steels have properties due to elements other than carbon. An Alloy Steel is a steel with properties due to elements other than carbon like nickel, copper, chromium, and/or aluminum.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Alloy Steels\n\nAn **Alloy Steel** is a steel with properties due to elements other than carbon like nickel, copper, chromium, and/or aluminum. These additional elements are used to influence the metal's strength, ductility, corrosion resistance, and machinability.\n\n## Primary Alloying Element Limits\n\nThe content of alloying elements exceeds one or more of the limits:\n\n* Manganese > 1.65%\n* Silicon > 0.60%\n* Copper > 0.60%\n\n## Secondary Alloying Elements\n\nIn addition a definite range or a minimum quantity of the following may be required:\n\n* Aluminum\n* Boron\n* Chromium\n* Cobalt\n* Columbium\n* Molybdenum\n* Nickel\n* Titanium\n* Tungsten\n* Vanadium\n* Zirconium"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Element",
+        "Type",
+        "Typical Range (%)",
+        "Primary Effect"
+      ],
+      "rows": [
+        [
+          "Manganese",
+          "Primary",
+          "> 1.65",
+          "Increases strength and hardness"
+        ],
+        [
+          "Silicon",
+          "Primary",
+          "> 0.60",
+          "Increases strength and elasticity"
+        ],
+        [
+          "Copper",
+          "Primary",
+          "> 0.60",
+          "Improves corrosion resistance"
+        ],
+        [
+          "Nickel",
+          "Secondary",
+          "0.5 - 5.0",
+          "Increases toughness and ductility"
+        ],
+        [
+          "Chromium",
+          "Secondary",
+          "0.5 - 2.0",
+          "Improves hardness and corrosion resistance"
+        ],
+        [
+          "Molybdenum",
+          "Secondary",
+          "0.2 - 1.0",
+          "Increases strength at high temperatures"
+        ],
+        [
+          "Aluminum",
+          "Secondary",
+          "0.5 - 1.0",
+          "Improves case hardening"
+        ],
+        [
+          "Vanadium",
+          "Secondary",
+          "0.1 - 0.3",
+          "Increases strength and wear resistance"
+        ],
+        [
+          "Tungsten",
+          "Secondary",
+          "1.0 - 2.0",
+          "Increases hardness and heat resistance"
+        ],
+        [
+          "Titanium",
+          "Secondary",
+          "0.1 - 0.5",
+          "Improves strength and creep resistance"
+        ],
+        [
+          "Cobalt",
+          "Secondary",
+          "1.0 - 5.0",
+          "Increases high-temperature strength"
+        ],
+        [
+          "Boron",
+          "Secondary",
+          "0.001 - 0.003",
+          "Increases hardenability"
+        ],
+        [
+          "Columbium",
+          "Secondary",
+          "0.1 - 1.0",
+          "Improves strength and corrosion resistance"
+        ],
+        [
+          "Zirconium",
+          "Secondary",
+          "0.05 - 0.3",
+          "Improves strength and fatigue resistance"
+        ]
+      ]
+    }
+  ]
+}

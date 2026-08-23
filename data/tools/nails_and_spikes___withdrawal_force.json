@@ -1,0 +1,288 @@
+{
+  "id": "nails_and_spikes___withdrawal_force",
+  "title": "Nails and Spikes - Withdrawal Force",
+  "description": "Calculate the allowable withdrawal load or force for a nail or spike driven into wood using the formula F = 1380 × SG^(5/2) × D. Includes both imperial and metric calculators with reference data tables for common US and metric wire nails.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Nails and Spikes - Withdrawal Force Calculator\n\nAllowable withdrawal load or force for a common nail or spike driven into side grain perpendicular to the fibers of seasoned wood can be estimated using:\n\n**F = 1380 × SG^(5/2) × D**\n\nWhere:\n- **F** = Allowable withdrawal load or force per inch of penetration (lb/in)\n- **SG** = Specific gravity of oven dry wood\n- **D** = Diameter of nail or spike (inches)\n\n*Note: The allowable load is 1/5 of the ultimate withdrawal resistance.*"
+    },
+    {
+      "type": "calculator",
+      "content": "Imperial Units Calculator",
+      "inputs": [
+        {
+          "id": "sg_imperial",
+          "label": "Specific Gravity (SG) - Oven Dry Wood",
+          "type": "number",
+          "defaultValue": 0.45
+        },
+        {
+          "id": "diameter_imperial",
+          "label": "Diameter of Nail (inches)",
+          "type": "number",
+          "defaultValue": 0.203,
+          "unit": "in"
+        },
+        {
+          "id": "penetration_imperial",
+          "label": "Penetration Depth (inches)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force_per_inch_imperial",
+          "label": "Withdrawal Force per Inch",
+          "formula": "1380 * Math.pow(inputs.sg_imperial, 2.5) * inputs.diameter_imperial",
+          "unit": "lb/in",
+          "format": "decimal"
+        },
+        {
+          "id": "total_force_imperial",
+          "label": "Total Withdrawal Force",
+          "formula": "1380 * Math.pow(inputs.sg_imperial, 2.5) * inputs.diameter_imperial * inputs.penetration_imperial",
+          "unit": "lb",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Metric Units Calculator",
+      "inputs": [
+        {
+          "id": "sg_metric",
+          "label": "Specific Gravity (SG) - Oven Dry Wood",
+          "type": "number",
+          "defaultValue": 0.45
+        },
+        {
+          "id": "diameter_metric",
+          "label": "Diameter of Nail (mm)",
+          "type": "number",
+          "defaultValue": 5.15,
+          "unit": "mm"
+        },
+        {
+          "id": "penetration_metric",
+          "label": "Penetration Depth (mm)",
+          "type": "number",
+          "defaultValue": 25.4,
+          "unit": "mm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force_per_mm_metric",
+          "label": "Withdrawal Force per mm",
+          "formula": "(1380 * Math.pow(inputs.sg_metric, 2.5) * inputs.diameter_metric / 25.4) / 4.448",
+          "unit": "N/mm",
+          "format": "decimal"
+        },
+        {
+          "id": "total_force_metric",
+          "label": "Total Withdrawal Force",
+          "formula": "(1380 * Math.pow(inputs.sg_metric, 2.5) * inputs.diameter_metric / 25.4 * inputs.penetration_metric / 25.4) / 4.448",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "US Wire Nails - Allowable Withdrawal Forces (Spruce, SG = 0.5)",
+      "headers": [
+        "Size",
+        "Length (in)",
+        "Allowable Withdrawal Force (lb)"
+      ],
+      "rows": [
+        [
+          "2d",
+          "1",
+          "17.6"
+        ],
+        [
+          "3d",
+          "1.25",
+          "25.3"
+        ],
+        [
+          "4d",
+          "1.5",
+          "39.9"
+        ],
+        [
+          "5d",
+          "1.75",
+          "46.5"
+        ],
+        [
+          "6d",
+          "2",
+          "58.5"
+        ],
+        [
+          "8d",
+          "2.5",
+          "81.7"
+        ],
+        [
+          "10d",
+          "3",
+          "108"
+        ],
+        [
+          "12d",
+          "3.25",
+          "117"
+        ],
+        [
+          "16d",
+          "3.5",
+          "141"
+        ],
+        [
+          "20d",
+          "4",
+          "198"
+        ],
+        [
+          "30d",
+          "4.5",
+          "242"
+        ],
+        [
+          "40d",
+          "5",
+          "290"
+        ],
+        [
+          "60d",
+          "6",
+          "348"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Metric Wire Nails - Allowable Withdrawal Forces (Spruce, SG = 0.5)",
+      "headers": [
+        "Length (mm)",
+        "Diameter (mm)",
+        "Allowable Withdrawal Force (N)"
+      ],
+      "rows": [
+        [
+          "20",
+          "1.2",
+          "40.4"
+        ],
+        [
+          "25",
+          "1.4",
+          "58.9"
+        ],
+        [
+          "30",
+          "1.6",
+          "80.8"
+        ],
+        [
+          "35",
+          "1.6",
+          "94.2"
+        ],
+        [
+          "35",
+          "1.8",
+          "106"
+        ],
+        [
+          "40",
+          "2.0",
+          "135"
+        ],
+        [
+          "45",
+          "2.2",
+          "167"
+        ],
+        [
+          "50",
+          "2.2",
+          "185"
+        ],
+        [
+          "55",
+          "2.2",
+          "204"
+        ],
+        [
+          "55",
+          "2.5",
+          "231"
+        ],
+        [
+          "60",
+          "2.5",
+          "252"
+        ],
+        [
+          "60",
+          "2.8",
+          "283"
+        ],
+        [
+          "65",
+          "2.8",
+          "306"
+        ],
+        [
+          "65",
+          "3.1",
+          "339"
+        ],
+        [
+          "70",
+          "3.1",
+          "365"
+        ],
+        [
+          "80",
+          "3.1",
+          "417"
+        ],
+        [
+          "80",
+          "3.4",
+          "458"
+        ],
+        [
+          "90",
+          "3.4",
+          "515"
+        ],
+        [
+          "90",
+          "3.8",
+          "575"
+        ],
+        [
+          "100",
+          "3.8",
+          "639"
+        ],
+        [
+          "100",
+          "4.2",
+          "707"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "light_oil_pumping___flow_velocities",
+  "title": "Light Oil Pumping - Flow Velocities",
+  "description": "Recommended max. flow velocities on the delivery side when pumping light oils. Reference table for piping and pumping system design.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Dimension (inches)",
+        "Pipe Dimension (mm)",
+        "Light Oil Velocity (m/s)",
+        "Light Oil Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          1,
+          25,
+          1,
+          3.5
+        ],
+        [
+          2,
+          50,
+          1.1,
+          3.6
+        ],
+        [
+          3,
+          75,
+          1.15,
+          3.8
+        ],
+        [
+          4,
+          100,
+          1.25,
+          4
+        ],
+        [
+          6,
+          150,
+          1.5,
+          4.7
+        ],
+        [
+          8,
+          200,
+          1.75,
+          5.5
+        ],
+        [
+          10,
+          250,
+          2,
+          6.5
+        ],
+        [
+          12,
+          300,
+          2,
+          6.5
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Select a pipe dimension to reference recommended flow velocities for light oil pumping systems.",
+      "inputs": [
+        {
+          "id": "pipe_dimension_inches",
+          "label": "Pipe Dimension",
+          "type": "select",
+          "defaultValue": "4",
+          "options": [
+            {
+              "value": "1",
+              "label": "1 inch (25 mm)"
+            },
+            {
+              "value": "2",
+              "label": "2 inches (50 mm)"
+            },
+            {
+              "value": "3",
+              "label": "3 inches (75 mm)"
+            },
+            {
+              "value": "4",
+              "label": "4 inches (100 mm)"
+            },
+            {
+              "value": "6",
+              "label": "6 inches (150 mm)"
+            },
+            {
+              "value": "8",
+              "label": "8 inches (200 mm)"
+            },
+            {
+              "value": "10",
+              "label": "10 inches (250 mm)"
+            },
+            {
+              "value": "12",
+              "label": "12 inches (300 mm)"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity_ms",
+          "label": "Flow Velocity",
+          "unit": "m/s",
+          "format": "decimal",
+          "formula": "inputs.pipe_dimension_inches == '1' ? 1 : inputs.pipe_dimension_inches == '2' ? 1.1 : inputs.pipe_dimension_inches == '3' ? 1.15 : inputs.pipe_dimension_inches == '4' ? 1.25 : inputs.pipe_dimension_inches == '6' ? 1.5 : inputs.pipe_dimension_inches == '8' ? 1.75 : inputs.pipe_dimension_inches == '10' ? 2 : inputs.pipe_dimension_inches == '12' ? 2 : 0"
+        },
+        {
+          "id": "velocity_fts",
+          "label": "Flow Velocity",
+          "unit": "ft/s",
+          "format": "decimal",
+          "formula": "inputs.pipe_dimension_inches == '1' ? 3.5 : inputs.pipe_dimension_inches == '2' ? 3.6 : inputs.pipe_dimension_inches == '3' ? 3.8 : inputs.pipe_dimension_inches == '4' ? 4 : inputs.pipe_dimension_inches == '6' ? 4.7 : inputs.pipe_dimension_inches == '8' ? 5.5 : inputs.pipe_dimension_inches == '10' ? 6.5 : inputs.pipe_dimension_inches == '12' ? 6.5 : 0"
+        }
+      ]
+    }
+  ]
+}

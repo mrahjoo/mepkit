@@ -1,0 +1,260 @@
+{
+  "id": "bulk_modulus_and_fluid_elasticities",
+  "title": "Bulk Modulus and Fluid Elasticities",
+  "description": "Calculate bulk modulus elasticity and fluid compressibility properties. The bulk modulus characterizes how easy a unit volume of fluid can be changed when changing pressure. Use volume-based or density-based calculations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Bulk Modulus and Fluid Elasticities Calculator\n\nThe Bulk Modulus Elasticity (Volume Modulus) is a material property characterizing the compressibility of a fluid.\n\n## Calculation Methods\n\n### Method 1: Volume-Based\nK = - dp / (dV / V0) = - (p1 - p0) / ((V1 - V0) / V0)\n\n### Method 2: Density-Based\nK = dp / (dρ / ρ0) = (p1 - p0) / ((ρ1 - ρ0) / ρ0)\n\nWhere:\n- K = Bulk Modulus of Elasticity (Pa, N/m²)\n- dp = differential change in pressure (Pa, N/m²)\n- p0 = initial pressure (Pa, N/m²)\n- p1 = final pressure (Pa, N/m²)\n- V0 = initial volume (m³)\n- V1 = final volume (m³)\n- ρ0 = initial density (kg/m³)\n- ρ1 = final density (kg/m³)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "method",
+          "label": "Calculation Method",
+          "type": "select",
+          "options": [
+            {
+              "value": "volume",
+              "label": "Volume-Based"
+            },
+            {
+              "value": "density",
+              "label": "Density-Based"
+            }
+          ],
+          "defaultValue": "volume"
+        },
+        {
+          "id": "p0",
+          "label": "Initial Pressure (p0)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        },
+        {
+          "id": "p1",
+          "label": "Final Pressure (p1)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 110000000
+        },
+        {
+          "id": "V0",
+          "label": "Initial Volume (V0)",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 1
+        },
+        {
+          "id": "V1",
+          "label": "Final Volume (V1)",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 0.99
+        },
+        {
+          "id": "rho0",
+          "label": "Initial Density (ρ0)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1022
+        },
+        {
+          "id": "rho1",
+          "label": "Final Density (ρ1)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1070
+        }
+      ],
+      "outputs": [
+        {
+          "id": "K_volume",
+          "label": "Bulk Modulus (Volume Method)",
+          "formula": "-(inputs.p1 - inputs.p0) / ((inputs.V1 - inputs.V0) / inputs.V0)",
+          "unit": "Pa",
+          "format": "scientific"
+        },
+        {
+          "id": "K_density",
+          "label": "Bulk Modulus (Density Method)",
+          "formula": "(inputs.p1 - inputs.p0) / ((inputs.rho1 - inputs.rho0) / inputs.rho0)",
+          "unit": "Pa",
+          "format": "scientific"
+        },
+        {
+          "id": "K_GPa",
+          "label": "Bulk Modulus",
+          "formula": "(inputs.p1 - inputs.p0) / ((inputs.rho1 - inputs.rho0) / inputs.rho0) / 1e9",
+          "unit": "GPa",
+          "format": "decimal"
+        },
+        {
+          "id": "dp",
+          "label": "Pressure Change (dp)",
+          "formula": "inputs.p1 - inputs.p0",
+          "unit": "Pa",
+          "format": "scientific"
+        },
+        {
+          "id": "drho",
+          "label": "Density Change (dρ)",
+          "formula": "inputs.rho1 - inputs.rho0",
+          "unit": "kg/m³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid",
+        "Bulk Modulus (10⁵ psi)",
+        "Bulk Modulus (10⁹ Pa)"
+      ],
+      "rows": [
+        [
+          "Acetone",
+          1.34,
+          0.92
+        ],
+        [
+          "Benzene",
+          1.5,
+          1.05
+        ],
+        [
+          "Carbon Tetrachloride",
+          1.91,
+          1.32
+        ],
+        [
+          "Ethyl Alcohol",
+          1.54,
+          1.06
+        ],
+        [
+          "Gasoline",
+          1.9,
+          1.3
+        ],
+        [
+          "Glycerin",
+          6.31,
+          4.35
+        ],
+        [
+          "ISO 32 mineral oil",
+          2.6,
+          1.8
+        ],
+        [
+          "Kerosene",
+          1.9,
+          1.3
+        ],
+        [
+          "Mercury",
+          41.4,
+          28.5
+        ],
+        [
+          "Paraffin Oil",
+          2.41,
+          1.66
+        ],
+        [
+          "Phosphate ester",
+          4.4,
+          3
+        ],
+        [
+          "SAE 30 Oil",
+          2.2,
+          1.5
+        ],
+        [
+          "Seawater",
+          3.39,
+          2.34
+        ],
+        [
+          "Sulfuric Acid",
+          4.3,
+          3
+        ],
+        [
+          "Water (10°C)",
+          3.12,
+          2.09
+        ],
+        [
+          "Water - glycol",
+          5,
+          3.4
+        ],
+        [
+          "Water in oil emulsion",
+          3.3,
+          2.3
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Bulk Modulus (10⁹ Pa)"
+      ],
+      "rows": [
+        [
+          0.01,
+          1.96
+        ],
+        [
+          10,
+          2.09
+        ],
+        [
+          20,
+          2.18
+        ],
+        [
+          30,
+          2.23
+        ],
+        [
+          40,
+          2.26
+        ],
+        [
+          50,
+          2.26
+        ],
+        [
+          60,
+          2.25
+        ],
+        [
+          70,
+          2.21
+        ],
+        [
+          80,
+          2.17
+        ],
+        [
+          90,
+          2.11
+        ],
+        [
+          100,
+          2.04
+        ]
+      ]
+    }
+  ]
+}

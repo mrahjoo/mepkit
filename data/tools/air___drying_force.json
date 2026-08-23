@@ -1,0 +1,261 @@
+{
+  "id": "air___drying_force",
+  "title": "Air - Drying Force",
+  "description": "Calculate the drying force of air, which is the difference between saturation vapor pressure and actual vapor pressure. The drying force represents the vapor carrying capacity of humid air and is essential for understanding drying processes.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "drying_force_calculator",
+      "content": "Calculate drying force based on saturation pressure and actual vapor pressure",
+      "inputs": [
+        {
+          "id": "saturation_pressure",
+          "label": "Saturation Vapor Pressure",
+          "type": "number",
+          "unit": "mbar",
+          "defaultValue": 25
+        },
+        {
+          "id": "vapor_pressure",
+          "label": "Actual Vapor Pressure",
+          "type": "number",
+          "unit": "mbar",
+          "defaultValue": 12.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "drying_force",
+          "label": "Drying Force",
+          "formula": "inputs.saturation_pressure - inputs.vapor_pressure",
+          "unit": "mbar",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "saturation_pressure_table",
+      "content": "Saturation vapor pressure of water at different temperatures",
+      "headers": [
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Saturation Vapor Pressure (10⁻³ bar)"
+      ],
+      "rows": [
+        [
+          -18,
+          0,
+          1.5
+        ],
+        [
+          -15,
+          5,
+          1.9
+        ],
+        [
+          -12,
+          10,
+          2.4
+        ],
+        [
+          -9,
+          15,
+          3
+        ],
+        [
+          -7,
+          20,
+          3.7
+        ],
+        [
+          -4,
+          25,
+          4.6
+        ],
+        [
+          -1,
+          30,
+          5.6
+        ],
+        [
+          2,
+          35,
+          6.9
+        ],
+        [
+          4,
+          40,
+          8.4
+        ],
+        [
+          7,
+          45,
+          10.3
+        ],
+        [
+          10,
+          50,
+          12.3
+        ],
+        [
+          13,
+          55,
+          14.8
+        ],
+        [
+          16,
+          60,
+          17.7
+        ],
+        [
+          18,
+          65,
+          21
+        ],
+        [
+          21,
+          70,
+          25
+        ],
+        [
+          24,
+          75,
+          29.6
+        ],
+        [
+          27,
+          80,
+          35
+        ],
+        [
+          29,
+          85,
+          41
+        ],
+        [
+          32,
+          90,
+          48.1
+        ],
+        [
+          35,
+          95,
+          56.2
+        ],
+        [
+          38,
+          100,
+          65.6
+        ],
+        [
+          41,
+          105,
+          76.2
+        ],
+        [
+          43,
+          110,
+          87.8
+        ],
+        [
+          46,
+          115,
+          101.4
+        ],
+        [
+          49,
+          120,
+          116.8
+        ],
+        [
+          52,
+          125,
+          134.2
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "saturation_pressure_chart",
+      "content": "Saturation vapor pressure vs temperature",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            -18,
+            -15,
+            -12,
+            -9,
+            -7,
+            -4,
+            -1,
+            2,
+            4,
+            7,
+            10,
+            13,
+            16,
+            18,
+            21,
+            24,
+            27,
+            29,
+            32,
+            35,
+            38,
+            41,
+            43,
+            46,
+            49,
+            52
+          ],
+          "name": "Temperature (°C)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Saturation Vapor Pressure (10⁻³ bar)"
+        },
+        "series": [
+          {
+            "name": "Saturation Vapor Pressure",
+            "data": [
+              1.5,
+              1.9,
+              2.4,
+              3,
+              3.7,
+              4.6,
+              5.6,
+              6.9,
+              8.4,
+              10.3,
+              12.3,
+              14.8,
+              17.7,
+              21,
+              25,
+              29.6,
+              35,
+              41,
+              48.1,
+              56.2,
+              65.6,
+              76.2,
+              87.8,
+              101.4,
+              116.8,
+              134.2
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

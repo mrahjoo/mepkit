@@ -1,0 +1,525 @@
+{
+  "id": "aluminum_conductor_characteristics",
+  "title": "Aluminum Conductor Characteristics",
+  "description": "Characteristics of all-aluminum conductors (AAC). Lookup table and calculator for aluminum conductor properties including resistance, breaking strength, weight, and electrical characteristics.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "AWG",
+        "kcmil",
+        "Strands",
+        "Diameter (in)",
+        "GMR (ft)",
+        "Resistance (ohm/1000 ft)",
+        "Breaking Strength (lb)",
+        "Weight (lb/1000 ft)"
+      ],
+      "rows": [
+        [
+          "6",
+          26.2,
+          7,
+          0.184,
+          0.0056,
+          0.659,
+          563,
+          24.6
+        ],
+        [
+          "4",
+          41.7,
+          7,
+          0.232,
+          0.007,
+          0.414,
+          881,
+          39.1
+        ],
+        [
+          "2",
+          66.4,
+          7,
+          0.292,
+          0.0088,
+          0.26,
+          1350,
+          62.2
+        ],
+        [
+          "1",
+          83.7,
+          7,
+          0.328,
+          0.0099,
+          0.207,
+          1640,
+          78.4
+        ],
+        [
+          "1/0",
+          106,
+          7,
+          0.368,
+          0.0111,
+          0.164,
+          1990,
+          98.9
+        ],
+        [
+          "2/0",
+          133,
+          7,
+          0.414,
+          0.0125,
+          0.13,
+          2510,
+          125
+        ],
+        [
+          "3/0",
+          168,
+          7,
+          0.464,
+          0.014,
+          0.103,
+          3040,
+          157
+        ],
+        [
+          "4/0",
+          212,
+          7,
+          0.522,
+          0.0158,
+          0.0817,
+          3830,
+          198
+        ],
+        [
+          "250",
+          250,
+          7,
+          0.567,
+          0.0171,
+          0.0691,
+          4520,
+          234
+        ],
+        [
+          "250",
+          250,
+          19,
+          0.574,
+          0.0181,
+          0.0693,
+          4660,
+          234
+        ],
+        [
+          "267",
+          267,
+          7,
+          0.586,
+          0.0177,
+          0.0647,
+          4830,
+          250
+        ],
+        [
+          "267",
+          267,
+          19,
+          0.593,
+          0.0187,
+          0.0648,
+          4970,
+          250
+        ],
+        [
+          "300",
+          300,
+          19,
+          0.629,
+          0.0198,
+          0.0575,
+          5480,
+          281
+        ],
+        [
+          "336",
+          336,
+          19,
+          0.666,
+          0.021,
+          0.0513,
+          6150,
+          316
+        ],
+        [
+          "350",
+          350,
+          19,
+          0.679,
+          0.0214,
+          0.0494,
+          6390,
+          328
+        ],
+        [
+          "398",
+          398,
+          19,
+          0.724,
+          0.0228,
+          0.0435,
+          7110,
+          373
+        ],
+        [
+          "450",
+          450,
+          19,
+          0.769,
+          0.0243,
+          0.0384,
+          7890,
+          422
+        ],
+        [
+          "477",
+          477,
+          19,
+          0.792,
+          0.025,
+          0.0363,
+          8360,
+          447
+        ],
+        [
+          "477",
+          477,
+          37,
+          0.795,
+          0.0254,
+          0.0363,
+          8690,
+          447
+        ],
+        [
+          "500",
+          500,
+          19,
+          0.811,
+          0.0256,
+          0.0346,
+          8760,
+          469
+        ],
+        [
+          "500",
+          500,
+          37,
+          0.813,
+          0.026,
+          0.0346,
+          9110,
+          468
+        ],
+        [
+          "557",
+          557,
+          19,
+          0.856,
+          0.027,
+          0.0311,
+          9750,
+          521
+        ],
+        [
+          "557",
+          557,
+          37,
+          0.858,
+          0.0275,
+          0.0311,
+          9940,
+          521
+        ],
+        [
+          "600",
+          600,
+          37,
+          0.891,
+          0.0285,
+          0.0288,
+          10700,
+          562
+        ],
+        [
+          "636",
+          636,
+          37,
+          0.918,
+          0.0294,
+          0.0272,
+          11400,
+          596
+        ],
+        [
+          "650",
+          650,
+          37,
+          0.928,
+          0.0297,
+          0.0266,
+          11600,
+          610
+        ],
+        [
+          "700",
+          700,
+          37,
+          0.963,
+          0.0308,
+          0.0247,
+          12500,
+          656
+        ],
+        [
+          "700",
+          700,
+          61,
+          0.964,
+          0.031,
+          0.0247,
+          12900,
+          656
+        ],
+        [
+          "716",
+          716,
+          37,
+          0.974,
+          0.0312,
+          0.0242,
+          12800,
+          671
+        ],
+        [
+          "716",
+          716,
+          61,
+          0.975,
+          0.0314,
+          0.0242,
+          13100,
+          671
+        ],
+        [
+          "750",
+          750,
+          37,
+          0.997,
+          0.0319,
+          0.023,
+          13100,
+          703
+        ],
+        [
+          "750",
+          750,
+          61,
+          0.998,
+          0.0321,
+          0.023,
+          13500,
+          703
+        ],
+        [
+          "795",
+          795,
+          37,
+          1.03,
+          0.0328,
+          0.0217,
+          13900,
+          745
+        ],
+        [
+          "795",
+          795,
+          61,
+          1.03,
+          0.0331,
+          0.0217,
+          14300,
+          746
+        ],
+        [
+          "875",
+          875,
+          37,
+          1.08,
+          0.0344,
+          0.0198,
+          15000,
+          820
+        ],
+        [
+          "875",
+          875,
+          61,
+          1.08,
+          0.0347,
+          0.0198,
+          15800,
+          821
+        ],
+        [
+          "900",
+          900,
+          37,
+          1.09,
+          0.0349,
+          0.0192,
+          15400,
+          844
+        ],
+        [
+          "900",
+          900,
+          61,
+          1.09,
+          0.0352,
+          0.0192,
+          15900,
+          844
+        ],
+        [
+          "954",
+          954,
+          37,
+          1.12,
+          0.036,
+          0.0181,
+          16400,
+          895
+        ],
+        [
+          "954",
+          954,
+          61,
+          1.13,
+          0.0362,
+          0.0181,
+          16900,
+          895
+        ],
+        [
+          "1000",
+          1000,
+          37,
+          1.15,
+          0.0368,
+          0.0173,
+          17200,
+          937
+        ],
+        [
+          "1000",
+          1000,
+          61,
+          1.15,
+          0.0371,
+          0.0173,
+          17700,
+          937
+        ]
+      ],
+      "content": "All-Aluminum Conductor (AAC) Characteristics - Complete Reference Table"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "conductor_length",
+          "label": "Conductor Length",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "ft"
+        },
+        {
+          "id": "resistance_per_1000ft",
+          "label": "Resistance (per 1000 ft)",
+          "type": "number",
+          "defaultValue": 0.0173,
+          "unit": "ohm"
+        },
+        {
+          "id": "current",
+          "label": "Current",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "A"
+        },
+        {
+          "id": "weight_per_1000ft",
+          "label": "Weight (per 1000 ft)",
+          "type": "number",
+          "defaultValue": 937,
+          "unit": "lb"
+        },
+        {
+          "id": "breaking_strength",
+          "label": "Breaking Strength (per conductor)",
+          "type": "number",
+          "defaultValue": 0.0182,
+          "unit": "lb"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_resistance",
+          "label": "Total Resistance",
+          "formula": "(inputs.conductor_length / 1000) * inputs.resistance_per_1000ft",
+          "unit": "ohm",
+          "format": "decimal"
+        },
+        {
+          "id": "voltage_drop",
+          "label": "Voltage Drop",
+          "formula": "inputs.current * ((inputs.conductor_length / 1000) * inputs.resistance_per_1000ft)",
+          "unit": "V",
+          "format": "decimal"
+        },
+        {
+          "id": "power_loss",
+          "label": "Power Loss",
+          "formula": "inputs.current * inputs.current * ((inputs.conductor_length / 1000) * inputs.resistance_per_1000ft)",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "total_weight",
+          "label": "Total Conductor Weight",
+          "formula": "(inputs.conductor_length / 1000) * inputs.weight_per_1000ft",
+          "unit": "lb",
+          "format": "decimal"
+        },
+        {
+          "id": "total_breaking_strength",
+          "label": "Total Breaking Strength",
+          "formula": "inputs.breaking_strength * 1000",
+          "unit": "lb",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Aluminum Conductor Reference Information\n\n### Key Definitions\n\n**GMR (Geometric Mean Radius)** - Quantifies a conductor's internal inductance. By definition, the GMR is the radius of an infinitely thin tube having the same internal inductance as the conductor out to a one-foot radius. GMR is often expressed in feet to ease calculations with distances measured in feet. Note that the GMR is less than the actual conductor radius.\n\n**kcmil (Thousand Circular Mils)** - A unit of conductor cross-sectional area where:\n- 1 kcmil = 1000 cmil\n- 1 kcmil = 785.4×10⁻⁶ in²\n- 1 kcmil = 0.5067 mm²\n\n### Unit Conversions\n- 1 ft = 0.3048 m\n- Resistance values are referenced at 60 Hz AC at 25°C\n\n### AAC Advantages\n- Lightweight compared to copper\n- Lower cost than copper\n- Suitable for transmission and distribution lines\n- Available in multiple strand configurations for different breaking strength requirements"
+    }
+  ]
+}

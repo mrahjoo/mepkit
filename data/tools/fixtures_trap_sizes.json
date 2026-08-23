@@ -1,0 +1,108 @@
+{
+  "id": "fixtures_trap_sizes",
+  "title": "Fixtures Trap Sizes",
+  "description": "Recommended drain trap sizes for different types of fixtures",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Fixtures Trap Sizes\n\nRecommended drain trap size for different types of fixtures based on plumbing standards."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fixture",
+        "Trap Size (in)",
+        "Trap Size (mm)"
+      ],
+      "rows": [
+        [
+          "Bathtub",
+          "1 1/2",
+          "38.1"
+        ],
+        [
+          "Bidet",
+          "1 1/2",
+          "38.1"
+        ],
+        [
+          "Dishwasher",
+          "1 1/2",
+          "38.1"
+        ],
+        [
+          "Drinking fountain",
+          "1 1/4",
+          "31.75"
+        ],
+        [
+          "Floor drain",
+          "2",
+          "50.8"
+        ],
+        [
+          "Kitchen sink",
+          "1 1/2",
+          "38.1"
+        ],
+        [
+          "Laundry tub",
+          "1 1/2",
+          "38.1"
+        ],
+        [
+          "Lavatory",
+          "1 1/4",
+          "31.75"
+        ],
+        [
+          "Public toilet",
+          "Integrated",
+          "Integrated"
+        ],
+        [
+          "Shower",
+          "2",
+          "50.8"
+        ],
+        [
+          "Toilet",
+          "Integrated",
+          "Integrated"
+        ],
+        [
+          "Urinal",
+          "2",
+          "50.8"
+        ],
+        [
+          "Washing machine",
+          "2",
+          "50.8"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "trapSizeInches",
+          "label": "Trap Size",
+          "type": "number",
+          "defaultValue": 1.5,
+          "unit": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "trapSizeMm",
+          "label": "Trap Size",
+          "formula": "inputs.trapSizeInches * 25.4",
+          "unit": "mm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

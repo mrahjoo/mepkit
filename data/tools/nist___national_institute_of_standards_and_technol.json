@@ -1,0 +1,37 @@
+{
+  "id": "nist___national_institute_of_standards_and_technol",
+  "title": "NIST - National Institute of Standards and Technology",
+  "description": "National Institute of Standards and Technology (NIST) is an agency in the Technology Administration of the United States Department of Commerce that aims to promote economic growth by developing and applying technology, measurements and standards.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# NIST - National Institute of Standards and Technology\n\n[NIST - the National Institute of Standards and Technology](http://www.nist.gov/) is an agency in the Technology Administration of the United States Department of Commerce that aims to promote economic growth by develop and apply technology, measurements and standards.\n\nNIST was originally called the National Bureau of Standards - NBS.\n\n## NIST Publications\n\nTitles of NIST/NBS publications are included in the online catalog of the [NIST Virtual Library](http://ts.nist.gov/nvl).\n\n## NIST Cooperative Programs\n\n- The NIST Laboratories conducts research advancing technology infrastructure to improve products and services.\n- The Baldrige National Quality Program promotes performance excellence among manufacturers, service companies, educational institutions, and health care providers.\n- The Manufacturing Extension Partnership offers technical and business assistance to smaller manufacturers.\n- The Advanced Technology Program develops innovative technologies."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Program",
+        "Description"
+      ],
+      "rows": [
+        [
+          "NIST Laboratories",
+          "Conducts research advancing technology infrastructure to improve products and services"
+        ],
+        [
+          "Baldrige National Quality Program",
+          "Promotes performance excellence among manufacturers, service companies, educational institutions, and health care providers"
+        ],
+        [
+          "Manufacturing Extension Partnership",
+          "Offers technical and business assistance to smaller manufacturers"
+        ],
+        [
+          "Advanced Technology Program",
+          "Develops innovative technologies"
+        ]
+      ]
+    }
+  ]
+}

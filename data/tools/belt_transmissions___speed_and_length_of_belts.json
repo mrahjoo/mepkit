@@ -1,0 +1,210 @@
+{
+  "id": "belt_transmissions___speed_and_length_of_belts",
+  "title": "Belt Transmissions - Speed and Length of Belts",
+  "description": "Belts (or chains) are used to transfer power through rotational motion from one shaft to another. This tool calculates belt length, velocity, gearing ratios, horsepower, and speed ratios for belt transmission systems used in HVAC and other mechanical applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Belt Transmissions - Speed and Length of Belts\n\nBelts (or chains) are used to transfer power (or convert torque) through rotational motion from one shaft to an other. Belt driven fans are common in heating, ventilation, air-conditioning and cooling (HVAC) systems.\n\n## Calculator Inputs\n\nEnter the parameters for your belt transmission system below."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "dm",
+          "label": "Pulley Diameter - Motor (mm)",
+          "type": "number",
+          "defaultValue": 100
+        },
+        {
+          "id": "df",
+          "label": "Pulley Diameter - Fan (mm)",
+          "type": "number",
+          "defaultValue": 150
+        },
+        {
+          "id": "lfm",
+          "label": "Center to Center Distance (mm)",
+          "type": "number",
+          "defaultValue": 500
+        },
+        {
+          "id": "nm",
+          "label": "Motor Speed (rpm)",
+          "type": "number",
+          "defaultValue": 1200
+        },
+        {
+          "id": "Fb",
+          "label": "Belt Tension (lbf)",
+          "type": "number",
+          "defaultValue": 100
+        },
+        {
+          "id": "T",
+          "label": "Torque (ft-lbf)",
+          "type": "number",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "lb",
+          "label": "Belt Length",
+          "formula": "(inputs.dm * 3.14159 / 2) + (inputs.df * 3.14159 / 2) + (2 * inputs.lfm) + ((inputs.df - inputs.dm) * (inputs.df - inputs.dm) / (4 * inputs.lfm))",
+          "unit": "mm"
+        },
+        {
+          "id": "vb",
+          "label": "Belt Velocity",
+          "formula": "(3.14159 * inputs.dm * inputs.nm) / 60000",
+          "unit": "m/s"
+        },
+        {
+          "id": "nf",
+          "label": "Follower Speed (Fan)",
+          "formula": "inputs.nm * inputs.dm / inputs.df",
+          "unit": "rpm"
+        },
+        {
+          "id": "Php_tension",
+          "label": "Power (from tension)",
+          "formula": "(inputs.Fb * inputs.vb * 304.8) / 33000",
+          "unit": "hp"
+        },
+        {
+          "id": "Php_torque",
+          "label": "Power (from torque)",
+          "formula": "inputs.T * inputs.nm / 5252",
+          "unit": "hp"
+        },
+        {
+          "id": "SR",
+          "label": "Speed Ratio",
+          "formula": "Math.max(inputs.nm, inputs.nf * inputs.dm / inputs.df) / Math.min(inputs.nm, inputs.nf * inputs.dm / inputs.df)",
+          "unit": "ratio"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pitch Diameter of Pulley (in)",
+        "850 rpm",
+        "1050 rpm",
+        "1075 rpm",
+        "1140 rpm",
+        "1550 rpm",
+        "1725 rpm",
+        "3450 rpm"
+      ],
+      "rows": [
+        [
+          1,
+          223,
+          275,
+          281,
+          298,
+          406,
+          452,
+          903
+        ],
+        [
+          2,
+          445,
+          550,
+          563,
+          597,
+          812,
+          903,
+          1806
+        ],
+        [
+          3,
+          668,
+          825,
+          844,
+          895,
+          1217,
+          1355,
+          2710
+        ],
+        [
+          4,
+          890,
+          1100,
+          1126,
+          1194,
+          1623,
+          1806,
+          3613
+        ],
+        [
+          5,
+          1113,
+          1374,
+          1407,
+          1492,
+          2029,
+          2258,
+          4516
+        ],
+        [
+          6,
+          1335,
+          1649,
+          1689,
+          1791,
+          2435,
+          2710,
+          5419
+        ],
+        [
+          7,
+          1558,
+          1924,
+          1970,
+          2089,
+          2841,
+          3161,
+          6322
+        ],
+        [
+          8,
+          1780,
+          2199,
+          2251,
+          2388,
+          3246,
+          3613,
+          7226
+        ],
+        [
+          9,
+          2003,
+          2474,
+          2533,
+          2686,
+          3652,
+          4064,
+          8129
+        ],
+        [
+          10,
+          2225,
+          2749,
+          2814,
+          2985,
+          4058,
+          4516,
+          9032
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formulas Used\n\n### Belt Length\n**lb = (dm × π / 2) + (df × π / 2) + (2 × lfm) + ((df - dm)² / (4 × lfm))**\n\n### Belt Velocity\n**vb = π × dm × nm / 60000** (metric units, m/s)\n\n### Belt Gearing\n**nf = nm × dm / df**\n\n### Horsepower\n**From Tension:** Php = Fb × vb / 33000\n\n**From Torque:** Php = T × n / 5252\n\n### Speed Ratio\n**SR = nf / ns** (where nf is faster and ns is slower)"
+    }
+  ]
+}

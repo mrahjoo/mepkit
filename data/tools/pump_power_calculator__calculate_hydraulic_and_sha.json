@@ -1,0 +1,194 @@
+{
+  "id": "pump_power_calculator__calculate_hydraulic_and_sha",
+  "title": "Pump Power Calculator: Calculate Hydraulic and Shaft Power for Pumps",
+  "description": "Calculate hydraulic and shaft power for centrifugal pumps using flow rate, density, head, and efficiency. Supports both SI and Imperial units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pump_power_si",
+      "content": "SI Units Calculator - Hydraulic and Shaft Power",
+      "inputs": [
+        {
+          "id": "flow_si",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 1
+        },
+        {
+          "id": "density",
+          "label": "Fluid Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "head_si",
+          "label": "Differential Head",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "efficiency",
+          "label": "Pump Efficiency",
+          "type": "number",
+          "unit": "(0-1)",
+          "defaultValue": 0.85
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hydraulic_power_kw",
+          "label": "Hydraulic Power",
+          "formula": "inputs.flow_si * inputs.density * 9.81 * inputs.head_si / 3600000",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "hydraulic_power_hp",
+          "label": "Hydraulic Power",
+          "formula": "inputs.hydraulic_power_kw / 0.746",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "shaft_power_kw",
+          "label": "Shaft Power",
+          "formula": "inputs.hydraulic_power_kw / inputs.efficiency",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "shaft_power_hp",
+          "label": "Shaft Power",
+          "formula": "(inputs.hydraulic_power_kw / inputs.efficiency) / 0.746",
+          "unit": "hp",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "pump_power_imperial",
+      "content": "Imperial Units Calculator - Hydraulic and Shaft Power",
+      "inputs": [
+        {
+          "id": "flow_gpm",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "gpm",
+          "defaultValue": 600
+        },
+        {
+          "id": "head_ft",
+          "label": "Differential Head",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 110
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity",
+          "type": "number",
+          "unit": "(dimensionless)",
+          "defaultValue": 1
+        },
+        {
+          "id": "efficiency_imperial",
+          "label": "Pump Efficiency",
+          "type": "number",
+          "unit": "(0-1)",
+          "defaultValue": 0.6
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hydraulic_power_hp_imperial",
+          "label": "Hydraulic Power",
+          "formula": "inputs.flow_gpm * inputs.head_ft * inputs.specific_gravity / 3960",
+          "unit": "hp",
+          "format": "decimal"
+        },
+        {
+          "id": "shaft_power_hp_imperial",
+          "label": "Shaft Power",
+          "formula": "(inputs.flow_gpm * inputs.head_ft * inputs.specific_gravity / 3960) / inputs.efficiency_imperial",
+          "unit": "hp",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "pump_power_table",
+      "content": "Pump Power Reference Table",
+      "headers": [
+        "Flow (m³/h)",
+        "Head (m)",
+        "Density (kg/m³)",
+        "Hydraulic Power (kW)",
+        "Shaft Power at 85% Efficiency (kW)"
+      ],
+      "rows": [
+        [
+          0.5,
+          5,
+          1000,
+          0.0068,
+          0.008
+        ],
+        [
+          1,
+          10,
+          1000,
+          0.0272,
+          0.032
+        ],
+        [
+          2,
+          15,
+          1000,
+          0.0816,
+          0.096
+        ],
+        [
+          5,
+          20,
+          1000,
+          0.272,
+          0.32
+        ],
+        [
+          10,
+          25,
+          1000,
+          0.68,
+          0.8
+        ],
+        [
+          20,
+          30,
+          1000,
+          1.63,
+          1.92
+        ],
+        [
+          50,
+          40,
+          1000,
+          5.45,
+          6.41
+        ],
+        [
+          100,
+          50,
+          1000,
+          13.6,
+          16
+        ]
+      ]
+    }
+  ]
+}

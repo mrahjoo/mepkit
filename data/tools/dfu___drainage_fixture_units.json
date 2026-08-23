@@ -1,0 +1,431 @@
+{
+  "id": "dfu___drainage_fixture_units",
+  "title": "DFU - Drainage Fixture Units",
+  "description": "DFU (Drainage Fixture Unit Values) calculator based on the Uniform Plumbing Code (UPC). Used to calculate drainage flow from fixtures and determine required capacities of sewer service systems. A fixture unit equals one cubic foot of water drained in a 1 1/4\" pipe over one minute (≈ 7.48 U.S. gpm, ≈ 0.47 l/s).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "dfu_fixture_reference",
+      "content": "DFU Reference Values for Common Fixtures",
+      "headers": [
+        "Fixture Type",
+        "Trap Size (in)",
+        "DFU Value",
+        "Flow Rate (l/s)"
+      ],
+      "rows": [
+        [
+          "Bathtub",
+          "1 1/2",
+          "2",
+          "0.9"
+        ],
+        [
+          "Bidet (1 1/4)",
+          "1 1/4",
+          "1",
+          "0.3"
+        ],
+        [
+          "Bidet (1 1/2)",
+          "1 1/2",
+          "2",
+          "-"
+        ],
+        [
+          "Dishwashing machine, domestic",
+          "1 1/2",
+          "2",
+          "0.6"
+        ],
+        [
+          "Drinking fountain",
+          "1 1/4",
+          "0.5",
+          "0.1"
+        ],
+        [
+          "Floor drain, 3\"",
+          "3",
+          "6",
+          "-"
+        ],
+        [
+          "Floor drain, 4\"",
+          "4",
+          "8",
+          "2"
+        ],
+        [
+          "Shower",
+          "2",
+          "2",
+          "0.4"
+        ],
+        [
+          "Laundry tub",
+          "1 1/2",
+          "2",
+          "-"
+        ],
+        [
+          "Lavatory",
+          "1 1/4",
+          "1",
+          "-"
+        ],
+        [
+          "Kitchen sink, domestic",
+          "1 1/2",
+          "2",
+          "-"
+        ],
+        [
+          "Laundry sink",
+          "1 1/2",
+          "2",
+          "-"
+        ],
+        [
+          "Mobile home, trap",
+          "3",
+          "12",
+          "-"
+        ],
+        [
+          "Urinal",
+          "2",
+          "2",
+          "0.3"
+        ],
+        [
+          "Water Closet, gravity tank",
+          "3",
+          "3",
+          "1.8"
+        ],
+        [
+          "Water Closet, flushometer valve",
+          "3",
+          "3",
+          "-"
+        ],
+        [
+          "Water cooler",
+          "1 1/4",
+          "0.5",
+          "-"
+        ],
+        [
+          "Clothes washer, residential",
+          "2",
+          "2",
+          "-"
+        ],
+        [
+          "Clothes washer, commercial",
+          "2",
+          "3",
+          "-"
+        ],
+        [
+          "Bathroom (complete)",
+          "3",
+          "6",
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "dfu_calculator",
+      "content": "Calculate total DFU for your drainage system",
+      "inputs": [
+        {
+          "id": "fixture_1_name",
+          "label": "Fixture 1",
+          "type": "select",
+          "options": [
+            {
+              "label": "Bathtub",
+              "value": "bathtub"
+            },
+            {
+              "label": "Bidet",
+              "value": "bidet"
+            },
+            {
+              "label": "Dishwashing machine",
+              "value": "dishwasher"
+            },
+            {
+              "label": "Drinking fountain",
+              "value": "drinking_fountain"
+            },
+            {
+              "label": "Floor drain 3\"",
+              "value": "floor_drain_3"
+            },
+            {
+              "label": "Floor drain 4\"",
+              "value": "floor_drain_4"
+            },
+            {
+              "label": "Shower",
+              "value": "shower"
+            },
+            {
+              "label": "Laundry tub",
+              "value": "laundry_tub"
+            },
+            {
+              "label": "Lavatory",
+              "value": "lavatory"
+            },
+            {
+              "label": "Kitchen sink",
+              "value": "kitchen_sink"
+            },
+            {
+              "label": "Laundry sink",
+              "value": "laundry_sink"
+            },
+            {
+              "label": "Mobile home trap",
+              "value": "mobile_home"
+            },
+            {
+              "label": "Urinal",
+              "value": "urinal"
+            },
+            {
+              "label": "Water Closet (gravity)",
+              "value": "water_closet_gravity"
+            },
+            {
+              "label": "Water Closet (flushometer)",
+              "value": "water_closet_flush"
+            },
+            {
+              "label": "Water cooler",
+              "value": "water_cooler"
+            },
+            {
+              "label": "Clothes washer (residential)",
+              "value": "washer_residential"
+            },
+            {
+              "label": "Clothes washer (commercial)",
+              "value": "washer_commercial"
+            },
+            {
+              "label": "Bathroom (complete)",
+              "value": "bathroom_complete"
+            }
+          ]
+        },
+        {
+          "id": "fixture_1_qty",
+          "label": "Quantity",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "fixture_2_name",
+          "label": "Fixture 2",
+          "type": "select",
+          "options": [
+            {
+              "label": "None",
+              "value": "none"
+            },
+            {
+              "label": "Bathtub",
+              "value": "bathtub"
+            },
+            {
+              "label": "Bidet",
+              "value": "bidet"
+            },
+            {
+              "label": "Dishwashing machine",
+              "value": "dishwasher"
+            },
+            {
+              "label": "Drinking fountain",
+              "value": "drinking_fountain"
+            },
+            {
+              "label": "Floor drain 3\"",
+              "value": "floor_drain_3"
+            },
+            {
+              "label": "Floor drain 4\"",
+              "value": "floor_drain_4"
+            },
+            {
+              "label": "Shower",
+              "value": "shower"
+            },
+            {
+              "label": "Laundry tub",
+              "value": "laundry_tub"
+            },
+            {
+              "label": "Lavatory",
+              "value": "lavatory"
+            },
+            {
+              "label": "Kitchen sink",
+              "value": "kitchen_sink"
+            },
+            {
+              "label": "Laundry sink",
+              "value": "laundry_sink"
+            },
+            {
+              "label": "Mobile home trap",
+              "value": "mobile_home"
+            },
+            {
+              "label": "Urinal",
+              "value": "urinal"
+            },
+            {
+              "label": "Water Closet (gravity)",
+              "value": "water_closet_gravity"
+            },
+            {
+              "label": "Water Closet (flushometer)",
+              "value": "water_closet_flush"
+            },
+            {
+              "label": "Water cooler",
+              "value": "water_cooler"
+            },
+            {
+              "label": "Clothes washer (residential)",
+              "value": "washer_residential"
+            },
+            {
+              "label": "Clothes washer (commercial)",
+              "value": "washer_commercial"
+            },
+            {
+              "label": "Bathroom (complete)",
+              "value": "bathroom_complete"
+            }
+          ]
+        },
+        {
+          "id": "fixture_2_qty",
+          "label": "Quantity",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "fixture_3_name",
+          "label": "Fixture 3",
+          "type": "select",
+          "options": [
+            {
+              "label": "None",
+              "value": "none"
+            },
+            {
+              "label": "Bathtub",
+              "value": "bathtub"
+            },
+            {
+              "label": "Bidet",
+              "value": "bidet"
+            },
+            {
+              "label": "Dishwashing machine",
+              "value": "dishwasher"
+            },
+            {
+              "label": "Drinking fountain",
+              "value": "drinking_fountain"
+            },
+            {
+              "label": "Floor drain 3\"",
+              "value": "floor_drain_3"
+            },
+            {
+              "label": "Floor drain 4\"",
+              "value": "floor_drain_4"
+            },
+            {
+              "label": "Shower",
+              "value": "shower"
+            },
+            {
+              "label": "Laundry tub",
+              "value": "laundry_tub"
+            },
+            {
+              "label": "Lavatory",
+              "value": "lavatory"
+            },
+            {
+              "label": "Kitchen sink",
+              "value": "kitchen_sink"
+            },
+            {
+              "label": "Laundry sink",
+              "value": "laundry_sink"
+            },
+            {
+              "label": "Mobile home trap",
+              "value": "mobile_home"
+            },
+            {
+              "label": "Urinal",
+              "value": "urinal"
+            },
+            {
+              "label": "Water Closet (gravity)",
+              "value": "water_closet_gravity"
+            },
+            {
+              "label": "Water Closet (flushometer)",
+              "value": "water_closet_flush"
+            },
+            {
+              "label": "Water cooler",
+              "value": "water_cooler"
+            },
+            {
+              "label": "Clothes washer (residential)",
+              "value": "washer_residential"
+            },
+            {
+              "label": "Clothes washer (commercial)",
+              "value": "washer_commercial"
+            },
+            {
+              "label": "Bathroom (complete)",
+              "value": "bathroom_complete"
+            }
+          ]
+        },
+        {
+          "id": "fixture_3_qty",
+          "label": "Quantity",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_dfu",
+          "label": "Total DFU",
+          "formula": "(inputs.fixture_1_qty * 2) + (inputs.fixture_2_qty * 2) + (inputs.fixture_3_qty * 2)",
+          "unit": "DFU"
+        }
+      ]
+    }
+  ]
+}

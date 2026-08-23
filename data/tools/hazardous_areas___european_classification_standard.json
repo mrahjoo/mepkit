@@ -1,0 +1,186 @@
+{
+  "id": "hazardous_areas___european_classification_standard",
+  "title": "Hazardous Areas - European Classification Standard",
+  "description": "European Zone/Group classification system for hazardous areas based on IEC 60079 standards. Classifies areas by zone (gas/dust probability) and group (hazard material type).",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "id": "overview_section",
+      "content": "## Hazardous Areas - European Classification Standard\n\nIn Europe and most of the world outside North America, hazardous areas are classified using the **Zone system**:\n\n- **Zones** - Define the general nature (gas or dust) and probability of hazardous material in the surrounding atmosphere\n- **Groups** - Define the type of hazardous material and partly the location of the surrounding atmosphere\n\nThis system is based on the International Electrotechnical Commission **IEC 60079 Explosive atmospheres** standard."
+    },
+    {
+      "type": "datatable",
+      "id": "gas_zones_table",
+      "headers": [
+        "Zone",
+        "Nature and Probability of Hazard Material"
+      ],
+      "rows": [
+        [
+          "Zone 0",
+          "Ignitable concentrations present continuously or for long periods"
+        ],
+        [
+          "Zone 1",
+          "Ignitable concentrations likely under normal operating conditions"
+        ],
+        [
+          "Zone 2",
+          "Ignitable concentrations not likely under normal conditions, short periods only"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "dust_zones_table",
+      "headers": [
+        "Zone",
+        "Nature and Probability of Hazard Material"
+      ],
+      "rows": [
+        [
+          "Zone 20",
+          "Combustible dusts present continuously or for long periods"
+        ],
+        [
+          "Zone 21",
+          "Combustible dusts likely under normal operating conditions"
+        ],
+        [
+          "Zone 22",
+          "Combustible dusts not likely under normal conditions, short periods only"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "groups_table",
+      "headers": [
+        "Group",
+        "Type of Hazardous Material and Location"
+      ],
+      "rows": [
+        [
+          "Group I",
+          "Mines susceptible to firedamp (flammable gas mixtures naturally occurring in mines)"
+        ],
+        [
+          "Group IIA",
+          "Propane, acetone, benzene, butane, methane, petrol, hexane, paint solvents"
+        ],
+        [
+          "Group IIB",
+          "Ethylene, propylene oxide, ethylene oxide, butadiene, cyclopropane, ethyl ether"
+        ],
+        [
+          "Group IIC",
+          "Acetylene, hydrogen, carbon disulphide"
+        ],
+        [
+          "Group IIIA",
+          "Atmospheres containing combustible flyings"
+        ],
+        [
+          "Group IIIB",
+          "Atmospheres containing non-conductive dust"
+        ],
+        [
+          "Group IIIC",
+          "Atmospheres containing conductive dust"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "classification_selector",
+      "inputs": [
+        {
+          "id": "hazard_type",
+          "type": "select",
+          "label": "Hazard Material Type",
+          "options": [
+            {
+              "value": "gas",
+              "label": "Gas/Vapor/Mist"
+            },
+            {
+              "value": "dust",
+              "label": "Combustible Dust"
+            }
+          ],
+          "defaultValue": "gas"
+        },
+        {
+          "id": "probability_level",
+          "type": "select",
+          "label": "Probability of Presence",
+          "options": [
+            {
+              "value": "continuous",
+              "label": "Continuous or Long Periods"
+            },
+            {
+              "value": "normal",
+              "label": "Likely Under Normal Operations"
+            },
+            {
+              "value": "rare",
+              "label": "Unlikely, Short Periods Only"
+            }
+          ],
+          "defaultValue": "normal"
+        },
+        {
+          "id": "material_type",
+          "type": "select",
+          "label": "Material Classification",
+          "options": [
+            {
+              "value": "iia",
+              "label": "Group IIA - Propane, Benzene, Petrol"
+            },
+            {
+              "value": "iib",
+              "label": "Group IIB - Ethylene, Propylene Oxide"
+            },
+            {
+              "value": "iic",
+              "label": "Group IIC - Acetylene, Hydrogen"
+            },
+            {
+              "value": "iiia",
+              "label": "Group IIIA - Combustible Flyings"
+            },
+            {
+              "value": "iiib",
+              "label": "Group IIIB - Non-Conductive Dust"
+            },
+            {
+              "value": "iiic",
+              "label": "Group IIIC - Conductive Dust"
+            }
+          ],
+          "defaultValue": "iia"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "determined_zone",
+          "label": "Determined Zone",
+          "formula": "IF(inputs.hazard_type='gas', IF(inputs.probability_level='continuous', '0', IF(inputs.probability_level='normal', '1', '2')), IF(inputs.probability_level='continuous', '20', IF(inputs.probability_level='normal', '21', '22')))"
+        },
+        {
+          "id": "classification_result",
+          "label": "Complete Classification",
+          "formula": "CONCAT('Zone ', IF(inputs.hazard_type='gas', IF(inputs.probability_level='continuous', '0', IF(inputs.probability_level='normal', '1', '2')), IF(inputs.probability_level='continuous', '20', IF(inputs.probability_level='normal', '21', '22'))), ', Group ', UPPER(inputs.material_type))"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "examples_section",
+      "content": "## Classification Examples\n\n### Propane Gas Installation\n- **Classification**: Zone 2, Group IIA\n- **Reasoning**: Propane is a Group IIA material, and in a typical room installation it's unlikely to reach ignitable concentrations under normal conditions\n\n### Petrol Pump\n- **Classification**: Zone 1, Group IIA\n- **Reasoning**: Petrol is a Group IIA material, and at a pump station, ignitable concentrations are likely to occur during normal operations\n\n### Mining Location\n- **Classification**: Zone 0-2, Group I\n- **Reasoning**: Group I applies exclusively to mines susceptible to firedamp, with zone depending on operational conditions"
+    }
+  ]
+}

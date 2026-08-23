@@ -1,0 +1,66 @@
+{
+  "id": "trap_sizes_vs__fixture_units",
+  "title": "Trap Sizes vs. Fixture Units",
+  "description": "Determines the required trap size based on the number of fixture units in a drainage system.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Sanitary Trap Sizes vs. Fixture Units\n\nThis tool helps you determine the required trap size based on the number of fixture units in your drainage system.\n\n**Note:** 1 in = 25.4 mm"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fixture_units",
+          "label": "Number of Fixture Units",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "trap_size",
+          "label": "Required Trap Size (in)",
+          "formula": "inputs.fixture_units <= 1 ? 1.25 : inputs.fixture_units <= 3 ? 1.5 : inputs.fixture_units <= 4 ? 2 : inputs.fixture_units <= 6 ? 3 : inputs.fixture_units <= 8 ? 4 : 4",
+          "unit": "in"
+        },
+        {
+          "id": "trap_size_mm",
+          "label": "Required Trap Size (mm)",
+          "formula": "inputs.fixture_units <= 1 ? 31.75 : inputs.fixture_units <= 3 ? 38.1 : inputs.fixture_units <= 4 ? 50.8 : inputs.fixture_units <= 6 ? 76.2 : inputs.fixture_units <= 8 ? 101.6 : 101.6",
+          "unit": "mm"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "No. of Fixture Units",
+        "Trap Size (in)"
+      ],
+      "rows": [
+        [
+          1,
+          "1 1/4"
+        ],
+        [
+          "2 - 3",
+          "1 1/2"
+        ],
+        [
+          "3 - 4",
+          "2"
+        ],
+        [
+          "5 - 6",
+          "3"
+        ],
+        [
+          "6 - 8",
+          "4"
+        ]
+      ]
+    }
+  ]
+}

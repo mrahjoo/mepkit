@@ -1,0 +1,199 @@
+{
+  "id": "en_1057_copper_tubes_for_water_and_gas_in_sanitary",
+  "title": "EN 1057 Copper Tubes - Dimensions Calculator",
+  "description": "Calculator for EN 1057 Copper and copper alloys - Seamless, round copper tubes for water and gas in sanitary and heating applications. Calculate inner diameter and cross-sectional area based on nominal outside diameter and wall thickness.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "copper_tubes_calculator",
+      "headers": [
+        "Parameter",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "nominal_od",
+          "label": "Nominal Outside Diameter (d)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 12
+        },
+        {
+          "id": "wall_thickness",
+          "label": "Nominal Wall Thickness (e)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "inner_diameter",
+          "label": "Inner Diameter",
+          "unit": "mm",
+          "formula": "inputs.nominal_od - (2 * inputs.wall_thickness)",
+          "format": "decimal"
+        },
+        {
+          "id": "cross_section_area",
+          "label": "Cross-Sectional Area",
+          "unit": "mm²",
+          "formula": "(Math.PI / 4) * (inputs.nominal_od * inputs.nominal_od - (inputs.nominal_od - 2 * inputs.wall_thickness) * (inputs.nominal_od - 2 * inputs.wall_thickness))",
+          "format": "decimal"
+        },
+        {
+          "id": "tube_designation",
+          "label": "Tube Designation Example",
+          "formula": "'EN 1057 R250 ' + inputs.nominal_od + '×' + inputs.wall_thickness",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "material_temper_table",
+      "headers": [
+        "Material Temper",
+        "Commonly Used Term",
+        "Size Range (mm)",
+        "Tensile Strength (MPa)",
+        "Elongation min. (%)",
+        "Vickers Hardness (HV5)"
+      ],
+      "rows": [
+        [
+          "R220",
+          "Annealed, soft",
+          "6 - 54",
+          "220",
+          "40",
+          "40 - 70"
+        ],
+        [
+          "R250",
+          "Half hard",
+          "6 - 66.7",
+          "250",
+          "20",
+          "75 - 100"
+        ],
+        [
+          "R290",
+          "Hard",
+          "6 - 159",
+          "290",
+          "5",
+          "95 - 120"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "plain_straight_tubes",
+      "headers": [
+        "Nominal Outside Diameter (mm)",
+        "Tube Length (m)",
+        "Wall Thickness Option 1 (mm)",
+        "Wall Thickness Option 2 (mm)"
+      ],
+      "rows": [
+        [
+          "6",
+          "3, 6",
+          "0.6",
+          "0.8"
+        ],
+        [
+          "8",
+          "3, 6",
+          "0.6",
+          "0.8"
+        ],
+        [
+          "10",
+          "3, 6",
+          "0.6",
+          "0.8"
+        ],
+        [
+          "15",
+          "3, 6",
+          "0.7",
+          "1.0"
+        ],
+        [
+          "22",
+          "3, 6",
+          "0.9",
+          "1.2"
+        ],
+        [
+          "28",
+          "3, 6",
+          "0.9",
+          "1.2"
+        ],
+        [
+          "35",
+          "3, 6",
+          "1.2",
+          "1.5"
+        ],
+        [
+          "42",
+          "3, 6",
+          "1.2",
+          "1.5"
+        ],
+        [
+          "54",
+          "3, 6",
+          "1.2",
+          "2.0"
+        ],
+        [
+          "67",
+          "3, 6",
+          "1.2",
+          "2.0"
+        ],
+        [
+          "76",
+          "3, 6",
+          "1.5",
+          "2.0"
+        ],
+        [
+          "108",
+          "3, 6",
+          "1.5",
+          "2.5"
+        ],
+        [
+          "133",
+          "3, 6",
+          "1.5",
+          ""
+        ],
+        [
+          "159",
+          "3, 6",
+          "2.0",
+          ""
+        ],
+        [
+          "219",
+          "6",
+          "3.0",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "material_designation_info",
+      "content": "## EN 1173 - Letter Symbols for Property Designations\n\n- **A**: Elongation\n- **B**: Spring bending limit\n- **G**: Grain size\n- **H**: Hardness (Brinell for castings, Vickers for wrought products)\n- **M**: (as) Manufactured, i.e. without specified mechanical properties\n- **R**: Tensile strength (like R220 - 220 MPa)\n- **Y**: 0.2% proof strength\n\n## Example - Designation\n\nCopper tube EN 1057 R250 12×1.0\n\nWhere R250 is the material temper designation.\n\n## Conversion\n\n1 inch = 25.4 mm"
+    }
+  ]
+}

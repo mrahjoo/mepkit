@@ -1,0 +1,48 @@
+{
+  "id": "air___heating__cooling__mixing__humidifying_or_deh",
+  "title": "Air - Heating, Cooling, Mixing, Humidifying or Dehumidifying Processes",
+  "description": "Calculator for common air conditioning processes including heating, cooling, mixing, humidifying and dehumidifying air using psychrometric principles and heat/moisture balances.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Process Type",
+        "Initial State",
+        "Final State",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Heating Air",
+          "State A (dry bulb temp, humidity)",
+          "State B (higher dry bulb temp, same humidity)",
+          "Air is heated along a constant specific humidity line. Enthalpy increases while humidity ratio remains constant."
+        ],
+        [
+          "Mixing Air",
+          "State A + State C (different conditions)",
+          "State B (mixture point)",
+          "Two air streams mix. Result depends on volume ratio. Uses heat balance: mA·hA + mC·hC = (mA + mC)·hB"
+        ],
+        [
+          "Cooling & Dehumidifying",
+          "State A (above dew point)",
+          "State B (below dew point)",
+          "Air cools and moisture condenses on cold surface. If temperature > Dew Point: constant humidity line. If temperature < Dew Point: moisture reduces (xA - xB condenses)."
+        ],
+        [
+          "Humidifying with Steam/Water",
+          "State A (lower humidity)",
+          "State B (higher humidity)",
+          "Water or steam added. Adiabatic process follows constant enthalpy line. Temperature slightly decreases (saturated steam: <1°C change)."
+        ]
+      ],
+      "content": "# Air Conditioning Processes Summary\n\nThis table summarizes the four main air conditioning processes used in HVAC systems. Each process involves different thermodynamic transformations of air conditions on the psychrometric chart."
+    },
+    {
+      "type": "markdown",
+      "content": "## Process Equations\n\n### Heat Balance for Mixing\n$$m_A h_A + m_C h_C = (m_A + m_C) h_B$$\n\nWhere:\n- $m$ = mass of air (kg)\n- $h$ = specific enthalpy (J/kg)\n\n### Moisture Balance for Mixing\n$$m_A x_A + m_C x_C = (m_A + m_C) x_B$$\n\nWhere:\n- $x$ = specific humidity (kg H₂O/kg dry air)\n\n### Key Concepts\n\n- **Mollier Diagram**: Visualization tool showing air state changes\n- **Dew Point Temperature**: Temperature at which condensation begins\n- **Specific Humidity**: Mass of water vapor per unit mass of dry air\n- **Adiabatic Process**: Process without heat transfer\n- **Fog Formation**: Occurs when mixing point falls below saturation line"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "metals_strength_vs__temperature",
+  "title": "Metals Strength vs. Temperature",
+  "description": "The influence of temperature on the strength of metals including bronze, copper, structural steel, casting steel, cast iron, wrought iron, and stainless steel (304N)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Metal Type",
+        "Temperature (°C)",
+        "Strength Reduction (%)",
+        "Strength (MPa)"
+      ],
+      "rows": [
+        [
+          "Bronze",
+          "20",
+          "100",
+          ""
+        ],
+        [
+          "Bronze",
+          "100",
+          "95",
+          ""
+        ],
+        [
+          "Bronze",
+          "200",
+          "90",
+          ""
+        ],
+        [
+          "Copper",
+          "20",
+          "100",
+          "220"
+        ],
+        [
+          "Copper",
+          "100",
+          "95",
+          "209"
+        ],
+        [
+          "Copper",
+          "200",
+          "85",
+          "187"
+        ],
+        [
+          "Structural Steel",
+          "20",
+          "100",
+          ""
+        ],
+        [
+          "Structural Steel",
+          "100",
+          "98",
+          ""
+        ],
+        [
+          "Structural Steel",
+          "200",
+          "100",
+          ""
+        ],
+        [
+          "Casting Steel",
+          "20",
+          "100",
+          ""
+        ],
+        [
+          "Casting Steel",
+          "100",
+          "97",
+          ""
+        ],
+        [
+          "Casting Steel",
+          "200",
+          "100",
+          ""
+        ],
+        [
+          "Cast Iron",
+          "20",
+          "100",
+          ""
+        ],
+        [
+          "Cast Iron",
+          "100",
+          "95",
+          ""
+        ],
+        [
+          "Cast Iron",
+          "200",
+          "85",
+          ""
+        ],
+        [
+          "Wrought Iron",
+          "20",
+          "100",
+          ""
+        ],
+        [
+          "Wrought Iron",
+          "100",
+          "98",
+          ""
+        ],
+        [
+          "Wrought Iron",
+          "200",
+          "95",
+          ""
+        ],
+        [
+          "Stainless Steel (304N)",
+          "20",
+          "100",
+          ""
+        ],
+        [
+          "Stainless Steel (304N)",
+          "100",
+          "96",
+          ""
+        ],
+        [
+          "Stainless Steel (304N)",
+          "200",
+          "92",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Information\n\n- Most ferrous metals have their maximal strength at about 200 °C (400 °F)\n- Modulus of elasticity decreases gradually with increased temperature until it rapidly falls off\n- The strength of copper is reduced to approximately 95% at 100 °C\n\n## Example - Strength of Copper at 100 °C\n\nWith an Ultimate Tensile Strength (σu) of 220 MPa for copper:\n- Strength reduction at 100 °C: 95%\n- Reduced strength: 0.95 × 220 MPa = 209 MPa"
+    }
+  ]
+}

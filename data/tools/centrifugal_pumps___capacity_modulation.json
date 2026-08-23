@@ -1,0 +1,85 @@
+{
+  "id": "centrifugal_pumps___capacity_modulation",
+  "title": "Centrifugal Pumps - Capacity Modulation",
+  "description": "Calculate and compare pump capacity modulation methods including speed variation and constant speed regulation. Estimate changes in power consumption, head, and volume rate using affinity laws.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Capacity Modulation Methods\n\nCentrifugal pump capacity can be regulated at:\n\n### Variable Speed (Energy Efficient)\n- Hydraulic/hydrostatic drives\n- Mechanical drives (belt and sheave)\n- Eddy current drive/clutch\n- Variable speed drives (inverters/AC drives)\n\n### Constant Speed (Less Efficient)\n- Throttling (discharge valve)\n- Bypassing flow\n- Changing impeller diameter\n- Modifying impeller blade pitch\n\nCalculations use affinity laws to estimate changes in power consumption, head, and volume rate."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "initial_speed",
+          "label": "Initial Pump Speed",
+          "type": "number",
+          "unit": "RPM",
+          "defaultValue": 1800
+        },
+        {
+          "id": "final_speed",
+          "label": "Final Pump Speed",
+          "type": "number",
+          "unit": "RPM",
+          "defaultValue": 1200
+        },
+        {
+          "id": "initial_capacity",
+          "label": "Initial Capacity (Q1)",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 100
+        },
+        {
+          "id": "initial_head",
+          "label": "Initial Head (H1)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 50
+        },
+        {
+          "id": "initial_power",
+          "label": "Initial Power Consumption (P1)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "speed_ratio",
+          "label": "Speed Ratio (n2/n1)",
+          "formula": "inputs.final_speed / inputs.initial_speed",
+          "unit": "-"
+        },
+        {
+          "id": "final_capacity",
+          "label": "Final Capacity (Q2)",
+          "formula": "inputs.initial_capacity * (inputs.final_speed / inputs.initial_speed)",
+          "unit": "m³/h"
+        },
+        {
+          "id": "final_head",
+          "label": "Final Head (H2)",
+          "formula": "inputs.initial_head * Math.pow(inputs.final_speed / inputs.initial_speed, 2)",
+          "unit": "m"
+        },
+        {
+          "id": "final_power",
+          "label": "Final Power Consumption (P2)",
+          "formula": "inputs.initial_power * Math.pow(inputs.final_speed / inputs.initial_speed, 3)",
+          "unit": "kW"
+        },
+        {
+          "id": "power_reduction",
+          "label": "Power Reduction",
+          "formula": "((inputs.initial_power - (inputs.initial_power * Math.pow(inputs.final_speed / inputs.initial_speed, 3))) / inputs.initial_power) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

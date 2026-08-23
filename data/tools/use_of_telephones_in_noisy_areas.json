@@ -1,0 +1,37 @@
+{
+  "id": "use_of_telephones_in_noisy_areas",
+  "title": "Use of Telephones in Noisy Areas",
+  "description": "Satisfactory, difficult and impossible noise levels for telephone use in noisy areas.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Condition",
+        "SIL (dB)",
+        "Approx. dBA",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Satisfactory",
+          "< 65",
+          "≈ 72",
+          "Background noise does not interfere with telephone conversations"
+        ],
+        [
+          "Difficult",
+          "65 - 80",
+          "72 - 87",
+          "Background noise causes some difficulty in telephone conversations"
+        ],
+        [
+          "Impossible",
+          "> 80",
+          "≈ 87",
+          "Background noise makes telephone conversations impossible"
+        ]
+      ]
+    }
+  ]
+}

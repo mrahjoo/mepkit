@@ -1,0 +1,136 @@
+{
+  "id": "car___traction_force",
+  "title": "Car - Traction Force",
+  "description": "Calculate the maximum traction force between a car wheel and the surface, and determine the maximum acceleration and acceleration time for a car on different surfaces using the formula F = μt × m × ag",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate traction force and acceleration parameters for a car.",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass of Car",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 2000
+        },
+        {
+          "id": "traction_coefficient",
+          "label": "Traction Coefficient",
+          "type": "number",
+          "unit": "μt",
+          "defaultValue": 0.6
+        },
+        {
+          "id": "traction_wheels",
+          "label": "Number of Traction Wheels",
+          "type": "number",
+          "unit": "wheels",
+          "defaultValue": 2
+        },
+        {
+          "id": "final_velocity",
+          "label": "Final Velocity",
+          "type": "number",
+          "unit": "km/h",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight_per_wheel",
+          "label": "Weight per Wheel",
+          "formula": "(inputs.mass * 9.81) / 4",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "traction_force_per_wheel",
+          "label": "Traction Force per Wheel",
+          "formula": "inputs.traction_coefficient * (inputs.mass * 9.81) / 4",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "total_traction_force",
+          "label": "Total Traction Force",
+          "formula": "inputs.traction_coefficient * (inputs.mass * 9.81) / 4 * inputs.traction_wheels",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "max_acceleration",
+          "label": "Maximum Acceleration",
+          "formula": "(inputs.traction_coefficient * (inputs.mass * 9.81) / 4 * inputs.traction_wheels) / inputs.mass",
+          "unit": "m/s²",
+          "format": "decimal"
+        },
+        {
+          "id": "acceleration_in_g",
+          "label": "Acceleration in G",
+          "formula": "((inputs.traction_coefficient * (inputs.mass * 9.81) / 4 * inputs.traction_wheels) / inputs.mass) / 9.81",
+          "unit": "g",
+          "format": "decimal"
+        },
+        {
+          "id": "acceleration_time",
+          "label": "Time to Accelerate (0 to final velocity)",
+          "formula": "(inputs.final_velocity * 1000 / 3600) / ((inputs.traction_coefficient * (inputs.mass * 9.81) / 4 * inputs.traction_wheels) / inputs.mass)",
+          "unit": "s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Traction Coefficients for Car Tires on Different Surfaces",
+      "headers": [
+        "Surface",
+        "Traction Coefficient (μt)"
+      ],
+      "rows": [
+        [
+          "Wet Ice",
+          0.1
+        ],
+        [
+          "Dry Ice/Snow",
+          0.2
+        ],
+        [
+          "Loose Sand",
+          "0.3 - 0.4"
+        ],
+        [
+          "Dry Clay",
+          "0.5 - 0.6"
+        ],
+        [
+          "Wet rolled Gravel",
+          "0.3 - 0.5"
+        ],
+        [
+          "Dry rolled Gravel",
+          "0.6 - 0.7"
+        ],
+        [
+          "Wet Asphalt",
+          0.6
+        ],
+        [
+          "Wet Concrete",
+          0.6
+        ],
+        [
+          "Dry Asphalt",
+          0.9
+        ],
+        [
+          "Dry Concrete",
+          0.9
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "id": "iso_724___metric_threads",
+  "title": "ISO 724 - Metric Threads",
+  "description": "Dimensions of metric threads according to ISO 724. Calculate metric thread dimensions including pitch, clearance drill, tap drill, and tensile stress area for coarse and fine threads up to M 300.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Metric Thread Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "nominal_diameter",
+          "label": "Nominal Diameter",
+          "type": "select",
+          "unit": "mm",
+          "options": [
+            {
+              "value": 1.6,
+              "label": "M 1.6"
+            },
+            {
+              "value": 2,
+              "label": "M 2"
+            },
+            {
+              "value": 2.5,
+              "label": "M 2.5"
+            },
+            {
+              "value": 3,
+              "label": "M 3"
+            },
+            {
+              "value": 3.5,
+              "label": "M 3.5"
+            },
+            {
+              "value": 4,
+              "label": "M 4"
+            },
+            {
+              "value": 5,
+              "label": "M 5"
+            },
+            {
+              "value": 6,
+              "label": "M 6"
+            },
+            {
+              "value": 8,
+              "label": "M 8"
+            },
+            {
+              "value": 10,
+              "label": "M 10"
+            },
+            {
+              "value": 12,
+              "label": "M 12"
+            },
+            {
+              "value": 14,
+              "label": "M 14"
+            },
+            {
+              "value": 16,
+              "label": "M 16"
+            },
+            {
+              "value": 20,
+              "label": "M 20"
+            },
+            {
+              "value": 22,
+              "label": "M 22"
+            },
+            {
+              "value": 24,
+              "label": "M 24"
+            },
+            {
+              "value": 27,
+              "label": "M 27"
+            },
+            {
+              "value": 30,
+              "label": "M 30"
+            },
+            {
+              "value": 36,
+              "label": "M 36"
+            },
+            {
+              "value": 42,
+              "label": "M 42"
+            },
+            {
+              "value": 48,
+              "label": "M 48"
+            },
+            {
+              "value": 56,
+              "label": "M 56"
+            },
+            {
+              "value": 64,
+              "label": "M 64"
+            },
+            {
+              "value": 68,
+              "label": "M 68"
+            }
+          ],
+          "defaultValue": 10
+        },
+        {
+          "id": "pitch",
+          "label": "Pitch",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 1.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thread_depth",
+          "label": "Thread Depth",
+          "formula": "inputs.pitch * 0.614",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "thread_angle",
+          "label": "Thread Angle",
+          "formula": "60",
+          "unit": "°",
+          "format": "decimal"
+        },
+        {
+          "id": "minor_diameter",
+          "label": "Minor Diameter",
+          "formula": "inputs.nominal_diameter - (2 * inputs.pitch * 0.614)",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "pitch_diameter",
+          "label": "Pitch Diameter",
+          "formula": "inputs.nominal_diameter - (inputs.pitch * 0.614)",
+          "unit": "mm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Coarse Threads - ISO 724"
+      ],
+      "rows": [
+        [
+          "M 1.6",
+          0.35,
+          1.8,
+          1.25,
+          "—"
+        ],
+        [
+          "M 2",
+          0.4,
+          2.4,
+          1.6,
+          "—"
+        ],
+        [
+          "M 2.5",
+          0.45,
+          2.9,
+          2,
+          "—"
+        ],
+        [
+          "M 3",
+          0.5,
+          3.4,
+          2.5,
+          "—"
+        ],
+        [
+          "M 3.5",
+          0.6,
+          3.9,
+          2.9,
+          "—"
+        ],
+        [
+          "M 4",
+          0.7,
+          4.5,
+          3.3,
+          8.78
+        ],
+        [
+          "M 5",
+          0.8,
+          5.5,
+          4.2,
+          14.2
+        ],
+        [
+          "M 6",
+          1,
+          6.6,
+          5,
+          20.1
+        ],
+        [
+          "M 8",
+          1.25,
+          9,
+          6.8,
+          36.6
+        ],
+        [
+          "M 10",
+          1.5,
+          12,
+          8.5,
+          58
+        ],
+        [
+          "M 12",
+          1.75,
+          14,
+          10.2,
+          84.3
+        ],
+        [
+          "M 14",
+          2,
+          16,
+          12,
+          "—"
+        ],
+        [
+          "M 16",
+          2,
+          18,
+          14,
+          157
+        ],
+        [
+          "M 20",
+          2.5,
+          22,
+          17.5,
+          245
+        ],
+        [
+          "M 22",
+          2.5,
+          25,
+          19.5,
+          "—"
+        ],
+        [
+          "M 24",
+          3,
+          27,
+          21,
+          353
+        ],
+        [
+          "M 27",
+          3,
+          30,
+          24,
+          "—"
+        ],
+        [
+          "M 30",
+          3.5,
+          33,
+          26.5,
+          561
+        ],
+        [
+          "M 36",
+          4,
+          40,
+          32,
+          817
+        ],
+        [
+          "M 42",
+          4.5,
+          46,
+          37.5,
+          1120
+        ],
+        [
+          "M 48",
+          5,
+          53,
+          43,
+          1470
+        ],
+        [
+          "M 56",
+          5.5,
+          62,
+          50.5,
+          2030
+        ],
+        [
+          "M 64",
+          6,
+          70,
+          58,
+          2680
+        ],
+        [
+          "M 68",
+          6,
+          74,
+          62,
+          "—"
+        ]
+      ]
+    }
+  ]
+}

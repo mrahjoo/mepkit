@@ -1,0 +1,40 @@
+{
+  "id": "porosity",
+  "title": "Porosity",
+  "description": "Volume not occupied by solid material",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Porosity Calculator\n\nPorosity is expressed as the volume not occupied by solid material:\n\n**n = Vv / V**\n\n**n = 1 - ρbulk / ρsolid**\n\nWhere:\n- **n** = porosity (dimensionless)\n- **Vv** = void volume (m³, ft³)\n- **V** = total volume (m³, ft³)\n- **ρbulk** = bulk density (kg/m³, slugs/ft³)\n- **ρsolid** = solid density (kg/m³, slugs/ft³)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "rho_bulk",
+          "label": "Bulk Density (ρbulk)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1500
+        },
+        {
+          "id": "rho_solid",
+          "label": "Solid Density (ρsolid)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 2650
+        }
+      ],
+      "outputs": [
+        {
+          "id": "porosity",
+          "label": "Porosity (n)",
+          "formula": "1 - inputs.rho_bulk / inputs.rho_solid",
+          "format": "decimal",
+          "unit": "dimensionless"
+        }
+      ]
+    }
+  ]
+}

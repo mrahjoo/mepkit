@@ -1,0 +1,306 @@
+{
+  "id": "air___speed_of_sound_vs__temperature",
+  "title": "Air - Speed of Sound vs. Temperature",
+  "description": "Speed of sound in air at standard atmospheric pressure with temperatures ranging -40 to 1000 °C (-40 to 1500 °F) - Imperial and SI Units.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Speed of Sound in Air Calculator\n\nCalculate the speed of sound in air based on temperature using the following formulas:\n\n**SI Units (Metric):**\n- Formula: v = 20.05 × √(273.16 + t)\n- Where: v = velocity of sound (m/s), t = temperature (°C)\n\n**Imperial Units (BG):**\n- Formula: v = 49.03 × √(459.7 + t)\n- Where: v = velocity of sound (ft/s), t = temperature (°F)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "speed_of_sound_ms",
+          "label": "Speed of Sound (SI)",
+          "formula": "20.05 * (273.16 + inputs.temperature_celsius) ** 0.5",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "temperature_fahrenheit",
+          "label": "Temperature (converted)",
+          "formula": "inputs.temperature_celsius * 9/5 + 32",
+          "unit": "°F",
+          "format": "decimal"
+        },
+        {
+          "id": "speed_of_sound_fts",
+          "label": "Speed of Sound (Imperial)",
+          "formula": "49.03 * (459.7 + inputs.temperature_celsius * 9/5 + 32) ** 0.5",
+          "unit": "ft/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Speed of Sound vs. Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Speed of Sound (SI)",
+            "Speed of Sound (Imperial)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            -40,
+            -20,
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100,
+            120,
+            140,
+            160,
+            180,
+            200,
+            300,
+            400,
+            500,
+            750,
+            1000
+          ],
+          "name": "Temperature (°C)"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Speed of Sound (m/s)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Speed of Sound (ft/s)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Speed of Sound (SI)",
+            "type": "line",
+            "data": [
+              306.2,
+              0,
+              331.4,
+              337.4,
+              343.3,
+              349.1,
+              0,
+              0,
+              365.7,
+              371.2,
+              376.6,
+              381.7,
+              386.9,
+              0,
+              0,
+              0,
+              0,
+              434.5,
+              476.3,
+              514.1,
+              548.8,
+              0,
+              694.8
+            ],
+            "yAxisIndex": 0,
+            "smooth": true
+          },
+          {
+            "name": "Speed of Sound (Imperial)",
+            "type": "line",
+            "data": [
+              1004,
+              1028,
+              1051,
+              1062,
+              1074,
+              1085,
+              1096,
+              1106,
+              1117,
+              1128,
+              1138,
+              1149,
+              1159,
+              1180,
+              1200,
+              1220,
+              1239,
+              1258,
+              1348,
+              1431,
+              1509,
+              1685,
+              1839
+            ],
+            "yAxisIndex": 1,
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Speed of Sound (m/s)",
+        "Temperature (°F)",
+        "Speed of Sound (ft/s)"
+      ],
+      "rows": [
+        [
+          -40,
+          306.2,
+          -40,
+          1004
+        ],
+        [
+          -20,
+          0,
+          -4,
+          1028
+        ],
+        [
+          0,
+          331.4,
+          32,
+          1051
+        ],
+        [
+          5,
+          334.4,
+          41,
+          0
+        ],
+        [
+          10,
+          337.4,
+          50,
+          1062
+        ],
+        [
+          15,
+          340.4,
+          59,
+          0
+        ],
+        [
+          20,
+          343.3,
+          68,
+          1074
+        ],
+        [
+          25,
+          346.3,
+          77,
+          0
+        ],
+        [
+          30,
+          349.1,
+          86,
+          1085
+        ],
+        [
+          40,
+          354.7,
+          104,
+          1096
+        ],
+        [
+          50,
+          360.3,
+          122,
+          1106
+        ],
+        [
+          60,
+          365.7,
+          140,
+          1117
+        ],
+        [
+          70,
+          371.2,
+          158,
+          1128
+        ],
+        [
+          80,
+          376.6,
+          176,
+          1138
+        ],
+        [
+          90,
+          381.7,
+          194,
+          1149
+        ],
+        [
+          100,
+          386.9,
+          212,
+          1159
+        ],
+        [
+          200,
+          434.5,
+          392,
+          1258
+        ],
+        [
+          300,
+          476.3,
+          572,
+          1348
+        ],
+        [
+          400,
+          514.1,
+          752,
+          1431
+        ],
+        [
+          500,
+          548.8,
+          932,
+          1509
+        ],
+        [
+          1000,
+          694.8,
+          1832,
+          1839
+        ]
+      ]
+    }
+  ]
+}

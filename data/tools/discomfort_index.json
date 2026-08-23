@@ -1,0 +1,90 @@
+{
+  "id": "discomfort_index",
+  "title": "Discomfort Index",
+  "description": "Calculate the Discomfort Index based on dry bulb, wet bulb, and dew point temperatures. The higher the value, the higher the level of discomfort.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Input",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "td",
+          "label": "Dry Bulb Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 80
+        },
+        {
+          "id": "tw",
+          "label": "Wet Bulb Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 70
+        },
+        {
+          "id": "tdp",
+          "label": "Dew Point Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 60
+        }
+      ],
+      "outputs": [
+        {
+          "id": "di_formula1",
+          "label": "Discomfort Index (Formula 1)",
+          "formula": "0.4 * (inputs.td + inputs.tw) + 15",
+          "unit": "DI",
+          "format": "decimal"
+        },
+        {
+          "id": "di_formula2",
+          "label": "Discomfort Index (Formula 2)",
+          "formula": "0.55 * inputs.td + 0.2 * inputs.tdp + 17.5",
+          "unit": "DI",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature Type",
+        "Value (°F)",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Dry Bulb (td)",
+          "inputs.td",
+          "Primary temperature measurement"
+        ],
+        [
+          "Wet Bulb (tw)",
+          "inputs.tw",
+          "Temperature with moisture consideration"
+        ],
+        [
+          "Dew Point (tdp)",
+          "inputs.tdp",
+          "Temperature at which dew forms"
+        ],
+        [
+          "DI - Formula 1",
+          "0.4 * (inputs.td + inputs.tw) + 15",
+          "DI = 0.4 (td + tw) + 15"
+        ],
+        [
+          "DI - Formula 2",
+          "0.55 * inputs.td + 0.2 * inputs.tdp + 17.5",
+          "DI = 0.55 td + 0.2 tdp + 17.5"
+        ]
+      ]
+    }
+  ]
+}

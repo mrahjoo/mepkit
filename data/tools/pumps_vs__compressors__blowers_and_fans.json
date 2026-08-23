@@ -1,0 +1,39 @@
+{
+  "id": "pumps_vs__compressors__blowers_and_fans",
+  "title": "Pumps vs. Compressors, Blowers and Fans",
+  "description": "A comprehensive tool for understanding the differences between pumps, compressors, blowers and fans, including their definitions, applications, and characteristics for fluid handling and pressure management.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nA generic definition of a **pump** is:\n\n> _A machine or device for raising, compressing, or transferring fluids._\n\nIn practice, it is common to differentiate between pumps, compressors, blowers, and fans.\n\n---\n\n## Equipment Categories\n\n### Pumps\n- A pump is a machine for raising a liquid - a relatively **incompressible** fluid - to a higher level of pressure or head\n- **Fluid Type**: Liquids\n- **Fluid Property**: Incompressible\n- **Primary Function**: Raise pressure or head\n\n### Compressors\n- A compressor is a machine for raising a gas - a **compressible** fluid - to a higher level of pressure\n- **Fluid Type**: Gases\n- **Fluid Property**: Compressible\n- **Primary Function**: Increase pressure significantly\n\n### Blowers\n- A blower is a machine for moving volumes of a gas with **moderate increase of pressure**\n- **Fluid Type**: Gases\n- **Pressure Increase**: Moderate\n- **Primary Function**: Move large volumes with moderate pressure rise\n\n### Fans\n- A fan moves large amounts of gas with **low increase in pressure**\n- **Fluid Type**: Gases\n- **Pressure Increase**: Low\n- **Primary Function**: Move large volumes with minimal pressure rise\n\n---\n\n## Key Differences\n\n| Equipment | Fluid Type | Compressibility | Pressure Rise | Application |\n|-----------|-----------|-----------------|----------------|-------------|\n| **Pump** | Liquid | Incompressible | High | Lifting, pressure increase |\n| **Compressor** | Gas | Compressible | High | High-pressure gas delivery |\n| **Blower** | Gas | Compressible | Moderate | Moderate-pressure gas movement |\n| **Fan** | Gas | Compressible | Low | Large-volume, low-pressure ventilation |\n"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Equipment Type",
+        "Definition"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "rows": [
+        [
+          "Pump",
+          "Machine for raising a liquid (incompressible fluid) to a higher level of pressure or head"
+        ],
+        [
+          "Compressor",
+          "Machine for raising a gas (compressible fluid) to a higher level of pressure"
+        ],
+        [
+          "Blower",
+          "Machine for moving volumes of a gas with moderate increase of pressure"
+        ],
+        [
+          "Fan",
+          "Machine for moving large amounts of gas with low increase in pressure"
+        ]
+      ]
+    }
+  ]
+}

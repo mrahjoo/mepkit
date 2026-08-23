@@ -1,0 +1,77 @@
+{
+  "id": "real_numbers_algebra",
+  "title": "Real Numbers Algebra",
+  "description": "A comprehensive tool demonstrating fundamental algebraic laws for real numbers including commutative, associative, identity, and inverse laws for both addition and multiplication, as well as the distributive law.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Real Numbers Algebra\n\n## Fundamental Laws\n\nThis tool demonstrates the key algebraic properties of real numbers:\n\n### Addition Laws\n- **Commutative Law**: a + b = b + a\n- **Associative Law**: (a + b) + c = a + (b + c)\n- **Identity Law**: a + 0 = 0 + a\n- **Inverse Law**: a + (-a) = (-a) + a = 0\n\n### Multiplication Laws\n- **Commutative Law**: a × b = b × a\n- **Associative Law**: a(bc) = (ab)c\n- **Identity Law**: a × 1 = 1 × a\n- **Inverse Law**: a × (1/a) = (1/a) × a = 1 (where a ≠ 0)\n\n### Mixed Operations\n- **Distributive Law**: a(b + c) = ab + ac"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "a",
+          "label": "Value a",
+          "type": "number",
+          "defaultValue": 5
+        },
+        {
+          "id": "b",
+          "label": "Value b",
+          "type": "number",
+          "defaultValue": 3
+        },
+        {
+          "id": "c",
+          "label": "Value c",
+          "type": "number",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "commutative_add",
+          "label": "Commutative Addition (a + b = b + a)",
+          "formula": "inputs.a + inputs.b"
+        },
+        {
+          "id": "associative_add",
+          "label": "Associative Addition ((a + b) + c = a + (b + c))",
+          "formula": "(inputs.a + inputs.b) + inputs.c"
+        },
+        {
+          "id": "identity_add",
+          "label": "Identity Addition (a + 0 = 0 + a)",
+          "formula": "inputs.a + 0"
+        },
+        {
+          "id": "inverse_add",
+          "label": "Inverse Addition (a + (-a) = 0)",
+          "formula": "inputs.a + (-inputs.a)"
+        },
+        {
+          "id": "commutative_mult",
+          "label": "Commutative Multiplication (a × b = b × a)",
+          "formula": "inputs.a * inputs.b"
+        },
+        {
+          "id": "associative_mult",
+          "label": "Associative Multiplication (a(bc) = (ab)c)",
+          "formula": "inputs.a * (inputs.b * inputs.c)"
+        },
+        {
+          "id": "identity_mult",
+          "label": "Identity Multiplication (a × 1 = a)",
+          "formula": "inputs.a * 1"
+        },
+        {
+          "id": "distributive",
+          "label": "Distributive Law (a(b + c) = ab + ac)",
+          "formula": "inputs.a * (inputs.b + inputs.c)"
+        }
+      ]
+    }
+  ]
+}

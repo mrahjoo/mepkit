@@ -1,0 +1,44 @@
+{
+  "id": "drain_waste_and_vent_pipes___hanger_spacing",
+  "title": "Drain Waste and Vent Pipes - Hanger Spacing",
+  "description": "Support of Drain Waste and Vent - DWV - pipes. Both vertical and horizontal drainage pipes must be supported properly. Recommended maximum distances between the hangers are indicated in the table below.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Piping Material",
+        "Horizontal Pipe Distance (ft)",
+        "Vertical Pipe Distance (ft)"
+      ],
+      "rows": [
+        [
+          "ABS plastic",
+          4,
+          4
+        ],
+        [
+          "Galvanized steel",
+          12,
+          15
+        ],
+        [
+          "DWV Copper",
+          10,
+          10
+        ],
+        [
+          "Cast Iron",
+          5,
+          15
+        ],
+        [
+          "PVC plastic",
+          4,
+          4
+        ]
+      ],
+      "content": "**Note:** For cast iron stacks, the base of each stack must be supported."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "screw_jack___effort_force_vs__load",
+  "title": "Screw Jack - Effort Force vs. Load",
+  "description": "A screw jack is a mechanical device that can increase the magnitude of an effort force. This calculator determines the effort force and torque acting on the lever arm, neglecting friction.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Screw Jack - Effort Force vs. Load\n\nA screw jack is a mechanical device that can increase the magnitude of an effort force.\n\n## Formula\n\nThe effort force for a screw jack when neglecting friction:\n\n**F = (Q × p) / (2π × R)**\n\nwhere:\n- F = effort force at the end of the arm or handle (lb, N)\n- Q = weight or load (lb, N)\n- p = pitch - distance or lead of thread in one turn (in, m)\n- R = lever-arm radius (in, m)\n\nThe torque acting on the screw:\n\n**T = F × R**\n\nwhere:\n- T = torque (lb in, Nm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "load",
+          "label": "Load",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 225000
+        },
+        {
+          "id": "pitch",
+          "label": "Pitch (distance or lead of thread in one turn)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.003
+        },
+        {
+          "id": "lever_arm",
+          "label": "Lever Arm Radius",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "effort_force",
+          "label": "Effort Force",
+          "formula": "(inputs.load * inputs.pitch) / (2 * 3.14159265359 * inputs.lever_arm)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "torque",
+          "label": "Torque",
+          "formula": "((inputs.load * inputs.pitch) / (2 * 3.14159265359 * inputs.lever_arm)) * inputs.lever_arm",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

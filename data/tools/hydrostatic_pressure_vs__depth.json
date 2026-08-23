@@ -1,0 +1,281 @@
+{
+  "id": "hydrostatic_pressure_vs__depth",
+  "title": "Hydrostatic Pressure vs. Depth",
+  "description": "Calculate hydrostatic pressure in a liquid based on depth using the formula p = ρ g h, where ρ is density, g is acceleration of gravity, and h is the height of fluid column or depth.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Hydrostatic Pressure vs. Depth\n\nHydrostatic pressure in a liquid can be calculated as:\n\n**p = ρ g h**\n\nWhere:\n- **p** = pressure in liquid (N/m², Pa, lbf/ft², psf)\n- **ρ** = density of liquid (kg/m³, slugs/ft³)\n- **g** = acceleration of gravity (9.81 m/s², 32.17405 ft/s²)\n- **h** = height of fluid column or depth in the fluid where pressure is measured (m, ft)\n\nFor water at 4°C with a density of 1000 kg/m³, the hydrostatic pressure increases linearly with depth."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (g)",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        },
+        {
+          "id": "depth",
+          "label": "Depth (h)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_pa",
+          "label": "Pressure (Pa)",
+          "formula": "inputs.density * inputs.gravity * inputs.depth",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_kpa",
+          "label": "Pressure (kPa)",
+          "formula": "(inputs.density * inputs.gravity * inputs.depth) / 1000",
+          "unit": "kPa",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_bar",
+          "label": "Pressure (bar)",
+          "formula": "(inputs.density * inputs.gravity * inputs.depth) / 100000",
+          "unit": "bar",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_psi",
+          "label": "Pressure (psi)",
+          "formula": "(inputs.density * inputs.gravity * inputs.depth) * 0.0001450377",
+          "unit": "psi",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Depth (m)",
+        "Depth (ft)",
+        "Pressure (kPa)",
+        "Pressure (bar)",
+        "Pressure (atm)",
+        "Pressure (psi)"
+      ],
+      "rows": [
+        [
+          1,
+          3.28,
+          9.81,
+          0.098,
+          0.097,
+          1.42
+        ],
+        [
+          2,
+          6.56,
+          19.6,
+          0.196,
+          0.194,
+          2.85
+        ],
+        [
+          3,
+          9.84,
+          29.4,
+          0.294,
+          0.29,
+          4.27
+        ],
+        [
+          4,
+          13.1,
+          39.2,
+          0.392,
+          0.387,
+          5.69
+        ],
+        [
+          5,
+          16.4,
+          49.1,
+          0.491,
+          0.484,
+          7.11
+        ],
+        [
+          6,
+          19.7,
+          58.9,
+          0.589,
+          0.581,
+          8.54
+        ],
+        [
+          7,
+          23,
+          68.7,
+          0.687,
+          0.678,
+          10
+        ],
+        [
+          8,
+          26.2,
+          78.5,
+          0.785,
+          0.775,
+          11.4
+        ],
+        [
+          9,
+          29.5,
+          88.3,
+          0.883,
+          0.871,
+          12.8
+        ],
+        [
+          10,
+          32.8,
+          98.1,
+          0.981,
+          0.968,
+          14.2
+        ],
+        [
+          12,
+          39.4,
+          118,
+          1.18,
+          1.16,
+          17.1
+        ],
+        [
+          14,
+          45.9,
+          137,
+          1.37,
+          1.36,
+          19.9
+        ],
+        [
+          16,
+          52.5,
+          157,
+          1.57,
+          1.55,
+          22.8
+        ],
+        [
+          18,
+          59,
+          177,
+          1.77,
+          1.74,
+          25.6
+        ],
+        [
+          20,
+          65.6,
+          196,
+          1.96,
+          1.94,
+          28.5
+        ],
+        [
+          25,
+          82,
+          245,
+          2.45,
+          2.42,
+          35.6
+        ],
+        [
+          30,
+          98.4,
+          294,
+          2.94,
+          2.9,
+          42.7
+        ],
+        [
+          35,
+          115,
+          343,
+          3.43,
+          3.39,
+          49.8
+        ],
+        [
+          40,
+          131,
+          392,
+          3.92,
+          3.87,
+          56.9
+        ],
+        [
+          50,
+          164,
+          491,
+          4.91,
+          4.84,
+          71.1
+        ],
+        [
+          60,
+          197,
+          589,
+          5.89,
+          5.81,
+          85.4
+        ],
+        [
+          70,
+          230,
+          687,
+          6.87,
+          6.78,
+          100
+        ],
+        [
+          80,
+          262,
+          785,
+          7.85,
+          7.75,
+          114
+        ],
+        [
+          90,
+          295,
+          883,
+          8.83,
+          8.71,
+          128
+        ],
+        [
+          100,
+          328,
+          981,
+          9.81,
+          9.68,
+          142
+        ]
+      ]
+    }
+  ]
+}

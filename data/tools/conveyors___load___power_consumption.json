@@ -1,0 +1,107 @@
+{
+  "id": "conveyors___load___power_consumption",
+  "title": "Conveyors - Load & Power Consumption",
+  "description": "Conveyor required power consumption vs. load for both level ground and lifting conveyors.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Level Ground Conveyors\n\nHorsepower required for conveyors transporting material on level ground.\n\n**Conversion factors:**\n- 1 hp (English horse power) = 745.7 W = 0.746 kW\n- 1 ft (foot) = 0.3048 m = 12 in = 0.3333 yd"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "load_lbs",
+          "label": "Load",
+          "type": "number",
+          "unit": "lbs",
+          "defaultValue": 1000
+        },
+        {
+          "id": "conveyor_length_ft",
+          "label": "Conveyor Length",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 50
+        },
+        {
+          "id": "conveyor_speed_fpm",
+          "label": "Conveyor Speed",
+          "type": "number",
+          "unit": "ft/min",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_hp_level",
+          "label": "Power Required (Level Ground)",
+          "unit": "hp",
+          "format": "decimal",
+          "formula": "(inputs.load_lbs * inputs.conveyor_length_ft * inputs.conveyor_speed_fpm) / 33000"
+        },
+        {
+          "id": "power_kw_level",
+          "label": "Power Required (Level Ground)",
+          "unit": "kW",
+          "format": "decimal",
+          "formula": "((inputs.load_lbs * inputs.conveyor_length_ft * inputs.conveyor_speed_fpm) / 33000) * 0.746"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Lifting Conveyors\n\nWith lifting conveyors, add lifting power from the chart below to the level ground power from the chart above.\n\n**Note:** For lifting conveyors, you will need to add the vertical lift height and use the lifting power calculation in addition to the level ground power."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "load_lbs_lift",
+          "label": "Load",
+          "type": "number",
+          "unit": "lbs",
+          "defaultValue": 1000
+        },
+        {
+          "id": "lift_height_ft",
+          "label": "Lift Height",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 20
+        },
+        {
+          "id": "conveyor_speed_fpm_lift",
+          "label": "Conveyor Speed",
+          "type": "number",
+          "unit": "ft/min",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_hp_lift",
+          "label": "Lifting Power Required",
+          "unit": "hp",
+          "format": "decimal",
+          "formula": "(inputs.load_lbs_lift * inputs.lift_height_ft * inputs.conveyor_speed_fpm_lift) / 33000"
+        },
+        {
+          "id": "power_kw_lift",
+          "label": "Lifting Power Required",
+          "unit": "kW",
+          "format": "decimal",
+          "formula": "((inputs.load_lbs_lift * inputs.lift_height_ft * inputs.conveyor_speed_fpm_lift) / 33000) * 0.746"
+        },
+        {
+          "id": "power_hp_total",
+          "label": "Total Power Required (Level + Lift)",
+          "unit": "hp",
+          "format": "decimal",
+          "formula": "((inputs.load_lbs * inputs.conveyor_length_ft * inputs.conveyor_speed_fpm) / 33000) + ((inputs.load_lbs_lift * inputs.lift_height_ft * inputs.conveyor_speed_fpm_lift) / 33000)"
+        }
+      ]
+    }
+  ]
+}

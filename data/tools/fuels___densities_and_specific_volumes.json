@@ -1,0 +1,164 @@
+{
+  "id": "fuels___densities_and_specific_volumes",
+  "title": "Fuels - Densities and Specific Volumes",
+  "description": "Densities and specific volumes of fuels like anthracite, butane, gasoil, diesel, coke, oil, wood and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel",
+        "Density@15°C - ρ - (kg/m³)",
+        "Density - ρ - (lb/ft³)",
+        "Specific Volume - v - (m³/1000 kg)",
+        "Specific Volume - v - (ft³ per ton)"
+      ],
+      "rows": [
+        [
+          "Anthracite",
+          "720 - 850",
+          "45 - 53",
+          "1.2 - 1.4",
+          "42 - 50"
+        ],
+        [
+          "Bituminous coal",
+          "690 - 800",
+          "43 - 50",
+          "1.2 - 1.5",
+          "45 - 52"
+        ],
+        [
+          "Butane (gas)",
+          "2.5",
+          "0.16",
+          "400",
+          "14100"
+        ],
+        [
+          "Charcoal, hard wood",
+          "149",
+          "9.3",
+          "6.7",
+          "240"
+        ],
+        [
+          "Charcoal, soft wood",
+          "216",
+          "13.5",
+          "4.6",
+          "165"
+        ],
+        [
+          "Coke",
+          "375 - 500",
+          "23.5 - 31",
+          "2.0 - 2.7",
+          "72 - 95"
+        ],
+        [
+          "Diesel 1D",
+          "875",
+          "54.6",
+          "1.14",
+          "40.4"
+        ],
+        [
+          "Diesel 2D",
+          "849",
+          "53",
+          "1.18",
+          "41.6"
+        ],
+        [
+          "Diesel 4D",
+          "959",
+          "59.9",
+          "1.04",
+          "36.8"
+        ],
+        [
+          "EN 590 Diesel",
+          "820-845",
+          "51-53",
+          "1.18-1.22",
+          "42-43"
+        ],
+        [
+          "Gas oil",
+          "825-900",
+          "51-56",
+          "1.1-1.2",
+          "36-43"
+        ],
+        [
+          "Gasoline",
+          "715-780",
+          "45-49",
+          "1.3-1.4",
+          "45-49"
+        ],
+        [
+          "Fuel Oil No.1",
+          "750-850",
+          "47-53",
+          "1.2-1.3",
+          "42-47"
+        ],
+        [
+          "Fuel Oil No.2",
+          "810-940",
+          "51-59",
+          "1.1-1.2",
+          "38-44"
+        ],
+        [
+          "Heavy fuel oil",
+          "800-1010",
+          "50-63",
+          "1.0-1.3",
+          "35-44"
+        ],
+        [
+          "Kerosene",
+          "775-840",
+          "48-52",
+          "1.2-1.3",
+          "42-46"
+        ],
+        [
+          "Natural gas (gas)",
+          "0.7 - 0.9",
+          "0.04-0.06",
+          "1110-1430",
+          "39200-50400"
+        ],
+        [
+          "Peat",
+          "310 - 400",
+          "19.5 - 25",
+          "2.5 - 3.2",
+          "90 - 115"
+        ],
+        [
+          "Propane (gas)",
+          "1.7",
+          "0.11",
+          "590",
+          "20800"
+        ],
+        [
+          "Wood",
+          "360 - 385",
+          "22.5 - 24",
+          "2.5 - 2.8",
+          "90 - 100"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n**Note 1:** Diesel fuels are in USA broken up into 3 different classes: **1D, 2D and 4D**. The difference between these classes depends on viscosity and boiling point ranges. **4D** fuels tend to be used in low-speed engines. **2D** fuels are used in warmer weather and are sometimes mixed with **1D** fuel to create a competent winter fuel. **1D** fuel is preferred for cold weather as it has a lower viscosity. It used to be standard to see the fuel number on the pump, but a lot of gas stations do not state the fuel number anymore.\n\n**Note 2:** European diesel standard from 2005\n\n**Note 3:** Fuel oil is a kind of product with a lot of classes and under classes as well as varying specifications in different markets. The density ranges given represents the variation, however, some products may be outside these ranges."
+    }
+  ]
+}

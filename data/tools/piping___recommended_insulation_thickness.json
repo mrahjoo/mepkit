@@ -1,0 +1,170 @@
+{
+  "id": "piping___recommended_insulation_thickness",
+  "title": "Piping - Recommended Insulation Thickness",
+  "description": "Recommended insulation thickness for heating systems like hot water and low, medium or high pressure steam systems. This tool helps determine appropriate insulation thickness based on nominal pipe size and system type to avoid heat loss and potential safety hazards.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Recommended Insulation Thickness Reference Table",
+      "headers": [
+        "Nominal Pipe Size (NPS)",
+        "Hot Water (inches)",
+        "Low Pressure Steam (inches)",
+        "Medium Pressure Steam (inches)",
+        "High Pressure Steam (inches)"
+      ],
+      "rows": [
+        [
+          "< 1\"",
+          "1.0",
+          "1.5",
+          "2.0",
+          "2.5"
+        ],
+        [
+          "1 1/4\" - 2\"",
+          "1.0",
+          "1.5",
+          "2.5",
+          "2.5"
+        ],
+        [
+          "2 1/2\" - 4\"",
+          "1.5",
+          "2.0",
+          "2.5",
+          "3.0"
+        ],
+        [
+          "5\" - 6\"",
+          "1.5",
+          "2.0",
+          "3.0",
+          "3.5"
+        ],
+        [
+          "> 8\"",
+          "1.5",
+          "2.0",
+          "3.0",
+          "3.5"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Insulation Thickness by Pipe Size and System Type",
+      "inputs": [
+        {
+          "id": "pipeSize",
+          "label": "Nominal Pipe Size (NPS)",
+          "type": "select",
+          "options": [
+            {
+              "value": 1,
+              "label": "< 1\""
+            },
+            {
+              "value": 2,
+              "label": "1 1/4\" - 2\""
+            },
+            {
+              "value": 3,
+              "label": "2 1/2\" - 4\""
+            },
+            {
+              "value": 4,
+              "label": "5\" - 6\""
+            },
+            {
+              "value": 5,
+              "label": "> 8\""
+            }
+          ],
+          "defaultValue": 1
+        }
+      ],
+      "options": {
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "legend": {
+          "data": [
+            "Hot Water",
+            "Low Pressure Steam",
+            "Medium Pressure Steam",
+            "High Pressure Steam"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "< 1\"",
+            "1 1/4\" - 2\"",
+            "2 1/2\" - 4\"",
+            "5\" - 6\"",
+            "> 8\""
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Insulation Thickness (inches)"
+        },
+        "series": [
+          {
+            "name": "Hot Water",
+            "type": "bar",
+            "data": [
+              1,
+              1,
+              1.5,
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "name": "Low Pressure Steam",
+            "type": "bar",
+            "data": [
+              1.5,
+              1.5,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "name": "Medium Pressure Steam",
+            "type": "bar",
+            "data": [
+              2,
+              2.5,
+              2.5,
+              3,
+              3
+            ]
+          },
+          {
+            "name": "High Pressure Steam",
+            "type": "bar",
+            "data": [
+              2.5,
+              2.5,
+              3,
+              3.5,
+              3.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## Important Notes\n\n- Insulation thickness values are based on insulation with thermal resistivity in the range **4 - 4.6 ft² hr °F/Btu in** (typical for mineral wool at room temperature)\n- **Conversion:** 1 inch = 25.4 mm\n- Always insulate pipe work in heating systems to avoid heat loss and reduced system efficiency\n- Hot water and steam systems must be insulated to prevent personal injuries from very hot surfaces\n- These recommendations apply to nominal pipe sizes (NPS) as indicated"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "metal_alloys___melting_points",
+  "title": "Metal Alloys - Melting Points",
+  "description": "Alloys and their melting points. An alloy is a mixture of metals or a mixture of a metal and another element. This tool provides melting point information for various metal alloy combinations including Lead, Aluminum, Copper, and Antimony mixtures with other metals.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Base Metal",
+        "Alloying Element",
+        "Element Symbol",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Lead",
+          "Tin",
+          "Sn",
+          "Pb - Sn mixture"
+        ],
+        [
+          "Lead",
+          "Bismuth",
+          "Bi",
+          "Pb - Bi mixture"
+        ],
+        [
+          "Lead",
+          "Tellurium",
+          "Te",
+          "Pb - Te mixture"
+        ],
+        [
+          "Lead",
+          "Silver",
+          "Ag",
+          "Pb - Ag mixture"
+        ],
+        [
+          "Lead",
+          "Sodium",
+          "Na",
+          "Pb - Na (Natrium) mixture"
+        ],
+        [
+          "Lead",
+          "Copper",
+          "Cu",
+          "Pb - Cu mixture"
+        ],
+        [
+          "Lead",
+          "Antimony",
+          "Sb",
+          "Pb - Sb mixture"
+        ],
+        [
+          "Aluminum",
+          "Antimony",
+          "Sb",
+          "Al - Sb mixture"
+        ],
+        [
+          "Aluminum",
+          "Copper",
+          "Cu",
+          "Al - Cu mixture"
+        ],
+        [
+          "Aluminum",
+          "Gold",
+          "Au",
+          "Al - Au mixture"
+        ],
+        [
+          "Aluminum",
+          "Silver",
+          "Ag",
+          "Al - Ag mixture"
+        ],
+        [
+          "Aluminum",
+          "Zinc",
+          "Zn",
+          "Al - Zn mixture"
+        ],
+        [
+          "Aluminum",
+          "Iron",
+          "Fe",
+          "Al - Fe mixture"
+        ],
+        [
+          "Aluminum",
+          "Tin",
+          "Sn",
+          "Al - Sn mixture"
+        ],
+        [
+          "Copper",
+          "Nickel",
+          "Ni",
+          "Cu - Ni mixture"
+        ],
+        [
+          "Copper",
+          "Silver",
+          "Ag",
+          "Cu - Ag mixture"
+        ],
+        [
+          "Copper",
+          "Tin",
+          "Sn",
+          "Cu - Sn mixture"
+        ],
+        [
+          "Copper",
+          "Zinc",
+          "Zn",
+          "Cu - Zn mixture"
+        ],
+        [
+          "Antimony",
+          "Bismuth",
+          "Bi",
+          "Sb - Bi mixture"
+        ],
+        [
+          "Antimony",
+          "Silver",
+          "Ag",
+          "Sb - Ag mixture"
+        ],
+        [
+          "Antimony",
+          "Tin",
+          "Sn",
+          "Sb - Sn mixture"
+        ],
+        [
+          "Antimony",
+          "Zinc",
+          "Zn",
+          "Sb - Zn mixture"
+        ]
+      ]
+    }
+  ]
+}

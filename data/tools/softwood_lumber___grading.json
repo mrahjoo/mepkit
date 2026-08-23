@@ -1,0 +1,128 @@
+{
+  "id": "softwood_lumber___grading",
+  "title": "Softwood Lumber - Grading",
+  "description": "Comprehensive guide to softwood lumber grading including rough lumber, surfaced lumber, worked lumber, shop and factory lumber, and yard lumber classifications.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Softwood Lumber Classification\n\nRough lumber, surfaced lumber (dressed), worked lumber, shop and factory lumber and yard lumber.\n\n### Rough Lumber\nSawn, trimmed and edged lumber. The faces are rough with saw marks.\n\n### Surfaced Lumber\nRough lumber smoothed by surfacing machines. Subcategories based on the number of sides and edges that have been smoothed.\n\n- **S1S** - Surfaced on 1 Sides\n- **S2S** - Surfaced on 2 Sides\n- **S3S** - Surfaced on 3 Sides\n- **S4S** - Surfaced on 4 Sides\n\n- **S1E** - Surfaced 1 Edge\n- **S2E** - Surfaced 2 Edges\n\n- **S1S1E** - Surfaced 1 Side and 1 Edge\n- **S1S2E** - Surfaced 1 Side and 2 Edges\n\nNote that S4S lumber planed and surfaced all four sides will be noticeably less than in its nominal dimension.\n\n### Worked Lumber\nSurfaced lumber that has been matched and patterned.\n\n### Shop and Factory Lumber\nMillwork lumber - used for molding, door jambs and windows frames.\n\n### Structural Lumber or Yard Lumber\nYard lumber used for house framing, sheathing, concrete forms.\n\nYard lumber or structural softwood lumber is subdivided in:\n- **Boards** - no more than 1 inch thick and 4-12 inches wide\n- **Planks** - more than 1 inch thick and more than 6 inches wide\n- **Timbers** - width and thickness greater than 5 inches"
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Softwood Lumber Classification Hierarchy"
+        },
+        "tooltip": {
+          "trigger": "item"
+        },
+        "series": [
+          {
+            "type": "sunburst",
+            "data": [
+              {
+                "name": "Softwood Lumber",
+                "children": [
+                  {
+                    "name": "Rough Lumber",
+                    "value": 1,
+                    "children": [
+                      {
+                        "name": "Sawn & Trimmed",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Surfaced Lumber",
+                    "value": 8,
+                    "children": [
+                      {
+                        "name": "S1S",
+                        "value": 1
+                      },
+                      {
+                        "name": "S2S",
+                        "value": 1
+                      },
+                      {
+                        "name": "S3S",
+                        "value": 1
+                      },
+                      {
+                        "name": "S4S",
+                        "value": 1
+                      },
+                      {
+                        "name": "S1E",
+                        "value": 1
+                      },
+                      {
+                        "name": "S2E",
+                        "value": 1
+                      },
+                      {
+                        "name": "S1S1E",
+                        "value": 1
+                      },
+                      {
+                        "name": "S1S2E",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Worked Lumber",
+                    "value": 1,
+                    "children": [
+                      {
+                        "name": "Matched & Patterned",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Shop & Factory Lumber",
+                    "value": 1,
+                    "children": [
+                      {
+                        "name": "Millwork",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Yard Lumber",
+                    "value": 3,
+                    "children": [
+                      {
+                        "name": "Boards (≤1\" thick, 4-12\" wide)",
+                        "value": 1
+                      },
+                      {
+                        "name": "Planks (>1\" thick, >6\" wide)",
+                        "value": 1
+                      },
+                      {
+                        "name": "Timbers (>5\" width & thickness)",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "radius": [
+              0,
+              "90%"
+            ],
+            "label": {
+              "rotate": "radial"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

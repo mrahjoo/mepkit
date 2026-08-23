@@ -1,0 +1,212 @@
+{
+  "id": "resistance_vs__resistivity",
+  "title": "Resistance vs. Resistivity",
+  "description": "Calculate electrical resistance of a conductor based on resistivity, length, and cross-sectional area using the formula R = ρL/A",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "resistance_calculator",
+      "content": "## Resistance Calculator\n\nCalculate the resistance of a conductor using the formula R = ρL/A, where:\n- **ρ (rho)** = resistivity of the conductor material (Ω m)\n- **L** = length of conductor (m)\n- **A** = cross-sectional area of conductor (m²)",
+      "inputs": [
+        {
+          "id": "resistivity",
+          "label": "Resistivity (ρ)",
+          "type": "number",
+          "unit": "Ω m",
+          "defaultValue": 1.724e-8
+        },
+        {
+          "id": "length",
+          "label": "Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "cross_sectional_area",
+          "label": "Cross-sectional Area (A)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 0.00000104
+        }
+      ],
+      "outputs": [
+        {
+          "id": "resistance",
+          "label": "Resistance (R)",
+          "formula": "inputs.resistivity * inputs.length / inputs.cross_sectional_area",
+          "unit": "Ω",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "resistivity_conductors",
+      "content": "### Resistivity of Common Conductors (at 20°C)",
+      "headers": [
+        "Material",
+        "Resistivity (Ω m)",
+        "Resistivity (μΩ m)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          "2.65×10⁻⁸",
+          "0.0265"
+        ],
+        [
+          "Carbon",
+          "10×10⁻⁸",
+          "0.10"
+        ],
+        [
+          "Copper",
+          "1.724×10⁻⁸",
+          "0.0174"
+        ],
+        [
+          "Iron",
+          "10×10⁻⁸",
+          "0.1"
+        ],
+        [
+          "Silver",
+          "1.6×10⁻⁸",
+          "0.0160"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "resistivity_insulators",
+      "content": "### Resistivity of Common Insulators",
+      "headers": [
+        "Material",
+        "Resistivity (Ω m)"
+      ],
+      "rows": [
+        [
+          "Bakelite",
+          "1×10¹²"
+        ],
+        [
+          "Glass",
+          "1×10¹⁰ - 1×10¹¹"
+        ],
+        [
+          "Marble",
+          "1×10⁸"
+        ],
+        [
+          "Mica",
+          "0.9×10¹³"
+        ],
+        [
+          "Paraffin Oil",
+          "1×10¹⁶"
+        ],
+        [
+          "Paraffin Wax (pure)",
+          "1×10¹⁶"
+        ],
+        [
+          "Plexiglass",
+          "1×10¹³"
+        ],
+        [
+          "Polystyrene",
+          "1×10¹⁴"
+        ],
+        [
+          "Porcelain",
+          "1×10¹²"
+        ],
+        [
+          "Pressed Amber",
+          "1×10¹⁶"
+        ],
+        [
+          "Vulcanite",
+          "1×10¹⁴"
+        ],
+        [
+          "Water (distilled)",
+          "1×10¹⁰"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "resistivity_compared_to_copper",
+      "content": "### Resistivity Compared to Copper",
+      "headers": [
+        "Material",
+        "Relative Resistivity (vs. Copper)"
+      ],
+      "rows": [
+        [
+          "Aluminum (pure)",
+          "1.6"
+        ],
+        [
+          "Brass",
+          "3.7-4.9"
+        ],
+        [
+          "Cadmium",
+          "4.4"
+        ],
+        [
+          "Chromium",
+          "1.8"
+        ],
+        [
+          "Copper (hard-drawn)",
+          "1.03"
+        ],
+        [
+          "Copper (annealed)",
+          "1.00"
+        ],
+        [
+          "Gold",
+          "1.4"
+        ],
+        [
+          "Iron (pure)",
+          "5.68"
+        ],
+        [
+          "Lead",
+          "12.8"
+        ],
+        [
+          "Nickel",
+          "5.1"
+        ],
+        [
+          "Phosphor Bronze",
+          "2.8-5.4"
+        ],
+        [
+          "Silver",
+          "0.94"
+        ],
+        [
+          "Steel",
+          "7.6-12.7"
+        ],
+        [
+          "Tin",
+          "6.7"
+        ],
+        [
+          "Zinc",
+          "3.4"
+        ]
+      ]
+    }
+  ]
+}

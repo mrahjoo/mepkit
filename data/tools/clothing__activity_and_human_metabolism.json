@@ -1,0 +1,217 @@
+{
+  "id": "clothing__activity_and_human_metabolism",
+  "title": "Clothing, Activity and Human Metabolism",
+  "description": "Human metabolism at low and high activity with different levels of clothing. Calculate comfort temperature and heat transfer based on activity level, clothing insulation, and relative air speed.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "metabolism_calculator",
+      "content": "Calculate human metabolism parameters based on activity level and clothing insulation.",
+      "inputs": [
+        {
+          "id": "activity_level",
+          "label": "Activity Level",
+          "type": "select",
+          "options": [
+            {
+              "label": "Sitting still (Low)",
+              "value": "sitting"
+            },
+            {
+              "label": "Medium activity",
+              "value": "medium"
+            },
+            {
+              "label": "High activity",
+              "value": "high"
+            }
+          ],
+          "defaultValue": "sitting"
+        },
+        {
+          "id": "clothing_insulation",
+          "label": "Clothing Insulation",
+          "type": "select",
+          "options": [
+            {
+              "label": "Naked",
+              "value": 0
+            },
+            {
+              "label": "0.3 Clo (Light clothing)",
+              "value": 0.3
+            },
+            {
+              "label": "0.5 Clo (Normal clothing)",
+              "value": 0.5
+            },
+            {
+              "label": "1.0 Clo (Warm clothing)",
+              "value": 1
+            },
+            {
+              "label": "1.5 Clo (Heavy clothing)",
+              "value": 1.5
+            }
+          ],
+          "defaultValue": 0
+        },
+        {
+          "id": "relative_air_speed",
+          "label": "Relative Air Speed",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0.1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "comfort_temperature",
+          "label": "Comfort Temperature",
+          "unit": "°C",
+          "formula": "inputs.activity_level === 'sitting' ? (inputs.clothing_insulation === 0 ? 28.8 : inputs.clothing_insulation === 0.3 ? 30.1 : inputs.clothing_insulation === 0.5 ? 30.7 : inputs.clothing_insulation === 1.0 ? 31.4 : 32.0) : inputs.activity_level === 'medium' ? (inputs.clothing_insulation === 0 ? 24.4 : inputs.clothing_insulation === 0.3 ? 26.2 : inputs.clothing_insulation === 0.5 ? 27.1 : inputs.clothing_insulation === 1.0 ? 28.2 : 29.0) : (inputs.clothing_insulation === 0 ? 22.1 : inputs.clothing_insulation === 0.5 ? 23.4 : inputs.clothing_insulation === 1.0 ? 24.9 : 25.5)"
+        },
+        {
+          "id": "convection",
+          "label": "Convection",
+          "unit": "W",
+          "formula": "inputs.activity_level === 'sitting' ? (inputs.clothing_insulation === 0 ? 36 : inputs.clothing_insulation === 0.3 ? 40 : inputs.clothing_insulation === 0.5 ? 40 : inputs.clothing_insulation === 1.0 ? 40 : 40) : inputs.activity_level === 'medium' ? (inputs.clothing_insulation === 0 ? 59 : inputs.clothing_insulation === 0.3 ? 115 : inputs.clothing_insulation === 0.5 ? 115 : inputs.clothing_insulation === 1.0 ? 115 : 115) : (inputs.clothing_insulation === 0 ? 107 : inputs.clothing_insulation === 0.5 ? 192 : inputs.clothing_insulation === 1.0 ? 192 : 192)"
+        },
+        {
+          "id": "radiation",
+          "label": "Radiation",
+          "unit": "W",
+          "formula": "inputs.activity_level === 'sitting' ? (inputs.clothing_insulation === 0 ? 38 : inputs.clothing_insulation === 0.3 ? 27 : inputs.clothing_insulation === 0.5 ? 27 : inputs.clothing_insulation === 1.0 ? 27 : 27) : inputs.activity_level === 'medium' ? (inputs.clothing_insulation === 0 ? 65 : inputs.clothing_insulation === 0.3 ? 77 : inputs.clothing_insulation === 0.5 ? 77 : inputs.clothing_insulation === 1.0 ? 77 : 77) : (inputs.clothing_insulation === 0 ? 67 : inputs.clothing_insulation === 0.5 ? 129 : inputs.clothing_insulation === 1.0 ? 129 : 129)"
+        },
+        {
+          "id": "latent_vapor",
+          "label": "Latent Vapor (Evaporation)",
+          "unit": "g/h",
+          "formula": "inputs.activity_level === 'sitting' ? (inputs.clothing_insulation === 0 ? 27 : inputs.clothing_insulation === 0.3 ? 40 : inputs.clothing_insulation === 0.5 ? 40 : inputs.clothing_insulation === 1.0 ? 40 : 40) : inputs.activity_level === 'medium' ? (inputs.clothing_insulation === 0 ? 77 : inputs.clothing_insulation === 0.3 ? 115 : inputs.clothing_insulation === 0.5 ? 115 : inputs.clothing_insulation === 1.0 ? 115 : 115) : (inputs.clothing_insulation === 0 ? 129 : inputs.clothing_insulation === 0.5 ? 192 : inputs.clothing_insulation === 1.0 ? 192 : 192)"
+        },
+        {
+          "id": "total_heat",
+          "label": "Total Heat Transferred",
+          "unit": "W",
+          "formula": "inputs.activity_level === 'sitting' ? 102 : inputs.activity_level === 'medium' ? 204 : 306"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "metabolism_data_table",
+      "content": "Human Metabolism Data Reference",
+      "headers": [
+        "Activity Level",
+        "Clothing (Clo)",
+        "Comfort Temp (°C)",
+        "Convection (W)",
+        "Radiation (W)",
+        "Latent Vapor (g/h)",
+        "Total Heat (W)"
+      ],
+      "rows": [
+        [
+          "Sitting still",
+          "Naked",
+          "28.8",
+          "36",
+          "38",
+          "27",
+          "102"
+        ],
+        [
+          "Sitting still",
+          "0.3",
+          "30.1",
+          "40",
+          "27",
+          "40",
+          "102"
+        ],
+        [
+          "Sitting still",
+          "0.5",
+          "30.7",
+          "40",
+          "27",
+          "40",
+          "102"
+        ],
+        [
+          "Sitting still",
+          "1.0",
+          "31.4",
+          "40",
+          "27",
+          "40",
+          "102"
+        ],
+        [
+          "Medium activity",
+          "Naked",
+          "24.4",
+          "59",
+          "65",
+          "77",
+          "204"
+        ],
+        [
+          "Medium activity",
+          "0.3",
+          "26.2",
+          "115",
+          "77",
+          "115",
+          "204"
+        ],
+        [
+          "Medium activity",
+          "0.5",
+          "27.1",
+          "115",
+          "77",
+          "115",
+          "204"
+        ],
+        [
+          "Medium activity",
+          "1.0",
+          "28.2",
+          "115",
+          "77",
+          "115",
+          "204"
+        ],
+        [
+          "High activity",
+          "Naked",
+          "22.1",
+          "107",
+          "67",
+          "129",
+          "306"
+        ],
+        [
+          "High activity",
+          "0.5",
+          "23.4",
+          "192",
+          "129",
+          "192",
+          "306"
+        ],
+        [
+          "High activity",
+          "1.0",
+          "24.9",
+          "192",
+          "129",
+          "192",
+          "306"
+        ]
+      ]
+    }
+  ]
+}

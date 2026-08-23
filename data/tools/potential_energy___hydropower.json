@@ -1,0 +1,139 @@
+{
+  "id": "potential_energy___hydropower",
+  "title": "Potential Energy - Hydropower",
+  "description": "Calculate elevation and potential energy in hydropower systems. Determine the increase in potential energy when a body of mass is elevated against gravitational force.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "potential_energy_calculator",
+      "content": "Calculate potential energy using the formula: Ep = m × ag × Δh",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg"
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        },
+        {
+          "id": "elevation_change",
+          "label": "Change in Elevation",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "potential_energy_joules",
+          "label": "Potential Energy",
+          "formula": "inputs.mass * inputs.gravity * inputs.elevation_change",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "potential_energy_kj",
+          "label": "Potential Energy",
+          "formula": "(inputs.mass * inputs.gravity * inputs.elevation_change) / 1000",
+          "unit": "kJ",
+          "format": "decimal"
+        },
+        {
+          "id": "potential_energy_kwh",
+          "label": "Potential Energy",
+          "formula": "(inputs.mass * inputs.gravity * inputs.elevation_change) / 3600000",
+          "unit": "kWh",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "energy_relationship_chart",
+      "content": "Visualization of potential energy relationship with mass and elevation",
+      "options": {
+        "title": {
+          "text": "Potential Energy vs Elevation",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Elevation Change (m)",
+          "data": [
+            5,
+            10,
+            15,
+            20,
+            25,
+            30
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Potential Energy (kJ)"
+        },
+        "series": [
+          {
+            "name": "1000 kg",
+            "type": "line",
+            "data": [
+              49.05,
+              98.1,
+              147.15,
+              196.2,
+              245.25,
+              294.3
+            ]
+          },
+          {
+            "name": "2000 kg",
+            "type": "line",
+            "data": [
+              98.1,
+              196.2,
+              294.3,
+              392.4,
+              490.5,
+              588.6
+            ]
+          },
+          {
+            "name": "5000 kg",
+            "type": "line",
+            "data": [
+              245.25,
+              490.5,
+              735.75,
+              981,
+              1226.25,
+              1471.5
+            ]
+          }
+        ],
+        "legend": {
+          "data": [
+            "1000 kg",
+            "2000 kg",
+            "5000 kg"
+          ]
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "formula_reference",
+      "content": "## Formula\n\n**Potential Energy Formula:**\n\n_Ep = m × ag × Δh_\n\nWhere:\n- **Ep** = potential energy (J, kJ, kWh)\n- **m** = mass of body (kg)\n- **ag** = acceleration of gravity on earth (9.81 m/s²)\n- **Δh** = change in elevation (m)\n\n## Example Calculation\n\nA body of **1000 kg** is elevated **10 m**:\n\n_Ep = (1000 kg) × (9.81 m/s²) × (10 m) = 98,100 J = 98 kJ = 0.027 kWh_"
+    }
+  ]
+}

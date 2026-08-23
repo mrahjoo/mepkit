@@ -1,0 +1,144 @@
+{
+  "id": "center_of_gravity",
+  "title": "Center of Gravity",
+  "description": "Calculate the center of gravity for various shapes including triangles, parallelograms, trapezoids, and systems of two bodies.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Center of Gravity Calculator\n\nThe \"center of gravity\" for a volume, an area or a line is the point at which the body - if suspended - would be in balance.\n\nFor a symmetrical body in a uniform material - the center of gravity would be in the geometric center.\n\n### Formulas\n\n**Triangle:** a = h / 3\n\n**Perimeter:** d = h (b + c) / 2 (a + b + c)\n\n**Two Bodies:** \n- b = Q a / (P + Q)\n- c = P a / (P + Q)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "shape",
+          "label": "Shape Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Triangle",
+              "value": "triangle"
+            },
+            {
+              "label": "Perimeter",
+              "value": "perimeter"
+            },
+            {
+              "label": "Two Bodies",
+              "value": "two_bodies"
+            }
+          ],
+          "defaultValue": "triangle"
+        },
+        {
+          "id": "h",
+          "label": "Height (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "a",
+          "label": "Distance (a)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "b",
+          "label": "Side b",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "c",
+          "label": "Side c",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "P",
+          "label": "Mass/Weight P",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 10
+        },
+        {
+          "id": "Q",
+          "label": "Mass/Weight Q",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "triangle_cog",
+          "label": "Triangle Center of Gravity (a)",
+          "formula": "inputs.h / 3",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "perimeter_cog",
+          "label": "Perimeter Center of Gravity (d)",
+          "formula": "inputs.h * (inputs.b + inputs.c) / (2 * (inputs.a + inputs.b + inputs.c))",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "two_bodies_b",
+          "label": "Two Bodies Distance b",
+          "formula": "inputs.Q * inputs.a / (inputs.P + inputs.Q)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "two_bodies_c",
+          "label": "Two Bodies Distance c",
+          "formula": "inputs.P * inputs.a / (inputs.P + inputs.Q)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Shape Type",
+        "Formula",
+        "Result",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Triangle",
+          "a = h / 3",
+          "inputs.h / 3",
+          "m"
+        ],
+        [
+          "Perimeter",
+          "d = h(b+c)/2(a+b+c)",
+          "inputs.h * (inputs.b + inputs.c) / (2 * (inputs.a + inputs.b + inputs.c))",
+          "m"
+        ],
+        [
+          "Two Bodies - Distance b",
+          "b = Q·a / (P+Q)",
+          "inputs.Q * inputs.a / (inputs.P + inputs.Q)",
+          "m"
+        ],
+        [
+          "Two Bodies - Distance c",
+          "c = P·a / (P+Q)",
+          "inputs.P * inputs.a / (inputs.P + inputs.Q)",
+          "m"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "id": "butane___thermophysical_properties",
+  "title": "Butane - Thermophysical Properties",
+  "description": "Calculate and reference thermophysical properties of n-Butane (C4H10) at standard conditions (25°C, 298K, atmospheric pressure). Includes molecular weight, density, viscosity, specific heat, thermal conductivity, critical point parameters, and heat of combustion.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Butane - Thermophysical Properties\n\nThermophysical properties of n-Butane (C₄H₁₀) at standard conditions:\n- **Temperature**: 25°C (77°F, 298 K)\n- **Pressure**: Atmospheric (14.7 psia, 101.325 kPa)\n\nUse the calculator below to compute properties based on selected units and input parameters."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "property_select",
+          "label": "Select Property",
+          "type": "select",
+          "options": [
+            {
+              "label": "Molecular Weight",
+              "value": "mol_weight"
+            },
+            {
+              "label": "Specific Gravity (air = 1)",
+              "value": "spec_gravity"
+            },
+            {
+              "label": "Density of Liquid",
+              "value": "density_liquid"
+            },
+            {
+              "label": "Vapor Pressure at 25°C",
+              "value": "vapor_pressure"
+            },
+            {
+              "label": "Specific Heat (cp)",
+              "value": "specific_heat"
+            },
+            {
+              "label": "Specific Heat Ratio (cp/cv)",
+              "value": "heat_ratio"
+            },
+            {
+              "label": "Boiling Point",
+              "value": "boiling_point"
+            },
+            {
+              "label": "Critical Temperature",
+              "value": "critical_temp"
+            },
+            {
+              "label": "Critical Pressure",
+              "value": "critical_pressure"
+            },
+            {
+              "label": "Latent Heat of Evaporation",
+              "value": "latent_heat_evap"
+            },
+            {
+              "label": "Heat of Combustion",
+              "value": "heat_combustion"
+            }
+          ]
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "Imperial (US)",
+              "value": "imperial"
+            },
+            {
+              "label": "SI (Metric)",
+              "value": "metric"
+            }
+          ],
+          "defaultValue": "imperial"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "property_value",
+          "label": "Property Value",
+          "formula": "inputs.property_select === 'mol_weight' ? 58.12 : inputs.property_select === 'spec_gravity' ? 2.07 : inputs.property_select === 'density_liquid' ? (inputs.unit_system === 'imperial' ? 37.5 : 604) : inputs.property_select === 'vapor_pressure' ? (inputs.unit_system === 'imperial' ? 35.4 : 0.244) : inputs.property_select === 'specific_heat' ? (inputs.unit_system === 'imperial' ? 0.39 : 1675) : inputs.property_select === 'heat_ratio' ? 1.096 : inputs.property_select === 'boiling_point' ? (inputs.unit_system === 'imperial' ? 31.2 : -0.4) : inputs.property_select === 'critical_temp' ? (inputs.unit_system === 'imperial' ? 306 : 152) : inputs.property_select === 'critical_pressure' ? (inputs.unit_system === 'imperial' ? 550 : 3.8) : inputs.property_select === 'latent_heat_evap' ? (inputs.unit_system === 'imperial' ? 165.6 : 386000) : inputs.property_select === 'heat_combustion' ? (inputs.unit_system === 'imperial' ? 21400 : 49700) : 0",
+          "unit": "Varies by property"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value (Imperial)",
+        "Value (SI)",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "58.12",
+          "58.12",
+          "g/mol"
+        ],
+        [
+          "Specific Gravity (air = 1)",
+          "2.07",
+          "2.07",
+          "dimensionless"
+        ],
+        [
+          "Density of Liquid at atm",
+          "37.5",
+          "604",
+          "lb/ft³, kg/m³"
+        ],
+        [
+          "Vapor Pressure at 25°C",
+          "35.4",
+          "0.244",
+          "psia, MN/m²"
+        ],
+        [
+          "Absolute Viscosity",
+          "4.8×10⁻⁶",
+          "0.007",
+          "lbm/ft·s, cP"
+        ],
+        [
+          "Sound Velocity in Gas",
+          "708.66",
+          "216",
+          "ft/s, m/s"
+        ],
+        [
+          "Specific Heat (cp)",
+          "0.39",
+          "1675",
+          "Btu/lb·°F, J/kg·K"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          "1.096",
+          "1.096",
+          "dimensionless"
+        ],
+        [
+          "Gas Constant (R)",
+          "26.56",
+          "143",
+          "ft·lb/lb·°R, J/kg·°C"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.01",
+          "0.017",
+          "Btu/hr·ft·°F, W/m·°C"
+        ],
+        [
+          "Boiling Point",
+          "31.2",
+          "-0.4",
+          "°F, °C"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "165.6",
+          "386000",
+          "Btu/lb, J/kg"
+        ],
+        [
+          "Freezing/Melting Point",
+          "-217",
+          "-138",
+          "°F, °C"
+        ],
+        [
+          "Latent Heat of Fusion",
+          "19.2",
+          "44700",
+          "Btu/lb, J/kg"
+        ],
+        [
+          "Critical Temperature",
+          "306",
+          "152",
+          "°F, °C"
+        ],
+        [
+          "Critical Pressure",
+          "550",
+          "3.8",
+          "psia, MN/m²"
+        ],
+        [
+          "Critical Volume",
+          "0.070",
+          "0.0043",
+          "ft³/lb, m³/kg"
+        ],
+        [
+          "Heat of Combustion",
+          "21400",
+          "49700",
+          "Btu/lb, kJ/kg"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Notes\n\n- **Flammability**: Butane is flammable\n- **Phase Behavior**: Butane is a gas at standard conditions but becomes liquid or solid at lower temperatures and/or higher pressures\n- **Critical Point**: At 306°F (152°C) and 550 psia (3.8 MN/m²), there is no phase change with pressure or heat addition\n- **Triple Point**: The temperature and pressure where gas, liquid, and solid phases coexist in thermodynamic equilibrium\n\n## References\n\nFor detailed properties at varying temperature and pressure, refer to:\n- Density and specific weight variation\n- Dynamic and kinematic viscosity variation\n- Specific heat capacity variation\n- Thermal conductivity variation"
+    }
+  ]
+}

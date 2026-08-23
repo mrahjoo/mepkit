@@ -1,0 +1,75 @@
+{
+  "id": "conn_rod_mechanism",
+  "title": "Conn-Rod Mechanism",
+  "description": "A connecting rod mechanism converts rotating motion to reciprocating motion or vice versa. Calculate the position, velocity, and acceleration of the connecting rod based on crank parameters and angular position.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Conn-Rod Mechanism Calculator\n\nThe connecting rod mechanism converts rotating motion to reciprocating motion (or vice versa). This calculator computes the position, velocity, and acceleration of the rod.\n\n### Key Parameters:\n- **r** = radius of crank (m)\n- **l** = length of rod (m)\n- **φ** = angular position of crank (rad)\n- **ω** = crank angular velocity (rad/s)\n\n### Formulas:\n1. **Position**: s = r(1 - cos(φ)) + (λ/2)r sin²(φ)\n2. **Velocity**: v = ωr sin(φ)(1 + λ cos(φ))\n3. **Acceleration**: a = ω²r(cos(φ) + λ cos(2φ))\n\nwhere λ = r/l (crank ratio)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "r",
+          "label": "Crank Radius (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "l",
+          "label": "Rod Length (l)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.15
+        },
+        {
+          "id": "phi",
+          "label": "Angular Position (φ)",
+          "type": "number",
+          "unit": "rad",
+          "defaultValue": 0.785
+        },
+        {
+          "id": "omega",
+          "label": "Angular Velocity (ω)",
+          "type": "number",
+          "unit": "rad/s",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "lambda",
+          "label": "Crank Ratio (λ)",
+          "formula": "inputs.r / inputs.l",
+          "unit": "-",
+          "format": "decimal"
+        },
+        {
+          "id": "position",
+          "label": "Position (s)",
+          "formula": "inputs.r * (1 - Math.cos(inputs.phi)) + (inputs.r / inputs.l / 2) * inputs.r * Math.pow(Math.sin(inputs.phi), 2)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity (v)",
+          "formula": "inputs.omega * inputs.r * Math.sin(inputs.phi) * (1 + (inputs.r / inputs.l) * Math.cos(inputs.phi))",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "acceleration",
+          "label": "Acceleration (a)",
+          "formula": "Math.pow(inputs.omega, 2) * inputs.r * (Math.cos(inputs.phi) + (inputs.r / inputs.l) * Math.cos(2 * inputs.phi))",
+          "unit": "m/s²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

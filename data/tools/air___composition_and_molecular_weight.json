@@ -1,0 +1,192 @@
+{
+  "id": "air___composition_and_molecular_weight",
+  "title": "Air - Composition and Molecular Weight",
+  "description": "Calculate the average molar mass of air based on the composition of its major components (Nitrogen, Oxygen, Argon, and other trace gases). The tool uses the mole fraction and molar mass of each gas component to determine the overall molecular weight of dry air.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Air Composition and Molecular Weight Calculator\n\nAir is a mixture of gases. The average molar mass is calculated using:\n\n**M_mixture = x₁M₁ + x₂M₂ + ... + xₙMₙ**\n\nWhere:\n- xᵢ = mole fractions of each gas\n- Mᵢ = molar mass of each gas\n\nThe molar mass of dry air is approximately **28.9647 g/mol**."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "nitrogen_fraction",
+          "label": "Nitrogen (N₂) Mole Fraction",
+          "type": "number",
+          "defaultValue": 0.78084,
+          "unit": "mol/mol"
+        },
+        {
+          "id": "nitrogen_molar_mass",
+          "label": "Nitrogen Molar Mass",
+          "type": "number",
+          "defaultValue": 28.013,
+          "unit": "g/mol"
+        },
+        {
+          "id": "oxygen_fraction",
+          "label": "Oxygen (O₂) Mole Fraction",
+          "type": "number",
+          "defaultValue": 0.20946,
+          "unit": "mol/mol"
+        },
+        {
+          "id": "oxygen_molar_mass",
+          "label": "Oxygen Molar Mass",
+          "type": "number",
+          "defaultValue": 31.999,
+          "unit": "g/mol"
+        },
+        {
+          "id": "argon_fraction",
+          "label": "Argon (Ar) Mole Fraction",
+          "type": "number",
+          "defaultValue": 0.00934,
+          "unit": "mol/mol"
+        },
+        {
+          "id": "argon_molar_mass",
+          "label": "Argon Molar Mass",
+          "type": "number",
+          "defaultValue": 39.948,
+          "unit": "g/mol"
+        },
+        {
+          "id": "co2_fraction",
+          "label": "Carbon Dioxide (CO₂) Mole Fraction",
+          "type": "number",
+          "defaultValue": 0.000412,
+          "unit": "mol/mol"
+        },
+        {
+          "id": "co2_molar_mass",
+          "label": "Carbon Dioxide Molar Mass",
+          "type": "number",
+          "defaultValue": 44.01,
+          "unit": "g/mol"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "nitrogen_contribution",
+          "label": "Nitrogen Contribution",
+          "formula": "inputs.nitrogen_fraction * inputs.nitrogen_molar_mass",
+          "unit": "g/mol",
+          "format": "decimal"
+        },
+        {
+          "id": "oxygen_contribution",
+          "label": "Oxygen Contribution",
+          "formula": "inputs.oxygen_fraction * inputs.oxygen_molar_mass",
+          "unit": "g/mol",
+          "format": "decimal"
+        },
+        {
+          "id": "argon_contribution",
+          "label": "Argon Contribution",
+          "formula": "inputs.argon_fraction * inputs.argon_molar_mass",
+          "unit": "g/mol",
+          "format": "decimal"
+        },
+        {
+          "id": "co2_contribution",
+          "label": "Carbon Dioxide Contribution",
+          "formula": "inputs.co2_fraction * inputs.co2_molar_mass",
+          "unit": "g/mol",
+          "format": "decimal"
+        },
+        {
+          "id": "average_molar_mass",
+          "label": "Average Molar Mass of Air",
+          "formula": "(inputs.nitrogen_fraction * inputs.nitrogen_molar_mass) + (inputs.oxygen_fraction * inputs.oxygen_molar_mass) + (inputs.argon_fraction * inputs.argon_molar_mass) + (inputs.co2_fraction * inputs.co2_molar_mass)",
+          "unit": "g/mol",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Formula",
+        "Mole Fraction",
+        "Molar Mass (g/mol)",
+        "Volume %"
+      ],
+      "rows": [
+        [
+          "Nitrogen",
+          "N₂",
+          "0.78084",
+          "28.013",
+          "78.084"
+        ],
+        [
+          "Oxygen",
+          "O₂",
+          "0.20946",
+          "31.999",
+          "20.946"
+        ],
+        [
+          "Argon",
+          "Ar",
+          "0.00934",
+          "39.948",
+          "0.934"
+        ],
+        [
+          "Carbon Dioxide",
+          "CO₂",
+          "0.000412",
+          "44.010",
+          "0.0412"
+        ],
+        [
+          "Neon",
+          "Ne",
+          "0.00001818",
+          "20.180",
+          "0.001818"
+        ],
+        [
+          "Helium",
+          "He",
+          "0.00000524",
+          "4.003",
+          "0.000524"
+        ],
+        [
+          "Methane",
+          "CH₄",
+          "0.00000179",
+          "16.042",
+          "0.000179"
+        ],
+        [
+          "Krypton",
+          "Kr",
+          "0.0000010",
+          "83.798",
+          "0.0001"
+        ],
+        [
+          "Hydrogen",
+          "H₂",
+          "0.0000005",
+          "2.016",
+          "0.00005"
+        ],
+        [
+          "Xenon",
+          "Xe",
+          "0.00000009",
+          "131.293",
+          "0.000009"
+        ]
+      ]
+    }
+  ]
+}

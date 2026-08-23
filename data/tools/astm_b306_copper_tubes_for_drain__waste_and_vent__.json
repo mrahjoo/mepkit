@@ -1,0 +1,113 @@
+{
+  "id": "astm_b306_copper_tubes_for_drain__waste_and_vent__",
+  "title": "ASTM B306 Copper Tubes for Drain, Waste and Vent - Dimensions and Working Pressures",
+  "description": "Dimensions and specifications of copper tubes ASTM B306 for Drain, Waste and Vent (DWV) applications. DWV pipes are recommended for above ground use only, no pressure applications, and sweat fittings only. This tool provides detailed dimensions and maximum working pressures for both annealed and drawn copper tubes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Diameter (in)",
+        "Outside Diameter (in)",
+        "Inside Diameter (in)",
+        "Wall Thickness (in)",
+        "Cross Sectional Area of Bore (in²)",
+        "Mass per Unit Length (lb/ft)",
+        "Mass with Water (lb/ft)",
+        "Max. Working Pressure - Annealed (psi)",
+        "Max. Working Pressure - Drawn (psi)"
+      ],
+      "rows": [
+        [
+          "1 1/4",
+          1.375,
+          1.295,
+          0.04,
+          1.32,
+          0.65,
+          1.22,
+          280,
+          549
+        ],
+        [
+          "1 1/2",
+          1.625,
+          1.541,
+          0.042,
+          1.87,
+          0.81,
+          1.62,
+          249,
+          489
+        ],
+        [
+          "2",
+          2.125,
+          2.041,
+          0.042,
+          3.27,
+          1.07,
+          2.48,
+          185,
+          362
+        ],
+        [
+          "3",
+          3.125,
+          3.03,
+          0.045,
+          7.21,
+          1.69,
+          4.81,
+          135,
+          265
+        ],
+        [
+          "4",
+          4.125,
+          4.009,
+          0.058,
+          11.6,
+          2.87,
+          7.88,
+          127,
+          250
+        ],
+        [
+          "5",
+          5.125,
+          4.981,
+          0.072,
+          19.5,
+          4.43,
+          12.9,
+          129,
+          252
+        ],
+        [
+          "6",
+          6.125,
+          5.959,
+          0.083,
+          27.9,
+          6.1,
+          18.2,
+          126,
+          247
+        ],
+        [
+          "8",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          124,
+          244
+        ]
+      ],
+      "content": "ASTM B306 Copper Tubes for Drain, Waste and Vent\n\n**Key Specifications:**\n- Recommended for above ground and no pressure applications only\n- Sweat fittings only\n- Available only in hard type\n- Service temperature max: 150°F (66°C)\n- Yield strength (annealed): 5100 psi (35 GPa)\n- Yield strength (drawn): 10000 psi (69 GPa)\n\n**Unit Conversions:**\n- 1 in² = 645.2 mm²\n- 1 lb/ft = 1.49 kg/m"
+    }
+  ]
+}

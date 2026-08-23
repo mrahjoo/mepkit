@@ -1,0 +1,319 @@
+{
+  "id": "carbon_steel_pipes___comparing_american___european",
+  "title": "Carbon Steel Pipes - Comparing American & European Standards",
+  "description": "Comparing standards of carbon steel pipes from USA, Germany, UK and Sweden. This table can be used to compare carbon steel piping standards from America - USA, and Europe - Germany, British (UK) and Sweden.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "USA",
+        "UK",
+        "Germany",
+        "Sweden"
+      ],
+      "rows": [
+        [
+          "ASTM A 53",
+          "BS3601",
+          "DIN 1629",
+          ""
+        ],
+        [
+          "Grade A SMLS",
+          "HFS 22 & CDS 22",
+          "St 35",
+          "SIS 1233-05"
+        ],
+        [
+          "Grade B SMLS",
+          "HFS 27 & CDS 27",
+          "St 45",
+          "SIS 1434-05"
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ASTM A 53",
+          "BS3601",
+          "DIN 1626",
+          ""
+        ],
+        [
+          "Grade A ERW",
+          "ERW 22",
+          "Blatt 3 St 34-2 ERW",
+          ""
+        ],
+        [
+          "Grade B ERW",
+          "ERW 27",
+          "Blatt 3 St 37-2 ERW",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ASTM A 53",
+          "BS3601",
+          "DIN 1626",
+          ""
+        ],
+        [
+          "FBW",
+          "BW 22",
+          "Blatt 3 St 34-2 FBW",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ASTM A 106",
+          "BS3602",
+          "DIN 17175 2)",
+          ""
+        ],
+        [
+          "Grade A",
+          "HFS 23",
+          "St 35-8",
+          "SIS 1233-06"
+        ],
+        [
+          "Grade B",
+          "HFS 27",
+          "St 45-8",
+          "SIS 1435-05"
+        ],
+        [
+          "Grade C",
+          "HFS 35",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ASTM A 134",
+          "BS3601",
+          "DIN 1626",
+          ""
+        ],
+        [
+          "",
+          "EFW",
+          "Blatt 2 EFW",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ASTM A 135",
+          "BS3601",
+          "DIN 1626",
+          ""
+        ],
+        [
+          "Grade A",
+          "ERW 22",
+          "Blatt 3 St 34-2 ERW",
+          "SIS 1233-06"
+        ],
+        [
+          "Grade B",
+          "ERW 27",
+          "Blatt 3 St 37-2 ERW",
+          "SIS 1434-06"
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ASTM A 139",
+          "BS3601",
+          "DIN 1626",
+          ""
+        ],
+        [
+          "Grade A",
+          "EFW 22",
+          "Blatt 2 St 37",
+          ""
+        ],
+        [
+          "Grade B",
+          "EFW 27",
+          "Blatt 2 St 42",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ASTM A 155 Class 2",
+          "BS3602",
+          "DIN 1626, Blatt 3 with certification C",
+          ""
+        ],
+        [
+          "C45",
+          "",
+          "St 34-2",
+          ""
+        ],
+        [
+          "C50",
+          "",
+          "St 37-2",
+          ""
+        ],
+        [
+          "C55",
+          "",
+          "St 42-2",
+          ""
+        ],
+        [
+          "KC55",
+          "EFW 28",
+          "St 42-2 2)",
+          ""
+        ],
+        [
+          "KC60",
+          "",
+          "St 42-2 2)",
+          ""
+        ],
+        [
+          "KC65",
+          "EFW 28S",
+          "St 52-2",
+          ""
+        ],
+        [
+          "KC70",
+          "",
+          "St 52-2",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "API 5L",
+          "BS3601",
+          "DIN 1629",
+          ""
+        ],
+        [
+          "Grade A SMLS",
+          "HFS 22 & CDS 22",
+          "St 35",
+          "SIS 1233-05"
+        ],
+        [
+          "Grade B SMLS",
+          "HFS 27 & CDS 27",
+          "St 45",
+          "SIS 1434-06 *"
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "API 5L",
+          "BS3601",
+          "DIN 1625",
+          ""
+        ],
+        [
+          "Grade A ERW",
+          "ERW 22",
+          "Blatt 3 St 34-2 ERW",
+          ""
+        ],
+        [
+          "Grade B ERW",
+          "ERW 27 1)",
+          "Blatt 4 St 37-2 ERW",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "API 5L",
+          "BS3601 Double welded",
+          "DIN 1626",
+          ""
+        ],
+        [
+          "Grade A EFW",
+          "ERW 22",
+          "Blatt 3 St 34-2 FW",
+          ""
+        ],
+        [
+          "Grade B EFW",
+          "ERW 27 1)",
+          "Blatt 4 St 37-2 FW",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "API 5L",
+          "BS3601",
+          "DIN 1626",
+          ""
+        ],
+        [
+          "FBW",
+          "BW 22",
+          "Blatt 3 St 34-2 FBW",
+          ""
+        ]
+      ]
+    }
+  ]
+}

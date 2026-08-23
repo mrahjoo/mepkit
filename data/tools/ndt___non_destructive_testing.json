@@ -1,0 +1,79 @@
+{
+  "id": "ndt___non_destructive_testing",
+  "title": "NDT - Non Destructive Testing",
+  "description": "Non-destructive testing (NDT) uses test methods to examine an object, material or system without impairing its future usefulness. This tool provides information on commonly used NDT techniques including AET, ART, ET, IRT, LT, MT, PT, RT, UT, and VT.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "NDT Technique",
+        "Abbreviation",
+        "Key Application",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Acoustic Emission Testing",
+          "AET",
+          "Pressure Vessels & Piping",
+          "Detects sharp sounds from PCCP breakage to identify areas of active distress within construction. Verifies structural integrity of pressure vessels, reactors, storage tanks."
+        ],
+        [
+          "Acoustic Resonance Testing",
+          "ART",
+          "Defect Detection",
+          "Measures characteristic vibration modes after impact using microphone or laser vibrometer. Detects cracks, cavities, detached layers, and material inconsistencies."
+        ],
+        [
+          "Electromagnetic Testing",
+          "ET",
+          "Surface Defects",
+          "Induces electric currents and magnetic fields in test object to observe response. Electromagnetic interference creates measurable response to detect defects."
+        ],
+        [
+          "Infrared Testing",
+          "IRT",
+          "Thermal Analysis",
+          "Uses thermography and infrared imaging to see and measure infrared energy. Detects heat development, lack of insulation, and thin walls in constructions."
+        ],
+        [
+          "Leak Testing",
+          "LT",
+          "Pressure Containment",
+          "Detects and locates leaks in pressure containment parts and vessels using liquid/gas penetration, electronic devices, pressure gauges, or soap-bubble tests."
+        ],
+        [
+          "Magnetic Particle Testing",
+          "MT",
+          "Ferromagnetic Materials",
+          "Induces magnetic field in ferromagnetic material and dusts surface with iron particles. Particles concentrate at defects making surface defects visible."
+        ],
+        [
+          "Dye Penetration Testing",
+          "PT",
+          "Surface Discontinuities",
+          "Uses highly penetrating dye on surface that enters discontinuities. After penetration time and removal of excess dye, surface defects become visible."
+        ],
+        [
+          "Radiographic Testing",
+          "RT",
+          "Internal Defects",
+          "Detects internal defects in castings, welds, or forgings using x-ray or gamma ray radiation. Defects visible by radiation absorption differences on film or fluorescent screen."
+        ],
+        [
+          "Ultrasonic Testing",
+          "UT",
+          "Flaw Detection & Measurement",
+          "Uses high frequency sound energy for examinations and measurements. Enables flaw detection, dimensional measurements, and material characterization."
+        ],
+        [
+          "Visual Testing",
+          "VT",
+          "Quality Assurance",
+          "Visual inspection offers wide range of options to secure proper system or product quality. Also known as Visual Inspection (VI)."
+        ]
+      ]
+    }
+  ]
+}

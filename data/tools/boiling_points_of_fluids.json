@@ -1,0 +1,68 @@
+{
+  "id": "boiling_points_of_fluids",
+  "title": "Boiling Points of Fluids",
+  "description": "Boiling points of elements, products and chemical species at varying conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fluid",
+        "Boiling Point (°C)",
+        "Pressure (atm)"
+      ],
+      "rows": [
+        [
+          "Water",
+          "100",
+          "1"
+        ],
+        [
+          "Ethanol",
+          "78.4",
+          "1"
+        ],
+        [
+          "Methanol",
+          "64.7",
+          "1"
+        ],
+        [
+          "Acetone",
+          "56.1",
+          "1"
+        ],
+        [
+          "Benzene",
+          "80.1",
+          "1"
+        ],
+        [
+          "Hexane",
+          "68.7",
+          "1"
+        ],
+        [
+          "Octane",
+          "125.6",
+          "1"
+        ],
+        [
+          "Ammonia",
+          "-33.3",
+          "1"
+        ],
+        [
+          "Carbon Dioxide",
+          "-78.5",
+          "1"
+        ],
+        [
+          "Nitrogen",
+          "-196.0",
+          "1"
+        ]
+      ]
+    }
+  ]
+}

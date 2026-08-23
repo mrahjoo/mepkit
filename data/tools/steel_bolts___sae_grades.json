@@ -1,0 +1,48 @@
+{
+  "id": "steel_bolts___sae_grades",
+  "title": "Steel Bolts - SAE Grades",
+  "description": "Reference table for SAE grade specifications for steel bolts including tensile strength, yield strength, and other mechanical properties.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "SAE Grade",
+        "Tensile Strength (MPa)",
+        "Yield Strength (MPa)",
+        "Elongation (%)",
+        "Applications"
+      ],
+      "rows": [
+        [
+          "Grade 2",
+          "310",
+          "170",
+          "25",
+          "General purpose fasteners, low strength"
+        ],
+        [
+          "Grade 5",
+          "830",
+          "690",
+          "12",
+          "Medium strength, automotive applications"
+        ],
+        [
+          "Grade 8",
+          "1040",
+          "900",
+          "12",
+          "High strength, heavy-duty applications"
+        ],
+        [
+          "Grade 8.2",
+          "1180",
+          "1040",
+          "10",
+          "Extra high strength fasteners"
+        ]
+      ]
+    }
+  ]
+}

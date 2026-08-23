@@ -1,0 +1,108 @@
+{
+  "id": "thermal_transmittance_vs__thermal_resistance",
+  "title": "Thermal Transmittance vs. Thermal Resistance",
+  "description": "Calculator for thermal transmittance (U) and thermal resistance (R). Thermal transmittance is the inverse of thermal resistance. For layered constructions, the overall thermal transmittance is 1 divided by the sum of individual thermal resistances.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Thermal Transmittance vs. Thermal Resistance\n\nThermal transmittance and thermal resistance are inversely related:\n\n**U = 1 / R** (Equation 1)\n\nWhere:\n- **U** = overall thermal transmittance (W/m² °C)\n- **R** = overall thermal resistance (m² °C/W)\n\nFor layered constructions with multiple thermal resistances:\n\n**U = 1 / ΣRi** (Equation 2)\n\nExample - Heat Exchanger:\nU = 1 / (R_air film + R_condensate film + R_metal wall + R_product film)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Single Value Calculations"
+      ],
+      "inputs": [
+        {
+          "id": "thermal_resistance",
+          "label": "Thermal Resistance (R)",
+          "type": "number",
+          "unit": "m² °C/W",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_transmittance_from_r",
+          "label": "Thermal Transmittance (U)",
+          "unit": "W/m² °C",
+          "formula": "1 / inputs.thermal_resistance"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Reverse Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "thermal_transmittance",
+          "label": "Thermal Transmittance (U)",
+          "type": "number",
+          "unit": "W/m² °C",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_resistance_from_u",
+          "label": "Thermal Resistance (R)",
+          "unit": "m² °C/W",
+          "formula": "1 / inputs.thermal_transmittance"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Layered Construction"
+      ],
+      "inputs": [
+        {
+          "id": "resistance_layer_1",
+          "label": "Layer 1 Resistance",
+          "type": "number",
+          "unit": "m² °C/W",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "resistance_layer_2",
+          "label": "Layer 2 Resistance",
+          "type": "number",
+          "unit": "m² °C/W",
+          "defaultValue": 0.2
+        },
+        {
+          "id": "resistance_layer_3",
+          "label": "Layer 3 Resistance",
+          "type": "number",
+          "unit": "m² °C/W",
+          "defaultValue": 0.15
+        },
+        {
+          "id": "resistance_layer_4",
+          "label": "Layer 4 Resistance",
+          "type": "number",
+          "unit": "m² °C/W",
+          "defaultValue": 0.05
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_resistance",
+          "label": "Total Thermal Resistance (ΣRi)",
+          "unit": "m² °C/W",
+          "formula": "inputs.resistance_layer_1 + inputs.resistance_layer_2 + inputs.resistance_layer_3 + inputs.resistance_layer_4"
+        },
+        {
+          "id": "overall_transmittance",
+          "label": "Overall Thermal Transmittance (U)",
+          "unit": "W/m² °C",
+          "formula": "1 / (inputs.resistance_layer_1 + inputs.resistance_layer_2 + inputs.resistance_layer_3 + inputs.resistance_layer_4)"
+        }
+      ]
+    }
+  ]
+}

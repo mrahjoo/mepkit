@@ -1,0 +1,211 @@
+{
+  "id": "butane___density_and_specific_weight_vs__temperatu",
+  "title": "Butane - Density and Specific Weight vs. Temperature and Pressure",
+  "description": "Calculator to estimate the density and specific weight of butane at given temperature and atmospheric pressure. Outputs density in multiple units (kg/m³, lb/ft³, lb/gal(US liq), sl/ft³) and specific weight (N/m³, lbf/ft³).",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure_bar",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bar"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "inputs.temperature_celsius > -0.8 ? 0.0412 * (26.9 - inputs.temperature_celsius) + 570.7 : 601.6 - 0.3 * (inputs.temperature_celsius + 0.8)"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "inputs.density_kg_m3 * 0.06243"
+        },
+        {
+          "id": "density_lb_gal",
+          "label": "Density",
+          "unit": "lb/gal(US liq)",
+          "format": "decimal",
+          "formula": "inputs.density_kg_m3 * 0.008345"
+        },
+        {
+          "id": "density_sl_ft3",
+          "label": "Density",
+          "unit": "sl/ft³",
+          "format": "decimal",
+          "formula": "inputs.density_kg_m3 * 0.001940"
+        },
+        {
+          "id": "specific_weight_n_m3",
+          "label": "Specific Weight",
+          "unit": "N/m³",
+          "format": "decimal",
+          "formula": "inputs.density_kg_m3 * 9.80665"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "format": "decimal",
+          "formula": "inputs.density_lb_ft3 * 0.3108"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Specific Weight (N/m³)"
+      ],
+      "rows": [
+        [
+          -138.25,
+          735,
+          7208
+        ],
+        [
+          -123,
+          720.9,
+          7070
+        ],
+        [
+          -73,
+          674,
+          6610
+        ],
+        [
+          -53,
+          654.8,
+          6421
+        ],
+        [
+          -33.2,
+          635.1,
+          6228
+        ],
+        [
+          -13.2,
+          614.6,
+          6027
+        ],
+        [
+          6.9,
+          593.3,
+          5818
+        ],
+        [
+          26.9,
+          570.7,
+          5597
+        ],
+        [
+          46.9,
+          546.4,
+          5358
+        ],
+        [
+          66.9,
+          519.7,
+          5097
+        ],
+        [
+          86.9,
+          489.6,
+          4801
+        ],
+        [
+          106.9,
+          454.2,
+          4454
+        ],
+        [
+          126.9,
+          408.5,
+          4006
+        ],
+        [
+          146.9,
+          327.8,
+          3215
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°C)"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Density (kg/m³)"
+          },
+          {
+            "type": "value",
+            "name": "Specific Weight (N/m³)"
+          }
+        ],
+        "series": [
+          {
+            "name": "Density (kg/m³)",
+            "data": [
+              735,
+              720.9,
+              674,
+              654.8,
+              635.1,
+              614.6,
+              593.3,
+              570.7,
+              546.4,
+              519.7,
+              489.6,
+              454.2,
+              408.5,
+              327.8
+            ],
+            "type": "line",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Specific Weight (N/m³)",
+            "data": [
+              7208,
+              7070,
+              6610,
+              6421,
+              6228,
+              6027,
+              5818,
+              5597,
+              5358,
+              5097,
+              4801,
+              4454,
+              4006,
+              3215
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}

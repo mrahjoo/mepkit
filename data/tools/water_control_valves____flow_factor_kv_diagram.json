@@ -1,0 +1,39 @@
+{
+  "id": "water_control_valves____flow_factor_kv_diagram",
+  "title": "Water Control Valves - Flow Factor Kv Diagram",
+  "description": "Sizing of water control valves using the flow factor Kv in SI units. Estimate Kv values based on pressure drop and flow rate through water control valves.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Water Control Valves - Flow Factor Kv Diagram\n\nSizing of water control valves - SI units\n\n### Overview\n\nThe flow factor _Kv_ for control valves in water systems can be estimated from pressure drop and flow rate.\n\n**Key Notes:**\n- 1 bar = 1×10⁵ Pa (N/m²)\n- Larger valves (with larger Kv) reduce maximum pressure modulating spans, limiting control stability\n- Control valves are often one to two dimensions below the connecting pipe dimensions\n\n### Example\n\nWith a water flow of 5 liter/s:\n- Pipe size would be in range: 3-4 inches (80-100 mm nominal)\n- Control valve size: Kv ~ 20 or 2-3 inches (50-80 mm nominal)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "liter/s",
+          "defaultValue": 5
+        },
+        {
+          "id": "pressure_drop",
+          "label": "Maximum Pressure Drop",
+          "type": "number",
+          "unit": "kPa",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "kv_value",
+          "label": "Flow Factor Kv",
+          "formula": "inputs.flow_rate / sqrt(inputs.pressure_drop / 10)",
+          "unit": "dimensionless"
+        }
+      ]
+    }
+  ]
+}

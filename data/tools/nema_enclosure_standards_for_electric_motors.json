@@ -1,0 +1,70 @@
+{
+  "id": "nema_enclosure_standards_for_electric_motors",
+  "title": "NEMA Enclosure Standards for Electric Motors",
+  "description": "A comprehensive reference guide for NEMA (National Electrical Manufacturers Association) enclosure standards for electric motors, including specifications for different enclosure types and explosion-proof motor classifications.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## NEMA Enclosure Types\n\n### Drip-Proof\nVentilation openings in shield and/or frame prevents drops of liquid from falling into motor within up to 15 degree angle from vertical.\n\nDesigned for reasonably dry, clean, and well ventilated (usually indoors) areas. Outdoors installation require the motor to be protected with a cover that does not restrict the flow of air to the motor.\n\n### Totally Enclosed Air Over (TEAO)\nDust-tight fan and blower motors for shaft mounted fans or belt driven fans. The motors mounted within the airflow of the fan.\n\n### Totally Enclosed Non-Ventilated (TENV)\nNo ventilation openings, enclosed to prevent free exchange of air (not airtight). No external cooling fan, relies on convection cooling.\n\nSuitable where the motor is exposed to dirt or dampness. Not suited in very moist humid or hazardous (explosive) air.\n\n### Totally Enclosed Fan Cooled (TEFC)\nSame as TENV with an external fan as an integral part of the motor. The fan provides cooling by blowing air on the outside of the motor.\n\n### Totally Enclosed, Hostile and Severe Environment\nDesigned for use in extreme conditions - moist and/or chemical environments. Not for hazardous locations.\n\n### Totally Enclosed Blower Cooled\nSame as TEFC with external fan on a power supply independent of the inverter output. Full cooling even at lower motor speeds."
+    },
+    {
+      "type": "markdown",
+      "content": "## Explosion-Proof Motors\n\n**Motor Ambient Temperature:** Must not exceed +40°C\n\n### CLASS I (Gases, Vapors)\n- **Group A:** Acetylene\n- **Group B:** Butadiene, ethylene oxide, hydrogen, propylene oxide\n- **Group C:** Acetaldehyde, cyclopropane, diethel ether, ethylene, isoprene\n- **Group D:** Acetone, acrylonitrite, ammonia, benzene, butane, ethylene dichloride, gasoline, hexane, methane, methanol, naphtha, propane, propylene, styrene, toluene, vinyl acetate, vinyl chloride, xylem\n\n### CLASS II (Combustible Dusts)\n- **Group E:** Aluminum, magnesium and other metal dusts with similar characteristics\n- **Group F:** Carbon black, coke or coal dust\n- **Group G:** Flour, starch or grain dust\n\n### CLASS III (Fibers and Flyings)\n- **Group G:** Flour, starch or grain dust"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Enclosure Type",
+        "Ventilation",
+        "External Fan",
+        "Best Use Case",
+        "Ambient Limit"
+      ],
+      "rows": [
+        [
+          "Drip-Proof",
+          "Yes (15° protection)",
+          "No",
+          "Dry, clean, well-ventilated indoors",
+          "No limit"
+        ],
+        [
+          "TEAO",
+          "Yes (dust-tight)",
+          "Shaft/belt mounted",
+          "Shaft or belt driven fan applications",
+          "No limit"
+        ],
+        [
+          "TENV",
+          "No",
+          "No",
+          "Dirty/damp environments",
+          "Moderate"
+        ],
+        [
+          "TEFC",
+          "No",
+          "Yes (integral)",
+          "Standard industrial use",
+          "Moderate to high"
+        ],
+        [
+          "Hostile/Severe",
+          "No",
+          "No",
+          "Moist/chemical environments",
+          "Extreme"
+        ],
+        [
+          "Blower Cooled",
+          "No",
+          "Yes (independent)",
+          "Variable speed operation",
+          "High"
+        ]
+      ]
+    }
+  ]
+}

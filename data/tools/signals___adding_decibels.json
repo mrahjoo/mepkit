@@ -1,0 +1,166 @@
+{
+  "id": "signals___adding_decibels",
+  "title": "Signals - Adding Decibels",
+  "description": "Calculate total signal level in decibels from multiple signal sources. Supports both equal signal levels and different signal strengths.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Signals - Adding Decibels\n\nThe decibel (dB) is a logarithmic unit used to express the ratio of two signal values - like power, sound power or pressure, voltage, intensity etc. - where one value is a reference value.\n\n## Adding Equal Signal Levels\n\nThe total signal level in decibel from equal signal sources can be calculated as:\n\n**Lt = Ls + 10 log(n)**\n\nWhere:\n- **Lt** = total signal level (dB)\n- **Ls** = signal level from each single source (dB)\n- **n** = number of sources\n\n**Note:** Adding two identical sources (doubling the signal) will increase the total signal level by 3 dB."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ls",
+          "label": "Signal Level from Single Source (Ls)",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 120
+        },
+        {
+          "id": "n",
+          "label": "Number of Signal Sources (n)",
+          "type": "number",
+          "unit": "sources",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "lt_equal",
+          "label": "Total Signal Level (Equal Sources)",
+          "formula": "inputs.ls + 10 * Math.log10(inputs.n)",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Number of Sources",
+        "Increase in Signal Level (dB)"
+      ],
+      "rows": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4.8
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          15,
+          11.8
+        ],
+        [
+          20,
+          13
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Adding Signals from Sources with Different Strengths\n\nThe total signal level from sources with different strengths can be calculated as:\n\n**Lt = 10 log((S1 + S2 + ... + Sn) / Sref)**\n\nWhere:\n- **S1, S2, ... Sn** = signal values (signal unit)\n- **Sref** = signal reference value (signal unit)\n\nAlternatively, if you have decibel values and a level difference:\n\n**Lt = Highest Level (dB) + Correction (dB)**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ls_highest",
+          "label": "Highest Signal Level",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 120
+        },
+        {
+          "id": "level_diff",
+          "label": "Signal Level Difference",
+          "type": "number",
+          "unit": "dB",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "lt_different",
+          "label": "Total Signal Level (Different Sources)",
+          "formula": "inputs.ls_highest + (inputs.level_diff <= 10 ? (inputs.level_diff === 0 ? 3 : inputs.level_diff <= 1 ? 2.5 : inputs.level_diff <= 2 ? 2 : inputs.level_diff <= 3 ? 2 : inputs.level_diff <= 4 ? 1.5 : 1) : 0)",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Level Difference (dB)",
+        "Decibels to Add to Highest Level (dB)"
+      ],
+      "rows": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2.5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1.5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          8,
+          0.5
+        ],
+        [
+          9,
+          0.5
+        ],
+        [
+          10,
+          0.5
+        ],
+        [
+          ">10",
+          0
+        ]
+      ]
+    }
+  ]
+}

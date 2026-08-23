@@ -1,0 +1,154 @@
+{
+  "id": "propylene_glycol_based_heat_transfer_fluids",
+  "title": "Propylene Glycol based Heat-Transfer Fluids",
+  "description": "Calculate properties of propylene glycol based heat-transfer fluids suitable for the food processing industry, including freezing points, specific gravities, densities, boiling points, and specific heats.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Propylene Glycol based Heat-Transfer Fluids\n\nPropylene glycol based heat-transfer fluids are commonly used in food processing systems where lower freezing points and safety are required. This calculator helps you determine the properties of propylene glycol and water solutions at different concentrations.\n\n**Important:** Due to slush creation, a propylene glycol and water solution should not be used close to freezing points."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pg_concentration_mass",
+          "label": "Propylene Glycol Concentration (% by mass)",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "%"
+        },
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "freezing_point_celsius",
+          "label": "Freezing Point",
+          "unit": "°C",
+          "formula": "IF(inputs.pg_concentration_mass < 5, 0, IF(inputs.pg_concentration_mass < 15, -3, IF(inputs.pg_concentration_mass < 25, -8, IF(inputs.pg_concentration_mass < 35, -14, IF(inputs.pg_concentration_mass < 45, -22, IF(inputs.pg_concentration_mass < 55, -34, -48))))))"
+        },
+        {
+          "id": "freezing_point_fahrenheit",
+          "label": "Freezing Point",
+          "unit": "°F",
+          "formula": "inputs.freezing_point_celsius * 9/5 + 32"
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity (at 60°F / 15.6°C)",
+          "unit": "SG",
+          "formula": "IF(inputs.pg_concentration_mass < 5, 1.000, IF(inputs.pg_concentration_mass < 15, 1.008, IF(inputs.pg_concentration_mass < 25, 1.017, IF(inputs.pg_concentration_mass < 35, 1.026, IF(inputs.pg_concentration_mass < 45, 1.034, IF(inputs.pg_concentration_mass < 55, 1.041, 1.046))))))"
+        },
+        {
+          "id": "boiling_point_fahrenheit",
+          "label": "Boiling Point",
+          "unit": "°F",
+          "formula": "IF(inputs.pg_concentration_mass < 5, 212, IF(inputs.pg_concentration_mass < 15, 212, IF(inputs.pg_concentration_mass < 25, 213, IF(inputs.pg_concentration_mass < 35, 216, IF(inputs.pg_concentration_mass < 45, 219, IF(inputs.pg_concentration_mass < 55, 222, 225))))))"
+        },
+        {
+          "id": "boiling_point_celsius",
+          "label": "Boiling Point",
+          "unit": "°C",
+          "formula": "(inputs.boiling_point_fahrenheit - 32) * 5/9"
+        },
+        {
+          "id": "specific_heat_btu",
+          "label": "Specific Heat",
+          "unit": "Btu/lb·°F",
+          "format": "decimal",
+          "formula": "IF(inputs.pg_concentration_mass < 5, 1.000, IF(inputs.pg_concentration_mass < 15, 0.980, IF(inputs.pg_concentration_mass < 25, 0.960, IF(inputs.pg_concentration_mass < 35, 0.935, IF(inputs.pg_concentration_mass < 45, 0.895, IF(inputs.pg_concentration_mass < 55, 0.850, 0.805))))))"
+        },
+        {
+          "id": "specific_heat_joules",
+          "label": "Specific Heat",
+          "unit": "J/kg·K",
+          "format": "decimal",
+          "formula": "inputs.specific_heat_btu * 4186.8"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Propylene Glycol (% by mass)",
+        "Propylene Glycol (% by volume)",
+        "Freezing Point (°C)",
+        "Freezing Point (°F)",
+        "Specific Gravity",
+        "Specific Heat (Btu/lb·°F)",
+        "Boiling Point (°F)"
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "32",
+          "1.000",
+          "1.000",
+          "212"
+        ],
+        [
+          "10",
+          "10",
+          "-3",
+          "26",
+          "1.008",
+          "0.980",
+          "212"
+        ],
+        [
+          "20",
+          "19",
+          "-8",
+          "18",
+          "1.017",
+          "0.960",
+          "213"
+        ],
+        [
+          "30",
+          "29",
+          "-14",
+          "7",
+          "1.026",
+          "0.935",
+          "216"
+        ],
+        [
+          "40",
+          "40",
+          "-22",
+          "-8",
+          "1.034",
+          "0.895",
+          "219"
+        ],
+        [
+          "50",
+          "50",
+          "-34",
+          "-29",
+          "1.041",
+          "0.850",
+          "222"
+        ],
+        [
+          "60",
+          "60",
+          "-48",
+          "-55",
+          "1.046",
+          "0.805",
+          "225"
+        ]
+      ]
+    }
+  ]
+}

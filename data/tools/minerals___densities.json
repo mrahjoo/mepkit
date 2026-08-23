@@ -1,0 +1,6 @@
+{
+  "id": "minerals___densities",
+  "title": "Minerals - Densities",
+  "description": "Densities of minerals in g/cm³, kg/m³, and lb/ft³ formats",
+  "type": "datatable"
+}

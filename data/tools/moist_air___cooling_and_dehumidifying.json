@@ -1,0 +1,181 @@
+{
+  "id": "moist_air___cooling_and_dehumidifying",
+  "title": "Moist Air - Cooling and Dehumidifying",
+  "description": "Calculate cooling and dehumidifying processes for moist air, including contact factor, bypass factor, and heat flow rates (sensible and latent)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "cooling_calculator",
+      "content": "Calculate cooling and dehumidifying parameters",
+      "inputs": [
+        {
+          "id": "volume_flow",
+          "label": "Volume Flow (v)",
+          "type": "number",
+          "unit": "m³/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "air_density",
+          "label": "Air Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.205
+        },
+        {
+          "id": "temp_a",
+          "label": "Initial Temperature - Point A (tA)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 30
+        },
+        {
+          "id": "temp_b",
+          "label": "Final Temperature - Point B (tB)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 15
+        },
+        {
+          "id": "temp_c",
+          "label": "Cooling Surface Temperature - Point C (tC)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 0
+        },
+        {
+          "id": "enthalpy_a",
+          "label": "Enthalpy - Point A (hA)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 70
+        },
+        {
+          "id": "enthalpy_b",
+          "label": "Enthalpy - Point B (hB)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 38.5
+        },
+        {
+          "id": "enthalpy_c",
+          "label": "Enthalpy - Point C (hC)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 8.5
+        },
+        {
+          "id": "spec_humidity_a",
+          "label": "Specific Humidity - Point A (xA)",
+          "type": "number",
+          "unit": "kg/kg",
+          "defaultValue": 0.016
+        },
+        {
+          "id": "spec_humidity_b",
+          "label": "Specific Humidity - Point B (xB)",
+          "type": "number",
+          "unit": "kg/kg",
+          "defaultValue": 0.0096
+        },
+        {
+          "id": "spec_humidity_c",
+          "label": "Specific Humidity - Point C (xC)",
+          "type": "number",
+          "unit": "kg/kg",
+          "defaultValue": 0.0036
+        },
+        {
+          "id": "cp_air",
+          "label": "Specific Heat of Air (cp)",
+          "type": "number",
+          "unit": "kJ/kg·°C",
+          "defaultValue": 1.01
+        },
+        {
+          "id": "hwe",
+          "label": "Water Evaporation Enthalpy (hwe)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 2502
+        }
+      ],
+      "outputs": [
+        {
+          "id": "contact_factor",
+          "label": "Contact Factor (β)",
+          "formula": "(inputs.enthalpy_a - inputs.enthalpy_b) / (inputs.enthalpy_a - inputs.enthalpy_c)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "bypass_factor",
+          "label": "Bypass Factor (BPF)",
+          "formula": "1 - ((inputs.enthalpy_a - inputs.enthalpy_b) / (inputs.enthalpy_a - inputs.enthalpy_c))",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "total_heat_flow",
+          "label": "Total Heat Flow (q)",
+          "formula": "inputs.volume_flow * inputs.air_density * (inputs.enthalpy_a - inputs.enthalpy_b)",
+          "format": "decimal",
+          "unit": "kW"
+        },
+        {
+          "id": "sensible_heat_flow",
+          "label": "Sensible Heat Flow (qs)",
+          "formula": "inputs.volume_flow * inputs.air_density * inputs.cp_air * (inputs.temp_a - inputs.temp_b)",
+          "format": "decimal",
+          "unit": "kW"
+        },
+        {
+          "id": "latent_heat_flow",
+          "label": "Latent Heat Flow (ql)",
+          "formula": "inputs.volume_flow * inputs.air_density * inputs.hwe * (inputs.spec_humidity_a - inputs.spec_humidity_b)",
+          "format": "decimal",
+          "unit": "kW"
+        },
+        {
+          "id": "humidity_change",
+          "label": "Change in Specific Humidity (Δx)",
+          "formula": "inputs.spec_humidity_a - inputs.spec_humidity_b",
+          "format": "decimal",
+          "unit": "kg/kg"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "states_table",
+      "content": "Moist Air States",
+      "headers": [
+        "State Point",
+        "Temperature (°C)",
+        "Enthalpy (kJ/kg)",
+        "Specific Humidity (kg/kg)"
+      ],
+      "rows": [
+        [
+          "A (Initial)",
+          "inputs.temp_a",
+          "inputs.enthalpy_a",
+          "inputs.spec_humidity_a"
+        ],
+        [
+          "B (Final)",
+          "inputs.temp_b",
+          "inputs.enthalpy_b",
+          "inputs.spec_humidity_b"
+        ],
+        [
+          "C (Coil Surface)",
+          "inputs.temp_c",
+          "inputs.enthalpy_c",
+          "inputs.spec_humidity_c"
+        ]
+      ]
+    }
+  ]
+}

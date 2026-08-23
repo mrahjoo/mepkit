@@ -1,0 +1,117 @@
+{
+  "id": "electrical_motors___locked_rotor_design_code_lette",
+  "title": "Electrical Motors - Locked Rotor Design Code Letters",
+  "description": "NEMA locked rotor indicating code letters for electrical motors. Classifies motors by the ratio of locked rotor kVA per horsepower according to NEMA standards.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "NEMA Code Letter",
+        "kVA/HP with locked rotor",
+        "Approximate Mid-Range Value"
+      ],
+      "rows": [
+        [
+          "A",
+          "0 - 3.14",
+          "1.6"
+        ],
+        [
+          "B",
+          "3.15 - 3.55",
+          "3.3"
+        ],
+        [
+          "C",
+          "3.55 - 3.99",
+          "3.8"
+        ],
+        [
+          "D",
+          "4.0 - 4.49",
+          "4.3"
+        ],
+        [
+          "E",
+          "4.5 - 4.99",
+          "4.7"
+        ],
+        [
+          "F",
+          "5.0 - 5.59",
+          "5.3"
+        ],
+        [
+          "G",
+          "5.6 - 6.29",
+          "5.9"
+        ],
+        [
+          "H",
+          "6.3 - 7.09",
+          "6.7"
+        ],
+        [
+          "J",
+          "7.1 - 7.99",
+          "7.5"
+        ],
+        [
+          "K",
+          "8.0 - 8.99",
+          "8.5"
+        ],
+        [
+          "L",
+          "9.0 - 9.99",
+          "9.5"
+        ],
+        [
+          "M",
+          "10.0 - 11.19",
+          "10.6"
+        ],
+        [
+          "N",
+          "11.2 - 12.49",
+          "11.8"
+        ],
+        [
+          "P",
+          "12.5 - 13.99",
+          "13.2"
+        ],
+        [
+          "R",
+          "14.0 - 15.99",
+          "15.0"
+        ],
+        [
+          "S",
+          "16.0 - 17.99",
+          ""
+        ],
+        [
+          "T",
+          "18.0 - 19.99",
+          ""
+        ],
+        [
+          "U",
+          "20.0 - 22.39",
+          ""
+        ],
+        [
+          "V",
+          "22.4 - and up",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Standard 3 Phase Motors Locked Rotor Codes by Horsepower\n\n- **Less than 1 hp**: Locked Rotor Code L, 9.0 - 9.99 kVA\n- **1 1/2 to 2 hp**: Locked Rotor Code L or M, 9.0 - 11.19 kVA\n- **3 hp**: Locked Rotor Code K, 8.0 - 8.99 kVA\n- **5 hp**: Locked Rotor Code J, 7.1 - 7.99 kVA\n- **7.5 to 10 hp**: Locked Rotor Code H, 6.3 - 7.09 kVA\n- **More than 15 hp**: Locked Rotor Code G, 5.6 - 6.29 kVA\n\n**Note**: Small motors generally require higher starting kVA than larger motors. The starting kVA required by a motor starting at full voltage is determined from the nameplate on the motor or from the manufacturer."
+    }
+  ]
+}

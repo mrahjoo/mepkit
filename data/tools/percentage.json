@@ -1,0 +1,64 @@
+{
+  "id": "percentage",
+  "title": "Percentage",
+  "description": "Calculate percentage values using the formula p = 100% P / W, where p is the percentage, P is the part, and W is the whole. Supports basic percentages, price changes, and comparative calculations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Part (P)",
+        "Whole (W)",
+        "Percentage (%)"
+      ],
+      "rows": [
+        [
+          100000,
+          200000,
+          "=100*inputs.part/inputs.whole"
+        ],
+        [
+          200,
+          1500,
+          "=100*inputs.part/inputs.whole"
+        ],
+        [
+          20000,
+          100000,
+          "=100*inputs.part/inputs.whole"
+        ],
+        [
+          20000,
+          100000,
+          "=100*inputs.part/inputs.whole"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "part",
+          "label": "Part (P)",
+          "type": "number",
+          "defaultValue": 100000
+        },
+        {
+          "id": "whole",
+          "label": "Whole (W)",
+          "type": "number",
+          "defaultValue": 200000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "percentage",
+          "label": "Percentage",
+          "formula": "100 * inputs.part / inputs.whole",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

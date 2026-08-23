@@ -1,0 +1,71 @@
+{
+  "id": "combustion_efficiency_and_excess_air",
+  "title": "Combustion Efficiency and Excess Air",
+  "description": "Optimizing boilers efficiency by analyzing the relationship between excess air, oxygen content, flue gas temperature, and combustion efficiency. This tool helps determine optimal combustion conditions to minimize fuel consumption and environmental impact.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Excess Air (%)",
+        "Oxygen (%)",
+        "Flue Gas Temp 200°F",
+        "Flue Gas Temp 300°F",
+        "Flue Gas Temp 400°F",
+        "Flue Gas Temp 500°F",
+        "Flue Gas Temp 600°F"
+      ],
+      "rows": [
+        [
+          9.5,
+          2,
+          85.4,
+          83.1,
+          80.8,
+          78.4,
+          76
+        ],
+        [
+          15,
+          3,
+          85.2,
+          82.8,
+          80.4,
+          77.9,
+          75.4
+        ],
+        [
+          28.1,
+          5,
+          84.7,
+          82.1,
+          79.5,
+          76.7,
+          74
+        ],
+        [
+          44.9,
+          7,
+          84.1,
+          81.2,
+          78.2,
+          75.2,
+          72.1
+        ],
+        [
+          81.6,
+          10,
+          82.8,
+          79.3,
+          75.6,
+          71.9,
+          68.2
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Parameters\n\n### Fuel Types and Recommended Excess Air\n- **Natural Gas**: 5-10% excess air (optimal CO2: ~10%)\n- **Fuel Oil**: 5-20% excess air (optimal CO2: ~13%)\n- **Coal**: 15-60% excess air\n\n### Combustion Efficiency Factors\n- **Stoichiometric Combustion**: Perfect balance of fuel and oxygen\n- **Net Stack Temperature**: Temperature difference between flue gas in chimney and ambient room temperature\n- **CO2 Content**: Important indicator of combustion efficiency in flue gas\n\n### Flue Gas Loss Considerations\nEfficiency loss is related to:\n- Temperature difference between flue gas and supply air\n- CO2 concentration in the flue gas\n\n**Example**: With 300°C temperature difference and 10% CO2, flue gas loss ≈ 16%"
+    }
+  ]
+}

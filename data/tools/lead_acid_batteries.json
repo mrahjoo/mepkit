@@ -1,0 +1,60 @@
+{
+  "id": "lead_acid_batteries",
+  "title": "Lead-Acid Batteries",
+  "description": "Specific gravity and charge of lead acid batteries - temperature and efficiency.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "State of Charge (%)",
+        "Voltage (V)",
+        "Specific Gravity",
+        "Status"
+      ],
+      "rows": [
+        [
+          100,
+          12.7,
+          1.3,
+          "Fully Charged / Overcharged"
+        ],
+        [
+          75,
+          12.5,
+          1.25,
+          "Normal"
+        ],
+        [
+          50,
+          12.2,
+          1.2,
+          "Half Charged"
+        ],
+        [
+          25,
+          11.9,
+          1.15,
+          "Very Low Capacity"
+        ],
+        [
+          0,
+          11.8,
+          1.12,
+          "Discharged"
+        ],
+        [
+          -100,
+          11.5,
+          "<1.12",
+          "Severely Discharged"
+        ]
+      ],
+      "content": "Lead-Acid Battery State of Charge Reference Table"
+    },
+    {
+      "type": "markdown",
+      "content": "## Voltage and Specific Gravity vs. State of Charge (SOC)\n\nThe table above shows the relationship between state of charge and key battery parameters:\n\n- **Overcharged**: Specific gravity above 1.30\n- **Very Low Capacity**: Specific gravity ranging 1.13 - 1.15\n- **Discharged**: Specific gravity below 1.12\n\n## Battery Efficiency vs. Temperature\n\nLead-acid battery efficiency varies significantly with temperature. Higher temperatures generally improve performance, while colder temperatures reduce efficiency.\n\n## Specific Gravity vs. Temperature\n\nSpecific gravity in a fully charged lead acid battery varies with temperature. Temperature compensation may be necessary for accurate state of charge determination."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "gaseous_fuels___chemical_composition",
+  "title": "Gaseous Fuels - Chemical Composition",
+  "description": "Chemical composition of gaseous fuels like coal gas, natural gas, propane and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel Type",
+        "Carbon Dioxide (CO2) %",
+        "Carbon Monoxide (CO) %",
+        "Methane (CH4) %",
+        "Butane (C4H10) %",
+        "Ethane (C2H6) %",
+        "Propane (C3H8) %",
+        "Hydrogen (H2) %",
+        "Hydrogen Sulfide (H2S) %",
+        "Oxygen (O2) %",
+        "Nitrogen (N2) %"
+      ],
+      "rows": [
+        [
+          "Carbon Monoxide",
+          "-",
+          "100",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          "Coal Gas",
+          "3.8",
+          "28.4",
+          "0.2",
+          "-",
+          "-",
+          "-",
+          "17.0",
+          "-",
+          "-",
+          "50.6"
+        ],
+        [
+          "Coke Oven Gas",
+          "2.0",
+          "5.5",
+          "32",
+          "-",
+          "-",
+          "-",
+          "51.9",
+          "-",
+          "0.3",
+          "4.8"
+        ],
+        [
+          "Digester Gas",
+          "30",
+          "-",
+          "64",
+          "-",
+          "-",
+          "-",
+          "0.7",
+          "0.8",
+          "-",
+          "2.0"
+        ],
+        [
+          "Hydrogen",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "100",
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          "Landfill Gas",
+          "47",
+          "0.1",
+          "47",
+          "-",
+          "-",
+          "-",
+          "0.1",
+          "0.01",
+          "0.8",
+          "3.7"
+        ],
+        [
+          "Natural Gas",
+          "0 - 0.8",
+          "0 - 0.45",
+          "82 - 93",
+          "-",
+          "0 - 15.8",
+          "-",
+          "0 - 1.8",
+          "0 - 0.18",
+          "0 - 0.35",
+          "0.5 - 8.4"
+        ],
+        [
+          "Propane Gas",
+          "-",
+          "-",
+          "-",
+          "0.5 - 0.8",
+          "2.0 - 2.2",
+          "73 - 97",
+          "-",
+          "-",
+          "-",
+          "-"
+        ]
+      ]
+    }
+  ]
+}

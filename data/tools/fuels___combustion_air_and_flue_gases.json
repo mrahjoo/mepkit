@@ -1,0 +1,252 @@
+{
+  "id": "fuels___combustion_air_and_flue_gases",
+  "title": "Fuels - Combustion Air and Flue Gases",
+  "description": "Combustion air and flue gas for common fuels - coke, oil, wood, natural gas and more. Calculate theoretical air requirements and flue gas production for various fuel types including solids, gases, and fluids.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Select a fuel type and its corresponding combustion parameters to calculate theoretical air requirements and flue gas production.",
+      "inputs": [
+        {
+          "id": "fuel_category",
+          "label": "Fuel Category",
+          "type": "select",
+          "defaultValue": "solids",
+          "options": [
+            {
+              "label": "Solids",
+              "value": "solids"
+            },
+            {
+              "label": "Gases",
+              "value": "gases"
+            },
+            {
+              "label": "Fluids",
+              "value": "fluids"
+            }
+          ]
+        },
+        {
+          "id": "fuel_type",
+          "label": "Fuel Type",
+          "type": "select",
+          "defaultValue": "anthracite",
+          "options": [
+            {
+              "label": "Anthracite",
+              "value": "anthracite"
+            },
+            {
+              "label": "Bituminous Coal",
+              "value": "bituminous_coal"
+            },
+            {
+              "label": "Charcoal",
+              "value": "charcoal"
+            },
+            {
+              "label": "Coke",
+              "value": "coke"
+            },
+            {
+              "label": "Lignite",
+              "value": "lignite"
+            },
+            {
+              "label": "Peat",
+              "value": "peat"
+            },
+            {
+              "label": "Semi Anthracite",
+              "value": "semi_anthracite"
+            },
+            {
+              "label": "Wood (dry)",
+              "value": "wood_dry"
+            },
+            {
+              "label": "Butane C4H10",
+              "value": "butane"
+            },
+            {
+              "label": "Natural Gas",
+              "value": "natural_gas"
+            },
+            {
+              "label": "Propane C3H8",
+              "value": "propane"
+            },
+            {
+              "label": "Gas Oil",
+              "value": "gas_oil"
+            },
+            {
+              "label": "Heavy Fuel Oil",
+              "value": "heavy_fuel_oil"
+            }
+          ]
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "defaultValue": "metric",
+          "options": [
+            {
+              "label": "Metric (m³/kg or m³/m³)",
+              "value": "metric"
+            },
+            {
+              "label": "Imperial (ft³/lb or ft³/ft³)",
+              "value": "imperial"
+            }
+          ]
+        },
+        {
+          "id": "fuel_quantity",
+          "label": "Fuel Quantity",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "kg or m³ or liters"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "theoretical_air",
+          "label": "Theoretical Air for Combustion",
+          "formula": "inputs.fuel_quantity",
+          "unit": "m³ or ft³"
+        },
+        {
+          "id": "theoretical_flue_gas",
+          "label": "Theoretical Flue Gas",
+          "formula": "inputs.fuel_quantity",
+          "unit": "m³ or ft³"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel Type",
+        "Category",
+        "Theoretical Air (m³/kg or m³/m³)",
+        "Theoretical Flue Gas (m³/kg or m³/m³)",
+        "Theoretical Air (ft³/lb or ft³/ft³)",
+        "Theoretical Flue Gas (ft³/lb or ft³/ft³)"
+      ],
+      "rows": [
+        [
+          "Anthracite",
+          "Solids",
+          9.4,
+          9.5,
+          150,
+          152
+        ],
+        [
+          "Bituminous Coal",
+          "Solids",
+          6.9,
+          7,
+          110,
+          112
+        ],
+        [
+          "Charcoal",
+          "Solids",
+          8.4,
+          8.4,
+          134,
+          135
+        ],
+        [
+          "Coke",
+          "Solids",
+          8.4,
+          8,
+          134,
+          135
+        ],
+        [
+          "Lignite",
+          "Solids",
+          5.7,
+          8.4,
+          92,
+          93
+        ],
+        [
+          "Peat",
+          "Solids",
+          5.7,
+          5.9,
+          92,
+          94
+        ],
+        [
+          "Semi Anthracite",
+          "Solids",
+          8.4,
+          8.6,
+          135,
+          137
+        ],
+        [
+          "Wood (dry)",
+          "Solids",
+          4.4,
+          5,
+          70,
+          80
+        ],
+        [
+          "Butane C4H10",
+          "Gases",
+          31,
+          33.4,
+          31,
+          33.4
+        ],
+        [
+          "Natural Gas",
+          "Gases",
+          9.5,
+          10.5,
+          9.5,
+          10.5
+        ],
+        [
+          "Propane C3H8",
+          "Gases",
+          23.8,
+          25.8,
+          23.8,
+          25.8
+        ],
+        [
+          "Gas Oil",
+          "Fluids",
+          9.8,
+          10.4,
+          1570,
+          1670
+        ],
+        [
+          "Heavy Fuel Oil",
+          "Fluids",
+          10.8,
+          11.6,
+          1730,
+          1860
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n1) **Combustion of Fuel Gases**: Combustion of a fuel gas creates a flue gas with higher density than the fuel gas and the combustion air. This is due to stoichiometric combustion reactions.\n\n2) **Volume at Standard Pressure**: All volume measurements are at standard pressure conditions.\n\n## Categories\n\n### Solids\nIncludes coal types (Anthracite, Bituminous, Lignite), coke, charcoal, peat, and wood.\n\n### Gases\nIncludes hydrocarbon gases such as Butane, Propane, and Natural Gas.\n\n### Fluids\nIncludes liquid fuels such as Gas Oil and Heavy Fuel Oil.\n\n## Unit Systems\n\n- **Metric**: m³/kg for solids, m³/m³ for gases, m³/liter for fluids\n- **Imperial**: ft³/lb for solids, ft³/ft³ for gases, ft³/gallon for fluids"
+    }
+  ]
+}

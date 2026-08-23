@@ -1,0 +1,218 @@
+{
+  "id": "bricks___quantity_and_mortar_consumption",
+  "title": "Bricks - Quantity and Mortar Consumption",
+  "description": "Estimate required quantities of bricks and mortar based on brick type, wall area, and mortar joint thickness.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Brick Quantity Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "brick_type",
+          "label": "Brick Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Standard",
+              "value": 6.3
+            },
+            {
+              "label": "Modular",
+              "value": 6.9
+            },
+            {
+              "label": "King",
+              "value": 4.8
+            },
+            {
+              "label": "Queen",
+              "value": 4.6
+            },
+            {
+              "label": "Engineer",
+              "value": 5.7
+            },
+            {
+              "label": "Economy",
+              "value": 4.5
+            },
+            {
+              "label": "Utility",
+              "value": 3.1
+            },
+            {
+              "label": "Jumbo",
+              "value": 5.5
+            },
+            {
+              "label": "Norman",
+              "value": 4.6
+            },
+            {
+              "label": "Norwegian",
+              "value": 3.9
+            }
+          ],
+          "defaultValue": 6.3
+        },
+        {
+          "id": "wall_area",
+          "label": "Wall Area",
+          "type": "number",
+          "unit": "sq ft",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_bricks",
+          "label": "Total Bricks Required",
+          "formula": "inputs.wall_area * inputs.brick_type",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Mortar Consumption Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "num_bricks",
+          "label": "Number of Bricks",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "joint_thickness",
+          "label": "Joint Thickness",
+          "type": "select",
+          "options": [
+            {
+              "label": "1/4 inch",
+              "value": 0.25
+            },
+            {
+              "label": "3/8 inch",
+              "value": 0.375
+            },
+            {
+              "label": "1/2 inch",
+              "value": 0.5
+            }
+          ],
+          "defaultValue": 0.375
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mortar_required",
+          "label": "Mortar Required",
+          "formula": "inputs.num_bricks * (inputs.joint_thickness === 0.25 ? 9 : inputs.joint_thickness === 0.375 ? 14 : 20) / 1000",
+          "unit": "ft³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Brick Type",
+        "Nominal Size (in)",
+        "Actual Size (in)",
+        "No. per Sq Ft"
+      ],
+      "rows": [
+        [
+          "Standard",
+          "4 x 2 2/3 x 8",
+          "3 5/8 x 2 1/4 x 8",
+          6.3
+        ],
+        [
+          "Modular",
+          "4 x 2 2/3 x 8",
+          "3 5/8 x 2 1/4 x 7 5/8",
+          6.9
+        ],
+        [
+          "King",
+          "3 3/8 x 3 x 10",
+          "3 x 2 5/8 x 9 5/8",
+          4.8
+        ],
+        [
+          "Queen",
+          "2 3/4 x 3 x 10",
+          "3 1/8 x 2 3/4 x 9 5/8",
+          4.6
+        ],
+        [
+          "Engineer",
+          "4 x 3 1/5 x 8",
+          "3 5/8 x 2 13/16 x 7 5/8",
+          5.7
+        ],
+        [
+          "Economy",
+          "4 x 4 x 8",
+          "3 5/8 x 3 5/8 x 7 5/8",
+          4.5
+        ],
+        [
+          "Utility",
+          "4 x 4 x 12",
+          "3 5/8 x 3 5/8 x 11 1/2",
+          3.1
+        ],
+        [
+          "Jumbo",
+          "4 x 3 x 8",
+          "3 5/8 x 2 3/4 x 8",
+          5.5
+        ],
+        [
+          "Norman",
+          "4 x 2 2/3 x 12",
+          "3 5/8 x 2 1/4 x 11 5/8",
+          4.6
+        ],
+        [
+          "Norwegian",
+          "3 1/2 x 3 x 12",
+          "3 1/2 x 2 3/4 x 11 5/8",
+          3.9
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Joint Thickness (inches)",
+        "Mortar Required per 1000 Bricks (ft³)",
+        "Mortar Required per ft³ Brick (ft³)"
+      ],
+      "rows": [
+        [
+          0.25,
+          9,
+          0.2
+        ],
+        [
+          0.375,
+          14,
+          0.3
+        ],
+        [
+          0.5,
+          20,
+          0.4
+        ]
+      ]
+    }
+  ]
+}

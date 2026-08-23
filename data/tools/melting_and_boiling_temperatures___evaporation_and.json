@@ -1,0 +1,218 @@
+{
+  "id": "melting_and_boiling_temperatures___evaporation_and",
+  "title": "Melting and Boiling Temperatures - Evaporation and Melting Heats",
+  "description": "Melting and boiling point temperatures, latent heat of evaporation, and melting heat of common substances like copper, gold, lead and more - SI units.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Melting Point (°C)",
+        "Latent Heat of Melting (kJ/kg)",
+        "Boiling Point (°C)",
+        "Latent Heat of Evaporation (kJ/kg)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          659,
+          399,
+          2327,
+          10530
+        ],
+        [
+          "Brass",
+          930,
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cobalt",
+          1480,
+          "",
+          2900,
+          ""
+        ],
+        [
+          "Copper",
+          1083,
+          207,
+          2595,
+          4730
+        ],
+        [
+          "Ethyl alcohol",
+          -114,
+          108,
+          78.3,
+          855
+        ],
+        [
+          "Gold",
+          1063,
+          64,
+          2600,
+          1577
+        ],
+        [
+          "Graphite",
+          "",
+          "",
+          3500,
+          ""
+        ],
+        [
+          "Hydrogen",
+          -259,
+          58,
+          -253,
+          455
+        ],
+        [
+          "Iron",
+          1149,
+          247,
+          2870,
+          ""
+        ],
+        [
+          "Lead",
+          328,
+          23,
+          1750,
+          859
+        ],
+        [
+          "Manganese",
+          1260,
+          "",
+          2150,
+          ""
+        ],
+        [
+          "Magnesium",
+          650,
+          "",
+          1110,
+          ""
+        ],
+        [
+          "Mercury",
+          -38.8,
+          11,
+          357,
+          295
+        ],
+        [
+          "Molybdenum",
+          2620,
+          "",
+          5560,
+          ""
+        ],
+        [
+          "Nickel",
+          1455,
+          "",
+          2730,
+          ""
+        ],
+        [
+          "Nitrogen",
+          -210,
+          25.7,
+          -196,
+          200
+        ],
+        [
+          "Oxygen",
+          -219,
+          13.9,
+          -183,
+          213
+        ],
+        [
+          "Silver",
+          962,
+          111,
+          1950,
+          2356
+        ],
+        [
+          "Titanium",
+          1700,
+          "",
+          3260,
+          ""
+        ],
+        [
+          "Tungsten",
+          3370,
+          "",
+          5930,
+          ""
+        ],
+        [
+          "Zinc",
+          420,
+          "",
+          906,
+          ""
+        ],
+        [
+          "Water",
+          0,
+          335,
+          100,
+          2272
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "tempF",
+          "label": "Temperature (°F)",
+          "type": "number",
+          "defaultValue": 32
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tempC",
+          "label": "Temperature (°C)",
+          "formula": "5/9 * (inputs.tempF - 32)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "energyKJ",
+          "label": "Energy (kJ/kg)",
+          "type": "number",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energyBtu",
+          "label": "Energy (Btu/lbm)",
+          "formula": "inputs.energyKJ * 0.4299",
+          "format": "decimal"
+        },
+        {
+          "id": "energyKcal",
+          "label": "Energy (kcal/kg)",
+          "formula": "inputs.energyKJ * 0.23884",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

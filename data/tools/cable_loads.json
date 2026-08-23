@@ -1,0 +1,131 @@
+{
+  "id": "cable_loads",
+  "title": "Cable Loads",
+  "description": "Calculator for uniformly loaded cables with horizontal and inclined loads. Calculates support forces, tensions, sag, and cable length for various cable configurations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Description",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Uniform Load (q)",
+          "Unit load on cable",
+          "",
+          "N/m or lb/ft"
+        ],
+        [
+          "Cable Span (L)",
+          "Horizontal span length",
+          "",
+          "m or ft"
+        ],
+        [
+          "Cable Sag (h)",
+          "Vertical sag at midpoint",
+          "",
+          "m or ft"
+        ],
+        [
+          "Horizontal Support Force (R1x/R2x)",
+          "= q L² / (8 h)",
+          "",
+          "N or lb"
+        ],
+        [
+          "Vertical Support Force (R1y/R2y)",
+          "= q L / 2",
+          "",
+          "N or lb"
+        ],
+        [
+          "Resultant Support Force (R1/R2)",
+          "= √(R1x² + R1y²)",
+          "",
+          "N or lb"
+        ],
+        [
+          "Support Angle (θ)",
+          "= arctan(R1y / R1x)",
+          "",
+          "degrees"
+        ],
+        [
+          "Cable Length (s)",
+          "= L + 8h² / (3L)",
+          "",
+          "m or ft"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Uniformly Loaded Cable - Horizontal Chords",
+      "inputs": [
+        {
+          "id": "q",
+          "label": "Uniform Load (q)",
+          "type": "number",
+          "unit": "N/m",
+          "defaultValue": 4000
+        },
+        {
+          "id": "L",
+          "label": "Cable Span (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 30
+        },
+        {
+          "id": "h",
+          "label": "Cable Sag (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "R1x",
+          "label": "Horizontal Support Force (R1x/R2x)",
+          "formula": "inputs.q * inputs.L * inputs.L / (8 * inputs.h)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R1y",
+          "label": "Vertical Support Force (R1y/R2y)",
+          "formula": "inputs.q * inputs.L / 2",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "R1",
+          "label": "Resultant Support Force (R1/R2)",
+          "formula": "Math.sqrt(inputs.q * inputs.L * inputs.L / (8 * inputs.h) * (inputs.q * inputs.L * inputs.L / (8 * inputs.h)) + inputs.q * inputs.L / 2 * inputs.q * inputs.L / 2)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "theta",
+          "label": "Support Angle (θ)",
+          "formula": "Math.atan(inputs.q * inputs.L / 2 / (inputs.q * inputs.L * inputs.L / (8 * inputs.h))) * 180 / Math.PI",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "s",
+          "label": "Cable Length (s)",
+          "formula": "inputs.L + 8 * inputs.h * inputs.h / (3 * inputs.L)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

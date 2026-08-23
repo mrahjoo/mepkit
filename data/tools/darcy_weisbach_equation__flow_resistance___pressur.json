@@ -1,0 +1,191 @@
+{
+  "id": "darcy_weisbach_equation__flow_resistance___pressur",
+  "title": "Darcy-Weisbach Equation: Flow Resistance & Pressure Loss Calculator",
+  "description": "Calculate pressure loss and head loss in pipes, tubes, and ducts using the Darcy-Weisbach equation. Supports both velocity-based and volume flow calculations with SI and Imperial units.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pressure_loss_calculator",
+      "content": "Pressure Loss Calculator (Darcy-Weisbach Equation)",
+      "inputs": [
+        {
+          "id": "friction_coefficient",
+          "label": "Friction Coefficient (λ)",
+          "type": "number",
+          "defaultValue": 0.019,
+          "unit": ""
+        },
+        {
+          "id": "duct_length",
+          "label": "Duct/Pipe Length (l)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        },
+        {
+          "id": "hydraulic_diameter",
+          "label": "Hydraulic Diameter (dh)",
+          "type": "number",
+          "defaultValue": 0.315,
+          "unit": "m"
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density (ρf)",
+          "type": "number",
+          "defaultValue": 1.2,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "fluid_velocity",
+          "label": "Fluid Velocity (v)",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_loss_pa",
+          "label": "Pressure Loss",
+          "formula": "inputs.friction_coefficient * (inputs.duct_length / inputs.hydraulic_diameter) * (inputs.fluid_density * inputs.fluid_velocity * inputs.fluid_velocity / 2)",
+          "unit": "Pa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "head_loss_calculator",
+      "content": "Head Loss Calculator (Darcy-Weisbach Equation)",
+      "inputs": [
+        {
+          "id": "friction_coeff_head",
+          "label": "Friction Coefficient (λ)",
+          "type": "number",
+          "defaultValue": 0.019,
+          "unit": ""
+        },
+        {
+          "id": "pipe_length_head",
+          "label": "Pipe/Duct Length (l)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        },
+        {
+          "id": "hydraulic_diam_head",
+          "label": "Hydraulic Diameter (dh)",
+          "type": "number",
+          "defaultValue": 0.315,
+          "unit": "m"
+        },
+        {
+          "id": "flow_fluid_density",
+          "label": "Flowing Fluid Density (ρf)",
+          "type": "number",
+          "defaultValue": 1.2,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "reference_fluid_density",
+          "label": "Reference Fluid Density (ρw)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "flow_velocity_head",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": "m/s"
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (g)",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "head_loss_m",
+          "label": "Head Loss (Water Column)",
+          "formula": "inputs.friction_coeff_head * (inputs.pipe_length_head / inputs.hydraulic_diam_head) * (inputs.flow_fluid_density / inputs.reference_fluid_density) * (inputs.flow_velocity_head * inputs.flow_velocity_head / (2 * inputs.gravity))",
+          "unit": "m H₂O",
+          "format": "decimal"
+        },
+        {
+          "id": "head_loss_mm",
+          "label": "Head Loss (mm H₂O)",
+          "formula": "inputs.friction_coeff_head * (inputs.pipe_length_head / inputs.hydraulic_diam_head) * (inputs.flow_fluid_density / inputs.reference_fluid_density) * (inputs.flow_velocity_head * inputs.flow_velocity_head / (2 * inputs.gravity)) / 1000",
+          "unit": "mm H₂O",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "reference_values_table",
+      "content": "Reference Values & Constants",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "SI Unit",
+        "Value (SI)",
+        "Imperial Unit",
+        "Value (Imperial)"
+      ],
+      "rows": [
+        [
+          "Density of Air (20°C)",
+          "ρf",
+          "kg/m³",
+          "1.2",
+          "slugs/ft³",
+          "0.0237"
+        ],
+        [
+          "Density of Water",
+          "ρw",
+          "kg/m³",
+          "1000",
+          "lb/ft³",
+          "62.425"
+        ],
+        [
+          "Specific Weight of Water",
+          "γw",
+          "N/m³",
+          "9807",
+          "lbf/ft³",
+          "62.4"
+        ],
+        [
+          "Acceleration of Gravity",
+          "g",
+          "m/s²",
+          "9.81",
+          "ft/s²",
+          "32.174"
+        ],
+        [
+          "Darcy-Weisbach Friction Coefficient",
+          "λ",
+          "-",
+          "0.015-0.08",
+          "-",
+          "0.015-0.08"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "equations_reference",
+      "content": "## Darcy-Weisbach Equations\n\n### Pressure Loss (Major Loss)\n**Δp_major_loss = λ (l / d_h) (ρ_f v² / 2)**\n\nWhere:\n- Δp_major_loss = major (friction) pressure loss (Pa, psf)\n- λ = Darcy-Weisbach friction coefficient\n- l = length of duct or pipe (m, ft)\n- d_h = hydraulic diameter (m, ft)\n- ρ_f = density of fluid (kg/m³, slugs/ft³)\n- v = velocity of fluid (m/s, ft/s)\n\n### Head Loss (Water Column Reference)\n**Δh_major_loss,w = λ (l / d_h) (ρ_f / ρ_w) (v² / (2g))**\n\nWhere:\n- Δh_major_loss,w = major head loss (m H₂O, ft H₂O)\n- g = acceleration of gravity (9.81 m/s², 32.174 ft/s²)\n- ρ_w = density of water (1000 kg/m³, 62.425 lb/ft³)\n\n### Head Loss in mm H₂O (Metric)\n**Δh_major_loss,w (mmH₂O) = λ (l / d_h) (ρ_f / ρ_w) (v² / (2g)) / 1000**\n\n### Head Loss in Inches H₂O (Imperial)\n**Δh_major_loss,w (inH₂O) = 12 × λ (l / d_h) (ρ_f / ρ_w) (v² / (2g))**"
+    }
+  ]
+}

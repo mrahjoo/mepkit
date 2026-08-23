@@ -1,0 +1,101 @@
+{
+  "id": "voltage_dividers___online_calculator",
+  "title": "Voltage Dividers - Online Calculator",
+  "description": "Voltage dividers are used to produce a lower voltage from a higher voltage source. This calculator determines the output voltage, current, and power consumption in a potential voltage divider circuit using the formula: Uout = Uin × R2 / (R1 + R2)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "voltage_divider_calc",
+      "content": "Calculate voltage divider parameters",
+      "inputs": [
+        {
+          "id": "uin",
+          "label": "Input Voltage (Uin)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 12
+        },
+        {
+          "id": "r1",
+          "label": "Resistor R1",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 10
+        },
+        {
+          "id": "r2",
+          "label": "Resistor R2",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "uout",
+          "label": "Output Voltage (Uout)",
+          "formula": "inputs.uin * inputs.r2 / (inputs.r1 + inputs.r2)",
+          "unit": "V",
+          "format": "decimal"
+        },
+        {
+          "id": "current",
+          "label": "Current (I)",
+          "formula": "inputs.uin / (inputs.r1 + inputs.r2)",
+          "unit": "A",
+          "format": "decimal"
+        },
+        {
+          "id": "power",
+          "label": "Power Consumption (P)",
+          "formula": "inputs.uin * (inputs.uin / (inputs.r1 + inputs.r2))",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "voltage_divider_examples",
+      "headers": [
+        "Description",
+        "Input Voltage (V)",
+        "R1 (Ω)",
+        "R2 (Ω)",
+        "Output Voltage (V)",
+        "Current (A)",
+        "Power (W)"
+      ],
+      "rows": [
+        [
+          "High Power Consumption",
+          12,
+          10,
+          20,
+          8,
+          0.4,
+          4.8
+        ],
+        [
+          "Lower Power Consumption",
+          12,
+          1000,
+          2000,
+          8,
+          0.004,
+          0.048
+        ],
+        [
+          "Nomogram Example",
+          12,
+          123,
+          47,
+          3.3,
+          0.0706,
+          0.847
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "modulus_of_rigidity",
+  "title": "Modulus of Rigidity",
+  "description": "Shear Modulus (Modulus of Rigidity) is the elasticity coefficient for shearing or torsion force. It is defined as the ratio of shear stress to the displacement per unit sample length (shear strain).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Shear Modulus - G (GPa)"
+      ],
+      "rows": [
+        [
+          "Aluminum Alloys",
+          27
+        ],
+        [
+          "Aluminum, 6061-T6",
+          24
+        ],
+        [
+          "Aluminum, 2024-T4",
+          28
+        ],
+        [
+          "Beryllium Copper",
+          48
+        ],
+        [
+          "Brass",
+          40
+        ],
+        [
+          "Bronze",
+          44.8
+        ],
+        [
+          "Cadmium",
+          19
+        ],
+        [
+          "Carbon Steel",
+          77
+        ],
+        [
+          "Cast Iron",
+          41
+        ],
+        [
+          "Chromium",
+          115
+        ],
+        [
+          "Concrete",
+          21
+        ],
+        [
+          "Copper",
+          45
+        ],
+        [
+          "Glass",
+          26.2
+        ],
+        [
+          "Glass, 96% silica",
+          19
+        ],
+        [
+          "Inconel",
+          79
+        ],
+        [
+          "Iron, Ductile",
+          "63-66"
+        ],
+        [
+          "Iron, Malleable",
+          64
+        ],
+        [
+          "Kevlar",
+          19
+        ],
+        [
+          "Lead",
+          13.1
+        ],
+        [
+          "Magnesium",
+          16.5
+        ],
+        [
+          "Molybdenum",
+          118
+        ],
+        [
+          "Monel metal",
+          66
+        ],
+        [
+          "Nickel Silver",
+          48
+        ],
+        [
+          "Nickel Steel",
+          76
+        ],
+        [
+          "Nylon",
+          4.1
+        ],
+        [
+          "Phosphor Bronze",
+          41
+        ],
+        [
+          "Plywood",
+          0.62
+        ],
+        [
+          "Polycarbonate",
+          2.3
+        ],
+        [
+          "Polyethylene",
+          0.12
+        ],
+        [
+          "Rubber",
+          0.0003
+        ],
+        [
+          "Structural Steel",
+          79.3
+        ],
+        [
+          "Stainless Steel",
+          77.2
+        ],
+        [
+          "Steel, Cast",
+          78
+        ],
+        [
+          "Steel, Cold-rolled",
+          75
+        ],
+        [
+          "Tin",
+          18
+        ],
+        [
+          "Titanium, Grade 2",
+          41
+        ],
+        [
+          "Titanium, Grade 5",
+          41
+        ],
+        [
+          "Titanium, 10% Vanadium",
+          42
+        ],
+        [
+          "Tungsten",
+          161
+        ],
+        [
+          "Wood, Douglas Fir",
+          13
+        ],
+        [
+          "Zinc",
+          43
+        ],
+        [
+          "Z-nickel",
+          76
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Definition\n\nModulus of Rigidity (G) - also known as Shear Modulus - is the coefficient of elasticity for a shearing force.\n\n**Shear Modulus** = Shear Stress / Shear Strain\n\n### Key Information\n\n- Modulus of Rigidity can be experimentally determined from the slope of a stress-strain curve created during tensile tests conducted on a sample of the material.\n- 1 GPa = 10⁹ Pa = 0.145×10⁶ psi (lbf/in²)\n- 1×10⁶ psi = 6.9 GPa"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "efficiency_of_small_machine_elements",
+  "title": "Efficiency of Small Machine Elements",
+  "description": "Calculate and analyze the efficiency of small machine elements. This tool helps engineers and designers evaluate performance metrics for various small mechanical components.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Machine Element",
+        "Input Power (W)",
+        "Output Power (W)",
+        "Efficiency (%)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Bearing",
+          100,
+          95,
+          95,
+          "Rolling bearing"
+        ],
+        [
+          "Gear",
+          500,
+          450,
+          90,
+          "Spur gear"
+        ],
+        [
+          "Belt Drive",
+          200,
+          180,
+          90,
+          "V-belt"
+        ],
+        [
+          "Chain Drive",
+          300,
+          270,
+          90,
+          "Roller chain"
+        ],
+        [
+          "Pulley",
+          150,
+          142.5,
+          95,
+          "Smooth pulley"
+        ]
+      ]
+    }
+  ]
+}

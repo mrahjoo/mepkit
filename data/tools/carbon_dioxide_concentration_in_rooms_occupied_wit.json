@@ -1,0 +1,71 @@
+{
+  "id": "carbon_dioxide_concentration_in_rooms_occupied_wit",
+  "title": "Carbon Dioxide Concentration in Rooms Occupied with People",
+  "description": "Calculate the carbon dioxide concentration in a room filled with persons over time using the formula: c = (q / (n V)) (1 - (1 / e^(n t))) + (c0 - ci) (1 / e^(n t)) + ci",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "q",
+          "label": "CO2 supplied to room (q)",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 5
+        },
+        {
+          "id": "n",
+          "label": "Air shifts per hour (n)",
+          "type": "number",
+          "unit": "1/h",
+          "defaultValue": 1
+        },
+        {
+          "id": "V",
+          "label": "Room volume (V)",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 500
+        },
+        {
+          "id": "t",
+          "label": "Time (t)",
+          "type": "number",
+          "unit": "h",
+          "defaultValue": 1
+        },
+        {
+          "id": "ci",
+          "label": "CO2 concentration in inlet air (ci)",
+          "type": "number",
+          "unit": "m³/m³",
+          "defaultValue": 0.0004
+        },
+        {
+          "id": "c0",
+          "label": "Initial CO2 concentration in room (c0)",
+          "type": "number",
+          "unit": "m³/m³",
+          "defaultValue": 0.0004
+        }
+      ],
+      "outputs": [
+        {
+          "id": "c",
+          "label": "CO2 concentration in room (c)",
+          "formula": "(inputs.q / (inputs.n * inputs.V)) * (1 - (1 / Math.exp(inputs.n * inputs.t))) + (inputs.c0 - inputs.ci) * (1 / Math.exp(inputs.n * inputs.t)) + inputs.ci",
+          "unit": "m³/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "c_ppm",
+          "label": "CO2 concentration in room (ppm)",
+          "formula": "((inputs.q / (inputs.n * inputs.V)) * (1 - (1 / Math.exp(inputs.n * inputs.t))) + (inputs.c0 - inputs.ci) * (1 / Math.exp(inputs.n * inputs.t)) + inputs.ci) * 1000000",
+          "unit": "ppm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

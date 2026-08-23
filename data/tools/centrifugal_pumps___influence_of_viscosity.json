@@ -1,0 +1,146 @@
+{
+  "id": "centrifugal_pumps___influence_of_viscosity",
+  "title": "Centrifugal Pumps - Influence of Viscosity",
+  "description": "Calculate how viscous fluid properties affect centrifugal pump performance including flow, head, efficiency, and power requirements.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Centrifugal Pump Viscosity Compensation Calculator",
+      "inputs": [
+        {
+          "id": "original_flow",
+          "label": "Original Flow (q)",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 100
+        },
+        {
+          "id": "original_head",
+          "label": "Original Head (h)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 50
+        },
+        {
+          "id": "original_efficiency",
+          "label": "Original Efficiency (μ)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 80
+        },
+        {
+          "id": "viscosity_flow_coefficient",
+          "label": "Viscosity Flow Coefficient (cq)",
+          "type": "number",
+          "defaultValue": 0.95
+        },
+        {
+          "id": "viscosity_head_coefficient",
+          "label": "Viscosity Head Coefficient (ch)",
+          "type": "number",
+          "defaultValue": 0.9
+        },
+        {
+          "id": "viscosity_efficiency_coefficient",
+          "label": "Viscosity Efficiency Coefficient (cμ)",
+          "type": "number",
+          "defaultValue": 0.85
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density (ρv)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "value": "SI",
+              "label": "SI (kW)"
+            },
+            {
+              "value": "Imperial",
+              "label": "Imperial (bhp)"
+            }
+          ],
+          "defaultValue": "SI"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "compensated_flow",
+          "label": "Compensated Flow (qv)",
+          "formula": "inputs.original_flow * inputs.viscosity_flow_coefficient",
+          "unit": "m³/h",
+          "format": "decimal"
+        },
+        {
+          "id": "compensated_head",
+          "label": "Compensated Head (hv)",
+          "formula": "inputs.original_head * inputs.viscosity_head_coefficient",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "compensated_efficiency",
+          "label": "Compensated Efficiency (μv)",
+          "formula": "inputs.original_efficiency * inputs.viscosity_efficiency_coefficient",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "compensated_power",
+          "label": "Compensated Power (Pv)",
+          "formula": "inputs.unit_system === 'SI' ? (inputs.original_flow * inputs.viscosity_flow_coefficient * inputs.original_head * inputs.viscosity_head_coefficient * inputs.fluid_density * 9.81) / (3.6e6 * (inputs.original_efficiency * inputs.viscosity_efficiency_coefficient / 100)) : (inputs.original_flow * inputs.viscosity_flow_coefficient * inputs.original_head * inputs.viscosity_head_coefficient * inputs.fluid_density) / (3960 * (inputs.original_efficiency * inputs.viscosity_efficiency_coefficient / 100))",
+          "unit": "kW / bhp",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Original Value",
+        "Coefficient",
+        "Compensated Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Flow (q/qv)",
+          "100",
+          "0.95",
+          "95",
+          "m³/h"
+        ],
+        [
+          "Head (h/hv)",
+          "50",
+          "0.90",
+          "45",
+          "m"
+        ],
+        [
+          "Efficiency (μ/μv)",
+          "80",
+          "0.85",
+          "68",
+          "%"
+        ],
+        [
+          "Power (P/Pv)",
+          "—",
+          "—",
+          "—",
+          "kW / bhp"
+        ]
+      ]
+    }
+  ]
+}

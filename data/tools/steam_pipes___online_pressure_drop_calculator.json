@@ -1,0 +1,117 @@
+{
+  "id": "steam_pipes___online_pressure_drop_calculator",
+  "title": "Steam Pipes - Online Pressure Drop Calculator",
+  "description": "Calculate the pressure drop in saturated steam distribution pipe lines using metric or imperial units. Based on the Unwin formula for steam flow in pipes.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pressure Drop Calculation\n\nThe pressure drop in a saturated steam distribution pipe line can be calculated using the Unwin formula:\n\n**Metric Units:**\n$$dp = 0.6753 \\times 10^6 \\times q^2 \\times l \\times (1 + 91.4/d) / (\\rho \\times d^5)$$\n\n**Imperial Units:**\n$$dp = 0.0001306 \\times q^2 \\times l \\times (1 + 3.6/d) / (3600 \\times \\rho \\times d^5)$$\n\nNote: For pressure drops exceeding 10-15% of initial absolute pressure, use values corresponding to average pressure."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "Metric (SI)",
+              "value": "metric"
+            },
+            {
+              "label": "Imperial (US)",
+              "value": "imperial"
+            }
+          ],
+          "defaultValue": "metric"
+        },
+        {
+          "id": "flow_rate",
+          "label": "Steam Flow Rate",
+          "type": "number",
+          "unit": "kg/h",
+          "defaultValue": 4000
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Inside Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 102
+        },
+        {
+          "id": "steam_density",
+          "label": "Steam Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 5.15
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_drop",
+          "label": "Pressure Drop",
+          "formula": "(0.6753 * Math.pow(10, 6) * Math.pow(inputs.flow_rate, 2) * inputs.pipe_length * (1 + 91.4 / inputs.pipe_diameter)) / (inputs.steam_density * Math.pow(inputs.pipe_diameter, 5))",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_drop_kpa",
+          "label": "Pressure Drop",
+          "formula": "((0.6753 * Math.pow(10, 6) * Math.pow(inputs.flow_rate, 2) * inputs.pipe_length * (1 + 91.4 / inputs.pipe_diameter)) / (inputs.steam_density * Math.pow(inputs.pipe_diameter, 5))) / 1000",
+          "unit": "kPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Metric Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Steam Flow Rate",
+          "4000",
+          "kg/h"
+        ],
+        [
+          "Pipe Length",
+          "100",
+          "m"
+        ],
+        [
+          "Pipe Inside Diameter",
+          "102",
+          "mm"
+        ],
+        [
+          "Steam Density",
+          "5.15",
+          "kg/m³"
+        ],
+        [
+          "Pressure Drop (Calculated)",
+          "36030",
+          "Pa"
+        ],
+        [
+          "Pressure Drop (Calculated)",
+          "36",
+          "kPa"
+        ]
+      ]
+    }
+  ]
+}

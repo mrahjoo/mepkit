@@ -1,0 +1,147 @@
+{
+  "id": "power_plants___performance_efficiencies",
+  "title": "Power Plants - Performance Efficiencies",
+  "description": "The performance of a power plant can be expressed through common performance factors including heat rate, thermal efficiency, capacity factor, load factor, economic efficiency, and operational efficiency.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Power Plants - Performance Efficiencies\n\nThe performance of a power plant can be expressed through some common performance factors:\n\n* heat rate (energy efficiency)\n* thermal efficiency\n* capacity factor\n* load factor\n* economic efficiency\n* operational efficiency\n\nEnter the parameters below to calculate the various performance metrics."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "heat_supplied",
+          "label": "Heat Supplied to Plant (H)",
+          "type": "number",
+          "unit": "kJ",
+          "defaultValue": 10000000
+        },
+        {
+          "id": "energy_output",
+          "label": "Energy Output from Plant (E)",
+          "type": "number",
+          "unit": "kWh",
+          "defaultValue": 2500
+        },
+        {
+          "id": "average_load",
+          "label": "Average Load (Pal)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 2000
+        },
+        {
+          "id": "rated_capacity",
+          "label": "Rated Capacity (Prl)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 3000
+        },
+        {
+          "id": "peak_load",
+          "label": "Peak Load (Ppl)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 2500
+        },
+        {
+          "id": "production_costs",
+          "label": "Production Costs (C)",
+          "type": "number",
+          "unit": "EUR",
+          "defaultValue": 500
+        },
+        {
+          "id": "potential_energy_output",
+          "label": "Potential Energy Output at 100% (E100%)",
+          "type": "number",
+          "unit": "kWh",
+          "defaultValue": 3000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_rate",
+          "label": "Heat Rate (φhr)",
+          "formula": "inputs.heat_supplied / inputs.energy_output",
+          "unit": "kJ/kWh",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_efficiency",
+          "label": "Thermal Efficiency (μte)",
+          "formula": "(100 * 3412.75) / (inputs.heat_supplied / inputs.energy_output)",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "capacity_factor",
+          "label": "Capacity Factor (μcf)",
+          "formula": "(100 * inputs.average_load) / inputs.rated_capacity",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "load_factor",
+          "label": "Load Factor (μlf)",
+          "formula": "(100 * inputs.average_load) / inputs.peak_load",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "economic_efficiency",
+          "label": "Economic Efficiency (φee)",
+          "formula": "inputs.production_costs / inputs.energy_output",
+          "unit": "EUR/kWh",
+          "format": "currency"
+        },
+        {
+          "id": "operational_efficiency",
+          "label": "Operational Efficiency (μoe)",
+          "formula": "(100 * inputs.energy_output) / inputs.potential_energy_output",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "type": "bar",
+        "title": "Performance Metrics Comparison",
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Heat Rate\n(kJ/kWh)",
+            "Thermal Efficiency\n(%)",
+            "Capacity Factor\n(%)",
+            "Load Factor\n(%)",
+            "Economic Efficiency\n(EUR/kWh)",
+            "Operational Efficiency\n(%)"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              "inputs.heat_supplied / inputs.energy_output",
+              "(100 * 3412.75) / (inputs.heat_supplied / inputs.energy_output)",
+              "(100 * inputs.average_load) / inputs.rated_capacity",
+              "(100 * inputs.average_load) / inputs.peak_load",
+              "inputs.production_costs / inputs.energy_output",
+              "(100 * inputs.energy_output) / inputs.potential_energy_output"
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#1f77b4"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

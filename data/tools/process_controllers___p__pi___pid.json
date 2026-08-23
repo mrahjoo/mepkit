@@ -1,0 +1,170 @@
+{
+  "id": "process_controllers___p__pi___pid",
+  "title": "Process Controllers - P, PI & PID",
+  "description": "Calculator and visualizer for Proportional (P), Integral (I), and Derivative (D) process controller outputs. Analyze controller responses including P-Controller, I-Controller, D-Controller, and combined PID-Controller behavior.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Process Controllers Overview\n\nThis tool calculates and visualizes the output responses of different process controller types:\n\n- **P-Controller (Proportional)**: Output proportional to error\n- **I-Controller (Integral)**: Output proportional to accumulated error over time\n- **D-Controller (Derivative)**: Output proportional to rate of change of error\n- **PID-Controller**: Combined proportional, integral, and derivative control\n\n### Key Formulas\n\n**P-Controller**: OP = -kP × Er\n\n**I-Controller**: OI = -kI × Σ(Er dt)\n\n**D-Controller**: OD = -kD × dEr/dt\n\n**PID-Controller**: O = OP + OI + OD"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "error",
+          "label": "Error (Er)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "%"
+        },
+        {
+          "id": "kp",
+          "label": "Proportional Gain (kP)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": ""
+        },
+        {
+          "id": "ki",
+          "label": "Integral Gain (kI)",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": ""
+        },
+        {
+          "id": "kd",
+          "label": "Derivative Gain (kD)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        },
+        {
+          "id": "error_rate",
+          "label": "Error Rate of Change (dEr/dt)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "%/s"
+        },
+        {
+          "id": "error_integral",
+          "label": "Error Integral (Σ Er dt)",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "% s"
+        },
+        {
+          "id": "proportional_band",
+          "label": "Proportional Band (P)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "op_output",
+          "label": "Proportional Output (OP)",
+          "formula": "-inputs.kp * inputs.error",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "oi_output",
+          "label": "Integral Output (OI)",
+          "formula": "-inputs.ki * inputs.error_integral",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "od_output",
+          "label": "Derivative Output (OD)",
+          "formula": "-inputs.kd * inputs.error_rate",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "pid_output",
+          "label": "PID Output (Total)",
+          "formula": "(-inputs.kp * inputs.error) + (-inputs.ki * inputs.error_integral) + (-inputs.kd * inputs.error_rate)",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "kp_calculated",
+          "label": "Calculated Gain (kP = 100/P)",
+          "formula": "100 / inputs.proportional_band",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Controller Type",
+        "Rise Time",
+        "Overshoot",
+        "Settling Time",
+        "Steady State Error"
+      ],
+      "rows": [
+        [
+          "P-Controller",
+          "Decrease",
+          "Increase",
+          "Small Change",
+          "Decrease"
+        ],
+        [
+          "I-Controller",
+          "Decrease",
+          "Increase",
+          "Increase",
+          "Eliminate"
+        ],
+        [
+          "D-Controller",
+          "Small Change",
+          "Decrease",
+          "Decrease",
+          "Small Change"
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "Controller Response Characteristics"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Rise Time",
+            "Overshoot",
+            "Settling Time",
+            "Steady State Error"
+          ]
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "P-Controller",
+            "I-Controller",
+            "D-Controller"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Effect Level"
+        }
+      }
+    }
+  ]
+}

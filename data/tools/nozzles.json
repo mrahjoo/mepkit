@@ -1,0 +1,118 @@
+{
+  "id": "nozzles",
+  "title": "Nozzles",
+  "description": "Calculate critical pressure ratios and mass flow through sonic nozzles based on gas properties and inlet conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Critical Pressure Ratio for Nozzles\n\nThe maximum gas flow through a nozzle is determined by **critical pressure**. Critical flow nozzles are also called **sonic chokes**.\n\nThe ratio between critical pressure and initial pressure is:\n\n**pc / p1 = (2 / (n + 1))^(n / (n - 1))**\n\nWhere:\n- **pc** = critical pressure (Pa)\n- **p1** = inlet pressure (Pa)\n- **n** = polytropic constant (index of isentropic expansion)\n\n### Common Gas Values for n:\n- Steam (wet region): n = 1.135\n- Steam (superheated): n = 1.30\n- Air: n = 1.4\n- Methane: n = 1.31\n- Helium: n = 1.667"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "n",
+          "label": "Polytropic Constant (n)",
+          "type": "number",
+          "defaultValue": 1.4,
+          "unit": "-"
+        },
+        {
+          "id": "p1",
+          "label": "Inlet Pressure (p1)",
+          "type": "number",
+          "defaultValue": 101325,
+          "unit": "Pa"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pc_p1_ratio",
+          "label": "Critical Pressure Ratio (pc/p1)",
+          "formula": "Math.pow(2 / (inputs.n + 1), inputs.n / (inputs.n - 1))",
+          "format": "decimal",
+          "unit": "-"
+        },
+        {
+          "id": "pc",
+          "label": "Critical Pressure (pc)",
+          "formula": "inputs.p1 * Math.pow(2 / (inputs.n + 1), inputs.n / (inputs.n - 1))",
+          "format": "decimal",
+          "unit": "Pa"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "n",
+        "pc/p1"
+      ],
+      "rows": [
+        [
+          1.135,
+          0.577
+        ],
+        [
+          1.3,
+          0.546
+        ],
+        [
+          1.4,
+          0.528
+        ],
+        [
+          1.667,
+          0.487
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Mass Flow through Sonic Nozzles\n\nThe mass flow through a nozzle with sonic flow (where minimum pressure equals critical pressure) is:\n\n**mc = Ac × √(n × p1 × ρ1) × (2 / (n + 1))^((n + 1) / 2(n - 1))**\n\nWhere:\n- **mc** = mass flow at sonic flow (kg/s)\n- **Ac** = nozzle cross-sectional area (m²)\n- **ρ1** = initial density (kg/m³)\n- **n** = polytropic constant"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "Ac",
+          "label": "Nozzle Area (Ac)",
+          "type": "number",
+          "defaultValue": 0.001,
+          "unit": "m²"
+        },
+        {
+          "id": "n_flow",
+          "label": "Polytropic Constant (n)",
+          "type": "number",
+          "defaultValue": 1.4,
+          "unit": "-"
+        },
+        {
+          "id": "p1_flow",
+          "label": "Inlet Pressure (p1)",
+          "type": "number",
+          "defaultValue": 101325,
+          "unit": "Pa"
+        },
+        {
+          "id": "rho1",
+          "label": "Initial Density (ρ1)",
+          "type": "number",
+          "defaultValue": 1.225,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mc",
+          "label": "Mass Flow (mc)",
+          "formula": "inputs.Ac * Math.sqrt(inputs.n_flow * inputs.p1_flow * inputs.rho1) * Math.pow(2 / (inputs.n_flow + 1), (inputs.n_flow + 1) / (2 * (inputs.n_flow - 1)))",
+          "format": "decimal",
+          "unit": "kg/s"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "id": "thermal_conductivity_of_metals_and_alloys__data_ta",
+  "title": "Thermal Conductivity of Metals and Alloys: Data Table",
+  "description": "Thermal conductivities of common metals, metallic elements and alloys. Thermal Conductivity (k) is used in Fourier's equation for conductive heat transfer calculations.",
+  "type": "datatable"
+}

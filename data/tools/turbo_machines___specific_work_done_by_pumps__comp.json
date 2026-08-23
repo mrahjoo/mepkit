@@ -1,0 +1,205 @@
+{
+  "id": "turbo_machines___specific_work_done_by_pumps__comp",
+  "title": "Turbo Machines - Specific Work done by Pumps, Compressors or Fans",
+  "description": "Calculate specific work (work per unit weight) for pumps, fans, compressors, and turbines. Specific work is expressed in Nm/kg, J/kg, or m²/s². This tool supports calculations for incompressible fluids (pumps, fans, turbines) and compressible fluids (compressors, gas turbines).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Machine Type",
+        "Formula",
+        "Inputs",
+        "Specific Work (Nm/kg)",
+        "Head (m)"
+      ],
+      "rows": [
+        [
+          "Pump/Fan (Incompressible)",
+          "w = (p2 - p1) / ρ",
+          "p1, p2, ρ",
+          "=((inputs.p2-inputs.p1)/inputs.rho)",
+          "=(((inputs.p2-inputs.p1)/inputs.rho)/9.81)"
+        ],
+        [
+          "Turbine (Incompressible)",
+          "w = (p1 - p2) / ρ",
+          "p1, p2, ρ",
+          "=((inputs.p1-inputs.p2)/inputs.rho)",
+          "=(((inputs.p1-inputs.p2)/inputs.rho)/9.81)"
+        ],
+        [
+          "Compressor (Isentropic)",
+          "w = (κ/(κ-1)) × R × T1 × ((p2/p1)^((κ-1)/κ) - 1)",
+          "κ, R, T1, p1, p2",
+          "=(inputs.kappa/(inputs.kappa-1)*inputs.R*inputs.T1*((inputs.p2/inputs.p1)^((inputs.kappa-1)/inputs.kappa)-1))",
+          "=((inputs.kappa/(inputs.kappa-1)*inputs.R*inputs.T1*((inputs.p2/inputs.p1)^((inputs.kappa-1)/inputs.kappa)-1))/9.81)"
+        ],
+        [
+          "Gas Turbine",
+          "w = (κ/(κ-1)) × R × T1 × (1 - (p2/p1)^((κ-1)/κ))",
+          "κ, R, T1, p1, p2",
+          "=(inputs.kappa/(inputs.kappa-1)*inputs.R*inputs.T1*(1-(inputs.p2/inputs.p1)^((inputs.kappa-1)/inputs.kappa)))",
+          "=((inputs.kappa/(inputs.kappa-1)*inputs.R*inputs.T1*(1-(inputs.p2/inputs.p1)^((inputs.kappa-1)/inputs.kappa)))/9.81)"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Pump/Fan Calculator (Incompressible Fluid)",
+      "inputs": [
+        {
+          "id": "p2",
+          "label": "Outlet Pressure (p2)",
+          "type": "number",
+          "defaultValue": 1000000,
+          "unit": "N/m²"
+        },
+        {
+          "id": "p1",
+          "label": "Inlet Pressure (p1)",
+          "type": "number",
+          "defaultValue": 100000,
+          "unit": "N/m²"
+        },
+        {
+          "id": "rho",
+          "label": "Density (ρ)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "w_pump",
+          "label": "Specific Work",
+          "formula": "(inputs.p2 - inputs.p1) / inputs.rho",
+          "unit": "Nm/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "h_pump",
+          "label": "Head",
+          "formula": "((inputs.p2 - inputs.p1) / inputs.rho) / 9.81",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Compressor Calculator (Isentropic Process)",
+      "inputs": [
+        {
+          "id": "kappa",
+          "label": "Ratio of Specific Heats (κ)",
+          "type": "number",
+          "defaultValue": 1.4,
+          "unit": "J/kg K"
+        },
+        {
+          "id": "R",
+          "label": "Individual Gas Constant (R)",
+          "type": "number",
+          "defaultValue": 286.9,
+          "unit": "J/kg K"
+        },
+        {
+          "id": "T1",
+          "label": "Absolute Temperature (T1)",
+          "type": "number",
+          "defaultValue": 293,
+          "unit": "K"
+        },
+        {
+          "id": "p1_comp",
+          "label": "Inlet Pressure (p1)",
+          "type": "number",
+          "defaultValue": 100000,
+          "unit": "N/m²"
+        },
+        {
+          "id": "p2_comp",
+          "label": "Outlet Pressure (p2)",
+          "type": "number",
+          "defaultValue": 1000000,
+          "unit": "N/m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "w_comp",
+          "label": "Specific Work",
+          "formula": "(inputs.kappa / (inputs.kappa - 1)) * inputs.R * inputs.T1 * ((inputs.p2_comp / inputs.p1_comp) ^ ((inputs.kappa - 1) / inputs.kappa) - 1)",
+          "unit": "Nm/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "h_comp",
+          "label": "Head",
+          "formula": "((inputs.kappa / (inputs.kappa - 1)) * inputs.R * inputs.T1 * ((inputs.p2_comp / inputs.p1_comp) ^ ((inputs.kappa - 1) / inputs.kappa) - 1)) / 9.81",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Gas Turbine Calculator",
+      "inputs": [
+        {
+          "id": "kappa_turb",
+          "label": "Ratio of Specific Heats (κ)",
+          "type": "number",
+          "defaultValue": 1.4,
+          "unit": "J/kg K"
+        },
+        {
+          "id": "R_turb",
+          "label": "Individual Gas Constant (R)",
+          "type": "number",
+          "defaultValue": 286.9,
+          "unit": "J/kg K"
+        },
+        {
+          "id": "T1_turb",
+          "label": "Absolute Temperature (T1)",
+          "type": "number",
+          "defaultValue": 293,
+          "unit": "K"
+        },
+        {
+          "id": "p1_turb",
+          "label": "Inlet Pressure (p1)",
+          "type": "number",
+          "defaultValue": 1000000,
+          "unit": "N/m²"
+        },
+        {
+          "id": "p2_turb",
+          "label": "Outlet Pressure (p2)",
+          "type": "number",
+          "defaultValue": 100000,
+          "unit": "N/m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "w_turb",
+          "label": "Specific Work",
+          "formula": "(inputs.kappa_turb / (inputs.kappa_turb - 1)) * inputs.R_turb * inputs.T1_turb * (1 - (inputs.p2_turb / inputs.p1_turb) ^ ((inputs.kappa_turb - 1) / inputs.kappa_turb))",
+          "unit": "Nm/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "h_turb",
+          "label": "Head",
+          "formula": "((inputs.kappa_turb / (inputs.kappa_turb - 1)) * inputs.R_turb * inputs.T1_turb * (1 - (inputs.p2_turb / inputs.p1_turb) ^ ((inputs.kappa_turb - 1) / inputs.kappa_turb))) / 9.81",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "relief_valves___length_of_vent_pipes",
+  "title": "Relief Valves - Length of Vent Pipes",
+  "description": "Calculate length of safety valves vent pipes. Determines the maximum length of relief valve vent lines based on relief pressure, inside diameter, and air flow.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "vent_pipe_calculator",
+      "content": "Calculate Maximum Length of Relief Valve Vent Lines",
+      "inputs": [
+        {
+          "id": "relief_pressure",
+          "label": "Relief Pressure (pr)",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 50
+        },
+        {
+          "id": "inside_diameter",
+          "label": "Inside Diameter (di)",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 1.5
+        },
+        {
+          "id": "air_flow",
+          "label": "Air Flow (qa)",
+          "type": "number",
+          "unit": "lbs./min",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "maximum_length",
+          "label": "Maximum Length of Vent Line (lm)",
+          "formula": "0.56 * (1.1 * inputs.relief_pressure + 14.7) ** 2 * inputs.inside_diameter ** 5 / inputs.air_flow ** 2",
+          "unit": "feet",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "vent_pipe_reference_table",
+      "content": "Reference Table for Common Relief Valve Configurations",
+      "headers": [
+        "Relief Pressure (psi)",
+        "Inside Diameter (inches)",
+        "Air Flow (lbs./min)",
+        "Maximum Length (feet)"
+      ],
+      "rows": [
+        [
+          25,
+          0.5,
+          50,
+          0.89
+        ],
+        [
+          25,
+          1,
+          100,
+          14.22
+        ],
+        [
+          25,
+          1.5,
+          150,
+          80.37
+        ],
+        [
+          50,
+          0.5,
+          75,
+          2.16
+        ],
+        [
+          50,
+          1,
+          150,
+          34.56
+        ],
+        [
+          50,
+          1.5,
+          225,
+          195.52
+        ],
+        [
+          100,
+          0.75,
+          100,
+          29.88
+        ],
+        [
+          100,
+          1.25,
+          200,
+          234.38
+        ],
+        [
+          100,
+          1.5,
+          250,
+          336.67
+        ]
+      ]
+    }
+  ]
+}

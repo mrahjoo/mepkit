@@ -1,0 +1,37 @@
+{
+  "id": "low_pressure_steam_pipes___pressure_drops",
+  "title": "Low Pressure Steam Pipes - Pressure Drops",
+  "description": "Typical pressure drop in low pressure steam lines. This tool provides pressure drop values for low pressure steam pipes based on initial steam pressure.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Initial Steam Pressure (psig)",
+        "Typical Pressure Drop (psi per 100 ft)"
+      ],
+      "rows": [
+        [
+          1,
+          0.13
+        ],
+        [
+          2,
+          0.13
+        ],
+        [
+          5,
+          0.26
+        ],
+        [
+          10,
+          0.51
+        ],
+        [
+          15,
+          1
+        ]
+      ]
+    }
+  ]
+}

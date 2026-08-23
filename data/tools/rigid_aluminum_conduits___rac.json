@@ -1,0 +1,186 @@
+{
+  "id": "rigid_aluminum_conduits___rac",
+  "title": "Rigid Aluminum Conduits - RAC",
+  "description": "Rigid Aluminum Conduits dimensions and properties used in raceways. Calculate conduit properties based on nominal size selection.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "select",
+      "id": "nominal_size",
+      "label": "Nominal Conduit Size",
+      "options": [
+        {
+          "value": "0.5",
+          "label": "1/2\""
+        },
+        {
+          "value": "0.75",
+          "label": "3/4\""
+        },
+        {
+          "value": "1",
+          "label": "1\""
+        },
+        {
+          "value": "1.25",
+          "label": "1 1/4\""
+        },
+        {
+          "value": "1.5",
+          "label": "1 1/2\""
+        },
+        {
+          "value": "2",
+          "label": "2\""
+        },
+        {
+          "value": "2.5",
+          "label": "2 1/2\""
+        },
+        {
+          "value": "3",
+          "label": "3\""
+        },
+        {
+          "value": "3.5",
+          "label": "3 1/2\""
+        },
+        {
+          "value": "4",
+          "label": "4\""
+        },
+        {
+          "value": "5",
+          "label": "5\""
+        },
+        {
+          "value": "6",
+          "label": "6\""
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "rac_properties",
+      "headers": [
+        "Nominal Size",
+        "OD (mm)",
+        "ID (in)",
+        "Weight (lbs/100ft)",
+        "Weight (kg/30m)",
+        "Weight w/ Conductors (lbs/100ft)",
+        "Weight w/ Conductors (kg/30m)"
+      ],
+      "rows": [
+        [
+          "1/2\"",
+          "15",
+          "0.84",
+          "27",
+          "13",
+          "50",
+          "23"
+        ],
+        [
+          "3/4\"",
+          "20",
+          "1.05",
+          "36",
+          "17",
+          "77",
+          "35"
+        ],
+        [
+          "1\"",
+          "25",
+          "1.315",
+          "53",
+          "24",
+          "119",
+          "54"
+        ],
+        [
+          "1 1/4\"",
+          "32",
+          "1.66",
+          "70",
+          "32",
+          "187",
+          "85"
+        ],
+        [
+          "1 1/2\"",
+          "40",
+          "1.9",
+          "82",
+          "37",
+          "242",
+          "110"
+        ],
+        [
+          "2\"",
+          "50",
+          "2.375",
+          "116",
+          "53",
+          "378",
+          "171"
+        ],
+        [
+          "2 1/2\"",
+          "65",
+          "2.875",
+          "183",
+          "83",
+          "557",
+          "252"
+        ],
+        [
+          "3\"",
+          "80",
+          "3.5",
+          "239",
+          "108",
+          "815",
+          "370"
+        ],
+        [
+          "3 1/2\"",
+          "90",
+          "4",
+          "288",
+          "131",
+          "1061",
+          "481"
+        ],
+        [
+          "4\"",
+          "100",
+          "4.5",
+          "340",
+          "154",
+          "1334",
+          "605"
+        ],
+        [
+          "5\"",
+          "125",
+          "5.563",
+          "465",
+          "211",
+          "2028",
+          "920"
+        ],
+        [
+          "6\"",
+          "150",
+          "6.625",
+          "613",
+          "278",
+          "2870",
+          "1302"
+        ]
+      ]
+    }
+  ]
+}

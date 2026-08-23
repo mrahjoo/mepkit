@@ -1,0 +1,111 @@
+{
+  "id": "electrical_resistance_in_serial_and_parallel_netwo",
+  "title": "Electrical Resistance in Serial and Parallel Networks",
+  "description": "Calculate total resistance and current for resistors connected in series and parallel configurations, including individual currents through each resistor.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Parallel Resistor Network Calculator",
+      "inputs": [
+        {
+          "id": "r1",
+          "label": "R1",
+          "type": "number",
+          "unit": "ohms",
+          "defaultValue": 33
+        },
+        {
+          "id": "r2",
+          "label": "R2",
+          "type": "number",
+          "unit": "ohms",
+          "defaultValue": 33
+        },
+        {
+          "id": "r3",
+          "label": "R3",
+          "type": "number",
+          "unit": "ohms",
+          "defaultValue": 47
+        },
+        {
+          "id": "r4",
+          "label": "R4",
+          "type": "number",
+          "unit": "ohms",
+          "defaultValue": 0
+        },
+        {
+          "id": "r5",
+          "label": "R5",
+          "type": "number",
+          "unit": "ohms",
+          "defaultValue": 0
+        },
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 12
+        }
+      ],
+      "outputs": [
+        {
+          "id": "r_total",
+          "label": "R (Total Resistance)",
+          "unit": "ohms",
+          "formula": "1 / (1/inputs.r1 + (inputs.r2 > 0 ? 1/inputs.r2 : 0) + (inputs.r3 > 0 ? 1/inputs.r3 : 0) + (inputs.r4 > 0 ? 1/inputs.r4 : 0) + (inputs.r5 > 0 ? 1/inputs.r5 : 0))",
+          "format": "decimal"
+        },
+        {
+          "id": "i_total",
+          "label": "I (Total Current)",
+          "unit": "amps",
+          "formula": "inputs.voltage / (1 / (1/inputs.r1 + (inputs.r2 > 0 ? 1/inputs.r2 : 0) + (inputs.r3 > 0 ? 1/inputs.r3 : 0) + (inputs.r4 > 0 ? 1/inputs.r4 : 0) + (inputs.r5 > 0 ? 1/inputs.r5 : 0)))",
+          "format": "decimal"
+        },
+        {
+          "id": "i1",
+          "label": "I1 (Current through R1)",
+          "unit": "amps",
+          "formula": "inputs.voltage / inputs.r1",
+          "format": "decimal"
+        },
+        {
+          "id": "i2",
+          "label": "I2 (Current through R2)",
+          "unit": "amps",
+          "formula": "inputs.r2 > 0 ? inputs.voltage / inputs.r2 : 0",
+          "format": "decimal"
+        },
+        {
+          "id": "i3",
+          "label": "I3 (Current through R3)",
+          "unit": "amps",
+          "formula": "inputs.r3 > 0 ? inputs.voltage / inputs.r3 : 0",
+          "format": "decimal"
+        },
+        {
+          "id": "i4",
+          "label": "I4 (Current through R4)",
+          "unit": "amps",
+          "formula": "inputs.r4 > 0 ? inputs.voltage / inputs.r4 : 0",
+          "format": "decimal"
+        },
+        {
+          "id": "i5",
+          "label": "I5 (Current through R5)",
+          "unit": "amps",
+          "formula": "inputs.r5 > 0 ? inputs.voltage / inputs.r5 : 0",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Series Connection Formula\n\n**R = R1 + R2 + ... + Rn**\n\nwhere R = total resistance (ohm, Ω)\n\n## Parallel Connection Formula\n\n**1 / R = 1 / R1 + 1 / R2 + ... + 1 / Rn**\n\nFor two resistors in parallel:\n**R = R1 × R2 / (R1 + R2)**\n\n## Current Calculation (Ohm's Law)\n\n**I = U / R**\n\nwhere I = current (amps), U = voltage (V), R = resistance (ohm, Ω)"
+    }
+  ]
+}

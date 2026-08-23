@@ -1,0 +1,76 @@
+{
+  "id": "hydrocarbons___vapor_pressures",
+  "title": "Hydrocarbons - Vapor Pressures",
+  "description": "Vapor pressure vs. temperature for propane, n-butane, n-heptane and n-pentane hydrocarbons.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Propane (bar)",
+        "n-Butane (bar)",
+        "n-Pentane (bar)",
+        "n-Heptane (bar)"
+      ],
+      "rows": [
+        [
+          -40,
+          4,
+          0.5,
+          0.1,
+          0.01
+        ],
+        [
+          -20,
+          8.5,
+          1.5,
+          0.4,
+          0.05
+        ],
+        [
+          0,
+          16.5,
+          4,
+          1,
+          0.15
+        ],
+        [
+          20,
+          29,
+          8.5,
+          2.3,
+          0.4
+        ],
+        [
+          40,
+          47,
+          16,
+          5,
+          1
+        ],
+        [
+          60,
+          72,
+          28,
+          10,
+          2.2
+        ],
+        [
+          80,
+          102,
+          46,
+          18.5,
+          4.5
+        ],
+        [
+          100,
+          138,
+          72,
+          32,
+          8.5
+        ]
+      ]
+    }
+  ]
+}

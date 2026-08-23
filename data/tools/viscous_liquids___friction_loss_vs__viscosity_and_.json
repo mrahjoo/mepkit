@@ -1,0 +1,43 @@
+{
+  "id": "viscous_liquids___friction_loss_vs__viscosity_and_",
+  "title": "Viscous Liquids - Friction Loss vs. Viscosity and Flow",
+  "description": "Calculate friction loss in viscous liquids based on viscosity and flow rate parameters",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Viscosity",
+          "1.0",
+          "cP (centipoise)"
+        ],
+        [
+          "Flow Rate",
+          "10.0",
+          "L/min"
+        ],
+        [
+          "Pipe Diameter",
+          "25",
+          "mm"
+        ],
+        [
+          "Pipe Length",
+          "100",
+          "m"
+        ],
+        [
+          "Friction Loss",
+          "Calculated",
+          "kPa"
+        ]
+      ]
+    }
+  ]
+}

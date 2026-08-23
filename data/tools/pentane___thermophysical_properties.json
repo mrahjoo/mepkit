@@ -1,0 +1,309 @@
+{
+  "id": "pentane___thermophysical_properties",
+  "title": "Pentane - Thermophysical Properties",
+  "description": "Calculator for thermophysical properties of Pentane (C5H12), a clear colorless liquid with petroleum-like odor. This tool provides access to chemical, physical, and thermal properties of pentane at 25°C (77°F, 298K) and 1 bara, including density, heat capacity, viscosity, critical parameters, and more in multiple unit systems.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pentane_properties_calc",
+      "headers": [
+        "Property",
+        "SI Units",
+        "Imperial Units"
+      ],
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bara"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "molecular_weight",
+          "label": "Molecular Weight",
+          "formula": "72.149",
+          "unit": "g/mol",
+          "format": "decimal"
+        },
+        {
+          "id": "density",
+          "label": "Density (liquid at 25°C)",
+          "formula": "620.9",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "boiling_point_k",
+          "label": "Boiling Point",
+          "formula": "309.2",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "boiling_point_c",
+          "label": "Boiling Point",
+          "formula": "36.06",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "melting_point_k",
+          "label": "Melting Point",
+          "formula": "143.48",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "melting_point_c",
+          "label": "Melting Point",
+          "formula": "-129.7",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_temp_k",
+          "label": "Critical Temperature",
+          "formula": "469.8",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_temp_c",
+          "label": "Critical Temperature",
+          "formula": "196.7",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_pressure",
+          "label": "Critical Pressure",
+          "formula": "3.36",
+          "unit": "MPa",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_density",
+          "label": "Critical Density",
+          "formula": "232",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_gravity_liquid",
+          "label": "Specific Gravity (liquid relative to water)",
+          "formula": "0.63",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_gravity_gas",
+          "label": "Specific Gravity (gas relative to air)",
+          "formula": "2.48",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_capacity_cp_gas",
+          "label": "Heat Capacity Cp (gas)",
+          "formula": "1.66",
+          "unit": "kJ/kg·K",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_capacity_cp_liquid",
+          "label": "Specific Heat Cp (liquid)",
+          "formula": "2.33",
+          "unit": "kJ/kg·K",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_capacity_cv_liquid",
+          "label": "Specific Heat Cv (liquid)",
+          "formula": "1.73",
+          "unit": "kJ/kg·K",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_of_evaporation",
+          "label": "Heat of Evaporation",
+          "formula": "366",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_of_combustion_liquid",
+          "label": "Heat of Combustion (liquid)",
+          "formula": "-48636",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_of_combustion_gas",
+          "label": "Heat of Combustion (gas)",
+          "formula": "-48996",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "formula": "0.111",
+          "unit": "W/m·°C",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_dynamic",
+          "label": "Viscosity, Dynamic (absolute)",
+          "formula": "0.2224",
+          "unit": "cP",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_kinematic",
+          "label": "Viscosity, Kinematic",
+          "formula": "0.358",
+          "unit": "cSt",
+          "format": "decimal"
+        },
+        {
+          "id": "surface_tension",
+          "label": "Surface Tension",
+          "formula": "0.016",
+          "unit": "N/m",
+          "format": "decimal"
+        },
+        {
+          "id": "sound_velocity",
+          "label": "Sound Velocity",
+          "formula": "1012",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "flash_point_c",
+          "label": "Flash Point",
+          "formula": "-49",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "autoignition_temp_k",
+          "label": "Autoignition Temperature",
+          "formula": "533",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "autoignition_temp_c",
+          "label": "Autoignition Temperature",
+          "formula": "260",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "vapor_pressure",
+          "label": "Vapor (saturation) Pressure",
+          "formula": "0.0685",
+          "unit": "MPa",
+          "format": "decimal"
+        },
+        {
+          "id": "gas_constant",
+          "label": "Gas Constant, Individual (R)",
+          "formula": "115.2",
+          "unit": "J/kg·K",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_ratio_gas",
+          "label": "Specific Heat Ratio (gas) - Cp/Cv",
+          "formula": "1.09",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_ratio_liquid",
+          "label": "Specific Heat Ratio (liquid) - Cp/Cv",
+          "formula": "1.34",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "entropy_gas",
+          "label": "Standard Molar Entropy (gas)",
+          "formula": "4.82",
+          "unit": "kJ/kg·K",
+          "format": "decimal"
+        },
+        {
+          "id": "entropy_liquid",
+          "label": "Standard Molar Entropy (liquid)",
+          "formula": "3.65",
+          "unit": "kJ/kg·K",
+          "format": "decimal"
+        },
+        {
+          "id": "gibbs_formation",
+          "label": "Gibbs Free Energy of Formation (gas)",
+          "formula": "-111",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "enthalpy_formation_gas",
+          "label": "Heat (enthalpy) of Formation (gas)",
+          "formula": "-2037",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "enthalpy_formation_liquid",
+          "label": "Heat (enthalpy) of Formation (liquid)",
+          "formula": "-2398",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_volume",
+          "label": "Specific Volume",
+          "formula": "0.0016106",
+          "unit": "m³/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "ionization_potential",
+          "label": "Ionization Potential",
+          "formula": "10.34",
+          "unit": "eV",
+          "format": "decimal"
+        },
+        {
+          "id": "log_kow",
+          "label": "log KOW (Octanol/Water Partition Coefficient)",
+          "formula": "3.39",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "solubility_water",
+          "label": "Solubility in Water (at 25°C)",
+          "formula": "0.038",
+          "unit": "mg/ml",
+          "format": "decimal"
+        }
+      ],
+      "content": "## Pentane Thermophysical Properties Calculator\n\nThis calculator provides thermophysical properties of pentane (C₅H₁₂) at standard conditions (25°C, 1 bara). Pentane is a clear colorless liquid with a petroleum-like odor, commonly used as a specialty solvent.\n\n**Key Properties:**\n- Boiling point: 36°C (97°F)\n- Both liquid and vapor are flammable\n- Heavier than air when vaporized\n- Molecular weight: 72.149 g/mol\n\n**Reference Conditions:** Values given for liquid at 25°C (77°F, 298K) and 1 bara unless otherwise specified.\n"
+    }
+  ]
+}

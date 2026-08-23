@@ -1,0 +1,6 @@
+{
+  "id": "butane___specific_heat_vs__temperature_and_pressur",
+  "title": "Butane - Specific Heat vs. Temperature and Pressure",
+  "description": "Calculate isobaric (Cp) and isochoric (Cv) specific heat of butane at varying temperature and pressure conditions. The tool provides specific heat values in multiple units (kJ/mol K, kJ/kg K, Wh/(kg K), kcal/(kg K), Btu(IT)/lb °F) for liquid, gas, and supercritical phase states.",
+  "type": "datatable"
+}

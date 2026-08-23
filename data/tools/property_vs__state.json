@@ -1,0 +1,49 @@
+{
+  "id": "property_vs__state",
+  "title": "Property vs. State",
+  "description": "The concept of properties and state. Properties are characteristics or attributes that can be quantitatively evaluated, while state describes the condition of an object using a list of properties.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "State",
+        "Properties"
+      ],
+      "rows": [
+        [
+          "Chemical",
+          "chemical composition, free charge, energy, entropy etc."
+        ],
+        [
+          "Electromagnetic",
+          "electric field strength, magnetic dipole moment, charge, etc."
+        ],
+        [
+          "Aesthetic",
+          "color, design, odor, etc"
+        ],
+        [
+          "Geometric",
+          "length, width, breadth, volume, etc."
+        ],
+        [
+          "Hydrodynamic",
+          "pressure, shearing stress, strain rate, etc."
+        ],
+        [
+          "Kinematic",
+          "position, speed, acceleration, etc."
+        ],
+        [
+          "Thermodynamic",
+          "energy, temperature, volume, pressure, enthalpy, entropy, etc."
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Property\n\nProperty is any characteristic or attribute which can be quantitatively evaluated.\n\n- Pressure, temperature, velocity, energy, etc. are all properties\n- Things that are done, like work or heat flow, are not properties\n\n## State\n\nThe state of an object is its condition described by a list of properties. For example:\n\n- Temperature and pressure may describe the state of a gas\n\nThe properties needed to describe the state of an object varies with the object and the microscopic versus macroscopic view of the object."
+    }
+  ]
+}

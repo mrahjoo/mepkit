@@ -1,0 +1,121 @@
+{
+  "id": "refrigerants___environmental_properties",
+  "title": "Refrigerants - Environmental Properties",
+  "description": "Comprehensive datatable of refrigerant types with their environmental properties, ozone depletion potential (ODP), global warming potential (GWP), chemical formulas, and typical applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Refrigerant",
+        "Chemical Formula",
+        "Boiling Point (°C)",
+        "GWP",
+        "ODP",
+        "Description",
+        "Applications"
+      ],
+      "rows": [
+        [
+          "Ammonia",
+          "NH3",
+          "-33",
+          "N/A",
+          "N/A",
+          "Efficient refrigerant used in industrial applications. Highly toxic with penetrating odor.",
+          "Large industrial plants"
+        ],
+        [
+          "R-11",
+          "CCl3F",
+          "N/A",
+          "4000",
+          "1",
+          "Single chlorofluorocarbon (CFC). High ODP and GWP. Banned in EU.",
+          "Commercial plants with centrifugal compressors"
+        ],
+        [
+          "R-12",
+          "CCl2F2",
+          "-29.8",
+          "N/A",
+          "N/A",
+          "Non flammable, non corrosive, non toxic, stable. Single dichlorodifluoromethane.",
+          "Small plants, automotive, medium temperature refrigeration"
+        ],
+        [
+          "R-22",
+          "CHClF2",
+          "-40.8",
+          "1700",
+          "0.05",
+          "Hydrochlorofluorocarbon (HCFC). Low ODP, modest GWP. Phase out by 2010 in EU.",
+          "Air conditioning, low/medium temperature refrigeration"
+        ],
+        [
+          "R-134a",
+          "CH2FCF3",
+          "N/A",
+          "1300",
+          "0",
+          "Hydrofluorocarbon (HFC). No ODP, modest GWP. R-12 replacement.",
+          "Automotive, stationary A/C, medium temp refrigeration"
+        ],
+        [
+          "R-290",
+          "C3H8",
+          "N/A",
+          "3",
+          "0",
+          "Pure propane hydrocarbon. Extremely low GWP. Highly flammable.",
+          "Environmentally safe applications (with safety considerations)"
+        ],
+        [
+          "R-407C",
+          "HFC blend (R32/R125/R134a)",
+          "N/A",
+          "1610",
+          "0",
+          "Ternary blend: 23% R32, 25% R125, 52% R134a. No chlorine content.",
+          "Modern refrigeration systems"
+        ],
+        [
+          "R-410A",
+          "HFC blend (R32/R125)",
+          "N/A",
+          "1725",
+          "0",
+          "Binary blend: 50% R32, 50% R125. No chlorine content, no ODP.",
+          "Modern refrigeration systems"
+        ],
+        [
+          "R-417A",
+          "HFC blend",
+          "N/A",
+          "N/A",
+          "0",
+          "Zero ODP replacement for R22. Drop-in compatible.",
+          "Retrofit and new equipment"
+        ],
+        [
+          "R-500",
+          "CCl2F2/CH3CHF2 blend",
+          "-33",
+          "N/A",
+          "N/A",
+          "Blend: 73.8% R-12, 26.2% R-152a. ~20% more capacity than R-12.",
+          "Systems requiring higher capacity"
+        ],
+        [
+          "R-502",
+          "CClF2/CClF2-CF3 blend",
+          "-45.6",
+          "N/A",
+          "N/A",
+          "Blend: 48.8% R-22, 51.2% R-502. Non flammable, non toxic, capacity comparable to R-22.",
+          "High capacity refrigeration"
+        ]
+      ]
+    }
+  ]
+}

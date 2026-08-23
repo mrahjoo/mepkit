@@ -1,0 +1,158 @@
+{
+  "id": "driving_distances_between_european_cities",
+  "title": "Driving Distances between European Cities",
+  "description": "Calculate driving distances and convert between kilometers and miles for major European cities",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "distance_converter",
+      "content": "Convert driving distances between kilometers and miles",
+      "inputs": [
+        {
+          "id": "distance_km",
+          "label": "Distance (km)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "km"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance_miles",
+          "label": "Distance (miles)",
+          "formula": "inputs.distance_km * 0.621",
+          "unit": "miles",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "european_cities_distances",
+      "content": "Driving distances between major European cities",
+      "headers": [
+        "Distance (km)",
+        "Amsterdam",
+        "Antwerp",
+        "Athens",
+        "Barcelona",
+        "Berlin",
+        "Bern",
+        "Brussels",
+        "Calais",
+        "Cologne"
+      ],
+      "rows": [
+        [
+          "Amsterdam",
+          "-",
+          "160",
+          "3082",
+          "1639",
+          "649",
+          "875",
+          "209",
+          "385",
+          "280"
+        ],
+        [
+          "Antwerp",
+          "160",
+          "-",
+          "2766",
+          "1465",
+          "723",
+          "704",
+          "46",
+          "211",
+          "237"
+        ],
+        [
+          "Athens",
+          "3082",
+          "2766",
+          "-",
+          "3312",
+          "2552",
+          "2627",
+          "3021",
+          "2976",
+          "2562"
+        ],
+        [
+          "Barcelona",
+          "1639",
+          "1465",
+          "3312",
+          "-",
+          "1899",
+          "913",
+          "1419",
+          "1399",
+          "1539"
+        ],
+        [
+          "Berlin",
+          "649",
+          "723",
+          "2552",
+          "1899",
+          "-",
+          "986",
+          "782",
+          "936",
+          "575"
+        ],
+        [
+          "Bern",
+          "875",
+          "704",
+          "2627",
+          "913",
+          "986",
+          "-",
+          "655",
+          "854",
+          "583"
+        ],
+        [
+          "Brussels",
+          "209",
+          "46",
+          "3021",
+          "1419",
+          "782",
+          "655",
+          "-",
+          "212",
+          "219"
+        ],
+        [
+          "Calais",
+          "385",
+          "211",
+          "2976",
+          "1399",
+          "936",
+          "854",
+          "212",
+          "-",
+          "431"
+        ],
+        [
+          "Cologne",
+          "280",
+          "237",
+          "2562",
+          "1539",
+          "575",
+          "583",
+          "219",
+          "431",
+          "-"
+        ]
+      ]
+    }
+  ]
+}

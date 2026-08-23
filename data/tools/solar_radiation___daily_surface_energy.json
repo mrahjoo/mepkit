@@ -1,0 +1,141 @@
+{
+  "id": "solar_radiation___daily_surface_energy",
+  "title": "Solar Radiation - Daily Surface Energy",
+  "description": "Daily surface energy from solar radiation accumulated on south-faced horizontal to vertical tilted surfaces at different northern hemisphere latitudes (0°N, 30°N, and 60°N).",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Solar Radiation - Daily Surface Energy\n\nDaily surface energy from solar radiation.\n\nSolar energy accumulated on south-faced horizontal to vertical tilted surfaces on the northern hemisphere at latitudes:\n- **0°N (Equator)**: Year-round applications possible due to sufficient winter radiation\n- **30°N**: Mixed seasonal applications\n- **60°N**: Primarily summer-time applications\n\n### Unit Conversions\n- 1 MJ = 0.278 kWh = 239 kcal = 948 Btu\n- 1 m² = 1550 in² = 10.764 ft²\n\n### Seasonal Considerations\nAt the equator there is enough radiation in winter time to consider year-round applications. In the northern hemisphere, applications typically require energy mainly during summer time."
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Surface Tilt Angle (degrees)",
+        "0°N (MJ/m²/day)",
+        "30°N (MJ/m²/day)",
+        "60°N (MJ/m²/day)"
+      ],
+      "rows": [
+        [
+          0,
+          22,
+          18.5,
+          12
+        ],
+        [
+          15,
+          21.5,
+          20.5,
+          14.5
+        ],
+        [
+          30,
+          20.5,
+          21.8,
+          16
+        ],
+        [
+          45,
+          19,
+          22,
+          16.8
+        ],
+        [
+          60,
+          16.5,
+          20.5,
+          16
+        ],
+        [
+          75,
+          13,
+          17.5,
+          14
+        ],
+        [
+          90,
+          9,
+          13,
+          10.5
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "Solar Radiation - Daily Surface Energy by Latitude"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "0°N (Equator)",
+            "30°N",
+            "60°N"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Surface Tilt Angle (degrees)",
+          "data": [
+            0,
+            15,
+            30,
+            45,
+            60,
+            75,
+            90
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Daily Surface Energy (MJ/m²/day)"
+        },
+        "series": [
+          {
+            "name": "0°N (Equator)",
+            "type": "line",
+            "data": [
+              22,
+              21.5,
+              20.5,
+              19,
+              16.5,
+              13,
+              9
+            ],
+            "smooth": true
+          },
+          {
+            "name": "30°N",
+            "type": "line",
+            "data": [
+              18.5,
+              20.5,
+              21.8,
+              22,
+              20.5,
+              17.5,
+              13
+            ],
+            "smooth": true
+          },
+          {
+            "name": "60°N",
+            "type": "line",
+            "data": [
+              12,
+              14.5,
+              16,
+              16.8,
+              16,
+              14,
+              10.5
+            ],
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

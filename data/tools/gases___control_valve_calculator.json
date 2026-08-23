@@ -1,0 +1,61 @@
+{
+  "id": "gases___control_valve_calculator",
+  "title": "Gases - Control Valve Calculator",
+  "description": "A calculator tool for controlling valve parameters in gas systems. This tool helps engineers and technicians calculate and manage valve control settings for optimal gas flow and pressure management.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Inlet Pressure",
+          "",
+          "bar",
+          "Pressure at valve inlet"
+        ],
+        [
+          "Outlet Pressure",
+          "",
+          "bar",
+          "Pressure at valve outlet"
+        ],
+        [
+          "Flow Rate",
+          "",
+          "m³/h",
+          "Gas flow rate through valve"
+        ],
+        [
+          "Temperature",
+          "",
+          "°C",
+          "Gas temperature"
+        ],
+        [
+          "Valve Cv",
+          "",
+          "",
+          "Valve flow coefficient"
+        ],
+        [
+          "Pressure Drop",
+          "",
+          "bar",
+          "Pressure difference across valve"
+        ],
+        [
+          "Gas Density",
+          "",
+          "kg/m³",
+          "Density of gas at operating conditions"
+        ]
+      ]
+    }
+  ]
+}

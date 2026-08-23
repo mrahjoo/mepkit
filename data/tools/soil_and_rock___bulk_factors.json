@@ -1,0 +1,137 @@
+{
+  "id": "soil_and_rock___bulk_factors",
+  "title": "Soil and Rock - Bulk Factors",
+  "description": "Soil and rock expansion - or swell - after mining. One cubic meter from the borrow expands when dropped on the lorry or landfill, translating borrow volume to dump volume using bulking factors.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Density at Borrow (kg/m³)",
+        "Bulking (Swell) Factor (%)"
+      ],
+      "rows": [
+        [
+          "Basalt",
+          "2.4 - 3.1",
+          "75 - 80"
+        ],
+        [
+          "Clay",
+          "1.8 - 2.6",
+          "20 - 40"
+        ],
+        [
+          "Dolomite",
+          "2.8",
+          "50 - 60"
+        ],
+        [
+          "Earth",
+          "",
+          "20 - 30"
+        ],
+        [
+          "Gneiss",
+          "2.69",
+          "75 - 80"
+        ],
+        [
+          "Granite",
+          "2.6 - 2.8",
+          "75 - 80"
+        ],
+        [
+          "Gravel, dry",
+          "1.80",
+          "20 - 30"
+        ],
+        [
+          "Gravel, wet",
+          "2.00",
+          "20 - 30"
+        ],
+        [
+          "Gravel, wet w/clay",
+          "",
+          "50 - 60"
+        ],
+        [
+          "Limestone",
+          "2.7 - 2.8",
+          "75 - 80"
+        ],
+        [
+          "Loam",
+          "",
+          "15 - 25"
+        ],
+        [
+          "Quartz",
+          "2.65",
+          "75 - 80"
+        ],
+        [
+          "Rock",
+          "",
+          "40 - 80"
+        ],
+        [
+          "Sand, dry",
+          "1.60",
+          "20 - 30"
+        ],
+        [
+          "Sand, wet",
+          "1.95",
+          "20 - 30"
+        ],
+        [
+          "Sandstone",
+          "2.1 - 2.4",
+          "75 - 80"
+        ],
+        [
+          "Slate",
+          "2.6 - 3.3",
+          "85 - 90"
+        ],
+        [
+          "Soil",
+          "1.2 - 1.6",
+          "20 - 30"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "borrow_volume",
+          "label": "Borrow Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 300
+        },
+        {
+          "id": "bulking_factor",
+          "label": "Bulking (Swell) Factor",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 40
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dump_volume",
+          "label": "Dump Volume",
+          "unit": "m³",
+          "formula": "inputs.borrow_volume * (100 + inputs.bulking_factor) / 100",
+          "format": "decimal"
+        }
+      ],
+      "content": "### Example - Swell Factor\n\nAfter excavation of borrow material with a bulking factor - the material swells in the dump.\n\nFormula: _(Borrow Volume m³) × (100% + Bulking Factor %) / 100%_"
+    }
+  ]
+}

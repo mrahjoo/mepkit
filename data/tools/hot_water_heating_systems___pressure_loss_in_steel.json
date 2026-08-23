@@ -1,0 +1,54 @@
+{
+  "id": "hot_water_heating_systems___pressure_loss_in_steel",
+  "title": "Hot Water Heating Systems - Pressure Loss in Steel Pipes",
+  "description": "Pressure loss calculator for hot water steel pipes. Estimates pressure loss based on pipe diameter, heat flow, and flow velocity for hot water heating systems with a 20°C temperature difference.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hot Water Heating Systems - Pressure Loss in Steel Pipes\n\nThis calculator estimates pressure loss in hot water steel piping systems based on the standard nomogram for pipes with a 20°C temperature difference.\n\n### How to Use:\n1. Enter the pipe diameter (in inches)\n2. Enter the heat flow (in kW)\n3. The calculator will estimate the water flow, flow velocity, and pressure loss\n\n### Conversion References:\n- 1 Pa = 10⁻⁵ bar = 1.02×10⁻⁴ m H₂O\n- 1 liter/s = 3.6 m³/h = 15.852 gal (US)/min\n- 1 m/s = 3.6 km/h = 2.237 mph"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "inches"
+        },
+        {
+          "id": "heat_flow",
+          "label": "Heat Flow",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "kW"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_flow",
+          "label": "Water Flow",
+          "formula": "inputs.heat_flow * 0.012",
+          "unit": "liter/s",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_velocity",
+          "label": "Flow Velocity",
+          "formula": "inputs.water_flow * 0.425 / (inputs.pipe_diameter * inputs.pipe_diameter)",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_loss",
+          "label": "Pressure Loss",
+          "formula": "inputs.heat_flow * 0.6 / inputs.pipe_diameter",
+          "unit": "Pa/m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

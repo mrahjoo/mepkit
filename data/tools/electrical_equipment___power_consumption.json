@@ -1,0 +1,261 @@
+{
+  "id": "electrical_equipment___power_consumption",
+  "title": "Electrical Equipment - Power Consumption",
+  "description": "Calculate energy consumption for common electrical equipment based on power rating and running time. This tool helps estimate the kWh usage for typical household and office appliances.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Power Consumption Calculator\n\nThis calculator estimates the energy consumption (in kWh) for electrical equipment based on:\n- **Equipment**: Select from a list of common appliances\n- **Power Rating**: The typical power consumption in watts\n- **Running Time**: How long the equipment runs in hours\n- **Time Period**: Select the calculation period (Daily, Weekly, Monthly, Quarterly, Yearly)\n\n**Formula**: Energy (kWh) = Power (W) × Running Time (h) / 1000"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "power_rating",
+          "label": "Power Rating",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "W"
+        },
+        {
+          "id": "running_time",
+          "label": "Running Time",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "h"
+        },
+        {
+          "id": "time_period",
+          "label": "Time Period",
+          "type": "select",
+          "options": [
+            {
+              "label": "Daily",
+              "value": 1
+            },
+            {
+              "label": "Weekly",
+              "value": 7
+            },
+            {
+              "label": "Monthly",
+              "value": 30
+            },
+            {
+              "label": "Quarterly",
+              "value": 91
+            },
+            {
+              "label": "Yearly",
+              "value": 365
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "daily_consumption",
+          "label": "Daily Energy Consumption",
+          "unit": "kWh",
+          "format": "decimal",
+          "formula": "inputs.power_rating * inputs.running_time / 1000"
+        },
+        {
+          "id": "period_consumption",
+          "label": "Period Energy Consumption",
+          "unit": "kWh",
+          "format": "decimal",
+          "formula": "inputs.power_rating * inputs.running_time * inputs.time_period / 1000"
+        },
+        {
+          "id": "annual_consumption",
+          "label": "Annual Energy Consumption",
+          "unit": "kWh",
+          "format": "decimal",
+          "formula": "inputs.power_rating * inputs.running_time * 365 / 1000"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Equipment",
+        "Power (W)",
+        "Typical Usage (h/day)"
+      ],
+      "rows": [
+        [
+          "Air cooler",
+          65,
+          "8-12"
+        ],
+        [
+          "Air fryer",
+          1500,
+          "0.25"
+        ],
+        [
+          "Air purifier",
+          25,
+          "8"
+        ],
+        [
+          "Amazon Echo",
+          3,
+          "24"
+        ],
+        [
+          "Aquarium",
+          130,
+          "12"
+        ],
+        [
+          "Apple TV",
+          4.5,
+          "3"
+        ],
+        [
+          "Ceiling fan",
+          65,
+          "8"
+        ],
+        [
+          "Coffee machine",
+          800,
+          "0.20"
+        ],
+        [
+          "Computer monitor",
+          25,
+          "8"
+        ],
+        [
+          "Desktop computer",
+          250,
+          "8"
+        ],
+        [
+          "Dishwasher",
+          1350,
+          "0.5"
+        ],
+        [
+          "DVD player",
+          37.5,
+          "2"
+        ],
+        [
+          "Electric shaver",
+          20,
+          "0.15"
+        ],
+        [
+          "Freezer",
+          85,
+          "16"
+        ],
+        [
+          "Hair blow dryer",
+          600,
+          "0.25"
+        ],
+        [
+          "Heater fan",
+          2000,
+          "4"
+        ],
+        [
+          "Internet router",
+          10,
+          "24"
+        ],
+        [
+          "Iron",
+          1000,
+          "0.5"
+        ],
+        [
+          "Kettle",
+          2000,
+          "0.25"
+        ],
+        [
+          "Lamp (60W incandescent)",
+          60,
+          "5"
+        ],
+        [
+          "Laptop computer",
+          75,
+          "6"
+        ],
+        [
+          "Microwave oven",
+          1300,
+          "0.1"
+        ],
+        [
+          "Refrigerator",
+          112.5,
+          "9"
+        ],
+        [
+          "Rice cooker",
+          350,
+          "1"
+        ],
+        [
+          "Slow cooker",
+          175,
+          "6"
+        ],
+        [
+          "Solarium",
+          1500,
+          "1"
+        ],
+        [
+          "Stove",
+          2250,
+          "1"
+        ],
+        [
+          "Toaster",
+          850,
+          "0.15"
+        ],
+        [
+          "TV LED 65\"",
+          100,
+          "3"
+        ],
+        [
+          "Vacuum cleaner",
+          750,
+          "2"
+        ],
+        [
+          "Washing machine",
+          1250,
+          "1"
+        ],
+        [
+          "Water heater (tankless)",
+          7750,
+          "0.25"
+        ],
+        [
+          "Water pump",
+          250,
+          "2"
+        ],
+        [
+          "WIFI router",
+          7,
+          "24"
+        ]
+      ]
+    }
+  ]
+}

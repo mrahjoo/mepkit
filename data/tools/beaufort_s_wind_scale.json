@@ -1,0 +1,121 @@
+{
+  "id": "beaufort_s_wind_scale",
+  "title": "Beaufort's Wind Scale",
+  "description": "The Beaufort wind scale, which is used to describe the force of the wind, was invented by Admiral Beaufort in 1805. It is divided into a series of values from zero (calm winds) up to twelve and above (hurricanes), with each value representing a specific range and classification of wind velocity.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "wind_speed",
+          "label": "Wind Speed",
+          "type": "number",
+          "unit": "knots",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "beaufort_number",
+          "label": "Beaufort Number",
+          "formula": "inputs.wind_speed < 1 ? 0 : inputs.wind_speed <= 3 ? 1 : inputs.wind_speed <= 6 ? 2 : inputs.wind_speed <= 10 ? 3 : inputs.wind_speed <= 16 ? 4 : inputs.wind_speed <= 21 ? 5 : inputs.wind_speed <= 27 ? 6 : inputs.wind_speed <= 33 ? 7 : inputs.wind_speed <= 40 ? 8 : inputs.wind_speed <= 47 ? 9 : inputs.wind_speed <= 55 ? 10 : inputs.wind_speed <= 63 ? 11 : 12"
+        },
+        {
+          "id": "description",
+          "label": "Wind Description",
+          "formula": "inputs.wind_speed < 1 ? 'Calm' : inputs.wind_speed <= 3 ? 'Light Air' : inputs.wind_speed <= 6 ? 'Light Breeze' : inputs.wind_speed <= 10 ? 'Gentle Breeze' : inputs.wind_speed <= 16 ? 'Moderate Breeze' : inputs.wind_speed <= 21 ? 'Fresh Breeze' : inputs.wind_speed <= 27 ? 'Strong Breeze' : inputs.wind_speed <= 33 ? 'Moderate (Near) gale' : inputs.wind_speed <= 40 ? 'Gale' : inputs.wind_speed <= 47 ? 'Strong gale' : inputs.wind_speed <= 55 ? 'Storm' : inputs.wind_speed <= 63 ? 'Violent Storm' : 'Hurricane'"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Beaufort No.",
+        "Description",
+        "Observation",
+        "Mean Wind Speed (knots)"
+      ],
+      "rows": [
+        [
+          "0",
+          "Calm",
+          "Smoke rises vertically. The sea is mirror smooth.",
+          "0 - 1"
+        ],
+        [
+          "1",
+          "Light Air",
+          "Direction of wind shown by smoke drift but not by vanes. Scale-like ripples on sea, no foam on wave crests.",
+          "1 - 3"
+        ],
+        [
+          "2",
+          "Light Breeze",
+          "Wind felt on face, leaves rustle, ordinary vanes moved by wind. Short wavelets, glassy wave crests.",
+          "4 - 6"
+        ],
+        [
+          "3",
+          "Gentle Breeze",
+          "Leaves and small twigs in constant motion, wind extends light flag",
+          "7 - 10"
+        ],
+        [
+          "4",
+          "Moderate Breeze",
+          "Raises dust and loose paper, small branches moved. Fairly frequent whitecaps occur.",
+          "11 - 16"
+        ],
+        [
+          "5",
+          "Fresh Breeze",
+          "Small trees in leaf begin to sway. Moderate waves, many white foam crests.",
+          "17 - 21"
+        ],
+        [
+          "6",
+          "Strong Breeze",
+          "Large branches in motion, whistling heard in telegraph wires. Some spray on the sea surface.",
+          "22 - 27"
+        ],
+        [
+          "7",
+          "Moderate (Near) gale",
+          "Whole trees in motion, inconvenience felt when walking into wind. Foam on waves blows on streaks.",
+          "28 - 33"
+        ],
+        [
+          "8",
+          "Gale",
+          "Twigs broken off trees, generally impeded progress. Long streaks on foam appear on sea.",
+          "34 - 40"
+        ],
+        [
+          "9",
+          "Strong gale",
+          "Structural damage, e.g. slates and chimney pots removed from roofs. High waves, crests start to roll over.",
+          "41 - 47"
+        ],
+        [
+          "10",
+          "Storm",
+          "Trees uprooted, considerable structural damage. Exceptionally high waves, visibility affected.",
+          "48 - 55"
+        ],
+        [
+          "11",
+          "Violent Storm",
+          "Widespread damage",
+          "56 - 63"
+        ],
+        [
+          "12",
+          "Hurricane",
+          "Air is filled with spray and foam.",
+          "> 64"
+        ]
+      ]
+    }
+  ]
+}

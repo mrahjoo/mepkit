@@ -1,0 +1,110 @@
+{
+  "id": "board_feet_chart_and_calculator",
+  "title": "Board Feet Chart and Calculator",
+  "description": "Board feet is used as a volume measurement of lumber. Calculate board feet using lumber dimensions and optional pricing information.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Board Feet Calculator\n\nBoard feet is a volume measurement for lumber. One board foot equals one square foot that is one inch thick.\n\n**Formula:** BF = (t × w × L) / 12\n\nWhere:\n- **t** = nominal lumber thickness (inches)\n- **w** = nominal lumber width (inches)\n- **L** = nominal lumber length (feet)\n\nDefault example: 2\" × 4\" × 6' = 4 board feet"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "thickness",
+          "label": "Thickness",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 2
+        },
+        {
+          "id": "width",
+          "label": "Width",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 4
+        },
+        {
+          "id": "length",
+          "label": "Length",
+          "type": "number",
+          "unit": "feet",
+          "defaultValue": 6
+        },
+        {
+          "id": "price_per_bf",
+          "label": "Price per Board Foot",
+          "type": "number",
+          "unit": "$/bf",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "board_feet",
+          "label": "Board Feet",
+          "formula": "(inputs.thickness * inputs.width * inputs.length) / 12",
+          "unit": "bf"
+        },
+        {
+          "id": "total_cost",
+          "label": "Total Cost",
+          "formula": "((inputs.thickness * inputs.width * inputs.length) / 12) * inputs.price_per_bf",
+          "unit": "$",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Dimension",
+        "Quick Approximation",
+        "Formula"
+      ],
+      "rows": [
+        [
+          "1 × 4",
+          "Divide length by 3",
+          "Length × 1/3"
+        ],
+        [
+          "1 × 6",
+          "Divide length by 2",
+          "Length × 1/2"
+        ],
+        [
+          "1 × 8",
+          "Multiply length by 0.66",
+          "Length × 2/3"
+        ],
+        [
+          "1 × 12",
+          "Linear length = board feet",
+          "Length × 1"
+        ],
+        [
+          "2 × 4",
+          "Multiply length by 0.66",
+          "Length × 2/3"
+        ],
+        [
+          "2 × 6",
+          "Linear length = board feet",
+          "Length × 1"
+        ],
+        [
+          "2 × 8",
+          "Multiply length by 1.33",
+          "Length × 4/3"
+        ],
+        [
+          "2 × 12",
+          "Multiply length by 2",
+          "Length × 2"
+        ]
+      ]
+    }
+  ]
+}

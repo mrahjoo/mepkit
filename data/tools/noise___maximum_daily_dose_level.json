@@ -1,0 +1,232 @@
+{
+  "id": "noise___maximum_daily_dose_level",
+  "title": "Noise - Maximum Daily Dose Level",
+  "description": "Calculate daily noise exposure dose and convert to 8-hr Time-Weighted Average (TWA). When exposed to different noise levels throughout the day, this tool computes the cumulative daily dose as a percentage and the corresponding TWA in dB(A). According to NIOSH guidelines, the daily dose should not exceed 100%.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Noise Dose Calculation\n\nWhen exposed to different noise levels throughout a working day, the daily dose can be calculated using:\n\n**D = (te₁/td₁ + te₂/td₂ + ... + teₙ/tdₙ) × 100%**\n\nwhere:\n- **D** = daily noise exposure (%)\n- **te** = exposure time at a specified noise level (min)\n- **td** = maximum duration time at specified noise level (min)\n\nThe Time-Weighted Average (TWA) for an 8-hour shift is then calculated as:\n\n**TWA = 10 log(D/100) + 85**\n\nAccording to NIOSH, the daily dose level should **not exceed 100%**."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "exposure_time_1",
+          "label": "Exposure Time 1",
+          "type": "number",
+          "unit": "min",
+          "defaultValue": 5
+        },
+        {
+          "id": "max_duration_1",
+          "label": "Maximum Duration 1",
+          "type": "number",
+          "unit": "min",
+          "defaultValue": 15
+        },
+        {
+          "id": "exposure_time_2",
+          "label": "Exposure Time 2",
+          "type": "number",
+          "unit": "min",
+          "defaultValue": 30
+        },
+        {
+          "id": "max_duration_2",
+          "label": "Maximum Duration 2",
+          "type": "number",
+          "unit": "min",
+          "defaultValue": 60
+        },
+        {
+          "id": "exposure_time_3",
+          "label": "Exposure Time 3",
+          "type": "number",
+          "unit": "min",
+          "defaultValue": 0
+        },
+        {
+          "id": "max_duration_3",
+          "label": "Maximum Duration 3",
+          "type": "number",
+          "unit": "min",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "daily_dose",
+          "label": "Daily Noise Dose",
+          "unit": "%",
+          "format": "decimal",
+          "formula": "((inputs.exposure_time_1 / inputs.max_duration_1) + (inputs.exposure_time_2 / inputs.max_duration_2) + (inputs.exposure_time_3 / inputs.max_duration_3)) * 100"
+        },
+        {
+          "id": "twa",
+          "label": "8-hr Time-Weighted Average (TWA)",
+          "unit": "dB(A)",
+          "format": "decimal",
+          "formula": "10 * Math.log10(((inputs.exposure_time_1 / inputs.max_duration_1) + (inputs.exposure_time_2 / inputs.max_duration_2) + (inputs.exposure_time_3 / inputs.max_duration_3)) * 100 / 100) + 85"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Daily Noise Dose (%)",
+        "8-hr TWA (dB(A))"
+      ],
+      "rows": [
+        [
+          20,
+          78
+        ],
+        [
+          30,
+          79.8
+        ],
+        [
+          40,
+          81
+        ],
+        [
+          50,
+          82
+        ],
+        [
+          60,
+          82.8
+        ],
+        [
+          70,
+          83.5
+        ],
+        [
+          80,
+          84
+        ],
+        [
+          90,
+          84.5
+        ],
+        [
+          100,
+          85
+        ],
+        [
+          200,
+          88
+        ],
+        [
+          400,
+          91
+        ],
+        [
+          600,
+          92.8
+        ],
+        [
+          800,
+          94
+        ],
+        [
+          1000,
+          95
+        ],
+        [
+          1500,
+          96.8
+        ],
+        [
+          2000,
+          98
+        ],
+        [
+          4000,
+          101
+        ],
+        [
+          6000,
+          102.8
+        ],
+        [
+          8000,
+          104
+        ],
+        [
+          10000,
+          105
+        ],
+        [
+          20000,
+          108
+        ],
+        [
+          40000,
+          111
+        ],
+        [
+          60000,
+          112.8
+        ],
+        [
+          80000,
+          114
+        ],
+        [
+          100000,
+          115
+        ],
+        [
+          150000,
+          116.8
+        ],
+        [
+          200000,
+          118
+        ],
+        [
+          400000,
+          121
+        ],
+        [
+          600000,
+          122.8
+        ],
+        [
+          800000,
+          124
+        ],
+        [
+          1000000,
+          125
+        ],
+        [
+          2000000,
+          128
+        ],
+        [
+          4000000,
+          131
+        ],
+        [
+          6000000,
+          132.8
+        ],
+        [
+          8000000,
+          134
+        ],
+        [
+          10000000,
+          135
+        ],
+        [
+          20000000,
+          138
+        ]
+      ]
+    }
+  ]
+}

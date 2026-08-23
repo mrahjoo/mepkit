@@ -1,0 +1,91 @@
+{
+  "id": "electrical_motors___service_factors",
+  "title": "Electrical Motors - Service Factors",
+  "description": "Calculate design power based on motor power and service factor. Service factor (SF) is a measure of periodic overload capacity at which a motor can operate without being damaged.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Service Factor Calculator\n\nService factor (SF) is a measure of periodically overload capacity at which a motor can operate without being damaged.\n\n**Formula:**\n\n_PD = SF × P_\n\nWhere:\n- _PD_ = Design Power (hp or W)\n- _SF_ = Service Factor\n- _P_ = Motor Power (hp or W)\n\nA motor operating continuously at a service factor greater than 1 will have a reduced life expectancy compared to operating at its rated nameplate horsepower."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "motor_power",
+          "label": "Motor Power",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "hp"
+        },
+        {
+          "id": "service_factor",
+          "label": "Service Factor",
+          "type": "number",
+          "defaultValue": 1.15,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "design_power",
+          "label": "Design Power",
+          "formula": "inputs.motor_power * inputs.service_factor",
+          "unit": "hp",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Motor Power (hp)",
+        "3600 rpm",
+        "1800 rpm",
+        "1200 rpm",
+        "900 rpm"
+      ],
+      "rows": [
+        [
+          "1/6, 1/4, 1/3",
+          "1.35",
+          "1.35",
+          "1.35",
+          "1.35"
+        ],
+        [
+          "1/2",
+          "1.25",
+          "1.25",
+          "1.25",
+          "1.25"
+        ],
+        [
+          "3/4",
+          "1.25",
+          "1.25",
+          "1.15",
+          "1.15"
+        ],
+        [
+          "1",
+          "1.25",
+          "1.15",
+          "1.15",
+          "1.15"
+        ],
+        [
+          "1 1/2 and up",
+          "1.115",
+          "1.15",
+          "1.15",
+          "1.15"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### NEMA Service Factor Reference\n\nThe table above shows NEMA service factors for drip-proof motors at various synchronous speeds and power ratings.\n\n**Example:** A 1 HP motor with a Service Factor of 1.15 can operate at:\n\n_PD = 1 hp × 1.15 = 1.15 hp_\n\nwithout overheating or damaging the motor (assuming rated voltage and frequency are supplied).\n\n**Note:** Insulation life and bearing life are reduced by operating at service factor loads."
+    }
+  ]
+}

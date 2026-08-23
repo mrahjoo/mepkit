@@ -1,0 +1,73 @@
+{
+  "id": "arsenic___melting_points_of_binary_eutectic_alloys",
+  "title": "Arsenic - Melting Points of Binary Eutectic Alloys",
+  "description": "Melting points of binary eutectic alloys containing Arsenic (As). Eutectic mixtures represent compositions where the melting point is at its minimum. This tool provides data for various As alloys with their weight percentages and melting points in both Kelvin and Fahrenheit.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Alloy Component",
+        "Weight of Alloy Component (%)",
+        "Melting Point (K)",
+        "Melting Point (°F)"
+      ],
+      "rows": [
+        [
+          "Co - Cobalt",
+          70,
+          1189,
+          1681
+        ],
+        [
+          "Cu - Copper",
+          78,
+          958,
+          1265
+        ],
+        [
+          "Fe - Iron (Ferrum)",
+          69,
+          1103,
+          2017
+        ],
+        [
+          "In - Indium",
+          18,
+          1004,
+          1348
+        ],
+        [
+          "Mn - Manganese",
+          49,
+          1143,
+          1598
+        ],
+        [
+          "Ni - Nickel",
+          57,
+          1077,
+          1479
+        ],
+        [
+          "Sb - Antimony (Stibium)",
+          87,
+          878,
+          1121
+        ],
+        [
+          "Sn - Tin (Stannum)",
+          51,
+          852,
+          1074
+        ],
+        [
+          "Zn - Zinc",
+          18,
+          996,
+          1333
+        ]
+      ]
+    }
+  ]
+}

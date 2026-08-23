@@ -1,0 +1,94 @@
+{
+  "id": "torque_or_moment_of_force___online_converter",
+  "title": "Torque or Moment of Force - Online Converter",
+  "description": "Torque or moment - the tendency of a force to rotate an object. Convert between common torque or moment units using the formula T = F × a, where T is torque, F is force, and a is moment arm.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Torque or Moment of Force - Online Converter\n\nTorque or moment - the tendency of a force to rotate an object around an axis or a point - is defined as the product of the force and the distance from the point or axis to the force vector.\n\n**Formula:** T = F × a\n\nWhere:\n- **T** = torque or moment of force (Nm, lbf ft)\n- **F** = applied force (N, lbf)\n- **a** = moment arm (m, ft)\n\n### Example - Torque exerted by a Wrench\n\nA force of 250 N is acting at the end of a 30 cm long wrench. The torque exerted:\n\nT = (250 N) × (30 cm) × (0.01 m/cm) = 75 Nm"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Applied Force (F)",
+          "type": "number",
+          "defaultValue": 250,
+          "unit": "N"
+        },
+        {
+          "id": "moment_arm",
+          "label": "Moment Arm (a)",
+          "type": "number",
+          "defaultValue": 0.3,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque_nm",
+          "label": "Torque",
+          "formula": "inputs.force * inputs.moment_arm",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "torque_lbf_ft",
+          "label": "Torque",
+          "formula": "(inputs.force * inputs.moment_arm) * 0.737562",
+          "unit": "lbf ft",
+          "format": "decimal"
+        },
+        {
+          "id": "torque_kgf_m",
+          "label": "Torque",
+          "formula": "(inputs.force * inputs.moment_arm) * 0.101972",
+          "unit": "kgf m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Torque Unit",
+        "Conversion Factor to Nm",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Newton-meter (Nm)",
+          "1",
+          "SI unit of torque"
+        ],
+        [
+          "Pound-force foot (lbf ft)",
+          "1.35582",
+          "Imperial unit"
+        ],
+        [
+          "Kilogram-force meter (kgf m)",
+          "9.80665",
+          "Metric unit"
+        ],
+        [
+          "Dyne-centimeter (dyne cm)",
+          "0.00000001",
+          "CGS unit"
+        ],
+        [
+          "Pound-force inch (lbf in)",
+          "0.112985",
+          "Imperial unit"
+        ]
+      ]
+    }
+  ]
+}

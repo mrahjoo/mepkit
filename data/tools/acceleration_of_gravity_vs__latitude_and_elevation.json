@@ -1,0 +1,185 @@
+{
+  "id": "acceleration_of_gravity_vs__latitude_and_elevation",
+  "title": "Acceleration of Gravity vs. Latitude and Elevation",
+  "description": "Calculate acceleration of gravity at sea level and elevation related to north-south position on earth (degrees latitude). Includes calculations for falling objects and weight variations across latitudes.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "gravity_calculator",
+      "content": "Acceleration of Gravity Calculator",
+      "inputs": [
+        {
+          "id": "latitude",
+          "label": "Latitude",
+          "type": "number",
+          "defaultValue": 45,
+          "unit": "degrees"
+        },
+        {
+          "id": "elevation",
+          "label": "Elevation",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m"
+        },
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "kg"
+        },
+        {
+          "id": "fall_distance",
+          "label": "Fall Distance",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "gravity_acceleration",
+          "label": "Acceleration of Gravity",
+          "unit": "m/s²",
+          "formula": "9.780318 * (1.0053024 * sin(inputs.latitude * 3.14159/180)^2 - 0.0000058 * sin(2 * inputs.latitude * 3.14159/180)^2) - (3.086e-6 * inputs.elevation)",
+          "format": "decimal"
+        },
+        {
+          "id": "weight",
+          "label": "Weight (Force)",
+          "unit": "N",
+          "formula": "inputs.mass * (9.780318 * (1.0053024 * sin(inputs.latitude * 3.14159/180)^2 - 0.0000058 * sin(2 * inputs.latitude * 3.14159/180)^2) - (3.086e-6 * inputs.elevation))",
+          "format": "decimal"
+        },
+        {
+          "id": "fall_time",
+          "label": "Time to Fall",
+          "unit": "s",
+          "formula": "sqrt(2 * inputs.fall_distance / (9.780318 * (1.0053024 * sin(inputs.latitude * 3.14159/180)^2 - 0.0000058 * sin(2 * inputs.latitude * 3.14159/180)^2) - (3.086e-6 * inputs.elevation)))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "gravity_vs_latitude_chart",
+      "content": "Acceleration of Gravity vs. Latitude",
+      "options": {
+        "title": {
+          "text": "Acceleration of Gravity vs. Latitude (at sea level)",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90
+          ],
+          "name": "Latitude (degrees)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Acceleration (m/s²)",
+          "min": 9.78,
+          "max": 9.84
+        },
+        "series": [
+          {
+            "data": [
+              9.78031,
+              9.78194,
+              9.78618,
+              9.79329,
+              9.80265,
+              9.81342,
+              9.82419,
+              9.83318,
+              9.83882,
+              9.83221
+            ],
+            "type": "line",
+            "name": "Gravity Acceleration",
+            "smooth": true,
+            "lineStyle": {
+              "width": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "id": "gravity_reference_table",
+      "content": "Gravity Acceleration Reference Values",
+      "headers": [
+        "Latitude (°)",
+        "Elevation (m)",
+        "Gravity (m/s²)",
+        "Gravity (ft/s²)"
+      ],
+      "rows": [
+        [
+          "0 (Equator)",
+          "0",
+          "9.7803",
+          "32.087"
+        ],
+        [
+          "15",
+          "0",
+          "9.7844",
+          "32.102"
+        ],
+        [
+          "30",
+          "0",
+          "9.7933",
+          "32.135"
+        ],
+        [
+          "45",
+          "0",
+          "9.8062",
+          "32.182"
+        ],
+        [
+          "60",
+          "0",
+          "9.8191",
+          "32.229"
+        ],
+        [
+          "90 (Pole)",
+          "0",
+          "9.8321",
+          "32.259"
+        ],
+        [
+          "45",
+          "1000",
+          "9.8048",
+          "32.177"
+        ],
+        [
+          "45",
+          "5000",
+          "9.7974",
+          "32.152"
+        ]
+      ]
+    }
+  ]
+}

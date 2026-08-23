@@ -1,0 +1,115 @@
+{
+  "id": "vacuum_pipes___pressure_loss_vs__air_flow",
+  "title": "Vacuum Pipes - Pressure Loss vs. Air Flow",
+  "description": "Calculate pressure drops in vacuum pipe lines. Based on initial vacuum pressure of 20 in Hg (67% vacuum) and steel pipes schedule 40.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pressure Drop Calculation\n\nCalculate pressure drops in vacuum pipelines for steel pipes schedule 40.\n\n### Conversion Factors\n- 1 in Hg = 3.37 kPa\n- 1 scfm = 0.472 nl/s\n\n### Reference\nBased on initial vacuum pressure: **20 in Hg (67% vacuum)**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "air_flow_scfm",
+          "label": "Air Flow",
+          "type": "number",
+          "unit": "scfm",
+          "defaultValue": 100
+        },
+        {
+          "id": "pipe_diameter_inches",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_drop_in_hg_per_100ft",
+          "label": "Pressure Drop (in Hg/100 ft)",
+          "formula": "inputs.air_flow_scfm * 0.05",
+          "unit": "in Hg/100 ft",
+          "format": "decimal"
+        },
+        {
+          "id": "air_flow_nl_s",
+          "label": "Air Flow",
+          "formula": "inputs.air_flow_scfm * 0.472",
+          "unit": "nl/s",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_drop_kpa_per_100m",
+          "label": "Pressure Drop (kPa/100 m)",
+          "formula": "inputs.air_flow_scfm * 0.05 * 3.37",
+          "unit": "kPa/100 m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Diameter (in)",
+        "Air Flow (scfm)",
+        "Pressure Drop (in Hg/100 ft)",
+        "Air Flow (nl/s)",
+        "Pressure Drop (kPa/100 m)"
+      ],
+      "rows": [
+        [
+          0.5,
+          10,
+          0.5,
+          4.72,
+          1.685
+        ],
+        [
+          0.75,
+          20,
+          1,
+          9.44,
+          3.37
+        ],
+        [
+          1,
+          50,
+          2.5,
+          23.6,
+          8.425
+        ],
+        [
+          1.5,
+          100,
+          5,
+          47.2,
+          16.85
+        ],
+        [
+          2,
+          200,
+          10,
+          94.4,
+          33.7
+        ],
+        [
+          2.5,
+          300,
+          15,
+          141.6,
+          50.55
+        ],
+        [
+          3,
+          500,
+          25,
+          236,
+          84.25
+        ]
+      ]
+    }
+  ]
+}

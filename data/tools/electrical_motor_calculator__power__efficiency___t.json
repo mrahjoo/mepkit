@@ -1,0 +1,89 @@
+{
+  "id": "electrical_motor_calculator__power__efficiency___t",
+  "title": "Electrical Motor Calculator: Power, Efficiency & Torque Calculations",
+  "description": "Calculate amps, hp and kVA for electrical motors. This calculator helps determine electric motor amps, horsepower and 3-phase kVA based on input parameters.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Electrical Motor Calculator\n\nCalculate current (amps), power (horsepower), and 3-phase apparent power (kVA) for electrical motors.\n\n## Key Definitions:\n- **RLA** - Running Load Amps: current drawn during normal operation\n- **FLA** - Full Load Amps: current drawn at full-load torque and horsepower (typically RLA + 25%)\n- **Conversion**: 1 hp = 0.745 kW"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Current (Amps) Calculator",
+        "Power (Horsepower) Calculator",
+        "3-Phase kVA Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 480
+        },
+        {
+          "id": "power_hp",
+          "label": "Power",
+          "type": "number",
+          "unit": "hp",
+          "defaultValue": 10
+        },
+        {
+          "id": "efficiency",
+          "label": "Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 85
+        },
+        {
+          "id": "power_factor",
+          "label": "Power Factor",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.85
+        },
+        {
+          "id": "phase",
+          "label": "Phase",
+          "type": "select",
+          "options": [
+            {
+              "label": "1-Phase",
+              "value": 1
+            },
+            {
+              "label": "3-Phase",
+              "value": 3
+            }
+          ],
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "current_amps",
+          "label": "Current (Amps)",
+          "unit": "A",
+          "format": "decimal",
+          "formula": "(inputs.power_hp * 746) / (inputs.voltage * inputs.power_factor * inputs.efficiency / 100)"
+        },
+        {
+          "id": "power_kw",
+          "label": "Power",
+          "unit": "kW",
+          "format": "decimal",
+          "formula": "inputs.power_hp * 0.745"
+        },
+        {
+          "id": "apparent_power_kva",
+          "label": "Apparent Power (3-Phase kVA)",
+          "unit": "kVA",
+          "format": "decimal",
+          "formula": "(inputs.voltage * inputs.current_amps * inputs.phase) / 1000"
+        }
+      ]
+    }
+  ]
+}

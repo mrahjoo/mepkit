@@ -1,0 +1,72 @@
+{
+  "id": "standard_grade_coal___heat_values",
+  "title": "Standard Grade Coal - Heat Values",
+  "description": "Approximate Lower Heating values of standard grades of coal. Provides heating values in both Btu/lb and kJ/kg for different coal grades including Anthracite, Bituminous, Sub-bituminous, and Lignite coal types.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Coal Grade",
+        "Heating Value (Btu/lb)",
+        "Heating Value (kJ/kg)"
+      ],
+      "rows": [
+        [
+          "Anthracite",
+          12910,
+          30080
+        ],
+        [
+          "Semi-Anthracite",
+          13770,
+          32084
+        ],
+        [
+          "Low-volatile bituminous",
+          14340,
+          33412
+        ],
+        [
+          "Medium-volatile bituminous",
+          13840,
+          32247
+        ],
+        [
+          "High-volatile bituminous A",
+          13090,
+          30499
+        ],
+        [
+          "High-volatile bituminous B",
+          12130,
+          28262
+        ],
+        [
+          "High-volatile bituminous C",
+          10750,
+          25047
+        ],
+        [
+          "Sub-bituminous B",
+          9150,
+          21319
+        ],
+        [
+          "Sub-bituminous C",
+          8940,
+          20830
+        ],
+        [
+          "Lignite",
+          6900,
+          16077
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Coal Grade Descriptions\n\n**Anthracite Coal** is very shiny, hard black coal, high carbon content and energy density, repels moisture, for domestic industrial uses, including smokeless fuel\n\n**Bituminous Coal** is softer and shiny, moisture content is 8-20%, possible for coking coals, volatile matter from 16%-40%, can be used for thermal or metallurgical applications\n\n**Sub-bituminous Coal** is soft and black with energy density lower than bituminous coal, most common type for electricity generation\n\n**Lignite Coal** is light brown with high moisture content and low energy density, used mainly for electricity generation"
+    }
+  ]
+}

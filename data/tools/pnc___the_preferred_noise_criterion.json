@@ -1,0 +1,157 @@
+{
+  "id": "pnc___the_preferred_noise_criterion",
+  "title": "PNC - the Preferred Noise Criterion",
+  "description": "A noise measurement system for continuous or ambient noise in indoor environments. The Preferred Noise Criterion (PNC) is used to judge the acceptability of ventilation and other background broad band noise sources by comparing measured sound pressure levels at different frequency bands against established PNC curves.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "PNC",
+        "31.5 Hz",
+        "63.0 Hz",
+        "125 Hz",
+        "250 Hz",
+        "500 Hz",
+        "1000 Hz",
+        "2000 Hz",
+        "4000 Hz",
+        "8000 Hz"
+      ],
+      "rows": [
+        [
+          "PNC - 15",
+          58,
+          43,
+          35,
+          28,
+          21,
+          15,
+          10,
+          8,
+          8
+        ],
+        [
+          "PNC - 20",
+          59,
+          46,
+          39,
+          32,
+          26,
+          20,
+          15,
+          13,
+          13
+        ],
+        [
+          "PNC - 25",
+          60,
+          49,
+          43,
+          37,
+          31,
+          25,
+          20,
+          18,
+          18
+        ],
+        [
+          "PNC - 30",
+          61,
+          52,
+          46,
+          41,
+          35,
+          30,
+          25,
+          23,
+          23
+        ],
+        [
+          "PNC - 35",
+          62,
+          55,
+          50,
+          45,
+          40,
+          35,
+          30,
+          28,
+          28
+        ],
+        [
+          "PNC - 40",
+          64,
+          59,
+          54,
+          50,
+          45,
+          40,
+          35,
+          33,
+          33
+        ],
+        [
+          "PNC - 45",
+          67,
+          63,
+          58,
+          54,
+          50,
+          45,
+          41,
+          38,
+          38
+        ],
+        [
+          "PNC - 50",
+          70,
+          66,
+          62,
+          58,
+          54,
+          50,
+          46,
+          43,
+          43
+        ],
+        [
+          "PNC - 55",
+          73,
+          70,
+          66,
+          62,
+          59,
+          55,
+          51,
+          48,
+          48
+        ],
+        [
+          "PNC - 60",
+          76,
+          73,
+          69,
+          66,
+          63,
+          59,
+          56,
+          53,
+          53
+        ],
+        [
+          "PNC - 65",
+          79,
+          76,
+          73,
+          70,
+          67,
+          64,
+          61,
+          58,
+          58
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "id": "pressure_to_head_unit_converter",
+  "title": "Pressure to Head Unit Converter",
+  "description": "Convert between commonly used units for pressure and head including lb/in², atm, kg/cm², kg/m², in. water, ft. water, in. mercury, mm mercury, bars, and MPa.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pressure to Head Unit Converter\n\nConvert pressure and head units using the conversion factors table below.\n\n### Supported Units:\n- **Pressure Units**: lb/in², lb/ft², Atm, kg/cm², kg/m², Bars, MPa\n- **Head Units**: in. water (68°F), ft. water (68°F), in. mercury (31°F), mm mercury (31°F)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "inputValue",
+          "label": "Input Value",
+          "type": "number",
+          "defaultValue": 29.92
+        },
+        {
+          "id": "fromUnit",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "lb_in2",
+              "label": "lb/in²"
+            },
+            {
+              "value": "lb_ft2",
+              "label": "lb/ft²"
+            },
+            {
+              "value": "atm",
+              "label": "Atm"
+            },
+            {
+              "value": "kg_cm2",
+              "label": "kg/cm²"
+            },
+            {
+              "value": "kg_m2",
+              "label": "kg/m²"
+            },
+            {
+              "value": "in_water",
+              "label": "in. water (68°F)"
+            },
+            {
+              "value": "ft_water",
+              "label": "ft. water (68°F)"
+            },
+            {
+              "value": "in_mercury",
+              "label": "in. mercury (31°F)"
+            },
+            {
+              "value": "mm_mercury",
+              "label": "mm mercury (31°F)"
+            },
+            {
+              "value": "bars",
+              "label": "Bars"
+            },
+            {
+              "value": "mpa",
+              "label": "MPa"
+            }
+          ]
+        },
+        {
+          "id": "toUnit",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "lb_in2",
+              "label": "lb/in²"
+            },
+            {
+              "value": "lb_ft2",
+              "label": "lb/ft²"
+            },
+            {
+              "value": "atm",
+              "label": "Atm"
+            },
+            {
+              "value": "kg_cm2",
+              "label": "kg/cm²"
+            },
+            {
+              "value": "kg_m2",
+              "label": "kg/m²"
+            },
+            {
+              "value": "in_water",
+              "label": "in. water (68°F)"
+            },
+            {
+              "value": "ft_water",
+              "label": "ft. water (68°F)"
+            },
+            {
+              "value": "in_mercury",
+              "label": "in. mercury (31°F)"
+            },
+            {
+              "value": "mm_mercury",
+              "label": "mm mercury (31°F)"
+            },
+            {
+              "value": "bars",
+              "label": "Bars"
+            },
+            {
+              "value": "mpa",
+              "label": "MPa"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Value",
+          "formula": "inputs.inputValue * (inputs.fromUnit === 'lb_in2' && inputs.toUnit === 'mpa' ? 0.006895 : inputs.fromUnit === 'in_mercury' && inputs.toUnit === 'mpa' ? 0.0033864 : inputs.fromUnit === 'atm' && inputs.toUnit === 'mpa' ? 0.101325 : inputs.fromUnit === 'bars' && inputs.toUnit === 'mpa' ? 0.1 : inputs.fromUnit === 'kg_cm2' && inputs.toUnit === 'mpa' ? 0.098067 : inputs.fromUnit === 'lb_in2' && inputs.toUnit === 'bars' ? 14.5038 : inputs.fromUnit === 'lb_in2' && inputs.toUnit === 'atm' ? 0.068046 : inputs.fromUnit === 'in_mercury' && inputs.toUnit === 'bars' ? 0.033864 : 1)",
+          "unit": "converted units"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "From Unit",
+        "To Unit",
+        "Multiply By"
+      ],
+      "rows": [
+        [
+          "lb/in²",
+          "lb/ft²",
+          "144"
+        ],
+        [
+          "lb/in²",
+          "Atm",
+          "0.068046"
+        ],
+        [
+          "lb/in²",
+          "kg/cm²",
+          "0.070307"
+        ],
+        [
+          "lb/in²",
+          "kg/m²",
+          "703.070"
+        ],
+        [
+          "lb/in²",
+          "in. water",
+          "27.7276"
+        ],
+        [
+          "lb/in²",
+          "ft. water",
+          "2.3106"
+        ],
+        [
+          "lb/in²",
+          "in. mercury",
+          "2.03602"
+        ],
+        [
+          "lb/in²",
+          "mm mercury",
+          "51.7150"
+        ],
+        [
+          "lb/in²",
+          "Bars",
+          "14.5038"
+        ],
+        [
+          "lb/in²",
+          "MPa",
+          "0.006895"
+        ],
+        [
+          "lb/ft²",
+          "lb/in²",
+          "0.0069444"
+        ],
+        [
+          "lb/ft²",
+          "Atm",
+          "0.000473"
+        ],
+        [
+          "lb/ft²",
+          "kg/cm²",
+          "0.000488"
+        ],
+        [
+          "lb/ft²",
+          "kg/m²",
+          "4.88241"
+        ],
+        [
+          "Atm",
+          "lb/in²",
+          "14.696"
+        ],
+        [
+          "Atm",
+          "lb/ft²",
+          "2116.22"
+        ],
+        [
+          "Atm",
+          "Bars",
+          "1.01325"
+        ],
+        [
+          "Atm",
+          "MPa",
+          "0.101325"
+        ],
+        [
+          "kg/cm²",
+          "lb/in²",
+          "14.2233"
+        ],
+        [
+          "kg/cm²",
+          "Atm",
+          "0.96784"
+        ],
+        [
+          "kg/cm²",
+          "MPa",
+          "0.098067"
+        ],
+        [
+          "in. water",
+          "in. mercury",
+          "0.073430"
+        ],
+        [
+          "in. water",
+          "mm mercury",
+          "1.8651"
+        ],
+        [
+          "in. water",
+          "Bars",
+          "0.00249"
+        ],
+        [
+          "in. water",
+          "MPa",
+          "0.000249"
+        ],
+        [
+          "ft. water",
+          "in. mercury",
+          "0.88155"
+        ],
+        [
+          "ft. water",
+          "mm mercury",
+          "22.3813"
+        ],
+        [
+          "ft. water",
+          "Bars",
+          "0.029839"
+        ],
+        [
+          "ft. water",
+          "MPa",
+          "0.0029839"
+        ],
+        [
+          "in. mercury",
+          "mm mercury",
+          "25.40005"
+        ],
+        [
+          "in. mercury",
+          "Bars",
+          "0.033864"
+        ],
+        [
+          "in. mercury",
+          "MPa",
+          "0.0033864"
+        ],
+        [
+          "mm mercury",
+          "Bars",
+          "0.001333"
+        ],
+        [
+          "mm mercury",
+          "MPa",
+          "0.0001333"
+        ],
+        [
+          "Bars",
+          "MPa",
+          "0.10"
+        ]
+      ]
+    }
+  ]
+}

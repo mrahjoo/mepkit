@@ -1,0 +1,84 @@
+{
+  "id": "maximizing_space__fit_small_rectangles_inside_a_la",
+  "title": "Maximizing Space: Fit Small Rectangles Inside a Larger Rectangle",
+  "description": "Calculate the maximum number of smaller rectangles or squares that can fit into a larger rectangle or square. Useful for estimating bricks in a wall or rectangular cuts from plates.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "large_width",
+          "label": "Large rectangle width",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "in"
+        },
+        {
+          "id": "large_height",
+          "label": "Large rectangle height",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "in"
+        },
+        {
+          "id": "small_width",
+          "label": "Small rectangles width",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "in"
+        },
+        {
+          "id": "small_height",
+          "label": "Small rectangles height",
+          "type": "number",
+          "defaultValue": 0.8,
+          "unit": "in"
+        },
+        {
+          "id": "spacing",
+          "label": "Space between rectangles",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "max_rectangles",
+          "label": "Maximum number of smaller rectangles",
+          "formula": "Math.floor((inputs.large_width + inputs.spacing) / (inputs.small_width + inputs.spacing)) * Math.floor((inputs.large_height + inputs.spacing) / (inputs.small_height + inputs.spacing))",
+          "format": "decimal"
+        },
+        {
+          "id": "large_area",
+          "label": "Area of large rectangle",
+          "formula": "inputs.large_width * inputs.large_height",
+          "format": "decimal",
+          "unit": "in²"
+        },
+        {
+          "id": "small_area",
+          "label": "Area of small rectangle",
+          "formula": "inputs.small_width * inputs.small_height",
+          "format": "decimal",
+          "unit": "in²"
+        },
+        {
+          "id": "total_small_area",
+          "label": "Total area of all small rectangles",
+          "formula": "Math.floor((inputs.large_width + inputs.spacing) / (inputs.small_width + inputs.spacing)) * Math.floor((inputs.large_height + inputs.spacing) / (inputs.small_height + inputs.spacing)) * inputs.small_width * inputs.small_height",
+          "format": "decimal",
+          "unit": "in²"
+        },
+        {
+          "id": "area_ratio",
+          "label": "Small rectangles to large rectangle area ratio",
+          "formula": "(Math.floor((inputs.large_width + inputs.spacing) / (inputs.small_width + inputs.spacing)) * Math.floor((inputs.large_height + inputs.spacing) / (inputs.small_height + inputs.spacing)) * inputs.small_width * inputs.small_height) / (inputs.large_width * inputs.large_height) * 100",
+          "format": "decimal",
+          "unit": "%"
+        }
+      ]
+    }
+  ]
+}

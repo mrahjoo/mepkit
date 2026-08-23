@@ -1,0 +1,68 @@
+{
+  "id": "static_pressure_vs__head",
+  "title": "Static Pressure vs. Head",
+  "description": "Calculate the relationship between static pressure and head in fluids. This tool demonstrates how pressure changes with elevation based on fluid density, specific weight, and gravitational acceleration using the fundamental equations of fluid statics.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Fluid Density (ρ)",
+          "1000",
+          "kg/m³",
+          "Mass per unit volume of the fluid"
+        ],
+        [
+          "Gravitational Acceleration (g)",
+          "9.81",
+          "m/s²",
+          "Standard acceleration due to gravity"
+        ],
+        [
+          "Specific Weight (γ)",
+          "9810",
+          "N/m³",
+          "Normal force per unit volume: γ = ρ × g"
+        ],
+        [
+          "Height Difference (Δh)",
+          "10",
+          "m",
+          "Vertical distance between two elevation points"
+        ],
+        [
+          "Reference Pressure (p₂)",
+          "101300",
+          "Pa",
+          "Atmospheric pressure at reference level"
+        ],
+        [
+          "Pressure Difference (Δp)",
+          "98100",
+          "Pa",
+          "Pressure change: Δp = γ × Δh"
+        ],
+        [
+          "Absolute Pressure (p₁)",
+          "199400",
+          "Pa",
+          "Total pressure: p₁ = γ × Δh + p₂"
+        ],
+        [
+          "Gauge Pressure",
+          "98100",
+          "Pa",
+          "Pressure above atmospheric: p₁ - p₂"
+        ]
+      ],
+      "content": "## Static Pressure and Head Relationships\n\nThe fundamental relationship between static pressure and head in incompressible fluids is:\n\n**Δp = γ × Δh**\n\nWhere:\n- **Δp** = change in pressure (Pa)\n- **γ** = specific weight of fluid (N/m³)\n- **Δh** = change in height / head (m)\n\n### Key Formulas:\n\n1. **Specific Weight**: γ = ρ × g\n2. **Pressure at Depth**: p₁ = γ × Δh + p₂\n3. **Head from Pressure**: Δh = (p₂ - p₁) / γ\n\nThis relationship shows that pressure in a static fluid depends only on:\n- Depth of the fluid\n- Density of the fluid\n- Acceleration of gravity"
+    }
+  ]
+}

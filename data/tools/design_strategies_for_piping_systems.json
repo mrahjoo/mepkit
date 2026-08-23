@@ -1,0 +1,69 @@
+{
+  "id": "design_strategies_for_piping_systems",
+  "title": "Design Strategies for Piping Systems",
+  "description": "Piping systems design strategies - documentation, P&ID, flow diagrams - capacities and limits.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Strategy",
+        "Description",
+        "Key Documentation",
+        "Capacity Considerations",
+        "Limits"
+      ],
+      "rows": [
+        [
+          "P&ID Development",
+          "Create detailed Piping and Instrumentation Diagrams",
+          "Process flow, equipment sizing, control points",
+          "Equipment specifications, flow rates",
+          "Accuracy of design basis, regulatory compliance"
+        ],
+        [
+          "Flow Analysis",
+          "Conduct fluid dynamics simulation and calculations",
+          "Flow diagrams, velocity profiles, pressure drops",
+          "Pipe sizing, pressure ratings, velocity limits",
+          "Computational complexity, model assumptions"
+        ],
+        [
+          "Material Selection",
+          "Choose appropriate piping materials",
+          "Material specifications, pressure ratings, temperature limits",
+          "Corrosion resistance, pressure capacity, temperature range",
+          "Material availability, cost constraints"
+        ],
+        [
+          "Capacity Planning",
+          "Design for current and future flow requirements",
+          "Load calculations, expansion provisions, safety margins",
+          "Peak flow rates, growth projections",
+          "Space limitations, budget constraints"
+        ],
+        [
+          "Redundancy Design",
+          "Implement backup systems and isolation points",
+          "Isolation valve locations, bypass routes, emergency procedures",
+          "Dual line capacity, switchover capability",
+          "System complexity, maintenance requirements"
+        ],
+        [
+          "Documentation Standards",
+          "Maintain comprehensive system documentation",
+          "As-built drawings, equipment manuals, maintenance logs",
+          "System completeness, update frequency",
+          "Documentation accuracy, version control"
+        ],
+        [
+          "Pressure Management",
+          "Design pressure control and relief systems",
+          "Pressure relief valve sizing, regulation strategy",
+          "Maximum operating pressure, relief capacity",
+          "Safety code compliance, system responsiveness"
+        ]
+      ]
+    }
+  ]
+}

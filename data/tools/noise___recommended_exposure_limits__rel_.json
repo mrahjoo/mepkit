@@ -1,0 +1,39 @@
+{
+  "id": "noise___recommended_exposure_limits__rel_",
+  "title": "Noise - Recommended Exposure Limits (REL)",
+  "description": "The NIOSH Recommended Exposure Limit (REL) for occupational noise exposure. The standard 8-hour Time-Weighted Average (TWA) is 85 dBA, with a peak exposure limit of 140 dBA. Exposures at and above 85 dBA are considered hazardous.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Exposure Type",
+        "Limit Value",
+        "Unit",
+        "Duration",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Time-Weighted Average (TWA)",
+          "85",
+          "dBA",
+          "8 hours",
+          "Standard occupational exposure limit - exposures at and above this level are hazardous"
+        ],
+        [
+          "Peak Exposure",
+          "140",
+          "dBA",
+          "Continuous/Impulsive",
+          "Maximum exposure for continuous, varying, intermittent, or impulsive noise"
+        ]
+      ],
+      "content": "NIOSH Recommended Exposure Limits for Occupational Noise"
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Information\n\n- **Primary Limit**: 85 dBA as an 8-hour Time-Weighted Average (TWA)\n- **Peak Limit**: 140 dBA for continuous, varying, intermittent, or impulsive noise\n- **Status**: Exposures at and above 85 dBA are considered hazardous\n- **Source**: [National Institute for Occupational Safety and Health (NIOSH)](https://www.cdc.gov/niosh/homepage.html)\n\n## Regulatory Context\n\nThe NIOSH REL serves as a recommended guideline for occupational noise exposure. Workers exposed to noise levels at or above 85 dBA for 8 hours should implement hearing protection and noise control measures."
+    }
+  ]
+}

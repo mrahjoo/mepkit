@@ -1,0 +1,117 @@
+{
+  "id": "fasteners",
+  "title": "Fasteners",
+  "description": "Bolts, nuts and threaded rods - torque, tension and loads",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fastener Type",
+        "Size",
+        "Material",
+        "Torque (Nm)",
+        "Tension (kN)",
+        "Load Rating (kN)"
+      ],
+      "rows": [
+        [
+          "Bolt",
+          "M6",
+          "Steel Grade 8.8",
+          5.5,
+          15.2,
+          20.1
+        ],
+        [
+          "Bolt",
+          "M8",
+          "Steel Grade 8.8",
+          13.2,
+          27.1,
+          35.8
+        ],
+        [
+          "Bolt",
+          "M10",
+          "Steel Grade 8.8",
+          25.9,
+          42.3,
+          55.9
+        ],
+        [
+          "Bolt",
+          "M12",
+          "Steel Grade 8.8",
+          44.7,
+          61,
+          80.6
+        ],
+        [
+          "Nut",
+          "M6",
+          "Steel",
+          5,
+          14.8,
+          19.5
+        ],
+        [
+          "Nut",
+          "M8",
+          "Steel",
+          12,
+          26.5,
+          35
+        ],
+        [
+          "Nut",
+          "M10",
+          "Steel",
+          24,
+          41.2,
+          54.5
+        ],
+        [
+          "Nut",
+          "M12",
+          "Steel",
+          42,
+          59.5,
+          78.7
+        ],
+        [
+          "Threaded Rod",
+          "M6",
+          "Steel",
+          4.8,
+          14,
+          18.5
+        ],
+        [
+          "Threaded Rod",
+          "M8",
+          "Steel",
+          11.5,
+          25,
+          33
+        ],
+        [
+          "Threaded Rod",
+          "M10",
+          "Steel",
+          22.5,
+          39.5,
+          52
+        ],
+        [
+          "Threaded Rod",
+          "M12",
+          "Steel",
+          40,
+          57,
+          75
+        ]
+      ]
+    }
+  ]
+}

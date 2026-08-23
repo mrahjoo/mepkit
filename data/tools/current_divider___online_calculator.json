@@ -1,0 +1,110 @@
+{
+  "id": "current_divider___online_calculator",
+  "title": "Current Divider - Online Calculator",
+  "description": "A current divider is a linear circuit that produces an output current that is a fraction of the input current. This calculator computes split currents, total resistance, and voltage across the circuit based on input resistances and supply voltage.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Enter the resistances and voltage to calculate the current divider parameters.",
+      "inputs": [
+        {
+          "id": "R1",
+          "label": "R1 - Resistance",
+          "type": "number",
+          "unit": "ohms",
+          "defaultValue": 220
+        },
+        {
+          "id": "R2",
+          "label": "R2 - Resistance",
+          "type": "number",
+          "unit": "ohms",
+          "defaultValue": 47
+        },
+        {
+          "id": "U",
+          "label": "U - Electrical Potential",
+          "type": "number",
+          "unit": "volts",
+          "defaultValue": 3.3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "RT",
+          "label": "RT - Total Resistance",
+          "formula": "(inputs.R1 * inputs.R2) / (inputs.R1 + inputs.R2)",
+          "unit": "ohms",
+          "format": "decimal"
+        },
+        {
+          "id": "I",
+          "label": "I - Total Current",
+          "formula": "inputs.U / ((inputs.R1 * inputs.R2) / (inputs.R1 + inputs.R2))",
+          "unit": "amps",
+          "format": "decimal"
+        },
+        {
+          "id": "I1",
+          "label": "I1 - Split Current (R1)",
+          "formula": "inputs.U / inputs.R1",
+          "unit": "amps",
+          "format": "decimal"
+        },
+        {
+          "id": "I2",
+          "label": "I2 - Split Current (R2)",
+          "formula": "inputs.U / inputs.R2",
+          "unit": "amps",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "R1 - Resistance",
+          "{{R1}}",
+          "ohms"
+        ],
+        [
+          "R2 - Resistance",
+          "{{R2}}",
+          "ohms"
+        ],
+        [
+          "U - Electrical Potential",
+          "{{U}}",
+          "volts"
+        ],
+        [
+          "RT - Total Resistance",
+          "{{RT}}",
+          "ohms"
+        ],
+        [
+          "I - Total Current",
+          "{{I}}",
+          "amps"
+        ],
+        [
+          "I1 - Split Current (R1)",
+          "{{I1}}",
+          "amps"
+        ],
+        [
+          "I2 - Split Current (R2)",
+          "{{I2}}",
+          "amps"
+        ]
+      ]
+    }
+  ]
+}

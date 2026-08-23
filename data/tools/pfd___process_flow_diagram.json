@@ -1,0 +1,184 @@
+{
+  "id": "pfd___process_flow_diagram",
+  "title": "PFD - Process Flow Diagram",
+  "description": "The Process Flow Diagram (PFD) is a schematic illustration of a system showing the relations between major components, their operational values across different modes (minimum, normal, maximum), and key system information including flow, temperature, pressure, and fluid composition.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Process Flow Diagram (PFD) Overview\n\nA Process Flow Diagram (PFD) or System Flow Diagram (SFD) is a schematic illustration showing:\n\n### Key Components to Include:\n- Process Piping\n- Major equipment symbols, names and identification numbers\n- Control valves and operational valves\n- Interconnection with other systems\n- Major bypass and recirculation lines\n- System ratings and operational values (minimum, normal, maximum flow, temperature, pressure)\n- Fluid composition\n\n### Components to Exclude:\n- Pipe class\n- Pipe line numbers\n- Minor bypass lines\n- Isolation and shutoff valves\n- Maintenance vents and drains\n- Relief and safety valves\n- Code class information\n- Seismic class information"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "min_flow",
+          "label": "Minimum Flow",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "kg/s"
+        },
+        {
+          "id": "normal_flow",
+          "label": "Normal Flow",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "kg/s"
+        },
+        {
+          "id": "max_flow",
+          "label": "Maximum Flow",
+          "type": "number",
+          "defaultValue": 150,
+          "unit": "kg/s"
+        },
+        {
+          "id": "min_temp",
+          "label": "Minimum Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "normal_temp",
+          "label": "Normal Temperature",
+          "type": "number",
+          "defaultValue": 60,
+          "unit": "°C"
+        },
+        {
+          "id": "max_temp",
+          "label": "Maximum Temperature",
+          "type": "number",
+          "defaultValue": 90,
+          "unit": "°C"
+        },
+        {
+          "id": "min_pressure",
+          "label": "Minimum Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bar"
+        },
+        {
+          "id": "normal_pressure",
+          "label": "Normal Pressure",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "bar"
+        },
+        {
+          "id": "max_pressure",
+          "label": "Maximum Pressure",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "bar"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_range",
+          "label": "Flow Range",
+          "formula": "inputs.max_flow - inputs.min_flow",
+          "unit": "kg/s"
+        },
+        {
+          "id": "temp_range",
+          "label": "Temperature Range",
+          "formula": "inputs.max_temp - inputs.min_temp",
+          "unit": "°C"
+        },
+        {
+          "id": "pressure_range",
+          "label": "Pressure Range",
+          "formula": "inputs.max_pressure - inputs.min_pressure",
+          "unit": "bar"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Operating Mode",
+        "Flow (kg/s)",
+        "Temperature (°C)",
+        "Pressure (bar)"
+      ],
+      "rows": [
+        [
+          "Minimum",
+          "inputs.min_flow",
+          "inputs.min_temp",
+          "inputs.min_pressure"
+        ],
+        [
+          "Normal",
+          "inputs.normal_flow",
+          "inputs.normal_temp",
+          "inputs.normal_pressure"
+        ],
+        [
+          "Maximum",
+          "inputs.max_flow",
+          "inputs.max_temp",
+          "inputs.max_pressure"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "PFD System Operating Parameters"
+        },
+        "legend": {
+          "data": [
+            "Flow (kg/s)",
+            "Temperature (°C)",
+            "Pressure (bar)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Minimum",
+            "Normal",
+            "Maximum"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Flow (kg/s)",
+            "data": [
+              "inputs.min_flow",
+              "inputs.normal_flow",
+              "inputs.max_flow"
+            ],
+            "type": "bar"
+          },
+          {
+            "name": "Temperature (°C)",
+            "data": [
+              "inputs.min_temp",
+              "inputs.normal_temp",
+              "inputs.max_temp"
+            ],
+            "type": "line"
+          },
+          {
+            "name": "Pressure (bar)",
+            "data": [
+              "inputs.min_pressure",
+              "inputs.normal_pressure",
+              "inputs.max_pressure"
+            ],
+            "type": "line"
+          }
+        ]
+      }
+    }
+  ]
+}

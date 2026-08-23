@@ -1,0 +1,6 @@
+{
+  "id": "propane___specific_heat_vs__temperature_and_pressu",
+  "title": "Propane - Specific Heat vs. Temperature and Pressure",
+  "description": "Calculate and display the specific heat (Cp and Cv) of propane at various temperatures and pressures. This tool provides isobaric (constant pressure) and isochoric (constant volume) specific heat values in multiple units for both liquid and gaseous states.",
+  "type": "datatable"
+}

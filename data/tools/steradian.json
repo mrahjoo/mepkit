@@ -1,0 +1,80 @@
+{
+  "id": "steradian",
+  "title": "Steradian",
+  "description": "A unit of solid-angle measure in the International System of Units (SI). The steradian is defined as the solid angle of a sphere subtended by a portion of the surface whose area is equal to the square of the sphere's radius.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Steradian\n\nA unit of solid-angle measure in the International System of Units (SI).\n\nThe **steradian** is a unit of solid-angle measure in the International System of Units (SI). It is defined as:\n\n* The solid angle of a sphere subtended by a portion of the surface whose area is equal to the square of the sphere's radius.\n\nThe complete surface area of a sphere is 4π times the square of its radius and:\n\n* The total solid angle about a point is equal to 4π steradians."
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Solid Angle Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "surfaceArea",
+          "label": "Surface Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 1
+        },
+        {
+          "id": "radius",
+          "label": "Radius of Sphere",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "solidAngle",
+          "label": "Solid Angle",
+          "formula": "inputs.surfaceArea / (inputs.radius * inputs.radius)",
+          "unit": "sr",
+          "format": "decimal"
+        },
+        {
+          "id": "totalSolidAngle",
+          "label": "Total Solid Angle (4π)",
+          "formula": "4 * 3.14159265359",
+          "unit": "sr",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Sphere Radius (m)",
+        "Surface Area (m²)",
+        "Solid Angle (sr)"
+      ],
+      "rows": [
+        [
+          1,
+          "4π ≈ 12.57",
+          "4π ≈ 12.57"
+        ],
+        [
+          2,
+          "16π ≈ 50.27",
+          "4π ≈ 12.57"
+        ],
+        [
+          5,
+          "100π ≈ 314.16",
+          "4π ≈ 12.57"
+        ],
+        [
+          10,
+          "400π ≈ 1256.64",
+          "4π ≈ 12.57"
+        ]
+      ]
+    }
+  ]
+}

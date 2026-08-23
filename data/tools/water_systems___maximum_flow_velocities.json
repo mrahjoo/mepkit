@@ -1,0 +1,73 @@
+{
+  "id": "water_systems___maximum_flow_velocities",
+  "title": "Water Systems - Maximum Flow Velocities",
+  "description": "Water velocities in pipes and tubes should not exceed certain limits. The fluid flow velocities in water systems should not exceed certain limits to avoid noise and damaging wear and tear of pipes and fittings.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Application",
+        "Maximum Velocity (m/s)",
+        "Maximum Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          "General Water Service",
+          "0.9 - 2.4",
+          "3 - 8"
+        ],
+        [
+          "Tap water (low noise)",
+          "0.5 - 0.7",
+          "1.6 - 2.3"
+        ],
+        [
+          "Tap water",
+          "1.0 - 2.5",
+          "3.3 - 8.2"
+        ],
+        [
+          "Cooling water",
+          "1.5 - 2.5",
+          "4.9 - 8.2"
+        ],
+        [
+          "Suction boiler feed water",
+          "0.5 - 1.0",
+          "1.6 - 3.3"
+        ],
+        [
+          "Discharge boiler feed water",
+          "1.5 - 2.5",
+          "4.9 - 8.2"
+        ],
+        [
+          "Condensate",
+          "1.0 - 2.0",
+          "3.3 - 6.5"
+        ],
+        [
+          "Process water",
+          "1.5 - 3",
+          "5 - 10"
+        ],
+        [
+          "Pump discharge",
+          "1.5 - 3",
+          "5 - 10"
+        ],
+        [
+          "Pump suction",
+          "0.9 - 2.4",
+          "3 - 8"
+        ],
+        [
+          "Heating circulation",
+          "1.0 - 3.0",
+          "3.3 - 9.8"
+        ]
+      ]
+    }
+  ]
+}

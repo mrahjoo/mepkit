@@ -1,0 +1,54 @@
+{
+  "id": "poiseuille_s_formula",
+  "title": "Poiseuille's Formula",
+  "description": "Calculate the volume flow discharged through a smooth-walled circular pipe using Poiseuille's formula.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Poiseuille's Formula\n\nCalculate the volume flow discharged through a smooth-walled circular pipe.\n\n### Formula\n\n**V = π × p × r⁴ / (8 × η × l)**\n\nWhere:\n- **V** = discharge volume flow (m³/s)\n- **p** = pressure difference between the ends of the pipe (N/m², Pa)\n- **r** = internal radius of pipe (m)\n- **l** = length of pipe (m)\n- **η** = dynamic viscosity of fluid (Pa·s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pressure_difference",
+          "label": "Pressure Difference (p)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 1000
+        },
+        {
+          "id": "pipe_radius",
+          "label": "Internal Radius of Pipe (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.01
+        },
+        {
+          "id": "pipe_length",
+          "label": "Length of Pipe (l)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "dynamic_viscosity",
+          "label": "Dynamic Viscosity (η)",
+          "type": "number",
+          "unit": "Pa·s",
+          "defaultValue": 0.001
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_flow",
+          "label": "Discharge Volume Flow (V)",
+          "formula": "3.14159 * inputs.pressure_difference * Math.pow(inputs.pipe_radius, 4) / (8 * inputs.dynamic_viscosity * inputs.pipe_length)",
+          "unit": "m³/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

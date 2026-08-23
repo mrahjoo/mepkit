@@ -1,0 +1,355 @@
+{
+  "id": "naming_inorganic_binary_compounds",
+  "title": "Naming Inorganic Binary Compounds",
+  "description": "A comprehensive guide to naming inorganic binary compounds including ionic compounds (Type I and II), polyatomic ions, and covalent compounds with reference tables and naming rules.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Ionic Compounds\n\nBinary ionic compounds contain a positive ion (cation) and a negative ion (anion). The cation is a metal in most cases, and is always written first in the formula.\n\n### Naming Rules:\n1. The cation is always named first and the anion second\n2. A cation takes its name from the element name (e.g., K⁺ is potassium)\n3. An anion is named by taking the first part of the element name and adding *-ide* (e.g., Br⁻ is bromide)\n\n### Monatomic Ions"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Cation",
+        "Cation Name",
+        "Anion",
+        "Anion Name"
+      ],
+      "rows": [
+        [
+          "Al³⁺",
+          "Aluminium",
+          "Br⁻",
+          "Bromide"
+        ],
+        [
+          "Ba²⁺",
+          "Barium",
+          "Cl⁻",
+          "Chloride"
+        ],
+        [
+          "Be²⁺",
+          "Beryllium",
+          "F⁻",
+          "Fluoride"
+        ],
+        [
+          "Ca²⁺",
+          "Calcium",
+          "H⁻",
+          "Hydride"
+        ],
+        [
+          "Cs⁺",
+          "Cesium",
+          "I⁻",
+          "Iodide"
+        ],
+        [
+          "H⁺",
+          "Hydrogen",
+          "N³⁻",
+          "Nitride"
+        ],
+        [
+          "Li⁺",
+          "Lithium",
+          "O²⁻",
+          "Oxide"
+        ],
+        [
+          "Mg²⁺",
+          "Magnesium",
+          "P³⁻",
+          "Phosphide"
+        ],
+        [
+          "K⁺",
+          "Potassium",
+          "S²⁻",
+          "Sulfide"
+        ],
+        [
+          "Rb⁺",
+          "Rubidium",
+          "",
+          ""
+        ],
+        [
+          "Ag⁺",
+          "Silver",
+          "",
+          ""
+        ],
+        [
+          "Na⁺",
+          "Sodium",
+          "",
+          ""
+        ],
+        [
+          "Sr²⁺",
+          "Strontium",
+          "",
+          ""
+        ],
+        [
+          "Zn²⁺",
+          "Zinc",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Polyatomic Ions\n\nPolyatomic ions contain more than one atom. For oxyanion series:\n- With 2 members: *-ite* for fewer O atoms, *-ate* for more O atoms\n- With 3+ members: *hypo-* prefix for fewest O atoms, *per-* prefix for most O atoms"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Ion",
+        "Ion Name",
+        "Ion",
+        "Ion Name"
+      ],
+      "rows": [
+        [
+          "NH₄⁺",
+          "Ammonium",
+          "MnO₄⁻",
+          "Permanganate"
+        ],
+        [
+          "C₂H₃O₂⁻",
+          "Acetate",
+          "NO₂⁻",
+          "Nitrite"
+        ],
+        [
+          "CO₃²⁻",
+          "Carbonate",
+          "NO₃⁻",
+          "Nitrate"
+        ],
+        [
+          "HCO₃⁻",
+          "Hydrogen carbonate (bicarbonate)",
+          "OH⁻",
+          "Hydroxide"
+        ],
+        [
+          "ClO⁻",
+          "Hypochlorite",
+          "O₂²⁻",
+          "Peroxide"
+        ],
+        [
+          "ClO₂⁻",
+          "Chlorite",
+          "PO₄³⁻",
+          "Phosphate"
+        ],
+        [
+          "ClO₃⁻",
+          "Chlorate",
+          "HPO₄²⁻",
+          "Hydrogen phosphate"
+        ],
+        [
+          "ClO₄⁻",
+          "Perchlorate",
+          "H₂PO₄⁻",
+          "Dihydrogen phosphate"
+        ],
+        [
+          "CN⁻",
+          "Cyanide",
+          "SO₃²⁻",
+          "Sulfite"
+        ],
+        [
+          "CrO₄²⁻",
+          "Chromate",
+          "SO₄²⁻",
+          "Sulfate"
+        ],
+        [
+          "Cr₂O₇⁻",
+          "Dichromate",
+          "HSO₄⁻",
+          "Hydrogen sulfate (bisulfate)"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Type I Binary Ionic Compounds\n\nType I compounds contain a metal that forms **only one type of cation** (e.g., Na⁺, Ca²⁺).\n\nNaming: [Cation Name] [Anion Name]"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Compound",
+        "Ions Present",
+        "Name"
+      ],
+      "rows": [
+        [
+          "CaS",
+          "Ca²⁺, S²⁻",
+          "Calcium sulfide"
+        ],
+        [
+          "CsBr",
+          "Cs⁺, Br⁻",
+          "Cesium bromide"
+        ],
+        [
+          "Li₃N",
+          "Li⁺, N³⁻",
+          "Lithium nitride"
+        ],
+        [
+          "MgO",
+          "Mg²⁺, O²⁻",
+          "Magnesium oxide"
+        ],
+        [
+          "KF",
+          "K⁺, F⁻",
+          "Potassium fluoride"
+        ],
+        [
+          "AgI",
+          "Ag⁺, I⁻",
+          "Silver iodide"
+        ],
+        [
+          "NaCl",
+          "Na⁺, Cl⁻",
+          "Sodium chloride"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Type II Binary Ionic Compounds\n\nType II compounds contain metals that can form **more than one type of cation** (e.g., Fe²⁺ and Fe³⁺).\n\nNaming: Use Roman numerals to indicate charge (e.g., iron(II) for Fe²⁺, iron(III) for Fe³⁺)\n\nAlternate naming: *-ous* suffix for lower charge, *-ic* suffix for higher charge"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Ion",
+        "Systematic Name",
+        "Alternate Name"
+      ],
+      "rows": [
+        [
+          "Co²⁺",
+          "Cobalt(II)",
+          "Cobaltous"
+        ],
+        [
+          "Co³⁺",
+          "Cobalt(III)",
+          "Cobaltic"
+        ],
+        [
+          "Cu⁺",
+          "Copper(I)",
+          "Cuprous"
+        ],
+        [
+          "Cu²⁺",
+          "Copper(II)",
+          "Cupric"
+        ],
+        [
+          "Fe²⁺",
+          "Iron(II)",
+          "Ferrous"
+        ],
+        [
+          "Fe³⁺",
+          "Iron(III)",
+          "Ferric"
+        ],
+        [
+          "Pb²⁺",
+          "Lead(II)",
+          "Plumbous"
+        ],
+        [
+          "Pb⁴⁺",
+          "Lead(IV)",
+          "Plumbic"
+        ],
+        [
+          "Hg⁺",
+          "Mercury(I)",
+          "Mercurous"
+        ],
+        [
+          "Hg²⁺",
+          "Mercury(II)",
+          "Mercuric"
+        ],
+        [
+          "Sn²⁺",
+          "Tin(II)",
+          "Stannous"
+        ],
+        [
+          "Sn⁴⁺",
+          "Tin(IV)",
+          "Stannic"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Covalent Compounds\n\nCovalent compounds contain two nonmetals.\n\n### Naming Rules:\n1. Name the first element using the full element name\n2. Name the second element as if it were an anion (*-ide* suffix)\n3. Use prefixes to denote the numbers of atoms: mono-, di-, tri-, tetra-, penta-, hexa-, hepta-, octa-\n4. **Never** use *mono-* prefix for the first element\n5. Drop the vowel from a prefix when the second element begins with a vowel (e.g., mono- + oxide = monoxide)\n\n### Naming Pattern:\n**[Prefix][First Nonmetal] [Prefix][Second Nonmetal]-ide**"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Compound",
+        "Systematic Name",
+        "Common Name"
+      ],
+      "rows": [
+        [
+          "NO",
+          "Nitrogen monoxide",
+          "Nitric oxide"
+        ],
+        [
+          "NO₂",
+          "Nitrogen dioxide",
+          ""
+        ],
+        [
+          "N₂O",
+          "Dinitrogen monoxide",
+          "Nitrous oxide"
+        ],
+        [
+          "N₂O₃",
+          "Dinitrogen trioxide",
+          ""
+        ],
+        [
+          "N₂O₄",
+          "Dinitrogen tetroxide",
+          ""
+        ],
+        [
+          "N₂O₅",
+          "Dinitrogen pentoxide",
+          ""
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "sensible_heat_flow",
+  "title": "Sensible Heat Flow Calculator",
+  "description": "Calculate sensible heat flow in both SI (metric) and English (imperial) units for HVAC applications",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "SI Units",
+        "Imperial Units"
+      ],
+      "inputs": [
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "SI (Metric)",
+              "value": "si"
+            },
+            {
+              "label": "Imperial (English)",
+              "value": "imperial"
+            }
+          ],
+          "defaultValue": "si"
+        },
+        {
+          "id": "cp",
+          "label": "Specific Heat (cp)",
+          "type": "number",
+          "defaultValue": 1.005,
+          "unit": "kJ/kg·K (SI) or Btu/lb·°F (Imperial)"
+        },
+        {
+          "id": "rho",
+          "label": "Air Density (ρ)",
+          "type": "number",
+          "defaultValue": 1.202,
+          "unit": "kg/m³ (SI) or lb/ft³ (Imperial)"
+        },
+        {
+          "id": "q",
+          "label": "Air Flow (q)",
+          "type": "number",
+          "defaultValue": 10000,
+          "unit": "m³/hr (SI) or ft³/min (Imperial)"
+        },
+        {
+          "id": "delta_t",
+          "label": "Temperature Difference (Δt)",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C (SI) or °F (Imperial)"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "qs_si",
+          "label": "Sensible Heat Flow (SI)",
+          "formula": "(inputs.cp * inputs.rho * inputs.q * inputs.delta_t) / 3600",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "qs_imperial",
+          "label": "Sensible Heat Flow (Imperial)",
+          "formula": "1.075 * inputs.q * inputs.delta_t",
+          "unit": "Btu/hr",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "SI Units Value",
+        "Imperial Units Value",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Specific Heat (cp)",
+          "1.005 kJ/kg·K",
+          "0.2388 Btu/lb·°F",
+          "Standard air properties"
+        ],
+        [
+          "Air Density (ρ)",
+          "1.202 kg/m³",
+          "0.075 lb/ft³",
+          "Air density at standard conditions"
+        ],
+        [
+          "Air Flow (q)",
+          "m³/hr",
+          "ft³/min",
+          "Volumetric air flow rate"
+        ],
+        [
+          "Temperature Difference (Δt)",
+          "°C",
+          "°F",
+          "Temperature difference across system"
+        ],
+        [
+          "Sensible Heat Flow Formula (SI)",
+          "Qs = cp·ρ·q·Δt / 3600",
+          "-",
+          "Results in kW"
+        ],
+        [
+          "Sensible Heat Flow Formula (Imperial)",
+          "-",
+          "Qs = 1.075·q·Δt",
+          "Results in Btu/hr"
+        ]
+      ]
+    }
+  ]
+}

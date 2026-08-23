@@ -1,0 +1,45 @@
+{
+  "id": "etsi_european_telecommunications_standards_institu",
+  "title": "ETSI European Telecommunications Standards Institute",
+  "description": "Globally applicable standards for Information and Communications Technologies (ICT).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# ETSI European Telecommunications Standards Institute\n\nThe European Telecommunications Standards Institute (ETSI) produces globally-applicable standards for Information and Communications Technologies (ICT), including fixed, mobile, radio, converged, broadcast and internet technologies.\n\n* [ETSI Official Website](http://www.etsi.org/)\n\n## About\n\nETSI is a European standardization organization that develops standards for ICT sectors worldwide. Their standards cover a wide range of technologies and communications infrastructure."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Technology Category",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Fixed Technologies",
+          "Standards for fixed-line telecommunications"
+        ],
+        [
+          "Mobile Technologies",
+          "Standards for mobile and cellular communications"
+        ],
+        [
+          "Radio Technologies",
+          "Standards for wireless and radio communications"
+        ],
+        [
+          "Converged Technologies",
+          "Standards for integrated communication systems"
+        ],
+        [
+          "Broadcast Technologies",
+          "Standards for broadcast transmission systems"
+        ],
+        [
+          "Internet Technologies",
+          "Standards for internet-based communications"
+        ]
+      ]
+    }
+  ]
+}

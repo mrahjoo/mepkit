@@ -1,0 +1,68 @@
+{
+  "id": "center_of_gravity_and_buoyancy",
+  "title": "Center of Gravity and Buoyancy",
+  "description": "Stability calculator - the center of gravity vs. the center of buoyancy. Analyze hull stability, righting torque, and capsizing conditions.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Center of Gravity and Buoyancy\n\nStability analysis based on the relationship between the center of gravity and center of buoyancy.\n\n### Key Concepts:\n\n- **Center of Gravity**: The point in a body where the gravitational force may be taken to act\n- **Center of Buoyancy**: The center of gravity for the volume of water which a hull displaces\n\n### Stability States:\n\n- **Stable**: When the hull is upright and the center of gravity and center of buoyancy are on the same vertical line\n- **Meta-stable**: When the center of buoyancy is below the center of gravity (most common case)\n- **Righting Torque**: The moment created when the hull tilts, attempting to return it to upright\n- **Capsize**: When excessive tilting causes the buoyancy and gravity forces to create a moment that destabilizes the hull"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "cg_height",
+          "label": "Center of Gravity Height",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2.5
+        },
+        {
+          "id": "cb_height",
+          "label": "Center of Buoyancy Height",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1.2
+        },
+        {
+          "id": "hull_mass",
+          "label": "Hull Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 50000
+        },
+        {
+          "id": "tilt_angle",
+          "label": "Hull Tilt Angle",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 15
+        }
+      ],
+      "outputs": [
+        {
+          "id": "stability_margin",
+          "label": "Stability Margin (CG to CB Distance)",
+          "formula": "inputs.cg_height - inputs.cb_height",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "righting_moment",
+          "label": "Righting Moment",
+          "formula": "(inputs.cg_height - inputs.cb_height) * inputs.hull_mass * 9.81 * Math.sin(inputs.tilt_angle * Math.PI / 180)",
+          "unit": "N·m",
+          "format": "decimal"
+        },
+        {
+          "id": "stability_status",
+          "label": "Stability Status",
+          "formula": "inputs.cb_height > inputs.cg_height ? 'Unstable - Capsize Risk' : (inputs.cg_height - inputs.cb_height > 0.5 ? 'Stable' : 'Meta-stable')",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

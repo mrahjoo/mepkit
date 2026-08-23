@@ -1,0 +1,248 @@
+{
+  "id": "discrete_compounding_cash_flow_formulas",
+  "title": "Discrete Compounding Cash Flow Formulas",
+  "description": "Calculate compound amount, present worth, annuities, sinking funds, and capital recovery using discrete compounding cash flow formulas",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Single Payment\n\n### Compound Amount\nConverts a single payment (or value) today to a future value.\n\n**Formula:** F = P(1 + i)^n\n\nWhere:\n- F = future value\n- P = single payment today\n- i = interest rate per period\n- n = number of periods"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Compound Amount - Single Payment"
+      ],
+      "inputs": [
+        {
+          "id": "compound_P",
+          "label": "Present Value (P)",
+          "type": "number",
+          "defaultValue": 5000
+        },
+        {
+          "id": "compound_i_pct",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 5
+        },
+        {
+          "id": "compound_n",
+          "label": "Number of Periods (n)",
+          "type": "number",
+          "defaultValue": 7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "compound_F",
+          "label": "Future Value (F)",
+          "formula": "inputs.compound_P * Math.pow(1 + inputs.compound_i_pct/100, inputs.compound_n)",
+          "unit": "currency",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Present Worth (or Value)\nConverts a future payment (or value) to present worth (or value).\n\n**Formula:** P = F(1 + i)^-n\n\nWhere:\n- P = present value\n- F = single future payment\n- i = discount rate per period\n- n = number of periods"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Present Worth - Single Payment"
+      ],
+      "inputs": [
+        {
+          "id": "present_F",
+          "label": "Future Value (F)",
+          "type": "number",
+          "defaultValue": 5000
+        },
+        {
+          "id": "present_i_pct",
+          "label": "Discount Rate (%)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 5
+        },
+        {
+          "id": "present_n",
+          "label": "Number of Periods (n)",
+          "type": "number",
+          "defaultValue": 7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "present_P",
+          "label": "Present Value (P)",
+          "formula": "inputs.present_F * Math.pow(1 + inputs.present_i_pct/100, -inputs.present_n)",
+          "unit": "currency",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Uniform Series\n\n### Compound Amount - Annuity\nConverts a uniform amount (annuity) to a future value.\n\n**Formula:** F = A × ((1 + i)^n - 1) / i\n\nWhere:\n- F = future value\n- A = uniform amount per period\n- i = interest rate\n- n = number of periods"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Compound Amount - Annuity"
+      ],
+      "inputs": [
+        {
+          "id": "annuity_A",
+          "label": "Uniform Amount per Period (A)",
+          "type": "number",
+          "defaultValue": 5000
+        },
+        {
+          "id": "annuity_i_pct",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 5
+        },
+        {
+          "id": "annuity_n",
+          "label": "Number of Periods (n)",
+          "type": "number",
+          "defaultValue": 7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "annuity_F",
+          "label": "Future Value (F)",
+          "formula": "inputs.annuity_A * (Math.pow(1 + inputs.annuity_i_pct/100, inputs.annuity_n) - 1) / (inputs.annuity_i_pct/100)",
+          "unit": "currency",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Sinking Fund\nConverts a specific future value to uniform amounts (annuities).\n\n**Formula:** A = F × i / ((1 + i)^n - 1)\n\nWhere:\n- A = uniform amount per period\n- F = future value\n- i = interest rate\n- n = number of periods"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Sinking Fund"
+      ],
+      "inputs": [
+        {
+          "id": "sinking_F",
+          "label": "Future Value (F)",
+          "type": "number",
+          "defaultValue": 5000
+        },
+        {
+          "id": "sinking_i_pct",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 5
+        },
+        {
+          "id": "sinking_n",
+          "label": "Number of Periods (n)",
+          "type": "number",
+          "defaultValue": 7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sinking_A",
+          "label": "Uniform Amount per Period (A)",
+          "formula": "inputs.sinking_F * (inputs.sinking_i_pct/100) / (Math.pow(1 + inputs.sinking_i_pct/100, inputs.sinking_n) - 1)",
+          "unit": "currency",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Present Worth - Uniform Series\nConverts a uniform amount (annuity) to a present value.\n\n**Formula:** P = A × ((1 + i)^n - 1) / (i × (1 + i)^n)\n\nWhere:\n- P = present value\n- A = amount per interest period\n- i = discount rate\n- n = discount periods"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Present Worth - Uniform Series"
+      ],
+      "inputs": [
+        {
+          "id": "uniform_A",
+          "label": "Uniform Amount per Period (A)",
+          "type": "number",
+          "defaultValue": 5000
+        },
+        {
+          "id": "uniform_i_pct",
+          "label": "Discount Rate (%)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 5
+        },
+        {
+          "id": "uniform_n",
+          "label": "Number of Periods (n)",
+          "type": "number",
+          "defaultValue": 7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "uniform_P",
+          "label": "Present Value (P)",
+          "formula": "inputs.uniform_A * (Math.pow(1 + inputs.uniform_i_pct/100, inputs.uniform_n) - 1) / (inputs.uniform_i_pct/100 * Math.pow(1 + inputs.uniform_i_pct/100, inputs.uniform_n))",
+          "unit": "currency",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Capital Recovery\nConverts a present value to a uniform amount (annuity).\n\n**Formula:** A = P × (i × (1 + i)^n) / ((1 + i)^n - 1)\n\nWhere:\n- P = present value\n- A = amount per interest period\n- i = interest rate\n- n = discount periods"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Capital Recovery"
+      ],
+      "inputs": [
+        {
+          "id": "capital_P",
+          "label": "Present Value (P)",
+          "type": "number",
+          "defaultValue": 5000
+        },
+        {
+          "id": "capital_i_pct",
+          "label": "Interest Rate (%)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 5
+        },
+        {
+          "id": "capital_n",
+          "label": "Number of Periods (n)",
+          "type": "number",
+          "defaultValue": 7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "capital_A",
+          "label": "Uniform Amount per Period (A)",
+          "formula": "inputs.capital_P * (inputs.capital_i_pct/100 * Math.pow(1 + inputs.capital_i_pct/100, inputs.capital_n)) / (Math.pow(1 + inputs.capital_i_pct/100, inputs.capital_n) - 1)",
+          "unit": "currency",
+          "format": "currency"
+        }
+      ]
+    }
+  ]
+}

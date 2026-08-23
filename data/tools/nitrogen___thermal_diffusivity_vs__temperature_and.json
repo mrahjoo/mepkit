@@ -1,0 +1,75 @@
+{
+  "id": "nitrogen___thermal_diffusivity_vs__temperature_and",
+  "title": "Nitrogen - Thermal Diffusivity vs. Temperature and Pressure",
+  "description": "Calculate thermal diffusivity of nitrogen based on thermal conductivity, density, and specific heat capacity. Thermal diffusivity (α) is the rate of heat transfer through a material, measured in m²/s. Use the formula: α = k / (ρ × Cp), where k is thermal conductivity (W/(m·K)), ρ is density (kg/m³), and Cp is specific heat capacity (J/(kg·K)).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity (k)",
+          "type": "number",
+          "unit": "W/(m·K)",
+          "defaultValue": 0.025
+        },
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.165
+        },
+        {
+          "id": "specific_heat_capacity",
+          "label": "Specific Heat Capacity (Cp)",
+          "type": "number",
+          "unit": "J/(kg·K)",
+          "defaultValue": 1040
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_diffusivity",
+          "label": "Thermal Diffusivity (α)",
+          "formula": "inputs.thermal_conductivity / (inputs.density * inputs.specific_heat_capacity)",
+          "unit": "m²/s",
+          "format": "scientific"
+        },
+        {
+          "id": "thermal_diffusivity_1e6",
+          "label": "Thermal Diffusivity (α)",
+          "formula": "(inputs.thermal_conductivity / (inputs.density * inputs.specific_heat_capacity)) * 1000000",
+          "unit": "×10⁻⁶ m²/s",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_diffusivity_m2_h",
+          "label": "Thermal Diffusivity (α)",
+          "formula": "(inputs.thermal_conductivity / (inputs.density * inputs.specific_heat_capacity)) * 3600",
+          "unit": "m²/h",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_diffusivity_ft2_s",
+          "label": "Thermal Diffusivity (α)",
+          "formula": "(inputs.thermal_conductivity / (inputs.density * inputs.specific_heat_capacity)) * 10.7639",
+          "unit": "×10⁻⁵ ft²/s",
+          "format": "scientific"
+        },
+        {
+          "id": "thermal_diffusivity_ft2_h",
+          "label": "Thermal Diffusivity (α)",
+          "formula": "(inputs.thermal_conductivity / (inputs.density * inputs.specific_heat_capacity)) * 38750.1",
+          "unit": "ft²/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Thermal Diffusivity Formula\n\n**α = k / (ρ × Cp)**\n\nWhere:\n- **k** = Thermal conductivity (W/(m·K))\n- **ρ** = Density (kg/m³)\n- **Cp** = Specific heat capacity at constant pressure (J/(kg·K))\n- **α** = Thermal diffusivity (m²/s)\n\n## Unit Conversions\n\n- 1 ft²/h = 2.7778×10⁻⁴ ft²/s = 0.09290 m²/h = 2.581×10⁻⁵ m²/s\n- 1 ft²/s = 3600 ft²/h = 334.45 m²/h = 0.09290 m²/s\n- 1 m²/h = 2.7778×10⁻⁴ m²/s = 10.7639 ft²/h = 0.002990 ft²/s\n- 1 m²/s = 3600 m²/h = 38750.1 ft²/h = 10.7639 ft²/s\n\n## About Thermal Diffusivity\n\nThermal diffusivity is the rate of transfer of heat through a material from the hot side to the cold side - a measure of how quickly a material can absorb heat from its surroundings. It has the SI derived unit of **m²/s**, and is usually denoted **α**."
+    }
+  ]
+}

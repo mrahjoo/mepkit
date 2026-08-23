@@ -1,0 +1,62 @@
+{
+  "id": "biogas___composition",
+  "title": "Biogas - Composition",
+  "description": "Typical composition of biogas produced from household waste through anaerobic digestion of organic resources such as crops, manure, sewage, municipal waste, green waste, and plant material.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Typical (%)",
+        "Range (%)"
+      ],
+      "rows": [
+        [
+          "Ash",
+          25,
+          "15 - 40"
+        ],
+        [
+          "Carbon",
+          25,
+          "15 - 35"
+        ],
+        [
+          "Chlorine",
+          0.7,
+          "0.5 - 1.0"
+        ],
+        [
+          "Hydrogen",
+          3,
+          "2 - 5"
+        ],
+        [
+          "Nitrogen",
+          0.6,
+          "0.2 - 1.0"
+        ],
+        [
+          "Oxygen",
+          18,
+          "12 - 24"
+        ],
+        [
+          "Sulphur",
+          0.003,
+          "0.002 - 0.6"
+        ],
+        [
+          "Water",
+          20,
+          "15 - 35"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About Biogas\n\nBiogas can be produced from many organic resources through anaerobic (without oxygen) digestion with anaerobic bacteria or by fermentation of biodegradable materials such as:\n\n- Crops\n- Manure\n- Sewage\n- Municipal waste\n- Green waste\n- Plant material\n\n## Energy Applications\n\nThe energy released by combustion of the methane, hydrogen, and carbon monoxide (CO) in the biogas can be used for:\n\n- Heating purposes\n- Gas engines to produce electricity\n- Powering motor vehicles (as compressed biogas)"
+    }
+  ]
+}

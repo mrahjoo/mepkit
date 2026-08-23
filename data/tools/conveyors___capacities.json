@@ -1,0 +1,612 @@
+{
+  "id": "conveyors___capacities",
+  "title": "Conveyors - Capacities",
+  "description": "Calculate conveyor belt capacity based on belt speed, width, material density, and cross-sectional area. Uses the formula Q = ρ A v where Q is conveyor capacity, ρ is material density, A is cross-sectional area, and v is belt velocity.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Conveyors - Capacities\n\nConveyor capacity is determined by the belt speed, width and the angle of the belt - and can be expressed as:\n\n**Q = ρ A v**\n\nWhere:\n- **Q** = conveyor capacity (kg/s, lb/s)\n- **ρ** = density of transported material (kg/m³, lb/ft³)\n- **A** = cross-sectional area of the bulk solid on the belt (m², ft²)\n- **v** = conveyor belt velocity (m/s, ft/s)\n\nThe cross-sectional area of the bulk solid on the belt can be calculated as:\n\n**A = U b²**\n\nWhere:\n- **U** = non-dimensional cross-sectional area shape factor\n- **b** = contact perimeter between bulk material and belt (m, ft)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Material Density (ρ)",
+          "type": "number",
+          "defaultValue": 1500,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "shape_factor",
+          "label": "Shape Factor (U)",
+          "type": "number",
+          "defaultValue": 0.4,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "contact_perimeter",
+          "label": "Contact Perimeter (b)",
+          "type": "number",
+          "defaultValue": 1.5,
+          "unit": "m"
+        },
+        {
+          "id": "belt_velocity",
+          "label": "Belt Velocity (v)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cross_section_area",
+          "label": "Cross-sectional Area (A)",
+          "formula": "inputs.shape_factor * inputs.contact_perimeter * inputs.contact_perimeter",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "capacity_kg_s",
+          "label": "Conveyor Capacity",
+          "formula": "inputs.density * (inputs.shape_factor * inputs.contact_perimeter * inputs.contact_perimeter) * inputs.belt_velocity",
+          "unit": "kg/s",
+          "format": "decimal"
+        },
+        {
+          "id": "capacity_kg_h",
+          "label": "Conveyor Capacity",
+          "formula": "inputs.density * (inputs.shape_factor * inputs.contact_perimeter * inputs.contact_perimeter) * inputs.belt_velocity * 3600",
+          "unit": "kg/h",
+          "format": "decimal"
+        },
+        {
+          "id": "capacity_m3_h",
+          "label": "Volume Capacity",
+          "formula": "(inputs.shape_factor * inputs.contact_perimeter * inputs.contact_perimeter) * inputs.belt_velocity * 3600",
+          "unit": "m³/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Surcharge Angle (degrees)"
+      ],
+      "rows": [
+        [
+          "Alum",
+          25
+        ],
+        [
+          "Alumina",
+          10
+        ],
+        [
+          "Aluminium sulphate",
+          20
+        ],
+        [
+          "Ammonium chloride",
+          10
+        ],
+        [
+          "Ammonium nitrate",
+          25
+        ],
+        [
+          "Asbestos shred",
+          30
+        ],
+        [
+          "Ashes, coal, dry",
+          25
+        ],
+        [
+          "Ashes, coal, wet",
+          25
+        ],
+        [
+          "Ashes, fly",
+          30
+        ],
+        [
+          "Asphalt",
+          30
+        ],
+        [
+          "Bagasse",
+          30
+        ],
+        [
+          "Bark, wood",
+          30
+        ],
+        [
+          "Barley",
+          10
+        ],
+        [
+          "Bauxite, ground, dry",
+          20
+        ],
+        [
+          "Bauxite, mine run",
+          20
+        ],
+        [
+          "Beans",
+          5
+        ],
+        [
+          "Beet, pulp, dry",
+          30
+        ],
+        [
+          "Beets, whole",
+          20
+        ],
+        [
+          "Borax",
+          20
+        ],
+        [
+          "Brewers grain wet",
+          30
+        ],
+        [
+          "Brick",
+          30
+        ],
+        [
+          "Calcium carbide",
+          20
+        ],
+        [
+          "Carbon black, pelletised",
+          5
+        ],
+        [
+          "Cashew nuts",
+          30
+        ],
+        [
+          "Cement, portland",
+          25
+        ],
+        [
+          "Cement clinker",
+          25
+        ],
+        [
+          "Chalk, lumpy",
+          10
+        ],
+        [
+          "Chalk, 100 mesh and under",
+          25
+        ],
+        [
+          "Charcoal",
+          25
+        ],
+        [
+          "Chrome ore",
+          10
+        ],
+        [
+          "Cinders, blast furnace",
+          10
+        ],
+        [
+          "Cinder, coal",
+          20
+        ],
+        [
+          "Clay, dry, fines",
+          20
+        ],
+        [
+          "Clay, dry, lumpy",
+          20
+        ],
+        [
+          "Coal, anthracite, 3mm and under",
+          20
+        ],
+        [
+          "Coal, anthracite, sized",
+          10
+        ],
+        [
+          "Coal, bituminous, mined 50 mesh and under",
+          30
+        ],
+        [
+          "Coal, bituminous, mined and sized",
+          20
+        ],
+        [
+          "Coal, lignite",
+          25
+        ],
+        [
+          "Cocoa beans",
+          10
+        ],
+        [
+          "Coke, breeze, 6mm and under",
+          20
+        ],
+        [
+          "Concrete wet",
+          24
+        ],
+        [
+          "Copper ore",
+          20
+        ],
+        [
+          "Copper sulphate",
+          20
+        ],
+        [
+          "Corn, ear",
+          25
+        ],
+        [
+          "Cornmeal",
+          20
+        ],
+        [
+          "Cottonseed cake",
+          20
+        ],
+        [
+          "Dolomite",
+          18
+        ],
+        [
+          "Earth, as dug, dry",
+          20
+        ],
+        [
+          "Earth, wet, with clay",
+          30
+        ],
+        [
+          "Feldspar",
+          25
+        ],
+        [
+          "Flaxseed",
+          10
+        ],
+        [
+          "Flour, wheat",
+          30
+        ],
+        [
+          "Fluorspar",
+          30
+        ],
+        [
+          "Foundry sand, old sand cores etc.",
+          25
+        ],
+        [
+          "Fullers earth, dry",
+          10
+        ],
+        [
+          "Glass batch",
+          10
+        ],
+        [
+          "Granite, broken, 75mm lumps",
+          10
+        ],
+        [
+          "Graphite, flake",
+          10
+        ],
+        [
+          "Gravel, pebbles",
+          10
+        ],
+        [
+          "Gypsum, dust, not-aerated",
+          20
+        ],
+        [
+          "Gypsum, dust, aerated",
+          30
+        ],
+        [
+          "Gypsum, 75mm lumps",
+          10
+        ],
+        [
+          "Illmenite ore",
+          10
+        ],
+        [
+          "Iron ore, coarse crushed",
+          20
+        ],
+        [
+          "Iron ore, crushed fine",
+          20
+        ],
+        [
+          "Lead ores",
+          10
+        ],
+        [
+          "Lead oxide, light",
+          25
+        ],
+        [
+          "Lignite, air dried",
+          10
+        ],
+        [
+          "Lime, ground, 3mm and under",
+          30
+        ],
+        [
+          "Lime, hydrated",
+          25
+        ],
+        [
+          "Lime, pebble",
+          10
+        ],
+        [
+          "Limestone, agricultural 3mm and under",
+          10
+        ],
+        [
+          "Limestone, crushed",
+          25
+        ],
+        [
+          "Linseed cake",
+          20
+        ],
+        [
+          "Linseed meal",
+          20
+        ],
+        [
+          "Magnesium chloride",
+          30
+        ],
+        [
+          "Magnesium sulphate",
+          10
+        ],
+        [
+          "Manganese ore",
+          25
+        ],
+        [
+          "Manganese sulphate",
+          10
+        ],
+        [
+          "Marble, crushed 12mm and under",
+          10
+        ],
+        [
+          "Mica, ground",
+          20
+        ],
+        [
+          "Mica, pulverized",
+          10
+        ],
+        [
+          "Mica, flakes",
+          5
+        ],
+        [
+          "Molybdenite, powdered",
+          20
+        ],
+        [
+          "Mortar, wet",
+          24
+        ],
+        [
+          "Nickel-cobalt",
+          10
+        ],
+        [
+          "Oats",
+          10
+        ],
+        [
+          "Peanuts in shells",
+          10
+        ],
+        [
+          "Peas, dried",
+          5
+        ],
+        [
+          "Phosphate, triple super ground fertilizer",
+          20
+        ],
+        [
+          "Phosphate rock, pulverized",
+          25
+        ],
+        [
+          "Potash ore",
+          10
+        ],
+        [
+          "Pyrites, pellets",
+          10
+        ],
+        [
+          "Quartz",
+          10
+        ],
+        [
+          "Rice",
+          5
+        ],
+        [
+          "Rock, crushed",
+          20
+        ],
+        [
+          "Rubber, pelletised",
+          20
+        ],
+        [
+          "Rubber, reclaim",
+          20
+        ],
+        [
+          "Rye",
+          10
+        ],
+        [
+          "Salt, common dry, coarse",
+          10
+        ],
+        [
+          "Salt, common dry, fine",
+          10
+        ],
+        [
+          "Sand, bank, damp",
+          30
+        ],
+        [
+          "Sand, bank, dry",
+          20
+        ],
+        [
+          "Sand, Silica, dry",
+          10
+        ],
+        [
+          "Sandstone, broken",
+          20
+        ],
+        [
+          "Sawdust",
+          25
+        ],
+        [
+          "Shale, crushed",
+          25
+        ],
+        [
+          "Sinter",
+          10
+        ],
+        [
+          "Slag, blast furnace, crushed",
+          10
+        ],
+        [
+          "Slate",
+          20
+        ],
+        [
+          "Soap, beads or granules",
+          10
+        ],
+        [
+          "Soap, chips",
+          10
+        ],
+        [
+          "Soda ash, heavy",
+          20
+        ],
+        [
+          "Soda ash, light",
+          25
+        ],
+        [
+          "Sodium nitrate",
+          10
+        ],
+        [
+          "Sodium phosphate",
+          10
+        ],
+        [
+          "Soyabeans, whole",
+          10
+        ],
+        [
+          "Starch",
+          10
+        ],
+        [
+          "Steel trimmings",
+          20
+        ],
+        [
+          "Sugar, granulated",
+          10
+        ],
+        [
+          "Sugar, raw, cane",
+          20
+        ],
+        [
+          "Sulphate powdered",
+          10
+        ],
+        [
+          "Talc, powdered",
+          10
+        ],
+        [
+          "Titanium ore",
+          10
+        ],
+        [
+          "Titanium sponge",
+          30
+        ],
+        [
+          "Vermiculite, expanded",
+          20
+        ],
+        [
+          "Walnut shells, crushed",
+          20
+        ],
+        [
+          "Wheat",
+          10
+        ],
+        [
+          "Woodchips",
+          30
+        ],
+        [
+          "Zinc ore, crushed",
+          25
+        ],
+        [
+          "Zinc ore, roasted",
+          25
+        ]
+      ]
+    }
+  ]
+}

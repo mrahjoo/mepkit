@@ -1,0 +1,94 @@
+{
+  "id": "sound___hearing_threshold_vs__age",
+  "title": "Sound - Hearing Threshold vs. Age",
+  "description": "Shift in hearing threshold for men and women vs. age. The hearing threshold is the minimum sound level a person's ear is able to detect any sound. For adults, 0 dB is the reference level. The hearing threshold is normally reduced with age.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hearing Threshold Information\n\nThe _hearing threshold_ is the minimum sound level a person's ear is able to detect any sound. For adults - _0 dB_ is the reference level.\n\nThe hearing threshold is normally reduced with age as indicated by the data for men and women below."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "age",
+          "label": "Age",
+          "type": "number",
+          "unit": "years",
+          "defaultValue": 30
+        },
+        {
+          "id": "gender",
+          "label": "Gender",
+          "type": "select",
+          "options": [
+            {
+              "label": "Male",
+              "value": "male"
+            },
+            {
+              "label": "Female",
+              "value": "female"
+            }
+          ],
+          "defaultValue": "male"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "threshold_shift",
+          "label": "Hearing Threshold Shift",
+          "unit": "dB",
+          "formula": "inputs.age * 0.5",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Age (years)",
+        "Men - Threshold Shift (dB)",
+        "Women - Threshold Shift (dB)"
+      ],
+      "rows": [
+        [
+          20,
+          0,
+          0
+        ],
+        [
+          30,
+          5,
+          3
+        ],
+        [
+          40,
+          12,
+          8
+        ],
+        [
+          50,
+          20,
+          15
+        ],
+        [
+          60,
+          30,
+          25
+        ],
+        [
+          70,
+          42,
+          38
+        ],
+        [
+          80,
+          55,
+          52
+        ]
+      ]
+    }
+  ]
+}

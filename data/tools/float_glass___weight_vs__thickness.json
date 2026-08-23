@@ -1,0 +1,96 @@
+{
+  "id": "float_glass___weight_vs__thickness",
+  "title": "Float Glass - Weight vs. Thickness",
+  "description": "Weight of float glass. Float glass is a sheet of glass made by floating molten glass on a bed of molten metal.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Float Glass - Weight vs. Thickness\n\nCalculate or reference the weight of float glass based on its thickness.\n\n**Note:** Float glass is a sheet of glass made by floating molten glass on a bed of molten metal."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "thickness",
+          "label": "Thickness",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 5
+        },
+        {
+          "id": "area",
+          "label": "Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight_per_m2",
+          "label": "Weight per m²",
+          "unit": "kg/m²",
+          "formula": "inputs.thickness * 2.5",
+          "format": "decimal"
+        },
+        {
+          "id": "total_weight",
+          "label": "Total Weight",
+          "unit": "kg",
+          "formula": "(inputs.thickness * 2.5) * inputs.area",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Thickness (mm)",
+        "Weight (kg/m²)"
+      ],
+      "rows": [
+        [
+          3,
+          7.5
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          12.5
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          20
+        ],
+        [
+          10,
+          25
+        ],
+        [
+          12,
+          30
+        ],
+        [
+          15,
+          37.5
+        ],
+        [
+          19,
+          47.5
+        ],
+        [
+          25,
+          62.5
+        ]
+      ]
+    }
+  ]
+}

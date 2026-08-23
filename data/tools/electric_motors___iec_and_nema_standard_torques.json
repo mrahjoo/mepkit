@@ -1,0 +1,194 @@
+{
+  "id": "electric_motors___iec_and_nema_standard_torques",
+  "title": "Electric Motors - IEC and NEMA Standard Torques",
+  "description": "IEC and NEMA torque classifications of electrical motors. Torques are classified by power (hp), pole configuration, and motor design type with measurements in lb ft.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Power (hp)",
+        "Pole Type",
+        "Locked Rotor Torque (lb ft)",
+        "Pull Up Torque (lb ft)",
+        "Break Down Torque (lb ft)"
+      ],
+      "rows": [
+        [
+          "3",
+          "2 Pole",
+          "170",
+          "110",
+          "200"
+        ],
+        [
+          "3",
+          "4 Pole",
+          "160",
+          "110",
+          "230"
+        ],
+        [
+          "5",
+          "2 Pole",
+          "160",
+          "110",
+          "200"
+        ],
+        [
+          "5",
+          "4 Pole",
+          "150",
+          "105",
+          "215"
+        ],
+        [
+          "7.5",
+          "2 Pole",
+          "150",
+          "100",
+          "200"
+        ],
+        [
+          "7.5",
+          "4 Pole",
+          "140",
+          "100",
+          "200"
+        ],
+        [
+          "10",
+          "2 Pole",
+          "150",
+          "100",
+          "200"
+        ],
+        [
+          "10",
+          "4 Pole",
+          "135",
+          "100",
+          "200"
+        ],
+        [
+          "15-20",
+          "2 Pole",
+          "140",
+          "100",
+          "200"
+        ],
+        [
+          "15-20",
+          "4 Pole",
+          "130",
+          "100",
+          "200"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Electric Motors - IEC and NEMA Standard Torques",
+          "subtext": "Torque comparison across different power ratings and pole configurations"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "2 Pole - Locked Rotor",
+            "2 Pole - Pull Up",
+            "2 Pole - Break Down",
+            "4 Pole - Locked Rotor",
+            "4 Pole - Pull Up",
+            "4 Pole - Break Down"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "3 hp",
+            "5 hp",
+            "7.5 hp",
+            "10 hp",
+            "15-20 hp"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Torque (lb ft)"
+        },
+        "series": [
+          {
+            "name": "2 Pole - Locked Rotor",
+            "type": "line",
+            "data": [
+              170,
+              160,
+              150,
+              150,
+              140
+            ]
+          },
+          {
+            "name": "2 Pole - Pull Up",
+            "type": "line",
+            "data": [
+              110,
+              110,
+              100,
+              100,
+              100
+            ]
+          },
+          {
+            "name": "2 Pole - Break Down",
+            "type": "line",
+            "data": [
+              200,
+              200,
+              200,
+              200,
+              200
+            ]
+          },
+          {
+            "name": "4 Pole - Locked Rotor",
+            "type": "line",
+            "data": [
+              160,
+              150,
+              140,
+              135,
+              130
+            ]
+          },
+          {
+            "name": "4 Pole - Pull Up",
+            "type": "line",
+            "data": [
+              110,
+              105,
+              100,
+              100,
+              100
+            ]
+          },
+          {
+            "name": "4 Pole - Break Down",
+            "type": "line",
+            "data": [
+              230,
+              215,
+              200,
+              200,
+              200
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

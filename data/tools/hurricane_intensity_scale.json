@@ -1,0 +1,97 @@
+{
+  "id": "hurricane_intensity_scale",
+  "title": "Hurricane Intensity Scale",
+  "description": "The Saffir-Simpson hurricane damage potential scale is used to describe the damage potential for hurricanes based on wind speed, central pressure, and storm surge.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "hurricane_calc",
+      "content": "Saffir-Simpson Hurricane Intensity Scale Calculator",
+      "inputs": [
+        {
+          "id": "wind_speed_mph",
+          "label": "Wind Speed",
+          "type": "number",
+          "unit": "mph",
+          "defaultValue": 75
+        },
+        {
+          "id": "central_pressure_hg",
+          "label": "Central Pressure",
+          "type": "number",
+          "unit": "inches Hg",
+          "defaultValue": 28.9
+        },
+        {
+          "id": "storm_surge_feet",
+          "label": "Storm Surge",
+          "type": "number",
+          "unit": "feet",
+          "defaultValue": 4.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hurricane_category",
+          "label": "Hurricane Category",
+          "formula": "IF(inputs.wind_speed_mph > 156, 5, IF(inputs.wind_speed_mph > 130, 4, IF(inputs.wind_speed_mph > 110, 3, IF(inputs.wind_speed_mph > 95, 2, IF(inputs.wind_speed_mph >= 74, 1, 0)))))"
+        },
+        {
+          "id": "damage_level",
+          "label": "Damage Level",
+          "formula": "IF(inputs.wind_speed_mph > 156, 'Catastrophic', IF(inputs.wind_speed_mph > 130, 'Extreme', IF(inputs.wind_speed_mph > 110, 'Extensive', IF(inputs.wind_speed_mph > 95, 'Moderate', IF(inputs.wind_speed_mph >= 74, 'Minimal', 'Below Scale')))))"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "scale_table",
+      "content": "Hurricane Intensity Scale Reference",
+      "headers": [
+        "Category",
+        "Wind Speed (mph)",
+        "Central Pressure (inches Hg)",
+        "Storm Surge (feet)",
+        "Damage Level"
+      ],
+      "rows": [
+        [
+          "1",
+          "74 - 95",
+          "> 28.94",
+          "4 - 5",
+          "Minimal"
+        ],
+        [
+          "2",
+          "96 - 110",
+          "28.91 - 28.50",
+          "6 - 8",
+          "Moderate"
+        ],
+        [
+          "3",
+          "111 - 130",
+          "28.47 - 27.91",
+          "9 - 12",
+          "Extensive"
+        ],
+        [
+          "4",
+          "131 - 155",
+          "27.88 - 27.17",
+          "13 - 18",
+          "Extreme"
+        ],
+        [
+          "5",
+          "> 156",
+          "< 27.15",
+          "> 18",
+          "Catastrophic"
+        ]
+      ]
+    }
+  ]
+}

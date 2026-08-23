@@ -1,0 +1,383 @@
+{
+  "id": "required_room_space_per_person",
+  "title": "Required Room Space per Person",
+  "description": "Room area per person - may be used to calculate typical indoor climate loads. This table provides guidance on required area (square metre or square feet) per person in typical buildings and rooms.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Building",
+        "Type of Room",
+        "Area per Person (m²)",
+        "Area per Person (ft²)"
+      ],
+      "rows": [
+        [
+          "Apartments",
+          "",
+          "",
+          "100 - 400"
+        ],
+        [
+          "Assembly building",
+          "Lecture room",
+          "0.6",
+          ""
+        ],
+        [
+          "Assembly building",
+          "Library",
+          "5",
+          ""
+        ],
+        [
+          "Cinema",
+          "",
+          "0.6",
+          ""
+        ],
+        [
+          "Concert hall",
+          "",
+          "0.6",
+          ""
+        ],
+        [
+          "Theater",
+          "",
+          "0.6",
+          ""
+        ],
+        [
+          "Banks",
+          "",
+          "",
+          "50 - 150"
+        ],
+        [
+          "Bars",
+          "",
+          "",
+          "15 - 50"
+        ],
+        [
+          "Cafeterias",
+          "",
+          "",
+          "10 - 50"
+        ],
+        [
+          "Churches",
+          "",
+          "",
+          "5 - 20"
+        ],
+        [
+          "Clubhouses",
+          "",
+          "",
+          "15 - 50"
+        ],
+        [
+          "Cocktail Lounges",
+          "",
+          "",
+          "15 - 50"
+        ],
+        [
+          "Computer Rooms",
+          "",
+          "",
+          "80 - 150"
+        ],
+        [
+          "Court Houses",
+          "",
+          "",
+          "50 - 150"
+        ],
+        [
+          "Dental Centers",
+          "Clinic and Offices",
+          "",
+          "50 - 150"
+        ],
+        [
+          "Department Stores",
+          "",
+          "",
+          "15 - 75"
+        ],
+        [
+          "Dining Halls",
+          "",
+          "",
+          "10 - 50"
+        ],
+        [
+          "Drug Store",
+          "",
+          "",
+          "15 - 50"
+        ],
+        [
+          "Factories",
+          "Assembly hall",
+          "2 - 5",
+          ""
+        ],
+        [
+          "Factories",
+          "Light manufacturing",
+          "10 - 20",
+          ""
+        ],
+        [
+          "Factories",
+          "Heavy manufacturing",
+          "20 - 30",
+          ""
+        ],
+        [
+          "Fire Stations",
+          "",
+          "",
+          "100 - 500"
+        ],
+        [
+          "Hotels",
+          "Rooms",
+          "5",
+          ""
+        ],
+        [
+          "Hotels",
+          "Lobby",
+          "0.6",
+          ""
+        ],
+        [
+          "Hotels",
+          "Assembly room",
+          "1.5",
+          ""
+        ],
+        [
+          "Hospitals",
+          "General Areas",
+          "",
+          "50 - 150"
+        ],
+        [
+          "Hospitals",
+          "Patient Rooms",
+          "80 - 150",
+          ""
+        ],
+        [
+          "Kindergarten",
+          "",
+          "2 - 3",
+          ""
+        ],
+        [
+          "Kitchens",
+          "",
+          "",
+          "50 - 150"
+        ],
+        [
+          "Libraries",
+          "",
+          "",
+          "30 - 100"
+        ],
+        [
+          "Luncheonettes",
+          "",
+          "",
+          "10 - 50"
+        ],
+        [
+          "Lunch Rooms",
+          "",
+          "",
+          "10 - 50"
+        ],
+        [
+          "Malls",
+          "",
+          "",
+          "50 - 100"
+        ],
+        [
+          "Medical Centers",
+          "Clinic and Offices",
+          "",
+          "50 - 150"
+        ],
+        [
+          "Motels, Dormitories",
+          "Public Spaces",
+          "",
+          "100 - 200"
+        ],
+        [
+          "Motels, Dormitories",
+          "Guest Rooms, Dormitories",
+          "100 - 200",
+          ""
+        ],
+        [
+          "Municipal Buildings",
+          "",
+          "",
+          "50 - 150"
+        ],
+        [
+          "Museums",
+          "",
+          "",
+          "30 - 100"
+        ],
+        [
+          "Nightclubs",
+          "",
+          "",
+          "15 - 50"
+        ],
+        [
+          "Nursing Home Patient Rooms",
+          "",
+          "",
+          "80 - 150"
+        ],
+        [
+          "Offices",
+          "Single office",
+          "10",
+          ""
+        ],
+        [
+          "Offices",
+          "Meeting room",
+          "1.5",
+          ""
+        ],
+        [
+          "Police Stations",
+          "",
+          "",
+          "100 - 500"
+        ],
+        [
+          "Post Offices",
+          "",
+          "",
+          "100 - 500"
+        ],
+        [
+          "Precision Manufacturing",
+          "",
+          "",
+          "100 - 300"
+        ],
+        [
+          "Residential",
+          "",
+          "",
+          "200 - 600"
+        ],
+        [
+          "Restaurant",
+          "With service",
+          "1.5",
+          ""
+        ],
+        [
+          "Restaurant",
+          "Without service",
+          "1",
+          ""
+        ],
+        [
+          "Retail Stores",
+          "",
+          "",
+          "15 - 75"
+        ],
+        [
+          "Schools",
+          "Lecture rooms",
+          "0.6",
+          ""
+        ],
+        [
+          "Schools",
+          "Class rooms",
+          "2",
+          ""
+        ],
+        [
+          "Schools",
+          "Corridors",
+          "2",
+          ""
+        ],
+        [
+          "Schools",
+          "Laboratory",
+          "3",
+          ""
+        ],
+        [
+          "Shops",
+          "Retail",
+          "2",
+          ""
+        ],
+        [
+          "Shops",
+          "Supermarkets",
+          "2",
+          ""
+        ],
+        [
+          "Sports",
+          "Gymnasium",
+          "1.5",
+          ""
+        ],
+        [
+          "Sports",
+          "Swimming pools",
+          "4",
+          ""
+        ],
+        [
+          "Supermarkets",
+          "",
+          "",
+          "50 - 100"
+        ],
+        [
+          "Taverns",
+          "",
+          "",
+          "15 - 50"
+        ],
+        [
+          "Town Halls",
+          "",
+          "",
+          "50 - 150"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- 1 m² = 10.764 ft²\n- 1 ft² = 0.0929 m²\n\n## Occupancy Rate\n\nOccupancy Rate is the maximum number of persons per area unit.\n\nIf the minimum area per person is 100 sq ft, the occupancy rate is 1/100 = 0.01 person per sq.ft, or 10 persons per 1000 sq.ft.\n\n**Note!** - Be aware of local restrictions, codes and their minimum values. They may diverge considerably from the numbers above."
+    }
+  ]
+}

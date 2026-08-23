@@ -1,0 +1,245 @@
+{
+  "id": "carbon_monoxide___co___thermophysical_properties",
+  "title": "Carbon Monoxide - CO - Thermophysical Properties",
+  "description": "Calculate and reference thermophysical properties of Carbon Monoxide (CO) at 25°C (77°F, 298 K) and atmospheric pressure. Access molecular weight, specific gravity, viscosity, thermal conductivity, heat capacity, and other critical thermodynamic parameters for engineering applications.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Carbon Monoxide - CO - Thermophysical Properties\n\nStandard reference data for Carbon Monoxide at 25°C (77°F, 298 K) and atmospheric pressure (14.7 psia, 760 mm Hg).",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "molecular_weight",
+          "label": "Molecular Weight",
+          "type": "number",
+          "defaultValue": 28.011,
+          "unit": "g/mol"
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity (air = 1)",
+          "type": "number",
+          "defaultValue": 0.967,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "specific_heat_capacity",
+          "label": "Specific Heat - cp",
+          "type": "number",
+          "defaultValue": 1046,
+          "unit": "J/kgK"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "type": "number",
+          "defaultValue": 0.024,
+          "unit": "W/moC"
+        },
+        {
+          "id": "heat_of_combustion",
+          "label": "Heat of Combustion",
+          "type": "number",
+          "defaultValue": 10100,
+          "unit": "kJ/kg"
+        },
+        {
+          "id": "critical_temperature_celsius",
+          "label": "Critical Temperature",
+          "type": "number",
+          "defaultValue": -140,
+          "unit": "°C"
+        },
+        {
+          "id": "critical_pressure",
+          "label": "Critical Pressure",
+          "type": "number",
+          "defaultValue": 3.49,
+          "unit": "MN/m²"
+        },
+        {
+          "id": "boiling_point_celsius",
+          "label": "Boiling Point",
+          "type": "number",
+          "defaultValue": -191.5,
+          "unit": "°C"
+        },
+        {
+          "id": "latent_heat_evaporation",
+          "label": "Latent Heat of Evaporation",
+          "type": "number",
+          "defaultValue": 216000,
+          "unit": "J/kg"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "molar_mass_display",
+          "label": "Molar Mass",
+          "formula": "inputs.molecular_weight",
+          "unit": "g/mol"
+        },
+        {
+          "id": "density_reference",
+          "label": "Specific Volume Reference",
+          "formula": "0.874",
+          "unit": "m³/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_reference",
+          "label": "Absolute Viscosity Reference",
+          "formula": "0.018",
+          "unit": "cP",
+          "format": "decimal"
+        },
+        {
+          "id": "sound_velocity",
+          "label": "Sound Velocity in Gas",
+          "formula": "352",
+          "unit": "m/s",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_capacity_ratio",
+          "label": "Specific Heat Ratio (cp/cv)",
+          "formula": "1.40",
+          "unit": "dimensionless",
+          "format": "decimal"
+        },
+        {
+          "id": "gas_constant",
+          "label": "Gas Constant",
+          "formula": "297",
+          "unit": "J/kg°C",
+          "format": "decimal"
+        },
+        {
+          "id": "melting_point",
+          "label": "Melting Point",
+          "formula": "-205",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "latent_heat_fusion",
+          "label": "Latent Heat of Fusion",
+          "formula": "12.8",
+          "unit": "Btu/lb",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_volume",
+          "label": "Critical Volume",
+          "formula": "0.0033",
+          "unit": "m³/kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "28.011",
+          "g/mol"
+        ],
+        [
+          "Specific Gravity (air = 1)",
+          "0.967",
+          "dimensionless"
+        ],
+        [
+          "Specific Volume",
+          "0.874",
+          "m³/kg"
+        ],
+        [
+          "Absolute Viscosity",
+          "0.018",
+          "cP"
+        ],
+        [
+          "Sound Velocity in Gas",
+          "352",
+          "m/s"
+        ],
+        [
+          "Specific Heat - cp",
+          "1046",
+          "J/kgK"
+        ],
+        [
+          "Specific Heat Ratio - cp/cv",
+          "1.40",
+          "dimensionless"
+        ],
+        [
+          "Gas Constant - R",
+          "297",
+          "J/kg°C"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.024",
+          "W/m°C"
+        ],
+        [
+          "Boiling Point (1 atm)",
+          "-191.5",
+          "°C"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "216000",
+          "J/kg"
+        ],
+        [
+          "Melting Point (1 atm)",
+          "-205",
+          "°C"
+        ],
+        [
+          "Latent Heat of Fusion",
+          "12.8",
+          "Btu/lb"
+        ],
+        [
+          "Critical Temperature",
+          "-140",
+          "°C"
+        ],
+        [
+          "Critical Pressure",
+          "3.49",
+          "MN/m²"
+        ],
+        [
+          "Critical Volume",
+          "0.0033",
+          "m³/kg"
+        ],
+        [
+          "Flammable",
+          "Yes",
+          ""
+        ],
+        [
+          "Heat of Combustion",
+          "10100",
+          "kJ/kg"
+        ]
+      ]
+    }
+  ]
+}

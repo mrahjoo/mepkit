@@ -1,0 +1,317 @@
+{
+  "id": "nr___the_noise_rating_curve",
+  "title": "NR - the Noise Rating Curve",
+  "description": "Determine acceptable indoor environment noise levels for hearing preservation, speech communication and annoyance using Noise Rating curves. Compare measured sound pressure levels at different frequencies to find the appropriate NR rating.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Noise Rating Calculator\n\nEnter the sound pressure levels (in dB) measured at different octave band frequencies to determine the Noise Rating - NR. The NR is determined by finding the highest ratio between measured values and the NR curve values.\n\n### Recommended NR Levels:\n- **NR 25**: Concert halls, broadcasting studios, churches\n- **NR 30**: Private dwellings, hospitals, theaters, cinemas, conference rooms\n- **NR 35**: Libraries, museums, schools, hospitals, executive offices\n- **NR 40**: Offices, restaurants, shops\n- **NR 45**: Department stores, supermarkets, general offices\n- **NR 50**: Typing pools, offices with machines\n- **NR 60**: Light engineering works\n- **NR 70**: Foundries, heavy engineering works"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "freq_31_5",
+          "label": "Sound Pressure Level at 31.5 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 40
+        },
+        {
+          "id": "freq_62_5",
+          "label": "Sound Pressure Level at 62.5 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 40
+        },
+        {
+          "id": "freq_125",
+          "label": "Sound Pressure Level at 125 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 50
+        },
+        {
+          "id": "freq_250",
+          "label": "Sound Pressure Level at 250 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 55
+        },
+        {
+          "id": "freq_500",
+          "label": "Sound Pressure Level at 500 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 60
+        },
+        {
+          "id": "freq_1000",
+          "label": "Sound Pressure Level at 1000 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 50
+        },
+        {
+          "id": "freq_2000",
+          "label": "Sound Pressure Level at 2000 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 55
+        },
+        {
+          "id": "freq_4000",
+          "label": "Sound Pressure Level at 4000 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 45
+        },
+        {
+          "id": "freq_8000",
+          "label": "Sound Pressure Level at 8000 Hz",
+          "unit": "dB",
+          "type": "number",
+          "defaultValue": 45
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ratio_31_5",
+          "label": "Ratio at 31.5 Hz (NR 70)",
+          "formula": "inputs.freq_31_5 - 103"
+        },
+        {
+          "id": "ratio_62_5",
+          "label": "Ratio at 62.5 Hz (NR 70)",
+          "formula": "inputs.freq_62_5 - 91"
+        },
+        {
+          "id": "ratio_125",
+          "label": "Ratio at 125 Hz (NR 70)",
+          "formula": "inputs.freq_125 - 83"
+        },
+        {
+          "id": "ratio_250",
+          "label": "Ratio at 250 Hz (NR 70)",
+          "formula": "inputs.freq_250 - 77"
+        },
+        {
+          "id": "ratio_500",
+          "label": "Ratio at 500 Hz (NR 70)",
+          "formula": "inputs.freq_500 - 73"
+        },
+        {
+          "id": "ratio_1000",
+          "label": "Ratio at 1000 Hz (NR 70)",
+          "formula": "inputs.freq_1000 - 70"
+        },
+        {
+          "id": "ratio_2000",
+          "label": "Ratio at 2000 Hz (NR 70)",
+          "formula": "inputs.freq_2000 - 68"
+        },
+        {
+          "id": "ratio_4000",
+          "label": "Ratio at 4000 Hz (NR 70)",
+          "formula": "inputs.freq_4000 - 66"
+        },
+        {
+          "id": "ratio_8000",
+          "label": "Ratio at 8000 Hz (NR 70)",
+          "formula": "inputs.freq_8000 - 64"
+        },
+        {
+          "id": "nr_rating",
+          "label": "Estimated Noise Rating - NR",
+          "formula": "70 + Math.max(inputs.freq_31_5 - 103, inputs.freq_62_5 - 91, inputs.freq_125 - 83, inputs.freq_250 - 77, inputs.freq_500 - 73, inputs.freq_1000 - 70, inputs.freq_2000 - 68, inputs.freq_4000 - 66, inputs.freq_8000 - 64)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Noise Rating Curve",
+        "31.5 Hz",
+        "62.5 Hz",
+        "125 Hz",
+        "250 Hz",
+        "500 Hz",
+        "1000 Hz",
+        "2000 Hz",
+        "4000 Hz",
+        "8000 Hz"
+      ],
+      "rows": [
+        [
+          "NR 0",
+          55,
+          36,
+          22,
+          12,
+          5,
+          0,
+          -4,
+          -6,
+          -8
+        ],
+        [
+          "NR 10",
+          62,
+          43,
+          31,
+          21,
+          15,
+          10,
+          7,
+          4,
+          2
+        ],
+        [
+          "NR 20",
+          69,
+          51,
+          39,
+          31,
+          24,
+          20,
+          17,
+          14,
+          13
+        ],
+        [
+          "NR 30",
+          76,
+          59,
+          48,
+          40,
+          34,
+          30,
+          27,
+          25,
+          23
+        ],
+        [
+          "NR 40",
+          83,
+          67,
+          57,
+          49,
+          44,
+          40,
+          37,
+          35,
+          33
+        ],
+        [
+          "NR 50",
+          89,
+          75,
+          66,
+          59,
+          54,
+          50,
+          47,
+          45,
+          44
+        ],
+        [
+          "NR 60",
+          96,
+          83,
+          74,
+          68,
+          63,
+          60,
+          57,
+          55,
+          54
+        ],
+        [
+          "NR 70",
+          103,
+          91,
+          83,
+          77,
+          73,
+          70,
+          68,
+          66,
+          64
+        ],
+        [
+          "NR 80",
+          110,
+          99,
+          92,
+          86,
+          83,
+          80,
+          78,
+          76,
+          74
+        ],
+        [
+          "NR 90",
+          117,
+          107,
+          100,
+          96,
+          93,
+          90,
+          88,
+          86,
+          85
+        ],
+        [
+          "NR 100",
+          124,
+          115,
+          109,
+          105,
+          102,
+          100,
+          98,
+          96,
+          95
+        ],
+        [
+          "NR 110",
+          130,
+          122,
+          118,
+          114,
+          112,
+          110,
+          108,
+          107,
+          105
+        ],
+        [
+          "NR 120",
+          137,
+          130,
+          126,
+          124,
+          122,
+          120,
+          118,
+          117,
+          116
+        ],
+        [
+          "NR 130",
+          144,
+          138,
+          135,
+          133,
+          131,
+          130,
+          128,
+          127,
+          126
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "centrifugal_pumps___minimum_flow",
+  "title": "Centrifugal Pumps - Minimum Flow",
+  "description": "Minimum continuous flow to prevent flashing in centrifugal pumps. Calculates the minimum water flow through the pump based on power input, specific heat of fluid, and specific gravity to prevent vaporization within the pump casing.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "pbhp",
+          "label": "Power Input (BHP)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "BHP"
+        },
+        {
+          "id": "cp",
+          "label": "Specific Heat of Fluid",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "Btu/lb °F"
+        },
+        {
+          "id": "sg",
+          "label": "Specific Gravity of Fluid",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "dimensionless"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "q_min",
+          "label": "Minimum Flow Rate",
+          "formula": "inputs.pbhp / (2.95 * inputs.cp * inputs.sg)",
+          "unit": "gpm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Input Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Power Input (PBHP)",
+          "inputs.pbhp",
+          "BHP"
+        ],
+        [
+          "Specific Heat of Fluid (cp)",
+          "inputs.cp",
+          "Btu/lb °F"
+        ],
+        [
+          "Specific Gravity of Fluid (SG)",
+          "inputs.sg",
+          "dimensionless"
+        ],
+        [
+          "Minimum Flow Rate (q)",
+          "inputs.pbhp / (2.95 * inputs.cp * inputs.sg)",
+          "gpm"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "id": "pressure_units___online_converter",
+  "title": "Pressure Units - Online Converter",
+  "description": "Convert between common pressure units including Pa, bar, atmosphere, mm Hg, mm H2O, m H2O, kg/cm², psi, and more using conversion factors and interactive calculator.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pressure_calculator",
+      "content": "Pressure Unit Converter",
+      "inputs": [
+        {
+          "id": "input_value",
+          "label": "Input Value",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": ""
+        },
+        {
+          "id": "input_unit",
+          "label": "Convert From",
+          "type": "select",
+          "defaultValue": "psi",
+          "options": [
+            {
+              "label": "Pa (N/m²)",
+              "value": "Pa"
+            },
+            {
+              "label": "bar",
+              "value": "bar"
+            },
+            {
+              "label": "atmosphere",
+              "value": "atm"
+            },
+            {
+              "label": "mm Hg",
+              "value": "mmHg"
+            },
+            {
+              "label": "mm H₂O",
+              "value": "mmH2O"
+            },
+            {
+              "label": "m H₂O",
+              "value": "mH2O"
+            },
+            {
+              "label": "kg/cm²",
+              "value": "kgcm2"
+            },
+            {
+              "label": "pound square feet (psf)",
+              "value": "psf"
+            },
+            {
+              "label": "pound square inches (psi)",
+              "value": "psi"
+            },
+            {
+              "label": "inches Hg",
+              "value": "inHg"
+            },
+            {
+              "label": "inches H₂O",
+              "value": "inH2O"
+            }
+          ]
+        },
+        {
+          "id": "output_unit",
+          "label": "Convert To",
+          "type": "select",
+          "defaultValue": "Pa",
+          "options": [
+            {
+              "label": "Pa (N/m²)",
+              "value": "Pa"
+            },
+            {
+              "label": "bar",
+              "value": "bar"
+            },
+            {
+              "label": "atmosphere",
+              "value": "atm"
+            },
+            {
+              "label": "mm Hg",
+              "value": "mmHg"
+            },
+            {
+              "label": "mm H₂O",
+              "value": "mmH2O"
+            },
+            {
+              "label": "m H₂O",
+              "value": "mH2O"
+            },
+            {
+              "label": "kg/cm²",
+              "value": "kgcm2"
+            },
+            {
+              "label": "pound square feet (psf)",
+              "value": "psf"
+            },
+            {
+              "label": "pound square inches (psi)",
+              "value": "psi"
+            },
+            {
+              "label": "inches Hg",
+              "value": "inHg"
+            },
+            {
+              "label": "inches H₂O",
+              "value": "inH2O"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Value",
+          "formula": "inputs.input_value * 6894.76",
+          "unit": "Pa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "conversion_table",
+      "content": "Pressure Conversion Factors",
+      "headers": [
+        "Convert from",
+        "Pa (N/m²)",
+        "bar",
+        "atmosphere",
+        "mm Hg",
+        "mm H₂O",
+        "m H₂O",
+        "kg/cm²"
+      ],
+      "rows": [
+        [
+          "Pa (N/m²)",
+          "1",
+          "10⁻⁵",
+          "9.87×10⁻⁶",
+          "0.0075",
+          "0.1",
+          "10⁻⁴",
+          "1.02×10⁻⁵"
+        ],
+        [
+          "bar",
+          "10⁵",
+          "1",
+          "0.987",
+          "750",
+          "1.0197×10⁴",
+          "10.197",
+          "1.0197"
+        ],
+        [
+          "atmosphere",
+          "1.01×10⁵",
+          "1.013",
+          "1",
+          "759.9",
+          "10332",
+          "10.332",
+          "1.03"
+        ],
+        [
+          "mm Hg",
+          "133.3",
+          "1.33×10⁻³",
+          "1.32×10⁻³",
+          "1",
+          "13.3",
+          "0.013",
+          "1.36×10⁻³"
+        ],
+        [
+          "mm H₂O",
+          "10",
+          "0.000097",
+          "9.87×10⁻⁵",
+          "0.075",
+          "1",
+          "0.001",
+          "1.02×10⁻⁴"
+        ],
+        [
+          "m H₂O",
+          "10⁴",
+          "0.097",
+          "9.87×10⁻²",
+          "75",
+          "1000",
+          "1",
+          "0.102"
+        ],
+        [
+          "kg/cm²",
+          "9.8×10⁴",
+          "0.98",
+          "0.97",
+          "735",
+          "10000",
+          "10",
+          "1"
+        ],
+        [
+          "pound square feet (psf)",
+          "47.8",
+          "4.78×10⁻⁴",
+          "4.72×10⁻⁴",
+          "0.36",
+          "4.78",
+          "4.78×10⁻³",
+          "4.88×10⁻⁴"
+        ],
+        [
+          "pound square inches (psi)",
+          "6894.76",
+          "0.069",
+          "0.068",
+          "51.7",
+          "689.7",
+          "0.690",
+          "0.07"
+        ],
+        [
+          "inches Hg",
+          "3377",
+          "0.0338",
+          "0.033",
+          "25.4",
+          "337.7",
+          "0.337",
+          "0.034"
+        ],
+        [
+          "inches H₂O",
+          "248.8",
+          "2.49×10⁻³",
+          "2.46×10⁻³",
+          "1.87",
+          "25.4",
+          "0.0254",
+          "0.0025"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "reference_info",
+      "content": "## Common Pressure Units Reference\n\n**Key Notes:**\n- 1 Torr = 1 mm Hg\n- Pressure is \"force per unit area\"\n- Units like kg/cm² are technically mass units; mass must be multiplied by gravity g to be a force (weight)\n\n### Example: Convert 10 psi to Pa\nFrom the conversion table, 1 psi = 6894.76 Pa:\n- 10 psi × 6894.76 = 68,947.6 Pa = 68.95 kPa\n\n### Additional Pressure Units\n- 1 Pa = 0.00001 Bar\n- 1 Pa = 0.0000102 Atmosphere (metric)\n- 1 Pa = 0.000145 Pound force/square inch\n- 1 Pa = 0.0000093 Standard atmosphere\n- 1 Pa = 1 Newton/square meter"
+    }
+  ]
+}

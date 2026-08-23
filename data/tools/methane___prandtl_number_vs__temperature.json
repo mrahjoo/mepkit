@@ -1,0 +1,165 @@
+{
+  "id": "methane___prandtl_number_vs__temperature",
+  "title": "Methane - Prandtl number vs. Temperature",
+  "description": "Calculate and display the Prandtl number for methane at varying temperatures and pressures. The Prandtl Number (Pr) is a dimensionless number approximating the ratio of momentum diffusivity (kinematic viscosity) to thermal diffusivity, used in heat transfer and convection calculations. Formula: Pr = μ Cp / k, where μ is absolute viscosity, Cp is specific heat, and k is thermal conductivity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (K)",
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Pr at 1 bara (14.5 psia)",
+        "Pr at 10 bara (145 psia)",
+        "Pr at 100 bara (1450 psia)"
+      ],
+      "rows": [
+        [
+          160,
+          -113,
+          -172,
+          0.7721,
+          0.8659,
+          1.629
+        ],
+        [
+          180,
+          -93.2,
+          -136,
+          0.7583,
+          0.817,
+          1.64
+        ],
+        [
+          200,
+          -73.2,
+          -99.7,
+          0.7487,
+          0.7892,
+          1.867
+        ],
+        [
+          220,
+          -53.2,
+          -63.7,
+          0.742,
+          0.7726,
+          2.055
+        ],
+        [
+          240,
+          -33.2,
+          -27.7,
+          0.7369,
+          0.7607,
+          1.453
+        ],
+        [
+          260,
+          -13.2,
+          8.3,
+          0.7328,
+          0.7515,
+          1.148
+        ],
+        [
+          280,
+          6.9,
+          44.3,
+          0.7299,
+          0.7452,
+          1.007
+        ],
+        [
+          300,
+          26.9,
+          80.3,
+          0.7279,
+          0.7402,
+          0.9304
+        ],
+        [
+          320,
+          46.9,
+          116,
+          0.7261,
+          0.737,
+          0.8824
+        ],
+        [
+          340,
+          66.9,
+          152,
+          0.7243,
+          0.7341,
+          0.8501
+        ],
+        [
+          360,
+          86.9,
+          188,
+          0.7234,
+          0.7312,
+          0.8269
+        ],
+        [
+          400,
+          127,
+          260,
+          0.7216,
+          0.7276,
+          0.7968
+        ],
+        [
+          500,
+          227,
+          440,
+          0.7182,
+          0.7233,
+          0.756
+        ],
+        [
+          600,
+          327,
+          620,
+          0.7155,
+          0.7179,
+          0.7385
+        ],
+        [
+          700,
+          427,
+          800,
+          0.7127,
+          null,
+          null
+        ],
+        [
+          800,
+          527,
+          980,
+          0.7099,
+          null,
+          null
+        ],
+        [
+          900,
+          627,
+          1160,
+          0.7082,
+          null,
+          null
+        ],
+        [
+          1000,
+          727,
+          1340,
+          0.706,
+          null,
+          null
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "empirical_equations",
+  "title": "Empirical Equations",
+  "description": "Equations based on observations and experience.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Empirical Equations\n\nEquations based on observations and experience.\n\nThis tool allows you to input variables and calculate results using empirical equations commonly used in engineering and scientific applications."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "input_var_1",
+          "label": "Variable 1",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "unit"
+        },
+        {
+          "id": "input_var_2",
+          "label": "Variable 2",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "unit"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result_1",
+          "label": "Result 1",
+          "formula": "inputs.input_var_1 + inputs.input_var_2",
+          "unit": "unit",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Empirical Equation Results"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Point 1",
+            "Point 2",
+            "Point 3"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "type": "line",
+            "data": [
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

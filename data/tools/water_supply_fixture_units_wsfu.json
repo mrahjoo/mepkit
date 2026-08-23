@@ -1,0 +1,117 @@
+{
+  "id": "water_supply_fixture_units_wsfu",
+  "title": "Water Supply Fixture Units WSFU",
+  "description": "WSFU is used to calculate water supply service systems based on the Uniform Plumbing Code. This tool provides fixture unit values for various plumbing fixtures to determine water supply requirements.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fixture Type",
+        "Minimum Fixture Branch Pipe Size (inch)",
+        "Water Supply Fixture Units (WSFU)"
+      ],
+      "rows": [
+        [
+          "Bathtub",
+          "1/2",
+          4
+        ],
+        [
+          "Bathtub with 3/4\" fill valve",
+          "3/4",
+          10
+        ],
+        [
+          "Bidet",
+          "1/2",
+          1
+        ],
+        [
+          "Dishwasher, domestic",
+          "1/2",
+          1.5
+        ],
+        [
+          "Drinking fountain",
+          "1/2",
+          0.5
+        ],
+        [
+          "Hose bibbs",
+          "1/2",
+          2.5
+        ],
+        [
+          "Lavatory",
+          "1/2",
+          1
+        ],
+        [
+          "Bar sink",
+          "1/2",
+          2
+        ],
+        [
+          "Clinic faucet sink",
+          "1/2",
+          3
+        ],
+        [
+          "Kitchen sink, domestic",
+          "1/2",
+          1.5
+        ],
+        [
+          "Laundry sink",
+          "1/2",
+          1.5
+        ],
+        [
+          "Service or mop basin",
+          "1/2",
+          3
+        ],
+        [
+          "Washup basin",
+          "1/2",
+          2
+        ],
+        [
+          "Shower, single head",
+          "1/2",
+          2
+        ],
+        [
+          "Urinal, flush tank",
+          "1/2",
+          2
+        ],
+        [
+          "Wash fountain",
+          "3/4",
+          4
+        ],
+        [
+          "Water closet, gravity flush tank",
+          "1/2",
+          2.5
+        ],
+        [
+          "Water closet, flushometer valve",
+          "1",
+          2.5
+        ],
+        [
+          "Water cooler",
+          "1/2",
+          0.5
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Reference\n\n- **1 WSFU = 1 GPM = 3.79 liter/min**\n- **1 in = 25.4 mm**\n\n## Important Notes\n\nThis conversion is only true for one or a few fixtures. Since all fixtures in a system are never used at the same time, the total units achieved by adding the numbers for all fixtures must be compensated for their intermittent use.\n\nFor supply pipe lines, this is taken care of in the sizing tables. For manifolds or special equipment sizing, a formula or table can be used to account for intermittent fixture usage."
+    }
+  ]
+}

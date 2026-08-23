@@ -1,0 +1,336 @@
+{
+  "id": "hydrogen___density_and_specific_weight_vs__tempera",
+  "title": "Hydrogen - Density and Specific Weight vs. Temperature and Pressure",
+  "description": "Calculate and visualize the density and specific weight of gaseous hydrogen at given temperature and atmospheric pressure. Includes conversion formulas and tabulated values for SI and Imperial units.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "hydrogen_density_calculator",
+      "content": "Hydrogen Density and Specific Weight Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bara"
+        },
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "defaultValue": "celsius",
+          "options": [
+            {
+              "value": "celsius",
+              "label": "°C"
+            },
+            {
+              "value": "fahrenheit",
+              "label": "°F"
+            },
+            {
+              "value": "kelvin",
+              "label": "K"
+            },
+            {
+              "value": "rankine",
+              "label": "°R"
+            }
+          ]
+        },
+        {
+          "id": "pressure_unit",
+          "label": "Pressure Unit",
+          "type": "select",
+          "defaultValue": "bara",
+          "options": [
+            {
+              "value": "bara",
+              "label": "bara"
+            },
+            {
+              "value": "psia",
+              "label": "psia"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "inputs.pressure / 1 * 0.0815",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "formula": "inputs.pressure / 1 * 0.00509",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lb_gal_us",
+          "label": "Density",
+          "unit": "lb/gal(US liq)",
+          "formula": "inputs.pressure / 1 * 0.0681",
+          "format": "decimal"
+        },
+        {
+          "id": "density_sl_ft3",
+          "label": "Density",
+          "unit": "sl/ft³",
+          "formula": "inputs.pressure / 1 * 0.000158",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_weight_n_m3",
+          "label": "Specific Weight",
+          "unit": "N/m³",
+          "formula": "inputs.pressure / 1 * 0.0815 * 9.80665",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "formula": "inputs.pressure / 1 * 0.00509 * 32.17405",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "hydrogen_density_table",
+      "content": "Hydrogen Density and Specific Weight Values at 1 bara",
+      "headers": [
+        "Temperature (K)",
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Density (kg/m³)",
+        "Density (lb/ft³)",
+        "Specific Weight (N/m³)",
+        "Specific Weight (lbf/ft³)"
+      ],
+      "rows": [
+        [
+          300,
+          26.9,
+          80.3,
+          0.08077,
+          0.005042,
+          0.792,
+          0.00504
+        ],
+        [
+          320,
+          46.9,
+          116,
+          0.07572,
+          0.004727,
+          0.743,
+          0.00473
+        ],
+        [
+          340,
+          66.9,
+          152,
+          0.07127,
+          0.004449,
+          0.699,
+          0.00445
+        ],
+        [
+          360,
+          86.9,
+          188,
+          0.06731,
+          0.004202,
+          0.66,
+          0.0042
+        ],
+        [
+          400,
+          127,
+          260,
+          0.06058,
+          0.003782,
+          0.594,
+          0.00378
+        ],
+        [
+          500,
+          227,
+          440,
+          0.04847,
+          0.003026,
+          0.475,
+          0.00303
+        ],
+        [
+          600,
+          327,
+          620,
+          0.0404,
+          0.002522,
+          0.396,
+          0.00252
+        ],
+        [
+          700,
+          427,
+          800,
+          0.03463,
+          0.002162,
+          0.34,
+          0.00216
+        ],
+        [
+          800,
+          527,
+          980,
+          0.0303,
+          0.001892,
+          0.297,
+          0.00189
+        ],
+        [
+          900,
+          627,
+          1160,
+          0.02693,
+          0.001681,
+          0.264,
+          0.00168
+        ],
+        [
+          1000,
+          727,
+          1340,
+          0.02424,
+          0.001513,
+          0.238,
+          0.00151
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "density_vs_temperature",
+      "content": "Hydrogen Density vs. Temperature at 1 bara",
+      "options": {
+        "title": {
+          "text": "Hydrogen Gas Density vs. Temperature (1 bara)"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            300,
+            320,
+            340,
+            360,
+            400,
+            500,
+            600,
+            700,
+            800,
+            900,
+            1000
+          ],
+          "name": "Temperature (K)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Density (kg/m³)"
+        },
+        "series": [
+          {
+            "data": [
+              0.08077,
+              0.07572,
+              0.07127,
+              0.06731,
+              0.06058,
+              0.04847,
+              0.0404,
+              0.03463,
+              0.0303,
+              0.02693,
+              0.02424
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Density (kg/m³)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "chart",
+      "id": "specific_weight_vs_temperature",
+      "content": "Hydrogen Specific Weight vs. Temperature at 1 bara",
+      "options": {
+        "title": {
+          "text": "Hydrogen Gas Specific Weight vs. Temperature (1 bara)"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            300,
+            320,
+            340,
+            360,
+            400,
+            500,
+            600,
+            700,
+            800,
+            900,
+            1000
+          ],
+          "name": "Temperature (K)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Specific Weight (N/m³)"
+        },
+        "series": [
+          {
+            "data": [
+              0.792,
+              0.743,
+              0.699,
+              0.66,
+              0.594,
+              0.475,
+              0.396,
+              0.34,
+              0.297,
+              0.264,
+              0.238
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Specific Weight (N/m³)"
+          }
+        ]
+      }
+    }
+  ]
+}

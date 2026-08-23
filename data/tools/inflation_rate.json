@@ -1,0 +1,61 @@
+{
+  "id": "inflation_rate",
+  "title": "Inflation Rate Calculator",
+  "description": "Calculate the future value of money after periods with uniform or variable inflation rates. Understand how inflation erodes purchasing power over time.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Inflation Rate Calculator\n\nAn inflation with rising prices will decrease the value of money over time. A deflation - the opposite of inflation or negative inflation - with decreasing prices will increase the value of money over time.\n\n### Uniform Inflation Rate Formula\n\n**F = P(1 - i)^n**\n\nWhere:\n- **F** = Future value\n- **P** = Present value\n- **i** = Average inflation rate per period (positive for inflation, negative for deflation)\n- **n** = Number of periods"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "presentValue",
+          "label": "Present Value (P)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "$"
+        },
+        {
+          "id": "inflationRate",
+          "label": "Inflation Rate (i)",
+          "type": "number",
+          "defaultValue": 0.04,
+          "unit": "%"
+        },
+        {
+          "id": "periods",
+          "label": "Number of Periods (n)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "periods"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "futureValue",
+          "label": "Future Value (F)",
+          "formula": "inputs.presentValue * Math.pow((1 - inputs.inflationRate), inputs.periods)",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "purchasingPowerLoss",
+          "label": "Purchasing Power Loss",
+          "formula": "inputs.presentValue - (inputs.presentValue * Math.pow((1 - inputs.inflationRate), inputs.periods))",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "purchasingPowerLossPercent",
+          "label": "Purchasing Power Loss (%)",
+          "formula": "((inputs.presentValue - (inputs.presentValue * Math.pow((1 - inputs.inflationRate), inputs.periods))) / inputs.presentValue) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

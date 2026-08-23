@@ -1,0 +1,176 @@
+{
+  "id": "discount_rates",
+  "title": "Discount Rates",
+  "description": "Calculate net price after applying single or multiple discount rates to a list price. Enter the list price and up to 4 discount rates to compute the final net price.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Discount Rates Calculator\n\nA discount is a deduction in percentage from the original price offered by the supplier.\n\n- The **base** is the original price of the item - the *list price*\n- The price after discount is the *net price*\n\n### Formula\n\n**Single Discount:** N = L (1 - i / 100)\n\n**Multiple Discounts:** N = L (1 - i₁ / 100) (1 - i₂ / 100) ... (1 - iₙ / 100)\n\nWhere:\n- N = net price\n- L = list price\n- i = discount rate (%)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "list_price",
+          "label": "List Price",
+          "type": "number",
+          "defaultValue": 500,
+          "unit": "$"
+        },
+        {
+          "id": "discount_1",
+          "label": "Discount Rate 1",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "%"
+        },
+        {
+          "id": "discount_2",
+          "label": "Discount Rate 2",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "%"
+        },
+        {
+          "id": "discount_3",
+          "label": "Discount Rate 3",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "%"
+        },
+        {
+          "id": "discount_4",
+          "label": "Discount Rate 4",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "net_price_factor",
+          "label": "Net Price Factor",
+          "formula": "(1 - inputs.discount_1 / 100) * (1 - inputs.discount_2 / 100) * (1 - inputs.discount_3 / 100) * (1 - inputs.discount_4 / 100)"
+        },
+        {
+          "id": "total_discount_percent",
+          "label": "Total Discount",
+          "formula": "(1 - (1 - inputs.discount_1 / 100) * (1 - inputs.discount_2 / 100) * (1 - inputs.discount_3 / 100) * (1 - inputs.discount_4 / 100)) * 100",
+          "unit": "%"
+        },
+        {
+          "id": "net_price",
+          "label": "Net Price",
+          "formula": "inputs.list_price * (1 - inputs.discount_1 / 100) * (1 - inputs.discount_2 / 100) * (1 - inputs.discount_3 / 100) * (1 - inputs.discount_4 / 100)",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "total_discount_amount",
+          "label": "Total Discount Amount",
+          "formula": "inputs.list_price - inputs.list_price * (1 - inputs.discount_1 / 100) * (1 - inputs.discount_2 / 100) * (1 - inputs.discount_3 / 100) * (1 - inputs.discount_4 / 100)",
+          "unit": "$",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Discount Rates (%)",
+        "Net Price Factor"
+      ],
+      "rows": [
+        [
+          "10",
+          "0.9"
+        ],
+        [
+          "10 - 10",
+          "0.81"
+        ],
+        [
+          "20",
+          "0.8"
+        ],
+        [
+          "20 - 5",
+          "0.76"
+        ],
+        [
+          "20 - 5 - 5",
+          "0.722"
+        ],
+        [
+          "20 - 10",
+          "0.72"
+        ],
+        [
+          "20 - 10 - 10",
+          "0.648"
+        ],
+        [
+          "25",
+          "0.75"
+        ],
+        [
+          "25 - 5",
+          "0.7125"
+        ],
+        [
+          "25 - 5 - 5",
+          "0.6769"
+        ],
+        [
+          "25 - 5 - 10",
+          "0.6413"
+        ],
+        [
+          "25 - 10",
+          "0.675"
+        ],
+        [
+          "25 - 10 - 5",
+          "0.6413"
+        ],
+        [
+          "25 - 10 - 10",
+          "0.6075"
+        ],
+        [
+          "25 - 10 - 10 - 5",
+          "0.5771"
+        ],
+        [
+          "30",
+          "0.7"
+        ],
+        [
+          "30 - 5",
+          "0.665"
+        ],
+        [
+          "30 - 5 - 5",
+          "0.6318"
+        ],
+        [
+          "30 - 5 - 10",
+          "0.5985"
+        ],
+        [
+          "30 - 10",
+          "0.63"
+        ],
+        [
+          "30 - 10 - 5",
+          "0.5985"
+        ],
+        [
+          "30 - 10 - 10",
+          "0.567"
+        ]
+      ]
+    }
+  ]
+}

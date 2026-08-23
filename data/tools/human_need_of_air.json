@@ -1,0 +1,65 @@
+{
+  "id": "human_need_of_air",
+  "title": "Human Need of Air",
+  "description": "Fresh air is required for respiration and for transport of heat and vapor emitted from the human body. This tool calculates heat loss from the human body at different dry bulb temperatures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Human Need of Air\n\nFresh air is required for respiration and for transport of heat and vapor emitted from the human body.\n\n## Respiration\n\nAn adult at rest breathes **15 - 18 respiration per minute** - exchanging 0.5 liter - approximately **0.5 m³/h**. With harder work the rate is **3 to 6 times** more (**1.5 - 3 m³/h**).\n\n### Average composition of exhaled air\n\n- Oxygen: **16.5%**\n- Carbon dioxide: **4.0%**\n- Nitrogen and Argon: **79.5%**\n\nThe quantity of carbon dioxide exhaled in **24 hrs** is about **1 kg**.\n\n## Equilibrium of Heat\n\nHeat is generated within the human body by the combustion of food. The heat is lost from the body by:\n\n- Conduction and convection: about **25%**\n- Radiation: about **43%**\n- Evaporation and moisture: about **30%**\n- Exhaled air: about **2%**\n\nEvaporation prevails at high ambient temperatures. Conduction and convection prevails at low ambient temperatures. Heat is liberated in a rate maintaining the internal body temperature at **37°C**."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Dry bulb temperature (°C)",
+        "Sensible heat (W)",
+        "Latent heat (W)",
+        "Total heat (W)"
+      ],
+      "rows": [
+        [
+          10,
+          135,
+          22,
+          157
+        ],
+        [
+          14,
+          112,
+          22,
+          134
+        ],
+        [
+          18,
+          100,
+          22,
+          122
+        ],
+        [
+          22,
+          95,
+          24,
+          118
+        ],
+        [
+          26,
+          84,
+          34,
+          118
+        ],
+        [
+          30,
+          59,
+          59,
+          118
+        ],
+        [
+          34,
+          29,
+          90,
+          119
+        ]
+      ]
+    }
+  ]
+}

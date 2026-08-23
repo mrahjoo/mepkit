@@ -1,0 +1,129 @@
+{
+  "id": "concrete_footings___volume",
+  "title": "Concrete Footings - Volume",
+  "description": "Estimate required concrete footing volume using the formula v = 0.0031 × l × w × t, where v is concrete volume in cubic yards, l is length in feet, w is width in feet, and t is depth in inches.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Length of Footing",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        },
+        {
+          "id": "width",
+          "label": "Width of Footing",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 1
+        },
+        {
+          "id": "depth",
+          "label": "Depth of Footing",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 12
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume",
+          "label": "Required Concrete Volume",
+          "unit": "cy",
+          "formula": "0.0031 * inputs.length * inputs.width * inputs.depth",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Depth of Footing (in)",
+        "12 in width (cy/ft)",
+        "15 in width (cy/ft)",
+        "18 in width (cy/ft)",
+        "24 in width (cy/ft)"
+      ],
+      "rows": [
+        [
+          6,
+          0.019,
+          0.023,
+          0.028,
+          0.037
+        ],
+        [
+          8,
+          0.025,
+          0.031,
+          0.037,
+          0.049
+        ],
+        [
+          9,
+          0.028,
+          0.035,
+          0.042,
+          0.056
+        ],
+        [
+          10,
+          0.031,
+          0.039,
+          0.046,
+          0.062
+        ],
+        [
+          12,
+          0.037,
+          0.046,
+          0.056,
+          0.074
+        ],
+        [
+          18,
+          0.056,
+          0.069,
+          0.083,
+          0.111
+        ],
+        [
+          24,
+          0.074,
+          0.093,
+          0.111,
+          0.148
+        ],
+        [
+          30,
+          0.093,
+          0.116,
+          0.139,
+          0.185
+        ],
+        [
+          36,
+          0.111,
+          0.139,
+          0.167,
+          0.222
+        ],
+        [
+          42,
+          0.13,
+          0.162,
+          0.194,
+          0.259
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Information\n\n- 1 cubic yard (cy) = 27 cubic feet\n- 1 foot (ft) = 12 inches (in)\n- 1 cy per linear foot (y³/ft) = 2.5 m³/m\n\n## Formula\n\n**v = 0.0031 × l × w × t**\n\nWhere:\n- v = required concrete (cubic yards)\n- l = length of footing (feet)\n- w = width of footing (feet)\n- t = depth of footing (inches)"
+    }
+  ]
+}

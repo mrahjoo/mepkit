@@ -1,0 +1,128 @@
+{
+  "id": "impact_force",
+  "title": "Impact Force Calculator",
+  "description": "Calculate the impact force from moving objects, falling objects, or crashes. Determines the average impact force based on mass, velocity, and deformation distance.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Scenario",
+        "Mass (kg)",
+        "Velocity (m/s)",
+        "Height (m)",
+        "Deformation (m)",
+        "Impact Force (kN)",
+        "Times Gravity"
+      ],
+      "rows": [
+        [
+          "Car Crash - 60 km/h",
+          2000,
+          16.7,
+          0,
+          0.5,
+          558,
+          28.5
+        ],
+        [
+          "Car Crash - 90 km/h",
+          2000,
+          25,
+          0,
+          0.5,
+          1275,
+          65
+        ],
+        [
+          "Falling Car - 14.2 m",
+          2000,
+          0,
+          14.2,
+          0.5,
+          558,
+          28.5
+        ],
+        [
+          "Person Falling - 1.2 m",
+          90,
+          0,
+          1.2,
+          0.02,
+          53,
+          60.2
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 2000,
+          "unit": "kg"
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity",
+          "type": "number",
+          "defaultValue": 16.7,
+          "unit": "m/s"
+        },
+        {
+          "id": "height",
+          "label": "Falling Height (0 if not falling)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m"
+        },
+        {
+          "id": "deformation",
+          "label": "Deformation Distance",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "kinetic_energy",
+          "label": "Kinetic Energy",
+          "formula": "inputs.velocity > 0 ? 0.5 * inputs.mass * inputs.velocity * inputs.velocity : 0",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "potential_energy",
+          "label": "Potential Energy",
+          "formula": "inputs.height > 0 ? inputs.mass * 9.81 * inputs.height : 0",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "total_energy",
+          "label": "Total Energy",
+          "formula": "(inputs.velocity > 0 ? 0.5 * inputs.mass * inputs.velocity * inputs.velocity : 0) + (inputs.height > 0 ? inputs.mass * 9.81 * inputs.height : 0)",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "impact_force",
+          "label": "Average Impact Force",
+          "formula": "((inputs.velocity > 0 ? 0.5 * inputs.mass * inputs.velocity * inputs.velocity : 0) + (inputs.height > 0 ? inputs.mass * 9.81 * inputs.height : 0)) / inputs.deformation / 1000",
+          "unit": "kN",
+          "format": "decimal"
+        },
+        {
+          "id": "times_gravity",
+          "label": "Times Gravity",
+          "formula": "(((inputs.velocity > 0 ? 0.5 * inputs.mass * inputs.velocity * inputs.velocity : 0) + (inputs.height > 0 ? inputs.mass * 9.81 * inputs.height : 0)) / inputs.deformation) / (inputs.mass * 9.81)",
+          "unit": "g",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

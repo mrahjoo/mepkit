@@ -1,0 +1,75 @@
+{
+  "id": "plastics___recycling_codes_and_labeling",
+  "title": "Plastics - Recycling Codes and Labeling",
+  "description": "Symbol codes and labeling used for recycling plastic products like bottles, containers and packaging. Includes information about different recycling codes (1-7), their plastic types, common uses, and food safety considerations.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "recycling_codes_table",
+      "headers": [
+        "Recycling Code",
+        "Plastic Type",
+        "Abbreviation",
+        "Common Products",
+        "Food Safe Notes"
+      ],
+      "rows": [
+        [
+          "1",
+          "Polyethylene Terephthalate",
+          "PETE",
+          "Soda, soft drink, water, juice, detergent, cleaner and peanut butter bottles",
+          "Preferred with food"
+        ],
+        [
+          "2",
+          "High Density Polyethylene",
+          "HDPE",
+          "Milk and water jugs, bleach, detergent and shampoo bottles, plastic bags, oil and motor oil bottles, toys",
+          "Preferred with food"
+        ],
+        [
+          "3",
+          "Vinyl or Polyvinyl Chloride",
+          "PVC or V",
+          "Food/cling wrap, squeeze bottles, cooking oil jars, detergent and window cleaner bottles, blister packages",
+          "Should be avoided with food"
+        ],
+        [
+          "4",
+          "Low Density Polyethylene",
+          "LDPE",
+          "Grocery store plastic bags, shrink wraps, some bottles, garment bags, flexible film packaging",
+          "Preferred with food"
+        ],
+        [
+          "5",
+          "Polypropylene",
+          "PP",
+          "Refrigerated containers, bottle tops, carpets, deli soup/syrup/yogurt containers, straws, baby bottles, yogurt tubs",
+          "Preferred with food"
+        ],
+        [
+          "6",
+          "Polystyrene",
+          "PS",
+          "Styrofoam food trays, carry-out containers, egg cartons, disposable cups and bowls, opaque plastic cutlery",
+          "Should be avoided with food"
+        ],
+        [
+          "7",
+          "Other/Polycarbonate",
+          "Other",
+          "Layered or mixed plastics, baby bottles, water bottles, metal food can liners, clear plastic sippy cups, clear plastic cutlery, bio-based plastics",
+          "Cannot be recycled - Mixed or layered"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "recycling_guide",
+      "content": "## Plastic Recycling Guide\n\n### Key Notes:\n- **Codes 1, 2, 4, 5**: Preferred for food contact applications\n- **Codes 3, 6**: Should be avoided for food contact\n- **Code 7**: Usually layered or mixed plastics that cannot be recycled\n\n### Common Applications by Code:\n\n**Code 1 (PETE)** - Clear beverage bottles, food containers\n\n**Code 2 (HDPE)** - Opaque containers for liquids and household products\n\n**Code 3 (PVC)** - Flexible wrapping and squeeze bottles\n\n**Code 4 (LDPE)** - Thin films and flexible packaging\n\n**Code 5 (PP)** - Heat-resistant containers and rigid plastics\n\n**Code 6 (PS)** - Foam and disposable foodservice items\n\n**Code 7 (Other)** - Mixed plastics, generally not recyclable"
+    }
+  ]
+}

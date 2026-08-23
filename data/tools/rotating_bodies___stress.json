@@ -1,0 +1,157 @@
+{
+  "id": "rotating_bodies___stress",
+  "title": "Rotating Bodies - Stress",
+  "description": "Stress in rotating disc and ring bodies. Calculate stress in rotating discs and rings based on angular velocity, dimensions, and material density.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Stress in a Rotating Disc\n\nStress in a rotating disc can be calculated as:\n\n**σz = ω² r² ρ / 3**\n\nOr alternatively:\n\n**σz = v² ρ / 3**\n\nOr using RPM:\n\n**σz = (2π n / 60)² r² ρ / 3**\n\nWhere:\n- σz = stress (Pa, N/m²)\n- ω = angular velocity (rad/s)\n- r = radius of disc (m)\n- ρ = density (kg/m³)\n- v = tangential velocity (m/s)\n- n = revolutions per minute (rpm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "body_type",
+          "label": "Body Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Rotating Disc",
+              "value": "disc"
+            },
+            {
+              "label": "Rotating Ring",
+              "value": "ring"
+            }
+          ],
+          "defaultValue": "disc"
+        },
+        {
+          "id": "angular_velocity",
+          "label": "Angular Velocity (ω)",
+          "type": "number",
+          "unit": "rad/s",
+          "defaultValue": 100
+        },
+        {
+          "id": "radius",
+          "label": "Radius (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "outer_radius",
+          "label": "Outer Radius (r₁)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "inner_radius",
+          "label": "Inner Radius (r₂)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.3
+        },
+        {
+          "id": "mean_radius",
+          "label": "Mean Radius (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.4
+        },
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 7850
+        }
+      ],
+      "outputs": [
+        {
+          "id": "stress_disc",
+          "label": "Stress in Disc",
+          "formula": "inputs.angular_velocity^2 * inputs.radius^2 * inputs.density / 3",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "stress_ring",
+          "label": "Stress in Ring",
+          "formula": "inputs.angular_velocity^2 * inputs.density * (inputs.outer_radius^2 + inputs.outer_radius * inputs.inner_radius + inputs.inner_radius^2) / 3",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "stress_ring_thin",
+          "label": "Stress in Thin Ring",
+          "formula": "inputs.angular_velocity^2 * inputs.density * inputs.mean_radius^2",
+          "unit": "Pa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Stress in a Rotating Ring\n\nStress in a rotating ring can be calculated as:\n\n**σz = ω² ρ (r₁² + r₁r₂ + r₂²) / 3**\n\nWhere:\n- r₁ = outer radius of ring (m)\n- r₂ = inner radius of ring (m)\n\nFor a thin ring, the equation simplifies to:\n\n**σz = ω² ρ r²**\n\nWhere:\n- r = mean radius of ring (m)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Density (kg/m³)",
+        "Typical Design Stress (MPa)"
+      ],
+      "rows": [
+        [
+          "Aluminum alloy",
+          2700,
+          "—"
+        ],
+        [
+          "Birch plywood",
+          700,
+          30
+        ],
+        [
+          "Composite carbon fiber - 40% epoxy",
+          1550,
+          750
+        ],
+        [
+          "E-glass fiber - 40% epoxy",
+          1900,
+          250
+        ],
+        [
+          "Kevlar fiber - 40% epoxy",
+          1400,
+          1000
+        ],
+        [
+          "Maraging steel",
+          8000,
+          900
+        ],
+        [
+          "Titanium Alloy",
+          4500,
+          650
+        ],
+        [
+          "Super paper",
+          1100,
+          "—"
+        ],
+        [
+          "S-glass fiber/epoxy",
+          1900,
+          350
+        ]
+      ]
+    }
+  ]
+}

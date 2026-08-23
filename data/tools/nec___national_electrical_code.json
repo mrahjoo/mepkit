@@ -1,0 +1,72 @@
+{
+  "id": "nec___national_electrical_code",
+  "title": "NEC - National Electrical Code",
+  "description": "The National Electrical Code (NEC), or NFPA 70 sets the foundation for electrical safety in residential, commercial, and industrial occupancies in the United States. It is part of the National Fire Codes series published by the National Fire Protection Association (NFPA), a private trade association.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# NEC - National Electrical Code\n\nThe [National Electrical Code (NEC)](https://www.nfpa.org/NEC \"NEC\"), or NFPA 70 sets the foundation for electrical safety in residential, commercial, and industrial occupancies in the United States. It is part of the National Fire Codes series published by the National Fire Protection Association (NFPA), a private trade association.\n\n## Overview\n\nThe NEC provides:\n- Safety standards for electrical installation\n- Guidelines for residential, commercial, and industrial applications\n- Best practices for electrical systems and equipment\n- Requirements for grounding and bonding\n- Protection against electrical hazards"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Code Section",
+        "Topic",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Article 110",
+          "General Requirements",
+          "Requirements for electrical equipment and its approval, listing, labeling, and installation"
+        ],
+        [
+          "Article 200",
+          "Use and Identification of Grounded Conductors",
+          "Requirements for identification of grounded conductors"
+        ],
+        [
+          "Article 210",
+          "Branch Circuits",
+          "Requirements for branch circuits including rating and protection"
+        ],
+        [
+          "Article 220",
+          "Branch Circuit, Feeder, and Service Calculations",
+          "Load calculation methods and requirements"
+        ],
+        [
+          "Article 230",
+          "Services",
+          "Requirements for service entrance conductors and equipment"
+        ],
+        [
+          "Article 240",
+          "Overcurrent Protection",
+          "Requirements for fuses and circuit breakers"
+        ],
+        [
+          "Article 250",
+          "Grounding and Bonding",
+          "Grounding requirements for safety"
+        ],
+        [
+          "Article 300",
+          "Wiring Methods and Materials",
+          "General requirements for all wiring methods"
+        ],
+        [
+          "Article 400",
+          "Flexible Cords and Cables",
+          "Requirements for cord and cable usage"
+        ],
+        [
+          "Article 430",
+          "Motors, Motor Circuits, and Controllers",
+          "Motor installation and protection requirements"
+        ]
+      ]
+    }
+  ]
+}

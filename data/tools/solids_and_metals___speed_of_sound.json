@@ -1,0 +1,488 @@
+{
+  "id": "solids_and_metals___speed_of_sound",
+  "title": "Solids and Metals - Speed of Sound",
+  "description": "Speed of sound in solids and metals like aluminum, brass, concrete and more. Calculate and compare propagation velocities across different materials including longitudinal, shear, and extensional wave speeds.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "solids_metals_speed_table",
+      "content": "Speed of Sound in Solids and Metals",
+      "headers": [
+        "Solid",
+        "Longitudinal (m/s)",
+        "Shear (m/s)",
+        "Extensional (m/s)"
+      ],
+      "rows": [
+        [
+          "Aluminum, rolled",
+          "6420",
+          "3040",
+          "5000"
+        ],
+        [
+          "Antimony",
+          "",
+          "",
+          "3400"
+        ],
+        [
+          "Beryllium",
+          "12890",
+          "8880",
+          "12870"
+        ],
+        [
+          "Bismut",
+          "2180",
+          "",
+          "1790"
+        ],
+        [
+          "Brass (70% Cu, 30% Zn)",
+          "4700",
+          "2110",
+          "3480"
+        ],
+        [
+          "Brick",
+          "4200",
+          "3600",
+          ""
+        ],
+        [
+          "Cadmium",
+          "2780",
+          "",
+          "2400"
+        ],
+        [
+          "Concrete",
+          "3700",
+          "3200",
+          ""
+        ],
+        [
+          "Constantan",
+          "5177",
+          "2625",
+          "4270"
+        ],
+        [
+          "Copper, annealed",
+          "4760",
+          "2325",
+          "3810"
+        ],
+        [
+          "Copper, rolled",
+          "5010",
+          "2270",
+          "3750"
+        ],
+        [
+          "Cork",
+          "518",
+          "366",
+          ""
+        ],
+        [
+          "Diamond",
+          "12000",
+          "",
+          ""
+        ],
+        [
+          "Duralumin",
+          "6320",
+          "3130",
+          "5150"
+        ],
+        [
+          "Glass, heavy silicate flint",
+          "3980",
+          "2380",
+          "3720"
+        ],
+        [
+          "Glass, light borate crown",
+          "5100",
+          "2840",
+          "4540"
+        ],
+        [
+          "Glass, pyrex",
+          "5640",
+          "3280",
+          "5140"
+        ],
+        [
+          "Gold, hard drawn",
+          "3240",
+          "1200",
+          "2030"
+        ],
+        [
+          "Granite",
+          "5950",
+          "",
+          ""
+        ],
+        [
+          "Iridium",
+          "",
+          "",
+          "4790"
+        ],
+        [
+          "Iron, cast",
+          "4994",
+          "2809",
+          "4480"
+        ],
+        [
+          "Iron, electrolytic",
+          "5950",
+          "3240",
+          "5120"
+        ],
+        [
+          "Ivory",
+          "",
+          "",
+          "3010"
+        ],
+        [
+          "Lead, annealed",
+          "2160",
+          "700",
+          "1190"
+        ],
+        [
+          "Lead, rolled",
+          "1960",
+          "690",
+          "1210"
+        ],
+        [
+          "Lucite",
+          "2680",
+          "1100",
+          "1840"
+        ],
+        [
+          "Magnesium, annealed",
+          "5770",
+          "3050",
+          "4940"
+        ],
+        [
+          "Manganese",
+          "4660",
+          "",
+          "3830"
+        ],
+        [
+          "Marble",
+          "",
+          "",
+          "3810"
+        ],
+        [
+          "Molybdenum",
+          "6250",
+          "3350",
+          "5400"
+        ],
+        [
+          "Monel",
+          "5350",
+          "2720",
+          "4400"
+        ],
+        [
+          "Nickel",
+          "6040",
+          "3000",
+          "4900"
+        ],
+        [
+          "Nylon 6/6",
+          "2620",
+          "1070",
+          "1800"
+        ],
+        [
+          "Platinum",
+          "3260",
+          "1730",
+          "2800"
+        ],
+        [
+          "Polyethylene",
+          "1950",
+          "540",
+          "920"
+        ],
+        [
+          "Polystyrene",
+          "2350",
+          "1120",
+          "1840"
+        ],
+        [
+          "Rubber, butyl",
+          "1830",
+          "",
+          ""
+        ],
+        [
+          "Rubber, gum",
+          "1550",
+          "",
+          ""
+        ],
+        [
+          "Rubber, neoprene",
+          "1600",
+          "",
+          ""
+        ],
+        [
+          "Silica, fused",
+          "5968",
+          "3764",
+          "5760"
+        ],
+        [
+          "Silver",
+          "3650",
+          "1610",
+          "2680"
+        ],
+        [
+          "Slate",
+          "",
+          "",
+          "4510"
+        ],
+        [
+          "Steel (1% C)",
+          "5940",
+          "3220",
+          "5180"
+        ],
+        [
+          "Steel, stainless",
+          "5790",
+          "3100",
+          "5000"
+        ],
+        [
+          "Tantalium",
+          "",
+          "",
+          "3350"
+        ],
+        [
+          "Tin, rolled",
+          "3320",
+          "1670",
+          "2730"
+        ],
+        [
+          "Titanium",
+          "6070",
+          "3125",
+          "5090"
+        ],
+        [
+          "Tungsten, annealed",
+          "5220",
+          "2890",
+          "4620"
+        ],
+        [
+          "Tungsten, drawn",
+          "5410",
+          "2640",
+          "4320"
+        ],
+        [
+          "Tungsten carbide",
+          "6655",
+          "3980",
+          "6220"
+        ],
+        [
+          "Wood (hard)",
+          "3960",
+          "",
+          ""
+        ],
+        [
+          "Wood, longitudinal parallel with grain",
+          "3300-5000",
+          "",
+          ""
+        ],
+        [
+          "Zinc, rolled",
+          "4210",
+          "2440",
+          "3850"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "speed_converter",
+      "content": "Speed of Sound Unit Converter",
+      "inputs": [
+        {
+          "id": "speed_ms",
+          "label": "Speed",
+          "type": "number",
+          "defaultValue": 343,
+          "unit": "m/s"
+        },
+        {
+          "id": "unit_type",
+          "label": "Convert to",
+          "type": "select",
+          "defaultValue": "kmh",
+          "options": [
+            {
+              "value": "kmh",
+              "label": "km/h"
+            },
+            {
+              "value": "ftmin",
+              "label": "ft/min"
+            },
+            {
+              "value": "fts",
+              "label": "ft/s"
+            },
+            {
+              "value": "mph",
+              "label": "mph"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result_kmh",
+          "label": "Speed in km/h",
+          "formula": "inputs.speed_ms * 3.6",
+          "unit": "km/h",
+          "format": "decimal"
+        },
+        {
+          "id": "result_ftmin",
+          "label": "Speed in ft/min",
+          "formula": "inputs.speed_ms * 196.85",
+          "unit": "ft/min",
+          "format": "decimal"
+        },
+        {
+          "id": "result_fts",
+          "label": "Speed in ft/s",
+          "formula": "inputs.speed_ms * 3.28",
+          "unit": "ft/s",
+          "format": "decimal"
+        },
+        {
+          "id": "result_mph",
+          "label": "Speed in mph",
+          "formula": "inputs.speed_ms * 2.237",
+          "unit": "mph",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "speed_comparison_chart",
+      "content": "Speed of Sound Comparison - Common Solids",
+      "options": {
+        "title": {
+          "text": "Speed of Sound in Common Solids"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Aluminum",
+            "Brass",
+            "Concrete",
+            "Copper",
+            "Glass",
+            "Steel",
+            "Titanium"
+          ],
+          "axisLabel": {
+            "rotate": 45
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Speed (m/s)"
+        },
+        "series": [
+          {
+            "name": "Longitudinal",
+            "type": "bar",
+            "data": [
+              6420,
+              4700,
+              3700,
+              4760,
+              5640,
+              5940,
+              6070
+            ]
+          },
+          {
+            "name": "Shear",
+            "type": "bar",
+            "data": [
+              3040,
+              2110,
+              3200,
+              2325,
+              3280,
+              3220,
+              3125
+            ]
+          },
+          {
+            "name": "Extensional",
+            "type": "bar",
+            "data": [
+              5000,
+              3480,
+              null,
+              3810,
+              5140,
+              5180,
+              5090
+            ]
+          }
+        ],
+        "tooltip": {
+          "show": true
+        },
+        "legend": {
+          "show": true
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "info_section",
+      "content": "## About Speed of Sound in Solids\n\n### Wave Types\nIn a liquid or gas only one speed is required. In an isotropic solid sound speed is characterized by:\n\n- **Longitudinal waves**: Speed of longitudinal waves in infinite elements (elements much larger than the wavelength of the sound)\n- **Shear waves**: Speed of shear waves in infinite elements\n- **Extensional waves**: Speed of extensional waves along a rod (with diameter much smaller than the wavelength)\n\n### Special Cases\n**Wood**: The speed of sound varies with grain direction because the transverse modulus of elasticity is as little as 1/20 the longitudinal value. The speed of sound across the grain is about one-fifth to one-third of the longitudinal value.\n\n### Reference Values\n- Speed of sound in normal air: **343 m/s**\n- Speed of sound in water: **1433 m/s**\n- 1 m/s = 3.6 km/h = 196.85 ft/min = 3.28 ft/s = 2.237 mph\n\n### Note\nNote that speed is a scalar quantity. Velocity is a vector quantity with direction. Propagation velocities vary with frequencies."
+    }
+  ]
+}

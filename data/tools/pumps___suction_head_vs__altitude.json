@@ -1,0 +1,63 @@
+{
+  "id": "pumps___suction_head_vs__altitude",
+  "title": "Pumps - Suction Head vs. Altitude",
+  "description": "Calculate the relationship between suction head and altitude for pump systems. This tool helps engineers understand how altitude affects pump suction head performance.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Altitude (m)",
+        "Atmospheric Pressure (kPa)",
+        "Suction Head (m)"
+      ],
+      "rows": [
+        [
+          0,
+          101.325,
+          10.33
+        ],
+        [
+          500,
+          95.461,
+          9.74
+        ],
+        [
+          1000,
+          89.875,
+          9.17
+        ],
+        [
+          1500,
+          84.556,
+          8.63
+        ],
+        [
+          2000,
+          79.495,
+          8.11
+        ],
+        [
+          2500,
+          74.682,
+          7.62
+        ],
+        [
+          3000,
+          70.108,
+          7.15
+        ],
+        [
+          3500,
+          65.758,
+          6.71
+        ],
+        [
+          4000,
+          61.625,
+          6.29
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "gases___molar_specific_heats",
+  "title": "Gases - Molar Specific Heats",
+  "description": "Molar specific heats for some common gases at constant volume. This table provides approximate molar specific heats at constant volume at room temperature for common gases in kcal/kmole K.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Specific Heat - Cv (kcal/kmole K)"
+      ],
+      "rows": [
+        [
+          "Argon (Ar)",
+          3
+        ],
+        [
+          "Carbon monoxide (CO)",
+          5.02
+        ],
+        [
+          "Chlorine (Cl2)",
+          6.01
+        ],
+        [
+          "Ethane (C2H6)",
+          10.3
+        ],
+        [
+          "Ether ((C2H5)2O)",
+          30.8
+        ],
+        [
+          "Helium (He)",
+          3.02
+        ],
+        [
+          "Hydrogen (H2)",
+          4.88
+        ],
+        [
+          "Mercury vapor (Hg)",
+          3
+        ],
+        [
+          "Nitrogen (N2)",
+          6.97
+        ],
+        [
+          "Oxygen (O2)",
+          4.99
+        ],
+        [
+          "Sulfur dioxide (SO2)",
+          7.5
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "**Conversion Factors:**\n\n1 kcal = 4186.8 J = 426.9 kp m = 1.163×10⁻³ kWh = 3.088 ft lbf = 3.9683 Btu = 1000 cal"
+    }
+  ]
+}

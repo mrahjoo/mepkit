@@ -1,0 +1,96 @@
+{
+  "id": "heavy_water___thermophysical_properties",
+  "title": "Heavy Water - Thermophysical Properties",
+  "description": "Thermodynamic properties of heavy water (D2O) including density, melting temperature, boiling temperature, latent heat of fusion, latent heat of evaporation, critical temperature, and other key properties.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Heavy Water (D2O) Thermophysical Properties\n\nHeavy water (deuterium oxide, D2O) is a form of water containing a higher proportion of deuterium (heavy hydrogen, ²H) rather than common hydrogen (¹H). This calculator provides key thermodynamic properties of heavy water.\n\n### Key Properties Reference\n\n| Property | Value | Unit |\n|----------|-------|------|\n| Boiling Temperature | 101.40 | °C |\n| Melting Temperature | 3.81 | °C |\n| Critical Temperature | 370.697 | °C |\n| Critical Pressure | 21.671 | MPa |\n| Critical Density | 0.356 | g/cm³ |\n| Maximum Density | 1105.9 | kg/m³ |\n| Molar Mass | 20.02751 | g/mol |\n| Specific Heat (Cp at 20°C) | 4.219 | kJ/kgK |\n| Latent Heat of Fusion | 306.2 | kJ/kg |\n| Latent Heat of Evaporation | 2073.20 | kJ/kg |\n| Surface Tension (at 25°C) | 71.87 | dyn/cm |\n| Viscosity (at 20°C) | 1.251 | cP |\n| pD (at 25°C) | 7.43 | - |"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "boiling_point",
+          "label": "Boiling Point",
+          "formula": "101.40",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "melting_point",
+          "label": "Melting Point",
+          "formula": "3.81",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_temperature",
+          "label": "Critical Temperature",
+          "formula": "370.697",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat (Cp)",
+          "formula": "4.219",
+          "unit": "kJ/kgK",
+          "format": "decimal"
+        },
+        {
+          "id": "latent_heat_fusion",
+          "label": "Latent Heat of Fusion",
+          "formula": "306.2",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "latent_heat_evaporation",
+          "label": "Latent Heat of Evaporation",
+          "formula": "2073.20",
+          "unit": "kJ/kg",
+          "format": "decimal"
+        },
+        {
+          "id": "density_max",
+          "label": "Maximum Density",
+          "formula": "1105.9",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_pressure",
+          "label": "Critical Pressure",
+          "formula": "21.671",
+          "unit": "MPa",
+          "format": "decimal"
+        },
+        {
+          "id": "surface_tension",
+          "label": "Surface Tension",
+          "formula": "71.87",
+          "unit": "dyn/cm",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity",
+          "label": "Viscosity",
+          "formula": "1.251",
+          "unit": "cP",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

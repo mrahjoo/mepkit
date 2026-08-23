@@ -1,0 +1,149 @@
+{
+  "id": "metals_and_alloys___young_s_modulus_of_elasticity",
+  "title": "Metals and Alloys - Young's Modulus of Elasticity",
+  "description": "Elastic properties and Young's modulus for metals and alloys like cast iron, carbon steel and more. Calculate Young's modulus of elasticity (E) for various metals and alloys at different temperatures.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Young's Modulus of Elasticity Calculator\n\nYoung's modulus (E) is the ratio of stress to strain and represents the elasticity of a material. It can be used to predict elongation or compression of an object.\n\n**Unit Conversion:**\n- 1 psi (lb/in²) = 6,894.8 Pa (N/m²)\n- T (°C) = 5/9 × (T (°F) - 32)\n\nThis tool provides Young's modulus values for common metals and alloys at various temperatures according to ASME B31.1-1995."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Metal/Alloy Type",
+        "Temperature (°C)",
+        "Young's Modulus (10⁶ psi)"
+      ],
+      "rows": [
+        [
+          "Gray cast iron",
+          "-200 to 538",
+          "13.4 to 10.2"
+        ],
+        [
+          "Carbon steel C ≤ 0.3%",
+          "-200 to 649",
+          "31.4 to 18.0"
+        ],
+        [
+          "Carbon steel C ≥ 0.3%",
+          "-200 to 649",
+          "31.2 to 15.4"
+        ],
+        [
+          "Carbon-molybdenum steels",
+          "-200 to 649",
+          "31.1 to 15.3"
+        ],
+        [
+          "Nickel steels Ni 2%-9%",
+          "-200 to 482",
+          "29.6 to 23.0"
+        ],
+        [
+          "Cr-Mo steels Cr 1/2%-2%",
+          "-200 to 649",
+          "31.6 to 21.8"
+        ],
+        [
+          "Cr-Mo steels Cr 2.25%-3%",
+          "-200 to 649",
+          "32.6 to 22.5"
+        ],
+        [
+          "Cr-Mo steels Cr 5%-9%",
+          "-200 to 649",
+          "32.9 to 18.2"
+        ],
+        [
+          "Chromium steels Cr 12%, 17%, 27%",
+          "-200 to 649",
+          "31.2 to 16.6"
+        ],
+        [
+          "Austenitic steels (TP304, 310, 316, 321, 347)",
+          "-200 to 649",
+          "30.3 to 21.2"
+        ],
+        [
+          "Copper (C11000)",
+          "-200 to 538",
+          "16.9 to 13.7"
+        ],
+        [
+          "Naval brass Si & Al bronze",
+          "-200 to 538",
+          "15.9 to 12.8"
+        ],
+        [
+          "Comp. and leaded-Sn bronze",
+          "-200 to 538",
+          "14.8 to 12.0"
+        ],
+        [
+          "Copper red brass Al-bronze",
+          "-200 to 538",
+          "18.0 to 14.5"
+        ],
+        [
+          "Monel 400 (N04400)",
+          "-200 to 649",
+          "27.8 to 21.2"
+        ],
+        [
+          "Unalloyed titanium (Gr. 1,2,3,7)",
+          "-200 to 427",
+          "15.5 to 11.2"
+        ],
+        [
+          "Aluminum alloys (443, 1060, 1100, 3003, 3004, 6063)",
+          "-200 to 482",
+          "11.1 to 8.7"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "material_modulus",
+          "label": "Young's Modulus at Reference Temperature",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "10⁶ psi"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "modulus_psi",
+          "label": "Young's Modulus",
+          "formula": "inputs.material_modulus",
+          "unit": "10⁶ psi",
+          "format": "decimal"
+        },
+        {
+          "id": "modulus_pa",
+          "label": "Young's Modulus",
+          "formula": "inputs.material_modulus * 6894.8",
+          "unit": "Pa",
+          "format": "scientific"
+        },
+        {
+          "id": "modulus_mpa",
+          "label": "Young's Modulus",
+          "formula": "inputs.material_modulus * 6.8948",
+          "unit": "MPa",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

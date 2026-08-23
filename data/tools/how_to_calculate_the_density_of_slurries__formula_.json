@@ -1,0 +1,113 @@
+{
+  "id": "how_to_calculate_the_density_of_slurries__formula_",
+  "title": "How to Calculate the Density of Slurries: Formula and Examples",
+  "description": "Calculate the density of slurries using the standard formula. A slurry is a mixture of a solid and a liquid. Input the concentration of solids by weight, density of solids, and density of liquid to determine the slurry density.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Slurry Density Calculator",
+      "inputs": [
+        {
+          "id": "cw",
+          "label": "Concentration of Solids by Weight (cw)",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 30
+        },
+        {
+          "id": "rho_s",
+          "label": "Density of Solids (ρs)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 2500
+        },
+        {
+          "id": "rho_l",
+          "label": "Density of Liquid (ρl)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "rho_m",
+          "label": "Density of Slurry (ρm)",
+          "formula": "100 / (inputs.cw / inputs.rho_s + (100 - inputs.cw) / inputs.rho_l)",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "sg",
+          "label": "Specific Gravity (SG)",
+          "formula": "(100 / (inputs.cw / inputs.rho_s + (100 - inputs.cw) / inputs.rho_l)) / 1000",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\n**ρm = 100 / (cw / ρs + (100 - cw) / ρl)**\n\nWhere:\n- **ρm** = density of slurry (kg/m³)\n- **cw** = concentration of solids by weight in the slurry (%)\n- **ρs** = density of the solids (kg/m³)\n- **ρl** = density of liquid without solids (kg/m³)\n\n## Example\n\nFor a slurry with:\n- Density of solids: 2500 kg/m³\n- Density of liquid: 1000 kg/m³\n- Weight concentration of solids: 30%\n\nThe slurry density = 100 / ((30) / (2500) + (70) / (1000)) = **1220 kg/m³**"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Product",
+        "SG",
+        "Typical Solids Concentration (% weight)",
+        "Typical Solids Concentration (% volume)"
+      ],
+      "rows": [
+        [
+          "Coal",
+          1.4,
+          "45 - 55",
+          "37 - 47"
+        ],
+        [
+          "Copper concentrate",
+          4.3,
+          "60 - 65",
+          "26 - 30"
+        ],
+        [
+          "Gilsonite (asphalt, bitumen)",
+          1.05,
+          "40 - 45",
+          "39 - 44"
+        ],
+        [
+          "Iron ore",
+          4.9,
+          "-",
+          "-"
+        ],
+        [
+          "Iron sands",
+          1.9,
+          "-",
+          "-"
+        ],
+        [
+          "Limestone",
+          2.7,
+          "60 - 65",
+          "36 - 41"
+        ],
+        [
+          "Magnetite",
+          4.9,
+          "60 - 65",
+          "23 - 27"
+        ],
+        [
+          "Sand",
+          2.65,
+          "43",
+          "23 - 30"
+        ]
+      ]
+    }
+  ]
+}

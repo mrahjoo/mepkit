@@ -1,0 +1,241 @@
+{
+  "id": "building_materials___radiation_constants",
+  "title": "Building Materials - Radiation Constants",
+  "description": "The radiation constant is the product between the Stefan-Boltzmann constant and the emissivity constant for a material. This tool provides radiation constants and emissivity values for typical building materials.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "The radiation constant is the product between the Stefan-Boltzmann constant - **σ** - and the emissivity constant - **ε** - of a material.\n\n**Stefan-Boltzmann Constant (σ):** 5.6703×10⁻⁸ W/m²K⁴ = 0.1714×10⁻⁸ Btu/(h ft² °R⁴)\n\n**Emissivity Coefficient (ε):** The emissivity of the object (ε = 1 for a black body)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Product",
+        "Radiation Constant (10⁻⁸ W/m²K⁴)",
+        "Emissivity Constant (ε)"
+      ],
+      "rows": [
+        [
+          "Black body",
+          5.7,
+          1
+        ],
+        [
+          "Brass, dull",
+          1.3,
+          0.22
+        ],
+        [
+          "Brick, red",
+          5.3,
+          0.93
+        ],
+        [
+          "Cast iron, rough oxidized",
+          5.1,
+          0.9
+        ],
+        [
+          "Copper, polished",
+          0.28,
+          0.04
+        ],
+        [
+          "Cotton",
+          4.4,
+          0.77
+        ],
+        [
+          "Glass",
+          5.1,
+          0.9
+        ],
+        [
+          "Lampblack paint",
+          5.5,
+          0.96
+        ],
+        [
+          "Oil paint",
+          5.4,
+          0.94
+        ],
+        [
+          "Paper",
+          3.1,
+          0.55
+        ],
+        [
+          "Plaster",
+          5.6,
+          0.98
+        ],
+        [
+          "Sand",
+          5.1,
+          0.9
+        ],
+        [
+          "Silk",
+          4.3,
+          0.75
+        ],
+        [
+          "Silver, polished",
+          0.17,
+          0.03
+        ],
+        [
+          "Tin, unoxidized",
+          0.23,
+          0.04
+        ],
+        [
+          "Water, 0 - 100 °C",
+          5.4,
+          0.95
+        ],
+        [
+          "Wood",
+          5.1,
+          0.9
+        ],
+        [
+          "Wool",
+          4.3,
+          0.75
+        ],
+        [
+          "Wrought iron, dull oxidized",
+          5.4,
+          0.9
+        ],
+        [
+          "Wrought iron, polished",
+          1.6,
+          0.25
+        ],
+        [
+          "Zinc, tarnished",
+          1.4,
+          0.25
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Radiation Constants by Building Material"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Radiation Constant (10⁻⁸ W/m²K⁴)",
+            "Emissivity Constant (ε)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Black body",
+            "Brass, dull",
+            "Brick, red",
+            "Cast iron, rough oxidized",
+            "Copper, polished",
+            "Cotton",
+            "Glass",
+            "Lampblack paint",
+            "Oil paint",
+            "Paper",
+            "Plaster",
+            "Sand",
+            "Silk",
+            "Silver, polished",
+            "Tin, unoxidized",
+            "Water, 0 - 100 °C",
+            "Wood",
+            "Wool",
+            "Wrought iron, dull oxidized",
+            "Wrought iron, polished",
+            "Zinc, tarnished"
+          ],
+          "axisLabel": {
+            "rotate": 45,
+            "interval": 0
+          }
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Radiation Constant (10⁻⁸ W/m²K⁴)"
+          },
+          {
+            "type": "value",
+            "name": "Emissivity Constant (ε)"
+          }
+        ],
+        "series": [
+          {
+            "name": "Radiation Constant (10⁻⁸ W/m²K⁴)",
+            "data": [
+              5.7,
+              1.3,
+              5.3,
+              5.1,
+              0.28,
+              4.4,
+              5.1,
+              5.5,
+              5.4,
+              3.1,
+              5.6,
+              5.1,
+              4.3,
+              0.17,
+              0.23,
+              5.4,
+              5.1,
+              4.3,
+              5.4,
+              1.6,
+              1.4
+            ],
+            "type": "bar"
+          },
+          {
+            "name": "Emissivity Constant (ε)",
+            "data": [
+              1,
+              0.22,
+              0.93,
+              0.9,
+              0.04,
+              0.77,
+              0.9,
+              0.96,
+              0.94,
+              0.55,
+              0.98,
+              0.9,
+              0.75,
+              0.03,
+              0.04,
+              0.95,
+              0.9,
+              0.75,
+              0.9,
+              0.25,
+              0.25
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}

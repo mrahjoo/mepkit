@@ -1,0 +1,113 @@
+{
+  "id": "rebar___u_s__imperial_reinforcing_bar",
+  "title": "Rebar - U.S. Imperial Reinforcing Bar",
+  "description": "U.S. imperial dimensions and properties of reinforcing bars (rebar). Select a rebar size to view weight, nominal diameter, and cross-sectional area specifications.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "bar_number",
+          "label": "Rebar Bar Number",
+          "type": "select",
+          "options": [
+            {
+              "value": 2,
+              "label": "Bar No. 2"
+            },
+            {
+              "value": 3,
+              "label": "Bar No. 3"
+            },
+            {
+              "value": 4,
+              "label": "Bar No. 4"
+            },
+            {
+              "value": 5,
+              "label": "Bar No. 5"
+            },
+            {
+              "value": 6,
+              "label": "Bar No. 6"
+            },
+            {
+              "value": 7,
+              "label": "Bar No. 7"
+            },
+            {
+              "value": 8,
+              "label": "Bar No. 8"
+            },
+            {
+              "value": 9,
+              "label": "Bar No. 9"
+            },
+            {
+              "value": 10,
+              "label": "Bar No. 10"
+            },
+            {
+              "value": 11,
+              "label": "Bar No. 11"
+            },
+            {
+              "value": 14,
+              "label": "Bar No. 14"
+            },
+            {
+              "value": 18,
+              "label": "Bar No. 18"
+            }
+          ],
+          "defaultValue": 4
+        },
+        {
+          "id": "length_ft",
+          "label": "Length",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "ft"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight_lb",
+          "label": "Total Weight",
+          "unit": "lb",
+          "format": "decimal",
+          "formula": "inputs.length_ft * (inputs.bar_number === 2 ? 0.166 : inputs.bar_number === 3 ? 0.376 : inputs.bar_number === 4 ? 0.668 : inputs.bar_number === 5 ? 1.043 : inputs.bar_number === 6 ? 1.502 : inputs.bar_number === 7 ? 2.044 : inputs.bar_number === 8 ? 2.670 : inputs.bar_number === 9 ? 3.400 : inputs.bar_number === 10 ? 4.303 : inputs.bar_number === 11 ? 5.313 : inputs.bar_number === 14 ? 7.650 : inputs.bar_number === 18 ? 13.60 : 0)"
+        },
+        {
+          "id": "nominal_diameter_in",
+          "label": "Nominal Diameter",
+          "unit": "in",
+          "format": "decimal",
+          "formula": "inputs.bar_number === 2 ? 0.25 : inputs.bar_number === 3 ? 0.375 : inputs.bar_number === 4 ? 0.500 : inputs.bar_number === 5 ? 0.625 : inputs.bar_number === 6 ? 0.750 : inputs.bar_number === 7 ? 0.875 : inputs.bar_number === 8 ? 1.000 : inputs.bar_number === 9 ? 1.128 : inputs.bar_number === 10 ? 1.270 : inputs.bar_number === 11 ? 1.410 : inputs.bar_number === 14 ? 1.693 : inputs.bar_number === 18 ? 2.257 : 0"
+        },
+        {
+          "id": "nominal_diameter_mm",
+          "label": "Nominal Diameter",
+          "unit": "mm",
+          "format": "decimal",
+          "formula": "inputs.bar_number === 2 ? 6.4 : inputs.bar_number === 3 ? 9.525 : inputs.bar_number === 4 ? 12.7 : inputs.bar_number === 5 ? 15.875 : inputs.bar_number === 6 ? 19.05 : inputs.bar_number === 7 ? 22.225 : inputs.bar_number === 8 ? 25.4 : inputs.bar_number === 9 ? 28.65 : inputs.bar_number === 10 ? 32.26 : inputs.bar_number === 11 ? 35.81 : inputs.bar_number === 14 ? 43 : inputs.bar_number === 18 ? 57.33 : 0"
+        },
+        {
+          "id": "nominal_area_in2",
+          "label": "Nominal Cross-Sectional Area",
+          "unit": "in²",
+          "format": "decimal",
+          "formula": "inputs.bar_number === 2 ? 0.05 : inputs.bar_number === 3 ? 0.11 : inputs.bar_number === 4 ? 0.20 : inputs.bar_number === 5 ? 0.31 : inputs.bar_number === 6 ? 0.44 : inputs.bar_number === 7 ? 0.60 : inputs.bar_number === 8 ? 0.79 : inputs.bar_number === 9 ? 1.00 : inputs.bar_number === 10 ? 1.27 : inputs.bar_number === 11 ? 1.56 : inputs.bar_number === 14 ? 2.25 : inputs.bar_number === 18 ? 4.00 : 0"
+        },
+        {
+          "id": "nominal_area_mm2",
+          "label": "Nominal Cross-Sectional Area",
+          "unit": "mm²",
+          "format": "decimal",
+          "formula": "inputs.bar_number === 2 ? 32 : inputs.bar_number === 3 ? 71 : inputs.bar_number === 4 ? 129 : inputs.bar_number === 5 ? 200 : inputs.bar_number === 6 ? 284 : inputs.bar_number === 7 ? 387 : inputs.bar_number === 8 ? 509 : inputs.bar_number === 9 ? 645 : inputs.bar_number === 10 ? 819 : inputs.bar_number === 11 ? 1006 : inputs.bar_number === 14 ? 1452 : inputs.bar_number === 18 ? 2581 : 0"
+        }
+      ]
+    }
+  ]
+}

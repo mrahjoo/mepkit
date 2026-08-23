@@ -1,0 +1,73 @@
+{
+  "id": "transnational_and_continental_standards_organizati",
+  "title": "Transnational and Continental Standards Organizations",
+  "description": "Some transnational and continental standards organizations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Organization",
+        "Abbreviation",
+        "Region",
+        "Scope"
+      ],
+      "rows": [
+        [
+          "International Organization for Standardization",
+          "ISO",
+          "Global",
+          "International standards"
+        ],
+        [
+          "International Electrotechnical Commission",
+          "IEC",
+          "Global",
+          "Electrical and electronics standards"
+        ],
+        [
+          "European Committee for Standardization",
+          "CEN",
+          "Europe",
+          "European standards"
+        ],
+        [
+          "European Committee for Electrotechnical Standardization",
+          "CENELEC",
+          "Europe",
+          "European electrical standards"
+        ],
+        [
+          "European Telecommunications Standards Institute",
+          "ETSI",
+          "Europe",
+          "European telecommunications standards"
+        ],
+        [
+          "Pan American Standards Commission",
+          "COPANT",
+          "Americas",
+          "American standards"
+        ],
+        [
+          "African Regional Organization for Standardization",
+          "ARSO",
+          "Africa",
+          "African standards"
+        ],
+        [
+          "Pacific Area Standards Congress",
+          "PASC",
+          "Pacific",
+          "Pacific region standards"
+        ],
+        [
+          "Association of Southeast Asian Nations Committee on Standards",
+          "ACCSQ",
+          "Southeast Asia",
+          "ASEAN standards"
+        ]
+      ]
+    }
+  ]
+}

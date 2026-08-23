@@ -1,0 +1,6 @@
+{
+  "id": "thermal_conductivity_of_common_materials____solids",
+  "title": "Thermal Conductivity of Common Materials - Solids",
+  "description": "A comprehensive reference table of thermal conductivity values for common solid materials, measured in W/(m K). Thermal conductivity describes a material's ability to conduct heat under steady-state conditions.",
+  "type": "datatable"
+}

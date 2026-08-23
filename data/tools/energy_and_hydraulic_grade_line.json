@@ -1,0 +1,192 @@
+{
+  "id": "energy_and_hydraulic_grade_line",
+  "title": "Energy and Hydraulic Grade Line Calculator",
+  "description": "Calculate Energy Line (EL), Hydraulic Grade Line (HGL), and associated head components using the Bernoulli Equation for steady, incompressible flow analysis",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "bernoulli_calculator",
+      "headers": [
+        "Bernoulli Equation & Head Calculations"
+      ],
+      "inputs": [
+        {
+          "id": "pressure_head",
+          "label": "Pressure Head (p/γ)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        },
+        {
+          "id": "velocity",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m/s"
+        },
+        {
+          "id": "elevation_head",
+          "label": "Elevation Head (h)",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "m"
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (g)",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity_head",
+          "label": "Velocity Head (v²/2g)",
+          "formula": "inputs.velocity * inputs.velocity / (2 * inputs.gravity)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "total_head",
+          "label": "Total Head (H)",
+          "formula": "inputs.pressure_head + (inputs.velocity * inputs.velocity / (2 * inputs.gravity)) + inputs.elevation_head",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_line",
+          "label": "Energy Line (EL)",
+          "formula": "inputs.pressure_head + (inputs.velocity * inputs.velocity / (2 * inputs.gravity)) + inputs.elevation_head",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "hydraulic_grade_line",
+          "label": "Hydraulic Grade Line (HGL)",
+          "formula": "inputs.pressure_head + inputs.elevation_head",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "piezometric_head",
+          "label": "Piezometric Head",
+          "formula": "inputs.pressure_head + inputs.elevation_head",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "head_components_chart",
+      "headers": [
+        "Head Components Breakdown"
+      ],
+      "options": {
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "legend": {
+          "data": [
+            "Pressure Head",
+            "Velocity Head",
+            "Elevation Head"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Head Components"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Head (m)"
+        },
+        "series": [
+          {
+            "name": "Pressure Head",
+            "type": "bar",
+            "stack": "total",
+            "data": [
+              "inputs.pressure_head"
+            ]
+          },
+          {
+            "name": "Velocity Head",
+            "type": "bar",
+            "stack": "total",
+            "data": [
+              "inputs.velocity * inputs.velocity / (2 * inputs.gravity)"
+            ]
+          },
+          {
+            "name": "Elevation Head",
+            "type": "bar",
+            "stack": "total",
+            "data": [
+              "inputs.elevation_head"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "chart",
+      "id": "energy_hgl_profile",
+      "headers": [
+        "Energy Line vs Hydraulic Grade Line"
+      ],
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Energy Line (EL)",
+            "Hydraulic Grade Line (HGL)",
+            "Elevation"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Position"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Head (m)"
+        },
+        "series": [
+          {
+            "name": "Energy Line (EL)",
+            "type": "line",
+            "data": [
+              "inputs.pressure_head + (inputs.velocity * inputs.velocity / (2 * inputs.gravity)) + inputs.elevation_head"
+            ]
+          },
+          {
+            "name": "Hydraulic Grade Line (HGL)",
+            "type": "line",
+            "data": [
+              "inputs.pressure_head + inputs.elevation_head"
+            ]
+          },
+          {
+            "name": "Elevation",
+            "type": "line",
+            "data": [
+              "inputs.elevation_head"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "dalton_s_law",
+  "title": "Dalton's Law",
+  "description": "Calculate total pressure and partial pressures of gas mixtures using Dalton's Law of Partial Pressures. The total pressure of a gas mixture equals the sum of the partial pressures of individual gases.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Dalton's Law of Partial Pressures\n\nThe total pressure exerted by a mixture of gases is the sum of the partial pressures of the individual gases:\n\n**ptotal = p1 + p2 + ... + pn = Σ pi**\n\nFor an ideal gas, the partial pressure is calculated using:\n\n**pi = (n × R × T) / V**\n\nWhere:\n- **ptotal** = total pressure (Pa, psi)\n- **pi** = partial pressure of individual gas (Pa, psi)\n- **n** = number of moles of the gas\n- **R** = universal gas constant (8.3145 J/(mol·K))\n- **T** = absolute temperature (K)\n- **V** = volume (m³)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "n_moles",
+          "label": "Number of Moles",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "mol"
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 300,
+          "unit": "K"
+        },
+        {
+          "id": "volume",
+          "label": "Volume",
+          "type": "number",
+          "defaultValue": 0.005,
+          "unit": "m³"
+        },
+        {
+          "id": "gas_constant",
+          "label": "Universal Gas Constant",
+          "type": "number",
+          "defaultValue": 8.3145,
+          "unit": "J/(mol·K)"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "partial_pressure_pa",
+          "label": "Partial Pressure",
+          "formula": "(inputs.n_moles * inputs.gas_constant * inputs.temperature) / inputs.volume",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "partial_pressure_kpa",
+          "label": "Partial Pressure",
+          "formula": "((inputs.n_moles * inputs.gas_constant * inputs.temperature) / inputs.volume) / 1000",
+          "unit": "kPa",
+          "format": "decimal"
+        },
+        {
+          "id": "partial_pressure_psi",
+          "label": "Partial Pressure",
+          "formula": "((inputs.n_moles * inputs.gas_constant * inputs.temperature) / inputs.volume) * 0.000145038",
+          "unit": "psi",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas Component",
+        "Number of Moles",
+        "Partial Pressure (Pa)",
+        "Partial Pressure (kPa)",
+        "Partial Pressure (psi)"
+      ],
+      "rows": [
+        [
+          "Gas 1",
+          "2",
+          "997740",
+          "997.74",
+          "144.71"
+        ],
+        [
+          "Gas 2",
+          "1",
+          "498870",
+          "498.87",
+          "72.35"
+        ],
+        [
+          "Gas 3",
+          "0.5",
+          "249435",
+          "249.44",
+          "36.18"
+        ],
+        [
+          "Total Mixture",
+          "3.5",
+          "1746045",
+          "1746.05",
+          "253.24"
+        ]
+      ]
+    }
+  ]
+}

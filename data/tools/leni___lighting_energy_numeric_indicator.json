@@ -1,0 +1,137 @@
+{
+  "id": "leni___lighting_energy_numeric_indicator",
+  "title": "LENI - Lighting Energy Numeric Indicator",
+  "description": "Energy consumption of lighting systems calculated according to EN 15193. The LENI (Lighting Energy Numeric Indicator) represents the actual energy consumption of a lighting system in kWh per square metre and year.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "leni_calculator",
+      "content": "# LENI Calculator\n\nCalculate the Lighting Energy Numeric Indicator using the formula:\n\n**LENI = Σ(Pn × fc) × ((td × fo × fd) + (tn × fo)) / A**\n\nWhere:\n- **LENI** = lighting energy numeric indicator (kWh/(m² year))\n- **Pn** = installed load (kW)\n- **fc** = reducing factor due to use of daylight control (<1)\n- **td** = annual hours of use by day (h)\n- **fo** = reducing factor due to use of present based control (<1)\n- **fd** = reducing factor due to use of constant lighting maintenance control (<1)\n- **tn** = annual hours of use by night (h)\n- **A** = area (m²)",
+      "inputs": [
+        {
+          "id": "pn",
+          "label": "Installed Load (Pn)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 5
+        },
+        {
+          "id": "fc",
+          "label": "Daylight Control Factor (fc)",
+          "type": "number",
+          "defaultValue": 0.9
+        },
+        {
+          "id": "td",
+          "label": "Annual Hours of Use by Day (td)",
+          "type": "number",
+          "unit": "h",
+          "defaultValue": 4000
+        },
+        {
+          "id": "fo",
+          "label": "Present Based Control Factor (fo)",
+          "type": "number",
+          "defaultValue": 0.95
+        },
+        {
+          "id": "fd",
+          "label": "Constant Maintenance Control Factor (fd)",
+          "type": "number",
+          "defaultValue": 0.95
+        },
+        {
+          "id": "tn",
+          "label": "Annual Hours of Use by Night (tn)",
+          "type": "number",
+          "unit": "h",
+          "defaultValue": 2000
+        },
+        {
+          "id": "area",
+          "label": "Area (A)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "leni",
+          "label": "LENI Result",
+          "formula": "(inputs.pn * inputs.fc) * ((inputs.td * inputs.fo * inputs.fd) + (inputs.tn * inputs.fo)) / inputs.area",
+          "unit": "kWh/(m² year)",
+          "format": "decimal"
+        },
+        {
+          "id": "annual_consumption",
+          "label": "Total Annual Consumption",
+          "formula": "(inputs.pn * inputs.fc) * ((inputs.td * inputs.fo * inputs.fd) + (inputs.tn * inputs.fo))",
+          "unit": "kWh/year",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "leni_parameters_table",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Installed Load",
+          "Pn",
+          "5.0",
+          "kW"
+        ],
+        [
+          "Daylight Control Factor",
+          "fc",
+          "0.9",
+          "-"
+        ],
+        [
+          "Annual Hours of Use by Day",
+          "td",
+          "4000",
+          "h"
+        ],
+        [
+          "Present Based Control Factor",
+          "fo",
+          "0.95",
+          "-"
+        ],
+        [
+          "Constant Maintenance Control Factor",
+          "fd",
+          "0.95",
+          "-"
+        ],
+        [
+          "Annual Hours of Use by Night",
+          "tn",
+          "2000",
+          "h"
+        ],
+        [
+          "Area",
+          "A",
+          "100",
+          "m²"
+        ],
+        [
+          "LENI Result",
+          "LENI",
+          "10.21",
+          "kWh/(m² year)"
+        ]
+      ]
+    }
+  ]
+}

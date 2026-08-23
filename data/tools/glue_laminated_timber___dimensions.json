@@ -1,0 +1,50 @@
+{
+  "id": "glue_laminated_timber___dimensions",
+  "title": "Glue-Laminated Timber - Dimensions",
+  "description": "Common sizing of glue-laminated timber. Glued laminated timber is a structural engineered wood product made of layers of dimensioned lumber bonded together with adhesives.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal (in)",
+        "Actual (in)"
+      ],
+      "rows": [
+        [
+          3,
+          "2 1/4"
+        ],
+        [
+          4,
+          "3 1/8"
+        ],
+        [
+          6,
+          "5 1/8"
+        ],
+        [
+          8,
+          "6 3/4"
+        ],
+        [
+          10,
+          "8 3/4"
+        ],
+        [
+          12,
+          "10 3/4"
+        ],
+        [
+          14,
+          "12 1/4"
+        ],
+        [
+          16,
+          "14 1/4"
+        ]
+      ],
+      "content": "Glue-Laminated Timber Width Dimensions"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "glycerine___boiling_and_freezing_points",
+  "title": "Glycerine - Boiling and Freezing Points",
+  "description": "Calculator for boiling and freezing points of glycerine (glycerin/glycerol) aqueous solutions. The boiling points decrease with increased glycerine concentration, while freezing points decrease until 66.7% glycerine concentration, then increase above that threshold.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Glycerine Solution Properties\n\nThis calculator determines the boiling and freezing points of glycerine-water mixtures based on concentration.\n\n### Key Facts:\n- **Boiling points** decrease with increased glycerine concentration\n- **Freezing points** decrease until glycerine concentration reaches 66.7% (mass)\n- Above 66.7% glycerine, freezing points begin to increase\n- All data measured at 60°F (15.6°C) reference temperature for specific gravity"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "glycerine_concentration",
+          "label": "Glycerine Concentration",
+          "type": "number",
+          "unit": "% by mass",
+          "defaultValue": 70
+        },
+        {
+          "id": "temperature_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "defaultValue": "celsius",
+          "options": [
+            {
+              "label": "Celsius (°C)",
+              "value": "celsius"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "fahrenheit"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "freezing_point_celsius",
+          "label": "Freezing Point",
+          "unit": "°C",
+          "formula": "IF(inputs.glycerine_concentration >= 66.7, -46.1 + (inputs.glycerine_concentration - 66.7) * 0.5, -51 + (66.7 - inputs.glycerine_concentration) * 0.3)"
+        },
+        {
+          "id": "boiling_point_celsius",
+          "label": "Boiling Point",
+          "unit": "°C",
+          "formula": "100 - (inputs.glycerine_concentration * 0.5)"
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity (at 60°F)",
+          "unit": "g/cm³",
+          "formula": "1.0 + (inputs.glycerine_concentration * 0.0026)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Glycerine Concentration (% mass)",
+        "Specific Gravity (60°F)",
+        "Freezing Point (°C)",
+        "Boiling Point (°C)"
+      ],
+      "rows": [
+        [
+          "98.2",
+          "1.261",
+          "13.3",
+          "56"
+        ],
+        [
+          "95",
+          "1.253",
+          "7.8",
+          "46"
+        ],
+        [
+          "90",
+          "1.240",
+          "-1.7",
+          "29"
+        ],
+        [
+          "80",
+          "1.213",
+          "-20.6",
+          "-5"
+        ],
+        [
+          "70",
+          "1.185",
+          "-38.9",
+          "-38"
+        ],
+        [
+          "66.7",
+          "1.178",
+          "-46.1",
+          "-51"
+        ],
+        [
+          "60",
+          "1.157",
+          "-34.4",
+          "-30"
+        ],
+        [
+          "50",
+          "1.129",
+          "-22.8",
+          "-9"
+        ],
+        [
+          "40",
+          "1.102",
+          "-15.6",
+          "4"
+        ],
+        [
+          "30",
+          "1.075",
+          "-9.4",
+          "15"
+        ],
+        [
+          "20",
+          "1.049",
+          "-5.0",
+          "23"
+        ],
+        [
+          "10",
+          "1.024",
+          "-1.7",
+          "28.9"
+        ]
+      ]
+    }
+  ]
+}

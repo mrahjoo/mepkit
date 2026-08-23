@@ -1,0 +1,109 @@
+{
+  "id": "vehicles_traffic_flow_and_density",
+  "title": "Vehicles Traffic Flow and Density",
+  "description": "Traffic flow and density as used in highway design. Calculate vehicle traffic flow (vehicles per hour) and vehicle density (vehicles per mile or per km).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Vehicles Traffic Flow and Density\n\nTraffic flow and density as used in highway design.\n\n## Vehicle Traffic Flow\n\nThe vehicle traffic flow on a road can be expressed as:\n\n**q = n × 3600 / t**\n\nWhere:\n- **q** = vehicle flow (no. vehicles per hour)\n- **n** = no. vehicles passing in t seconds\n- **t** = time for passing vehicles (s)\n\n## Vehicle Density\n\nVehicle density can be expressed as:\n\n**Imperial (vehicles per mile):**\n**k = n × 5280 / l**\n\n**Metric (vehicles per km):**\n**k = n × 1000 / l**\n\nWhere:\n- **k** = vehicle density (vehicles per mile or per km)\n- **n** = no. of vehicles occupying a length l of the road\n- **l** = the length of road occupied by the vehicles (ft for imperial, m for metric)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Vehicle Traffic Flow Calculation",
+        "Vehicle Density Calculation (Imperial)",
+        "Vehicle Density Calculation (Metric)"
+      ],
+      "inputs": [
+        {
+          "id": "num_vehicles_flow",
+          "label": "Number of Vehicles (flow)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "vehicles"
+        },
+        {
+          "id": "time_seconds",
+          "label": "Time Period",
+          "type": "number",
+          "defaultValue": 7200,
+          "unit": "s"
+        },
+        {
+          "id": "num_vehicles_density",
+          "label": "Number of Vehicles (density)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "vehicles"
+        },
+        {
+          "id": "road_length_ft",
+          "label": "Road Length (imperial)",
+          "type": "number",
+          "defaultValue": 5280,
+          "unit": "ft"
+        },
+        {
+          "id": "road_length_m",
+          "label": "Road Length (metric)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "vehicle_flow",
+          "label": "Vehicle Traffic Flow",
+          "formula": "inputs.num_vehicles_flow * 3600 / inputs.time_seconds",
+          "unit": "vehicles/h",
+          "format": "decimal"
+        },
+        {
+          "id": "vehicle_density_imperial",
+          "label": "Vehicle Density (Imperial)",
+          "formula": "inputs.num_vehicles_density * 5280 / inputs.road_length_ft",
+          "unit": "vehicles/mile",
+          "format": "decimal"
+        },
+        {
+          "id": "vehicle_density_metric",
+          "label": "Vehicle Density (Metric)",
+          "formula": "inputs.num_vehicles_density * 1000 / inputs.road_length_m",
+          "unit": "vehicles/km",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Metric",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Vehicle Traffic Flow Formula",
+          "q = n × 3600 / t",
+          "vehicles/h",
+          "Flow rate calculation"
+        ],
+        [
+          "Vehicle Density Formula (Imperial)",
+          "k = n × 5280 / l",
+          "vehicles/mile",
+          "Density with imperial units"
+        ],
+        [
+          "Vehicle Density Formula (Metric)",
+          "k = n × 1000 / l",
+          "vehicles/km",
+          "Density with metric units"
+        ]
+      ]
+    }
+  ]
+}

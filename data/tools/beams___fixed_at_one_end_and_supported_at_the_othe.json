@@ -1,0 +1,243 @@
+{
+  "id": "beams___fixed_at_one_end_and_supported_at_the_othe",
+  "title": "Beams - Fixed at One End and Supported at the Other",
+  "description": "Calculate bending moments, deflections, and support reactions for beams fixed at one end and supported at the other with various load configurations including point loads, continuous loads, declining loads, and applied moments.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Load Configuration\nSelect the type of load acting on the beam and enter the corresponding parameters."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "loadType",
+          "label": "Load Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Single Point Load",
+              "value": "pointLoad"
+            },
+            {
+              "label": "Continuous Load",
+              "value": "continuousLoad"
+            },
+            {
+              "label": "Continuous Declining Load",
+              "value": "decliningLoad"
+            },
+            {
+              "label": "Moment at Supported End",
+              "value": "moment"
+            }
+          ],
+          "defaultValue": "pointLoad"
+        },
+        {
+          "id": "L",
+          "label": "Beam Length (L)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "E",
+          "label": "Modulus of Elasticity (E)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 200000000000
+        },
+        {
+          "id": "I",
+          "label": "Area Moment of Inertia (I)",
+          "type": "number",
+          "unit": "m4",
+          "defaultValue": 0.00001
+        },
+        {
+          "id": "F",
+          "label": "Point Load (F)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 1000
+        },
+        {
+          "id": "a",
+          "label": "Distance from Fixed End (a)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "b",
+          "label": "Distance from Supported End (b)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3
+        },
+        {
+          "id": "q",
+          "label": "Continuous Load (q)",
+          "type": "number",
+          "unit": "N/m",
+          "defaultValue": 200
+        },
+        {
+          "id": "MB",
+          "label": "Applied Moment (MB)",
+          "type": "number",
+          "unit": "Nm",
+          "defaultValue": 5000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "MA_point",
+          "label": "Moment at Fixed End (Point Load)",
+          "formula": "- inputs.F * inputs.a * inputs.b * (inputs.L + inputs.b) / (2 * inputs.L * inputs.L)",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "RA_point",
+          "label": "Support Reaction at A (Point Load)",
+          "formula": "inputs.F * inputs.b * (3 * inputs.L * inputs.L - inputs.b * inputs.b) / (2 * inputs.L * inputs.L * inputs.L)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "RB_point",
+          "label": "Support Reaction at B (Point Load)",
+          "formula": "inputs.F * inputs.a * inputs.a * (inputs.b + 2 * inputs.L) / (2 * inputs.L * inputs.L * inputs.L)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "delta_point",
+          "label": "Deflection at Load (Point Load)",
+          "formula": "inputs.F * inputs.a * inputs.a * inputs.a * inputs.b * inputs.b * (3 * inputs.L + inputs.b) / (12 * inputs.L * inputs.L * inputs.L * inputs.E * inputs.I)",
+          "unit": "m",
+          "format": "scientific"
+        },
+        {
+          "id": "MA_continuous",
+          "label": "Moment at Fixed End (Continuous Load)",
+          "formula": "- inputs.q * inputs.L * inputs.L / 8",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "M1_continuous",
+          "label": "Maximum Moment (Continuous Load)",
+          "formula": "9 * inputs.q * inputs.L * inputs.L / 128",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "delta_max_continuous",
+          "label": "Maximum Deflection (Continuous Load)",
+          "formula": "inputs.q * inputs.L * inputs.L * inputs.L * inputs.L / (185 * inputs.E * inputs.I)",
+          "unit": "m",
+          "format": "scientific"
+        },
+        {
+          "id": "delta_half_continuous",
+          "label": "Deflection at Midspan (Continuous Load)",
+          "formula": "inputs.q * inputs.L * inputs.L * inputs.L * inputs.L / (192 * inputs.E * inputs.I)",
+          "unit": "m",
+          "format": "scientific"
+        },
+        {
+          "id": "RA_continuous",
+          "label": "Support Reaction at A (Continuous Load)",
+          "formula": "5 * inputs.q * inputs.L / 8",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "RB_continuous",
+          "label": "Support Reaction at B (Continuous Load)",
+          "formula": "3 * inputs.q * inputs.L / 8",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "MA_declining",
+          "label": "Moment at Fixed End (Declining Load)",
+          "formula": "- inputs.q * inputs.L * inputs.L / 15",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "M1_declining",
+          "label": "Maximum Moment (Declining Load)",
+          "formula": "inputs.q * inputs.L * inputs.L / 33.6",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "delta_max_declining",
+          "label": "Maximum Deflection (Declining Load)",
+          "formula": "inputs.q * inputs.L * inputs.L * inputs.L * inputs.L / (419 * inputs.E * inputs.I)",
+          "unit": "m",
+          "format": "scientific"
+        },
+        {
+          "id": "delta_half_declining",
+          "label": "Deflection at Midspan (Declining Load)",
+          "formula": "inputs.q * inputs.L * inputs.L * inputs.L * inputs.L / (427 * inputs.E * inputs.I)",
+          "unit": "m",
+          "format": "scientific"
+        },
+        {
+          "id": "RA_declining",
+          "label": "Support Reaction at A (Declining Load)",
+          "formula": "2 * inputs.q * inputs.L / 5",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "RB_declining",
+          "label": "Support Reaction at B (Declining Load)",
+          "formula": "inputs.q * inputs.L / 10",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "MA_moment",
+          "label": "Moment at Fixed End (Applied Moment)",
+          "formula": "- inputs.MB / 2",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "delta_max_moment",
+          "label": "Maximum Deflection (Applied Moment)",
+          "formula": "inputs.MB * inputs.L * inputs.L / (27 * inputs.E * inputs.I)",
+          "unit": "m",
+          "format": "scientific"
+        },
+        {
+          "id": "RA_moment",
+          "label": "Support Reaction at A (Applied Moment)",
+          "formula": "3 * inputs.MB / (2 * inputs.L)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "RB_moment",
+          "label": "Support Reaction at B (Applied Moment)",
+          "formula": "- 3 * inputs.MB / (2 * inputs.L)",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n- All calculations assume linear elastic behavior\n- For point loads, ensure a + b = L\n- Distances are measured from the fixed end (A) to the supported end (B)\n- Deflections are in meters (or feet if using imperial units)\n- Positive moments indicate counterclockwise rotation\n- Positive reactions indicate upward forces"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "centrifugal_pump_standards",
+  "title": "Centrifugal Pump Standards",
+  "description": "International centrifugal pump design and dimension standards. Covers ISO, API, ANSI, DIN, NFPA, and BSi standards for centrifugal pump specifications.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Centrifugal Pump Standards\n\nInternational centrifugal pump design and dimension standards.\n\n## Standards Organizations\n\nStandards for design and dimensional specifications are required to bring unity to centrifugal pumps. Standards are provided by:\n\n- **ISO** - International Standards Organization\n- **API** - American Petroleum Institute\n- **ANSI** - American National Standards Institute\n- **DIN** - Deutsches Institut für Normung\n- **NFPA** - National Fire Protection Agency\n- **BSi** - British Standards Institute\n\n## Commonly Used Standards\n\n### ANSI/API 610-1995\nCentrifugal Pumps for General Refinery Service - Covers minimum requirements for centrifugal pumps, including pumps running in reverse as hydraulic power recovery turbines, for use in petroleum, heavy duty chemicals, and gas industry services.\n\n### DIN EN ISO 5199\nTechnical specifications for centrifugal pumps\n\n### ASME B73.1-2001\nSpecification for Horizontal End Suction Centrifugal Pumps for Chemical Process - Covers centrifugal pumps of horizontal, end suction single stage, centerline discharge design with dimensional interchangeability requirements.\n\n### ASME B73.2-2003\nSpecifications for Vertical In-Line Centrifugal Pumps for Chemical Process\n\n### BS 5257:1975\nSpecification for horizontal end-suction centrifugal pumps (16 bar) - Principal dimensions and nominal duty point. Dimensions for seal cavities and base plate installations."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Standard",
+        "Organization",
+        "Type",
+        "Pressure Rating",
+        "Application"
+      ],
+      "rows": [
+        [
+          "ANSI/API 610-1995",
+          "ANSI/API",
+          "Refinery Service",
+          "Variable",
+          "Petroleum, Chemicals, Gas"
+        ],
+        [
+          "DIN EN ISO 5199",
+          "DIN/ISO",
+          "General Purpose",
+          "Variable",
+          "Industrial"
+        ],
+        [
+          "ASME B73.1-2001",
+          "ASME",
+          "Horizontal End Suction",
+          "Variable",
+          "Chemical Process"
+        ],
+        [
+          "ASME B73.2-2003",
+          "ASME",
+          "Vertical In-Line",
+          "Variable",
+          "Chemical Process"
+        ],
+        [
+          "BS 5257:1975",
+          "BSi",
+          "Horizontal End Suction",
+          "16 bar",
+          "Industrial"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pump_type",
+          "label": "Pump Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Horizontal End Suction",
+              "value": "horizontal"
+            },
+            {
+              "label": "Vertical In-Line",
+              "value": "vertical"
+            },
+            {
+              "label": "Overhung",
+              "value": "overhung"
+            },
+            {
+              "label": "Between Bearings",
+              "value": "between"
+            },
+            {
+              "label": "Vertically Suspended",
+              "value": "suspended"
+            }
+          ],
+          "defaultValue": "horizontal"
+        },
+        {
+          "id": "pressure_rating",
+          "label": "Pressure Rating",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 16
+        },
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "m³/h",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_psi",
+          "label": "Pressure (PSI)",
+          "formula": "inputs.pressure_rating * 14.5038",
+          "unit": "psi",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_gpm",
+          "label": "Flow Rate (GPM)",
+          "formula": "inputs.flow_rate * 4.4029",
+          "unit": "gpm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

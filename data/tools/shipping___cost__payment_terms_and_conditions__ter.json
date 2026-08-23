@@ -1,0 +1,97 @@
+{
+  "id": "shipping___cost__payment_terms_and_conditions__ter",
+  "title": "Shipping - Cost, Payment Terms and Conditions (TERMS)",
+  "description": "Comprehensive guide to shipping methods, costs, and payment terms including FOB, CFR, CIF, and other Incoterms with their definitions and seller responsibilities.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Abbreviation",
+        "Method",
+        "Description",
+        "Seller Responsibility"
+      ],
+      "rows": [
+        [
+          "CFR",
+          "Cost and Freight",
+          "Cost and Freight",
+          "Seller pays the costs necessary to bring the goods to named port of destination"
+        ],
+        [
+          "CIF",
+          "Cost, Insurance and Freight",
+          "Cost, Insurance and Freight",
+          "Same as CFR but in addition the seller includes marine insurance loss or damage to goods during shipment"
+        ],
+        [
+          "CIP",
+          "Carriage and Insurance Paid To",
+          "Carriage and Insurance Paid To",
+          "Same as CPT, but in addition the seller includes insurance loss of or damage to the goods during carriage"
+        ],
+        [
+          "CPT",
+          "Carriage Paid To",
+          "Carriage Paid To",
+          "Seller pays freight to named destination"
+        ],
+        [
+          "DAF",
+          "Delivered At Frontier",
+          "Delivered At Frontier",
+          "Seller clears the goods for export at named destination - but before the customs"
+        ],
+        [
+          "DDP",
+          "Delivered Duty Paid",
+          "Delivered Duty Paid",
+          "Seller deliver the goods at named destination - pays charges of delivering the goods to be cleared at custom"
+        ],
+        [
+          "DDU",
+          "Delivered Duty Unpaid",
+          "Delivered Duty Unpaid",
+          "Seller deliver the goods at named destination"
+        ],
+        [
+          "DES",
+          "Delivered Ex Ship",
+          "Delivered Ex Ship",
+          "Seller deliver the goods on board the ship, uncleared for import at named destination - seller pays to bring the goods to named destination"
+        ],
+        [
+          "DEQ",
+          "Delivered Ex Quay (Duty Paid)",
+          "Delivered Ex Quay (Duty Paid)",
+          "Seller deliver the goods at named destination - cleared for importation"
+        ],
+        [
+          "EXW",
+          "Ex Works",
+          "Ex Works",
+          "Seller makes the goods available at his premises"
+        ],
+        [
+          "FAS",
+          "Free Alongside Ship",
+          "Free Alongside Ship",
+          "Seller sends the goods to alongside the vessel - or in the named port of shipment"
+        ],
+        [
+          "FCA",
+          "Free Carrier",
+          "Free Carrier",
+          "Seller hands over the goods cleared for export to the charge of the carrier named by the buyer at named place"
+        ],
+        [
+          "FOB",
+          "Free On Board",
+          "Free On Board",
+          "Seller clears the goods for export at named port of shipment"
+        ]
+      ]
+    }
+  ]
+}

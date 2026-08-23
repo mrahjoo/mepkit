@@ -1,0 +1,40 @@
+{
+  "id": "microwave_heating",
+  "title": "Microwave Heating",
+  "description": "Heating with microwaves. Calculate wavelengths based on electromagnetic wave properties using the relationship λ = c / f",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Microwave Heating Calculator\n\nMicrowaves penetrate food products and heating extends within the entire product. Packaging materials such as glass, ceramics and most thermoplastic materials allow microwaves to pass with little or no absorption.\n\n### Electromagnetic Wave Relationship\n\nThe relation between wavelength, frequency and velocity of electromagnetic waves:\n\n**λ = c / f**\n\nWhere:\n- λ = wavelength (m)\n- c = speed of light (3×10⁸ m/s)\n- f = frequency (Hz)\n\n### Permitted Microwave Frequencies\n\n- 915 ± 13 MHz\n- 2450 ± 50 MHz"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "frequency",
+          "label": "Frequency",
+          "type": "number",
+          "unit": "MHz",
+          "defaultValue": 2450
+        }
+      ],
+      "outputs": [
+        {
+          "id": "wavelength",
+          "label": "Wavelength",
+          "formula": "(3e8 / (inputs.frequency * 1e6))",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "wavelength_cm",
+          "label": "Wavelength",
+          "formula": "(3e8 / (inputs.frequency * 1e6)) * 100",
+          "unit": "cm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

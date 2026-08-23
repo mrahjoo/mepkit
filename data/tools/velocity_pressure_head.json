@@ -1,0 +1,581 @@
+{
+  "id": "velocity_pressure_head",
+  "title": "Velocity Pressure Head Calculator",
+  "description": "Calculate dynamic pressure and velocity head for water and air flows using pitot tube measurements. Supports metric and imperial units for converting between flow velocity and pressure head.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "water_velocity_calculator",
+      "content": "### Water Flow - Velocity Head Calculator",
+      "inputs": [
+        {
+          "id": "water_velocity_fps",
+          "label": "Water Flow Velocity",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "ft/sec"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_head_ft",
+          "label": "Velocity Head (ft H2O)",
+          "formula": "0.0155 * inputs.water_velocity_fps ^ 2",
+          "unit": "ft H2O",
+          "format": "decimal"
+        },
+        {
+          "id": "water_head_in",
+          "label": "Velocity Head (in H2O)",
+          "formula": "0.186 * inputs.water_velocity_fps ^ 2",
+          "unit": "in H2O",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "air_velocity_calculator",
+      "content": "### Air Flow - Head to Velocity Calculator",
+      "inputs": [
+        {
+          "id": "air_velocity_fpm",
+          "label": "Air Flow Velocity",
+          "type": "number",
+          "defaultValue": 4000,
+          "unit": "ft/min"
+        },
+        {
+          "id": "air_temp_f",
+          "label": "Air Temperature",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "°F"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "air_head_in",
+          "label": "Velocity Head (in H2O)",
+          "formula": "(inputs.air_velocity_fpm / 4005) ^ 2",
+          "unit": "in H2O",
+          "format": "decimal"
+        },
+        {
+          "id": "air_head_ft",
+          "label": "Velocity Head (ft H2O)",
+          "formula": "((inputs.air_velocity_fpm / 4005) ^ 2) / 12",
+          "unit": "ft H2O",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "water_velocity_table",
+      "headers": [
+        "Water Flow Velocity (ft/sec)",
+        "Velocity Head (ft H2O)"
+      ],
+      "rows": [
+        [
+          0.5,
+          0.004
+        ],
+        [
+          1,
+          0.016
+        ],
+        [
+          1.5,
+          0.035
+        ],
+        [
+          2,
+          0.062
+        ],
+        [
+          2.5,
+          0.097
+        ],
+        [
+          3,
+          0.14
+        ],
+        [
+          3.5,
+          0.19
+        ],
+        [
+          4,
+          0.248
+        ],
+        [
+          4.5,
+          0.314
+        ],
+        [
+          5,
+          0.389
+        ],
+        [
+          5.5,
+          0.47
+        ],
+        [
+          6,
+          0.56
+        ],
+        [
+          6.5,
+          0.657
+        ],
+        [
+          7,
+          0.762
+        ],
+        [
+          7.5,
+          0.875
+        ],
+        [
+          8,
+          0.995
+        ],
+        [
+          8.5,
+          1.123
+        ],
+        [
+          9,
+          1.259
+        ],
+        [
+          9.5,
+          1.403
+        ],
+        [
+          10,
+          1.555
+        ],
+        [
+          11,
+          1.881
+        ],
+        [
+          12,
+          2.239
+        ],
+        [
+          13,
+          2.627
+        ],
+        [
+          14,
+          3.047
+        ],
+        [
+          15,
+          3.498
+        ],
+        [
+          16,
+          3.98
+        ],
+        [
+          17,
+          4.493
+        ],
+        [
+          18,
+          5.037
+        ],
+        [
+          19,
+          5.613
+        ],
+        [
+          20,
+          6.219
+        ],
+        [
+          21,
+          6.856
+        ],
+        [
+          22,
+          7.525
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "air_velocity_table",
+      "headers": [
+        "Air Flow Velocity (ft/sec)",
+        "Velocity Head (ft H2O)"
+      ],
+      "rows": [
+        [
+          5,
+          0.00047
+        ],
+        [
+          10,
+          0.0019
+        ],
+        [
+          15,
+          0.0042
+        ],
+        [
+          20,
+          0.0075
+        ],
+        [
+          25,
+          0.012
+        ],
+        [
+          30,
+          0.017
+        ],
+        [
+          35,
+          0.023
+        ],
+        [
+          40,
+          0.03
+        ],
+        [
+          45,
+          0.038
+        ],
+        [
+          50,
+          0.047
+        ],
+        [
+          55,
+          0.057
+        ],
+        [
+          60,
+          0.067
+        ],
+        [
+          65,
+          0.079
+        ],
+        [
+          70,
+          0.092
+        ],
+        [
+          75,
+          0.11
+        ],
+        [
+          80,
+          0.12
+        ],
+        [
+          85,
+          0.14
+        ],
+        [
+          90,
+          0.15
+        ],
+        [
+          95,
+          0.17
+        ],
+        [
+          100,
+          0.19
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "water_velocity_chart",
+      "content": "Water Flow - Velocity Heads Chart",
+      "options": {
+        "title": {
+          "text": "Water Flow - Velocity Heads vs. Velocity",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Velocity (ft/sec)",
+          "nameLocation": "middle",
+          "nameGap": 30
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Velocity Head (ft H2O)",
+          "nameLocation": "middle",
+          "nameGap": 50
+        },
+        "series": [
+          {
+            "name": "Water Velocity Head",
+            "data": [
+              [
+                0.5,
+                0.004
+              ],
+              [
+                1,
+                0.016
+              ],
+              [
+                1.5,
+                0.035
+              ],
+              [
+                2,
+                0.062
+              ],
+              [
+                2.5,
+                0.097
+              ],
+              [
+                3,
+                0.14
+              ],
+              [
+                3.5,
+                0.19
+              ],
+              [
+                4,
+                0.248
+              ],
+              [
+                4.5,
+                0.314
+              ],
+              [
+                5,
+                0.389
+              ],
+              [
+                5.5,
+                0.47
+              ],
+              [
+                6,
+                0.56
+              ],
+              [
+                6.5,
+                0.657
+              ],
+              [
+                7,
+                0.762
+              ],
+              [
+                7.5,
+                0.875
+              ],
+              [
+                8,
+                0.995
+              ],
+              [
+                8.5,
+                1.123
+              ],
+              [
+                9,
+                1.259
+              ],
+              [
+                9.5,
+                1.403
+              ],
+              [
+                10,
+                1.555
+              ],
+              [
+                11,
+                1.881
+              ],
+              [
+                12,
+                2.239
+              ],
+              [
+                13,
+                2.627
+              ],
+              [
+                14,
+                3.047
+              ],
+              [
+                15,
+                3.498
+              ],
+              [
+                16,
+                3.98
+              ],
+              [
+                17,
+                4.493
+              ],
+              [
+                18,
+                5.037
+              ],
+              [
+                19,
+                5.613
+              ],
+              [
+                20,
+                6.219
+              ],
+              [
+                21,
+                6.856
+              ],
+              [
+                22,
+                7.525
+              ]
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "chart",
+      "id": "air_velocity_chart",
+      "content": "Air Flow - Velocity Heads Chart",
+      "options": {
+        "title": {
+          "text": "Air Flow - Velocity Heads vs. Velocity",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Velocity (ft/sec)",
+          "nameLocation": "middle",
+          "nameGap": 30
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Velocity Head (ft H2O)",
+          "nameLocation": "middle",
+          "nameGap": 50
+        },
+        "series": [
+          {
+            "name": "Air Velocity Head",
+            "data": [
+              [
+                5,
+                0.00047
+              ],
+              [
+                10,
+                0.0019
+              ],
+              [
+                15,
+                0.0042
+              ],
+              [
+                20,
+                0.0075
+              ],
+              [
+                25,
+                0.012
+              ],
+              [
+                30,
+                0.017
+              ],
+              [
+                35,
+                0.023
+              ],
+              [
+                40,
+                0.03
+              ],
+              [
+                45,
+                0.038
+              ],
+              [
+                50,
+                0.047
+              ],
+              [
+                55,
+                0.057
+              ],
+              [
+                60,
+                0.067
+              ],
+              [
+                65,
+                0.079
+              ],
+              [
+                70,
+                0.092
+              ],
+              [
+                75,
+                0.11
+              ],
+              [
+                80,
+                0.12
+              ],
+              [
+                85,
+                0.14
+              ],
+              [
+                90,
+                0.15
+              ],
+              [
+                95,
+                0.17
+              ],
+              [
+                100,
+                0.19
+              ]
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

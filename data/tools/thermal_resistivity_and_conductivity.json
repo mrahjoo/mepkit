@@ -1,0 +1,85 @@
+{
+  "id": "thermal_resistivity_and_conductivity",
+  "title": "Thermal Resistivity and Conductivity",
+  "description": "Calculate thermal resistivity and conductivity. Thermal resistivity is the ability of a material to resist flow of heat and is the reciprocal of thermal conductivity.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Thermal resistivity is calculated as the reciprocal of thermal conductivity using the formula: r = 1 / k",
+      "inputs": [
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity (k)",
+          "type": "number",
+          "unit": "W/(m·°C)",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_resistivity",
+          "label": "Thermal Resistivity (r)",
+          "formula": "1 / inputs.thermal_conductivity",
+          "unit": "m·°C/W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Thermal Conductivity (W/m·°C)",
+        "Thermal Resistivity (m·°C/W)"
+      ],
+      "rows": [
+        [
+          "Air",
+          0.024,
+          41.67
+        ],
+        [
+          "Water",
+          0.6,
+          1.67
+        ],
+        [
+          "Wood",
+          0.1,
+          10
+        ],
+        [
+          "Concrete",
+          0.8,
+          1.25
+        ],
+        [
+          "Brick",
+          0.6,
+          1.67
+        ],
+        [
+          "Glass",
+          0.8,
+          1.25
+        ],
+        [
+          "Steel",
+          50,
+          0.02
+        ],
+        [
+          "Aluminum",
+          205,
+          0.0049
+        ],
+        [
+          "Copper",
+          385,
+          0.0026
+        ]
+      ]
+    }
+  ]
+}

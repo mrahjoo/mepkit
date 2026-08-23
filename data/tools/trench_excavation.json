@@ -1,0 +1,149 @@
+{
+  "id": "trench_excavation",
+  "title": "Trench Excavation",
+  "description": "Estimate trench excavation - online calculator.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Trench Excavation Calculator\n\nEstimate trench excavation volume and material weight using this calculator.\n\n![Trench excavation - slope and volume](static/docs/documents/1717/excavation_slope.png \"Trench excavation - slope and volume\")\n\n## Calculation Methods\n\n- **Imperial Units**: For trench volume calculations in feet and cubic yards\n- **SI Units**: For trench volume calculations in meters and cubic meters"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "trench_length",
+          "label": "Trench Length",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "ft"
+        },
+        {
+          "id": "trench_depth",
+          "label": "Trench Depth",
+          "type": "number",
+          "defaultValue": 4,
+          "unit": "ft"
+        },
+        {
+          "id": "trench_width_top",
+          "label": "Trench Width (Top)",
+          "type": "number",
+          "defaultValue": 3,
+          "unit": "ft"
+        },
+        {
+          "id": "trench_width_bottom",
+          "label": "Trench Width (Bottom)",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "ft"
+        },
+        {
+          "id": "fill_material",
+          "label": "Fill Material Type",
+          "type": "select",
+          "options": [
+            {
+              "value": 1920,
+              "label": "Clay, damp"
+            },
+            {
+              "value": 2080,
+              "label": "Clay, saturated"
+            },
+            {
+              "value": 1840,
+              "label": "Sand, damp"
+            },
+            {
+              "value": 1600,
+              "label": "Sand, dry"
+            },
+            {
+              "value": 1920,
+              "label": "Sand, wet"
+            },
+            {
+              "value": 1600,
+              "label": "Topsoil with sand, damp"
+            },
+            {
+              "value": 1840,
+              "label": "Topsoil, saturated"
+            }
+          ],
+          "defaultValue": 1600,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_cubic_feet",
+          "label": "Volume (Cubic Feet)",
+          "formula": "((inputs.trench_width_top + inputs.trench_width_bottom) / 2) * inputs.trench_depth * inputs.trench_length",
+          "unit": "ft³",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_cubic_yards",
+          "label": "Volume (Cubic Yards)",
+          "formula": "(((inputs.trench_width_top + inputs.trench_width_bottom) / 2) * inputs.trench_depth * inputs.trench_length) / 27",
+          "unit": "yd³",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_cubic_meters",
+          "label": "Volume (Cubic Meters)",
+          "formula": "((inputs.trench_width_top + inputs.trench_width_bottom) / 2) * inputs.trench_depth * inputs.trench_length * 0.092903",
+          "unit": "m³",
+          "format": "decimal"
+        },
+        {
+          "id": "fill_weight_kg",
+          "label": "Fill Material Weight",
+          "formula": "((inputs.trench_width_top + inputs.trench_width_bottom) / 2) * inputs.trench_depth * inputs.trench_length * 0.092903 * inputs.fill_material",
+          "unit": "kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fill Material",
+        "Density (kg/m³)"
+      ],
+      "rows": [
+        [
+          "Clay, damp",
+          1920
+        ],
+        [
+          "Clay, saturated",
+          2080
+        ],
+        [
+          "Sand, damp",
+          1840
+        ],
+        [
+          "Sand, dry",
+          1600
+        ],
+        [
+          "Sand, wet",
+          1920
+        ],
+        [
+          "Topsoil with sand, damp",
+          1600
+        ],
+        [
+          "Topsoil, saturated",
+          1840
+        ]
+      ]
+    }
+  ]
+}

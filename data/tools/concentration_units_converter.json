@@ -1,0 +1,146 @@
+{
+  "id": "concentration_units_converter",
+  "title": "Concentration Units Converter",
+  "description": "Online units concentration calculator for converting between common concentration units (Wt%, Molality, Molarity, Mole fraction, and g solute/l solution). Requires mole weight of solvent and solute, and density of solution.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "concentration_calc",
+      "content": "Concentration Units Converter Calculator",
+      "inputs": [
+        {
+          "id": "mole_weight_solvent",
+          "label": "Mole Weight of Solvent (A)",
+          "type": "number",
+          "unit": "g/mol",
+          "defaultValue": 18
+        },
+        {
+          "id": "mole_weight_solute",
+          "label": "Mole Weight of Solute (B)",
+          "type": "number",
+          "unit": "g/mol",
+          "defaultValue": 58.44
+        },
+        {
+          "id": "density_solution",
+          "label": "Density of Solution (C)",
+          "type": "number",
+          "unit": "g/ml",
+          "defaultValue": 1
+        },
+        {
+          "id": "input_type",
+          "label": "Input Concentration Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "wt_percent",
+              "label": "Weight Percent (Wt%)"
+            },
+            {
+              "value": "molality",
+              "label": "Molality (mol/kg solvent)"
+            },
+            {
+              "value": "molarity",
+              "label": "Molarity (mol/liter solution)"
+            },
+            {
+              "value": "mole_fraction",
+              "label": "Mole Fraction (mol solute/mol total)"
+            },
+            {
+              "value": "g_per_liter",
+              "label": "Grams solute/liter solution"
+            }
+          ],
+          "defaultValue": "wt_percent"
+        },
+        {
+          "id": "input_value",
+          "label": "Input Concentration Value",
+          "type": "number",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "wt_percent",
+          "label": "Weight Percent (Wt%)",
+          "unit": "%",
+          "format": "decimal",
+          "formula": "inputs.input_value"
+        },
+        {
+          "id": "molality",
+          "label": "Molality",
+          "unit": "mol/kg solvent",
+          "format": "decimal",
+          "formula": "(100 * inputs.input_value * inputs.mole_weight_solute) / (1000 + inputs.input_value * inputs.mole_weight_solute)"
+        },
+        {
+          "id": "molarity",
+          "label": "Molarity",
+          "unit": "mol/liter solution",
+          "format": "decimal",
+          "formula": "(inputs.input_value * inputs.mole_weight_solute * inputs.density_solution) / (10 * inputs.density_solution)"
+        },
+        {
+          "id": "mole_fraction",
+          "label": "Mole Fraction",
+          "unit": "mol solute/mol total",
+          "format": "decimal",
+          "formula": "(100 * inputs.input_value * inputs.mole_weight_solute) / (inputs.input_value * inputs.mole_weight_solute + (1 - inputs.input_value) * inputs.mole_weight_solvent)"
+        },
+        {
+          "id": "g_per_liter",
+          "label": "Grams solute/liter solution",
+          "unit": "g/L",
+          "format": "decimal",
+          "formula": "(inputs.input_value * inputs.mole_weight_solute) / (10 * inputs.density_solution)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "solubility_terms",
+      "content": "Descriptive Terms for Solubility",
+      "headers": [
+        "Descriptive Term",
+        "Parts of solvent required for 1 part of solute"
+      ],
+      "rows": [
+        [
+          "Very soluble",
+          "< 1"
+        ],
+        [
+          "Freely soluble",
+          "1 < 10"
+        ],
+        [
+          "Soluble",
+          "10 < 30"
+        ],
+        [
+          "Sparingly soluble",
+          "30 < 100"
+        ],
+        [
+          "Slightly soluble",
+          "100 < 1000"
+        ],
+        [
+          "Very slightly soluble",
+          "1000 < 10000"
+        ],
+        [
+          "Practically insoluble (Insoluble)",
+          "> 10000"
+        ]
+      ]
+    }
+  ]
+}

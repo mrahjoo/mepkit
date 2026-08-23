@@ -1,0 +1,270 @@
+{
+  "id": "ethanol_freeze_protected_water_solutions",
+  "title": "Ethanol Freeze Protected Water Solutions",
+  "description": "Calculator and reference for ethanol-based water solutions freezing points, flash points, and mixture calculations",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Freezing Point Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "ethanol_conc_A",
+          "label": "Ethanol Concentration A (% by volume)",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "%"
+        },
+        {
+          "id": "freezing_point_A",
+          "label": "Freezing Point A",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "°C"
+        },
+        {
+          "id": "ethanol_conc_B",
+          "label": "Ethanol Concentration B (% by volume)",
+          "type": "number",
+          "defaultValue": 40,
+          "unit": "%"
+        },
+        {
+          "id": "freezing_point_B",
+          "label": "Freezing Point B",
+          "type": "number",
+          "defaultValue": -10,
+          "unit": "°C"
+        },
+        {
+          "id": "target_freezing_point",
+          "label": "Target Freezing Point",
+          "type": "number",
+          "defaultValue": -20,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "calculated_ethanol_conc",
+          "label": "Calculated Ethanol Concentration",
+          "formula": "((inputs.ethanol_conc_B - inputs.ethanol_conc_A) / (inputs.freezing_point_B - inputs.freezing_point_A)) * (inputs.target_freezing_point - inputs.freezing_point_A) + inputs.ethanol_conc_A",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Water Mixture Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "initial_ethanol_conc",
+          "label": "Initial Ethanol Concentration",
+          "type": "number",
+          "defaultValue": 90,
+          "unit": "%"
+        },
+        {
+          "id": "target_ethanol_conc",
+          "label": "Target Ethanol Concentration",
+          "type": "number",
+          "defaultValue": 36.25,
+          "unit": "%"
+        },
+        {
+          "id": "initial_solution_volume",
+          "label": "Initial Solution Volume",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "L"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_volume_to_add",
+          "label": "Water Volume to Add",
+          "formula": "(inputs.initial_ethanol_conc - inputs.target_ethanol_conc) * inputs.initial_solution_volume / inputs.target_ethanol_conc",
+          "unit": "L",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Ethanol Concentration (% by volume)",
+        "0",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "100"
+      ],
+      "rows": [
+        [
+          "Freezing Point (°F)",
+          32,
+          25,
+          15,
+          5,
+          -10,
+          -25,
+          -35,
+          -55,
+          -75,
+          -110,
+          -175
+        ],
+        [
+          "Freezing Point (°C)",
+          0,
+          -4,
+          -9,
+          -15,
+          -23,
+          -32,
+          -37,
+          -48,
+          -59,
+          -73,
+          -115
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Ethanol Concentration (% by weight)",
+        "5",
+        "10",
+        "20",
+        "30",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "96"
+      ],
+      "rows": [
+        [
+          "Flash Point (°F)",
+          144,
+          120,
+          97,
+          84,
+          79,
+          75,
+          72,
+          70,
+          68,
+          63,
+          55
+        ],
+        [
+          "Flash Point (°C)",
+          62,
+          49,
+          36,
+          29,
+          26,
+          24,
+          22,
+          21,
+          20,
+          17,
+          13
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Ethanol Water Solution - Freezing Point and Flash Point"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Freezing Point (°C)",
+            "Flash Point (°C)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            5,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            96,
+            100
+          ],
+          "name": "Ethanol Concentration (%)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Temperature (°C)"
+        },
+        "series": [
+          {
+            "name": "Freezing Point (°C)",
+            "data": [
+              0,
+              -4,
+              -9,
+              -15,
+              -23,
+              -32,
+              -37,
+              -48,
+              -59,
+              -73,
+              -115
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Flash Point (°C)",
+            "data": [
+              62,
+              49,
+              36,
+              29,
+              26,
+              24,
+              22,
+              21,
+              20,
+              17,
+              13
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

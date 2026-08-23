@@ -1,0 +1,203 @@
+{
+  "id": "water_flow_in_tubes___reynolds_number",
+  "title": "Water Flow in Tubes - Reynolds Number",
+  "description": "Reynolds number for clean cold water flow. Determine if flow is laminar, transient, or turbulent based on dimensionless Reynolds Number calculations.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate Reynolds Number for water flow in tubes at 20°C",
+      "inputs": [
+        {
+          "id": "pipe_diameter_mm",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "mm"
+        },
+        {
+          "id": "flow_rate_lpm",
+          "label": "Flow Rate",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "L/min"
+        },
+        {
+          "id": "water_temperature",
+          "label": "Water Temperature",
+          "type": "select",
+          "defaultValue": 20,
+          "options": [
+            {
+              "label": "0°C (Kinematic viscosity 1.787·10⁻⁶ m²/s)",
+              "value": 0
+            },
+            {
+              "label": "20°C (Kinematic viscosity 1.004·10⁻⁶ m²/s)",
+              "value": 20
+            },
+            {
+              "label": "100°C (Kinematic viscosity 0.29·10⁻⁶ m²/s)",
+              "value": 100
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number",
+          "formula": "inputs.flow_rate_lpm * 1000 / (60 * (inputs.pipe_diameter_mm / 1000) * 1000 * (inputs.water_temperature === 0 ? 1.787e-6 : inputs.water_temperature === 20 ? 1.004e-6 : 0.29e-6) / (1.004e-6))"
+        },
+        {
+          "id": "flow_regime",
+          "label": "Flow Regime",
+          "formula": "inputs.reynolds_number < 2300 ? 'Laminar (Re < 2300)' : inputs.reynolds_number < 4000 ? 'Transient (2300 < Re < 4000)' : 'Turbulent (Re ≥ 4000)'"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Size (inches)",
+        "Pipe Size (mm)",
+        "Reynolds @ 1 L/min",
+        "Reynolds @ 1 gal/min"
+      ],
+      "rows": [
+        [
+          "1",
+          "25",
+          "835",
+          "3180"
+        ],
+        [
+          "1 1/2",
+          "40",
+          "550",
+          "2090"
+        ],
+        [
+          "2",
+          "50",
+          "420",
+          "1600"
+        ],
+        [
+          "3",
+          "75",
+          "280",
+          "1060"
+        ],
+        [
+          "4",
+          "100",
+          "210",
+          "780"
+        ],
+        [
+          "6",
+          "150",
+          "140",
+          "570"
+        ],
+        [
+          "8",
+          "200",
+          "105",
+          "400"
+        ],
+        [
+          "10",
+          "250",
+          "85",
+          "320"
+        ],
+        [
+          "12",
+          "300",
+          "70",
+          "265"
+        ],
+        [
+          "18",
+          "450",
+          "46",
+          "175"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Reynolds Number vs Pipe Diameter",
+      "options": {
+        "title": {
+          "text": "Reynolds Number vs Pipe Diameter"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "1 L/min",
+            "1 gal/min"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "25",
+            "40",
+            "50",
+            "75",
+            "100",
+            "150",
+            "200",
+            "250",
+            "300",
+            "450"
+          ],
+          "name": "Pipe Diameter (mm)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Reynolds Number"
+        },
+        "series": [
+          {
+            "name": "1 L/min",
+            "data": [
+              835,
+              550,
+              420,
+              280,
+              210,
+              140,
+              105,
+              85,
+              70,
+              46
+            ],
+            "type": "line"
+          },
+          {
+            "name": "1 gal/min",
+            "data": [
+              3180,
+              2090,
+              1600,
+              1060,
+              780,
+              570,
+              400,
+              320,
+              265,
+              175
+            ],
+            "type": "line"
+          }
+        ]
+      }
+    }
+  ]
+}

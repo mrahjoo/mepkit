@@ -1,0 +1,377 @@
+{
+  "id": "gases___specific_gravities",
+  "title": "Gases - Specific Gravities",
+  "description": "Specific gravities of air, ammonia, butadiene, carbon dioxide, carbon monoxide and some other common gases. Specific gravity is the ratio between the density of an actual gas and the density of air at NTP (Normal Temperature and Pressure: 20°C and 1 atm).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Specific Gravity"
+      ],
+      "rows": [
+        [
+          "Acetylene (ethyne) - C2H2",
+          0.899
+        ],
+        [
+          "Air",
+          1
+        ],
+        [
+          "Alcohol vapor",
+          1.601
+        ],
+        [
+          "Ammonia - NH3",
+          0.59
+        ],
+        [
+          "Argon - Ar",
+          1.38
+        ],
+        [
+          "Arsine",
+          2.69
+        ],
+        [
+          "Benzene - C6H6",
+          2.6969
+        ],
+        [
+          "Blast Furnace gas",
+          1.02
+        ],
+        [
+          "1,2 - Butadiene - C4H6",
+          1.8676
+        ],
+        [
+          "Butane - C4H10",
+          2.0061
+        ],
+        [
+          "1-Butene (Butylene)- C4H8",
+          1.9372
+        ],
+        [
+          "Isobutene - C4H8",
+          1.94
+        ],
+        [
+          "Carbon dioxide - CO2",
+          1.5189
+        ],
+        [
+          "Carbon monoxide - CO",
+          0.9667
+        ],
+        [
+          "Carbureted Water Gas",
+          0.63
+        ],
+        [
+          "Chlorine - Cl2",
+          2.486
+        ],
+        [
+          "Coke Oven Gas",
+          0.44
+        ],
+        [
+          "Cyclobutane",
+          1.938
+        ],
+        [
+          "Cyclohexane",
+          2.9057
+        ],
+        [
+          "Cyclopentane",
+          2.4215
+        ],
+        [
+          "Cyclopropane",
+          1.451
+        ],
+        [
+          "n - Decane",
+          4.9125
+        ],
+        [
+          "Deutrium - D2",
+          0.07
+        ],
+        [
+          "Digestive Gas (Sewage or Biogas)",
+          0.8
+        ],
+        [
+          "2,3 - Dimethylbutane",
+          2.9753
+        ],
+        [
+          "2,2 - Dimetylpentane",
+          3.4596
+        ],
+        [
+          "Diisobutyl",
+          3.9439
+        ],
+        [
+          "Ethane - C2H6",
+          1.0378
+        ],
+        [
+          "Ether vapor",
+          2.586
+        ],
+        [
+          "Ethylbenzene",
+          3.6655
+        ],
+        [
+          "Ethyl Chloride - C2H5Cl",
+          2.23
+        ],
+        [
+          "Ethylene (Ethene) - C2H4",
+          0.9686
+        ],
+        [
+          "3 - Ethylpentane",
+          3.4596
+        ],
+        [
+          "Fluorine",
+          1.31
+        ],
+        [
+          "Helium - He",
+          0.138
+        ],
+        [
+          "n - Heptane",
+          3.4596
+        ],
+        [
+          "n - Hexane",
+          2.9753
+        ],
+        [
+          "Hydrogen",
+          0.0696
+        ],
+        [
+          "Hydrogen chloride - HCl",
+          1.268
+        ],
+        [
+          "Hydrogen sulfide - H2S",
+          1.1763
+        ],
+        [
+          "Hydrofluoric acid",
+          2.37
+        ],
+        [
+          "Hydrochloric acid",
+          1.261
+        ],
+        [
+          "Illuminating gas",
+          0.4
+        ],
+        [
+          "Isobutane",
+          2.0068
+        ],
+        [
+          "Isobutene",
+          1.9372
+        ],
+        [
+          "Isooctane",
+          3.9439
+        ],
+        [
+          "Isopentane",
+          2.4911
+        ],
+        [
+          "Isoprene",
+          2.3519
+        ],
+        [
+          "Isopropylbenzene",
+          4.1498
+        ],
+        [
+          "Krypton",
+          2.89
+        ],
+        [
+          "Marsh gas",
+          0.555
+        ],
+        [
+          "Mercury vapor",
+          6.94
+        ],
+        [
+          "Methane - CH4",
+          0.5537
+        ],
+        [
+          "Methylcyclopentane",
+          2.9057
+        ],
+        [
+          "Methylcyclohexane",
+          3.39
+        ],
+        [
+          "Methyl Chloride",
+          1.74
+        ],
+        [
+          "2 - Methylhexane",
+          3.4596
+        ],
+        [
+          "2 - Methylpentane",
+          2.9753
+        ],
+        [
+          "Natural Gas (typical)",
+          "0.60 - 0.70"
+        ],
+        [
+          "Neohexane",
+          2.9753
+        ],
+        [
+          "Neopentane",
+          2.4911
+        ],
+        [
+          "Neon",
+          0.697
+        ],
+        [
+          "Nitric oxide - NO",
+          1.037
+        ],
+        [
+          "Nitrogen - N2 (pure)",
+          0.9669
+        ],
+        [
+          "Nitrogen - N2 (atmospheric)",
+          0.9723
+        ],
+        [
+          "Nitrous oxide - N2O",
+          1.53
+        ],
+        [
+          "n - Nonane",
+          4.4282
+        ],
+        [
+          "n - Octane",
+          3.9439
+        ],
+        [
+          "Oxygen - O2",
+          1.1044
+        ],
+        [
+          "Ozone",
+          1.66
+        ],
+        [
+          "n - Pentane",
+          2.4911
+        ],
+        [
+          "Phosgene",
+          1.39
+        ],
+        [
+          "Propane - C3H8",
+          1.5219
+        ],
+        [
+          "Propene (Propylene) - C3H6",
+          1.4529
+        ],
+        [
+          "R-11",
+          4.742
+        ],
+        [
+          "R-12",
+          4.174
+        ],
+        [
+          "R-22",
+          2.985
+        ],
+        [
+          "R-114",
+          5.9
+        ],
+        [
+          "R-123",
+          5.279
+        ],
+        [
+          "R-134a",
+          3.522
+        ],
+        [
+          "Sasol",
+          0.42
+        ],
+        [
+          "Silane",
+          1.11
+        ],
+        [
+          "Styrene",
+          3.5959
+        ],
+        [
+          "Sulfur Dioxide - SO2",
+          2.264
+        ],
+        [
+          "Toluene - Methylbenzene",
+          3.1082
+        ],
+        [
+          "Triptane",
+          3.4596
+        ],
+        [
+          "Water gas (bituminous)",
+          0.71
+        ],
+        [
+          "Water vapor",
+          0.6218
+        ],
+        [
+          "Xenon",
+          4.53
+        ],
+        [
+          "o - Xylene",
+          3.6655
+        ]
+      ]
+    }
+  ]
+}

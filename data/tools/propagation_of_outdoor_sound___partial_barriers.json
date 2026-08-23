@@ -1,0 +1,76 @@
+{
+  "id": "propagation_of_outdoor_sound___partial_barriers",
+  "title": "Propagation of Outdoor Sound - Partial Barriers",
+  "description": "Calculate the Fresnel number and barrier attenuation for outdoor sound propagation around partial barriers. Determines how sound is affected by reflection, transmission, and diffraction around barriers.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Fresnel Number & Barrier Attenuation Calculator\n\nWhen a barrier is interposed between a sound source and a receiver, sound propagates through three mechanisms:\n- **Reflection** back from the barrier\n- **Transmission** through the barrier\n- **Diffraction** around the barrier\n\nThe attenuation is expressed using the **Fresnel number**:\n\n**N = 2δ / λ**\n\nWhere:\n- **N** = Fresnel number (dimensionless)\n- **δ** = A + B - d (path difference in meters or feet)\n- **λ** = wavelength of the sound (meters or feet)\n\n### Key Points:\n- **High frequencies** (short wavelengths) produce higher Fresnel numbers and greater attenuation\n- **Low frequencies** (long wavelengths) produce lower Fresnel numbers and less attenuation\n- Attenuation is reduced for moving sources (vehicles) compared to stationary sources"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "distance_A",
+          "label": "Distance A (source to barrier top)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 20
+        },
+        {
+          "id": "distance_B",
+          "label": "Distance B (barrier top to receiver)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 30
+        },
+        {
+          "id": "distance_d",
+          "label": "Distance d (source to receiver direct)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 43
+        },
+        {
+          "id": "frequency",
+          "label": "Sound Frequency",
+          "type": "number",
+          "unit": "Hz",
+          "defaultValue": 500
+        },
+        {
+          "id": "wavelength",
+          "label": "Wavelength",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.69
+        }
+      ],
+      "outputs": [
+        {
+          "id": "path_difference",
+          "label": "Path Difference (δ)",
+          "formula": "inputs.distance_A + inputs.distance_B - inputs.distance_d",
+          "unit": "m"
+        },
+        {
+          "id": "fresnel_number",
+          "label": "Fresnel Number (N)",
+          "formula": "(2 * inputs.path_difference) / inputs.wavelength",
+          "format": "decimal"
+        },
+        {
+          "id": "attenuation_estimate",
+          "label": "Estimated Barrier Attenuation",
+          "formula": "inputs.fresnel_number > 50 ? 20 : inputs.fresnel_number > 20 ? 17.5 : inputs.fresnel_number > 10 ? 15 : inputs.fresnel_number > 5 ? 12 : 8",
+          "unit": "dB"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Example Calculation\n\n**Given:**\n- Distance A = 20 m (highway to barrier top)\n- Distance B = 30 m (barrier top to person)\n- Distance d = 43 m (highway to person direct)\n\n**For 500 Hz noise (λ = 0.69 m):**\n- δ = 20 + 30 - 43 = 7 m\n- N = 2(7) / 0.69 = 20.3\n- Estimated attenuation ≈ 17.5 dB\n\n**For 2000 Hz noise (λ = 0.17 m):**\n- δ = 7 m (same)\n- N = 2(7) / 0.17 = 82.4\n- Estimated attenuation ≈ 20 dB\n\nHigher frequencies (shorter wavelengths) produce greater barrier attenuation."
+    }
+  ]
+}

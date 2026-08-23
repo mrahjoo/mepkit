@@ -1,0 +1,40 @@
+{
+  "id": "acoustic_impedance",
+  "title": "Acoustic Impedance",
+  "description": "Specific acoustic impedance is a measure of the ability of a medium to transmit sound waves. It expresses the coupling between vibrating particles in the medium and can be calculated as the product of density and velocity of sound.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Acoustic Impedance Calculator\n\nSpecific acoustic impedance (Z) is calculated using:\n\n**Z = ρ × c**\n\nWhere:\n- **Z** = Acoustic impedance (Pa·s/m)\n- **ρ** = Density of medium (kg/m³)\n- **c** = Velocity of sound in medium (m/s)\n\nAlternatively, acoustic impedance can be expressed as:\n\n**Z = P / v**\n\nWhere:\n- **P** = Sound pressure (Pa)\n- **v** = Particle velocity (m/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Density of medium (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "sound_velocity",
+          "label": "Velocity of sound (c)",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 1500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "acoustic_impedance",
+          "label": "Acoustic Impedance (Z)",
+          "unit": "Pa·s/m",
+          "formula": "inputs.density * inputs.sound_velocity",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

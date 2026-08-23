@@ -1,0 +1,92 @@
+{
+  "id": "air___humidity_ratio",
+  "title": "Air - Humidity Ratio",
+  "description": "Calculate the humidity ratio of moist air based on vapor partial pressure and atmospheric pressure. The humidity ratio expresses the mass of water vapor per unit mass of dry air.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Air - Humidity Ratio\n\nThe **humidity ratio** of moist air can be expressed as the ratio of the mass of water vapor to the mass of dry air.\n\n### Humidity Ratio by Vapor Partial Pressure\n\nBased on the Ideal Gas Law, the humidity ratio can be expressed as:\n\n**x = 0.62198 × pw / (pa - pw)**\n\nWhere:\n- **x** = humidity ratio (kg water/kg dry air)\n- **pw** = partial pressure of water vapor (Pa)\n- **pa** = atmospheric pressure (Pa)\n\nFor saturated air:\n\n**xs = 0.62198 × pws / (pa - pws)**\n\nWhere:\n- **xs** = maximum saturation humidity ratio\n- **pws** = saturation pressure of water vapor (Pa)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pw",
+          "label": "Partial Pressure of Water Vapor",
+          "unit": "Pa",
+          "type": "number",
+          "defaultValue": 2333
+        },
+        {
+          "id": "pa",
+          "label": "Atmospheric Pressure",
+          "unit": "Pa",
+          "type": "number",
+          "defaultValue": 101325
+        }
+      ],
+      "outputs": [
+        {
+          "id": "humidity_ratio",
+          "label": "Humidity Ratio",
+          "unit": "kg water/kg dry air",
+          "formula": "0.62198 * inputs.pw / (inputs.pa - inputs.pw)",
+          "format": "decimal"
+        },
+        {
+          "id": "humidity_ratio_g",
+          "label": "Humidity Ratio",
+          "unit": "g water/kg dry air",
+          "formula": "0.62198 * inputs.pw / (inputs.pa - inputs.pw) * 1000",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Saturation Pressure (Pa)",
+        "Maximum Humidity Ratio (kg/kg)"
+      ],
+      "rows": [
+        [
+          0,
+          609.9,
+          0.003767
+        ],
+        [
+          5,
+          870,
+          0.005387
+        ],
+        [
+          10,
+          1225,
+          0.007612
+        ],
+        [
+          15,
+          1701,
+          0.01062
+        ],
+        [
+          20,
+          2333,
+          0.014659
+        ],
+        [
+          25,
+          3130,
+          0.019826
+        ],
+        [
+          30,
+          4234,
+          0.027125
+        ]
+      ]
+    }
+  ]
+}

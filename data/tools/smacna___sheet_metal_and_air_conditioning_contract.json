@@ -1,0 +1,12 @@
+{
+  "id": "smacna___sheet_metal_and_air_conditioning_contract",
+  "title": "SMACNA - Sheet Metal and Air Conditioning Contractors",
+  "description": "SMACNA - Sheet Metal and Air Conditioning Contractors National Association is an international trade association representing 4500 contributing contractor firms that promotes quality and excellence in sheet metal and air conditioning work. SMACNA members specialize in heating, ventilating, air conditioning, architectural and industrial sheet metal, kitchen equipment, specialty stainless steel work, manufacturing, siding and decking, testing and balancing, service, energy management, and maintenance.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# SMACNA - Sheet Metal and Air Conditioning Contractors National Association\n\n[SMACNA](http://www.smacna.org/) is an international trade association representing 4500 contributing contractor firms that promotes quality and excellence in the sheet metal and air conditioning industry.\n\n## SMACNA Members Specialize In:\n\n* Heating\n* Ventilating and air conditioning\n* Architectural sheet metal\n* Industrial sheet metal\n* Kitchen equipment\n* Specialty stainless steel work\n* Manufacturing\n* Siding and decking\n* Testing and balancing\n* Service\n* Energy management\n* Maintenance\n\n## Standards and Accreditation\n\nThe voluntary technical standards and manuals developed by SMACNA Contractors have found worldwide acceptance by the construction community, as well as foreign government agencies. ANSI (American National Standards Institute) has accredited SMACNA as a standards-setting organization."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "incompressible_flow_calculator",
+  "title": "Incompressible Flow Calculator",
+  "description": "Pipe rating for single phase incompressible flow. Calculate single phase pressure drop in steel pipes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Flow Rate",
+          "—",
+          "GPM",
+          "Volumetric flow rate"
+        ],
+        [
+          "Pipe Diameter",
+          "—",
+          "inches",
+          "Internal pipe diameter"
+        ],
+        [
+          "Pipe Material",
+          "—",
+          "—",
+          "Steel"
+        ],
+        [
+          "Fluid Type",
+          "—",
+          "—",
+          "Incompressible liquid"
+        ],
+        [
+          "Pressure Drop",
+          "—",
+          "PSI/100ft",
+          "Calculated pressure drop"
+        ],
+        [
+          "Velocity",
+          "—",
+          "ft/s",
+          "Flow velocity in pipe"
+        ]
+      ]
+    }
+  ]
+}

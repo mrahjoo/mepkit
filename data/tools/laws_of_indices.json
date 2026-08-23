@@ -1,0 +1,53 @@
+{
+  "id": "laws_of_indices",
+  "title": "Laws of Indices",
+  "description": "Simplifying calculations by involving indices.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Law",
+        "Formula",
+        "Description"
+      ],
+      "rows": [
+        [
+          "1",
+          "x^y × x^z = x^(y + z)",
+          "Multiplying two or more numbers with the same base"
+        ],
+        [
+          "2",
+          "x^y ÷ x^z = x^(y - z)",
+          "Dividing numbers with the same base"
+        ],
+        [
+          "3",
+          "(x^y)^z = x^(y × z)",
+          "Raising a power to a power"
+        ],
+        [
+          "4",
+          "x^0 = 1",
+          "Number with index 0"
+        ],
+        [
+          "5",
+          "x^(-y) = 1 / x^y",
+          "Number raised with negative index"
+        ],
+        [
+          "5b",
+          "1 / x^(-y) = x^y",
+          "Reciprocal of negative index"
+        ],
+        [
+          "6",
+          "x^(y/z) = (x^y)^(1/z)",
+          "Number raised with a fractional index"
+        ]
+      ]
+    }
+  ]
+}

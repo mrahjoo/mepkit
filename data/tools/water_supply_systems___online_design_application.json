@@ -1,0 +1,67 @@
+{
+  "id": "water_supply_systems___online_design_application",
+  "title": "Water Supply Systems - Online Design Application",
+  "description": "An online application for designing water supply systems with comprehensive analysis and configuration.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Specification",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "System Design Parameters",
+          "Configuration",
+          "",
+          ""
+        ],
+        [
+          "Water Source Capacity",
+          "Maximum daily supply",
+          "1000",
+          "m³/day"
+        ],
+        [
+          "Distribution Network",
+          "Pipe diameter range",
+          "50-300",
+          "mm"
+        ],
+        [
+          "Pressure Requirements",
+          "Operating pressure",
+          "20-60",
+          "psi"
+        ],
+        [
+          "Storage Capacity",
+          "Reservoir volume",
+          "500",
+          "m³"
+        ],
+        [
+          "Treatment System",
+          "Flow rate capacity",
+          "250",
+          "m³/hr"
+        ],
+        [
+          "Pumping Station",
+          "Number of pumps",
+          "2",
+          "units"
+        ],
+        [
+          "Quality Standards",
+          "Compliance level",
+          "ISO 9001:2015",
+          "Standard"
+        ]
+      ]
+    }
+  ]
+}

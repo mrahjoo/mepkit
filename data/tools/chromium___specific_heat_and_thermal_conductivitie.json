@@ -1,0 +1,151 @@
+{
+  "id": "chromium___specific_heat_and_thermal_conductivitie",
+  "title": "Chromium - Specific Heat and Thermal Conductivities vs. Temperatures",
+  "description": "Specific heat and thermal conductivity of chromium related to temperature.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Chromium - Specific Heat and Thermal Conductivities vs. Temperatures\n\nThis tool provides data on the specific heat capacity and thermal conductivity of chromium as functions of temperature.\n\n- **T (K)**: Temperature in Kelvin\n- **c (kJ/kg K)**: Specific heat capacity in kilojoules per kilogram per Kelvin\n- **k (W/m K)**: Thermal conductivity in watts per meter per Kelvin"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "T (K)",
+        "c (kJ/kg K)",
+        "k (W/m K)"
+      ],
+      "rows": [
+        [
+          100,
+          0.192,
+          159
+        ],
+        [
+          200,
+          0.384,
+          111
+        ],
+        [
+          300,
+          0.449,
+          93.7
+        ],
+        [
+          400,
+          0.484,
+          90.9
+        ],
+        [
+          600,
+          0.542,
+          80.7
+        ],
+        [
+          800,
+          0.581,
+          71.3
+        ],
+        [
+          1000,
+          0.616,
+          65.4
+        ],
+        [
+          1200,
+          0.682,
+          61.9
+        ],
+        [
+          1500,
+          0.779,
+          57.2
+        ],
+        [
+          2000,
+          0.937,
+          49.4
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Chromium Properties vs Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Specific Heat c (kJ/kg K)",
+            "Thermal Conductivity k (W/m K)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            100,
+            200,
+            300,
+            400,
+            600,
+            800,
+            1000,
+            1200,
+            1500,
+            2000
+          ],
+          "name": "Temperature (K)"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Specific Heat (kJ/kg K)"
+          },
+          {
+            "type": "value",
+            "name": "Thermal Conductivity (W/m K)"
+          }
+        ],
+        "series": [
+          {
+            "name": "Specific Heat c (kJ/kg K)",
+            "data": [
+              0.192,
+              0.384,
+              0.449,
+              0.484,
+              0.542,
+              0.581,
+              0.616,
+              0.682,
+              0.779,
+              0.937
+            ],
+            "type": "line",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Thermal Conductivity k (W/m K)",
+            "data": [
+              159,
+              111,
+              93.7,
+              90.9,
+              80.7,
+              71.3,
+              65.4,
+              61.9,
+              57.2,
+              49.4
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    }
+  ]
+}

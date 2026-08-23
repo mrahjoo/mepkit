@@ -1,0 +1,139 @@
+{
+  "id": "ac___active__reactive_and_apparent_power",
+  "title": "AC - Active, Reactive and Apparent Power",
+  "description": "Calculate active, reactive, and apparent power in AC electrical circuits for single-phase, three-phase, and DC systems. Active power represents real power consumption, reactive power represents imaginary power in capacitive/inductive loads, and apparent power is the total power supplied to the circuit.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "power_calculator",
+      "content": "AC Power Calculator",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage (U)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 230
+        },
+        {
+          "id": "current",
+          "label": "Current (I)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 10
+        },
+        {
+          "id": "power_factor",
+          "label": "Power Factor (PF) or cos(φ)",
+          "type": "number",
+          "defaultValue": 0.9
+        },
+        {
+          "id": "phase_angle_sin",
+          "label": "sin(φ)",
+          "type": "number",
+          "defaultValue": 0.436
+        },
+        {
+          "id": "circuit_type",
+          "label": "Circuit Type",
+          "type": "select",
+          "options": [
+            {
+              "value": 1,
+              "label": "Single Phase"
+            },
+            {
+              "value": 1.732,
+              "label": "Three Phase"
+            }
+          ],
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "active_power",
+          "label": "Active Power (P)",
+          "formula": "inputs.circuit_type * inputs.voltage * inputs.current * inputs.power_factor",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "reactive_power",
+          "label": "Reactive Power (Q)",
+          "formula": "inputs.circuit_type * inputs.voltage * inputs.current * inputs.phase_angle_sin",
+          "unit": "VAR",
+          "format": "decimal"
+        },
+        {
+          "id": "apparent_power",
+          "label": "Apparent Power (S)",
+          "formula": "Math.sqrt(Math.pow(inputs.circuit_type * inputs.voltage * inputs.current * inputs.phase_angle_sin, 2) + Math.pow(inputs.circuit_type * inputs.voltage * inputs.current * inputs.power_factor, 2))",
+          "unit": "VA",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "power_triangle_chart",
+      "content": "Power Triangle Visualization",
+      "headers": [
+        "Power Type",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Active Power (P)",
+          "outputs.active_power"
+        ],
+        [
+          "Reactive Power (Q)",
+          "outputs.reactive_power"
+        ],
+        [
+          "Apparent Power (S)",
+          "outputs.apparent_power"
+        ]
+      ],
+      "options": {
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Active Power (P)",
+            "Reactive Power (Q)",
+            "Apparent Power (S)"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              "outputs.active_power",
+              "outputs.reactive_power",
+              "outputs.apparent_power"
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": [
+                "#2E7D32",
+                "#FF6F00",
+                "#1565C0"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

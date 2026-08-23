@@ -1,0 +1,127 @@
+{
+  "id": "nitrogen___thermophysical_properties",
+  "title": "Nitrogen - Thermophysical Properties",
+  "description": "Thermophysical properties of Nitrogen (N2) at standard conditions (25°C, 77°F, 298 K) and atmospheric pressure. Includes molecular weight, density, viscosity, thermal properties, critical points, and phase behavior information.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit (SI)",
+        "Unit (Imperial)"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "28.013",
+          "g/mol",
+          "g/mol"
+        ],
+        [
+          "Specific Gravity (air = 1)",
+          "0.967",
+          "-",
+          "-"
+        ],
+        [
+          "Specific Volume",
+          "0.872",
+          "m³/kg",
+          "13.98 ft³/lb"
+        ],
+        [
+          "Density of Liquid @ 1 atm",
+          "808.4",
+          "kg/m³",
+          "50.46 lb/ft³"
+        ],
+        [
+          "Absolute Viscosity",
+          "0.018",
+          "cP",
+          "12.1×10⁻⁶ lbm/ft·s"
+        ],
+        [
+          "Sound Velocity in Gas",
+          "353",
+          "m/s",
+          "1158 ft/s"
+        ],
+        [
+          "Specific Heat (cp)",
+          "1040",
+          "J/kg·K",
+          "0.249 Btu/lb·°F"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          "1.40",
+          "-",
+          "-"
+        ],
+        [
+          "Gas Constant (R)",
+          "297",
+          "J/kg·°C",
+          "55.2 ft·lb/lb·°R"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.026",
+          "W/m·°C",
+          "0.015 Btu/hr·ft·°F"
+        ],
+        [
+          "Boiling Point @ 1 atm",
+          "-195.8",
+          "°C",
+          "-320.4 °F"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "199000",
+          "J/kg",
+          "85.5 Btu/lb"
+        ],
+        [
+          "Freezing/Melting Point @ 1 atm",
+          "-210",
+          "°C",
+          "-346 °F"
+        ],
+        [
+          "Latent Heat of Fusion",
+          "25800",
+          "J/kg",
+          "11.1 Btu/lb"
+        ],
+        [
+          "Critical Temperature",
+          "-147",
+          "°C",
+          "-232.6 °F"
+        ],
+        [
+          "Critical Pressure",
+          "3.40",
+          "MN/m²",
+          "493 psia"
+        ],
+        [
+          "Critical Volume",
+          "0.00318",
+          "m³/kg",
+          "0.051 ft³/lb"
+        ],
+        [
+          "Flammable",
+          "No",
+          "-",
+          "-"
+        ]
+      ]
+    }
+  ]
+}

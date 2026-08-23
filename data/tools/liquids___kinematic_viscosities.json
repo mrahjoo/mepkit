@@ -1,0 +1,300 @@
+{
+  "id": "liquids___kinematic_viscosities",
+  "title": "Liquids - Kinematic Viscosities",
+  "description": "Kinematic viscosities of common liquids like motor oil, diesel fuel, peanut oil and many more. Viscosity is resistance to shear or flow in a fluid. This tool provides reference data for kinematic viscosity in centiStokes (cSt) at various temperatures for different liquid types.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Liquid",
+        "Temperature (°F)",
+        "Temperature (°C)",
+        "Kinematic Viscosity (cSt)",
+        "Seconds Saybolt Universal (SSU)"
+      ],
+      "rows": [
+        [
+          "Acetaldehyde CH3CHO",
+          "68",
+          "20",
+          "0.295",
+          "36"
+        ],
+        [
+          "Acetic acid - 10% vinegar",
+          "59",
+          "15",
+          "1.35",
+          "31.7"
+        ],
+        [
+          "Acetic acid - 50%",
+          "59",
+          "15",
+          "2.27",
+          "33"
+        ],
+        [
+          "Acetic acid - 80%",
+          "59",
+          "15",
+          "2.85",
+          "35"
+        ],
+        [
+          "Acetone CH3COCH3",
+          "68",
+          "20",
+          "0.41",
+          ""
+        ],
+        [
+          "Alcohol - ethyl (grain)",
+          "68",
+          "20",
+          "1.52",
+          "31.7"
+        ],
+        [
+          "Alcohol - methyl (wood)",
+          "59",
+          "15",
+          "0.74",
+          ""
+        ],
+        [
+          "Alcohol - butyl-n",
+          "68",
+          "20",
+          "3.64",
+          "38"
+        ],
+        [
+          "Beer",
+          "68",
+          "20",
+          "1.8",
+          "32"
+        ],
+        [
+          "Benzene C6H6",
+          "68",
+          "20",
+          "0.74",
+          "31"
+        ],
+        [
+          "Bromine",
+          "68",
+          "20",
+          "0.34",
+          ""
+        ],
+        [
+          "Carbon tetrachloride CCl4",
+          "68",
+          "20",
+          "0.612",
+          ""
+        ],
+        [
+          "Carbon disulfide CS2",
+          "68",
+          "20",
+          "0.298",
+          ""
+        ],
+        [
+          "Castor oil",
+          "100",
+          "37.8",
+          "259",
+          "1200"
+        ],
+        [
+          "Coconut oil",
+          "100",
+          "37.8",
+          "30.5",
+          "143"
+        ],
+        [
+          "Corn oil",
+          "212",
+          "100",
+          "8.6",
+          "54"
+        ],
+        [
+          "Diesel fuel 2D",
+          "100",
+          "37.8",
+          "4",
+          "39"
+        ],
+        [
+          "Diesel fuel 3D",
+          "100",
+          "37.8",
+          "8.875",
+          "55.25"
+        ],
+        [
+          "Ethylene glycol",
+          "70",
+          "21.1",
+          "17.8",
+          "88.4"
+        ],
+        [
+          "Gasoline",
+          "60",
+          "15.6",
+          "0.88",
+          ""
+        ],
+        [
+          "Glycerine 100%",
+          "68.6",
+          "20.3",
+          "648",
+          "2950"
+        ],
+        [
+          "Kerosene",
+          "68",
+          "20",
+          "2.71",
+          "35"
+        ],
+        [
+          "Lard oil",
+          "100",
+          "37.8",
+          "44.25",
+          "205"
+        ],
+        [
+          "Linseed oil",
+          "100",
+          "37.8",
+          "30.5",
+          "143"
+        ],
+        [
+          "Mercury",
+          "70",
+          "21.1",
+          "0.118",
+          ""
+        ],
+        [
+          "Milk",
+          "68",
+          "20",
+          "1.13",
+          "31.5"
+        ],
+        [
+          "Motor oil SAE 10W",
+          "0",
+          "-17.8",
+          "1942.5",
+          "9M"
+        ],
+        [
+          "Motor oil SAE 20",
+          "210",
+          "98.9",
+          "7.65",
+          "51.5"
+        ],
+        [
+          "Motor oil SAE 30",
+          "210",
+          "98.9",
+          "11.25",
+          "64"
+        ],
+        [
+          "Motor oil SAE 40",
+          "210",
+          "98.9",
+          "14.85",
+          "77.5"
+        ],
+        [
+          "Motor oil SAE 50",
+          "210",
+          "98.9",
+          "19.75",
+          "97.5"
+        ],
+        [
+          "Olive oil",
+          "100",
+          "37.8",
+          "43.2",
+          "200"
+        ],
+        [
+          "Peanut oil",
+          "100",
+          "37.8",
+          "42",
+          "200"
+        ],
+        [
+          "Rapeseed oil",
+          "100",
+          "37.8",
+          "54.1",
+          "250"
+        ],
+        [
+          "Sesame seed oil",
+          "100",
+          "37.8",
+          "39.6",
+          "184"
+        ],
+        [
+          "Toluene",
+          "68",
+          "20",
+          "0.68",
+          ""
+        ],
+        [
+          "Turpentine",
+          "100",
+          "37.8",
+          "90.75",
+          "1425"
+        ],
+        [
+          "Water, distilled",
+          "68",
+          "20",
+          "1.0038",
+          "31"
+        ],
+        [
+          "Water, fresh",
+          "60",
+          "15.6",
+          "1.13",
+          "31.5"
+        ],
+        [
+          "Xylene-o",
+          "68",
+          "20",
+          "0.93",
+          ""
+        ]
+      ]
+    }
+  ]
+}

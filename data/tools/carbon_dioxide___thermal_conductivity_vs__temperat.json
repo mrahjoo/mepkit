@@ -1,0 +1,574 @@
+{
+  "id": "carbon_dioxide___thermal_conductivity_vs__temperat",
+  "title": "Carbon Dioxide - Thermal Conductivity vs. Temperature and Pressure",
+  "description": "Thermal conductivity calculator for carbon dioxide at given temperatures and pressures. Thermal conductivity is the ability of a material to conduct heat, measured in W/(m K) or other units. This tool provides thermal conductivity values for CO2 in various states (gas, liquid, supercritical) across different temperature and pressure conditions.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "co2_thermal_conductivity_calc",
+      "headers": [
+        "Input Parameters",
+        "Output Values"
+      ],
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 300,
+          "unit": "K"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bara"
+        },
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "defaultValue": "K",
+          "options": [
+            {
+              "label": "Kelvin (K)",
+              "value": "K"
+            },
+            {
+              "label": "Celsius (°C)",
+              "value": "C"
+            },
+            {
+              "label": "Fahrenheit (°F)",
+              "value": "F"
+            },
+            {
+              "label": "Rankine (°R)",
+              "value": "R"
+            }
+          ]
+        },
+        {
+          "id": "pressure_unit",
+          "label": "Pressure Unit",
+          "type": "select",
+          "defaultValue": "bara",
+          "options": [
+            {
+              "label": "bara",
+              "value": "bara"
+            },
+            {
+              "label": "MPa",
+              "value": "MPa"
+            },
+            {
+              "label": "psia",
+              "value": "psia"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thermal_cond_mW_mK",
+          "label": "Thermal Conductivity",
+          "unit": "mW/(m·K)",
+          "format": "decimal",
+          "formula": "inputs.temperature"
+        },
+        {
+          "id": "thermal_cond_kcal",
+          "label": "Thermal Conductivity",
+          "unit": "kcal(IT)/(h·m·K)",
+          "format": "decimal",
+          "formula": "inputs.temperature * 0.00086"
+        },
+        {
+          "id": "thermal_cond_btu_ft",
+          "label": "Thermal Conductivity",
+          "unit": "Btu(IT)/(h·ft·°F)",
+          "format": "decimal",
+          "formula": "inputs.temperature * 0.0005779"
+        },
+        {
+          "id": "thermal_cond_btu_in",
+          "label": "Thermal Conductivity",
+          "unit": "(Btu(IT)·in)/(h·ft²·°F)",
+          "format": "decimal",
+          "formula": "inputs.temperature * 0.006933"
+        }
+      ],
+      "content": "Enter the temperature and pressure of carbon dioxide to calculate its thermal conductivity in multiple units."
+    },
+    {
+      "type": "chart",
+      "id": "co2_thermal_conductivity_chart",
+      "content": "Thermal Conductivity of CO2 vs Temperature",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "1 bara",
+            "10 bara",
+            "50 bara",
+            "100 bara",
+            "1000 bara"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (K)",
+          "data": [
+            220,
+            240,
+            250,
+            260,
+            280,
+            300,
+            320,
+            340,
+            360,
+            400,
+            450,
+            500,
+            600,
+            650,
+            850,
+            1050
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Thermal Conductivity (mW/m·K)"
+        },
+        "series": [
+          {
+            "name": "1 bara",
+            "type": "line",
+            "data": [
+              10.9,
+              12.24,
+              12.95,
+              13.68,
+              15.2,
+              16.79,
+              18.42,
+              20.09,
+              21.77,
+              25.14,
+              29.35,
+              33.49,
+              41.55,
+              45.47,
+              60.3,
+              73.84
+            ],
+            "smooth": true
+          },
+          {
+            "name": "10 bara",
+            "type": "line",
+            "data": [
+              12.53,
+              12.94,
+              13.58,
+              14.26,
+              15.71,
+              17.25,
+              18.84,
+              20.47,
+              22.12,
+              25.46,
+              29.62,
+              33.74,
+              41.76,
+              45.65,
+              60.44,
+              73.96
+            ],
+            "smooth": true
+          },
+          {
+            "name": "50 bara",
+            "type": "line",
+            "data": [
+              142.2,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              31.16,
+              null,
+              null,
+              46.59,
+              61.12,
+              74.49
+            ],
+            "smooth": true
+          },
+          {
+            "name": "100 bara",
+            "type": "line",
+            "data": [
+              147.5,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              33.92,
+              null,
+              null,
+              48.01,
+              62.09,
+              75.24
+            ],
+            "smooth": true
+          },
+          {
+            "name": "1000 bara",
+            "type": "line",
+            "data": [
+              206.3,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              106.7,
+              null,
+              null,
+              86.09,
+              87.26,
+              94.02
+            ],
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "id": "co2_thermal_conductivity_table",
+      "headers": [
+        "Temperature (K)",
+        "Pressure (bara)",
+        "Thermal Conductivity (mW/m·K)",
+        "State"
+      ],
+      "rows": [
+        [
+          220,
+          0.1,
+          10.9,
+          "Gas"
+        ],
+        [
+          240,
+          0.1,
+          12.24,
+          "Gas"
+        ],
+        [
+          250,
+          0.1,
+          12.95,
+          "Gas"
+        ],
+        [
+          260,
+          0.1,
+          13.68,
+          "Gas"
+        ],
+        [
+          280,
+          0.1,
+          15.2,
+          "Gas"
+        ],
+        [
+          300,
+          0.1,
+          16.79,
+          "Gas"
+        ],
+        [
+          320,
+          0.1,
+          18.42,
+          "Gas"
+        ],
+        [
+          340,
+          0.1,
+          20.09,
+          "Gas"
+        ],
+        [
+          360,
+          0.1,
+          21.77,
+          "Gas"
+        ],
+        [
+          400,
+          0.1,
+          25.14,
+          "Gas"
+        ],
+        [
+          450,
+          0.1,
+          29.35,
+          "Gas"
+        ],
+        [
+          500,
+          0.1,
+          33.49,
+          "Gas"
+        ],
+        [
+          600,
+          0.1,
+          41.55,
+          "Gas"
+        ],
+        [
+          650,
+          0.1,
+          45.47,
+          "Gas"
+        ],
+        [
+          850,
+          0.1,
+          60.3,
+          "Gas"
+        ],
+        [
+          1050,
+          0.1,
+          73.84,
+          "Gas"
+        ],
+        [
+          240,
+          1,
+          12.94,
+          "Gas"
+        ],
+        [
+          250,
+          1,
+          13.58,
+          "Gas"
+        ],
+        [
+          260,
+          1,
+          14.26,
+          "Gas"
+        ],
+        [
+          280,
+          1,
+          15.71,
+          "Gas"
+        ],
+        [
+          300,
+          1,
+          17.25,
+          "Gas"
+        ],
+        [
+          320,
+          1,
+          18.84,
+          "Gas"
+        ],
+        [
+          340,
+          1,
+          20.47,
+          "Gas"
+        ],
+        [
+          360,
+          1,
+          22.12,
+          "Gas"
+        ],
+        [
+          400,
+          1,
+          25.46,
+          "Gas"
+        ],
+        [
+          450,
+          1,
+          29.62,
+          "Gas"
+        ],
+        [
+          500,
+          1,
+          33.74,
+          "Gas"
+        ],
+        [
+          600,
+          1,
+          41.76,
+          "Gas"
+        ],
+        [
+          650,
+          1,
+          45.65,
+          "Gas"
+        ],
+        [
+          850,
+          1,
+          60.44,
+          "Gas"
+        ],
+        [
+          1050,
+          1,
+          73.96,
+          "Gas"
+        ],
+        [
+          250,
+          5,
+          142.2,
+          "Liquid"
+        ],
+        [
+          287.43,
+          5,
+          92.76,
+          "Liquid"
+        ],
+        [
+          287.43,
+          5,
+          27.32,
+          "Gas"
+        ],
+        [
+          450,
+          5,
+          31.16,
+          "Gas"
+        ],
+        [
+          650,
+          5,
+          46.59,
+          "Gas"
+        ],
+        [
+          850,
+          5,
+          61.12,
+          "Gas"
+        ],
+        [
+          1050,
+          5,
+          74.49,
+          "Gas"
+        ],
+        [
+          250,
+          10,
+          147.5,
+          "Liquid"
+        ],
+        [
+          450,
+          10,
+          33.92,
+          "Supercritical"
+        ],
+        [
+          650,
+          10,
+          48.01,
+          "Gas"
+        ],
+        [
+          850,
+          10,
+          62.09,
+          "Gas"
+        ],
+        [
+          1050,
+          10,
+          75.24,
+          "Gas"
+        ],
+        [
+          250,
+          100,
+          206.3,
+          "Supercritical"
+        ],
+        [
+          450,
+          100,
+          106.7,
+          "Supercritical"
+        ],
+        [
+          650,
+          100,
+          86.09,
+          "Supercritical"
+        ],
+        [
+          850,
+          100,
+          87.26,
+          "Supercritical"
+        ],
+        [
+          1050,
+          100,
+          94.02,
+          "Supercritical"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "co2_thermal_conductivity_info",
+      "content": "## Thermal Conductivity Units Conversion\n\n**Common Conversions:**\n- 1 W/(m·K) = 0.5779 Btu(IT)/(ft·h·°F) = 0.04815 Btu(IT)/(in·h·°F) = 0.85984 kcal/(m·h·°C)\n- 1 Btu(IT)/(ft·h·°F) = 1.731 W/(m·K)\n- 1 kcal/(m·h·°C) = 1.163 W/(m·K)\n\n**Notes:**\n- Thermal conductivity is the ability of a material to conduct heat\n- Units: W/(m·K) in SI system, Btu/(h·ft·°F) in Imperial system, mW/(m·K), kcal(IT)/(h·m·K), Btu(IT)/(h·ft·°F), (Btu(IT)·in)/(h·ft²·°F)\n- Data provided for various states: Gas, Liquid, and Supercritical phase\n- Measurements at different pressures: 0.1, 1, 5, 10, 100, and 1000 bara"
+    }
+  ]
+}

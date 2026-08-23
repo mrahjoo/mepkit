@@ -1,0 +1,72 @@
+{
+  "id": "beryllium___specific_heat_vs__temperatures",
+  "title": "Beryllium - Specific Heat vs. Temperatures",
+  "description": "Specific heat of beryllium related to temperature.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "T (K)",
+        "c (kJ/kg-K)"
+      ],
+      "rows": [
+        [
+          100,
+          0.203
+        ],
+        [
+          200,
+          1.114
+        ],
+        [
+          300,
+          1.825
+        ],
+        [
+          400,
+          2.191
+        ],
+        [
+          600,
+          2.604
+        ],
+        [
+          800,
+          2.823
+        ],
+        [
+          1000,
+          3.018
+        ],
+        [
+          1200,
+          3.227
+        ]
+      ],
+      "content": "Beryllium Specific Heat Data"
+    },
+    {
+      "type": "calculator",
+      "content": "Specific Heat Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat",
+          "unit": "kJ/kg-K",
+          "format": "decimal",
+          "formula": "Linear interpolation based on temperature input"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "hydraulic_pump_motor_sizing",
+  "title": "Hydraulic Pump Motor Sizing",
+  "description": "Motor size vs. flow rate, shaft torque, shaft power and hydraulic power.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hydraulic Pump Motor Sizing\n\nCalculate flow rate, shaft torque, shaft power, and hydraulic power based on pump displacement, pressure, and rotational speed.\n\n### Equations\n\n**Flow Rate:**\n- Q = D × n / 1000\n- Q = flow rate (l/min), D = displacement (cm³/rev), n = revolutions (rpm)\n\n**Shaft Torque:**\n- T = D × p / (20 × π)\n- T = torque (Nm), p = pressure (bar)\n\n**Shaft Power:**\n- P_s = T × n / 9554\n- P_s = shaft power (kW)\n\n**Hydraulic Power:**\n- P_h = Q × p / 600\n- P_h = hydraulic power (kW)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "displacement",
+          "label": "Piston Displacement",
+          "type": "number",
+          "unit": "cm³/rev",
+          "defaultValue": 50
+        },
+        {
+          "id": "revolutions",
+          "label": "Revolutions",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 1500
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 200
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "formula": "inputs.displacement * inputs.revolutions / 1000",
+          "unit": "l/min",
+          "format": "decimal"
+        },
+        {
+          "id": "shaft_torque",
+          "label": "Shaft Torque",
+          "formula": "inputs.displacement * inputs.pressure / (20 * 3.14159265359)",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "shaft_power",
+          "label": "Shaft Power",
+          "formula": "(inputs.displacement * inputs.pressure / (20 * 3.14159265359)) * inputs.revolutions / 9554",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "hydraulic_power",
+          "label": "Hydraulic Power",
+          "formula": "(inputs.displacement * inputs.revolutions / 1000) * inputs.pressure / 600",
+          "unit": "kW",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

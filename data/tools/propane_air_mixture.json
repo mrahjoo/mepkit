@@ -1,0 +1,55 @@
+{
+  "id": "propane_air_mixture",
+  "title": "Propane Air Mixture",
+  "description": "A tool for calculating and analyzing propane and air mixture properties and ratios.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Unit",
+        "Value",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Propane Mass Fraction",
+          "%",
+          "",
+          "Mass percentage of propane in the mixture"
+        ],
+        [
+          "Air Mass Fraction",
+          "%",
+          "",
+          "Mass percentage of air in the mixture"
+        ],
+        [
+          "Stoichiometric Ratio",
+          "kg/kg",
+          "",
+          "Ratio of air to propane for complete combustion"
+        ],
+        [
+          "Total Mixture Mass",
+          "kg",
+          "",
+          "Total mass of propane and air mixture"
+        ],
+        [
+          "Propane Mass",
+          "kg",
+          "",
+          "Mass of propane component"
+        ],
+        [
+          "Air Mass",
+          "kg",
+          "",
+          "Mass of air component"
+        ]
+      ]
+    }
+  ]
+}

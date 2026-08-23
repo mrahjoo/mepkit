@@ -1,0 +1,218 @@
+{
+  "id": "geometric_shapes___areas",
+  "title": "Geometric Shapes - Areas",
+  "description": "Calculate areas and related measurements for various geometric shapes including squares, rectangles, triangles, circles, and 3D shapes.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Shape",
+        "Formula",
+        "Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "shape_type",
+          "label": "Select Shape",
+          "type": "select",
+          "options": [
+            {
+              "value": "square",
+              "label": "Square"
+            },
+            {
+              "value": "rectangle",
+              "label": "Rectangle"
+            },
+            {
+              "value": "parallelogram",
+              "label": "Parallelogram"
+            },
+            {
+              "value": "equilateral_triangle",
+              "label": "Equilateral Triangle"
+            },
+            {
+              "value": "triangle",
+              "label": "Triangle"
+            },
+            {
+              "value": "trapezoid",
+              "label": "Trapezoid"
+            },
+            {
+              "value": "hexagon",
+              "label": "Hexagon"
+            },
+            {
+              "value": "circle",
+              "label": "Circle"
+            },
+            {
+              "value": "sector",
+              "label": "Sector of Circle"
+            },
+            {
+              "value": "segment",
+              "label": "Segment of Circle"
+            },
+            {
+              "value": "cylinder",
+              "label": "Right Circular Cylinder"
+            },
+            {
+              "value": "cone",
+              "label": "Right Circular Cone"
+            },
+            {
+              "value": "sphere",
+              "label": "Sphere"
+            }
+          ],
+          "defaultValue": "square"
+        },
+        {
+          "id": "side_a",
+          "label": "Side a",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 5
+        },
+        {
+          "id": "side_b",
+          "label": "Side b",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3
+        },
+        {
+          "id": "height_h",
+          "label": "Height h",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "radius_r",
+          "label": "Radius r",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 2
+        },
+        {
+          "id": "angle_degrees",
+          "label": "Angle (degrees)",
+          "type": "number",
+          "unit": "°",
+          "defaultValue": 45
+        },
+        {
+          "id": "side_c",
+          "label": "Side c",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "area_result",
+          "label": "Area",
+          "formula": "inputs.side_a * inputs.side_a",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "diagonal_result",
+          "label": "Diagonal",
+          "formula": "inputs.side_a * Math.sqrt(2)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "circumference_result",
+          "label": "Circumference",
+          "formula": "2 * Math.PI * inputs.radius_r",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Shape",
+        "Formula",
+        "Variables"
+      ],
+      "rows": [
+        [
+          "Square",
+          "A = a²",
+          "a = side"
+        ],
+        [
+          "Rectangle",
+          "A = a × b",
+          "a, b = sides"
+        ],
+        [
+          "Parallelogram",
+          "A = a × h or a × b × sin(α)",
+          "a, b = sides, h = height, α = angle"
+        ],
+        [
+          "Equilateral Triangle",
+          "A = (a² × √3) / 4",
+          "a = side"
+        ],
+        [
+          "Triangle",
+          "A = a × h / 2 or A = r × s",
+          "a = base, h = height, r = inradius, s = semiperimeter"
+        ],
+        [
+          "Trapezoid",
+          "A = (a + b) × h / 2",
+          "a, b = parallel sides, h = height"
+        ],
+        [
+          "Hexagon",
+          "A = (3 × √3 × a²) / 2",
+          "a = side"
+        ],
+        [
+          "Circle",
+          "A = π × r² or A = π × d² / 4",
+          "r = radius, d = diameter"
+        ],
+        [
+          "Sector of Circle",
+          "A = (1/2) × θr × r² or (θd × π × r²) / 360",
+          "θr = angle in radians, θd = angle in degrees"
+        ],
+        [
+          "Segment of Circle",
+          "A = (1/2) × (θr - sin(θr)) × r²",
+          "θr = angle in radians"
+        ],
+        [
+          "Cylinder",
+          "A = 2 × π × r × h",
+          "r = radius, h = height"
+        ],
+        [
+          "Cone",
+          "A = π × r × l or π × r × √(r² + h²)",
+          "r = radius, h = height, l = slant length"
+        ],
+        [
+          "Sphere",
+          "A = 4 × π × r²",
+          "r = radius"
+        ]
+      ]
+    }
+  ]
+}

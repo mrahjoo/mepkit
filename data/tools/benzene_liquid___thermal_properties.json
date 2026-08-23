@@ -1,0 +1,102 @@
+{
+  "id": "benzene_liquid___thermal_properties",
+  "title": "Benzene Liquid - Thermal Properties",
+  "description": "Thermal properties of Benzene C6H6 including density, specific heat, thermal conductivity, dynamic viscosity and Prandtl number in both SI and Imperial units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Specific Heat (kJ/kg K)",
+        "Thermal Conductivity (W/m K)",
+        "Dynamic Viscosity (10⁻⁶ Pa s)",
+        "Prandtl Number"
+      ],
+      "rows": [
+        [
+          20,
+          879,
+          1.729,
+          0.144,
+          649,
+          7.79
+        ],
+        [
+          50,
+          847,
+          1.821,
+          0.134,
+          436,
+          5.93
+        ],
+        [
+          100,
+          793,
+          1.968,
+          0.127,
+          261,
+          4.04
+        ],
+        [
+          200,
+          661,
+          "-",
+          0.108,
+          113,
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Density (lb/ft³)",
+        "Specific Heat (Btu/lbm°F)",
+        "Thermal Conductivity (Btu/(hr ft °F))",
+        "Dynamic Viscosity (10⁻⁶ lb/(ft s))",
+        "Prandtl Number"
+      ],
+      "rows": [
+        [
+          68,
+          54.9,
+          0.413,
+          0.083,
+          436,
+          7.79
+        ],
+        [
+          122,
+          52.9,
+          0.435,
+          0.078,
+          292,
+          5.93
+        ],
+        [
+          212,
+          49.5,
+          0.47,
+          0.073,
+          175,
+          4.04
+        ],
+        [
+          392,
+          41.3,
+          "-",
+          0.062,
+          75.7,
+          "-"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About Benzene\n\nBenzene is an organic chemical compound with the chemical formula C₆H₆.\n\n**⚠️ Warning:** Benzene is a human carcinogen - an agent directly involved in causing cancer."
+    }
+  ]
+}

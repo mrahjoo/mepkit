@@ -1,0 +1,63 @@
+{
+  "id": "ansi_asme_y14_1___u_s__standard_engineering_drawin",
+  "title": "ANSI/ASME Y14.1 - U.S. Standard Engineering Drawing Sizes",
+  "description": "Reference tool for U.S. Standard Engineering Drawing Sizes according to ANSI/ASME Y14.1 specifications. This tool provides information about standard engineering drawing dimensions and formats.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Drawing Size",
+        "Width (inches)",
+        "Height (inches)",
+        "Aspect Ratio",
+        "Common Use"
+      ],
+      "rows": [
+        [
+          "A",
+          8.5,
+          11,
+          "1:1.29",
+          "General purpose, letters"
+        ],
+        [
+          "B",
+          11,
+          17,
+          "1:1.55",
+          "Continuation of A size"
+        ],
+        [
+          "C",
+          17,
+          22,
+          "1:1.29",
+          "Engineering drawings"
+        ],
+        [
+          "D",
+          22,
+          34,
+          "1:1.55",
+          "Large engineering drawings"
+        ],
+        [
+          "E",
+          34,
+          44,
+          "1:1.29",
+          "Very large engineering drawings"
+        ],
+        [
+          "F",
+          28,
+          40,
+          "1:1.43",
+          "Auxiliary paper size"
+        ]
+      ],
+      "content": "U.S. Standard Engineering Drawing Sizes as defined by ANSI/ASME Y14.1"
+    }
+  ]
+}

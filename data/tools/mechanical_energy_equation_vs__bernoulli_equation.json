@@ -1,0 +1,353 @@
+{
+  "id": "mechanical_energy_equation_vs__bernoulli_equation",
+  "title": "Mechanical Energy Equation vs. Bernoulli Equation",
+  "description": "Analyze and compare the Mechanical Energy Equation and Bernoulli Equation for pump/fan and turbine systems, including energy calculations in various forms (per unit mass, volume, and weight).",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Pump/Fan - Energy Per Unit Mass"
+      ],
+      "inputs": [
+        {
+          "id": "p_in",
+          "label": "Inlet Pressure (Pa)",
+          "type": "number",
+          "defaultValue": 101325
+        },
+        {
+          "id": "p_out",
+          "label": "Outlet Pressure (Pa)",
+          "type": "number",
+          "defaultValue": 101325
+        },
+        {
+          "id": "v_in",
+          "label": "Inlet Velocity (m/s)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "v_out",
+          "label": "Outlet Velocity (m/s)",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "rho",
+          "label": "Density (kg/m³)",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "g",
+          "label": "Gravity (m/s²)",
+          "type": "number",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "h_in",
+          "label": "Inlet Height (m)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "h_out",
+          "label": "Outlet Height (m)",
+          "type": "number",
+          "defaultValue": 10
+        },
+        {
+          "id": "e_loss",
+          "label": "Hydraulic Loss (J/kg)",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "e_pressure_in",
+          "label": "Inlet Pressure Energy",
+          "formula": "inputs.p_in / inputs.rho",
+          "unit": "J/kg"
+        },
+        {
+          "id": "e_pressure_out",
+          "label": "Outlet Pressure Energy",
+          "formula": "inputs.p_out / inputs.rho",
+          "unit": "J/kg"
+        },
+        {
+          "id": "e_velocity_in",
+          "label": "Inlet Velocity Energy",
+          "formula": "inputs.v_in * inputs.v_in / 2",
+          "unit": "J/kg"
+        },
+        {
+          "id": "e_velocity_out",
+          "label": "Outlet Velocity Energy",
+          "formula": "inputs.v_out * inputs.v_out / 2",
+          "unit": "J/kg"
+        },
+        {
+          "id": "e_elevation_in",
+          "label": "Inlet Elevation Energy",
+          "formula": "inputs.g * inputs.h_in",
+          "unit": "J/kg"
+        },
+        {
+          "id": "e_elevation_out",
+          "label": "Outlet Elevation Energy",
+          "formula": "inputs.g * inputs.h_out",
+          "unit": "J/kg"
+        },
+        {
+          "id": "e_shaft_required",
+          "label": "Required Shaft Energy",
+          "formula": "(inputs.p_out / inputs.rho - inputs.p_in / inputs.rho) + (inputs.v_out * inputs.v_out / 2 - inputs.v_in * inputs.v_in / 2) + (inputs.g * inputs.h_out - inputs.g * inputs.h_in) + inputs.e_loss",
+          "unit": "J/kg"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Pump/Fan - Energy Per Unit Weight (Head)"
+      ],
+      "inputs": [
+        {
+          "id": "p_in_head",
+          "label": "Inlet Pressure (Pa)",
+          "type": "number",
+          "defaultValue": 101325
+        },
+        {
+          "id": "p_out_head",
+          "label": "Outlet Pressure (Pa)",
+          "type": "number",
+          "defaultValue": 101325
+        },
+        {
+          "id": "v_in_head",
+          "label": "Inlet Velocity (m/s)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "v_out_head",
+          "label": "Outlet Velocity (m/s)",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "gamma",
+          "label": "Specific Weight (N/m³)",
+          "type": "number",
+          "defaultValue": 9810
+        },
+        {
+          "id": "h_in_head",
+          "label": "Inlet Height (m)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "h_out_head",
+          "label": "Outlet Height (m)",
+          "type": "number",
+          "defaultValue": 10
+        },
+        {
+          "id": "h_loss",
+          "label": "Loss Head (m)",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "h_pressure_in",
+          "label": "Inlet Pressure Head",
+          "formula": "inputs.p_in_head / inputs.gamma",
+          "unit": "m"
+        },
+        {
+          "id": "h_pressure_out",
+          "label": "Outlet Pressure Head",
+          "formula": "inputs.p_out_head / inputs.gamma",
+          "unit": "m"
+        },
+        {
+          "id": "h_velocity_in",
+          "label": "Inlet Velocity Head",
+          "formula": "inputs.v_in_head * inputs.v_in_head / (2 * (inputs.gamma / 1000) * 9.81)",
+          "unit": "m"
+        },
+        {
+          "id": "h_velocity_out",
+          "label": "Outlet Velocity Head",
+          "formula": "inputs.v_out_head * inputs.v_out_head / (2 * (inputs.gamma / 1000) * 9.81)",
+          "unit": "m"
+        },
+        {
+          "id": "h_shaft_required",
+          "label": "Required Shaft Head",
+          "formula": "(inputs.p_out_head / inputs.gamma - inputs.p_in_head / inputs.gamma) + (inputs.v_out_head * inputs.v_out_head / (2 * (inputs.gamma / 1000) * 9.81) - inputs.v_in_head * inputs.v_in_head / (2 * (inputs.gamma / 1000) * 9.81)) + (inputs.h_out_head - inputs.h_in_head) + inputs.h_loss",
+          "unit": "m"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Turbine - Energy Per Unit Mass"
+      ],
+      "inputs": [
+        {
+          "id": "p_in_turb",
+          "label": "Inlet Pressure (Pa)",
+          "type": "number",
+          "defaultValue": 101325
+        },
+        {
+          "id": "p_out_turb",
+          "label": "Outlet Pressure (Pa)",
+          "type": "number",
+          "defaultValue": 101325
+        },
+        {
+          "id": "v_in_turb",
+          "label": "Inlet Velocity (m/s)",
+          "type": "number",
+          "defaultValue": 5
+        },
+        {
+          "id": "v_out_turb",
+          "label": "Outlet Velocity (m/s)",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "rho_turb",
+          "label": "Density (kg/m³)",
+          "type": "number",
+          "defaultValue": 1000
+        },
+        {
+          "id": "g_turb",
+          "label": "Gravity (m/s²)",
+          "type": "number",
+          "defaultValue": 9.81
+        },
+        {
+          "id": "h_in_turb",
+          "label": "Inlet Height (m)",
+          "type": "number",
+          "defaultValue": 10
+        },
+        {
+          "id": "h_out_turb",
+          "label": "Outlet Height (m)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "e_loss_turb",
+          "label": "Hydraulic Loss (J/kg)",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "e_shaft_out",
+          "label": "Shaft Energy Output",
+          "formula": "(inputs.p_in_turb / inputs.rho_turb - inputs.p_out_turb / inputs.rho_turb) + (inputs.v_in_turb * inputs.v_in_turb / 2 - inputs.v_out_turb * inputs.v_out_turb / 2) + (inputs.g_turb * inputs.h_in_turb - inputs.g_turb * inputs.h_out_turb) - inputs.e_loss_turb",
+          "unit": "J/kg"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Efficiency Calculations"
+      ],
+      "inputs": [
+        {
+          "id": "e_shaft_pump",
+          "label": "Shaft Energy (Pump/Fan) (J/kg)",
+          "type": "number",
+          "defaultValue": 100
+        },
+        {
+          "id": "e_loss_pump",
+          "label": "Hydraulic Loss (J/kg)",
+          "type": "number",
+          "defaultValue": 20
+        },
+        {
+          "id": "e_shaft_turb_eff",
+          "label": "Shaft Energy (Turbine) (J/kg)",
+          "type": "number",
+          "defaultValue": 80
+        },
+        {
+          "id": "e_loss_turb_eff",
+          "label": "Hydraulic Loss (Turbine) (J/kg)",
+          "type": "number",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eta_pump",
+          "label": "Pump/Fan Efficiency",
+          "formula": "(inputs.e_shaft_pump - inputs.e_loss_pump) / inputs.e_shaft_pump",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "eta_turb",
+          "label": "Turbine Efficiency",
+          "formula": "inputs.e_shaft_turb_eff / (inputs.e_shaft_turb_eff + inputs.e_loss_turb_eff)",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Equation Form",
+        "Pump/Fan",
+        "Turbine",
+        "Dimensions",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Energy per Unit Mass",
+          "pin/ρ + vin²/2 + ghin + Eshaft = pout/ρ + vout²/2 + ghout + Eloss",
+          "pin/ρ + vin²/2 + ghin = pout/ρ + vout²/2 + ghout + Eshaft + Eloss",
+          "J/kg (m²/s²)",
+          "Extended Bernoulli Equation with losses and work"
+        ],
+        [
+          "Energy per Unit Volume",
+          "pin + ρvin²/2 + γhin + ρEshaft = pout + ρvout²/2 + γhout + ρEloss",
+          "N/A",
+          "Pa (N/m²)",
+          "Multiply energy per unit mass by density ρ"
+        ],
+        [
+          "Energy per Unit Weight (Head)",
+          "pin/γ + vin²/2g + hin + hshaft = pout/γ + vout²/2g + hout + hloss",
+          "N/A",
+          "m (head)",
+          "Divide energy per unit mass by gravity g"
+        ]
+      ]
+    }
+  ]
+}

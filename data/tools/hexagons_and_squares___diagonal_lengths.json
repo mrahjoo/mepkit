@@ -1,0 +1,59 @@
+{
+  "id": "hexagons_and_squares___diagonal_lengths",
+  "title": "Hexagons and Squares - Diagonal Lengths",
+  "description": "Distances between corners for hexagons and squares.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Shape",
+        "Formula",
+        "Distance (Dh or Ds)",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Hexagon",
+          "Dh = 1.154701 × d",
+          "1.154701d",
+          "m"
+        ],
+        [
+          "Square",
+          "Ds = 1.4142 × d",
+          "1.4142d",
+          "m"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "side_length",
+          "label": "Side Length (d)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hexagon_diagonal",
+          "label": "Hexagon Diagonal Distance (Dh)",
+          "formula": "inputs.side_length * 1.154701",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "square_diagonal",
+          "label": "Square Diagonal Distance (Ds)",
+          "formula": "inputs.side_length * 1.4142",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

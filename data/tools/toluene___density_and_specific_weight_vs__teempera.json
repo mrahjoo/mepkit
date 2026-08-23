@@ -1,0 +1,80 @@
+{
+  "id": "toluene___density_and_specific_weight_vs__teempera",
+  "title": "Toluene - Density and Specific Weight vs. Temperature and Pressure",
+  "description": "Calculator for estimating the density and specific weight of liquid toluene at given temperature (maximum 307°C or 580°F) and pressure (maximum 36 bara or 500 psia). Provides density in kg/m³, lb/ft³, lb/gal(US liq), and sl/ft³, plus specific weight in N/m³ and lbf/ft³.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "toluene_density_calc",
+      "content": "Toluene Density and Specific Weight Calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bara"
+        },
+        {
+          "id": "gravity",
+          "label": "Gravitational Acceleration",
+          "type": "number",
+          "defaultValue": 9.80665,
+          "unit": "m/s²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "860.4 - 0.625 * inputs.temperature"
+        },
+        {
+          "id": "density_lb_ft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "format": "decimal",
+          "formula": "(860.4 - 0.625 * inputs.temperature) * 0.06243"
+        },
+        {
+          "id": "density_lb_gal",
+          "label": "Density",
+          "unit": "lb/gal(US liq)",
+          "format": "decimal",
+          "formula": "(860.4 - 0.625 * inputs.temperature) * 0.008345"
+        },
+        {
+          "id": "density_sl_ft3",
+          "label": "Density",
+          "unit": "sl/ft³",
+          "format": "decimal",
+          "formula": "(860.4 - 0.625 * inputs.temperature) * 0.001940"
+        },
+        {
+          "id": "specific_weight_n_m3",
+          "label": "Specific Weight",
+          "unit": "N/m³",
+          "format": "decimal",
+          "formula": "(860.4 - 0.625 * inputs.temperature) * inputs.gravity"
+        },
+        {
+          "id": "specific_weight_lbf_ft3",
+          "label": "Specific Weight",
+          "unit": "lbf/ft³",
+          "format": "decimal",
+          "formula": "(860.4 - 0.625 * inputs.temperature) * 0.06243"
+        }
+      ]
+    }
+  ]
+}

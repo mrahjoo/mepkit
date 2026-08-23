@@ -1,0 +1,325 @@
+{
+  "id": "engineering_materials___properties",
+  "title": "Engineering Materials - Properties",
+  "description": "Comprehensive reference for typical properties of engineering materials including steel, plastics, ceramics, and composites. Compare density, tensile modulus, tensile strength, specific modulus, specific strength, and maximum service temperature across different material categories.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "material_properties_calc",
+      "content": "Calculate material properties and derive specific characteristics",
+      "inputs": [
+        {
+          "id": "density",
+          "label": "Density (ρ)",
+          "type": "number",
+          "unit": "10³ kg/m³",
+          "defaultValue": 2.7
+        },
+        {
+          "id": "tensile_modulus",
+          "label": "Tensile Modulus (E)",
+          "type": "number",
+          "unit": "GPa",
+          "defaultValue": 73
+        },
+        {
+          "id": "tensile_strength",
+          "label": "Tensile Strength (σ)",
+          "type": "number",
+          "unit": "MPa",
+          "defaultValue": 450
+        }
+      ],
+      "outputs": [
+        {
+          "id": "specific_modulus",
+          "label": "Specific Modulus (E/ρ)",
+          "formula": "inputs.tensile_modulus / inputs.density",
+          "unit": "GPa / (10³ kg/m³)"
+        },
+        {
+          "id": "specific_strength",
+          "label": "Specific Strength (σ/ρ)",
+          "formula": "inputs.tensile_strength / (inputs.density * 1000)",
+          "unit": "MPa / (10³ kg/m³)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "composites_table",
+      "content": "Composite Materials Properties",
+      "headers": [
+        "Material",
+        "Density (10³ kg/m³)",
+        "Tensile Modulus (GPa)",
+        "Tensile Strength (MPa)",
+        "Specific Modulus",
+        "Specific Strength",
+        "Max Service Temp (°C)"
+      ],
+      "rows": [
+        [
+          "Glass-filled epoxy (35%)",
+          1.9,
+          25,
+          300,
+          13.2,
+          0.16,
+          "80-200"
+        ],
+        [
+          "Glass-filled polyester (35%)",
+          2,
+          15.7,
+          130,
+          7.85,
+          0.065,
+          "80-125"
+        ],
+        [
+          "Glass-filled nylon (35%)",
+          1.6,
+          14.5,
+          200,
+          8.95,
+          0.12,
+          "75-110"
+        ],
+        [
+          "S-glass epoxy (45%)",
+          1.8,
+          39.5,
+          870,
+          21.8,
+          0.48,
+          "80-215"
+        ],
+        [
+          "Carbon epoxy (61%)",
+          1.6,
+          142,
+          1730,
+          89.3,
+          1.08,
+          "80-215"
+        ],
+        [
+          "Kevlar epoxy (53%)",
+          1.35,
+          63.6,
+          1100,
+          47.1,
+          0.81,
+          "80-215"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "metals_table",
+      "content": "Metal Materials Properties",
+      "headers": [
+        "Material",
+        "Density (10³ kg/m³)",
+        "Tensile Modulus (GPa)",
+        "Tensile Strength (MPa)",
+        "Specific Modulus",
+        "Specific Strength",
+        "Max Service Temp (°C)"
+      ],
+      "rows": [
+        [
+          "Cast Iron, grade 20",
+          7.15,
+          100,
+          140,
+          14.3,
+          0.02,
+          "230-300"
+        ],
+        [
+          "Steel, AISI 1045",
+          7.85,
+          205,
+          585,
+          26.3,
+          0.073,
+          "500-650"
+        ],
+        [
+          "Aluminum 2045-T4",
+          2.7,
+          73,
+          450,
+          27,
+          0.17,
+          "150-250"
+        ],
+        [
+          "Aluminum 6061-T6",
+          2.7,
+          69,
+          270,
+          25.5,
+          0.1,
+          "150-250"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "ceramics_table",
+      "content": "Ceramic Materials Properties",
+      "headers": [
+        "Material",
+        "Density (10³ kg/m³)",
+        "Tensile Modulus (GPa)",
+        "Tensile Strength (MPa)",
+        "Specific Modulus",
+        "Specific Strength",
+        "Max Service Temp (°C)"
+      ],
+      "rows": [
+        [
+          "Alumina",
+          3.8,
+          350,
+          170,
+          92.1,
+          0.045,
+          "1425-1540"
+        ],
+        [
+          "MgO",
+          3.6,
+          205,
+          60,
+          56.9,
+          0.017,
+          "900-1000"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "plastics_table",
+      "content": "Plastic Materials Properties",
+      "headers": [
+        "Material",
+        "Density (10³ kg/m³)",
+        "Tensile Modulus (GPa)",
+        "Tensile Strength (MPa)",
+        "Specific Modulus",
+        "Specific Strength",
+        "Max Service Temp (°C)"
+      ],
+      "rows": [
+        [
+          "Nylon 6/6",
+          1.15,
+          2.8,
+          82,
+          2.52,
+          0.071,
+          "75-100"
+        ],
+        [
+          "Polypropylene",
+          1.07,
+          1.4,
+          33,
+          1.55,
+          0.037,
+          "50-80"
+        ],
+        [
+          "Epoxy",
+          1.25,
+          3.5,
+          69,
+          2.8,
+          0.055,
+          "80-215"
+        ],
+        [
+          "Phenolic",
+          1.35,
+          3,
+          6,
+          2.22,
+          0.004,
+          "70-120"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "materials_comparison_chart",
+      "content": "Material Properties Comparison",
+      "options": {
+        "title": {
+          "text": "Engineering Materials - Properties Comparison"
+        },
+        "legend": {
+          "data": [
+            "Composites",
+            "Metals",
+            "Ceramics",
+            "Plastics"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Density (10³ kg/m³)",
+            "Tensile Modulus (GPa)",
+            "Tensile Strength (MPa)"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Carbon epoxy",
+            "type": "bar",
+            "data": [
+              1.6,
+              142,
+              1730
+            ]
+          },
+          {
+            "name": "Steel, AISI 1045",
+            "type": "bar",
+            "data": [
+              7.85,
+              205,
+              585
+            ]
+          },
+          {
+            "name": "Alumina",
+            "type": "bar",
+            "data": [
+              3.8,
+              350,
+              170
+            ]
+          },
+          {
+            "name": "Epoxy",
+            "type": "bar",
+            "data": [
+              1.25,
+              3.5,
+              69
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

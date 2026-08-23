@@ -1,0 +1,55 @@
+{
+  "id": "steel_bolts___astm_grades",
+  "title": "Steel Bolts - ASTM Grades",
+  "description": "A reference tool for ASTM grade specifications and properties of steel bolts",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "ASTM Grade",
+        "Tensile Strength (ksi)",
+        "Yield Strength (ksi)",
+        "Elongation (%)",
+        "Hardness (Rc)"
+      ],
+      "rows": [
+        [
+          "Grade 2",
+          "60-100",
+          "36",
+          "25",
+          "B95-B110"
+        ],
+        [
+          "Grade 5",
+          "120-150",
+          "85",
+          "16",
+          "C19-C32"
+        ],
+        [
+          "Grade 8",
+          "150-190",
+          "130",
+          "12",
+          "C33-C38"
+        ],
+        [
+          "Grade 8.1",
+          "150-180",
+          "130",
+          "14",
+          "C25-C34"
+        ],
+        [
+          "Grade 8.2",
+          "180-210",
+          "150",
+          "10",
+          "C35-C40"
+        ]
+      ]
+    }
+  ]
+}

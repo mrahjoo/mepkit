@@ -1,0 +1,12 @@
+{
+  "id": "iso_grade_oils___viscosities_and_densities",
+  "title": "ISO Grade Oils - Viscosities and Densities",
+  "description": "Viscosities and densities of ISO and equivalent SAE grade oils.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nThis tool provides reference data for ISO grade oils, including their viscosities and densities.\n\n### ISO Grade Oil Classifications\n\nISO viscosity grades are standardized industrial oil classifications based on kinematic viscosity at 40°C:\n\n| ISO Grade | Kinematic Viscosity (cSt at 40°C) | Typical SAE Equivalent | Typical Density (kg/m³) |\n|-----------|--------------------------------------|------------------------|-------------------------|\n| ISO 10 | 9-11 | SAE 5W | 800-820 |\n| ISO 15 | 13.5-16.5 | SAE 10W | 810-830 |\n| ISO 22 | 19.8-24.2 | SAE 15W | 815-835 |\n| ISO 32 | 28.8-35.2 | SAE 20W | 820-840 |\n| ISO 46 | 41.4-50.6 | SAE 30 | 825-845 |\n| ISO 68 | 61.2-74.8 | SAE 40 | 830-850 |\n| ISO 100 | 90-110 | SAE 50 | 835-855 |\n| ISO 150 | 135-165 | SAE 60 | 840-860 |\n| ISO 220 | 198-242 | - | 845-865 |\n| ISO 320 | 288-352 | - | 850-870 |\n| ISO 460 | 414-506 | - | 855-875 |\n| ISO 680 | 612-748 | - | 860-880 |\n| ISO 1000 | 900-1100 | - | 865-885 |\n\n### Key Properties\n\n- **Kinematic Viscosity**: Measured at 40°C (104°F), expressed in centistokes (cSt)\n- **Density**: Typical range at 15°C, expressed in kg/m³\n- **SAE Equivalents**: Approximate Society of Automotive Engineers classifications for motor oils\n\n### Applications\n\n- **ISO 10-32**: Light machine oils, refrigeration oils, spindle oils\n- **ISO 46**: General purpose hydraulic oils, compressor oils\n- **ISO 68-100**: Heavy-duty hydraulic oils, gear oils\n- **ISO 150+**: Industrial gear oils, marine applications\n\n### Notes\n\n- Viscosity changes with temperature; these values are standardized at 40°C\n- Actual densities vary by oil type and additives\n- Always consult manufacturer specifications for specific applications\n- Viscosity index affects how much viscosity changes with temperature"
+    }
+  ]
+}

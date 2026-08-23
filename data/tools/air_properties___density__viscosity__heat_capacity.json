@@ -1,0 +1,198 @@
+{
+  "id": "air_properties___density__viscosity__heat_capacity",
+  "title": "Air Properties - Density, Viscosity, Heat Capacity",
+  "description": "Calculate thermophysical properties of air including density, viscosity, heat capacity, and thermal conductivity at varying temperature and pressure conditions.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "air_properties_calculator",
+      "content": "Air Thermophysical Properties Calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "pressure_bar",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 1
+        },
+        {
+          "id": "volume_m3",
+          "label": "Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_kg_m3",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "1.205 - (inputs.temperature_celsius - 20) * 0.00369",
+          "format": "decimal"
+        },
+        {
+          "id": "mass_kg",
+          "label": "Mass",
+          "unit": "kg",
+          "formula": "inputs.volume_m3 * (1.205 - (inputs.temperature_celsius - 20) * 0.00369)",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_dynamic_pa_s",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "formula": "17.22e-6 * (1 + (inputs.temperature_celsius - 0) * 0.002)",
+          "format": "scientific"
+        },
+        {
+          "id": "heat_capacity_cp_kj_kg_k",
+          "label": "Specific Heat Capacity (Cp)",
+          "unit": "kJ/kg·K",
+          "formula": "1.006",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity_mw_m_k",
+          "label": "Thermal Conductivity",
+          "unit": "mW/m·K",
+          "formula": "24.35 + (inputs.temperature_celsius - 0) * 0.1",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "density_vs_temperature_chart",
+      "content": "Air Density vs. Temperature",
+      "options": {
+        "title": {
+          "text": "Air Density vs. Temperature",
+          "left": "center"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°C)",
+          "data": [
+            -20,
+            -10,
+            0,
+            10,
+            20,
+            30,
+            50,
+            100,
+            150,
+            200
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Density (kg/m³)"
+        },
+        "series": [
+          {
+            "name": "Density",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              1.394,
+              1.342,
+              1.293,
+              1.247,
+              1.205,
+              1.165,
+              1.093,
+              0.946,
+              0.835,
+              0.746
+            ],
+            "symbolSize": 6,
+            "lineStyle": {
+              "width": 2
+            }
+          }
+        ],
+        "grid": {
+          "left": "10%",
+          "right": "10%",
+          "top": "15%",
+          "bottom": "15%"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "formatter": "{b}°C: {c} kg/m³"
+        }
+      }
+    },
+    {
+      "type": "chart",
+      "id": "viscosity_vs_temperature_chart",
+      "content": "Air Viscosity vs. Temperature",
+      "options": {
+        "title": {
+          "text": "Air Dynamic Viscosity vs. Temperature",
+          "left": "center"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°C)",
+          "data": [
+            0,
+            20,
+            40,
+            60,
+            80,
+            100,
+            150,
+            200
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Viscosity (μPa·s)"
+        },
+        "series": [
+          {
+            "name": "Dynamic Viscosity",
+            "type": "line",
+            "smooth": true,
+            "data": [
+              17.22,
+              18.18,
+              19.16,
+              20.16,
+              21.18,
+              22.22,
+              24.66,
+              27.22
+            ],
+            "symbolSize": 6,
+            "lineStyle": {
+              "width": 2,
+              "color": "#FF6B6B"
+            }
+          }
+        ],
+        "grid": {
+          "left": "10%",
+          "right": "10%",
+          "top": "15%",
+          "bottom": "15%"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "formatter": "{b}°C: {c} μPa·s"
+        }
+      }
+    }
+  ]
+}

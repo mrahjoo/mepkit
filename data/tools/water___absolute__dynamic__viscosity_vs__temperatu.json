@@ -1,0 +1,118 @@
+{
+  "id": "water___absolute__dynamic__viscosity_vs__temperatu",
+  "title": "Water - Absolute (Dynamic) Viscosity vs. Temperature and Pressure",
+  "description": "Calculate the absolute (dynamic) viscosity of water as a function of temperature and pressure. This tool provides viscosity values for water under various conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Pressure (atm)",
+        "Viscosity (mPa·s)"
+      ],
+      "rows": [
+        [
+          0,
+          1,
+          1.787
+        ],
+        [
+          5,
+          1,
+          1.519
+        ],
+        [
+          10,
+          1,
+          1.307
+        ],
+        [
+          15,
+          1,
+          1.139
+        ],
+        [
+          20,
+          1,
+          1.002
+        ],
+        [
+          25,
+          1,
+          0.89
+        ],
+        [
+          30,
+          1,
+          0.798
+        ],
+        [
+          40,
+          1,
+          0.653
+        ],
+        [
+          50,
+          1,
+          0.547
+        ],
+        [
+          60,
+          1,
+          0.467
+        ],
+        [
+          70,
+          1,
+          0.404
+        ],
+        [
+          80,
+          1,
+          0.355
+        ],
+        [
+          90,
+          1,
+          0.315
+        ],
+        [
+          100,
+          1,
+          0.282
+        ],
+        [
+          0,
+          10,
+          1.819
+        ],
+        [
+          20,
+          10,
+          1.024
+        ],
+        [
+          40,
+          10,
+          0.668
+        ],
+        [
+          60,
+          10,
+          0.475
+        ],
+        [
+          80,
+          10,
+          0.362
+        ],
+        [
+          100,
+          10,
+          0.289
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "insulation_of_cooling_systems",
+  "title": "Insulation of Cooling Systems",
+  "description": "Cooling systems and insulation thickness. Determines the required insulation thickness for chilled water, refrigerant, and brine systems based on system type, operation temperature, and pipe size.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Insulation of Cooling Systems\n\nTo avoid heat gain and reduced efficiency of cooling systems, as well as condensation of water on surfaces and potential corrosion problems, pipes in cooling systems should always be insulated.\n\nThe insulation thickness of chilled water, refrigerant and brine systems should not be less than indicated in the table below.\n\n**Note:** Insulation should be made with micro-cellular cross-linked polyethylene foam with low water vapor diffusion."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "system_type",
+          "label": "System Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "chilled_water",
+              "label": "Chilled Water"
+            },
+            {
+              "value": "refrigerant",
+              "label": "Refrigerant"
+            },
+            {
+              "value": "brine",
+              "label": "Brine"
+            }
+          ],
+          "defaultValue": "chilled_water"
+        },
+        {
+          "id": "operation_temp_f",
+          "label": "Operation Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 45
+        },
+        {
+          "id": "pipe_size",
+          "label": "Pipe Size",
+          "type": "select",
+          "options": [
+            {
+              "value": "less_than_1",
+              "label": "< 1\""
+            },
+            {
+              "value": "1_to_2",
+              "label": "1 1/4\" - 2\""
+            },
+            {
+              "value": "2_5_to_4",
+              "label": "2 1/2\" - 4\""
+            },
+            {
+              "value": "5_to_6",
+              "label": "5\" - 6\""
+            },
+            {
+              "value": "greater_than_8",
+              "label": "> 8\""
+            }
+          ],
+          "defaultValue": "1_to_2"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "insulation_thickness",
+          "label": "Required Insulation Thickness",
+          "unit": "inches",
+          "format": "decimal",
+          "formula": "inputs.system_type === 'chilled_water' && inputs.pipe_size === 'less_than_1' ? 0.5 : inputs.system_type === 'chilled_water' && inputs.pipe_size === '1_to_2' ? 0.75 : inputs.system_type === 'chilled_water' && inputs.pipe_size === '2_5_to_4' ? 1.0 : inputs.system_type === 'chilled_water' && (inputs.pipe_size === '5_to_6' || inputs.pipe_size === 'greater_than_8') ? 1.0 : inputs.system_type === 'refrigerant' && inputs.pipe_size === 'less_than_1' ? 1.0 : inputs.system_type === 'refrigerant' && (inputs.pipe_size === '1_to_2' || inputs.pipe_size === '2_5_to_4' || inputs.pipe_size === '5_to_6' || inputs.pipe_size === 'greater_than_8') ? 1.5 : inputs.system_type === 'brine' && inputs.pipe_size === 'less_than_1' ? 1.0 : inputs.system_type === 'brine' && (inputs.pipe_size === '1_to_2' || inputs.pipe_size === '2_5_to_4' || inputs.pipe_size === '5_to_6' || inputs.pipe_size === 'greater_than_8') ? 1.5 : 0"
+        },
+        {
+          "id": "insulation_thickness_mm",
+          "label": "Required Insulation Thickness",
+          "unit": "mm",
+          "format": "decimal",
+          "formula": "inputs.system_type === 'chilled_water' && inputs.pipe_size === 'less_than_1' ? 12.7 : inputs.system_type === 'chilled_water' && inputs.pipe_size === '1_to_2' ? 19.05 : inputs.system_type === 'chilled_water' && inputs.pipe_size === '2_5_to_4' ? 25.4 : inputs.system_type === 'chilled_water' && (inputs.pipe_size === '5_to_6' || inputs.pipe_size === 'greater_than_8') ? 25.4 : inputs.system_type === 'refrigerant' && inputs.pipe_size === 'less_than_1' ? 25.4 : inputs.system_type === 'refrigerant' && (inputs.pipe_size === '1_to_2' || inputs.pipe_size === '2_5_to_4' || inputs.pipe_size === '5_to_6' || inputs.pipe_size === 'greater_than_8') ? 38.1 : inputs.system_type === 'brine' && inputs.pipe_size === 'less_than_1' ? 25.4 : inputs.system_type === 'brine' && (inputs.pipe_size === '1_to_2' || inputs.pipe_size === '2_5_to_4' || inputs.pipe_size === '5_to_6' || inputs.pipe_size === 'greater_than_8') ? 38.1 : 0"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "System",
+        "Operation Temperature",
+        "Pipe Size (inches)",
+        "Insulation Thickness (inches)"
+      ],
+      "rows": [
+        [
+          "Chilled Water",
+          "40 - 55 °F (4 - 12 °C)",
+          "< 1\"",
+          "0.5"
+        ],
+        [
+          "Chilled Water",
+          "40 - 55 °F (4 - 12 °C)",
+          "1 1/4\" - 2\"",
+          "0.75"
+        ],
+        [
+          "Chilled Water",
+          "40 - 55 °F (4 - 12 °C)",
+          "2 1/2\" - 4\"",
+          "1.0"
+        ],
+        [
+          "Chilled Water",
+          "40 - 55 °F (4 - 12 °C)",
+          "5\" - 6\"",
+          "1.0"
+        ],
+        [
+          "Chilled Water",
+          "40 - 55 °F (4 - 12 °C)",
+          "> 8\"",
+          "1.0"
+        ],
+        [
+          "Refrigerant",
+          "< 40 °F (< 4 °C)",
+          "< 1\"",
+          "1.0"
+        ],
+        [
+          "Refrigerant",
+          "< 40 °F (< 4 °C)",
+          "1 1/4\" - 2\"",
+          "1.5"
+        ],
+        [
+          "Refrigerant",
+          "< 40 °F (< 4 °C)",
+          "2 1/2\" - 4\"",
+          "1.5"
+        ],
+        [
+          "Refrigerant",
+          "< 40 °F (< 4 °C)",
+          "5\" - 6\"",
+          "1.5"
+        ],
+        [
+          "Refrigerant",
+          "< 40 °F (< 4 °C)",
+          "> 8\"",
+          "1.5"
+        ],
+        [
+          "Brine",
+          "< 40 °F (< 4 °C)",
+          "< 1\"",
+          "1.0"
+        ],
+        [
+          "Brine",
+          "< 40 °F (< 4 °C)",
+          "1 1/4\" - 2\"",
+          "1.5"
+        ],
+        [
+          "Brine",
+          "< 40 °F (< 4 °C)",
+          "2 1/2\" - 4\"",
+          "1.5"
+        ],
+        [
+          "Brine",
+          "< 40 °F (< 4 °C)",
+          "5\" - 6\"",
+          "1.5"
+        ],
+        [
+          "Brine",
+          "< 40 °F (< 4 °C)",
+          "> 8\"",
+          "1.5"
+        ]
+      ]
+    }
+  ]
+}

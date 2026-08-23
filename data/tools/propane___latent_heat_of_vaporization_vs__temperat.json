@@ -1,0 +1,69 @@
+{
+  "id": "propane___latent_heat_of_vaporization_vs__temperat",
+  "title": "Propane - Latent Heat of Vaporization vs. Temperature",
+  "description": "This tool calculates and displays the latent heat of vaporization for propane as a function of temperature.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (K)",
+        "Latent Heat of Vaporization (kJ/kg)"
+      ],
+      "rows": [
+        [
+          85,
+          560.5
+        ],
+        [
+          100,
+          535.2
+        ],
+        [
+          120,
+          498.1
+        ],
+        [
+          140,
+          457.8
+        ],
+        [
+          160,
+          413.2
+        ],
+        [
+          180,
+          363.5
+        ],
+        [
+          200,
+          308.2
+        ],
+        [
+          220,
+          247
+        ],
+        [
+          240,
+          178.5
+        ],
+        [
+          250,
+          136.4
+        ],
+        [
+          260,
+          88.5
+        ],
+        [
+          270,
+          34.2
+        ],
+        [
+          275,
+          8.5
+        ]
+      ]
+    }
+  ]
+}

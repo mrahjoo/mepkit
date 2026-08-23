@@ -1,0 +1,104 @@
+{
+  "id": "standardized_enthalpies_and_entropies",
+  "title": "Standardized Enthalpies and Entropies",
+  "description": "Standardized enthalpies and entropies for common substances at 25°C (77°F) and 1 atm. Reference data includes entropy and enthalpy values in both imperial (Btu/lbmole) and SI (J/gmole) units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Entropy - s - (Btu/lbmole·R)",
+        "Entropy - s - (J/gmole·K)",
+        "Enthalpy - h - (Btu/lbmole)",
+        "Enthalpy - h - (J/gmole)"
+      ],
+      "rows": [
+        [
+          "Acetylene C2H2",
+          47.97,
+          200.82,
+          97495,
+          226757
+        ],
+        [
+          "Benzene C6H6",
+          64.3,
+          269.21,
+          35653,
+          82923
+        ],
+        [
+          "n-Butane C4H10",
+          74.1,
+          310.03,
+          -53627,
+          -124727
+        ],
+        [
+          "Carbon Dioxide CO2",
+          51.03,
+          213.66,
+          -169183,
+          -393492
+        ],
+        [
+          "Carbon Monoxide CO",
+          47.3,
+          197.92,
+          -47517,
+          -110516
+        ],
+        [
+          "Ethane C2H6",
+          54.8,
+          229.48,
+          -36401,
+          -84662
+        ],
+        [
+          "Hydrogen H2",
+          31.2,
+          130.6,
+          0,
+          0
+        ],
+        [
+          "Methane CH4",
+          44.5,
+          186.19,
+          -32179,
+          -74843
+        ],
+        [
+          "Nitrogen N2",
+          45.8,
+          191.56,
+          0,
+          0
+        ],
+        [
+          "Oxygen O2",
+          48.99,
+          205.09,
+          0,
+          0
+        ],
+        [
+          "Propane C3H8",
+          64.47,
+          269.92,
+          -44647,
+          -103848
+        ],
+        [
+          "Water H2O",
+          16.72,
+          70,
+          -122976,
+          -286022
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "equal_areas___circles_vs__squares",
+  "title": "Equal Areas - Circles vs. Squares",
+  "description": "Calculate radius and side lengths of equal areas for circles and squares. Solve for the radius of a circle or side of a square when they have equal areas.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Equal Areas - Circles vs. Squares\n\nCalculate the radius and side lengths of circles and squares with equal areas.\n\n## Formulas\n\n**Circle Area:** Ac = π r²\n\n**Square Area:** As = s²\n\n**When Ac = As:** π r² = s²\n\n**Radius of Circle (given square side):** r = √(s² / π)\n\n**Side of Square (given circle radius):** s = √(π r²)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Circle Radius to Square Side"
+      ],
+      "inputs": [
+        {
+          "id": "circle_radius",
+          "label": "Circle Radius",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "square_side_from_radius",
+          "label": "Square Side Length",
+          "formula": "Math.sqrt(Math.PI * inputs.circle_radius * inputs.circle_radius)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "circle_area",
+          "label": "Area",
+          "formula": "Math.PI * inputs.circle_radius * inputs.circle_radius",
+          "unit": "m²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Square Side to Circle Radius"
+      ],
+      "inputs": [
+        {
+          "id": "square_side",
+          "label": "Square Side Length",
+          "type": "number",
+          "defaultValue": 3.54,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "circle_radius_from_side",
+          "label": "Circle Radius",
+          "formula": "Math.sqrt(inputs.square_side * inputs.square_side / Math.PI)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "square_area",
+          "label": "Area",
+          "formula": "inputs.square_side * inputs.square_side",
+          "unit": "m²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

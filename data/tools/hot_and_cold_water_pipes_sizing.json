@@ -1,0 +1,81 @@
+{
+  "id": "hot_and_cold_water_pipes_sizing",
+  "title": "Hot and Cold Water Pipes Sizing",
+  "description": "Recommended dimensions for hot and cold water pipes. Determine the maximum numbers of draw offs served by a pipe based on nominal bore and pipe type.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Bore (in)",
+        "Flow Pipes (Max Draw Offs)",
+        "Return Pipes - Steel (mm)",
+        "Return Pipes - Copper (mm)",
+        "Head up to 20m (70 ft)",
+        "Head over 20m (70 ft)"
+      ],
+      "rows": [
+        [
+          "1/2",
+          "15",
+          "15",
+          "1",
+          "1 - 2",
+          "1 - 8"
+        ],
+        [
+          "3/4",
+          "20",
+          "22",
+          "2 - 4",
+          "3 - 9",
+          "9 - 29"
+        ],
+        [
+          "1",
+          "25",
+          "28",
+          "5 - 8",
+          "10 - 19",
+          "30 - 66"
+        ],
+        [
+          "1 1/4",
+          "32",
+          "35",
+          "9 - 24",
+          "20 - 49",
+          "67 - 169"
+        ],
+        [
+          "1 1/2",
+          "40",
+          "42",
+          "25 - 49",
+          "50 - 79",
+          "170 - 350"
+        ],
+        [
+          "2",
+          "50",
+          "54",
+          "50 - 99",
+          "80 - 153",
+          "—"
+        ],
+        [
+          "2 1/2",
+          "65",
+          "67",
+          "100 - 200",
+          "154 - 300",
+          "—"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Notes\n* Basins, sinks, showers and similar are regarded as 1 draw off\n* Baths and similar are regarded as 2 draw offs\n\n### How to Use\n1. Identify the number of draw offs required\n2. Select the nominal bore that accommodates that number\n3. Choose the appropriate pipe type (Steel or Copper) and head pressure range\n4. Reference the recommended pipe dimensions from the table"
+    }
+  ]
+}

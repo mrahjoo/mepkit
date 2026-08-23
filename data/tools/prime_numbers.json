@@ -1,0 +1,41 @@
+{
+  "id": "prime_numbers",
+  "title": "Prime Numbers",
+  "description": "A calculator tool for working with prime numbers. We care about your privacy!",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Prime Number Calculator",
+      "inputs": [
+        {
+          "id": "number",
+          "label": "Enter a Number",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "is_prime",
+          "label": "Is Prime?",
+          "formula": "inputs.number > 1 && inputs.number % 1 == 0",
+          "unit": ""
+        },
+        {
+          "id": "nearest_prime_below",
+          "label": "Nearest Prime Below",
+          "formula": "inputs.number - 1",
+          "unit": ""
+        },
+        {
+          "id": "nearest_prime_above",
+          "label": "Nearest Prime Above",
+          "formula": "inputs.number + 1",
+          "unit": ""
+        }
+      ]
+    }
+  ]
+}

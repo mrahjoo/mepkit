@@ -1,0 +1,117 @@
+{
+  "id": "efficiency_in_pumps_or_fans",
+  "title": "Efficiency in Pumps or Fans",
+  "description": "Calculate hydraulic, mechanical, volumetric, and overall efficiency for pumps or fans, considering losses from friction, leakage, and mechanical components.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Efficiency Calculator for Pumps and Fans",
+      "inputs": [
+        {
+          "id": "specific_work",
+          "label": "Specific Work (w)",
+          "type": "number",
+          "unit": "J/kg",
+          "defaultValue": 100
+        },
+        {
+          "id": "specific_work_loss_hydraulic",
+          "label": "Specific Work Loss - Hydraulic (wl)",
+          "type": "number",
+          "unit": "J/kg",
+          "defaultValue": 10
+        },
+        {
+          "id": "power_motor_shaft",
+          "label": "Power from Motor to Shaft (P)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 1000
+        },
+        {
+          "id": "power_loss_transmission",
+          "label": "Power Loss in Transmission (Pl)",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 50
+        },
+        {
+          "id": "volume_flow_out",
+          "label": "Volume Flow Out (q)",
+          "type": "number",
+          "unit": "m³/s",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "leakage_volume_flow",
+          "label": "Leakage Volume Flow (ql)",
+          "type": "number",
+          "unit": "m³/s",
+          "defaultValue": 0.005
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hydraulic_efficiency",
+          "label": "Hydraulic Efficiency (ηh)",
+          "formula": "inputs.specific_work / (inputs.specific_work + inputs.specific_work_loss_hydraulic)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "mechanical_efficiency",
+          "label": "Mechanical Efficiency (ηm)",
+          "formula": "(inputs.power_motor_shaft - inputs.power_loss_transmission) / inputs.power_motor_shaft",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "volumetric_efficiency",
+          "label": "Volumetric Efficiency (ηv)",
+          "formula": "inputs.volume_flow_out / (inputs.volume_flow_out + inputs.leakage_volume_flow)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "overall_efficiency",
+          "label": "Overall Efficiency (η)",
+          "formula": "(inputs.specific_work / (inputs.specific_work + inputs.specific_work_loss_hydraulic)) * ((inputs.power_motor_shaft - inputs.power_loss_transmission) / inputs.power_motor_shaft) * (inputs.volume_flow_out / (inputs.volume_flow_out + inputs.leakage_volume_flow))",
+          "format": "decimal",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Efficiency Components Reference",
+      "headers": [
+        "Efficiency Type",
+        "Formula",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Hydraulic Efficiency (ηh)",
+          "w / (w + wl)",
+          "Accounts for friction, acceleration/retardation, and flow direction changes"
+        ],
+        [
+          "Mechanical Efficiency (ηm)",
+          "(P - Pl) / P",
+          "Accounts for losses in transmission gears and bearings"
+        ],
+        [
+          "Volumetric Efficiency (ηv)",
+          "q / (q + ql)",
+          "Accounts for fluid leakage between impeller and casing"
+        ],
+        [
+          "Overall Efficiency (η)",
+          "ηh × ηm × ηv",
+          "Product of all three efficiency components"
+        ]
+      ]
+    }
+  ]
+}

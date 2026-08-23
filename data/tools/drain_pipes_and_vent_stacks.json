@@ -1,0 +1,59 @@
+{
+  "id": "drain_pipes_and_vent_stacks",
+  "title": "Drain Pipes and Vent Stacks",
+  "description": "Vents transport sewer gas through the building to open air space. Properly installed vents prevent traps from siphoning and sewage gas from leaking into the interior building. This tool provides reference data for individual vents, relief vents, circuit vents, branch vents, and stack vents, including sizing requirements and maximum length specifications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Vent Type",
+        "Description",
+        "Minimum Size",
+        "Application",
+        "Key Requirement"
+      ],
+      "rows": [
+        [
+          "Individual Vent",
+          "Serves individual fixtures",
+          "1 1/4 inches (32 mm)",
+          "One fixture, may connect to another vent extending to open air",
+          "At least one-half the size of the drain it vents"
+        ],
+        [
+          "Relief Vent",
+          "Provides additional air to drainage system where primary vent is too far",
+          "1 1/4 inches (32 mm)",
+          "Supplementary venting where primary vent distance is inadequate",
+          "At least one-half the size of the drain it vents"
+        ],
+        [
+          "Circuit Vent",
+          "Used with more than one fixture",
+          "1 1/4 inches (32 mm)",
+          "Multiple fixtures, extends to open air or connects to another vent",
+          "At least one-half the size of the drain it vents"
+        ],
+        [
+          "Branch Vent",
+          "Extends horizontally connecting multiple vents together",
+          "Varies",
+          "Connects and consolidates multiple individual vents",
+          "Sized based on connected load"
+        ],
+        [
+          "Stack Vent",
+          "Used solely for the purpose of venting",
+          "Varies",
+          "Dedicated venting for drainage system",
+          "Sized by Developed Length method"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Piping Materials\n\nMaterials used in drainage and vent pipes according U.S. standards:\n\n- **ABS Plastic Pipe**: Schedule 40, DR 22 (PS 200) and DR 24 (PS 140)\n  - Standards: ASTM D2661, ASTM F628, ASTM F1488, CSA B181.1\n\n- **Cast-Iron Pipe**\n  - Standards: ASTM A74, ASTM A888, CISPI 301\n\n- **Copper or Copper-Alloy Pipe**\n  - Standards: ASTM B42, ASTM B43, ASTM B302\n\n- **Copper or Copper-Alloy Tubing** (Type K, L, M or DWV)\n  - Standards: ASTM B75, ASTM B88, ASTM B251, ASTM B306\n\n- **Galvanized Steel Pipe**\n  - Standards: ASTM A53\n\n- **Glass Pipe**\n  - Standards: ASTM C1053\n\n- **Polyolefin Pipe**\n  - Standards: ASTM F1412, CSA B181.3\n\n- **PVC Plastic Pipe**: Schedule 40, DR 22 (PS 200), and DR 24 (PS 140)\n  - Standards: ASTM D2665, ASTM F891, ASTM F1488, CSA B181.2\n\n- **PVC Plastic Pipe** (3.25-inch O.D.)\n  - Standards: ASTM D2949, ASTM F1488\n\n- **PVDF Plastic Pipe**\n  - Standards: ASTM F1673, CSA B181.3\n\n- **Stainless Steel Drainage Systems** (Types 304 and 316L)\n  - Standards: ASME A112.3.1"
+    }
+  ]
+}

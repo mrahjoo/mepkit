@@ -1,0 +1,132 @@
+{
+  "id": "pumps___suction_specific_speed",
+  "title": "Pumps - Suction Specific Speed",
+  "description": "Suction Specific Speed (Nss) calculator for evaluating pump operating conditions on the suction side. Used to determine pump geometry selection and estimate safe operating ranges without cavitation.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Suction Specific Speed Calculator\n\nSubction Specific Speed (Nss) is used to determine pump geometry selection and evaluate operating conditions on the suction side of pumps.\n\n**Formula:**\n\nNss = ω × q^(1/2) / NPSHr^(3/4)\n\nWhere:\n- **ω** = pump shaft rotational speed (rpm)\n- **q** = flow rate capacity at Best Efficiency Point (BEP)\n- **NPSHr** = Required Net Positive Suction Head at BEP\n\n**Safe Operating Range:** Nss should be below 9000 (US gpm units) to avoid cavitation.\n\n**Unit Conversions:**\n- Nss (US gpm) = 1.63 × Nss (metric l/s) = 0.86 × Nss (metric m3/h)\n- Nss (metric l/s) = 0.614 × Nss (US gpm)\n- Nss (metric l/s) = 0.67 × Nss (British gpm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "omega",
+          "label": "Pump Shaft Rotational Speed (ω)",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 1750
+        },
+        {
+          "id": "q",
+          "label": "Flow Rate Capacity (q)",
+          "type": "number",
+          "unit": "gpm",
+          "defaultValue": 500
+        },
+        {
+          "id": "npshr",
+          "label": "Required Net Positive Suction Head (NPSHr)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 13.3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "nss",
+          "label": "Suction Specific Speed (Nss)",
+          "formula": "inputs.omega * Math.pow(inputs.q, 0.5) / Math.pow(inputs.npshr, 0.75)",
+          "unit": "(dimensionless)",
+          "format": "decimal"
+        },
+        {
+          "id": "nss_safe",
+          "label": "Exceeds Safe Limit (9000)?",
+          "formula": "inputs.omega * Math.pow(inputs.q, 0.5) / Math.pow(inputs.npshr, 0.75) > 9000 ? 'Yes - Risk of Cavitation' : 'No - Safe Range'",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Additional Calculations\n\n### Calculate Required NPSHr from Target Nss\n\nIf you want to find the Required NPSHr for a maximum acceptable Suction Specific Speed:\n\nNPSHr = (ω × q^(1/2) / Nss)^(4/3)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "omega_2",
+          "label": "Pump Shaft Rotational Speed (ω)",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 3000
+        },
+        {
+          "id": "q_2",
+          "label": "Flow Rate Capacity (q)",
+          "type": "number",
+          "unit": "gpm",
+          "defaultValue": 1000
+        },
+        {
+          "id": "nss_target",
+          "label": "Target Suction Specific Speed (Nss)",
+          "type": "number",
+          "unit": "(dimensionless)",
+          "defaultValue": 9000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "npshr_calc",
+          "label": "Required Net Positive Suction Head (NPSHr)",
+          "formula": "Math.pow((inputs.omega_2 * Math.pow(inputs.q_2, 0.5)) / inputs.nss_target, 4/3)",
+          "unit": "ft",
+          "format": "decimal"
+        },
+        {
+          "id": "npsha_safe",
+          "label": "Actual NPSHa with 50% Safety Margin",
+          "formula": "Math.pow((inputs.omega_2 * Math.pow(inputs.q_2, 0.5)) / inputs.nss_target, 4/3) * 1.5",
+          "unit": "ft",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## NPSHa vs NPSHr with Safety Margin\n\nThe Actual Net Positive Suction Head (NPSHa) should include a safety margin:\n\nNPSHa = NPSHr × Sr\n\nWhere Sr (safety ratio) is typically 1.5 (50% safety margin) or higher for critical applications.\n\n### To Increase Available Head on Suction Side:\n- Increase suction pipe dimensions\n- Shorten suction pipes\n- Remove or reduce components (valves, filters) in suction lines\n- Increase static pressure in the system\n- Lower the pump installation (increases static pressure)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "npshr_safety",
+          "label": "Required Net Positive Suction Head (NPSHr)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 23
+        },
+        {
+          "id": "safety_ratio",
+          "label": "Safety Ratio (Sr)",
+          "type": "number",
+          "unit": "(dimensionless)",
+          "defaultValue": 1.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "npsha_result",
+          "label": "Actual Net Positive Suction Head (NPSHa)",
+          "formula": "inputs.npshr_safety * inputs.safety_ratio",
+          "unit": "ft",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

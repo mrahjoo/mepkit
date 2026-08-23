@@ -1,0 +1,84 @@
+{
+  "id": "energy_balance_and_energy_ratio",
+  "title": "Energy Balance and Energy Ratio",
+  "description": "Energy balance and energy payback ratio calculator. Calculate system energy output related to system energy input.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Energy Balance and Energy Ratio\n\nThe terms \"energy balance\" and \"energy payback ratio\", or \"energy ratio\", are used to describe system energy output related to system energy input.\n\n## Energy Balance Formula\n\n**dE = Eo - Ei**\n\nWhere:\n- **dE** = energy balance\n- **Eo** = energy output\n- **Ei** = energy input\n\n## Energy Ratio Formula\n\n**ER = Eo / Ei**\n\nWhere:\n- **ER** = energy ratio\n- **Eo** = energy output\n- **Ei** = energy input"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "energy_output",
+          "label": "Energy Output (Eo)",
+          "type": "number",
+          "unit": "kWh",
+          "defaultValue": 1000
+        },
+        {
+          "id": "energy_input",
+          "label": "Energy Input (Ei)",
+          "type": "number",
+          "unit": "kWh",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy_balance",
+          "label": "Energy Balance (dE)",
+          "formula": "inputs.energy_output - inputs.energy_input",
+          "unit": "kWh",
+          "format": "decimal"
+        },
+        {
+          "id": "energy_ratio",
+          "label": "Energy Ratio (ER)",
+          "formula": "inputs.energy_output / inputs.energy_input",
+          "unit": "ratio",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "type": "bar",
+        "title": {
+          "text": "Energy Balance Analysis"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Energy Output",
+            "Energy Input",
+            "Energy Balance"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Energy (kWh)"
+        },
+        "series": [
+          {
+            "data": [
+              "inputs.energy_output",
+              "inputs.energy_input",
+              "inputs.energy_output - inputs.energy_input"
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

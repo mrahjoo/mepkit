@@ -1,0 +1,12 @@
+{
+  "id": "fasteners___type_chart",
+  "title": "Fasteners - Type Chart",
+  "description": "Wood screws, machine screws, sheet metal screws, self drilling SMS and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Fastener Categories\n\nWood Screws, Machine Screws, Sheet Metal Screws, Self Drilling SMS, Hex Bolts, Carriage Bolts, Lag Bolts, Set Screws, Socket Screws, Eye Bolts, Eye Lags, U-Bolts, J-Bolts, Hanger Bolts\n\n## Head Styles\n\nFlat, Oval, Pan, Truss, Round, Hex, Hex Washer, Slotted Hex Washer, Socket Cap, Button\n\n## Drive Types\n\nPhillips and Frearson, Slotted, Combination, Socket, Hex, Allen\n\n## Nut Types\n\nHex, Nylon Insert Lock, Jam, Nylon Insert Jam Lock, Wing, Cap, Acorn, Flange, Tee, Square, Prevailing Torque Lock, K-Lock or Keep, Coupling\n\n## Washer Types\n\nFlat, Fender, Finishing, Split Lock, External Toot Lock, Internal Toot Lock, Square, Dock, Ogee\n\n**Reference:** [Bolt Depot Fastener Type Chart](http://www.boltdepot.com/fastener-information/Printable-Tools/Type-Chart.pdf)"
+    }
+  ]
+}

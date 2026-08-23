@@ -1,0 +1,59 @@
+{
+  "id": "dry_bulb__wet_bulb_and_dew_point_temperatures",
+  "title": "Dry Bulb, Wet Bulb and Dew Point Temperatures",
+  "description": "Determine the state of humid air using Dry Bulb, Wet Bulb, and Dew Point temperatures. These three parameters characterize moist air properties including water vapor content and enthalpy.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nThe **Dry Bulb**, **Wet Bulb**, and **Dew Point** temperatures are fundamental properties used to determine the state of humid air. Knowing any two of these values is sufficient to fully characterize the thermodynamic state of moist air.\n\n### Dry Bulb Temperature (Tdb)\nThe dry bulb temperature is the ambient air temperature measured by a standard thermometer shielded from radiation and moisture. It indicates the heat content of the air and is typically measured in °C, °F, or K.\n\n### Wet Bulb Temperature (Twb)\nThe wet bulb temperature is the adiabatic saturation temperature, measured using a thermometer with a wet muslin bulb. It represents the temperature achievable through evaporative cooling and always falls between the dry bulb and dew point temperatures.\n\n### Dew Point Temperature (Tdp)\nThe dew point is the temperature at which water vapor begins to condense from the air. It indicates the absolute moisture content and is always lower than or equal to the dry bulb temperature."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Description",
+        "Typical Range",
+        "Units"
+      ],
+      "rows": [
+        [
+          "Dry Bulb Temperature",
+          "Tdb",
+          "Ambient air temperature measured by standard thermometer",
+          "-50 to +60",
+          "°C or °F"
+        ],
+        [
+          "Wet Bulb Temperature",
+          "Twb",
+          "Adiabatic saturation temperature; measured with wet muslin wrapped bulb",
+          "-30 to +50",
+          "°C or °F"
+        ],
+        [
+          "Dew Point Temperature",
+          "Tdp",
+          "Temperature at which water vapor begins to condense",
+          "-50 to +40",
+          "°C or °F"
+        ],
+        [
+          "Relative Humidity",
+          "RH",
+          "Ratio of actual water vapor pressure to saturation pressure",
+          "0 to 100",
+          "%"
+        ],
+        [
+          "Absolute Humidity",
+          "AH",
+          "Mass of water vapor per unit volume of air",
+          "0 to ~30",
+          "g/m³"
+        ]
+      ]
+    }
+  ]
+}

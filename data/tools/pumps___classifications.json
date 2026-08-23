@@ -1,0 +1,148 @@
+{
+  "id": "pumps___classifications",
+  "title": "Pumps - Classifications",
+  "description": "Comprehensive guide to pump classifications including Centrifugal Pumps (Roto-dynamic) and Positive Displacement Pumps, with comparison of key characteristics such as flow rate, pressure head, viscosity effects, mechanical efficiency, and NPSH considerations.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pumps - Classifications\n\nPumps are in general classified as **Centrifugal Pumps** (or Roto-dynamic pumps) and **Positive Displacement Pumps**.\n\n## Centrifugal Pumps (Roto-dynamic pumps)\n\nCentrifugal or roto-dynamic pumps produce a head and a flow by increasing the velocity of the liquid through the machine with the help of a rotating vane impeller. They include radial, axial and mixed flow units.\n\n### Types of Centrifugal Pumps:\n- End suction pumps\n- In-line pumps\n- Double suction pumps\n- Vertical multistage pumps\n- Horizontal multistage pumps\n- Submersible pumps\n- Self-priming pumps\n- Axial-flow pumps\n- Regenerative pumps\n\n## Positive Displacement Pumps\n\nPositive displacement pumps operate by alternating filling a cavity and then displacing a given volume of liquid. They deliver a constant volume of liquid for each cycle independent of discharge pressure or head.\n\n### Types of Positive Displacement Pumps:\n- **Reciprocating pumps**: piston, plunger, and diaphragm\n- **Power pumps**\n- **Steam pumps**\n- **Rotary pumps**: gear, lobe, screw, vane, regenerative (peripheral), and progressive cavity"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Characteristic",
+        "Centrifugal Pump",
+        "Positive Displacement Pump"
+      ],
+      "rows": [
+        [
+          "Flow Rate & Pressure Head",
+          "Varying flow depending on system pressure or head",
+          "More or less constant flow regardless of system pressure or head"
+        ],
+        [
+          "Pressure Generated",
+          "Lower pressure",
+          "Generally makes more pressure"
+        ],
+        [
+          "Effect of Viscosity on Flow",
+          "Flow is reduced when viscosity is increased",
+          "Flow is increased when viscosity is increased"
+        ],
+        [
+          "Suitability for Viscosity",
+          "Becomes very inefficient at even modest viscosity",
+          "Better suited for higher viscosity applications"
+        ],
+        [
+          "System Pressure Effect",
+          "May have dramatic effect on flow rate",
+          "Little or no effect on flow rate"
+        ],
+        [
+          "Mechanical Efficiency",
+          "Affected by system pressure changes",
+          "Less affected by system pressure changes"
+        ],
+        [
+          "NPSH Variation",
+          "Varies as function of flow determined by pressure",
+          "Varies as function of flow determined by speed"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Pump Classification Overview",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "item"
+        },
+        "legend": {
+          "orient": "vertical",
+          "left": "left"
+        },
+        "series": [
+          {
+            "name": "Pump Types",
+            "type": "treemap",
+            "label": {
+              "show": true
+            },
+            "data": [
+              {
+                "name": "Centrifugal Pumps",
+                "value": 100,
+                "children": [
+                  {
+                    "name": "End Suction",
+                    "value": 15
+                  },
+                  {
+                    "name": "In-line",
+                    "value": 15
+                  },
+                  {
+                    "name": "Double Suction",
+                    "value": 10
+                  },
+                  {
+                    "name": "Vertical Multistage",
+                    "value": 15
+                  },
+                  {
+                    "name": "Horizontal Multistage",
+                    "value": 15
+                  },
+                  {
+                    "name": "Submersible",
+                    "value": 10
+                  },
+                  {
+                    "name": "Self-priming",
+                    "value": 10
+                  },
+                  {
+                    "name": "Axial-flow",
+                    "value": 5
+                  },
+                  {
+                    "name": "Regenerative",
+                    "value": 5
+                  }
+                ]
+              },
+              {
+                "name": "Positive Displacement",
+                "value": 100,
+                "children": [
+                  {
+                    "name": "Reciprocating (Piston/Plunger/Diaphragm)",
+                    "value": 30
+                  },
+                  {
+                    "name": "Power Pumps",
+                    "value": 20
+                  },
+                  {
+                    "name": "Steam Pumps",
+                    "value": 20
+                  },
+                  {
+                    "name": "Rotary (Gear/Lobe/Screw/Vane)",
+                    "value": 30
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "",
+  "title": "",
+  "description": "",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Information"
+      ],
+      "rows": [
+        [
+          "Details omitted."
+        ]
+      ]
+    }
+  ]
+}

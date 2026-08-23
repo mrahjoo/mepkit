@@ -1,0 +1,230 @@
+{
+  "id": "poisson_s_ratio___definition__values_for_materials",
+  "title": "Poisson's Ratio Calculator",
+  "description": "Calculate Poisson's ratio from strain measurements and explore Poisson's ratio values for common materials. Poisson's ratio describes the relationship between transverse strain and longitudinal strain when a material is deformed.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Poisson's Ratio Calculator\n\nPoisson's ratio (μ) is the ratio of transverse strain to longitudinal strain when a material is deformed:\n\n**μ = - εt / εl**\n\nWhere:\n- εt = transverse strain (lateral contraction)\n- εl = longitudinal strain (axial extension)\n\nFor most common materials, Poisson's ratio ranges from 0 to 0.5.",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "transverse_strain",
+          "label": "Transverse Strain (εt)",
+          "type": "number",
+          "defaultValue": 0.001,
+          "unit": "m/m"
+        },
+        {
+          "id": "longitudinal_strain",
+          "label": "Longitudinal Strain (εl)",
+          "type": "number",
+          "defaultValue": 0.003,
+          "unit": "m/m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "poisson_ratio",
+          "label": "Poisson's Ratio (μ)",
+          "formula": "-(inputs.transverse_strain / inputs.longitudinal_strain)",
+          "format": "decimal",
+          "unit": "dimensionless"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Poisson's Ratio (μ)"
+      ],
+      "rows": [
+        [
+          "Upper limit",
+          0.5
+        ],
+        [
+          "Aluminum",
+          0.334
+        ],
+        [
+          "Aluminum, 6061-T6",
+          0.35
+        ],
+        [
+          "Aluminum, 2024-T4",
+          0.32
+        ],
+        [
+          "Beryllium Copper",
+          0.285
+        ],
+        [
+          "Brass, 70-30",
+          0.331
+        ],
+        [
+          "Brass, cast",
+          0.357
+        ],
+        [
+          "Bronze",
+          0.34
+        ],
+        [
+          "Clay",
+          0.41
+        ],
+        [
+          "Concrete",
+          "0.1 - 0.2"
+        ],
+        [
+          "Copper",
+          0.355
+        ],
+        [
+          "Cork",
+          0
+        ],
+        [
+          "Glass, Soda",
+          0.22
+        ],
+        [
+          "Glass, Float",
+          "0.2 - 0.27"
+        ],
+        [
+          "Granite",
+          "0.2 - 0.3"
+        ],
+        [
+          "Ice",
+          0.33
+        ],
+        [
+          "Inconel",
+          "0.27 - 0.38"
+        ],
+        [
+          "Iron, Cast - gray",
+          0.211
+        ],
+        [
+          "Iron, Cast",
+          "0.22 - 0.30"
+        ],
+        [
+          "Iron, Ductile",
+          "0.26 - 0.31"
+        ],
+        [
+          "Iron, Malleable",
+          0.271
+        ],
+        [
+          "Lead",
+          0.431
+        ],
+        [
+          "Limestone",
+          "0.2 - 0.3"
+        ],
+        [
+          "Magnesium",
+          0.35
+        ],
+        [
+          "Magnesium Alloy",
+          0.281
+        ],
+        [
+          "Marble",
+          "0.2 - 0.3"
+        ],
+        [
+          "Molybdenum",
+          0.307
+        ],
+        [
+          "Monel metal",
+          0.315
+        ],
+        [
+          "Nickel Silver",
+          0.322
+        ],
+        [
+          "Nickel Steel",
+          0.291
+        ],
+        [
+          "Polystyrene",
+          0.34
+        ],
+        [
+          "Phosphor Bronze",
+          0.359
+        ],
+        [
+          "Rubber",
+          "0.48 - ~0.5"
+        ],
+        [
+          "Sand",
+          0.29
+        ],
+        [
+          "Sandy loam",
+          0.31
+        ],
+        [
+          "Sandy clay",
+          0.37
+        ],
+        [
+          "Stainless Steel 18-8",
+          0.305
+        ],
+        [
+          "Steel, cast",
+          0.265
+        ],
+        [
+          "Steel, Cold-rolled",
+          0.287
+        ],
+        [
+          "Steel, high carbon",
+          0.295
+        ],
+        [
+          "Steel, mild",
+          0.303
+        ],
+        [
+          "Titanium (99.0 Ti)",
+          0.32
+        ],
+        [
+          "Wrought iron",
+          0.278
+        ],
+        [
+          "Z-nickel",
+          0.36
+        ],
+        [
+          "Zinc",
+          0.331
+        ]
+      ]
+    }
+  ]
+}

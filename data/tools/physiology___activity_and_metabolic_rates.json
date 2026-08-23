@@ -1,0 +1,81 @@
+{
+  "id": "physiology___activity_and_metabolic_rates",
+  "title": "Physiology - Activity and Metabolic Rates",
+  "description": "Heat production from the human body vs. activity. Reference table showing metabolic rates in W/m² and Met units for various activities, with mean human body surface area of 1.8 m².",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Activity",
+        "Metabolic Rate (W/m²)",
+        "Metabolic Rate (Met)"
+      ],
+      "rows": [
+        [
+          "Laying down",
+          46,
+          0.8
+        ],
+        [
+          "Sitting, relaxed",
+          58,
+          1
+        ],
+        [
+          "Standing, relaxed",
+          70,
+          1.2
+        ],
+        [
+          "Sitting activity (office work, school etc.)",
+          70,
+          1.2
+        ],
+        [
+          "Standing activity (shop, laboratory etc.)",
+          93,
+          1.6
+        ],
+        [
+          "Moving activity (house work, working at machines etc.)",
+          116,
+          2
+        ],
+        [
+          "Harder activity (hard work at machines, work shops etc.)",
+          165,
+          2.8
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "activity_metabolic_rate_wm2",
+          "label": "Metabolic Rate (W/m²)",
+          "type": "number",
+          "defaultValue": 70,
+          "unit": "W/m²"
+        },
+        {
+          "id": "body_surface_area",
+          "label": "Body Surface Area",
+          "type": "number",
+          "defaultValue": 1.8,
+          "unit": "m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_heat_production",
+          "label": "Total Heat Production",
+          "formula": "inputs.activity_metabolic_rate_wm2 * inputs.body_surface_area",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

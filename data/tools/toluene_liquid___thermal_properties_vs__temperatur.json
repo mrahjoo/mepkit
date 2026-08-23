@@ -1,0 +1,117 @@
+{
+  "id": "toluene_liquid___thermal_properties_vs__temperatur",
+  "title": "Toluene Liquid - Thermal Properties vs. Temperature",
+  "description": "Density, specific heat, thermal conductivity and more. Thermal properties of Toluene (C7H8) as a function of temperature.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Toluene Liquid - Thermal Properties vs. Temperature\n\nToluene (toluol) is a clear water-insoluble liquid with the typical smell of paint thinner. This calculator allows you to look up or interpolate thermal properties of liquid toluene (C7H8) across a temperature range.\n\n## Available Temperature Range\n- 0°C to 200°C\n\n## Properties Calculated\n- Density (kg/m³)\n- Specific Heat (kJ/kg K)\n- Thermal Conductivity (W/m K)\n- Dynamic Viscosity (Pa s × 10⁻⁶)\n- Prandtl Number"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "IF(inputs.temperature <= 0, 885, IF(inputs.temperature < 20, 885 - (885-867)/20*inputs.temperature, IF(inputs.temperature < 50, 867 - (867-839)/30*(inputs.temperature-20), IF(inputs.temperature < 100, 839 - (839-793)/50*(inputs.temperature-50), IF(inputs.temperature < 200, 793 - (793-672)/100*(inputs.temperature-100), 672)))))",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat",
+          "unit": "kJ/kg K",
+          "formula": "IF(inputs.temperature <= 0, 1.612, IF(inputs.temperature < 20, 1.612 + (1.717-1.612)/20*inputs.temperature, IF(inputs.temperature < 50, 1.717 + (1.800-1.717)/30*(inputs.temperature-20), IF(inputs.temperature < 100, 1.800 + (1.968-1.800)/50*(inputs.temperature-50), IF(inputs.temperature < 200, 1.968 + (2.617-1.968)/100*(inputs.temperature-100), 2.617)))))",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "unit": "W/m K",
+          "formula": "IF(inputs.temperature <= 0, 0.144, IF(inputs.temperature < 20, 0.144 - (0.144-0.141)/20*inputs.temperature, IF(inputs.temperature < 50, 0.141 - (0.141-0.136)/30*(inputs.temperature-20), IF(inputs.temperature < 100, 0.136 - (0.136-0.128)/50*(inputs.temperature-50), IF(inputs.temperature < 200, 0.128 - (0.128-0.108)/100*(inputs.temperature-100), 0.108)))))",
+          "format": "decimal"
+        },
+        {
+          "id": "dynamic_viscosity",
+          "label": "Dynamic Viscosity (×10⁻⁶)",
+          "unit": "Pa s",
+          "formula": "IF(inputs.temperature <= 0, 773, IF(inputs.temperature < 20, 773 - (773-583)/20*inputs.temperature, IF(inputs.temperature < 50, 583 - (583-419)/30*(inputs.temperature-20), IF(inputs.temperature < 100, 419 - (419-269)/50*(inputs.temperature-50), IF(inputs.temperature < 200, 269 - (269-133)/100*(inputs.temperature-100), 133)))))",
+          "format": "decimal"
+        },
+        {
+          "id": "prandtl_number",
+          "label": "Prandtl Number",
+          "formula": "IF(inputs.temperature <= 0, 8.65, IF(inputs.temperature < 20, 8.65 - (8.65-7.14)/20*inputs.temperature, IF(inputs.temperature < 50, 7.14 - (7.14-5.55)/30*(inputs.temperature-20), IF(inputs.temperature < 100, 5.55 - (5.55-4.14)/50*(inputs.temperature-50), IF(inputs.temperature < 200, 4.14 - (4.14-3.22)/100*(inputs.temperature-100), 3.22)))))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Specific Heat (kJ/kg K)",
+        "Thermal Conductivity (W/m K)",
+        "Dynamic Viscosity (Pa s ×10⁻⁶)",
+        "Prandtl Number"
+      ],
+      "rows": [
+        [
+          0,
+          885,
+          1.612,
+          0.144,
+          773,
+          8.65
+        ],
+        [
+          20,
+          867,
+          1.717,
+          0.141,
+          583,
+          7.14
+        ],
+        [
+          50,
+          839,
+          1.8,
+          0.136,
+          419,
+          5.55
+        ],
+        [
+          100,
+          793,
+          1.968,
+          0.128,
+          269,
+          4.14
+        ],
+        [
+          200,
+          672,
+          2.617,
+          0.108,
+          133,
+          3.22
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Unit Conversions\n\n- 1 kg/m³ = 0.0624 lb/ft³\n- 1 kJ/kgK = 0.2389 Btu/lbm°F\n- 1 W/(m K) = 6.935 (Btu in)/(ft² h °F)\n- 1 Pa s (N s/m²) = 10 P (Poise) = 10³ cP = 0.1020 kp s/m² = 0.6721 lb/(ft s)"
+    }
+  ]
+}

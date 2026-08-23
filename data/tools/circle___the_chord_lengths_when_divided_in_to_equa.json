@@ -1,0 +1,246 @@
+{
+  "id": "circle___the_chord_lengths_when_divided_in_to_equa",
+  "title": "Circle - Chord Lengths when Divided into Equal Segments",
+  "description": "Calculate chord lengths when dividing the circumference of a circle into an equal number of segments. This tool helps determine chord lengths for both unit circles and circles with specific radii.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "chord_calculator",
+      "content": "Calculate chord lengths based on radius and number of segments",
+      "inputs": [
+        {
+          "id": "radius",
+          "label": "Radius",
+          "type": "number",
+          "defaultValue": 3,
+          "unit": "m"
+        },
+        {
+          "id": "segments",
+          "label": "Number of Segments",
+          "type": "number",
+          "defaultValue": 24,
+          "unit": "segments"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "center_angle",
+          "label": "Center Angle (θ)",
+          "formula": "360 / inputs.segments",
+          "unit": "degrees"
+        },
+        {
+          "id": "single_chord_length",
+          "label": "Single Chord Length (L)",
+          "formula": "2 * inputs.radius * Math.sin((Math.PI / 180) * (180 / inputs.segments))",
+          "unit": "m"
+        },
+        {
+          "id": "total_chord_length",
+          "label": "Total Chord Length",
+          "formula": "inputs.segments * 2 * inputs.radius * Math.sin((Math.PI / 180) * (180 / inputs.segments))",
+          "unit": "m"
+        },
+        {
+          "id": "circumference",
+          "label": "Circle Circumference",
+          "formula": "2 * Math.PI * inputs.radius",
+          "unit": "m"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "chord_visualization",
+      "content": "Visualization of chord lengths as the number of segments increases",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Number of Segments",
+          "data": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            24,
+            30,
+            36,
+            45,
+            60,
+            90,
+            120,
+            180,
+            360
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Chord Length (Unit Circle)"
+        },
+        "series": [
+          {
+            "name": "Single Chord Length",
+            "type": "line",
+            "data": [
+              3.1416,
+              1.5708,
+              1.0472,
+              0.7854,
+              0.6283,
+              0.5236,
+              0.4488,
+              0.3927,
+              0.3491,
+              0.3142,
+              0.2618,
+              0.2094,
+              0.1745,
+              0.1397,
+              0.1047,
+              0.0698,
+              0.0524,
+              0.0349,
+              0.0175
+            ],
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "id": "chord_table",
+      "content": "Detailed reference table of chord lengths for unit circles",
+      "headers": [
+        "Number of Segments (n)",
+        "Center Angle (θ) - degrees",
+        "Single Chord Length (L)",
+        "Total Chord Length"
+      ],
+      "rows": [
+        [
+          2,
+          180,
+          3.1416,
+          2
+        ],
+        [
+          4,
+          90,
+          1.5708,
+          1.4142
+        ],
+        [
+          6,
+          60,
+          1.0472,
+          1
+        ],
+        [
+          8,
+          45,
+          0.7854,
+          0.7654
+        ],
+        [
+          10,
+          36,
+          0.6283,
+          0.618
+        ],
+        [
+          12,
+          30,
+          0.5236,
+          0.5176
+        ],
+        [
+          14,
+          25.7143,
+          0.4488,
+          0.445
+        ],
+        [
+          16,
+          22.5,
+          0.3927,
+          0.3902
+        ],
+        [
+          18,
+          20,
+          0.3491,
+          0.3473
+        ],
+        [
+          20,
+          18,
+          0.3142,
+          0.3129
+        ],
+        [
+          24,
+          15,
+          0.2618,
+          0.2611
+        ],
+        [
+          30,
+          12,
+          0.2094,
+          0.2091
+        ],
+        [
+          36,
+          10,
+          0.1745,
+          0.1743
+        ],
+        [
+          45,
+          8,
+          0.1396,
+          0.1396
+        ],
+        [
+          60,
+          6,
+          0.1047,
+          0.1047
+        ],
+        [
+          90,
+          4,
+          0.0698,
+          0.0698
+        ],
+        [
+          120,
+          3,
+          0.0524,
+          0.0524
+        ],
+        [
+          180,
+          2,
+          0.0349,
+          0.0349
+        ],
+        [
+          360,
+          1,
+          0.0175,
+          0.0175
+        ]
+      ]
+    }
+  ]
+}

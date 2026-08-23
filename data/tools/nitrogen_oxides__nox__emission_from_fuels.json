@@ -1,0 +1,128 @@
+{
+  "id": "nitrogen_oxides__nox__emission_from_fuels",
+  "title": "Nitrogen Oxides (NOx) Emission from Fuels",
+  "description": "Emission of Nitrogen Oxides - NOx - with combustion of fuels like oil, coal, propane and more. NOx emissions contribute to eutrophication, acidification and the formation of ground-level ozone.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## NOx Emission from Fuels\n\nCalculate Nitrogen Oxides (NOx) emissions from fuel combustion. Note that emissions vary widely depending on application temperatures and air/fuel ratios.\n\n**Important Notes:**\n- Higher combustion temperatures increase NOx emissions\n- Higher air/fuel ratios increase NOx emissions\n- Hydrogen produces zero theoretical emissions, but in practice produces more NOx than natural gas due to high flame temperature\n- Catalytic systems on modern vehicles reduce NOx emissions"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "fuel_type",
+          "label": "Fuel Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Oil",
+              "value": 3
+            },
+            {
+              "label": "Kerosene",
+              "value": 3
+            },
+            {
+              "label": "Coal",
+              "value": 4.5
+            },
+            {
+              "label": "Propane",
+              "value": 2.3
+            },
+            {
+              "label": "Gasoline",
+              "value": 27
+            },
+            {
+              "label": "Hydrogen",
+              "value": 0
+            },
+            {
+              "label": "Natural Gas",
+              "value": 1
+            },
+            {
+              "label": "Butane",
+              "value": 2.3
+            },
+            {
+              "label": "Wood, Birch 20% moisture content",
+              "value": 0.7
+            }
+          ]
+        },
+        {
+          "id": "fuel_mass",
+          "label": "Fuel Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "nox_emission",
+          "label": "NOx Emission",
+          "formula": "inputs.fuel_type * inputs.fuel_mass",
+          "unit": "10^-3 kg NOx",
+          "format": "decimal"
+        },
+        {
+          "id": "nox_emission_g",
+          "label": "NOx Emission",
+          "formula": "inputs.fuel_type * inputs.fuel_mass * 1000",
+          "unit": "mg NOx",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel Type",
+        "Emission (10^-3 kg NOx/kg fuel)"
+      ],
+      "rows": [
+        [
+          "Oil",
+          3
+        ],
+        [
+          "Kerosene",
+          3
+        ],
+        [
+          "Coal",
+          4.5
+        ],
+        [
+          "Propane",
+          2.3
+        ],
+        [
+          "Gasoline",
+          27
+        ],
+        [
+          "Hydrogen",
+          0
+        ],
+        [
+          "Natural Gas",
+          1
+        ],
+        [
+          "Butane",
+          2.3
+        ],
+        [
+          "Wood, Birch 20% moisture content",
+          0.7
+        ]
+      ]
+    }
+  ]
+}

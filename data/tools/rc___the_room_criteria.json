@@ -1,0 +1,172 @@
+{
+  "id": "rc___the_room_criteria",
+  "title": "RC - the Room Criteria",
+  "description": "The Room Criteria (RC) is used to measure background noise in buildings for frequencies ranging 16 to 4000 Hz. RC requires a determination of the mid-frequency average level and the perceived balance between high and low frequency sound.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# RC - the Room Criteria\n\nThe Room Criteria (RC) is used to measure background noise in buildings over frequencies ranging **16 Hz** to **4000 Hz**.\n\nRC requires a determination of the mid-frequency average level and the perceived balance between high and low frequency sound.\n\n## Neutral (N) Criteria\nThe levels in the octave bands centered at 500 Hz and below must not exceed the octave-band levels of the reference spectrum by more than 5 dB at any point in the range; the levels in the octave bands centered at 1000 Hz and above must not exceed the octave-band level of the reference spectrum by more than 3 dB at any point in the range."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Room - Space Type",
+        "Recommended RC Level RC Curve",
+        "Equivalent Sound Level dB(A)"
+      ],
+      "rows": [
+        [
+          "Apartments",
+          "25 - 35 (N)",
+          "35 - 45"
+        ],
+        [
+          "Assembly Halls",
+          "25 - 30 (N)",
+          "35 - 40"
+        ],
+        [
+          "Churches",
+          "30 - 35 (N)",
+          "40 - 45"
+        ],
+        [
+          "Courtrooms",
+          "30 - 40 (N)",
+          "40 - 50"
+        ],
+        [
+          "Factories",
+          "40 - 65 (N)",
+          "50 - 75"
+        ],
+        [
+          "Hotels/Motels - Individual rooms or suites",
+          "30 - 35 (N)",
+          "35 - 45"
+        ],
+        [
+          "Hotels/Motels - Meeting or banquet rooms",
+          "25 - 35 (N)",
+          "35 - 45"
+        ],
+        [
+          "Hotels/Motels - Service and Support Areas",
+          "40 - 45 (N)",
+          "45 - 50"
+        ],
+        [
+          "Hotels/Motels - Halls, corridors, lobbies",
+          "35 - 40 (N)",
+          "50 - 55"
+        ],
+        [
+          "Offices - Conference rooms",
+          "25 - 30 (N)",
+          "35 - 40"
+        ],
+        [
+          "Offices - Private",
+          "30 - 35 (N)",
+          "40 - 45"
+        ],
+        [
+          "Offices - Open-plan areas",
+          "35 - 40 (N)",
+          "45 - 50"
+        ],
+        [
+          "Offices - Business machines/computers",
+          "40 - 45 (N)",
+          "50 - 55"
+        ],
+        [
+          "Hospitals and Clinics - Private rooms",
+          "25 - 30 (N)",
+          "35 - 40"
+        ],
+        [
+          "Hospitals and Clinics - Operating rooms",
+          "25 - 30 (N)",
+          "35 - 40"
+        ],
+        [
+          "Hospitals and Clinics - Wards",
+          "30 - 35 (N)",
+          "40 - 45"
+        ],
+        [
+          "Hospitals and Clinics - Laboratories",
+          "35 - 40 (N)",
+          "45 - 50"
+        ],
+        [
+          "Hospitals and Clinics - Corridors",
+          "30 - 35 (N)",
+          "40 - 45"
+        ],
+        [
+          "Hospitals and Clinics - Public areas",
+          "35 - 40 (N)",
+          "45 - 50"
+        ],
+        [
+          "Schools - Lecture and classrooms",
+          "25 - 30 (N)",
+          "35 - 40"
+        ],
+        [
+          "Schools - Open-plan classrooms",
+          "30 - 40 (N)",
+          "45 - 50"
+        ],
+        [
+          "Movie motion picture theaters",
+          "30 - 35 (N)",
+          "40 - 45"
+        ],
+        [
+          "Libraries",
+          "35 - 40 (N)",
+          "40 - 50"
+        ],
+        [
+          "Legitimate theaters",
+          "20 - 25 (N)",
+          "30 - 65"
+        ],
+        [
+          "Private Residences",
+          "25 - 35 (N)",
+          "35 - 45"
+        ],
+        [
+          "Restaurants",
+          "40 - 45 (N)",
+          "50 - 55"
+        ],
+        [
+          "TV Broadcast studios",
+          "15 - 25 (N)",
+          "25 - 35"
+        ],
+        [
+          "Recording Studios",
+          "15 - 20 (N)",
+          "25 - 30"
+        ],
+        [
+          "Concert and recital halls",
+          "15 - 20 (N)",
+          "25 - 30"
+        ],
+        [
+          "Sport Coliseums",
+          "45 - 55 (N)",
+          "55 - 65"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "hot_air_balloon_lifting_force_calculator",
+  "title": "Hot Air Balloon Lifting Force Calculator",
+  "description": "Calculate the lifting force from a hot air balloon based on the density difference between balloon air and surrounding air, and the balloon volume using the formula: Fl = V (ρc - ρh) ag",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Hot Air Balloon Lifting Force Calculator\n\n## Formula\n\n**Fl = V (ρc - ρh) ag**\n\nWhere:\n- **Fl** = lifting force (N)\n- **V** = balloon volume (m³)\n- **ρc** = density of cold surrounding air (kg/m³)\n- **ρh** = density of hot balloon air (kg/m³)\n- **ag** = acceleration of gravity (9.81 m/s²)\n\n## Example\n\nA hot air balloon with volume 10 m³ heated to 100°C with surrounding air at 20°C:\n- Air density at 100°C: 0.946 kg/m³\n- Air density at 20°C: 1.205 kg/m³\n- Lifting force = (10) × (1.205 - 0.946) × 9.81 = **25.4 N**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "volume",
+          "label": "Balloon Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 10
+        },
+        {
+          "id": "density_cold",
+          "label": "Density of Cold Surrounding Air",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.205
+        },
+        {
+          "id": "density_hot",
+          "label": "Density of Hot Balloon Air",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 0.946
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        }
+      ],
+      "outputs": [
+        {
+          "id": "lifting_force",
+          "label": "Lifting Force",
+          "formula": "inputs.volume * (inputs.density_cold - inputs.density_hot) * inputs.gravity",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "lifted_mass",
+          "label": "Lifted Mass",
+          "formula": "(inputs.volume * (inputs.density_cold - inputs.density_hot) * inputs.gravity) / inputs.gravity",
+          "unit": "kg",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

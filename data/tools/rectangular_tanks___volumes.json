@@ -1,0 +1,57 @@
+{
+  "id": "rectangular_tanks___volumes",
+  "title": "Rectangular Tanks - Volumes",
+  "description": "Tank volume per foot depth. Reference table for calculating volumes in rectangular tanks based on dimensions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Tank Dimension (ft x ft)",
+        "Volume (U.S. gallons per foot of depth)"
+      ],
+      "rows": [
+        [
+          "2 x 2",
+          29.9
+        ],
+        [
+          "2 x 3",
+          44.9
+        ],
+        [
+          "2 x 4",
+          59.9
+        ],
+        [
+          "2 x 5",
+          74.8
+        ],
+        [
+          "3 x 3",
+          67.3
+        ],
+        [
+          "3 x 4",
+          89.8
+        ],
+        [
+          "3 x 5",
+          112
+        ],
+        [
+          "4 x 4",
+          120
+        ],
+        [
+          "4 x 5",
+          150
+        ],
+        [
+          "5 x 5",
+          187
+        ]
+      ]
+    }
+  ]
+}

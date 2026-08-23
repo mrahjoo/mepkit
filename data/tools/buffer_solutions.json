@@ -1,0 +1,189 @@
+{
+  "id": "buffer_solutions",
+  "title": "Buffer Solutions Calculator",
+  "description": "A comprehensive tool for calculating buffer solution pH and composition using the Henderson-Hasselbalch equation. Determine pH for a given buffer, find required acid/base ratios for target pH, and analyze buffer capacity.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Buffer Solutions Calculator\n\nUse this tool to calculate buffer solution properties using the **Henderson-Hasselbalch equation**:\n\n**pH = pKa + log((base) / (acid))**\n\nWhere:\n- **pKa**: Negative logarithm of the acid dissociation constant\n- **base**: Concentration of the conjugate base or salt (A⁻)\n- **acid**: Concentration of the weak acid (HA)\n\n## Key Concepts\n\n- The **best buffering effect** is achieved when the (A⁻)/(HA) ratio is 1 (pH = pKa)\n- **Buffer capacity** depends on the magnitude of both [A⁻] and [HA] concentrations\n- Choose an acid/base with pKa **closest to your target pH**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pKa",
+          "label": "pKa (Acid Dissociation Constant)",
+          "type": "number",
+          "defaultValue": 4.76,
+          "unit": ""
+        },
+        {
+          "id": "base_conc",
+          "label": "Base/Salt Concentration (A⁻)",
+          "type": "number",
+          "defaultValue": 0.25,
+          "unit": "M"
+        },
+        {
+          "id": "acid_conc",
+          "label": "Acid Concentration (HA)",
+          "type": "number",
+          "defaultValue": 0.4,
+          "unit": "M"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pH",
+          "label": "pH",
+          "formula": "inputs.pKa + (Math.log10(inputs.base_conc / inputs.acid_conc))",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "ratio",
+          "label": "Base/Acid Ratio",
+          "formula": "inputs.base_conc / inputs.acid_conc",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "pOH",
+          "label": "pOH",
+          "formula": "14 - (inputs.pKa + Math.log10(inputs.base_conc / inputs.acid_conc))",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "target_pH",
+          "label": "Target pH",
+          "type": "number",
+          "defaultValue": 4.5,
+          "unit": ""
+        },
+        {
+          "id": "pKa_target",
+          "label": "pKa of Weak Acid",
+          "type": "number",
+          "defaultValue": 4.2,
+          "unit": ""
+        },
+        {
+          "id": "acid_concentration",
+          "label": "Acid Concentration",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "M"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "required_ratio",
+          "label": "Required [Base]/[Acid] Ratio",
+          "formula": "Math.pow(10, (inputs.target_pH - inputs.pKa_target))",
+          "unit": "",
+          "format": "decimal"
+        },
+        {
+          "id": "required_base_conc",
+          "label": "Required Base Concentration",
+          "formula": "inputs.acid_concentration * Math.pow(10, (inputs.target_pH - inputs.pKa_target))",
+          "unit": "M",
+          "format": "decimal"
+        },
+        {
+          "id": "pH_difference",
+          "label": "pH vs pKa Difference",
+          "formula": "inputs.target_pH - inputs.pKa_target",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Acid",
+        "pKa",
+        "Best For pH Range",
+        "Use Case"
+      ],
+      "rows": [
+        [
+          "Chloroacetic Acid",
+          "2.87",
+          "2.5 - 3.5",
+          "Very acidic buffers"
+        ],
+        [
+          "Formic Acid (HCOOH)",
+          "3.74",
+          "3.3 - 4.3",
+          "Acidic buffers"
+        ],
+        [
+          "Ethanoic Acid (CH₃COOH)",
+          "4.76",
+          "4.3 - 5.3",
+          "Weak acid buffers"
+        ],
+        [
+          "Benzoic Acid",
+          "4.20",
+          "3.7 - 4.7",
+          "Moderate acidic buffers"
+        ],
+        [
+          "Propanoic Acid",
+          "4.87",
+          "4.4 - 5.4",
+          "Weak acid buffers"
+        ],
+        [
+          "Ammonia (NH₃)",
+          "9.24",
+          "8.7 - 9.7",
+          "Basic buffers"
+        ],
+        [
+          "Hypochlorous Acid",
+          "7.54",
+          "7.0 - 8.0",
+          "Neutral to weak basic buffers"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Buffer Type",
+        "Initial pH",
+        "After 0.20 mol HCl Added",
+        "pH Change",
+        "Buffer Capacity"
+      ],
+      "rows": [
+        [
+          "7.00 M CH₃COOH / 7.00 M CH₃COONa",
+          "4.76",
+          "4.76",
+          "0.00",
+          "High"
+        ],
+        [
+          "0.070 M CH₃COOH / 0.070 M CH₃COONa",
+          "4.76",
+          "4.50",
+          "0.26",
+          "Low"
+        ]
+      ]
+    }
+  ]
+}

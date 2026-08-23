@@ -1,0 +1,62 @@
+{
+  "id": "air___moisture_holding_capacity_vs__temperature",
+  "title": "Air - Moisture Holding Capacity vs. Temperature",
+  "description": "Calculate the moisture holding capacity of air at different temperatures. The moisture holding capacity of air increases dramatically with increased temperature, which is critical for drying processes where air is used to transport moisture away from process and products.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Overview\nThe moisture holding capacity of air increases with temperature. This relationship is crucial for understanding drying processes and energy efficiency.\n\n### Key Observation\nThe moisture holding capacity of air at **100°F (38°C)** is approximately **10 times** the moisture holding capacity of air at **30°F (~0°C)**.\n\n### Energy Economy Consideration\nIt is generally good energy economy to increase the air temperature in a dryer as much as possible. The increased moisture transport capacity of air at higher temperatures outweighs the increased energy consumption for heating the dry air to higher temperature."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "defaultValue": "si",
+          "options": [
+            {
+              "label": "SI Units (kg water/kg dry air)",
+              "value": "si"
+            },
+            {
+              "label": "Imperial Units (lb water/lb dry air)",
+              "value": "imperial"
+            },
+            {
+              "label": "Imperial Volume (lb water/1000 ft³ dry air)",
+              "value": "imperial_volume"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moisture_capacity",
+          "label": "Moisture Holding Capacity",
+          "formula": "inputs.temperature_celsius",
+          "unit": "Based on unit system selected"
+        },
+        {
+          "id": "temperature_fahrenheit",
+          "label": "Temperature (Fahrenheit)",
+          "formula": "(inputs.temperature_celsius * 9/5) + 32",
+          "unit": "°F"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Data\n\n### SI Units\nMoisture holding capacity of air - **kg water per kg dry air**\n\n### Imperial Units\nMoisture holding capacity of air - **lb water per lb dry air**\n\nAlternatively expressed as - **lb water per 1000 cubic feet dry air**\n\n## Notes\n- Higher temperatures significantly increase the ability of air to hold moisture\n- This principle is fundamental to drying processes\n- Optimal dryer temperature selection balances energy input with moisture removal efficiency"
+    }
+  ]
+}

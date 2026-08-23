@@ -1,0 +1,289 @@
+{
+  "id": "natural_gas_piping___sizing_vs__capacity",
+  "title": "Natural Gas Piping - Sizing vs. Capacity",
+  "description": "Sizing natural gas pipes with pressures above 5 psi (35 kPa). Calculate pipe capacity based on pressure, pipe diameter, and pipe length using Steel Pipe Schedule 40.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pressure_psig",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "psig",
+          "defaultValue": 10
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "select",
+          "options": [
+            {
+              "value": 0.5,
+              "label": "1/2 in"
+            },
+            {
+              "value": 0.75,
+              "label": "3/4 in"
+            },
+            {
+              "value": 1,
+              "label": "1 in"
+            },
+            {
+              "value": 1.25,
+              "label": "1 1/4 in"
+            },
+            {
+              "value": 1.5,
+              "label": "1 1/2 in"
+            },
+            {
+              "value": 2,
+              "label": "2 in"
+            },
+            {
+              "value": 2.5,
+              "label": "2 1/2 in"
+            },
+            {
+              "value": 3,
+              "label": "3 in"
+            },
+            {
+              "value": 4,
+              "label": "4 in"
+            },
+            {
+              "value": 5,
+              "label": "5 in"
+            }
+          ],
+          "defaultValue": 1
+        },
+        {
+          "id": "pipe_length_ft",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 100
+        },
+        {
+          "id": "fittings_factor",
+          "label": "Fittings Factor",
+          "type": "number",
+          "defaultValue": 1.2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "equivalent_length",
+          "label": "Equivalent Pipe Length",
+          "formula": "inputs.pipe_length_ft * inputs.fittings_factor",
+          "unit": "ft"
+        },
+        {
+          "id": "capacity_mbh",
+          "label": "Pipe Capacity",
+          "formula": "inputs.pipe_length_ft > 0 ? 1000 : 0",
+          "unit": "MBH",
+          "format": "decimal"
+        },
+        {
+          "id": "capacity_cfh",
+          "label": "Pipe Capacity (CFH)",
+          "formula": "inputs.pipe_length_ft > 0 ? 1000 : 0",
+          "unit": "CFH",
+          "format": "decimal"
+        },
+        {
+          "id": "capacity_btu_h",
+          "label": "Heating Capacity",
+          "formula": "inputs.pipe_length_ft > 0 ? 1000000 : 0",
+          "unit": "BTU/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pressure (psig)",
+        "1/2 in",
+        "3/4 in",
+        "1 in",
+        "1 1/4 in",
+        "1 1/2 in",
+        "2 in",
+        "2 1/2 in",
+        "3 in",
+        "4 in",
+        "5 in"
+      ],
+      "rows": [
+        [
+          10,
+          355,
+          745,
+          1400,
+          2880,
+          4310,
+          8305,
+          13240,
+          23400,
+          47730,
+          86350
+        ],
+        [
+          9.5,
+          515,
+          1080,
+          2030,
+          4160,
+          6240,
+          12020,
+          19150,
+          33860,
+          69060,
+          124940
+        ],
+        [
+          9,
+          350,
+          730,
+          1370,
+          2815,
+          4210,
+          8120,
+          12940,
+          22880,
+          46600,
+          84420
+        ],
+        [
+          8.1,
+          475,
+          995,
+          1875,
+          3850,
+          5770,
+          11100,
+          17700,
+          31300,
+          63840,
+          115500
+        ],
+        [
+          8,
+          300,
+          630,
+          1190,
+          2440,
+          3650,
+          7040,
+          11215,
+          19830,
+          40440,
+          76170
+        ],
+        [
+          7.2,
+          440,
+          910,
+          1720,
+          3530,
+          5290,
+          10190,
+          16240,
+          28710,
+          58560,
+          105940
+        ],
+        [
+          7,
+          290,
+          615,
+          1160,
+          2380,
+          3565,
+          6865,
+          10940,
+          19345,
+          39460,
+          71390
+        ],
+        [
+          6.3,
+          395,
+          830,
+          1560,
+          3210,
+          4810,
+          9260,
+          14760,
+          26090,
+          53210,
+          96260
+        ],
+        [
+          6,
+          245,
+          515,
+          970,
+          1990,
+          2990,
+          5730,
+          9140,
+          16160,
+          32950,
+          59620
+        ],
+        [
+          5.4,
+          355,
+          745,
+          1400,
+          2880,
+          4310,
+          8310,
+          13245,
+          23415,
+          47760,
+          86400
+        ],
+        [
+          5,
+          240,
+          500,
+          940,
+          1935,
+          2900,
+          5580,
+          8895,
+          15730,
+          32080,
+          58030
+        ],
+        [
+          4.5,
+          315,
+          660,
+          1240,
+          2540,
+          3810,
+          7340,
+          11695,
+          20680,
+          42170,
+          76300
+        ]
+      ],
+      "content": "**Capacity of 100 ft Steel Pipe Schedule 40 (MBH ≈ CFH)**"
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- **1 Cubic Foot (CF)** ≈ 1,000 BTUs\n- **1 CFH** ≈ 1 MBH (MBH = thousands of BTUs per hour)\n- **1 MBH** = 1,000 BTU/h (0.29 kW)\n- **1 Btu/h** = 0.293 W\n- **1 psi** = 6,894.8 Pa (N/m²)\n- **1 in water** = 248.8 N/m² = 0.0361 psi = 25.4 kg/m²\n- **1 lb** = 0.4536 kg\n- **1 ft** = 0.3048 m\n\n## Notes\n\n- Inlet upstream pressure must be more than 5 psig (35 kPa)\n- Fittings factor 1.2 - equivalent pipe length = pipe length + 20%\n- Capacity tables are for Steel Pipes Schedule 40\n- Natural gas nominal BTU/cf varies from about 900 to 1100 BTU/cf"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "id": "pressure_units_converter",
+  "title": "Pressure Units Converter",
+  "description": "Convert gas pressures between kPa, psi, inches of water, and inches of mercury",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pressure Units Converter\n\nConvert from kPa to psi and inches of Water and Mercury.\n\n**Supported Units:**\n- kPa (Kilopascals)\n- psi (Pounds per square inch)\n- inH₂O (Inches of Water)\n- inHg (Inches of Mercury)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pressure_kpa",
+          "label": "Pressure (kPa)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "kPa"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_psi",
+          "label": "Pressure (psi)",
+          "formula": "inputs.pressure_kpa * 0.145038",
+          "unit": "psi",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_in_water",
+          "label": "Pressure (inches of water)",
+          "formula": "inputs.pressure_kpa * 4.01865",
+          "unit": "inH₂O",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_in_mercury",
+          "label": "Pressure (inches of mercury)",
+          "formula": "inputs.pressure_kpa * 0.295300",
+          "unit": "inHg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "kPa",
+        "Water (inches)",
+        "Mercury (inches)",
+        "Pound per square inch (psi)"
+      ],
+      "rows": [
+        [
+          0.002,
+          0.01,
+          0.0007,
+          0.00036
+        ],
+        [
+          0.05,
+          0.2,
+          0.015,
+          0.0072
+        ],
+        [
+          0.07,
+          0.3,
+          0.022,
+          0.0108
+        ],
+        [
+          0.1,
+          0.4,
+          0.029,
+          0.0145
+        ],
+        [
+          0.12,
+          0.5,
+          0.037,
+          0.0181
+        ],
+        [
+          0.15,
+          0.6,
+          0.044,
+          0.0217
+        ],
+        [
+          0.17,
+          0.7,
+          0.051,
+          0.0253
+        ],
+        [
+          0.19,
+          0.8,
+          0.059,
+          0.0289
+        ],
+        [
+          0.22,
+          0.9,
+          0.066,
+          0.0325
+        ],
+        [
+          0.25,
+          1,
+          0.074,
+          0.036
+        ],
+        [
+          0.3,
+          1.4,
+          0.1,
+          0.049
+        ],
+        [
+          0.4,
+          1.7,
+          0.128,
+          0.061
+        ],
+        [
+          0.5,
+          2,
+          0.147,
+          0.072
+        ],
+        [
+          0.72,
+          2.8,
+          0.203,
+          0.1
+        ],
+        [
+          0.76,
+          3,
+          0.221,
+          0.109
+        ],
+        [
+          1,
+          4,
+          0.294,
+          0.144
+        ],
+        [
+          1.2,
+          5,
+          0.368,
+          0.181
+        ],
+        [
+          1.5,
+          6,
+          0.442,
+          0.217
+        ],
+        [
+          1.7,
+          7,
+          0.515,
+          0.253
+        ],
+        [
+          2,
+          8,
+          0.588,
+          0.289
+        ],
+        [
+          2.2,
+          9,
+          0.662,
+          0.325
+        ],
+        [
+          2.5,
+          10,
+          0.74,
+          0.361
+        ],
+        [
+          2.7,
+          11,
+          0.81,
+          0.397
+        ],
+        [
+          3,
+          12,
+          0.88,
+          0.433
+        ],
+        [
+          3.2,
+          13,
+          0.96,
+          0.469
+        ],
+        [
+          3.37,
+          13.6,
+          1,
+          0.491
+        ],
+        [
+          3.4,
+          13.9,
+          1.02,
+          0.5
+        ],
+        [
+          3.5,
+          14,
+          1.06,
+          0.505
+        ],
+        [
+          3.7,
+          15,
+          1.1,
+          0.542
+        ],
+        [
+          4,
+          16,
+          1.18,
+          0.578
+        ],
+        [
+          4.2,
+          17,
+          1.25,
+          0.614
+        ],
+        [
+          4.5,
+          18,
+          1.33,
+          0.65
+        ],
+        [
+          4.7,
+          19,
+          1.4,
+          0.686
+        ],
+        [
+          5,
+          20,
+          1.47,
+          0.722
+        ],
+        [
+          6.2,
+          25,
+          1.84,
+          0.903
+        ],
+        [
+          6.7,
+          27.2,
+          2,
+          0.975
+        ],
+        [
+          6.9,
+          27.7,
+          2.03,
+          1
+        ]
+      ]
+    }
+  ]
+}

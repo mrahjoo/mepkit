@@ -1,0 +1,37 @@
+{
+  "id": "bep___the_best_efficiency_point_of_a_pump",
+  "title": "BEP - the Best Efficiency Point of a Pump",
+  "description": "BEP is where the pump is most efficient. This tool helps you understand pump efficiency, including internal losses (hydraulic and volumetric), external losses (mechanical), and the Best Efficiency Point (BEP) concept.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Loss Type",
+        "Category",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Hydraulic Loss",
+          "Internal",
+          "Due to disk friction in the impeller, rapid change in flow directions and velocity changes throughout the pump"
+        ],
+        [
+          "Volumetric Loss",
+          "Internal",
+          "Due to internal re-circulation caused by wear in rings and bushes"
+        ],
+        [
+          "Mechanical Loss",
+          "External",
+          "Due to friction in seals and bearings"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Concept\n\n**BEP - Best Efficiency Point** is the design point where a pump operates at maximum efficiency. For pumps operating at all other operating points, the efficiency will be less than at BEP.\n\n### Loss Categories\n\n**Internal Losses** occur within the pump:\n- Hydraulic loss from impeller friction and flow direction changes\n- Volumetric loss from internal re-circulation due to wear\n\n**External Losses** occur outside the pump:\n- Mechanical loss from friction in seals and bearings\n\nA practical pump will never be able to convert all its kinetic energy to pressure energy - some energy will always be lost internally or externally."
+    }
+  ]
+}

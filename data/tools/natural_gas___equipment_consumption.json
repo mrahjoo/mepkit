@@ -1,0 +1,279 @@
+{
+  "id": "natural_gas___equipment_consumption",
+  "title": "Natural Gas - Equipment Consumption",
+  "description": "Natural gas consumption for equipment like boiling pans, ovens, cookers, kettles and more. Provides consumption rates and heat dissipation data across various commercial and domestic appliances.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Consumer",
+        "Natural Gas Consumption (ft³/h)",
+        "Heat Dissipated (Liter/s)",
+        "Heat Output (Btu/hour)",
+        "Power (kW)"
+      ],
+      "rows": [
+        [
+          "10 gal boiling pan",
+          45,
+          0.35,
+          44000,
+          13
+        ],
+        [
+          "20 gal boiling pan",
+          60,
+          0.48,
+          61000,
+          18
+        ],
+        [
+          "30 gal boiling pan",
+          75,
+          0.6,
+          75000,
+          22
+        ],
+        [
+          "40 gal boiling pan",
+          90,
+          0.7,
+          88000,
+          26
+        ],
+        [
+          "4 ft hot cupboard",
+          48,
+          0.38,
+          48000,
+          14
+        ],
+        [
+          "6 ft hot cupboard",
+          54,
+          0.43,
+          54000,
+          16
+        ],
+        [
+          "Steaming oven",
+          "40 - 60",
+          "0.30 - 0.40",
+          "37000 - 51000",
+          "11 - 15"
+        ],
+        [
+          "Steaming oven, double",
+          100,
+          0.8,
+          100000,
+          30
+        ],
+        [
+          "Small broiler",
+          "-",
+          "-",
+          30000,
+          9
+        ],
+        [
+          "Large broiler",
+          "-",
+          "-",
+          61000,
+          18
+        ],
+        [
+          "Boiler and roaster, combined",
+          "-",
+          "-",
+          68000,
+          20
+        ],
+        [
+          "2-tier roasting oven",
+          50,
+          0.4,
+          51000,
+          15
+        ],
+        [
+          "Doughnut fryer",
+          "-",
+          "-",
+          68000,
+          20
+        ],
+        [
+          "Double oven range",
+          400,
+          3.2,
+          390000,
+          115
+        ],
+        [
+          "Roasting oven",
+          30,
+          0.24,
+          30000,
+          9
+        ],
+        [
+          "Gas cooker",
+          75,
+          0.6,
+          68000,
+          20
+        ],
+        [
+          "Hot cupboard",
+          17,
+          0.14,
+          17000,
+          5
+        ],
+        [
+          "Clothes dryer - domestic",
+          "-",
+          "-",
+          35000,
+          "-"
+        ],
+        [
+          "Drying cupboard",
+          5,
+          0.04,
+          5100,
+          1.5
+        ],
+        [
+          "Gas iron heater",
+          5,
+          0.04,
+          5100,
+          1.5
+        ],
+        [
+          "Washing machine",
+          20,
+          0.15,
+          20000,
+          6
+        ],
+        [
+          "Wash Boiler",
+          "30 - 50",
+          "0.23 - 0.40",
+          "27000 - 51000",
+          "8 - 15"
+        ],
+        [
+          "Furnace",
+          "-",
+          "-",
+          120000,
+          "-"
+        ],
+        [
+          "Gas Refrigerator",
+          "-",
+          "-",
+          3000,
+          "-"
+        ],
+        [
+          "Fireplace Gas Log",
+          "-",
+          "-",
+          80000,
+          "-"
+        ],
+        [
+          "Barbecue grill - residential",
+          "-",
+          "-",
+          51000,
+          15
+        ],
+        [
+          "Bunsen burner small",
+          3,
+          0.02,
+          3500,
+          1
+        ],
+        [
+          "Bunsen burner large",
+          10,
+          0.08,
+          10000,
+          3
+        ],
+        [
+          "Coffee maker 3 burner",
+          "-",
+          "-",
+          17000,
+          5
+        ],
+        [
+          "Glue kettle",
+          10,
+          0.08,
+          10000,
+          3
+        ],
+        [
+          "Gas engine per horsepower",
+          "-",
+          "-",
+          10000,
+          3
+        ],
+        [
+          "Gas dryer",
+          "-",
+          "-",
+          35000,
+          "-"
+        ],
+        [
+          "Forge",
+          15,
+          0.12,
+          14000,
+          4
+        ],
+        [
+          "Brazing heart",
+          30,
+          0.23,
+          30000,
+          9
+        ],
+        [
+          "Storage water heater, 30 - 40 gallon (115 - 150 liter)",
+          "-",
+          "-",
+          35000,
+          "-"
+        ],
+        [
+          "Storage water heater, 50 gallon (115 - 190 liter)",
+          "-",
+          "-",
+          50000,
+          "-"
+        ],
+        [
+          "Domestic standard gas range",
+          "-",
+          "-",
+          70000,
+          "-"
+        ]
+      ]
+    }
+  ]
+}

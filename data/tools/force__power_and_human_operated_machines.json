@@ -1,0 +1,87 @@
+{
+  "id": "force__power_and_human_operated_machines",
+  "title": "Force, Power and Human Operated Machines",
+  "description": "Maximum force or power available in human operated machines",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Human Force and Power Limits\n\nFor man operated machines the force and power must be kept within certain limits.\n\n### Pedal Force Limits\n- **Sitting person with solid backrest**: Maximum horizontal force = **1000 N**\n- **Sitting person**: Maximum vertical force = **300 N**\n- **Standing person**: Maximum vertical force = **500 N**\n\n### Lever and Rotating Wheel Operation\n- **Vertical lever (pump)**: Maximum force = **90-100 N**, Frequency ≤ **20 beats/min**\n- **Rotating wheel/crank arm**: \n  - Arm length (radius) ≈ **0.4 m**\n  - Maximum force ≤ **130 N**\n  - Speed ≤ **25-30 rpm**\n  - Axle height ≈ **1 m**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 130
+        },
+        {
+          "id": "radius",
+          "label": "Radius (Arm Length)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.4
+        },
+        {
+          "id": "rpm",
+          "label": "Rotations per Minute",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 25
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power",
+          "label": "Power",
+          "formula": "inputs.force * inputs.radius * 3.14159 * inputs.rpm / 30",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Scenario",
+        "Force (N)",
+        "Radius (m)",
+        "RPM",
+        "Power (W)"
+      ],
+      "rows": [
+        [
+          "Ideal conditions (rotating wheel)",
+          130,
+          0.4,
+          25,
+          136
+        ],
+        [
+          "Maximum force scenario",
+          130,
+          0.4,
+          30,
+          163
+        ],
+        [
+          "Lower force scenario",
+          100,
+          0.4,
+          25,
+          105
+        ],
+        [
+          "Lever operation (pump)",
+          95,
+          "-",
+          20,
+          "-"
+        ]
+      ]
+    }
+  ]
+}

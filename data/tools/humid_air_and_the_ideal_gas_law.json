@@ -1,0 +1,116 @@
+{
+  "id": "humid_air_and_the_ideal_gas_law",
+  "title": "Humid Air and the Ideal Gas Law",
+  "description": "Calculator for humid air properties using the Ideal Gas Law. Compute partial pressures of dry air and water vapor, total pressure, and individual gas constants based on temperature and density.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Humid Air and the Ideal Gas Law\n\nThe Ideal Gas Law expresses the relationship between pressure, volume, temperature, and quantity of gas:\n\n**p V = m R T** (equation 4)\n\nWhere:\n- p = absolute pressure (N/m²)\n- V = volume (m³)\n- m = mass of gas (kg)\n- R = individual gas constant (J/kg K)\n- T = absolute temperature (K)\n\nFor humid air, the total pressure is the sum of partial pressures:\n\n**pt = pa + pw** (equation 6)\n\nWhere:\n- pt = total pressure (kPa)\n- pa = partial pressure dry air (kPa)\n- pw = partial pressure water vapor (kPa)\n\n### Individual Gas Constants:\n- Air: R = 286.9 J/kg K\n- Water vapor: R = 461.4 J/kg K"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Input Parameters"
+      ],
+      "inputs": [
+        {
+          "id": "temp_kelvin",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 293.15,
+          "unit": "K"
+        },
+        {
+          "id": "density_air",
+          "label": "Dry Air Density",
+          "type": "number",
+          "defaultValue": 1.2,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "density_vapor",
+          "label": "Water Vapor Density",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_air",
+          "label": "Dry Air Partial Pressure",
+          "formula": "inputs.density_air * 286.9 * inputs.temp_kelvin / 1000",
+          "unit": "kPa",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_vapor",
+          "label": "Water Vapor Partial Pressure",
+          "formula": "inputs.density_vapor * 461.4 * inputs.temp_kelvin / 1000",
+          "unit": "kPa",
+          "format": "decimal"
+        },
+        {
+          "id": "total_pressure",
+          "label": "Total Pressure",
+          "formula": "(inputs.density_air * 286.9 * inputs.temp_kelvin / 1000) + (inputs.density_vapor * 461.4 * inputs.temp_kelvin / 1000)",
+          "unit": "kPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Pressure Distribution in Humid Air",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Dry Air Partial Pressure",
+            "Water Vapor Partial Pressure",
+            "Total Pressure"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Partial Pressures"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Pressure (kPa)"
+        },
+        "series": [
+          {
+            "name": "Dry Air Partial Pressure",
+            "type": "bar",
+            "data": [
+              "(inputs.density_air * 286.9 * inputs.temp_kelvin / 1000)"
+            ]
+          },
+          {
+            "name": "Water Vapor Partial Pressure",
+            "type": "bar",
+            "data": [
+              "(inputs.density_vapor * 461.4 * inputs.temp_kelvin / 1000)"
+            ]
+          },
+          {
+            "name": "Total Pressure",
+            "type": "line",
+            "data": [
+              "((inputs.density_air * 286.9 * inputs.temp_kelvin / 1000) + (inputs.density_vapor * 461.4 * inputs.temp_kelvin / 1000))"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

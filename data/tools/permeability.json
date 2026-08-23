@@ -1,0 +1,168 @@
+{
+  "id": "permeability",
+  "title": "Permeability",
+  "description": "Electromagnetism and formation of magnetic fields. Calculate permeability and relative permeability of materials.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Permeability Calculator\n\nPermeability is the ability to support formation of magnetic fields in a material.\n\n## Key Constants\n\n- **Permeability of free space (µ₀)**: 4π × 10⁻⁷ H/m ≈ 1.257 × 10⁻⁶ H/m\n\n## Formula\n\n**Relative Permeability**: µᵣ = µ / µ₀\n\nwhere:\n- µᵣ = relative permeability (dimensionless)\n- µ = permeability of the medium (H/m)\n- µ₀ = permeability of free space (H/m)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "permeability",
+          "label": "Permeability (µ)",
+          "type": "number",
+          "unit": "H/m",
+          "defaultValue": 0.00000125663753
+        }
+      ],
+      "outputs": [
+        {
+          "id": "relative_permeability",
+          "label": "Relative Permeability (µᵣ)",
+          "formula": "inputs.permeability / 1.25663753e-6",
+          "unit": "dimensionless",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Medium",
+        "Permeability (H/m)",
+        "Relative Permeability (µᵣ)"
+      ],
+      "rows": [
+        [
+          "Air",
+          "1.25663753×10⁻⁶",
+          "1.00000037"
+        ],
+        [
+          "Aluminum",
+          "1.256665×10⁻⁶",
+          "1.000022"
+        ],
+        [
+          "Austenitic stainless steel",
+          "1.260×10⁻⁶ – 8.8×10⁻⁶",
+          "1.003 – 7"
+        ],
+        [
+          "Bismuth",
+          "1.25643×10⁻⁶",
+          "0.999834"
+        ],
+        [
+          "Carbon Steel",
+          "1.26×10⁻⁴",
+          "100"
+        ],
+        [
+          "Cobalt-Iron",
+          "2.3×10⁻²",
+          "18000"
+        ],
+        [
+          "Copper",
+          "1.256629×10⁻⁶",
+          "0.999994"
+        ],
+        [
+          "Ferrite (nickel zinc)",
+          "2.0×10⁻⁵ – 8.0×10⁻⁴",
+          "16 – 640"
+        ],
+        [
+          "Ferritic stainless steel",
+          "1.26×10⁻³ – 2.26×10⁻³",
+          "1000 – 1800"
+        ],
+        [
+          "Hydrogen",
+          "1.2566371×10⁻⁶",
+          "1"
+        ],
+        [
+          "Iron (99.8% pure)",
+          "6.3×10⁻³",
+          "5000"
+        ],
+        [
+          "Iron (99.95% pure, annealed)",
+          "2.5×10⁻¹",
+          "200000"
+        ],
+        [
+          "Martensitic stainless steel (annealed)",
+          "9.42×10⁻⁴ – 1.19×10⁻³",
+          "750 – 950"
+        ],
+        [
+          "Martensitic stainless steel (hardened)",
+          "5.0×10⁻⁵ – 1.2×10⁻⁴",
+          "40 – 95"
+        ],
+        [
+          "Nanoperm",
+          "1.0×10⁻¹",
+          "80000"
+        ],
+        [
+          "Neodymium magnet",
+          "1.32×10⁻⁶",
+          "1.05"
+        ],
+        [
+          "Nickel",
+          "1.26×10⁻⁴ – 7.54×10⁻⁴",
+          "100 – 600"
+        ],
+        [
+          "Permalloy",
+          "1.0×10⁻²",
+          "8000"
+        ],
+        [
+          "Platinum",
+          "1.256970×10⁻⁶",
+          "1.000265"
+        ],
+        [
+          "Sapphire",
+          "1.2566368×10⁻⁶",
+          "0.99999976"
+        ],
+        [
+          "Superconductors",
+          "0",
+          "0"
+        ],
+        [
+          "Teflon",
+          "1.2567×10⁻⁶",
+          "1"
+        ],
+        [
+          "Vacuum (µ₀)",
+          "4π × 10⁻⁷",
+          "1"
+        ],
+        [
+          "Water",
+          "1.256627×10⁻⁶",
+          "0.999992"
+        ],
+        [
+          "Wood",
+          "1.25663760×10⁻⁶",
+          "1.00000043"
+        ]
+      ]
+    }
+  ]
+}

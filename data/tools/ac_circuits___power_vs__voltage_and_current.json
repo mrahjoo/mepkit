@@ -1,0 +1,102 @@
+{
+  "id": "ac_circuits___power_vs__voltage_and_current",
+  "title": "AC Circuits - Power vs. Voltage and Current",
+  "description": "Calculate active power, reactive power, and related AC circuit parameters based on RMS voltage, RMS current, and phase angle. Includes visualization of power components.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "ac_power_calculator",
+      "content": "AC Power Calculator",
+      "inputs": [
+        {
+          "id": "urms",
+          "label": "RMS Voltage (Urms)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 230
+        },
+        {
+          "id": "irms",
+          "label": "RMS Current (Irms)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 10
+        },
+        {
+          "id": "phase_angle",
+          "label": "Phase Angle (φ)",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 30
+        }
+      ],
+      "outputs": [
+        {
+          "id": "active_power",
+          "label": "Active Power (P)",
+          "unit": "W",
+          "formula": "inputs.urms * inputs.irms * cos(inputs.phase_angle * 3.14159265359 / 180)",
+          "format": "decimal"
+        },
+        {
+          "id": "reactive_power",
+          "label": "Reactive Power (Q)",
+          "unit": "VAR",
+          "formula": "inputs.urms * inputs.irms * sin(inputs.phase_angle * 3.14159265359 / 180)",
+          "format": "decimal"
+        },
+        {
+          "id": "apparent_power",
+          "label": "Apparent Power (S)",
+          "unit": "VA",
+          "formula": "inputs.urms * inputs.irms",
+          "format": "decimal"
+        },
+        {
+          "id": "power_factor",
+          "label": "Power Factor (cos φ)",
+          "unit": "",
+          "formula": "cos(inputs.phase_angle * 3.14159265359 / 180)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "power_triangle_chart",
+      "content": "Power Triangle Visualization",
+      "options": {
+        "type": "scatter",
+        "title": {
+          "text": "Power Triangle (Active, Reactive, and Apparent Power)"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "Active Power P (W)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Reactive Power Q (VAR)"
+        },
+        "series": [
+          {
+            "data": [
+              [
+                0,
+                0
+              ],
+              [
+                "inputs.urms * inputs.irms * cos(inputs.phase_angle * 3.14159265359 / 180)",
+                "inputs.urms * inputs.irms * sin(inputs.phase_angle * 3.14159265359 / 180)"
+              ]
+            ],
+            "type": "line",
+            "name": "Power Triangle",
+            "symbolSize": 8
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "fractions",
+  "title": "Fractions",
+  "description": "Law of fractions - Learn about numerators, denominators, and operations on fractions including addition, multiplication, and division.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Fractions\n\n## Definition\n\nFractions consist of two basic parts:\n\n- **Numerator** - the top number (a)\n- **Denominator** - the bottom number (b)\n\n**Fraction:** a / b\n\n## Types of Fractions\n\n- **Proper fraction** - the numerator is smaller than the denominator\n- **Improper fraction** - the numerator is larger than the denominator\n- **Reducible fraction** - a fraction that can be reduced to lower terms\n- **Mixed number** - a combination of a whole number and a fraction\n\n## Laws of Fractions\n\n1. **Addition:** (a / b) + (c / d) = (ad + bc) / (bd)\n2. **Multiplication:** (a / b) × (c / d) = (ac) / (bd)\n3. **Division:** (a / b) ÷ (c / d) = (a / b) × (d / c)\n4. **Negation:** (-a / b) = -(a / b) = a / (-b)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Operation",
+        "Input",
+        "Result"
+      ],
+      "inputs": [
+        {
+          "id": "numerator1",
+          "label": "Numerator 1",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "denominator1",
+          "label": "Denominator 1",
+          "type": "number",
+          "defaultValue": 4
+        },
+        {
+          "id": "numerator2",
+          "label": "Numerator 2",
+          "type": "number",
+          "defaultValue": 3
+        },
+        {
+          "id": "denominator2",
+          "label": "Denominator 2",
+          "type": "number",
+          "defaultValue": 16
+        },
+        {
+          "id": "operation",
+          "label": "Operation",
+          "type": "select",
+          "defaultValue": "add",
+          "options": [
+            {
+              "value": "add",
+              "label": "Addition"
+            },
+            {
+              "value": "multiply",
+              "label": "Multiplication"
+            },
+            {
+              "value": "divide",
+              "label": "Division"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "resultNumerator",
+          "label": "Result Numerator",
+          "formula": "if(inputs.operation == 'add', inputs.numerator1 * inputs.denominator2 + inputs.numerator2 * inputs.denominator1, if(inputs.operation == 'multiply', inputs.numerator1 * inputs.numerator2, if(inputs.operation == 'divide', inputs.numerator1 * inputs.denominator2, 0)))",
+          "format": "decimal"
+        },
+        {
+          "id": "resultDenominator",
+          "label": "Result Denominator",
+          "formula": "if(inputs.operation == 'add', inputs.denominator1 * inputs.denominator2, if(inputs.operation == 'multiply', inputs.denominator1 * inputs.denominator2, if(inputs.operation == 'divide', inputs.denominator1 * inputs.numerator2, 1)))",
+          "format": "decimal"
+        },
+        {
+          "id": "resultDecimal",
+          "label": "Result (Decimal)",
+          "formula": "if(inputs.operation == 'add', (inputs.numerator1 / inputs.denominator1) + (inputs.numerator2 / inputs.denominator2), if(inputs.operation == 'multiply', (inputs.numerator1 / inputs.denominator1) * (inputs.numerator2 / inputs.denominator2), if(inputs.operation == 'divide', (inputs.numerator1 / inputs.denominator1) / (inputs.numerator2 / inputs.denominator2), 0)))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Operation",
+        "Formula",
+        "Example 1",
+        "Example 2",
+        "Example 3"
+      ],
+      "rows": [
+        [
+          "Addition",
+          "(a/b) + (c/d) = (ad + bc)/(bd)",
+          "(1/4) + (3/16) = 7/16 = 0.4375",
+          "(1/4) + (7/8) = 9/8 = 1.125",
+          "(3/4) + (1/8) = 7/8 = 0.875"
+        ],
+        [
+          "Multiplication",
+          "(a/b) × (c/d) = (ac)/(bd)",
+          "(3/4) × (9/16) = 27/64 ≈ 0.422",
+          "(1/2) × (3/4) = 3/8 = 0.375",
+          "(2/3) × (3/5) = 6/15 = 0.4"
+        ],
+        [
+          "Division",
+          "(a/b) ÷ (c/d) = (ad)/(bc)",
+          "(3/4) ÷ (9/16) = 48/36 = 4/3 ≈ 1.333",
+          "(1/2) ÷ (1/4) = 2/1 = 2",
+          "(3/4) ÷ (1/2) = 6/4 = 1.5"
+        ]
+      ]
+    }
+  ]
+}

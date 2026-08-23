@@ -1,0 +1,45 @@
+{
+  "id": "nema___national_electrical_manufacturers_associati",
+  "title": "NEMA - National Electrical Manufacturers Association",
+  "description": "National Electrical Manufacturers Association. NEMA is the leading trade association in the U.S. representing the interests of electroindustry manufacturers of products used in the generation, transmission and distribution, control, and end-use of electricity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Organization",
+        "Full Name",
+        "Focus Area",
+        "Primary Function",
+        "Standards Published"
+      ],
+      "rows": [
+        [
+          "NEMA",
+          "National Electrical Manufacturers Association",
+          "Electroindustry Manufacturing",
+          "Trade Association & Standardization",
+          "500+"
+        ],
+        [
+          "NEMA",
+          "Trade Association",
+          "Electrical Equipment Standards",
+          "Forum for Standardization",
+          "Enables Safe & Compatible Products"
+        ],
+        [
+          "NEMA",
+          "Standards Organization",
+          "Generation, Transmission, Distribution, Control, End-use",
+          "Consumer Product Safety & Compatibility",
+          "500+ Published Standards"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nNEMA provides a forum for the standardization of electrical equipment, enabling consumers to select from a range of safe, effective, and compatible electrical products.\n\n## Key Information\n\n- **Organization**: National Electrical Manufacturers Association\n- **Website**: [www.nema.org](http://www.nema.org/)\n- **Role**: Leading trade association in the U.S.\n- **Member Focus**: Electroindustry manufacturers\n- **Service Areas**: Generation, transmission and distribution, control, and end-use of electricity\n- **Standards Published**: Over 500 standards\n\n## Mission\n\nRepresenting the interests of electroindustry manufacturers by providing standardization and compatibility frameworks for electrical equipment used throughout the industry."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "chimney_s_size_vs__boiler_power",
+  "title": "Chimney's Size vs. Boiler Power",
+  "description": "The size of chimney vs. boiler's heat load. Reference table showing required chimney cross-sectional area based on boiler heat capacity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Boiler Capacity (kW)",
+        "Boiler Capacity (Btu/h)",
+        "Required Chimney Area (cm²)",
+        "Required Chimney Area (in²)"
+      ],
+      "rows": [
+        [
+          15,
+          51000,
+          115,
+          18
+        ],
+        [
+          23,
+          78000,
+          150,
+          23
+        ],
+        [
+          35,
+          119000,
+          200,
+          31
+        ],
+        [
+          46,
+          157000,
+          250,
+          39
+        ],
+        [
+          58,
+          198000,
+          300,
+          47
+        ],
+        [
+          70,
+          239000,
+          350,
+          54
+        ],
+        [
+          81,
+          276000,
+          400,
+          62
+        ],
+        [
+          93,
+          317000,
+          450,
+          70
+        ],
+        [
+          104,
+          355000,
+          500,
+          78
+        ],
+        [
+          116,
+          396000,
+          550,
+          85
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factor\n\n1 kW = 3412 Btu/h\n\n## Important Note\n\n⚠️ Always check local authorities before final design.\n\n## Usage\n\nSelect the boiler capacity closest to your requirements and reference the corresponding required chimney area in both metric (cm²) and imperial (in²) units."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "heating_systems___steam_and_condensate_loads",
+  "title": "Heating Systems - Steam and Condensate Loads",
+  "description": "Calculate steam and condensate loads for steam heated systems including heat transfer through areas and heating up materials, with support for both heat quantity and heat rate calculations.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Heating Systems - Steam and Condensate Loads\n\nThis tool calculates steam and condensate loads in steam heated systems for two basic situations:\n\n### 1. Heat Transfer through Areas\n**Q = U × A × dt**\n- Q = quantity of heat transferred through the area\n- U = heat transfer coefficient\n- A = heat transfer area\n- dt = temperature difference between the steam and secondary fluid\n\n### 2. Heating up Materials\n**Q = w × cp × (t₂ - t₁)**\n- w = weight of material\n- cp = specific heat of the heated material\n- t₁ = initial temperature\n- t₂ = final temperature\n\n### Heat Transfer Rate\n**Q' = Q / (L × h)**\n- L = Latent heat of steam\n- h = available time"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Heat Transfer Through Areas",
+        "Heating up Materials"
+      ],
+      "inputs": [
+        {
+          "id": "heat_transfer_coefficient",
+          "label": "Heat Transfer Coefficient (U)",
+          "type": "number",
+          "unit": "W/m²·K",
+          "defaultValue": 500
+        },
+        {
+          "id": "heat_transfer_area",
+          "label": "Heat Transfer Area (A)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 10
+        },
+        {
+          "id": "temperature_difference_areas",
+          "label": "Temperature Difference (dt)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 50
+        },
+        {
+          "id": "material_weight",
+          "label": "Weight of Material (w)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 100
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat (cp)",
+          "type": "number",
+          "unit": "J/kg·K",
+          "defaultValue": 4186
+        },
+        {
+          "id": "initial_temperature",
+          "label": "Initial Temperature (t₁)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "final_temperature",
+          "label": "Final Temperature (t₂)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 80
+        },
+        {
+          "id": "latent_heat_steam",
+          "label": "Latent Heat of Steam (L)",
+          "type": "number",
+          "unit": "J/kg",
+          "defaultValue": 2257000
+        },
+        {
+          "id": "available_time",
+          "label": "Available Time (h)",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 3600
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_transfer_quantity_areas",
+          "label": "Heat Quantity - Areas (Q)",
+          "formula": "inputs.heat_transfer_coefficient * inputs.heat_transfer_area * inputs.temperature_difference_areas",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_transfer_rate_areas",
+          "label": "Heat Rate - Areas (Q')",
+          "formula": "(inputs.heat_transfer_coefficient * inputs.heat_transfer_area * inputs.temperature_difference_areas) / (inputs.latent_heat_steam * inputs.available_time)",
+          "unit": "kg/s",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_transfer_quantity_materials",
+          "label": "Heat Quantity - Materials (Q)",
+          "formula": "inputs.material_weight * inputs.specific_heat * (inputs.final_temperature - inputs.initial_temperature)",
+          "unit": "J",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_transfer_rate_materials",
+          "label": "Heat Rate - Materials (Q')",
+          "formula": "(inputs.material_weight * inputs.specific_heat * (inputs.final_temperature - inputs.initial_temperature)) / (inputs.latent_heat_steam * inputs.available_time)",
+          "unit": "kg/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Heat Transfer - Areas",
+            "Heat Transfer - Materials"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Heat Quantity (J)",
+            "Heat Rate (kg/s)"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Heat Transfer - Areas",
+            "type": "bar",
+            "data": [
+              "=heat_transfer_quantity_areas",
+              "=heat_transfer_rate_areas"
+            ]
+          },
+          {
+            "name": "Heat Transfer - Materials",
+            "type": "bar",
+            "data": [
+              "=heat_transfer_quantity_materials",
+              "=heat_transfer_rate_materials"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

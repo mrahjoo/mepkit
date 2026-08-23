@@ -1,0 +1,277 @@
+{
+  "id": "electric_motors___230___460v_three_phase_circuits_",
+  "title": "Electric Motors - 230 & 460V Three Phase Circuits Wiring",
+  "description": "Sizing of copper wire and transformers for three phase 230 & 460V electrical motors. This tool provides wire gauge recommendations based on motor horsepower, voltage, apparent power, and distance from motor to transformer.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Transformer (HP)",
+        "Voltage (V)",
+        "Apparent Power (kVA)",
+        "100 ft",
+        "150 ft",
+        "200 ft",
+        "300 ft",
+        "500 ft"
+      ],
+      "rows": [
+        [
+          "1.5",
+          "230",
+          "3",
+          "12",
+          "12",
+          "12",
+          "12",
+          "10"
+        ],
+        [
+          "2",
+          "460",
+          "3",
+          "12",
+          "12",
+          "12",
+          "12",
+          "12"
+        ],
+        [
+          "3",
+          "230",
+          "3",
+          "12",
+          "12",
+          "12",
+          "10",
+          "8"
+        ],
+        [
+          "2",
+          "460",
+          "3",
+          "12",
+          "12",
+          "12",
+          "12",
+          "12"
+        ],
+        [
+          "3",
+          "230",
+          "5",
+          "12",
+          "10",
+          "10",
+          "8",
+          "6"
+        ],
+        [
+          "3",
+          "460",
+          "5",
+          "12",
+          "12",
+          "12",
+          "12",
+          "10"
+        ],
+        [
+          "5",
+          "230",
+          "7.5",
+          "10",
+          "8",
+          "8",
+          "6",
+          "4"
+        ],
+        [
+          "5",
+          "460",
+          "7.5",
+          "12",
+          "12",
+          "12",
+          "10",
+          "8"
+        ],
+        [
+          "7.5",
+          "230",
+          "10",
+          "8",
+          "6",
+          "6",
+          "4",
+          "2"
+        ],
+        [
+          "7.5",
+          "460",
+          "10",
+          "12",
+          "12",
+          "12",
+          "10",
+          "8"
+        ],
+        [
+          "10",
+          "230",
+          "15",
+          "6",
+          "4",
+          "4",
+          "4",
+          "1"
+        ],
+        [
+          "10",
+          "460",
+          "15",
+          "12",
+          "12",
+          "12",
+          "10",
+          "8"
+        ],
+        [
+          "15",
+          "230",
+          "20",
+          "4",
+          "4",
+          "4",
+          "2",
+          "0"
+        ],
+        [
+          "15",
+          "460",
+          "20",
+          "12",
+          "10",
+          "10",
+          "8",
+          "6"
+        ],
+        [
+          "20",
+          "230",
+          "See note",
+          "4",
+          "2",
+          "2",
+          "1",
+          "0"
+        ],
+        [
+          "20",
+          "460",
+          "See note",
+          "10",
+          "8",
+          "8",
+          "6",
+          "4"
+        ],
+        [
+          "25",
+          "230",
+          "See note",
+          "2",
+          "2",
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "30",
+          "230",
+          "See note",
+          "2",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "30",
+          "460",
+          "See note",
+          "8",
+          "6",
+          "6",
+          "4",
+          "2"
+        ],
+        [
+          "40",
+          "230",
+          "See note",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "50",
+          "230",
+          "See note",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "50",
+          "460",
+          "See note",
+          "4",
+          "4",
+          "2",
+          "2",
+          "0"
+        ],
+        [
+          "60",
+          "460",
+          "See note",
+          "4",
+          "2",
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "75",
+          "230",
+          "See note",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "75",
+          "460",
+          "See note",
+          "4",
+          "2",
+          "2",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- All wiring and electrical connections should comply with the National Electrical Code (NEC) and with local codes and practices.\n- **Apparent Power**: The power supplied to the electric circuit - typical from a power supplier to the grid - to cover the real and reactive power consumption in the loads.\n- **For rows marked 'See note'**: The local power company should be consulted.\n- If undersized wire is used between the motor and the power source, the starting and load carrying capabilities of the motor will be limited.\n\n## Conversion Factors\n\n- 1 hp = 0.746 kW\n- 1 ft (foot) = 0.3048 m\n\n## Wire Gauge (AWG) Reference\n\nThe table above provides recommended copper wire gauges (American Wire Gauge) based on motor horsepower, operating voltage (230V or 460V three-phase), apparent power in kVA, and distance from motor to transformer in feet. Lower AWG numbers indicate larger diameter wires."
+    }
+  ]
+}

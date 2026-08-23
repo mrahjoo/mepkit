@@ -1,0 +1,193 @@
+{
+  "id": "biomasses___energy_content_when_used_as_fuel",
+  "title": "Biomasses - Energy Content when Used as Fuel",
+  "description": "Approximately energy content in different biomasses, used as fuels (not processed material). Shows energy content in MJ/kg for various bio fuels including agricultural residues, wood, and processed materials.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Bio Fuel",
+        "Energy content (MJ/kg)",
+        "Energy content (kWh/kg)",
+        "Energy content (Btu/lbm)"
+      ],
+      "rows": [
+        [
+          "Alfalfa straw",
+          18.5,
+          5.18,
+          7955
+        ],
+        [
+          "Charcoal",
+          30,
+          8.4,
+          12900
+        ],
+        [
+          "Coal",
+          28,
+          7.84,
+          12040
+        ],
+        [
+          "Coconut husks",
+          10,
+          2.8,
+          4300
+        ],
+        [
+          "Coconut shells",
+          18,
+          5.04,
+          7740
+        ],
+        [
+          "Coffee husks",
+          16,
+          4.48,
+          6880
+        ],
+        [
+          "Commercial wastes",
+          16,
+          4.48,
+          6880
+        ],
+        [
+          "Cotton hulls",
+          19.5,
+          5.46,
+          8385
+        ],
+        [
+          "Cotton stalks",
+          17.5,
+          4.9,
+          7525
+        ],
+        [
+          "Domestic refuse",
+          9,
+          2.52,
+          3870
+        ],
+        [
+          "Dung, dried",
+          16,
+          4.48,
+          6880
+        ],
+        [
+          "Grass, fresh",
+          4,
+          1.12,
+          1720
+        ],
+        [
+          "Groundnut shells",
+          20,
+          5.6,
+          8600
+        ],
+        [
+          "Maize cobs",
+          19,
+          5.32,
+          8170
+        ],
+        [
+          "Maize stalks",
+          18,
+          5.04,
+          7740
+        ],
+        [
+          "Methane from biogas",
+          55,
+          15.4,
+          23650
+        ],
+        [
+          "Paper, newspaper",
+          17,
+          4.76,
+          7310
+        ],
+        [
+          "Peat",
+          14.5,
+          4.06,
+          6235
+        ],
+        [
+          "Petroleum Oil",
+          42,
+          11.76,
+          18060
+        ],
+        [
+          "Rice hulls",
+          15.5,
+          4.34,
+          6665
+        ],
+        [
+          "Rice straw",
+          15,
+          4.2,
+          6450
+        ],
+        [
+          "Soybean stalks",
+          19,
+          5.32,
+          8170
+        ],
+        [
+          "Straw, harvested, baled",
+          15,
+          4.2,
+          6450
+        ],
+        [
+          "Sorghum bagasse",
+          19,
+          5.32,
+          8170
+        ],
+        [
+          "Sugar cane residues",
+          17,
+          4.76,
+          7310
+        ],
+        [
+          "Wheat straw",
+          19,
+          5.32,
+          8170
+        ],
+        [
+          "Wood, green with 60% moisture",
+          6,
+          1.68,
+          2580
+        ],
+        [
+          "Wood, air-dried to 20% moisture",
+          15,
+          4.2,
+          6450
+        ],
+        [
+          "Wood, oven-dried to 0% moisture",
+          18,
+          5.04,
+          7740
+        ]
+      ]
+    }
+  ]
+}

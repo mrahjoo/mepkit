@@ -1,0 +1,187 @@
+{
+  "id": "bases___ph_values",
+  "title": "Bases - pH Values",
+  "description": "pH values for bases like sodium hydroxide, ammonia and more. pH is a measure of the hydrogen ion (H+) activity in a solution and, therefore, its acidity or alkalinity.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Bases - pH Values Reference\n\npH is a measure of the hydrogen ion (_H+_) activity in a solution and, therefore, its acidity or alkalinity.\n\nUse the calculator below to explore pH values for common bases, or reference the table for specific base values."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Base",
+        "Normality",
+        "pH"
+      ],
+      "rows": [
+        [
+          "Ammonia",
+          "N",
+          "11.5"
+        ],
+        [
+          "Ammonia",
+          "0.1 N",
+          "11.1"
+        ],
+        [
+          "Ammonia",
+          "0.01 N",
+          "10.6"
+        ],
+        [
+          "Barbital sodium",
+          "0.1N",
+          "9.4"
+        ],
+        [
+          "Borax",
+          "0.01 N",
+          "9.2"
+        ],
+        [
+          "Calcium carbonate",
+          "saturated",
+          "9.4"
+        ],
+        [
+          "Calcium hydroxide",
+          "saturated",
+          "12.4"
+        ],
+        [
+          "Ferrous hydroxide",
+          "saturated",
+          "9.5"
+        ],
+        [
+          "Magnesia",
+          "saturated",
+          "10.5"
+        ],
+        [
+          "Lime",
+          "saturated",
+          "12.4"
+        ],
+        [
+          "Potassium acetate",
+          "0.1N",
+          "9.7"
+        ],
+        [
+          "Potassium bicarbonate",
+          "0.1N",
+          "8.2"
+        ],
+        [
+          "Potassium carbonate",
+          "0.1N",
+          "11.5"
+        ],
+        [
+          "Potassium cyanide",
+          "0.1 N",
+          "11.0"
+        ],
+        [
+          "Potassium hydroxide",
+          "N",
+          "14.0"
+        ],
+        [
+          "Potassium hydroxide",
+          "0.1 N",
+          "13.0"
+        ],
+        [
+          "Potassium hydroxide",
+          "0.01 N",
+          "12.0"
+        ],
+        [
+          "Sodium acetate",
+          "0.1N",
+          "8.9"
+        ],
+        [
+          "Sodium benzoate",
+          "0.1N",
+          "8.0"
+        ],
+        [
+          "Sodium bicarbonate(baking soda)",
+          "0.1 N",
+          "8.4"
+        ],
+        [
+          "Sodium carbonate(washing soda)",
+          "0.1 N",
+          "11.6"
+        ],
+        [
+          "Sodium hydroxide(caustic soda)",
+          "N",
+          "14.0"
+        ],
+        [
+          "Sodium hydroxide",
+          "0.1 N",
+          "13.0"
+        ],
+        [
+          "Sodium hydroxide",
+          "0.01 N",
+          "12.0"
+        ],
+        [
+          "Sodium metasilicate",
+          "0.1 N",
+          "12.6"
+        ],
+        [
+          "Sodium sesquicarbonate",
+          "0.1 N",
+          "10.1"
+        ],
+        [
+          "Trisodium phosphate",
+          "0.1 N",
+          "12.0"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ph_value",
+          "label": "pH Value",
+          "type": "number",
+          "defaultValue": 7
+        }
+      ],
+      "outputs": [
+        {
+          "id": "h_ion_concentration",
+          "label": "H+ Ion Concentration",
+          "formula": "Math.pow(10, -inputs.ph_value)",
+          "format": "scientific"
+        },
+        {
+          "id": "oh_ion_concentration",
+          "label": "OH- Ion Concentration",
+          "formula": "Math.pow(10, inputs.ph_value - 14)",
+          "format": "scientific"
+        },
+        {
+          "id": "acidity_type",
+          "label": "Solution Type",
+          "formula": "inputs.ph_value > 7 ? 'Basic (Alkaline)' : inputs.ph_value < 7 ? 'Acidic' : 'Neutral'"
+        }
+      ]
+    }
+  ]
+}

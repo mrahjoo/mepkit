@@ -1,0 +1,110 @@
+{
+  "id": "malleability_vs__brittlenes_vs__ductility",
+  "title": "Malleability vs. Brittleness vs. Ductility",
+  "description": "Educational tool comparing three material properties: malleability (plastic deformation when cold), brittleness (fracture without plastic deformation), and ductility (plastic elongation without fracture). Includes calculators for percent elongation and percent reduction of area.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Material Properties Overview\n\n### Malleability\nA material can be plastic deformed and shaped when cold. Malleable materials can be shaped with hammering or rolling without fracture.\n\n**Typical materials:** mild steel, gold, lead\n\n### Brittleness\nA material will fracture without appreciable prior plastic deformation. The elastic stage is followed by immediate fracture.\n\n**Typical materials:** glass, concrete, ceramics, stone, gray cast iron\n\n### Ductility\nA material can be plastic deformed by elongation without fracture. Ductile materials typically can be elongated more than 15% before fracture.\n\n**Typical materials:** copper, mild steel, thermoplastics"
+    },
+    {
+      "type": "calculator",
+      "content": "### Ductility - Percent Elongation",
+      "headers": [
+        "Parameter",
+        "Formula",
+        "Description"
+      ],
+      "inputs": [
+        {
+          "id": "original_length",
+          "label": "Original Length (L₀)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "mm"
+        },
+        {
+          "id": "final_length",
+          "label": "Final Length (Lf)",
+          "type": "number",
+          "defaultValue": 125,
+          "unit": "mm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "percent_elongation",
+          "label": "Percent Elongation (DL)",
+          "formula": "100 * (inputs.final_length - inputs.original_length) / inputs.original_length",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "### Ductility - Percent Reduction of Area",
+      "headers": [
+        "Parameter",
+        "Formula",
+        "Description"
+      ],
+      "inputs": [
+        {
+          "id": "original_area",
+          "label": "Original Area (A₀)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "mm²"
+        },
+        {
+          "id": "final_area",
+          "label": "Final Area (Af)",
+          "type": "number",
+          "defaultValue": 75,
+          "unit": "mm²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "percent_reduction_area",
+          "label": "Percent Reduction of Area (DA)",
+          "formula": "100 * (inputs.original_area - inputs.final_area) / inputs.original_area",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "### Material Classification",
+      "headers": [
+        "Material Property",
+        "Definition",
+        "Deformation Behavior",
+        "Typical Examples"
+      ],
+      "rows": [
+        [
+          "Malleability",
+          "Material can be plastic deformed and shaped when cold",
+          "Shaped by hammering or rolling without fracture",
+          "Mild steel, gold, lead"
+        ],
+        [
+          "Brittleness",
+          "Material fractures without appreciable plastic deformation",
+          "Elastic stage followed by immediate fracture",
+          "Glass, concrete, ceramics, stone, gray cast iron"
+        ],
+        [
+          "Ductility",
+          "Material can be plastic deformed by elongation without fracture",
+          "Can be elongated >15% before fracture",
+          "Copper, mild steel, thermoplastics"
+        ]
+      ]
+    }
+  ]
+}

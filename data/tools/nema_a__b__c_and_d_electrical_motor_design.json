@@ -1,0 +1,129 @@
+{
+  "id": "nema_a__b__c_and_d_electrical_motor_design",
+  "title": "NEMA A, B, C and D Electrical Motor Design",
+  "description": "A comprehensive tool for selecting and comparing NEMA electrical induction motor designs (A, B, C, and D) based on their performance characteristics including slip, starting current, locked rotor torque, and breakdown torque for different applications.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## NEMA Motor Design Comparison\n\nNEMA has established four different designs (A, B, C, and D) for electrical induction motors. Different motors with the same nominal horsepower may have different start current, torque curves, speeds and other variables.\n\n### Design Characteristics:\n\n**NEMA Design A**\n- Maximum 5% slip\n- High to medium starting current\n- Normal locked rotor torque\n- Normal breakdown torque\n- Suited for: fans and pumps\n\n**NEMA Design B**\n- Maximum 5% slip\n- Low starting current\n- High locked rotor torque\n- Normal breakdown torque\n- Suited for: HVAC applications with fans, blowers and pumps\n\n**NEMA Design C**\n- Maximum 5% slip\n- Low starting current\n- High locked rotor torque\n- Normal breakdown torque\n- Suited for: equipment with high inertia and high starting torques (positive displacement pumps, conveyors)\n\n**NEMA Design D**\n- Maximum 5-13% slip\n- Low starting current\n- Very high locked rotor torque\n- Suited for: equipment with very high inertia starts (cranes, hoists)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "motor_design",
+          "label": "Select NEMA Motor Design",
+          "type": "select",
+          "options": [
+            {
+              "value": "A",
+              "label": "NEMA Design A"
+            },
+            {
+              "value": "B",
+              "label": "NEMA Design B"
+            },
+            {
+              "value": "C",
+              "label": "NEMA Design C"
+            },
+            {
+              "value": "D",
+              "label": "NEMA Design D"
+            }
+          ]
+        },
+        {
+          "id": "horsepower",
+          "label": "Motor Horsepower (HP)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "HP"
+        },
+        {
+          "id": "supply_voltage",
+          "label": "Supply Voltage",
+          "type": "number",
+          "defaultValue": 460,
+          "unit": "V"
+        },
+        {
+          "id": "motor_speed",
+          "label": "Motor Synchronous Speed",
+          "type": "number",
+          "defaultValue": 1800,
+          "unit": "RPM"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "max_slip",
+          "label": "Maximum Slip",
+          "unit": "%",
+          "format": "decimal",
+          "formula": "IF(inputs.motor_design='D', 9, 5)"
+        },
+        {
+          "id": "output_power",
+          "label": "Output Power",
+          "unit": "kW",
+          "format": "decimal",
+          "formula": "inputs.horsepower * 0.7457"
+        },
+        {
+          "id": "design_characteristics",
+          "label": "Key Characteristics",
+          "unit": "",
+          "format": "decimal",
+          "formula": "IF(inputs.motor_design='A', 'High-medium starting current, normal torque', IF(inputs.motor_design='B', 'Low starting current, high locked rotor torque', IF(inputs.motor_design='C', 'Low starting current, high locked rotor torque, high inertia', 'Low starting current, very high locked rotor torque, very high inertia')))"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "NEMA Design",
+        "Max Slip (%)",
+        "Starting Current",
+        "Locked Rotor Torque",
+        "Breakdown Torque",
+        "Primary Applications"
+      ],
+      "rows": [
+        [
+          "A",
+          "5",
+          "High to Medium",
+          "Normal",
+          "Normal",
+          "Fans, Pumps"
+        ],
+        [
+          "B",
+          "5",
+          "Low",
+          "High",
+          "Normal",
+          "HVAC, Fans, Blowers, Pumps"
+        ],
+        [
+          "C",
+          "5",
+          "Low",
+          "High",
+          "Normal",
+          "High Inertia, Pumps, Conveyors"
+        ],
+        [
+          "D",
+          "5-13",
+          "Low",
+          "Very High",
+          "Variable",
+          "Cranes, Hoists, Very High Inertia"
+        ]
+      ]
+    }
+  ]
+}

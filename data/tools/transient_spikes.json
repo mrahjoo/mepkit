@@ -1,0 +1,52 @@
+{
+  "id": "transient_spikes",
+  "title": "Transient Spikes",
+  "description": "A transient is a high voltage spike caused by an external or internal transient source",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Transient Spikes Overview\n\nA transient is a high voltage spike of less than 10 microseconds in duration. Transients in power lines may have voltage spikes up to 6000 volts and it is not unusual that spikes in commercial industrial circuits excess 1000 volts.\n\nHigh voltage transients follows the path of least resistance to the ground and may create a damaging heat in circuit components causing malfunction and failure.\n\n### External Transient Sources\n\nAn external transient at high voltage caused by lightning hitting the power line is reduced through distribution transformers by a factor typical ranging 1 to 6. Since a transient caused by lighting may be extremely high - more than 50000 volts - the resulting transient after transformers in a distribution system may also be very high when they reach the internal circuits.\n\n### Internal Transient Sources\n\nSwitching on and off of motors in an internal circuit may cause transients up to 2500 volts."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Transient Source",
+        "Type",
+        "Typical Voltage Range",
+        "Duration",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Lightning Strike",
+          "External",
+          "50,000+ volts",
+          "< 10 microseconds",
+          "Reduced by transformers (factor 1-6)"
+        ],
+        [
+          "Power Line Transient",
+          "External",
+          "Up to 6,000 volts",
+          "< 10 microseconds",
+          "After transformer reduction"
+        ],
+        [
+          "Motor Switching",
+          "Internal",
+          "Up to 2,500 volts",
+          "< 10 microseconds",
+          "Caused by on/off switching"
+        ],
+        [
+          "Commercial/Industrial Circuit",
+          "Internal",
+          "Exceeds 1,000 volts",
+          "< 10 microseconds",
+          "Common in industrial settings"
+        ]
+      ]
+    }
+  ]
+}

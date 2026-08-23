@@ -1,0 +1,82 @@
+{
+  "id": "shrink_fits_assembly",
+  "title": "Shrink-Fits Assembly",
+  "description": "Assembly temperatures for shrink-fits. Calculate required heating temperature or diametric interference for shrink-fit assemblies using thermal expansion principles.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Shrink-Fits Assembly\n\nShrink-fits are assembled by heating them to temperatures where the expansion exceeds the interference. Required heating temperature can be calculated as:\n\n**Formula (1): Temperature Heating**\n\ndt = δ / (α × di)\n\n**Formula (2): Diametric Interference**\n\nδ = dt × α × di\n\n**Where:**\n- dt = temperature heating (°C, °F)\n- δ = diametric interference (mm, in)\n- α = coefficient of linear expansion (m/m·K, in/in·°F)\n- di = initial diameter of hole before expansion (mm, in)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "diametric_interference",
+          "label": "Diametric Interference (δ)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "linear_expansion_coeff",
+          "label": "Coefficient of Linear Expansion (α)",
+          "type": "number",
+          "unit": "m/m·K",
+          "defaultValue": 0.000011
+        },
+        {
+          "id": "initial_diameter",
+          "label": "Initial Hole Diameter (di)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heating_temp",
+          "label": "Required Heating Temperature (dt)",
+          "formula": "inputs.diametric_interference / (inputs.linear_expansion_coeff * inputs.initial_diameter)",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "heating_temp_reverse",
+          "label": "Heating Temperature (dt)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 90.9
+        },
+        {
+          "id": "linear_expansion_coeff_reverse",
+          "label": "Coefficient of Linear Expansion (α)",
+          "type": "number",
+          "unit": "m/m·K",
+          "defaultValue": 0.000011
+        },
+        {
+          "id": "initial_diameter_reverse",
+          "label": "Initial Hole Diameter (di)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "diametric_interference_calc",
+          "label": "Diametric Interference (δ)",
+          "formula": "inputs.heating_temp_reverse * inputs.linear_expansion_coeff_reverse * inputs.initial_diameter_reverse",
+          "unit": "mm",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

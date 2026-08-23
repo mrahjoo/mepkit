@@ -1,0 +1,100 @@
+{
+  "id": "walls___no__of_studs",
+  "title": "Walls - No. of Studs",
+  "description": "Calculate required number of studs in a wall based on wall length and center distance between studs.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate the number of studs required in a wall using the formula: n = L / l + 1, where n is the number of studs, L is the length of wall, and l is the center distance between studs.",
+      "inputs": [
+        {
+          "id": "wall_length",
+          "label": "Wall Length (ft)",
+          "type": "number",
+          "defaultValue": 16,
+          "unit": "ft"
+        },
+        {
+          "id": "stud_spacing",
+          "label": "Center Distance Between Studs (ft)",
+          "type": "number",
+          "defaultValue": 1.33,
+          "unit": "ft"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "num_studs",
+          "label": "Number of Studs",
+          "formula": "inputs.wall_length / inputs.stud_spacing + 1",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\n**n = L / l + 1**\n\nWhere:\n- **n** = number of studs\n- **L** = length of wall (ft, m)\n- **l** = center distance between the studs (ft, m)\n\n## Note\n\nAdditional studs are required in corners and around doors and windows. This calculation provides the base number of studs for the wall run."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Wall Length (ft)",
+        "Stud Spacing (ft)",
+        "Number of Studs"
+      ],
+      "rows": [
+        [
+          8,
+          1.33,
+          7
+        ],
+        [
+          12,
+          1.33,
+          10
+        ],
+        [
+          16,
+          1.33,
+          13
+        ],
+        [
+          20,
+          1.33,
+          16
+        ],
+        [
+          24,
+          1.33,
+          19
+        ],
+        [
+          8,
+          2,
+          5
+        ],
+        [
+          12,
+          2,
+          7
+        ],
+        [
+          16,
+          2,
+          9
+        ],
+        [
+          20,
+          2,
+          11
+        ],
+        [
+          24,
+          2,
+          13
+        ]
+      ]
+    }
+  ]
+}

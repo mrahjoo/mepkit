@@ -1,0 +1,52 @@
+{
+  "id": "consanguinity",
+  "title": "Consanguinity",
+  "description": "Relationship between persons descending from the same ancestor. Consanguinity refers to familial relationships such as children, siblings, cousins, grandchildren, and great grandchildren. \"Removed\" cousin designates when cousins are not of the same generation.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Relationship Type",
+        "Description",
+        "Generation Level"
+      ],
+      "rows": [
+        [
+          "Children",
+          "Direct descendants one generation below",
+          "1"
+        ],
+        [
+          "Siblings",
+          "Persons sharing the same parents",
+          "Same"
+        ],
+        [
+          "Cousins",
+          "Persons descended from a common ancestor but different generations",
+          "Variable"
+        ],
+        [
+          "Grandchildren",
+          "Direct descendants two generations below",
+          "2"
+        ],
+        [
+          "Great Grandchildren",
+          "Direct descendants three generations below",
+          "3"
+        ],
+        [
+          "First Cousins Once Removed",
+          "Cousins from different generations",
+          "±1"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About Consanguinity\n\nConsanguinity is the relationship between persons descending from the same ancestor. Common examples include:\n\n- **Children**: Direct descendants one generation below\n- **Siblings**: Persons sharing the same parents\n- **Cousins**: Persons descended from a common ancestor\n- **Grandchildren**: Direct descendants two generations below\n- **Great Grandchildren**: Direct descendants three generations below\n\n### Removed Cousins\n\n\"Removed\" cousin designates the cousins are not of the same generation. For example, a first cousin once removed is the child of your first cousin."
+    }
+  ]
+}

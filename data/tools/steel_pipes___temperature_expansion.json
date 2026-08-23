@@ -1,0 +1,103 @@
+{
+  "id": "steel_pipes___temperature_expansion",
+  "title": "Steel Pipes - Temperature Expansion",
+  "description": "Calculate temperature expansion with carbon steel pipes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Original Length",
+          "",
+          "mm"
+        ],
+        [
+          "Initial Temperature",
+          "",
+          "°C"
+        ],
+        [
+          "Final Temperature",
+          "",
+          "°C"
+        ],
+        [
+          "Thermal Expansion Coefficient (Carbon Steel)",
+          "0.000012",
+          "1/°C"
+        ],
+        [
+          "Temperature Change",
+          "",
+          "°C"
+        ],
+        [
+          "Total Expansion",
+          "",
+          "mm"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "original_length",
+          "label": "Original Length",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 1000
+        },
+        {
+          "id": "initial_temperature",
+          "label": "Initial Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "final_temperature",
+          "label": "Final Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 100
+        },
+        {
+          "id": "thermal_coefficient",
+          "label": "Thermal Expansion Coefficient",
+          "type": "number",
+          "unit": "1/°C",
+          "defaultValue": 0.000012
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_change",
+          "label": "Temperature Change",
+          "unit": "°C",
+          "formula": "inputs.final_temperature - inputs.initial_temperature"
+        },
+        {
+          "id": "total_expansion",
+          "label": "Total Expansion",
+          "unit": "mm",
+          "formula": "inputs.original_length * inputs.thermal_coefficient * (inputs.final_temperature - inputs.initial_temperature)",
+          "format": "decimal"
+        },
+        {
+          "id": "final_length",
+          "label": "Final Length",
+          "unit": "mm",
+          "formula": "inputs.original_length + (inputs.original_length * inputs.thermal_coefficient * (inputs.final_temperature - inputs.initial_temperature))",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

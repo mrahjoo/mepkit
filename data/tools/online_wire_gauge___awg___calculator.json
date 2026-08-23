@@ -1,0 +1,77 @@
+{
+  "id": "online_wire_gauge___awg___calculator",
+  "title": "Online Wire Gauge - AWG - Calculator",
+  "description": "Calculate AWG, mil, mm, CM or square mm. This tool helps you convert between different wire gauge measurements and units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Wire Gauge Calculator",
+      "inputs": [
+        {
+          "id": "awg_gauge",
+          "label": "AWG Gauge",
+          "type": "number",
+          "defaultValue": 10
+        },
+        {
+          "id": "mil_value",
+          "label": "Mil (thousandths of inch)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "mm_value",
+          "label": "Millimeter (mm)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "cm_value",
+          "label": "Circular Mil (CM)",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "sqmm_value",
+          "label": "Square Millimeter (mm²)",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "awg_result",
+          "label": "AWG Gauge",
+          "formula": "inputs.awg_gauge",
+          "unit": "AWG"
+        },
+        {
+          "id": "mil_result",
+          "label": "Mil",
+          "formula": "inputs.awg_gauge > 0 ? 204.3 / Math.pow(92, inputs.awg_gauge / 39) : 0",
+          "unit": "mil"
+        },
+        {
+          "id": "mm_result",
+          "label": "Millimeter",
+          "formula": "inputs.awg_gauge > 0 ? 5.189 / Math.pow(92, inputs.awg_gauge / 39) : 0",
+          "unit": "mm"
+        },
+        {
+          "id": "cm_result",
+          "label": "Circular Mil",
+          "formula": "inputs.awg_gauge > 0 ? Math.pow(204.3 / Math.pow(92, inputs.awg_gauge / 39), 2) : 0",
+          "unit": "CM"
+        },
+        {
+          "id": "sqmm_result",
+          "label": "Square Millimeter",
+          "formula": "inputs.awg_gauge > 0 ? Math.PI * Math.pow(5.189 / (2 * Math.pow(92, inputs.awg_gauge / 39)), 2) : 0",
+          "unit": "mm²",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

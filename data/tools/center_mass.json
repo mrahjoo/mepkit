@@ -1,0 +1,61 @@
+{
+  "id": "center_mass",
+  "title": "Center Mass",
+  "description": "Calculate position of center mass using the formula: Rx = (ma·xa + mb·xb) / (ma + mb)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Center Mass\n\nCalculate position of center mass.\n\nA coordinate system for determining center of mass:\n\n![Center mass - position](static/docs/documents/1838/center_of_mass.png \"Center mass - position\")\n\nThe position of center mass can calculated as\n\n**Rx = (ma·xa + mb·xb) / (ma + mb)**\n\nor equivalently:\n\n**Rx = (mb / (ma + mb)) · d**\n\nWhere:\n- **Rx** = x-coordinate for the center of mass\n- **ma** = mass of object a\n- **xa** = x-coordinate of object a\n- **mb** = mass of object b\n- **xb** = x-coordinate of object b\n- **d** = distance between objects"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ma",
+          "label": "Mass A (ma)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 10
+        },
+        {
+          "id": "xa",
+          "label": "Position A (xa)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "mb",
+          "label": "Mass B (mb)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 5
+        },
+        {
+          "id": "xb",
+          "label": "Position B (xb)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_mass",
+          "label": "Total Mass",
+          "unit": "kg",
+          "formula": "inputs.ma + inputs.mb",
+          "format": "decimal"
+        },
+        {
+          "id": "center_mass_x",
+          "label": "Center of Mass (Rx)",
+          "unit": "m",
+          "formula": "(inputs.ma * inputs.xa + inputs.mb * inputs.xb) / (inputs.ma + inputs.mb)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

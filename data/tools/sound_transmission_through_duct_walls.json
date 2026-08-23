@@ -1,0 +1,103 @@
+{
+  "id": "sound_transmission_through_duct_walls",
+  "title": "Sound Transmission through Duct Walls",
+  "description": "Calculate sound pressure level in a room based on sound transmission from ducts to surrounding rooms using the formula: Lp = LN - TL - 10 log(A F / 4 Ad)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Sound Transmission Loss through Duct Walls (dB)",
+      "headers": [
+        "Duct Sheet Thickness (mm)",
+        "125 Hz",
+        "250 Hz",
+        "500 Hz",
+        "1000 Hz"
+      ],
+      "rows": [
+        [
+          1.25,
+          17,
+          22,
+          25,
+          29
+        ],
+        [
+          1,
+          15,
+          20,
+          23,
+          27
+        ],
+        [
+          0.75,
+          14,
+          19,
+          22,
+          26
+        ],
+        [
+          0.65,
+          12,
+          17,
+          20,
+          24
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "Sound Pressure Level Calculator",
+      "inputs": [
+        {
+          "id": "LN",
+          "label": "Sound Power Level in Duct (LN)",
+          "type": "number",
+          "defaultValue": 80,
+          "unit": "dB"
+        },
+        {
+          "id": "TL",
+          "label": "Transmission Loss through Duct Wall (TL)",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "dB"
+        },
+        {
+          "id": "A",
+          "label": "Room Absorption (A)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m² Sabine"
+        },
+        {
+          "id": "F",
+          "label": "Cross Section Area of Duct (F)",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "m²"
+        },
+        {
+          "id": "Ad",
+          "label": "Surface Area of Duct (Ad)",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "m²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Lp",
+          "label": "Sound Pressure Level in Room (Lp)",
+          "formula": "inputs.LN - inputs.TL - 10 * Math.log10((inputs.A * inputs.F) / (4 * inputs.Ad))",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\n**Lp = LN - TL - 10 log(A F / 4 Ad)**\n\nWhere:\n- **Lp** = Sound pressure level in room (dB)\n- **LN** = Sound power level in the duct (dB)\n- **TL** = Transmission loss through duct wall (dB)\n- **A** = Room absorption (m² Sabine)\n- **F** = Cross section area of duct (m²)\n- **Ad** = Surface area of duct (m²)\n\n## Notes\n\nThe acoustic performance of round and oval ducts is superior to rectangular ducts since their curved surfaces allow less breakout noise. Low-frequency sound is better contained in round ducts."
+    }
+  ]
+}

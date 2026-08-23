@@ -1,0 +1,54 @@
+{
+  "id": "process_control_systems_documentation",
+  "title": "Process Control Systems Documentation",
+  "description": "Documentation of process control systems - Block Flow Diagrams (BFD), Process Flow Diagrams (PFD), Piping and Instrumentation Diagrams (P&ID) and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Process Control Systems Documentation\n\nThis tool provides comprehensive documentation for process control systems including:\n\n- **Block Flow Diagrams (BFD)**: High-level overview of process blocks and material flows\n- **Process Flow Diagrams (PFD)**: Detailed process flows with equipment and connections\n- **Piping and Instrumentation Diagrams (P&ID)**: Detailed piping design with control instrumentation\n\n## Documentation Resources\n\nUse this tool to reference and calculate process control parameters for your industrial systems."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "L/min",
+          "defaultValue": 100
+        },
+        {
+          "id": "pressure_inlet",
+          "label": "Inlet Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 5
+        },
+        {
+          "id": "pressure_outlet",
+          "label": "Outlet Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_drop",
+          "label": "Pressure Drop",
+          "unit": "bar",
+          "formula": "inputs.pressure_inlet - inputs.pressure_outlet",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_rate_adjusted",
+          "label": "Adjusted Flow Rate",
+          "unit": "m³/h",
+          "formula": "inputs.flow_rate * 0.06",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

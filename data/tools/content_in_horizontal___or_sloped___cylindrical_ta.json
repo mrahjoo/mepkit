@@ -1,0 +1,274 @@
+{
+  "id": "content_in_horizontal___or_sloped___cylindrical_ta",
+  "title": "Content in Horizontal - or Sloped - Cylindrical Tanks or Pipes",
+  "description": "Volume of partly filled horizontal or sloped cylindrical tanks or pipes. Calculate the liquid volume, mass, central angle, chord length, arc length, cross-sectional area, and air volume in partly filled horizontal or sloped cylindrical tanks or pipes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "calculator_section",
+      "content": "Cylindrical Tank Content Calculator",
+      "inputs": [
+        {
+          "id": "inside_diameter",
+          "label": "Inside Diameter",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m"
+        },
+        {
+          "id": "liquid_level",
+          "label": "Liquid Level (Height from bottom)",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "m"
+        },
+        {
+          "id": "tank_length",
+          "label": "Tank Length",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m"
+        },
+        {
+          "id": "slope_angle",
+          "label": "Slope Angle",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "degrees"
+        },
+        {
+          "id": "liquid_density",
+          "label": "Liquid Density",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "liquid_volume",
+          "label": "Liquid Volume",
+          "formula": "inputs.tank_length * (Math.pow(inputs.inside_diameter / 2, 2) * Math.acos((inputs.inside_diameter / 2 - inputs.liquid_level) / (inputs.inside_diameter / 2)) - (inputs.inside_diameter / 2 - inputs.liquid_level) * Math.sqrt(Math.pow(inputs.inside_diameter / 2, 2) - Math.pow(inputs.inside_diameter / 2 - inputs.liquid_level, 2)))",
+          "unit": "m³",
+          "format": "decimal"
+        },
+        {
+          "id": "liquid_mass",
+          "label": "Liquid Mass",
+          "formula": "inputs.liquid_density * inputs.tank_length * (Math.pow(inputs.inside_diameter / 2, 2) * Math.acos((inputs.inside_diameter / 2 - inputs.liquid_level) / (inputs.inside_diameter / 2)) - (inputs.inside_diameter / 2 - inputs.liquid_level) * Math.sqrt(Math.pow(inputs.inside_diameter / 2, 2) - Math.pow(inputs.inside_diameter / 2 - inputs.liquid_level, 2)))",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "central_angle",
+          "label": "Central Angle",
+          "formula": "2 * Math.acos((inputs.inside_diameter / 2 - inputs.liquid_level) / (inputs.inside_diameter / 2)) * 180 / Math.PI",
+          "unit": "degrees",
+          "format": "decimal"
+        },
+        {
+          "id": "chord_length",
+          "label": "Chord Length",
+          "formula": "2 * Math.sqrt(Math.pow(inputs.inside_diameter / 2, 2) - Math.pow(inputs.inside_diameter / 2 - inputs.liquid_level, 2))",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "arc_length",
+          "label": "Arc Length",
+          "formula": "inputs.inside_diameter / 2 * 2 * Math.acos((inputs.inside_diameter / 2 - inputs.liquid_level) / (inputs.inside_diameter / 2))",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "liquid_cross_section",
+          "label": "Liquid Cross-Sectional Area",
+          "formula": "Math.pow(inputs.inside_diameter / 2, 2) * Math.acos((inputs.inside_diameter / 2 - inputs.liquid_level) / (inputs.inside_diameter / 2)) - (inputs.inside_diameter / 2 - inputs.liquid_level) * Math.sqrt(Math.pow(inputs.inside_diameter / 2, 2) - Math.pow(inputs.inside_diameter / 2 - inputs.liquid_level, 2))",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "air_cross_section",
+          "label": "Air Cross-Sectional Area",
+          "formula": "Math.PI * Math.pow(inputs.inside_diameter / 2, 2) - (Math.pow(inputs.inside_diameter / 2, 2) * Math.acos((inputs.inside_diameter / 2 - inputs.liquid_level) / (inputs.inside_diameter / 2)) - (inputs.inside_diameter / 2 - inputs.liquid_level) * Math.sqrt(Math.pow(inputs.inside_diameter / 2, 2) - Math.pow(inputs.inside_diameter / 2 - inputs.liquid_level, 2)))",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "air_volume",
+          "label": "Air Volume in Tank",
+          "formula": "inputs.tank_length * (Math.PI * Math.pow(inputs.inside_diameter / 2, 2) - (Math.pow(inputs.inside_diameter / 2, 2) * Math.acos((inputs.inside_diameter / 2 - inputs.liquid_level) / (inputs.inside_diameter / 2)) - (inputs.inside_diameter / 2 - inputs.liquid_level) * Math.sqrt(Math.pow(inputs.inside_diameter / 2, 2) - Math.pow(inputs.inside_diameter / 2 - inputs.liquid_level, 2))))",
+          "unit": "m³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "level_volume_table",
+      "content": "Horizontal Tank - Liquid Level and Volume Fill Relationship",
+      "headers": [
+        "Liquid Level Ratio (% of max height)",
+        "Liquid Fill (% of max volume)"
+      ],
+      "rows": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          15,
+          9
+        ],
+        [
+          20,
+          14
+        ],
+        [
+          25,
+          20
+        ],
+        [
+          30,
+          25
+        ],
+        [
+          35,
+          31
+        ],
+        [
+          40,
+          37
+        ],
+        [
+          45,
+          44
+        ],
+        [
+          50,
+          50
+        ],
+        [
+          55,
+          56
+        ],
+        [
+          60,
+          63
+        ],
+        [
+          65,
+          69
+        ],
+        [
+          70,
+          75
+        ],
+        [
+          75,
+          80
+        ],
+        [
+          80,
+          86
+        ],
+        [
+          85,
+          91
+        ],
+        [
+          90,
+          95
+        ],
+        [
+          95,
+          98
+        ],
+        [
+          100,
+          100
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "level_volume_chart",
+      "content": "Horizontal Tank - Liquid Level vs Volume Fill Chart",
+      "options": {
+        "title": {
+          "text": "Horizontal Tank - Liquid Level and Volume Fill"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Liquid Level Ratio (% of max height)",
+          "data": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            45,
+            50,
+            55,
+            60,
+            65,
+            70,
+            75,
+            80,
+            85,
+            90,
+            95,
+            100
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Liquid Fill (% of max volume)"
+        },
+        "series": [
+          {
+            "data": [
+              0,
+              2,
+              5,
+              9,
+              14,
+              20,
+              25,
+              31,
+              37,
+              44,
+              50,
+              56,
+              63,
+              69,
+              75,
+              80,
+              86,
+              91,
+              95,
+              98,
+              100
+            ],
+            "type": "line",
+            "smooth": true,
+            "name": "Volume Fill %"
+          }
+        ]
+      }
+    }
+  ]
+}

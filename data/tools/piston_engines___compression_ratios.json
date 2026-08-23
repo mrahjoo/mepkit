@@ -1,0 +1,190 @@
+{
+  "id": "piston_engines___compression_ratios",
+  "title": "Piston Engines - Compression Ratios",
+  "description": "Cylinder volume and compression ratios in piston engines. Calculate the static compression ratio using piston displacement volume and clearance volume.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "compression_ratio_calculator",
+      "headers": [
+        "Compression Ratio Calculator"
+      ],
+      "content": "Calculate the compression ratio CR = (Vd + Vc) / Vc where Vd = π d² s / 4",
+      "inputs": [
+        {
+          "id": "piston_diameter",
+          "label": "Piston Diameter (d)",
+          "type": "number",
+          "unit": "cm",
+          "defaultValue": 8
+        },
+        {
+          "id": "piston_stroke",
+          "label": "Piston Stroke (s)",
+          "type": "number",
+          "unit": "cm",
+          "defaultValue": 10
+        },
+        {
+          "id": "clearance_volume",
+          "label": "Clearance Volume (Vc)",
+          "type": "number",
+          "unit": "cm³",
+          "defaultValue": 50
+        }
+      ],
+      "outputs": [
+        {
+          "id": "displacement_volume",
+          "label": "Piston Displacement Volume (Vd)",
+          "formula": "(3.14159 * inputs.piston_diameter ^ 2 * inputs.piston_stroke) / 4",
+          "unit": "cm³",
+          "format": "decimal"
+        },
+        {
+          "id": "total_volume",
+          "label": "Total Volume (Vd + Vc)",
+          "formula": "((3.14159 * inputs.piston_diameter ^ 2 * inputs.piston_stroke) / 4) + inputs.clearance_volume",
+          "unit": "cm³",
+          "format": "decimal"
+        },
+        {
+          "id": "compression_ratio",
+          "label": "Compression Ratio (CR)",
+          "formula": "(((3.14159 * inputs.piston_diameter ^ 2 * inputs.piston_stroke) / 4) + inputs.clearance_volume) / inputs.clearance_volume",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "compression_ratios_table",
+      "headers": [
+        "Piston Diameter (cm)",
+        "Piston Stroke (cm)",
+        "Clearance Volume (cm³)",
+        "Displacement Volume (cm³)",
+        "Compression Ratio"
+      ],
+      "rows": [
+        [
+          5,
+          8,
+          30,
+          157.08,
+          6.24
+        ],
+        [
+          6,
+          10,
+          40,
+          282.74,
+          8.07
+        ],
+        [
+          7,
+          10,
+          50,
+          384.85,
+          8.7
+        ],
+        [
+          8,
+          10,
+          50,
+          502.65,
+          11.05
+        ],
+        [
+          8,
+          12,
+          60,
+          603.19,
+          11.06
+        ],
+        [
+          9,
+          12,
+          70,
+          763.41,
+          11.91
+        ],
+        [
+          10,
+          12,
+          80,
+          942.48,
+          12.78
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "compression_ratio_chart",
+      "headers": [
+        "Compression Ratio vs Piston Diameter"
+      ],
+      "rows": [
+        [
+          5,
+          6.24
+        ],
+        [
+          6,
+          8.07
+        ],
+        [
+          7,
+          8.7
+        ],
+        [
+          8,
+          11.05
+        ],
+        [
+          9,
+          11.91
+        ],
+        [
+          10,
+          12.78
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "name": "Piston Diameter (cm)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Compression Ratio"
+        },
+        "series": [
+          {
+            "data": [
+              6.24,
+              8.07,
+              8.7,
+              11.05,
+              11.91,
+              12.78
+            ],
+            "type": "line",
+            "name": "Compression Ratio",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

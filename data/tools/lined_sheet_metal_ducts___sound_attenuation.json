@@ -1,0 +1,106 @@
+{
+  "id": "lined_sheet_metal_ducts___sound_attenuation",
+  "title": "Lined Sheet-Metal Ducts - Sound Attenuation",
+  "description": "Noise attenuation in rectangular straight, lined, sheet metal ducts. Calculate total sound attenuation based on duct dimensions, lining thickness, frequency, and duct length.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Lined Sheet-Metal Ducts - Sound Attenuation\n\nNoise attenuation in rectangular straight, lined, sheet metal ducts.\n\n## Theory\n\nAttenuation in ducts with **25 mm lining** and **50 mm lining** varies by duct dimensions and frequency.\n\n### Conversion Factors\n- 1 in = 25.4 mm\n- 1 ft = 0.3 m\n\n### Example Calculation\n\nThe sound attenuation in a 610 × 610 mm lined duct is approximately 2.5 dB/m at frequency 250 Hz. The total sound attenuation in a 10 m duct:\n\n**(10 m) × (2.5 dB/m) = 25 dB**"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value"
+      ],
+      "inputs": [
+        {
+          "id": "duct_width",
+          "label": "Duct Width",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 610
+        },
+        {
+          "id": "duct_height",
+          "label": "Duct Height",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 610
+        },
+        {
+          "id": "lining_thickness",
+          "label": "Lining Thickness",
+          "type": "select",
+          "options": [
+            {
+              "value": 25,
+              "label": "25 mm"
+            },
+            {
+              "value": 50,
+              "label": "50 mm"
+            }
+          ],
+          "defaultValue": 25
+        },
+        {
+          "id": "frequency",
+          "label": "Frequency",
+          "type": "select",
+          "options": [
+            {
+              "value": 125,
+              "label": "125 Hz"
+            },
+            {
+              "value": 250,
+              "label": "250 Hz"
+            },
+            {
+              "value": 500,
+              "label": "500 Hz"
+            },
+            {
+              "value": 1000,
+              "label": "1000 Hz"
+            },
+            {
+              "value": 2000,
+              "label": "2000 Hz"
+            },
+            {
+              "value": 4000,
+              "label": "4000 Hz"
+            }
+          ],
+          "defaultValue": 250
+        },
+        {
+          "id": "attenuation_rate",
+          "label": "Attenuation Rate",
+          "type": "number",
+          "unit": "dB/m",
+          "defaultValue": 2.5
+        },
+        {
+          "id": "duct_length",
+          "label": "Duct Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_attenuation",
+          "label": "Total Sound Attenuation",
+          "formula": "inputs.duct_length * inputs.attenuation_rate",
+          "unit": "dB",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

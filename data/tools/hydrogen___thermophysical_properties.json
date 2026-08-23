@@ -1,0 +1,113 @@
+{
+  "id": "hydrogen___thermophysical_properties",
+  "title": "Hydrogen - Thermophysical Properties",
+  "description": "Thermophysical properties of Hydrogen (H2) at 25°C (77°F, 298 K) and atmospheric pressure. Includes molecular weight, density, viscosity, specific heat, thermal conductivity, boiling point, freezing point, critical properties, and heat of combustion.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value (US Units)",
+        "Value (SI Units)"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "—",
+          "2.016 g/mol"
+        ],
+        [
+          "Specific Gravity (air = 1)",
+          "0.070",
+          "0.070"
+        ],
+        [
+          "Specific Volume",
+          "194 ft³/lb",
+          "12.1 m³/kg"
+        ],
+        [
+          "Density of Liquid at Atmospheric Pressure",
+          "4.43 lb/ft³",
+          "71.0 kg/m³"
+        ],
+        [
+          "Absolute Viscosity",
+          "6.05×10⁻⁶ lbm/ft·s",
+          "0.009 cP"
+        ],
+        [
+          "Sound Velocity in Gas",
+          "—",
+          "1315 m/s"
+        ],
+        [
+          "Specific Heat (cp)",
+          "3.42 Btu/lb·°F",
+          "14310 J/kg·K"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          "1.405",
+          "1.405"
+        ],
+        [
+          "Gas Constant (R)",
+          "767 ft·lb/lb·°R",
+          "4126 J/kg·°C"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.105 Btu/hr·ft·°F",
+          "0.182 W/m·°C"
+        ],
+        [
+          "Boiling Point",
+          "−423 °F",
+          "20.4 K"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "192 Btu/lb",
+          "447000 J/kg"
+        ],
+        [
+          "Freezing/Melting Point",
+          "−434.6 °F",
+          "−259.1 °C"
+        ],
+        [
+          "Latent Heat of Fusion",
+          "25.0 Btu/lb",
+          "58000 J/kg"
+        ],
+        [
+          "Critical Temperature",
+          "−399.8 °F",
+          "−240.0 °C"
+        ],
+        [
+          "Critical Pressure",
+          "189 psia",
+          "1.30 MN/m²"
+        ],
+        [
+          "Critical Volume",
+          "0.53 ft³/lb",
+          "0.033 m³/kg"
+        ],
+        [
+          "Flammable",
+          "Yes",
+          "Yes"
+        ],
+        [
+          "Heat of Combustion",
+          "320 Btu/ft³ / 62050 Btu/lb",
+          "144000 kJ/kg"
+        ]
+      ]
+    }
+  ]
+}

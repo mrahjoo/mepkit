@@ -1,0 +1,74 @@
+{
+  "id": "masonry_blocks___dimensions",
+  "title": "Masonry Blocks - Dimensions",
+  "description": "Concrete Masonry Unit Blocks (CMU) - dimensions and specifications for standard and half blocks.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Standard Blocks\n\nTypical dimensions for standard concrete masonry unit blocks.\n\n### Nominal vs Actual Sizes\n\nStandard blocks have a nominal height of 8 inches and length of 16 inches, with varying widths."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Size (in)",
+        "Actual Size (in)"
+      ],
+      "rows": [
+        [
+          "4 x 8 x 16",
+          "3-5/8 x 7-5/8 x 15-5/8"
+        ],
+        [
+          "6 x 8 x 16",
+          "5-5/8 x 7-5/8 x 15-5/8"
+        ],
+        [
+          "8 x 8 x 16",
+          "7-5/8 x 7-5/8 x 15-5/8"
+        ],
+        [
+          "10 x 8 x 16",
+          "9-5/8 x 7-5/8 x 15-5/8"
+        ],
+        [
+          "12 x 8 x 16",
+          "11-5/8 x 7-5/8 x 15-5/8"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Half Blocks\n\nHalf blocks are used for partial course heights and corners. They have a nominal height of 8 inches and length of 8 inches (half the standard length)."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Size (in)",
+        "Actual Size (in)"
+      ],
+      "rows": [
+        [
+          "4 x 8 x 8",
+          "3-5/8 x 7-5/8 x 7-5/8"
+        ],
+        [
+          "6 x 8 x 8",
+          "5-5/8 x 7-5/8 x 7-5/8"
+        ],
+        [
+          "8 x 8 x 8",
+          "7-5/8 x 7-5/8 x 7-5/8"
+        ],
+        [
+          "12 x 8 x 8",
+          "11-5/8 x 7-5/8 x 7-5/8"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- Actual sizes account for typical mortar joint spacing (approximately 3/8 inch)\n- The difference between nominal and actual size allows for standard mortar joint thickness\n- Use the complementary tool to calculate the number of masonry units needed for a project"
+    }
+  ]
+}

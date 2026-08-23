@@ -1,0 +1,561 @@
+{
+  "id": "emissivity_coefficients_of_common_materials__data_",
+  "title": "Emissivity Coefficients of Common Materials: Data & Reference Guide",
+  "description": "The radiation heat transfer emissivity coefficients for common materials. The emissivity coefficient (ε) indicates the radiation of heat from a 'grey body' according to the Stefan-Boltzmann Law, compared with an ideal 'black body' (ε = 1). Emissivity values are based on a reference temperature of 300 K.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Surface Material",
+        "Emissivity Coefficient (ε)"
+      ],
+      "rows": [
+        [
+          "Alloy 24ST Polished",
+          0.09
+        ],
+        [
+          "Alumina, Flame sprayed",
+          0.8
+        ],
+        [
+          "Aluminum Commercial sheet",
+          0.09
+        ],
+        [
+          "Aluminum Foil",
+          0.04
+        ],
+        [
+          "Aluminum Heavily Oxidized",
+          "0.2 - 0.31"
+        ],
+        [
+          "Aluminum Highly Polished",
+          "0.039 - 0.057"
+        ],
+        [
+          "Aluminum Anodized",
+          0.77
+        ],
+        [
+          "Aluminum Rough",
+          0.07
+        ],
+        [
+          "Aluminum paint",
+          "0.27 - 0.67"
+        ],
+        [
+          "Anodize black",
+          0.88
+        ],
+        [
+          "Antimony, polished",
+          "0.28 - 0.31"
+        ],
+        [
+          "Asbestos board",
+          0.96
+        ],
+        [
+          "Asbestos paper",
+          "0.93 - 0.945"
+        ],
+        [
+          "Asphalt",
+          0.93
+        ],
+        [
+          "Basalt",
+          0.72
+        ],
+        [
+          "Beryllium",
+          0.18
+        ],
+        [
+          "Beryllium, Anodized",
+          0.9
+        ],
+        [
+          "Bismuth, bright",
+          0.34
+        ],
+        [
+          "Black Body Matt",
+          1
+        ],
+        [
+          "Black lacquer on iron",
+          0.875
+        ],
+        [
+          "Black Parson Optical",
+          0.95
+        ],
+        [
+          "Black Silicone Paint",
+          0.93
+        ],
+        [
+          "Black Epoxy Paint",
+          0.89
+        ],
+        [
+          "Black Enamel Paint",
+          0.8
+        ],
+        [
+          "Brass Dull Plate",
+          0.22
+        ],
+        [
+          "Brass Rolled Plate Natural Surface",
+          0.06
+        ],
+        [
+          "Brass Polished",
+          0.03
+        ],
+        [
+          "Brass Oxidized 600 oC",
+          0.6
+        ],
+        [
+          "Brick, red rough",
+          0.93
+        ],
+        [
+          "Brick, fire-clay",
+          0.75
+        ],
+        [
+          "Cadmium",
+          0.02
+        ],
+        [
+          "Carbon, not oxidized",
+          0.81
+        ],
+        [
+          "Carbon filament",
+          0.77
+        ],
+        [
+          "Carbon pressed filled surface",
+          0.98
+        ],
+        [
+          "Cast Iron, newly turned",
+          0.44
+        ],
+        [
+          "Cast Iron, turned and heated",
+          "0.60 - 0.70"
+        ],
+        [
+          "Cement",
+          0.54
+        ],
+        [
+          "Cromium polished",
+          0.058
+        ],
+        [
+          "Clay",
+          0.91
+        ],
+        [
+          "Coal",
+          0.8
+        ],
+        [
+          "Concrete",
+          0.85
+        ],
+        [
+          "Concrete, rough",
+          0.94
+        ],
+        [
+          "Concrete tiles",
+          0.63
+        ],
+        [
+          "Cotton cloth",
+          0.77
+        ],
+        [
+          "Copper electroplated",
+          0.03
+        ],
+        [
+          "Copper heated and covered with thick oxide layer",
+          0.78
+        ],
+        [
+          "Copper Polished",
+          "0.023 - 0.052"
+        ],
+        [
+          "Copper Nickel Alloy, polished",
+          0.059
+        ],
+        [
+          "Glass smooth",
+          "0.92 - 0.94"
+        ],
+        [
+          "Glass, pyrex",
+          "0.85 - 0.95"
+        ],
+        [
+          "Glass, opal",
+          0.87
+        ],
+        [
+          "Gold not polished",
+          0.47
+        ],
+        [
+          "Gold highly polished",
+          "0.02 - 0.04"
+        ],
+        [
+          "Granite, natural surface",
+          0.96
+        ],
+        [
+          "Gravel",
+          0.28
+        ],
+        [
+          "Gypsum",
+          0.85
+        ],
+        [
+          "Ice smooth",
+          0.966
+        ],
+        [
+          "Ice rough",
+          0.985
+        ],
+        [
+          "Inconel X Oxidized",
+          0.71
+        ],
+        [
+          "Iron polished",
+          "0.14 - 0.38"
+        ],
+        [
+          "Iron, plate rusted red",
+          0.61
+        ],
+        [
+          "Iron, dark gray surface",
+          0.31
+        ],
+        [
+          "Iron, rough ingot",
+          "0.87 - 0.95"
+        ],
+        [
+          "Lampblack paint",
+          0.96
+        ],
+        [
+          "Lead pure unoxidized",
+          "0.057 - 0.075"
+        ],
+        [
+          "Lead Oxidized",
+          0.43
+        ],
+        [
+          "Limestone",
+          "0.90 - 0.93"
+        ],
+        [
+          "Lime wash",
+          0.91
+        ],
+        [
+          "Magnesia",
+          0.72
+        ],
+        [
+          "Magnesite",
+          0.38
+        ],
+        [
+          "Magnesium Oxide",
+          "0.20 - 0.55"
+        ],
+        [
+          "Magnesium Polished",
+          "0.07 - 0.13"
+        ],
+        [
+          "Marble White",
+          0.95
+        ],
+        [
+          "Masonry Plastered",
+          0.93
+        ],
+        [
+          "Mercury liquid",
+          0.1
+        ],
+        [
+          "Mild Steel",
+          "0.20 - 0.32"
+        ],
+        [
+          "Molybdenum polished",
+          "0.05 - 0.18"
+        ],
+        [
+          "Mortar",
+          0.87
+        ],
+        [
+          "Nickel, electroplated",
+          0.03
+        ],
+        [
+          "Nickel, polished",
+          0.072
+        ],
+        [
+          "Nickel, oxidized",
+          "0.59 - 0.86"
+        ],
+        [
+          "Nichrome wire, bright",
+          "0.65 - 0.79"
+        ],
+        [
+          "Oak, planed",
+          0.89
+        ],
+        [
+          "Oil paints, all colors",
+          "0.92 - 0.96"
+        ],
+        [
+          "Paper offset",
+          0.55
+        ],
+        [
+          "Plaster",
+          0.98
+        ],
+        [
+          "Platinum, polished plate",
+          "0.054 - 0.104"
+        ],
+        [
+          "Pine",
+          0.84
+        ],
+        [
+          "Plaster board",
+          0.91
+        ],
+        [
+          "Porcelain, glazed",
+          0.92
+        ],
+        [
+          "Paint",
+          0.96
+        ],
+        [
+          "Paper",
+          0.93
+        ],
+        [
+          "Plaster, rough",
+          0.91
+        ],
+        [
+          "Plastics",
+          "0.90 - 0.97"
+        ],
+        [
+          "Polypropylene",
+          0.97
+        ],
+        [
+          "Polytetrafluoroethylene (PTFE)",
+          0.92
+        ],
+        [
+          "Polyethylene, black plastic",
+          0.92
+        ],
+        [
+          "Porcelain glazed",
+          0.93
+        ],
+        [
+          "Pyrex",
+          0.92
+        ],
+        [
+          "PVC",
+          "0.91 - 0.93"
+        ],
+        [
+          "Quartz glass",
+          0.93
+        ],
+        [
+          "Roofing paper",
+          0.91
+        ],
+        [
+          "Rubber, foam",
+          0.9
+        ],
+        [
+          "Rubber, hard glossy plate",
+          0.94
+        ],
+        [
+          "Rubber, natural hard",
+          0.91
+        ],
+        [
+          "Rubber, natural soft",
+          0.86
+        ],
+        [
+          "Salt",
+          0.34
+        ],
+        [
+          "Sand",
+          0.9
+        ],
+        [
+          "Sandstone",
+          0.59
+        ],
+        [
+          "Sapphire",
+          0.48
+        ],
+        [
+          "Sawdust",
+          0.75
+        ],
+        [
+          "Silica",
+          0.79
+        ],
+        [
+          "Silicon Carbide",
+          "0.83 - 0.96"
+        ],
+        [
+          "Silver Polished",
+          "0.02 - 0.03"
+        ],
+        [
+          "Snow",
+          "0.96 - 0.98"
+        ],
+        [
+          "Soil",
+          "0.90 - 0.95"
+        ],
+        [
+          "Steel Oxidized",
+          0.79
+        ],
+        [
+          "Steel Polished",
+          0.07
+        ],
+        [
+          "Stainless Steel, weathered",
+          0.85
+        ],
+        [
+          "Stainless Steel, polished",
+          0.075
+        ],
+        [
+          "Stainless Steel, type 301",
+          "0.54 - 0.63"
+        ],
+        [
+          "Steel Galvanized Old",
+          0.88
+        ],
+        [
+          "Steel Galvanized New",
+          0.23
+        ],
+        [
+          "Thoria",
+          0.28
+        ],
+        [
+          "Tile",
+          0.97
+        ],
+        [
+          "Tin unoxidized",
+          0.04
+        ],
+        [
+          "Titanium polished",
+          0.19
+        ],
+        [
+          "Tungsten polished",
+          0.04
+        ],
+        [
+          "Tungsten aged filament",
+          "0.032 - 0.35"
+        ],
+        [
+          "Water (0 - 100 oC)",
+          "0.95 - 0.963"
+        ],
+        [
+          "Wood Beech, planned",
+          0.935
+        ],
+        [
+          "Wood Oak, planned",
+          0.885
+        ],
+        [
+          "Wood, Pine",
+          0.95
+        ],
+        [
+          "Wrought Iron",
+          0.94
+        ],
+        [
+          "Zinc Tarnished",
+          0.25
+        ],
+        [
+          "Zinc polished",
+          0.045
+        ]
+      ]
+    }
+  ]
+}

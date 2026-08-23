@@ -1,0 +1,58 @@
+{
+  "id": "pneumatic_transport___solids_and_particle_size",
+  "title": "Pneumatic Transport - Solids and Particle Size",
+  "description": "Particle sizes for common products like coal, sand, ash and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Product",
+        "Typical Particle Size (micron)"
+      ],
+      "rows": [
+        [
+          "Outdoor dust",
+          "0.5"
+        ],
+        [
+          "Sand blasting",
+          "1.4"
+        ],
+        [
+          "Foundry dust",
+          "1.0 - 200"
+        ],
+        [
+          "Granite cutting",
+          "1.4"
+        ],
+        [
+          "Coal mining",
+          "1.0"
+        ],
+        [
+          "Raindrops",
+          "500 - 5000"
+        ],
+        [
+          "Mist",
+          "40 - 500"
+        ],
+        [
+          "Fog",
+          "1 - 40"
+        ],
+        [
+          "Fly ash",
+          "3 - 70"
+        ],
+        [
+          "Pulverized coal",
+          "10 - 400"
+        ]
+      ],
+      "content": "Pneumatic Transport - Particle Sizes vs. Products\n\nNote: 1 micron = 0.001 mm"
+    }
+  ]
+}

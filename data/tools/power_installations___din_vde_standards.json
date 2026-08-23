@@ -1,0 +1,329 @@
+{
+  "id": "power_installations___din_vde_standards",
+  "title": "Power Installations - DIN VDE Standards",
+  "description": "Comprehensive reference guide for DIN VDE standards covering power installations, cables, telecommunications, and electrical equipment. Includes standards for installations below and above 1 kV, protective measures, cable types, and specialized applications.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Standard Code",
+        "Title",
+        "Category",
+        "Voltage Range"
+      ],
+      "rows": [
+        [
+          "DIN VDE 0100",
+          "Erection of power installations with rated voltages below 1000V",
+          "Power Installations",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0100 Part 100",
+          "General requirements",
+          "Power Installations",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0100 Part 410/430",
+          "Protective measures and protection against electric shock",
+          "Power Installations",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0100 Part 520/530",
+          "Selection and erection of equipment - cable, wires and wiring systems",
+          "Power Installations",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0100 Part 559",
+          "Luminaries and lighting equipment",
+          "Power Installations",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0100 Part 701-705",
+          "Special locations - bathrooms, swimming pools, saunas, agricultural premises",
+          "Power Installations",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0100 Part 720",
+          "Fire hazard locations",
+          "Power Installations",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0101",
+          "Erection of power installations with rated voltages above 1 kV",
+          "Power Installations",
+          "> 1 kV"
+        ],
+        [
+          "DIN VDE 0105",
+          "Operation of power installations",
+          "Power Installations",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0107",
+          "Electrical installations in hospitals and medical locations",
+          "Power Installations",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0108",
+          "Power installations in communal facilities, stores, shops, and exhibitions",
+          "Power Installations",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0113",
+          "Electrical equipment of industrial machines",
+          "Industrial Equipment",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0118",
+          "Erection of electrical installations in mines",
+          "Industrial Equipment",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0165",
+          "Installation of electrical apparatus in hazardous areas",
+          "Hazardous Areas",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0166",
+          "Electrical installations in atmospheres potentially endangered by explosive material",
+          "Hazardous Areas",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0170/0171",
+          "Electrical apparatus for potentially explosive atmospheres",
+          "Hazardous Areas",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0185",
+          "Lightning protection systems",
+          "Protection Systems",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0245 Part 1",
+          "Cables and cords for electrical and electronic equipment",
+          "Cables & Cords",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0250",
+          "Cables, wires and flexible cords for power installation",
+          "Cables & Cords",
+          "< 1 kV"
+        ],
+        [
+          "DIN VDE 0253",
+          "Heating cables and power guides",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0262",
+          "XLPE insulated and PVC sheathed installation cables",
+          "Cables & Cords",
+          "0.6/1 kV"
+        ],
+        [
+          "DIN VDE 0265",
+          "Cables with plastic insulated lead sheath",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0267",
+          "Halogen free cables with improved fire characteristics",
+          "Cables & Cords",
+          "6-30 kV"
+        ],
+        [
+          "DIN VDE 0271",
+          "PVC-insulated cables and sheathed power cables",
+          "Cables & Cords",
+          "3.6/6-7.2 kV"
+        ],
+        [
+          "DIN VDE 0276 Part 603",
+          "Distribution cables",
+          "Cables & Cords",
+          "0.6/1 kV"
+        ],
+        [
+          "DIN VDE 0276 Part 620",
+          "Distribution cables",
+          "Cables & Cords",
+          "3.6-36 kV"
+        ],
+        [
+          "DIN VDE 0276 Part 1000",
+          "Current-carrying capacity and conversion factors",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0281",
+          "PVC cables, wires and flexible cords",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0282",
+          "Rubber cables and flexible cords",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0284",
+          "Mineral insulated cables",
+          "Cables & Cords",
+          "< 750 V"
+        ],
+        [
+          "DIN VDE 0289",
+          "Definitions for cables, wires and flexible cords",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0292",
+          "Code designation for harmonized cables and flexible cords",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0293",
+          "Core identification for cables and flexible cords",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0295",
+          "Conductors of cables, wires and flexible cords",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0298",
+          "Application of cables and flexible cords",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0472",
+          "Testing of cables, wires and flexible cords",
+          "Testing",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0473",
+          "Insulating and sheathing materials - common test methods",
+          "Testing",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0482",
+          "Measurement of smoke density of cables",
+          "Testing",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0800",
+          "Telecommunications",
+          "Telecommunications",
+          "Low Voltage"
+        ],
+        [
+          "DIN VDE 0811",
+          "Ribbon cables with round conductors",
+          "Telecommunications",
+          "Low Voltage"
+        ],
+        [
+          "DIN VDE 0812",
+          "Equipment wires for telecommunications systems",
+          "Telecommunications",
+          "Low Voltage"
+        ],
+        [
+          "DIN VDE 0813",
+          "Switchboard cables for telecommunications",
+          "Telecommunications",
+          "Low Voltage"
+        ],
+        [
+          "DIN VDE 0814",
+          "Cords for telecommunications systems",
+          "Telecommunications",
+          "Low Voltage"
+        ],
+        [
+          "DIN VDE 0815",
+          "Wiring cables for telecommunications systems (indoor)",
+          "Telecommunications",
+          "Low Voltage"
+        ],
+        [
+          "DIN VDE 0816",
+          "Outdoor cables for telecommunications systems",
+          "Telecommunications",
+          "Low Voltage"
+        ],
+        [
+          "DIN VDE 0817",
+          "Cables with stranded conductors for increased mechanical stress",
+          "Telecommunications",
+          "Low Voltage"
+        ],
+        [
+          "DIN VDE 0818",
+          "Self-supporting telecommunication aerial cables",
+          "Telecommunications",
+          "> 1 kV"
+        ],
+        [
+          "DIN VDE 0839",
+          "Electromagnetic compatibility",
+          "General",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0881",
+          "Equipment wires with extended temperature range",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0891",
+          "Special directions and guiding principles for cables",
+          "Cables & Cords",
+          "Variable"
+        ],
+        [
+          "DIN VDE 0899",
+          "Special specification for optical fiber cables",
+          "Telecommunications",
+          "Fiber Optic"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## DIN VDE Standards Overview\n\n### Standard Categories\n\n**Power Installations (DIN VDE 0100-0108)**\n- General requirements and protective measures\n- Installation in specific locations (hospitals, swimming pools, mines)\n- Fire safety and lightning protection\n- Voltage ranges from below 1 kV to above 1 kV\n\n**Cables & Cords (DIN VDE 0245-0299)**\n- PVC-insulated cables\n- XLPE insulated cables\n- Rubber cables and flexible cords\n- Mineral insulated cables\n- Halogen-free cables for improved fire performance\n- Ratings from low voltage to 36 kV\n\n**Testing & Measurement (DIN VDE 0472-0482)**\n- Testing procedures for cables and flexible cords\n- Insulation and sheathing material tests\n- Smoke density measurements\n\n**Telecommunications (DIN VDE 0800-0899)**\n- Telecommunications cables and wiring\n- Equipment wires and stranded cables\n- Outdoor and indoor cable systems\n- Optical fiber cables\n- Electromagnetic compatibility requirements\n\n### Key Voltage Classifications\n- **Below 1 kV**: DIN VDE 0100 series\n- **1-36 kV**: DIN VDE 0101, 0276 Part 620\n- **Above 1 kV**: DIN VDE 0101, 0818\n- **Low Voltage**: Telecommunications series (DIN VDE 0800-0899)\n\n### Special Applications\n- Hazardous and potentially explosive atmospheres (DIN VDE 0165-0171)\n- Industrial machine equipment (DIN VDE 0113)\n- Mining installations (DIN VDE 0118, 0168)\n- Hospital and medical facilities (DIN VDE 0107)\n- Lightning protection systems (DIN VDE 0185)"
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "id": "process_instrumentation___isa_codes",
+  "title": "Process Instrumentation - ISA Codes",
+  "description": "ISA process instrumentation codes and combinations calculator based on ANSI/ISA S5.1-1984 (R 1992). Combines letter codes to identify instruments in P&ID diagrams with optional sequential numbering.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## ISA Code Generator\n\nThis tool helps you generate ISA process instrumentation codes according to ANSI/ISA S5.1-1984 standards. Select the appropriate letters for your instrument and add an optional identification number."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "first_letter",
+          "label": "First Letter (Measured/Initiating Variable)",
+          "type": "select",
+          "options": [
+            {
+              "label": "A - Analysis",
+              "value": "A"
+            },
+            {
+              "label": "B - Burner, combustion",
+              "value": "B"
+            },
+            {
+              "label": "C - User's choice",
+              "value": "C"
+            },
+            {
+              "label": "D - User's choice",
+              "value": "D"
+            },
+            {
+              "label": "E - Voltage",
+              "value": "E"
+            },
+            {
+              "label": "F - Flow rate",
+              "value": "F"
+            },
+            {
+              "label": "G - User's choice",
+              "value": "G"
+            },
+            {
+              "label": "H - Hand",
+              "value": "H"
+            },
+            {
+              "label": "I - Current (electrical)",
+              "value": "I"
+            },
+            {
+              "label": "J - Power",
+              "value": "J"
+            },
+            {
+              "label": "K - Time, time schedule",
+              "value": "K"
+            },
+            {
+              "label": "L - Level",
+              "value": "L"
+            },
+            {
+              "label": "M - User's choice",
+              "value": "M"
+            },
+            {
+              "label": "N - User's choice",
+              "value": "N"
+            },
+            {
+              "label": "O - User's choice",
+              "value": "O"
+            },
+            {
+              "label": "P - Pressure, vacuum",
+              "value": "P"
+            },
+            {
+              "label": "Q - Quantity",
+              "value": "Q"
+            },
+            {
+              "label": "R - Radiation",
+              "value": "R"
+            },
+            {
+              "label": "S - Speed, frequency",
+              "value": "S"
+            },
+            {
+              "label": "T - Temperature",
+              "value": "T"
+            },
+            {
+              "label": "U - Multivariable",
+              "value": "U"
+            },
+            {
+              "label": "V - Vibration, mechanical analyses",
+              "value": "V"
+            },
+            {
+              "label": "W - Weight, force",
+              "value": "W"
+            },
+            {
+              "label": "X - Unclassified",
+              "value": "X"
+            },
+            {
+              "label": "Y - Event, state or presence",
+              "value": "Y"
+            },
+            {
+              "label": "Z - Position, dimension",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "id": "modifier_letter",
+          "label": "Modifier Letter (Optional)",
+          "type": "select",
+          "defaultValue": "none",
+          "options": [
+            {
+              "label": "None",
+              "value": "none"
+            },
+            {
+              "label": "D - Differential",
+              "value": "D"
+            },
+            {
+              "label": "F - Ratio (fraction)",
+              "value": "F"
+            },
+            {
+              "label": "J - Scan",
+              "value": "J"
+            },
+            {
+              "label": "K - Time rate of change",
+              "value": "K"
+            },
+            {
+              "label": "M - Momentary",
+              "value": "M"
+            },
+            {
+              "label": "Q - Integrate, totalizer",
+              "value": "Q"
+            },
+            {
+              "label": "S - Safety",
+              "value": "S"
+            },
+            {
+              "label": "X - X-axis",
+              "value": "X"
+            },
+            {
+              "label": "Y - Y-axis",
+              "value": "Y"
+            },
+            {
+              "label": "Z - Z-axis",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "id": "second_letter",
+          "label": "Second Letter (Function)",
+          "type": "select",
+          "options": [
+            {
+              "label": "A - Alarm",
+              "value": "A"
+            },
+            {
+              "label": "B - User's choice",
+              "value": "B"
+            },
+            {
+              "label": "C - Control",
+              "value": "C"
+            },
+            {
+              "label": "E - Sensor (primary element)",
+              "value": "E"
+            },
+            {
+              "label": "G - Glass, viewing device",
+              "value": "G"
+            },
+            {
+              "label": "H - High (modifier)",
+              "value": "H"
+            },
+            {
+              "label": "I - Indication",
+              "value": "I"
+            },
+            {
+              "label": "K - Control Station",
+              "value": "K"
+            },
+            {
+              "label": "L - Light / Low (modifier)",
+              "value": "L"
+            },
+            {
+              "label": "M - Middle, intermediate (modifier)",
+              "value": "M"
+            },
+            {
+              "label": "N - User's choice",
+              "value": "N"
+            },
+            {
+              "label": "O - Orifice, restriction",
+              "value": "O"
+            },
+            {
+              "label": "P - Point (test connection)",
+              "value": "P"
+            },
+            {
+              "label": "R - Record",
+              "value": "R"
+            },
+            {
+              "label": "S - Switch",
+              "value": "S"
+            },
+            {
+              "label": "T - Transmit",
+              "value": "T"
+            },
+            {
+              "label": "U - Multifunction",
+              "value": "U"
+            },
+            {
+              "label": "V - Valve, damper, louver",
+              "value": "V"
+            },
+            {
+              "label": "W - Well",
+              "value": "W"
+            },
+            {
+              "label": "X - Unclassified",
+              "value": "X"
+            },
+            {
+              "label": "Y - Relay, compute, convert",
+              "value": "Y"
+            },
+            {
+              "label": "Z - Driver, actuator",
+              "value": "Z"
+            }
+          ]
+        },
+        {
+          "id": "modifier_function",
+          "label": "Modifier Function (Optional)",
+          "type": "select",
+          "defaultValue": "none",
+          "options": [
+            {
+              "label": "None",
+              "value": "none"
+            },
+            {
+              "label": "B - User's choice",
+              "value": "B"
+            },
+            {
+              "label": "H - High",
+              "value": "H"
+            },
+            {
+              "label": "L - Low",
+              "value": "L"
+            },
+            {
+              "label": "M - Middle, intermediate",
+              "value": "M"
+            },
+            {
+              "label": "N - User's choice",
+              "value": "N"
+            },
+            {
+              "label": "U - Multifunction",
+              "value": "U"
+            },
+            {
+              "label": "X - Unclassified",
+              "value": "X"
+            }
+          ]
+        },
+        {
+          "id": "identification_number",
+          "label": "Identification Number (Optional)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "isa_code",
+          "label": "ISA Code",
+          "formula": "inputs.first_letter + (inputs.modifier_letter != 'none' ? inputs.modifier_letter : '') + inputs.second_letter + (inputs.modifier_function != 'none' ? inputs.modifier_function : '')"
+        },
+        {
+          "id": "full_code",
+          "label": "Full Identification",
+          "formula": "inputs.first_letter + (inputs.modifier_letter != 'none' ? inputs.modifier_letter : '') + inputs.second_letter + (inputs.modifier_function != 'none' ? inputs.modifier_function : '') + ' ' + String(inputs.identification_number).padStart(3, '0')"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Common Examples\n\n| Code | Description |\n|------|-------------|\n| FI 001 | Flowmeter - Indicating |\n| TT 001 | Temperature - Transmitter |\n| FV 001 | Control Valve |\n| ZSH 001 | Position Switch - High Level |\n\n## Reference\n\nBased on ANSI/ISA S5.1-1984 (R 1992) \"Instrumentation symbols and identification\"\n\n### Structure\n\n1. **First Letter**: Measured or initiating variable (A-Z)\n2. **Modifier Letter** (Optional): Modifies the first letter (D, F, J, K, M, Q, S, X, Y, Z)\n3. **Second Letter**: Readout, output, or modifier function\n4. **Modifier Function** (Optional): Further modifies the function\n5. **Number**: Sequential or process-line-related identification"
+    }
+  ]
+}

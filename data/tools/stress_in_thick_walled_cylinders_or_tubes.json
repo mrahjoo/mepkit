@@ -1,0 +1,103 @@
+{
+  "id": "stress_in_thick_walled_cylinders_or_tubes",
+  "title": "Stress in Thick-Walled Cylinders or Tubes",
+  "description": "Calculate stress in thick-walled cylinders or tubes subjected to internal and external pressure. Computes axial, circumferential (hoop), and radial stress at any point in the tube wall.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "stress_calculator",
+      "content": "Enter the cylinder or tube parameters to calculate stresses in different directions.",
+      "inputs": [
+        {
+          "id": "pi",
+          "label": "Internal Pressure (pi)",
+          "type": "number",
+          "unit": "MPa",
+          "defaultValue": 100
+        },
+        {
+          "id": "po",
+          "label": "External Pressure (po)",
+          "type": "number",
+          "unit": "MPa",
+          "defaultValue": 0
+        },
+        {
+          "id": "ri",
+          "label": "Internal Radius (ri)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 100
+        },
+        {
+          "id": "ro",
+          "label": "External Radius (ro)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 200
+        },
+        {
+          "id": "r",
+          "label": "Radius to Point in Wall (r)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "stress_axial",
+          "label": "Axial Stress (σa)",
+          "formula": "(inputs.pi * inputs.ri * inputs.ri - inputs.po * inputs.ro * inputs.ro) / (inputs.ro * inputs.ro - inputs.ri * inputs.ri)",
+          "unit": "MPa",
+          "format": "decimal"
+        },
+        {
+          "id": "stress_circumferential",
+          "label": "Circumferential/Hoop Stress (σc)",
+          "formula": "((inputs.pi * inputs.ri * inputs.ri - inputs.po * inputs.ro * inputs.ro) / (inputs.ro * inputs.ro - inputs.ri * inputs.ri)) + ((inputs.ri * inputs.ri * inputs.ro * inputs.ro * (inputs.pi - inputs.po)) / (inputs.r * inputs.r * (inputs.ro * inputs.ro - inputs.ri * inputs.ri)))",
+          "unit": "MPa",
+          "format": "decimal"
+        },
+        {
+          "id": "stress_radial",
+          "label": "Radial Stress (σr)",
+          "formula": "((inputs.pi * inputs.ri * inputs.ri - inputs.po * inputs.ro * inputs.ro) / (inputs.ro * inputs.ro - inputs.ri * inputs.ri)) - ((inputs.ri * inputs.ri * inputs.ro * inputs.ro * (inputs.pi - inputs.po)) / (inputs.r * inputs.r * (inputs.ro * inputs.ro - inputs.ri * inputs.ri)))",
+          "unit": "MPa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "stress_results_table",
+      "headers": [
+        "Stress Type",
+        "Formula Reference",
+        "Value (MPa)",
+        "Location"
+      ],
+      "rows": [
+        [
+          "Axial Stress (σa)",
+          "Equation (1)",
+          "(inputs.pi * inputs.ri * inputs.ri - inputs.po * inputs.ro * inputs.ro) / (inputs.ro * inputs.ro - inputs.ri * inputs.ri)",
+          "Throughout wall"
+        ],
+        [
+          "Circumferential Stress (σc)",
+          "Equation (2)",
+          "((inputs.pi * inputs.ri * inputs.ri - inputs.po * inputs.ro * inputs.ro) / (inputs.ro * inputs.ro - inputs.ri * inputs.ri)) + ((inputs.ri * inputs.ri * inputs.ro * inputs.ro * (inputs.pi - inputs.po)) / (inputs.r * inputs.r * (inputs.ro * inputs.ro - inputs.ri * inputs.ri)))",
+          "At radius r (maximum at r = ri)"
+        ],
+        [
+          "Radial Stress (σr)",
+          "Equation (3)",
+          "((inputs.pi * inputs.ri * inputs.ri - inputs.po * inputs.ro * inputs.ro) / (inputs.ro * inputs.ro - inputs.ri * inputs.ri)) - ((inputs.ri * inputs.ri * inputs.ro * inputs.ro * (inputs.pi - inputs.po)) / (inputs.r * inputs.r * (inputs.ro * inputs.ro - inputs.ri * inputs.ri)))",
+          "At radius r (maximum at r = ri)"
+        ]
+      ]
+    }
+  ]
+}

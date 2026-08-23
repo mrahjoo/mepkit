@@ -1,0 +1,132 @@
+{
+  "id": "standard_differentials_and_integrals",
+  "title": "Standard Differentials and Integrals",
+  "description": "A comprehensive reference table of common differential and integral formulas in calculus, including polynomial, logarithmic, exponential, trigonometric, and inverse trigonometric functions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "#",
+        "Function Type",
+        "Differential Formula",
+        "Integral Formula",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "1",
+          "Power Function",
+          "(d/dx) xⁿ = n xⁿ⁻¹",
+          "∫ xⁿ dx = xⁿ⁺¹ / (n + 1)",
+          "n ≠ -1"
+        ],
+        [
+          "2",
+          "Logarithmic",
+          "(d/dx) ln(x) = 1/x",
+          "∫ 1/x dx = ln(x)",
+          "x > 0"
+        ],
+        [
+          "3",
+          "Exponential (base e)",
+          "(d/dx) eᵃˣ = a eᵃˣ",
+          "∫ eᵃˣ dx = eᵃˣ / a",
+          "a ≠ 0"
+        ],
+        [
+          "4",
+          "Exponential (base a)",
+          "(d/dx) aˣ = aˣ ln(a)",
+          "∫ aˣ dx = aˣ / ln(a)",
+          "a > 0, a ≠ 1"
+        ],
+        [
+          "5",
+          "Power Exponential",
+          "(d/dx) xˣ = xˣ(1 + ln(x))",
+          "N/A",
+          "Special case"
+        ],
+        [
+          "6",
+          "Logarithm of x",
+          "N/A",
+          "∫ ln(x) dx = x(ln(x) - 1)",
+          "Integration by parts"
+        ],
+        [
+          "7",
+          "Sine",
+          "(d/dx) sin(x) = cos(x)",
+          "∫ sin(x) dx = -cos(x)",
+          "Standard trig"
+        ],
+        [
+          "8",
+          "Cosine",
+          "(d/dx) cos(x) = -sin(x)",
+          "∫ cos(x) dx = sin(x)",
+          "Standard trig"
+        ],
+        [
+          "9",
+          "Tangent",
+          "(d/dx) tan(x) = sec²(x)",
+          "∫ tan(x) dx = -ln(cos(x))",
+          "Trigonometric"
+        ],
+        [
+          "10",
+          "Cotangent",
+          "(d/dx) cot(x) = -cosec²(x)",
+          "∫ cot(x) dx = ln(sin(x))",
+          "Trigonometric"
+        ],
+        [
+          "11",
+          "Secant Squared",
+          "N/A",
+          "∫ sec²(x) dx = tan(x)",
+          "Trig derivative inverse"
+        ],
+        [
+          "12",
+          "Cosecant Squared",
+          "N/A",
+          "∫ cosec²(x) dx = -cot(x)",
+          "Trig derivative inverse"
+        ],
+        [
+          "13",
+          "Inverse Sine",
+          "(d/dx) sin⁻¹(x) = 1 / √(1 - x²)",
+          "∫ 1/√(1 - x²) dx = sin⁻¹(x)",
+          "|x| < 1"
+        ],
+        [
+          "14",
+          "Inverse Cosine",
+          "(d/dx) cos⁻¹(x) = -1 / √(1 - x²)",
+          "N/A",
+          "|x| < 1"
+        ],
+        [
+          "15",
+          "Inverse Tangent",
+          "(d/dx) tan⁻¹(x) = 1 / (1 + x²)",
+          "∫ 1/(1 + x²) dx = tan⁻¹(x)",
+          "All x"
+        ],
+        [
+          "16",
+          "Inverse Cotangent",
+          "(d/dx) cot⁻¹(x) = -1 / (1 + x²)",
+          "N/A",
+          "All x"
+        ]
+      ]
+    }
+  ]
+}

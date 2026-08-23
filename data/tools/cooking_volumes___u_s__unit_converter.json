@@ -1,0 +1,103 @@
+{
+  "id": "cooking_volumes___u_s__unit_converter",
+  "title": "Cooking Volumes - U.S. Unit Converter",
+  "description": "Convert between US cooking volume units including teaspoons, tablespoons, cups, fluid ounces, pints, quarts, and gallons.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "teaspoons",
+          "label": "Teaspoons",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "tablespoons",
+          "label": "Tablespoons",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "cups",
+          "label": "Cups",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "fluid_ounces",
+          "label": "Fluid Ounces",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "pints",
+          "label": "Pints",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "quarts",
+          "label": "Quarts",
+          "type": "number",
+          "defaultValue": 0
+        },
+        {
+          "id": "gallons",
+          "label": "Gallons",
+          "type": "number",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "teaspoons_out",
+          "label": "Total Teaspoons",
+          "formula": "inputs.teaspoons + inputs.tablespoons * 3 + inputs.cups * 48 + inputs.fluid_ounces * 6 + inputs.pints * 96 + inputs.quarts * 192 + inputs.gallons * 768",
+          "unit": "tsp"
+        },
+        {
+          "id": "tablespoons_out",
+          "label": "Total Tablespoons",
+          "formula": "(inputs.teaspoons + inputs.tablespoons * 3 + inputs.cups * 48 + inputs.fluid_ounces * 6 + inputs.pints * 96 + inputs.quarts * 192 + inputs.gallons * 768) / 3",
+          "unit": "tbsp"
+        },
+        {
+          "id": "cups_out",
+          "label": "Total Cups",
+          "formula": "(inputs.teaspoons + inputs.tablespoons * 3 + inputs.cups * 48 + inputs.fluid_ounces * 6 + inputs.pints * 96 + inputs.quarts * 192 + inputs.gallons * 768) / 48",
+          "unit": "cup"
+        },
+        {
+          "id": "fluid_ounces_out",
+          "label": "Total Fluid Ounces",
+          "formula": "(inputs.teaspoons + inputs.tablespoons * 3 + inputs.cups * 48 + inputs.fluid_ounces * 6 + inputs.pints * 96 + inputs.quarts * 192 + inputs.gallons * 768) / 6",
+          "unit": "fl oz"
+        },
+        {
+          "id": "pints_out",
+          "label": "Total Pints",
+          "formula": "(inputs.teaspoons + inputs.tablespoons * 3 + inputs.cups * 48 + inputs.fluid_ounces * 6 + inputs.pints * 96 + inputs.quarts * 192 + inputs.gallons * 768) / 96",
+          "unit": "pt"
+        },
+        {
+          "id": "quarts_out",
+          "label": "Total Quarts",
+          "formula": "(inputs.teaspoons + inputs.tablespoons * 3 + inputs.cups * 48 + inputs.fluid_ounces * 6 + inputs.pints * 96 + inputs.quarts * 192 + inputs.gallons * 768) / 192",
+          "unit": "qt"
+        },
+        {
+          "id": "gallons_out",
+          "label": "Total Gallons",
+          "formula": "(inputs.teaspoons + inputs.tablespoons * 3 + inputs.cups * 48 + inputs.fluid_ounces * 6 + inputs.pints * 96 + inputs.quarts * 192 + inputs.gallons * 768) / 768",
+          "unit": "gal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Reference\n\n### Volume Conversions\n- 3 teaspoons = 1 tablespoon\n- 16 tablespoons = 1 cup\n- 1 cup = 8 fluid ounces\n- 1 pint = 16 fluid ounces = 2 cups\n- 1 quart = 32 fluid ounces = 2 pints = 4 cups\n- 1 gallon = 4 quarts\n\n### Common Measurements\n- 1/8 cup = 2 tablespoons\n- 1/4 cup = 4 tablespoons\n- 1/3 cup = 5 tablespoons + 1 teaspoon\n- 1/2 cup = 8 tablespoons\n- 2/3 cup = 10 tablespoons + 2 teaspoons\n- 3/4 cup = 12 tablespoons\n\n### Specialty Measurements\n- 1 dash = 6 drops\n- 1 jigger = 1.5 ounces\n- 1 pony = 1 ounce\n- 1 fifth = 25.6 fluid ounces"
+    }
+  ]
+}

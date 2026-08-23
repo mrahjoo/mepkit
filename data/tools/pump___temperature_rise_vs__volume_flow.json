@@ -1,0 +1,84 @@
+{
+  "id": "pump___temperature_rise_vs__volume_flow",
+  "title": "Pump - Temperature Rise vs. Volume Flow",
+  "description": "Calculate temperature rise in a pump based on brake power, pump efficiency, specific heat, volume flow, and fluid density. Energy lost in friction and hydraulic losses transforms to heat, heating up the fluid transported through the pump.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "pump_temperature_calculator",
+      "content": "Pump Temperature Rise Calculator",
+      "inputs": [
+        {
+          "id": "Ps",
+          "label": "Brake Power (Ps)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 0.11
+        },
+        {
+          "id": "mu",
+          "label": "Pump Efficiency (μ)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.28
+        },
+        {
+          "id": "cp",
+          "label": "Specific Heat (cp)",
+          "type": "number",
+          "unit": "kJ/kg°C",
+          "defaultValue": 4.2
+        },
+        {
+          "id": "q",
+          "label": "Volume Flow (q)",
+          "type": "number",
+          "unit": "m³/s",
+          "defaultValue": 0.0017
+        },
+        {
+          "id": "rho",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dt",
+          "label": "Temperature Rise (dt)",
+          "formula": "inputs.Ps * (1 - inputs.mu) / (inputs.cp * inputs.q * inputs.rho)",
+          "unit": "°C",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "temperature_rise_table",
+      "content": "Temperature Rise Examples",
+      "headers": [
+        "Volume Flow (m³/s)",
+        "Brake Power (kW)",
+        "Pump Efficiency",
+        "Temperature Rise (°C)"
+      ],
+      "rows": [
+        [
+          0.0017,
+          0.11,
+          0.28,
+          0.011
+        ],
+        [
+          0.00056,
+          0.095,
+          0.15,
+          0.035
+        ]
+      ]
+    }
+  ]
+}

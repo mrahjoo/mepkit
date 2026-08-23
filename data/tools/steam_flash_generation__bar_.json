@@ -1,0 +1,215 @@
+{
+  "id": "steam_flash_generation__bar_",
+  "title": "Steam Flash Generation (bar)",
+  "description": "Calculate the amount of flash steam generated based on steam pressure and condensate line pressure in bar. The flash steam percentage depends on the pressure difference before and after the condensate trap.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Steam Flash Generation (bar)\n\nThe amount of flash steam generated depends on steam pressure and the pressure in the condensate lines.\n\n## How it works\nFlash steam is generated when high-pressure condensate is suddenly exposed to lower pressure. The amount generated (as a percentage of condensate) depends on:\n- **Steam Gauge Pressure** before the condensate trap (bar)\n- **Condensate Gauge Pressure** after the condensate trap (bar)\n\n## Important Note\nWithout a flash recovery system, the energy in the flash steam will be lost to the surroundings."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "steam_pressure",
+          "label": "Steam Gauge Pressure (bar)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "bar"
+        },
+        {
+          "id": "condensate_pressure",
+          "label": "Condensate Gauge Pressure (bar)",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "bar"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flash_steam_percentage",
+          "label": "Flash Steam Generated",
+          "formula": "LOOKUP(inputs.steam_pressure, inputs.condensate_pressure)",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Steam Gauge Pressure (bar)",
+        "0 bar",
+        "0.5 bar",
+        "1 bar",
+        "1.5 bar",
+        "2 bar",
+        "2.5 bar",
+        "3 bar"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          1,
+          3.8,
+          1.7,
+          0,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          2,
+          6.3,
+          4.2,
+          2.6,
+          1.2,
+          0,
+          null,
+          null
+        ],
+        [
+          3,
+          8.3,
+          6.2,
+          4.5,
+          3.2,
+          2,
+          0.8,
+          0
+        ],
+        [
+          4,
+          9.8,
+          7.7,
+          6.1,
+          4.8,
+          3.6,
+          2.4,
+          1.7
+        ],
+        [
+          5,
+          11.2,
+          9.1,
+          7.5,
+          6.2,
+          5,
+          3.8,
+          3.1
+        ],
+        [
+          6,
+          12.3,
+          10.3,
+          8.7,
+          7.4,
+          6.3,
+          5,
+          4.3
+        ],
+        [
+          7,
+          13.4,
+          11.4,
+          9.8,
+          8.5,
+          7.4,
+          6.2,
+          5.4
+        ],
+        [
+          8,
+          14.4,
+          12.3,
+          10.8,
+          9.5,
+          8.4,
+          7.2,
+          6.5
+        ],
+        [
+          9,
+          15.2,
+          13.2,
+          11.7,
+          10.4,
+          9.3,
+          8.1,
+          7.4
+        ],
+        [
+          10,
+          16.1,
+          14.1,
+          12.5,
+          11.3,
+          10.1,
+          9,
+          8.3
+        ],
+        [
+          11,
+          16.8,
+          14.8,
+          13.3,
+          12,
+          10.9,
+          9.8,
+          9.1
+        ],
+        [
+          12,
+          17.5,
+          15.6,
+          14.1,
+          12.8,
+          11.7,
+          10.5,
+          9.8
+        ],
+        [
+          13,
+          18.2,
+          16.3,
+          14.8,
+          13.5,
+          12.4,
+          11.2,
+          10.6
+        ],
+        [
+          14,
+          18.9,
+          16.9,
+          15.4,
+          14.2,
+          13.1,
+          11.9,
+          11.2
+        ],
+        [
+          15,
+          19.5,
+          17.6,
+          16.1,
+          14.8,
+          13.7,
+          12.6,
+          11.9
+        ]
+      ]
+    }
+  ]
+}

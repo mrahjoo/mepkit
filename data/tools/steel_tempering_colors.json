@@ -1,0 +1,141 @@
+{
+  "id": "steel_tempering_colors",
+  "title": "Steel Tempering Colors",
+  "description": "The tempering process of hardening steel. Reference guide for carbon steel tempering colors, temperatures, and applications. Includes melting points of various heat-treating baths.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Steel Tempering Colors\n\nSteels containing more than 0.3% carbon are intended for heat treatment. Lower values of carbon makes the steel more tough than hard and suitable for applications where strength are important - like springs and high tensile bolts. Steels with carbon content in excess of 0.7% can be hardened to a higher degree and are suitable for applications where hardness rather than toughness is important. Tool steels make excellent cutting and drilling equipment as they contain tungsten, molybdenum, cobalt, and vanadium to increase heat resistance and durability.\n\nTempering steel is a two-step process:\n\n1. **The tool is forged and hardened**\n   - Tool end is heated to bright red color and forged\n   - Tool quenched in cold water and cooled until touchable\n   - Tool is sharpened and polished\n\n2. **The tool is tempered**\n   - Tool heated to tempering temperature as indicated in the tables below\n   - Tool quenched in cold water\n\n**Note:** Oil baths and salt baths are also used extensively for tempering steel tools. Lead baths and sand baths are also used. If steel is heated in an oxidizing atmosphere - like air - a film of oxide forms on the surface and the color changes as the temperature increases."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Temperature (°C)",
+        "Application"
+      ],
+      "rows": [
+        [
+          600,
+          316,
+          "Scrapers, spokeshaves"
+        ],
+        [
+          560,
+          293,
+          "Screwdrivers, springs, gears"
+        ],
+        [
+          540,
+          282,
+          "Cold chisels, center punches"
+        ],
+        [
+          520,
+          271,
+          "Taps ≤ 1/4 inch"
+        ],
+        [
+          500,
+          260,
+          "Axes, wood chisels, drifts, taps ≥ 1/4 inch, nut taps, thread dies, press tools"
+        ],
+        [
+          480,
+          249,
+          "Twist drills, large taps, knurls"
+        ],
+        [
+          460,
+          238,
+          "Dies, punches, bits, reamers"
+        ],
+        [
+          450,
+          232,
+          "Twist drills for hard use"
+        ],
+        [
+          440,
+          227,
+          "Turning tools, lathe tools, scrapers, milling cutters, reamers"
+        ],
+        [
+          430,
+          221,
+          "Edge tools, reamers"
+        ],
+        [
+          420,
+          216,
+          "Knives, hammers"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Melting Points of Heat-Treating Baths"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Melting Point (°F)",
+        "Melting Point (°C)"
+      ],
+      "rows": [
+        [
+          "35% lead, 65% tin",
+          358,
+          181
+        ],
+        [
+          "50% sodium nitrate, 50% potassium nitrate",
+          424,
+          218
+        ],
+        [
+          "Tin",
+          450,
+          232
+        ],
+        [
+          "Sodium nitrate",
+          586,
+          308
+        ],
+        [
+          "Lead",
+          620,
+          327
+        ],
+        [
+          "Potassium nitrate",
+          642,
+          339
+        ],
+        [
+          "45% sodium chloride, 50% sodium sulfate",
+          1154,
+          623
+        ],
+        [
+          "Sodium chloride",
+          1474,
+          801
+        ],
+        [
+          "Sodium sulfate",
+          1618,
+          881
+        ],
+        [
+          "Barium chloride",
+          1760,
+          960
+        ]
+      ]
+    }
+  ]
+}

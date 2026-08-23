@@ -1,0 +1,131 @@
+{
+  "id": "sulfur_dioxide_liquid___thermal_properties",
+  "title": "Sulfur Dioxide Liquid - Thermal Properties",
+  "description": "Density, specific heat, thermal conductivity and more. Thermal properties of Sulfur Dioxide SO2 at various temperatures.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Density (kg/m³)",
+        "Specific Heat (kJ/kg K)",
+        "Thermal Conductivity (W/m K)",
+        "Dynamic Viscosity (10⁻⁶ Pa s)",
+        "Prandtl's Number"
+      ],
+      "rows": [
+        [
+          0,
+          1435,
+          1.33,
+          0.212,
+          367,
+          2.31
+        ],
+        [
+          20,
+          1383,
+          1.37,
+          0.199,
+          304,
+          2.09
+        ],
+        [
+          50,
+          1296,
+          1.48,
+          0.177,
+          234,
+          1.96
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Sulfur Dioxide Liquid - Thermal Properties vs Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Density (kg/m³)",
+            "Specific Heat (kJ/kg K)",
+            "Thermal Conductivity (W/m K)",
+            "Dynamic Viscosity (10⁻⁶ Pa s)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            0,
+            20,
+            50
+          ],
+          "name": "Temperature (°C)"
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Density (kg/m³)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Other Properties",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Density (kg/m³)",
+            "data": [
+              1435,
+              1383,
+              1296
+            ],
+            "type": "line",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Specific Heat (kJ/kg K)",
+            "data": [
+              1.33,
+              1.37,
+              1.48
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          },
+          {
+            "name": "Thermal Conductivity (W/m K)",
+            "data": [
+              0.212,
+              0.199,
+              0.177
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          },
+          {
+            "name": "Dynamic Viscosity (10⁻⁶ Pa s)",
+            "data": [
+              367,
+              304,
+              234
+            ],
+            "type": "line",
+            "yAxisIndex": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n* 1 kg/m³ = 0.0624 lb/ft³\n* 1 kJ/kgK = 0.2389 kcal/(kg °C) = 0.2389 Btu/lbm°F\n* 1 W/(m K) = 0.5779 Btu/(ft h °F)\n* 1 Pa s (N s/m²) = 10 P (Poise) = 10³ cP = 0.1020 kp s/m² = 0.6721 lb/(ft s)"
+    }
+  ]
+}

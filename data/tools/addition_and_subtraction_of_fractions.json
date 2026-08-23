@@ -1,0 +1,130 @@
+{
+  "id": "addition_and_subtraction_of_fractions",
+  "title": "Addition and Subtraction of Fractions",
+  "description": "How to add and subtract fraction numbers with step-by-step examples and calculations",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Addition and Subtraction of Fractions\n\nLearn how to add and subtract mixed fractions by converting them to common denominators.\n\n## Addition\n\n**Example 1:** Adding mixed fractions\n- 2 3/4 = 2 6/8\n- + 4 3/8 = 4 3/8\n- + 3 1/2 = 3 4/8\n- = 9 13/8 = 10 5/8\n\n**Example 2:** Another addition example\n- 10 7/8 = 10 14/16\n- + 12 3/16 = 12 3/16\n- + 9 1/4 = 9 4/16\n- = 31 21/16 = 32 5/16\n\n## Subtraction\n\n**Example 3:** Simple subtraction\n- 6 3/4 = 6 6/8\n- - 4 3/8 = 4 3/8\n- = 2 3/8\n\n**Example 4:** Subtraction with borrowing\n- 10 3/16 = 9 19/16\n- - 4 3/8 = 4 6/16\n- = 5 13/16"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "operation",
+          "label": "Operation",
+          "type": "select",
+          "options": [
+            {
+              "label": "Addition",
+              "value": "add"
+            },
+            {
+              "label": "Subtraction",
+              "value": "subtract"
+            }
+          ],
+          "defaultValue": "add"
+        },
+        {
+          "id": "whole1",
+          "label": "First Number - Whole Part",
+          "type": "number",
+          "defaultValue": 2
+        },
+        {
+          "id": "numerator1",
+          "label": "First Number - Numerator",
+          "type": "number",
+          "defaultValue": 3
+        },
+        {
+          "id": "denominator1",
+          "label": "First Number - Denominator",
+          "type": "number",
+          "defaultValue": 4
+        },
+        {
+          "id": "whole2",
+          "label": "Second Number - Whole Part",
+          "type": "number",
+          "defaultValue": 4
+        },
+        {
+          "id": "numerator2",
+          "label": "Second Number - Numerator",
+          "type": "number",
+          "defaultValue": 3
+        },
+        {
+          "id": "denominator2",
+          "label": "Second Number - Denominator",
+          "type": "number",
+          "defaultValue": 8
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result_whole",
+          "label": "Result - Whole Part",
+          "formula": "IF(inputs.operation='add', FLOOR((inputs.whole1 + inputs.whole2) + FLOOR((inputs.numerator1/inputs.denominator1 + inputs.numerator2/inputs.denominator2))), FLOOR((inputs.whole1 - inputs.whole2) + FLOOR((inputs.numerator1/inputs.denominator1 - inputs.numerator2/inputs.denominator2))))",
+          "format": "decimal"
+        },
+        {
+          "id": "result_numerator",
+          "label": "Result - Numerator",
+          "formula": "IF(inputs.operation='add', ROUND(MOD((inputs.numerator1/inputs.denominator1 + inputs.numerator2/inputs.denominator2), 1) * LCM(inputs.denominator1, inputs.denominator2)), ROUND(MOD((inputs.numerator1/inputs.denominator1 - inputs.numerator2/inputs.denominator2), 1) * LCM(inputs.denominator1, inputs.denominator2)))",
+          "format": "decimal"
+        },
+        {
+          "id": "result_denominator",
+          "label": "Result - Denominator",
+          "formula": "LCM(inputs.denominator1, inputs.denominator2)",
+          "format": "decimal"
+        },
+        {
+          "id": "result_decimal",
+          "label": "Result - Decimal",
+          "formula": "IF(inputs.operation='add', inputs.whole1 + inputs.numerator1/inputs.denominator1 + inputs.whole2 + inputs.numerator2/inputs.denominator2, inputs.whole1 + inputs.numerator1/inputs.denominator1 - (inputs.whole2 + inputs.numerator2/inputs.denominator2))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Step",
+        "Description",
+        "Calculation"
+      ],
+      "rows": [
+        [
+          "1",
+          "Convert to common denominator",
+          "Find LCM of denominators"
+        ],
+        [
+          "2",
+          "Convert fractions",
+          "Multiply numerators and denominators"
+        ],
+        [
+          "3",
+          "Combine whole numbers",
+          "Add or subtract whole parts"
+        ],
+        [
+          "4",
+          "Combine fractions",
+          "Add or subtract numerators with common denominator"
+        ],
+        [
+          "5",
+          "Simplify result",
+          "Convert improper fractions to mixed numbers"
+        ]
+      ]
+    }
+  ]
+}

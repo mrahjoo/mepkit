@@ -1,0 +1,95 @@
+{
+  "id": "centrifugal_pumps___speed_torque_curve",
+  "title": "Centrifugal Pumps - Speed Torque Curve",
+  "description": "The characteristic speed torque curves for centrifugal pumps. Calculate theoretical torque based on pump speed or full load torque based on power and speed.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Speed Torque Curve\n\nThe speed torque curve characterizes a centrifugal pump. The theoretical characteristic is a parabola starting from the origin and proportional to the square of the speed.\n\n**Formula (1): Theoretical Torque**\n\nT = k × n²\n\nWhere:\n- T = torque (Nm)\n- k = constant\n- n = pump speed (rpm)\n\nWith the discharge valve closed, the torque amounts to 30-50% of the nominal torque at full speed.\n\n**Formula (2): Full Load Torque**\n\nT = 30 × P / (π × n)\n\nWhere:\n- T = torque (kN m)\n- P = power (kW)\n- n = pump speed (rpm)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Calculation Method"
+      ],
+      "inputs": [
+        {
+          "id": "method",
+          "label": "Select Calculation Method",
+          "type": "select",
+          "options": [
+            {
+              "value": "theoretical",
+              "label": "Theoretical Torque (T = k × n²)"
+            },
+            {
+              "value": "full_load",
+              "label": "Full Load Torque (T = 30 × P / π × n)"
+            }
+          ]
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Theoretical Torque Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "constant_k",
+          "label": "Constant (k)",
+          "type": "number",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "speed_n_theoretical",
+          "label": "Pump Speed (n)",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 1500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque_theoretical",
+          "label": "Theoretical Torque",
+          "unit": "Nm",
+          "formula": "inputs.constant_k * Math.pow(inputs.speed_n_theoretical, 2)"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Full Load Torque Calculation"
+      ],
+      "inputs": [
+        {
+          "id": "power_p",
+          "label": "Power (P)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 10
+        },
+        {
+          "id": "speed_n_full_load",
+          "label": "Pump Speed (n)",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 1500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque_full_load",
+          "label": "Full Load Torque",
+          "unit": "kN m",
+          "formula": "(30 * inputs.power_p) / (Math.PI * inputs.speed_n_full_load)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "chimney_sizing",
+  "title": "Chimney Sizing",
+  "description": "Calculate chimney draft and required chimney area based on height, temperature difference, air density, and flue gas volume.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Chimney Sizing Calculator\n\nThe capacity of a chimney depends on the potential chimney draft - the pressure difference created by the inside and outside air temperature difference and chimney height - and the chimney area.\n\n### Chimney Draft Formula\n\n**dp_ch = h × ρo × (1 - To / Ti) × ag**\n\nWhere:\n- **dp_ch** = pressure draft in the chimney (Pa)\n- **h** = height of chimney (m)\n- **ρo** = ambient outside density of air (kg/m³)\n- **Ti** = absolute inside chimney temperature (K)\n- **To** = absolute outside air temperature (K)\n- **ag** = acceleration of gravity (9.81 m/s²)\n\n### Chimney Area Formula\n\n**A = Q / v**\n\nWhere:\n- **A** = cross-sectional area of chimney (m²)\n- **Q** = volume of flue gases at chimney temperature (m³/s)\n- **v** = velocity (m/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "h",
+          "label": "Chimney Height",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "m"
+        },
+        {
+          "id": "rho_o",
+          "label": "Outside Air Density",
+          "type": "number",
+          "defaultValue": 1.292,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "ti",
+          "label": "Inside Chimney Temperature",
+          "type": "number",
+          "defaultValue": 200,
+          "unit": "°C"
+        },
+        {
+          "id": "to",
+          "label": "Outside Air Temperature",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "°C"
+        },
+        {
+          "id": "Q",
+          "label": "Volume of Flue Gases",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "m³/s"
+        },
+        {
+          "id": "v",
+          "label": "Design Velocity",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m/s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "Ti_K",
+          "label": "Inside Temperature (Absolute)",
+          "formula": "inputs.ti + 273",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "To_K",
+          "label": "Outside Temperature (Absolute)",
+          "formula": "inputs.to + 273",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "dpch",
+          "label": "Chimney Draft Pressure",
+          "formula": "inputs.h * inputs.rho_o * (1 - (inputs.to + 273) / (inputs.ti + 273)) * 9.81",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "A",
+          "label": "Required Chimney Area",
+          "formula": "inputs.Q / inputs.v",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "A_mm2",
+          "label": "Required Chimney Area",
+          "formula": "(inputs.Q / inputs.v) * 1000000",
+          "unit": "mm²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Chimney Height",
+          "20",
+          "m",
+          "Height of chimney structure"
+        ],
+        [
+          "Outside Air Density",
+          "1.292",
+          "kg/m³",
+          "Ambient outside air density"
+        ],
+        [
+          "Inside Temperature",
+          "200",
+          "°C",
+          "Flue gas temperature inside chimney"
+        ],
+        [
+          "Outside Temperature",
+          "0",
+          "°C",
+          "Ambient outside air temperature"
+        ],
+        [
+          "Gravity Acceleration",
+          "9.81",
+          "m/s²",
+          "Standard acceleration due to gravity"
+        ],
+        [
+          "Design Velocity (min)",
+          "2",
+          "m/s",
+          "Minimum velocity for smaller furnaces"
+        ],
+        [
+          "Design Velocity (max)",
+          "10",
+          "m/s",
+          "Maximum velocity for larger furnaces"
+        ],
+        [
+          "Area per kW",
+          "1100",
+          "mm²/kW",
+          "Standard chimney area requirement per kW of boiler heat"
+        ]
+      ]
+    }
+  ]
+}

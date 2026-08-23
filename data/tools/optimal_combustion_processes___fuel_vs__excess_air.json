@@ -1,0 +1,54 @@
+{
+  "id": "optimal_combustion_processes___fuel_vs__excess_air",
+  "title": "Optimal Combustion Processes - Fuel vs. Excess Air",
+  "description": "Reference table showing typical excess air percentages for various fuel types in combustion processes. Excess air is the amount of air supplied beyond the theoretical stoichiometric requirement needed to completely burn fuel. Power plant boilers typically run 10-20% excess air, while natural gas-fired boilers may run as low as 5% and gas turbines run very lean with up to 300% excess air.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel Type",
+        "Excess Air (%)"
+      ],
+      "rows": [
+        [
+          "Anthracite",
+          "40"
+        ],
+        [
+          "Coke oven gas",
+          "5 - 10"
+        ],
+        [
+          "Natural Gas",
+          "5 - 10"
+        ],
+        [
+          "Coal, pulverized",
+          "15 - 20"
+        ],
+        [
+          "Coal, stoker",
+          "20 - 30"
+        ],
+        [
+          "Oil (No. 2 and No. 6)",
+          "10 - 20"
+        ],
+        [
+          "Semi anthracite, hand firing",
+          "70 - 100"
+        ],
+        [
+          "Semi anthracite, with stoker",
+          "40 - 70"
+        ],
+        [
+          "Semi anthracite, with traveling grate",
+          "30 - 60"
+        ]
+      ],
+      "content": "## Typical Excess Air Values by Fuel Type\n\nThis table presents the recommended excess air percentages for optimal combustion of various fuel types. Excess air is the amount of air supplied beyond the stoichiometric (theoretical) requirement.\n\n### Key Points:\n- **Stoichiometric combustion**: Chemically correct mixing with no fuel or air left over\n- **Practical operation**: Almost never runs stoichiometric; typically incorporates 10-20% excess air\n- **Purpose of excess air**: Ensures complete fuel combustion, prevents incomplete combustion products (soot, smoke, CO), and provides safety margin for fuel composition variations\n\n### Operating Ranges by Equipment:\n- Power plant boilers: 10-20% excess air\n- Natural gas-fired boilers: 5% excess air\n- Pulverized coal-fired boilers: 20% excess air\n- Gas turbines: up to 300% excess air (very lean burn)\n\n### Benefits of Proper Excess Air Level:\n- Complete combustion of fuel\n- Improved efficiency\n- Reduced pollution and emissions\n- Prevention of heat transfer surface fouling\n- Flame stability\n- Protection from variations in fuel composition"
+    }
+  ]
+}

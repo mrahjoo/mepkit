@@ -1,0 +1,190 @@
+{
+  "id": "angular_motion___power_and_torque",
+  "title": "Angular Motion - Power and Torque",
+  "description": "Calculate power, torque, and angular motion parameters. Includes formulas for rotating bodies with options to work in SI units (watts, Nm, rpm) or imperial units (hp, ft lbf, rpm).",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "power_torque_calculator",
+      "content": "Power and Torque Calculator",
+      "inputs": [
+        {
+          "id": "power_w",
+          "label": "Power",
+          "type": "number",
+          "unit": "W",
+          "defaultValue": 2000
+        },
+        {
+          "id": "rpm",
+          "label": "Rotations per Minute",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 3600
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "SI (Watts, Nm)",
+              "value": "si"
+            },
+            {
+              "label": "Imperial (HP, ft lbf)",
+              "value": "imperial"
+            }
+          ],
+          "defaultValue": "si"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque_nm",
+          "label": "Torque",
+          "formula": "inputs.unit_system === 'si' ? (30 * inputs.power_w) / (3.14159 * inputs.rpm) : (inputs.power_w * 5252) / inputs.rpm",
+          "unit": "Nm / ft lbf",
+          "format": "decimal"
+        },
+        {
+          "id": "angular_velocity",
+          "label": "Angular Velocity",
+          "formula": "(2 * 3.14159 * inputs.rpm) / 60",
+          "unit": "rad/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "power_torque_table",
+      "content": "Power vs Torque at Various RPM",
+      "headers": [
+        "RPM",
+        "Power (W)",
+        "Torque (Nm)",
+        "Angular Velocity (rad/s)"
+      ],
+      "rows": [
+        [
+          1000,
+          500,
+          4.77,
+          104.72
+        ],
+        [
+          1500,
+          750,
+          4.77,
+          157.08
+        ],
+        [
+          2000,
+          1000,
+          4.77,
+          209.44
+        ],
+        [
+          2500,
+          1250,
+          4.77,
+          261.8
+        ],
+        [
+          3000,
+          1500,
+          4.77,
+          314.16
+        ],
+        [
+          3600,
+          2000,
+          5.3,
+          376.99
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "torque_power_chart",
+      "content": "Motor - Torque vs Power and RPM",
+      "options": {
+        "title": {
+          "text": "Torque vs Power at Various RPM",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Power (W)",
+            "Torque (Nm)"
+          ],
+          "bottom": "10px"
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "RPM",
+          "data": [
+            1000,
+            1500,
+            2000,
+            2500,
+            3000,
+            3600
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Power (W)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Torque (Nm)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Power (W)",
+            "data": [
+              500,
+              750,
+              1000,
+              1250,
+              1500,
+              2000
+            ],
+            "type": "line",
+            "yAxisIndex": 0,
+            "smooth": true
+          },
+          {
+            "name": "Torque (Nm)",
+            "data": [
+              4.77,
+              4.77,
+              4.77,
+              4.77,
+              4.77,
+              5.3
+            ],
+            "type": "line",
+            "yAxisIndex": 1,
+            "smooth": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "id": "formulas_reference",
+      "content": "## Key Formulas\n\n### Power and Torque Relationship\n**P = T × ω** where:\n- P = power (W)\n- T = torque (Nm)\n- ω = angular velocity (rad/s)\n\n### Alternative Forms\n**P = T × 2π × nrps** (using rotations per second)\n\n**P = T × π × nrpm / 30** (using rotations per minute)\n\n**P = T × nrpm / 5252** (imperial units: power in hp, torque in ft lbf)\n\n### Rearranged for Torque\n**T = 30 × P / (π × nrpm)**\n\n### Angular Acceleration Torque\n**T = I × α** where:\n- I = moment of inertia (kg⋅m²)\n- α = angular acceleration (rad/s²)\n\n### Unit Conversions\n- 1 radian = 360° / 2π ≈ 57.296°\n- Angular velocity: ω = 2π × rpm / 60"
+    }
+  ]
+}

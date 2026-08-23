@@ -1,0 +1,72 @@
+{
+  "id": "dehumidifiers",
+  "title": "Dehumidifiers",
+  "description": "Classification of dehumidifiers - devices to remove moisture from air. Includes absorption, spray, and refrigeration dehumidifiers.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Dehumidifiers\n\nDevices to remove moisture from air - dehumidification - can be classified into three main types:\n\n## Types of Dehumidifiers\n\n### Absorption Dehumidifiers\nIn an absorption dehumidifier, moisture is extracted into a sorbent material. The sorbent contains microscopic pores where water is absorbed. When saturated, the sorbent can be regenerated with hot air through an intermittent process requiring more complicated air flow control.\n\n### Spray Dehumidifiers\nWhen water temperature is lower than the dew point of the air flow, an air washer or spray dehumidifier can be used. The air is dehumidified when moisture in the air saturates on the surface of the sprayed water.\n\n### Refrigeration Dehumidifiers\nIn a refrigeration dehumidifier, the airflow passes over a cooled surface where moisture in the air condenses. The surface or coil is cooled by a refrigeration unit, making it the most common type for comfort conditioning applications."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "dehumidifier_type",
+          "label": "Dehumidifier Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "absorption",
+              "label": "Absorption Dehumidifier"
+            },
+            {
+              "value": "spray",
+              "label": "Spray Dehumidifier"
+            },
+            {
+              "value": "refrigeration",
+              "label": "Refrigeration Dehumidifier"
+            }
+          ],
+          "defaultValue": "refrigeration"
+        },
+        {
+          "id": "initial_humidity",
+          "label": "Initial Humidity (%)",
+          "type": "number",
+          "defaultValue": 80,
+          "unit": "%"
+        },
+        {
+          "id": "target_humidity",
+          "label": "Target Humidity (%)",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "%"
+        },
+        {
+          "id": "air_volume",
+          "label": "Air Volume (m³/h)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "m³/h"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "humidity_reduction",
+          "label": "Humidity Reduction",
+          "formula": "inputs.initial_humidity - inputs.target_humidity",
+          "unit": "%"
+        },
+        {
+          "id": "dehumidification_ratio",
+          "label": "Dehumidification Ratio",
+          "formula": "(inputs.initial_humidity - inputs.target_humidity) / inputs.initial_humidity",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

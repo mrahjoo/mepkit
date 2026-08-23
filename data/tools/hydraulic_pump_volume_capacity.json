@@ -1,0 +1,70 @@
+{
+  "id": "hydraulic_pump_volume_capacity",
+  "title": "Hydraulic Pump Volume Capacity",
+  "description": "Calculate hydraulic pump volume capacity in both Imperial (gpm) and Metric (l/s) units based on cylinder area, piston stroke, and time for full stroke.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hydraulic Pump Volume Capacity Calculator\n\nCalculate the required pump output capacity for hydraulic cylinders using either Imperial or Metric units.\n\n**Imperial Formula:** q = 0.26 × A × s / t (gpm)\n\n**Metric Formula:** q = 10⁻⁶ × A × s / t (l/s)\n\nWhere:\n- q = pump output capacity\n- A = area of cylinder\n- s = piston stroke\n- t = required time for full stroke"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "Imperial (gpm)",
+              "value": "imperial"
+            },
+            {
+              "label": "Metric (l/s)",
+              "value": "metric"
+            }
+          ],
+          "defaultValue": "imperial"
+        },
+        {
+          "id": "area",
+          "label": "Cylinder Area",
+          "type": "number",
+          "unit": "in² / mm²",
+          "defaultValue": 7.065
+        },
+        {
+          "id": "stroke",
+          "label": "Piston Stroke",
+          "type": "number",
+          "unit": "in / mm",
+          "defaultValue": 30
+        },
+        {
+          "id": "time",
+          "label": "Time for Full Stroke",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "capacity_imperial",
+          "label": "Pump Capacity (Imperial)",
+          "formula": "inputs.unit_system === 'imperial' ? 0.26 * inputs.area * inputs.stroke / inputs.time : null",
+          "unit": "gpm",
+          "format": "decimal"
+        },
+        {
+          "id": "capacity_metric",
+          "label": "Pump Capacity (Metric)",
+          "formula": "inputs.unit_system === 'metric' ? 1e-6 * inputs.area * inputs.stroke / inputs.time : null",
+          "unit": "l/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

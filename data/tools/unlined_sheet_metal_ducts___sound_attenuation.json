@@ -1,0 +1,103 @@
+{
+  "id": "unlined_sheet_metal_ducts___sound_attenuation",
+  "title": "Unlined Sheet-Metal Ducts - Sound Attenuation",
+  "description": "Noise attenuation in unlined sheet-metal ducts at different frequencies.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Unlined Sheet-Metal Ducts - Sound Attenuation\n\nAttenuation of sound in unlined sheet metal ducts at different frequencies. The table below shows attenuation values in dB/m for various duct types and octave band center frequencies.\n\n**Note:** 1 in = 25.4 mm"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Duct Type",
+        "63.5 Hz",
+        "125 Hz",
+        "250 Hz",
+        "500 Hz",
+        "1000 Hz",
+        "2000+ Hz"
+      ],
+      "rows": [
+        [
+          "Round 100-300 mm",
+          0.1,
+          0.1,
+          0.1,
+          0,
+          0,
+          0
+        ],
+        [
+          "Round > 300 mm",
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          "Rectangular 150 x 150 mm",
+          0.65,
+          0.65,
+          0.5,
+          0.35,
+          0.35,
+          0.35
+        ],
+        [
+          "Rectangular 600 x 600 mm",
+          0.65,
+          0.65,
+          0.35,
+          0.15,
+          0.15,
+          0.15
+        ],
+        [
+          "Rectangular 1800 x 1800 mm",
+          0.35,
+          0.35,
+          0.15,
+          0.03,
+          0.03,
+          0.03
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "duct_length",
+          "label": "Duct Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "attenuation_rate",
+          "label": "Attenuation Rate",
+          "type": "number",
+          "unit": "dB/m",
+          "defaultValue": 0.35
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_attenuation",
+          "label": "Total Sound Attenuation",
+          "unit": "dB",
+          "formula": "inputs.duct_length * inputs.attenuation_rate",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Example Calculation\n\nFor a rectangular 600 x 600 mm unlined duct with an attenuation rate of 0.35 dB/m at 250 Hz frequency, the total sound attenuation over a 10 m duct length is:\n\n**(10 m) × (0.35 dB/m) = 3.5 dB**"
+    }
+  ]
+}

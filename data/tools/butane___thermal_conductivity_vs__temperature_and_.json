@@ -1,0 +1,6 @@
+{
+  "id": "butane___thermal_conductivity_vs__temperature_and_",
+  "title": "Butane - Thermal Conductivity vs. Temperature and Pressure",
+  "description": "Calculator and data tables for thermal conductivity of butane at various temperatures and pressures. Thermal conductivity is measured in multiple units: mW/(m K), Btu(IT)/(h ft °F), and kcal(IT)/(h m K). Data includes both liquid and gas states across a wide range of temperatures and pressures.",
+  "type": "datatable"
+}

@@ -1,0 +1,108 @@
+{
+  "id": "earthquake_scales",
+  "title": "Earthquake Scales",
+  "description": "Richter Magnitude, Moment Magnitude and Mercalli Intensity - a comprehensive reference table for understanding earthquake scales and their measurements.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Earthquake Scales\n\nThe intensity of an earthquake can be described by three main scales:\n\n* **Moment Magnitude (Mw)** - Based on energy released (logarithmic scale)\n* **Mercalli Intensity** - Based on actual observations of damage (cannot be measured by instruments)\n* **Richter Magnitude (ML)** - Based on the movement of a needle (logarithmic scale)\n\n**Important Note:** The Mercalli scale measures **local shaking** while the Richter scale measures **total energy** in the whole earthquake. These scales are not directly convertible."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Classification",
+        "Mercalli Intensity",
+        "Richter Magnitude",
+        "Moment Magnitude",
+        "Observations"
+      ],
+      "rows": [
+        [
+          "Instrumental",
+          "I",
+          "2",
+          "1.0 - 3.0",
+          "Micro earthquakes, usually not felt - detected by instruments"
+        ],
+        [
+          "Feeble",
+          "II",
+          "2",
+          "3.9",
+          "Often felt, especially on upper floors - detected by instruments"
+        ],
+        [
+          "Slight",
+          "III",
+          "3",
+          "4.0",
+          "Felt noticeably indoors, vibration like passing vehicles, cars may rock"
+        ],
+        [
+          "Moderate",
+          "IV",
+          "-",
+          "4.9",
+          "Felt indoors by many, felt outdoors by few. Dishes and doors disturbed, like a heavy truck nearby, walls-cracking sound"
+        ],
+        [
+          "Rather Strong",
+          "V",
+          "4",
+          "5.0",
+          "Felt by most people, slight damage. Some dishes and windows broken, some cracked plaster, trees disturbed"
+        ],
+        [
+          "Strong",
+          "VI",
+          "5",
+          "5.9",
+          "Felt by all, many frightened and run outdoors. Damage minor to moderate"
+        ],
+        [
+          "Very Strong",
+          "VII",
+          "5 - 6",
+          "6.0",
+          "Everyone runs outdoors. Much damage to poor designed buildings, some chimneys broken, noticed by people driving cars"
+        ],
+        [
+          "Destructive",
+          "VIII",
+          "6",
+          "6.9",
+          "Damage moderate to major. Minor damage to well designed structures, major damage in poor designed structures. Chimneys, columns and walls fall. Heavy furniture turned. Well water changes, sand and mud ejected"
+        ],
+        [
+          "Ruinous",
+          "IX",
+          "7",
+          "7.0",
+          "Can cause serious damage over larger areas. Major damage in all structures, ground cracked, pipes broken, shift foundation"
+        ],
+        [
+          "Disastrous",
+          "X",
+          "7 - 8",
+          "-",
+          "Major damage, most masonry and frame structures destroyed. Ground badly cracked, landslides, water sloshed over river banks, rails bent"
+        ],
+        [
+          "Very Disastrous",
+          "XI",
+          "8",
+          "-",
+          "Almost all masonry structures destroyed, bridges fall, big fissures in ground, land slumps, rails bent greatly"
+        ],
+        [
+          "Catastrophic",
+          "XII",
+          ">8",
+          "-",
+          "Devastating in areas several thousand miles across. Total destruction, Ground surface waves seen, objects thrown in the air. All constructions destroyed"
+        ]
+      ]
+    }
+  ]
+}

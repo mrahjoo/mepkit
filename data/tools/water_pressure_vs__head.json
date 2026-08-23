@@ -1,0 +1,67 @@
+{
+  "id": "water_pressure_vs__head",
+  "title": "Water Pressure vs. Head",
+  "description": "Pressure in pounds per square inch (psi) vs. head in feet of water (ft h2o). Convert between pressure and head measurements using standard conversion factors.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Water Pressure vs. Head Converter\n\nConvert between pressure in pounds per square inch (psi) and head in feet of water (ft H₂O).\n\n**Conversion Factors:**\n- 1 ft H₂O = 0.4335 psi\n- 1 psi = 2.307 ft H₂O\n\nSelect your conversion type below."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "conversion_type",
+          "label": "Conversion Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Head (ft H₂O) to Pressure (psi)",
+              "value": "head_to_pressure"
+            },
+            {
+              "label": "Pressure (psi) to Head (ft H₂O)",
+              "value": "pressure_to_head"
+            }
+          ],
+          "defaultValue": "head_to_pressure"
+        },
+        {
+          "id": "head_value",
+          "label": "Head (ft H₂O)",
+          "type": "number",
+          "defaultValue": 64,
+          "unit": "ft H₂O"
+        },
+        {
+          "id": "pressure_value",
+          "label": "Pressure (psi)",
+          "type": "number",
+          "defaultValue": 27.7,
+          "unit": "psi"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result_pressure",
+          "label": "Pressure Result",
+          "formula": "inputs.conversion_type === 'head_to_pressure' ? inputs.head_value * 0.4335 : inputs.pressure_value",
+          "unit": "psi",
+          "format": "decimal"
+        },
+        {
+          "id": "result_head",
+          "label": "Head Result",
+          "formula": "inputs.conversion_type === 'pressure_to_head' ? inputs.pressure_value * 2.307 : inputs.head_value",
+          "unit": "ft H₂O",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Information\n\n**1 ft H₂O = 0.4335 psi = 62.43 lbs/ft²**\n\n**1 psi (lb/in²) equivalent to:**\n- 144 psf (lbf/ft²)\n- 6894.8 Pa (N/m²)\n- 2.307 ft H₂O\n- 27.71 in H₂O at 61°F (16.7°C)\n- 703.1 mm H₂O at 61°F (16.7°C)\n- 0.06895 atm\n\n**Example:** A head of 64 ft H₂O = 27.7 psi"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "improvised_torque_wrench",
+  "title": "Improvised Torque Wrench",
+  "description": "Calculate torque/moment using an improvised setup with a standard wrench and a scale. Supports both SI units (kg, meters) and Imperial units (lbf, inches/feet).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "si_calculator",
+      "headers": [
+        "SI Units Calculator (kg, m)"
+      ],
+      "content": "Calculate torque using SI units where scale reads in kilograms",
+      "inputs": [
+        {
+          "id": "mass_kg",
+          "label": "Scale Reading",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 10
+        },
+        {
+          "id": "wrench_length_m",
+          "label": "Wrench Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.3
+        },
+        {
+          "id": "gravity_si",
+          "label": "Gravity (g)",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.81
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque_nm",
+          "label": "Torque",
+          "unit": "Nm",
+          "format": "decimal",
+          "formula": "inputs.mass_kg * inputs.gravity_si * inputs.wrench_length_m"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "imperial_calculator",
+      "headers": [
+        "Imperial Units Calculator (lbf, inches)"
+      ],
+      "content": "Calculate torque using Imperial units where scale reads in lbf",
+      "inputs": [
+        {
+          "id": "force_lbf",
+          "label": "Scale Reading",
+          "type": "number",
+          "unit": "lbf",
+          "defaultValue": 20
+        },
+        {
+          "id": "wrench_length_in",
+          "label": "Wrench Length",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 6
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque_in_lbf",
+          "label": "Torque (in·lbf)",
+          "unit": "in·lbf",
+          "format": "decimal",
+          "formula": "inputs.force_lbf * inputs.wrench_length_in"
+        },
+        {
+          "id": "torque_ft_lbf",
+          "label": "Torque (ft·lbf)",
+          "unit": "ft·lbf",
+          "format": "decimal",
+          "formula": "(inputs.force_lbf * inputs.wrench_length_in) / 12"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "common_torque_specs",
+      "headers": [
+        "Application",
+        "Torque (Nm)",
+        "Wrench Length (m)",
+        "Scale Reading (kg)"
+      ],
+      "rows": [
+        [
+          "Cylinder Head",
+          "30",
+          "0.2",
+          "15.3"
+        ],
+        [
+          "Engine Block Bolt",
+          "50",
+          "0.25",
+          "20.4"
+        ],
+        [
+          "Wheel Lug Nut",
+          "100",
+          "0.3",
+          "34.0"
+        ],
+        [
+          "Suspension Component",
+          "60",
+          "0.2",
+          "30.6"
+        ],
+        [
+          "Oil Drain Plug",
+          "25",
+          "0.15",
+          "17.0"
+        ]
+      ]
+    }
+  ]
+}

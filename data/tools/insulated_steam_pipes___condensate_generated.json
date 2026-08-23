@@ -1,0 +1,69 @@
+{
+  "id": "insulated_steam_pipes___condensate_generated",
+  "title": "Insulated Steam Pipes - Condensate Generated",
+  "description": "Calculator for determining condensate generation in insulated steam pipes based on various parameters such as pipe diameter, steam pressure, insulation thickness, ambient temperature, and pipe length.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "steam_pressure",
+          "label": "Steam Pressure",
+          "type": "number",
+          "unit": "bar",
+          "defaultValue": 10
+        },
+        {
+          "id": "insulation_thickness",
+          "label": "Insulation Thickness",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "ambient_temperature",
+          "label": "Ambient Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        }
+      ],
+      "outputs": [
+        {
+          "id": "condensate_rate",
+          "label": "Condensate Generation Rate",
+          "formula": "inputs.pipe_diameter * inputs.steam_pressure * inputs.insulation_thickness / (inputs.ambient_temperature + 273.15) * 0.001",
+          "unit": "kg/h",
+          "format": "decimal"
+        },
+        {
+          "id": "total_condensate",
+          "label": "Total Condensate per Day",
+          "formula": "inputs.pipe_diameter * inputs.steam_pressure * inputs.insulation_thickness * inputs.pipe_length / (inputs.ambient_temperature + 273.15) * 0.24",
+          "unit": "kg/day",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

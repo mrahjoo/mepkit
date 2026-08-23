@@ -1,0 +1,6 @@
+{
+  "id": "steel_pipes_schedule_40___pressure_loss",
+  "title": "Steel Pipes Schedule 40 - Pressure Loss",
+  "description": "Water flow and pressure loss in schedule 40 steel pipes - Imperial and SI units. Calculate friction loss and pressure drop for ASME/ANSI B36.10/19 schedule 40 steel pipes based on the D'Arcy-Weisbach Equation.",
+  "type": "chart"
+}

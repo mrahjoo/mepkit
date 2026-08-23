@@ -1,0 +1,537 @@
+{
+  "id": "astm___sections_and_volumes",
+  "title": "ASTM - Sections and Volumes",
+  "description": "ASTM International standards organized by sections and volumes covering metals, construction, petroleum, textiles, plastics, rubber, electronics, water, energy, medical devices, and general products.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "astm_sections_volumes",
+      "headers": [
+        "Section Number",
+        "Section Title",
+        "Volume Code",
+        "Volume Title"
+      ],
+      "rows": [
+        [
+          "1",
+          "Iron and Steel Products",
+          "01.01",
+          "Steel Piping, Tubing, Fittings"
+        ],
+        [
+          "1",
+          "Iron and Steel Products",
+          "01.02",
+          "Ferrous Castings; Ferroalloys"
+        ],
+        [
+          "1",
+          "Iron and Steel Products",
+          "01.03",
+          "Steel - Plate, Sheet, Strip, Wire; Stainless Steel Bar"
+        ],
+        [
+          "1",
+          "Iron and Steel Products",
+          "01.04",
+          "Steel - Structural, Reinforcing, Pressure Vessel, Railway"
+        ],
+        [
+          "1",
+          "Iron and Steel Products",
+          "01.05",
+          "Steel - Bars, Forgings, Bearing, Chain, Springs"
+        ],
+        [
+          "1",
+          "Iron and Steel Products",
+          "01.06",
+          "Coated Steel Products"
+        ],
+        [
+          "1",
+          "Iron and Steel Products",
+          "01.07",
+          "Ships and Marine Technology"
+        ],
+        [
+          "1",
+          "Iron and Steel Products",
+          "01.08",
+          "Fasteners"
+        ],
+        [
+          "2",
+          "Nonferrous Metal Products",
+          "02.01",
+          "Copper and Copper Alloys"
+        ],
+        [
+          "2",
+          "Nonferrous Metal Products",
+          "02.02",
+          "Aluminum and Magnesium Alloys"
+        ],
+        [
+          "2",
+          "Nonferrous Metal Products",
+          "02.03",
+          "Electrical Conductors"
+        ],
+        [
+          "2",
+          "Nonferrous Metal Products",
+          "02.04",
+          "Metals: Nickel, Cobalt, Lead, Tin, Zinc, Cadmium, Precious, Reactive, Refractory Metals and Alloys"
+        ],
+        [
+          "2",
+          "Nonferrous Metal Products",
+          "02.05",
+          "Metallic and Inorganic Coatings; Metal Powders; Sintered P/M Structural Parts"
+        ],
+        [
+          "3",
+          "Metals Test Methods and Analytical Procedures",
+          "03.01",
+          "Metals - Mechanical Testing; Elevated and Low-Temperature Tests; Metallography"
+        ],
+        [
+          "3",
+          "Metals Test Methods and Analytical Procedures",
+          "03.02",
+          "Wear and Erosion; Metal Corrosion"
+        ],
+        [
+          "3",
+          "Metals Test Methods and Analytical Procedures",
+          "03.03",
+          "Nondestructive Testing"
+        ],
+        [
+          "3",
+          "Metals Test Methods and Analytical Procedures",
+          "03.04",
+          "Magnetic Properties"
+        ],
+        [
+          "3",
+          "Metals Test Methods and Analytical Procedures",
+          "03.05",
+          "Analytical Chemistry for Metals, Ores, and Related Materials (I)"
+        ],
+        [
+          "3",
+          "Metals Test Methods and Analytical Procedures",
+          "03.06",
+          "Analytical Chemistry for Metals, Ores, and Related Materials (II); Molecular Spectroscopy; Surface Analysis"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.01",
+          "Cement, Lime; Gypsum"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.02",
+          "Concrete and Aggregates"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.03",
+          "Road and Paving Materials; Vehicle-Pavement Systems"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.04",
+          "Roofing, Waterproofing, and Bituminous Materials"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.05",
+          "Chemical-Resistant Nonmetallic Materials; Vitrified Clay Pipe; Concrete Pipe; Fiber-Reinforced Cement Products"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.06",
+          "Thermal Insulation; Environmental Acoustics"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.07",
+          "Building Seals and Sealants; Fire Standards; Dimension Stone"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.08",
+          "Soil and Rock (I)"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.09",
+          "Soil and Rock (II); Geosynthetics"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.10",
+          "Wood"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.11",
+          "Building Construction"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.12",
+          "Building Constructions (II); Property Management Systems"
+        ],
+        [
+          "4",
+          "Construction",
+          "04.13",
+          "Geosynthetics"
+        ],
+        [
+          "5",
+          "Petroleum Products, Lubricants, and Fossil Fuels",
+          "05.01",
+          "Petroleum Products and Lubricants (I)"
+        ],
+        [
+          "5",
+          "Petroleum Products, Lubricants, and Fossil Fuels",
+          "05.02",
+          "Petroleum Products and Lubricants (II)"
+        ],
+        [
+          "5",
+          "Petroleum Products, Lubricants, and Fossil Fuels",
+          "05.03",
+          "Petroleum Products and Lubricants (III)"
+        ],
+        [
+          "5",
+          "Petroleum Products, Lubricants, and Fossil Fuels",
+          "05.04",
+          "Petroleum Products and Lubricants (IV)"
+        ],
+        [
+          "5",
+          "Petroleum Products, Lubricants, and Fossil Fuels",
+          "05.05",
+          "Test Methods for Rating Motor, Diesel, and Aviation Fuels; Catalysts; Manufactured Carbon and Graphite Products"
+        ],
+        [
+          "5",
+          "Petroleum Products, Lubricants, and Fossil Fuels",
+          "05.06",
+          "Gaseous Fuels, Coal and Coke"
+        ],
+        [
+          "6",
+          "Paints, Related Coatings, and Aromatics",
+          "06.01",
+          "Paint - Tests for Chemical, Physical, and Optical Properties; Appearance"
+        ],
+        [
+          "6",
+          "Paints, Related Coatings, and Aromatics",
+          "06.02",
+          "Paint - Products and Applications; Protective Coatings; Pipeline Coatings"
+        ],
+        [
+          "6",
+          "Paints, Related Coatings, and Aromatics",
+          "06.03",
+          "Paint - Pigments, Drying Oils, Polymers, Resins, Naval Stores, Cellulosic Esters, and Ink Vehicles"
+        ],
+        [
+          "6",
+          "Paints, Related Coatings, and Aromatics",
+          "06.04",
+          "Paint - Solvents; Aromatic Hydrocarbons"
+        ],
+        [
+          "7",
+          "Textiles",
+          "07.01",
+          "Textiles (I)"
+        ],
+        [
+          "7",
+          "Textiles",
+          "07.02",
+          "Textiles (II)"
+        ],
+        [
+          "8",
+          "Plastics",
+          "08.01",
+          "Plastics (I)"
+        ],
+        [
+          "8",
+          "Plastics",
+          "08.02",
+          "Plastics (II)"
+        ],
+        [
+          "8",
+          "Plastics",
+          "08.03",
+          "Plastics (III)"
+        ],
+        [
+          "8",
+          "Plastics",
+          "08.04",
+          "Plastic Pipe and Building Products"
+        ],
+        [
+          "9",
+          "Rubber",
+          "09.01",
+          "Rubber, Natural and Synthetic -- General Test Methods; Carbon Black"
+        ],
+        [
+          "9",
+          "Rubber",
+          "09.02",
+          "Rubber Products, Industrial - Specifications and Related Test Methods: Gaskets; Tires"
+        ],
+        [
+          "10",
+          "Electrical Insulation and Electronics",
+          "10.01",
+          "Electrical Insulation (I)"
+        ],
+        [
+          "10",
+          "Electrical Insulation and Electronics",
+          "10.02",
+          "Electrical Insulation (II)"
+        ],
+        [
+          "10",
+          "Electrical Insulation and Electronics",
+          "10.03",
+          "Electrical Insulating Liquids and Gases; Electrical Protective Equipment"
+        ],
+        [
+          "10",
+          "Electrical Insulation and Electronics",
+          "10.04",
+          "Electronics (I)"
+        ],
+        [
+          "10",
+          "Electrical Insulation and Electronics",
+          "10.05",
+          "Electronics (II)"
+        ],
+        [
+          "11",
+          "Water and Environmental Technology",
+          "11.01",
+          "Water (I)"
+        ],
+        [
+          "11",
+          "Water and Environmental Technology",
+          "11.02",
+          "Water (II)"
+        ],
+        [
+          "11",
+          "Water and Environmental Technology",
+          "11.03",
+          "Atmospheric Analysis; Occupational Health and Safety; Protective Clothing"
+        ],
+        [
+          "11",
+          "Water and Environmental Technology",
+          "11.04",
+          "Environmental Assessment; Hazardous Substances and Oil Spill Responses; Waste Management"
+        ],
+        [
+          "11",
+          "Water and Environmental Technology",
+          "11.05",
+          "Biological Effects and Environmental Fate; Biotechnology; Pesticides"
+        ],
+        [
+          "12",
+          "Nuclear, Solar, and Geothermal Energy",
+          "12.01",
+          "Nuclear Energy (I)"
+        ],
+        [
+          "12",
+          "Nuclear, Solar, and Geothermal Energy",
+          "12.02",
+          "Nuclear Energy (II), Solar, and Geothermal Energy"
+        ],
+        [
+          "13",
+          "Medical Devices and Services",
+          "13.01",
+          "Medical Devices; Emergency Medical Services"
+        ],
+        [
+          "14",
+          "General Methods and Instrumentation",
+          "14.01",
+          "Healthcare Informatics"
+        ],
+        [
+          "14",
+          "General Methods and Instrumentation",
+          "14.02",
+          "General Test Methods; Forensic Sciences; Terminology; Conformity Assessment; Statistical Methods"
+        ],
+        [
+          "14",
+          "General Methods and Instrumentation",
+          "14.03",
+          "Temperature Measurement"
+        ],
+        [
+          "14",
+          "General Methods and Instrumentation",
+          "14.04",
+          "Laboratory Apparatus; Degradation of Materials; SI; Oxygen Fire Safety"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.01",
+          "Refractories; Activated Carbon; Advanced Ceramics"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.02",
+          "Glass; Ceramic Whitewares"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.03",
+          "Space Simulation; Aerospace and Aircraft; High Modulus Fibers"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.04",
+          "Soaps and Other Detergents; Polishes; Leather; Resilient Floor Coverings"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.05",
+          "Engine Coolants; Halogenated Organic Solvents and Fire Extinguishing Agents; Industrial and Specialty Chemicals"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.06",
+          "Adhesives"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.07",
+          "Sport Equipment; Safety and Traction for Footwear; Amusement Rides; Consumer Products"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.08",
+          "Sensory Evaluation; Vacuum Cleaners; Security Systems; Detention Facilities; Food Service Equipment"
+        ],
+        [
+          "15",
+          "General Products, Chemical Specialties, and End Use Products",
+          "15.09",
+          "Paper; Packaging; Flexible Barrier Materials; Business Imaging Products"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "astm_sections_chart",
+      "options": {
+        "title": {
+          "text": "ASTM Sections and Volume Distribution"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Section 1",
+            "Section 2",
+            "Section 3",
+            "Section 4",
+            "Section 5",
+            "Section 6",
+            "Section 7",
+            "Section 8",
+            "Section 9",
+            "Section 10",
+            "Section 11",
+            "Section 12",
+            "Section 13",
+            "Section 14",
+            "Section 15"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Number of Volumes",
+            "data": [
+              8,
+              5,
+              6,
+              13,
+              6,
+              4,
+              2,
+              4,
+              2,
+              5,
+              5,
+              2,
+              1,
+              4,
+              9
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

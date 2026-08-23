@@ -1,0 +1,132 @@
+{
+  "id": "pipes_and_tubes___temperature_expansion",
+  "title": "Pipes and Tubes - Temperature Expansion",
+  "description": "Calculate the temperature-induced expansion of pipes based on the linear expansion coefficient, pipe length, and temperature difference using the formula: dl = α × Lo × dt",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Pipe Temperature Expansion Calculator",
+      "inputs": [
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length (Lo)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "ft"
+        },
+        {
+          "id": "initial_temp",
+          "label": "Initial Temperature",
+          "type": "number",
+          "defaultValue": 32,
+          "unit": "°F"
+        },
+        {
+          "id": "final_temp",
+          "label": "Final Temperature",
+          "type": "number",
+          "defaultValue": 212,
+          "unit": "°F"
+        },
+        {
+          "id": "expansion_coeff",
+          "label": "Linear Expansion Coefficient (α)",
+          "type": "number",
+          "defaultValue": 0.000008,
+          "unit": "in/in°F"
+        },
+        {
+          "id": "length_unit",
+          "label": "Length Unit",
+          "type": "select",
+          "defaultValue": "feet",
+          "options": [
+            {
+              "value": "feet",
+              "label": "Feet"
+            },
+            {
+              "value": "inches",
+              "label": "Inches"
+            },
+            {
+              "value": "meters",
+              "label": "Meters"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temp_difference",
+          "label": "Temperature Difference (dt)",
+          "formula": "inputs.final_temp - inputs.initial_temp",
+          "unit": "°F"
+        },
+        {
+          "id": "pipe_length_inches",
+          "label": "Pipe Length in Inches",
+          "formula": "inputs.length_unit === 'feet' ? inputs.pipe_length * 12 : inputs.length_unit === 'meters' ? inputs.pipe_length * 39.37 : inputs.pipe_length",
+          "unit": "inches"
+        },
+        {
+          "id": "expansion",
+          "label": "Thermal Expansion (dl)",
+          "formula": "inputs.expansion_coeff * inputs.pipe_length * 12 * (inputs.final_temp - inputs.initial_temp)",
+          "unit": "inches",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "32-212°F",
+        "32-400°F",
+        "32-600°F",
+        "32-750°F",
+        "32-900°F",
+        "32-1100°F",
+        "32-1300°F"
+      ],
+      "rows": [
+        [
+          "Alloy Steel (1% Cr, 1/2% Mo)",
+          8,
+          8.4,
+          8.8,
+          9.2,
+          9.6,
+          9.8,
+          null
+        ],
+        [
+          "Mild Steel (0.1-0.2% C)",
+          7.8,
+          8.3,
+          8.7,
+          9,
+          9.5,
+          9.7,
+          null
+        ],
+        [
+          "Stainless Steel (18% Cr, 8% Ni)",
+          11.1,
+          11.5,
+          11.8,
+          12.1,
+          12.4,
+          12.6,
+          12.8
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Thermal Expansion Formula\n\n**dl = α × Lo × dt**\n\nWhere:\n- **dl** = expansion (m, inches)\n- **Lo** = length of pipe (m, inches)\n- **dt** = temperature difference (°C, °F)\n- **α** = linear expansion coefficient (m/m°K, in/in°F)\n\n### Example\nAn alloy steel pipe with length 100 feet is heated from 32 to 212°F. The expansion coefficient is 8×10⁻⁶ (in/in°F).\n\n**Calculation:**\ndl = (8×10⁻⁶ in/in°F) × (100 ft × 12 in/ft) × (212°F - 32°F) = **1.728 inches**"
+    }
+  ]
+}

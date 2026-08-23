@@ -1,0 +1,73 @@
+{
+  "id": "steam_heating_systems___classifications",
+  "title": "Steam Heating Systems - Classifications",
+  "description": "Steam systems carries heat through pipes from the boiler to consumers as heat exchangers, process equipment etc. This tool provides a comprehensive classification of steam heating systems by pressure, condensate return method, and pipe layout.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Classification Type",
+        "Category",
+        "Description",
+        "Typical Application"
+      ],
+      "rows": [
+        [
+          "Pressure",
+          "High Pressure",
+          "Above 20 kN/m² (3 lb/in²)",
+          "Industrial processes, large facilities"
+        ],
+        [
+          "Pressure",
+          "Low Pressure",
+          "Up to 20 kN/m² (3 lb/in²)",
+          "Building heating, small facilities"
+        ],
+        [
+          "Pressure",
+          "Vacuum",
+          "Below atmospheric pressure",
+          "Specialized heating systems"
+        ],
+        [
+          "Condensate Return",
+          "Gravity",
+          "Condensate returns by gravity flow",
+          "Downflow systems, lower floors"
+        ],
+        [
+          "Condensate Return",
+          "Mechanical",
+          "Condensate return via pump",
+          "Upflow systems, higher floors"
+        ],
+        [
+          "Pipe Layout",
+          "One Pipe",
+          "Single pipe for steam and condensate",
+          "Simpler systems, lower cost"
+        ],
+        [
+          "Pipe Layout",
+          "Two Pipe",
+          "Separate pipes for steam and condensate",
+          "More efficient, larger systems"
+        ],
+        [
+          "Pipe Layout",
+          "Up-Feed",
+          "Steam flows upward through pipes",
+          "Upper level distribution"
+        ],
+        [
+          "Pipe Layout",
+          "Down-Feed",
+          "Steam flows downward through pipes",
+          "Lower level distribution"
+        ]
+      ]
+    }
+  ]
+}

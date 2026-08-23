@@ -1,0 +1,126 @@
+{
+  "id": "area_units_converter",
+  "title": "Area Units Converter",
+  "description": "Convert between units of area.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Area Units Converter - Convert between different units of area measurement",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Value",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        },
+        {
+          "id": "from_unit",
+          "label": "From Unit",
+          "type": "select",
+          "defaultValue": "m2",
+          "options": [
+            {
+              "label": "Square Meter (m²)",
+              "value": "m2"
+            },
+            {
+              "label": "Square Kilometer (km²)",
+              "value": "km2"
+            },
+            {
+              "label": "Square Centimeter (cm²)",
+              "value": "cm2"
+            },
+            {
+              "label": "Square Millimeter (mm²)",
+              "value": "mm2"
+            },
+            {
+              "label": "Square Mile (mi²)",
+              "value": "mi2"
+            },
+            {
+              "label": "Square Yard (yd²)",
+              "value": "yd2"
+            },
+            {
+              "label": "Square Foot (ft²)",
+              "value": "ft2"
+            },
+            {
+              "label": "Square Inch (in²)",
+              "value": "in2"
+            },
+            {
+              "label": "Hectare (ha)",
+              "value": "ha"
+            },
+            {
+              "label": "Acre (ac)",
+              "value": "ac"
+            }
+          ]
+        },
+        {
+          "id": "to_unit",
+          "label": "To Unit",
+          "type": "select",
+          "defaultValue": "ft2",
+          "options": [
+            {
+              "label": "Square Meter (m²)",
+              "value": "m2"
+            },
+            {
+              "label": "Square Kilometer (km²)",
+              "value": "km2"
+            },
+            {
+              "label": "Square Centimeter (cm²)",
+              "value": "cm2"
+            },
+            {
+              "label": "Square Millimeter (mm²)",
+              "value": "mm2"
+            },
+            {
+              "label": "Square Mile (mi²)",
+              "value": "mi2"
+            },
+            {
+              "label": "Square Yard (yd²)",
+              "value": "yd2"
+            },
+            {
+              "label": "Square Foot (ft²)",
+              "value": "ft2"
+            },
+            {
+              "label": "Square Inch (in²)",
+              "value": "in2"
+            },
+            {
+              "label": "Hectare (ha)",
+              "value": "ha"
+            },
+            {
+              "label": "Acre (ac)",
+              "value": "ac"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "converted_value",
+          "label": "Converted Value",
+          "unit": "",
+          "format": "decimal",
+          "formula": "inputs.value * (inputs.from_unit === 'm2' ? 1 : inputs.from_unit === 'km2' ? 1000000 : inputs.from_unit === 'cm2' ? 0.0001 : inputs.from_unit === 'mm2' ? 0.000001 : inputs.from_unit === 'mi2' ? 2589988.110336 : inputs.from_unit === 'yd2' ? 0.836127 : inputs.from_unit === 'ft2' ? 0.092903 : inputs.from_unit === 'in2' ? 0.00064516 : inputs.from_unit === 'ha' ? 10000 : inputs.from_unit === 'ac' ? 4046.856 : 1) / (inputs.to_unit === 'm2' ? 1 : inputs.to_unit === 'km2' ? 1000000 : inputs.to_unit === 'cm2' ? 0.0001 : inputs.to_unit === 'mm2' ? 0.000001 : inputs.to_unit === 'mi2' ? 2589988.110336 : inputs.to_unit === 'yd2' ? 0.836127 : inputs.to_unit === 'ft2' ? 0.092903 : inputs.to_unit === 'in2' ? 0.00064516 : inputs.to_unit === 'ha' ? 10000 : inputs.to_unit === 'ac' ? 4046.856 : 1)"
+        }
+      ]
+    }
+  ]
+}

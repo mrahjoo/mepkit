@@ -1,0 +1,192 @@
+{
+  "id": "equivalent_length_vs__minor_pressure_head_loss_in_",
+  "title": "Equivalent Length vs. Minor Pressure Head Loss in Pipe and Duct Components",
+  "description": "Calculate the equivalent length and minor pressure head loss in pipe and duct components using the Darcy-Weisbach equation and minor loss coefficients.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "minor_loss_calculator",
+      "content": "Calculate minor pressure loss and equivalent length",
+      "inputs": [
+        {
+          "id": "minor_loss_coefficient",
+          "label": "Minor Loss Coefficient (ξ)",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "velocity",
+          "label": "Flow Velocity (v)",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "m/s"
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density (ρ)",
+          "type": "number",
+          "defaultValue": 1.23,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "gravity",
+          "label": "Acceleration of Gravity (g)",
+          "type": "number",
+          "defaultValue": 9.81,
+          "unit": "m/s²"
+        },
+        {
+          "id": "friction_coefficient",
+          "label": "Friction Coefficient (λ)",
+          "type": "number",
+          "defaultValue": 0.017,
+          "unit": "dimensionless"
+        },
+        {
+          "id": "hydraulic_diameter",
+          "label": "Hydraulic Diameter (dh)",
+          "type": "number",
+          "defaultValue": 0.315,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "minor_pressure_loss",
+          "label": "Minor Pressure Loss (Δp)",
+          "formula": "inputs.minor_loss_coefficient * inputs.fluid_density * (inputs.velocity ^ 2) / 2",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "minor_head_loss",
+          "label": "Minor Head Loss (Δh)",
+          "formula": "inputs.minor_loss_coefficient * (inputs.velocity ^ 2) / (2 * inputs.gravity)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "equivalent_length",
+          "label": "Equivalent Length (le)",
+          "formula": "(inputs.minor_loss_coefficient * inputs.hydraulic_diameter) / inputs.friction_coefficient",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "roughness_coefficients_table",
+      "content": "Pressure Loss due to Friction - Roughness Coefficients vs. Surface Materials",
+      "headers": [
+        "Surface Material",
+        "Absolute Roughness (10⁻³ m)",
+        "Absolute Roughness (feet)"
+      ],
+      "rows": [
+        [
+          "Copper, Lead, Brass, Aluminum (new)",
+          "0.001 - 0.002",
+          "3.3 - 6.7×10⁻⁶"
+        ],
+        [
+          "PVC and Plastic Pipes",
+          "0.0015 - 0.007",
+          "0.5 - 2.33×10⁻⁵"
+        ],
+        [
+          "Epoxy, Vinyl Ester and Isophthalic pipe",
+          "0.005",
+          "1.7×10⁻⁵"
+        ],
+        [
+          "Stainless steel, bead blasted",
+          "0.001 - 0.006",
+          "(0.00328 - 0.0197) 10⁻³"
+        ],
+        [
+          "Stainless steel, turned",
+          "0.0004 - 0.006",
+          "(0.00131 - 0.0197) 10⁻³"
+        ],
+        [
+          "Stainless steel, electropolished",
+          "0.0001 - 0.0008",
+          "(0.000328 - 0.00262) 10⁻³"
+        ],
+        [
+          "Steel commercial pipe",
+          "0.045 - 0.09",
+          "1.5 - 3×10⁻⁴"
+        ],
+        [
+          "Stretched steel",
+          "0.015",
+          "5×10⁻⁵"
+        ],
+        [
+          "Weld steel",
+          "0.045",
+          "1.5×10⁻⁴"
+        ],
+        [
+          "Galvanized steel",
+          "0.15",
+          "5×10⁻⁴"
+        ],
+        [
+          "Rusted steel (corrosion)",
+          "0.15 - 4",
+          "5 - 133×10⁻⁴"
+        ],
+        [
+          "New cast iron",
+          "0.25 - 0.8",
+          "8 - 27×10⁻⁴"
+        ],
+        [
+          "Worn cast iron",
+          "0.8 - 1.5",
+          "2.7 - 5×10⁻³"
+        ],
+        [
+          "Rusty cast iron",
+          "1.5 - 2.5",
+          "5 - 8.3×10⁻³"
+        ],
+        [
+          "Sheet or asphalted cast iron",
+          "0.01 - 0.015",
+          "3.33 - 5×10⁻⁵"
+        ],
+        [
+          "Smoothed cement",
+          "0.3",
+          "1×10⁻³"
+        ],
+        [
+          "Ordinary concrete",
+          "0.3 - 1",
+          "1 - 3.33×10⁻³"
+        ],
+        [
+          "Coarse concrete",
+          "0.3 - 5",
+          "1 - 16.7×10⁻³"
+        ],
+        [
+          "Well planed wood",
+          "0.18 - 0.9",
+          "6 - 30×10⁻⁴"
+        ],
+        [
+          "Ordinary wood",
+          "5",
+          "16.7×10⁻³"
+        ]
+      ]
+    }
+  ]
+}

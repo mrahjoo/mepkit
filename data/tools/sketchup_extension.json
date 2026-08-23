@@ -1,0 +1,12 @@
+{
+  "id": "sketchup_extension",
+  "title": "SketchUp Extension",
+  "description": "An extension made by the Engineering ToolBox for the amazing 3D Sketchup drawing tool.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# SketchUp Extension\n\nAn extension made by the Engineering ToolBox for the amazing 3D Sketchup drawing tool.\n\n## Features\n- Integration with SketchUp for enhanced 3D modeling\n- Engineering calculations and tools\n- Professional drawing capabilities"
+    }
+  ]
+}

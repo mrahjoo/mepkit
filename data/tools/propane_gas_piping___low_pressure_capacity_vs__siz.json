@@ -1,0 +1,255 @@
+{
+  "id": "propane_gas_piping___low_pressure_capacity_vs__siz",
+  "title": "Propane Gas Piping - Low Pressure Capacity vs. Size",
+  "description": "Sizing of low pressure propane gas pipe lines - Imperial units. Capacity tables for steel pipe Schedule 40 and copper tubing types K and L.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Size (in)",
+        "10 ft",
+        "20 ft",
+        "40 ft",
+        "80 ft",
+        "150 ft",
+        "300 ft"
+      ],
+      "rows": [
+        [
+          "1/2",
+          235,
+          160,
+          110,
+          75,
+          55,
+          35
+        ],
+        [
+          "3/4",
+          490,
+          340,
+          230,
+          160,
+          115,
+          80
+        ],
+        [
+          "1",
+          925,
+          640,
+          440,
+          300,
+          215,
+          145
+        ],
+        [
+          "1 1/4",
+          1900,
+          1305,
+          900,
+          620,
+          440,
+          300
+        ],
+        [
+          "1 1/2",
+          2850,
+          1960,
+          1345,
+          925,
+          660,
+          450
+        ],
+        [
+          "2",
+          5490,
+          3770,
+          2590,
+          1780,
+          1270,
+          870
+        ],
+        [
+          "2 1/2",
+          8740,
+          6010,
+          4130,
+          2840,
+          2020,
+          1390
+        ],
+        [
+          "3",
+          15455,
+          10620,
+          7300,
+          5020,
+          3570,
+          2450
+        ],
+        [
+          "4",
+          31525,
+          21670,
+          14890,
+          10230,
+          7280,
+          5010
+        ],
+        [
+          "5",
+          57030,
+          39200,
+          26940,
+          18520,
+          13180,
+          9060
+        ],
+        [
+          "6",
+          92350,
+          63470,
+          43620,
+          29980,
+          21340,
+          14665
+        ],
+        [
+          "8",
+          189750,
+          130410,
+          89630,
+          61600,
+          43840,
+          30135
+        ]
+      ],
+      "content": "**Steel Pipe - Schedule 40**\n\nPropane Gas - Low Pressure Capacities in Steel Pipes Schedule 40 (MBH)\n\n*Conditions:*\n- Pressure less than 1 1/2 psig\n- Fittings factor 1.5 - equivalent pipe length = pipe length + 50%\n- Pressure drop 0.5 inches water column\n- Energy content in propane gas 2520 Btu/cu ft\n- One MBH is equivalent to 1000 BTU's per hour\n- 1 CFH ≈ 2.54 MBH"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Pipe Size (O.D) (in)",
+        "10 ft",
+        "20 ft",
+        "40 ft",
+        "80 ft"
+      ],
+      "rows": [
+        [
+          "1/4 (3/8)",
+          35,
+          25,
+          17,
+          12
+        ],
+        [
+          "3/8 (1/2)",
+          75,
+          50,
+          35,
+          25
+        ],
+        [
+          "1/2 (5/8)",
+          150,
+          105,
+          70,
+          50
+        ],
+        [
+          "5/8 (3/4)",
+          265,
+          180,
+          125,
+          85
+        ],
+        [
+          "3/4 (7/8)",
+          380,
+          260,
+          180,
+          120
+        ],
+        [
+          "1 (1 1/8)",
+          805,
+          555,
+          380,
+          260
+        ],
+        [
+          "1 1/4 (1 3/8)",
+          1450,
+          995,
+          685,
+          470
+        ]
+      ],
+      "content": "**Copper Tubing - Type K**\n\nPropane Gas - Low Pressure Capacities in Copper Tubes - Type K (MBH)\n\n*Conditions:*\n- Pressure less than 1 1/2 psig\n- Fittings factor 1.5 - equivalent pipe length = pipe length + 50%\n- Pressure drop 0.5 inches water column\n- Energy content in propane gas 2500 Btu/cu ft\n- One MBH is equivalent to 1000 BTU's per hour\n- 1 CFH ≈ 2.54 MBH"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Pipe Size (O.D) (in)",
+        "10 ft",
+        "20 ft",
+        "40 ft",
+        "80 ft"
+      ],
+      "rows": [
+        [
+          "1/4 (3/8)",
+          40,
+          25,
+          20,
+          13
+        ],
+        [
+          "3/8 (1/2)",
+          90,
+          60,
+          40,
+          30
+        ],
+        [
+          "1/2 (5/8)",
+          165,
+          115,
+          80,
+          55
+        ],
+        [
+          "5/8 (3/4)",
+          280,
+          190,
+          135,
+          90
+        ],
+        [
+          "3/4 (7/8)",
+          430,
+          295,
+          205,
+          140
+        ],
+        [
+          "1 (1 1/8)",
+          870,
+          600,
+          410,
+          280
+        ],
+        [
+          "1 1/4 (1 3/8)",
+          1510,
+          1040,
+          710,
+          490
+        ]
+      ],
+      "content": "**Copper Tubing - Type L**\n\nPropane Gas - Low Pressure Capacities in Copper Tubes - Type L (MBH)\n\n*Conditions:*\n- Pressure less than 1 1/2 psig\n- Fittings factor 1.5 - equivalent pipe length = pipe length + 50%\n- Pressure drop 0.5 inches water column\n- Energy content in propane gas 2500 Btu/cu ft\n- One MBH is equivalent to 1000 BTU's per hour\n- 1 CFH ≈ 2.54 MBH"
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "id": "metals___boiling_points_and_specific_heat",
+  "title": "Metals - Boiling Points and Specific Heat",
+  "description": "Boiling points and specific heat of liquid metals. This tool allows you to look up and calculate thermal properties of various metals including boiling points and specific heat capacities.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Metal",
+        "Boiling Point (K)",
+        "Vapor Pressure 10⁻³ (atm)",
+        "Vapor Pressure 10⁻⁶ (atm)",
+        "Specific Heat of Liquid (cal/g°C)",
+        "Specific Heat of Liquid (kJ/kg°C)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          1782,
+          1333,
+          0.28,
+          1.18
+        ],
+        [
+          "Antimony",
+          1007,
+          741,
+          0.062,
+          0.26
+        ],
+        [
+          "Beryllium",
+          1793,
+          1347,
+          0.78,
+          3.27
+        ],
+        [
+          "Bismuth",
+          1155,
+          851,
+          0.036,
+          0.15
+        ],
+        [
+          "Cadmium",
+          655,
+          486,
+          0.063,
+          0.26
+        ],
+        [
+          "Chromium",
+          1992,
+          1530,
+          0.224,
+          0.94
+        ],
+        [
+          "Cobalt",
+          2167,
+          1652,
+          0.164,
+          0.69
+        ],
+        [
+          "Copper",
+          1862,
+          1391,
+          0.118,
+          0.49
+        ],
+        [
+          "Gold",
+          2023,
+          1510,
+          0.0355,
+          0.15
+        ],
+        [
+          "Iridium",
+          3253,
+          2515,
+          0.043,
+          0.18
+        ],
+        [
+          "Iron",
+          2093,
+          1594,
+          0.197,
+          0.82
+        ],
+        [
+          "Lead",
+          1230,
+          889,
+          0.033,
+          0.14
+        ],
+        [
+          "Magnesium",
+          857,
+          638,
+          0.32,
+          1.34
+        ],
+        [
+          "Manganese",
+          1495,
+          1131,
+          0.2,
+          0.84
+        ],
+        [
+          "Mercury",
+          393,
+          287,
+          "",
+          0
+        ],
+        [
+          "Molybdenum",
+          3344,
+          2558,
+          0.089,
+          0.37
+        ],
+        [
+          "Nickel",
+          2156,
+          1646,
+          0.175,
+          0.73
+        ],
+        [
+          "Niobium (Columbium)",
+          3523,
+          2721,
+          0.083,
+          0.35
+        ],
+        [
+          "Osmium",
+          "",
+          "",
+          0.039,
+          0.16
+        ],
+        [
+          "Platinum",
+          2817,
+          2155,
+          0.043,
+          0.18
+        ],
+        [
+          "Plutonium",
+          2200,
+          1596,
+          0.041,
+          0.17
+        ],
+        [
+          "Potassium",
+          606,
+          430,
+          "",
+          ""
+        ],
+        [
+          "Rhodium",
+          "",
+          "",
+          0.092,
+          0.39
+        ],
+        [
+          "Silicon",
+          2340,
+          1749,
+          0.217,
+          0.91
+        ],
+        [
+          "Silver",
+          1582,
+          1179,
+          0.068,
+          0.28
+        ],
+        [
+          "Sodium",
+          701,
+          504,
+          "",
+          0
+        ],
+        [
+          "Tantalum",
+          3959,
+          3052,
+          0.04,
+          0.17
+        ],
+        [
+          "Thorium",
+          3251,
+          2407,
+          0.047,
+          0.2
+        ],
+        [
+          "Tin",
+          1857,
+          1366,
+          0.058,
+          0.24
+        ],
+        [
+          "Titanium",
+          2405,
+          1827,
+          0.188,
+          0.79
+        ],
+        [
+          "Tungsten",
+          4139,
+          3228,
+          0.04,
+          0.17
+        ],
+        [
+          "Uranium",
+          2861,
+          2128,
+          0.048,
+          0.2
+        ],
+        [
+          "Vanadium",
+          2525,
+          1948,
+          0.207,
+          0.87
+        ],
+        [
+          "Zinc",
+          752,
+          559,
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Boiling Points of Metals (K)"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Aluminum",
+            "Antimony",
+            "Beryllium",
+            "Bismuth",
+            "Cadmium",
+            "Chromium",
+            "Cobalt",
+            "Copper",
+            "Gold",
+            "Iridium",
+            "Iron",
+            "Lead",
+            "Magnesium",
+            "Manganese",
+            "Mercury",
+            "Molybdenum",
+            "Nickel",
+            "Niobium",
+            "Osmium",
+            "Platinum",
+            "Plutonium",
+            "Potassium",
+            "Rhodium",
+            "Silicon",
+            "Silver",
+            "Sodium",
+            "Tantalum",
+            "Thorium",
+            "Tin",
+            "Titanium",
+            "Tungsten",
+            "Uranium",
+            "Vanadium",
+            "Zinc"
+          ],
+          "axisLabel": {
+            "rotate": 45
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Boiling Point (K)"
+        },
+        "series": [
+          {
+            "name": "Boiling Point (K)",
+            "data": [
+              1782,
+              1007,
+              1793,
+              1155,
+              655,
+              1992,
+              2167,
+              1862,
+              2023,
+              3253,
+              2093,
+              1230,
+              857,
+              1495,
+              393,
+              3344,
+              2156,
+              3523,
+              null,
+              2817,
+              2200,
+              606,
+              null,
+              2340,
+              1582,
+              701,
+              3959,
+              3251,
+              1857,
+              2405,
+              4139,
+              2861,
+              2525,
+              752
+            ],
+            "type": "bar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Specific Heat of Liquid Metals (kJ/kg°C)"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Aluminum",
+            "Antimony",
+            "Beryllium",
+            "Bismuth",
+            "Cadmium",
+            "Chromium",
+            "Cobalt",
+            "Copper",
+            "Gold",
+            "Iridium",
+            "Iron",
+            "Lead",
+            "Magnesium",
+            "Manganese",
+            "Mercury",
+            "Molybdenum",
+            "Nickel",
+            "Niobium",
+            "Osmium",
+            "Platinum",
+            "Plutonium",
+            "Potassium",
+            "Rhodium",
+            "Silicon",
+            "Silver",
+            "Sodium",
+            "Tantalum",
+            "Thorium",
+            "Tin",
+            "Titanium",
+            "Tungsten",
+            "Uranium",
+            "Vanadium",
+            "Zinc"
+          ],
+          "axisLabel": {
+            "rotate": 45
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Specific Heat (kJ/kg°C)"
+        },
+        "series": [
+          {
+            "name": "Specific Heat (kJ/kg°C)",
+            "data": [
+              1.18,
+              0.26,
+              3.27,
+              0.15,
+              0.26,
+              0.94,
+              0.69,
+              0.49,
+              0.15,
+              0.18,
+              0.82,
+              0.14,
+              1.34,
+              0.84,
+              0,
+              0.37,
+              0.73,
+              0.35,
+              0.16,
+              0.18,
+              0.17,
+              null,
+              0.39,
+              0.91,
+              0.28,
+              0,
+              0.17,
+              0.2,
+              0.24,
+              0.79,
+              0.17,
+              0.2,
+              0.87,
+              null
+            ],
+            "type": "bar"
+          }
+        ]
+      }
+    }
+  ]
+}

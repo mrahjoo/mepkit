@@ -1,0 +1,47 @@
+{
+  "id": "rotating_shafts___torque",
+  "title": "Rotating Shafts - Torque",
+  "description": "Calculate torsional moments or torque acting on rotating shafts. Torque is expressed as T = 63057 × Php / n, where Php is horsepower (hp) and n is revolution per minute (rpm). Results can be expressed in lb-in or Nm.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "horsepower",
+          "label": "Power",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "hp"
+        },
+        {
+          "id": "rpm",
+          "label": "Revolution Speed",
+          "type": "number",
+          "defaultValue": 5000,
+          "unit": "rpm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "torque_lb_in",
+          "label": "Torque",
+          "formula": "(inputs.horsepower * 63057) / inputs.rpm",
+          "unit": "lb-in",
+          "format": "decimal"
+        },
+        {
+          "id": "torque_nm",
+          "label": "Torque",
+          "formula": "((inputs.horsepower * 63057) / inputs.rpm) * 0.113",
+          "unit": "Nm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Formula\n\nT = 63057 × Php / n\n\nWhere:\n- **T** = Torque or moment (lb-in)\n- **Php** = Horsepower (hp)\n- **n** = Revolution per minute (rpm)\n\n## Conversion Factors\n\n- 1 hp (English horsepower) = 745.7 W\n- 1 lb-in = 0.113 Nm"
+    }
+  ]
+}

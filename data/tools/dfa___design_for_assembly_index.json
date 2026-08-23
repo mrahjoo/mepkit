@@ -1,0 +1,74 @@
+{
+  "id": "dfa___design_for_assembly_index",
+  "title": "DFA - Design for Assembly Index",
+  "description": "Design for Assembly Index indicates how easy it is to assemble a component. It is calculated using the formula: DFA = 100 × Nm × tm / ta, where Nm is the theoretical minimum number of parts, tm is the minimum assembly time per part (s), and ta is the estimated total assembly time (s).",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Design for Assembly (DFA) Index Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "Nm",
+          "label": "Theoretical Minimum Number of Parts (Nm)",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "tm",
+          "label": "Minimum Assembly Time per Part (tm)",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 1
+        },
+        {
+          "id": "ta",
+          "label": "Estimated Total Assembly Time (ta)",
+          "type": "number",
+          "unit": "s",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "DFA",
+          "label": "Design for Assembly Index (DFA)",
+          "formula": "100 * inputs.Nm * inputs.tm / inputs.ta",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "DFA Index Chart",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Ideal Design (1 part, 1s)",
+            "Component Assembly (6 parts, 200s)"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "DFA Index"
+        },
+        "series": [
+          {
+            "data": [
+              100,
+              9
+            ],
+            "type": "bar",
+            "name": "DFA Index"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

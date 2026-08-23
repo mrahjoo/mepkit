@@ -1,0 +1,62 @@
+{
+  "id": "water_supply_pipe_lines___sizing",
+  "title": "Water Supply Pipe Lines - Sizing",
+  "description": "Sizing of water supply pipe lines according to expected demand and fixture usage patterns for applications like homes, offices, and nursing homes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Copper Pipe Size DN (mm)",
+        "Total Maximum Theoretical Demand (liter/s)",
+        "Maximum Expected Demand (liter/s)"
+      ],
+      "rows": [
+        [
+          12,
+          0.2,
+          0.2
+        ],
+        [
+          15,
+          0.8,
+          0.4
+        ],
+        [
+          18,
+          1.6,
+          0.5
+        ],
+        [
+          22,
+          4,
+          0.6
+        ],
+        [
+          28,
+          15,
+          1.1
+        ],
+        [
+          35,
+          30,
+          1.8
+        ],
+        [
+          42,
+          65,
+          2.8
+        ],
+        [
+          54,
+          130,
+          4.5
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Reference\n\n- 1 in = 25.4 mm\n\n## Notes\n\nA water supply pipe line should be sized according to expected demand and not the total theoretical demand from all fixtures at the same time. Due to intermittent use of fixtures, it may be difficult to predict a realistic demand. The values above are relevant for water supply lines in applications like homes, offices, nursing homes, etc."
+    }
+  ]
+}

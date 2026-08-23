@@ -1,0 +1,59 @@
+{
+  "id": "squaring_with_diagonal_measurements",
+  "title": "Squaring with Diagonal Measurements",
+  "description": "A rectangle is square if the lengths of both diagonals are equal. This tool helps verify if a rectangle is square by comparing diagonal measurements.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Diagonal",
+        "Measurement (m, ft, etc.)"
+      ],
+      "rows": [
+        [
+          "Diagonal A",
+          ""
+        ],
+        [
+          "Diagonal B",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "diagonal_a",
+          "label": "Diagonal A",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        },
+        {
+          "id": "diagonal_b",
+          "label": "Diagonal B",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "difference",
+          "label": "Difference (A - B)",
+          "formula": "inputs.diagonal_a - inputs.diagonal_b",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "is_square",
+          "label": "Is Square?",
+          "formula": "inputs.diagonal_a === inputs.diagonal_b ? 'Yes' : 'No'",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

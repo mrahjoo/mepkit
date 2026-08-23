@@ -1,0 +1,199 @@
+{
+  "id": "dielectric_strength_of_insulating_materials",
+  "title": "Dielectric Strength of Insulating Materials",
+  "description": "The dielectric strength of a material is the ability of the material to act as an insulator. It represents the voltage that a material of a given thickness will resist. With higher voltage than the dielectric strength, a spark will pass through the material.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Dielectric Strength Reference\n\nThe dielectric strength is usually given in **volts per mil** where **1 mil equals 0.001 in**, or **volts per meter**.\n\n**Conversion factors:**\n- 1 V/m = 2.54×10⁻⁵ V/mil\n- 1 V/mil = 3.94×10⁴ V/m"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Dielectric Strength (10⁶ V/m)",
+        "Dielectric Strength (V/mil)"
+      ],
+      "rows": [
+        [
+          "Mica (muscovite)",
+          39.4,
+          1000
+        ],
+        [
+          "Glass",
+          35.5,
+          900
+        ],
+        [
+          "Mica (phlogopite)",
+          31.5,
+          800
+        ],
+        [
+          "Porcelain (electrical)",
+          31.5,
+          800
+        ],
+        [
+          "Steatite",
+          29.6,
+          750
+        ],
+        [
+          "Rubber, hard",
+          27.6,
+          700
+        ],
+        [
+          "Rubber, silicone",
+          23.6,
+          600
+        ],
+        [
+          "Polystyrene",
+          23.6,
+          600
+        ],
+        [
+          "Pyroxylin",
+          23.6,
+          600
+        ],
+        [
+          "Rubber, buna",
+          20.3,
+          515
+        ],
+        [
+          "PTFE",
+          19.7,
+          500
+        ],
+        [
+          "Vinylidene chloride",
+          19.7,
+          500
+        ],
+        [
+          "Fish paper",
+          19.7,
+          500
+        ],
+        [
+          "Methyl methacrylate",
+          18.9,
+          480
+        ],
+        [
+          "Cellulose acetate",
+          15.8,
+          400
+        ],
+        [
+          "Casein plastic",
+          15.8,
+          400
+        ],
+        [
+          "Shellac",
+          15.8,
+          400
+        ],
+        [
+          "Varnished cambric",
+          15.8,
+          400
+        ],
+        [
+          "Alumina",
+          13.4,
+          null
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Dielectric Strength Comparison",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Mica (muscovite)",
+            "Glass",
+            "Mica (phlogopite)",
+            "Porcelain (electrical)",
+            "Steatite",
+            "Rubber, hard",
+            "Rubber, silicone",
+            "Polystyrene",
+            "Pyroxylin",
+            "Rubber, buna",
+            "PTFE",
+            "Vinylidene chloride",
+            "Fish paper",
+            "Methyl methacrylate",
+            "Cellulose acetate",
+            "Casein plastic",
+            "Shellac",
+            "Varnished cambric",
+            "Alumina"
+          ],
+          "axisLabel": {
+            "rotate": 45,
+            "interval": 0
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Dielectric Strength (10⁶ V/m)"
+        },
+        "series": [
+          {
+            "data": [
+              39.4,
+              35.5,
+              31.5,
+              31.5,
+              29.6,
+              27.6,
+              23.6,
+              23.6,
+              23.6,
+              20.3,
+              19.7,
+              19.7,
+              19.7,
+              18.9,
+              15.8,
+              15.8,
+              15.8,
+              15.8,
+              13.4
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ],
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "20%",
+          "containLabel": true
+        }
+      }
+    }
+  ]
+}

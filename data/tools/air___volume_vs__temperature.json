@@ -1,0 +1,150 @@
+{
+  "id": "air___volume_vs__temperature",
+  "title": "Air - Volume vs. Temperature",
+  "description": "Air volume vs. temperature correction factor compared to Normal Air Conditions. Shows how air volume changes when heated or cooled relative to standard conditions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Temperature (°F)",
+        "Volume Correction Factor"
+      ],
+      "rows": [
+        [
+          -46,
+          -50,
+          0.77
+        ],
+        [
+          -40,
+          -40,
+          0.79
+        ],
+        [
+          -34,
+          -30,
+          0.81
+        ],
+        [
+          -28,
+          -20,
+          0.83
+        ],
+        [
+          -23,
+          -10,
+          0.85
+        ],
+        [
+          -18,
+          0,
+          0.87
+        ],
+        [
+          -9,
+          10,
+          0.89
+        ],
+        [
+          -5,
+          20,
+          0.91
+        ],
+        [
+          -1,
+          30,
+          0.93
+        ],
+        [
+          4,
+          40,
+          0.94
+        ],
+        [
+          10,
+          50,
+          0.96
+        ],
+        [
+          18,
+          60,
+          0.98
+        ],
+        [
+          22,
+          70,
+          1
+        ],
+        [
+          27,
+          80,
+          1.02
+        ],
+        [
+          32,
+          90,
+          1.04
+        ],
+        [
+          38,
+          100,
+          1.06
+        ],
+        [
+          43,
+          110,
+          1.08
+        ],
+        [
+          49,
+          120,
+          1.1
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "initial_volume",
+          "label": "Initial Volume",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "m³"
+        },
+        {
+          "id": "temperature_initial",
+          "label": "Initial Temperature",
+          "type": "number",
+          "defaultValue": 22,
+          "unit": "°C"
+        },
+        {
+          "id": "temperature_final",
+          "label": "Final Temperature",
+          "type": "number",
+          "defaultValue": 43,
+          "unit": "°C"
+        },
+        {
+          "id": "correction_factor",
+          "label": "Volume Correction Factor",
+          "type": "number",
+          "defaultValue": 1.08,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "new_volume",
+          "label": "New Volume",
+          "formula": "inputs.initial_volume * inputs.correction_factor",
+          "unit": "m³",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

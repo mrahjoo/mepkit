@@ -1,0 +1,88 @@
+{
+  "id": "effective_interest_rate_vs__nominal_interest_rate",
+  "title": "Effective Interest Rate vs. Nominal Interest Rate",
+  "description": "Calculate the relationship between effective and nominal interest rates. The nominal interest rate is typically expressed per year, while the effective interest rate applies to sub-periods like months, weeks, or days. Use this tool to convert between nominal and effective interest rates.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Effective Interest Rate vs. Nominal Interest Rate\n\nAn interest rate is only meaningful in the context of time - typically understood as _per year_ (the **nominal interest rate**). With other periods of time like _month_, _week_, or _day_ - the rate may be called the **effective interest rate**.\n\n### Formula 1: Nominal Interest Rate\n_i = (1 + ie)^n - 1_\n\nWhere:\n- **i** = nominal interest rate for the period\n- **ie** = effective interest rate for the sub-period\n- **n** = number of sub-periods\n\n### Formula 2: Effective Interest Rate\n_ie = (1 + i)^(1/n) - 1_\n\nWhere:\n- **ie** = effective interest rate for sub-periods\n- **i** = nominal interest rate for the period\n- **n** = number of sub-periods"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Nominal Interest Rate Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "effective_rate",
+          "label": "Effective Interest Rate (sub-period)",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "decimal"
+        },
+        {
+          "id": "num_periods",
+          "label": "Number of Sub-periods",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "nominal_rate",
+          "label": "Nominal Interest Rate",
+          "formula": "Math.pow(1 + inputs.effective_rate, inputs.num_periods) - 1",
+          "format": "decimal",
+          "unit": "decimal"
+        },
+        {
+          "id": "nominal_rate_percent",
+          "label": "Nominal Interest Rate",
+          "formula": "(Math.pow(1 + inputs.effective_rate, inputs.num_periods) - 1) * 100",
+          "format": "decimal",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Effective Interest Rate Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "nominal_rate",
+          "label": "Nominal Interest Rate",
+          "type": "number",
+          "defaultValue": 0.1,
+          "unit": "decimal"
+        },
+        {
+          "id": "num_periods",
+          "label": "Number of Sub-periods",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "effective_rate",
+          "label": "Effective Interest Rate",
+          "formula": "Math.pow(1 + inputs.nominal_rate, 1 / inputs.num_periods) - 1",
+          "format": "decimal",
+          "unit": "decimal"
+        },
+        {
+          "id": "effective_rate_percent",
+          "label": "Effective Interest Rate",
+          "formula": "(Math.pow(1 + inputs.nominal_rate, 1 / inputs.num_periods) - 1) * 100",
+          "format": "decimal",
+          "unit": "%"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "id": "propane___prandtl_number_vs__temperature_and_press",
+  "title": "Propane - Prandtl Number vs. Temperature and Pressure",
+  "description": "Calculate the Prandtl Number for Propane based on temperature and pressure. The Prandtl number (Pr) is a dimensionless number approximating the ratio of momentum diffusivity (kinematic viscosity) to thermal diffusivity, commonly used in heat transfer and convection calculations. Calculated using: Pr = μ cp / k, where μ is dynamic viscosity, cp is specific heat, and k is thermal conductivity.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "select",
+          "options": [
+            {
+              "label": "1 bara (14.5 psia) - Atmospheric",
+              "value": 1
+            },
+            {
+              "label": "10 bara (145 psia)",
+              "value": 10
+            },
+            {
+              "label": "50 bara (725 psia)",
+              "value": 50
+            },
+            {
+              "label": "100 bara (1450 psia)",
+              "value": 100
+            }
+          ],
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "prandtl_number",
+          "label": "Prandtl Number",
+          "unit": "-",
+          "format": "decimal",
+          "formula": "Approximate value based on temperature (K) and pressure (bara). For T=300K at 1 bara: 0.7492; at 10 bara: values increase with pressure. Consult reference tables for precise interpolation."
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "State",
+        "Temperature (K)",
+        "Temperature (°C)",
+        "Pressure (bara)",
+        "Prandtl Number (-)"
+      ],
+      "rows": [
+        [
+          "Gas",
+          "231",
+          "-42",
+          "1",
+          "0.7857"
+        ],
+        [
+          "Gas",
+          "240",
+          "-33.2",
+          "1",
+          "0.7760"
+        ],
+        [
+          "Gas",
+          "260",
+          "-13.2",
+          "1",
+          "0.7621"
+        ],
+        [
+          "Gas",
+          "280",
+          "6.9",
+          "1",
+          "0.7534"
+        ],
+        [
+          "Gas",
+          "300",
+          "26.9",
+          "1",
+          "0.7492"
+        ],
+        [
+          "Gas",
+          "320",
+          "46.9",
+          "1",
+          "0.7467"
+        ],
+        [
+          "Gas",
+          "340",
+          "66.9",
+          "1",
+          "0.7458"
+        ],
+        [
+          "Gas",
+          "360",
+          "86.9",
+          "1",
+          "0.7453"
+        ],
+        [
+          "Gas",
+          "400",
+          "127",
+          "1",
+          "0.7437"
+        ],
+        [
+          "Gas",
+          "500",
+          "227",
+          "1",
+          "0.7301"
+        ],
+        [
+          "Gas",
+          "300.09",
+          "26.94",
+          "10",
+          "0.8851"
+        ],
+        [
+          "Gas",
+          "320",
+          "46.9",
+          "10",
+          "0.8299"
+        ],
+        [
+          "Gas",
+          "340",
+          "66.9",
+          "10",
+          "0.8001"
+        ],
+        [
+          "Gas",
+          "360",
+          "86.9",
+          "10",
+          "0.7824"
+        ],
+        [
+          "Gas",
+          "400",
+          "127",
+          "10",
+          "0.7619"
+        ],
+        [
+          "Gas",
+          "500",
+          "227",
+          "10",
+          "0.7321"
+        ],
+        [
+          "Gas",
+          "500",
+          "227",
+          "50",
+          "0.8190"
+        ],
+        [
+          "Supercritical phase",
+          "400",
+          "127",
+          "50",
+          "1.305"
+        ],
+        [
+          "Supercritical phase",
+          "500",
+          "227",
+          "50",
+          "0.8190"
+        ],
+        [
+          "Supercritical phase",
+          "500",
+          "227",
+          "100",
+          "1.085"
+        ],
+        [
+          "Supercritical phase",
+          "600",
+          "327",
+          "100",
+          "0.8466"
+        ],
+        [
+          "Supercritical phase",
+          "700",
+          "427",
+          "100",
+          "0.7417"
+        ],
+        [
+          "Supercritical phase",
+          "800",
+          "527",
+          "100",
+          "0.6694"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About Prandtl Number\n\nThe **Prandtl Number (Pr)** is a dimensionless number that approximates the ratio of:\n- **Momentum diffusivity** (kinematic viscosity) to **thermal diffusivity**\n\n### Formula\n\n**Pr = μ cp / k**\n\nWhere:\n- **μ** = Absolute or dynamic viscosity (kg/(m·s))\n- **cp** = Specific heat (J/(kg·K))\n- **k** = Thermal conductivity (W/(m·K))\n\n### Applications\n\nThe Prandtl number is commonly used in:\n- Heat transfer calculations\n- Free and forced convection analysis\n- Thermal boundary layer studies\n- Fluid dynamics simulations\n\n### Propane Properties\n\nFor propane (C₃H₈), the Prandtl number varies with:\n- **Temperature**: Generally decreases with increasing temperature in the gas phase\n- **Pressure**: Shows more complex behavior, with values changing based on the thermodynamic state\n\nThe data provided covers propane in liquid, gas, and supercritical phases across a wide range of temperatures and pressures.\n"
+    }
+  ]
+}

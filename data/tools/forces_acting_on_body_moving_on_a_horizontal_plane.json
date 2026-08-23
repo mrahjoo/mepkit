@@ -1,0 +1,88 @@
+{
+  "id": "forces_acting_on_body_moving_on_a_horizontal_plane",
+  "title": "Forces acting on Body Moving on a Horizontal Plane",
+  "description": "Calculator for determining the horizontal and vertical forces acting on a body moving on a horizontal plane. Enter the total force F and the angle α to calculate the horizontal force Q and vertical force P.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "forces_calculator",
+      "content": "Calculate the horizontal and vertical forces acting on a body on a horizontal plane.",
+      "inputs": [
+        {
+          "id": "force_F",
+          "label": "Total Force (F)",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 1000
+        },
+        {
+          "id": "angle_alpha",
+          "label": "Angle to Horizontal Plane (α)",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 30
+        }
+      ],
+      "outputs": [
+        {
+          "id": "force_Q",
+          "label": "Horizontal Force (Q)",
+          "unit": "N",
+          "formula": "inputs.force_F * Math.cos(inputs.angle_alpha * Math.PI / 180)",
+          "format": "decimal"
+        },
+        {
+          "id": "force_P",
+          "label": "Vertical Force (P)",
+          "unit": "N",
+          "formula": "Math.sqrt(inputs.force_F * inputs.force_F - (inputs.force_F * Math.cos(inputs.angle_alpha * Math.PI / 180)) * (inputs.force_F * Math.cos(inputs.angle_alpha * Math.PI / 180)))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "forces_table",
+      "content": "Force Calculation Examples",
+      "headers": [
+        "Force F (N)",
+        "Angle α (°)",
+        "Horizontal Force Q (N)",
+        "Vertical Force P (N)"
+      ],
+      "rows": [
+        [
+          500,
+          15,
+          483,
+          129
+        ],
+        [
+          750,
+          20,
+          705,
+          257
+        ],
+        [
+          1000,
+          30,
+          866,
+          500
+        ],
+        [
+          1200,
+          45,
+          849,
+          849
+        ],
+        [
+          1500,
+          60,
+          750,
+          1299
+        ]
+      ]
+    }
+  ]
+}

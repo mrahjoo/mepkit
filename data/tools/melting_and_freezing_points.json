@@ -1,0 +1,163 @@
+{
+  "id": "melting_and_freezing_points",
+  "title": "Melting and Freezing Points",
+  "description": "Melting and freezing points of elements and chemical species at varying conditions.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate melting and freezing points of elements and chemical species",
+      "inputs": [
+        {
+          "id": "substance",
+          "label": "Substance",
+          "type": "select",
+          "options": [
+            {
+              "label": "Water",
+              "value": "water"
+            },
+            {
+              "label": "Methanol",
+              "value": "methanol"
+            },
+            {
+              "label": "Ethanol",
+              "value": "ethanol"
+            },
+            {
+              "label": "Ammonia",
+              "value": "ammonia"
+            },
+            {
+              "label": "Acetone",
+              "value": "acetone"
+            },
+            {
+              "label": "Benzene",
+              "value": "benzene"
+            },
+            {
+              "label": "Iron",
+              "value": "iron"
+            },
+            {
+              "label": "Copper",
+              "value": "copper"
+            },
+            {
+              "label": "Aluminum",
+              "value": "aluminum"
+            },
+            {
+              "label": "Lead",
+              "value": "lead"
+            }
+          ],
+          "defaultValue": "water"
+        },
+        {
+          "id": "pressure_atm",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "atm",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "melting_point_celsius",
+          "label": "Melting Point",
+          "unit": "°C",
+          "format": "decimal",
+          "formula": "0"
+        },
+        {
+          "id": "freezing_point_celsius",
+          "label": "Freezing Point",
+          "unit": "°C",
+          "format": "decimal",
+          "formula": "0"
+        },
+        {
+          "id": "melting_point_kelvin",
+          "label": "Melting Point",
+          "unit": "K",
+          "format": "decimal",
+          "formula": "273.15"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Melting and Freezing Points by Substance",
+      "options": {
+        "title": {
+          "text": "Melting and Freezing Points Comparison"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Melting Point",
+            "Freezing Point"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Water",
+            "Methanol",
+            "Ethanol",
+            "Ammonia",
+            "Acetone",
+            "Benzene",
+            "Iron",
+            "Copper",
+            "Aluminum",
+            "Lead"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Temperature (°C)"
+        },
+        "series": [
+          {
+            "name": "Melting Point",
+            "type": "bar",
+            "data": [
+              0,
+              -97,
+              -114,
+              -78,
+              -95,
+              5.5,
+              1538,
+              1085,
+              660,
+              327
+            ]
+          },
+          {
+            "name": "Freezing Point",
+            "type": "bar",
+            "data": [
+              0,
+              -97,
+              -114,
+              -78,
+              -95,
+              5.5,
+              1538,
+              1085,
+              660,
+              327
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

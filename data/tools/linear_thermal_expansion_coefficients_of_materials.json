@@ -1,0 +1,866 @@
+{
+  "id": "linear_thermal_expansion_coefficients_of_materials",
+  "title": "Linear Thermal Expansion Coefficients of Materials",
+  "description": "A comprehensive reference tool for linear thermal expansion coefficients of various materials. This calculator helps you find the thermal expansion coefficient for a specific material, which is essential for designing and analyzing systems that experience temperature changes.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "material_coefficients_table",
+      "content": "Linear Thermal Expansion Coefficients of Materials (in 10⁻⁶/°C)",
+      "headers": [
+        "Material",
+        "Coefficient (10⁻⁶/°C)"
+      ],
+      "rows": [
+        [
+          "ABS (Acrylonitrile butadiene styrene) thermoplastic",
+          "72 - 108"
+        ],
+        [
+          "ABS -glass fiber-reinforced",
+          "31"
+        ],
+        [
+          "Acetal - glass fiber-reinforced",
+          "39"
+        ],
+        [
+          "Acetals",
+          "85 - 110"
+        ],
+        [
+          "Acrylic",
+          "68 - 75"
+        ],
+        [
+          "ALLVAR Alloy 30 (negative thermal expansion)",
+          "-30"
+        ],
+        [
+          "Alumina (aluminium oxide, Al2O3)",
+          "8.1"
+        ],
+        [
+          "Aluminum",
+          "23"
+        ],
+        [
+          "Aluminum alloys",
+          "21 - 24"
+        ],
+        [
+          "Aluminum nitride",
+          "5.3"
+        ],
+        [
+          "Amber",
+          "50 - 60"
+        ],
+        [
+          "Antimonial lead (hard lead)",
+          "26.5"
+        ],
+        [
+          "Antimony",
+          "9 - 11"
+        ],
+        [
+          "Arsenic",
+          "4.7"
+        ],
+        [
+          "Bakelite, bleached",
+          "22"
+        ],
+        [
+          "Barium",
+          "20.6"
+        ],
+        [
+          "Barium ferrite",
+          "10"
+        ],
+        [
+          "Benzocyclobutene",
+          "42"
+        ],
+        [
+          "Beryllium",
+          "12"
+        ],
+        [
+          "Bismuth",
+          "13 - 13.5"
+        ],
+        [
+          "Boron",
+          "5"
+        ],
+        [
+          "Brass",
+          "18 - 19"
+        ],
+        [
+          "Brick masonry",
+          "5"
+        ],
+        [
+          "Bronze",
+          "17.5 - 18"
+        ],
+        [
+          "Cadmium",
+          "30"
+        ],
+        [
+          "Calcium",
+          "22.3"
+        ],
+        [
+          "Caoutchouc",
+          "66 - 69"
+        ],
+        [
+          "Cast Iron Gray",
+          "10.8"
+        ],
+        [
+          "Celluloid",
+          "100"
+        ],
+        [
+          "Cellulose acetate (CA)",
+          "130"
+        ],
+        [
+          "Cellulose acetate butynate (CAB)",
+          "96 - 171"
+        ],
+        [
+          "Cellulose nitrate (CN)",
+          "80 - 120"
+        ],
+        [
+          "Cement, Portland",
+          "11"
+        ],
+        [
+          "Cerium",
+          "5.2"
+        ],
+        [
+          "Chlorinated polyether",
+          "80"
+        ],
+        [
+          "Chlorinated polyvinylchloride (CPVC)",
+          "63 - 66"
+        ],
+        [
+          "Chromium",
+          "6 - 7"
+        ],
+        [
+          "Clay tile structure",
+          "5.9"
+        ],
+        [
+          "Cobalt",
+          "12"
+        ],
+        [
+          "Concrete",
+          "13 - 14"
+        ],
+        [
+          "Concrete structure",
+          "9.8"
+        ],
+        [
+          "Constantan",
+          "15.2 - 18.8"
+        ],
+        [
+          "Copper",
+          "16 - 16.7"
+        ],
+        [
+          "Copper, Beryllium 25",
+          "17.8"
+        ],
+        [
+          "Corundum, sintered",
+          "6.5"
+        ],
+        [
+          "Cupronickel 30% (constantan)",
+          "16.2"
+        ],
+        [
+          "Diamond (Carbon)",
+          "1.1 - 1.3"
+        ],
+        [
+          "Duralumin",
+          "23"
+        ],
+        [
+          "Dysprosium",
+          "9.9"
+        ],
+        [
+          "Ebonite",
+          "70"
+        ],
+        [
+          "Epoxy - glass fiber reinforced",
+          "36"
+        ],
+        [
+          "Epoxy, cast resins & compounds, unfilled",
+          "45 - 65"
+        ],
+        [
+          "Erbium",
+          "12.2"
+        ],
+        [
+          "Ethylene ethyl acrylate (EEA)",
+          "205"
+        ],
+        [
+          "Ethylene vinyl acetate (EVA)",
+          "180"
+        ],
+        [
+          "Europium",
+          "35"
+        ],
+        [
+          "Fluoroethylene propylene (FEP)",
+          "135"
+        ],
+        [
+          "Fluorspar, CaF2",
+          "19.5"
+        ],
+        [
+          "Gadolinium",
+          "9"
+        ],
+        [
+          "German silver",
+          "18.4"
+        ],
+        [
+          "Germanium",
+          "6.1"
+        ],
+        [
+          "Glass, hard",
+          "5.9"
+        ],
+        [
+          "Glass, plate",
+          "9.0"
+        ],
+        [
+          "Glass, Pyrex",
+          "4.0"
+        ],
+        [
+          "Gold",
+          "14.2"
+        ],
+        [
+          "Gold - copper",
+          "15.5"
+        ],
+        [
+          "Gold - platinum",
+          "15.2"
+        ],
+        [
+          "Granite",
+          "7.9 - 8.4"
+        ],
+        [
+          "Graphite, pure (Carbon)",
+          "4 - 8"
+        ],
+        [
+          "Gunmetal",
+          "18"
+        ],
+        [
+          "Gutta percha",
+          "198"
+        ],
+        [
+          "Hafnium",
+          "5.9"
+        ],
+        [
+          "Hard alloy K20",
+          "6"
+        ],
+        [
+          "Hastelloy C",
+          "11.3"
+        ],
+        [
+          "Holmium",
+          "11.2"
+        ],
+        [
+          "Ice, 0°C water",
+          "51"
+        ],
+        [
+          "Inconel",
+          "11.5 - 12.6"
+        ],
+        [
+          "Indium",
+          "33"
+        ],
+        [
+          "Invar",
+          "1.5"
+        ],
+        [
+          "Iridium",
+          "6.4"
+        ],
+        [
+          "Iron, cast",
+          "10.4 - 11"
+        ],
+        [
+          "Iron, forged",
+          "11.3"
+        ],
+        [
+          "Iron, pure",
+          "12.0"
+        ],
+        [
+          "Kapton",
+          "20"
+        ],
+        [
+          "Lanthanum",
+          "12.1"
+        ],
+        [
+          "Lead",
+          "29"
+        ],
+        [
+          "Limestone",
+          "8"
+        ],
+        [
+          "Lithium",
+          "46"
+        ],
+        [
+          "Lutetium",
+          "9.9"
+        ],
+        [
+          "Macor",
+          "9.3"
+        ],
+        [
+          "Magnalium",
+          "23.8"
+        ],
+        [
+          "Magnesium",
+          "25 - 26.9"
+        ],
+        [
+          "Magnesium alloy AZ31B",
+          "26"
+        ],
+        [
+          "Manganese",
+          "22"
+        ],
+        [
+          "Manganin",
+          "18.1"
+        ],
+        [
+          "Marble",
+          "5.5 - 14.1"
+        ],
+        [
+          "Masonry, brick",
+          "4.7 - 9.0"
+        ],
+        [
+          "Mercury",
+          "61"
+        ],
+        [
+          "Mica",
+          "3"
+        ],
+        [
+          "Molybdenum",
+          "5"
+        ],
+        [
+          "Monel metal",
+          "13.5"
+        ],
+        [
+          "Mortar",
+          "7.3 - 13.5"
+        ],
+        [
+          "Neodymium",
+          "9.6"
+        ],
+        [
+          "Nickel",
+          "13.0"
+        ],
+        [
+          "Niobium (Columbium)",
+          "7"
+        ],
+        [
+          "Nylon, general purpose",
+          "50 - 90"
+        ],
+        [
+          "Nylon, glass fiber reinforced",
+          "23"
+        ],
+        [
+          "Nylon, Type 11, molding and extruding compound",
+          "100"
+        ],
+        [
+          "Nylon, Type 12, molding and extruding compound",
+          "80.5"
+        ],
+        [
+          "Nylon, Type 6, cast",
+          "85"
+        ],
+        [
+          "Nylon, Type 6/6, molding compound",
+          "80"
+        ],
+        [
+          "Oak, perpendicular to the grain",
+          "54"
+        ],
+        [
+          "Osmium",
+          "5 - 6"
+        ],
+        [
+          "Palladium",
+          "11.8"
+        ],
+        [
+          "Paraffin",
+          "106 - 480"
+        ],
+        [
+          "Phenolic resin without fillers",
+          "60 - 80"
+        ],
+        [
+          "Phosphor bronze",
+          "16.7"
+        ],
+        [
+          "Plaster",
+          "17"
+        ],
+        [
+          "Plastics",
+          "40 - 120"
+        ],
+        [
+          "Platinum",
+          "9"
+        ],
+        [
+          "Plutonium",
+          "47 - 54"
+        ],
+        [
+          "Polyacrylonitrile",
+          "70"
+        ],
+        [
+          "Polyallomer",
+          "92"
+        ],
+        [
+          "Polyamide (PA)",
+          "110"
+        ],
+        [
+          "Polybutylene (PB)",
+          "130 - 139"
+        ],
+        [
+          "Polycarbonate (PC)",
+          "65 - 70"
+        ],
+        [
+          "Polycarbonate - glass fiber-reinforced",
+          "21.5"
+        ],
+        [
+          "Polyester",
+          "124"
+        ],
+        [
+          "Polyester - glass fiber-reinforced",
+          "25"
+        ],
+        [
+          "Polyethylene (PE)",
+          "108 - 200"
+        ],
+        [
+          "Polyethylene (PE) - High Molecular Weight",
+          "108"
+        ],
+        [
+          "Polyethylene terephthalate (PET)",
+          "59.4"
+        ],
+        [
+          "Polyphenylene",
+          "54"
+        ],
+        [
+          "Polyphenylene - glass fiber-reinforced",
+          "36"
+        ],
+        [
+          "Polypropylene (PP), unfilled",
+          "72 - 90"
+        ],
+        [
+          "Polypropylene - glass fiber-reinforced",
+          "32"
+        ],
+        [
+          "Polystyrene (PS)",
+          "70"
+        ],
+        [
+          "Polysulfone (PSO)",
+          "55 - 60"
+        ],
+        [
+          "Polytetrafluorethylene (PTFE)",
+          "112 - 135"
+        ],
+        [
+          "Polyurethane (PUR), rigid",
+          "57.6"
+        ],
+        [
+          "Polyvinyl chloride (PVC)",
+          "54 - 110"
+        ],
+        [
+          "Polyvinylidene fluoride (PVDF)",
+          "128 - 140"
+        ],
+        [
+          "Porcelain, Industrial",
+          "4"
+        ],
+        [
+          "Potassium",
+          "83"
+        ],
+        [
+          "Praseodymium",
+          "6.7"
+        ],
+        [
+          "Promethium",
+          "11"
+        ],
+        [
+          "Quartz, fused",
+          "0.55"
+        ],
+        [
+          "Quartz, mineral",
+          "8 - 14"
+        ],
+        [
+          "Rhenium",
+          "6.7"
+        ],
+        [
+          "Rhodium",
+          "8"
+        ],
+        [
+          "Rock salt",
+          "40.4"
+        ],
+        [
+          "Rubber, hard",
+          "80"
+        ],
+        [
+          "Rubidium",
+          "90"
+        ],
+        [
+          "Ruthenium",
+          "9.1"
+        ],
+        [
+          "Samarium",
+          "12.7"
+        ],
+        [
+          "Sandstone",
+          "11.6"
+        ],
+        [
+          "Sapphire",
+          "5.3"
+        ],
+        [
+          "Scandium",
+          "10.2"
+        ],
+        [
+          "Selenium",
+          "37"
+        ],
+        [
+          "Silicon",
+          "3 - 5"
+        ],
+        [
+          "Silicon Carbide",
+          "2.77"
+        ],
+        [
+          "Silver",
+          "19 - 19.7"
+        ],
+        [
+          "Sitall",
+          "0.15"
+        ],
+        [
+          "Slate",
+          "10"
+        ],
+        [
+          "Sodium",
+          "70"
+        ],
+        [
+          "Solder lead - tin, 50% - 50%",
+          "25"
+        ],
+        [
+          "Speculum metal",
+          "19.3"
+        ],
+        [
+          "Steatite",
+          "8.5"
+        ],
+        [
+          "Steel",
+          "10.8 - 12.5"
+        ],
+        [
+          "Steel Stainless Austenitic (304)",
+          "17.3"
+        ],
+        [
+          "Steel Stainless Austenitic (310)",
+          "14.4"
+        ],
+        [
+          "Steel Stainless Austenitic (316)",
+          "16.0"
+        ],
+        [
+          "Steel Stainless Ferritic (410)",
+          "9.9"
+        ],
+        [
+          "Strontium",
+          "22.5"
+        ],
+        [
+          "Tantalum",
+          "6.5"
+        ],
+        [
+          "Tellurium",
+          "36.9"
+        ],
+        [
+          "Terbium",
+          "10.3"
+        ],
+        [
+          "Terne",
+          "11.6"
+        ],
+        [
+          "Thallium",
+          "29.9"
+        ],
+        [
+          "Thorium",
+          "12"
+        ],
+        [
+          "Thulium",
+          "13.3"
+        ],
+        [
+          "Tin",
+          "20 - 23"
+        ],
+        [
+          "Titanium",
+          "8.5 - 9"
+        ],
+        [
+          "Topas",
+          "5 - 8"
+        ],
+        [
+          "Tungsten",
+          "4.5"
+        ],
+        [
+          "Uranium",
+          "13.4"
+        ],
+        [
+          "Vanadium",
+          "8"
+        ],
+        [
+          "Vinyl Ester",
+          "16 - 22"
+        ],
+        [
+          "Vulcanite",
+          "63.6"
+        ],
+        [
+          "Wax",
+          "2 - 15"
+        ],
+        [
+          "Wedgwood ware",
+          "8.9"
+        ],
+        [
+          "Wood, across (perpendicular) to grain",
+          "30"
+        ],
+        [
+          "Wood, fir",
+          "3.7"
+        ],
+        [
+          "Wood, parallel to grain",
+          "3"
+        ],
+        [
+          "Wood, pine",
+          "5"
+        ],
+        [
+          "Ytterbium",
+          "26.3"
+        ],
+        [
+          "Yttrium",
+          "10.6"
+        ],
+        [
+          "Zinc",
+          "30 - 35"
+        ],
+        [
+          "Zirconium",
+          "5.7"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "thermal_expansion_calculator",
+      "content": "Calculate thermal expansion of materials",
+      "inputs": [
+        {
+          "id": "initial_length",
+          "label": "Initial Length",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "mm"
+        },
+        {
+          "id": "thermal_coefficient",
+          "label": "Linear Thermal Expansion Coefficient",
+          "type": "number",
+          "defaultValue": 23,
+          "unit": "10⁻⁶/°C"
+        },
+        {
+          "id": "temperature_change",
+          "label": "Temperature Change",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "°C"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "length_change",
+          "label": "Change in Length",
+          "formula": "inputs.initial_length * inputs.thermal_coefficient * inputs.temperature_change / 1000000",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "final_length",
+          "label": "Final Length",
+          "formula": "inputs.initial_length + (inputs.initial_length * inputs.thermal_coefficient * inputs.temperature_change / 1000000)",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "percent_change",
+          "label": "Percentage Change",
+          "formula": "(inputs.initial_length * inputs.thermal_coefficient * inputs.temperature_change / 1000000) / inputs.initial_length * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

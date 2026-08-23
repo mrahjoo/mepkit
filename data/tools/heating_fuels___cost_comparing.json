@@ -1,0 +1,105 @@
+{
+  "id": "heating_fuels___cost_comparing",
+  "title": "Heating Fuels - Cost Comparing",
+  "description": "Cost comparison formulas for heating fuels like Natural Gas, Propane LP Gas, Fuel Oil and Electricity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "heating_fuels_calculator",
+      "content": "Calculate heating fuel costs per 100,000 Btu",
+      "inputs": [
+        {
+          "id": "electricity_price",
+          "label": "Electricity Price",
+          "type": "number",
+          "unit": "$/kWh",
+          "defaultValue": 0.12
+        },
+        {
+          "id": "natural_gas_price",
+          "label": "Natural Gas Price",
+          "type": "number",
+          "unit": "$/ft³",
+          "defaultValue": 1.5
+        },
+        {
+          "id": "propane_price",
+          "label": "Propane (LP Gas) Price",
+          "type": "number",
+          "unit": "$/gallon",
+          "defaultValue": 2.5
+        },
+        {
+          "id": "fuel_oil_price",
+          "label": "Fuel Oil Price",
+          "type": "number",
+          "unit": "$/gallon",
+          "defaultValue": 3.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "electricity_cost",
+          "label": "Electricity Cost per 100,000 Btu",
+          "formula": "(inputs.electricity_price * 100000) / 3412",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "natural_gas_cost",
+          "label": "Natural Gas Cost per 100,000 Btu",
+          "formula": "(inputs.natural_gas_price * 100000) / 1028",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "propane_cost",
+          "label": "Propane Cost per 100,000 Btu",
+          "formula": "(inputs.propane_price * 100000) / 91333",
+          "unit": "$",
+          "format": "currency"
+        },
+        {
+          "id": "fuel_oil_cost",
+          "label": "Fuel Oil Cost per 100,000 Btu",
+          "formula": "(inputs.fuel_oil_price * 100000) / 140000",
+          "unit": "$",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "fuel_cost_comparison",
+      "content": "Heating Fuel Cost Comparison Table",
+      "headers": [
+        "Heating Fuel Type",
+        "Unit Price",
+        "Cost per 100,000 Btu"
+      ],
+      "rows": [
+        [
+          "Electricity",
+          "inputs.electricity_price $/kWh",
+          "outputs.electricity_cost"
+        ],
+        [
+          "Natural Gas",
+          "inputs.natural_gas_price $/ft³",
+          "outputs.natural_gas_cost"
+        ],
+        [
+          "Propane (LP Gas)",
+          "inputs.propane_price $/gallon",
+          "outputs.propane_cost"
+        ],
+        [
+          "Fuel Oil",
+          "inputs.fuel_oil_price $/gallon",
+          "outputs.fuel_oil_cost"
+        ]
+      ]
+    }
+  ]
+}

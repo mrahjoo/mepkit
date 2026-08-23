@@ -1,0 +1,118 @@
+{
+  "id": "measurement_of_electrical_power",
+  "title": "Measurement of Electrical Power",
+  "description": "Measure electric power with an ammeter and a voltmeter. Calculate power using P = U × I or P = R × I²",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Measurement of Electrical Power\n\nElectric power in a circuit can be measured with an ammeter (amperemeter) and a voltmeter.\n\nThe power can be calculated as:\n\n**P = U × I** or **P = R × I²**\n\nWhere:\n- **P** = electric power (W, watts)\n- **U** = voltage (V, volt)\n- **I** = current (A, ampere)\n- **R** = resistance (Ω, ohm)\n\n### Example\nFor a 230 V household circuit with an electric heater measuring 8 A:\n\nP = (230 V) × (8 A) = 1,840 W"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "voltage",
+          "label": "Voltage (U)",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 230
+        },
+        {
+          "id": "current",
+          "label": "Current (I)",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 8
+        },
+        {
+          "id": "resistance",
+          "label": "Resistance (R)",
+          "type": "number",
+          "unit": "Ω",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_ui",
+          "label": "Power (P = U × I)",
+          "formula": "inputs.voltage * inputs.current",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "power_ri2",
+          "label": "Power (P = R × I²)",
+          "formula": "inputs.resistance * inputs.current * inputs.current",
+          "unit": "W",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Unit",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Voltage",
+          "U",
+          "V",
+          "230"
+        ],
+        [
+          "Current",
+          "I",
+          "A",
+          "8"
+        ],
+        [
+          "Power",
+          "P",
+          "W",
+          "1840"
+        ],
+        [
+          "Resistance",
+          "R",
+          "Ω",
+          "28.75"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Electrical Power Relationship"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "P = U × I",
+            "P = R × I²"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Power (W)"
+        },
+        "series": [
+          {
+            "data": [
+              1840,
+              1840
+            ],
+            "type": "bar",
+            "name": "Power"
+          }
+        ]
+      }
+    }
+  ]
+}

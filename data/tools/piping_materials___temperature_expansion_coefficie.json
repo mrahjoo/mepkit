@@ -1,0 +1,72 @@
+{
+  "id": "piping_materials___temperature_expansion_coefficie",
+  "title": "Piping Materials - Temperature Expansion Coefficients",
+  "description": "Temperature expansion coefficients for materials used in pipes and tubes like aluminum, carbon steel, cast iron, PVC, HDPE and more. Use these coefficients to calculate thermal expansion of pipes and tubes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Expansion Coefficient (10⁻⁶ in/in °F)",
+        "Expansion Coefficient (10⁻⁶ m/m °C)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          12.8,
+          23.1
+        ],
+        [
+          "Carbon Steel",
+          6.5,
+          11.7
+        ],
+        [
+          "Cast Iron",
+          5.9,
+          10.6
+        ],
+        [
+          "Copper",
+          9.3,
+          16.8
+        ],
+        [
+          "Stainless Steel",
+          9.9,
+          17.8
+        ],
+        [
+          "ABS (Acrylonitrile butadiene styrene)",
+          35,
+          63
+        ],
+        [
+          "HDPE (High density polyethylene)",
+          67,
+          120
+        ],
+        [
+          "PE (Polyethylene)",
+          83,
+          150
+        ],
+        [
+          "CPVC (Chlorinated polyvinyl chloride)",
+          44,
+          79
+        ],
+        [
+          "PVC (Polyvinyl chloride)",
+          28,
+          50.4
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- **Conversion**: 1 in/in °F = 1200 in/100ft °F = 1.8 m/m°C\n- **Important**: Plastic materials have significantly higher expansion coefficients, making plastic pipes and tubes extremely sensitive to temperature changes. Always pay attention to plastic pipes and tubes when temperature varies.\n\n## Example - Thermal Expansion of a PVC Pipe\n\nA PVC pipe with length 6 m is heated from 0°C to 60°C.\n\nExpansion of the pipe can be calculated as:\n\n**Δl = (50.4×10⁻⁶ m/m°C) × (6 m) × ((60°C) - (0°C))**\n\n- Δl = 0.018 m\n- Δl = 1.8 cm"
+    }
+  ]
+}

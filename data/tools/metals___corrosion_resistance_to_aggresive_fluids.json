@@ -1,0 +1,6 @@
+{
+  "id": "metals___corrosion_resistance_to_aggresive_fluids",
+  "title": "Metals - Corrosion Resistance to Aggressive Fluids",
+  "description": "Common metals and their corrosion resistance to aggressive fluids like acids, bases and more. Comprehensive reference table showing compatibility ratings (1=Good, 2=Be Careful, 3=Not Usable, na=data not available) for various metals with different chemical fluids.",
+  "type": "datatable"
+}

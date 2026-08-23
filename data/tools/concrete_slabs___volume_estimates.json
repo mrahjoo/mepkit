@@ -1,0 +1,201 @@
+{
+  "id": "concrete_slabs___volume_estimates",
+  "title": "Concrete Slabs - Volume Estimates",
+  "description": "Estimate required concrete volume per sq. ft. using slab dimensions and depth. Required concrete is calculated in cubic yards (cy) using the formula: v = 0.0031 × l × w × t",
+  "type": "chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "concrete_calculator",
+      "content": "Calculate concrete volume required for concrete slabs",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Slab Length",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        },
+        {
+          "id": "width",
+          "label": "Slab Width",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        },
+        {
+          "id": "depth",
+          "label": "Slab Depth",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume",
+          "label": "Required Concrete Volume",
+          "unit": "cy",
+          "formula": "inputs.length * inputs.width * inputs.depth * 0.0031",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_cubic_feet",
+          "label": "Required Concrete Volume",
+          "unit": "cu.ft.",
+          "formula": "inputs.length * inputs.width * inputs.depth * 0.0031 * 27",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "volume_per_sqft_table",
+      "content": "Concrete Volume per Square Foot by Depth",
+      "headers": [
+        "Depth (in)",
+        "Volume (cy/sq.ft.)"
+      ],
+      "rows": [
+        [
+          2,
+          0.006
+        ],
+        [
+          4,
+          0.012
+        ],
+        [
+          6,
+          0.019
+        ],
+        [
+          8,
+          0.024
+        ],
+        [
+          10,
+          0.031
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "area_coverage_table",
+      "content": "Area Covered by One Cubic Yard of Concrete",
+      "headers": [
+        "Depth (in)",
+        "Area (sq.ft.)"
+      ],
+      "rows": [
+        [
+          2,
+          162
+        ],
+        [
+          3,
+          108
+        ],
+        [
+          4,
+          81
+        ],
+        [
+          5,
+          65
+        ],
+        [
+          6,
+          54
+        ],
+        [
+          7,
+          46.3
+        ],
+        [
+          8,
+          40.5
+        ],
+        [
+          9,
+          36
+        ],
+        [
+          10,
+          32.4
+        ],
+        [
+          11,
+          29.5
+        ],
+        [
+          12,
+          27
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "volume_chart",
+      "content": "Concrete Volume per Square Foot vs Depth",
+      "headers": [
+        "Depth (in)",
+        "Volume (cy/sq.ft.)"
+      ],
+      "rows": [
+        [
+          2,
+          0.006
+        ],
+        [
+          4,
+          0.012
+        ],
+        [
+          6,
+          0.019
+        ],
+        [
+          8,
+          0.024
+        ],
+        [
+          10,
+          0.031
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              0.006,
+              0.012,
+              0.019,
+              0.024,
+              0.031
+            ],
+            "type": "line",
+            "name": "Volume (cy/sq.ft.)",
+            "smooth": true
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        }
+      }
+    }
+  ]
+}

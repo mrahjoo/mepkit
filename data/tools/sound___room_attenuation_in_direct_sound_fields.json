@@ -1,0 +1,57 @@
+{
+  "id": "sound___room_attenuation_in_direct_sound_fields",
+  "title": "Sound - Room Attenuation in Direct Sound Fields",
+  "description": "Calculate room attenuation in direct sound fields as a function of room size and room sound absorption characteristics. The diagram is based on a listener within 5 ft (1.5 m) from the source.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Room Attenuation Calculator\n\nRoom attenuation in a direct sound field depends on room size and absorption characteristics.\n\n### Room Absorption Types\n\n- **Hard**: Bath rooms, large churches, gymnasiums, factories\n- **Average**: Private homes, concert halls, restaurants, offices, conference rooms, hotel rooms, school rooms, hospitals, libraries, churches, reception rooms\n- **Soft**: Radio and TV studios, theaters\n\n*Note: Listener is positioned within 5 ft (1.5 m) from the sound source. 1 ft² = 0.0929 m²*"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "room_surface_area",
+          "label": "Room Surface Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 100
+        },
+        {
+          "id": "absorption_type",
+          "label": "Room Absorption Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Hard (bath rooms, churches, gymnasiums, factories)",
+              "value": "hard"
+            },
+            {
+              "label": "Average (homes, offices, conference rooms, hospitals)",
+              "value": "average"
+            },
+            {
+              "label": "Soft (studios, theaters)",
+              "value": "soft"
+            }
+          ],
+          "defaultValue": "average"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "room_attenuation",
+          "label": "Room Attenuation",
+          "unit": "dB",
+          "formula": "inputs.absorption_type === 'hard' ? (inputs.room_surface_area > 80 ? 3 : 2) : inputs.absorption_type === 'average' ? (inputs.room_surface_area > 80 ? 5 : 3) : (inputs.room_surface_area > 80 ? 8 : 6)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Example\n\nFor an \"average\" room with a surface area of 100 m² (1076 ft²), the room attenuation is approximately **5 dB**."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "steam_pipes___installation_of_drip_legs",
+  "title": "Steam Pipes - Installation of Drip Legs",
+  "description": "Properly draining steam pipes for condensate. Reference guide for drip leg dimensions and installation locations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Steam Pipes - Installation of Drip Legs\n\nCondensate is generated in the steam pipes due to heat loss and energy required during system heat up. For the steam system to work properly it is important that the condensate is removed.\n\n### Steam Trap Placement Locations\n\nSteam traps for draining should be located:\n- On horizontal pipes - every 30 - 50 m (100 - 150 ft)\n- In front of pressure reducing valves to avoid damaging the equipment\n- In front of control valves to avoid damaging the equipment\n- In front of normally closed valves to avoid building up condensate\n- At the bottom of vertical lines\n- At the end of the steam line"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Main Diameter (mm)",
+        "Main Diameter (in)",
+        "Pocket Diameter (mm)",
+        "Pocket Diameter (in)",
+        "Pocket Depth (mm)",
+        "Pocket Depth (in)"
+      ],
+      "rows": [
+        [
+          50,
+          2,
+          50,
+          2,
+          700,
+          28
+        ],
+        [
+          80,
+          3,
+          80,
+          3,
+          700,
+          28
+        ],
+        [
+          100,
+          4,
+          100,
+          4,
+          700,
+          28
+        ],
+        [
+          250,
+          10,
+          150,
+          6,
+          700,
+          28
+        ],
+        [
+          500,
+          20,
+          250,
+          10,
+          700,
+          28
+        ]
+      ]
+    }
+  ]
+}

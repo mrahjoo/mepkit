@@ -1,0 +1,61 @@
+{
+  "id": "heat_discomfort_zones",
+  "title": "Heat Discomfort Zones",
+  "description": "Maximum work load vs. temperature and relative humidity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Temperature (°C)",
+        "Relative Humidity 30%",
+        "Relative Humidity 40%",
+        "Relative Humidity 60%",
+        "Relative Humidity 80%"
+      ],
+      "rows": [
+        [
+          80,
+          27,
+          "Very Heavy",
+          "Very Heavy",
+          "Very Heavy",
+          "Heavy"
+        ],
+        [
+          90,
+          32,
+          "Very Heavy",
+          "Heavy",
+          "Moderate",
+          "Light"
+        ],
+        [
+          100,
+          38,
+          "Heavy",
+          "Moderate",
+          "Light",
+          "Not recommended"
+        ],
+        [
+          110,
+          43,
+          "Moderate",
+          "Light",
+          "Not recommended",
+          "Not recommended"
+        ],
+        [
+          120,
+          49,
+          "Light",
+          "Not recommended",
+          "Not recommended",
+          "Not recommended"
+        ]
+      ]
+    }
+  ]
+}

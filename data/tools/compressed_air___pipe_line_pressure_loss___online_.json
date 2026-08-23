@@ -1,0 +1,125 @@
+{
+  "id": "compressed_air___pipe_line_pressure_loss___online_",
+  "title": "Compressed Air - Pipe Line Pressure Loss - Online Calculator",
+  "description": "Calculate pressure drop in compressed air pipelines using empirical formulas with metric and imperial units. Supports FAD flow rates, pipe diameters, lengths, and initial pressures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Metric Units",
+        "Imperial Units"
+      ],
+      "inputs": [
+        {
+          "id": "air_flow_fad",
+          "label": "Air Volume Flow (FAD)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m³/min"
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "m"
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Inside Pipe Diameter",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "mm"
+        },
+        {
+          "id": "initial_pressure_gauge",
+          "label": "Initial Gauge Pressure",
+          "type": "number",
+          "defaultValue": 7,
+          "unit": "kg/cm²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_drop",
+          "label": "Pressure Drop",
+          "formula": "7.57 * Math.pow(inputs.air_flow_fad, 1.85) * inputs.pipe_length * Math.pow(10, 4) / (Math.pow(inputs.pipe_diameter, 5) * inputs.initial_pressure_gauge)",
+          "unit": "kg/cm²",
+          "format": "decimal"
+        },
+        {
+          "id": "final_pressure",
+          "label": "Final Gauge Pressure",
+          "formula": "inputs.initial_pressure_gauge - (7.57 * Math.pow(inputs.air_flow_fad, 1.85) * inputs.pipe_length * Math.pow(10, 4) / (Math.pow(inputs.pipe_diameter, 5) * inputs.initial_pressure_gauge))",
+          "unit": "kg/cm²",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_drop_psi",
+          "label": "Pressure Drop",
+          "formula": "(7.57 * Math.pow(inputs.air_flow_fad, 1.85) * inputs.pipe_length * Math.pow(10, 4) / (Math.pow(inputs.pipe_diameter, 5) * inputs.initial_pressure_gauge)) * 14.2",
+          "unit": "psi",
+          "format": "decimal"
+        }
+      ],
+      "content": "Enter the compressed air pipeline parameters to calculate pressure drop. Formula: dp = 7.57 × q^1.85 × L × 10^4 / (d^5 × p)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Diameter (mm)",
+        "Air Flow 5 m³/min",
+        "Air Flow 10 m³/min",
+        "Air Flow 15 m³/min",
+        "Air Flow 20 m³/min"
+      ],
+      "rows": [
+        [
+          25,
+          0.85,
+          2.45,
+          4.95,
+          8.1
+        ],
+        [
+          32,
+          0.28,
+          0.82,
+          1.65,
+          2.7
+        ],
+        [
+          40,
+          0.12,
+          0.33,
+          0.67,
+          1.1
+        ],
+        [
+          50,
+          0.04,
+          0.12,
+          0.24,
+          0.4
+        ],
+        [
+          63,
+          0.01,
+          0.03,
+          0.07,
+          0.11
+        ],
+        [
+          75,
+          0.005,
+          0.01,
+          0.02,
+          0.04
+        ]
+      ],
+      "content": "Pressure drop in 100m pipe line at 7 kg/cm² initial gauge pressure (kg/cm²)"
+    }
+  ]
+}

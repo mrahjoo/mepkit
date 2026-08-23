@@ -1,0 +1,193 @@
+{
+  "id": "individual___universal_gas_constants__definitions_",
+  "title": "Individual & Universal Gas Constants: Definitions, Values, and Applications",
+  "description": "Calculator and reference tool for individual and universal gas constants. Calculate individual gas constant from universal constant and molecular weight, or look up values for common gases in multiple unit systems.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Individual Gas Constant Calculator\n\nCalculate the individual gas constant from the universal gas constant and molecular weight using the formula:\n\n**R = Ru / Mgas**\n\nwhere:\n- R = Individual Gas Constant\n- Ru = Universal Gas Constant\n- Mgas = Molecular Weight of the gas"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ru",
+          "label": "Universal Gas Constant (Ru)",
+          "type": "number",
+          "defaultValue": 8.3144598,
+          "unit": "J/(mol·K)"
+        },
+        {
+          "id": "mgas",
+          "label": "Molecular Weight (Mgas)",
+          "type": "number",
+          "defaultValue": 28.9647,
+          "unit": "g/mol"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "r_si",
+          "label": "Individual Gas Constant (R)",
+          "formula": "inputs.ru / (inputs.mgas / 1000)",
+          "unit": "J/(kg·K)",
+          "format": "decimal"
+        },
+        {
+          "id": "r_imperial",
+          "label": "Individual Gas Constant (R)",
+          "formula": "(inputs.ru / (inputs.mgas / 1000)) * 5.97994",
+          "unit": "ft·lbf/slug·°R",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Universal Gas Constant Values\n\nThe universal gas constant (Ru) in common units:\n\n- **J/(mol·K)**: 8.3144598\n- **kJ/(kmol·K)**: 8.3144598\n- **J/(kmol·K)**: 8314.472\n- **atm·L/(mol·K)**: 0.082057338\n- **cal/(mol·K)**: 1.9872\n- **Btu/(lbmol·°R)**: 1.9872036\n- **lbf·ft/(lbmol·°R)**: 1545.349\n- **psi·ft³/(lbmol·°R)**: 10.73\n\nThe universal gas constant is the same for all ideal or perfect gases."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Gas",
+        "Formula",
+        "Molecular Weight (g/mol)",
+        "R (J/kg·K)",
+        "R (ft·lbf/slug·°R)"
+      ],
+      "rows": [
+        [
+          "Acetylene",
+          "C₂H₂",
+          "26.038",
+          "319.32",
+          "1910"
+        ],
+        [
+          "Air",
+          "Mixture",
+          "28.9647",
+          "287.05",
+          "1717"
+        ],
+        [
+          "Ammonia",
+          "NH₃",
+          "17.031",
+          "488.21",
+          "2919"
+        ],
+        [
+          "Argon",
+          "Ar",
+          "39.948",
+          "208.13",
+          "1245"
+        ],
+        [
+          "Butane",
+          "C₄H₁₀",
+          "58.122",
+          "143.05",
+          "855"
+        ],
+        [
+          "Butene",
+          "C₄H₈",
+          "56.106",
+          "148.19",
+          "886"
+        ],
+        [
+          "Carbon Dioxide",
+          "CO₂",
+          "44.010",
+          "188.92",
+          "1130"
+        ],
+        [
+          "Carbon Monoxide",
+          "CO",
+          "28.010",
+          "296.84",
+          "1775"
+        ],
+        [
+          "Ethane",
+          "C₂H₆",
+          "30.069",
+          "276.51",
+          "1654"
+        ],
+        [
+          "Ethene",
+          "C₂H₄",
+          "28.053",
+          "296.38",
+          "1772"
+        ],
+        [
+          "Helium",
+          "He",
+          "4.003",
+          "2077.1",
+          "12421"
+        ],
+        [
+          "Hydrogen",
+          "H₂",
+          "2.016",
+          "4124.2",
+          "24663"
+        ],
+        [
+          "Hydrogen Sulfide",
+          "H₂S",
+          "34.081",
+          "243.96",
+          "1459"
+        ],
+        [
+          "Methane",
+          "CH₄",
+          "16.042",
+          "518.28",
+          "3099"
+        ],
+        [
+          "Nitrogen",
+          "N₂",
+          "28.013",
+          "296.80",
+          "1775"
+        ],
+        [
+          "Oxygen",
+          "O₂",
+          "31.999",
+          "259.84",
+          "1554"
+        ],
+        [
+          "Propane",
+          "C₃H₈",
+          "44.096",
+          "188.56",
+          "1128"
+        ],
+        [
+          "Water Vapor",
+          "H₂O",
+          "18.015",
+          "461.52",
+          "2760"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Relationships\n\n**Individual Gas Constant (R):**\n- R = Ru / Mgas\n- Depends on the particular gas\n- Independent of temperature\n- Common units: J/(kg·K) or ft·lbf/slug·°R\n\n**Universal Gas Constant (Ru):**\n- Ru = Mgas × R\n- The same for all ideal or perfect gases\n- Can be expressed as: Ru = k × NA\n  - k (Boltzmann's constant) = 1.381×10⁻²³ J/K\n  - NA (Avogadro's number) = 6.022×10²³ 1/mol\n\n**Gas Mixture Molecular Weight:**\n- Mmixture = Σ(xi × Mi)\n- Average based on mole fractions of each component gas"
+    }
+  ]
+}

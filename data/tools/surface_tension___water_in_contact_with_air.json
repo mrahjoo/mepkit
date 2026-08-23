@@ -1,0 +1,193 @@
+{
+  "id": "surface_tension___water_in_contact_with_air",
+  "title": "Surface Tension - Water in contact with Air",
+  "description": "Surface tension of water in contact with air for temperatures ranging 0 to 100°C (32 to 212°F) in imperial units (BG units) and SI units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Surface Tension of Water in Contact with Air\n\nThis calculator provides surface tension values for water in contact with air across different temperature ranges using both Imperial (BG) and SI units.\n\n**Imperial Units (BG):** Surface tension in 10⁻³ lb/ft\n\n**SI Units:** Surface tension in 10⁻² N/m"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature_value",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20
+        },
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "value": "si",
+              "label": "SI Units (°C)"
+            },
+            {
+              "value": "imperial",
+              "label": "Imperial Units (°F)"
+            }
+          ],
+          "defaultValue": "si"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "surface_tension",
+          "label": "Surface Tension",
+          "formula": "inputs.temperature_value",
+          "unit": "dynamic"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Surface Tension (10⁻² N/m)"
+      ],
+      "rows": [
+        [
+          0,
+          7.56
+        ],
+        [
+          5,
+          7.49
+        ],
+        [
+          10,
+          7.42
+        ],
+        [
+          20,
+          7.28
+        ],
+        [
+          30,
+          7.12
+        ],
+        [
+          40,
+          6.96
+        ],
+        [
+          50,
+          6.79
+        ],
+        [
+          60,
+          6.62
+        ],
+        [
+          70,
+          6.44
+        ],
+        [
+          80,
+          6.26
+        ],
+        [
+          90,
+          6.08
+        ],
+        [
+          100,
+          5.89
+        ],
+        [
+          150,
+          4.82
+        ],
+        [
+          200,
+          3.76
+        ],
+        [
+          250,
+          2.64
+        ],
+        [
+          300,
+          1.47
+        ],
+        [
+          350,
+          0.37
+        ],
+        [
+          374.1,
+          0
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°F)",
+        "Surface Tension (10⁻³ lb/ft)"
+      ],
+      "rows": [
+        [
+          32,
+          5.18
+        ],
+        [
+          40,
+          5.13
+        ],
+        [
+          50,
+          5.09
+        ],
+        [
+          60,
+          5.03
+        ],
+        [
+          70,
+          4.97
+        ],
+        [
+          80,
+          4.91
+        ],
+        [
+          90,
+          4.86
+        ],
+        [
+          100,
+          4.79
+        ],
+        [
+          120,
+          4.67
+        ],
+        [
+          140,
+          4.53
+        ],
+        [
+          160,
+          4.4
+        ],
+        [
+          180,
+          4.26
+        ],
+        [
+          200,
+          4.12
+        ],
+        [
+          212,
+          4.04
+        ]
+      ]
+    }
+  ]
+}

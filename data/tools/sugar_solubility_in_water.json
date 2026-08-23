@@ -1,0 +1,61 @@
+{
+  "id": "sugar_solubility_in_water",
+  "title": "Sugar Solubility in Water",
+  "description": "Solubility of sugar in water.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Temperature (°C)",
+        "Solubility (g/100mL)"
+      ],
+      "rows": [
+        [
+          0,
+          179.2
+        ],
+        [
+          10,
+          190.5
+        ],
+        [
+          20,
+          203.9
+        ],
+        [
+          30,
+          219.5
+        ],
+        [
+          40,
+          237.9
+        ],
+        [
+          50,
+          259.2
+        ],
+        [
+          60,
+          283.9
+        ],
+        [
+          70,
+          312.5
+        ],
+        [
+          80,
+          345.6
+        ],
+        [
+          90,
+          384.2
+        ],
+        [
+          100,
+          428.5
+        ]
+      ]
+    }
+  ]
+}

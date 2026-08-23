@@ -1,0 +1,125 @@
+{
+  "id": "food_borne_infections_and_diseases",
+  "title": "Food-borne Infections and Diseases",
+  "description": "Common bacteria and viruses found in food and their associated diseases transmitted to humans",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Food-borne Infections and Diseases\n\nCommon bacteria and viruses found in food.\n\n## Common microorganisms found in food\n\n- **Corynebacterium, Leuconostoc** - found in dairy products\n- **Achromobacter** - found in meat, poultry, seafoods\n- **Bacteriodes, Proteus** - found in eggs and meats\n- **Pseudomonas** - found in meats, poultry, eggs\n\n## Common pathogenic bacteria found in food\n\nClostridium botulinum, Salmonella spp., Clostridium perfringens, Botulinum spp., Streptococci spp., Lactobacillus spp., Shigellas spp., Listeria monocytogenes, Staphlococcus aureus, Escherichia coli, Campylobacter jejuni, Bacillus cereus, Proteus, Pseudomonas spp., Vibrio spp.\n\n## Common pathogenic viruses found in food\n\nHepatitis A virus, Rotavirus, Echovirus, Calcivirus\n\n## Major Bacterial Diseases Transmitted to Humans by Food\n\n- **Campylobacter** → Campylobacteriosis\n- **Listeria monocytogenes** → Listeriosis\n- **Salmonella spp.** → Salmonellosis\n- **Salmonella typhi** → Typhoid fever\n- **Shigella dysenteriae** → Dysentery\n- **Vibrio cholerae** → Cholera\n- **Yersinia enterocolitica** → Diarrheal disease\n- **Enterobacteriaceae** → Enteric disease\n\n## Major Viral Diseases Transmitted to Humans by Food\n\n- **ECHO virus** → Gastroenteritis\n- **HAV virus** → Hepatitis type A\n- **Norwalk agent** → Viral diarrhea\n- **Rotavirus** → Infant diarrhea"
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Pathogen Type",
+        "Organism/Virus",
+        "Associated Disease",
+        "Food Sources"
+      ],
+      "rows": [
+        [
+          "Bacteria",
+          "Campylobacter",
+          "Campylobacteriosis",
+          "Meat, Poultry"
+        ],
+        [
+          "Bacteria",
+          "Listeria monocytogenes",
+          "Listeriosis",
+          "Dairy, Meat"
+        ],
+        [
+          "Bacteria",
+          "Salmonella spp.",
+          "Salmonellosis",
+          "Eggs, Meat, Poultry"
+        ],
+        [
+          "Bacteria",
+          "Salmonella typhi",
+          "Typhoid fever",
+          "Contaminated water/food"
+        ],
+        [
+          "Bacteria",
+          "Shigella dysenteriae",
+          "Dysentery",
+          "Contaminated food/water"
+        ],
+        [
+          "Bacteria",
+          "Vibrio cholerae",
+          "Cholera",
+          "Seafood, Water"
+        ],
+        [
+          "Bacteria",
+          "Yersinia enterocolitica",
+          "Diarrheal disease",
+          "Meat, Dairy"
+        ],
+        [
+          "Bacteria",
+          "Staphylococcus aureus",
+          "Food poisoning",
+          "Meat, Dairy, Prepared foods"
+        ],
+        [
+          "Bacteria",
+          "Escherichia coli",
+          "Diarrheal disease",
+          "Meat, Water"
+        ],
+        [
+          "Bacteria",
+          "Bacillus cereus",
+          "Food poisoning",
+          "Cereals, Rice"
+        ],
+        [
+          "Virus",
+          "Hepatitis A virus",
+          "Hepatitis type A",
+          "Shellfish, Contaminated food"
+        ],
+        [
+          "Virus",
+          "Rotavirus",
+          "Infant diarrhea",
+          "Contaminated food/water"
+        ],
+        [
+          "Virus",
+          "Echovirus",
+          "Gastroenteritis",
+          "Contaminated food/water"
+        ],
+        [
+          "Virus",
+          "Norwalk agent",
+          "Viral diarrhea",
+          "Shellfish, Contaminated food"
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "Food-borne Pathogens and Associated Diseases"
+        },
+        "tooltip": {
+          "trigger": "item"
+        },
+        "legend": {
+          "orient": "vertical",
+          "left": "left"
+        },
+        "xAxis": {
+          "type": "category"
+        },
+        "yAxis": {
+          "type": "value"
+        }
+      }
+    }
+  ]
+}

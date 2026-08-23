@@ -1,0 +1,133 @@
+{
+  "id": "plastics___abbreviations",
+  "title": "Plastics - Abbreviations",
+  "description": "Commonly used plastic abbreviations and their full names.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Abbreviation",
+        "Full Name"
+      ],
+      "rows": [
+        [
+          "ABS",
+          "Acrylonitrile butadiene styrene"
+        ],
+        [
+          "CPE",
+          "Chlorinated polyethylene"
+        ],
+        [
+          "CPVC",
+          "Chlorinated polyvinyl chloride"
+        ],
+        [
+          "EPDM",
+          "Ethylene propylene di-monomer"
+        ],
+        [
+          "EPS",
+          "Expanded polystyrene"
+        ],
+        [
+          "ETFE",
+          "Ethyl tetra fluoro ethylene"
+        ],
+        [
+          "EVA",
+          "Ethylene vinyl acetate"
+        ],
+        [
+          "GRP",
+          "Glass-reinforced polyester, Fibreglass"
+        ],
+        [
+          "HDPE",
+          "High density polyethylene"
+        ],
+        [
+          "HIPS",
+          "High impact polystyrene"
+        ],
+        [
+          "LDPE",
+          "Low density polyethylene"
+        ],
+        [
+          "MF",
+          "Melamine-formaldehyde"
+        ],
+        [
+          "PA",
+          "Polyamide, Nylon"
+        ],
+        [
+          "PB",
+          "Polybutylene"
+        ],
+        [
+          "PC",
+          "Polycarbonate"
+        ],
+        [
+          "PE",
+          "Polyethylene"
+        ],
+        [
+          "PF",
+          "Phenol-formaledehyde, Bakelite"
+        ],
+        [
+          "PMMA",
+          "Polymethyl methacrylate, Perspex"
+        ],
+        [
+          "PP",
+          "Polypropylene"
+        ],
+        [
+          "PS",
+          "Polystyrene"
+        ],
+        [
+          "PTFE",
+          "Polytetrafluoroethylene"
+        ],
+        [
+          "PU",
+          "Polyurethane"
+        ],
+        [
+          "PVA",
+          "Polyvinyl acetate, latex emulsion"
+        ],
+        [
+          "PVC",
+          "Polyvinyl chloride"
+        ],
+        [
+          "PVB",
+          "Polyvinyl butyral"
+        ],
+        [
+          "PVF",
+          "Polyvinyl fluoride"
+        ],
+        [
+          "UF",
+          "Urea-formaldehyde"
+        ],
+        [
+          "UP",
+          "Unsaturated polyester"
+        ],
+        [
+          "UPVC",
+          "Unplasticised polyvinyl chloride"
+        ]
+      ]
+    }
+  ]
+}

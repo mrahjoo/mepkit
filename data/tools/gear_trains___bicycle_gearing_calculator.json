@@ -1,0 +1,117 @@
+{
+  "id": "gear_trains___bicycle_gearing_calculator",
+  "title": "Gear Trains - Bicycle Gearing Calculator",
+  "description": "Calculate bicycle wheel distance traveled based on pedaling revolutions, chainset teeth, and cassette teeth. Supports both SI and Imperial units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Bicycle Gearing Calculator\n\nCalculate the distance traveled by a bicycle wheel based on pedaling revolutions, chainset sprocket teeth, cassette sprocket teeth, and wheel diameter.\n\n**Formula:**\n\n_l = π d nD tD / tF_\n\nWhere:\n- **l** = distance traveled (m, in)\n- **d** = outer wheel diameter (m, in)\n- **nD** = revolutions of pedaling (rpm)\n- **tD** = number of teeth in pedaling sprocket (chainset)\n- **tF** = number of teeth in wheel sprocket (cassette)\n- **π** = 3.14159..."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "wheel_diameter",
+          "label": "Wheel Diameter",
+          "type": "number",
+          "defaultValue": 26,
+          "unit": "in"
+        },
+        {
+          "id": "pedal_revolutions",
+          "label": "Pedaling Revolutions",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "rpm"
+        },
+        {
+          "id": "chainset_teeth",
+          "label": "Chainset Sprocket Teeth (nD)",
+          "type": "number",
+          "defaultValue": 42,
+          "unit": "teeth"
+        },
+        {
+          "id": "cassette_teeth",
+          "label": "Cassette Sprocket Teeth (tF)",
+          "type": "number",
+          "defaultValue": 14,
+          "unit": "teeth"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance_traveled",
+          "label": "Distance Traveled",
+          "formula": "3.14159 * inputs.wheel_diameter * inputs.pedal_revolutions * inputs.chainset_teeth / inputs.cassette_teeth",
+          "unit": "distance",
+          "format": "decimal"
+        },
+        {
+          "id": "movement_ratio",
+          "label": "Movement Ratio (nF/nD)",
+          "formula": "inputs.chainset_teeth / inputs.cassette_teeth",
+          "format": "decimal"
+        },
+        {
+          "id": "wheel_circumference",
+          "label": "Wheel Circumference",
+          "formula": "3.14159 * inputs.wheel_diameter",
+          "unit": "distance",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Gear Set",
+        "Min Ratio",
+        "Max Ratio"
+      ],
+      "rows": [
+        [
+          "Spur gear, external",
+          "1:1",
+          "5:1"
+        ],
+        [
+          "Spur gear, internal",
+          "1.5:1",
+          "7:1"
+        ],
+        [
+          "Helical gear, external",
+          "1:1",
+          "10:1"
+        ],
+        [
+          "Helical gear, internal",
+          "1.5:1",
+          "10:1"
+        ],
+        [
+          "Straight bevel gear",
+          "1:1",
+          "8:1"
+        ],
+        [
+          "Spiral bevel gear",
+          "1:1",
+          "8:1"
+        ],
+        [
+          "Epicyclic planetary gear",
+          "3:1",
+          "12:1"
+        ],
+        [
+          "Epicyclic star gear",
+          "2:1",
+          "11:1"
+        ]
+      ]
+    }
+  ]
+}

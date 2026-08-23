@@ -1,0 +1,260 @@
+{
+  "id": "industrial_lubricants___viscosities_vs__iso_vg_gra",
+  "title": "Industrial Lubricants - Viscosities vs. ISO-VG Grade",
+  "description": "ISO-VG viscosity grades for industrial lubricants. Convert between ISO-VG grades and equivalent SAE crankcase oil, aircraft oil, gear lube, and AGMA grades. Calculate absolute viscosity conversions between temperature scales and viscosity units.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Temperature and Viscosity Unit Conversions",
+      "inputs": [
+        {
+          "id": "temperature_fahrenheit",
+          "label": "Temperature (Fahrenheit)",
+          "type": "number",
+          "defaultValue": 40,
+          "unit": "°F"
+        },
+        {
+          "id": "temperature_celsius",
+          "label": "Temperature (Celsius)",
+          "type": "number",
+          "defaultValue": 4.44,
+          "unit": "°C"
+        },
+        {
+          "id": "viscosity_centistoke",
+          "label": "Viscosity (centiStoke)",
+          "type": "number",
+          "defaultValue": 46,
+          "unit": "cSt"
+        },
+        {
+          "id": "viscosity_centipoise",
+          "label": "Viscosity (centiPoise)",
+          "type": "number",
+          "defaultValue": 46,
+          "unit": "cP"
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity of Oil",
+          "type": "number",
+          "defaultValue": 0.9,
+          "unit": ""
+        },
+        {
+          "id": "viscosity_reyns",
+          "label": "Viscosity (Reyns)",
+          "type": "number",
+          "defaultValue": 0.0067,
+          "unit": "lb s/in²"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "celsius_from_fahrenheit",
+          "label": "Temperature (Celsius)",
+          "formula": "inputs.temperature_fahrenheit * 5/9 - 32 * 5/9",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "fahrenheit_from_celsius",
+          "label": "Temperature (Fahrenheit)",
+          "formula": "inputs.temperature_celsius * 9/5 + 32",
+          "unit": "°F",
+          "format": "decimal"
+        },
+        {
+          "id": "centipoise_from_centistoke",
+          "label": "Viscosity (centiPoise)",
+          "formula": "inputs.viscosity_centistoke * inputs.specific_gravity",
+          "unit": "cP",
+          "format": "decimal"
+        },
+        {
+          "id": "centistoke_from_centipoise",
+          "label": "Viscosity (centiStoke)",
+          "formula": "inputs.viscosity_centipoise / inputs.specific_gravity",
+          "unit": "cSt",
+          "format": "decimal"
+        },
+        {
+          "id": "pascals_from_reyns",
+          "label": "Viscosity (Pascal-Seconds)",
+          "formula": "inputs.viscosity_reyns * 6896.55",
+          "unit": "Pa·s",
+          "format": "decimal"
+        },
+        {
+          "id": "reyns_from_pascals",
+          "label": "Viscosity (Reyns)",
+          "formula": "inputs.viscosity_reyns",
+          "unit": "lb s/in²",
+          "format": "scientific"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "ISO-VG Grade Equivalents",
+      "headers": [
+        "ISO-VG Grade",
+        "SAE Crankcase Oil",
+        "SAE Aircraft Oil",
+        "SAE Gear Lube",
+        "AGMA Regular"
+      ],
+      "rows": [
+        [
+          22,
+          "5W",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          32,
+          "10W",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          46,
+          "15W",
+          "—",
+          "75W",
+          "1"
+        ],
+        [
+          68,
+          "20W",
+          "—",
+          "—",
+          "2"
+        ],
+        [
+          100,
+          "30",
+          "65",
+          "80W-90",
+          "3"
+        ],
+        [
+          150,
+          "40",
+          "80",
+          "—",
+          "4"
+        ],
+        [
+          220,
+          "50",
+          "100",
+          "90",
+          "5"
+        ],
+        [
+          320,
+          "60",
+          "120",
+          "—",
+          "6"
+        ],
+        [
+          460,
+          "—",
+          "—",
+          "85W-140",
+          "7"
+        ],
+        [
+          680,
+          "—",
+          "—",
+          "—",
+          "8"
+        ],
+        [
+          1500,
+          "—",
+          "—",
+          "250",
+          "—"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "ISO-VG Viscosity Grade Range",
+      "options": {
+        "title": {
+          "text": "ISO-VG Viscosity Grades at 40°C"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "ISO-VG 22",
+            "ISO-VG 32",
+            "ISO-VG 46",
+            "ISO-VG 68",
+            "ISO-VG 100",
+            "ISO-VG 150",
+            "ISO-VG 220",
+            "ISO-VG 320"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Viscosity (cSt)"
+        },
+        "series": [
+          {
+            "name": "Viscosity Range",
+            "type": "candlestick",
+            "data": [
+              [
+                19.8,
+                24.2
+              ],
+              [
+                28.8,
+                35.2
+              ],
+              [
+                41.4,
+                50.6
+              ],
+              [
+                61.2,
+                74.8
+              ],
+              [
+                90,
+                110
+              ],
+              [
+                135,
+                165
+              ],
+              [
+                198,
+                242
+              ],
+              [
+                288,
+                352
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## ISO-VG Viscosity Grade Standards\n\nISO VG stands for \"International Standards Organization Viscosity Grade\" and uses a numbering system ranging from 2 to 1500.\n\n### Temperature Conversion Formulas\n- **Celsius to Fahrenheit:** tF = 9/5 × tC + 32\n- **Fahrenheit to Celsius:** tC = 5/9 × (tF - 32)\n\n### Viscosity Unit Conversion Formulas\n- **1 reyns (lb·s/in²) = 6896.55 Pa·s**\n- **1 cSt (centiStoke) = 1 cP (centiPoise) / SG**\n- **Where SG = specific gravity of oil**\n\n### Common ISO-VG Applications\n- **ISO-VG 22, 32:** Light hydraulic oils, precision machinery\n- **ISO-VG 46:** Standard hydraulic and turbine oils\n- **ISO-VG 68, 100:** Heavy hydraulic applications\n- **ISO-VG 150, 220:** Gear oils, circulating oils\n- **ISO-VG 320+:** Heavy industrial gear oils"
+    }
+  ]
+}

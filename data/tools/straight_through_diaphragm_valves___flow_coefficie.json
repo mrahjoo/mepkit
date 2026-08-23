@@ -1,0 +1,273 @@
+{
+  "id": "straight_through_diaphragm_valves___flow_coefficie",
+  "title": "Straight Through Diaphragm Valves - Flow Coefficients",
+  "description": "Flow coefficients - Cv - and flow factors - Kv - for straight through diaphragm valves. Calculate flow coefficients based on valve size and lining type.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Straight Through Diaphragm Valves - Flow Coefficients\n\nFlow coefficients - Cv - and flow factors - Kv - for straight through diaphragm valves of 'Saunders' type.\n\n**Flow Characteristics:**\n- Closing a valve to 80% reduces the flow coefficient to approximately 85%\n- Closing a valve to 50% reduces the flow coefficient to approximately 60%"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "valve_size",
+          "label": "Valve Size (DN)",
+          "type": "select",
+          "options": [
+            {
+              "value": 15,
+              "label": "DN 15 (1/2\")"
+            },
+            {
+              "value": 25,
+              "label": "DN 25 (1\")"
+            },
+            {
+              "value": 32,
+              "label": "DN 32 (1 1/4\")"
+            },
+            {
+              "value": 40,
+              "label": "DN 40 (1 1/2\")"
+            },
+            {
+              "value": 50,
+              "label": "DN 50 (2\")"
+            },
+            {
+              "value": 65,
+              "label": "DN 65 (2 1/2\")"
+            },
+            {
+              "value": 80,
+              "label": "DN 80 (3\")"
+            },
+            {
+              "value": 100,
+              "label": "DN 100 (4\")"
+            },
+            {
+              "value": 125,
+              "label": "DN 125 (5\")"
+            },
+            {
+              "value": 150,
+              "label": "DN 150 (6\")"
+            },
+            {
+              "value": 200,
+              "label": "DN 200 (8\")"
+            },
+            {
+              "value": 250,
+              "label": "DN 250 (10\")"
+            },
+            {
+              "value": 300,
+              "label": "DN 300 (12\")"
+            },
+            {
+              "value": 350,
+              "label": "DN 350 (14\")"
+            }
+          ]
+        },
+        {
+          "id": "lining_type",
+          "label": "Lining Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "unlined",
+              "label": "Unlined"
+            },
+            {
+              "value": "rubber_lined",
+              "label": "Rubber Lined"
+            },
+            {
+              "value": "glass_plastic_lined",
+              "label": "Glass/Plastic Lined"
+            }
+          ]
+        },
+        {
+          "id": "opening_percentage",
+          "label": "Valve Opening (%)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cv_value",
+          "label": "Flow Coefficient (Cv)",
+          "formula": "IF(inputs.valve_size==15 && inputs.lining_type=='unlined',9,IF(inputs.valve_size==25 && inputs.lining_type=='unlined',38,IF(inputs.valve_size==32 && inputs.lining_type=='unlined',56,IF(inputs.valve_size==40 && inputs.lining_type=='unlined',75,IF(inputs.valve_size==50 && inputs.lining_type=='unlined',128,IF(inputs.valve_size==65 && inputs.lining_type=='unlined',238,IF(inputs.valve_size==80 && inputs.lining_type=='unlined',330,IF(inputs.valve_size==100 && inputs.lining_type=='unlined',588,IF(inputs.valve_size==125 && inputs.lining_type=='unlined',924,IF(inputs.valve_size==150 && inputs.lining_type=='unlined',1680,IF(inputs.valve_size==200 && inputs.lining_type=='unlined',2580,IF(inputs.valve_size==250 && inputs.lining_type=='unlined',4020,IF(inputs.valve_size==300 && inputs.lining_type=='unlined',6060,IF(inputs.valve_size==350 && inputs.lining_type=='unlined',10300,IF(inputs.valve_size==25 && inputs.lining_type=='rubber_lined',31,IF(inputs.valve_size==32 && inputs.lining_type=='rubber_lined',46,IF(inputs.valve_size==40 && inputs.lining_type=='rubber_lined',66,IF(inputs.valve_size==50 && inputs.lining_type=='rubber_lined',107,IF(inputs.valve_size==65 && inputs.lining_type=='rubber_lined',195,IF(inputs.valve_size==80 && inputs.lining_type=='rubber_lined',264,IF(inputs.valve_size==100 && inputs.lining_type=='rubber_lined',480,IF(inputs.valve_size==125 && inputs.lining_type=='rubber_lined',720,IF(inputs.valve_size==150 && inputs.lining_type=='rubber_lined',1260,IF(inputs.valve_size==200 && inputs.lining_type=='rubber_lined',2196,IF(inputs.valve_size==250 && inputs.lining_type=='rubber_lined',3420,IF(inputs.valve_size==300 && inputs.lining_type=='rubber_lined',4884,IF(inputs.valve_size==350 && inputs.lining_type=='rubber_lined',9950,IF(inputs.valve_size==15 && inputs.lining_type=='glass_plastic_lined',9,IF(inputs.valve_size==25 && inputs.lining_type=='glass_plastic_lined',39,IF(inputs.valve_size==32 && inputs.lining_type=='glass_plastic_lined',58,IF(inputs.valve_size==40 && inputs.lining_type=='glass_plastic_lined',79,IF(inputs.valve_size==50 && inputs.lining_type=='glass_plastic_lined',138,IF(inputs.valve_size==65 && inputs.lining_type=='glass_plastic_lined',254,IF(inputs.valve_size==80 && inputs.lining_type=='glass_plastic_lined',342,IF(inputs.valve_size==100 && inputs.lining_type=='glass_plastic_lined',618,IF(inputs.valve_size==125 && inputs.lining_type=='glass_plastic_lined',960,IF(inputs.valve_size==150 && inputs.lining_type=='glass_plastic_lined',1800,IF(inputs.valve_size==200 && inputs.lining_type=='glass_plastic_lined',2724,IF(inputs.valve_size==250 && inputs.lining_type=='glass_plastic_lined',4296,0)))))))))))))))))))))))))))))))) * (inputs.opening_percentage / 100)"
+        },
+        {
+          "id": "kv_value",
+          "label": "Flow Factor (Kv)",
+          "formula": "IF(inputs.valve_size==15 && inputs.lining_type=='unlined',7,IF(inputs.valve_size==25 && inputs.lining_type=='unlined',33,IF(inputs.valve_size==32 && inputs.lining_type=='unlined',48,IF(inputs.valve_size==40 && inputs.lining_type=='unlined',65,IF(inputs.valve_size==50 && inputs.lining_type=='unlined',110,IF(inputs.valve_size==65 && inputs.lining_type=='unlined',205,IF(inputs.valve_size==80 && inputs.lining_type=='unlined',284,IF(inputs.valve_size==100 && inputs.lining_type=='unlined',507,IF(inputs.valve_size==125 && inputs.lining_type=='unlined',797,IF(inputs.valve_size==150 && inputs.lining_type=='unlined',1448,IF(inputs.valve_size==200 && inputs.lining_type=='unlined',2224,IF(inputs.valve_size==250 && inputs.lining_type=='unlined',3466,IF(inputs.valve_size==300 && inputs.lining_type=='unlined',5224,IF(inputs.valve_size==350 && inputs.lining_type=='unlined',8879,IF(inputs.valve_size==25 && inputs.lining_type=='rubber_lined',26,IF(inputs.valve_size==32 && inputs.lining_type=='rubber_lined',39,IF(inputs.valve_size==40 && inputs.lining_type=='rubber_lined',57,IF(inputs.valve_size==50 && inputs.lining_type=='rubber_lined',92,IF(inputs.valve_size==65 && inputs.lining_type=='rubber_lined',168,IF(inputs.valve_size==80 && inputs.lining_type=='rubber_lined',228,IF(inputs.valve_size==100 && inputs.lining_type=='rubber_lined',414,IF(inputs.valve_size==125 && inputs.lining_type=='rubber_lined',621,IF(inputs.valve_size==150 && inputs.lining_type=='rubber_lined',1086,IF(inputs.valve_size==200 && inputs.lining_type=='rubber_lined',1893,IF(inputs.valve_size==250 && inputs.lining_type=='rubber_lined',2948,IF(inputs.valve_size==300 && inputs.lining_type=='rubber_lined',4210,IF(inputs.valve_size==350 && inputs.lining_type=='rubber_lined',8578,IF(inputs.valve_size==15 && inputs.lining_type=='glass_plastic_lined',8,IF(inputs.valve_size==25 && inputs.lining_type=='glass_plastic_lined',34,IF(inputs.valve_size==32 && inputs.lining_type=='glass_plastic_lined',50,IF(inputs.valve_size==40 && inputs.lining_type=='glass_plastic_lined',68,IF(inputs.valve_size==50 && inputs.lining_type=='glass_plastic_lined',119,IF(inputs.valve_size==65 && inputs.lining_type=='glass_plastic_lined',219,IF(inputs.valve_size==80 && inputs.lining_type=='glass_plastic_lined',295,IF(inputs.valve_size==100 && inputs.lining_type=='glass_plastic_lined',533,IF(inputs.valve_size==125 && inputs.lining_type=='glass_plastic_lined',828,IF(inputs.valve_size==150 && inputs.lining_type=='glass_plastic_lined',1552,IF(inputs.valve_size==200 && inputs.lining_type=='glass_plastic_lined',2348,IF(inputs.valve_size==250 && inputs.lining_type=='glass_plastic_lined',3703,0)))))))))))))))))))))))))))))))) * (inputs.opening_percentage / 100)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Valve Size (DN)",
+        "Size (Inches)",
+        "Unlined Cv",
+        "Unlined Kv",
+        "Rubber Lined Cv",
+        "Rubber Lined Kv",
+        "Glass/Plastic Lined Cv",
+        "Glass/Plastic Lined Kv"
+      ],
+      "rows": [
+        [
+          15,
+          "1/2",
+          9,
+          7,
+          "-",
+          "-",
+          9,
+          8
+        ],
+        [
+          25,
+          "1",
+          38,
+          33,
+          31,
+          26,
+          39,
+          34
+        ],
+        [
+          32,
+          "1 1/4",
+          56,
+          48,
+          46,
+          39,
+          58,
+          50
+        ],
+        [
+          40,
+          "1 1/2",
+          75,
+          65,
+          66,
+          57,
+          79,
+          68
+        ],
+        [
+          50,
+          "2",
+          128,
+          110,
+          107,
+          92,
+          138,
+          119
+        ],
+        [
+          65,
+          "2 1/2",
+          238,
+          205,
+          195,
+          168,
+          254,
+          219
+        ],
+        [
+          80,
+          "3",
+          330,
+          284,
+          264,
+          228,
+          342,
+          295
+        ],
+        [
+          100,
+          "4",
+          588,
+          507,
+          480,
+          414,
+          618,
+          533
+        ],
+        [
+          125,
+          "5",
+          924,
+          797,
+          720,
+          621,
+          960,
+          828
+        ],
+        [
+          150,
+          "6",
+          1680,
+          1448,
+          1260,
+          1086,
+          1800,
+          1552
+        ],
+        [
+          200,
+          "8",
+          2580,
+          2224,
+          2196,
+          1893,
+          2724,
+          2348
+        ],
+        [
+          250,
+          "10",
+          4020,
+          3466,
+          3420,
+          2948,
+          4296,
+          3703
+        ],
+        [
+          300,
+          "12",
+          6060,
+          5224,
+          4884,
+          4210,
+          "-",
+          "-"
+        ],
+        [
+          350,
+          "14",
+          10300,
+          8879,
+          9950,
+          8578,
+          "-",
+          "-"
+        ]
+      ]
+    }
+  ]
+}

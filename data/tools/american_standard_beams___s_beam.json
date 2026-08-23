@@ -1,0 +1,497 @@
+{
+  "id": "american_standard_beams___s_beam",
+  "title": "American Standard Beams - S Beam",
+  "description": "American Standard Beams ASTM A6 - Imperial units. Calculator for properties and dimensions of American Standard S Beams including moment of inertia, section modulus, and other structural properties.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "s_beam_properties",
+      "content": "American Standard S Beam Properties",
+      "headers": [
+        "Designation",
+        "Depth h (in)",
+        "Width w (in)",
+        "Web Thickness s (in)",
+        "Area (in²)",
+        "Weight (lb/ft)",
+        "Ix (in⁴)",
+        "Iy (in⁴)",
+        "Sx (in³)",
+        "Sy (in³)"
+      ],
+      "rows": [
+        [
+          "S 24 x 121",
+          24.5,
+          8.05,
+          0.8,
+          35.6,
+          121,
+          3160,
+          83.3,
+          258,
+          20.7
+        ],
+        [
+          "S 24 x 106",
+          24.5,
+          7.78,
+          0.62,
+          31.2,
+          106,
+          2940,
+          77.1,
+          240,
+          19.6
+        ],
+        [
+          "S 24 x 100",
+          24,
+          7.425,
+          0.745,
+          29.3,
+          100,
+          2390,
+          47.7,
+          199,
+          13.2
+        ],
+        [
+          "S 24 x 90",
+          24,
+          7.125,
+          0.625,
+          26.5,
+          90,
+          2250,
+          44.9,
+          187,
+          12.6
+        ],
+        [
+          "S 24 x 80",
+          24,
+          7,
+          0.5,
+          23.5,
+          80,
+          2100,
+          42.2,
+          175,
+          12.1
+        ],
+        [
+          "S 20 x 96",
+          20.3,
+          7.2,
+          0.8,
+          28.2,
+          96,
+          1670,
+          50.2,
+          165,
+          13.9
+        ],
+        [
+          "S 20 x 86",
+          20.3,
+          7.06,
+          0.66,
+          25.3,
+          86,
+          1580,
+          46.8,
+          155,
+          13.3
+        ],
+        [
+          "S 20 x 75",
+          20,
+          6.385,
+          0.635,
+          22,
+          75,
+          1280,
+          29.8,
+          128,
+          9.32
+        ],
+        [
+          "S 20 x 66",
+          20,
+          6.255,
+          0.505,
+          19.4,
+          66,
+          1190,
+          27.7,
+          119,
+          8.85
+        ],
+        [
+          "S 18 x 70",
+          18,
+          6.251,
+          0.711,
+          20.6,
+          70,
+          926,
+          24.1,
+          103,
+          7.72
+        ],
+        [
+          "S 18 x 54.7",
+          18,
+          6.001,
+          0.461,
+          16.1,
+          54.7,
+          804,
+          20.8,
+          89.4,
+          6.94
+        ],
+        [
+          "S 15 x 50",
+          15,
+          5.64,
+          0.55,
+          14.7,
+          50,
+          486,
+          15.7,
+          64.8,
+          5.57
+        ],
+        [
+          "S 15 x 42.9",
+          15,
+          5.501,
+          0.411,
+          12.6,
+          42.9,
+          447,
+          14.4,
+          59.6,
+          5.23
+        ],
+        [
+          "S 12 x 50",
+          12,
+          5.477,
+          0.687,
+          14.7,
+          50,
+          305,
+          15.7,
+          50.8,
+          5.74
+        ],
+        [
+          "S 12 x 40.8",
+          12,
+          5.252,
+          0.462,
+          12,
+          40.8,
+          272,
+          13.6,
+          45.4,
+          5.16
+        ],
+        [
+          "S 12 x 35",
+          12,
+          5.078,
+          0.428,
+          10.3,
+          35,
+          229,
+          9.87,
+          38.2,
+          3.89
+        ],
+        [
+          "S 12 x 31.8",
+          12,
+          5,
+          0.35,
+          9.35,
+          31.8,
+          218,
+          9.36,
+          36.4,
+          3.74
+        ],
+        [
+          "S 10 x 35",
+          10,
+          4.944,
+          0.594,
+          10.3,
+          35,
+          147,
+          8.36,
+          29.4,
+          3.38
+        ],
+        [
+          "S 10 x 25.4",
+          10,
+          4.661,
+          0.311,
+          7.46,
+          25.4,
+          124,
+          6.79,
+          24.7,
+          2.91
+        ],
+        [
+          "S 8 x 23",
+          8,
+          4.171,
+          0.441,
+          6.77,
+          23,
+          64.9,
+          4.31,
+          16.2,
+          2.07
+        ],
+        [
+          "S 8 x 18.4",
+          8,
+          4.001,
+          0.271,
+          5.41,
+          18.4,
+          57.6,
+          3.73,
+          14.4,
+          1.86
+        ],
+        [
+          "S 7 x 20",
+          7,
+          3.86,
+          0.45,
+          5.88,
+          20,
+          42.4,
+          3.17,
+          12.1,
+          1.64
+        ],
+        [
+          "S 7 x 15.3",
+          7,
+          3.662,
+          0.252,
+          4.5,
+          15.3,
+          36.7,
+          2.64,
+          10.5,
+          1.44
+        ],
+        [
+          "S 6 x 17.25",
+          6,
+          3.565,
+          0.465,
+          5.07,
+          17.25,
+          26.3,
+          2.31,
+          8.77,
+          1.3
+        ],
+        [
+          "S 6 x 12.5",
+          6,
+          3.332,
+          0.232,
+          3.67,
+          12.5,
+          22.1,
+          1.82,
+          7.37,
+          1.09
+        ],
+        [
+          "S 5 x 14.75",
+          5,
+          3.284,
+          0.494,
+          4.34,
+          14.75,
+          15.2,
+          1.67,
+          6.09,
+          1.01
+        ],
+        [
+          "S 5 x 10",
+          5,
+          3.004,
+          0.214,
+          2.94,
+          10,
+          12.3,
+          1.22,
+          4.92,
+          0.81
+        ],
+        [
+          "S 4 x 9.5",
+          4,
+          2.796,
+          0.326,
+          2.79,
+          9.5,
+          6.79,
+          0.903,
+          3.39,
+          0.65
+        ],
+        [
+          "S 4 x 7.7",
+          4,
+          2.663,
+          0.193,
+          2.26,
+          7.7,
+          6.08,
+          0.764,
+          3.04,
+          0.57
+        ],
+        [
+          "S 3 x 7.5",
+          3,
+          2.509,
+          0.349,
+          2.21,
+          7.5,
+          2.93,
+          0.586,
+          1.95,
+          0.47
+        ],
+        [
+          "S 3 x 5.7",
+          3,
+          2.33,
+          0.17,
+          1.67,
+          5.7,
+          2.52,
+          0.455,
+          1.68,
+          0.39
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "beam_calculator",
+      "content": "American Standard S Beam Calculator",
+      "inputs": [
+        {
+          "id": "beam_depth",
+          "label": "Beam Depth (h)",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 12
+        },
+        {
+          "id": "beam_width",
+          "label": "Flange Width (w)",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 5.477
+        },
+        {
+          "id": "web_thickness",
+          "label": "Web Thickness (s)",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 0.687
+        },
+        {
+          "id": "sectional_area",
+          "label": "Sectional Area",
+          "type": "number",
+          "unit": "in²",
+          "defaultValue": 14.7
+        },
+        {
+          "id": "moment_inertia_x",
+          "label": "Moment of Inertia - Ix",
+          "type": "number",
+          "unit": "in⁴",
+          "defaultValue": 305
+        },
+        {
+          "id": "moment_inertia_y",
+          "label": "Moment of Inertia - Iy",
+          "type": "number",
+          "unit": "in⁴",
+          "defaultValue": 15.7
+        },
+        {
+          "id": "section_modulus_x",
+          "label": "Section Modulus - Sx",
+          "type": "number",
+          "unit": "in³",
+          "defaultValue": 50.8
+        },
+        {
+          "id": "section_modulus_y",
+          "label": "Section Modulus - Sy",
+          "type": "number",
+          "unit": "in³",
+          "defaultValue": 5.74
+        }
+      ],
+      "outputs": [
+        {
+          "id": "bending_stress_x",
+          "label": "Maximum Bending Stress - X axis",
+          "formula": "inputs.moment_inertia_x * 1.5 / inputs.section_modulus_x",
+          "unit": "lbf/in²",
+          "format": "decimal"
+        },
+        {
+          "id": "bending_stress_y",
+          "label": "Maximum Bending Stress - Y axis",
+          "formula": "inputs.moment_inertia_y * 1.5 / inputs.section_modulus_y",
+          "unit": "lbf/in²",
+          "format": "decimal"
+        },
+        {
+          "id": "radius_gyration_x",
+          "label": "Radius of Gyration - rx",
+          "formula": "Math.sqrt(inputs.moment_inertia_x / inputs.sectional_area)",
+          "unit": "in",
+          "format": "decimal"
+        },
+        {
+          "id": "radius_gyration_y",
+          "label": "Radius of Gyration - ry",
+          "formula": "Math.sqrt(inputs.moment_inertia_y / inputs.sectional_area)",
+          "unit": "in",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "info",
+      "content": "## American Standard S Beams (ASTM A6)\n\n### Standard Specifications\n- **Units**: Imperial (inches, pounds)\n- **Cross Section**: I-shaped beam\n- **Standards**: ASTM A6\n\n### Common Applications\n- Building construction\n- Bridge construction\n- Industrial structures\n- Heavy-duty framing\n\n### Beam Designation\nBeams are specified by depth and weight per unit length (e.g., S 12 x 50):\n- **S**: Standard I-beam\n- **12**: Nominal depth in inches\n- **50**: Weight in pounds per foot\n\n### Key Parameters\n- **h**: Depth of the beam\n- **w**: Width of the flange\n- **s**: Web thickness\n- **Ix, Iy**: Moment of inertia about X and Y axes\n- **Sx, Sy**: Section modulus about X and Y axes\n\n### Unit Conversions\n- 1 in³ = 1.64 × 10⁴ mm³ = 16.4 cm³\n- 1 in⁴ = 4.16 × 10⁵ mm⁴ = 41.6 cm⁴"
+    }
+  ]
+}

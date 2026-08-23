@@ -1,0 +1,76 @@
+{
+  "id": "sound___reverberation_time",
+  "title": "Sound - Reverberation Time",
+  "description": "Calculate reverberation time in a room - the time it takes for sound pressure level to decrease by 60 dB after the sound source stops. Supports two formulas based on mean sound absorption coefficient.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "reverberation_calculator",
+      "content": "Reverberation Time Calculator",
+      "inputs": [
+        {
+          "id": "room_volume",
+          "label": "Room Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 4
+        },
+        {
+          "id": "total_absorption",
+          "label": "Total Sound Absorption",
+          "type": "number",
+          "unit": "m² Sabine",
+          "defaultValue": 12.2
+        },
+        {
+          "id": "mean_absorption_coefficient",
+          "label": "Mean Sound Absorption Coefficient (αm)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reverberation_time",
+          "label": "Reverberation Time (Ta)",
+          "unit": "s",
+          "format": "decimal",
+          "formula": "inputs.mean_absorption_coefficient <= 0.35 ? (0.16 * inputs.room_volume / inputs.total_absorption) : (0.16 * inputs.room_volume / ((inputs.total_absorption / inputs.mean_absorption_coefficient) * Math.log(1 / (1 - inputs.mean_absorption_coefficient))))"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "recommended_times_table",
+      "content": "Recommended Sound Reverberation Times for Typical Rooms",
+      "headers": [
+        "Room Type",
+        "Room Volume (m³): 10000",
+        "Room Volume (m³): 1000",
+        "Room Volume (m³): 100"
+      ],
+      "rows": [
+        [
+          "Conference room, school, cinema",
+          "1.0",
+          "0.8",
+          "0.6"
+        ],
+        [
+          "Concert Hall, Normal Music",
+          "1.5",
+          "1.3",
+          "1.1"
+        ],
+        [
+          "Church, Organ Music",
+          "2.0",
+          "1.6",
+          "1.2"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "pipe_velocity_calculator_with_flow_data___charts",
+  "title": "Pipe Velocity Calculator with Flow Data & Charts",
+  "description": "Calculate fluid flow velocity in circular pipes using Imperial and SI units. Supports calculations with volume flow rates and pipe inside diameters.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pipe Velocity Calculator with Flow Data & Charts\n\n## Imperial Units\n\nFluid flow velocity in a circular pipe can be calculated as:\n\n**v = 0.4084 × q_gpm / d_in²**\n\nWhere:\n- v = velocity (ft/s)\n- q_gpm = volume flow (US gal/min)\n- d_in = pipe inside diameter (inches)\n\n## SI Units\n\n**v = 1.273 × q / d²**\n\nWhere:\n- v = velocity (m/s)\n- q = volume flow (m³/s)\n- d = pipe inside diameter (m)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Imperial Units Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "flow_rate_gpm",
+          "label": "Volume Flow Rate",
+          "type": "number",
+          "unit": "gpm (US gal/min)",
+          "defaultValue": 60
+        },
+        {
+          "id": "pipe_diameter_inches",
+          "label": "Pipe Inside Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 3.83
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity_imperial",
+          "label": "Flow Velocity",
+          "formula": "0.4084 * inputs.flow_rate_gpm / (inputs.pipe_diameter_inches * inputs.pipe_diameter_inches)",
+          "unit": "ft/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "SI Units Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "flow_rate_m3s",
+          "label": "Volume Flow Rate",
+          "type": "number",
+          "unit": "m³/s",
+          "defaultValue": 0.00378
+        },
+        {
+          "id": "pipe_diameter_m",
+          "label": "Pipe Inside Diameter",
+          "type": "number",
+          "unit": "meters",
+          "defaultValue": 0.0972
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity_si",
+          "label": "Flow Velocity",
+          "formula": "1.273 * inputs.flow_rate_m3s / (inputs.pipe_diameter_m * inputs.pipe_diameter_m)",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Schedule",
+        "Nominal Size (in)",
+        "Inside Diameter (in)",
+        "Flow Rate (gpm)",
+        "Velocity (ft/s)"
+      ],
+      "rows": [
+        [
+          "Schedule 40",
+          "2",
+          "2.067",
+          "30",
+          "8.89"
+        ],
+        [
+          "Schedule 40",
+          "3",
+          "3.068",
+          "60",
+          "8.14"
+        ],
+        [
+          "Schedule 40",
+          "4",
+          "4.026",
+          "100",
+          "9.78"
+        ],
+        [
+          "Schedule 80",
+          "2",
+          "1.939",
+          "20",
+          "7.09"
+        ],
+        [
+          "Schedule 80",
+          "3",
+          "2.900",
+          "50",
+          "8.62"
+        ],
+        [
+          "Schedule 80",
+          "4",
+          "3.826",
+          "80",
+          "8.63"
+        ]
+      ]
+    }
+  ]
+}

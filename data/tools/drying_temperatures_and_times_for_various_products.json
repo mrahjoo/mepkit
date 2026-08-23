@@ -1,0 +1,188 @@
+{
+  "id": "drying_temperatures_and_times_for_various_products",
+  "title": "Drying Temperatures and Times for Various Products",
+  "description": "Drying temperature and time for products like food, coffee, fruits, lumber and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Drying Temperature (°C)",
+        "Drying Time (hr)"
+      ],
+      "rows": [
+        [
+          "Bedding",
+          "66 - 88",
+          ""
+        ],
+        [
+          "Cereals",
+          "43 - 66",
+          ""
+        ],
+        [
+          "Coconut",
+          "63 - 68",
+          "4 - 6"
+        ],
+        [
+          "Coffee",
+          "71 - 82",
+          "24"
+        ],
+        [
+          "Cores, oil sand",
+          "150",
+          "0.5"
+        ],
+        [
+          "Films, photo",
+          "32",
+          ""
+        ],
+        [
+          "Fish feed",
+          "70 - 110",
+          "0.5 - 1.5"
+        ],
+        [
+          "Fruits, vegetable",
+          "60",
+          "2 - 6"
+        ],
+        [
+          "Furs",
+          "43",
+          ""
+        ],
+        [
+          "Glue",
+          "21 - 32",
+          "2 - 4"
+        ],
+        [
+          "Glue size on furniture",
+          "54",
+          "4"
+        ],
+        [
+          "Gut",
+          "66",
+          ""
+        ],
+        [
+          "Gypsum wall board, start wet",
+          "175",
+          ""
+        ],
+        [
+          "Gypsum wall board, finish",
+          "88",
+          ""
+        ],
+        [
+          "Gypsum blocks",
+          "175 - 88",
+          "8 - 16"
+        ],
+        [
+          "Hair goods",
+          "66 - 88",
+          ""
+        ],
+        [
+          "Hats, felt",
+          "60 - 82",
+          ""
+        ],
+        [
+          "Hops",
+          "49 - 82",
+          ""
+        ],
+        [
+          "Hides, thin",
+          "32",
+          "2 - 4"
+        ],
+        [
+          "Ink, printing",
+          "21 - 150",
+          ""
+        ],
+        [
+          "Knitted fabrics",
+          "60 - 82",
+          ""
+        ],
+        [
+          "Leather, thick sole",
+          "32",
+          "4 - 6"
+        ],
+        [
+          "Lumber, green hardwood",
+          "38 - 82",
+          "3 - 180"
+        ],
+        [
+          "Lumber, green softwood",
+          "71 - 105",
+          "24 - 350"
+        ],
+        [
+          "Macaroni",
+          "32 - 43",
+          ""
+        ],
+        [
+          "Matches",
+          "60 - 82",
+          ""
+        ],
+        [
+          "Milk",
+          "120 - 150",
+          ""
+        ],
+        [
+          "Paper glued",
+          "54 - 150",
+          ""
+        ],
+        [
+          "Paper treated",
+          "60 - 93",
+          ""
+        ],
+        [
+          "Rubber",
+          "27 - 32",
+          "6 - 12"
+        ],
+        [
+          "Soap",
+          "52",
+          "12"
+        ],
+        [
+          "Sugar",
+          "66 - 93",
+          "0.3 - 0.5"
+        ],
+        [
+          "Tannin",
+          "120 - 150",
+          ""
+        ],
+        [
+          "Terracotta",
+          "66 - 93",
+          "12 - 96"
+        ]
+      ]
+    }
+  ]
+}

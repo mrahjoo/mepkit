@@ -1,0 +1,128 @@
+{
+  "id": "human_effort_levels___energy_and_heart_rates",
+  "title": "Human Effort Levels - Energy and Heart Rates",
+  "description": "Human work effort levels vs. energy expenditure and associated heart rates. Calculate energy expenditure in different units and understand heart rate ranges for various physical tasks.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Human Effort Levels\n\nSelect an effort level to view associated heart rate ranges, energy expenditure, and typical tasks."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "effort_level",
+          "label": "Effort Level",
+          "type": "select",
+          "options": [
+            {
+              "label": "Light",
+              "value": "light"
+            },
+            {
+              "label": "Moderate",
+              "value": "moderate"
+            },
+            {
+              "label": "Heavy",
+              "value": "heavy"
+            },
+            {
+              "label": "Very Heavy",
+              "value": "very_heavy"
+            },
+            {
+              "label": "Extremely Heavy",
+              "value": "extremely_heavy"
+            }
+          ]
+        },
+        {
+          "id": "energy_watts",
+          "label": "Energy Expenditure (Watts)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "W"
+        },
+        {
+          "id": "duration_hours",
+          "label": "Work Duration",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "hours"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "energy_btu",
+          "label": "Energy Expenditure (Btu/h)",
+          "formula": "inputs.energy_watts * 3.412",
+          "format": "decimal",
+          "unit": "Btu/h"
+        },
+        {
+          "id": "total_energy",
+          "label": "Total Energy Expenditure",
+          "formula": "inputs.energy_watts * inputs.duration_hours",
+          "format": "decimal",
+          "unit": "Wh"
+        },
+        {
+          "id": "total_energy_btu",
+          "label": "Total Energy Expenditure (Btu)",
+          "formula": "inputs.energy_watts * 3.412 * inputs.duration_hours",
+          "format": "decimal",
+          "unit": "Btu"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Effort Level",
+        "Heart Rate (bpm)",
+        "Energy Expenditure (W)",
+        "Work Duration Restriction",
+        "Typical Tasks"
+      ],
+      "rows": [
+        [
+          "Light",
+          "0 - 35",
+          "70 - 175",
+          "None",
+          "Riding bicycle at 10 km/h, canning paint, raking leaves, making drawings, machining light objects, sewing by hand"
+        ],
+        [
+          "Moderate",
+          "35 - 55",
+          "175 - 260",
+          "> 2 hours",
+          "Building brick wall, cleaning boiler, planing softwood, sheet-metal working, soldering, using screwdrivers, walking on level"
+        ],
+        [
+          "Heavy",
+          "55 - 75",
+          "260 - 420",
+          "< 1 to 2 hours",
+          "Digging trenches, using sledge-hammer, stoking furnace, metal grinding, walking up 5% gradient"
+        ],
+        [
+          "Very Heavy",
+          "75 - 90",
+          "420 - 700",
+          "< 1 to 2 hours",
+          "Shoveling sand, using jackhammer, stacking concrete blocks, stone masonry, climbing normal stairs"
+        ],
+        [
+          "Extremely Heavy",
+          "> 90",
+          "> 700",
+          "< 0.25 to 0.3 hours",
+          "Sawing wood, climbing vertical ladder"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "ev___electrical_vehicles_charging_speed__km_h_and_",
+  "title": "EV - Electrical Vehicles Charging Speed (km/h and mph)",
+  "description": "Calculate electric vehicle charging speed in km/h or mph based on charging power and energy consumption. Supports multiple calculation methods: power-based, voltage/current-based, and energy/time-based approaches.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## EV - Charging Speed Calculator\n\nCharging speed is calculated as: **c = P / E**\n\nWhere:\n- **c** = charging speed (km/h or miles/h)\n- **P** = charging power (kW)\n- **E** = energy consumption when driving (kWh/km or kWh/miles)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Method 1: Power-Based Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "power_kw",
+          "label": "Charging Power",
+          "type": "number",
+          "defaultValue": 45,
+          "unit": "kW"
+        },
+        {
+          "id": "energy_consumption_km",
+          "label": "Energy Consumption (per km)",
+          "type": "number",
+          "defaultValue": 0.2,
+          "unit": "kWh/km"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "charging_speed_kmh",
+          "label": "Charging Speed",
+          "formula": "inputs.power_kw / inputs.energy_consumption_km",
+          "unit": "km/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Method 2: Voltage and Current Based Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "voltage_v",
+          "label": "Voltage",
+          "type": "number",
+          "defaultValue": 240,
+          "unit": "V"
+        },
+        {
+          "id": "current_a",
+          "label": "Current (single phase)",
+          "type": "number",
+          "defaultValue": 32,
+          "unit": "A"
+        },
+        {
+          "id": "energy_consumption_km_2",
+          "label": "Energy Consumption (per km)",
+          "type": "number",
+          "defaultValue": 0.18,
+          "unit": "kWh/km"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_calculated",
+          "label": "Calculated Power",
+          "formula": "(inputs.voltage_v * inputs.current_a) / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "charging_speed_kmh_2",
+          "label": "Charging Speed",
+          "formula": "(inputs.voltage_v * inputs.current_a / 1000) / inputs.energy_consumption_km_2",
+          "unit": "km/h",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Method 3: Energy and Time Based Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "charged_energy_kwh",
+          "label": "Charged Energy",
+          "type": "number",
+          "defaultValue": 9,
+          "unit": "kWh"
+        },
+        {
+          "id": "charging_time_minutes",
+          "label": "Charging Time",
+          "type": "number",
+          "defaultValue": 13,
+          "unit": "minutes"
+        },
+        {
+          "id": "energy_consumption_km_3",
+          "label": "Energy Consumption (per km)",
+          "type": "number",
+          "defaultValue": 0.18,
+          "unit": "kWh/km"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "power_from_energy",
+          "label": "Calculated Power",
+          "formula": "(inputs.charged_energy_kwh / inputs.charging_time_minutes) * 60",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "charging_speed_kmh_3",
+          "label": "Charging Speed",
+          "formula": "((inputs.charged_energy_kwh / inputs.charging_time_minutes) * 60) / inputs.energy_consumption_km_3",
+          "unit": "km/h",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

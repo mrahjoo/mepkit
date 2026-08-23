@@ -1,0 +1,49 @@
+{
+  "id": "solving_equations_of_the_first_degree_with_one_unk",
+  "title": "Solving Equations of the First Degree with One Unknown",
+  "description": "Solver for first degree equations with one unknown. Equations can be expressed as a1*x + c1 = a2*x + c2, and solved to find x.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Solving First Degree Equations with One Unknown\n\nA first degree equation with one unknown can be expressed as:\n\n**a₁x + c₁ = a₂x + c₂**\n\nWhich can be rearranged to solve for x:\n\n**x = (c₂ - c₁) / (a₁ - a₂)**\n\n### Example\nFor the equation: 22x - 10 = 12x + 20\n- a₁ = 22, c₁ = -10\n- a₂ = 12, c₂ = 20\n- x = (20 - (-10)) / (22 - 12) = 30 / 10 = 3"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "a1",
+          "label": "a₁ (coefficient of x on left side)",
+          "type": "number",
+          "defaultValue": 22
+        },
+        {
+          "id": "c1",
+          "label": "c₁ (constant on left side)",
+          "type": "number",
+          "defaultValue": -10
+        },
+        {
+          "id": "a2",
+          "label": "a₂ (coefficient of x on right side)",
+          "type": "number",
+          "defaultValue": 12
+        },
+        {
+          "id": "c2",
+          "label": "c₂ (constant on right side)",
+          "type": "number",
+          "defaultValue": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "solution",
+          "label": "Solution (x)",
+          "formula": "(inputs.c2 - inputs.c1) / (inputs.a1 - inputs.a2)",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

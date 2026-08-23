@@ -1,0 +1,375 @@
+{
+  "id": "metals___latent_heat_of_melting",
+  "title": "Metals - Latent Heat of Melting",
+  "description": "Metals and their latent heat of fusion. The Latent Heat of Fusion is the heat supplied to a solid body at the melting point when it changes state from solid to liquid.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Latent Heat of Fusion Reference\n\nThe **Latent Heat of Fusion** is the heat supplied to a solid body at the melting point when it changes state from solid to liquid.\n\nLatent heat of fusion is calculated as:\n\n**L = 1000 × L_mol / A**\n\nWhere:\n- **L** = latent heat of fusion (kJ/kg)\n- **L_mol** = latent heat of fusion (kJ/mol)\n- **A** = atomic weight (g/mol)\n\nConversion: 1 kJ/kg = 0.23884 cal/g = 0.23884 kcal/kg = 0.4299 Btu/lbm"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Metal",
+        "Symbol",
+        "Atomic Weight (g/mol)",
+        "Latent Heat (kJ/mol)",
+        "Latent Heat (kJ/kg)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          "Al",
+          "27",
+          "10.7",
+          "396"
+        ],
+        [
+          "Antimony",
+          "Sb",
+          "122",
+          "19.7",
+          "161"
+        ],
+        [
+          "Beryllium",
+          "Be",
+          "9.1",
+          "7.95",
+          "1356"
+        ],
+        [
+          "Bismuth",
+          "Bi",
+          "209",
+          "10.9",
+          "52.2"
+        ],
+        [
+          "Cadmium",
+          "Cd",
+          "112",
+          "6.3",
+          "56"
+        ],
+        [
+          "Chromium",
+          "Cr",
+          "52.0",
+          "20.5",
+          "394"
+        ],
+        [
+          "Cobalt",
+          "Co",
+          "58.9",
+          "16.2",
+          "275"
+        ],
+        [
+          "Copper",
+          "Cu",
+          "63.5",
+          "13.1",
+          "206"
+        ],
+        [
+          "Gold",
+          "Au",
+          "197",
+          "12.5",
+          "63"
+        ],
+        [
+          "Iridium",
+          "Ir",
+          "192",
+          "26",
+          "135"
+        ],
+        [
+          "Iron",
+          "Fe",
+          "55.8",
+          "13.8",
+          "247"
+        ],
+        [
+          "Lead",
+          "Pb",
+          "207",
+          "4.77",
+          "23"
+        ],
+        [
+          "Magnesium",
+          "Mg",
+          "24.3",
+          "8.7",
+          "358"
+        ],
+        [
+          "Manganese",
+          "Mn",
+          "54.9",
+          "13.2",
+          "240"
+        ],
+        [
+          "Mercury",
+          "Hg",
+          "201",
+          "2.29",
+          "11.4"
+        ],
+        [
+          "Molybdenum",
+          "Mo",
+          "95.9",
+          "36",
+          "375"
+        ],
+        [
+          "Nickel",
+          "Ni",
+          "58.7",
+          "17.2",
+          "293"
+        ],
+        [
+          "Niobium",
+          "Nb",
+          "92.9",
+          "26.8",
+          "288"
+        ],
+        [
+          "Osmium",
+          "Os",
+          "190",
+          "31",
+          "163"
+        ],
+        [
+          "Platinum",
+          "Pt",
+          "195",
+          "20",
+          "103"
+        ],
+        [
+          "Potassium",
+          "K",
+          "39.1",
+          "2.33",
+          "56"
+        ],
+        [
+          "Rhodium",
+          "Rh",
+          "103",
+          "21.7",
+          "211"
+        ],
+        [
+          "Selenium",
+          "Se",
+          "79",
+          "5.4",
+          "68"
+        ],
+        [
+          "Silicon",
+          "Si",
+          "28.1",
+          "50.2",
+          "1787"
+        ],
+        [
+          "Silver",
+          "Ag",
+          "108",
+          "11.3",
+          "105"
+        ],
+        [
+          "Sodium",
+          "Na",
+          "23",
+          "2.6",
+          "113"
+        ],
+        [
+          "Tantalum",
+          "Ta",
+          "271",
+          "36",
+          "199"
+        ],
+        [
+          "Thorium",
+          "Th",
+          "232",
+          "16",
+          "69"
+        ],
+        [
+          "Tin",
+          "Sn",
+          "119",
+          "7",
+          "59"
+        ],
+        [
+          "Titanium",
+          "Ti",
+          "47.9",
+          "18.7",
+          "390"
+        ],
+        [
+          "Tungsten",
+          "W",
+          "184",
+          "35",
+          "190"
+        ],
+        [
+          "Uranium",
+          "U",
+          "238",
+          "14",
+          "59"
+        ],
+        [
+          "Vanadium",
+          "V",
+          "50.9",
+          "22.8",
+          "448"
+        ],
+        [
+          "Zinc",
+          "Zn",
+          "65.4",
+          "7.35",
+          "112"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Latent Heat of Melting by Metal",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "top": "15%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Al",
+            "Sb",
+            "Be",
+            "Bi",
+            "Cd",
+            "Cr",
+            "Co",
+            "Cu",
+            "Au",
+            "Ir",
+            "Fe",
+            "Pb",
+            "Mg",
+            "Mn",
+            "Hg",
+            "Mo",
+            "Ni",
+            "Nb",
+            "Os",
+            "Pt",
+            "K",
+            "Rh",
+            "Se",
+            "Si",
+            "Ag",
+            "Na",
+            "Ta",
+            "Th",
+            "Sn",
+            "Ti",
+            "W",
+            "U",
+            "V",
+            "Zn"
+          ],
+          "axisLabel": {
+            "rotate": 45
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Latent Heat (kJ/kg)"
+        },
+        "series": [
+          {
+            "name": "Latent Heat (kJ/kg)",
+            "data": [
+              396,
+              161,
+              1356,
+              52.2,
+              56,
+              394,
+              275,
+              206,
+              63,
+              135,
+              247,
+              23,
+              358,
+              240,
+              11.4,
+              375,
+              293,
+              288,
+              163,
+              103,
+              56,
+              211,
+              68,
+              1787,
+              105,
+              113,
+              199,
+              69,
+              59,
+              390,
+              190,
+              59,
+              448,
+              112
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

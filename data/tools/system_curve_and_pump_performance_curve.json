@@ -1,0 +1,86 @@
+{
+  "id": "system_curve_and_pump_performance_curve",
+  "title": "System Curve and Pump Performance Curve",
+  "description": "A calculator tool for analyzing system curves and pump performance curves. Calculate system head based on elevation difference and head losses, and determine the operating point where the system curve intersects the pump performance curve.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## System Head Calculation\n\nThe total system head is determined by the elevation head difference and the major/minor losses in the system:\n\n**h = dh + hl**\n\nWhere:\n- **h** = total system head (m)\n- **dh** = elevation (static) head difference (m)\n- **hl** = major and minor head loss (m)\n\nHead loss can be expressed as: **hl = k × q²**\n\nWhere:\n- **q** = flow rate\n- **k** = system characteristics constant"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "elevation_head_difference",
+          "label": "Elevation Head Difference (dh)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "system_loss_constant",
+          "label": "System Loss Constant (k)",
+          "type": "number",
+          "unit": "s²/m⁵",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate (q)",
+          "type": "number",
+          "unit": "m³/s",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "pump_shutoff_head",
+          "label": "Pump Shutoff Head (H₀)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 25
+        },
+        {
+          "id": "pump_performance_constant",
+          "label": "Pump Performance Constant",
+          "type": "number",
+          "unit": "s²/m⁵",
+          "defaultValue": 0.1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "head_loss",
+          "label": "Head Loss (hl)",
+          "formula": "inputs.system_loss_constant * inputs.flow_rate * inputs.flow_rate",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "total_system_head",
+          "label": "Total System Head (h)",
+          "formula": "inputs.elevation_head_difference + (inputs.system_loss_constant * inputs.flow_rate * inputs.flow_rate)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "pump_head_capacity",
+          "label": "Pump Head Capacity",
+          "formula": "inputs.pump_shutoff_head - (inputs.pump_performance_constant * inputs.flow_rate * inputs.flow_rate)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "head_margin",
+          "label": "Head Margin (Pump Head - System Head)",
+          "formula": "(inputs.pump_shutoff_head - (inputs.pump_performance_constant * inputs.flow_rate * inputs.flow_rate)) - (inputs.elevation_head_difference + (inputs.system_loss_constant * inputs.flow_rate * inputs.flow_rate))",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Parameters\n\n- **Elevation Head Difference (dh)**: The static head difference between inlet and outlet\n- **System Loss Constant (k)**: Describes total system characteristics including major and minor losses\n- **Flow Rate (q)**: Current volumetric flow rate through the system\n- **Pump Shutoff Head (H₀)**: The head produced when pump operates at zero flow\n- **Pump Performance Constant**: Describes the pump's performance characteristics\n\n## Operating Point\n\nThe operating point occurs where the system curve and pump curve intersect. At this point, the system head equals the pump head capacity."
+    }
+  ]
+}

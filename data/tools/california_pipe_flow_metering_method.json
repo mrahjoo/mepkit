@@ -1,0 +1,93 @@
+{
+  "id": "california_pipe_flow_metering_method",
+  "title": "California Pipe Flow Metering Method",
+  "description": "Calculate the discharge from partially filled horizontal pipes discharging freely into the air using the California Pipe Flow Metering Method. This empirical method applies to pipes with internal diameters between 3-10 inches.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# California Pipe Flow Metering Method\n\nThe discharge from the open end of partially filled horizontal pipes discharging freely into the air can be measured using the formula:\n\n**q = 8.69 (1 - a / d)^1.88 × d^2.48**\n\nWhere:\n- **q** = discharge (ft³/s)\n- **a** = distance from the top of the inside surface of the pipe to the water surface (ft)\n- **d** = internal diameter of pipe (ft)\n\nThis empirical equation is valid for pipes with internal diameters between 3-10 inches.\n\n### Unit Conversions\n- 1 mm = 0.00328 feet\n- 1 ft = 0.3048 m = 12 in = 30.48 cm = 304.8 mm\n- 1 ft³/s = 0.0283168 m³/s = 101.9 m³/h = 28.32 dm³/s = 448.9 gal (US)/min"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Imperial Units (feet)",
+        "Metric Units (mm)"
+      ],
+      "inputs": [
+        {
+          "id": "d_ft",
+          "label": "Internal Diameter of Pipe (d)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0.34
+        },
+        {
+          "id": "a_ft",
+          "label": "Distance to Water Surface (a)",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0.25
+        },
+        {
+          "id": "d_mm",
+          "label": "Internal Diameter of Pipe (d)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 103.6
+        },
+        {
+          "id": "a_mm",
+          "label": "Distance to Water Surface (a)",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 76.2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "q_ft3_s",
+          "label": "Discharge (q)",
+          "unit": "ft³/s",
+          "format": "decimal",
+          "formula": "8.69 * Math.pow((1 - inputs.a_ft / inputs.d_ft), 1.88) * Math.pow(inputs.d_ft, 2.48)"
+        },
+        {
+          "id": "q_m3_s",
+          "label": "Discharge (q)",
+          "unit": "m³/s",
+          "format": "decimal",
+          "formula": "8.69 * Math.pow((1 - inputs.a_ft / inputs.d_ft), 1.88) * Math.pow(inputs.d_ft, 2.48) * 0.0283168"
+        },
+        {
+          "id": "q_gal_min",
+          "label": "Discharge (q)",
+          "unit": "gal (US)/min",
+          "format": "decimal",
+          "formula": "8.69 * Math.pow((1 - inputs.a_ft / inputs.d_ft), 1.88) * Math.pow(inputs.d_ft, 2.48) * 448.9"
+        },
+        {
+          "id": "q_ft3_s_metric",
+          "label": "Discharge (q)",
+          "unit": "ft³/s",
+          "format": "decimal",
+          "formula": "8.69 * Math.pow((1 - (inputs.a_mm * 0.00328) / (inputs.d_mm * 0.00328)), 1.88) * Math.pow((inputs.d_mm * 0.00328), 2.48)"
+        },
+        {
+          "id": "q_m3_s_metric",
+          "label": "Discharge (q)",
+          "unit": "m³/s",
+          "format": "decimal",
+          "formula": "8.69 * Math.pow((1 - (inputs.a_mm * 0.00328) / (inputs.d_mm * 0.00328)), 1.88) * Math.pow((inputs.d_mm * 0.00328), 2.48) * 0.0283168"
+        },
+        {
+          "id": "q_gal_min_metric",
+          "label": "Discharge (q)",
+          "unit": "gal (US)/min",
+          "format": "decimal",
+          "formula": "8.69 * Math.pow((1 - (inputs.a_mm * 0.00328) / (inputs.d_mm * 0.00328)), 1.88) * Math.pow((inputs.d_mm * 0.00328), 2.48) * 448.9"
+        }
+      ]
+    }
+  ]
+}

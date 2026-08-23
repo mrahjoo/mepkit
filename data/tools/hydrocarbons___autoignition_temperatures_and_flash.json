@@ -1,0 +1,6 @@
+{
+  "id": "hydrocarbons___autoignition_temperatures_and_flash",
+  "title": "Hydrocarbons - Autoignition Temperatures and Flash Points",
+  "description": "Reference data for autoignition temperature (AIT) and flash point (FP) of different hydrocarbons. Autoignition temperature is the temperature at which a material spontaneously ignites in normal atmosphere. Flash point is the lowest temperature at which vapor can be ignited with an ignition source present.",
+  "type": "calculator-table"
+}

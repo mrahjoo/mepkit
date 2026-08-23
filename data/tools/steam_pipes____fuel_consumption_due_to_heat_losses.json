@@ -1,0 +1,148 @@
+{
+  "id": "steam_pipes____fuel_consumption_due_to_heat_losses",
+  "title": "Steam Pipes - Fuel Consumption due to Heat Losses over a Year",
+  "description": "Yearly heat loss in amount of coal or oil consumption for insulated and uninsulated steam pipes at different dimensions and operation times. Calculates fuel consumption based on steam pipe dimensions, heat loss values, and production hours.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Dimension (mm)",
+        "Heat Loss Uninsulated (W/m)",
+        "Heat Loss Insulated (W/m)",
+        "Production Time (hours)",
+        "Coal Consumption Uninsulated (kg/m)",
+        "Coal Consumption Insulated (kg/m)",
+        "Oil Consumption Uninsulated (kg/m)",
+        "Oil Consumption Insulated (kg/m)"
+      ],
+      "rows": [
+        [
+          25,
+          313,
+          2000,
+          119,
+          30,
+          59,
+          15
+        ],
+        [
+          25,
+          357,
+          6000,
+          89,
+          178,
+          45
+        ],
+        [
+          25,
+          505,
+          8400,
+          126,
+          253,
+          64
+        ],
+        [
+          32,
+          430,
+          2000,
+          166,
+          42,
+          82,
+          21
+        ],
+        [
+          32,
+          500,
+          6000,
+          125,
+          265,
+          62
+        ],
+        [
+          32,
+          699,
+          8400,
+          174,
+          349,
+          88
+        ],
+        [
+          50,
+          529,
+          2000,
+          202,
+          50,
+          101,
+          25
+        ],
+        [
+          50,
+          607,
+          6000,
+          152,
+          303,
+          76
+        ],
+        [
+          50,
+          755,
+          8400,
+          189,
+          378,
+          92
+        ],
+        [
+          80,
+          748,
+          2000,
+          297,
+          74,
+          149,
+          37
+        ],
+        [
+          80,
+          892,
+          6000,
+          223,
+          446,
+          111
+        ],
+        [
+          80,
+          1249,
+          8400,
+          312,
+          625,
+          156
+        ],
+        [
+          100,
+          940,
+          2000,
+          327,
+          82,
+          164,
+          42
+        ],
+        [
+          100,
+          981,
+          6000,
+          245,
+          491,
+          131
+        ],
+        [
+          100,
+          1517,
+          8400,
+          379,
+          758,
+          190
+        ]
+      ]
+    }
+  ]
+}

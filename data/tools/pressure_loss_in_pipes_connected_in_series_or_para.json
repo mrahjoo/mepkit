@@ -1,0 +1,79 @@
+{
+  "id": "pressure_loss_in_pipes_connected_in_series_or_para",
+  "title": "Pressure Loss in Pipes connected in Series or Parallel",
+  "description": "Calculate pressure loss in pipes connected in series or parallel. For series configuration, total pressure loss is the sum of individual losses and mass flow is constant. For parallel configuration, pressure loss is the same in all pipes and total mass flow is the sum of individual flows.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Pipes in Series\n\nFor pipes connected in series the pressure loss is the sum of the individual losses:\n\n**dp = dp1 + dp2 + ... + dpn**\n\nWhere:\n- dp = total pressure loss (Pa, psi)\n- dp1..n = individual pressure loss in each pipe (Pa, psi)\n- m = m1 = m2 = ... = mn (mass flow rate is constant)\n\n## Pipes in Parallel\n\nFor pipes connected in parallel the pressure loss is the same in all pipes:\n\n**dp = dp1 = dp2 = ... = dpn**\n\nThe total mass flow is the sum of the flow in each pipe:\n\n**m = m1 + m2 + ... + mn**\n\nWhere:\n- dp = pressure loss (Pa, psi)\n- m = total mass flow (kg/s, lb/s)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Series Configuration",
+        "Parallel Configuration"
+      ],
+      "inputs": [
+        {
+          "id": "dp1_series",
+          "label": "Pressure Loss Pipe 1 (Series)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 100
+        },
+        {
+          "id": "dp2_series",
+          "label": "Pressure Loss Pipe 2 (Series)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 150
+        },
+        {
+          "id": "dp3_series",
+          "label": "Pressure Loss Pipe 3 (Series)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 0
+        },
+        {
+          "id": "m1_parallel",
+          "label": "Mass Flow Pipe 1 (Parallel)",
+          "type": "number",
+          "unit": "kg/s",
+          "defaultValue": 1.5
+        },
+        {
+          "id": "m2_parallel",
+          "label": "Mass Flow Pipe 2 (Parallel)",
+          "type": "number",
+          "unit": "kg/s",
+          "defaultValue": 2
+        },
+        {
+          "id": "m3_parallel",
+          "label": "Mass Flow Pipe 3 (Parallel)",
+          "type": "number",
+          "unit": "kg/s",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dp_total_series",
+          "label": "Total Pressure Loss (Series)",
+          "formula": "inputs.dp1_series + inputs.dp2_series + inputs.dp3_series",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "m_total_parallel",
+          "label": "Total Mass Flow (Parallel)",
+          "formula": "inputs.m1_parallel + inputs.m2_parallel + inputs.m3_parallel",
+          "unit": "kg/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

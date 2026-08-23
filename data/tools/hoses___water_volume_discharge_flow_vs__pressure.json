@@ -1,0 +1,143 @@
+{
+  "id": "hoses___water_volume_discharge_flow_vs__pressure",
+  "title": "Hoses - Water Volume Discharge Flow vs. Pressure",
+  "description": "Water discharge through hoses - pressure ranging 10 - 200 psi (0.75 - 14 bar). Calculate water flow discharge rates based on hose diameter and pressure.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Water Discharge Through Hoses\n\nWater discharge through hoses at various pressures and hose diameters.\n\n**Imperial Units:** Water discharge through 100 feet hoses at pressures ranging 10 - 200 psi\n\n**Metric Units:** Water discharge through 30 m hoses at pressures ranging 0.75 - 14 bar\n\n### Conversion Factors\n- 1 psi = 6.9 kPa = 0.069 bar\n- 1 ft (foot) = 0.3048 m\n- 1 gal (US)/min = 6.30888×10⁻⁵ m³/s = 0.227 m³/h"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Hose Nominal Diameter (inches)",
+        "Internal Diameter (inches)"
+      ],
+      "rows": [
+        [
+          "1/8",
+          0.125
+        ],
+        [
+          "3/16",
+          0.1875
+        ],
+        [
+          "1/4",
+          0.25
+        ],
+        [
+          "5/16",
+          0.3125
+        ],
+        [
+          "3/8",
+          0.375
+        ],
+        [
+          "7/16",
+          0.4375
+        ],
+        [
+          "1/2",
+          0.5
+        ],
+        [
+          "5/8",
+          0.625
+        ],
+        [
+          "3/4",
+          0.75
+        ],
+        [
+          "7/8",
+          0.875
+        ],
+        [
+          "1",
+          1
+        ],
+        [
+          "1 1/4",
+          1.25
+        ],
+        [
+          "1 1/2",
+          1.5
+        ],
+        [
+          "2",
+          2
+        ],
+        [
+          "2 1/2",
+          2.5
+        ],
+        [
+          "3",
+          3
+        ],
+        [
+          "3 1/2",
+          3.5
+        ],
+        [
+          "4",
+          4
+        ],
+        [
+          "5",
+          5
+        ],
+        [
+          "6",
+          6
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "hose_diameter",
+          "label": "Hose Internal Diameter",
+          "type": "number",
+          "defaultValue": 0.5,
+          "unit": "inches"
+        },
+        {
+          "id": "pressure_psi",
+          "label": "Water Pressure",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "psi"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_rate_gpm",
+          "label": "Flow Rate (GPM)",
+          "formula": "inputs.hose_diameter * inputs.hose_diameter * inputs.pressure_psi * 0.55",
+          "unit": "gal/min",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_bar",
+          "label": "Pressure in Bar",
+          "formula": "inputs.pressure_psi * 0.069",
+          "unit": "bar",
+          "format": "decimal"
+        },
+        {
+          "id": "flow_rate_liter_per_second",
+          "label": "Flow Rate (L/s)",
+          "formula": "inputs.flow_rate_gpm * 0.0631",
+          "unit": "L/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

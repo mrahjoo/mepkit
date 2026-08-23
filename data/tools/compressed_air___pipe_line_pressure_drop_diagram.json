@@ -1,0 +1,89 @@
+{
+  "id": "compressed_air___pipe_line_pressure_drop_diagram",
+  "title": "Compressed Air - Pipe Line Pressure Drop Diagram",
+  "description": "Calculate pressure drop in compressed air pipe lines with a nomograph diagram. This tool helps estimate pressure drop based on pipe length, air flow volume, pipe diameter, and working pressure.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Compressed Air Pipe Line Pressure Drop Calculator\n\nUse this calculator to estimate pressure drop in compressed air pipe lines based on the nomograph diagram method.\n\n### How to Use:\n1. Enter the pipe length in meters\n2. Enter the air flow volume in liters per second\n3. Enter the inside pipe diameter in millimeters\n4. Enter the working pressure in bar gauge\n5. The pressure drop will be estimated based on nomograph principles\n\n### Reference Example:\n- Pipe Length: 100 m\n- Air Flow: 500 l/s\n- Inside Diameter: 100 mm\n- Working Pressure: 9 bar gauge\n- **Estimated Pressure Drop: 0.07 bar**"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        },
+        {
+          "id": "air_flow",
+          "label": "Air Flow Volume",
+          "type": "number",
+          "unit": "l/s",
+          "defaultValue": 500
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Inside Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 100
+        },
+        {
+          "id": "working_pressure",
+          "label": "Working Pressure",
+          "type": "number",
+          "unit": "bar gauge",
+          "defaultValue": 9
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_drop",
+          "label": "Pressure Drop",
+          "unit": "bar",
+          "formula": "(inputs.pipe_length * inputs.air_flow) / (inputs.pipe_diameter * inputs.pipe_diameter * inputs.working_pressure) * 0.001",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Pipe Length",
+          "inputs.pipe_length",
+          "m"
+        ],
+        [
+          "Air Flow Volume",
+          "inputs.air_flow",
+          "l/s"
+        ],
+        [
+          "Inside Pipe Diameter",
+          "inputs.pipe_diameter",
+          "mm"
+        ],
+        [
+          "Working Pressure",
+          "inputs.working_pressure",
+          "bar gauge"
+        ],
+        [
+          "Estimated Pressure Drop",
+          "outputs.pressure_drop",
+          "bar"
+        ]
+      ]
+    }
+  ]
+}

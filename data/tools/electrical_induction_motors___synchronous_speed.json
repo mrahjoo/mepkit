@@ -1,0 +1,149 @@
+{
+  "id": "electrical_induction_motors___synchronous_speed",
+  "title": "Electrical Induction Motors - Synchronous Speed",
+  "description": "Calculate the synchronous speed of an induction motor based on power supply frequency and number of poles. The synchronous speed is determined by the formula: n = f (2 / p) 60, where n is shaft rotation speed (rpm), f is frequency (Hz), and p is the number of poles.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "synchronous_speed_calculator",
+      "content": "Synchronous Speed Calculator",
+      "headers": [
+        "Input",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "frequency",
+          "label": "Frequency",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "Hz"
+        },
+        {
+          "id": "poles",
+          "label": "Number of Poles",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "poles"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "synchronous_speed",
+          "label": "Synchronous Speed",
+          "formula": "inputs.frequency * (2 / inputs.poles) * 60",
+          "unit": "rpm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "synchronous_speed_table",
+      "content": "Synchronous Speed Reference Table",
+      "headers": [
+        "Frequency (Hz)",
+        "2 Poles (rpm)",
+        "4 Poles (rpm)",
+        "6 Poles (rpm)",
+        "8 Poles (rpm)",
+        "10 Poles (rpm)",
+        "12 Poles (rpm)"
+      ],
+      "rows": [
+        [
+          10,
+          600,
+          300,
+          200,
+          150,
+          120,
+          100
+        ],
+        [
+          20,
+          1200,
+          600,
+          400,
+          300,
+          240,
+          200
+        ],
+        [
+          30,
+          1800,
+          900,
+          600,
+          450,
+          360,
+          300
+        ],
+        [
+          40,
+          2400,
+          1200,
+          800,
+          600,
+          480,
+          400
+        ],
+        [
+          50,
+          3000,
+          1500,
+          1000,
+          750,
+          600,
+          500
+        ],
+        [
+          60,
+          3600,
+          1800,
+          1200,
+          900,
+          720,
+          600
+        ],
+        [
+          70,
+          4200,
+          2100,
+          1400,
+          1050,
+          840,
+          700
+        ],
+        [
+          80,
+          4800,
+          2400,
+          1600,
+          1200,
+          960,
+          800
+        ],
+        [
+          90,
+          5400,
+          2700,
+          1800,
+          1350,
+          1080,
+          900
+        ],
+        [
+          100,
+          6000,
+          3000,
+          2000,
+          1500,
+          1200,
+          1000
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "id": "ball_valves___flow_coefficients_cv",
+  "title": "Ball Valves - Flow Coefficients Cv",
+  "description": "Flow coefficients - Cv - for typical ball valves - reduced and full bore. A conventional ball valve is normally not used as a throttling valve since a partial flow will create high velocity flow tear at the ball and the seal. These values are suitable for estimates only.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Valve Type",
+        "Valve Size (inches)",
+        "Valve Size (mm)",
+        "Flow Coefficient Cv"
+      ],
+      "rows": [
+        [
+          "Full Bore",
+          "1/2",
+          "12",
+          "26"
+        ],
+        [
+          "Full Bore",
+          "3/4",
+          "19",
+          "50"
+        ],
+        [
+          "Full Bore",
+          "1",
+          "25",
+          "94"
+        ],
+        [
+          "Full Bore",
+          "1 1/2",
+          "37.5",
+          "260"
+        ],
+        [
+          "Full Bore",
+          "2",
+          "50",
+          "480"
+        ],
+        [
+          "Full Bore",
+          "2 1/2",
+          "62.5",
+          "750"
+        ],
+        [
+          "Full Bore",
+          "3",
+          "75",
+          "1300"
+        ],
+        [
+          "Full Bore",
+          "4",
+          "100",
+          "2300"
+        ],
+        [
+          "Full Bore",
+          "6",
+          "150",
+          "5400"
+        ],
+        [
+          "Full Bore",
+          "8",
+          "200",
+          "10000"
+        ],
+        [
+          "Full Bore",
+          "10",
+          "250",
+          "16000"
+        ],
+        [
+          "Full Bore",
+          "12",
+          "300",
+          "24000"
+        ],
+        [
+          "Full Bore",
+          "14",
+          "350",
+          "31400"
+        ],
+        [
+          "Full Bore",
+          "16",
+          "400",
+          "43000"
+        ],
+        [
+          "Full Bore",
+          "18",
+          "450",
+          "57000"
+        ],
+        [
+          "Reduced Bore",
+          "3",
+          "75",
+          "420"
+        ],
+        [
+          "Reduced Bore",
+          "4",
+          "100",
+          "770"
+        ],
+        [
+          "Reduced Bore",
+          "6",
+          "150",
+          "1800"
+        ],
+        [
+          "Reduced Bore",
+          "8",
+          "200",
+          "2500"
+        ],
+        [
+          "Reduced Bore",
+          "10",
+          "250",
+          "4500"
+        ],
+        [
+          "Reduced Bore",
+          "12",
+          "300",
+          "8000"
+        ],
+        [
+          "Reduced Bore",
+          "14",
+          "350",
+          "12000"
+        ],
+        [
+          "Reduced Bore",
+          "16",
+          "400",
+          "14000"
+        ],
+        [
+          "Reduced Bore",
+          "18",
+          "450",
+          "18000"
+        ],
+        [
+          "Reduced Bore",
+          "20",
+          "500",
+          "22000"
+        ]
+      ]
+    }
+  ]
+}

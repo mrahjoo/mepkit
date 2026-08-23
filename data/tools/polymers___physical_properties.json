@@ -1,0 +1,152 @@
+{
+  "id": "polymers___physical_properties",
+  "title": "Polymers - Physical Properties",
+  "description": "Densities, tensile strength, elongation, Young's modulus and Brinell hardness of common plastic materials including thermoplastics and thermosets.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Physical Properties of Polymers\n\nThis tool provides physical properties data for common plastic materials including thermoplastics and thermosets.\n\n### Properties Included:\n- **Density (ρ)** - kg/m³\n- **Tensile Strength (σ)** - MPa\n- **Elongation** - %\n- **Young's Modulus (E)** - GPa\n- **Brinell Hardness Number**"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Polymer",
+        "Type",
+        "Density (kg/m³)",
+        "Tensile Strength (MPa)",
+        "Elongation (%)",
+        "Young's Modulus (GPa)",
+        "Brinell Hardness"
+      ],
+      "rows": [
+        [
+          "Acrylic (metacrylate)",
+          "Thermoplastic",
+          "1190",
+          "74",
+          "6",
+          "3.0",
+          "34"
+        ],
+        [
+          "Cellulose Acetate",
+          "Thermoplastic",
+          "1300",
+          "40",
+          "10 - 60",
+          "1.4",
+          "12"
+        ],
+        [
+          "Cellulose Nitrate",
+          "Thermoplastic",
+          "1350",
+          "48",
+          "40",
+          "1.4",
+          "10"
+        ],
+        [
+          "Nylon",
+          "Thermoplastic",
+          "1160",
+          "60",
+          "90",
+          "2.4",
+          "10"
+        ],
+        [
+          "Polyethylene",
+          "Thermoplastic",
+          "950",
+          "20 - 30",
+          "20 - 100",
+          "0.7",
+          "2"
+        ],
+        [
+          "Polypropylene",
+          "Thermoplastic",
+          "900",
+          "27",
+          "200 - 700",
+          "1.3",
+          "10"
+        ],
+        [
+          "Polystyrene",
+          "Thermoplastic",
+          "1050",
+          "48",
+          "3",
+          "3.4",
+          "25"
+        ],
+        [
+          "PTFE (fluoropolymer)",
+          "Thermoplastic",
+          "2100",
+          "13",
+          "100",
+          "0.3",
+          "-"
+        ],
+        [
+          "PVC",
+          "Thermoplastic",
+          "1330",
+          "48",
+          "200",
+          "3.4",
+          "20"
+        ],
+        [
+          "Acetals, glass filled",
+          "Thermoset",
+          "1600",
+          "58 - 75",
+          "2 - 7",
+          "7",
+          "27"
+        ],
+        [
+          "Epoxy resin, glass filled",
+          "Thermoset",
+          "1600 - 2000",
+          "68 - 200",
+          "4",
+          "20",
+          "38"
+        ],
+        [
+          "Melamine formaldehyde, fabric filled",
+          "Thermoset",
+          "1800 - 2000",
+          "60 - 90",
+          "-",
+          "7",
+          "38"
+        ],
+        [
+          "Phenol formaldehyde, mica filled",
+          "Thermoset",
+          "1600 - 1900",
+          "38 - 50",
+          "0.5",
+          "17 - 35",
+          "36"
+        ],
+        [
+          "Urea formaldehyde, cellulose filled",
+          "Thermoset",
+          "1500",
+          "38 - 90",
+          "1",
+          "7 - 10",
+          "51"
+        ]
+      ]
+    }
+  ]
+}

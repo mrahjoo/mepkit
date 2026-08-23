@@ -1,0 +1,104 @@
+{
+  "id": "area_survey_app",
+  "title": "Area Survey App",
+  "description": "Use this application to make an exact plot of a room, a property or any two dimensional area. Measure distances and angles, calculate side lengths, diagonals and angles. Export the plot to Sketchup or other CAD systems.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## How to Use\n\n1. Make the reference line A - B (a virtual or physical line between two points)\n2. Measure the distance A - B\n3. Mark measure points clockwise from 1 to 9\n4. Measure distances from control points A and B to each measure point\n5. Click Calculate to generate the survey plot\n\n**Plot Colors:**\n- Control line A - B: **black**\n- Measured lines: **purple**\n- Calculated sides and angles: **red**\n- Calculated diagonals: **green**"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Distance between Control Points"
+      ],
+      "inputs": [
+        {
+          "id": "ab_distance",
+          "label": "A - B Distance",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "m, mm, ft, in (specify your unit)"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ab_distance_output",
+          "label": "Control Line A - B",
+          "formula": "inputs.ab_distance",
+          "unit": "units"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Point",
+        "Distance from A",
+        "Distance from B",
+        "Below A-B"
+      ],
+      "rows": [
+        [
+          "1",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "",
+          "",
+          ""
+        ],
+        [
+          "4",
+          "",
+          "",
+          ""
+        ],
+        [
+          "5",
+          "",
+          "",
+          ""
+        ],
+        [
+          "6",
+          "",
+          "",
+          ""
+        ],
+        [
+          "7",
+          "",
+          "",
+          ""
+        ],
+        [
+          "8",
+          "",
+          "",
+          ""
+        ],
+        [
+          "9",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Calculated Results\n\nAfter entering your measurements and clicking Calculate, the following will be computed:\n\n- **Calculated Angles**: Internal angles at each measured point\n- **Calculated Sides**: Side lengths connecting consecutive points\n- **Calculated Diagonals**: Diagonal distances across the surveyed area\n\n## Export Options\n\n**Sketchup Export**: Copy the Cartesian x,y coordinates to paste into the Engineering ToolBox extension \"Lines made from Custom Points\"\n\n**SVG File**: Export as SVG format for use with drawing, CAD and web applications\n\n**CAD Compatible**: Plain Cartesian coordinates can be transferred to almost any CAD system"
+    }
+  ]
+}

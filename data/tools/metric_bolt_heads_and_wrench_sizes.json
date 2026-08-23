@@ -1,0 +1,111 @@
+{
+  "id": "metric_bolt_heads_and_wrench_sizes",
+  "title": "Metric Bolt Heads and Wrench Sizes",
+  "description": "ANSI/ISO, DIN and JIS metric bolt head and wrench sizes reference table. Includes spanner/wrench sizes and Allen key dimensions for metric bolts.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "ISO Metric Threaded Bolt (mm)",
+        "ANSI/ISO Spanner Size (mm)",
+        "DIN Spanner Size (mm)",
+        "JIS Spanner Size (mm)",
+        "ANSI/ISO Allen Key (mm)"
+      ],
+      "rows": [
+        [
+          3,
+          5.5,
+          "",
+          "",
+          ""
+        ],
+        [
+          4,
+          7,
+          7,
+          7,
+          ""
+        ],
+        [
+          5,
+          8,
+          8,
+          8,
+          4
+        ],
+        [
+          6,
+          10,
+          10,
+          10,
+          5
+        ],
+        [
+          7,
+          "",
+          11,
+          "",
+          ""
+        ],
+        [
+          8,
+          13,
+          13,
+          12,
+          6
+        ],
+        [
+          10,
+          "15, 16",
+          17,
+          14,
+          8
+        ],
+        [
+          12,
+          18,
+          19,
+          17,
+          10
+        ],
+        [
+          14,
+          21,
+          22,
+          19,
+          ""
+        ],
+        [
+          16,
+          24,
+          24,
+          22,
+          14
+        ],
+        [
+          18,
+          "",
+          27,
+          "",
+          ""
+        ],
+        [
+          20,
+          30,
+          30,
+          "",
+          17
+        ],
+        [
+          24,
+          36,
+          "",
+          "",
+          19
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "radians_vs__degrees____definition_and_conversions",
+  "title": "Radians vs. Degrees - Definition and Conversions",
+  "description": "Convert between radians and degrees, and explore angular velocity conversions including RPM to rad/s and deg/s",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Degrees",
+        "Radians (Decimal)",
+        "Radians (Expression)"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          "0"
+        ],
+        [
+          15,
+          0.26,
+          "π/12"
+        ],
+        [
+          30,
+          0.52,
+          "π/6"
+        ],
+        [
+          45,
+          0.79,
+          "π/4"
+        ],
+        [
+          60,
+          1.05,
+          "π/3"
+        ],
+        [
+          75,
+          1.31,
+          "5π/12"
+        ],
+        [
+          90,
+          1.57,
+          "π/2"
+        ],
+        [
+          180,
+          3.14,
+          "π"
+        ],
+        [
+          270,
+          4.71,
+          "3π/2"
+        ],
+        [
+          360,
+          6.28,
+          "2π"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Revolutions (rpm)",
+        "Angular Velocity (rad/s)",
+        "Angular Velocity (deg/s)"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          1,
+          60
+        ],
+        [
+          20,
+          2.1,
+          120
+        ],
+        [
+          30,
+          3.1,
+          180
+        ],
+        [
+          40,
+          4.2,
+          240
+        ],
+        [
+          50,
+          5.2,
+          300
+        ],
+        [
+          60,
+          6.3,
+          360
+        ],
+        [
+          70,
+          7.3,
+          420
+        ],
+        [
+          80,
+          8.4,
+          480
+        ],
+        [
+          90,
+          9.4,
+          540
+        ],
+        [
+          100,
+          10.5,
+          600
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "degrees_input",
+          "label": "Degrees",
+          "type": "number",
+          "defaultValue": 45,
+          "unit": "°"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "radians_output",
+          "label": "Radians",
+          "formula": "inputs.degrees_input * 0.01745",
+          "unit": "rad"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "radians_input",
+          "label": "Radians",
+          "type": "number",
+          "defaultValue": 3.14159,
+          "unit": "rad"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "degrees_output",
+          "label": "Degrees",
+          "formula": "inputs.radians_input * 57.29578",
+          "unit": "°"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "rpm_input",
+          "label": "Revolutions per Minute (RPM)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "rpm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "rad_per_s_output",
+          "label": "Angular Velocity (rad/s)",
+          "formula": "inputs.rpm_input * 0.10472",
+          "unit": "rad/s"
+        },
+        {
+          "id": "deg_per_s_output",
+          "label": "Angular Velocity (deg/s)",
+          "formula": "inputs.rpm_input * 6",
+          "unit": "deg/s"
+        }
+      ]
+    }
+  ]
+}

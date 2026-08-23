@@ -1,0 +1,47 @@
+{
+  "id": "cen___the_european_committee_for_standardization",
+  "title": "CEN - The European Committee for Standardization",
+  "description": "The European Committee for Standardization (CEN) contributes to the objectives of the European Union and European Economic Area with voluntary technical standards that promote free trade, worker and consumer safety, network interoperability, environmental protection, and research development.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Standard Type",
+        "Description",
+        "Example",
+        "Status"
+      ],
+      "rows": [
+        [
+          "European Standard (EN)",
+          "Voluntary technical standard produced by CEN",
+          "EN 10255:2004 - Non-alloy steel tubes suitable for welding or threading",
+          "Published"
+        ],
+        [
+          "National Implementation",
+          "Standards implemented by national standards bodies of EU and EFTA member countries",
+          "BS EN 10255:2004 (BSi - United Kingdom), DIN EN 10255:2004 (DIN - Germany)",
+          "Adopted"
+        ],
+        [
+          "Coverage",
+          "Standards promote free trade, safety, interoperability, environmental protection, and research",
+          "All sectors requiring standardization",
+          "Active"
+        ],
+        [
+          "Technical Requirements",
+          "Main text remains unchanged across all member countries; translated to national language",
+          "Identical technical requirements in all implementations",
+          "Consistent"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## About CEN\n\nCEN (The European Committee for Standardization) is an organization that develops and publishes European standards. These standards are mandatory for implementation by national standards bodies in all EU and EFTA member countries.\n\n### Key Functions:\n- Develops voluntary technical standards\n- Promotes free trade across Europe\n- Ensures worker and consumer safety\n- Facilitates network interoperability\n- Supports environmental protection\n- Supports research and development programs\n- Facilitates public procurement\n\n### Standard Implementation:\nWhen a European standard is published by a national standards body, it receives a national reference prefix (e.g., BS for British Standards, DIN for German standards) while maintaining the original EN number and identical technical requirements.\n\n### Organization Website:\n[CEN Official Website](http://www.cenorm.be/)"
+    }
+  ]
+}

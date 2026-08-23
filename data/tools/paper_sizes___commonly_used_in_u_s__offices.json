@@ -1,0 +1,246 @@
+{
+  "id": "paper_sizes___commonly_used_in_u_s__offices",
+  "title": "Paper Sizes - commonly used in U.S. Offices",
+  "description": "Office paper sizes commonly used in the United States and Canada, including Letter, Legal, Tabloid, and other formats defined in the American National Standard ANSI X3.151.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Paper Size Name",
+        "Size (mm)",
+        "Size (inches)"
+      ],
+      "rows": [
+        [
+          "Commercial writing (Letter)",
+          "216 x 279",
+          "8.5 x 11"
+        ],
+        [
+          "Denny",
+          "406 x 533",
+          "16 x 21"
+        ],
+        [
+          "Elephant",
+          "584 x 712",
+          "23 x 28"
+        ],
+        [
+          "Executive",
+          "184.2 x 266.7",
+          "7 × 10"
+        ],
+        [
+          "Folio",
+          "432 x 559",
+          "17 x 22"
+        ],
+        [
+          "Folio F4",
+          "210 x 330",
+          "8 x 13"
+        ],
+        [
+          "Folio note",
+          "140 x 215",
+          "5.5 x 8.5"
+        ],
+        [
+          "Foolscap",
+          "305 x 406",
+          "12 x 16"
+        ],
+        [
+          "Foolscap E",
+          "203 x 330",
+          "8 x 13"
+        ],
+        [
+          "Half Letter (Half Sheet)",
+          "139.7 x 215.9",
+          "4 x 6"
+        ],
+        [
+          "Imperial",
+          "584 x 787",
+          "23 x 31"
+        ],
+        [
+          "Index Card 5 x 8",
+          "127 x 203",
+          "5 x 8"
+        ],
+        [
+          "Ledger, ANSI B",
+          "279.4 x 431.8",
+          "11 x 17"
+        ],
+        [
+          "Legal",
+          "215.9 x 355.6",
+          "8.5 x 14"
+        ],
+        [
+          "Legal cap",
+          "216 x 356",
+          "8.5 x 14"
+        ],
+        [
+          "Letter, U.S. A, ANSI A",
+          "215.9 x 279.4",
+          "8.5 x 11"
+        ],
+        [
+          "Pocket note",
+          "152 x 241",
+          "6 x 9.5"
+        ],
+        [
+          "Photo 4 x 6",
+          "102 x 152",
+          "4 x 6"
+        ],
+        [
+          "Royal",
+          "483 x 700",
+          "5.5 x 8.5"
+        ],
+        [
+          "Super royal",
+          "508 x 712",
+          "20 x 28"
+        ],
+        [
+          "Tabloid, U.S. B, ANSI B",
+          "279.4 x 431.8",
+          "11 x 17"
+        ],
+        [
+          "U.S. government writing (before 1980)",
+          "203 x 267",
+          "8 x 10.5"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "paper_width_inches",
+          "label": "Paper Width",
+          "type": "number",
+          "defaultValue": 8.5,
+          "unit": "inches"
+        },
+        {
+          "id": "paper_height_inches",
+          "label": "Paper Height",
+          "type": "number",
+          "defaultValue": 11,
+          "unit": "inches"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "width_mm",
+          "label": "Width (mm)",
+          "formula": "inputs.paper_width_inches * 25.4",
+          "format": "decimal",
+          "unit": "mm"
+        },
+        {
+          "id": "height_mm",
+          "label": "Height (mm)",
+          "formula": "inputs.paper_height_inches * 25.4",
+          "format": "decimal",
+          "unit": "mm"
+        },
+        {
+          "id": "area_sq_inches",
+          "label": "Area",
+          "formula": "inputs.paper_width_inches * inputs.paper_height_inches",
+          "format": "decimal",
+          "unit": "sq. inches"
+        },
+        {
+          "id": "area_sq_mm",
+          "label": "Area",
+          "formula": "(inputs.paper_width_inches * 25.4) * (inputs.paper_height_inches * 25.4)",
+          "format": "decimal",
+          "unit": "sq. mm"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Paper Sizes Comparison",
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Letter",
+            "Legal",
+            "Tabloid",
+            "Executive",
+            "Folio",
+            "Half Letter",
+            "Index Card"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Width (inches)",
+            "position": "left"
+          },
+          {
+            "type": "value",
+            "name": "Height (inches)",
+            "position": "right"
+          }
+        ],
+        "series": [
+          {
+            "name": "Width (inches)",
+            "data": [
+              8.5,
+              8.5,
+              11,
+              7,
+              17,
+              4,
+              5
+            ],
+            "type": "bar",
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Height (inches)",
+            "data": [
+              11,
+              14,
+              17,
+              10,
+              22,
+              6,
+              8
+            ],
+            "type": "bar",
+            "yAxisIndex": 1
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Width (inches)",
+            "Height (inches)"
+          ]
+        }
+      }
+    }
+  ]
+}

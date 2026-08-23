@@ -1,0 +1,158 @@
+{
+  "id": "sandpapers___grit_sizes",
+  "title": "Sandpapers - Grit Sizes",
+  "description": "Grit sizes ranging 12 - 2500. Reference guide for sandpaper grit classifications, descriptions, and typical applications for various types of work.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Grit Size",
+        "Description",
+        "Type of Work"
+      ],
+      "rows": [
+        [
+          12,
+          "Extra Coarse",
+          "Very rough work, high speed, heavy machines, unplanned woods, wood floors, rough cut, very fast removal of material"
+        ],
+        [
+          16,
+          "Extra Coarse",
+          ""
+        ],
+        [
+          20,
+          "Extra Coarse",
+          ""
+        ],
+        [
+          24,
+          "Extra Coarse",
+          ""
+        ],
+        [
+          30,
+          "Extra Coarse",
+          ""
+        ],
+        [
+          36,
+          "Extra Coarse",
+          ""
+        ],
+        [
+          40,
+          "Coarse",
+          "Rough wood work, rapid removal of material"
+        ],
+        [
+          50,
+          "Coarse",
+          ""
+        ],
+        [
+          60,
+          "Medium",
+          ""
+        ],
+        [
+          80,
+          "Medium",
+          "General wood work, plaster patches, 1st smooth of old paint"
+        ],
+        [
+          100,
+          "Fine",
+          ""
+        ],
+        [
+          120,
+          "Fine",
+          ""
+        ],
+        [
+          150,
+          "Very Fine",
+          "Hardwood preparation, final preparation of softwood, final preparation old paint"
+        ],
+        [
+          180,
+          "Very Fine",
+          ""
+        ],
+        [
+          220,
+          "Very Fine",
+          "Final sanding, sanding between coats, sand marks not shown, dry sanding"
+        ],
+        [
+          240,
+          "Very Fine",
+          ""
+        ],
+        [
+          280,
+          "Very Fine",
+          ""
+        ],
+        [
+          320,
+          "Very Fine",
+          "Polish of final coats or top coats, sanding between coats, wet sanding"
+        ],
+        [
+          360,
+          "Very Fine",
+          ""
+        ],
+        [
+          400,
+          "Extra Fine",
+          ""
+        ],
+        [
+          500,
+          "Extra Fine",
+          "Sanding metal, sanding plastics, sanding ceramics, wet sanding"
+        ],
+        [
+          600,
+          "Extra Fine",
+          ""
+        ],
+        [
+          800,
+          "Super Fine",
+          "Final sanding"
+        ],
+        [
+          1000,
+          "Super Fine",
+          ""
+        ],
+        [
+          1200,
+          "Super Fine",
+          ""
+        ],
+        [
+          1500,
+          "Ultra Fine",
+          "Final sanding and polishing"
+        ],
+        [
+          2000,
+          "Ultra Fine",
+          ""
+        ],
+        [
+          2500,
+          "Ultra Fine",
+          ""
+        ]
+      ]
+    }
+  ]
+}

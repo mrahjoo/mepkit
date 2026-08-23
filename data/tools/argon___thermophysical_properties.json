@@ -1,0 +1,271 @@
+{
+  "id": "argon___thermophysical_properties",
+  "title": "Argon - Thermophysical Properties",
+  "description": "Calculator for argon thermophysical properties. Contains standard reference values for molecular weight, density, viscosity, thermal conductivity, specific heat, and critical point data.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Argon - Thermophysical Properties\n\nArgon is a noble gas with unique thermophysical properties. This calculator provides standard reference values for argon at various conditions.\n\n## Key Properties\n- **Chemical Symbol**: Ar\n- **Molecular Weight**: 39.948\n- **State at STP**: Gas\n- **Flammable**: No"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "molecular_weight",
+          "label": "Molecular Weight",
+          "type": "number",
+          "defaultValue": 39.948,
+          "unit": "g/mol"
+        },
+        {
+          "id": "specific_gravity",
+          "label": "Specific Gravity",
+          "type": "number",
+          "defaultValue": 1.38,
+          "unit": ""
+        },
+        {
+          "id": "specific_volume_m3kg",
+          "label": "Specific Volume",
+          "type": "number",
+          "defaultValue": 0.622,
+          "unit": "m³/kg"
+        },
+        {
+          "id": "liquid_density",
+          "label": "Liquid Density at Atmospheric Pressure",
+          "type": "number",
+          "defaultValue": 1400,
+          "unit": "kg/m³"
+        },
+        {
+          "id": "viscosity",
+          "label": "Absolute Viscosity",
+          "type": "number",
+          "defaultValue": 0.02,
+          "unit": "cP"
+        },
+        {
+          "id": "sound_velocity",
+          "label": "Sound Velocity in Gas",
+          "type": "number",
+          "defaultValue": 322,
+          "unit": "m/s"
+        },
+        {
+          "id": "specific_heat_cp",
+          "label": "Specific Heat (cp)",
+          "type": "number",
+          "defaultValue": 523,
+          "unit": "J/kgK"
+        },
+        {
+          "id": "specific_heat_ratio",
+          "label": "Specific Heat Ratio (cp/cv)",
+          "type": "number",
+          "defaultValue": 1.67,
+          "unit": ""
+        },
+        {
+          "id": "gas_constant",
+          "label": "Gas Constant (R)",
+          "type": "number",
+          "defaultValue": 208,
+          "unit": "J/kg°C"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "type": "number",
+          "defaultValue": 0.0172,
+          "unit": "W/m°C"
+        },
+        {
+          "id": "boiling_point_c",
+          "label": "Boiling Point",
+          "type": "number",
+          "defaultValue": -186,
+          "unit": "°C"
+        },
+        {
+          "id": "latent_heat_evaporation",
+          "label": "Latent Heat of Evaporation at Boiling Point",
+          "type": "number",
+          "defaultValue": 163000,
+          "unit": "J/kg"
+        },
+        {
+          "id": "melting_point_c",
+          "label": "Freezing/Melting Point at 1 atm",
+          "type": "number",
+          "defaultValue": -189.2,
+          "unit": "°C"
+        },
+        {
+          "id": "critical_temperature_c",
+          "label": "Critical Temperature",
+          "type": "number",
+          "defaultValue": -122,
+          "unit": "°C"
+        },
+        {
+          "id": "critical_pressure_mpa",
+          "label": "Critical Pressure",
+          "type": "number",
+          "defaultValue": 4.87,
+          "unit": "MPa"
+        },
+        {
+          "id": "critical_volume",
+          "label": "Critical Volume",
+          "type": "number",
+          "defaultValue": 0.00186,
+          "unit": "m³/kg"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "molar_mass_summary",
+          "label": "Molar Mass",
+          "formula": "inputs.molecular_weight",
+          "unit": "g/mol"
+        },
+        {
+          "id": "density_gas_summary",
+          "label": "Gas Density (calculated from specific volume)",
+          "formula": "1 / inputs.specific_volume_m3kg",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "critical_temp_kelvin",
+          "label": "Critical Temperature (absolute)",
+          "formula": "inputs.critical_temperature_c + 273.15",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "boiling_point_kelvin",
+          "label": "Boiling Point (absolute)",
+          "formula": "inputs.boiling_point_c + 273.15",
+          "unit": "K",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value",
+        "Unit (SI)",
+        "Unit (Imperial)"
+      ],
+      "rows": [
+        [
+          "Molecular Weight",
+          "39.948",
+          "g/mol",
+          ""
+        ],
+        [
+          "Specific Gravity",
+          "1.38",
+          "-",
+          "-"
+        ],
+        [
+          "Specific Volume",
+          "0.622",
+          "m³/kg",
+          "9.8 ft³/lb"
+        ],
+        [
+          "Liquid Density at 1 atm",
+          "1400",
+          "kg/m³",
+          "87.0 lb/ft³"
+        ],
+        [
+          "Absolute Viscosity",
+          "0.02",
+          "cP",
+          "13.4×10⁻⁶ lbm/ft·s"
+        ],
+        [
+          "Sound Velocity in Gas",
+          "322",
+          "m/s",
+          "-"
+        ],
+        [
+          "Specific Heat (cp)",
+          "523",
+          "J/kgK",
+          "0.125 Btu/lb·°F"
+        ],
+        [
+          "Specific Heat Ratio (cp/cv)",
+          "1.67",
+          "-",
+          "-"
+        ],
+        [
+          "Gas Constant (R)",
+          "208",
+          "J/kg·°C",
+          "38.7 ft·lb/lb·°R"
+        ],
+        [
+          "Thermal Conductivity",
+          "0.0172",
+          "W/m·°C",
+          "0.0102 Btu/hr·ft·°F"
+        ],
+        [
+          "Boiling Point (1 atm)",
+          "-186",
+          "°C",
+          "-303 °F"
+        ],
+        [
+          "Melting Point (1 atm)",
+          "-189.2",
+          "°C",
+          "-308.5 °F"
+        ],
+        [
+          "Critical Temperature",
+          "-122",
+          "°C",
+          "-187.6 °F"
+        ],
+        [
+          "Critical Pressure",
+          "4.87",
+          "MPa",
+          "707 psia"
+        ],
+        [
+          "Critical Volume",
+          "0.00186",
+          "m³/kg",
+          "0.0299 ft³/lb"
+        ],
+        [
+          "Latent Heat of Evaporation",
+          "163000",
+          "J/kg",
+          "70 Btu/lb"
+        ],
+        [
+          "Flammable",
+          "No",
+          "-",
+          "-"
+        ]
+      ]
+    }
+  ]
+}

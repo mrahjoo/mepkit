@@ -1,0 +1,89 @@
+{
+  "id": "blood_sugar_units",
+  "title": "Blood Sugar Units",
+  "description": "Convert between blood sugar units (mmol/L and mg/dL)",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "mmol/L",
+        "mg/dL"
+      ],
+      "rows": [
+        [
+          3.9,
+          70
+        ],
+        [
+          4,
+          72
+        ],
+        [
+          5,
+          90
+        ],
+        [
+          6,
+          108
+        ],
+        [
+          7,
+          126
+        ],
+        [
+          7.1,
+          128
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Blood Sugar Unit Conversion",
+      "inputs": [
+        {
+          "id": "mmol_l",
+          "label": "Blood Sugar (mmol/L)",
+          "type": "number",
+          "defaultValue": 5.5,
+          "unit": "mmol/L"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mg_dl",
+          "label": "Blood Sugar (mg/dL)",
+          "formula": "inputs.mmol_l * 18",
+          "unit": "mg/dL",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Reverse Conversion",
+      "inputs": [
+        {
+          "id": "mg_dl_input",
+          "label": "Blood Sugar (mg/dL)",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "mg/dL"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "mmol_l_output",
+          "label": "Blood Sugar (mmol/L)",
+          "formula": "inputs.mg_dl_input / 18",
+          "unit": "mmol/L",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference Information\n\n**Conversion Factors:**\n- 1 mmol/L = 18 mg/dL\n- 1 mg/dL = mmol/L ÷ 18\n\n**Normal Blood Glucose Levels:**\n- Range: 3.9 to 7.1 mmol/L (70 to 130 mg/dL)\n- These are reference values for healthy individuals"
+    }
+  ]
+}

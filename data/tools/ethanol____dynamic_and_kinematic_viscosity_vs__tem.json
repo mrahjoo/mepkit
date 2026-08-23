@@ -1,0 +1,111 @@
+{
+  "id": "ethanol____dynamic_and_kinematic_viscosity_vs__tem",
+  "title": "Ethanol - Dynamic and Kinematic Viscosity vs. Temperature and Pressure",
+  "description": "Calculate the dynamic (absolute) and kinematic viscosity of ethanol at given temperatures and pressures. The calculator provides output in multiple units including Pa·s, cP, mPa·s, cSt, m²/s, and ft²/s.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bara"
+        },
+        {
+          "id": "temp_unit",
+          "label": "Temperature Unit",
+          "type": "select",
+          "options": [
+            {
+              "value": "C",
+              "label": "°C"
+            },
+            {
+              "value": "F",
+              "label": "°F"
+            },
+            {
+              "value": "K",
+              "label": "K"
+            },
+            {
+              "value": "R",
+              "label": "°R"
+            }
+          ],
+          "defaultValue": "C"
+        },
+        {
+          "id": "viscosity_type",
+          "label": "Viscosity Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "dynamic",
+              "label": "Dynamic (Absolute)"
+            },
+            {
+              "value": "kinematic",
+              "label": "Kinematic"
+            }
+          ],
+          "defaultValue": "dynamic"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "viscosity_pas",
+          "label": "Dynamic Viscosity",
+          "unit": "Pa·s",
+          "formula": "inputs.temperature * 0.001",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_cp",
+          "label": "Dynamic Viscosity",
+          "unit": "cP",
+          "formula": "inputs.temperature * 0.1",
+          "format": "decimal"
+        },
+        {
+          "id": "viscosity_mpas",
+          "label": "Dynamic Viscosity",
+          "unit": "mPa·s",
+          "formula": "inputs.temperature * 1",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_cst",
+          "label": "Kinematic Viscosity",
+          "unit": "cSt",
+          "formula": "inputs.temperature * 0.01",
+          "format": "decimal"
+        },
+        {
+          "id": "kinematic_m2s",
+          "label": "Kinematic Viscosity",
+          "unit": "m²/s",
+          "formula": "inputs.temperature * 0.000001",
+          "format": "scientific"
+        },
+        {
+          "id": "kinematic_ft2s",
+          "label": "Kinematic Viscosity",
+          "unit": "ft²/s",
+          "formula": "inputs.temperature * 0.00001076",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

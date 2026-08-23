@@ -1,0 +1,191 @@
+{
+  "id": "great_sensible_heat_factor___gshf",
+  "title": "Great Sensible Heat Factor - GSHF",
+  "description": "Calculator for Great Sensible Heat Factor (GSHF), which determines the capacity of a cooling coil to handle sensible heat load and cool fresh make-up air. GSHF is independent of total air flow and is calculated from sensible/total heat generation, fresh air mass flow, specific heat, temperatures, and specific enthalpies.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Great Sensible Heat Factor - GSHF\n\nThe Great Sensible Heat Factor represents the ratio of sensible cooling capacity to total cooling capacity and is calculated using:\n\n**GSHF = (Qs + mf × cp × (tf - tr)) / (Qt + mf × (hf - hr))**\n\n### Where:\n- **Qs** = Sensible heat generated in the room (kW)\n- **Qt** = Total heat generated in the room (kW)\n- **mf** = Fresh air mass flow - make up air (kg/s)\n- **cp** = Specific heat of air (kJ/kg°C)\n- **tf** = Temperature in fresh air (°C)\n- **tr** = Temperature in room air (°C)\n- **hf** = Specific enthalpy of fresh air (kJ/kg)\n- **hr** = Specific enthalpy of air in the room (kJ/kg)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sensible_heat_qs",
+          "label": "Sensible Heat (Qs)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 4
+        },
+        {
+          "id": "total_heat_qt",
+          "label": "Total Heat (Qt)",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 5.4
+        },
+        {
+          "id": "fresh_air_mass_flow",
+          "label": "Fresh Air Mass Flow (mf)",
+          "type": "number",
+          "unit": "kg/s",
+          "defaultValue": 0.278
+        },
+        {
+          "id": "specific_heat_cp",
+          "label": "Specific Heat of Air (cp)",
+          "type": "number",
+          "unit": "kJ/kg°C",
+          "defaultValue": 1.005
+        },
+        {
+          "id": "fresh_air_temp_tf",
+          "label": "Fresh Air Temperature (tf)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 28
+        },
+        {
+          "id": "room_air_temp_tr",
+          "label": "Room Air Temperature (tr)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 22
+        },
+        {
+          "id": "fresh_air_enthalpy_hf",
+          "label": "Fresh Air Specific Enthalpy (hf)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 60
+        },
+        {
+          "id": "room_air_enthalpy_hr",
+          "label": "Room Air Specific Enthalpy (hr)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 45
+        }
+      ],
+      "outputs": [
+        {
+          "id": "numerator",
+          "label": "Numerator (Qs + mf × cp × (tf - tr))",
+          "formula": "inputs.sensible_heat_qs + inputs.fresh_air_mass_flow * inputs.specific_heat_cp * (inputs.fresh_air_temp_tf - inputs.room_air_temp_tr)",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "denominator",
+          "label": "Denominator (Qt + mf × (hf - hr))",
+          "formula": "inputs.total_heat_qt + inputs.fresh_air_mass_flow * (inputs.fresh_air_enthalpy_hf - inputs.room_air_enthalpy_hr)",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "gshf",
+          "label": "Great Sensible Heat Factor (GSHF)",
+          "formula": "(inputs.sensible_heat_qs + inputs.fresh_air_mass_flow * inputs.specific_heat_cp * (inputs.fresh_air_temp_tf - inputs.room_air_temp_tr)) / (inputs.total_heat_qt + inputs.fresh_air_mass_flow * (inputs.fresh_air_enthalpy_hf - inputs.room_air_enthalpy_hr))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Parameter",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Sensible Heat (Qs)",
+          "4 kW"
+        ],
+        [
+          "Latent Heat",
+          "1.4 kW"
+        ],
+        [
+          "Total Heat (Qt)",
+          "5.4 kW"
+        ],
+        [
+          "Fresh Air Mass Flow",
+          "0.278 kg/s"
+        ],
+        [
+          "Fresh Air Temperature",
+          "28 °C"
+        ],
+        [
+          "Room Air Temperature",
+          "22 °C"
+        ],
+        [
+          "Fresh Air Enthalpy",
+          "60 kJ/kg"
+        ],
+        [
+          "Room Air Enthalpy",
+          "45 kJ/kg"
+        ],
+        [
+          "GSHF Result",
+          "0.59"
+        ]
+      ],
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "GSHF Calculation Parameters"
+          ]
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Sensible Heat",
+            "Latent Heat",
+            "Total Heat",
+            "Fresh Air Flow",
+            "Fresh Air Temp",
+            "Room Temp",
+            "Fresh Air Enthalpy",
+            "Room Enthalpy"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Values",
+            "type": "bar",
+            "data": [
+              4,
+              1.4,
+              5.4,
+              0.278,
+              28,
+              22,
+              60,
+              45
+            ],
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

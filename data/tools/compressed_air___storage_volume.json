@@ -1,0 +1,51 @@
+{
+  "id": "compressed_air___storage_volume",
+  "title": "Compressed Air - Storage Volume",
+  "description": "Calculate the storage volume for compressed gas using Boyle's Law. Determines the amount of free gas at atmospheric pressure in a given volume, such as a cylinder storage.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Compressed Air - Storage Volume Calculator\n\nThis calculator uses **Boyle's Law** to determine the volume of free gas at atmospheric pressure in a storage cylinder.\n\n**Formula:** Va = pc × Vc / pa\n\nWhere:\n- **pa** = Atmospheric pressure (14.7 psia or 101.325 kPa)\n- **Va** = Volume of gas at atmospheric pressure (cubic feet or m³)\n- **pc** = Pressure after compression (psi or kPa)\n- **Vc** = Volume of gas after compression (cubic feet or m³)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pc",
+          "label": "Pressure after compression (pc)",
+          "type": "number",
+          "defaultValue": 2200,
+          "unit": "psia"
+        },
+        {
+          "id": "vc",
+          "label": "Volume of gas after compression (Vc)",
+          "type": "number",
+          "defaultValue": 1.76,
+          "unit": "cu ft"
+        },
+        {
+          "id": "pa",
+          "label": "Atmospheric pressure (pa)",
+          "type": "number",
+          "defaultValue": 14.7,
+          "unit": "psia"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "va",
+          "label": "Volume of free gas at atmospheric pressure (Va)",
+          "formula": "inputs.pc * inputs.vc / inputs.pa",
+          "unit": "cu ft",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Storage Cylinder Pressure Ranges\n\n- **High-pressure cylinders:** >6000 psig (>410 bar)\n- **Normal-pressure cylinders:** 2000-2500 psig (140-175 bar)\n- **Low-pressure cylinders:** 480 psig (34 bar)\n\n### Example\nAir compressed in a 1.76 cubic feet K-type cylinder at 2200 psig (2214.7 psia):\n- Va = (2214.7 psia) × (1.76 cu ft) / (14.7 psia) = **265 cu ft**\n\nThis means the air in a 1.76 cubic feet container at 2200 psig occupies 265 cubic feet at atmospheric pressure."
+    }
+  ]
+}

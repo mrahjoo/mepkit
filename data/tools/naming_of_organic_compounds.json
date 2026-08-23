@@ -1,0 +1,193 @@
+{
+  "id": "naming_of_organic_compounds",
+  "title": "Naming of Organic Compounds",
+  "description": "A comprehensive guide to the systematic nomenclature of organic compounds following IUPAC rules. This tool helps identify compound classes, apply naming rules, and understand the priority of functional groups in organic chemistry.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Naming of Organic Compounds\n\nThis tool provides guidance on naming organic compounds using IUPAC nomenclature rules. Organic compounds follow a systematic naming pattern:\n\n1. **Prefix** = substituent(s)\n2. **First Name** = carbon chain number\n3. **Second Name** = type of chain (saturated/unsaturated)\n4. **Suffix** = highest priority functional group\n\n### Compound Classes Covered\n\n- **Hydrocarbons**: Alkanes, Alkenes, Alkynes, Aromatics\n- **Functional Groups**: Alcohols, Thiols, Amines, Aldehydes, Ketones, Carboxylic Acids, Esters, Amides\n- **Other Classes**: Ethers, Sulfides, Nitriles, Haloalkanes, Acyl Halides, Nitro Compounds"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "carbon_count",
+          "label": "Number of Carbon Atoms",
+          "type": "number",
+          "defaultValue": 4,
+          "unit": "atoms"
+        },
+        {
+          "id": "compound_type",
+          "label": "Compound Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "alkane",
+              "label": "Alkane (-ane)"
+            },
+            {
+              "value": "alkene",
+              "label": "Alkene (-ene)"
+            },
+            {
+              "value": "alkyne",
+              "label": "Alkyne (-yne)"
+            },
+            {
+              "value": "alcohol",
+              "label": "Alcohol (-ol)"
+            },
+            {
+              "value": "aldehyde",
+              "label": "Aldehyde (-al)"
+            },
+            {
+              "value": "ketone",
+              "label": "Ketone (-one)"
+            },
+            {
+              "value": "carboxylic_acid",
+              "label": "Carboxylic Acid (-oic acid)"
+            },
+            {
+              "value": "amine",
+              "label": "Amine (-amine)"
+            },
+            {
+              "value": "amide",
+              "label": "Amide (-amide)"
+            },
+            {
+              "value": "ester",
+              "label": "Ester (-oate)"
+            },
+            {
+              "value": "nitrile",
+              "label": "Nitrile (-nitrile)"
+            },
+            {
+              "value": "ether",
+              "label": "Ether (alkoxy-)"
+            },
+            {
+              "value": "thiol",
+              "label": "Thiol (-thiol)"
+            },
+            {
+              "value": "sulfide",
+              "label": "Sulfide (thio-)"
+            }
+          ]
+        },
+        {
+          "id": "substituent_count",
+          "label": "Number of Substituents/Double Bonds",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "groups"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "base_name",
+          "label": "Base Name (Carbon Chain)",
+          "formula": "IF(inputs.carbon_count=1,'meth',IF(inputs.carbon_count=2,'eth',IF(inputs.carbon_count=3,'prop',IF(inputs.carbon_count=4,'but',IF(inputs.carbon_count=5,'pent',IF(inputs.carbon_count=6,'hex',IF(inputs.carbon_count=7,'hept',IF(inputs.carbon_count=8,'oct',IF(inputs.carbon_count=9,'non','dec')))))))))",
+          "unit": ""
+        },
+        {
+          "id": "suffix",
+          "label": "Suffix (Functional Group)",
+          "formula": "IF(inputs.compound_type='alkane','-ane',IF(inputs.compound_type='alkene','-ene',IF(inputs.compound_type='alkyne','-yne',IF(inputs.compound_type='alcohol','-ol',IF(inputs.compound_type='aldehyde','-al',IF(inputs.compound_type='ketone','-one',IF(inputs.compound_type='carboxylic_acid','-oic acid',IF(inputs.compound_type='amine','-amine',IF(inputs.compound_type='amide','-amide',IF(inputs.compound_type='ester','-oate',IF(inputs.compound_type='nitrile','-nitrile',IF(inputs.compound_type='ether','alkoxy-',IF(inputs.compound_type='thiol','-thiol',IF(inputs.compound_type='sulfide','thio-',''))))))))))))))))",
+          "unit": ""
+        },
+        {
+          "id": "iupac_name",
+          "label": "IUPAC Name Structure",
+          "formula": "CONCATENATE('[Prefix]-',inputs.base_name,'[Root]-',inputs.suffix)",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Number of C Atoms",
+        "Prefix",
+        "Number of C Atoms",
+        "Prefix"
+      ],
+      "rows": [
+        [
+          1,
+          "meth-",
+          11,
+          "undec-"
+        ],
+        [
+          2,
+          "eth-",
+          12,
+          "dodec-"
+        ],
+        [
+          3,
+          "prop-",
+          13,
+          "tridec-"
+        ],
+        [
+          4,
+          "but-",
+          14,
+          "tetradec-"
+        ],
+        [
+          5,
+          "pent-",
+          15,
+          "pentadec-"
+        ],
+        [
+          6,
+          "hex-",
+          16,
+          "hexadec-"
+        ],
+        [
+          7,
+          "hept-",
+          17,
+          "heptadec-"
+        ],
+        [
+          8,
+          "oct-",
+          18,
+          "octadec-"
+        ],
+        [
+          9,
+          "non-",
+          19,
+          "nonadec-"
+        ],
+        [
+          10,
+          "dec-",
+          20,
+          "eicos-"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Functional Group Priority Order\n\nWhen multiple functional groups are present, the highest priority group takes the suffix form. Below is the priority order (highest to lowest):\n\n1. **Carboxylic acids** (-oic acid)\n2. **Esters** (-oate)\n3. **Acyl halides** (-oyl halide)\n4. **Amides** (-amide)\n5. **Nitriles** (-nitrile)\n6. **Aldehydes** (-al)\n7. **Ketones** (-one)\n8. **Alcohols** (-ol)\n9. **Thiols** (-thiol)\n10. **Amines** (-amine)\n11. **Ethers** (alkoxy-)\n12. **Sulfides** (thio-)\n13. **Haloalkanes** (halo-)\n14. **Nitro compounds** (nitro-)\n\n**Rule**: The highest priority group gets the suffix; all others become prefixes (in alphabetical order)."
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Naming Rules by Compound Class\n\n### Alkanes\n- Formula: CnH2n+2 (acyclic)\n- Naming: Replace -ane ending; number chain for lowest substituent numbers\n- Prefix for branching: di-, tri-, tetra-, penta-\n\n### Alkenes & Alkynes\n- Alkenes: Replace -ane with -ene; number chain so double bond gets lowest number\n- Alkynes: Replace -ane with -yne\n- When both present: -en- precedes -yn- (e.g., pent-3-en-1-yne)\n\n### Alcohols\n- Suffix: -ol\n- Multiple OH groups: -diol, -triol, etc.\n- Prefix when not principal group: hydroxy-\n\n### Aldehydes & Ketones\n- Aldehydes: Always terminal, C=O at position 1, suffix -al\n- Ketones: C=O in chain, position indicated, suffix -one\n\n### Carboxylic Acids\n- Suffix: -oic acid (replace -ane)\n- Always terminal (position 1)\n- Highest priority functional group\n\n### Amines\n- Suffix: -amine\n- Secondary/tertiary: prefix with N- for each substituent (e.g., N,N-dimethyl)\n\n### Ethers\n- Simple alkyl groups: alkyl alkyl ether (alphabetical order)\n- As prefix: alkoxy- (smaller group is substituent)\n\n### Esters\n- Format: [alcohol part] [carboxylic acid part]-oate\n- Derived from: R-COOH + R'-OH → R'-COO-R"
+    }
+  ]
+}

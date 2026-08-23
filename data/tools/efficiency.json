@@ -1,0 +1,71 @@
+{
+  "id": "efficiency",
+  "title": "Efficiency",
+  "description": "The measure of usefulness of an operation, process or machine. Efficiency is calculated as the ratio of output to input (μ = Wo / Wi).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate efficiency from output and input values",
+      "inputs": [
+        {
+          "id": "output",
+          "label": "Output (Wo)",
+          "type": "number",
+          "defaultValue": 1800,
+          "unit": "W"
+        },
+        {
+          "id": "input",
+          "label": "Input (Wi)",
+          "type": "number",
+          "defaultValue": 2000,
+          "unit": "W"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "efficiency_decimal",
+          "label": "Efficiency (decimal)",
+          "formula": "inputs.output / inputs.input",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "efficiency_percent",
+          "label": "Efficiency (percentage)",
+          "formula": "(inputs.output / inputs.input) * 100",
+          "format": "decimal",
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Efficiency Calculation Examples",
+      "headers": [
+        "Description",
+        "Output (Wo)",
+        "Input (Wi)",
+        "Efficiency (decimal)",
+        "Efficiency (%)"
+      ],
+      "rows": [
+        [
+          "Electric Motor",
+          1800,
+          2000,
+          0.9,
+          90
+        ],
+        [
+          "Wind Mill",
+          70,
+          300,
+          0.23,
+          23
+        ]
+      ]
+    }
+  ]
+}

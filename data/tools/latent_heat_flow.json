@@ -1,0 +1,114 @@
+{
+  "id": "latent_heat_flow",
+  "title": "Latent Heat Flow",
+  "description": "Calculate latent heat flow due to moisture in air using English (Imperial) or SI (metric) units. The latent heat flow depends on the latent heat of vaporization, air density, air flow rate, and the difference in humidity ratio between two states.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "English (Imperial)",
+        "SI (Metric)",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Formula",
+          "Ql = 60 × hwe × ρ × q × Δx",
+          "Ql = hwe × ρ × q × Δx / 3600",
+          "Latent heat flow calculation"
+        ],
+        [
+          "Ql (Output)",
+          "Btu/hr",
+          "kW",
+          "Latent heat flow"
+        ],
+        [
+          "hwe",
+          "1060 Btu/lb",
+          "2454 kJ/kg (at 20°C)",
+          "Latent heat of vaporization of water"
+        ],
+        [
+          "ρ (Air Density)",
+          "0.075 lb/ft³",
+          "1.202 kg/m³",
+          "Air density at standard conditions"
+        ],
+        [
+          "q (Air Flow)",
+          "ft³/min",
+          "m³/hr",
+          "Measured air flow rate"
+        ],
+        [
+          "Δx (Humidity Difference)",
+          "lbH₂O/lbdry_air",
+          "kgH₂O/kgdry_air",
+          "Difference in humidity ratio"
+        ]
+      ],
+      "content": "# Latent Heat Flow - SI and Imperial Units\n\n## English (Imperial) Formula\n**Ql = 60 × hwe × ρ × q × Δx**\n\nWhere:\n- Ql = latent heat flow (Btu/hr)\n- hwe = 1060 (Btu/lb) - latent heat of vaporization\n- ρ = 0.075 (lb/ft³) - air density at standard conditions\n- q = measured air flow (ft³/min)\n- Δx = difference in humidity ratio (lbH₂O/lbdry_air)\n\n## SI (Metric) Formula\n**Ql = hwe × ρ × q × Δx / 3600**\n\nWhere:\n- Ql = latent heat flow (kW)\n- hwe = 2454 (kJ/kg) - latent heat of vaporization at 20°C\n- ρ = 1.202 (kg/m³) - air density at standard conditions\n- q = air flow (m³/hr)\n- Δx = difference in humidity ratio (kgH₂O/kgdry_air)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "unit_system",
+          "label": "Unit System",
+          "type": "select",
+          "options": [
+            {
+              "label": "SI (Metric) - kW",
+              "value": "si"
+            },
+            {
+              "label": "English (Imperial) - Btu/hr",
+              "value": "imperial"
+            }
+          ],
+          "defaultValue": "si"
+        },
+        {
+          "id": "hwe",
+          "label": "Latent Heat of Vaporization (hwe)",
+          "type": "number",
+          "defaultValue": 2454,
+          "unit": "kJ/kg or Btu/lb"
+        },
+        {
+          "id": "rho",
+          "label": "Air Density (ρ)",
+          "type": "number",
+          "defaultValue": 1.202,
+          "unit": "kg/m³ or lb/ft³"
+        },
+        {
+          "id": "q",
+          "label": "Air Flow Rate (q)",
+          "type": "number",
+          "defaultValue": 10000,
+          "unit": "m³/hr or ft³/min"
+        },
+        {
+          "id": "delta_x",
+          "label": "Humidity Ratio Difference (Δx)",
+          "type": "number",
+          "defaultValue": 0.002,
+          "unit": "kgH₂O/kgdry_air or lbH₂O/lbdry_air"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "latent_heat_flow",
+          "label": "Latent Heat Flow (Ql)",
+          "formula": "inputs.unit_system === 'si' ? (inputs.hwe * inputs.rho * inputs.q * inputs.delta_x / 3600) : (60 * inputs.hwe * inputs.rho * inputs.q * inputs.delta_x)",
+          "unit": "kW or Btu/hr",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

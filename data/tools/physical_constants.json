@@ -1,0 +1,216 @@
+{
+  "id": "physical_constants",
+  "title": "Physical Constants",
+  "description": "Physical constants in SI Units - Reference table with values and formulas",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Description",
+        "Symbol",
+        "Formula",
+        "Value (SI)",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Absolute zero, temperature",
+          "",
+          "",
+          "0 K / -273.15 °C",
+          "K"
+        ],
+        [
+          "Acceleration of gravity at earth's surface",
+          "g",
+          "",
+          "9.81",
+          "m/s²"
+        ],
+        [
+          "Atmospheric pressure at sea level",
+          "",
+          "",
+          "1.01325×10⁵",
+          "N/m²"
+        ],
+        [
+          "Atomic mass unit",
+          "",
+          "",
+          "1.660540×10⁻²⁷",
+          "kg"
+        ],
+        [
+          "Avogadro's constant",
+          "Nₐ",
+          "",
+          "6.022141×10²³",
+          "mol⁻¹"
+        ],
+        [
+          "Base of natural logarithms",
+          "e",
+          "",
+          "2.718281828",
+          ""
+        ],
+        [
+          "Bohr magneton",
+          "μB",
+          "e h/4πmₑ",
+          "9.274009994×10⁻²⁴",
+          "Am²"
+        ],
+        [
+          "Bohr radius",
+          "a₀",
+          "ε₀h²/π mₑe²",
+          "5.2917721067×10⁻¹¹",
+          "m"
+        ],
+        [
+          "Boltzmann constant",
+          "k",
+          "R/Nₐ",
+          "1.38064852×10⁻²³",
+          "J/K"
+        ],
+        [
+          "Charge of electron",
+          "e",
+          "",
+          "1.602176×10⁻¹⁹",
+          "C"
+        ],
+        [
+          "Faraday constant",
+          "F",
+          "e Nₐ",
+          "9.648533289×10⁴",
+          "C/mol"
+        ],
+        [
+          "Fine structure constant",
+          "α",
+          "",
+          "7.29720×10⁻³",
+          ""
+        ],
+        [
+          "Gas constant (molar, ideal)",
+          "R",
+          "",
+          "8.3144598",
+          "J/mol·K"
+        ],
+        [
+          "Gravitational constant",
+          "G",
+          "",
+          "6.67408×10⁻¹¹",
+          "m³/kg·s²"
+        ],
+        [
+          "Mass of electron (rest mass)",
+          "mₑ",
+          "",
+          "9.10938356×10⁻³¹",
+          "kg"
+        ],
+        [
+          "Mass of neutron",
+          "mₙ",
+          "",
+          "1.67492747×10⁻²⁷",
+          "kg"
+        ],
+        [
+          "Mass of proton",
+          "mₚ",
+          "",
+          "1.67262190×10⁻²⁷",
+          "kg"
+        ],
+        [
+          "Permeability of a vacuum",
+          "μ₀",
+          "",
+          "4π×10⁻⁷",
+          "H/m"
+        ],
+        [
+          "Permittivity of a vacuum",
+          "ε₀",
+          "1/μ₀c₀²",
+          "8.854187817×10⁻¹²",
+          "F/m"
+        ],
+        [
+          "Planck's constant",
+          "h",
+          "",
+          "6.626070040×10⁻³⁴",
+          "J·s"
+        ],
+        [
+          "Radiation constant, first",
+          "C₁",
+          "2πhc²",
+          "3.741844×10⁻¹⁶",
+          "W·m²"
+        ],
+        [
+          "Radiation constant, second",
+          "C₂",
+          "hc/k",
+          "1.438833×10⁻²",
+          "m·K"
+        ],
+        [
+          "Ratio of a circle's circumference to diameter",
+          "π",
+          "C/d",
+          "3.141592653",
+          ""
+        ],
+        [
+          "Rydberg constant",
+          "R∞",
+          "mₑe⁴/8ε₀²h³c₀",
+          "1.097373156×10⁷",
+          "m⁻¹"
+        ],
+        [
+          "Speed of light in vacuum",
+          "c₀",
+          "",
+          "2.99792458×10⁸",
+          "m/s"
+        ],
+        [
+          "Stefan-Boltzmann constant",
+          "σ",
+          "",
+          "5.670367×10⁻⁸",
+          "W/m²·K⁴"
+        ],
+        [
+          "Volume ideal gas, 1 atm, 0°C",
+          "Vₘ",
+          "",
+          "22413.6 cm³/mol",
+          "cm³/mol"
+        ],
+        [
+          "Volume ideal gas, 1 atm, 25°C",
+          "Vₘ",
+          "",
+          "24466.1 cm³/mol",
+          "cm³/mol"
+        ]
+      ]
+    }
+  ]
+}

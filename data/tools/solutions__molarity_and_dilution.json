@@ -1,0 +1,161 @@
+{
+  "id": "solutions__molarity_and_dilution",
+  "title": "Solutions, Molarity and Dilution",
+  "description": "Calculator for molarity, dilution, and solution concentration calculations. Includes tools for calculating molarity, dilution equations, and concentration percentages.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Molarity Calculator\n\nMolarity expresses the molar concentration of a compound in a solution:\n\n**M = n / V**\n\nWhere:\n- n = number of moles of solute (mol)\n- M = Molarity of the solution (mol/L)\n- V = volume of the solution (L)",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "moles_solute",
+          "label": "Moles of Solute",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "mol"
+        },
+        {
+          "id": "volume_solution",
+          "label": "Volume of Solution",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "L"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "molarity",
+          "label": "Molarity",
+          "formula": "inputs.moles_solute / inputs.volume_solution",
+          "unit": "mol/L",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Dilution Calculator\n\nDilution is the process where a solution is added more solvent to decrease the concentration of the solute.\n\nIn dilution, the number of moles remains constant:\n\n**Mi × Vi = Mf × Vf**\n\nWhere:\n- Mi = Initial molarity (mol/L)\n- Vi = Initial volume (L)\n- Mf = Final molarity (mol/L)\n- Vf = Final volume (L)",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "initial_molarity",
+          "label": "Initial Molarity",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "mol/L"
+        },
+        {
+          "id": "initial_volume",
+          "label": "Initial Volume",
+          "type": "number",
+          "defaultValue": 0.03,
+          "unit": "L"
+        },
+        {
+          "id": "final_molarity",
+          "label": "Final Molarity",
+          "type": "number",
+          "defaultValue": 0.3,
+          "unit": "mol/L"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "final_volume",
+          "label": "Final Volume Required",
+          "formula": "inputs.initial_molarity * inputs.initial_volume / inputs.final_molarity",
+          "unit": "L",
+          "format": "decimal"
+        },
+        {
+          "id": "moles_conserved",
+          "label": "Moles (Check)",
+          "formula": "inputs.initial_molarity * inputs.initial_volume",
+          "unit": "mol",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Weight Percentage Calculator\n\nThe mass of solute expressed as a percentage of the mass of the whole solution:\n\n**wt% = (mass of solute / total mass of solution) × 100%**",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass_solute",
+          "label": "Mass of Solute",
+          "type": "number",
+          "defaultValue": 56,
+          "unit": "g"
+        },
+        {
+          "id": "mass_solvent",
+          "label": "Mass of Solvent",
+          "type": "number",
+          "defaultValue": 800,
+          "unit": "g"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight_percentage",
+          "label": "Weight Percentage",
+          "formula": "(inputs.mass_solute / (inputs.mass_solute + inputs.mass_solvent)) * 100",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "total_mass",
+          "label": "Total Mass",
+          "formula": "inputs.mass_solute + inputs.mass_solvent",
+          "unit": "g",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Moles from Mass Calculator\n\nCalculate the number of moles from the mass and molar weight:\n\n**n = m / M**\n\nWhere:\n- n = number of moles (mol)\n- m = mass (g)\n- M = molar weight (g/mol)",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "mass_grams",
+          "label": "Mass of Substance",
+          "type": "number",
+          "defaultValue": 200,
+          "unit": "g"
+        },
+        {
+          "id": "molar_weight",
+          "label": "Molar Weight",
+          "type": "number",
+          "defaultValue": 58.44,
+          "unit": "g/mol"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "number_of_moles",
+          "label": "Number of Moles",
+          "formula": "inputs.mass_grams / inputs.molar_weight",
+          "unit": "mol",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

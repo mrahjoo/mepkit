@@ -1,0 +1,271 @@
+{
+  "id": "metals_in_seawater___galvanic_series",
+  "title": "Metals in Seawater - Galvanic Series",
+  "description": "Galvanic series of metals in seawater at 25°C (77°F). The list is ordered from most noble (top) to most active (bottom), helping predict galvanic corrosion behavior when different metals are in contact in seawater.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Galvanic Series in Seawater at 25°C (77°F)\n\nThe galvanic series ranks metals and alloys based on their electrode potential in seawater. Metals higher in the series (more noble) will be protected, while metals lower in the series (more active) will be sacrificed in galvanic corrosion.\n\n**Key Principles:**\n- Metals closer together in the series have less galvanic potential difference\n- Larger separation in the series indicates greater galvanic corrosion risk\n- The position of metals can change based on whether they are in passive or active state"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Rank",
+        "Metal/Alloy",
+        "Status"
+      ],
+      "rows": [
+        [
+          1,
+          "Platinum",
+          "Most Noble"
+        ],
+        [
+          2,
+          "Gold",
+          ""
+        ],
+        [
+          3,
+          "Graphite",
+          ""
+        ],
+        [
+          4,
+          "Titanium",
+          ""
+        ],
+        [
+          5,
+          "Silver",
+          ""
+        ],
+        [
+          6,
+          "Chlorimet 3 (62 Ni + 18 Cr + 18 Mo)",
+          ""
+        ],
+        [
+          7,
+          "HASTELLOY® alloy C (62Ni + 17 Cr + 15 Mo)",
+          ""
+        ],
+        [
+          8,
+          "INCONEL® alloy 625",
+          ""
+        ],
+        [
+          9,
+          "INCONEL® alloy 825",
+          ""
+        ],
+        [
+          10,
+          "Stainless steel, type 316",
+          "Passive"
+        ],
+        [
+          11,
+          "Stainless steel, type 304",
+          "Passive"
+        ],
+        [
+          12,
+          "Stainless steel, type 410",
+          "Passive"
+        ],
+        [
+          13,
+          "Monel alloy 400",
+          ""
+        ],
+        [
+          14,
+          "INCONEL® alloy 600",
+          "Passive"
+        ],
+        [
+          15,
+          "Nickel 200",
+          "Passive"
+        ],
+        [
+          16,
+          "Copper alloy C71500 (Cu 30% Ni)",
+          ""
+        ],
+        [
+          17,
+          "Copper alloy C23000 (red brass 85% Cu)",
+          ""
+        ],
+        [
+          18,
+          "Copper alloy C27000 (yellow brass 65% Cu)",
+          ""
+        ],
+        [
+          19,
+          "HASTELLOY® alloy B",
+          ""
+        ],
+        [
+          20,
+          "INCONEL® alloy 600",
+          "Active"
+        ],
+        [
+          21,
+          "Nickel 200",
+          "Active"
+        ],
+        [
+          22,
+          "Copper alloy C46400",
+          ""
+        ],
+        [
+          23,
+          "Copper alloy C46500",
+          ""
+        ],
+        [
+          24,
+          "Copper alloy C46600",
+          ""
+        ],
+        [
+          25,
+          "Copper alloy C46700 (naval brass)",
+          ""
+        ],
+        [
+          26,
+          "Tin",
+          ""
+        ],
+        [
+          27,
+          "Lead",
+          ""
+        ],
+        [
+          28,
+          "Lead-Tin solders",
+          ""
+        ],
+        [
+          29,
+          "Hastelloy A",
+          ""
+        ],
+        [
+          30,
+          "Stainless steel, type 316",
+          "Active"
+        ],
+        [
+          31,
+          "Stainless steel, type 304",
+          "Active"
+        ],
+        [
+          32,
+          "50-50 lead tin solder",
+          ""
+        ],
+        [
+          33,
+          "Stainless steel, type 410",
+          "Active"
+        ],
+        [
+          34,
+          "Cast iron",
+          ""
+        ],
+        [
+          35,
+          "Wrought iron",
+          ""
+        ],
+        [
+          36,
+          "Low carbon steel",
+          ""
+        ],
+        [
+          37,
+          "Aluminum alloy 2117",
+          ""
+        ],
+        [
+          38,
+          "Aluminum alloy 2017",
+          ""
+        ],
+        [
+          39,
+          "Aluminum alloy 2024",
+          ""
+        ],
+        [
+          40,
+          "Cadmium",
+          ""
+        ],
+        [
+          41,
+          "Aluminum alloy 5052",
+          ""
+        ],
+        [
+          42,
+          "Aluminum alloy 3004",
+          ""
+        ],
+        [
+          43,
+          "Aluminum alloy 3003",
+          ""
+        ],
+        [
+          44,
+          "Aluminum alloy 1100",
+          ""
+        ],
+        [
+          45,
+          "Aluminum alloy 6053",
+          ""
+        ],
+        [
+          46,
+          "Galvanized steel",
+          ""
+        ],
+        [
+          47,
+          "Zinc",
+          ""
+        ],
+        [
+          48,
+          "Magnesium alloys",
+          ""
+        ],
+        [
+          49,
+          "Magnesium",
+          "Most Active"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Galvanic Corrosion Prevention Tips\n\n1. **Avoid dissimilar metals**: Use metals close together in the galvanic series\n2. **Isolate metals**: Use non-conductive materials between different metals\n3. **Use cathodic protection**: For important structures, use sacrificial anodes or impressed current systems\n4. **Apply coatings**: Paint or other protective coatings can reduce galvanic effects\n5. **Control electrolyte**: Reduce salinity and increase pH when possible\n6. **Consider surface area**: Minimize the cathode/anode area ratio to reduce current flow"
+    }
+  ]
+}

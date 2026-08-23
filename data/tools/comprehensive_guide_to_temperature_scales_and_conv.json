@@ -1,0 +1,136 @@
+{
+  "id": "comprehensive_guide_to_temperature_scales_and_conv",
+  "title": "Comprehensive Guide to Temperature Scales and Conversion",
+  "description": "A comprehensive guide covering temperature measurement, scales (Celsius, Fahrenheit, Kelvin, Rankine), and conversion formulas between different temperature units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Rankine (°R)",
+        "Kelvin (K)",
+        "Fahrenheit (°F)",
+        "Celsius (°C)"
+      ],
+      "rows": [
+        [
+          0,
+          0,
+          -459.67,
+          -273.15
+        ],
+        [
+          100,
+          55.56,
+          -359.67,
+          -217.59
+        ],
+        [
+          180,
+          100,
+          -279.67,
+          -173.15
+        ],
+        [
+          459.67,
+          255.37,
+          0,
+          -17.78
+        ],
+        [
+          491.67,
+          273.15,
+          32,
+          0
+        ],
+        [
+          559.67,
+          310.93,
+          100,
+          37.78
+        ],
+        [
+          671.67,
+          373.15,
+          212,
+          100
+        ]
+      ],
+      "content": "Temperature Units - Reference Table"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Celsius (°C)",
+        "Fahrenheit (°F)"
+      ],
+      "rows": [
+        [
+          -20,
+          -4
+        ],
+        [
+          -15,
+          5
+        ],
+        [
+          -10,
+          14
+        ],
+        [
+          -5,
+          23
+        ],
+        [
+          0,
+          32
+        ],
+        [
+          5,
+          41
+        ],
+        [
+          10,
+          50
+        ],
+        [
+          15,
+          59
+        ],
+        [
+          20,
+          68
+        ],
+        [
+          25,
+          77
+        ],
+        [
+          30,
+          86
+        ],
+        [
+          35,
+          95
+        ],
+        [
+          40,
+          104
+        ],
+        [
+          45,
+          113
+        ],
+        [
+          50,
+          122
+        ]
+      ],
+      "content": "Celsius vs. Fahrenheit - Quick Reference"
+    },
+    {
+      "type": "markdown",
+      "content": "## Key Conversion Formulas\n\n### Celsius ↔ Fahrenheit\n- **T (°F) = 1.8 × T (°C) + 32**\n- **T (°C) = (T (°F) - 32) / 1.8**\n\n### Celsius → Kelvin\n- **T (K) = T (°C) + 273.15**\n\n### Kelvin → Rankine\n- **T (°R) = 1.8 × T (K)**\n\n### Fahrenheit → Rankine\n- **T (°R) = T (°F) + 459.67**\n\n### Temperature Differences\n- **ΔT (°F) = 1.8 × ΔT (°C)**\n- **ΔT (°C) = ΔT (°F) / 1.8**\n- **ΔT (K) = ΔT (°C)**\n- **ΔT (°R) = ΔT (°F)**"
+    }
+  ]
+}

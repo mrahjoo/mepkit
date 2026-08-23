@@ -1,0 +1,154 @@
+{
+  "id": "stockpile_volumes",
+  "title": "Stockpile Volumes",
+  "description": "Calculate volumes and mass of natural stockpiles. This tool provides calculators for both coned (conical) and rectangular pile configurations, using diameter/base dimensions, height, and material density.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Stockpile Volumes Calculator\n\nCalculate the volume and mass of stockpiles using the following configurations:\n\n- **Coned Pile**: Based on diameter and height (conical shape)\n- **Rectangular Pile**: Based on length, width, and height (rectangular prism shape)\n\nFormulas:\n- **Coned Pile Volume**: V = (π/12) × D² × H\n- **Rectangular Pile Volume**: V = L × W × H\n- **Mass**: m = ρ × V\n\nwhere:\n- D = diameter (m or ft)\n- H = height (m or ft)\n- L = length (m or ft)\n- W = width (m or ft)\n- ρ = density (kg/m³ or lb/ft³)\n- V = volume (m³ or ft³)\n- m = mass (kg or lb)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Coned Pile Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "cone_diameter",
+          "label": "Diameter",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "m"
+        },
+        {
+          "id": "cone_height",
+          "label": "Height",
+          "type": "number",
+          "defaultValue": 4,
+          "unit": "m"
+        },
+        {
+          "id": "cone_density",
+          "label": "Material Density",
+          "type": "number",
+          "defaultValue": 1500,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cone_volume",
+          "label": "Volume",
+          "formula": "(3.14159 / 12) * (inputs.cone_diameter ^ 2) * inputs.cone_height",
+          "unit": "m³",
+          "format": "decimal"
+        },
+        {
+          "id": "cone_mass",
+          "label": "Total Mass",
+          "formula": "inputs.cone_density * ((3.14159 / 12) * (inputs.cone_diameter ^ 2) * inputs.cone_height)",
+          "unit": "kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Rectangular Pile Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "rect_length",
+          "label": "Length",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "m"
+        },
+        {
+          "id": "rect_width",
+          "label": "Width",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "m"
+        },
+        {
+          "id": "rect_height",
+          "label": "Height",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "m"
+        },
+        {
+          "id": "rect_density",
+          "label": "Material Density",
+          "type": "number",
+          "defaultValue": 1500,
+          "unit": "kg/m³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "rect_volume",
+          "label": "Volume",
+          "formula": "inputs.rect_length * inputs.rect_width * inputs.rect_height",
+          "unit": "m³",
+          "format": "decimal"
+        },
+        {
+          "id": "rect_mass",
+          "label": "Total Mass",
+          "formula": "inputs.rect_density * (inputs.rect_length * inputs.rect_width * inputs.rect_height)",
+          "unit": "kg",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material Type",
+        "Typical Density (kg/m³)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Anthracite Coal",
+          "1041",
+          "Converted from 65 lb/ft³"
+        ],
+        [
+          "Sand",
+          "1600",
+          "Loose, dry"
+        ],
+        [
+          "Gravel",
+          "1750",
+          "Mixed sizes"
+        ],
+        [
+          "Stone (Crushed)",
+          "1700",
+          "Typical"
+        ],
+        [
+          "Coal (bituminous)",
+          "1300",
+          "Average"
+        ],
+        [
+          "Iron Ore",
+          "2500",
+          "Typical"
+        ],
+        [
+          "Limestone",
+          "1450",
+          "Crushed"
+        ]
+      ]
+    }
+  ]
+}

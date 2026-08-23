@@ -1,0 +1,209 @@
+{
+  "id": "food_products___bulk_densities",
+  "title": "Food Products - Bulk Densities",
+  "description": "Bulk densities of some common food products like grain, corn, barley, sugar and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Food Material",
+        "Bulk Density (kg/m³)"
+      ],
+      "rows": [
+        [
+          "Barley",
+          600
+        ],
+        [
+          "Beans",
+          700
+        ],
+        [
+          "Beets, whole",
+          760
+        ],
+        [
+          "Brewers grain, spent dry",
+          450
+        ],
+        [
+          "Brewers grain, spent wet",
+          900
+        ],
+        [
+          "Butter",
+          911
+        ],
+        [
+          "Cashew nuts",
+          560
+        ],
+        [
+          "Coconut, shredded",
+          "320 - 352"
+        ],
+        [
+          "Coffee beans, green",
+          673
+        ],
+        [
+          "Coffee, ground",
+          400
+        ],
+        [
+          "Coffee, roasted beans",
+          368
+        ],
+        [
+          "Corn, shelled",
+          720
+        ],
+        [
+          "Corn starch, loosely packed",
+          540
+        ],
+        [
+          "Corn starch, tightly packed",
+          630
+        ],
+        [
+          "Corn syrup",
+          1380
+        ],
+        [
+          "Flour, wheat",
+          600
+        ],
+        [
+          "Grain, Barley",
+          620
+        ],
+        [
+          "Grain, Corn - shelled",
+          720
+        ],
+        [
+          "Grain, Corn - ear",
+          900
+        ],
+        [
+          "Grain, distillery spent dry",
+          480
+        ],
+        [
+          "Grain, Flax",
+          770
+        ],
+        [
+          "Grain, Millet",
+          640
+        ],
+        [
+          "Grain, Oats",
+          410
+        ],
+        [
+          "Grain, Rice rough",
+          580
+        ],
+        [
+          "Grain, Rice, hulled",
+          750
+        ],
+        [
+          "Grain, Rye",
+          720
+        ],
+        [
+          "Grain, Wheat",
+          770
+        ],
+        [
+          "Honey",
+          1420
+        ],
+        [
+          "Milk, whole dried",
+          320
+        ],
+        [
+          "Mayonnaise",
+          910
+        ],
+        [
+          "Mayonnaise, light",
+          1000
+        ],
+        [
+          "Mustard seed",
+          720
+        ],
+        [
+          "Oats",
+          420
+        ],
+        [
+          "Oil, vegetable",
+          920
+        ],
+        [
+          "Peanuts in shells",
+          270
+        ],
+        [
+          "Peanuts, shelled",
+          650
+        ],
+        [
+          "Peas, dried",
+          800
+        ],
+        [
+          "Rapeseed",
+          770
+        ],
+        [
+          "Rice, clean",
+          770
+        ],
+        [
+          "Rye",
+          700
+        ],
+        [
+          "Salt, Sodium Chloride",
+          2165
+        ],
+        [
+          "Soybeans, cracked",
+          560
+        ],
+        [
+          "Soybeans, whole",
+          770
+        ],
+        [
+          "Sugar, granulated",
+          800
+        ],
+        [
+          "Sugar, raw cane",
+          960
+        ],
+        [
+          "Sugar, sucrose",
+          1550
+        ],
+        [
+          "Walnut shells, crushed",
+          650
+        ],
+        [
+          "Wheat",
+          770
+        ]
+      ]
+    }
+  ]
+}

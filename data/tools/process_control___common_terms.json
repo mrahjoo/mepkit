@@ -1,0 +1,209 @@
+{
+  "id": "process_control___common_terms",
+  "title": "Process Control - Common Terms",
+  "description": "A comprehensive reference guide for common terminology used in process control systems, including definitions of analog/digital signals, controller modes, PID components, and key process control concepts.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Term",
+        "Definition"
+      ],
+      "rows": [
+        [
+          "Analog Signal",
+          "Electrical signals like voltage or electric current representing temperature, pressure, or level. Typically 4-20 mA where 4 mA is minimum and 20 mA is maximum span."
+        ],
+        [
+          "Analog to Digital Converting (A-D Converting)",
+          "Electronic hardware that converts analog signals like voltage, current, temperature, or pressure into digital data for computer processing."
+        ],
+        [
+          "Auto Mode",
+          "Controller mode where output is calculated using the error signal - the difference between set point and process variable."
+        ],
+        [
+          "Closed Loop",
+          "Controller operating in automatic mode."
+        ],
+        [
+          "Cascade",
+          "Two or more controllers working together where the master controller's output becomes the set point for the slave controller."
+        ],
+        [
+          "Controller Output (CO)",
+          "Output signal from the controller."
+        ],
+        [
+          "DDE Windows Dynamic Data Exchange",
+          "Standard Microsoft OS method for communication between applications. Replaced by OLE/OPC for process control."
+        ],
+        [
+          "Dead Band",
+          "Range through which an input can be varied without initiating a response."
+        ],
+        [
+          "Dead Time",
+          "Time duration for the process variable to start changing after changing an output (control valve, VFD, etc.)."
+        ],
+        [
+          "Derivative (D)",
+          "Derivative part of PID controller where output is proportional to rate of change of process variable or error."
+        ],
+        [
+          "Delay",
+          "Term commonly used instead of dead time."
+        ],
+        [
+          "Deviation",
+          "Any departure from a desired or expected process value."
+        ],
+        [
+          "Digital Signal",
+          "Discrete binary value with two states (1 or 0), often used for on-off indication."
+        ],
+        [
+          "Digital Control System (DCS)",
+          "Larger digital control systems for process management."
+        ],
+        [
+          "Discrete Logic",
+          "Digital on-off logic operations."
+        ],
+        [
+          "Discrete I/O",
+          "On or off signals sent or received to the field."
+        ],
+        [
+          "Distributed Control System (DCS)",
+          "Control system where controller elements are distributed throughout rather than centrally located."
+        ],
+        [
+          "Dominant Lag Process",
+          "Process where lag time is larger than dead time. Most process plant loops are dominant lag types including temperature, level, flow, and pressure loops."
+        ],
+        [
+          "Error",
+          "In control loop: Error = Set Point - Process Value."
+        ],
+        [
+          "Gain",
+          "Calculated as 100 / Proportional Band. Higher gain provides faster loop response but more oscillatory/unstable process. Process Gain = change in output / change in input."
+        ],
+        [
+          "Gain Margin",
+          "Difference in logarithms of amplitude ratios at frequency where combined phase angle is 180 degrees lag."
+        ],
+        [
+          "Hysteresis",
+          "Signal change required before output unit (valve or similar) moves."
+        ],
+        [
+          "Input/Output (I/O)",
+          "Electronic hardware where field devices are wired."
+        ],
+        [
+          "Integral Action (I)",
+          "Integral part of PID controller where output is proportional to amount and duration of error signal."
+        ],
+        [
+          "Load Upset",
+          "Process upset not caused by changing the set-point."
+        ],
+        [
+          "Lag Time",
+          "Time after dead time that process variable takes to move 63.3% of final value after step change in valve position."
+        ],
+        [
+          "Measurement",
+          "Same as process value."
+        ],
+        [
+          "Manual Mode",
+          "Controller mode where output is set manually."
+        ],
+        [
+          "Mode",
+          "Controller setting: auto, manual, or remote mode."
+        ],
+        [
+          "Man Machine Interface (MMI)",
+          "Software that process operator uses to operate the process."
+        ],
+        [
+          "Output",
+          "Output signal from the controller."
+        ],
+        [
+          "Overshoot",
+          "Amount a process exceeds the set point during system load change or set point change."
+        ],
+        [
+          "PID Controller",
+          "Controller including Proportional, Integrating, and Derivative functions per ANSI/IEEE Standard 100-1977."
+        ],
+        [
+          "Process Value (PV)",
+          "Actual value in control loop: temperature, pressure, flow, composition, pH, etc."
+        ],
+        [
+          "Programmable Logic Controller (PLC)",
+          "Controllers replacing relay logic, usually with PID controller functions."
+        ],
+        [
+          "Process Variable (PV)",
+          "Actual value in control loop including temperature, pressure, flow, composition, pH, etc."
+        ],
+        [
+          "Proportional Band (P)",
+          "Controller output proportional to error or process variable change. Proportional Band = 100 / Gain."
+        ],
+        [
+          "Rate",
+          "Same as derivative or D part of PID controllers."
+        ],
+        [
+          "Register",
+          "Data storage location in a PLC."
+        ],
+        [
+          "Regulator",
+          "Controller that changes output variable to move process variable back to set point."
+        ],
+        [
+          "Repeat-ability",
+          "Variation in outputs for the same change of input."
+        ],
+        [
+          "Reset",
+          "Same as integral or I part of PID controllers."
+        ],
+        [
+          "Reset Windup",
+          "Integral action continuing to change controller output after actual output reaches physical limit."
+        ],
+        [
+          "Response Time",
+          "Rate of interrogating a transmitter."
+        ],
+        [
+          "Sample Interval",
+          "Rate at which controller samples process variable and calculates new output."
+        ],
+        [
+          "Set Point",
+          "Desired value of the process variable."
+        ],
+        [
+          "Time Constant",
+          "Same as lag time."
+        ],
+        [
+          "Transmitter",
+          "Senses actual system value and transforms it to standardized signal (typically 4-20 mA for analog signals) as input to control system."
+        ]
+      ]
+    }
+  ]
+}

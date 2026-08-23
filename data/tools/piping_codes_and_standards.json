@@ -1,0 +1,172 @@
+{
+  "id": "piping_codes_and_standards",
+  "title": "Piping Codes and Standards",
+  "description": "Piping and tubes codes and standards - ASME, ANSI, ASTM, AGA, API, AWWA, BS, ISO, DIN and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Piping Codes and Standards\n\nThis calculator provides reference information for piping and tube standards from major organizations:\n\n- **ASME** - American Society of Mechanical Engineers\n- **ANSI** - American National Standards Institute\n- **ASTM** - American Society for Testing and Materials\n- **AGA** - American Gas Association\n- **API** - American Petroleum Institute\n- **AWWA** - American Water Works Association\n- **BS** - British Standards\n- **ISO** - International Organization for Standardization\n- **DIN** - Deutsches Institut für Normung (German Institute for Standardization)\n\nUse this tool to select and reference applicable piping codes and standards for your project specifications."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "standard_type",
+          "label": "Piping Standard Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "ASME B36.10M - Welded and Seamless Wrought Steel Pipe",
+              "value": "ASME_B36.10M"
+            },
+            {
+              "label": "ASME B36.19M - Stainless Steel Pipe",
+              "value": "ASME_B36.19M"
+            },
+            {
+              "label": "ANSI/ASME B16.5 - Flanges and Flanged Fittings",
+              "value": "ANSI_ASME_B16.5"
+            },
+            {
+              "label": "ASTM A53 - Carbon Steel Pipe",
+              "value": "ASTM_A53"
+            },
+            {
+              "label": "ASTM A106 - Seamless Carbon Steel Pipe for High-Temperature Service",
+              "value": "ASTM_A106"
+            },
+            {
+              "label": "API 5L - Line Pipe",
+              "value": "API_5L"
+            },
+            {
+              "label": "AWWA C200 - Steel Water Pipe",
+              "value": "AWWA_C200"
+            },
+            {
+              "label": "BS EN ISO 1127 - Stainless Steel Tubes",
+              "value": "BS_EN_ISO_1127"
+            },
+            {
+              "label": "ISO 4200 - Seamless Steel Tubes for Pressure Equipment",
+              "value": "ISO_4200"
+            },
+            {
+              "label": "DIN 17175 - Seamless Steel Tubes for Pressure Purposes",
+              "value": "DIN_17175"
+            }
+          ]
+        },
+        {
+          "id": "pipe_material",
+          "label": "Pipe Material",
+          "type": "select",
+          "options": [
+            {
+              "label": "Carbon Steel",
+              "value": "carbon_steel"
+            },
+            {
+              "label": "Stainless Steel",
+              "value": "stainless_steel"
+            },
+            {
+              "label": "Alloy Steel",
+              "value": "alloy_steel"
+            },
+            {
+              "label": "Copper",
+              "value": "copper"
+            },
+            {
+              "label": "PVC",
+              "value": "pvc"
+            },
+            {
+              "label": "HDPE",
+              "value": "hdpe"
+            }
+          ]
+        },
+        {
+          "id": "nominal_diameter",
+          "label": "Nominal Pipe Size (inches)",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "in"
+        },
+        {
+          "id": "schedule",
+          "label": "Schedule",
+          "type": "select",
+          "options": [
+            {
+              "label": "Schedule 10",
+              "value": "SCH10"
+            },
+            {
+              "label": "Schedule 20",
+              "value": "SCH20"
+            },
+            {
+              "label": "Schedule 30",
+              "value": "SCH30"
+            },
+            {
+              "label": "Schedule 40",
+              "value": "SCH40"
+            },
+            {
+              "label": "Schedule 60",
+              "value": "SCH60"
+            },
+            {
+              "label": "Schedule 80",
+              "value": "SCH80"
+            },
+            {
+              "label": "Schedule 100",
+              "value": "SCH100"
+            },
+            {
+              "label": "Schedule 120",
+              "value": "SCH120"
+            },
+            {
+              "label": "Schedule 140",
+              "value": "SCH140"
+            },
+            {
+              "label": "Schedule 160 (XXS)",
+              "value": "SCHXXS"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "standard_selected",
+          "label": "Selected Standard",
+          "formula": "inputs.standard_type"
+        },
+        {
+          "id": "material_selected",
+          "label": "Material Type",
+          "formula": "inputs.pipe_material"
+        },
+        {
+          "id": "pipe_size",
+          "label": "Nominal Pipe Size",
+          "unit": "in",
+          "formula": "inputs.nominal_diameter"
+        },
+        {
+          "id": "schedule_selected",
+          "label": "Selected Schedule",
+          "formula": "inputs.schedule"
+        }
+      ]
+    }
+  ]
+}

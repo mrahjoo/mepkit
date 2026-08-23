@@ -1,0 +1,86 @@
+{
+  "id": "fluid_flow_and_pressure_loss_in_pipes_and_tubes",
+  "title": "Fluid Flow and Pressure Loss in Pipes and Tubes",
+  "description": "Fluid flow and pressure loss in pipe lines. Water and sewer systems. Steel pipes, PVC pipes, copper tubes and more.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate pressure loss and fluid flow characteristics in pipes and tubes",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 50
+        },
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 100
+        },
+        {
+          "id": "flow_rate",
+          "label": "Flow Rate",
+          "type": "number",
+          "unit": "L/min",
+          "defaultValue": 60
+        },
+        {
+          "id": "fluid_viscosity",
+          "label": "Fluid Viscosity",
+          "type": "number",
+          "unit": "cP",
+          "defaultValue": 1
+        },
+        {
+          "id": "pipe_roughness",
+          "label": "Pipe Roughness",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 0.045
+        },
+        {
+          "id": "fluid_density",
+          "label": "Fluid Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "flow_velocity",
+          "label": "Flow Velocity",
+          "unit": "m/s",
+          "formula": "(inputs.flow_rate / 1000 / 60) / (3.14159 * ((inputs.pipe_diameter / 1000) / 2) ^ 2)",
+          "format": "decimal"
+        },
+        {
+          "id": "reynolds_number",
+          "label": "Reynolds Number",
+          "unit": "dimensionless",
+          "formula": "(inputs.fluid_density * (((inputs.flow_rate / 1000 / 60) / (3.14159 * ((inputs.pipe_diameter / 1000) / 2) ^ 2))) * (inputs.pipe_diameter / 1000)) / (inputs.fluid_viscosity / 1000)",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_loss",
+          "label": "Pressure Loss",
+          "unit": "Pa",
+          "formula": "0.0826 * (inputs.pipe_length / inputs.pipe_diameter) * (inputs.fluid_density / 1000) * ((inputs.flow_rate / 1000 / 60) / (3.14159 * ((inputs.pipe_diameter / 1000) / 2) ^ 2)) ^ 2",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_loss_bar",
+          "label": "Pressure Loss",
+          "unit": "bar",
+          "formula": "(0.0826 * (inputs.pipe_length / inputs.pipe_diameter) * (inputs.fluid_density / 1000) * ((inputs.flow_rate / 1000 / 60) / (3.14159 * ((inputs.pipe_diameter / 1000) / 2) ^ 2)) ^ 2) / 100000",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "hot_water_boiler___circulation_rates",
+  "title": "Hot Water Boiler - Circulation Rates",
+  "description": "Calculate boiler power and water flow relationships in imperial and SI units. Determine circulated water flow based on boiler capacity and temperature drop.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Hot Water Boiler - Circulation Rates\n\nBoiler power and water flow - Imperial and SI-units.\n\nThe relation between:\n- Boiler capacity (or power)\n- Temperature drop of the water flow in a system serviced by boiler\n- Circulated water flow\n\nare indicated in the diagrams below."
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "SI Units (kW and °C)",
+        "Imperial Units (Btu/h and °F)",
+        "Imperial Units (BHP and °F)"
+      ],
+      "inputs": [
+        {
+          "id": "boiler_capacity_kw",
+          "label": "Boiler Capacity",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 50
+        },
+        {
+          "id": "temp_drop_celsius",
+          "label": "Temperature Drop",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "boiler_capacity_btu",
+          "label": "Boiler Capacity",
+          "type": "number",
+          "unit": "Btu/h",
+          "defaultValue": 170490
+        },
+        {
+          "id": "temp_drop_fahrenheit",
+          "label": "Temperature Drop",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 36
+        },
+        {
+          "id": "boiler_capacity_bhp",
+          "label": "Boiler Capacity",
+          "type": "number",
+          "unit": "BHP",
+          "defaultValue": 67
+        },
+        {
+          "id": "temp_drop_fahrenheit_bhp",
+          "label": "Temperature Drop",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 36
+        }
+      ],
+      "outputs": [
+        {
+          "id": "water_flow_si",
+          "label": "Water Flow Rate",
+          "formula": "inputs.boiler_capacity_kw / (inputs.temp_drop_celsius * 4.18)",
+          "unit": "kg/s",
+          "format": "decimal"
+        },
+        {
+          "id": "water_flow_btu",
+          "label": "Water Flow Rate",
+          "formula": "inputs.boiler_capacity_btu / (inputs.temp_drop_fahrenheit * 0.24)",
+          "unit": "gal/min (US)",
+          "format": "decimal"
+        },
+        {
+          "id": "water_flow_bhp",
+          "label": "Water Flow Rate",
+          "formula": "inputs.boiler_capacity_bhp * 745.7 / (inputs.temp_drop_fahrenheit_bhp * 0.24 * 4.186)",
+          "unit": "gal/min (US)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n**Flow Rate Conversions:**\n- 1 gal (US)/min = 6.30888×10⁻⁵ m³/s = 0.0227 m³/h = 0.06309 dm³(liter)/s = 2.228×10⁻³ ft³/s = 0.1337 ft³/min = 0.8327 Imperial gal (UK)/min\n\n**Power Conversions:**\n- 1 hp (English horse power) = 745.7 W = 0.746 kW = 550 ft lb/s = 2,545 Btu/h\n- 1 Btu/h = 0.293 W\n- 1 kW = 3,412 Btu/h = 1.341 British hp\n\n## Example\n\nA boiler with capacity **50 kW** increases the temperature of the circulated water by **20 °C** - the water flow through the boiler is **0.6 kg/s**"
+    }
+  ]
+}

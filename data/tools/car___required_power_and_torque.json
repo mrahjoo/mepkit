@@ -1,0 +1,168 @@
+{
+  "id": "car___required_power_and_torque",
+  "title": "Car - Required Power and Torque",
+  "description": "Calculate the required engine power and torque for a car to maintain constant speed or accelerate, based on forces acting on the vehicle and transmission efficiency.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Aerodynamic Resistance Force (FD)",
+          "250",
+          "N"
+        ],
+        [
+          "Rolling Resistance Force (FR)",
+          "400",
+          "N"
+        ],
+        [
+          "Acceleration Force (FA)",
+          "0",
+          "N"
+        ],
+        [
+          "Total Force (FT)",
+          "650",
+          "N"
+        ],
+        [
+          "Velocity (v)",
+          "25",
+          "m/s"
+        ],
+        [
+          "Transmission Efficiency (η)",
+          "0.85",
+          "-"
+        ],
+        [
+          "Engine Power (P)",
+          "19118",
+          "W"
+        ],
+        [
+          "Engine Speed (nrpm)",
+          "1500",
+          "rpm"
+        ],
+        [
+          "Engine Torque (T)",
+          "121.5",
+          "Nm"
+        ],
+        [
+          "Wheel Radius (r)",
+          "0.35",
+          "m"
+        ],
+        [
+          "Wheel Speed (nw_rpm)",
+          "1500",
+          "rpm"
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "aerodynamic_force",
+          "label": "Aerodynamic Resistance Force",
+          "type": "number",
+          "defaultValue": 250,
+          "unit": "N"
+        },
+        {
+          "id": "rolling_force",
+          "label": "Rolling Resistance Force",
+          "type": "number",
+          "defaultValue": 400,
+          "unit": "N"
+        },
+        {
+          "id": "acceleration_force",
+          "label": "Acceleration Force",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "N"
+        },
+        {
+          "id": "velocity",
+          "label": "Velocity",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "m/s"
+        },
+        {
+          "id": "efficiency",
+          "label": "Transmission Efficiency",
+          "type": "number",
+          "defaultValue": 0.85,
+          "unit": "-"
+        },
+        {
+          "id": "engine_speed_rpm",
+          "label": "Engine Speed",
+          "type": "number",
+          "defaultValue": 1500,
+          "unit": "rpm"
+        },
+        {
+          "id": "wheel_radius",
+          "label": "Wheel Radius",
+          "type": "number",
+          "defaultValue": 0.35,
+          "unit": "m"
+        },
+        {
+          "id": "wheel_speed_rpm",
+          "label": "Wheel Speed",
+          "type": "number",
+          "defaultValue": 1500,
+          "unit": "rpm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_force",
+          "label": "Total Force (FT)",
+          "formula": "inputs.aerodynamic_force + inputs.rolling_force + inputs.acceleration_force",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "engine_power",
+          "label": "Engine Power (P)",
+          "formula": "(inputs.aerodynamic_force + inputs.rolling_force + inputs.acceleration_force) * inputs.velocity / inputs.efficiency",
+          "unit": "W",
+          "format": "decimal"
+        },
+        {
+          "id": "engine_power_kw",
+          "label": "Engine Power (P)",
+          "formula": "((inputs.aerodynamic_force + inputs.rolling_force + inputs.acceleration_force) * inputs.velocity / inputs.efficiency) / 1000",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "engine_torque",
+          "label": "Engine Torque (T)",
+          "formula": "9.55 * ((inputs.aerodynamic_force + inputs.rolling_force + inputs.acceleration_force) * inputs.velocity / inputs.efficiency) / inputs.engine_speed_rpm",
+          "unit": "Nm",
+          "format": "decimal"
+        },
+        {
+          "id": "wheel_force",
+          "label": "Wheel Force (Fw)",
+          "formula": "(9.55 * ((inputs.aerodynamic_force + inputs.rolling_force + inputs.acceleration_force) * inputs.velocity / inputs.efficiency) * inputs.efficiency / inputs.wheel_radius) * (inputs.engine_speed_rpm / inputs.wheel_speed_rpm)",
+          "unit": "N",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

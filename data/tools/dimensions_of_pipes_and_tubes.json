@@ -1,0 +1,97 @@
+{
+  "id": "dimensions_of_pipes_and_tubes",
+  "title": "Dimensions of Pipes and Tubes",
+  "description": "Pipe, tube and fittings sizes and dimensions. Inside and outside diameters, weights and more.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Nominal Size",
+        "Outside Diameter (OD)",
+        "Inside Diameter (ID)",
+        "Wall Thickness",
+        "Weight per Foot"
+      ],
+      "rows": [
+        [
+          "1/2\"",
+          "0.840 in",
+          "0.622 in",
+          "0.109 in",
+          "0.849 lbs"
+        ],
+        [
+          "3/4\"",
+          "1.050 in",
+          "0.824 in",
+          "0.113 in",
+          "1.130 lbs"
+        ],
+        [
+          "1\"",
+          "1.315 in",
+          "1.029 in",
+          "0.133 in",
+          "1.678 lbs"
+        ],
+        [
+          "1-1/4\"",
+          "1.660 in",
+          "1.380 in",
+          "0.140 in",
+          "2.273 lbs"
+        ],
+        [
+          "1-1/2\"",
+          "1.900 in",
+          "1.610 in",
+          "0.145 in",
+          "2.718 lbs"
+        ],
+        [
+          "2\"",
+          "2.375 in",
+          "2.067 in",
+          "0.154 in",
+          "3.653 lbs"
+        ],
+        [
+          "2-1/2\"",
+          "2.875 in",
+          "2.469 in",
+          "0.203 in",
+          "5.793 lbs"
+        ],
+        [
+          "3\"",
+          "3.500 in",
+          "3.068 in",
+          "0.216 in",
+          "7.576 lbs"
+        ],
+        [
+          "4\"",
+          "4.500 in",
+          "4.026 in",
+          "0.237 in",
+          "10.790 lbs"
+        ],
+        [
+          "5\"",
+          "5.563 in",
+          "5.047 in",
+          "0.258 in",
+          "14.620 lbs"
+        ],
+        [
+          "6\"",
+          "6.625 in",
+          "6.065 in",
+          "0.280 in",
+          "18.970 lbs"
+        ]
+      ]
+    }
+  ]
+}

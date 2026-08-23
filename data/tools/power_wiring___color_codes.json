@@ -1,0 +1,83 @@
+{
+  "id": "power_wiring___color_codes",
+  "title": "Power Wiring - Color Codes",
+  "description": "Color codes used in power wiring for 120/240 Volt and 277/480 Volt systems",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Typical Power Wiring Color Codes\n\n### 120/240 Volt\n\n| Wire Type | Color | Purpose |\n|-----------|-------|----------|\n| Phase 1 | Black | Power |\n| Phase 2 | Red | Power |\n| Phase 3 | Blue | Power |\n| Neutral | White or 3 white stripes | Return path |\n| Ground | Green | Safety ground |\n\n### 277/480 Volt\n\n| Wire Type | Color | Purpose |\n|-----------|-------|----------|\n| Phase 1 | Brown | Power |\n| Phase 2 | Orange | Power |\n| Phase 3 | Yellow | Power |\n| Neutral | Gray or 2 white stripes | Return path |\n| Ground | Green with yellow stripe | Safety ground |"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Voltage System",
+        "Wire Type",
+        "Color",
+        "Purpose"
+      ],
+      "rows": [
+        [
+          "120/240V",
+          "Phase 1",
+          "Black",
+          "Power"
+        ],
+        [
+          "120/240V",
+          "Phase 2",
+          "Red",
+          "Power"
+        ],
+        [
+          "120/240V",
+          "Phase 3",
+          "Blue",
+          "Power"
+        ],
+        [
+          "120/240V",
+          "Neutral",
+          "White or 3 white stripes",
+          "Return path"
+        ],
+        [
+          "120/240V",
+          "Ground",
+          "Green",
+          "Safety ground"
+        ],
+        [
+          "277/480V",
+          "Phase 1",
+          "Brown",
+          "Power"
+        ],
+        [
+          "277/480V",
+          "Phase 2",
+          "Orange",
+          "Power"
+        ],
+        [
+          "277/480V",
+          "Phase 3",
+          "Yellow",
+          "Power"
+        ],
+        [
+          "277/480V",
+          "Neutral",
+          "Gray or 2 white stripes",
+          "Return path"
+        ],
+        [
+          "277/480V",
+          "Ground",
+          "Green with yellow stripe",
+          "Safety ground"
+        ]
+      ]
+    }
+  ]
+}

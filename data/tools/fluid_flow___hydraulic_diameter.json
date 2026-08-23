@@ -1,0 +1,130 @@
+{
+  "id": "fluid_flow___hydraulic_diameter",
+  "title": "Fluid Flow - Hydraulic Diameter",
+  "description": "Calculate hydraulic diameter for various duct and pipe configurations. The hydraulic diameter is the characteristic length used in Reynolds Number calculations and the Darcy-Weisbach equation for pressure loss. This calculator supports circular, concentric circular, and rectangular geometries.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "hydraulic_diameter_calc",
+      "content": "Hydraulic Diameter Calculator",
+      "inputs": [
+        {
+          "id": "geometry_type",
+          "label": "Geometry Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Circular Pipe/Duct",
+              "value": "circular"
+            },
+            {
+              "label": "Concentric Circular Tubes",
+              "value": "concentric"
+            },
+            {
+              "label": "Rectangular Duct",
+              "value": "rectangular"
+            }
+          ],
+          "defaultValue": "circular"
+        },
+        {
+          "id": "diameter",
+          "label": "Inner Diameter (d)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "outer_radius",
+          "label": "Outer Radius (ro)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        },
+        {
+          "id": "inner_radius",
+          "label": "Inner Radius (ri)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.02
+        },
+        {
+          "id": "width",
+          "label": "Width (a)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.1
+        },
+        {
+          "id": "height",
+          "label": "Height (b)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.05
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hydraulic_diameter",
+          "label": "Hydraulic Diameter (dh)",
+          "formula": "inputs.diameter",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "hydraulic_diameter_concentric",
+          "label": "Hydraulic Diameter (dh)",
+          "formula": "2 * (inputs.outer_radius - inputs.inner_radius)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "hydraulic_diameter_rectangular",
+          "label": "Hydraulic Diameter (dh)",
+          "formula": "(2 * inputs.width * inputs.height) / (inputs.width + inputs.height)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "reference_table",
+      "content": "Reference: Hydraulic Diameter Formulas",
+      "headers": [
+        "Configuration",
+        "Formula",
+        "Parameters"
+      ],
+      "rows": [
+        [
+          "Circular Pipe/Duct",
+          "dh = d",
+          "d = inner diameter"
+        ],
+        [
+          "Concentric Circular Tubes",
+          "dh = 2(ro - ri)",
+          "ro = outer radius, ri = inner radius"
+        ],
+        [
+          "Rectangular Duct",
+          "dh = 2ab/(a+b)",
+          "a = width, b = height"
+        ],
+        [
+          "Generic Formula",
+          "dh = 4A/p",
+          "A = cross-section area, p = wetted perimeter"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "info_markdown",
+      "content": "### Flow Classification\n- **Laminar**: Re < 2300\n- **Transient**: 2300 ≤ Re ≤ 4000\n- **Turbulent**: Re > 4000\n\nWhere Re (Reynolds Number) = (ρ × v × dh) / μ\n\nThe hydraulic diameter is used in the Darcy-Weisbach equation to calculate pressure loss in ducts and pipes.\n\n**Note**: Hydraulic diameter is not the same as equivalent diameter. The equivalent diameter is the diameter of a circular duct that produces the same pressure loss as the rectangular duct."
+    }
+  ]
+}

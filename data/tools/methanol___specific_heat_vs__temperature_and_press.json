@@ -1,0 +1,390 @@
+{
+  "id": "methanol___specific_heat_vs__temperature_and_press",
+  "title": "Methanol - Specific Heat vs. Temperature and Pressure",
+  "description": "Calculator for estimating the isobaric (Cp) and isochoric (Cv) specific heat of liquid methanol at constant volume or constant pressure and at given temperature. The output heat capacity is provided in multiple units: kJ/(mol·K), kJ/(kg·K), kWh/(kg·K), kcal/(kg·K), Btu(IT)/(mol·°R) and Btu(IT)/(lbm·°R).",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Methanol - Specific Heat vs. Temperature and Pressure\n\n**Specific heat (C)** is the amount of heat required to change the temperature of a mass unit of a substance by one degree.\n\n- **Isobaric specific heat (Cp)** is used for a substance in a constant pressure (ΔP = 0) system.\n- **Isochoric specific heat (Cv)** is used for a substance in a constant-volume closed system.\n\nAt ambient pressure and temperature, the isobaric specific heat, CP, of liquid methanol is 2.53 (kJ/kg K) or 0.605 (Btu/lb °F), while the isochoric specific heat, CV, is 2.12 (kJ/kg K) or 0.506 (Btu/lb °F).\n\nThe specific heat will vary with temperature and pressure. For practical purposes, the specific heat of liquid methanol is approximately constant with varying pressure up to the critical point (240°C, 82.16 bara / 464°F, 1192 psia)."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "°C"
+        },
+        {
+          "id": "pressure",
+          "label": "Pressure",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "bar"
+        },
+        {
+          "id": "heat_type",
+          "label": "Heat Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Isobaric (Cp)",
+              "value": "cp"
+            },
+            {
+              "label": "Isochoric (Cv)",
+              "value": "cv"
+            }
+          ],
+          "defaultValue": "cp"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "cp_kj_mol_k",
+          "label": "Cp - kJ/(mol·K)",
+          "formula": "inputs.temperature > 500 ? 0.1213 : inputs.temperature > 420 ? 0.1078 : inputs.temperature > 360 ? 0.09716 : 0.08158",
+          "format": "decimal",
+          "unit": "kJ/(mol·K)"
+        },
+        {
+          "id": "cp_kj_kg_k",
+          "label": "Cp - kJ/(kg·K)",
+          "formula": "inputs.temperature > 500 ? 3.787 : inputs.temperature > 420 ? 3.363 : inputs.temperature > 360 ? 3.032 : 2.546",
+          "format": "decimal",
+          "unit": "kJ/(kg·K)"
+        },
+        {
+          "id": "cp_btu_lb_f",
+          "label": "Cp - Btu/(lb·°F)",
+          "formula": "inputs.temperature > 500 ? 0.9044 : inputs.temperature > 420 ? 0.8033 : inputs.temperature > 360 ? 0.7243 : 0.6053",
+          "format": "decimal",
+          "unit": "Btu/(lb·°F)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "State",
+        "Temperature (°C)",
+        "Pressure (bar)",
+        "Cp (kJ/kg·K)",
+        "Cv (kJ/kg·K)",
+        "Cp/Cv"
+      ],
+      "rows": [
+        [
+          "Liquid at equilibrium",
+          "-97.54",
+          "1.86E-06",
+          "2.197",
+          "1.770",
+          "1.24"
+        ],
+        [
+          "Liquid",
+          "-63.2",
+          "1.98E-04",
+          "2.223",
+          "1.781",
+          "1.25"
+        ],
+        [
+          "Liquid",
+          "-33.2",
+          "3.63E-03",
+          "2.283",
+          "1.850",
+          "1.23"
+        ],
+        [
+          "Liquid",
+          "-3.1",
+          "0.0332",
+          "2.387",
+          "1.964",
+          "1.22"
+        ],
+        [
+          "Liquid",
+          "25.0",
+          "0.166",
+          "2.534",
+          "2.107",
+          "1.20"
+        ],
+        [
+          "Liquid",
+          "26.9",
+          "0.187",
+          "2.546",
+          "2.118",
+          "1.20"
+        ],
+        [
+          "Liquid",
+          "56.9",
+          "0.745",
+          "2.762",
+          "2.299",
+          "1.20"
+        ],
+        [
+          "Liquid",
+          "86.9",
+          "2.30",
+          "3.032",
+          "2.493",
+          "1.22"
+        ],
+        [
+          "Liquid",
+          "117",
+          "5.86",
+          "3.363",
+          "2.690",
+          "1.25"
+        ],
+        [
+          "Liquid",
+          "147",
+          "12.9",
+          "3.787",
+          "2.887",
+          "1.31"
+        ],
+        [
+          "Liquid",
+          "177",
+          "25.4",
+          "4.407",
+          "3.091",
+          "1.43"
+        ],
+        [
+          "Liquid",
+          "207",
+          "45.7",
+          "5.725",
+          "3.329",
+          "1.72"
+        ],
+        [
+          "Gas at equilibrium",
+          "-97.54",
+          "1.86E-06",
+          "1.257",
+          "0.9948",
+          "1.26"
+        ],
+        [
+          "Gas",
+          "-63.2",
+          "1.98E-04",
+          "1.541",
+          "1.252",
+          "1.23"
+        ],
+        [
+          "Gas",
+          "-33.2",
+          "3.63E-03",
+          "2.121",
+          "1.758",
+          "1.21"
+        ],
+        [
+          "Gas",
+          "-3.1",
+          "0.0332",
+          "2.902",
+          "2.405",
+          "1.21"
+        ],
+        [
+          "Gas",
+          "25.0",
+          "0.166",
+          "3.620",
+          "2.949",
+          "1.23"
+        ],
+        [
+          "Gas",
+          "26.9",
+          "0.187",
+          "3.664",
+          "2.983",
+          "1.23"
+        ],
+        [
+          "Gas",
+          "56.9",
+          "0.745",
+          "4.291",
+          "3.389",
+          "1.27"
+        ],
+        [
+          "Gas",
+          "86.9",
+          "2.30",
+          "4.856",
+          "3.663",
+          "1.33"
+        ],
+        [
+          "Gas",
+          "117",
+          "5.86",
+          "5.592",
+          "3.915",
+          "1.43"
+        ],
+        [
+          "Gas",
+          "147",
+          "12.9",
+          "6.862",
+          "4.240",
+          "1.62"
+        ],
+        [
+          "Gas",
+          "177",
+          "25.4",
+          "8.271",
+          "4.444",
+          "1.86"
+        ],
+        [
+          "Gas",
+          "207",
+          "45.7",
+          "8.726",
+          "3.938",
+          "2.22"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Methanol Specific Heat - Temperature Dependency"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Cp Liquid",
+            "Cv Liquid",
+            "Cp Gas",
+            "Cv Gas"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "name": "Temperature (°C)",
+          "data": [
+            "-97.54",
+            "-63.2",
+            "-33.2",
+            "-3.1",
+            "25.0",
+            "26.9",
+            "56.9",
+            "86.9",
+            "117",
+            "147",
+            "177",
+            "207"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Specific Heat (kJ/kg·K)"
+        },
+        "series": [
+          {
+            "name": "Cp Liquid",
+            "type": "line",
+            "data": [
+              2.197,
+              2.223,
+              2.283,
+              2.387,
+              2.534,
+              2.546,
+              2.762,
+              3.032,
+              3.363,
+              3.787,
+              4.407,
+              5.725
+            ]
+          },
+          {
+            "name": "Cv Liquid",
+            "type": "line",
+            "data": [
+              1.77,
+              1.781,
+              1.85,
+              1.964,
+              2.107,
+              2.118,
+              2.299,
+              2.493,
+              2.69,
+              2.887,
+              3.091,
+              3.329
+            ]
+          },
+          {
+            "name": "Cp Gas",
+            "type": "line",
+            "data": [
+              1.257,
+              1.541,
+              2.121,
+              2.902,
+              3.62,
+              3.664,
+              4.291,
+              4.856,
+              5.592,
+              6.862,
+              8.271,
+              8.726
+            ]
+          },
+          {
+            "name": "Cv Gas",
+            "type": "line",
+            "data": [
+              0.9948,
+              1.252,
+              1.758,
+              2.405,
+              2.949,
+              2.983,
+              3.389,
+              3.663,
+              3.915,
+              4.24,
+              4.444,
+              3.938
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

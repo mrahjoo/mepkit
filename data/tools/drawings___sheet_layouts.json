@@ -1,0 +1,125 @@
+{
+  "id": "drawings___sheet_layouts",
+  "title": "Drawings - Sheet Layouts",
+  "description": "Standard drawing sheets layouts. Standard layouts of drawing sheets are specified by the various standards organizations.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Sheet Size",
+        "Width (mm)",
+        "Height (mm)",
+        "Area (m²)",
+        "Standard"
+      ],
+      "rows": [
+        [
+          "A0",
+          841,
+          1189,
+          1,
+          "ISO 216"
+        ],
+        [
+          "A1",
+          594,
+          841,
+          0.5,
+          "ISO 216"
+        ],
+        [
+          "A2",
+          420,
+          594,
+          0.25,
+          "ISO 216"
+        ],
+        [
+          "A3",
+          297,
+          420,
+          0.125,
+          "ISO 216"
+        ],
+        [
+          "A4",
+          210,
+          297,
+          0.0625,
+          "ISO 216"
+        ],
+        [
+          "B0",
+          1000,
+          1414,
+          1.414,
+          "ISO 216"
+        ],
+        [
+          "B1",
+          707,
+          1000,
+          0.707,
+          "ISO 216"
+        ],
+        [
+          "B2",
+          500,
+          707,
+          0.354,
+          "ISO 216"
+        ],
+        [
+          "B3",
+          353,
+          500,
+          0.177,
+          "ISO 216"
+        ],
+        [
+          "B4",
+          250,
+          353,
+          0.088,
+          "ISO 216"
+        ],
+        [
+          "C0",
+          917,
+          1297,
+          1.189,
+          "ISO 216"
+        ],
+        [
+          "C1",
+          648,
+          917,
+          0.594,
+          "ISO 216"
+        ],
+        [
+          "C2",
+          458,
+          648,
+          0.297,
+          "ISO 216"
+        ],
+        [
+          "C3",
+          324,
+          458,
+          0.148,
+          "ISO 216"
+        ],
+        [
+          "C4",
+          229,
+          324,
+          0.074,
+          "ISO 216"
+        ]
+      ]
+    }
+  ]
+}

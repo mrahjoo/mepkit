@@ -1,0 +1,173 @@
+{
+  "id": "acids___ph_values",
+  "title": "Acids - pH Values",
+  "description": "pH values of acids like sulfuric, acetic and more. Acidity or alkalinity - pH - is a measure of hydrogen ion (H+) activity in solutions.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Acid",
+        "Normality",
+        "pH"
+      ],
+      "rows": [
+        [
+          "Acetic",
+          "N",
+          2.4
+        ],
+        [
+          "Acetic",
+          "0.1 N",
+          2.9
+        ],
+        [
+          "Acetic",
+          "0.01 N",
+          3.4
+        ],
+        [
+          "Alum",
+          "0.1 N",
+          3.2
+        ],
+        [
+          "Arsenious",
+          "saturated",
+          5
+        ],
+        [
+          "Benzoic",
+          "0.1 N",
+          3
+        ],
+        [
+          "Boric",
+          "0.1 N",
+          5.2
+        ],
+        [
+          "Carbonic",
+          "saturated",
+          3.8
+        ],
+        [
+          "Citric",
+          "0.1 N",
+          2.2
+        ],
+        [
+          "Formic",
+          "0.1 N",
+          2.3
+        ],
+        [
+          "Hydrochloric",
+          "N",
+          0.1
+        ],
+        [
+          "Hydrochloric",
+          "0.1 N",
+          1.1
+        ],
+        [
+          "Hydrochloric",
+          "0.01 N",
+          2
+        ],
+        [
+          "Hydrocyanic",
+          "0.1 N",
+          5.1
+        ],
+        [
+          "Hydrogen sulfide",
+          "0.1 N",
+          4.1
+        ],
+        [
+          "Lactic",
+          "0.1 N",
+          2.4
+        ],
+        [
+          "Lemon Juice",
+          "",
+          2
+        ],
+        [
+          "Malic",
+          "0.1 N",
+          2.2
+        ],
+        [
+          "Nitric",
+          "0.1N",
+          1
+        ],
+        [
+          "Orthophosphoric",
+          "0.1 N",
+          1.5
+        ],
+        [
+          "Oxalic",
+          "0.1 N",
+          1.3
+        ],
+        [
+          "Salicylic",
+          "saturated",
+          2.4
+        ],
+        [
+          "Succinic",
+          "0.1N",
+          2.7
+        ],
+        [
+          "Sulfuric",
+          "N",
+          0.3
+        ],
+        [
+          "Sulfuric",
+          "0.1 N",
+          1.2
+        ],
+        [
+          "Sulfuric",
+          "0.01 N",
+          2.1
+        ],
+        [
+          "Sulfurous",
+          "0.1 N",
+          1.5
+        ],
+        [
+          "Stomach Acid",
+          "",
+          1
+        ],
+        [
+          "Tartaric",
+          "0.1 N",
+          2.2
+        ],
+        [
+          "Trichloracetic",
+          "0.1N",
+          1.2
+        ],
+        [
+          "Vinegar",
+          "",
+          3
+        ]
+      ]
+    }
+  ]
+}

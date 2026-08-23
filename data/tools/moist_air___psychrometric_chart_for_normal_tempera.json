@@ -1,0 +1,33 @@
+{
+  "id": "moist_air___psychrometric_chart_for_normal_tempera",
+  "title": "Moist Air - Psychrometric Chart for Normal Temperatures at 7500 Feet Altitude",
+  "description": "Psychrometric chart in I-P Units at 7500 feet and barometric pressure 22.653 inHG. Enthalpy in btu/lb dry air.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Dry Bulb Temperature (°F)",
+        "Wet Bulb Temperature (°F)",
+        "Relative Humidity (%)",
+        "Humidity Ratio (lb/lb)",
+        "Enthalpy (btu/lb)",
+        "Specific Volume (ft³/lb)"
+      ],
+      "rows": [
+        [
+          "Data Point 1",
+          "Data Point 1",
+          "Data Point 1",
+          "Data Point 1",
+          "Data Point 1",
+          "Data Point 1"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Psychrometric Chart Parameters\n\n**Altitude:** 7500 feet\n\n**Barometric Pressure:** 22.653 inHG\n\n**Units:** I-P (Inch-Pound)\n\n**Enthalpy:** btu/lb dry air\n\n### Reference\n[ASHRAE Psychrometric Chart Data](https://www.ashrae.org/File%20Library/Technical%20Resources/Bookstore/UP3/IP-9.pdf)"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "id": "electrical_motors___shaft_power_vs__voltage_and_cu",
+  "title": "Electrical Motors - Shaft Power vs. Voltage and Current",
+  "description": "Calculate shaft power produced by electrical motors in watts and horsepower. Supports DC and AC (single phase, two phase, three phase) motors with adjustable voltage, current, motor efficiency, and power factor.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Electrical Motors - Shaft Power Calculator\n\nPower is rated in **watt (W)** or **horsepower (hp)**.\n- **1 hp = 746 watts = 0.76 kW**\n- **1 watt = 1 / 746 hp**\n\n### Shaft Power Formulas\n\n**DC Motor:**\n- Pshaft_kW = ηm × U × I / 1000\n\n**AC Motor - Single Phase:**\n- Pshaft_kW = ηm × U × I × PF / 1000\n\n**AC Motor - Three Phase:**\n- Pshaft_kW = ηm × 1.73 × U × I × PF / 1000\n\n**Conversion to Horsepower:**\n- Pshaft_hp = Pshaft_kW / 0.746"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "motorType",
+          "label": "Motor Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "DC Motor",
+              "value": "dc"
+            },
+            {
+              "label": "AC Single Phase",
+              "value": "ac_single"
+            },
+            {
+              "label": "AC Three Phase",
+              "value": "ac_three"
+            }
+          ],
+          "defaultValue": "dc"
+        },
+        {
+          "id": "voltage",
+          "label": "Voltage",
+          "type": "number",
+          "unit": "V",
+          "defaultValue": 36
+        },
+        {
+          "id": "current",
+          "label": "Current",
+          "type": "number",
+          "unit": "A",
+          "defaultValue": 5
+        },
+        {
+          "id": "efficiency",
+          "label": "Motor Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 85
+        },
+        {
+          "id": "powerFactor",
+          "label": "Power Factor (AC only)",
+          "type": "number",
+          "unit": "",
+          "defaultValue": 0.9
+        }
+      ],
+      "outputs": [
+        {
+          "id": "powerKW",
+          "label": "Shaft Power",
+          "unit": "kW",
+          "formula": "inputs.efficiency / 100 * inputs.voltage * inputs.current / 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "powerHP",
+          "label": "Shaft Power",
+          "unit": "hp",
+          "formula": "inputs.efficiency / 100 * inputs.voltage * inputs.current / 1000 / 0.746",
+          "format": "decimal"
+        },
+        {
+          "id": "powerW",
+          "label": "Shaft Power",
+          "unit": "W",
+          "formula": "inputs.efficiency / 100 * inputs.voltage * inputs.current",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Current (A)",
+        "Power (kW)",
+        "Power (hp)",
+        "Power (W)"
+      ],
+      "rows": [
+        [
+          1,
+          0.0306,
+          0.041,
+          30.6
+        ],
+        [
+          2,
+          0.0612,
+          0.082,
+          61.2
+        ],
+        [
+          3,
+          0.0918,
+          0.123,
+          91.8
+        ],
+        [
+          4,
+          0.1224,
+          0.164,
+          122.4
+        ],
+        [
+          5,
+          0.153,
+          0.205,
+          153
+        ],
+        [
+          6,
+          0.1836,
+          0.246,
+          183.6
+        ],
+        [
+          7,
+          0.2142,
+          0.287,
+          214.2
+        ],
+        [
+          8,
+          0.2448,
+          0.328,
+          244.8
+        ],
+        [
+          9,
+          0.2754,
+          0.369,
+          275.4
+        ],
+        [
+          10,
+          0.306,
+          0.41,
+          306
+        ]
+      ],
+      "options": {
+        "xAxis": {
+          "type": "category",
+          "name": "Current (A)"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Power"
+        },
+        "series": [
+          {
+            "name": "Power (kW)",
+            "data": [
+              0.0306,
+              0.0612,
+              0.0918,
+              0.1224,
+              0.153,
+              0.1836,
+              0.2142,
+              0.2448,
+              0.2754,
+              0.306
+            ],
+            "type": "line",
+            "smooth": true
+          },
+          {
+            "name": "Power (hp)",
+            "data": [
+              0.041,
+              0.082,
+              0.123,
+              0.164,
+              0.205,
+              0.246,
+              0.287,
+              0.328,
+              0.369,
+              0.41
+            ],
+            "type": "line",
+            "smooth": true
+          }
+        ]
+      }
+    }
+  ]
+}

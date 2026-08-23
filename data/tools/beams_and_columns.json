@@ -1,0 +1,67 @@
+{
+  "id": "beams_and_columns",
+  "title": "Beams and Columns",
+  "description": "Deflection and stress in beams and columns, moment of inertia, section modulus and technical information.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Moment of Inertia",
+          "I",
+          "mm⁴ or in⁴",
+          "Resistance to bending deflection"
+        ],
+        [
+          "Section Modulus",
+          "S",
+          "mm³ or in³",
+          "Measure of beam strength in bending"
+        ],
+        [
+          "Bending Stress",
+          "σ",
+          "MPa or psi",
+          "Maximum stress in outer fiber"
+        ],
+        [
+          "Deflection",
+          "δ",
+          "mm or in",
+          "Maximum displacement under load"
+        ],
+        [
+          "Young's Modulus",
+          "E",
+          "GPa or psi",
+          "Material stiffness property"
+        ],
+        [
+          "Applied Load",
+          "P",
+          "N or lbf",
+          "Force applied to beam or column"
+        ],
+        [
+          "Span Length",
+          "L",
+          "mm or in",
+          "Distance between supports"
+        ],
+        [
+          "Compressive Strength",
+          "Fc",
+          "MPa or psi",
+          "Maximum compressive stress capacity"
+        ]
+      ]
+    }
+  ]
+}

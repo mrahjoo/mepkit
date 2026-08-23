@@ -1,0 +1,80 @@
+{
+  "id": "iec_electric_motor_duty_cycles",
+  "title": "IEC Electric Motor Duty Cycles",
+  "description": "The eight S1-S8 IEC duty cycles of operating electrical motors. IEC (the International Electrotechnical Commission) uses eight duty cycle designations to describe electrical motor operating conditions and thermal characteristics.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# IEC Electric Motor Duty Cycles\n\nThe International Electrotechnical Commission (IEC) defines eight duty cycle designations (S1-S8) to describe electrical motor operating conditions:\n\n## Duty Cycle Definitions\n\n| Code | Name | Description |\n|------|------|-------------|\n| **S1** | Continuous Duty | Motor works at constant load long enough to reach thermal equilibrium |\n| **S2** | Short-Time Duty | Motor works at constant load but not long enough to reach thermal equilibrium; long rest periods allow cooling to ambient temperature |\n| **S3** | Intermittent Periodic Duty | Sequential, identical run and rest cycles at constant load; thermal equilibrium never reached |\n| **S4** | Intermittent Periodic Duty with Starting | Sequential, identical start, run and rest cycles at constant load; thermal equilibrium not reached; starting current affects temperature rise |\n| **S5** | Intermittent Periodic Duty with Electric Braking | Sequential cycles of starting, running at constant load, and running with no load; no rest periods |\n| **S6** | Continuous Operation with Intermittent Load | Sequential cycles of running at constant load and running with no load; no rest periods |\n| **S7** | Continuous Operation with Electric Braking | Sequential cycles of starting, running at constant load, and electric braking; no rest periods |\n| **S8** | Continuous Operation with Periodic Load/Speed Changes | Sequential duty cycles run at different constant loads and speeds; no rest periods |\n\n## Key Considerations\n\n- **S1** is the baseline continuous duty cycle\n- **S2-S4** include rest periods for cooling\n- **S5-S8** are continuous operation cycles with no rest periods\n- Thermal characteristics vary significantly between cycles\n- Motor selection must match the actual duty cycle requirements"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Duty Cycle",
+        "Operation Type",
+        "Load Characteristics",
+        "Rest Periods",
+        "Thermal Behavior"
+      ],
+      "rows": [
+        [
+          "S1",
+          "Continuous",
+          "Constant load",
+          "None",
+          "Reaches thermal equilibrium"
+        ],
+        [
+          "S2",
+          "Short-time",
+          "Constant load",
+          "Long rest periods",
+          "Does not reach thermal equilibrium"
+        ],
+        [
+          "S3",
+          "Intermittent periodic",
+          "Constant load",
+          "Periodic rest",
+          "Never reaches equilibrium; starting current negligible"
+        ],
+        [
+          "S4",
+          "Intermittent periodic",
+          "Constant load",
+          "Periodic rest",
+          "Not at equilibrium; starting current affects temperature"
+        ],
+        [
+          "S5",
+          "Continuous with braking",
+          "Constant then no load",
+          "None",
+          "Sequential start, run, brake cycles"
+        ],
+        [
+          "S6",
+          "Continuous intermittent load",
+          "Constant then no load",
+          "None",
+          "Sequential load and no-load cycles"
+        ],
+        [
+          "S7",
+          "Continuous with braking",
+          "Constant load and electric brake",
+          "None",
+          "Sequential start, run, brake cycles"
+        ],
+        [
+          "S8",
+          "Continuous variable",
+          "Variable loads and speeds",
+          "None",
+          "Sequential cycles at different operating points"
+        ]
+      ]
+    }
+  ]
+}

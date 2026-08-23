@@ -1,0 +1,113 @@
+{
+  "id": "concrete_walls___volume",
+  "title": "Concrete Walls - Volume",
+  "description": "Estimate concrete wall volume.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Wall Section",
+        "Length (ft)",
+        "Height (ft)",
+        "Thickness (in)",
+        "Volume (cubic yards)"
+      ],
+      "rows": [
+        [
+          "Wall 1",
+          50,
+          10,
+          8,
+          "=((inputs.length_1 * inputs.height_1 * inputs.thickness_1) / 12) / 27"
+        ],
+        [
+          "Wall 2",
+          0,
+          0,
+          0,
+          "=((inputs.length_2 * inputs.height_2 * inputs.thickness_2) / 12) / 27"
+        ],
+        [
+          "Wall 3",
+          0,
+          0,
+          0,
+          "=((inputs.length_3 * inputs.height_3 * inputs.thickness_3) / 12) / 27"
+        ],
+        [
+          "Total Volume",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "length_1",
+          "label": "Wall 1 Length",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 50
+        },
+        {
+          "id": "height_1",
+          "label": "Wall 1 Height",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 10
+        },
+        {
+          "id": "thickness_1",
+          "label": "Wall 1 Thickness",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 8
+        },
+        {
+          "id": "length_2",
+          "label": "Wall 2 Length",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0
+        },
+        {
+          "id": "height_2",
+          "label": "Wall 2 Height",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0
+        },
+        {
+          "id": "thickness_2",
+          "label": "Wall 2 Thickness",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 0
+        },
+        {
+          "id": "length_3",
+          "label": "Wall 3 Length",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0
+        },
+        {
+          "id": "height_3",
+          "label": "Wall 3 Height",
+          "type": "number",
+          "unit": "ft",
+          "defaultValue": 0
+        },
+        {
+          "id": "thickness_3",
+          "label": "Wall 3 Thickness",
+          "type": "number",
+          "unit": "in",
+          "defaultValue": 0
+        }
+      ]
+    }
+  ]
+}

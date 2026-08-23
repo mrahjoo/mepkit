@@ -1,0 +1,112 @@
+{
+  "id": "compressed_air___pressure_drop_diagrams__metric_un",
+  "title": "Compressed Air - Pressure Drop Diagrams, Metric Units",
+  "description": "Pressure loss in compressed air pipe lines. Pressure drop can be estimated for typical entering pressures. The diagrams are calculated for schedule 40 pipes.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Compressed Air Pipeline Pressure Drop Calculator\n\nPressure loss in compressed air pipe lines measured in **kg/m² per 100 m** of pipe for various entering pressures.\n\nThe diagrams below are calculated for [schedule 40 pipes](https://www.engineeringtoolbox.com/ansi-steel-pipes-d_305.html).\n\n### Unit Conversions\n- _1 kg/cm² = 0.98 bar = 735 mmHg = 10000 mmH₂O = 14.2 psi_\n- _1 m³/min = 0.017 m³/s = 60 m³/h = 1000 liter/min = 35.3 cfm_\n- _1 m (meter) = 3.2808 ft = 39.37 in_\n\n### Schedule 40 Pipe Pressure Drop Reference Tables"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Pipe Diameter (mm)",
+        "Pressure 5 kg/cm² (kg/m²/100m)",
+        "Pressure 7.5 kg/cm² (kg/m²/100m)",
+        "Pressure 10 kg/cm² (kg/m²/100m)",
+        "Pressure 13 kg/cm² (kg/m²/100m)"
+      ],
+      "rows": [
+        [
+          13,
+          45.5,
+          40.2,
+          36.8,
+          34.2
+        ],
+        [
+          16,
+          20.1,
+          17.8,
+          16.3,
+          15.1
+        ],
+        [
+          19,
+          10.2,
+          9,
+          8.3,
+          7.7
+        ],
+        [
+          25,
+          3.8,
+          3.4,
+          3.1,
+          2.9
+        ],
+        [
+          32,
+          1.2,
+          1.1,
+          1,
+          0.9
+        ],
+        [
+          38,
+          0.5,
+          0.5,
+          0.4,
+          0.4
+        ],
+        [
+          50,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Pressure Drop Calculation for Non-Schedule 40 Pipes\n\nFor pipes other than schedule 40, use the following formula:\n\n**dp = dp₄₀ × (d₄₀ / d)⁵**\n\nWhere:\n- **dp** = actual pressure drop (kg/m² per 100 m pipe)\n- **dp₄₀** = pressure drop in schedule 40 pipe from table above (kg/m² per 100 m pipe)\n- **d₄₀** = inside diameter schedule 40 pipe (mm)\n- **d** = actual inside diameter (mm)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "dp40",
+          "label": "Pressure Drop Schedule 40 (kg/m² per 100m)",
+          "type": "number",
+          "defaultValue": 10.2,
+          "unit": "kg/m²"
+        },
+        {
+          "id": "d40",
+          "label": "Schedule 40 Inside Diameter",
+          "type": "number",
+          "defaultValue": 19,
+          "unit": "mm"
+        },
+        {
+          "id": "d",
+          "label": "Actual Inside Diameter",
+          "type": "number",
+          "defaultValue": 19,
+          "unit": "mm"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dp_actual",
+          "label": "Actual Pressure Drop",
+          "formula": "inputs.dp40 * Math.pow(inputs.d40 / inputs.d, 5)",
+          "unit": "kg/m² per 100m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "flywheels___kinetic_energy",
+  "title": "Flywheels - Kinetic Energy",
+  "description": "Calculate kinetic energy stored in a rotating flywheel using moment of inertia and angular velocity. A flywheel stores energy mechanically to smooth energy fluctuations in intermittent operating machines.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Flywheel Material",
+        "Density (kg/m³)",
+        "Design Stress (MPa)",
+        "Specific Energy (kWh/kg)"
+      ],
+      "rows": [
+        [
+          "Aluminum alloy",
+          2700,
+          "-",
+          "-"
+        ],
+        [
+          "Birch plywood",
+          700,
+          30,
+          "-"
+        ],
+        [
+          "Composite carbon fiber - 40% epoxy",
+          1550,
+          750,
+          0.052
+        ],
+        [
+          "E-glass fiber - 40% epoxy",
+          1900,
+          250,
+          0.014
+        ],
+        [
+          "Kevlar fiber - 40% epoxy",
+          1400,
+          1000,
+          0.076
+        ],
+        [
+          "Maraging steel",
+          8000,
+          900,
+          0.024
+        ],
+        [
+          "Titanium Alloy",
+          4500,
+          650,
+          0.031
+        ],
+        [
+          "Super paper",
+          1100,
+          "-",
+          "-"
+        ],
+        [
+          "S-glass fiber/epoxy",
+          1900,
+          350,
+          0.02
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "moment_of_inertia",
+          "label": "Moment of Inertia (I)",
+          "type": "number",
+          "unit": "kg m²",
+          "defaultValue": 0.22
+        },
+        {
+          "id": "angular_velocity",
+          "label": "Angular Velocity (ω)",
+          "type": "number",
+          "unit": "rad/s",
+          "defaultValue": 20.9
+        }
+      ],
+      "outputs": [
+        {
+          "id": "kinetic_energy",
+          "label": "Kinetic Energy (Ef)",
+          "formula": "0.5 * inputs.moment_of_inertia * inputs.angular_velocity ** 2",
+          "unit": "Joules (J)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "inertial_constant",
+          "label": "Inertial Constant (k)",
+          "type": "select",
+          "defaultValue": 1,
+          "options": [
+            {
+              "label": "Wheel loaded at rim (bicycle tire)",
+              "value": 1
+            },
+            {
+              "label": "Flat solid disk of uniform thickness",
+              "value": 0.606
+            },
+            {
+              "label": "Flat disk with center hole",
+              "value": 0.3
+            },
+            {
+              "label": "Solid sphere",
+              "value": 0.4
+            },
+            {
+              "label": "Thin rim",
+              "value": 0.5
+            },
+            {
+              "label": "Radial rod",
+              "value": 0.333
+            },
+            {
+              "label": "Circular brush",
+              "value": 0.333
+            },
+            {
+              "label": "Thin-walled hollow sphere",
+              "value": 0.667
+            },
+            {
+              "label": "Thin rectangular rod",
+              "value": 0.5
+            }
+          ]
+        },
+        {
+          "id": "mass",
+          "label": "Mass of Flywheel (m)",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 2.3
+        },
+        {
+          "id": "radius",
+          "label": "Radius (r)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.306
+        }
+      ],
+      "outputs": [
+        {
+          "id": "moment_of_inertia_calc",
+          "label": "Moment of Inertia (I)",
+          "formula": "inputs.inertial_constant * inputs.mass * inputs.radius ** 2",
+          "unit": "kg m²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "linear_velocity",
+          "label": "Linear Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 6.94
+        },
+        {
+          "id": "wheel_radius",
+          "label": "Wheel Radius",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.3325
+        }
+      ],
+      "outputs": [
+        {
+          "id": "angular_velocity_calc",
+          "label": "Angular Velocity (ω)",
+          "formula": "inputs.linear_velocity / inputs.wheel_radius",
+          "unit": "rad/s",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

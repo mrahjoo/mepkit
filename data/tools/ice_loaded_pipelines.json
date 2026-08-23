@@ -1,0 +1,72 @@
+{
+  "id": "ice_loaded_pipelines",
+  "title": "Ice Loaded Pipelines",
+  "description": "Ice coat weight on horizontal pipe lines. Calculate weight load on ice coated horizontal pipe lines with conversion between imperial and metric units.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Ice Loaded Pipelines\n\nIce coat weight on horizontal pipe lines.\n\n## Weight Load Calculation\n\nWeight load on ice coated horizontal pipe lines:\n\n*Conversion factor: 1 lb/ft = 1.49 kg/m*"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "ice_weight_imperial",
+          "label": "Ice Weight Load",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "lb/ft"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ice_weight_metric",
+          "label": "Ice Weight Load (Metric)",
+          "formula": "inputs.ice_weight_imperial * 1.49",
+          "unit": "kg/m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0.5",
+            "1.0",
+            "1.5",
+            "2.0",
+            "2.5",
+            "3.0"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Weight Load (kg/m)"
+        },
+        "series": [
+          {
+            "name": "Ice Weight Load",
+            "data": [
+              0.745,
+              1.49,
+              2.235,
+              2.98,
+              3.725,
+              4.47
+            ],
+            "type": "line",
+            "smooth": true,
+            "symbol": "circle"
+          }
+        ]
+      }
+    }
+  ]
+}

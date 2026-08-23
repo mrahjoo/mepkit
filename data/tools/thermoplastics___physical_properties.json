@@ -1,0 +1,93 @@
+{
+  "id": "thermoplastics___physical_properties",
+  "title": "Thermoplastics - Physical Properties",
+  "description": "Typical properties of common thermoplastics including specific gravity, tensile yield strength, tensile modulus, coefficient of linear expansion, thermal conductivity, specific heat, and maximum temperature limits.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Thermoplastic",
+        "Specific Gravity (SG)",
+        "Tensile Yield Strength (10³ psi)",
+        "Tensile Modulus (10³ psi)",
+        "Coefficient of Linear Expansion (10⁻⁶ in/in °F)",
+        "Thermal Conductivity (Btu in/ft²h °F)",
+        "Specific Heat (Btu/lb °F)",
+        "Maximum Temperature Limit (°F/°C)"
+      ],
+      "rows": [
+        [
+          "ABS",
+          1.08,
+          7,
+          340,
+          60,
+          1.35,
+          0.34,
+          "180/80"
+        ],
+        [
+          "PVC",
+          1.4,
+          8,
+          410,
+          30,
+          1.1,
+          0.25,
+          "150/65"
+        ],
+        [
+          "CPVC",
+          1.54,
+          8,
+          420,
+          35,
+          1,
+          0.2,
+          "210/100"
+        ],
+        [
+          "PE",
+          0.95,
+          3.2,
+          120,
+          90,
+          3.2,
+          0.55,
+          "160/70"
+        ],
+        [
+          "PEX",
+          0.94,
+          2.8,
+          "—",
+          90,
+          3.2,
+          0.55,
+          "210/100"
+        ],
+        [
+          "PB",
+          0.92,
+          4.2,
+          55,
+          72,
+          1.5,
+          0.45,
+          "210/100"
+        ],
+        [
+          "PVDF",
+          1.76,
+          7,
+          220,
+          70,
+          1.5,
+          0.29,
+          "300/150"
+        ]
+      ]
+    }
+  ]
+}

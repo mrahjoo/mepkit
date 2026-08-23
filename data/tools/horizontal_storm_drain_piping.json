@@ -1,0 +1,134 @@
+{
+  "id": "horizontal_storm_drain_piping",
+  "title": "Horizontal Storm Drain Piping",
+  "description": "Capacities of horizontal storm drain piping systems. Calculates the area to be drained based on drain pipe diameter and slope. Based on rainfall intensity of 100 mm/hour (4 inches/hour).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Horizontal Storm Drain Piping Capacity Calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Drain Pipe Diameter",
+          "type": "select",
+          "options": [
+            {
+              "value": 80,
+              "label": "80 mm (3 inches)"
+            },
+            {
+              "value": 100,
+              "label": "100 mm (4 inches)"
+            },
+            {
+              "value": 150,
+              "label": "150 mm (6 inches)"
+            },
+            {
+              "value": 200,
+              "label": "200 mm (8 inches)"
+            }
+          ],
+          "defaultValue": 100
+        },
+        {
+          "id": "slope",
+          "label": "Pipe Slope",
+          "type": "select",
+          "options": [
+            {
+              "value": 1,
+              "label": "1%"
+            },
+            {
+              "value": 2,
+              "label": "2%"
+            },
+            {
+              "value": 4,
+              "label": "4%"
+            }
+          ],
+          "defaultValue": 1,
+          "unit": "%"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "area_drained_m2",
+          "label": "Area to be Drained",
+          "formula": "IF(AND(inputs.pipe_diameter==80,inputs.slope==1),75,IF(AND(inputs.pipe_diameter==80,inputs.slope==2),110,IF(AND(inputs.pipe_diameter==80,inputs.slope==4),150,IF(AND(inputs.pipe_diameter==100,inputs.slope==1),175,IF(AND(inputs.pipe_diameter==100,inputs.slope==2),245,IF(AND(inputs.pipe_diameter==100,inputs.slope==4),350,IF(AND(inputs.pipe_diameter==150,inputs.slope==1),495,IF(AND(inputs.pipe_diameter==150,inputs.slope==2),700,IF(AND(inputs.pipe_diameter==150,inputs.slope==4),995,IF(AND(inputs.pipe_diameter==200,inputs.slope==1),1070,IF(AND(inputs.pipe_diameter==200,inputs.slope==2),1515,IF(AND(inputs.pipe_diameter==200,inputs.slope==4),2135,0))))))))))))",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "area_drained_ft2",
+          "label": "Area to be Drained",
+          "formula": "IF(AND(inputs.pipe_diameter==80,inputs.slope==1),820,IF(AND(inputs.pipe_diameter==80,inputs.slope==2),1180,IF(AND(inputs.pipe_diameter==80,inputs.slope==4),1620,IF(AND(inputs.pipe_diameter==100,inputs.slope==1),1880,IF(AND(inputs.pipe_diameter==100,inputs.slope==2),2640,IF(AND(inputs.pipe_diameter==100,inputs.slope==4),3770,IF(AND(inputs.pipe_diameter==150,inputs.slope==1),5350,IF(AND(inputs.pipe_diameter==150,inputs.slope==2),7550,IF(AND(inputs.pipe_diameter==150,inputs.slope==4),10700,IF(AND(inputs.pipe_diameter==200,inputs.slope==1),11500,IF(AND(inputs.pipe_diameter==200,inputs.slope==2),16300,IF(AND(inputs.pipe_diameter==200,inputs.slope==4),23000,0))))))))))))",
+          "unit": "ft²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Diameter (mm)",
+        "Diameter (in)",
+        "1% Slope (m²)",
+        "1% Slope (ft²)",
+        "2% Slope (m²)",
+        "2% Slope (ft²)",
+        "4% Slope (m²)",
+        "4% Slope (ft²)"
+      ],
+      "rows": [
+        [
+          80,
+          3,
+          75,
+          820,
+          110,
+          1180,
+          150,
+          1620
+        ],
+        [
+          100,
+          4,
+          175,
+          1880,
+          245,
+          2640,
+          350,
+          3770
+        ],
+        [
+          150,
+          6,
+          495,
+          5350,
+          700,
+          7550,
+          995,
+          10700
+        ],
+        [
+          200,
+          8,
+          1070,
+          11500,
+          1515,
+          16300,
+          2135,
+          23000
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Notes\n\n- Based on rainfall intensity of **100 mm/hour (4 inches/hour)**\n- The anticipated rainfall intensity should always be checked with the local authorities\n- Table values represent the maximum area that can be drained by each pipe diameter at the specified slope\n- Drained areas may include roofs, paved courtyards, or similar surfaces"
+    }
+  ]
+}

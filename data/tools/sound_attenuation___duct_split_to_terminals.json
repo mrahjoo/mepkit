@@ -1,0 +1,53 @@
+{
+  "id": "sound_attenuation___duct_split_to_terminals",
+  "title": "Sound Attenuation - Duct split to Terminals",
+  "description": "Estimating sound attenuation where ducts splits to terminals. Splitting ducts to terminals will reduce the sound power level transferred to each terminal based on the reduced volume of air.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Number of Equal Terminals",
+        "Sound Attenuation (dB)"
+      ],
+      "rows": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4.77
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6.99
+        ],
+        [
+          6,
+          7.78
+        ],
+        [
+          8,
+          9.03
+        ],
+        [
+          10,
+          10
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## How Sound Attenuation Works\n\nWhen a duct splits into multiple equal terminals, the sound power level (_LN_) is reduced according to the reduced volume of air flowing through each terminal.\n\n### Formula\n\nThe sound attenuation for equal terminals can be calculated as:\n\n**Attenuation (dB) = 10 × log₁₀(Number of Terminals)**\n\n### Example\n\nFor a duct that splits into **4 equal terminals**, the sound attenuation from duct to each terminal is approximately **6 dB**."
+    }
+  ]
+}

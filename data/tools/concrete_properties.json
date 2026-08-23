@@ -1,0 +1,176 @@
+{
+  "id": "concrete_properties",
+  "title": "Concrete Properties",
+  "description": "Properties of normal strength Portland cement concrete.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "datatable",
+      "content": "Typical properties of normal strength Portland cement concrete",
+      "headers": [
+        "Property",
+        "Symbol",
+        "Min Value",
+        "Max Value",
+        "Unit (SI)",
+        "Unit (Imperial)"
+      ],
+      "rows": [
+        [
+          "Density",
+          "ρ",
+          "2240",
+          "2400",
+          "kg/m³",
+          "lb/ft³"
+        ],
+        [
+          "Compressive strength",
+          "",
+          "20",
+          "40",
+          "MPa",
+          "psi"
+        ],
+        [
+          "Flexural strength",
+          "",
+          "3",
+          "5",
+          "MPa",
+          "psi"
+        ],
+        [
+          "Tensile strength",
+          "σ",
+          "2",
+          "5",
+          "MPa",
+          "psi"
+        ],
+        [
+          "Modulus of elasticity",
+          "E",
+          "14",
+          "41",
+          "GPa",
+          "×10⁶ psi"
+        ],
+        [
+          "Permeability",
+          "",
+          "1×10⁻¹⁰",
+          "",
+          "cm/sec",
+          ""
+        ],
+        [
+          "Coefficient of thermal expansion",
+          "β",
+          "1×10⁻⁵",
+          "",
+          "°C⁻¹",
+          "×10⁻⁶ °F⁻¹"
+        ],
+        [
+          "Drying shrinkage",
+          "",
+          "4×10⁻⁴",
+          "8×10⁻⁴",
+          "",
+          ""
+        ],
+        [
+          "Drying shrinkage (reinforced)",
+          "",
+          "2×10⁻⁴",
+          "3×10⁻⁴",
+          "",
+          ""
+        ],
+        [
+          "Poisson's ratio",
+          "",
+          "0.20",
+          "0.21",
+          "",
+          ""
+        ],
+        [
+          "Shear strength",
+          "τ",
+          "6",
+          "17",
+          "MPa",
+          ""
+        ],
+        [
+          "Specific heat",
+          "c",
+          "0.75",
+          "",
+          "kJ/kg K",
+          "Btu/lbm °F"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Concrete Properties Range Comparison",
+      "options": {
+        "title": {
+          "text": "Concrete Properties Range Comparison"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Density (×100 kg/m³)",
+            "Compressive (MPa)",
+            "Flexural (MPa)",
+            "Tensile (MPa)",
+            "Modulus (GPa)",
+            "Poisson's Ratio (×10)",
+            "Shear (MPa)"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "name": "Minimum",
+            "type": "bar",
+            "data": [
+              22.4,
+              20,
+              3,
+              2,
+              14,
+              2,
+              6
+            ]
+          },
+          {
+            "name": "Maximum",
+            "type": "bar",
+            "data": [
+              24,
+              40,
+              5,
+              5,
+              41,
+              2.1,
+              17
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

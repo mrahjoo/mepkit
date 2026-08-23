@@ -1,0 +1,67 @@
+{
+  "id": "air_compressors___maximum_air_flow_vs__inlet_pipe_",
+  "title": "Air Compressors - Maximum Air Flow vs. Inlet Pipe Size",
+  "description": "Inlet pipe size and maximum air flow. The pressure loss through an air compressor inlet should be kept to a minimum to avoid noise problems. The diagram indicates reasonable maximum flow through an inlet pipe.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Inlet Pipe Size (inches)",
+        "Inlet Pipe Size (mm)",
+        "Maximum Air Flow (cfm)",
+        "Maximum Air Flow (l/s)"
+      ],
+      "rows": [
+        [
+          0.5,
+          12.7,
+          20,
+          9.4
+        ],
+        [
+          0.75,
+          19.05,
+          40,
+          18.8
+        ],
+        [
+          1,
+          25.4,
+          80,
+          37.6
+        ],
+        [
+          1.25,
+          31.75,
+          125,
+          58.75
+        ],
+        [
+          1.5,
+          38.1,
+          160,
+          75.2
+        ],
+        [
+          2,
+          50.8,
+          250,
+          117.5
+        ],
+        [
+          2.5,
+          63.5,
+          350,
+          164.5
+        ],
+        [
+          3,
+          76.2,
+          500,
+          235
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "types_of_air_compressors",
+  "title": "Types of Air Compressors",
+  "description": "Comprehensive guide to the three basic types of air compressors: reciprocating, rotary screw, and rotary centrifugal. Includes specifications, characteristics, and applications for each type.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Types of Air Compressors\n\nThe three basic types of air compressors are:\n\n- **Reciprocating**: Positive displacement machines using a piston within a cylinder\n- **Rotary Screw**: Positive displacement compressors with two rotors within a casing\n- **Rotary Centrifugal**: Dynamic compressors depending on transfer of energy from a rotating impeller\n\n## Key Specifications\n\nAll compressor types are further specified by:\n\n- Number of compression stages\n- Cooling method (air, water, oil)\n- Drive method (motor, engine, steam, other)\n- Lubrication (oil, Oil-Free)\n- Packaged or custom-built"
+    },
+    {
+      "type": "chart",
+      "headers": [
+        "Compressor Type",
+        "Displacement Type",
+        "Pressure Range",
+        "Typical HP Range",
+        "Key Characteristics"
+      ],
+      "rows": [
+        [
+          "Reciprocating - Single Stage",
+          "Positive Displacement",
+          "70-100 psig",
+          "1-50 HP",
+          "Piston-based, general purpose"
+        ],
+        [
+          "Reciprocating - Two Stage",
+          "Positive Displacement",
+          "100-250 psig",
+          "1-50 HP",
+          "Higher pressure capability"
+        ],
+        [
+          "Rotary Screw",
+          "Positive Displacement",
+          "Variable",
+          "100+ HP",
+          "Smooth, pulse-free, continuous duty"
+        ],
+        [
+          "Rotary Screw - Oil Free",
+          "Positive Displacement",
+          "Variable",
+          "100+ HP",
+          "True oil-free air output"
+        ],
+        [
+          "Centrifugal",
+          "Dynamic",
+          "High Pressure",
+          "100+ HP",
+          "High capacity, continuous flow"
+        ]
+      ],
+      "options": {
+        "title": {
+          "text": "Air Compressor Types Comparison"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Reciprocating Single",
+            "Reciprocating Two",
+            "Rotary Screw",
+            "Oil-Free Screw",
+            "Centrifugal"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "legend": {
+          "data": [
+            "Typical HP Range"
+          ]
+        }
+      }
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Compressor Type",
+        "Mechanism",
+        "Cooling Method",
+        "Lubrication",
+        "Maintenance",
+        "Applications"
+      ],
+      "rows": [
+        [
+          "Reciprocating",
+          "Piston in cylinder (single/double acting)",
+          "Air or Water cooled",
+          "Lubricated or Oil-Free",
+          "Regular valve maintenance",
+          "70-250 psig range applications"
+        ],
+        [
+          "Rotary Screw",
+          "Two rotors in casing",
+          "Oil cooled (air/water cooled oil coolers)",
+          "Oil flooded or Oil-Free",
+          "Low maintenance, easy operation",
+          "High volume, continuous duty"
+        ],
+        [
+          "Centrifugal",
+          "Rotating impeller (dynamic)",
+          "Air or Water cooled",
+          "Oil-Free by design (sealed)",
+          "Minimal air-oil contact",
+          "High capacity, high speed operation"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Detailed Type Descriptions\n\n### Reciprocating Air Compressors\n\n**Mechanism**: Positive displacement machines that increase pressure by reducing volume. Use a piston within a cylinder as the compressing element.\n\n**Configurations**:\n- **Single-stage**: 70-100 psig pressure range\n- **Two-stage**: 100-250 psig pressure range\n- **Single-acting**: Compression on one side of piston\n- **Double-acting**: Compression on both sides of piston\n\n**Typical Range**: 1-50 HP (~4 CFM at 100 psi per HP)\n\n**Advantages**: Wide range of pressure and capacity selections, available in lubricated and non-lubricated configurations\n\n### Rotary Screw Compressors\n\n**Mechanism**: Positive displacement compressors with two rotors that compress air internally (no valves). Most common type is the single-stage helical/spiral lobe oil-flooded screw compressor.\n\n**Characteristics**:\n- Oil seals internal clearances\n- Cooling occurs inside the compressor\n- Continuous duty, compact size\n- Smooth, pulse-free air output\n\n**Capacity Control**: Variable speed and variable displacement (slide valve technique)\n\n**Configurations**: Oil-flooded and Oil-Free variants (air or water cooled)\n\n**Typical Range**: 100+ HP\n\n### Centrifugal Compressors\n\n**Mechanism**: Dynamic compressors that transfer energy from a rotating impeller to air, converting angular momentum to pressure.\n\n**Characteristics**:\n- Higher rotation speeds than other types\n- Designed for high capacity with continuous flow\n- Oil-free by design (oil lubricated running gear separated by seals)\n- Capacity controlled by adjusting inlet guide vanes\n\n**Typical Range**: 100+ HP and above"
+    }
+  ]
+}

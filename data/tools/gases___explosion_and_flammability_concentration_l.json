@@ -1,0 +1,6 @@
+{
+  "id": "gases___explosion_and_flammability_concentration_l",
+  "title": "Gases - Explosion and Flammability Concentration Limits",
+  "description": "Flame and explosion limits for gases like propane, methane, butane, acetylene and more. Calculate safe ventilation levels based on LEL/LFL concentration limits.",
+  "type": "calculator"
+}

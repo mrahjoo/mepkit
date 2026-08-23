@@ -1,0 +1,77 @@
+{
+  "id": "acceleration_units_converter",
+  "title": "Acceleration Units Converter",
+  "description": "Converting between units of acceleration.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Convert between common acceleration units including m/s², ft/s², g (gravity), and km/h²",
+      "inputs": [
+        {
+          "id": "value",
+          "label": "Acceleration Value",
+          "type": "number",
+          "defaultValue": 1
+        },
+        {
+          "id": "unit_from",
+          "label": "From Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "m/s² (Meters per second squared)",
+              "value": "m/s2"
+            },
+            {
+              "label": "ft/s² (Feet per second squared)",
+              "value": "ft/s2"
+            },
+            {
+              "label": "g (Standard gravity)",
+              "value": "g"
+            },
+            {
+              "label": "km/h² (Kilometers per hour squared)",
+              "value": "km/h2"
+            }
+          ],
+          "defaultValue": "m/s2"
+        },
+        {
+          "id": "unit_to",
+          "label": "To Unit",
+          "type": "select",
+          "options": [
+            {
+              "label": "m/s² (Meters per second squared)",
+              "value": "m/s2"
+            },
+            {
+              "label": "ft/s² (Feet per second squared)",
+              "value": "ft/s2"
+            },
+            {
+              "label": "g (Standard gravity)",
+              "value": "g"
+            },
+            {
+              "label": "km/h² (Kilometers per hour squared)",
+              "value": "km/h2"
+            }
+          ],
+          "defaultValue": "ft/s2"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "Converted Value",
+          "formula": "inputs.value * (inputs.unit_from == 'm/s2' ? 1 : inputs.unit_from == 'ft/s2' ? 0.3048 : inputs.unit_from == 'g' ? 9.81 : 0.00771604938) / (inputs.unit_to == 'm/s2' ? 1 : inputs.unit_to == 'ft/s2' ? 0.3048 : inputs.unit_to == 'g' ? 9.81 : 0.00771604938)",
+          "unit": "varies",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

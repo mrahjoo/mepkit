@@ -1,0 +1,190 @@
+{
+  "id": "ventilation_systems",
+  "title": "Ventilation Systems",
+  "description": "Design of systems for ventilation and air handling - air change rates, ducts and pressure drops, charts and diagrams and more.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Ventilation Systems\n\nDesign of systems for ventilation and air handling including:\n- Air change rates calculation\n- Duct sizing and design\n- Pressure drop analysis\n- Performance charts and diagrams\n- System efficiency optimization"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "room_volume",
+          "label": "Room Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 100
+        },
+        {
+          "id": "air_changes_per_hour",
+          "label": "Air Changes Per Hour",
+          "type": "number",
+          "unit": "ACH",
+          "defaultValue": 6
+        },
+        {
+          "id": "duct_diameter",
+          "label": "Duct Diameter",
+          "type": "number",
+          "unit": "mm",
+          "defaultValue": 150
+        },
+        {
+          "id": "air_velocity",
+          "label": "Air Velocity",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volumetric_flow_rate",
+          "label": "Volumetric Flow Rate",
+          "formula": "inputs.room_volume * inputs.air_changes_per_hour / 60",
+          "unit": "m³/min",
+          "format": "decimal"
+        },
+        {
+          "id": "duct_area",
+          "label": "Duct Cross-sectional Area",
+          "formula": "3.14159 * (inputs.duct_diameter / 2 / 1000) ^ 2",
+          "unit": "m²",
+          "format": "decimal"
+        },
+        {
+          "id": "actual_velocity",
+          "label": "Actual Air Velocity",
+          "formula": "inputs.volumetric_flow_rate / 60 / (3.14159 * (inputs.duct_diameter / 2 / 1000) ^ 2)",
+          "unit": "m/s",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit",
+        "Standard Range"
+      ],
+      "rows": [
+        [
+          "Room Volume",
+          "100",
+          "m³",
+          "50-500"
+        ],
+        [
+          "Air Changes Per Hour",
+          "6",
+          "ACH",
+          "4-12"
+        ],
+        [
+          "Duct Diameter",
+          "150",
+          "mm",
+          "100-400"
+        ],
+        [
+          "Air Velocity",
+          "4",
+          "m/s",
+          "3-5"
+        ],
+        [
+          "Volumetric Flow Rate",
+          "10",
+          "m³/min",
+          "5-50"
+        ],
+        [
+          "Pressure Drop",
+          "12",
+          "Pa/m",
+          "10-20"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Ventilation System Performance"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Flow Rate",
+            "Pressure Drop",
+            "Velocity"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "4 ACH",
+            "6 ACH",
+            "8 ACH",
+            "10 ACH",
+            "12 ACH"
+          ]
+        },
+        "yAxis": [
+          {
+            "type": "value",
+            "name": "Flow Rate (m³/min)"
+          },
+          {
+            "type": "value",
+            "name": "Pressure Drop (Pa)"
+          }
+        ],
+        "series": [
+          {
+            "name": "Flow Rate",
+            "type": "line",
+            "data": [
+              6.67,
+              10,
+              13.33,
+              16.67,
+              20
+            ],
+            "yAxisIndex": 0
+          },
+          {
+            "name": "Pressure Drop",
+            "type": "line",
+            "data": [
+              8,
+              12,
+              18,
+              25,
+              33
+            ],
+            "yAxisIndex": 1
+          },
+          {
+            "name": "Velocity",
+            "type": "bar",
+            "data": [
+              3.2,
+              4,
+              4.8,
+              5.6,
+              6.4
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "id": "insulated_steam_pipes___condensate_generated__kg_h",
+  "title": "Insulated Steam Pipes - Condensate Generated (kg/h per 100m)",
+  "description": "Calculate condensate generated due to heat loss in insulated steam pipes. Heat loss from steam pipes generates condensate which must be drained from the system. This tool uses a lookup table based on steam pressure and pipe size, with surrounding temperature of 20°C and 80% insulation efficiency.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "condensate_calculator",
+      "content": "Select steam pressure and pipe size to determine condensate generation rate",
+      "inputs": [
+        {
+          "id": "steam_pressure",
+          "label": "Steam Pressure (bar)",
+          "type": "select",
+          "options": [
+            {
+              "value": 0.7,
+              "label": "0.7"
+            },
+            {
+              "value": 2,
+              "label": "2"
+            },
+            {
+              "value": 4,
+              "label": "4"
+            },
+            {
+              "value": 7,
+              "label": "7"
+            },
+            {
+              "value": 12,
+              "label": "12"
+            },
+            {
+              "value": 16,
+              "label": "16"
+            },
+            {
+              "value": 20,
+              "label": "20"
+            },
+            {
+              "value": 28,
+              "label": "28"
+            },
+            {
+              "value": 35,
+              "label": "35"
+            },
+            {
+              "value": 42,
+              "label": "42"
+            }
+          ]
+        },
+        {
+          "id": "pipe_size",
+          "label": "Pipe Size (mm)",
+          "type": "select",
+          "options": [
+            {
+              "value": 50,
+              "label": "50"
+            },
+            {
+              "value": 65,
+              "label": "65"
+            },
+            {
+              "value": 80,
+              "label": "80"
+            },
+            {
+              "value": 100,
+              "label": "100"
+            },
+            {
+              "value": 125,
+              "label": "125"
+            },
+            {
+              "value": 150,
+              "label": "150"
+            },
+            {
+              "value": 200,
+              "label": "200"
+            },
+            {
+              "value": 250,
+              "label": "250"
+            },
+            {
+              "value": 300,
+              "label": "300"
+            }
+          ]
+        },
+        {
+          "id": "temperature_adjustment",
+          "label": "Temperature Adjustment Factor",
+          "type": "select",
+          "options": [
+            {
+              "value": 1,
+              "label": "20°C (Standard)"
+            },
+            {
+              "value": 1.5,
+              "label": "-20°C (Add 50%)"
+            }
+          ],
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "condensate_generation",
+          "label": "Condensate Generation",
+          "unit": "kg/h per 100m",
+          "format": "decimal",
+          "formula": "lookupCondensateValue(inputs.steam_pressure, inputs.pipe_size) * inputs.temperature_adjustment"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "condensate_table",
+      "content": "Condensate Generation Reference Table",
+      "headers": [
+        "Steam Pressure (bar)",
+        "50 mm",
+        "65 mm",
+        "80 mm",
+        "100 mm",
+        "125 mm",
+        "150 mm",
+        "200 mm",
+        "250 mm",
+        "300 mm"
+      ],
+      "rows": [
+        [
+          "0.7",
+          "9",
+          "10",
+          "13",
+          "16",
+          "19",
+          "24",
+          "30",
+          "36",
+          "44"
+        ],
+        [
+          "2",
+          "11",
+          "13",
+          "16",
+          "20",
+          "24",
+          "29",
+          "37",
+          "46",
+          "55"
+        ],
+        [
+          "4",
+          "15",
+          "18",
+          "21",
+          "28",
+          "37",
+          "42",
+          "51",
+          "63",
+          "75"
+        ],
+        [
+          "7",
+          "18",
+          "22",
+          "26",
+          "32",
+          "41",
+          "48",
+          "60",
+          "75",
+          "89"
+        ],
+        [
+          "12",
+          "24",
+          "28",
+          "34",
+          "39",
+          "49",
+          "57",
+          "79",
+          "99",
+          "117"
+        ],
+        [
+          "16",
+          "29",
+          "35",
+          "43",
+          "54",
+          "67",
+          "80",
+          "99",
+          "123",
+          "147"
+        ],
+        [
+          "20",
+          "31",
+          "38",
+          "46",
+          "57",
+          "71",
+          "83",
+          "105",
+          "131",
+          "155"
+        ],
+        [
+          "28",
+          "34",
+          "41",
+          "50",
+          "63",
+          "78",
+          "92",
+          "117",
+          "145",
+          "173"
+        ],
+        [
+          "35",
+          "41",
+          "50",
+          "59",
+          "74",
+          "92",
+          "110",
+          "137",
+          "172",
+          "204"
+        ],
+        [
+          "42",
+          "45",
+          "59",
+          "66",
+          "83",
+          "103",
+          "124",
+          "155",
+          "193",
+          "229"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "notes",
+      "content": "## Notes\n\n- Table is based on a surrounding temperature of **20°C** with **80% insulation efficiency** compared with uninsulated pipes\n- At a surrounding temperature of **-20°C**, approximately **50% additional condensate load** should be added\n- Values are per 100 meters of pipe length\n- 1 inch = 25.4 mm"
+    }
+  ]
+}

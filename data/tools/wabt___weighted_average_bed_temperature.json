@@ -1,0 +1,164 @@
+{
+  "id": "wabt___weighted_average_bed_temperature",
+  "title": "WABT - Weighted Average Bed Temperature",
+  "description": "Calculate the Weighted Average Bed Temperature (WABT) for adiabatic reactors with one or multiple catalyst beds. WABT provides a single representative temperature value that accounts for temperature profiles across the reactor and is weighted by catalyst mass distribution.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Reactor/Bed",
+        "Inlet Temperature (°C)",
+        "Outlet Temperature (°C)",
+        "Catalyst Mass (kg)",
+        "Weight Fraction"
+      ],
+      "rows": [
+        [
+          "Reactor 1",
+          350,
+          395,
+          9900,
+          0.18
+        ],
+        [
+          "Reactor 2",
+          370,
+          390,
+          24000,
+          0.42
+        ],
+        [
+          "Reactor 3",
+          385,
+          395,
+          22500,
+          0.4
+        ]
+      ],
+      "inputs": [
+        {
+          "id": "inlet_temp_1",
+          "label": "Inlet Temperature Reactor 1",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 350
+        },
+        {
+          "id": "outlet_temp_1",
+          "label": "Outlet Temperature Reactor 1",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 395
+        },
+        {
+          "id": "catalyst_mass_1",
+          "label": "Catalyst Mass Reactor 1",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 9900
+        },
+        {
+          "id": "inlet_temp_2",
+          "label": "Inlet Temperature Reactor 2",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 370
+        },
+        {
+          "id": "outlet_temp_2",
+          "label": "Outlet Temperature Reactor 2",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 390
+        },
+        {
+          "id": "catalyst_mass_2",
+          "label": "Catalyst Mass Reactor 2",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 24000
+        },
+        {
+          "id": "inlet_temp_3",
+          "label": "Inlet Temperature Reactor 3",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 385
+        },
+        {
+          "id": "outlet_temp_3",
+          "label": "Outlet Temperature Reactor 3",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 395
+        },
+        {
+          "id": "catalyst_mass_3",
+          "label": "Catalyst Mass Reactor 3",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 22500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_catalyst_mass",
+          "label": "Total Catalyst Mass",
+          "unit": "kg",
+          "formula": "inputs.catalyst_mass_1 + inputs.catalyst_mass_2 + inputs.catalyst_mass_3",
+          "format": "decimal"
+        },
+        {
+          "id": "weight_fraction_1",
+          "label": "Weight Fraction Reactor 1",
+          "unit": "",
+          "formula": "inputs.catalyst_mass_1 / (inputs.catalyst_mass_1 + inputs.catalyst_mass_2 + inputs.catalyst_mass_3)",
+          "format": "decimal"
+        },
+        {
+          "id": "weight_fraction_2",
+          "label": "Weight Fraction Reactor 2",
+          "unit": "",
+          "formula": "inputs.catalyst_mass_2 / (inputs.catalyst_mass_1 + inputs.catalyst_mass_2 + inputs.catalyst_mass_3)",
+          "format": "decimal"
+        },
+        {
+          "id": "weight_fraction_3",
+          "label": "Weight Fraction Reactor 3",
+          "unit": "",
+          "formula": "inputs.catalyst_mass_3 / (inputs.catalyst_mass_1 + inputs.catalyst_mass_2 + inputs.catalyst_mass_3)",
+          "format": "decimal"
+        },
+        {
+          "id": "wabt_reactor_1",
+          "label": "WABT Reactor 1",
+          "unit": "°C",
+          "formula": "(inputs.inlet_temp_1 + 2 * inputs.outlet_temp_1) / 3",
+          "format": "decimal"
+        },
+        {
+          "id": "wabt_reactor_2",
+          "label": "WABT Reactor 2",
+          "unit": "°C",
+          "formula": "(inputs.inlet_temp_2 + 2 * inputs.outlet_temp_2) / 3",
+          "format": "decimal"
+        },
+        {
+          "id": "wabt_reactor_3",
+          "label": "WABT Reactor 3",
+          "unit": "°C",
+          "formula": "(inputs.inlet_temp_3 + 2 * inputs.outlet_temp_3) / 3",
+          "format": "decimal"
+        },
+        {
+          "id": "global_wabt",
+          "label": "Global WABT",
+          "unit": "°C",
+          "formula": "((inputs.inlet_temp_1 + 2 * inputs.outlet_temp_1) / 3) * (inputs.catalyst_mass_1 / (inputs.catalyst_mass_1 + inputs.catalyst_mass_2 + inputs.catalyst_mass_3)) + ((inputs.inlet_temp_2 + 2 * inputs.outlet_temp_2) / 3) * (inputs.catalyst_mass_2 / (inputs.catalyst_mass_1 + inputs.catalyst_mass_2 + inputs.catalyst_mass_3)) + ((inputs.inlet_temp_3 + 2 * inputs.outlet_temp_3) / 3) * (inputs.catalyst_mass_3 / (inputs.catalyst_mass_1 + inputs.catalyst_mass_2 + inputs.catalyst_mass_3))",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1201 @@
+{
+  "id": "hvac_abbreviations",
+  "title": "HVAC Abbreviations",
+  "description": "Commonly used HVAC abbreviations and their meanings.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Abbreviation",
+        "Definition"
+      ],
+      "rows": [
+        [
+          "A",
+          "Compressed air line or area"
+        ],
+        [
+          "ABC",
+          "Above ceiling"
+        ],
+        [
+          "AC",
+          "Air chamber, alternating current"
+        ],
+        [
+          "A/C",
+          "Air conditioning"
+        ],
+        [
+          "AFF",
+          "Above finished floor"
+        ],
+        [
+          "AFG",
+          "Above finished grade"
+        ],
+        [
+          "AL",
+          "Aluminum"
+        ],
+        [
+          "AMB",
+          "Ambient"
+        ],
+        [
+          "AMP",
+          "Ampere"
+        ],
+        [
+          "ARR",
+          "Arrangement"
+        ],
+        [
+          "ATC",
+          "Automatic temperature control, at ceiling"
+        ],
+        [
+          "ATM",
+          "Atmosphere"
+        ],
+        [
+          "AUTO",
+          "Automatic"
+        ],
+        [
+          "AUX",
+          "Auxiliary"
+        ],
+        [
+          "AVG",
+          "Average"
+        ],
+        [
+          "BBD",
+          "Boiler blowdown"
+        ],
+        [
+          "BF",
+          "Boiler feed"
+        ],
+        [
+          "BHP",
+          "Boiler horsepower, brake horsepower"
+        ],
+        [
+          "BOD",
+          "Bottom of duct"
+        ],
+        [
+          "BOP",
+          "Bottom of pipe"
+        ],
+        [
+          "BOT",
+          "Bottom"
+        ],
+        [
+          "BP",
+          "Back pressure"
+        ],
+        [
+          "B & S",
+          "Bell-and-spigot"
+        ],
+        [
+          "BSMT",
+          "Basement"
+        ],
+        [
+          "BTU",
+          "British thermal unit"
+        ],
+        [
+          "BV",
+          "Butterfly valve"
+        ],
+        [
+          "°C",
+          "Degrees Celsius"
+        ],
+        [
+          "C",
+          "Condensate line"
+        ],
+        [
+          "C to C",
+          "Center to center"
+        ],
+        [
+          "CA",
+          "Compressed air"
+        ],
+        [
+          "CAL",
+          "Calorie"
+        ],
+        [
+          "CAP",
+          "Capacity"
+        ],
+        [
+          "CD",
+          "Condensate drain"
+        ],
+        [
+          "CF",
+          "Chemical feed, cubic foot"
+        ],
+        [
+          "CFH",
+          "Cubic feet per hour"
+        ],
+        [
+          "CFM",
+          "Cubic feet per minute"
+        ],
+        [
+          "CI",
+          "Cast iron"
+        ],
+        [
+          "CIRC",
+          "Circular"
+        ],
+        [
+          "CL",
+          "Center line"
+        ],
+        [
+          "CM",
+          "Centimetre"
+        ],
+        [
+          "CM2",
+          "Square centimetre"
+        ],
+        [
+          "CO",
+          "Clean out"
+        ],
+        [
+          "COL",
+          "Column"
+        ],
+        [
+          "CONC",
+          "Concrete, concentric"
+        ],
+        [
+          "CONN",
+          "Connect, connection"
+        ],
+        [
+          "CONT",
+          "Continuation"
+        ],
+        [
+          "CPVC",
+          "Chlorinated polyvinyl chloride"
+        ],
+        [
+          "CR",
+          "Condenser return"
+        ],
+        [
+          "CRW",
+          "Chemical resistant waste"
+        ],
+        [
+          "CS",
+          "Condenser supply"
+        ],
+        [
+          "CTR",
+          "Center"
+        ],
+        [
+          "CU",
+          "Cubic"
+        ],
+        [
+          "CU FT.",
+          "Cubic feet"
+        ],
+        [
+          "CU IN.",
+          "Cubic inches"
+        ],
+        [
+          "CV",
+          "Check valve"
+        ],
+        [
+          "CW",
+          "Cold water"
+        ],
+        [
+          "CWR",
+          "Chilled/cold water return"
+        ],
+        [
+          "CWS",
+          "Chilled/cold water supply"
+        ],
+        [
+          "D",
+          "Drain, deep"
+        ],
+        [
+          "DB",
+          "Dry bulb"
+        ],
+        [
+          "DDC",
+          "Direct digital control"
+        ],
+        [
+          "DEG",
+          "Degree"
+        ],
+        [
+          "DELTAT",
+          "Temperature difference"
+        ],
+        [
+          "DET",
+          "Detail"
+        ],
+        [
+          "DIA",
+          "Diameter"
+        ],
+        [
+          "DISC",
+          "Disconnect"
+        ],
+        [
+          "DN",
+          "Down"
+        ],
+        [
+          "DP",
+          "Dew point temperature"
+        ],
+        [
+          "DR",
+          "Drain"
+        ],
+        [
+          "DWG",
+          "Drawing"
+        ],
+        [
+          "EA",
+          "Exhaust air, each"
+        ],
+        [
+          "EAT",
+          "Entering temperature"
+        ],
+        [
+          "EATR",
+          "Exhaust Air Transfer Ratio"
+        ],
+        [
+          "E to C",
+          "End to center"
+        ],
+        [
+          "EER",
+          "Energy efficient ratio"
+        ],
+        [
+          "EFF",
+          "Efficiency"
+        ],
+        [
+          "EJ",
+          "Expansion joint"
+        ],
+        [
+          "EL",
+          "Elevation"
+        ],
+        [
+          "ELB",
+          "Elbow"
+        ],
+        [
+          "ELEC",
+          "Electrical"
+        ],
+        [
+          "ENT",
+          "Entering"
+        ],
+        [
+          "ERV",
+          "Energy Recovery Ventilator"
+        ],
+        [
+          "ESP",
+          "External static pressure"
+        ],
+        [
+          "ET",
+          "Expansion tank"
+        ],
+        [
+          "EVAP",
+          "Evaporator"
+        ],
+        [
+          "EWT",
+          "Entering water temperature"
+        ],
+        [
+          "EXH",
+          "Exhaust"
+        ],
+        [
+          "EXP",
+          "Expansion"
+        ],
+        [
+          "EXST",
+          "Existing"
+        ],
+        [
+          "EXT",
+          "External"
+        ],
+        [
+          "°F",
+          "Degrees Fahrenheit"
+        ],
+        [
+          "F",
+          "Fahrenheit"
+        ],
+        [
+          "FC",
+          "Flexible connector, flexible connection"
+        ],
+        [
+          "FCO",
+          "Floor clean out"
+        ],
+        [
+          "FD",
+          "Floor drain"
+        ],
+        [
+          "FDW",
+          "Feed water"
+        ],
+        [
+          "FEC",
+          "Fire extinguisher cabinet"
+        ],
+        [
+          "FF",
+          "Finish floor"
+        ],
+        [
+          "FG",
+          "Finish grade"
+        ],
+        [
+          "FHC",
+          "Fire hose cabinet"
+        ],
+        [
+          "FLA",
+          "Full load amps"
+        ],
+        [
+          "FLR",
+          "Floor"
+        ],
+        [
+          "FM",
+          "Flow meter"
+        ],
+        [
+          "FO",
+          "Fuel oil"
+        ],
+        [
+          "FOV",
+          "Flush out valve"
+        ],
+        [
+          "FPM",
+          "Feet per minute"
+        ],
+        [
+          "FPS",
+          "Feet per second"
+        ],
+        [
+          "FS",
+          "Flow switch, federal specs"
+        ],
+        [
+          "FT",
+          "Foot, feet"
+        ],
+        [
+          "FTG",
+          "Fitting"
+        ],
+        [
+          "FU",
+          "Fixture unit"
+        ],
+        [
+          "FV",
+          "Flush valve"
+        ],
+        [
+          "G",
+          "Gram, gas line"
+        ],
+        [
+          "GA",
+          "Gauge"
+        ],
+        [
+          "GAL",
+          "Gallons"
+        ],
+        [
+          "GALV",
+          "Galvanized"
+        ],
+        [
+          "GL.V",
+          "Globe valve"
+        ],
+        [
+          "GND",
+          "Ground"
+        ],
+        [
+          "GPD",
+          "Gallons per day"
+        ],
+        [
+          "GPH",
+          "Gallons per hour"
+        ],
+        [
+          "GPM",
+          "Gallons per minute"
+        ],
+        [
+          "GPS",
+          "Gallons per second"
+        ],
+        [
+          "GR",
+          "Grain"
+        ],
+        [
+          "GV",
+          "Gate valve"
+        ],
+        [
+          "GWH",
+          "Gas water heater"
+        ],
+        [
+          "H2O",
+          "Water"
+        ],
+        [
+          "HB",
+          "Hose bibb"
+        ],
+        [
+          "HD",
+          "Head"
+        ],
+        [
+          "Hg",
+          "Mercury"
+        ],
+        [
+          "HGT",
+          "Height"
+        ],
+        [
+          "HMD",
+          "Humidity"
+        ],
+        [
+          "HORIZ",
+          "Horizontal"
+        ],
+        [
+          "HP",
+          "Horsepower"
+        ],
+        [
+          "HR",
+          "Hour"
+        ],
+        [
+          "HRV",
+          "Heat Recovery Ventilator"
+        ],
+        [
+          "HTD",
+          "Heated"
+        ],
+        [
+          "HTR",
+          "Heater"
+        ],
+        [
+          "HW",
+          "Hot water"
+        ],
+        [
+          "HWH",
+          "Hot water heater"
+        ],
+        [
+          "HWR",
+          "Hot water return, hot water riser"
+        ],
+        [
+          "HWS",
+          "Hot water supply"
+        ],
+        [
+          "HWT",
+          "Hot water tank"
+        ],
+        [
+          "HZ",
+          "Hertz"
+        ],
+        [
+          "ID",
+          "Inside diameter"
+        ],
+        [
+          "IN.",
+          "Inch"
+        ],
+        [
+          "INHg",
+          "Inches of mercury"
+        ],
+        [
+          "INSUL",
+          "Insulation"
+        ],
+        [
+          "INT",
+          "International"
+        ],
+        [
+          "INTL",
+          "Internal"
+        ],
+        [
+          "IPS",
+          "Iron pipe size"
+        ],
+        [
+          "IV",
+          "Indirect vent"
+        ],
+        [
+          "IW",
+          "Indirect waste"
+        ],
+        [
+          "J",
+          "Joule"
+        ],
+        [
+          "K",
+          "Kelvin"
+        ],
+        [
+          "KG",
+          "Kilogram"
+        ],
+        [
+          "KM",
+          "Kilometre"
+        ],
+        [
+          "KM2",
+          "Square kilometre"
+        ],
+        [
+          "KPA",
+          "Kilo pascal"
+        ],
+        [
+          "KS",
+          "Kitchen sink"
+        ],
+        [
+          "KW",
+          "Kilowatt"
+        ],
+        [
+          "L",
+          "Length, liter"
+        ],
+        [
+          "LAT",
+          "Leaving air temperature"
+        ],
+        [
+          "LB.",
+          "Pound"
+        ],
+        [
+          "LBF",
+          "Pound-force"
+        ],
+        [
+          "LIQ",
+          "Liquid"
+        ],
+        [
+          "LP",
+          "Low pressure"
+        ],
+        [
+          "LRA",
+          "Locked rotor amps"
+        ],
+        [
+          "LVL",
+          "Level"
+        ],
+        [
+          "LVR",
+          "Louver"
+        ],
+        [
+          "LWT",
+          "Leaving water temperature"
+        ],
+        [
+          "M",
+          "Meter"
+        ],
+        [
+          "M2",
+          "Square meter"
+        ],
+        [
+          "M TYPE",
+          "Lightest type of rigid copper pipe"
+        ],
+        [
+          "MAN",
+          "Manual"
+        ],
+        [
+          "MAT",
+          "Mixed air temperature"
+        ],
+        [
+          "MAX",
+          "Maximum"
+        ],
+        [
+          "MBH",
+          "Thousand British thermal units per hour"
+        ],
+        [
+          "MFR",
+          "Manufacturer"
+        ],
+        [
+          "MG",
+          "Milligram"
+        ],
+        [
+          "MGD",
+          "Millions gallons per day"
+        ],
+        [
+          "MIN",
+          "Minimum or minute"
+        ],
+        [
+          "ML",
+          "Milliliter"
+        ],
+        [
+          "MM",
+          "Millimetre"
+        ],
+        [
+          "MM3",
+          "Cubic millimetre"
+        ],
+        [
+          "MPT",
+          "Male pipe thread"
+        ],
+        [
+          "MTD",
+          "Mounted"
+        ],
+        [
+          "MU",
+          "Make up"
+        ],
+        [
+          "NA",
+          "Not applicable"
+        ],
+        [
+          "NC",
+          "Normally closed"
+        ],
+        [
+          "NEG",
+          "Negative"
+        ],
+        [
+          "NIC",
+          "Not in contact"
+        ],
+        [
+          "NO",
+          "Normally open"
+        ],
+        [
+          "NPHP",
+          "Name plate horsepower"
+        ],
+        [
+          "NPS",
+          "Nominal pipe size"
+        ],
+        [
+          "NPSH",
+          "Net positive suction head"
+        ],
+        [
+          "NTS",
+          "Not to scale"
+        ],
+        [
+          "O",
+          "Oxygen"
+        ],
+        [
+          "OA",
+          "Outside air"
+        ],
+        [
+          "OAT",
+          "Outside temperature"
+        ],
+        [
+          "OC",
+          "On center"
+        ],
+        [
+          "OD",
+          "Outside diameter"
+        ],
+        [
+          "OED",
+          "Open end duct"
+        ],
+        [
+          "OF",
+          "Overflow"
+        ],
+        [
+          "OV",
+          "Outlet velocity"
+        ],
+        [
+          "OZ.",
+          "Ounce"
+        ],
+        [
+          "PA",
+          "Pascal"
+        ],
+        [
+          "PC",
+          "Plumbing contractor"
+        ],
+        [
+          "PCR",
+          "Pumped condensate return"
+        ],
+        [
+          "PD",
+          "Pressure drop"
+        ],
+        [
+          "PF",
+          "Power factor"
+        ],
+        [
+          "PG",
+          "Pressure gauge"
+        ],
+        [
+          "PL",
+          "Plate"
+        ],
+        [
+          "PNEU",
+          "Pneumatic"
+        ],
+        [
+          "PRESS",
+          "Pressure"
+        ],
+        [
+          "PROP",
+          "Propeller"
+        ],
+        [
+          "PRV",
+          "Pressure reducing valve"
+        ],
+        [
+          "PSI",
+          "Pounds per square inch"
+        ],
+        [
+          "PSIA",
+          "Pound per square inch absolute"
+        ],
+        [
+          "PSIG",
+          "Pound per square inch gauge"
+        ],
+        [
+          "PV",
+          "Plug valve"
+        ],
+        [
+          "QTY",
+          "Quantity"
+        ],
+        [
+          "RA",
+          "Return air"
+        ],
+        [
+          "RAD",
+          "Radius"
+        ],
+        [
+          "RAT",
+          "Return air temperature"
+        ],
+        [
+          "RD",
+          "Roof drain"
+        ],
+        [
+          "R/E",
+          "Return and exhaust"
+        ],
+        [
+          "RECOV",
+          "Recovery"
+        ],
+        [
+          "RED",
+          "Reducer"
+        ],
+        [
+          "REF",
+          "Reference"
+        ],
+        [
+          "RH",
+          "Relative humidity"
+        ],
+        [
+          "REQD",
+          "Required"
+        ],
+        [
+          "REV",
+          "Revision"
+        ],
+        [
+          "RL",
+          "Refrigerant liquid"
+        ],
+        [
+          "RLA",
+          "Rated Load Amperes"
+        ],
+        [
+          "RM",
+          "Room"
+        ],
+        [
+          "RS",
+          "Refrigerant suction"
+        ],
+        [
+          "RTN",
+          "Return"
+        ],
+        [
+          "RV",
+          "Relief valve"
+        ],
+        [
+          "S",
+          "Switch"
+        ],
+        [
+          "SA",
+          "Shock absorber, supply air"
+        ],
+        [
+          "SAT",
+          "Supply air temperature"
+        ],
+        [
+          "SCH",
+          "Schedule"
+        ],
+        [
+          "SDT",
+          "Saturated discharge temperature"
+        ],
+        [
+          "SEC",
+          "Seconds, secondary"
+        ],
+        [
+          "SENS",
+          "Sensible"
+        ],
+        [
+          "SEP",
+          "Separate"
+        ],
+        [
+          "SEQ",
+          "Sequence"
+        ],
+        [
+          "SER",
+          "Series"
+        ],
+        [
+          "SERV",
+          "Service"
+        ],
+        [
+          "SF",
+          "Service factor"
+        ],
+        [
+          "SHT",
+          "Sheet"
+        ],
+        [
+          "SI",
+          "International systems of units"
+        ],
+        [
+          "SOL",
+          "Solenoid"
+        ],
+        [
+          "SP",
+          "Static pressure"
+        ],
+        [
+          "SPEC",
+          "Specification"
+        ],
+        [
+          "SQ.",
+          "Square"
+        ],
+        [
+          "SQ.FT.",
+          "Square feet"
+        ],
+        [
+          "SS",
+          "Stainless steel"
+        ],
+        [
+          "SSH",
+          "Static suction head"
+        ],
+        [
+          "SST",
+          "Saturated suction temperature, stainless steel"
+        ],
+        [
+          "STD",
+          "Standard"
+        ],
+        [
+          "STH",
+          "Static total head"
+        ],
+        [
+          "STL",
+          "Steel"
+        ],
+        [
+          "SUCT",
+          "Suction"
+        ],
+        [
+          "SPLY",
+          "Supply"
+        ],
+        [
+          "SV",
+          "Service"
+        ],
+        [
+          "SVH",
+          "Static velocity head"
+        ],
+        [
+          "SW",
+          "Service weight"
+        ],
+        [
+          "SWS",
+          "Service water"
+        ],
+        [
+          "TD",
+          "Temperature difference"
+        ],
+        [
+          "TDH",
+          "Total dynamic head"
+        ],
+        [
+          "TEMP",
+          "Temperature"
+        ],
+        [
+          "TH",
+          "Thermometer"
+        ],
+        [
+          "THK",
+          "Thick"
+        ],
+        [
+          "TP",
+          "Total pressure"
+        ],
+        [
+          "TSP",
+          "Total static pressure"
+        ],
+        [
+          "UF",
+          "Under floor"
+        ],
+        [
+          "UH",
+          "Unit heater"
+        ],
+        [
+          "V",
+          "Vent, volt, volume"
+        ],
+        [
+          "VAC",
+          "Vacuum"
+        ],
+        [
+          "VAV",
+          "Variable air volume"
+        ],
+        [
+          "VB",
+          "Vacuum breaker"
+        ],
+        [
+          "VCI",
+          "Vacuum cleaning inlet"
+        ],
+        [
+          "VCL",
+          "Vacuum cleaning line"
+        ],
+        [
+          "VEL",
+          "Velocity"
+        ],
+        [
+          "VERT",
+          "Vertical"
+        ],
+        [
+          "VIB",
+          "Vibration"
+        ],
+        [
+          "VOL",
+          "Volume"
+        ],
+        [
+          "VSD",
+          "Variable speed drive"
+        ],
+        [
+          "VP",
+          "Velocity pressure"
+        ],
+        [
+          "VTR",
+          "Vent thru roof"
+        ],
+        [
+          "W",
+          "Watt, width, wide"
+        ],
+        [
+          "WB",
+          "Wet bulb"
+        ],
+        [
+          "WCO",
+          "Wall clean out"
+        ],
+        [
+          "WG",
+          "Water gauge"
+        ],
+        [
+          "WH",
+          "Water heater"
+        ]
+      ]
+    }
+  ]
+}

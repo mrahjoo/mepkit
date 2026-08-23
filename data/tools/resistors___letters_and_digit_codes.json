@@ -1,0 +1,78 @@
+{
+  "id": "resistors___letters_and_digit_codes",
+  "title": "Resistors - Letters and Digit Codes",
+  "description": "Letter and digit codes to indicate resistor values and tolerances",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Resistor Value Codes\n\nResistor values can be indicated with letters and digit codes where letters represent decimal points:\n\n- **R** = decimal point (ohms)\n- **K** = thousands (kilohms)\n- **M** = millions (megohms)\n\n### Common Value Examples:\n- 0.47 Ω = R47\n- 1 Ω = 1R0\n- 4.7 Ω = 4R7\n- 47 Ω = 47R\n- 100 Ω = 100R\n- 1 kΩ = 1K0\n- 1 MΩ = 1M\n\n## Tolerance Codes\n\nTolerance is indicated as:\n- **F** = ±1%\n- **G** = ±2%\n- **J** = ±5%\n- **K** = ±10%\n- **M** = ±20%\n\n### Example:\n4R7K = 4.7 Ω ±10%"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Value",
+        "Code"
+      ],
+      "rows": [
+        [
+          "0.47 Ω",
+          "R47"
+        ],
+        [
+          "1 Ω",
+          "1R0"
+        ],
+        [
+          "4.7 Ω",
+          "4R7"
+        ],
+        [
+          "47 Ω",
+          "47R"
+        ],
+        [
+          "100 Ω",
+          "100R"
+        ],
+        [
+          "1 kΩ",
+          "1K0"
+        ],
+        [
+          "1 MΩ",
+          "1M"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Tolerance Code",
+        "Tolerance Value"
+      ],
+      "rows": [
+        [
+          "F",
+          "±1%"
+        ],
+        [
+          "G",
+          "±2%"
+        ],
+        [
+          "J",
+          "±5%"
+        ],
+        [
+          "K",
+          "±10%"
+        ],
+        [
+          "M",
+          "±20%"
+        ]
+      ]
+    }
+  ]
+}

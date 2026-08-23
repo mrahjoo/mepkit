@@ -1,0 +1,59 @@
+{
+  "id": "high_and_low_heat_values",
+  "title": "High and Low Heat Values",
+  "description": "Tool for calculating and comparing gross (high) and net (low) heating values of fuels. Includes conversion between common heating value units (Btu/lb, J/kg, kcal/kg).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Heating Value Type",
+        "Description",
+        "Unit",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Gross (High) Heating Value",
+          "Heat produced when all combustion products are cooled to initial temperature and water vapor is condensed",
+          "Btu/lb",
+          ""
+        ],
+        [
+          "Gross (High) Heating Value",
+          "Heat produced when all combustion products are cooled to initial temperature and water vapor is condensed",
+          "J/kg",
+          ""
+        ],
+        [
+          "Gross (High) Heating Value",
+          "Heat produced when all combustion products are cooled to initial temperature and water vapor is condensed",
+          "kcal/kg",
+          ""
+        ],
+        [
+          "Net (Lower) Heating Value",
+          "Gross heating value minus latent heat of vaporization of water vapor formed by combustion",
+          "Btu/lb",
+          ""
+        ],
+        [
+          "Net (Lower) Heating Value",
+          "Gross heating value minus latent heat of vaporization of water vapor formed by combustion",
+          "J/kg",
+          ""
+        ],
+        [
+          "Net (Lower) Heating Value",
+          "Gross heating value minus latent heat of vaporization of water vapor formed by combustion",
+          "kcal/kg",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- **1 Btu/lb** = 2326.1 J/kg = 0.55556 kcal/kg\n- **1 J/kg** = 0.00043 Btu/lb = 2.39×10⁻⁴ kcal/kg\n- **1 kcal/kg** = 1.80 Btu/lb = 4187 J/kg\n\n## Definitions\n\n**Gross (High) Heating Value**: The amount of heat produced by complete combustion of a unit quantity of fuel when all combustion products are cooled to the initial temperature and water vapor is condensed.\n\n**Net (Lower) Heating Value**: Obtained by subtracting the latent heat of vaporization of the water vapor formed during combustion from the gross heating value."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "animals___laboratory_environments",
+  "title": "Animals - Laboratory Environments",
+  "description": "Temperature and humidity environments for laboratory animals. Provides reference data for optimal room temperature, comfort zone temperature, relative humidity, and air change rates for various laboratory animal species.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Animal",
+        "Room Temperature (°F)",
+        "Comfort Zone Temperature (°F)",
+        "Relative Humidity (%)",
+        "Air Changes (1/h)"
+      ],
+      "rows": [
+        [
+          "Baboon",
+          "70 - 78",
+          "65 - 83",
+          "> 50",
+          "12 - 16"
+        ],
+        [
+          "Cat",
+          "70 - 72",
+          "60 - 75",
+          "45 - 60",
+          "10 - 20"
+        ],
+        [
+          "Cattle, Calves",
+          "> 60",
+          "60 - 70",
+          "< 70",
+          "10 - 20"
+        ],
+        [
+          "Chicken",
+          "60 - 70",
+          "62 - 82",
+          "45 - 70",
+          "10 - 15"
+        ],
+        [
+          "Chimpanzee",
+          "70 - 78",
+          "68 - 84",
+          "40 - 60",
+          "12 - 15"
+        ],
+        [
+          "Dog",
+          "65 - 75",
+          "68 - 70",
+          "45 - 55",
+          "8 - 12"
+        ],
+        [
+          "Goat",
+          "> 45",
+          "55 - 70",
+          "55 - 65",
+          "6 - 12"
+        ],
+        [
+          "Hamster",
+          "70 - 76",
+          "82 - 88",
+          "45 - 65",
+          "6 - 10"
+        ],
+        [
+          "Horse",
+          "> 35",
+          "50 - 70",
+          "40 - 60",
+          "6 - 12"
+        ],
+        [
+          "Mink",
+          "40 - 65",
+          "—",
+          "40 - 65",
+          "8 - 15"
+        ],
+        [
+          "Monkey",
+          "70 - 80",
+          "68 - 84",
+          "40 - 60",
+          "8 - 15"
+        ],
+        [
+          "Mouse",
+          "70 - 80",
+          "82 - 87",
+          "50 - 80",
+          "6 - 12"
+        ],
+        [
+          "Pig",
+          "60 - 75",
+          "42 - 70",
+          "55 - 75",
+          "10 - 20"
+        ],
+        [
+          "Pigeon",
+          "40 - 60",
+          "60 - 80",
+          "45 - 70",
+          "10 - 15"
+        ],
+        [
+          "Rabbit",
+          "60 - 70",
+          "82 - 84",
+          "45 - 70",
+          "10 - 15"
+        ],
+        [
+          "Rat",
+          "70 - 80",
+          "81 - 86",
+          "50 - 55",
+          "10 - 20"
+        ],
+        [
+          "Sheep",
+          "> 35",
+          "69 - 77",
+          "< 70",
+          "10 - 20"
+        ]
+      ]
+    }
+  ]
+}

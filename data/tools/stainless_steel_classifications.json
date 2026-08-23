@@ -1,0 +1,263 @@
+{
+  "id": "stainless_steel_classifications",
+  "title": "Stainless Steel Classifications",
+  "description": "Comprehensive reference guide for stainless steel classifications, including martensitic, ferritic, austenitic, duplex, and precipitation-hardening stainless steels with their types and UNS equivalents.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nStainless steels are iron-based alloys containing between **10.5% to 30% Cr** and achieve their stainless characteristic through the formation of an invisible and adherent chromium-rich oxide surface film.\n\n### Classification Categories\n\n- **Martensitic stainless steels**: High strength, plain chromium class\n- **Ferritic stainless steels**: Plain chromium category, good corrosion resistance\n- **Austenitic stainless steels**: Chromium-nickel class, most commonly specified\n- **Duplex (ferritic-austenitic) stainless steels**: Combined properties\n- **Precipitation-hardening stainless steels**: Enhanced hardness through heat treatment\n\n### Common Alloying Elements\n\nThe metals used most commonly as alloying elements include **chromium, nickel, and molybdenum**. Other elements include copper, titanium, aluminum, silicon, niobium, nitrogen, sulphur, and selenium.\n\n### Selection Criteria\n\nSelection is based on:\n- Corrosion resistance\n- Fabrication characteristics\n- Availability\n- Mechanical properties for specific temperature ranges\n- Product cost"
+    },
+    {
+      "type": "markdown",
+      "content": "## Austenitic Stainless Steels\n\nThe most commonly specified austenitic (chromium-nickel stainless class) stainless steels. Type 304 accounts for more than half of the stainless steel produced worldwide."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type",
+        "Equivalent UNS"
+      ],
+      "rows": [
+        [
+          "201",
+          "S20100"
+        ],
+        [
+          "202",
+          "S20200"
+        ],
+        [
+          "205",
+          "S20500"
+        ],
+        [
+          "301",
+          "S30100"
+        ],
+        [
+          "302",
+          "S30200"
+        ],
+        [
+          "302B",
+          "S30215"
+        ],
+        [
+          "303",
+          "S30300"
+        ],
+        [
+          "303Se",
+          "S30323"
+        ],
+        [
+          "304",
+          "S30400"
+        ],
+        [
+          "304L",
+          "S30403"
+        ],
+        [
+          "302HQ",
+          "S30430"
+        ],
+        [
+          "304N",
+          "S30451"
+        ],
+        [
+          "305",
+          "S30500"
+        ],
+        [
+          "308",
+          "S30800"
+        ],
+        [
+          "309",
+          "S30900"
+        ],
+        [
+          "309S",
+          "S30908"
+        ],
+        [
+          "310",
+          "S31000"
+        ],
+        [
+          "310S",
+          "S31008"
+        ],
+        [
+          "314",
+          "S31400"
+        ],
+        [
+          "316",
+          "S31600"
+        ],
+        [
+          "316L",
+          "S31603"
+        ],
+        [
+          "316F",
+          "S31620"
+        ],
+        [
+          "316N",
+          "S31651"
+        ],
+        [
+          "317",
+          "S31700"
+        ],
+        [
+          "317L",
+          "S31703"
+        ],
+        [
+          "317LMN",
+          "S31726"
+        ],
+        [
+          "321",
+          "S32100"
+        ],
+        [
+          "330",
+          "NO8330"
+        ],
+        [
+          "347",
+          "S34700"
+        ],
+        [
+          "348",
+          "S34800"
+        ],
+        [
+          "384",
+          "S38400"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Ferritic Stainless Steels\n\nPlain chromium stainless category offering general-purpose corrosion resistance. Type 409 is suitable for high temperatures with the lowest chromium content and thus least expensive. Type 430 is the most widely used ferritic stainless steel."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type",
+        "Equivalent UNS"
+      ],
+      "rows": [
+        [
+          "405",
+          "S40500"
+        ],
+        [
+          "409",
+          "S40900"
+        ],
+        [
+          "429",
+          "S42900"
+        ],
+        [
+          "430",
+          "S43000"
+        ],
+        [
+          "430F",
+          "S43020"
+        ],
+        [
+          "430FSe",
+          "S43023"
+        ],
+        [
+          "434",
+          "S43400"
+        ],
+        [
+          "436",
+          "S43600"
+        ],
+        [
+          "442",
+          "S44200"
+        ],
+        [
+          "446",
+          "S44600"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Martensitic Stainless Steels\n\nPlain chromium stainless class with exceptional strength. Type 410 is the most widely used martensitic stainless steel, a low-cost, heat-treatable grade suitable for non-severe corrosion applications."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type",
+        "Equivalent UNS"
+      ],
+      "rows": [
+        [
+          "403",
+          "S40300"
+        ],
+        [
+          "410",
+          "S41000"
+        ],
+        [
+          "414",
+          "S41400"
+        ],
+        [
+          "416",
+          "S41600"
+        ],
+        [
+          "416Se",
+          "S41623"
+        ],
+        [
+          "420",
+          "S42000"
+        ],
+        [
+          "420F",
+          "S42020"
+        ],
+        [
+          "422",
+          "S42200"
+        ],
+        [
+          "431",
+          "S43100"
+        ],
+        [
+          "440A",
+          "S44002"
+        ],
+        [
+          "440B",
+          "S44003"
+        ],
+        [
+          "440C",
+          "S44004"
+        ]
+      ]
+    }
+  ]
+}

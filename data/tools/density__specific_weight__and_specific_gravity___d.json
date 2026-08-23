@@ -1,0 +1,351 @@
+{
+  "id": "density__specific_weight__and_specific_gravity___d",
+  "title": "Density, Specific Weight, and Specific Gravity Calculator",
+  "description": "Calculate density, specific gravity, and specific weight of substances. Includes formulas for mass per unit volume, relative density compared to water or air, and weight per unit volume.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Density Calculator\n\n**Density** is mass per unit volume (ρ = m / V). Choose your calculation type below.",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "calc_type",
+          "label": "Calculation Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "density",
+              "label": "Density (ρ = m / V)"
+            },
+            {
+              "value": "mass",
+              "label": "Mass (m = ρ × V)"
+            },
+            {
+              "value": "volume",
+              "label": "Volume (V = m / ρ)"
+            }
+          ],
+          "defaultValue": "density"
+        },
+        {
+          "id": "mass_kg",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 1000
+        },
+        {
+          "id": "volume_m3",
+          "label": "Volume",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_result",
+          "label": "Density",
+          "formula": "inputs.mass_kg / inputs.volume_m3",
+          "unit": "kg/m³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Specific Gravity Calculator\n\n**Specific Gravity (SG)** is the ratio of substance density to water density (dimensionless).\n\nFor liquids/solids: SG = ρ_substance / ρ_water\n\nFor gases: SG = ρ_gas / ρ_air",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "sg_type",
+          "label": "Specific Gravity Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "liquid",
+              "label": "Liquid/Solid (vs Water)"
+            },
+            {
+              "value": "gas",
+              "label": "Gas (vs Air)"
+            }
+          ],
+          "defaultValue": "liquid"
+        },
+        {
+          "id": "substance_density",
+          "label": "Substance Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "reference_density",
+          "label": "Reference Density (Water: 1000 kg/m³, Air: 1.204 kg/m³)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sg_result",
+          "label": "Specific Gravity",
+          "formula": "inputs.substance_density / inputs.reference_density",
+          "unit": "",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Specific Weight Calculator\n\n**Specific Weight (γ)** is weight (force) per unit volume: γ = ρ × g\n\nwhere g = 9.807 m/s² (SI) or 32.174 ft/s² (Imperial)",
+      "headers": []
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "density_sw",
+          "label": "Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1000
+        },
+        {
+          "id": "gravity",
+          "label": "Gravity Acceleration",
+          "type": "number",
+          "unit": "m/s²",
+          "defaultValue": 9.807
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sw_result",
+          "label": "Specific Weight",
+          "formula": "inputs.density_sw * inputs.gravity",
+          "unit": "N/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "sw_kn",
+          "label": "Specific Weight (kN/m³)",
+          "formula": "(inputs.density_sw * inputs.gravity) / 1000",
+          "unit": "kN/m³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance",
+        "Specific Gravity (SG)"
+      ],
+      "rows": [
+        [
+          "Acetylene",
+          0.0017
+        ],
+        [
+          "Air, dry",
+          0.0013
+        ],
+        [
+          "Alcohol",
+          0.82
+        ],
+        [
+          "Aluminum",
+          2.72
+        ],
+        [
+          "Brass",
+          8.48
+        ],
+        [
+          "Cadmium",
+          8.57
+        ],
+        [
+          "Chromium",
+          7.03
+        ],
+        [
+          "Copper",
+          8.79
+        ],
+        [
+          "Carbon dioxide",
+          0.00198
+        ],
+        [
+          "Carbon monoxide",
+          0.00126
+        ],
+        [
+          "Cast iron",
+          7.2
+        ],
+        [
+          "Hydrogen",
+          0.00009
+        ],
+        [
+          "Lead",
+          11.35
+        ],
+        [
+          "Mercury",
+          13.59
+        ],
+        [
+          "Nickel",
+          8.73
+        ],
+        [
+          "Nitrogen",
+          0.00125
+        ],
+        [
+          "Nylon",
+          1.12
+        ],
+        [
+          "Oxygen",
+          0.00143
+        ],
+        [
+          "Paraffin",
+          0.8
+        ],
+        [
+          "Petrol",
+          0.72
+        ],
+        [
+          "PVC",
+          1.36
+        ],
+        [
+          "Rubber",
+          0.96
+        ],
+        [
+          "Steel",
+          7.82
+        ],
+        [
+          "Tin",
+          7.28
+        ],
+        [
+          "Zinc",
+          7.12
+        ],
+        [
+          "Water (4 °C)",
+          1
+        ],
+        [
+          "Water, sea",
+          1.027
+        ],
+        [
+          "Wood, Oak",
+          0.77
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Specific Weight (lb/ft³)",
+        "Specific Weight (kN/m³)"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          172,
+          27
+        ],
+        [
+          "Brass",
+          540,
+          84.5
+        ],
+        [
+          "Carbon tetrachloride",
+          99.4,
+          15.6
+        ],
+        [
+          "Copper",
+          570,
+          89
+        ],
+        [
+          "Ethyl Alcohol",
+          49.3,
+          7.74
+        ],
+        [
+          "Gasoline",
+          42.5,
+          6.67
+        ],
+        [
+          "Glycerin",
+          78.6,
+          12.4
+        ],
+        [
+          "Kerosene",
+          50,
+          7.9
+        ],
+        [
+          "Mercury",
+          847,
+          133.7
+        ],
+        [
+          "SAE 20 Motor Oil",
+          57,
+          8.95
+        ],
+        [
+          "Seawater",
+          63.9,
+          10.03
+        ],
+        [
+          "Stainless Steel",
+          505.5,
+          79
+        ],
+        [
+          "Water",
+          62.4,
+          9.81
+        ],
+        [
+          "Wrought Iron",
+          486.5,
+          76
+        ]
+      ]
+    }
+  ]
+}

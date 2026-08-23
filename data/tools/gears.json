@@ -1,0 +1,116 @@
+{
+  "id": "gears",
+  "title": "Gears",
+  "description": "Gears effort force vs. load force.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Gears\n\nA gear is a mechanical device that transmits rotary motion by changing the magnitude and line of action of the effort force.\n\nThe effort force can be expressed as:\n\n**F = W (r₁ r₂ ... rₙ) / (R₁ R₂ ... Rₙ)**\n\nWhere:\n- **F** = effort force (N, lbf)\n- **W** = load force or weight (N, lbf)\n- **r** = gear wheel inside diameter (m, in)\n- **R** = gear wheel outside diameter (m, in)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "inputs": [
+        {
+          "id": "W",
+          "label": "Load Force (W)",
+          "type": "number",
+          "defaultValue": 1000,
+          "unit": "N"
+        },
+        {
+          "id": "r1",
+          "label": "Wheel 1 Inside Diameter (r₁)",
+          "type": "number",
+          "defaultValue": 0.05,
+          "unit": "m"
+        },
+        {
+          "id": "R1",
+          "label": "Wheel 1 Outside Diameter (R₁)",
+          "type": "number",
+          "defaultValue": 0.12,
+          "unit": "m"
+        },
+        {
+          "id": "r2",
+          "label": "Wheel 2 Inside Diameter (r₂)",
+          "type": "number",
+          "defaultValue": 0.06,
+          "unit": "m"
+        },
+        {
+          "id": "R2",
+          "label": "Wheel 2 Outside Diameter (R₂)",
+          "type": "number",
+          "defaultValue": 0.13,
+          "unit": "m"
+        },
+        {
+          "id": "r3",
+          "label": "Wheel 3 Inside Diameter (r₃)",
+          "type": "number",
+          "defaultValue": 0.07,
+          "unit": "m"
+        },
+        {
+          "id": "R3",
+          "label": "Wheel 3 Outside Diameter (R₃)",
+          "type": "number",
+          "defaultValue": 0.14,
+          "unit": "m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "F",
+          "label": "Effort Force (F)",
+          "formula": "inputs.W * (inputs.r1 * inputs.r2 * inputs.r3) / (inputs.R1 * inputs.R2 * inputs.R3)",
+          "unit": "N",
+          "format": "decimal"
+        },
+        {
+          "id": "F_kN",
+          "label": "Effort Force (F)",
+          "formula": "(inputs.W * (inputs.r1 * inputs.r2 * inputs.r3) / (inputs.R1 * inputs.R2 * inputs.R3)) / 1000",
+          "unit": "kN",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Wheel",
+        "Inside Diameter (r)",
+        "Outside Diameter (R)",
+        "Ratio (r/R)"
+      ],
+      "rows": [
+        [
+          "Wheel 1",
+          0.05,
+          0.12,
+          "=A2/B2"
+        ],
+        [
+          "Wheel 2",
+          0.06,
+          0.13,
+          "=A3/B3"
+        ],
+        [
+          "Wheel 3",
+          0.07,
+          0.14,
+          "=A4/B4"
+        ]
+      ]
+    }
+  ]
+}

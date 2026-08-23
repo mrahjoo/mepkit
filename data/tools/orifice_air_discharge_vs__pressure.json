@@ -1,0 +1,67 @@
+{
+  "id": "orifice_air_discharge_vs__pressure",
+  "title": "Orifice Air Discharge vs. Pressure",
+  "description": "Nozzles discharging air volume. Calculate air leakage or air volume passing through orifices ranging from 1/64 to 1/4 inches. For well rounded nozzles multiply the diagram values by 0.97. For sharp edged nozzles multiply the values by 0.65.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n- 1 psig = 6.9 kPa = 0.069 bar\n- 1 inch = 25.4 mm\n- 1 scfm = 0.472 nl/s\n\n## Nozzle Types\n\n- **Well rounded nozzles**: Multiply diagram values by 0.97\n- **Sharp edged nozzles**: Multiply diagram values by 0.65"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "orifice_size_inches",
+          "label": "Orifice Size",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 0.125
+        },
+        {
+          "id": "pressure_psig",
+          "label": "Pressure",
+          "type": "number",
+          "unit": "psig",
+          "defaultValue": 40
+        },
+        {
+          "id": "nozzle_type",
+          "label": "Nozzle Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Well Rounded",
+              "value": 0.97
+            },
+            {
+              "label": "Sharp Edged",
+              "value": 0.65
+            }
+          ],
+          "defaultValue": 0.97
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_kpa",
+          "label": "Pressure",
+          "unit": "kPa",
+          "formula": "inputs.pressure_psig * 6.9"
+        },
+        {
+          "id": "pressure_bar",
+          "label": "Pressure",
+          "unit": "bar",
+          "formula": "inputs.pressure_psig * 0.069"
+        },
+        {
+          "id": "orifice_size_mm",
+          "label": "Orifice Size",
+          "unit": "mm",
+          "formula": "inputs.orifice_size_inches * 25.4"
+        }
+      ]
+    }
+  ]
+}

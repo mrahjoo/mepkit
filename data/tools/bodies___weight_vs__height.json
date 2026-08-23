@@ -1,0 +1,372 @@
+{
+  "id": "bodies___weight_vs__height",
+  "title": "Bodies - Weight vs. Height",
+  "description": "Typical ideal body weight versus height. Reference tables for men and women showing ideal body weight ranges by frame size across different heights.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Ideal Body Weight vs. Height\n\nThis tool provides typical ideal body weight ranges based on height and frame size for both men and women.\n\n### How to Use\n1. Select your gender\n2. Enter your height (feet and inches)\n3. View your recommended weight range based on your frame size"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "gender",
+          "label": "Gender",
+          "type": "select",
+          "options": [
+            {
+              "label": "Male",
+              "value": "male"
+            },
+            {
+              "label": "Female",
+              "value": "female"
+            }
+          ],
+          "defaultValue": "male"
+        },
+        {
+          "id": "feet",
+          "label": "Height (feet)",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "ft"
+        },
+        {
+          "id": "inches",
+          "label": "Height (inches)",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "in"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "height_cm",
+          "label": "Height (cm)",
+          "unit": "cm",
+          "format": "decimal",
+          "formula": "Math.round((inputs.feet * 12 + inputs.inches) * 2.54)"
+        },
+        {
+          "id": "small_frame_min",
+          "label": "Small Frame Min",
+          "unit": "lbs",
+          "format": "decimal",
+          "formula": "inputs.gender === 'male' ? Math.round((inputs.feet * 12 + inputs.inches) * 4.0 - 130) : Math.round((inputs.feet * 12 + inputs.inches) * 3.5 - 108)"
+        },
+        {
+          "id": "small_frame_max",
+          "label": "Small Frame Max",
+          "unit": "lbs",
+          "format": "decimal",
+          "formula": "inputs.gender === 'male' ? Math.round((inputs.feet * 12 + inputs.inches) * 4.1 - 135) : Math.round((inputs.feet * 12 + inputs.inches) * 3.6 - 115)"
+        },
+        {
+          "id": "medium_frame_min",
+          "label": "Medium Frame Min",
+          "unit": "lbs",
+          "format": "decimal",
+          "formula": "inputs.gender === 'male' ? Math.round((inputs.feet * 12 + inputs.inches) * 4.2 - 140) : Math.round((inputs.feet * 12 + inputs.inches) * 3.7 - 120)"
+        },
+        {
+          "id": "medium_frame_max",
+          "label": "Medium Frame Max",
+          "unit": "lbs",
+          "format": "decimal",
+          "formula": "inputs.gender === 'male' ? Math.round((inputs.feet * 12 + inputs.inches) * 4.3 - 150) : Math.round((inputs.feet * 12 + inputs.inches) * 3.8 - 127)"
+        },
+        {
+          "id": "large_frame_min",
+          "label": "Large Frame Min",
+          "unit": "lbs",
+          "format": "decimal",
+          "formula": "inputs.gender === 'male' ? Math.round((inputs.feet * 12 + inputs.inches) * 4.4 - 160) : Math.round((inputs.feet * 12 + inputs.inches) * 3.9 - 132)"
+        },
+        {
+          "id": "large_frame_max",
+          "label": "Large Frame Max",
+          "unit": "lbs",
+          "format": "decimal",
+          "formula": "inputs.gender === 'male' ? Math.round((inputs.feet * 12 + inputs.inches) * 4.6 - 180) : Math.round((inputs.feet * 12 + inputs.inches) * 4.1 - 145)"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Height (ft)",
+        "Height (in)",
+        "Height (cm)",
+        "Small Frame (lbs)",
+        "Medium Frame (lbs)",
+        "Large Frame (lbs)"
+      ],
+      "rows": [
+        [
+          "5",
+          "2",
+          "158",
+          "128-134",
+          "131-141",
+          "138-150"
+        ],
+        [
+          "5",
+          "3",
+          "160",
+          "130-136",
+          "133-143",
+          "140-153"
+        ],
+        [
+          "5",
+          "4",
+          "163",
+          "132-138",
+          "135-145",
+          "142-156"
+        ],
+        [
+          "5",
+          "5",
+          "165",
+          "134-140",
+          "137-148",
+          "144-160"
+        ],
+        [
+          "5",
+          "6",
+          "168",
+          "136-142",
+          "139-151",
+          "146-164"
+        ],
+        [
+          "5",
+          "7",
+          "170",
+          "138-145",
+          "142-154",
+          "149-168"
+        ],
+        [
+          "5",
+          "8",
+          "173",
+          "140-148",
+          "145-157",
+          "152-172"
+        ],
+        [
+          "5",
+          "9",
+          "175",
+          "142-151",
+          "148-160",
+          "155-176"
+        ],
+        [
+          "5",
+          "10",
+          "178",
+          "144-154",
+          "151-163",
+          "158-180"
+        ],
+        [
+          "5",
+          "11",
+          "180",
+          "146-157",
+          "154-166",
+          "161-184"
+        ],
+        [
+          "6",
+          "0",
+          "183",
+          "149-160",
+          "157-170",
+          "164-188"
+        ],
+        [
+          "6",
+          "1",
+          "186",
+          "152-164",
+          "160-174",
+          "168-192"
+        ],
+        [
+          "6",
+          "2",
+          "188",
+          "155-168",
+          "164-178",
+          "172-197"
+        ],
+        [
+          "6",
+          "3",
+          "191",
+          "158-172",
+          "167-182",
+          "176-202"
+        ],
+        [
+          "6",
+          "4",
+          "193",
+          "162-176",
+          "171-187",
+          "181-207"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Men - Height vs. Weight Reference\n\nIdeal body weight ranges for men based on frame size. Frame size is typically determined by wrist circumference or bone structure."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Height (ft)",
+        "Height (in)",
+        "Height (cm)",
+        "Small Frame (lbs)",
+        "Medium Frame (lbs)",
+        "Large Frame (lbs)"
+      ],
+      "rows": [
+        [
+          "4",
+          "10",
+          "147",
+          "102-111",
+          "109-121",
+          "118-131"
+        ],
+        [
+          "4",
+          "11",
+          "150",
+          "103-113",
+          "111-123",
+          "120-134"
+        ],
+        [
+          "5",
+          "0",
+          "153",
+          "104-115",
+          "113-126",
+          "122-137"
+        ],
+        [
+          "5",
+          "1",
+          "155",
+          "106-118",
+          "115-129",
+          "125-140"
+        ],
+        [
+          "5",
+          "2",
+          "158",
+          "108-121",
+          "118-132",
+          "128-143"
+        ],
+        [
+          "5",
+          "3",
+          "160",
+          "111-124",
+          "121-135",
+          "131-147"
+        ],
+        [
+          "5",
+          "4",
+          "163",
+          "114-127",
+          "124-138",
+          "134-151"
+        ],
+        [
+          "5",
+          "5",
+          "165",
+          "117-130",
+          "127-141",
+          "137-155"
+        ],
+        [
+          "5",
+          "6",
+          "168",
+          "120-133",
+          "130-144",
+          "140-159"
+        ],
+        [
+          "5",
+          "7",
+          "170",
+          "123-136",
+          "133-147",
+          "143-163"
+        ],
+        [
+          "5",
+          "8",
+          "173",
+          "126-139",
+          "136-150",
+          "146-167"
+        ],
+        [
+          "5",
+          "9",
+          "175",
+          "129-142",
+          "139-153",
+          "149-170"
+        ],
+        [
+          "5",
+          "10",
+          "178",
+          "132-145",
+          "142-156",
+          "152-173"
+        ],
+        [
+          "5",
+          "11",
+          "180",
+          "135-148",
+          "145-159",
+          "155-176"
+        ],
+        [
+          "6",
+          "0",
+          "183",
+          "138-151",
+          "148-162",
+          "158-179"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "### Women - Height vs. Weight Reference\n\nIdeal body weight ranges for women based on frame size. Frame size is typically determined by wrist circumference or bone structure."
+    }
+  ]
+}

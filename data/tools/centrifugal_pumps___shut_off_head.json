@@ -1,0 +1,92 @@
+{
+  "id": "centrifugal_pumps___shut_off_head",
+  "title": "Centrifugal Pumps - Shut-Off Head",
+  "description": "Centrifugal pumps and maximum shut-off head. The maximum \"shut-off\" head for a centrifugal pump can be estimated using the relationship between impeller diameter, rotational speed, and resulting head.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate the maximum shut-off head for a centrifugal pump using the formula: hs = (d × n / 1840)²",
+      "inputs": [
+        {
+          "id": "impeller_diameter",
+          "label": "Impeller Outside Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 6
+        },
+        {
+          "id": "rotational_speed",
+          "label": "Rotational Speed",
+          "type": "number",
+          "unit": "rpm",
+          "defaultValue": 1800
+        }
+      ],
+      "outputs": [
+        {
+          "id": "shut_off_head",
+          "label": "Maximum Shut-Off Head",
+          "unit": "feet",
+          "formula": "Math.pow((inputs.impeller_diameter * inputs.rotational_speed) / 1840, 2)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Impeller Diameter (inches)",
+        "Rotational Speed (rpm)",
+        "Shut-Off Head (feet)"
+      ],
+      "rows": [
+        [
+          4,
+          1200,
+          7.1
+        ],
+        [
+          6,
+          1200,
+          16
+        ],
+        [
+          8,
+          1200,
+          28.4
+        ],
+        [
+          4,
+          1800,
+          15.9
+        ],
+        [
+          6,
+          1800,
+          35.8
+        ],
+        [
+          8,
+          1800,
+          63.7
+        ],
+        [
+          4,
+          3600,
+          63.7
+        ],
+        [
+          6,
+          3600,
+          143.2
+        ],
+        [
+          8,
+          3600,
+          254.8
+        ]
+      ]
+    }
+  ]
+}

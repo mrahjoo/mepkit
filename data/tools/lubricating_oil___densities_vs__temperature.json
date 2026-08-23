@@ -1,0 +1,157 @@
+{
+  "id": "lubricating_oil___densities_vs__temperature",
+  "title": "Lubricating Oil - Densities vs. Temperature",
+  "description": "Correlations for lubricating oil density and temperature based on ASTM D 1250-04 and IP 200/04 standards. Calculate density changes across temperature ranges and volume correction factors for lubricating oils.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Lubricating Oil - Densities vs. Temperature\n\nThis tool calculates correlations for lubricating oil density and temperature based on **ASTM D 1250-04** and **IP 200/04** standards. Each colored line represents a lubricant with a given density at a given reference temperature.\n\n## Key Features:\n- Calculate density changes across temperature ranges\n- Determine volume correction factors\n- Use volume correction factors to convert volumes between different temperatures\n\n## Important Notes:\n- Volume increases with increasing temperature\n- Base temperature reference: 15°C (59°F)\n- For API gravity values, use the API-to-gravity converter\n\n## How It Works:\nIf you know the lubricating oil density at one temperature, you can determine its density at another temperature using the provided correlations and volume correction factors."
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Volume Correction Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "reference_density",
+          "label": "Reference Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 941
+        },
+        {
+          "id": "reference_temperature",
+          "label": "Reference Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 15
+        },
+        {
+          "id": "observed_temperature",
+          "label": "Observed Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 200
+        },
+        {
+          "id": "observed_volume",
+          "label": "Volume at Observed Temperature",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 10
+        }
+      ],
+      "outputs": [
+        {
+          "id": "volume_at_reference",
+          "label": "Volume at Reference Temperature (15°C)",
+          "unit": "m³",
+          "formula": "inputs.observed_volume / (1 + 0.0006 * (inputs.observed_temperature - inputs.reference_temperature))",
+          "format": "decimal"
+        },
+        {
+          "id": "vcf_factor",
+          "label": "Volume Correction Factor",
+          "unit": "ratio",
+          "formula": "1 + 0.0006 * (inputs.observed_temperature - inputs.reference_temperature)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Lubricating Oil Density vs Temperature"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Density@954kg/m³@150°C (Brown)",
+            "Density@941kg/m³@15°C (Dark Blue)"
+          ]
+        },
+        "xAxis": {
+          "name": "Temperature (°C)",
+          "type": "value",
+          "min": 0,
+          "max": 200
+        },
+        "yAxis": {
+          "name": "Density (kg/m³)",
+          "type": "value",
+          "min": 800,
+          "max": 1000
+        },
+        "series": [
+          {
+            "name": "Density@954kg/m³@150°C (Brown)",
+            "type": "line",
+            "data": [
+              [
+                0,
+                985
+              ],
+              [
+                50,
+                975
+              ],
+              [
+                100,
+                965
+              ],
+              [
+                150,
+                954
+              ],
+              [
+                200,
+                943
+              ]
+            ],
+            "lineStyle": {
+              "color": "#8B4513"
+            }
+          },
+          {
+            "name": "Density@941kg/m³@15°C (Dark Blue)",
+            "type": "line",
+            "data": [
+              [
+                15,
+                941
+              ],
+              [
+                50,
+                930
+              ],
+              [
+                100,
+                918
+              ],
+              [
+                150,
+                906
+              ],
+              [
+                200,
+                894
+              ]
+            ],
+            "lineStyle": {
+              "color": "#00008B"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## Example 1: Converting Volume from 150°C to 15°C\n\n**Problem:** You have 100 liters of lubricating oil with a density of 954 kg/m³ at 150°C. What is the volume at 15°C?\n\n**Solution:**\n- The brown line in the chart represents this lubricating oil\n- Using the volume correction factor at 150°C: approximately 1.09\n- Volume at 15°C = 100 liters ÷ 1.09 = **92 liters**\n- Check: Lowest volume at lowest temperature ✓\n\n## Example 2: Converting Volume from 15°C to 200°C\n\n**Problem:** You have 10 m³ of lubricating oil with a density of 941 kg/m³ at 15°C. What is the volume at 200°C?\n\n**Solution:**\n- The dark blue line represents this lubricating oil\n- Using the volume correction factor at 200°C: approximately 1.145\n- Volume at 200°C = 10 m³ × 1.145 = **11.45 m³**\n- Check: Lowest volume at lowest temperature ✓"
+    }
+  ]
+}

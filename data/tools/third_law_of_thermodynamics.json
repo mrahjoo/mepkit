@@ -1,0 +1,53 @@
+{
+  "id": "third_law_of_thermodynamics",
+  "title": "Third Law of Thermodynamics",
+  "description": "The entropy of a substance approaches zero as the absolute temperature approaches zero Kelvin. This tool helps you understand and calculate entropy relationships based on the Third Law of Thermodynamics.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Symbol",
+        "Description",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Entropy",
+          "S",
+          "Measure of disorder or randomness in a substance",
+          "J/K"
+        ],
+        [
+          "Absolute Temperature",
+          "T",
+          "Temperature measured in Kelvin (K)",
+          "K"
+        ],
+        [
+          "Pure Substance",
+          "—",
+          "Single element or compound with fixed composition",
+          "—"
+        ],
+        [
+          "Thermodynamic Equilibrium",
+          "—",
+          "State where no spontaneous changes occur",
+          "—"
+        ],
+        [
+          "Absolute Zero",
+          "0 K",
+          "Reference point where entropy approaches zero",
+          "K"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Mathematical Expression\n\nThe Third Law of Thermodynamics can be expressed as:\n\n**lim (T→0) S = 0**\n\nWhere:\n- **S** = entropy (J/K)\n- **T** = absolute temperature (K)\n\n## Key Principles\n\n1. At absolute zero (0 K), there is no thermal energy or heat\n2. Atoms in a pure crystalline substance are perfectly aligned with no motion\n3. There is no entropy of mixing since the substance is pure\n4. Absolute zero serves as the reference point for entropy determination\n\n## Application\n\nAbsolute entropy of a substance can be calculated from measured thermodynamic properties by integrating differential equations of state from absolute zero. For a gas, this requires integrating through solid, liquid, and gaseous phases."
+    }
+  ]
+}

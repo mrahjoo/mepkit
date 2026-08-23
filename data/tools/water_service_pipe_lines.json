@@ -1,0 +1,185 @@
+{
+  "id": "water_service_pipe_lines",
+  "title": "Water Service Pipe Lines",
+  "description": "Water service pipe lines extend from the potable water source to the interior of buildings. This tool helps calculate and reference water service pipe specifications, materials, and standards.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Water Service Pipe Lines Overview\n\nA water-service pipe line extends from the potable water source to the interior of a building. Inside the building the water-service pipe becomes a water-distribution pipe.\n\n### Key Requirements\n- Rated for pressure produced by water source and service line by pumps or static differences\n- Common rating: more than 160 psi (11 bar)\n- Temperature: below approximately 75°F (25°C)\n\n### Common Materials\n- Cast iron pipe (ductile pipe) - used in large water mains\n- PE - Polyethylene\n- PVC - Polyvinyl Chloride\n- PB - Polybutylene\n- Asbestos cement pipe"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 1
+        },
+        {
+          "id": "operating_pressure",
+          "label": "Operating Pressure",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 160
+        },
+        {
+          "id": "water_temperature",
+          "label": "Water Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 70
+        },
+        {
+          "id": "pipe_material",
+          "label": "Pipe Material",
+          "type": "select",
+          "options": [
+            {
+              "value": "abs",
+              "label": "ABS - Acrylonitrile Butadiene Styrene"
+            },
+            {
+              "value": "cpvc",
+              "label": "CPVC - Chlorinated Polyvinyl Chloride"
+            },
+            {
+              "value": "copper",
+              "label": "Copper or Copper-alloy"
+            },
+            {
+              "value": "pex",
+              "label": "PEX - Cross-linked Polyethylene"
+            },
+            {
+              "value": "pe",
+              "label": "PE - Polyethylene"
+            },
+            {
+              "value": "pvc",
+              "label": "PVC - Polyvinyl Chloride"
+            },
+            {
+              "value": "pb",
+              "label": "PB - Polybutylene"
+            },
+            {
+              "value": "ductile_iron",
+              "label": "Ductile Iron Pipe"
+            },
+            {
+              "value": "galvanized_steel",
+              "label": "Galvanized Steel"
+            },
+            {
+              "value": "stainless_steel",
+              "label": "Stainless Steel"
+            }
+          ],
+          "defaultValue": "pvc"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pressure_rating_status",
+          "label": "Pressure Rating Status",
+          "formula": "inputs.operating_pressure > 160 ? 'Exceeds Standard (>160 psi)' : 'Within Standard (≤160 psi)'"
+        },
+        {
+          "id": "temperature_rating_status",
+          "label": "Temperature Rating Status",
+          "formula": "inputs.water_temperature <= 75 ? 'Within Standard (≤75°F)' : 'Exceeds Standard (>75°F)'"
+        },
+        {
+          "id": "pipe_diameter_mm",
+          "label": "Pipe Diameter (mm)",
+          "formula": "inputs.pipe_diameter * 25.4",
+          "unit": "mm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Piping Material",
+        "US Standards",
+        "Material Type"
+      ],
+      "rows": [
+        [
+          "ABS - Acrylonitrile Butadiene Styrene",
+          "ASTM D1527; ASTM D2282",
+          "Plastic"
+        ],
+        [
+          "CPVC - Chlorinated Polyvinyl Chloride",
+          "ASTM D2846; ASTM F441; ASTM F442; CSA B137.6",
+          "Plastic"
+        ],
+        [
+          "Copper or Copper-alloy (Type K, WK, L, WL, M, WM)",
+          "ASTM B75; ASTM B88; ASTM B251; ASTM B447",
+          "Metal"
+        ],
+        [
+          "PEX - Cross-linked Polyethylene",
+          "ASTM F876; AWWA C904; CSA B137.5",
+          "Plastic"
+        ],
+        [
+          "PEX-AL-PEX - Cross-linked Polyethylene/Aluminum",
+          "ASTM F1281; ASTM F2262; CSA B137.10",
+          "Composite"
+        ],
+        [
+          "Ductile Iron Pipe",
+          "AWWA C151/A21.51; AWWA C115/A21.15",
+          "Metal"
+        ],
+        [
+          "Galvanized Steel Pipe",
+          "ASTM A53",
+          "Metal"
+        ],
+        [
+          "PE - Polyethylene Plastic Pipe",
+          "ASTM D2239; ASTM D3035; AWWA C901; CSA B137.11",
+          "Plastic"
+        ],
+        [
+          "PE-AL-PE - Polyethylene/Aluminum",
+          "ASTM F1282; CSA B137.9",
+          "Composite"
+        ],
+        [
+          "PE-RT - Polyethylene of Raised Temperature",
+          "ASTM F2769; CSA B137.18",
+          "Plastic"
+        ],
+        [
+          "PP - Polypropylene Plastic",
+          "ASTM F2389; CSA B137.11",
+          "Plastic"
+        ],
+        [
+          "PVC - Polyvinyl Chloride",
+          "ASTM D1785; ASTM D2241; ASTM D2672; CSA B137.3",
+          "Plastic"
+        ],
+        [
+          "Stainless Steel (Type 304/304L)",
+          "ASTM A312; ASTM A778",
+          "Metal"
+        ],
+        [
+          "Stainless Steel (Type 316/316L)",
+          "ASTM A312; ASTM A778",
+          "Metal"
+        ]
+      ]
+    }
+  ]
+}

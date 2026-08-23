@@ -1,0 +1,405 @@
+{
+  "id": "air_tools___air_consumption",
+  "title": "Air Tools - Air Consumption",
+  "description": "Air consumption of common air tools based on approximately 90 psi working pressure with 25% load factor. Reference table for pneumatic equipment air consumption in CFM (Free Air).",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Air Tool/Equipment",
+        "Average Free Air Consumption (cfm)"
+      ],
+      "rows": [
+        [
+          "Air Bushing",
+          20
+        ],
+        [
+          "Air Filter Cleaner",
+          3
+        ],
+        [
+          "Air Hammer, light",
+          4
+        ],
+        [
+          "Air Hammer, heavy",
+          22
+        ],
+        [
+          "Air Hoist, 1000 lb",
+          5
+        ],
+        [
+          "Air Motor - 0.5 hp",
+          "6 - 10"
+        ],
+        [
+          "Air Motor - 1 hp",
+          "12 - 15"
+        ],
+        [
+          "Air Motor - 2 hp",
+          "18 - 20"
+        ],
+        [
+          "Backfill Tamper",
+          "30 - 35"
+        ],
+        [
+          "Bead Breaker",
+          12
+        ],
+        [
+          "Bench Rammer",
+          5
+        ],
+        [
+          "Brad Nailer",
+          0.5
+        ],
+        [
+          "Blow Gun",
+          3
+        ],
+        [
+          "Body Polisher",
+          2
+        ],
+        [
+          "Body Orbital Sander",
+          5
+        ],
+        [
+          "Brake Tester",
+          4
+        ],
+        [
+          "Burr Tool, small",
+          4
+        ],
+        [
+          "Burr Tool, large",
+          "5 - 6"
+        ],
+        [
+          "Bus Lift",
+          6
+        ],
+        [
+          "Car Lift",
+          6
+        ],
+        [
+          "Carbon Remover",
+          3
+        ],
+        [
+          "Car rockers",
+          6
+        ],
+        [
+          "Carving tool",
+          "10 - 15"
+        ],
+        [
+          "Caulking Gun",
+          4
+        ],
+        [
+          "Chain Saw",
+          "7 - 22"
+        ],
+        [
+          "Chipping Hammer",
+          "30 - 40"
+        ],
+        [
+          "Chisel Hammer",
+          "3 - 10"
+        ],
+        [
+          "Circle Saw - 8 inch",
+          12
+        ],
+        [
+          "Circle Saw - 12 inch",
+          17
+        ],
+        [
+          "Compression Riviter",
+          1
+        ],
+        [
+          "Concrete Vibrator",
+          "20 - 50"
+        ],
+        [
+          "Demolition Tool",
+          "30 - 40"
+        ],
+        [
+          "Cut-Off Tool",
+          "4 - 10"
+        ],
+        [
+          "Die Grinder 1/4\"",
+          "4 - 6"
+        ],
+        [
+          "Disc Grinder - 7\"",
+          "5 - 8"
+        ],
+        [
+          "Drill, Reversible or Straight-Line",
+          "3 - 6"
+        ],
+        [
+          "Drill 3/8\"",
+          4
+        ],
+        [
+          "Drill 1/2\"",
+          4
+        ],
+        [
+          "Dust Blow Gun",
+          3
+        ],
+        [
+          "File/Saw Machine",
+          "3-5"
+        ],
+        [
+          "Floor Rammer",
+          7
+        ],
+        [
+          "Framing Nailer",
+          2.5
+        ],
+        [
+          "Garage Door, Pneumatic",
+          3
+        ],
+        [
+          "Grease Gun",
+          4
+        ],
+        [
+          "Grinder 2 in Horizontal",
+          "5 - 10"
+        ],
+        [
+          "High Speed Grinder",
+          8
+        ],
+        [
+          "Hoists, 1 ton",
+          1
+        ],
+        [
+          "Hydraulic Riveter",
+          4
+        ],
+        [
+          "Hydraulic Lift, 8000lb",
+          6
+        ],
+        [
+          "Hydraulic Floor Jack",
+          6
+        ],
+        [
+          "Impact Driver 1/2\"",
+          4
+        ],
+        [
+          "Impact Driver 3/4\"",
+          7.5
+        ],
+        [
+          "Impact Driver 1\"",
+          12
+        ],
+        [
+          "Impact Wrenches - 3/8\"",
+          "2 - 5"
+        ],
+        [
+          "Impact Wrenches - 1/2\"",
+          "4 - 5"
+        ],
+        [
+          "Impact Wrenches - 1\"",
+          10
+        ],
+        [
+          "Jackhammer, medium",
+          135
+        ],
+        [
+          "Jitterbug Sander",
+          6
+        ],
+        [
+          "Lift, Bus or Truck",
+          10
+        ],
+        [
+          "Lift, Car",
+          6
+        ],
+        [
+          "Mini Die Grinder",
+          "4 - 6"
+        ],
+        [
+          "Nailer, Brad (30 psi)",
+          2
+        ],
+        [
+          "Nailer, Framing (50 psi)",
+          4
+        ],
+        [
+          "Needle Scaler",
+          "8 - 16"
+        ],
+        [
+          "Nibbler",
+          4
+        ],
+        [
+          "Nutsetter - 3/8\" inch",
+          "3 - 6"
+        ],
+        [
+          "Nutsetter - 3/4\" inch",
+          "5 - 8"
+        ],
+        [
+          "Orbital Sander",
+          "6 - 9"
+        ],
+        [
+          "Paint Sprayers, production gun",
+          20
+        ],
+        [
+          "Paint Sprayers, Small Hand Operated",
+          "3 - 7"
+        ],
+        [
+          "Pavement breaker",
+          "35 - 60"
+        ],
+        [
+          "Pneumatic doors",
+          2
+        ],
+        [
+          "Rammers - small",
+          3
+        ],
+        [
+          "Rammers - large",
+          10
+        ],
+        [
+          "Ratchet, 1/4\"",
+          3
+        ],
+        [
+          "Ratchet, 3/8\"",
+          4
+        ],
+        [
+          "Rivet Buster",
+          "40 - 50"
+        ],
+        [
+          "Rock Drill",
+          100
+        ],
+        [
+          "Rotational Sander",
+          "8 - 15"
+        ],
+        [
+          "Sand Blasters",
+          "6 - 400"
+        ],
+        [
+          "Sander, Dual",
+          "11 - 13"
+        ],
+        [
+          "Screwdriver",
+          "1 - 6"
+        ],
+        [
+          "Shears",
+          "8 - 16"
+        ],
+        [
+          "Spark plug cleaner",
+          5
+        ],
+        [
+          "Speed Saw",
+          5
+        ],
+        [
+          "Spray Cleaner",
+          5
+        ],
+        [
+          "Spray gun, Basic (20 - 45 psi)",
+          "0.5 - 3.5"
+        ],
+        [
+          "Spray gun, Commercial (30 - 70 psi)",
+          "4 - 7"
+        ],
+        [
+          "Spring Oilers",
+          4
+        ],
+        [
+          "Strait line Sander",
+          "4 - 7"
+        ],
+        [
+          "Tapper - 3/8\" inch",
+          "3 - 5"
+        ],
+        [
+          "Tire Changer",
+          1
+        ],
+        [
+          "Tire Inflation",
+          2
+        ],
+        [
+          "Transmission flusher",
+          3
+        ],
+        [
+          "Upholstery Stapler (30 psi)",
+          2
+        ],
+        [
+          "Vacuum Cleaners",
+          6
+        ],
+        [
+          "Valve Grinders",
+          2
+        ]
+      ]
+    }
+  ]
+}

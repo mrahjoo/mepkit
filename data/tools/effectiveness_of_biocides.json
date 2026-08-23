@@ -1,0 +1,103 @@
+{
+  "id": "effectiveness_of_biocides",
+  "title": "Effectiveness of Biocides",
+  "description": "Biocide effectiveness against bacteria, fungi and algae with information on oxidizing and non-oxidizing biocides, their pH ranges, and applications.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Biocide Type",
+        "Biocide Name",
+        "Bacteria",
+        "Fungi",
+        "Algae",
+        "pH Range",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Oxidizing",
+          "Chlorine (Cl2)",
+          "Excellent",
+          "Good",
+          "Good",
+          "5-8",
+          "Powerful oxidant used in bleaching, disinfectants, and swimming pool maintenance"
+        ],
+        [
+          "Oxidizing",
+          "Chlorine Dioxide (ClO2)",
+          "Excellent",
+          "Good",
+          "Good",
+          "Insensitive",
+          "Potent oxidizing agent used in water treatment and bleaching"
+        ],
+        [
+          "Oxidizing",
+          "Bromine",
+          "Excellent",
+          "Good",
+          "Poor",
+          "5-10",
+          "Used in swimming pool maintenance, water purification, disinfectants, and insecticides"
+        ],
+        [
+          "Oxidizing",
+          "Ozone",
+          "Excellent",
+          "Good",
+          "Good",
+          "7-9",
+          "Used for laundry disinfection, water treatment, air deodorization, and pool sanitization"
+        ],
+        [
+          "Non-Oxidizing",
+          "Carbamate",
+          "Excellent",
+          "Poor",
+          "Poor",
+          "5-9",
+          "Used in insecticides"
+        ],
+        [
+          "Non-Oxidizing",
+          "Organobromide (DBNPA)",
+          "Excellent",
+          "Poor",
+          "Poor",
+          "6-8.5",
+          "Effective fumigant"
+        ],
+        [
+          "Non-Oxidizing",
+          "Methylene bis(thiocyanate) (MBT)",
+          "Excellent",
+          "Poor",
+          "Poor",
+          "Below 8",
+          "Used as microbiocide/microbiostat, fungicide/fungistat, algicide, and disinfectant"
+        ],
+        [
+          "Non-Oxidizing",
+          "Isothiazoline",
+          "Excellent",
+          "Good",
+          "Good",
+          "Insensitive",
+          "General purpose biocide"
+        ],
+        [
+          "Non-Oxidizing",
+          "Triazine",
+          "No control",
+          "No control",
+          "Excellent",
+          "6-9",
+          "Often used as basis for herbicides"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "fuel_gases___wobbe_index",
+  "title": "Fuel Gases - Wobbe Index",
+  "description": "Wobbe index for fuel gases like propane, butane, methane and more. The Wobbe Index indicates the interchange ability of a fuel gas and is the best indicator of similarity between natural gas and a specific propane-air mixture.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel Gas",
+        "Upper Wobbe Index (kcal/Nm³)",
+        "Lower Wobbe Index (kcal/Nm³)"
+      ],
+      "rows": [
+        [
+          "Hydrogen",
+          11528,
+          9714
+        ],
+        [
+          "Methane",
+          12735,
+          11452
+        ],
+        [
+          "Ethane",
+          16298,
+          14931
+        ],
+        [
+          "Ethylene",
+          15253,
+          14344
+        ],
+        [
+          "Natural Gas",
+          12837,
+          11597
+        ],
+        [
+          "Propane",
+          19376,
+          17814
+        ],
+        [
+          "Propylene",
+          18413,
+          17180
+        ],
+        [
+          "n-Butane",
+          22066,
+          20336
+        ],
+        [
+          "Iso-Butane",
+          21980,
+          20247
+        ],
+        [
+          "Butylene-1",
+          21142,
+          19728
+        ],
+        [
+          "LPG",
+          20755,
+          19106
+        ],
+        [
+          "Acetylene",
+          14655,
+          14141
+        ],
+        [
+          "Carbon Monoxide",
+          3060,
+          3060
+        ]
+      ]
+    }
+  ]
+}

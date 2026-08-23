@@ -1,0 +1,41 @@
+{
+  "id": "concrete_slabs___load_capacities",
+  "title": "Concrete Slabs - Load Capacities",
+  "description": "Load capacity of simply supported concrete slabs. Imposed loads vary from approximately 1.5 kN/m2 (153 kg/m2) in domestic buildings to approximately 10 kN/m2 (1053 kg/m2) in heavy industrial areas. 500 kg/m2 is typical for office, storage space and similar.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Thickness (mm)",
+        "Self Weight (kg/m2)",
+        "Imposed Load (kg/m2)",
+        "Total Load (kg/m2)",
+        "Span (m)"
+      ],
+      "rows": [
+        [
+          100,
+          240,
+          500,
+          740,
+          2.4
+        ],
+        [
+          125,
+          300,
+          500,
+          800,
+          3
+        ],
+        [
+          150,
+          360,
+          500,
+          860,
+          3.6
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "jis___japanese_industrial_standards",
+  "title": "JIS - Japanese Industrial Standards",
+  "description": "JIS (Japanese Industrial Standards) specifies the standards used for industrial activities in Japan. The standardization process is coordinated by the Japanese Industrial Standards Committee (JISC) and published through the Japanese Standards Association (JSA). This tool provides a comprehensive reference to the various JIS divisions and categories covering civil engineering, mechanical engineering, electrical engineering, automotive, railway, shipbuilding, materials, chemicals, textiles, and many other industrial sectors.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Division Code",
+        "Division Name",
+        "Categories"
+      ],
+      "rows": [
+        [
+          "A",
+          "Civil Engineering and Architecture",
+          "General, Test and Inspection, Design and Plan, Accommodation and Fixture, Material and Fittings, Execution, Working Machine and Appliance, Miscellaneous"
+        ],
+        [
+          "B",
+          "Mechanical Engineering",
+          "General, Machine and Parts, Common to Factory Automation, Tools/Jig/Implements, Machine Tool, Measuring and Calculating Machine, General Machine"
+        ],
+        [
+          "C",
+          "Electronic and Electrical Engineering",
+          "General, Measuring and Testing Machine, Material, Electric Wire/Cable/Apparatus, Electric Machine, Communication Machine, Vacuum Tube/Lamp, Illumination/Wiring/Battery, Electric Application Machine"
+        ],
+        [
+          "D",
+          "Automotive Engineering",
+          "General, Test and Inspection, Common Parts, Motors and Engine, Chassis/Car Bodies, Electric System/Instrument, Special Car Construction, Repair/Control/Test, Bicycles"
+        ],
+        [
+          "E",
+          "Railway Engineering",
+          "Track General, Electric Car Line/Substation, Signaling/Safety Appliance, Rolling Stock, Motive Power, Railway Carriage/Wagons, Industrial Vehicles, Cable Cars"
+        ],
+        [
+          "F",
+          "Shipbuilding",
+          "General, Hull Parts, Engine Parts, Electric Parts, Measuring Instruments"
+        ],
+        [
+          "G",
+          "Ferrous Materials and Metallurgy",
+          "General, Analysis Method, Raw Materials, Carbon Steel, Alloy Steel, Cast Steel/Iron, ISO Corresponding Standards, Miscellaneous"
+        ],
+        [
+          "H",
+          "Non-ferrous Metals and Metallurgy",
+          "General, Analysis Method, Raw Materials, Copper/Copper Alloy, Other Metals, Casting, Secondary Products, Functional Materials, Processing Method, Miscellaneous"
+        ],
+        [
+          "K",
+          "Chemical Engineering",
+          "General, Monomer Chemicals/Manure, Fuel/Lubricating Oil/Petroleum, Oil-Cake/Perfume/Biotech, Dyestuff Raw Materials, Pigment/Paint/Copying, Rubber/Leather, Plastics, Photography Materials, Reagent"
+        ],
+        [
+          "L",
+          "Textile Engineering",
+          "General, Test and Inspection, Thread, Woven Fabric, Textile Product, Yarn Reeling Machine, Textile Machine, Dyeing/Finishing Machine"
+        ],
+        [
+          "M",
+          "Mining",
+          "General, Exploration, Mining, Dressing Coal/Dressing, Transportation, Safety Item, Mine Products"
+        ],
+        [
+          "P",
+          "Pulp and Paper",
+          "General, Pulp, Paper, Paper Goods, Test and Measurement, Miscellaneous"
+        ],
+        [
+          "Q",
+          "Management System",
+          "Reference Materials/Management System"
+        ],
+        [
+          "R",
+          "Ceramics",
+          "General, Pottery Ware, Refractories, Glass/Mineral Fibrous Goods, Enamel Wares, Cement Goods, Abrasives/Ovenware, Carbons, Special Ceramic Wares, Miscellaneous"
+        ],
+        [
+          "S",
+          "Domestic Wares",
+          "General, Furniture/Household Wares, Oil Burning Appliances/Kitchen Wares, Other Household Wares, Vanity/Personal Accessories, Foot Gear, Stationery/Office Wares, Sporting Utensil, Amusement/Musical Instruments, Miscellaneous"
+        ],
+        [
+          "T",
+          "Medical Equipment and Safety Appliances",
+          "General, Medical Electric Machine, General Surgical Machine, Dental Machine, Dental Materials, Medical Equipment, Safety for Working, Rehabilitation Machine/Sanitation Goods"
+        ],
+        [
+          "W",
+          "Aircraft and Aviation",
+          "General, Materials/Standard Parts, Hull, Engine, Propeller, Measuring Instrument, Radio Communication, Ground Facilities, Miscellaneous"
+        ],
+        [
+          "X",
+          "Information Processing",
+          "Terms/Symbols/Codes, Programming Languages, Business Graph/Japanese/Documents, OSI/LAN/Data Transmission, Output Machines/Data Mediums, Field of Allocation, OCR/POS, etc."
+        ],
+        [
+          "Z",
+          "Miscellaneous, Packaging, Welding, Radioactivity, etc.",
+          "Physical Distribution/Packaging, Miscellaneous Testing/Metallurgy, Welding, Radioactivity, Micro-graphics, Recycle, Standards/Generals, Shop Management"
+        ]
+      ]
+    }
+  ]
+}

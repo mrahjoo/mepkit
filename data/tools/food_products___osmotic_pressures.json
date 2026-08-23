@@ -1,0 +1,64 @@
+{
+  "id": "food_products___osmotic_pressures",
+  "title": "Food Products - Osmotic Pressures",
+  "description": "Osmotic pressure in food products. Reverse-osmosis membrane systems can be used to remove water from water-solute mixtures. This tool displays osmotic pressures for common food products.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Food",
+        "Concentration",
+        "Osmotic Pressure (10³ Pa)"
+      ],
+      "rows": [
+        [
+          "Apple juice",
+          "15% solids",
+          2070
+        ],
+        [
+          "Coffee extract",
+          "28% solids",
+          3450
+        ],
+        [
+          "Grape juice",
+          "16% solids",
+          2070
+        ],
+        [
+          "Lactic acid",
+          "1% (w/v)",
+          552
+        ],
+        [
+          "Lactose",
+          "4.7% (w/v)",
+          380
+        ],
+        [
+          "Milk",
+          "9% solids, no fat",
+          690
+        ],
+        [
+          "Orange juice",
+          "11% solids",
+          1587
+        ],
+        [
+          "Sodium chloride",
+          "1% (w/v)",
+          862
+        ],
+        [
+          "Whey",
+          "6% solids",
+          690
+        ]
+      ],
+      "content": "**Unit Conversions:**\n- 1 Pa = 10⁻⁶ N/mm² = 10⁻⁵ bar = 1.45×10⁻⁴ psi (lbf/in²)\n- w/v = weight/volume"
+    }
+  ]
+}

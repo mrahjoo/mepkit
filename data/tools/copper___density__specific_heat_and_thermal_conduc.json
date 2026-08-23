@@ -1,0 +1,118 @@
+{
+  "id": "copper___density__specific_heat_and_thermal_conduc",
+  "title": "Copper - Density, Specific Heat and Thermal Conductivity vs. Temperature",
+  "description": "Calculate density, specific heat capacity, and thermal conductivity of copper at various temperatures. This tool provides interpolated values based on experimental data for copper properties.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "copper_properties_table",
+      "headers": [
+        "T (K)",
+        "ρ (kg/m³)",
+        "c (kJ/kg K)",
+        "k (W/m K)"
+      ],
+      "rows": [
+        [
+          100,
+          9009,
+          0.254,
+          480
+        ],
+        [
+          150,
+          8992,
+          0.323,
+          429
+        ],
+        [
+          200,
+          8973,
+          0.357,
+          413
+        ],
+        [
+          250,
+          8951,
+          0.377,
+          406
+        ],
+        [
+          300,
+          8930,
+          0.386,
+          401
+        ],
+        [
+          400,
+          8884,
+          0.396,
+          393
+        ],
+        [
+          600,
+          8787,
+          0.431,
+          379
+        ],
+        [
+          800,
+          8642,
+          0.448,
+          366
+        ],
+        [
+          1000,
+          8568,
+          0.446,
+          352
+        ],
+        [
+          1200,
+          8458,
+          0.48,
+          339
+        ]
+      ],
+      "content": "Copper Properties vs Temperature"
+    },
+    {
+      "type": "calculator",
+      "id": "copper_calculator",
+      "inputs": [
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 300
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density",
+          "label": "Density",
+          "unit": "kg/m³",
+          "formula": "8930",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat Capacity",
+          "unit": "kJ/kg K",
+          "formula": "0.386",
+          "format": "decimal"
+        },
+        {
+          "id": "thermal_conductivity",
+          "label": "Thermal Conductivity",
+          "unit": "W/m K",
+          "formula": "401",
+          "format": "decimal"
+        }
+      ],
+      "content": "Enter temperature to retrieve copper properties"
+    }
+  ]
+}

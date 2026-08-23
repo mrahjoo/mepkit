@@ -1,0 +1,143 @@
+{
+  "id": "compression_and_expansion_of_gases",
+  "title": "Compression and Expansion of Gases",
+  "description": "Calculate pressure and density relationships for isothermal, isentropic, and polytropic compression/expansion processes of gases",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Process Type",
+        "Initial Pressure (Pa)",
+        "Initial Volume (m³)",
+        "Initial Density (kg/m³)",
+        "Final Volume (m³)",
+        "Final Pressure (Pa)",
+        "Final Density (kg/m³)",
+        "Parameter k or n"
+      ],
+      "rows": [
+        [
+          "Isothermal",
+          101325,
+          1,
+          1.2,
+          0.5,
+          202650,
+          2.4,
+          "—"
+        ],
+        [
+          "Isentropic",
+          101325,
+          1,
+          1.2,
+          0.5,
+          323560,
+          3.84,
+          1.4
+        ],
+        [
+          "Polytropic",
+          101325,
+          1,
+          1.2,
+          0.5,
+          262725,
+          3.12,
+          1.2
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "process_type",
+          "label": "Process Type",
+          "type": "select",
+          "options": [
+            {
+              "value": "isothermal",
+              "label": "Isothermal"
+            },
+            {
+              "value": "isentropic",
+              "label": "Isentropic (Adiabatic)"
+            },
+            {
+              "value": "polytropic",
+              "label": "Polytropic"
+            }
+          ],
+          "defaultValue": "isothermal"
+        },
+        {
+          "id": "p1",
+          "label": "Initial Pressure (p₁)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 101325
+        },
+        {
+          "id": "v1",
+          "label": "Initial Volume (V₁)",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 1
+        },
+        {
+          "id": "rho1",
+          "label": "Initial Density (ρ₁)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.2
+        },
+        {
+          "id": "v2",
+          "label": "Final Volume (V₂)",
+          "type": "number",
+          "unit": "m³",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "k_value",
+          "label": "k (cp/cv) or n (polytropic index)",
+          "type": "number",
+          "unit": "—",
+          "defaultValue": 1.4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "p2",
+          "label": "Final Pressure (p₂)",
+          "unit": "Pa",
+          "format": "decimal",
+          "formula": "inputs.process_type === 'isothermal' ? (inputs.p1 * inputs.v1) / inputs.v2 : inputs.process_type === 'isentropic' ? inputs.p1 * Math.pow((inputs.v1 / inputs.v2), inputs.k_value) : inputs.p1 * Math.pow((inputs.v1 / inputs.v2), inputs.k_value)"
+        },
+        {
+          "id": "rho2",
+          "label": "Final Density (ρ₂)",
+          "unit": "kg/m³",
+          "format": "decimal",
+          "formula": "inputs.rho1 * (inputs.v1 / inputs.v2)"
+        },
+        {
+          "id": "work_ratio",
+          "label": "Pressure Ratio (p₂/p₁)",
+          "unit": "—",
+          "format": "decimal",
+          "formula": "(inputs.process_type === 'isothermal' ? (inputs.p1 * inputs.v1) / inputs.v2 : inputs.process_type === 'isentropic' ? inputs.p1 * Math.pow((inputs.v1 / inputs.v2), inputs.k_value) : inputs.p1 * Math.pow((inputs.v1 / inputs.v2), inputs.k_value)) / inputs.p1"
+        },
+        {
+          "id": "density_ratio",
+          "label": "Density Ratio (ρ₂/ρ₁)",
+          "unit": "—",
+          "format": "decimal",
+          "formula": "inputs.v1 / inputs.v2"
+        }
+      ]
+    }
+  ]
+}

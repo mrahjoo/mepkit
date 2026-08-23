@@ -1,0 +1,206 @@
+{
+  "id": "typical_floor_loads",
+  "title": "Typical Floor Loads",
+  "description": "Uniformly and concentrated floor loads for different applications and how to calculate loads in kN from mass",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Application",
+        "Concentrated Load (kN)",
+        "Uniformly Distributed Load (kN/m²)"
+      ],
+      "rows": [
+        [
+          "Bedroom, dwelling",
+          1.8,
+          1.5
+        ],
+        [
+          "Bedroom, hotel",
+          1.8,
+          2
+        ],
+        [
+          "Bathroom",
+          1.8,
+          2
+        ],
+        [
+          "Balcony, dwelling",
+          1.4,
+          1.5
+        ],
+        [
+          "Balcony, hotel or guest house",
+          1.5,
+          3
+        ],
+        [
+          "Communal area",
+          1.4,
+          1.5
+        ],
+        [
+          "Factory, general",
+          4.5,
+          5
+        ],
+        [
+          "Kitchen, communal",
+          4.5,
+          3
+        ],
+        [
+          "Laboratory",
+          4.5,
+          3
+        ],
+        [
+          "Laundry",
+          4.5,
+          3
+        ],
+        [
+          "Library",
+          4.5,
+          4
+        ],
+        [
+          "Office",
+          2.7,
+          2.5
+        ],
+        [
+          "WC",
+          1.8,
+          2
+        ],
+        [
+          "Warehouse, general storage",
+          1.8,
+          2
+        ],
+        [
+          "Work area, general",
+          2.7,
+          2.5
+        ],
+        [
+          "Workshop",
+          4.5,
+          5
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "content": "## Calculate Load in kN from Mass\n\nUse the formula: **F = m × g / 1000**\n\nWhere:\n- F = load (kN)\n- m = mass (kg)\n- g = gravitational acceleration (9.81 m/s²)",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "unit": "kg",
+          "defaultValue": 800
+        }
+      ],
+      "outputs": [
+        {
+          "id": "load",
+          "label": "Load",
+          "formula": "inputs.mass * 9.81 / 1000",
+          "unit": "kN",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Typical Floor Loads Comparison",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Concentrated Load (kN)",
+            "Uniformly Distributed Load (kN/m²)"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Bedroom, dwelling",
+            "Bedroom, hotel",
+            "Bathroom",
+            "Balcony, dwelling",
+            "Balcony, hotel",
+            "Communal area",
+            "Factory, general",
+            "Kitchen, communal",
+            "Laboratory",
+            "Laundry",
+            "Library",
+            "Office",
+            "WC",
+            "Warehouse, storage",
+            "Work area, general",
+            "Workshop"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Load (kN or kN/m²)"
+        },
+        "series": [
+          {
+            "name": "Concentrated Load (kN)",
+            "data": [
+              1.8,
+              1.8,
+              1.8,
+              1.4,
+              1.5,
+              1.4,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
+              2.7,
+              1.8,
+              1.8,
+              2.7,
+              4.5
+            ],
+            "type": "bar"
+          },
+          {
+            "name": "Uniformly Distributed Load (kN/m²)",
+            "data": [
+              1.5,
+              2,
+              2,
+              1.5,
+              3,
+              1.5,
+              5,
+              3,
+              3,
+              3,
+              4,
+              2.5,
+              2,
+              2,
+              2.5,
+              5
+            ],
+            "type": "bar"
+          }
+        ]
+      }
+    }
+  ]
+}

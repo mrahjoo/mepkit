@@ -1,0 +1,524 @@
+{
+  "id": "density_of_aqueous_solutions_of_organic_substances",
+  "title": "Density of Aqueous Solutions of Organic Substances",
+  "description": "Comprehensive reference for density values of aqueous solutions of organic substances (sugars and alcohols) at 20°C. Includes data for mass%, molality (mol/kg), and molarity (mol/liter) concentrations.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "chart",
+      "content": "Density of Aqueous Solutions vs Concentration",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "Acetone",
+            "1,2-Ethanediol",
+            "Ethanol",
+            "b-D-Fructose",
+            "a-D-Glucose",
+            "Glycerol",
+            "b-D-Lactose",
+            "a-Maltose",
+            "D-Mannitol",
+            "Methanol",
+            "1-propanol",
+            "2-propanol",
+            "Sucrose",
+            "Urea"
+          ],
+          "top": "5%"
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "3%",
+          "top": "15%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "1%",
+            "5%",
+            "10%",
+            "20%",
+            "30%",
+            "40%",
+            "50%",
+            "60%",
+            "70%",
+            "80%",
+            "100%"
+          ],
+          "name": "Mass % Concentration"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Density (g/cm³)"
+        },
+        "series": [
+          {
+            "name": "Acetone",
+            "type": "line",
+            "data": [
+              0.9968,
+              0.9912,
+              0.9849,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "1,2-Ethanediol",
+            "type": "line",
+            "data": [
+              0.9995,
+              1.0044,
+              1.0108,
+              1.0241,
+              null,
+              1.0514,
+              1.065,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "Ethanol",
+            "type": "line",
+            "data": [
+              0.9963,
+              0.9893,
+              0.9819,
+              0.9687,
+              0.9539,
+              0.9352,
+              0.9139,
+              null,
+              0.8676,
+              null,
+              0.7893
+            ]
+          },
+          {
+            "name": "b-D-Fructose",
+            "type": "line",
+            "data": [
+              1.0021,
+              1.0181,
+              1.0385,
+              1.0816,
+              1.1276,
+              1.1769,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "a-D-Glucose",
+            "type": "line",
+            "data": [
+              1.002,
+              1.0175,
+              1.0375,
+              1.0797,
+              1.126,
+              1.1724,
+              1.2235,
+              1.2793,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "Glycerol",
+            "type": "line",
+            "data": [
+              1.0005,
+              1.0097,
+              1.0215,
+              1.0459,
+              null,
+              1.0984,
+              null,
+              1.153,
+              null,
+              1.2085,
+              1.2611
+            ]
+          },
+          {
+            "name": "b-D-Lactose",
+            "type": "line",
+            "data": [
+              1.0021,
+              1.0184,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "a-Maltose",
+            "type": "line",
+            "data": [
+              1.0003,
+              1.0184,
+              1.0385,
+              1.0801,
+              1.1269,
+              1.1769,
+              1.2194,
+              1.2855,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "D-Mannitol",
+            "type": "line",
+            "data": [
+              1.0017,
+              1.0159,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "Methanol",
+            "type": "line",
+            "data": [
+              0.9964,
+              0.9896,
+              0.9816,
+              0.9666,
+              0.9514,
+              0.9347,
+              0.9156,
+              null,
+              0.8715,
+              null,
+              0.797
+            ]
+          },
+          {
+            "name": "1-propanol",
+            "type": "line",
+            "data": [
+              0.9963,
+              0.9896,
+              0.9829,
+              0.9686,
+              null,
+              0.9288,
+              null,
+              0.8875,
+              null,
+              0.847,
+              0.8034
+            ]
+          },
+          {
+            "name": "2-propanol",
+            "type": "line",
+            "data": [
+              0.996,
+              0.9884,
+              0.9816,
+              0.9696,
+              null,
+              0.9302,
+              null,
+              0.8824,
+              null,
+              0.8341,
+              0.7848
+            ]
+          },
+          {
+            "name": "Sucrose",
+            "type": "line",
+            "data": [
+              1.0021,
+              1.0178,
+              1.0381,
+              1.081,
+              1.127,
+              1.1765,
+              1.2295,
+              null,
+              1.3472,
+              null,
+              null
+            ]
+          },
+          {
+            "name": "Urea",
+            "type": "line",
+            "data": [
+              1.0007,
+              1.0111,
+              1.0248,
+              1.053,
+              1.0812,
+              1.1106,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "datatable",
+      "content": "Density Values at 20°C (g/cm³) - Mass% Concentration",
+      "headers": [
+        "Substance",
+        "1%",
+        "5%",
+        "10%",
+        "20%",
+        "30%",
+        "40%",
+        "50%",
+        "60%",
+        "70%",
+        "80%",
+        "100%"
+      ],
+      "rows": [
+        [
+          "Acetone",
+          0.9968,
+          0.9912,
+          0.9849,
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "1,2-Ethanediol",
+          0.9995,
+          1.0044,
+          1.0108,
+          1.0241,
+          "—",
+          1.0514,
+          1.065,
+          "—",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Ethanol",
+          0.9963,
+          0.9893,
+          0.9819,
+          0.9687,
+          0.9539,
+          0.9352,
+          0.9139,
+          "—",
+          0.8676,
+          "—",
+          0.7893
+        ],
+        [
+          "b-D-Fructose",
+          1.0021,
+          1.0181,
+          1.0385,
+          1.0816,
+          1.1276,
+          1.1769,
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "a-D-Glucose",
+          1.002,
+          1.0175,
+          1.0375,
+          1.0797,
+          1.126,
+          1.1724,
+          1.2235,
+          1.2793,
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Glycerol",
+          1.0005,
+          1.0097,
+          1.0215,
+          1.0459,
+          "—",
+          1.0984,
+          "—",
+          1.153,
+          "—",
+          1.2085,
+          1.2611
+        ],
+        [
+          "b-D-Lactose",
+          1.0021,
+          1.0184,
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "a-Maltose",
+          1.0003,
+          1.0184,
+          1.0385,
+          1.0801,
+          1.1269,
+          1.1769,
+          1.2194,
+          1.2855,
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "D-Mannitol",
+          1.0017,
+          1.0159,
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Methanol",
+          0.9964,
+          0.9896,
+          0.9816,
+          0.9666,
+          0.9514,
+          0.9347,
+          0.9156,
+          "—",
+          0.8715,
+          "—",
+          0.797
+        ],
+        [
+          "1-propanol",
+          0.9963,
+          0.9896,
+          0.9829,
+          0.9686,
+          "—",
+          0.9288,
+          "—",
+          0.8875,
+          "—",
+          0.847,
+          0.8034
+        ],
+        [
+          "2-propanol",
+          0.996,
+          0.9884,
+          0.9816,
+          0.9696,
+          "—",
+          0.9302,
+          "—",
+          0.8824,
+          "—",
+          0.8341,
+          0.7848
+        ],
+        [
+          "Sucrose",
+          1.0021,
+          1.0178,
+          1.0381,
+          1.081,
+          1.127,
+          1.1765,
+          1.2295,
+          "—",
+          1.3472,
+          "—",
+          "—"
+        ],
+        [
+          "Urea",
+          1.0007,
+          1.0111,
+          1.0248,
+          1.053,
+          1.0812,
+          1.1106,
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Concentration Units\n\n**wt% (Mass%):** Mass of solute / total mass of solution × 100%\n\n**mol/kg (Molality):** Moles of solute / kg of water\n\n**mol/liter (Molarity):** Moles of solute / liter of solution\n\n## Key Notes\n\n- All density values are measured at 20°C\n- Data includes sugars (fructose, glucose, lactose, maltose, mannitol, sucrose), alcohols (ethanol, methanol, propanol, ethanediol, glycerol), and other organic substances (acetone, urea)\n- Missing values (—) indicate data not available\n- Conversion tables for mol/kg and mol/liter concentration units are provided in the complete dataset"
+    }
+  ]
+}

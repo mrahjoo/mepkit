@@ -1,0 +1,163 @@
+{
+  "id": "concrete_columns",
+  "title": "Concrete Columns",
+  "description": "Estimate concrete volume required for concrete columns. Calculate the volume of concrete needed for round or square columns in cubic yards using column dimensions and height.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Concrete Columns Calculator\n\nEstimate the concrete volume required for concrete columns using the formula:\n\n**v = 0.7854 × a² × h / 27**\n\nWhere:\n- **v** = required concrete (cubic yards)\n- **a** = column area (sq. ft.)\n- **h** = column height (ft)\n\n**Note:** 1 cubic yard = 27 cubic feet; 1 ft = 12 inches"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "column_type",
+          "label": "Column Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Round Column",
+              "value": "round"
+            },
+            {
+              "label": "Square Column",
+              "value": "square"
+            }
+          ],
+          "defaultValue": "round"
+        },
+        {
+          "id": "column_diameter_round",
+          "label": "Column Diameter (inches) - Round",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": "in"
+        },
+        {
+          "id": "column_size_square",
+          "label": "Column Size (inches) - Square",
+          "type": "number",
+          "defaultValue": 12,
+          "unit": "in"
+        },
+        {
+          "id": "column_height",
+          "label": "Column Height",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "ft"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "column_area",
+          "label": "Column Area",
+          "formula": "inputs.column_type === 'round' ? 3.14159 * (inputs.column_diameter_round / 12) ** 2 / 4 : (inputs.column_size_square / 12) ** 2",
+          "unit": "sq. ft.",
+          "format": "decimal"
+        },
+        {
+          "id": "concrete_volume",
+          "label": "Concrete Volume Required",
+          "formula": "0.7854 * (inputs.column_type === 'round' ? (inputs.column_diameter_round / 12) ** 2 : (inputs.column_size_square / 12) ** 2) * inputs.column_height / 27",
+          "unit": "cy",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Column Size (in)",
+        "Volume (cy per linear foot)"
+      ],
+      "rows": [
+        [
+          "8 (Round)",
+          "0.013"
+        ],
+        [
+          "9 (Round)",
+          "0.016"
+        ],
+        [
+          "10 (Round)",
+          "0.020"
+        ],
+        [
+          "11 (Round)",
+          "0.024"
+        ],
+        [
+          "12 (Round)",
+          "0.029"
+        ],
+        [
+          "14 (Round)",
+          "0.040"
+        ],
+        [
+          "16 (Round)",
+          "0.051"
+        ],
+        [
+          "18 (Round)",
+          "0.065"
+        ],
+        [
+          "20 (Round)",
+          "0.081"
+        ],
+        [
+          "22 (Round)",
+          "0.097"
+        ],
+        [
+          "24 (Round)",
+          "0.116"
+        ],
+        [
+          "26 (Round)",
+          "0.137"
+        ],
+        [
+          "28 (Round)",
+          "0.158"
+        ],
+        [
+          "30 (Round)",
+          "0.181"
+        ],
+        [
+          "12 x 12 (Square)",
+          "0.037"
+        ],
+        [
+          "14 x 14 (Square)",
+          "0.050"
+        ],
+        [
+          "16 x 16 (Square)",
+          "0.066"
+        ],
+        [
+          "18 x 18 (Square)",
+          "0.083"
+        ],
+        [
+          "20 x 20 (Square)",
+          "0.103"
+        ],
+        [
+          "24 x 24 (Square)",
+          "0.148"
+        ],
+        [
+          "30 x 30 (Square)",
+          "0.231"
+        ]
+      ]
+    }
+  ]
+}

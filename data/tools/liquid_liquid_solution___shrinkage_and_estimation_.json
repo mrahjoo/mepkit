@@ -1,0 +1,100 @@
+{
+  "id": "liquid_liquid_solution___shrinkage_and_estimation_",
+  "title": "Liquid-Liquid Solution - Shrinkage and Estimation of Density",
+  "description": "Calculate the density of liquid-liquid solutions using the shrinkage estimation formula. This tool helps estimate the density of solutions where both solvent and solute are liquids, accounting for potential shrinkage effects due to molecular size differences.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "density_calculator",
+      "content": "Density Estimation Calculator",
+      "inputs": [
+        {
+          "id": "wt_percent_solvent",
+          "label": "Weight % of Solvent",
+          "type": "number",
+          "defaultValue": 80,
+          "unit": "%"
+        },
+        {
+          "id": "density_solvent",
+          "label": "Density of Solvent",
+          "type": "number",
+          "defaultValue": 0.9982,
+          "unit": "g/cm³"
+        },
+        {
+          "id": "wt_percent_solute",
+          "label": "Weight % of Solute",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "%"
+        },
+        {
+          "id": "density_solute",
+          "label": "Density of Solute",
+          "type": "number",
+          "defaultValue": 0.7893,
+          "unit": "g/cm³"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "estimated_density",
+          "label": "Estimated Density (No Shrinkage)",
+          "formula": "(inputs.wt_percent_solvent * inputs.density_solvent + inputs.wt_percent_solute * inputs.density_solute) / 100",
+          "unit": "g/cm³",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "shrinkage_example",
+      "content": "Example: Ethanol-Water Solutions at 20°C",
+      "headers": [
+        "Mass% Ethanol in Water",
+        "Density Measured (g/cm³)",
+        "Density Estimated (g/cm³)",
+        "Difference (%)"
+      ],
+      "rows": [
+        [
+          "0",
+          "0.9982",
+          "—",
+          "—"
+        ],
+        [
+          "20",
+          "0.9687",
+          "0.9564",
+          "1.27"
+        ],
+        [
+          "50",
+          "0.9139",
+          "0.8938",
+          "2.20"
+        ],
+        [
+          "70",
+          "0.8676",
+          "0.8520",
+          "1.80"
+        ],
+        [
+          "100",
+          "0.7893",
+          "—",
+          "—"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "formula_explanation",
+      "content": "## Formula\n\n**Density Estimation Formula:**\n\n$$\\text{density}_{\\text{solution}} = \\frac{x \\rho_{\\text{solvent}} + y \\rho_{\\text{solute}}}{100}$$\n\nWhere:\n- **x** = weight % of solvent\n- **ρ_solvent** = density of solvent\n- **y** = weight % of solute\n- **ρ_solute** = density of solute\n\n## Important Notes on Shrinkage\n\n- **Shrinkage** occurs when molecules with relatively large differences in size are mixed\n- The resulting density is **higher than calculated** by the formula above\n- Shrinkage is **largest around 50 wt% concentration**\n- Effects of molecular shape and polarity also influence shrinkage\n- The formula provides an **estimate only**, with errors that vary with solute concentration"
+    }
+  ]
+}

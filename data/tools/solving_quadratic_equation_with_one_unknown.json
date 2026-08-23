@@ -1,0 +1,94 @@
+{
+  "id": "solving_quadratic_equation_with_one_unknown",
+  "title": "Solving Quadratic Equation with One Unknown",
+  "description": "How to solve a quadratic equation. Calculates the two solutions (x1 and x2) for a quadratic equation of the form ax² + bx + c = 0 using the quadratic formula.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "quadratic_calculator",
+      "headers": [
+        "Quadratic Equation Solver"
+      ],
+      "content": "Solve the quadratic equation: ax² + bx + c = 0",
+      "inputs": [
+        {
+          "id": "a",
+          "label": "Coefficient a",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        },
+        {
+          "id": "b",
+          "label": "Coefficient b",
+          "type": "number",
+          "defaultValue": 6,
+          "unit": ""
+        },
+        {
+          "id": "c",
+          "label": "Coefficient c",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": ""
+        }
+      ],
+      "outputs": [
+        {
+          "id": "discriminant",
+          "label": "Discriminant (b² - 4ac)",
+          "formula": "inputs.b * inputs.b - 4 * inputs.a * inputs.c",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "x1",
+          "label": "Solution x₁",
+          "formula": "(-inputs.b + sqrt(inputs.b * inputs.b - 4 * inputs.a * inputs.c)) / (2 * inputs.a)",
+          "format": "decimal",
+          "unit": ""
+        },
+        {
+          "id": "x2",
+          "label": "Solution x₂",
+          "formula": "(-inputs.b - sqrt(inputs.b * inputs.b - 4 * inputs.a * inputs.c)) / (2 * inputs.a)",
+          "format": "decimal",
+          "unit": ""
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "id": "quadratic_curve",
+      "headers": [
+        "Quadratic Equation Curve"
+      ],
+      "content": "Visualization of the quadratic equation f(x) = ax² + bx + c",
+      "options": {
+        "title": {
+          "text": "Quadratic Equation Curve: f(x) = ax² + bx + c"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "value",
+          "name": "x"
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "f(x)"
+        },
+        "series": [
+          {
+            "data": [],
+            "type": "line",
+            "smooth": true,
+            "name": "f(x)"
+          }
+        ]
+      }
+    }
+  ]
+}

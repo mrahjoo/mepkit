@@ -1,0 +1,197 @@
+{
+  "id": "temperature_expansion",
+  "title": "Temperature Expansion",
+  "description": "Thermal expansion and expansion coefficients. Expansion pipes and tubes made of stainless steel, carbon steel, copper, plastics and more.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate thermal expansion based on material properties and temperature change.",
+      "inputs": [
+        {
+          "id": "original_length",
+          "label": "Original Length",
+          "type": "number",
+          "defaultValue": 100,
+          "unit": "mm"
+        },
+        {
+          "id": "temperature_change",
+          "label": "Temperature Change",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "°C"
+        },
+        {
+          "id": "expansion_coefficient",
+          "label": "Linear Expansion Coefficient",
+          "type": "number",
+          "defaultValue": 0.000012,
+          "unit": "1/°C"
+        },
+        {
+          "id": "material",
+          "label": "Material Type",
+          "type": "select",
+          "options": [
+            {
+              "label": "Stainless Steel",
+              "value": 0.000013
+            },
+            {
+              "label": "Carbon Steel",
+              "value": 0.000012
+            },
+            {
+              "label": "Copper",
+              "value": 0.0000167
+            },
+            {
+              "label": "Aluminum",
+              "value": 0.000023
+            },
+            {
+              "label": "Plastic (PVC)",
+              "value": 0.00007
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "expansion_length",
+          "label": "Thermal Expansion Length",
+          "formula": "inputs.original_length * inputs.expansion_coefficient * inputs.temperature_change",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "final_length",
+          "label": "Final Length",
+          "formula": "inputs.original_length + (inputs.original_length * inputs.expansion_coefficient * inputs.temperature_change)",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "expansion_percentage",
+          "label": "Expansion Percentage",
+          "formula": "((inputs.original_length * inputs.expansion_coefficient * inputs.temperature_change) / inputs.original_length) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Linear Expansion Coefficient (1/°C)",
+        "Category"
+      ],
+      "rows": [
+        [
+          "Stainless Steel",
+          "0.000013",
+          "Metals"
+        ],
+        [
+          "Carbon Steel",
+          "0.000012",
+          "Metals"
+        ],
+        [
+          "Copper",
+          "0.0000167",
+          "Metals"
+        ],
+        [
+          "Aluminum",
+          "0.000023",
+          "Metals"
+        ],
+        [
+          "Brass",
+          "0.000019",
+          "Metals"
+        ],
+        [
+          "Plastic (PVC)",
+          "0.000070",
+          "Plastics"
+        ],
+        [
+          "Plastic (HDPE)",
+          "0.000150",
+          "Plastics"
+        ],
+        [
+          "Plastic (LDPE)",
+          "0.000200",
+          "Plastics"
+        ],
+        [
+          "Glass",
+          "0.0000090",
+          "Ceramics"
+        ],
+        [
+          "Concrete",
+          "0.000012",
+          "Ceramics"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "Thermal expansion comparison across different materials",
+      "options": {
+        "title": {
+          "text": "Linear Expansion Coefficients by Material"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Stainless Steel",
+            "Carbon Steel",
+            "Copper",
+            "Aluminum",
+            "Brass",
+            "PVC",
+            "HDPE",
+            "LDPE",
+            "Glass",
+            "Concrete"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Coefficient (1/°C)"
+        },
+        "series": [
+          {
+            "name": "Linear Expansion Coefficient",
+            "data": [
+              0.000013,
+              0.000012,
+              0.0000167,
+              0.000023,
+              0.000019,
+              0.00007,
+              0.00015,
+              0.0002,
+              0.000009,
+              0.000012
+            ],
+            "type": "bar",
+            "itemStyle": {
+              "color": "#3b82f6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

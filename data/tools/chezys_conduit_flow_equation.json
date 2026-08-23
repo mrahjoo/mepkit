@@ -1,0 +1,116 @@
+{
+  "id": "chezys_conduit_flow_equation",
+  "title": "Chezys Conduit Flow Equation",
+  "description": "Calculate mean flow velocity in conduits using Chezy's equation: v = C (Rh S)^(1/2). Determine flow velocity based on Chezy coefficient, hydraulic radius, and slope.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "chezy_calculator",
+      "content": "Chezy's Conduit Flow Equation",
+      "inputs": [
+        {
+          "id": "chezy_coefficient",
+          "label": "Chezy Coefficient (C)",
+          "type": "number",
+          "unit": "m^(1/2)/s",
+          "defaultValue": 50
+        },
+        {
+          "id": "hydraulic_radius",
+          "label": "Hydraulic Radius (Rh)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0.25
+        },
+        {
+          "id": "slope",
+          "label": "Slope (S)",
+          "type": "number",
+          "unit": "m/m",
+          "defaultValue": 0.01
+        },
+        {
+          "id": "cross_sectional_area",
+          "label": "Cross Sectional Area (A)",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 0.5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity",
+          "label": "Mean Velocity (v)",
+          "unit": "m/s",
+          "formula": "inputs.chezy_coefficient * Math.sqrt(inputs.hydraulic_radius * inputs.slope)",
+          "format": "decimal"
+        },
+        {
+          "id": "volume_flow",
+          "label": "Volume Flow (q)",
+          "unit": "m³/s",
+          "formula": "inputs.cross_sectional_area * (inputs.chezy_coefficient * Math.sqrt(inputs.hydraulic_radius * inputs.slope))",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "example_data",
+      "content": "Example - Concrete Conduit (1m x 1m, half filled, slope 1/100)",
+      "headers": [
+        "Parameter",
+        "Value",
+        "Unit"
+      ],
+      "rows": [
+        [
+          "Conduit Dimensions",
+          "1 × 1",
+          "m"
+        ],
+        [
+          "Fill Level",
+          "0.5",
+          "fraction"
+        ],
+        [
+          "Cross Sectional Area (A)",
+          "0.5",
+          "m²"
+        ],
+        [
+          "Wetted Perimeter (P)",
+          "2",
+          "m"
+        ],
+        [
+          "Hydraulic Radius (Rh)",
+          "0.25",
+          "m"
+        ],
+        [
+          "Slope (S)",
+          "0.01",
+          "m/m"
+        ],
+        [
+          "Chezy Coefficient (C)",
+          "50",
+          "m^(1/2)/s"
+        ],
+        [
+          "Mean Velocity (v)",
+          "2.5",
+          "m/s"
+        ],
+        [
+          "Volume Flow (q)",
+          "1.25",
+          "m³/s"
+        ]
+      ]
+    }
+  ]
+}

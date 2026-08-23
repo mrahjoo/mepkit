@@ -1,0 +1,44 @@
+{
+  "id": "pneumatic_cylinder___acting_velocity",
+  "title": "Pneumatic Cylinder - Acting Velocity",
+  "description": "Calculate pneumatic cylinder acting velocity based on volume flow and piston area.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Pneumatic Cylinder - Acting Velocity\n\nVelocity of a pneumatic cylinder can be calculated using:\n\n**s = 28.8 q / A**\n\nWhere:\n- **s** = velocity (inches/sec)\n- **q** = volume flow (cubic feet/min)\n- **A** = piston area (square inches)",
+      "headers": [
+        "Formula",
+        "Variables"
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "volumeFlow",
+          "label": "Volume Flow",
+          "unit": "cubic feet/min",
+          "type": "number",
+          "defaultValue": 10
+        },
+        {
+          "id": "pistonArea",
+          "label": "Piston Area",
+          "unit": "square inches",
+          "type": "number",
+          "defaultValue": 5
+        }
+      ],
+      "outputs": [
+        {
+          "id": "velocity",
+          "label": "Acting Velocity",
+          "unit": "inches/sec",
+          "formula": "28.8 * inputs.volumeFlow / inputs.pistonArea",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

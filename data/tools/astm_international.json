@@ -1,0 +1,113 @@
+{
+  "id": "astm_international",
+  "title": "ASTM International Standards",
+  "description": "ASTM International is one of the largest voluntary standards development organizations in the world, providing technical standards for materials, products, systems, and services across 67 volumes organized in 16 sections including metals, construction, petroleum, textiles, plastics, and more.",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# ASTM International Standards Overview\n\n[ASTM International](http://www.astm.org/), originally known as the American Society for Testing and Materials, is a trusted source for technical standards covering:\n\n- **Materials Testing**: Chemical composition, performance verification\n- **Product Standards**: Refined materials like steel and basic products like machinery\n- **Publication**: 67 volumes organized in 16 sections\n\n## Coverage Areas\n\n1. **Iron and Steel Products** - Piping, tubing, castings, structural steel\n2. **Nonferrous Metals** - Copper, aluminum, nickel, and alloys\n3. **Metals Test Methods** - Mechanical testing, corrosion, NDT\n4. **Construction** - Cement, concrete, roofing, wood, soils\n5. **Petroleum & Fuels** - Products, lubricants, gaseous fuels\n6. **Paints & Coatings** - Chemical/physical properties, protective coatings\n7. **Textiles** - Various textile standards\n8. **Plastics** - Pipe, building products, general plastics\n9. **Rubber** - Natural/synthetic rubber, tires\n10. **Electrical Insulation** - Insulation materials and electronics\n11. **Water & Environment** - Analysis, waste management, biotechnology\n12. **Nuclear/Solar/Geothermal** - Energy standards\n13. **Medical Devices** - Medical devices and services\n14. **General Methods** - Test methods, terminology, statistical methods\n15. **General Products** - Chemicals, ceramics, adhesives, consumer products"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Section",
+        "Title",
+        "Volumes",
+        "Key Areas"
+      ],
+      "rows": [
+        [
+          "1",
+          "Iron and Steel Products",
+          "8",
+          "Piping, tubing, castings, plate, structural steel, fasteners"
+        ],
+        [
+          "2",
+          "Nonferrous Metal Products",
+          "5",
+          "Copper, aluminum, nickel, cobalt, precious metals, coatings"
+        ],
+        [
+          "3",
+          "Metals Test Methods",
+          "6",
+          "Mechanical testing, wear, erosion, corrosion, NDT"
+        ],
+        [
+          "4",
+          "Construction",
+          "13",
+          "Cement, concrete, roofing, soil, wood, building systems"
+        ],
+        [
+          "5",
+          "Petroleum Products & Lubricants",
+          "6",
+          "Motor fuels, diesel, aviation fuels, coal, coke"
+        ],
+        [
+          "6",
+          "Paints & Coatings",
+          "4",
+          "Chemical/physical testing, protective coatings, pigments"
+        ],
+        [
+          "7",
+          "Textiles",
+          "2",
+          "Textile standards and test methods"
+        ],
+        [
+          "8",
+          "Plastics",
+          "4",
+          "General plastics, pipe, building products"
+        ],
+        [
+          "9",
+          "Rubber",
+          "2",
+          "Natural/synthetic rubber, gaskets, tires"
+        ],
+        [
+          "10",
+          "Electrical Insulation",
+          "4",
+          "Insulation materials, gases, electronics"
+        ],
+        [
+          "11",
+          "Water & Environment",
+          "5",
+          "Water analysis, environmental assessment, biotechnology"
+        ],
+        [
+          "12",
+          "Nuclear/Solar/Geothermal",
+          "2",
+          "Nuclear energy, solar, geothermal energy"
+        ],
+        [
+          "13",
+          "Medical Devices",
+          "2",
+          "Medical devices, emergency medical services"
+        ],
+        [
+          "14",
+          "General Methods",
+          "4",
+          "Test methods, temperature measurement, SI standards"
+        ],
+        [
+          "15",
+          "General Products",
+          "9",
+          "Refractories, glass, ceramics, adhesives, specialty chemicals"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "centrifugal_pumps___stable_and_unstable_flow",
+  "title": "Centrifugal Pumps - Stable and Unstable Flow",
+  "description": "The characteristics of stable and unstable flow in centrifugal pumps. Understand the behavior differences between stable head-flow characteristics where differential head progressively falls with increasing flow rate, and unstable head-flow characteristics where differential head rises to a maximum before falling.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Flow Condition",
+        "Differential Head (h)",
+        "Flow Rate (q)",
+        "Characteristics",
+        "Stability Status"
+      ],
+      "rows": [
+        [
+          "Stable Head-Flow",
+          "Progressively falls",
+          "Increasing",
+          "Linear negative relationship",
+          "Stable"
+        ],
+        [
+          "Unstable Head-Flow",
+          "Rises to max then falls",
+          "Increasing",
+          "Non-linear with peak",
+          "Unstable - Oscillates"
+        ],
+        [
+          "Stable Operation",
+          "Predictable",
+          "Controlled",
+          "Recommended for design",
+          "Safe"
+        ],
+        [
+          "Unstable Operation",
+          "Unpredictable",
+          "Modulating",
+          "Flow oscillates, pipeline vibrates",
+          "Not Recommended"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Stable Head-Flow Characteristic\nThe differential head (_h_) progressively falls with increasing flow rate (_q_). This creates a stable operating condition where the pump behavior is predictable and consistent.\n\n## Unstable Head-Flow Characteristic\nThe differential head (_h_) rises to a maximum and then progressively falls with increasing flow rate (_q_). An unstable pump may start to oscillate between two possible combinations of head-flow, causing the flow rate to modulate and the pipeline to vibrate.\n\n## Recommendations\nIt is recommended that centrifugal pumps are designed and operated under **stable conditions** to ensure reliable and safe operation."
+    }
+  ]
+}

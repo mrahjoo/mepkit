@@ -1,0 +1,6 @@
+{
+  "id": "standard_enthalpy_of_formation__gibbs_energy_of_fo",
+  "title": "Standard enthalpy of formation, Gibbs energy of formation, entropy and molar heat capacity of organic substances",
+  "description": "Comprehensive data table for thermodynamic properties of organic substances at 25°C (298.15 K), including standard enthalpy of formation (ΔH°f), Gibbs free energy of formation (ΔG°f), standard entropy (S°), and molar heat capacity (Cp) in their standard states (gas or liquid).",
+  "type": "datatable"
+}

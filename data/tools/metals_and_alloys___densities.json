@@ -1,0 +1,556 @@
+{
+  "id": "metals_and_alloys___densities",
+  "title": "Metals and Alloys - Densities",
+  "description": "Densities of common metals, metallic elements and alloys - aluminum, bronze, copper, iron and more. Look up density values and convert between different density units.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "density_table",
+      "headers": [
+        "Metal or Alloy",
+        "Density (kg/m³)"
+      ],
+      "rows": [
+        [
+          "Actinium",
+          10070
+        ],
+        [
+          "Admiralty Brass",
+          8525
+        ],
+        [
+          "Aluminum",
+          2712
+        ],
+        [
+          "Aluminum - melted",
+          "2560 - 2640"
+        ],
+        [
+          "Aluminum alloy - 1100",
+          2720
+        ],
+        [
+          "Aluminum alloy 2014, annealed",
+          2800
+        ],
+        [
+          "Aluminum alloy 3003, rolled",
+          2730
+        ],
+        [
+          "Aluminum alloy 360",
+          2640
+        ],
+        [
+          "Aluminum alloy 2024-T6",
+          2770
+        ],
+        [
+          "Aluminum alloy - 6061",
+          2720
+        ],
+        [
+          "Aluminum alloy - 7050",
+          2800
+        ],
+        [
+          "Aluminum alloy - 7178",
+          2830
+        ],
+        [
+          "Aluminum bronze (3-10% Al)",
+          "7700 - 8700"
+        ],
+        [
+          "Aluminum foil",
+          "2700 - 2750"
+        ],
+        [
+          "Antifriction metal",
+          "9130 - 10600"
+        ],
+        [
+          "Antimony",
+          6690
+        ],
+        [
+          "Antimonial lead (hard lead)",
+          10900
+        ],
+        [
+          "Babbitt",
+          7272
+        ],
+        [
+          "Barium",
+          3594
+        ],
+        [
+          "Beryllium",
+          1840
+        ],
+        [
+          "Beryllium copper",
+          "8100 - 8250"
+        ],
+        [
+          "Bismuth",
+          9750
+        ],
+        [
+          "Brass - casting",
+          "8400 - 8700"
+        ],
+        [
+          "Brass - rolled and drawn",
+          "8430 - 8730"
+        ],
+        [
+          "Brass 60/40",
+          8520
+        ],
+        [
+          "Bronze - lead",
+          "7700 - 8700"
+        ],
+        [
+          "Bronze - phosphorous",
+          "8780 - 8920"
+        ],
+        [
+          "Bronze (8-14% Sn)",
+          "7400 - 8900"
+        ],
+        [
+          "Brushed metal",
+          7860
+        ],
+        [
+          "Cadmium",
+          8640
+        ],
+        [
+          "Caesium",
+          1873
+        ],
+        [
+          "Calcium",
+          1540
+        ],
+        [
+          "Cartridge brass (70% Cu, 30% Zn)",
+          8530
+        ],
+        [
+          "Cast iron",
+          "6800 - 7800"
+        ],
+        [
+          "Cerium",
+          6770
+        ],
+        [
+          "Chemical Lead",
+          11340
+        ],
+        [
+          "Chromium",
+          7190
+        ],
+        [
+          "Cobalt",
+          8746
+        ],
+        [
+          "Constantan",
+          8920
+        ],
+        [
+          "Columbium",
+          8600
+        ],
+        [
+          "Copper",
+          8940
+        ],
+        [
+          "Cupronickel",
+          "8908 - 8940"
+        ],
+        [
+          "Delta metal",
+          8600
+        ],
+        [
+          "Duralumin",
+          2790
+        ],
+        [
+          "Dysprosium",
+          8550
+        ],
+        [
+          "Electrum (natural alloy silver and gold)",
+          "12500 - 15000"
+        ],
+        [
+          "Erbium",
+          9070
+        ],
+        [
+          "Eroded metal",
+          7860
+        ],
+        [
+          "Europium",
+          5243
+        ],
+        [
+          "Gadolinium",
+          7900
+        ],
+        [
+          "Gallium",
+          5907
+        ],
+        [
+          "Germanium",
+          5323
+        ],
+        [
+          "Gold",
+          19320
+        ],
+        [
+          "Hafnium",
+          13310
+        ],
+        [
+          "Hastelloy C",
+          8940
+        ],
+        [
+          "Holmium",
+          8800
+        ],
+        [
+          "Indium",
+          7310
+        ],
+        [
+          "Inconel",
+          8497
+        ],
+        [
+          "Incoloy",
+          8027
+        ],
+        [
+          "Iridium",
+          22650
+        ],
+        [
+          "Iron",
+          7850
+        ],
+        [
+          "Lanthanum",
+          6145
+        ],
+        [
+          "Lead",
+          11340
+        ],
+        [
+          "Light alloy based on Al",
+          "2560 - 2800"
+        ],
+        [
+          "Light alloy based on Mg",
+          "1760 - 1870"
+        ],
+        [
+          "Lithium",
+          534
+        ],
+        [
+          "Lutetium",
+          9840
+        ],
+        [
+          "Magnesium",
+          1738
+        ],
+        [
+          "Magnesium alloy AZ31B",
+          1770
+        ],
+        [
+          "Manganese",
+          7440
+        ],
+        [
+          "Manganese Bronze",
+          8359
+        ],
+        [
+          "Manganin",
+          8500
+        ],
+        [
+          "Mercury",
+          13593
+        ],
+        [
+          "Molybdenum",
+          10188
+        ],
+        [
+          "Monel",
+          "8360 - 8840"
+        ],
+        [
+          "Neodymium",
+          7007
+        ],
+        [
+          "Neptunium",
+          20200
+        ],
+        [
+          "Nichrome",
+          8400
+        ],
+        [
+          "Nickel",
+          8908
+        ],
+        [
+          "Nickel 20",
+          8090
+        ],
+        [
+          "Nickel 200",
+          8890
+        ],
+        [
+          "Nickel silver",
+          "8400 - 8900"
+        ],
+        [
+          "Nickeline",
+          8770
+        ],
+        [
+          "Nimonic",
+          8100
+        ],
+        [
+          "Niobium",
+          8570
+        ],
+        [
+          "Osmium",
+          22610
+        ],
+        [
+          "Palladium",
+          12160
+        ],
+        [
+          "Phosphor bronze",
+          8900
+        ],
+        [
+          "Platinum",
+          21400
+        ],
+        [
+          "Plutonium",
+          19816
+        ],
+        [
+          "Polonium",
+          9200
+        ],
+        [
+          "Potassium",
+          890
+        ],
+        [
+          "Praseodymium",
+          6770
+        ],
+        [
+          "Promethium",
+          7260
+        ],
+        [
+          "Protactinium",
+          15400
+        ],
+        [
+          "Radium",
+          5000
+        ],
+        [
+          "Red Brass",
+          8746
+        ],
+        [
+          "Rhenium",
+          20800
+        ],
+        [
+          "Rhodium",
+          12400
+        ],
+        [
+          "Rubidium",
+          1530
+        ],
+        [
+          "Ruthenium",
+          12100
+        ],
+        [
+          "Samarium",
+          7520
+        ],
+        [
+          "Scandium",
+          2990
+        ],
+        [
+          "Silver",
+          10490
+        ],
+        [
+          "Sodium",
+          971
+        ],
+        [
+          "Solder 50/50 Pb Sn",
+          8885
+        ],
+        [
+          "Stainless Steel",
+          "7480 - 8000"
+        ],
+        [
+          "Steel",
+          7850
+        ],
+        [
+          "Strontium",
+          2640
+        ],
+        [
+          "Tantalum",
+          16400
+        ],
+        [
+          "Technetium",
+          11000
+        ],
+        [
+          "Terbium",
+          8230
+        ],
+        [
+          "Tin",
+          7280
+        ],
+        [
+          "Titanium",
+          4500
+        ],
+        [
+          "Thallium",
+          11873
+        ],
+        [
+          "Thorium",
+          11700
+        ],
+        [
+          "Thulium",
+          9320
+        ],
+        [
+          "Tungsten",
+          19600
+        ],
+        [
+          "Uranium",
+          18900
+        ],
+        [
+          "Vanadium",
+          5494
+        ],
+        [
+          "White metal",
+          7100
+        ],
+        [
+          "Wrought Iron",
+          7750
+        ],
+        [
+          "Yellow Brass",
+          8470
+        ],
+        [
+          "Ytterbium",
+          6900
+        ],
+        [
+          "Yttrium",
+          4470
+        ],
+        [
+          "Zinc",
+          7135
+        ],
+        [
+          "Zirconium",
+          6570
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "id": "density_converter",
+      "content": "## Density Unit Converter",
+      "inputs": [
+        {
+          "id": "density_kgm3",
+          "label": "Density",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 7850
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_lbft3",
+          "label": "Density",
+          "unit": "lb/ft³",
+          "formula": "inputs.density_kgm3 * 0.0624",
+          "format": "decimal"
+        },
+        {
+          "id": "density_lbin3",
+          "label": "Density",
+          "unit": "lb/in³",
+          "formula": "inputs.density_kgm3 * 0.000036127",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

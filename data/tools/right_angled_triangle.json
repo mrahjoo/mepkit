@@ -1,0 +1,68 @@
+{
+  "id": "right_angled_triangle",
+  "title": "Right Angled Triangle",
+  "description": "Right angled triangle equations for calculating hypotenuse, sides, and angles",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Right Angled Triangle\n\nA right triangle - or a right angled triangle - is a triangle in which one of the angles is a right angle - a 90 degree angle.\n\n**Formulas:**\n- Hypotenuse: c = √(a² + b²)\n- Side a: a = √(c² - b²)\n- Side b: b = √(c² - a²)\n- Angle θ: θ = arctan(b / a)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "side_a",
+          "label": "Side a",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1.7
+        },
+        {
+          "id": "side_b",
+          "label": "Side b",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        },
+        {
+          "id": "hypotenuse",
+          "label": "Hypotenuse c",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 0
+        }
+      ],
+      "outputs": [
+        {
+          "id": "hypotenuse_calc",
+          "label": "Hypotenuse (c)",
+          "formula": "sqrt(inputs.side_a * inputs.side_a + inputs.side_b * inputs.side_b)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "angle_theta",
+          "label": "Angle θ",
+          "formula": "atan(inputs.side_b / inputs.side_a) * 180 / 3.14159265359",
+          "unit": "°",
+          "format": "decimal"
+        },
+        {
+          "id": "side_a_calc",
+          "label": "Side a (from c and b)",
+          "formula": "sqrt(inputs.hypotenuse * inputs.hypotenuse - inputs.side_b * inputs.side_b)",
+          "unit": "m",
+          "format": "decimal"
+        },
+        {
+          "id": "side_b_calc",
+          "label": "Side b (from c and a)",
+          "formula": "sqrt(inputs.hypotenuse * inputs.hypotenuse - inputs.side_a * inputs.side_a)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

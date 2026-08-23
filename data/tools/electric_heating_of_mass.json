@@ -1,0 +1,72 @@
+{
+  "id": "electric_heating_of_mass",
+  "title": "Electric Heating of Mass",
+  "description": "Calculator for determining temperature rise in an electric heated object or mass. Uses the principle that electric energy supplied equals thermal energy change: P·t·μ = c·m·dT. Heat loss during heating is neglected in this calculation.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Electric Heating of Mass\n\nWhen an electric heater heats an object, the electric energy is transformed to heat by increased object temperature.\n\n**Formula:** dT = U·I·t·μ / (c·m)\n\nWhere:\n- **P** = power (watts, W)\n- **U** = potential difference (volts, V)\n- **I** = electrical current (amps, A)\n- **t** = time (seconds)\n- **μ** = heating efficiency (0-1)\n- **c** = specific heat of substance (J/kg°C)\n- **m** = mass of substance (kg)\n- **dT** = temperature difference (°C)\n\n**Note:** The mass of the heater and heat loss during heating are neglected in this calculation."
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Input Parameters",
+        "Values"
+      ],
+      "inputs": [
+        {
+          "id": "power_or_voltage",
+          "label": "Power (W)",
+          "type": "number",
+          "defaultValue": 1200,
+          "unit": "W"
+        },
+        {
+          "id": "time",
+          "label": "Time",
+          "type": "number",
+          "defaultValue": 300,
+          "unit": "s"
+        },
+        {
+          "id": "efficiency",
+          "label": "Efficiency",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": ""
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat",
+          "type": "number",
+          "defaultValue": 4200,
+          "unit": "J/kg°C"
+        },
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 0.4,
+          "unit": "kg"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temperature_change",
+          "label": "Temperature Change",
+          "formula": "inputs.power_or_voltage * inputs.time * inputs.efficiency / (inputs.specific_heat * inputs.mass)",
+          "unit": "°C",
+          "format": "decimal"
+        },
+        {
+          "id": "electric_energy",
+          "label": "Electric Energy Supplied",
+          "formula": "inputs.power_or_voltage * inputs.time * inputs.efficiency",
+          "unit": "J",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

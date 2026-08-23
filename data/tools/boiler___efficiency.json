@@ -1,0 +1,176 @@
+{
+  "id": "boiler___efficiency",
+  "title": "Boiler - Efficiency",
+  "description": "Calculate boiler efficiency based on heat exported by the fluid relative to heat provided by the fuel. Supports both water heating and steam boiler calculations.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Boiler Efficiency Calculator\n\nBoiler efficiency can be indicated by:\n- **Combustion Efficiency** - burner's ability to burn fuel\n- **Thermal Efficiency** - heat exchanger's effectiveness to transfer heat\n- **Fuel to Fluid Efficiency** - overall efficiency including losses\n\n### Formula\nBoiler efficiency (%) = 100 × (Heat exported by fluid / Heat provided by fuel)\n\n### Heat Exported from the Boiler\n\nFor water heating:\n- **q = (m/t) × cp × ΔT**\n\nFor steam boilers:\n- **q = (m/t) × h_e**\n\n### Heat Provided by Fuel\nUse either Gross or Net Calorific Value. Net calorific value ≈ Gross calorific value - 10%"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "massFlow",
+          "label": "Mass Flow Rate",
+          "type": "number",
+          "unit": "kg/s",
+          "defaultValue": 1
+        },
+        {
+          "id": "specificHeat",
+          "label": "Specific Heat (for water heating)",
+          "type": "number",
+          "unit": "kJ/kg°C",
+          "defaultValue": 4.18
+        },
+        {
+          "id": "tempDifference",
+          "label": "Temperature Difference (ΔT)",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 30
+        },
+        {
+          "id": "evaporationEnergy",
+          "label": "Evaporation Energy (for steam, optional)",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 2257
+        },
+        {
+          "id": "boilerType",
+          "label": "Boiler Type",
+          "type": "select",
+          "defaultValue": "water",
+          "options": [
+            {
+              "label": "Water Heating",
+              "value": "water"
+            },
+            {
+              "label": "Steam Boiler",
+              "value": "steam"
+            }
+          ]
+        },
+        {
+          "id": "heatExported",
+          "label": "Heat Exported by Fluid",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 125.4
+        },
+        {
+          "id": "fuelEnergy",
+          "label": "Heat Provided by Fuel",
+          "type": "number",
+          "unit": "kW",
+          "defaultValue": 150
+        },
+        {
+          "id": "calorificValue",
+          "label": "Calorific Value Type",
+          "type": "select",
+          "defaultValue": "gross",
+          "options": [
+            {
+              "label": "Gross Calorific Value",
+              "value": "gross"
+            },
+            {
+              "label": "Net Calorific Value",
+              "value": "net"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heatExportedCalc",
+          "label": "Heat Exported by Fluid",
+          "formula": "inputs.boilerType === 'water' ? inputs.massFlow * inputs.specificHeat * inputs.tempDifference : inputs.massFlow * inputs.evaporationEnergy",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "boilerEfficiency",
+          "label": "Boiler Efficiency",
+          "formula": "(inputs.heatExported / inputs.fuelEnergy) * 100",
+          "unit": "%",
+          "format": "decimal"
+        },
+        {
+          "id": "netCalorificAdjustment",
+          "label": "Net Calorific Value Adjustment",
+          "formula": "inputs.calorificValue === 'net' ? inputs.fuelEnergy * 0.9 : inputs.fuelEnergy",
+          "unit": "kW",
+          "format": "decimal"
+        },
+        {
+          "id": "adjustedEfficiency",
+          "label": "Adjusted Efficiency (with calorific type)",
+          "formula": "(inputs.heatExported / (inputs.calorificValue === 'net' ? inputs.fuelEnergy * 0.9 : inputs.fuelEnergy)) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Fuel",
+        "Unit",
+        "Energy (Btu)"
+      ],
+      "rows": [
+        [
+          "No. 1 Oil",
+          "Gallon",
+          137400
+        ],
+        [
+          "No. 2 Oil",
+          "Gallon",
+          139600
+        ],
+        [
+          "No. 3 Oil",
+          "Gallon",
+          141800
+        ],
+        [
+          "No. 4 Oil",
+          "Gallon",
+          145100
+        ],
+        [
+          "No. 5 Oil",
+          "Gallon",
+          148800
+        ],
+        [
+          "No. 6 Oil",
+          "Gallon",
+          152400
+        ],
+        [
+          "Natural Gas",
+          "cu. ft.",
+          "950 - 1050"
+        ],
+        [
+          "Propane",
+          "cu. ft.",
+          2550
+        ],
+        [
+          "Butane",
+          "cu. ft.",
+          3200
+        ]
+      ]
+    }
+  ]
+}

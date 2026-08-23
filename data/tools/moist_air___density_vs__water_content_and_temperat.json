@@ -1,0 +1,75 @@
+{
+  "id": "moist_air___density_vs__water_content_and_temperat",
+  "title": "Moist Air - Density vs. Water Content and Temperature",
+  "description": "Calculate the density of moist air based on water content (humidity ratio) and temperature. This tool uses the ideal gas law to determine how water vapor content and temperature affect air density. Higher moisture content and temperature both reduce air density.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Moist Air Density Calculator\n\nThe density of humid air varies with water content and temperature. Water vapor is lighter than dry air components (O₂ and N₂), so increased moisture reduces overall air density.\n\nThis calculator uses the formula:\n\n**ρ = ρref × (1 + x) / (1 + 1.609x)**\n\nWhere:\n- **ρ** = density of moist air (kg/m³)\n- **ρref** = reference density of dry air (kg/m³) = p / (Ra × T)\n- **x** = humidity ratio (kg_H₂O/kg_dry_air)\n- **Ra** = 286.9 J/(kg·K) (gas constant for dry air)\n- **p** = total pressure (Pa)\n- **T** = absolute temperature (K)\n- **Rw/Ra** = 1.609 (gas constant ratio)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pressure",
+          "label": "Total Pressure",
+          "type": "number",
+          "defaultValue": 101325,
+          "unit": "Pa"
+        },
+        {
+          "id": "temperature_c",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 20,
+          "unit": "°C"
+        },
+        {
+          "id": "humidity_ratio",
+          "label": "Humidity Ratio (x)",
+          "type": "number",
+          "defaultValue": 0.01,
+          "unit": "kg_H₂O/kg_dry_air"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "temp_kelvin",
+          "label": "Temperature (Absolute)",
+          "formula": "inputs.temperature_c + 273.15",
+          "unit": "K",
+          "format": "decimal"
+        },
+        {
+          "id": "gas_constant_dry_air",
+          "label": "Gas Constant (Dry Air)",
+          "formula": "286.9",
+          "unit": "J/(kg·K)",
+          "format": "decimal"
+        },
+        {
+          "id": "rho_ref",
+          "label": "Reference Density (Dry Air)",
+          "formula": "inputs.pressure / (286.9 * (inputs.temperature_c + 273.15))",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "moist_air_density",
+          "label": "Moist Air Density",
+          "formula": "(inputs.pressure / (286.9 * (inputs.temperature_c + 273.15))) * (1 + inputs.humidity_ratio) / (1 + 1.609 * inputs.humidity_ratio)",
+          "unit": "kg/m³",
+          "format": "decimal"
+        },
+        {
+          "id": "density_ratio",
+          "label": "Density Ratio (Moist/Dry)",
+          "formula": "(1 + inputs.humidity_ratio) / (1 + 1.609 * inputs.humidity_ratio)",
+          "unit": "ratio",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

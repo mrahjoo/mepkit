@@ -1,0 +1,137 @@
+{
+  "id": "sound___room_absorption_coefficients",
+  "title": "Sound - Room Absorption Coefficients",
+  "description": "Reference table of sound absorption coefficients for common building materials. The sound absorption coefficient (α) is the ratio of absorbed sound intensity to incident sound intensity. This table provides absorption coefficient values for various materials used in room acoustics.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material",
+        "Sound Absorption Coefficient (α)"
+      ],
+      "rows": [
+        [
+          "Acoustic belt, 12 mm",
+          "0.5"
+        ],
+        [
+          "Acoustic tiles",
+          "0.4 - 0.8"
+        ],
+        [
+          "Asbestos, sprayed 25 mm",
+          "0.6 - 0.7"
+        ],
+        [
+          "Brickwork, painted",
+          "0.01 - 0.02"
+        ],
+        [
+          "Brickwork, unpainted",
+          "0.02 - 0.05"
+        ],
+        [
+          "Carpet, heavy on concrete",
+          "0.3 - 0.6"
+        ],
+        [
+          "Carpet, heavy on foam rubber",
+          "0.5 - 0.7"
+        ],
+        [
+          "Concrete block, coarse",
+          "0.3 - 0.4"
+        ],
+        [
+          "Concrete block, painted",
+          "0.05 - 0.07"
+        ],
+        [
+          "Cork sheet, 6 mm",
+          "0.1 - 0.2"
+        ],
+        [
+          "Fiberboard on battens, 12 mm",
+          "0.3 - 0.4"
+        ],
+        [
+          "Floor, concrete or terrazzo",
+          "0.02"
+        ],
+        [
+          "Floor, linoleum, asphalt, rubber or cork tiles on concrete",
+          "0.03"
+        ],
+        [
+          "Floor, wood",
+          "0.06 - 0.1"
+        ],
+        [
+          "Hardwood",
+          "0.3"
+        ],
+        [
+          "Glass, large panes heavy plate",
+          "0.03 - 0.05"
+        ],
+        [
+          "Glass, ordinary windows",
+          "0.1 - 0.2"
+        ],
+        [
+          "Gypsum board, 12 mm",
+          "0.04 - 0.07"
+        ],
+        [
+          "Mineral wool, 100 mm",
+          "0.65"
+        ],
+        [
+          "Persons, each",
+          "0.2 - 0.5"
+        ],
+        [
+          "Plaster walls",
+          "0.01 - 0.03"
+        ],
+        [
+          "Plywood panel, 3 mm",
+          "0.01 - 0.02"
+        ],
+        [
+          "Polystyrene, expanded on 50 mm battens",
+          "0.35"
+        ],
+        [
+          "Polystyrene, expanded rigid backing",
+          "0.15"
+        ],
+        [
+          "Polyurethane foam, flexible",
+          "0.95"
+        ],
+        [
+          "Rubber sheet, 6 mm porous",
+          "0.1 - 0.2"
+        ],
+        [
+          "Slag wool or glass silk, 50 mm",
+          "0.8 - 0.9"
+        ],
+        [
+          "Snow",
+          "0.75"
+        ],
+        [
+          "Wood wool cement on battens, 25 mm",
+          "0.6 - 0.7"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Overview\n\nThe sound absorption coefficient (α) is the ratio of absorbed sound intensity to incident sound intensity:\n\n**α = I_a / I_i**\n\nWhere:\n- **α** = sound absorption coefficient\n- **I_a** = sound intensity absorbed (W/m²)\n- **I_i** = incident sound intensity (W/m²)\n\n**Note:** The sound absorption coefficient varies with frequency.\n\n## Total Room Sound Absorption\n\nThe total sound absorption in a room can be expressed as:\n\n**A = ∑(S_i × α_i)**\n\nWhere:\n- **A** = the absorption of the room (m² Sabine)\n- **S_i** = area of the actual surface (m²)\n- **α_i** = absorption coefficient of the actual surface\n\n## Mean Absorption Coefficient\n\nThe mean absorption coefficient for the room:\n\n**α_m = A / S**\n\nWhere:\n- **α_m** = mean absorption coefficient\n- **S** = total surface in the room (m²)\n\n### Example - Room Acoustic Absorption\n\nFor a room with:\n- 10 m² concrete floor (α = 0.02)\n- 10 m² concrete roof (α = 0.02)\n- 40 m² fiberboard walls (α = 0.3)\n\nTotal absorption:\n**A = (10)(0.02) + (10)(0.02) + (40)(0.3) = 12.2 m² Sabine**\n\nMean absorption coefficient:\n**α_m = 12.2 / 60 = 0.2**"
+    }
+  ]
+}

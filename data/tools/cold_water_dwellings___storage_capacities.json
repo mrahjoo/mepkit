@@ -1,0 +1,213 @@
+{
+  "id": "cold_water_dwellings___storage_capacities",
+  "title": "Cold Water Dwellings - Storage Capacities",
+  "description": "Required cold water dwelling storage capacity - commonly used fixtures and types of buildings. Calculate 24-hour storage requirements based on fixtures and building types per CIBSE Guide G (2004).",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Cold Water Dwellings - Storage Capacities\n\nThis tool calculates storage requirements for cold water systems in dwellings based on fixtures and building types.\n\n**Key Guidelines:**\n- A water storage in a domestic dwelling should have a capacity of at least 200-300 liters\n- Calculations based on CIBSE Guide G (2004) Public Health Engineering"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "basin_count",
+          "label": "Number of Basins",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "fixtures"
+        },
+        {
+          "id": "bath_count",
+          "label": "Number of Baths",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "fixtures"
+        },
+        {
+          "id": "garden_tap_count",
+          "label": "Number of Garden Watering Taps",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "fixtures"
+        },
+        {
+          "id": "shower_count",
+          "label": "Number of Showers",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "fixtures"
+        },
+        {
+          "id": "sink_count",
+          "label": "Number of Sinks",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "fixtures"
+        },
+        {
+          "id": "urinal_count",
+          "label": "Number of Urinals",
+          "type": "number",
+          "defaultValue": 0,
+          "unit": "fixtures"
+        },
+        {
+          "id": "wc_count",
+          "label": "Number of WCs",
+          "type": "number",
+          "defaultValue": 1,
+          "unit": "fixtures"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "basin_capacity",
+          "label": "Basin Storage Requirement",
+          "formula": "inputs.basin_count * 90",
+          "unit": "liters",
+          "format": "decimal"
+        },
+        {
+          "id": "bath_capacity",
+          "label": "Bath Storage Requirement",
+          "formula": "inputs.bath_count * 900",
+          "unit": "liters",
+          "format": "decimal"
+        },
+        {
+          "id": "garden_tap_capacity",
+          "label": "Garden Tap Storage Requirement",
+          "formula": "inputs.garden_tap_count * 180",
+          "unit": "liters",
+          "format": "decimal"
+        },
+        {
+          "id": "shower_capacity",
+          "label": "Shower Storage Requirement",
+          "formula": "inputs.shower_count * 185",
+          "unit": "liters",
+          "format": "decimal"
+        },
+        {
+          "id": "sink_capacity",
+          "label": "Sink Storage Requirement",
+          "formula": "inputs.sink_count * 135",
+          "unit": "liters",
+          "format": "decimal"
+        },
+        {
+          "id": "urinal_capacity",
+          "label": "Urinal Storage Requirement",
+          "formula": "inputs.urinal_count * 110",
+          "unit": "liters",
+          "format": "decimal"
+        },
+        {
+          "id": "wc_capacity",
+          "label": "WC Storage Requirement",
+          "formula": "inputs.wc_count * 180",
+          "unit": "liters",
+          "format": "decimal"
+        },
+        {
+          "id": "total_capacity",
+          "label": "Total Storage Capacity Required",
+          "formula": "inputs.basin_count * 90 + inputs.bath_count * 900 + inputs.garden_tap_count * 180 + inputs.shower_count * 185 + inputs.sink_count * 135 + inputs.urinal_count * 110 + inputs.wc_count * 180",
+          "unit": "liters",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Fixture",
+        "Storage Capacity (liters)",
+        "Storage Capacity (gal)"
+      ],
+      "rows": [
+        [
+          "Basin",
+          90,
+          23
+        ],
+        [
+          "Bath",
+          900,
+          207
+        ],
+        [
+          "Garden watering tap",
+          180,
+          47
+        ],
+        [
+          "Shower",
+          "140 - 230",
+          "36 - 60"
+        ],
+        [
+          "Sink",
+          "90 - 180",
+          "23 - 47"
+        ],
+        [
+          "Urinal",
+          110,
+          29
+        ],
+        [
+          "WC",
+          180,
+          47
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Type of Building",
+        "Storage per Person (liters)",
+        "Storage per Person (gal)"
+      ],
+      "rows": [
+        [
+          "Hostels",
+          90,
+          23
+        ],
+        [
+          "Hotels",
+          135,
+          35
+        ],
+        [
+          "Offices with canteens",
+          45,
+          12
+        ],
+        [
+          "Offices without canteens",
+          40,
+          10
+        ],
+        [
+          "Restaurants, per meal",
+          7,
+          2
+        ],
+        [
+          "Boarding School",
+          90,
+          23
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Reference\n\n- **Source:** CIBSE Guide G (2004) Public Health Engineering\n- **Domestic Dwelling Standard:** A water storage in a domestic dwelling should have a capacity of at least 200-300 liters"
+    }
+  ]
+}

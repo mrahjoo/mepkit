@@ -1,0 +1,145 @@
+{
+  "id": "regular_polygons",
+  "title": "Regular Polygons",
+  "description": "Calculate areas and perimeters of regular polygons with 3 to 12 sides. Regular polygons are polygons with equal sides and equal angles.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate regular polygon properties",
+      "inputs": [
+        {
+          "id": "sides",
+          "label": "Number of Sides (n)",
+          "type": "select",
+          "options": [
+            {
+              "value": 3,
+              "label": "Triangle (3)"
+            },
+            {
+              "value": 4,
+              "label": "Square (4)"
+            },
+            {
+              "value": 5,
+              "label": "Pentagon (5)"
+            },
+            {
+              "value": 6,
+              "label": "Hexagon (6)"
+            },
+            {
+              "value": 7,
+              "label": "Heptagon (7)"
+            },
+            {
+              "value": 8,
+              "label": "Octagon (8)"
+            },
+            {
+              "value": 9,
+              "label": "Nonagon (9)"
+            },
+            {
+              "value": 10,
+              "label": "Decagon (10)"
+            },
+            {
+              "value": 11,
+              "label": "Undecagon (11)"
+            },
+            {
+              "value": 12,
+              "label": "Dodecagon (12)"
+            }
+          ],
+          "defaultValue": 6
+        },
+        {
+          "id": "sideLength",
+          "label": "Side Length (a)",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "perimeter",
+          "label": "Perimeter (P)",
+          "formula": "inputs.sides * inputs.sideLength",
+          "unit": "m"
+        },
+        {
+          "id": "area",
+          "label": "Area (A)",
+          "formula": "inputs.sides * Math.pow(inputs.sideLength, 2) * Math.tan(Math.PI / inputs.sides) / Math.tan(Math.PI / inputs.sides) * inputs.sides / 4",
+          "unit": "m²",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Regular Polygons - Area vs. Number of Sides",
+      "headers": [
+        "Polygon",
+        "Number of Sides (n)",
+        "Area Coefficient (A/a²)"
+      ],
+      "rows": [
+        [
+          "Triangle, equilateral",
+          3,
+          0.433
+        ],
+        [
+          "Square",
+          4,
+          1
+        ],
+        [
+          "Pentagon",
+          5,
+          1.7205
+        ],
+        [
+          "Hexagon",
+          6,
+          2.5981
+        ],
+        [
+          "Heptagon",
+          7,
+          3.6339
+        ],
+        [
+          "Octagon",
+          8,
+          4.8284
+        ],
+        [
+          "Nonagon",
+          9,
+          6.1818
+        ],
+        [
+          "Decagon",
+          10,
+          7.6942
+        ],
+        [
+          "Undecagon",
+          11,
+          9.3656
+        ],
+        [
+          "Dodecagon",
+          12,
+          11.1961
+        ]
+      ]
+    }
+  ]
+}

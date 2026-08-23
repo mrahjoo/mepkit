@@ -1,0 +1,92 @@
+{
+  "id": "energy",
+  "title": "Energy",
+  "description": "Energy is the capacity to do work. This tool helps calculate energy efficiency and convert between energy units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Energy\n\nEnergy is **the capacity (or capability) to do work.**\n\nEnergy is used or consumed when work is done.\n\nThe SI unit for energy is _joule - J_, where\n\n_1 J = 1 Nm_\n\n#### Imperial Units of Energy\n\n- _1 J = 0.738 ft lb_\n- _1 ft lb = 1.356 Nm (J)_\n\n### Energy Forms\n\nThere can be several forms of energy, including:\n\n- Mechanical energy\n- Heat or thermal energy\n- Electrical energy\n- Chemical energy\n- Nuclear energy\n- Light energy\n\n### Energy Efficiency\n\nEnergy efficiency is the ratio between useful energy output and input energy:\n\n_μ = Eo / Ei_\n\nwhere:\n- _μ = energy efficiency_\n- _Eo = useful energy output_\n- _Ei = energy input_"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Energy Efficiency Calculator"
+      ],
+      "inputs": [
+        {
+          "id": "force",
+          "label": "Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 100
+        },
+        {
+          "id": "distance",
+          "label": "Distance",
+          "type": "number",
+          "unit": "m",
+          "defaultValue": 10
+        },
+        {
+          "id": "inputEnergy",
+          "label": "Input Energy",
+          "type": "number",
+          "unit": "J",
+          "defaultValue": 1500
+        }
+      ],
+      "outputs": [
+        {
+          "id": "outputEnergy",
+          "label": "Useful Energy Output",
+          "formula": "inputs.force * inputs.distance",
+          "unit": "J"
+        },
+        {
+          "id": "efficiency",
+          "label": "Energy Efficiency",
+          "formula": "inputs.force * inputs.distance / inputs.inputEnergy",
+          "format": "decimal"
+        },
+        {
+          "id": "efficiencyPercent",
+          "label": "Energy Efficiency",
+          "formula": "(inputs.force * inputs.distance / inputs.inputEnergy) * 100",
+          "unit": "%",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Unit",
+        "Conversion Factor",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Joule (J)",
+          "1",
+          "SI unit of energy"
+        ],
+        [
+          "Newton-meter (Nm)",
+          "1",
+          "Equivalent to Joule"
+        ],
+        [
+          "Foot-pound (ft lb)",
+          "0.738",
+          "1 J = 0.738 ft lb"
+        ],
+        [
+          "Foot-pound (ft lb)",
+          "1.356",
+          "1 ft lb = 1.356 J"
+        ]
+      ]
+    }
+  ]
+}

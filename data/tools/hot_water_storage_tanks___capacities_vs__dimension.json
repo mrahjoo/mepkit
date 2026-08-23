@@ -1,0 +1,243 @@
+{
+  "id": "hot_water_storage_tanks___capacities_vs__dimension",
+  "title": "Hot Water Storage Tanks - Capacities vs. Dimensions",
+  "description": "Dimensions and capacities of hot-water storage tanks. Find the hot-water storage capacity in gallons based on tank diameter and length.",
+  "type": "chart",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Tank Diameter (inches)",
+        "Tank Length (ft): 1",
+        "Tank Length (ft): 2",
+        "Tank Length (ft): 3",
+        "Tank Length (ft): 4",
+        "Tank Length (ft): 5",
+        "Tank Length (ft): 6",
+        "Tank Length (ft): 7",
+        "Tank Length (ft): 8",
+        "Tank Length (ft): 9",
+        "Tank Length (ft): 10"
+      ],
+      "rows": [
+        [
+          20,
+          16,
+          32,
+          48,
+          66,
+          82,
+          98,
+          114,
+          131,
+          147,
+          163
+        ],
+        [
+          22,
+          20,
+          40,
+          60,
+          80,
+          100,
+          120,
+          140,
+          160,
+          180,
+          200
+        ],
+        [
+          24,
+          24,
+          48,
+          72,
+          96,
+          120,
+          144,
+          168,
+          192,
+          216,
+          240
+        ],
+        [
+          30,
+          37,
+          74,
+          110,
+          147,
+          184,
+          220,
+          257,
+          294,
+          330,
+          367
+        ],
+        [
+          36,
+          53,
+          106,
+          159,
+          212,
+          265,
+          317,
+          370,
+          423,
+          476,
+          529
+        ],
+        [
+          42,
+          72,
+          144,
+          216,
+          288,
+          360,
+          432,
+          504,
+          576,
+          648,
+          720
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "legend": {
+          "data": [
+            "20 in",
+            "22 in",
+            "24 in",
+            "30 in",
+            "36 in",
+            "42 in"
+          ]
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "1 ft",
+            "2 ft",
+            "3 ft",
+            "4 ft",
+            "5 ft",
+            "6 ft",
+            "7 ft",
+            "8 ft",
+            "9 ft",
+            "10 ft"
+          ]
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Capacity (Gallons)"
+        },
+        "series": [
+          {
+            "name": "20 in",
+            "data": [
+              16,
+              32,
+              48,
+              66,
+              82,
+              98,
+              114,
+              131,
+              147,
+              163
+            ],
+            "type": "line"
+          },
+          {
+            "name": "22 in",
+            "data": [
+              20,
+              40,
+              60,
+              80,
+              100,
+              120,
+              140,
+              160,
+              180,
+              200
+            ],
+            "type": "line"
+          },
+          {
+            "name": "24 in",
+            "data": [
+              24,
+              48,
+              72,
+              96,
+              120,
+              144,
+              168,
+              192,
+              216,
+              240
+            ],
+            "type": "line"
+          },
+          {
+            "name": "30 in",
+            "data": [
+              37,
+              74,
+              110,
+              147,
+              184,
+              220,
+              257,
+              294,
+              330,
+              367
+            ],
+            "type": "line"
+          },
+          {
+            "name": "36 in",
+            "data": [
+              53,
+              106,
+              159,
+              212,
+              265,
+              317,
+              370,
+              423,
+              476,
+              529
+            ],
+            "type": "line"
+          },
+          {
+            "name": "42 in",
+            "data": [
+              72,
+              144,
+              216,
+              288,
+              360,
+              432,
+              504,
+              576,
+              648,
+              720
+            ],
+            "type": "line"
+          }
+        ]
+      }
+    },
+    {
+      "type": "markdown",
+      "content": "## Conversion Factors\n\n* **1 ft (foot)** = 0.3048 m\n* **1 in (inch)** = 25.4 mm = 2.54 cm = 0.0254 m\n* **1 Gallon (U.S.)** = 3.785×10⁻³ m³ = 3.785 dm³ (liter)"
+    }
+  ]
+}

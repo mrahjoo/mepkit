@@ -1,0 +1,97 @@
+{
+  "id": "sound___frequency__wavelength_and_octave",
+  "title": "Sound - Frequency, Wavelength and Octave",
+  "description": "Calculate frequency, wavelength, and octave relationships for sound waves. Includes frequency from period, wavelength from frequency and speed of sound, and octave mean frequency calculations.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Frequency Calculator\nCalculate frequency from period: f = 1 / T"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "period",
+          "label": "Period (T)",
+          "type": "number",
+          "defaultValue": 0.002,
+          "unit": "s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "frequency",
+          "label": "Frequency (f)",
+          "formula": "1 / inputs.period",
+          "unit": "Hz",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Wavelength Calculator\nCalculate wavelength from frequency and speed of sound: λ = c / f"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "speed_of_sound",
+          "label": "Speed of Sound (c)",
+          "type": "number",
+          "defaultValue": 331.2,
+          "unit": "m/s"
+        },
+        {
+          "id": "frequency_wavelength",
+          "label": "Frequency (f)",
+          "type": "number",
+          "defaultValue": 500,
+          "unit": "Hz"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "wavelength",
+          "label": "Wavelength (λ)",
+          "formula": "inputs.speed_of_sound / inputs.frequency_wavelength",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": "## Octave Mean Frequency Calculator\nCalculate mean frequency of an octave: fm = √(f1 × f2)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "freq1",
+          "label": "Lower Frequency (f1)",
+          "type": "number",
+          "defaultValue": 250,
+          "unit": "Hz"
+        },
+        {
+          "id": "freq2",
+          "label": "Upper Frequency (f2)",
+          "type": "number",
+          "defaultValue": 500,
+          "unit": "Hz"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "octave_mean_freq",
+          "label": "Mean Octave Frequency (fm)",
+          "formula": "Math.sqrt(inputs.freq1 * inputs.freq2)",
+          "unit": "Hz",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

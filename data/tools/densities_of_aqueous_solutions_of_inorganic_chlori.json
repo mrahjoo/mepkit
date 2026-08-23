@@ -1,0 +1,243 @@
+{
+  "id": "densities_of_aqueous_solutions_of_inorganic_chlori",
+  "title": "Densities of Aqueous Solutions of Inorganic Chlorides",
+  "description": "Calculate densities and concentration conversions for aqueous solutions of inorganic chlorides at 20°C. Supports conversion between mass%, mol/kg (molality), and mol/liter (molarity) for various chloride compounds including Ammonium, Barium, Calcium, Cesium, Hydrogen chloride, Iron(III), Lithium, Magnesium, Potassium, Sodium, and Strontium chlorides.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Density Calculator for Aqueous Inorganic Chloride Solutions\n\nThis calculator provides density and concentration data for aqueous solutions of inorganic chlorides at 20°C.\n\n**Concentration Units:**\n- **wt% (Mass%):** Mass of solute / total mass of solution × 100%\n- **mol/kg (Molality):** Moles of solute / kg of water\n- **mol/liter (Molarity):** Moles of solute / liter of solution\n\nSelect a chloride compound and concentration to retrieve density and converted concentration values."
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "chloride_compound",
+          "label": "Chloride Compound",
+          "type": "select",
+          "options": [
+            {
+              "label": "Ammonium chloride",
+              "value": "ammonium_chloride"
+            },
+            {
+              "label": "Barium chloride",
+              "value": "barium_chloride"
+            },
+            {
+              "label": "Calcium chloride",
+              "value": "calcium_chloride"
+            },
+            {
+              "label": "Cesium chloride",
+              "value": "cesium_chloride"
+            },
+            {
+              "label": "Hydrogen chloride",
+              "value": "hydrogen_chloride"
+            },
+            {
+              "label": "Iron(III) chloride",
+              "value": "iron_chloride"
+            },
+            {
+              "label": "Lithium chloride",
+              "value": "lithium_chloride"
+            },
+            {
+              "label": "Magnesium chloride",
+              "value": "magnesium_chloride"
+            },
+            {
+              "label": "Potassium chloride",
+              "value": "potassium_chloride"
+            },
+            {
+              "label": "Sodium chloride",
+              "value": "sodium_chloride"
+            },
+            {
+              "label": "Strontium chloride",
+              "value": "strontium_chloride"
+            }
+          ]
+        },
+        {
+          "id": "mass_percent",
+          "label": "Mass Percent (wt%)",
+          "type": "select",
+          "options": [
+            {
+              "label": "1%",
+              "value": 1
+            },
+            {
+              "label": "5%",
+              "value": 5
+            },
+            {
+              "label": "10%",
+              "value": 10
+            },
+            {
+              "label": "20%",
+              "value": 20
+            },
+            {
+              "label": "30%",
+              "value": 30
+            },
+            {
+              "label": "40%",
+              "value": 40
+            },
+            {
+              "label": "50%",
+              "value": 50
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "density_value",
+          "label": "Density at 20°C",
+          "unit": "g/cm³",
+          "format": "decimal",
+          "formula": "Density lookup based on inputs.chloride_compound and inputs.mass_percent"
+        },
+        {
+          "id": "molality_value",
+          "label": "Molality (mol/kg water)",
+          "unit": "mol/kg",
+          "format": "decimal",
+          "formula": "Molality conversion based on inputs.chloride_compound and inputs.mass_percent"
+        },
+        {
+          "id": "molarity_value",
+          "label": "Molarity (mol/liter solution)",
+          "unit": "mol/L",
+          "format": "decimal",
+          "formula": "Molarity conversion based on inputs.chloride_compound and inputs.mass_percent"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Mass%",
+        "NH₄Cl",
+        "BaCl₂",
+        "CaCl₂",
+        "CsCl",
+        "HCl",
+        "FeCl₃",
+        "LiCl",
+        "MgCl₂",
+        "KCl",
+        "NaCl",
+        "SrCl₂"
+      ],
+      "rows": [
+        [
+          "1",
+          "1.0014",
+          "1.007",
+          "1.0065",
+          "1.0058",
+          "1.0031",
+          "1.0068",
+          "1.0041",
+          "1.0062",
+          "1.0046",
+          "1.0053",
+          "1.0071"
+        ],
+        [
+          "5",
+          "1.0138",
+          "1.0434",
+          "1.0401",
+          "1.0374",
+          "1.0228",
+          "1.0408",
+          "1.0272",
+          "1.0394",
+          "1.0304",
+          "1.034",
+          "1.0437"
+        ],
+        [
+          "10",
+          "1.0286",
+          "1.0921",
+          "1.0835",
+          "1.0798",
+          "1.0476",
+          "1.0853",
+          "1.056",
+          "1.0826",
+          "1.0633",
+          "1.0707",
+          "1.0925"
+        ],
+        [
+          "20",
+          "1.0567",
+          "1.2031",
+          "1.1775",
+          "1.1756",
+          "1.098",
+          "1.1816",
+          "1.115",
+          "1.1742",
+          "1.1328",
+          "1.1478",
+          "1.2008"
+        ],
+        [
+          "30",
+          "—",
+          "—",
+          "1.2816",
+          "1.2885",
+          "1.1492",
+          "1.2679",
+          "1.1791",
+          "1.2763",
+          "—",
+          "—",
+          "1.3248"
+        ],
+        [
+          "40",
+          "—",
+          "—",
+          "1.3957",
+          "1.4226",
+          "1.1977",
+          "1.4176",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "50",
+          "—",
+          "—",
+          "—",
+          "1.5846",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ]
+      ]
+    }
+  ]
+}

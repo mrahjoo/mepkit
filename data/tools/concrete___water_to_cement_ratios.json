@@ -1,0 +1,78 @@
+{
+  "id": "concrete___water_to_cement_ratios",
+  "title": "Concrete - Water to Cement Ratios",
+  "description": "Water vs. cement ratio when mixing concrete. Calculate the water to cement ratio based on water volume and cement weight.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "Calculate water to cement ratio using the formula: r = 8.33 × qH₂O / wc",
+      "inputs": [
+        {
+          "id": "water_volume",
+          "label": "Water Volume",
+          "type": "number",
+          "unit": "US gallons",
+          "defaultValue": 45
+        },
+        {
+          "id": "cement_weight",
+          "label": "Cement Weight",
+          "type": "number",
+          "unit": "lbs",
+          "defaultValue": 900
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ratio",
+          "label": "Water to Cement Ratio",
+          "formula": "(8.33 * inputs.water_volume) / inputs.cement_weight",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "content": "Water to Cement Ratio Reference Table",
+      "headers": [
+        "Concrete Type",
+        "Water to Cement Ratio Range",
+        "Strength Level",
+        "Durability"
+      ],
+      "rows": [
+        [
+          "Very High Strength",
+          "0.30 - 0.40",
+          "High",
+          "Excellent"
+        ],
+        [
+          "High Strength",
+          "0.40 - 0.50",
+          "High",
+          "Very Good"
+        ],
+        [
+          "Standard",
+          "0.50 - 0.60",
+          "Medium",
+          "Good"
+        ],
+        [
+          "Low Strength",
+          "0.60 - 0.70",
+          "Low",
+          "Fair"
+        ],
+        [
+          "Weak Mix",
+          "0.70+",
+          "Very Low",
+          "Poor"
+        ]
+      ]
+    }
+  ]
+}

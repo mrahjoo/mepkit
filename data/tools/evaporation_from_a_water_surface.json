@@ -1,0 +1,103 @@
+{
+  "id": "evaporation_from_a_water_surface",
+  "title": "Evaporation from a Water Surface",
+  "description": "Calculator for water evaporation from open surfaces like pools and tanks. Computes evaporated water amount and required heat supply based on water temperature, air conditions, and surface parameters.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Evaporation from a Water Surface Calculator\n\nCalculate the amount of evaporated water and required heat supply from an open water surface based on:\n\n**Evaporation Formula:**\n- _gh = Θ × A × (xs - x)_\n  - gh = amount of evaporated water per hour (kg/h)\n  - Θ = (25 + 19v) = evaporation coefficient (kg/m²h)\n  - A = water surface area (m²)\n  - xs = maximum humidity ratio of saturated air at water temperature (kg/kg)\n  - x = humidity ratio of air (kg/kg)\n\n**Heat Supply Formula:**\n- _q = hwe × gs_\n  - q = heat supplied (kW)\n  - hwe = evaporation heat of water (kJ/kg)\n  - gs = evaporated water per second (kg/s)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "water_temp",
+          "label": "Water Temperature",
+          "type": "number",
+          "unit": "°C",
+          "defaultValue": 20
+        },
+        {
+          "id": "air_velocity",
+          "label": "Air Velocity Above Water Surface",
+          "type": "number",
+          "unit": "m/s",
+          "defaultValue": 0.5
+        },
+        {
+          "id": "surface_area",
+          "label": "Water Surface Area",
+          "type": "number",
+          "unit": "m²",
+          "defaultValue": 1000
+        },
+        {
+          "id": "xs_humidity",
+          "label": "Maximum Saturation Humidity Ratio (xs)",
+          "type": "number",
+          "unit": "kg/kg",
+          "defaultValue": 0.014659
+        },
+        {
+          "id": "x_humidity",
+          "label": "Air Humidity Ratio (x)",
+          "type": "number",
+          "unit": "kg/kg",
+          "defaultValue": 0.0098
+        },
+        {
+          "id": "evaporation_heat",
+          "label": "Evaporation Heat of Water",
+          "type": "number",
+          "unit": "kJ/kg",
+          "defaultValue": 2454
+        }
+      ],
+      "outputs": [
+        {
+          "id": "evaporation_coeff",
+          "label": "Evaporation Coefficient (Θ)",
+          "unit": "kg/m²h",
+          "formula": "25 + 19 * inputs.air_velocity",
+          "format": "decimal"
+        },
+        {
+          "id": "humidity_diff",
+          "label": "Humidity Ratio Difference (xs - x)",
+          "unit": "kg/kg",
+          "formula": "inputs.xs_humidity - inputs.x_humidity",
+          "format": "decimal"
+        },
+        {
+          "id": "evap_per_hour",
+          "label": "Evaporated Water per Hour (gh)",
+          "unit": "kg/h",
+          "formula": "(25 + 19 * inputs.air_velocity) * inputs.surface_area * (inputs.xs_humidity - inputs.x_humidity)",
+          "format": "decimal"
+        },
+        {
+          "id": "evap_per_second",
+          "label": "Evaporated Water per Second (gs)",
+          "unit": "kg/s",
+          "formula": "((25 + 19 * inputs.air_velocity) * inputs.surface_area * (inputs.xs_humidity - inputs.x_humidity)) / 3600",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_supply",
+          "label": "Required Heat Supply (q)",
+          "unit": "kW",
+          "formula": "inputs.evaporation_heat * (((25 + 19 * inputs.air_velocity) * inputs.surface_area * (inputs.xs_humidity - inputs.x_humidity)) / 3600) / 1000",
+          "format": "decimal"
+        },
+        {
+          "id": "heat_supply_btu",
+          "label": "Required Heat Supply",
+          "unit": "Btu/h",
+          "formula": "inputs.evaporation_heat * (((25 + 19 * inputs.air_velocity) * inputs.surface_area * (inputs.xs_humidity - inputs.x_humidity)) / 3600) / 1000 * 3412",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

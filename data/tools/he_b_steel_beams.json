@@ -1,0 +1,146 @@
+{
+  "id": "he_b_steel_beams",
+  "title": "HE-B Steel Beams",
+  "description": "Calculator and chart tool for HE-B steel beam properties, dimensions, and calculations.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "calculator",
+      "content": "HE-B Steel Beams Calculator",
+      "inputs": [
+        {
+          "id": "beam_size",
+          "label": "Beam Size",
+          "type": "select",
+          "options": [
+            {
+              "label": "HE 100 B",
+              "value": 100
+            },
+            {
+              "label": "HE 120 B",
+              "value": 120
+            },
+            {
+              "label": "HE 140 B",
+              "value": 140
+            },
+            {
+              "label": "HE 160 B",
+              "value": 160
+            },
+            {
+              "label": "HE 180 B",
+              "value": 180
+            },
+            {
+              "label": "HE 200 B",
+              "value": 200
+            },
+            {
+              "label": "HE 220 B",
+              "value": 220
+            },
+            {
+              "label": "HE 240 B",
+              "value": 240
+            },
+            {
+              "label": "HE 260 B",
+              "value": 260
+            },
+            {
+              "label": "HE 280 B",
+              "value": 280
+            },
+            {
+              "label": "HE 300 B",
+              "value": 300
+            }
+          ]
+        },
+        {
+          "id": "length",
+          "label": "Length",
+          "type": "number",
+          "defaultValue": 5,
+          "unit": "m"
+        },
+        {
+          "id": "load",
+          "label": "Distributed Load",
+          "type": "number",
+          "defaultValue": 10,
+          "unit": "kN/m"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "weight_per_length",
+          "label": "Weight per Length",
+          "formula": "inputs.beam_size * 0.5",
+          "unit": "kg/m",
+          "format": "decimal"
+        },
+        {
+          "id": "total_weight",
+          "label": "Total Weight",
+          "formula": "inputs.beam_size * 0.5 * inputs.length",
+          "unit": "kg",
+          "format": "decimal"
+        },
+        {
+          "id": "max_deflection",
+          "label": "Max Deflection",
+          "formula": "inputs.load * inputs.length / 50",
+          "unit": "mm",
+          "format": "decimal"
+        },
+        {
+          "id": "bending_moment",
+          "label": "Bending Moment",
+          "formula": "inputs.load * inputs.length * inputs.length / 8",
+          "unit": "kNm",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "chart",
+      "content": "HE-B Steel Beam Properties",
+      "options": {
+        "title": {
+          "text": "HE-B Steel Beam Load vs Deflection"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "data": [
+              0,
+              1.2,
+              2.4,
+              3.6,
+              4.8,
+              6
+            ],
+            "type": "line",
+            "name": "Deflection (mm)"
+          }
+        ]
+      }
+    }
+  ]
+}

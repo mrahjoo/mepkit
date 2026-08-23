@@ -1,0 +1,325 @@
+{
+  "id": "roofing_materials___weights",
+  "title": "Roofing Materials - Weights",
+  "description": "The weight of roofing constructions above the truss/rafter may be estimated. This tool provides weight data for roofing materials, sheating materials, and underlayment materials in both imperial and metric units.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Material Type",
+        "Description",
+        "Weight (lbm/ft²)",
+        "Weight (kg/m²)"
+      ],
+      "rows": [
+        [
+          "Roofing Materials",
+          "None",
+          "0",
+          "0"
+        ],
+        [
+          "Roofing Materials",
+          "Asphalt roll roofing",
+          "1.1",
+          "5.4"
+        ],
+        [
+          "Roofing Materials",
+          "Asphalt shingle or asphalt-fiberglass composite shingle",
+          "2.7",
+          "13.2"
+        ],
+        [
+          "Roofing Materials",
+          "Metal roofing - aluminum or steel - panel, sheet or shingle",
+          "1.2",
+          "5.9"
+        ],
+        [
+          "Roofing Materials",
+          "Terne plate - copper bearing steel sheet",
+          "0.7",
+          "3.4"
+        ],
+        [
+          "Roofing Materials",
+          "Wood shingle or shake",
+          "2.4",
+          "11.7"
+        ],
+        [
+          "Roofing Materials",
+          "Zinc roofing",
+          "1.6",
+          "7.8"
+        ],
+        [
+          "Roofing Materials",
+          "Copper-asphalt composite shingle",
+          "4.2",
+          "20.5"
+        ],
+        [
+          "Roofing Materials",
+          "Felt, tar and gravel roofing - 3 ply",
+          "4.8",
+          "23.4"
+        ],
+        [
+          "Roofing Materials",
+          "Felt, tar and gravel roofing - 4 ply",
+          "5.3",
+          "25.9"
+        ],
+        [
+          "Roofing Materials",
+          "Felt, tar and gravel roofing - 5 ply",
+          "6.1",
+          "29.8"
+        ],
+        [
+          "Roofing Materials",
+          "Felt, tar and slag roofing - 3 ply",
+          "4.5",
+          "22"
+        ],
+        [
+          "Roofing Materials",
+          "Felt, tar and slag roofing - 4 ply",
+          "4.8",
+          "23.4"
+        ],
+        [
+          "Roofing Materials",
+          "Felt, tar and slag roofing - 5 ply",
+          "5.3",
+          "25.9"
+        ],
+        [
+          "Roofing Materials",
+          "Ceramic slate",
+          "5.8",
+          "28.3"
+        ],
+        [
+          "Roofing Materials",
+          "Reconstituted slate",
+          "4.4",
+          "21.5"
+        ],
+        [
+          "Roofing Materials",
+          "Clay tile",
+          "10.8",
+          "52.7"
+        ],
+        [
+          "Roofing Materials",
+          "Concrete tile",
+          "9.3",
+          "45.4"
+        ],
+        [
+          "Roofing Materials",
+          "Slate - 1/4\" to 3/16\" thick",
+          "9.1",
+          "44.4"
+        ],
+        [
+          "Roofing Materials",
+          "Slate - 3/8\" thick",
+          "12.8",
+          "62.5"
+        ],
+        [
+          "Roofing Materials",
+          "Slate - 1/2\" thick",
+          "18.8",
+          "91.8"
+        ],
+        [
+          "Roofing Materials",
+          "Slate - 3/4\" thick",
+          "26.0",
+          "127"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "None",
+          "0",
+          "0"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "5/16\" thick",
+          "1.0",
+          "4.9"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "3/8\" thick",
+          "1.1",
+          "5.4"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "7/16\" thick",
+          "1.3",
+          "6.3"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "15/32\" thick",
+          "1.4",
+          "6.8"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "1/2\" thick",
+          "1.5",
+          "7.3"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "19/32\" thick",
+          "1.8",
+          "8.8"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "5/8\" thick",
+          "1.9",
+          "9.3"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "23/32\" thick",
+          "2.2",
+          "10.7"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "3/4\" thick",
+          "2.3",
+          "11.2"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "7/8\" thick",
+          "2.3",
+          "11.2"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "1\" thick",
+          "3.0",
+          "14.6"
+        ],
+        [
+          "Sheating Materials - Plywood",
+          "1 1/8\" thick",
+          "3.3",
+          "16.1"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "5/16\" thick",
+          "1.1",
+          "5.4"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "3/8\" thick",
+          "1.2",
+          "5.9"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "7/16\" thick",
+          "1.4",
+          "6.8"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "15/32\" thick",
+          "1.5",
+          "7.3"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "1/2\" thick",
+          "1.7",
+          "8.3"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "19/32\" thick",
+          "2.0",
+          "9.8"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "5/8\" thick",
+          "2.1",
+          "10.3"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "23/32\" thick",
+          "2.4",
+          "11.7"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "3/4\" thick",
+          "2.5",
+          "12.2"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "7/8\" thick",
+          "2.9",
+          "14.2"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "1\" thick",
+          "3.3",
+          "16.1"
+        ],
+        [
+          "Sheating Materials - OSB/Com-Ply",
+          "1 1/8\" thick",
+          "3.6",
+          "17.6"
+        ],
+        [
+          "Underlayment Materials",
+          "None",
+          "0",
+          "0"
+        ],
+        [
+          "Underlayment Materials",
+          "15 pound paper",
+          "0.2",
+          "1"
+        ],
+        [
+          "Underlayment Materials",
+          "30 pound paper",
+          "0.3",
+          "1.5"
+        ],
+        [
+          "Underlayment Materials",
+          "45 pound paper",
+          "0.5",
+          "2.4"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "id": "total_and_partial_pressure___dalton_s_law_of_parti",
+  "title": "Total and Partial Pressure - Dalton's Law of Partial Pressures",
+  "description": "Calculate total and partial pressures of gas mixtures using Dalton's Law of Partial Pressures. This tool determines the partial pressure of each component gas and the total pressure based on moles, temperature, and volume.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Dalton's Law of Partial Pressures\n\nThe **total pressure** of a gas mixture equals the sum of partial pressures:\n\n**Ptot = ∑Pi = P1 + P2 + P3 ...**\n\nWhere:\n- **Ptot** = total pressure\n- **Pi** = partial pressure of component i\n\nUsing the Ideal Gas Law:\n- **Pi = (ni × R × T) / V**\n- **Ptot = (ntot × R × T) / V**\n\nThe mole fraction relationship:\n- **Xi = ni / ntot**\n- **Pi = Xi × Ptot**\n\nWhere:\n- ni = moles of component i\n- ntot = total moles\n- R = 0.08206 (L·atm/mol·K)\n- T = absolute temperature (K)\n- V = volume (L)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "moles_n1",
+          "label": "Moles of Component 1 (n1)",
+          "type": "number",
+          "defaultValue": 2.693,
+          "unit": "mol"
+        },
+        {
+          "id": "moles_n2",
+          "label": "Moles of Component 2 (n2)",
+          "type": "number",
+          "defaultValue": 0.725,
+          "unit": "mol"
+        },
+        {
+          "id": "moles_n3",
+          "label": "Moles of Component 3 (n3)",
+          "type": "number",
+          "defaultValue": 0.032,
+          "unit": "mol"
+        },
+        {
+          "id": "moles_n4",
+          "label": "Moles of Component 4 (n4)",
+          "type": "number",
+          "defaultValue": 0.001,
+          "unit": "mol"
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature",
+          "type": "number",
+          "defaultValue": 393.15,
+          "unit": "K"
+        },
+        {
+          "id": "volume",
+          "label": "Volume",
+          "type": "number",
+          "defaultValue": 50,
+          "unit": "L"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_moles",
+          "label": "Total Moles (ntot)",
+          "formula": "inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4",
+          "unit": "mol"
+        },
+        {
+          "id": "total_pressure",
+          "label": "Total Pressure (Ptot)",
+          "formula": "(inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume",
+          "unit": "atm",
+          "format": "decimal"
+        },
+        {
+          "id": "partial_pressure_1",
+          "label": "Partial Pressure P1",
+          "formula": "(inputs.moles_n1 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)) * ((inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume)",
+          "unit": "atm",
+          "format": "decimal"
+        },
+        {
+          "id": "partial_pressure_2",
+          "label": "Partial Pressure P2",
+          "formula": "(inputs.moles_n2 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)) * ((inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume)",
+          "unit": "atm",
+          "format": "decimal"
+        },
+        {
+          "id": "partial_pressure_3",
+          "label": "Partial Pressure P3",
+          "formula": "(inputs.moles_n3 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)) * ((inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume)",
+          "unit": "atm",
+          "format": "decimal"
+        },
+        {
+          "id": "partial_pressure_4",
+          "label": "Partial Pressure P4",
+          "formula": "(inputs.moles_n4 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)) * ((inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume)",
+          "unit": "atm",
+          "format": "decimal"
+        },
+        {
+          "id": "mole_fraction_1",
+          "label": "Mole Fraction X1",
+          "formula": "inputs.moles_n1 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)",
+          "format": "decimal"
+        },
+        {
+          "id": "mole_fraction_2",
+          "label": "Mole Fraction X2",
+          "formula": "inputs.moles_n2 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)",
+          "format": "decimal"
+        },
+        {
+          "id": "mole_fraction_3",
+          "label": "Mole Fraction X3",
+          "formula": "inputs.moles_n3 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)",
+          "format": "decimal"
+        },
+        {
+          "id": "mole_fraction_4",
+          "label": "Mole Fraction X4",
+          "formula": "inputs.moles_n4 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Component",
+        "Moles (mol)",
+        "Mole Fraction",
+        "Partial Pressure (atm)"
+      ],
+      "rows": [
+        [
+          "Component 1",
+          "inputs.moles_n1",
+          "inputs.moles_n1 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)",
+          "(inputs.moles_n1 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)) * ((inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume)"
+        ],
+        [
+          "Component 2",
+          "inputs.moles_n2",
+          "inputs.moles_n2 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)",
+          "(inputs.moles_n2 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)) * ((inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume)"
+        ],
+        [
+          "Component 3",
+          "inputs.moles_n3",
+          "inputs.moles_n3 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)",
+          "(inputs.moles_n3 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)) * ((inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume)"
+        ],
+        [
+          "Component 4",
+          "inputs.moles_n4",
+          "inputs.moles_n4 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)",
+          "(inputs.moles_n4 / (inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4)) * ((inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume)"
+        ],
+        [
+          "TOTAL",
+          "inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4",
+          "1.0",
+          "(inputs.moles_n1 + inputs.moles_n2 + inputs.moles_n3 + inputs.moles_n4) * 0.08206 * inputs.temperature / inputs.volume"
+        ]
+      ]
+    }
+  ]
+}

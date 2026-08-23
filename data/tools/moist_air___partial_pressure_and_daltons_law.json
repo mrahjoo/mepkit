@@ -1,0 +1,131 @@
+{
+  "id": "moist_air___partial_pressure_and_daltons_law",
+  "title": "Moist Air - Partial Pressure and Daltons Law",
+  "description": "Calculate the total pressure of moist air using Daltons Law of partial pressures. The total pressure is the sum of the partial pressures of dry air and water vapor.",
+  "type": "calculator-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Daltons Law of Partial Pressure\n\nDaltons Law states that *the total pressure of a mixture of gases is equal to the sum of the partial pressures of the constituent gases*.\n\nThe partial pressure is the pressure each gas would exert if it alone occupied the volume of the mixture.\n\n### Formula\n\n**p = pa + pw**\n\nWhere:\n- **p** = total pressure of air (Pa, N/m²)\n- **pa** = partial pressure of dry air (Pa, N/m²)\n- **pw** = partial pressure of water vapor (Pa, N/m²)\n\n### Alternative Formula\n\n**p = ρa × 286.9 × T + ρw × 455 × T**\n\nWhere:\n- **ρa** = density of air (kg/m³)\n- **ρw** = density of water vapor (kg/m³)\n- **T** = temperature (K)"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Method 1: Direct Partial Pressures",
+        "Method 2: Using Density and Temperature"
+      ],
+      "inputs": [
+        {
+          "id": "partial_pressure_dry_air",
+          "label": "Partial Pressure of Dry Air (pa)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 98000
+        },
+        {
+          "id": "partial_pressure_water_vapor",
+          "label": "Partial Pressure of Water Vapor (pw)",
+          "type": "number",
+          "unit": "Pa",
+          "defaultValue": 2000
+        },
+        {
+          "id": "density_air",
+          "label": "Density of Air (ρa)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 1.225
+        },
+        {
+          "id": "density_water_vapor",
+          "label": "Density of Water Vapor (ρw)",
+          "type": "number",
+          "unit": "kg/m³",
+          "defaultValue": 0.01
+        },
+        {
+          "id": "temperature",
+          "label": "Temperature (T)",
+          "type": "number",
+          "unit": "K",
+          "defaultValue": 288.15
+        }
+      ],
+      "outputs": [
+        {
+          "id": "total_pressure_method1",
+          "label": "Total Pressure (Method 1)",
+          "formula": "inputs.partial_pressure_dry_air + inputs.partial_pressure_water_vapor",
+          "unit": "Pa",
+          "format": "decimal"
+        },
+        {
+          "id": "total_pressure_method2",
+          "label": "Total Pressure (Method 2)",
+          "formula": "inputs.density_air * 286.9 * inputs.temperature + inputs.density_water_vapor * 455 * inputs.temperature",
+          "unit": "Pa",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Parameter",
+        "Symbol",
+        "Unit",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Total Pressure",
+          "p",
+          "Pa (N/m²)",
+          "Total pressure of moist air"
+        ],
+        [
+          "Partial Pressure of Dry Air",
+          "pa",
+          "Pa (N/m²)",
+          "Pressure exerted by dry air component"
+        ],
+        [
+          "Partial Pressure of Water Vapor",
+          "pw",
+          "Pa (N/m²)",
+          "Pressure exerted by water vapor component"
+        ],
+        [
+          "Density of Air",
+          "ρa",
+          "kg/m³",
+          "Mass density of dry air"
+        ],
+        [
+          "Density of Water Vapor",
+          "ρw",
+          "kg/m³",
+          "Mass density of water vapor"
+        ],
+        [
+          "Temperature",
+          "T",
+          "K",
+          "Absolute temperature"
+        ],
+        [
+          "Gas Constant for Air",
+          "Ra",
+          "J/(kg·K)",
+          "286.9 J/(kg·K)"
+        ],
+        [
+          "Gas Constant for Water Vapor",
+          "Rw",
+          "J/(kg·K)",
+          "455 J/(kg·K)"
+        ]
+      ]
+    }
+  ]
+}

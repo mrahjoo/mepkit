@@ -1,0 +1,164 @@
+{
+  "id": "horizontal_pipe_hanger_supports___spacing_and_rod_",
+  "title": "Horizontal Pipe Hanger Supports - Spacing and Rod Size",
+  "description": "Recommended maximum support span between hangers and rod sizes for straight horizontal pipes. This tool provides spacing recommendations and rod sizes based on pipe nominal diameter (NPS) and pipe material type.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "datatable",
+      "id": "pipe_hanger_spacing_table",
+      "content": "Horizontal Pipe Hanger Supports - Spacing and Rod Sizes",
+      "headers": [
+        "Nominal Diameter (inches)",
+        "Steel Pipe - Water (ft)",
+        "Steel Pipe - Steam (ft)",
+        "Copper Tube - Water (ft)",
+        "Steel Rod Size (inches)",
+        "Copper Rod Size (inches)"
+      ],
+      "rows": [
+        [
+          "1/2",
+          "7",
+          "8",
+          "5",
+          "3/8",
+          "3/8"
+        ],
+        [
+          "3/4",
+          "7",
+          "9",
+          "5",
+          "3/8",
+          "3/8"
+        ],
+        [
+          "1",
+          "7",
+          "9",
+          "6",
+          "3/8",
+          "3/8"
+        ],
+        [
+          "1 1/2",
+          "9",
+          "12",
+          "8",
+          "3/8",
+          "3/8"
+        ],
+        [
+          "2",
+          "10",
+          "13",
+          "8",
+          "3/8",
+          "3/8"
+        ],
+        [
+          "2 1/2",
+          "11",
+          "14",
+          "9",
+          "1/2",
+          "1/2"
+        ],
+        [
+          "3",
+          "12",
+          "15",
+          "10",
+          "1/2",
+          "1/2"
+        ],
+        [
+          "4",
+          "14",
+          "17",
+          "12",
+          "1/2",
+          "5/8"
+        ],
+        [
+          "6",
+          "17",
+          "21",
+          "14",
+          "5/8",
+          "3/4"
+        ],
+        [
+          "8",
+          "19",
+          "24",
+          "16",
+          "3/4",
+          "3/4"
+        ],
+        [
+          "10",
+          "22",
+          "26",
+          "18",
+          "3/4",
+          "7/8"
+        ],
+        [
+          "12",
+          "23",
+          "30",
+          "19",
+          "3/4",
+          "7/8"
+        ],
+        [
+          "14",
+          "25",
+          "32",
+          "-",
+          "1",
+          "1"
+        ],
+        [
+          "16",
+          "27",
+          "35",
+          "-",
+          "1",
+          "1"
+        ],
+        [
+          "18",
+          "28",
+          "37",
+          "-",
+          "1",
+          "1"
+        ],
+        [
+          "20",
+          "30",
+          "39",
+          "-",
+          "1-1/4",
+          "1-1/4"
+        ],
+        [
+          "24",
+          "32",
+          "42",
+          "-",
+          "1-1/4",
+          "1-1/4"
+        ]
+      ]
+    },
+    {
+      "type": "markdown",
+      "id": "notes_section",
+      "content": "## Notes\n\n- **Recommended maximum space between hangers** for straight horizontal pipes and tubes are indicated in the table above.\n- These values do not apply where loads are concentrated with flanges, valves, specialties, etc.\n- **Rule of thumb**: Support concentrated loads (flanges, valves, specialties) with hangers on both sides of the load.\n- **Unit conversion**: 1 ft (foot) = 0.3048 m\n\n## Reference\n- Maximum space pipe supports diagram and documentation available in the PDF reference document."
+    }
+  ]
+}

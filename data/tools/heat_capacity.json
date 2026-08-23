@@ -1,0 +1,122 @@
+{
+  "id": "heat_capacity",
+  "title": "Heat Capacity Calculator",
+  "description": "Calculate heat capacity, specific heat capacity, and heat supplied using thermal properties. Supports conversions between specific heat and molar heat capacity.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "calculator",
+      "id": "heat_calculator",
+      "content": "Heat Capacity and Specific Heat Calculations",
+      "inputs": [
+        {
+          "id": "mass",
+          "label": "Mass",
+          "type": "number",
+          "defaultValue": 2,
+          "unit": "kg"
+        },
+        {
+          "id": "specific_heat",
+          "label": "Specific Heat (c)",
+          "type": "number",
+          "defaultValue": 0.91,
+          "unit": "kJ/kg°C"
+        },
+        {
+          "id": "temp_change",
+          "label": "Temperature Change (ΔT)",
+          "type": "number",
+          "defaultValue": 80,
+          "unit": "°C"
+        },
+        {
+          "id": "molar_mass",
+          "label": "Molar Mass (M)",
+          "type": "number",
+          "defaultValue": 32.04,
+          "unit": "g/mol"
+        },
+        {
+          "id": "molar_heat_capacity",
+          "label": "Molar Heat Capacity (Cp)",
+          "type": "number",
+          "defaultValue": 81.1,
+          "unit": "J/mol·K"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "heat_supplied",
+          "label": "Heat Supplied (Q)",
+          "formula": "inputs.mass * inputs.specific_heat * inputs.temp_change",
+          "unit": "kJ",
+          "format": "decimal"
+        },
+        {
+          "id": "specific_heat_from_molar",
+          "label": "Specific Heat from Molar (cp)",
+          "formula": "inputs.molar_heat_capacity / (inputs.molar_mass * 1000)",
+          "unit": "kJ/kg·K",
+          "format": "decimal"
+        },
+        {
+          "id": "molar_heat_from_specific",
+          "label": "Molar Heat from Specific (Cp)",
+          "formula": "inputs.specific_heat * inputs.molar_mass",
+          "unit": "J/mol·K",
+          "format": "decimal"
+        }
+      ]
+    },
+    {
+      "type": "datatable",
+      "id": "material_properties",
+      "content": "Common Material Properties",
+      "headers": [
+        "Material",
+        "Specific Heat (kJ/kg°C)",
+        "Molar Mass (g/mol)",
+        "Temperature Range"
+      ],
+      "rows": [
+        [
+          "Aluminum",
+          "0.91",
+          "26.98",
+          "Room Temperature"
+        ],
+        [
+          "Iron",
+          "0.45",
+          "55.85",
+          "Room Temperature"
+        ],
+        [
+          "Water",
+          "4.19",
+          "18.02",
+          "0-100°C"
+        ],
+        [
+          "Methanol",
+          "2.53",
+          "32.04",
+          "Room Temperature"
+        ],
+        [
+          "Copper",
+          "0.39",
+          "63.55",
+          "Room Temperature"
+        ],
+        [
+          "Steel",
+          "0.50",
+          "55.85",
+          "Room Temperature"
+        ]
+      ]
+    }
+  ]
+}

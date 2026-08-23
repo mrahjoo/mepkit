@@ -1,0 +1,92 @@
+{
+  "id": "distance_traveled_vs__speed_and_time___calculator_",
+  "title": "Distance Traveled vs. Speed and Time - Calculator",
+  "description": "Calculate the total distance traveled by multiplying speed and time intervals. Velocity plotted in time used diagram - the area under the graph is distance traveled.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Distance Traveled Calculator\n\nFor a graph with velocity vs. time, the area under the graph is distance traveled.\n\nYou can calculate the total distance traveled by summing the product of speed and time for each interval.\n\n### Formula\nDistance = (Speed₁ × Time₁) + (Speed₂ × Time₂) + (Speed₃ × Time₃) + ...\n\n### Example\nA car travels intervals with constant speed:\n1. 25 m/s in 120 s\n2. 30 m/s in 220 s\n3. 15 m/s in 300 s\n\nTotal distance = (25 × 120) + (30 × 220) + (15 × 300) = **14,100 m**"
+    },
+    {
+      "type": "calculator",
+      "headers": [
+        "Interval",
+        "Speed",
+        "Time",
+        "Distance"
+      ],
+      "inputs": [
+        {
+          "id": "speed_1",
+          "label": "Speed 1",
+          "type": "number",
+          "defaultValue": 25,
+          "unit": "m/s"
+        },
+        {
+          "id": "time_1",
+          "label": "Time 1",
+          "type": "number",
+          "defaultValue": 120,
+          "unit": "s"
+        },
+        {
+          "id": "speed_2",
+          "label": "Speed 2",
+          "type": "number",
+          "defaultValue": 30,
+          "unit": "m/s"
+        },
+        {
+          "id": "time_2",
+          "label": "Time 2",
+          "type": "number",
+          "defaultValue": 220,
+          "unit": "s"
+        },
+        {
+          "id": "speed_3",
+          "label": "Speed 3",
+          "type": "number",
+          "defaultValue": 15,
+          "unit": "m/s"
+        },
+        {
+          "id": "time_3",
+          "label": "Time 3",
+          "type": "number",
+          "defaultValue": 300,
+          "unit": "s"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance_1",
+          "label": "Distance 1",
+          "formula": "inputs.speed_1 * inputs.time_1",
+          "unit": "m"
+        },
+        {
+          "id": "distance_2",
+          "label": "Distance 2",
+          "formula": "inputs.speed_2 * inputs.time_2",
+          "unit": "m"
+        },
+        {
+          "id": "distance_3",
+          "label": "Distance 3",
+          "formula": "inputs.speed_3 * inputs.time_3",
+          "unit": "m"
+        },
+        {
+          "id": "total_distance",
+          "label": "Total Distance Traveled",
+          "formula": "(inputs.speed_1 * inputs.time_1) + (inputs.speed_2 * inputs.time_2) + (inputs.speed_3 * inputs.time_3)",
+          "unit": "m",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

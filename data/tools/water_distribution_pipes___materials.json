@@ -1,0 +1,170 @@
+{
+  "id": "water_distribution_pipes___materials",
+  "title": "Water Distribution Pipes - Materials",
+  "description": "Materials used in water distribution pipes for potable water delivery inside buildings. Includes common piping materials and their corresponding U.S. standards.",
+  "type": "calculator-chart",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Water Distribution Pipes - Materials\n\nA water-distribution pipe is located inside a building and delivers potable water to the fixtures. The supply system delivering water from the potable source to the building is the water service pipe.\n\n## Overview\n\nThe water distribution system includes normally both hot and cold water. The temperature range limits the materials allowed.\n\n**Standard Operating Conditions:**\n- Minimum working pressure: ~100 psi (7 bar)\n- Temperature rating: 180 °F (80 °C)\n\nIf the water-service pressure to the building exceeds the rated water-distribution pressure, a pressure-reducing valve must be installed.\n\n## Commonly Used Materials\n\n- Copper tube\n- Galvanized steel pipe\n- PB (polybutene)\n- PEX (cross-linked Polyethylene)"
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Piping Material",
+        "US Standards"
+      ],
+      "rows": [
+        [
+          "Chlorinated polyvinyl chloride (CPVC) plastic pipe and tubing",
+          "ASTM D2846; ASTM F441; ASTM F442; CSA B137.6"
+        ],
+        [
+          "Chlorinated polyvinyl chloride/aluminum/chlorinated polyvinyl chloride (CPVC/AL/CPVC)",
+          "ASTM F2855"
+        ],
+        [
+          "Copper or copper-alloy pipe",
+          "ASTM B42; ASTM B302; ASTM B43"
+        ],
+        [
+          "Copper or copper-alloy tubing (Type K, WK, L, WL, M or WM)",
+          "ASTM B75; ASTM B88; ASTM B251; ASTM B447"
+        ],
+        [
+          "Cross-linked polyethylene (PEX) plastic tubing",
+          "ASTM F876; CSA B137.5"
+        ],
+        [
+          "Cross-linked polyethylene/aluminum/cross-linked polyethylene (PEX-AL-PEX) pipe",
+          "ASTM F1281; ASTM F2262; CSA B137.10"
+        ],
+        [
+          "Cross-linked polyethylene/aluminum/high-density polyethylene (PEX-AL-HDPE)",
+          "ASTM F1986"
+        ],
+        [
+          "Ductile iron pipe",
+          "AWWA C151/A21.51; AWWA C115/A21.15"
+        ],
+        [
+          "Galvanized steel pipe",
+          "ASTM A53"
+        ],
+        [
+          "Polyethylene/aluminum/polyethylene (PE-AL-PE) composite pipe",
+          "ASTM F1282"
+        ],
+        [
+          "Polyethylene of raised temperature (PE-RT) plastic tubing",
+          "ASTM F2769; CSA B137.158"
+        ],
+        [
+          "Polypropylene (PP) plastic pipe or tubing",
+          "ASTM F2389; CSA B137.11"
+        ],
+        [
+          "Stainless steel pipe (Type 304/304L)",
+          "ASTM A312; ASTM A778"
+        ],
+        [
+          "Stainless steel pipe (Type 316/316L)",
+          "ASTM A312; ASTM A778"
+        ]
+      ]
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "pipe_length",
+          "label": "Pipe Length",
+          "type": "number",
+          "unit": "feet",
+          "defaultValue": 100
+        },
+        {
+          "id": "pipe_diameter",
+          "label": "Pipe Diameter",
+          "type": "number",
+          "unit": "inches",
+          "defaultValue": 0.75
+        },
+        {
+          "id": "working_pressure",
+          "label": "Working Pressure",
+          "type": "number",
+          "unit": "psi",
+          "defaultValue": 100
+        },
+        {
+          "id": "water_temperature",
+          "label": "Water Temperature",
+          "type": "number",
+          "unit": "°F",
+          "defaultValue": 68
+        },
+        {
+          "id": "material_type",
+          "label": "Pipe Material",
+          "type": "select",
+          "options": [
+            {
+              "value": "cpvc",
+              "label": "CPVC Plastic"
+            },
+            {
+              "value": "copper",
+              "label": "Copper Tube"
+            },
+            {
+              "value": "pex",
+              "label": "PEX Plastic"
+            },
+            {
+              "value": "pex_al_pex",
+              "label": "PEX-AL-PEX"
+            },
+            {
+              "value": "galvanized",
+              "label": "Galvanized Steel"
+            },
+            {
+              "value": "stainless",
+              "label": "Stainless Steel"
+            }
+          ],
+          "defaultValue": "copper"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "pipe_volume",
+          "label": "Pipe Volume",
+          "unit": "gallons",
+          "formula": "inputs.pipe_length * 3.14159 * (inputs.pipe_diameter / 2) ^ 2 / 231",
+          "format": "decimal"
+        },
+        {
+          "id": "max_flow_rate",
+          "label": "Estimated Max Flow Rate",
+          "unit": "GPM",
+          "formula": "inputs.pipe_diameter * inputs.working_pressure / 100 * 10",
+          "format": "decimal"
+        },
+        {
+          "id": "temperature_status",
+          "label": "Temperature Status",
+          "formula": "inputs.water_temperature <= 180 ? 'Within Standard (≤80°C/180°F)' : 'Exceeds Standard (>80°C/180°F)'",
+          "format": "decimal"
+        },
+        {
+          "id": "pressure_status",
+          "label": "Pressure Status",
+          "formula": "inputs.working_pressure <= 100 ? 'Standard Conditions' : 'Pressure Reducing Valve Recommended'",
+          "format": "decimal"
+        }
+      ]
+    }
+  ]
+}

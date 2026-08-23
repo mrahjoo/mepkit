@@ -1,0 +1,355 @@
+{
+  "id": "absorbed_solar_radiation",
+  "title": "Absorbed Solar Radiation",
+  "description": "Solar radiation absorbed by various materials and surface colors",
+  "type": "chart-table",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "## Absorbed Solar Radiation\n\nSolar energy absorbed depends on surface color and material properties. Select a surface color category or specific material to view its absorption factor."
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Surface Color",
+        "Absorb Factor (Range)"
+      ],
+      "rows": [
+        [
+          "White smooth surfaces",
+          "0.25 - 0.40"
+        ],
+        [
+          "Grey to dark grey",
+          "0.40 - 0.50"
+        ],
+        [
+          "Green, red and brown",
+          "0.50 - 0.70"
+        ],
+        [
+          "Dark brown to blue",
+          "0.70 - 0.80"
+        ],
+        [
+          "Dark blue to black",
+          "0.80 - 0.90"
+        ]
+      ]
+    },
+    {
+      "type": "datatable",
+      "headers": [
+        "Substance/Material",
+        "Absorb Factor"
+      ],
+      "rows": [
+        [
+          "Aluminum, polished",
+          "0.30"
+        ],
+        [
+          "Aluminum paint",
+          "0.20"
+        ],
+        [
+          "Aluminum, anodized",
+          "0.15"
+        ],
+        [
+          "Brick, glazed",
+          "0.35"
+        ],
+        [
+          "Brick, common light red",
+          "0.55"
+        ],
+        [
+          "Brick, common red",
+          "0.68"
+        ],
+        [
+          "Brick, wire cut red",
+          "0.52"
+        ],
+        [
+          "Brick, blue",
+          "0.89"
+        ],
+        [
+          "Cork",
+          "0.45"
+        ],
+        [
+          "Limestone, light",
+          "0.35"
+        ],
+        [
+          "Limestone, dark",
+          "0.50"
+        ],
+        [
+          "Linoleum, red-brown",
+          "0.84"
+        ],
+        [
+          "Sandstone, light grey",
+          "0.62"
+        ],
+        [
+          "Sandstone, red",
+          "0.73"
+        ],
+        [
+          "Marble, white",
+          "0.44"
+        ],
+        [
+          "Soft rubber, gray",
+          "0.65"
+        ],
+        [
+          "Marble, dark",
+          "0.66"
+        ],
+        [
+          "Granite, reddish",
+          "0.55"
+        ],
+        [
+          "Magnesium oxide, evaporated",
+          "0.08"
+        ],
+        [
+          "Graphite",
+          "0.84"
+        ],
+        [
+          "Porcelain",
+          "0.50"
+        ],
+        [
+          "Steel, vitreous enameled green",
+          "0.76"
+        ],
+        [
+          "Steel, vitreous enameled dark red",
+          "0.81"
+        ],
+        [
+          "Steel, vitreous enameled blue",
+          "0.80"
+        ],
+        [
+          "Iron, galvanized new",
+          "0.64"
+        ],
+        [
+          "Iron, galvanized dirty",
+          "0.92"
+        ],
+        [
+          "Iron, galvanized white washed",
+          "0.22"
+        ],
+        [
+          "Concrete",
+          "0.60"
+        ],
+        [
+          "Copper, polished",
+          "0.18"
+        ],
+        [
+          "Copper, tarnished",
+          "0.64"
+        ],
+        [
+          "Lead, old",
+          "0.79"
+        ],
+        [
+          "Asbestos cement, roof tiles old",
+          "0.83"
+        ],
+        [
+          "Asbestos cement, roof tiles red",
+          "0.69"
+        ],
+        [
+          "Asbestos slate",
+          "0.81"
+        ],
+        [
+          "Asphalt roofing, new",
+          "0.91"
+        ],
+        [
+          "Asphalt roofing, old",
+          "0.82"
+        ],
+        [
+          "Bitumen-covered roofing sheet, brown",
+          "0.87"
+        ],
+        [
+          "Slate, blue grey",
+          "0.87"
+        ],
+        [
+          "Tile, clay red",
+          "0.64"
+        ],
+        [
+          "Tile, concrete uncolored",
+          "0.65"
+        ],
+        [
+          "Tile, concrete black",
+          "0.91"
+        ],
+        [
+          "Vitreous enamel, white",
+          "0.39"
+        ],
+        [
+          "White Dutch tile",
+          "0.18"
+        ]
+      ]
+    },
+    {
+      "type": "chart",
+      "options": {
+        "title": {
+          "text": "Absorb Factor by Material Type",
+          "left": "center"
+        },
+        "tooltip": {
+          "trigger": "axis",
+          "axisPointer": {
+            "type": "shadow"
+          }
+        },
+        "grid": {
+          "left": "3%",
+          "right": "4%",
+          "bottom": "20%",
+          "containLabel": true
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "Aluminum, polished",
+            "Aluminum paint",
+            "Aluminum, anodized",
+            "Brick, glazed",
+            "Brick, common light red",
+            "Brick, common red",
+            "Brick, wire cut red",
+            "Brick, blue",
+            "Cork",
+            "Limestone, light",
+            "Limestone, dark",
+            "Linoleum, red-brown",
+            "Sandstone, light grey",
+            "Sandstone, red",
+            "Marble, white",
+            "Soft rubber, gray",
+            "Marble, dark",
+            "Granite, reddish",
+            "Magnesium oxide, evaporated",
+            "Graphite",
+            "Porcelain",
+            "Steel, vitreous enameled green",
+            "Steel, vitreous enameled dark red",
+            "Steel, vitreous enameled blue",
+            "Iron, galvanized new",
+            "Iron, galvanized dirty",
+            "Iron, galvanized white washed",
+            "Concrete",
+            "Copper, polished",
+            "Copper, tarnished",
+            "Lead, old",
+            "Asbestos cement, roof tiles old",
+            "Asbestos cement, roof tiles red",
+            "Asbestos slate",
+            "Asphalt roofing, new",
+            "Asphalt roofing, old",
+            "Bitumen-covered roofing sheet, brown",
+            "Slate, blue grey",
+            "Tile, clay red",
+            "Tile, concrete uncolored",
+            "Tile, concrete black",
+            "Vitreous enamel, white",
+            "White Dutch tile"
+          ],
+          "axisLabel": {
+            "rotate": 45,
+            "interval": 0
+          }
+        },
+        "yAxis": {
+          "type": "value",
+          "name": "Absorb Factor",
+          "min": 0,
+          "max": 1
+        },
+        "series": [
+          {
+            "name": "Absorb Factor",
+            "type": "bar",
+            "data": [
+              0.3,
+              0.2,
+              0.15,
+              0.35,
+              0.55,
+              0.68,
+              0.52,
+              0.89,
+              0.45,
+              0.35,
+              0.5,
+              0.84,
+              0.62,
+              0.73,
+              0.44,
+              0.65,
+              0.66,
+              0.55,
+              0.08,
+              0.84,
+              0.5,
+              0.76,
+              0.81,
+              0.8,
+              0.64,
+              0.92,
+              0.22,
+              0.6,
+              0.18,
+              0.64,
+              0.79,
+              0.83,
+              0.69,
+              0.81,
+              0.91,
+              0.82,
+              0.87,
+              0.87,
+              0.64,
+              0.65,
+              0.91,
+              0.39,
+              0.18
+            ],
+            "itemStyle": {
+              "color": "#5470c6"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "food___energy_content",
+  "title": "Food - Energy Content",
+  "description": "Energy in carbohydrates, fats and proteins. The specific energy content in carbohydrates, fats and proteins in food.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Food",
+        "Specific Energy (MJ/kg)",
+        "Specific Energy (kcal/g)",
+        "Specific Energy (Btu/lb)"
+      ],
+      "rows": [
+        [
+          "Carbohydrates",
+          17,
+          4,
+          7300
+        ],
+        [
+          "Fats",
+          39,
+          9,
+          16800
+        ],
+        [
+          "Proteins",
+          17,
+          4,
+          7300
+        ]
+      ]
+    }
+  ]
+}

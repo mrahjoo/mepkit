@@ -1,0 +1,112 @@
+{
+  "id": "preferred_noise_criterion__pnc____calculator",
+  "title": "Preferred Noise Criterion (PNC) - Calculator",
+  "description": "An online Preferred Noise Criterion (PNC) calculator.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "PNC Curve",
+        "63 Hz",
+        "125 Hz",
+        "250 Hz",
+        "500 Hz",
+        "1 kHz",
+        "2 kHz",
+        "4 kHz",
+        "8 kHz"
+      ],
+      "rows": [
+        [
+          "PNC 30",
+          47,
+          36,
+          29,
+          22,
+          17,
+          14,
+          11,
+          9
+        ],
+        [
+          "PNC 35",
+          52,
+          41,
+          34,
+          27,
+          22,
+          19,
+          16,
+          14
+        ],
+        [
+          "PNC 40",
+          57,
+          46,
+          39,
+          32,
+          27,
+          24,
+          21,
+          19
+        ],
+        [
+          "PNC 45",
+          62,
+          51,
+          44,
+          37,
+          32,
+          29,
+          26,
+          24
+        ],
+        [
+          "PNC 50",
+          67,
+          56,
+          49,
+          42,
+          37,
+          34,
+          31,
+          29
+        ],
+        [
+          "PNC 55",
+          72,
+          61,
+          54,
+          47,
+          42,
+          39,
+          36,
+          34
+        ],
+        [
+          "PNC 60",
+          77,
+          66,
+          59,
+          52,
+          47,
+          44,
+          41,
+          39
+        ],
+        [
+          "PNC 65",
+          82,
+          71,
+          64,
+          57,
+          52,
+          49,
+          46,
+          44
+        ]
+      ]
+    }
+  ]
+}

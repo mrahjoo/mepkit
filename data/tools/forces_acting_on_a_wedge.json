@@ -1,0 +1,46 @@
+{
+  "id": "forces_acting_on_a_wedge",
+  "title": "Forces Acting on a Wedge",
+  "description": "Calculate normal forces introduced by wedges. Large forces can be generated with the aid of wedges, where a small force can be translated into large forces using the wedge angle.",
+  "type": "calculator",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Forces Acting on a Wedge\n\nLarge forces can be introduced with the aid of wedges. A small force can be translated into large forces.\n\nThe normal forces can be calculated as:\n\n**FN = F / (2 sin(Θ / 2))**\n\nWhere:\n- **FN** = normal force (N)\n- **F** = acting force (N)\n- **Θ** = wedge angle (degrees)"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "F",
+          "label": "Acting Force",
+          "type": "number",
+          "unit": "N",
+          "defaultValue": 100
+        },
+        {
+          "id": "theta",
+          "label": "Wedge Angle",
+          "type": "number",
+          "unit": "degrees",
+          "defaultValue": 30
+        }
+      ],
+      "outputs": [
+        {
+          "id": "FN",
+          "label": "Normal Force",
+          "unit": "N",
+          "format": "decimal",
+          "formula": "inputs.F / (2 * Math.sin(inputs.theta * Math.PI / 180 / 2))"
+        },
+        {
+          "id": "ratio",
+          "label": "Force Ratio (FN/F)",
+          "format": "decimal",
+          "formula": "inputs.F / (2 * Math.sin(inputs.theta * Math.PI / 180 / 2)) / inputs.F"
+        }
+      ]
+    }
+  ]
+}

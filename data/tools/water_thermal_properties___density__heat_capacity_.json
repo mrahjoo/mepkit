@@ -1,0 +1,133 @@
+{
+  "id": "water_thermal_properties___density__heat_capacity_",
+  "title": "Water Thermal Properties – Density, Heat Capacity, and Conductivity",
+  "description": "Comprehensive thermodynamic properties of water including density, specific heat capacity, thermal conductivity, and other critical properties at varying temperatures and pressures.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "datatable",
+      "headers": [
+        "Property",
+        "Value (SI)",
+        "Value (Imperial)",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Boiling Temperature (at 101.325 kPa)",
+          "99.974 °C",
+          "211.953 °F",
+          "Standard atmospheric pressure"
+        ],
+        [
+          "Bulk Modulus Elasticity",
+          "2.15×10⁹ Pa",
+          "2.15×10⁹ N/m²",
+          "Elasticity property"
+        ],
+        [
+          "Critical Temperature",
+          "373.946 °C",
+          "705.103 °F",
+          "Critical point"
+        ],
+        [
+          "Critical Pressure",
+          "22.06 MPa",
+          "217.7 atm / 3200 psi",
+          "Critical point pressure"
+        ],
+        [
+          "Critical Density",
+          "0.322 g/cm³",
+          "20.1018 lbm/ft³",
+          "At critical point"
+        ],
+        [
+          "Ionization Constant pKw (at 25°C)",
+          "13.995",
+          "13.995",
+          "pH indicator"
+        ],
+        [
+          "Latent Heat of Melting",
+          "334 kJ/kg",
+          "144 Btu(IT)/lb",
+          "Solid to liquid transition"
+        ],
+        [
+          "Latent Heat of Evaporation (at 100°C)",
+          "2256 kJ/kg",
+          "970 Btu(IT)/lb",
+          "Liquid to gas transition"
+        ],
+        [
+          "Maximum Density (at 4°C)",
+          "999.975 kg/m³",
+          "8.34519 lbm/gal(US)",
+          "Highest density point"
+        ],
+        [
+          "Melting Temperature (at 101.325 kPa)",
+          "0 °C",
+          "32 °F",
+          "Ice to water transition"
+        ],
+        [
+          "Molar Mass",
+          "18.01527 g/mol",
+          "18.01527 g/mol",
+          "Molecular weight"
+        ],
+        [
+          "pH (at 25°C)",
+          "6.9976",
+          "6.9976",
+          "Neutral water"
+        ],
+        [
+          "Specific Heat Capacity - Liquid (at 15°C)",
+          "4.187 kJ/kg·K",
+          "1.001 Btu(IT)/(lbm·°F)",
+          "Heat capacity of liquid water"
+        ],
+        [
+          "Specific Heat Capacity - Ice",
+          "2.108 kJ/kg·K",
+          "0.5035 Btu(IT)/(lbm·°F)",
+          "Heat capacity of solid water"
+        ],
+        [
+          "Specific Heat Capacity - Water Vapor",
+          "1.996 kJ/kg·K",
+          "0.4767 Btu(IT)/(lbm·°F)",
+          "Heat capacity of gaseous water"
+        ],
+        [
+          "Specific Weight (at 4°C)",
+          "9.806 kN/m³",
+          "62.43 lbf/ft³",
+          "Force per unit volume"
+        ],
+        [
+          "Thermal Expansion (4°C to 100°C)",
+          "4.2×10⁻⁴",
+          "4.2×10⁻⁴",
+          "Non-linear with temperature"
+        ],
+        [
+          "Triple Point Pressure",
+          "611.657 Pa",
+          "0.00604 atm / 0.08871 psi",
+          "Triple point condition"
+        ],
+        [
+          "Triple Point Temperature",
+          "0.01 °C",
+          "32.02 °F",
+          "Solid-liquid-gas equilibrium"
+        ]
+      ]
+    }
+  ]
+}

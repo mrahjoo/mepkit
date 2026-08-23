@@ -1,0 +1,54 @@
+{
+  "id": "air_compressor___power_cost_per_year",
+  "title": "Air Compressor - Power Cost per Year",
+  "description": "Yearly power cost for operating an air compressor based on compressor power, electricity rates, operating hours, and motor efficiency.",
+  "type": "datatable",
+  "components": [
+    {
+      "type": "markdown",
+      "content": "# Air Compressor - Power Cost per Year\n\nCalculate the yearly power costs for operating an air compressor using the formula:\n\n**C = Pbhp × 0.746 × ckWh × hyear / μ**\n\nWhere:\n- **C** = Total power costs per year (USD or actual currency)\n- **Pbhp** = Compressor power (bhp)\n- **ckWh** = Cost per kWh (USD or actual currency)\n- **hyear** = Operating hours per year (h)\n- **μ** = Motor efficiency\n\n**Cost Distribution:**\n- Power costs: 60-70% of total operating costs\n- Fixed costs: 10-20% of total operating costs\n- Other costs: 15-25% of total operating costs"
+    },
+    {
+      "type": "calculator",
+      "inputs": [
+        {
+          "id": "compressor_power_bhp",
+          "label": "Compressor Power",
+          "type": "number",
+          "unit": "bhp",
+          "defaultValue": 10
+        },
+        {
+          "id": "cost_per_kwh",
+          "label": "Cost per kWh",
+          "type": "number",
+          "unit": "USD/kWh",
+          "defaultValue": 0.12
+        },
+        {
+          "id": "operating_hours_per_year",
+          "label": "Operating Hours per Year",
+          "type": "number",
+          "unit": "h",
+          "defaultValue": 8760
+        },
+        {
+          "id": "motor_efficiency",
+          "label": "Motor Efficiency",
+          "type": "number",
+          "unit": "%",
+          "defaultValue": 85
+        }
+      ],
+      "outputs": [
+        {
+          "id": "yearly_power_cost",
+          "label": "Yearly Power Cost",
+          "formula": "(inputs.compressor_power_bhp * 0.746 * inputs.cost_per_kwh * inputs.operating_hours_per_year) / (inputs.motor_efficiency / 100)",
+          "unit": "USD/year",
+          "format": "currency"
+        }
+      ]
+    }
+  ]
+}
