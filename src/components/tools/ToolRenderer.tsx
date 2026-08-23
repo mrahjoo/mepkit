@@ -106,7 +106,7 @@ function CalculatorView({ comp }: { comp: CalculatorComponent }) {
                 {input.type === 'select' && input.options ? (
                   <Select 
                     value={String(inputs[input.id] ?? '')} 
-                    onValueChange={(val) => handleInputChange(input.id, val, 'select')}
+                    onValueChange={(val) => handleInputChange(input.id, val ?? '', 'select')}
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Select an option" />
