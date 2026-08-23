@@ -31,9 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   let componentRoutes: MetadataRoute.Sitemap = [];
-
   try {
-    // Read the catalog from the public directory
     const catalogPath = path.join(process.cwd(), 'public', 'data', 'pipedata_catalog.json');
     if (fs.existsSync(catalogPath)) {
       const catalogContent = fs.readFileSync(catalogPath, 'utf8');
@@ -52,5 +50,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     console.error('Error generating sitemap for components:', error);
   }
 
-  return [...staticRoutes, ...componentRoutes];
+  let toolRoutes: MetadataRoute.Sitemap = [];
+  try {
+    const toolsDir = path.join(process.cwd(), 'data', 'tools');
+    if (fs.existsSync(toolsDir)) {
+      const files = fs.readdirSync(toolsDir);
+      for (const file of files) {
+        if (file.endsWith('.json')) {
+          const slug = file.replace('.json', '');
+          toolRoutes.push({
+            url: `${baseUrl}/tools/${slug}`,
+            lastModified: new Date(), // Could read mtime, but this works
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+          });
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error generating sitemap for dynamic tools:', error);
+  }
+
+  return [...staticRoutes, ...componentRoutes, ...toolRoutes];
 }

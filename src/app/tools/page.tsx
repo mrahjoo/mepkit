@@ -1,52 +1,93 @@
 import React from 'react';
-import Link from 'next/link';
+import fs from 'fs/promises';
+import path from 'path';
+import { ToolConfig } from '@/lib/tool-schema';
+import { ToolsList } from '@/components/tools/ToolsList';
 
 export const metadata = {
   title: 'Engineering Tools | MEPKit',
-  description: 'Interactive engineering tools for building BOMs, sizing pipes, and simulating pressure drops.',
+  description: 'Search and browse thousands of data-driven engineering tools, calculators, and data tables for MEP engineers.',
 };
 
-export default function ToolsCategoryPage() {
-  const tools = [
+async function getToolsList() {
+  try {
+    const toolsDir = path.join(process.cwd(), 'data', 'tools');
+    
+    try {
+      await fs.access(toolsDir);
+    } catch {
+      await fs.mkdir(toolsDir, { recursive: true });
+      return [];
+    }
+    
+    const files = await fs.readdir(toolsDir);
+    const tools = [];
+
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        const filePath = path.join(toolsDir, file);
+        const fileContents = await fs.readFile(filePath, 'utf8');
+        try {
+          const config = JSON.parse(fileContents) as ToolConfig;
+          tools.push({
+            slug: file.replace('.json', ''),
+            title: config.title,
+            description: config.description || 'Engineering calculation tool.',
+            type: config.type || 'calculator'
+          });
+        } catch (e) {
+          console.error(`Error parsing ${file}:`, e);
+        }
+      }
+    }
+
+    return tools.sort((a, b) => a.title.localeCompare(b.title));
+  } catch (error) {
+    console.error('Error reading tools directory:', error);
+    return [];
+  }
+}
+
+export default async function ToolsHubPage() {
+  const tools = await getToolsList();
+  
+  const staticTools = [
     { 
       title: 'Pipe Size Lookup', 
-      href: '/tools/size-lookup', 
-      desc: 'Instantly lookup outer diameter, wall thickness, and weight for any nominal pipe size and schedule.' 
+      slug: 'size-lookup', 
+      description: 'Instantly lookup outer diameter, wall thickness, and weight for any nominal pipe size and schedule.',
+      type: 'static'
     },
     { 
       title: 'Fitting & Valve Selector', 
-      href: '/tools/fitting-selector', 
-      desc: 'Search and filter fittings and valves by nominal size and type to find K-factors.' 
+      slug: 'fitting-selector', 
+      description: 'Search and filter fittings and valves by nominal size and type to find K-factors.',
+      type: 'static'
     },
     { 
       title: 'Bill of Materials Builder', 
-      href: '/tools/bom-builder', 
-      desc: 'Assemble a piping system and aggregate total weights and components.' 
+      slug: 'bom-builder', 
+      description: 'Assemble a piping system and aggregate total weights and components.',
+      type: 'static'
     },
     { 
       title: 'System Pressure Drop Simulator', 
-      href: '/tools/system-simulator', 
-      desc: 'Build a simple pipe network (segments + fittings) to compute total friction loss end-to-end.' 
+      slug: 'system-simulator', 
+      description: 'Build a simple pipe network (segments + fittings) to compute total friction loss end-to-end.',
+      type: 'static'
     },
   ];
 
+  const allTools = [...staticTools, ...tools];
+
   return (
-    <div className="container py-10 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-bold mb-4">Engineering Tools</h1>
-      <p className="text-lg text-muted-foreground mb-8">
-        Use our interactive tools to streamline your engineering workflows.
+    <div className="container py-10 px-4 md:px-8">
+      <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-center tracking-tight">Engineering Tools</h1>
+      <p className="text-lg md:text-xl text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
+        Search and browse our extensive collection of {allTools.length > 0 ? allTools.length : ''} data-driven engineering calculators, charts, and reference tables.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {tools.map(t => (
-          <Link href={t.href} key={t.title} className="block group">
-            <div className="border rounded-xl p-6 h-full bg-card hover:border-primary transition-colors shadow-sm hover:shadow-md">
-              <h2 className="text-xl font-semibold mb-2 group-hover:text-primary">{t.title}</h2>
-              <p className="text-muted-foreground">{t.desc}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <ToolsList initialTools={allTools} />
     </div>
   );
 }
