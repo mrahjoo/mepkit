@@ -9,10 +9,10 @@ import { ArrowLeft, Download } from 'lucide-react';
 import Image from 'next/image';
 
 interface Props {
-  params: {
+  params: Promise<{
     category: string;
     id: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -27,7 +27,8 @@ export async function generateStaticParams() {
 }
 
 export default async function ComponentDetailPage({ params }: Props) {
-  const { category, id } = params;
+  const resolvedParams = await params;
+  const { category, id } = resolvedParams;
   
   const dataPath = path.join(process.cwd(), 'public', 'data', 'pipedata', `${id}.json`);
   if (!fs.existsSync(dataPath)) {
